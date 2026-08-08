@@ -1,7 +1,10 @@
 # Stage 5 — Evaluation
 
 Per proposal SS7: **not** random clause splitting as the primary result (adjacent versions
-of the same draft are too similar). Three protocols, all required:
+of the same draft are too similar). Also avoid splitting **adjacent revisions of the same draft**
+across train and test — that leaks near-duplicate clauses and inflates metrics.
+
+Three protocols, all required:
 
 1. **document-family split** — all versions of a draft family in one partition
 2. **temporal split** — train on earlier drafts, test on later publication periods

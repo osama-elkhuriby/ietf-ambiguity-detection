@@ -81,14 +81,14 @@ These files are the source of truth for the project's dependencies.
 
 ```bash
 conda env create -f environment-linux.yml
-conda activate draft-ambiguity-detection
+conda activate ietf-ambiguity-detection
 ```
 
 ### Windows
 
 ```powershell
 conda env create -f environment-windows.yml
-conda activate draft-ambiguity-detection
+conda activate ietf-ambiguity-detection
 ```
 
 After creating the environment, verify the installation:
@@ -124,14 +124,14 @@ Use the environment file corresponding to your operating system.
 
 ```bash
 conda env create -f environment-linux.yml
-conda activate draft-ambiguity-detection
+conda activate ietf-ambiguity-detection
 ```
 
 **Windows:**
 
 ```powershell
 conda env create -f environment-windows.yml
-conda activate draft-ambiguity-detection
+conda activate ietf-ambiguity-detection
 ```
 
 ### 2. Fetch a draft's revision history
@@ -149,8 +149,10 @@ The script requires normal Internet access to the IETF Datatracker and will not 
 Pilot data should be stored under:
 
 ```text
-experiments/pilot/data/raw/<draft-name>/
+corpus/raw/<draft-name>/
 ```
+
+Optionally mirror fetches under `experiments/pilot/data/raw/` using `--output-dir` (see `experiments/pilot/README.md`).
 
 The fetched data includes the submitted revisions and a `versions.json` manifest containing revision metadata such as submission dates, revision numbers, and word counts.
 

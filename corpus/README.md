@@ -4,6 +4,8 @@
 working against the real library API (see `../DECISIONS.md`, 2026-08-08). Needs normal
 internet access to run (not usable from a locked-down sandbox).
 
+Optional: `--output-dir experiments/pilot/data/raw` for pilot-only copies (see `../experiments/pilot/README.md`).
+
 Still to add here:
 - Errata integration. Check what RFCScope's public dataset (github.com/HIPREL-Group/RFCScope)
   already covers before writing an independent RFC Editor errata scraper — see `../DECISIONS.md`.

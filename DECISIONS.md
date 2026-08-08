@@ -60,3 +60,34 @@ for no clear benefit at this stage. Can revisit if `ietfdata` proves to be missi
 
 ---
 
+## 2026-08-08 — RFCScope taxonomy as the subtype vocabulary
+
+**Decision:** Use RFCScope's seven logical-ambiguity subtypes (I-1…I-3, U-1…U-4) for
+`ambiguity_subtype` labels and for comparing detector output to reused errata data — not a
+parallel taxonomy.
+
+**Why:** The team is reusing RFCScope's public errata categorization (see entry above). A single
+vocabulary keeps silver labels comparable and avoids double-annotation work.
+
+**Rejected alternatives:** Merging RFCScope categories with informal "linguistic ambiguity" tags
+only — useful as *features*, but not as the primary evaluation subtype axis.
+
+**Owner:** Osama Elkhuribi
+
+---
+
+## 2026-08-08 — Pilot clause unit: section paragraph (plaintext)
+
+**Decision:** For Phase 1 hand alignment and labeling, treat a **clause** as one paragraph within
+a numbered section of the Datatracker `.txt` revision, with the exceptions documented in
+`experiments/pilot/docs/annotation_guide_v0.md` §1.
+
+**Why:** Matches how authors edit I-Ds in practice, aligns with iddiff hunks at paragraph
+granularity, and is coarse enough for 15–20 clause pilot labels in week 1.
+
+**Rejected alternatives:** Sentence-level units (too fragmented for cross-ref and ABNF); whole
+sections (mixes many independent requirements and hurts class balance).
+
+**Owner:** Osama Elkhuribi
+
+---

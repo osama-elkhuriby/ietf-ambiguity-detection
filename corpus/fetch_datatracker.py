@@ -8,11 +8,13 @@ see ../DECISIONS.md, 2026-08-08 entry.
 
 Usage:
     python corpus/fetch_datatracker.py draft-ietf-dnsop-svcb-https
-    python corpus/fetch_datatracker.py draft-name-one draft-name-two
+    python corpus/fetch_datatracker.py --output-dir experiments/pilot/data/raw draft-name-one
 
 For each draft, this writes:
-    corpus/raw/<draft-name>/versions.json        -- manifest: rev, dates, word/page counts
-    corpus/raw/<draft-name>/<draft-name>-NN.txt   -- raw plaintext of each revision
+    <output-dir>/<draft-name>/versions.json        -- manifest: rev, dates, word/page counts
+    <output-dir>/<draft-name>/<draft-name>-NN.txt   -- raw plaintext of each revision
+
+Default <output-dir> is corpus/raw (see corpus/README.md).
 
 Note: this makes real network calls to datatracker.ietf.org and ietf.org, so it needs
 to run somewhere with normal internet access. (It will NOT run inside a locked-down
@@ -20,12 +22,14 @@ sandbox that only allows package-registry domains -- confirmed while building th
 """
 from __future__ import annotations
 
+import argparse
 import json
-import sys
 from pathlib import Path
 
 import requests
 from ietfdata.datatracker import DataTracker
+
+DEFAULT_OUTPUT_DIR = Path("corpus/raw")
 
 
 def fetch_draft_history(draft_name: str, out_dir: Path) -> list[dict]:
@@ -80,11 +84,16 @@ def fetch_draft_history(draft_name: str, out_dir: Path) -> list[dict]:
 
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: python fetch_datatracker.py <draft-name> [<draft-name> ...]")
-        print("Example: python fetch_datatracker.py draft-ietf-dnsop-svcb-https")
-        sys.exit(1)
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--output-dir",
+        type=Path,
+        default=DEFAULT_OUTPUT_DIR,
+        help=f"Root directory for per-draft folders (default: {DEFAULT_OUTPUT_DIR})",
+    )
+    parser.add_argument("draft_names", nargs="+", help="Datatracker draft name(s)")
+    args = parser.parse_args()
 
-    for name in sys.argv[1:]:
+    for name in args.draft_names:
         print(f"Fetching {name} ...")
-        fetch_draft_history(name, Path("corpus/raw") / name)
+        fetch_draft_history(name, args.output_dir / name)
