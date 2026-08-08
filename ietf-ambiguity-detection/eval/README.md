@@ -1,0 +1,16 @@
+# Stage 5 — Evaluation
+
+Per proposal SS7: **not** random clause splitting as the primary result (adjacent versions
+of the same draft are too similar). Three protocols, all required:
+
+1. **document-family split** — all versions of a draft family in one partition
+2. **temporal split** — train on earlier drafts, test on later publication periods
+3. **protocol-family holdout** — test transfer to an unseen protocol area
+
+Report results for the full test set *and* separately by ambiguity subtype, revision stage,
+and protocol family. Metrics: precision/recall/macro-F1/F2/PR-AUC/false-negative rate/per-subtype
+F1 (not accuracy — ambiguous clauses are rare), plus calibration, abstention risk-coverage,
+latency, cost, and explanation-faithfulness metrics per SS7.
+
+This folder is genuinely shared across the team, not one person's stage — whoever built a
+detector needs to agree on what "leakage-resistant" means for their own inputs.

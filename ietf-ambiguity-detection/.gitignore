@@ -1,0 +1,33 @@
+# Environments
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Secrets — never commit API keys
+.env
+*.key
+
+# ietfdata's local cache (recreated automatically, don't version large sqlite blobs)
+*.sqlite
+ietf-dt-cache.sqlite
+
+# Raw pulled corpus — large and re-fetchable; keep manifests, not full text dumps, in git
+corpus/raw/
+
+# Experiment tracking
+mlruns/
+wandb/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
