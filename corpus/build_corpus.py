@@ -23,6 +23,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 
 import fetch_datatracker
 import fetch_errata
@@ -51,12 +52,28 @@ def main() -> None:
     links = link_draft_rfc.build_links(metadata, rfcs_before)
     link_draft_rfc.LINKS_METADATA_PATH.parent.mkdir(parents=True, exist_ok=True)
     link_draft_rfc.LINKS_METADATA_PATH.write_text(json.dumps(links, indent=2, sort_keys=True))
-    linked_rfc_numbers = sorted({d["rfc_number"] for d in metadata.values() if d.get("rfc_number")})
-    print(f"{len(linked_rfc_numbers)} of {len(args.drafts)} requested drafts are published: {linked_rfc_numbers}\n")
+    linked_rfc_ids = sorted({link["rfc"] for link in links if link.get("rfc")})
+    print(f"{len(linked_rfc_ids)} of {len(args.drafts)} requested drafts are published: {linked_rfc_ids}\n")
 
-    if linked_rfc_numbers:
+    if not linked_rfc_ids:
+        print("=== Step 2b/4: scanning RFC index for requested drafts ===")
+        fetch_rfc.INDEX_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+        index = RFCIndex(cache_dir=str(fetch_rfc.INDEX_CACHE_DIR))
+        normalized_requested = {re.sub(r"-\d+$", "", name): name for name in args.drafts}
+        candidate_rfc_ids: set[str] = set()
+        for rfc_entry in index.rfcs():
+            if not getattr(rfc_entry, "draft", None):
+                continue
+            draft_name = rfc_entry.draft
+            if draft_name in args.drafts or re.sub(r"-\d+$", "", draft_name) in normalized_requested:
+                candidate_rfc_ids.add(str(rfc_entry.doc_id))
+
+        linked_rfc_ids = sorted(candidate_rfc_ids)
+        print(f"{len(linked_rfc_ids)} RFCs found in RFC index for requested drafts: {linked_rfc_ids}\n")
+
+    if linked_rfc_ids:
         print("=== Step 3/4: fetching linked RFC(s) ===")
-        rfc_ids = [f"rfc{n}" for n in linked_rfc_numbers]
+        rfc_ids = linked_rfc_ids
         fetch_rfc.INDEX_CACHE_DIR.mkdir(parents=True, exist_ok=True)
         index = RFCIndex(cache_dir=str(fetch_rfc.INDEX_CACHE_DIR))
         rfc_metadata = fetch_rfc.load_metadata()
@@ -67,7 +84,7 @@ def main() -> None:
         print(f"Updated {fetch_rfc.RFCS_METADATA_PATH} ({len(rfc_metadata)} RFCs total)\n")
 
         print("=== Step 4/4: fetching errata for linked RFC(s) ===")
-        rfc_numbers = set(linked_rfc_numbers)
+        rfc_numbers = {int(rfc_id[3:]) for rfc_id in linked_rfc_ids}
         all_errata = fetch_errata.download_bulk_errata()
         by_rfc = fetch_errata.filter_and_group(all_errata, rfc_numbers)
         fetch_errata.ERRATA_METADATA_PATH.parent.mkdir(parents=True, exist_ok=True)

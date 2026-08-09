@@ -19,6 +19,6 @@ def normalize_rfc_number(value: str) -> int:
 
 
 def normalize_rfc_id(value: str) -> str:
-    """Accepts '9460', 'rfc9460', or 'RFC9460' -> returns 'rfc9460'."""
+    """Accepts '9460', 'rfc9460', or 'RFC9460' -> returns 'RFC9460'."""
     num = normalize_rfc_number(value)
-    return f"rfc{num}"
+    return f"RFC{num}"

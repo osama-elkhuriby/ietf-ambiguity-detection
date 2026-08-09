@@ -33,6 +33,11 @@ from typing import Any
 import requests
 from ietfdata.datatracker import DataTracker
 
+try:
+    from ietfdata.datatracker import DTBackendLive
+except ImportError:
+    from ietfdata.dt_backend import DTBackendLive
+
 from paths import repo_path
 
 METADATA_PATH = repo_path("corpus", "metadata", "drafts.json")
@@ -51,7 +56,7 @@ def save_metadata(data: dict[str, Any]) -> None:
 
 
 def fetch_draft_history(draft_name: str, out_dir: Path) -> dict[str, Any]:
-    dt = DataTracker()
+    dt = DataTracker(DTBackendLive())
     doc = dt.document_from_draft(draft_name)
     if doc is None:
         raise SystemExit(

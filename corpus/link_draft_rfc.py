@@ -22,6 +22,7 @@ fetch_datatracker.py and (optionally) fetch_rfc.py first.
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 from typing import Any
 
@@ -38,13 +39,22 @@ def load_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text())
 
 
+def normalize_draft_name(draft_name: str) -> str:
+    return re.sub(r"-\d+$", "", draft_name)
+
+
 def build_links(drafts: dict[str, Any], rfcs: dict[str, Any]) -> list[dict[str, Any]]:
     # Reverse index: draft name (from the RFC index's own 'draft' field) -> rfc_id
     draft_to_rfc_from_index: dict[str, str] = {}
     for rfc_id, rfc_record in rfcs.items():
         draft_name = rfc_record.get("draft")
-        if draft_name:
-            draft_to_rfc_from_index[draft_name] = rfc_id
+        if not draft_name:
+            continue
+
+        draft_to_rfc_from_index[draft_name] = rfc_id
+        normalized_name = normalize_draft_name(draft_name)
+        if normalized_name != draft_name and normalized_name not in draft_to_rfc_from_index:
+            draft_to_rfc_from_index[normalized_name] = rfc_id
 
     links: list[dict[str, Any]] = []
 
