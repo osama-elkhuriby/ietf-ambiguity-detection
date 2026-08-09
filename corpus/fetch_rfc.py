@@ -81,7 +81,14 @@ def fetch_rfc(rfc_id: str, index: RFCIndex) -> dict[str, Any]:
         "local_txt_path": None,
     }
 
-    text_url = entry.content_url("TEXT")
+    text_url = None
+    text_format = None
+    for fmt in ("TEXT", "TXT", "ASCII"):
+        text_url = entry.content_url(fmt)
+        if text_url:
+            text_format = fmt
+            break
+
     if text_url:
         RAW_RFC_DIR.mkdir(parents=True, exist_ok=True)
         resp = requests.get(text_url, timeout=30)
@@ -89,10 +96,12 @@ def fetch_rfc(rfc_id: str, index: RFCIndex) -> dict[str, Any]:
             txt_path = RAW_RFC_DIR / f"{rfc_id}.txt"
             txt_path.write_text(resp.text, encoding="utf-8", errors="replace")
             record["local_txt_path"] = str(txt_path)
+            if text_format != "TEXT":
+                print(f"  note: using {text_format} format for {rfc_id} (formats: {entry.formats})")
         else:
             print(f"  warning: {rfc_id} .txt fetch returned HTTP {resp.status_code}")
     else:
-        print(f"  warning: no TEXT format listed for {rfc_id} (formats: {entry.formats})")
+        print(f"  warning: no TEXT/TXT/ASCII format listed for {rfc_id} (formats: {entry.formats})")
 
     print(f"  fetched {rfc_id}  ({record['date']}, draft={record['draft']})")
     return record

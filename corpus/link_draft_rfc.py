@@ -62,6 +62,8 @@ def build_links(drafts: dict[str, Any], rfcs: dict[str, Any]) -> list[dict[str, 
         datatracker_rfc_number = draft_record.get("rfc_number")
         datatracker_rfc_id = f"rfc{datatracker_rfc_number}" if datatracker_rfc_number else None
         index_rfc_id = draft_to_rfc_from_index.get(draft_name)
+        if index_rfc_id is None:
+            index_rfc_id = draft_to_rfc_from_index.get(normalize_draft_name(draft_name))
 
         if datatracker_rfc_id is None and index_rfc_id is None:
             continue  # this draft hasn't been linked to an RFC by either source; not an error

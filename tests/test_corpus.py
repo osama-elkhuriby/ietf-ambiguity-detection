@@ -38,6 +38,15 @@ def test_build_links_single_source_datatracker() -> None:
     assert links[0]["rfc"] == "rfc9460"
 
 
+def test_build_links_single_source_rfc_index_normalized_name() -> None:
+    drafts = {"draft-ietf-dnsop-svcb-https": {}}
+    rfcs = {"rfc9460": {"draft": "draft-ietf-dnsop-svcb-https-12"}}
+    links = link_draft_rfc.build_links(drafts, rfcs)
+    assert len(links) == 1
+    assert links[0]["confidence"] == "single-source"
+    assert links[0]["rfc"] == "rfc9460"
+
+
 def test_filter_and_group_errata() -> None:
     bulk = [
         {"doc-id": "RFC9460", "errata_id": 1, "errata_status_code": "Verified", "errata_type_code": "Technical"},

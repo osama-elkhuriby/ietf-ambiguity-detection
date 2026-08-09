@@ -49,27 +49,33 @@ def main() -> None:
 
     print("=== Step 2/4: linking drafts to any published RFC ===")
     rfcs_before = link_draft_rfc.load_json(link_draft_rfc.RFCS_METADATA_PATH)
-    links = link_draft_rfc.build_links(metadata, rfcs_before)
+    requested_metadata = {name: metadata[name] for name in args.drafts}
+    links = link_draft_rfc.build_links(requested_metadata, rfcs_before)
     link_draft_rfc.LINKS_METADATA_PATH.parent.mkdir(parents=True, exist_ok=True)
     link_draft_rfc.LINKS_METADATA_PATH.write_text(json.dumps(links, indent=2, sort_keys=True))
     linked_rfc_ids = sorted({link["rfc"] for link in links if link.get("rfc")})
+    linked_draft_names = {link["draft"] for link in links if link.get("rfc")}
+    missing_drafts = [name for name in args.drafts if name not in linked_draft_names]
     print(f"{len(linked_rfc_ids)} of {len(args.drafts)} requested drafts are published: {linked_rfc_ids}\n")
 
-    if not linked_rfc_ids:
+    if missing_drafts:
         print("=== Step 2b/4: scanning RFC index for requested drafts ===")
         fetch_rfc.INDEX_CACHE_DIR.mkdir(parents=True, exist_ok=True)
         index = RFCIndex(cache_dir=str(fetch_rfc.INDEX_CACHE_DIR))
-        normalized_requested = {re.sub(r"-\d+$", "", name): name for name in args.drafts}
+        normalized_missing = {re.sub(r"-\d+$", "", name) for name in missing_drafts}
         candidate_rfc_ids: set[str] = set()
         for rfc_entry in index.rfcs():
             if not getattr(rfc_entry, "draft", None):
                 continue
             draft_name = rfc_entry.draft
-            if draft_name in args.drafts or re.sub(r"-\d+$", "", draft_name) in normalized_requested:
+            if draft_name in missing_drafts or re.sub(r"-\d+$", "", draft_name) in normalized_missing:
                 candidate_rfc_ids.add(str(rfc_entry.doc_id))
 
-        linked_rfc_ids = sorted(candidate_rfc_ids)
-        print(f"{len(linked_rfc_ids)} RFCs found in RFC index for requested drafts: {linked_rfc_ids}\n")
+        if candidate_rfc_ids:
+            linked_rfc_ids = sorted(set(linked_rfc_ids) | candidate_rfc_ids)
+            print(f"{len(candidate_rfc_ids)} RFCs found in RFC index for missing requested drafts: {sorted(candidate_rfc_ids)}\n")
+        else:
+            print(f"No RFCs found in RFC index for missing requested drafts: {missing_drafts}\n")
 
     if linked_rfc_ids:
         print("=== Step 3/4: fetching linked RFC(s) ===")

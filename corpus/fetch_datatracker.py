@@ -81,16 +81,48 @@ def fetch_draft_history(draft_name: str, out_dir: Path) -> dict[str, Any]:
             "local_txt_path": None,
         }
 
+        raw_url = None
+        raw_type = None
         for file_type, url in sub.urls():
-            if file_type == ".txt":
-                resp = requests.get(url, timeout=30)
-                if resp.status_code == 200:
-                    txt_path = out_dir / f"{sub.name}-{sub.rev}.txt"
-                    txt_path.write_text(resp.text, encoding="utf-8", errors="replace")
-                    record["local_txt_path"] = str(txt_path)
-                else:
-                    print(f"  warning: rev {sub.rev} .txt fetch returned HTTP {resp.status_code}")
+            if file_type and file_type.lower() in {".txt", "txt", "text"}:
+                raw_url = url
+                raw_type = file_type.lower()
                 break
+        if raw_url is None:
+            for file_type, url in sub.urls():
+                if file_type and file_type.lower() == ".xml":
+                    raw_url = url
+                    raw_type = ".xml"
+                    break
+        if raw_url is None:
+            for file_type, url in sub.urls():
+                if file_type and file_type.lower() == ".html":
+                    raw_url = url
+                    raw_type = ".html"
+                    break
+
+        if raw_url is not None:
+            try:
+                resp = requests.get(raw_url, timeout=30)
+                resp.raise_for_status()
+
+                out_suffix = Path(raw_url).suffix or ".txt"
+                raw_path = out_dir / f"{sub.name}-{sub.rev}{out_suffix}"
+                raw_path.write_text(
+                    resp.text,
+                    encoding="utf-8",
+                    errors="replace"
+                )
+
+                record["local_txt_path"] = str(raw_path)
+                print(f"    saved: {raw_path}")
+                if raw_type not in {".txt", "txt", "text"}:
+                    print(f"    note: saved {raw_type} source for rev {sub.rev}")
+
+            except requests.RequestException as e:
+                print(f"  warning: rev {sub.rev} fetch failed: {e}")
+        else:
+            print(f"  warning: rev {sub.rev} has no TXT/XML/HTML source")
 
         versions.append(record)
         print(f"  fetched rev {sub.rev}  ({sub.submission_date}, {sub.words or '?'} words)")
