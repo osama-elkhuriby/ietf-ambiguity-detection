@@ -1,38 +1,56 @@
 """
-Pilot corpus fetcher — pulls the full submitted-revision history of one or more
-Internet-Drafts from the IETF Datatracker, via the `ietfdata` library.
+Draft fetcher — pulls the full submitted-revision history of one or more Internet-Drafts
+from the IETF Datatracker, via the `ietfdata` library, and records each in
+corpus/metadata/drafts.json.
 
 Verified against ietfdata==0.8.1 (glasgow-ipl/ietfdata) by inspecting the installed
 package directly (datatracker.py: Document, Submission, DataTracker classes) —
-see ../DECISIONS.md, 2026-08-08 entry.
+see ../DECISIONS.md, 2026-08-08 entries.
 
 Usage:
     python corpus/fetch_datatracker.py draft-ietf-dnsop-svcb-https
-    python corpus/fetch_datatracker.py --output-dir experiments/pilot/data/raw draft-name-one
+    python corpus/fetch_datatracker.py draft-name-one draft-name-two
 
 For each draft, this writes:
-    <output-dir>/<draft-name>/versions.json        -- manifest: rev, dates, word/page counts
-    <output-dir>/<draft-name>/<draft-name>-NN.txt   -- raw plaintext of each revision
+    corpus/raw/drafts/<draft-name>/<draft-name>-NN.txt   -- raw plaintext of each revision
+And upserts one entry per draft into:
+    corpus/metadata/drafts.json                          -- master draft manifest
 
-Default <output-dir> is corpus/raw (see corpus/README.md).
+If a draft's Document record already has an rfc_number (i.e. it was published), that's
+recorded directly in metadata/drafts.json — link_draft_rfc.py reads it from there rather
+than re-querying the Datatracker.
 
 Note: this makes real network calls to datatracker.ietf.org and ietf.org, so it needs
-to run somewhere with normal internet access. (It will NOT run inside a locked-down
-sandbox that only allows package-registry domains -- confirmed while building this.)
+to run somewhere with normal internet access.
 """
 from __future__ import annotations
 
 import argparse
 import json
 from pathlib import Path
+from typing import Any
 
 import requests
 from ietfdata.datatracker import DataTracker
 
-DEFAULT_OUTPUT_DIR = Path("corpus/raw")
+from paths import repo_path
+
+METADATA_PATH = repo_path("corpus", "metadata", "drafts.json")
+DEFAULT_RAW_DRAFTS_DIR = repo_path("corpus", "raw", "drafts")
 
 
-def fetch_draft_history(draft_name: str, out_dir: Path) -> list[dict]:
+def load_metadata() -> dict[str, Any]:
+    if METADATA_PATH.exists():
+        return json.loads(METADATA_PATH.read_text())
+    return {}
+
+
+def save_metadata(data: dict[str, Any]) -> None:
+    METADATA_PATH.parent.mkdir(parents=True, exist_ok=True)
+    METADATA_PATH.write_text(json.dumps(data, indent=2, sort_keys=True))
+
+
+def fetch_draft_history(draft_name: str, out_dir: Path) -> dict[str, Any]:
     dt = DataTracker()
     doc = dt.document_from_draft(draft_name)
     if doc is None:
@@ -42,17 +60,15 @@ def fetch_draft_history(draft_name: str, out_dir: Path) -> list[dict]:
         )
 
     out_dir.mkdir(parents=True, exist_ok=True)
-    versions: list[dict] = []
+    versions: list[dict[str, Any]] = []
 
     for sub_uri in doc.submissions:
         sub = dt.submission(sub_uri)
         if sub is None:
             continue
 
-        record = {
-            "name": sub.name,
+        record: dict[str, Any] = {
             "rev": sub.rev,
-            "title": sub.title,
             "submission_date": str(sub.submission_date),
             "document_date": str(sub.document_date) if sub.document_date else None,
             "pages": sub.pages,
@@ -60,7 +76,6 @@ def fetch_draft_history(draft_name: str, out_dir: Path) -> list[dict]:
             "local_txt_path": None,
         }
 
-        # Grab the plaintext rendering of this specific revision, if available
         for file_type, url in sub.urls():
             if file_type == ".txt":
                 resp = requests.get(url, timeout=30)
@@ -77,23 +92,44 @@ def fetch_draft_history(draft_name: str, out_dir: Path) -> list[dict]:
 
     versions.sort(key=lambda v: v["rev"])
 
-    manifest_path = out_dir / "versions.json"
-    manifest_path.write_text(json.dumps(versions, indent=2))
-    print(f"-> {len(versions)} revisions. Manifest: {manifest_path}")
-    return versions
+    draft_record = {
+        "name": doc.name,
+        "title": doc.title,
+        "group": str(doc.group) if doc.group else None,
+        "rfc": doc.rfc,
+        "rfc_number": doc.rfc_number,
+        "latest_rev": doc.rev,
+        "num_versions": len(versions),
+        "versions": versions,
+    }
+
+    became_rfc = f" Became RFC {doc.rfc_number}." if doc.rfc_number else " Not published as an RFC (yet)."
+    print(f"-> {len(versions)} revisions." + became_rfc)
+    return draft_record
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Pull Internet-Draft version history from the IETF Datatracker.")
+    parser.add_argument("drafts", nargs="+", help="Draft name(s), e.g. draft-ietf-dnsop-svcb-https")
+    parser.add_argument(
+        "--out-dir",
+        "--output-dir",
+        dest="out_dir",
+        default=str(DEFAULT_RAW_DRAFTS_DIR),
+        help="Base output directory; one subfolder per draft is created inside it (default: corpus/raw/drafts)",
+    )
+    args = parser.parse_args()
+
+    metadata = load_metadata()
+    base_out = Path(args.out_dir)
+
+    for name in args.drafts:
+        print(f"Fetching {name} ...")
+        metadata[name] = fetch_draft_history(name, base_out / name)
+
+    save_metadata(metadata)
+    print(f"\nUpdated {METADATA_PATH} ({len(metadata)} drafts total)")
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument(
-        "--output-dir",
-        type=Path,
-        default=DEFAULT_OUTPUT_DIR,
-        help=f"Root directory for per-draft folders (default: {DEFAULT_OUTPUT_DIR})",
-    )
-    parser.add_argument("draft_names", nargs="+", help="Datatracker draft name(s)")
-    args = parser.parse_args()
-
-    for name in args.draft_names:
-        print(f"Fetching {name} ...")
-        fetch_draft_history(name, args.output_dir / name)
+    main()

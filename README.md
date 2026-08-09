@@ -134,29 +134,36 @@ conda env create -f environment-windows.yml
 conda activate ietf-ambiguity-detection
 ```
 
-### 2. Fetch a draft's revision history
+### 2. Build corpus data for a draft
 
-The pilot currently uses a small DNS-family example.
-
-For example:
+The pilot currently uses a small DNS-family example. From the **repository root**:
 
 ```bash
+# Full Stage 1 pipeline (draft revisions → RFC link → RFC text → errata)
+python corpus/build_corpus.py draft-ietf-dnsop-svcb-https
+
+# Or only draft revisions:
 python corpus/fetch_datatracker.py draft-ietf-dnsop-svcb-https
 ```
 
-The script requires normal Internet access to the IETF Datatracker and will not work from a sandboxed or network-restricted environment.
+These scripts require normal Internet access (Datatracker, RFC Editor) and will not work from a sandboxed or network-restricted environment.
 
-Pilot data should be stored under:
+Draft plaintext and revision metadata:
 
 ```text
-corpus/raw/<draft-name>/
+corpus/raw/drafts/<draft-name>/<draft-name>-NN.txt
+corpus/metadata/drafts.json
 ```
 
-Optionally mirror fetches under `experiments/pilot/data/raw/` using `--output-dir` (see `experiments/pilot/README.md`).
-
-The fetched data includes the submitted revisions and a `versions.json` manifest containing revision metadata such as submission dates, revision numbers, and word counts.
+Optionally mirror draft files under `experiments/pilot/data/raw/` using `--out-dir` (see `experiments/pilot/README.md`). Metadata always lives in `corpus/metadata/`.
 
 Replace the draft name with the DNS-family draft selected by the team for the pilot.
+
+**Tests (no network):**
+
+```bash
+pytest tests/
+```
 
 ---
 

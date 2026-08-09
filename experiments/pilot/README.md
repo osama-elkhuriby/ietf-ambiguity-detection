@@ -27,8 +27,8 @@ Confirm exact names on [Datatracker](https://datatracker.ietf.org/).
 
 | Step | Action | Artifact |
 |------|--------|----------|
-| 1 | Fetch revisions | `corpus/raw/<draft-name>/` via `corpus/fetch_datatracker.py` |
-| 2 | Inspect text | `versions.json`, sample `-NN.txt` files (section numbering, boilerplate) |
+| 1 | Fetch revisions (or full corpus build) | `corpus/raw/drafts/<draft-name>/`, `corpus/metadata/drafts.json` |
+| 2 | Inspect text | `drafts.json` → `versions`, sample `-NN.txt` files (section numbering, boilerplate) |
 | 3 | Hand-align | 15–30 clause pairs across 2+ revisions → `data/processed/` (local; gitignored) |
 | 4 | Label | `labels/pilot_labels.csv` from `labels/pilot_labels_template.csv` |
 | 5 | Baselines | Heuristic + one LLM prompt on the same clauses |
@@ -40,16 +40,22 @@ From repo root, with network access:
 
 ```bash
 conda activate ietf-ambiguity-detection
+python corpus/build_corpus.py draft-ietf-dnsop-svcb-https
+```
+
+Draft-only fetch:
+
+```bash
 python corpus/fetch_datatracker.py draft-ietf-dnsop-svcb-https
 ```
 
 Optional output directory (e.g. keep pilot copies separate):
 
 ```bash
-python corpus/fetch_datatracker.py --output-dir experiments/pilot/data/raw draft-ietf-dnsop-svcb-https
+python corpus/fetch_datatracker.py --out-dir experiments/pilot/data/raw draft-ietf-dnsop-svcb-https
 ```
 
-Commit lightweight `versions.json` manifests if you need a record of what was pulled; do not commit full `.txt` corpora.
+Commit lightweight entries in `corpus/metadata/drafts.json` if you need a record of what was pulled; do not commit full `.txt` corpora (`corpus/raw/` is gitignored).
 
 ### Alignment (pilot)
 
@@ -83,4 +89,4 @@ experiments/pilot/
   results/        Pilot metrics, prompts, configs (commit summaries, not secrets)
 ```
 
-Raw text for all stages defaults under `corpus/raw/` (see root `README.md`).
+Raw text for all stages defaults under `corpus/raw/drafts/` (see root `README.md` and `corpus/README.md`).

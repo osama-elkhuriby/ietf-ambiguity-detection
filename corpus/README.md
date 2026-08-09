@@ -1,17 +1,26 @@
 # Stage 1 — Corpus
 
-`fetch_datatracker.py` — pulls Internet-Draft version history via `ietfdata`. Verified
-working against the real library API (see `../DECISIONS.md`, 2026-08-08). Needs normal
-internet access to run (not usable from a locked-down sandbox).
+Run scripts from the repository root (paths are resolved automatically):
 
-Optional: `--output-dir experiments/pilot/data/raw` for pilot-only copies (see `../experiments/pilot/README.md`).
+```bash
+python corpus/build_corpus.py draft-ietf-dnsop-svcb-https
+```
 
-Still to add here:
-- Errata integration. Check what RFCScope's public dataset (github.com/HIPREL-Group/RFCScope)
-  already covers before writing an independent RFC Editor errata scraper — see `../DECISIONS.md`.
-- Final-RFC linking for drafts that were published (`dt.document_from_rfc()` /
-  `dt.documents_from_bcp()` in `ietfdata.datatracker` look like the relevant entry points —
-  confirm against the installed package before relying on them).
-- `corpus/raw/` is where `fetch_datatracker.py` writes downloaded text — gitignored on purpose,
-  since it's large and re-fetchable. Commit `versions.json` manifests if you want a lightweight
-  record of exactly what was pulled and when.
+Or run steps individually:
+
+| Script | Role |
+|--------|------|
+| `fetch_datatracker.py` | Internet-Draft revision history → `corpus/raw/drafts/`, `corpus/metadata/drafts.json` |
+| `link_draft_rfc.py` | Draft↔RFC join with cross-check → `corpus/metadata/draft_rfc_links.json` |
+| `fetch_rfc.py` | RFC index metadata + plaintext → `corpus/raw/rfcs/`, `corpus/metadata/rfcs.json` |
+| `fetch_errata.py` | RFC Editor bulk errata (cached) → `corpus/metadata/errata.json` |
+| `build_corpus.py` | Runs the four steps above for one or more draft names |
+
+All network fetchers need normal internet access (Datatracker, rfc-editor.org).
+
+**Pilot mirror:** pass `--out-dir experiments/pilot/data/raw` (alias: `--output-dir`) to
+`fetch_datatracker.py` to keep a copy under the pilot tree; metadata still updates
+`corpus/metadata/drafts.json`.
+
+Manifest schemas: `metadata/README.md`. Large plaintext under `corpus/raw/` is gitignored;
+RFCScope errata reuse for modeling is documented in `../DECISIONS.md`.

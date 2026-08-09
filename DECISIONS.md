@@ -91,3 +91,18 @@ sections (mixes many independent requirements and hurts class balance).
 **Owner:** Osama Elkhuribi
 
 ---
+
+## 2026-08-09 — Repo-root paths for corpus scripts
+
+**Decision:** Resolve all `corpus/metadata/` and `corpus/raw/` paths from `corpus/paths.py`
+(`REPO_ROOT`), not from the process working directory.
+
+**Why:** Avoids silent writes to the wrong tree when someone runs a script from `corpus/` or
+another directory; keeps pilot mirrors (`--out-dir`) independent of metadata location.
+
+**Rejected alternatives:** Require "always cd to repo root" in docs only — easy to forget during
+pilot crunch.
+
+**Owner:** Osama Elkhuribi
+
+---
