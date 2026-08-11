@@ -2,18 +2,82 @@ name: ietf-ambiguity-detection
 
 channels:
   - conda-forge
+  - nodefaults
 
 dependencies:
+  # Runtime and project configuration
   - python=3.11
   - pip
+  - setuptools
+  - wheel
+  - python-dotenv
+  - pyyaml
+  - pydantic>=2
+  - protobuf>=4.25.8,<7
+  - tenacity
+  - tqdm
+  - rich
+
+  # IETF collection and document parsing
   - requests
-  - pandas
-  - numpy
-  - scipy
-  - scikit-learn
   - beautifulsoup4
   - lxml
-  - python-dotenv
+
+  # Data processing and storage
+  - numpy
+  - pandas
+  - scipy
+  - pyarrow
+  - joblib
+
+  # NLP, clause alignment, and graph/reference features
+  - spacy=3.8.*
+  - spacy-model-en_core_web_sm=3.8.*
+  - nltk
+  - rapidfuzz
+  - networkx
+  - sentence-transformers
+
+  # Classical and imbalanced machine learning
+  - scikit-learn
+  - imbalanced-learn
+  - xgboost
+  - optuna
+
+  # Transformer training and local/open-parameter inference. Conda-forge
+  # selects a compatible PyTorch build for the machine; see README for GPU notes.
+  - pytorch
+  - transformers
+  - datasets
+  - evaluate
+  - accelerate
+  - sentencepiece
+  - safetensors
+  - huggingface_hub
+
+  # Evaluation, statistics, and visualisation
+  - statsmodels
+  - matplotlib
+  - seaborn
+
+  # Experiment tracking and interactive research
+  - mlflow
+  - jupyterlab
+  - ipykernel
+
+  # Testing, quality, and reproducibility
   - pytest
+  - pytest-cov
+  - ruff
+  - mypy
+  - pre-commit
+  - conda-lock
+
+  # Packages not consistently available from Conda with the required APIs.
+  # Keep pip last so Conda resolves all compiled dependencies first.
   - pip:
       - ietfdata==0.8.1
+      - krippendorff>=0.8,<1
+      - litellm>=1,<2
+      - tiktoken>=0.9,<1
+      - xml2rfc>=3,<4

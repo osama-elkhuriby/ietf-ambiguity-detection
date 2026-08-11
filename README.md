@@ -67,6 +67,7 @@ The `corpus/`, `alignment/`, `models/`, and `eval/` directories contain the core
 ## Reproducible Environment
 
 The project uses **Conda** to provide a reproducible development environment across Linux and Windows.
+Install Miniforge, Miniconda, or Anaconda first if the `conda` command is not available.
 
 Two OS-specific environment files are maintained:
 
@@ -76,6 +77,17 @@ environment-windows.yml
 ```
 
 These files are the source of truth for the project's dependencies.
+
+The environment covers the complete proposal pipeline, not only the current corpus scripts:
+
+* IETF collection and XML/HTML parsing
+* pandas/Arrow data processing
+* spaCy, sentence-transformers, and fuzzy/graph-based clause alignment
+* scikit-learn, imbalance handling, XGBoost, and hyperparameter search
+* PyTorch, Hugging Face training, and local/open-parameter inference
+* provider-independent hosted-LLM calls and token accounting
+* agreement, calibration, statistical testing, plots, and MLflow tracking
+* Jupyter, tests, linting, type checking, and environment locking
 
 ### Linux
 
@@ -94,9 +106,16 @@ conda activate ietf-ambiguity-detection
 After creating the environment, verify the installation:
 
 ```bash
-python --version
-python -c "import ietfdata; print('ietfdata OK')"
+python scripts/check_environment.py
 ```
+
+The check is offline: it imports the main libraries, loads `en_core_web_sm`, and reports
+whether PyTorch sees a CPU or CUDA device. It does not download corpora or model weights.
+
+The environment intentionally does not force a CUDA toolkit version, so the same OS file
+can be solved on CPU-only and NVIDIA-equipped machines. Create it on the target machine and
+confirm the reported PyTorch device before transformer or local-LLM experiments. Model weights,
+IETF data, and hosted-provider credentials are runtime resources and are not bundled in Conda.
 
 > **Note:** The Linux and Windows environment files may contain platform-specific dependencies where required. Do not manually install or change project dependencies without updating the corresponding environment file.
 
