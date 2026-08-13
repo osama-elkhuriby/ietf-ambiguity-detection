@@ -34,6 +34,7 @@ from ietfdata.rfcindex import RFCIndex
 
 from paths import repo_path
 from rfc_ids import normalize_rfc_id
+from storage import to_repo_relative
 
 DRAFTS_METADATA_PATH = repo_path("corpus", "metadata", "drafts.json")
 RFCS_METADATA_PATH = repo_path("corpus", "metadata", "rfcs.json")
@@ -83,11 +84,19 @@ def fetch_rfc(rfc_id: str, index: RFCIndex) -> dict[str, Any]:
 
     text_url = None
     text_format = None
-    for fmt in ("TEXT", "TXT", "ASCII"):
+    preferred = ("TXT", "TEXT", "ASCII")
+    for fmt in preferred:
         text_url = entry.content_url(fmt)
         if text_url:
             text_format = fmt
             break
+    if text_url is None:
+        for fmt in entry.formats:
+            if fmt.upper() in {"TXT", "TEXT", "ASCII"}:
+                rfcnum = f"rfc{entry.doc_id[3:].lstrip('0') or '0'}"
+                text_url = f"https://www.rfc-editor.org/rfc/{rfcnum}.txt"
+                text_format = fmt
+                break
 
     if text_url:
         RAW_RFC_DIR.mkdir(parents=True, exist_ok=True)
@@ -95,8 +104,8 @@ def fetch_rfc(rfc_id: str, index: RFCIndex) -> dict[str, Any]:
         if resp.status_code == 200:
             txt_path = RAW_RFC_DIR / f"{rfc_id}.txt"
             txt_path.write_text(resp.text, encoding="utf-8", errors="replace")
-            record["local_txt_path"] = str(txt_path)
-            if text_format != "TEXT":
+            record["local_txt_path"] = to_repo_relative(txt_path)
+            if text_format not in {"TEXT", "TXT", "ASCII"}:
                 print(f"  note: using {text_format} format for {rfc_id} (formats: {entry.formats})")
         else:
             print(f"  warning: {rfc_id} .txt fetch returned HTTP {resp.status_code}")

@@ -33,12 +33,20 @@ from typing import Any
 import requests
 from ietfdata.datatracker import DataTracker
 
+from paths import REPO_ROOT, repo_path
+from storage import to_repo_relative
+
 try:
     from ietfdata.datatracker import DTBackendLive
 except ImportError:
-    from ietfdata.dt_backend import DTBackendLive
+    DTBackendLive = None  # type: ignore[misc, assignment]
 
-from paths import repo_path
+
+def make_datatracker() -> DataTracker:
+    """Support both legacy (DTBackendLive) and current ietfdata DataTracker APIs."""
+    if DTBackendLive is not None:
+        return DataTracker(DTBackendLive())
+    return DataTracker(cache_dir=str(REPO_ROOT))
 
 METADATA_PATH = repo_path("corpus", "metadata", "drafts.json")
 DEFAULT_RAW_DRAFTS_DIR = repo_path("corpus", "raw", "drafts")
@@ -56,7 +64,7 @@ def save_metadata(data: dict[str, Any]) -> None:
 
 
 def fetch_draft_history(draft_name: str, out_dir: Path) -> dict[str, Any]:
-    dt = DataTracker(DTBackendLive())
+    dt = make_datatracker()
     doc = dt.document_from_draft(draft_name)
     if doc is None:
         raise SystemExit(
@@ -114,7 +122,7 @@ def fetch_draft_history(draft_name: str, out_dir: Path) -> dict[str, Any]:
                     errors="replace"
                 )
 
-                record["local_txt_path"] = str(raw_path)
+                record["local_txt_path"] = to_repo_relative(raw_path)
                 print(f"    saved: {raw_path}")
                 if raw_type not in {".txt", "txt", "text"}:
                     print(f"    note: saved {raw_type} source for rev {sub.rev}")

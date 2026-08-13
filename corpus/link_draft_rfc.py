@@ -27,6 +27,7 @@ from pathlib import Path
 from typing import Any
 
 from paths import repo_path
+from rfc_ids import normalize_rfc_id
 
 DRAFTS_METADATA_PATH = repo_path("corpus", "metadata", "drafts.json")
 RFCS_METADATA_PATH = repo_path("corpus", "metadata", "rfcs.json")
@@ -51,19 +52,23 @@ def build_links(drafts: dict[str, Any], rfcs: dict[str, Any]) -> list[dict[str, 
         if not draft_name:
             continue
 
-        draft_to_rfc_from_index[draft_name] = rfc_id
+        draft_to_rfc_from_index[draft_name] = normalize_rfc_id(rfc_id)
         normalized_name = normalize_draft_name(draft_name)
         if normalized_name != draft_name and normalized_name not in draft_to_rfc_from_index:
-            draft_to_rfc_from_index[normalized_name] = rfc_id
+            draft_to_rfc_from_index[normalized_name] = normalize_rfc_id(rfc_id)
 
     links: list[dict[str, Any]] = []
 
     for draft_name, draft_record in drafts.items():
         datatracker_rfc_number = draft_record.get("rfc_number")
-        datatracker_rfc_id = f"rfc{datatracker_rfc_number}" if datatracker_rfc_number else None
+        datatracker_rfc_id = (
+            normalize_rfc_id(str(datatracker_rfc_number)) if datatracker_rfc_number else None
+        )
         index_rfc_id = draft_to_rfc_from_index.get(draft_name)
         if index_rfc_id is None:
             index_rfc_id = draft_to_rfc_from_index.get(normalize_draft_name(draft_name))
+        if index_rfc_id is not None:
+            index_rfc_id = normalize_rfc_id(index_rfc_id)
 
         if datatracker_rfc_id is None and index_rfc_id is None:
             continue  # this draft hasn't been linked to an RFC by either source; not an error

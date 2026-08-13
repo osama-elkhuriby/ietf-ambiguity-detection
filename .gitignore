@@ -13,10 +13,22 @@ venv/
 .env
 .env.*
 
-# Re-fetchable corpus blobs (metadata JSON under corpus/metadata/ may be committed)
-corpus/raw/
+# ---------------------------------------------------------------------------
+# Corpus data policy (Stage 1)
+#
+# COMMITTED (shared with collaborators):
+#   corpus/metadata/          manifests, manifest CSV, audit JSON
+#   corpus/raw/drafts/          Internet-Draft revision plaintext/XML
+#   corpus/raw/rfcs/*.txt     RFC plaintext
+#   corpus/raw/errata/
+#
+# IGNORED (re-fetchable local caches — not needed on other machines):
+#   corpus/raw/rfcs/.rfcindex-cache/
+#   ietf-dt-cache.sqlite        Datatracker HTTP cache (see *.sqlite below)
+# ---------------------------------------------------------------------------
+corpus/raw/rfcs/.rfcindex-cache/
 
-# Pilot-local data
+# Pilot-local experiment mirrors (not the canonical corpus tree)
 experiments/pilot/data/raw/
 experiments/pilot/data/processed/
 
@@ -27,6 +39,7 @@ experiments/pilot/data/processed/
 .DS_Store
 Thumbs.db
 
+# Local Datatracker / tool caches
 *.sqlite
 
 *.jsonl

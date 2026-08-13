@@ -112,6 +112,15 @@ def main() -> None:
 
     print("\nDone.")
 
+    import sync_metadata
+
+    print("\n=== Post-build metadata sync ===")
+    result = sync_metadata.sync_all(refresh_manifest=True, write_audit=True)
+    print(
+        f"Links: high={result['links_high']} single-source={result['links_single_source']} "
+        f"conflict={result['links_conflict']}"
+    )
+
 
 if __name__ == "__main__":
     main()

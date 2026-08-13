@@ -106,3 +106,69 @@ pilot crunch.
 **Owner:** Osama Elkhuribi
 
 ---
+
+## 2026-08-13 — Phase-2 curated corpus manifest (12 RFC families)
+
+**Decision:** Use `corpus/metadata/final_rfc_manifest.csv` as the canonical target list
+for Phase-2 corpus collection, spanning transport, routing, DNS, security, and application
+families (QUIC/TCP, OSPF/BGP/IPv6, SVCB/HTTPS, TLS, HTTP).
+
+**Why:** Gives reproducible coverage across protocol areas named in the proposal, with one
+row per published RFC family, explicit revision counts, and on-disk provenance columns
+refreshed by `sync_metadata.py`.
+
+**Rejected alternatives:** Ad-hoc per-experiment draft lists — harder to audit and compare
+across alignment/modeling stages.
+
+**Owner:** Osama Elkhuribi
+
+---
+
+## 2026-08-13 — Structured corpus storage and repo-relative paths
+
+**Decision:** Store raw plaintext under `corpus/raw/{drafts,rfcs,errata}/` and record
+`local_txt_path` values repo-relative to the project root via `corpus/storage.py`.
+
+**Why:** Metadata JSON is committed; raw blobs are gitignored and re-fetchable. Relative
+paths survive machine moves and keep manifests portable across team members' checkouts.
+
+**Rejected alternatives:** Absolute paths in metadata — caused silent breakage when the
+repo moved between machines.
+
+**Owner:** Osama Elkhuribi
+
+---
+
+## 2026-08-13 — RFC-only treatment for pre-Datatracker routing standards
+
+**Decision:** Mark `draft-ietf-ospf-vers2` (RFC2328) and `draft-ietf-idr-bgp4` (RFC4271)
+as **`rfc-only`** collection mode. Collect RFC plaintext and errata, but do not treat
+missing Datatracker submission history as a corpus gap.
+
+**Why:** The IETF Datatracker returns zero submissions for these pre-2006 documents.
+Revision-level draft alignment is not available from the official archive; RFC-level
+analysis and errata remain valid.
+
+**Rejected alternatives:** Excluding legacy routing RFCs entirely — they are important
+routing coverage and have rich errata histories.
+
+**Owner:** Osama Elkhuribi
+
+---
+
+## 2026-08-13 — Backfill `rfc_number` from the RFC index when Datatracker omits it
+
+**Decision:** After fetch, run `corpus/sync_metadata.py` to populate `drafts.json`
+`rfc_number` from `rfcs.json` (RFC index `draft` field) when Datatracker leaves it null,
+then rebuild `draft_rfc_links.json` for high-confidence joins.
+
+**Why:** Published drafts fetched by family name often have `rfc_number=null` in Datatracker
+even though the RFC index cross-reference is authoritative. Backfilling avoids false
+`single-source` links without extra network calls.
+
+**Rejected alternatives:** Accepting permanent `single-source` links — correct but weaker
+provenance for thesis reproducibility reporting.
+
+**Owner:** Osama Elkhuribi
+
+---
