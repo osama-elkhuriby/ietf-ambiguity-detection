@@ -3,6 +3,7 @@
 Methodology and decision history live in:
 
 - **`../DECISIONS.md`** — dated choices (thesis methodology raw material)
+- **`literature_review_draft.md`** — first working literature-review synthesis and benchmark implications
 - **`../experiments/pilot/docs/annotation_guide_v0.md`** — clause labeling (pilot → Phase 2)
 - **`../experiments/pilot/docs/pilot_memo_template.md`** — pilot outcomes for advisors
 
