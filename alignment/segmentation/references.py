@@ -18,6 +18,12 @@ EXPLICIT_RFC_RE = re.compile(
     r"(?:of|in)\s+RFC\s*(?P<number>\d{3,5})\b",
     re.IGNORECASE,
 )
+INTERNAL_SECTION_RE = re.compile(
+    r"\b(?:Sections?|Appendix)\s+"
+    r"(?P<section>(?:\d+(?:\.\d+)*(?:\([A-Za-z0-9]+\))?|[A-Z](?:\.\d+)*))"
+    r"(?=[\s,.;:)]|$)",
+    re.IGNORECASE,
+)
 TAG_RE = re.compile(r"\[(?P<tag>[A-Za-z0-9._-]+)\]")
 RFC_RE = re.compile(r"\bRFC\s*(?P<number>\d{3,5})\b", re.IGNORECASE)
 REFERENCE_DEFINITION_RE = re.compile(r"^\[(?P<tag>[^\]]+)\]\s+(?P<body>.+)$", re.DOTALL)
@@ -34,7 +40,12 @@ def _deduplicate(references: Iterable[Reference]) -> list[Reference]:
     return result
 
 
-def extract_text_references(text: str) -> list[Reference]:
+def extract_text_references(
+    text: str,
+    document_id: str | None = None,
+    *,
+    include_symbolic_tags: bool = True,
+) -> list[Reference]:
     """Extract explicit section references and symbolic/RFC tags from rendered text."""
     references: list[Reference] = []
     explicit_spans: list[tuple[int, int]] = []
@@ -64,11 +75,24 @@ def extract_text_references(text: str) -> list[Reference]:
     def inside_explicit_span(start: int) -> bool:
         return any(span_start <= start < span_end for span_start, span_end in explicit_spans)
 
-    for match in TAG_RE.finditer(text):
-        if not inside_explicit_span(match.start()):
-            references.append(
-                Reference(target=match.group("tag"), kind="text", display_text=match.group(0))
-            )
+    if document_id is not None:
+        for match in INTERNAL_SECTION_RE.finditer(text):
+            if not inside_explicit_span(match.start()):
+                references.append(
+                    Reference(
+                        target=document_id,
+                        target_section=match.group("section").rstrip("."),
+                        kind="text",
+                        display_text=match.group(0),
+                    )
+                )
+
+    if include_symbolic_tags:
+        for match in TAG_RE.finditer(text):
+            if not inside_explicit_span(match.start()):
+                references.append(
+                    Reference(target=match.group("tag"), kind="text", display_text=match.group(0))
+                )
 
     for match in RFC_RE.finditer(text):
         if not inside_explicit_span(match.start()):
@@ -98,4 +122,3 @@ def parse_text_reference_definition(text: str) -> ReferenceDefinition | None:
         document_id=f"RFC{rfc_match.group('number')}" if rfc_match else None,
         target_url=url_match.group(0).rstrip(".,") if url_match else None,
     )
-

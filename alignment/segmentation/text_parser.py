@@ -70,11 +70,13 @@ UNNUMBERED_SECTIONS: dict[str, tuple[str, str]] = {
     "references": ("references", "references"),
     "normative references": ("references.normative", "references"),
     "informative references": ("references.informative", "references"),
-    "acknowledgements": ("acknowledgements", "body"),
-    "acknowledgments": ("acknowledgements", "body"),
-    "author's address": ("authors-addresses", "body"),
-    "authors' addresses": ("authors-addresses", "body"),
-    "authors’ addresses": ("authors-addresses", "body"),
+    "acknowledgements": ("acknowledgements", "back"),
+    "acknowledgments": ("acknowledgements", "back"),
+    "author's address": ("authors-addresses", "back"),
+    "authors' addresses": ("authors-addresses", "back"),
+    "authors’ addresses": ("authors-addresses", "back"),
+    "contributors": ("contributors", "back"),
+    "index": ("index", "back"),
     "security considerations": ("security-considerations", "body"),
     "iana considerations": ("iana-considerations", "body"),
 }
@@ -116,14 +118,25 @@ def _section_heading(
     line: str,
     document_type: Literal["internet-draft", "rfc"],
     known_section_ids: set[str],
+    previous_line_blank: bool,
 ) -> _Heading | None:
     unnumbered = UNNUMBERED_SECTIONS.get(line.strip().casefold())
-    if document_type == "rfc" and unnumbered is not None:
+    if (
+        document_type == "rfc"
+        and unnumbered is not None
+        and previous_line_blank
+        and line == line.lstrip()
+    ):
         identifier, scope = unnumbered
         return _Heading(identifier, line.strip(), analysis_scope=scope, synthetic=True)
 
     match = SECTION_RE.match(line)
     if not match:
+        return None
+    # Rendered RFC prose and pseudocode frequently wrap after text such as
+    # "Section" and leave a continuation line beginning with ``9.3.2.``.
+    # Real RFC/I-D headings are separated from prior content by a blank line.
+    if not previous_line_blank:
         return None
     title = match.group("title").strip()
     if TOC_DOTS_RE.search(title):
@@ -151,8 +164,14 @@ def _build_section_tree(
     current: _SectionBuilder | None = None
     known_section_ids: set[str] = set()
 
-    for line_number, line in lines:
-        heading = _section_heading(line, document_type, known_section_ids)
+    for index, (line_number, line) in enumerate(lines):
+        previous_line_blank = index == 0 or not lines[index - 1][1].strip()
+        heading = _section_heading(
+            line,
+            document_type,
+            known_section_ids,
+            previous_line_blank,
+        )
         if heading is None:
             if current is not None:
                 current.content.append((line_number, line))
@@ -257,12 +276,17 @@ def _convert_section(
         if not text:
             continue
         counter[0] += 1
+        reference_definition = (
+            parse_text_reference_definition(text) if scope == "references" else None
+        )
         section.blocks.append(
             Block(
                 block_id=block_identifier(document_id, builder.identifier, counter[0]),
                 index=counter[0],
                 block_type=(
-                    "artwork"
+                    "reference"
+                    if reference_definition is not None
+                    else "artwork"
                     if structural
                     else "list_item"
                     if LIST_ITEM_RE.match(raw_lines[0])
@@ -272,7 +296,11 @@ def _convert_section(
                 source_location=SourceLocation(
                     line_start=paragraph[0][0], line_end=paragraph[-1][0]
                 ),
-                references=extract_text_references(text),
+                references=extract_text_references(
+                    text,
+                    document_id,
+                    include_symbolic_tags=not structural,
+                ),
             )
         )
     if builder.content:

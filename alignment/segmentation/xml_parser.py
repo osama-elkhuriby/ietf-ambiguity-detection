@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import re
 from pathlib import Path
 
 from lxml import etree  # type: ignore[import-untyped]
@@ -35,8 +36,46 @@ def _first_child(element: etree._Element, name: str) -> etree._Element | None:
 
 
 def _element_text(element: etree._Element, multiline: bool = False) -> str:
-    text = "".join(element.itertext())
+    text = _inline_text(element)
     return normalize_multiline(text) if multiline else normalize_prose(text)
+
+
+def _reference_placeholder(element: etree._Element) -> str:
+    """Return the text XML2RFC would visibly derive for an empty reference."""
+    if element.get("format") == "none":
+        return ""
+
+    derived_content = element.get("derivedContent")
+    target = element.get("target") or ""
+    section = element.get("section")
+    name = _local_name(element)
+    if derived_content:
+        return derived_content
+    if name == "eref":
+        return target
+    if section and target:
+        return f"Section {section} of [{target}]"
+    if target:
+        return f"[{target}]"
+    return ""
+
+
+def _inline_text(element: etree._Element) -> str:
+    """Render inline XML while retaining the visible form of empty references."""
+    parts = [element.text or ""]
+    for child in element:
+        if not isinstance(child.tag, str):
+            parts.append(child.text or "")
+            parts.append(child.tail or "")
+            continue
+
+        name = _local_name(child)
+        child_text = _inline_text(child)
+        if name in {"xref", "relref", "eref"} and not child_text.strip():
+            child_text = _reference_placeholder(child)
+        parts.append(child_text)
+        parts.append(child.tail or "")
+    return "".join(parts)
 
 
 def _xpath(tree: etree._ElementTree, element: etree._Element) -> str:
@@ -59,7 +98,9 @@ def _extract_xml_references(element: etree._Element) -> list[Reference]:
                 target=target,
                 target_section=descendant.get("section"),
                 kind=name,  # type: ignore[arg-type]
-                display_text=_element_text(descendant) or None,
+                display_text=(
+                    _element_text(descendant) or _reference_placeholder(descendant) or None
+                ),
             )
         )
     return references
@@ -71,15 +112,79 @@ def _text_without_children(element: etree._Element, excluded: set[str]) -> str:
         if not isinstance(child.tag, str):
             continue
         if _local_name(child) not in excluded:
-            parts.append("".join(child.itertext(with_tail=False)))
+            parts.append(_inline_text(child))
         parts.append(child.tail or "")
     return normalize_prose("".join(parts))
+
+
+def _text_without_descendants(element: etree._Element, excluded: set[str]) -> str:
+    """Render an element while omitting nested structural containers."""
+
+    def render(current: etree._Element) -> str:
+        parts = [current.text or ""]
+        for child in current:
+            if not isinstance(child.tag, str):
+                parts.append(child.text or "")
+            elif _local_name(child) not in excluded:
+                child_text = render(child)
+                if _local_name(child) in {"xref", "relref", "eref"} and not child_text.strip():
+                    child_text = _reference_placeholder(child)
+                parts.append(child_text)
+            parts.append(child.tail or "")
+        return "".join(parts)
+
+    return normalize_prose(render(element))
+
+
+def _table_text(element: etree._Element) -> str:
+    """Render XML2RFC v2 and v3 tables without collapsing cell boundaries."""
+    name = _local_name(element)
+    rows: list[str] = []
+    if name == "table":
+        for row in element.iterdescendants():
+            if not isinstance(row.tag, str) or _local_name(row) != "tr":
+                continue
+            cells = [
+                _element_text(cell)
+                for cell in row
+                if isinstance(cell.tag, str) and _local_name(cell) in {"th", "td"}
+            ]
+            if cells:
+                rows.append(" | ".join(cells))
+    else:
+        headings = [_element_text(column) for column in _children(element, "ttcol")]
+        cells = [_element_text(cell) for cell in _children(element, "c")]
+        if headings:
+            rows.append(" | ".join(headings))
+            width = len(headings)
+            rows.extend(
+                " | ".join(cells[index : index + width])
+                for index in range(0, len(cells), width)
+            )
+        elif cells:
+            rows.extend(cells)
+    return normalize_multiline("\n".join(rows))
 
 
 def _block_elements(
     section: etree._Element,
 ) -> list[tuple[etree._Element, str, str | None]]:
     result: list[tuple[etree._Element, str, str | None]] = []
+
+    def add_nested_lists(container: etree._Element) -> None:
+        for nested in container:
+            if not isinstance(nested.tag, str):
+                continue
+            if _local_name(nested) in {"ul", "ol", "dl", "list"}:
+                add_element(nested)
+            else:
+                add_nested_lists(nested)
+
+    def add_list_item(item: etree._Element) -> None:
+        item_text = _text_without_descendants(item, {"ul", "ol", "dl", "list"})
+        if item_text:
+            result.append((item, "list_item", item_text))
+        add_nested_lists(item)
 
     def add_element(child: etree._Element) -> None:
         if not isinstance(child.tag, str):
@@ -97,13 +202,18 @@ def _block_elements(
                 result.append((child, "paragraph", surrounding_text))
             for legacy_list in legacy_lists:
                 for item in _children(legacy_list, "t"):
-                    item_text = _element_text(item)
+                    item_text = _text_without_descendants(item, {"list"})
                     hanging_term = item.get("hangText")
                     if hanging_term:
                         item_text = f"{normalize_prose(hanging_term)}: {item_text}"
                     result.append((item, "list_item", item_text))
+                    add_nested_lists(item)
+        elif name == "list":
+            for item in _children(child, "t"):
+                add_list_item(item)
         elif name in {"ul", "ol"}:
-            result.extend((item, "list_item", None) for item in _children(child, "li"))
+            for item in _children(child, "li"):
+                add_list_item(item)
         elif name == "dl":
             terms = _children(child, "dt")
             definitions = _children(child, "dd")
@@ -115,21 +225,16 @@ def _block_elements(
         elif name in {"artwork", "sourcecode"}:
             result.append((child, name, None))
         elif name in {"table", "texttable"}:
-            result.append((child, "table", None))
+            result.append((child, "table", _table_text(child)))
         elif name == "figure":
-            for nested_text in child.iterdescendants():
-                if (
-                    isinstance(nested_text.tag, str)
-                    and _local_name(nested_text) in {"preamble", "postamble"}
-                ):
-                    result.append((nested_text, "paragraph", None))
-            nested = [
-                descendant
-                for descendant in child.iterdescendants()
-                if isinstance(descendant.tag, str)
-                and _local_name(descendant) in {"artwork", "sourcecode"}
-            ]
-            result.extend((descendant, _local_name(descendant), None) for descendant in nested)
+            for nested in child.iterdescendants():
+                if not isinstance(nested.tag, str):
+                    continue
+                nested_name = _local_name(nested)
+                if nested_name in {"preamble", "postamble"}:
+                    result.append((nested, "paragraph", None))
+                elif nested_name in {"artwork", "sourcecode"}:
+                    result.append((nested, nested_name, None))
         elif name in {"aside", "blockquote"}:
             for nested in child:
                 add_element(nested)
@@ -148,8 +253,12 @@ def _make_blocks(
 ) -> list[Block]:
     blocks: list[Block] = []
     for block_element, block_type, supplied_text in _block_elements(element):
-        multiline = block_type in {"artwork", "sourcecode"}
-        text = supplied_text or _element_text(block_element, multiline=multiline)
+        multiline = block_type in {"artwork", "sourcecode", "table"}
+        text = (
+            supplied_text
+            if supplied_text is not None
+            else _element_text(block_element, multiline=multiline)
+        )
         if not text:
             continue
         counter[0] += 1
@@ -177,12 +286,13 @@ def _parse_section(
 ) -> Section:
     name_element = _first_child(element, "name")
     title = _element_text(name_element) if name_element is not None else element.get("title", "")
+    resolved_scope = _body_section_scope(title, analysis_scope)
     section = Section(
         section_id=section_id,
         title=title or "Untitled",
         path=[*parent_path, section_id],
         anchor=element.get("anchor"),
-        analysis_scope=analysis_scope,  # type: ignore[arg-type]
+        analysis_scope=resolved_scope,  # type: ignore[arg-type]
         source_location=SourceLocation(xpath=_xpath(tree, element)),
     )
     section.blocks = _make_blocks(tree, element, document_id, section_id, counter)
@@ -195,7 +305,7 @@ def _parse_section(
             f"{section_id}.{index}",
             section.path,
             counter,
-            analysis_scope,
+            resolved_scope,
         )
         for index, child in enumerate(child_elements, start=1)
     ]
@@ -225,6 +335,52 @@ def _reference_definition(element: etree._Element) -> ReferenceDefinition | None
     )
 
 
+def _external_entity_urls(tree: etree._ElementTree) -> dict[str, str | None]:
+    dtd = tree.docinfo.internalDTD
+    if dtd is None:
+        return {}
+    return {entity.name: entity.system_url for entity in dtd.iterentities()}
+
+
+def _external_reference_definition(
+    element: etree._Entity,
+    entity_urls: dict[str, str | None],
+) -> ReferenceDefinition | None:
+    tag = element.name
+    if not tag:
+        return None
+
+    document_id = None
+    rfc_match = re.fullmatch(r"RFC0*(\d+)", tag, re.IGNORECASE)
+    if rfc_match:
+        document_id = f"RFC{int(rfc_match.group(1))}"
+    elif tag.startswith("I-D."):
+        document_id = f"draft-{tag.removeprefix('I-D.')}"
+
+    return ReferenceDefinition(
+        tag=tag,
+        document_id=document_id,
+        target_url=entity_urls.get(tag),
+    )
+
+
+def _body_section_scope(title: str, default: str = "body") -> str:
+    if default != "body":
+        return default
+    normalized = title.casefold().strip()
+    if normalized in {
+        "acknowledgements",
+        "acknowledgments",
+        "author's address",
+        "authors' addresses",
+        "authors’ addresses",
+        "contributors",
+        "index",
+    }:
+        return "back"
+    return default
+
+
 def parse_xml_document(path: Path) -> Document:
     """Parse an XML2RFC source file into the canonical section/block tree."""
     parser = etree.XMLParser(
@@ -235,7 +391,10 @@ def parse_xml_document(path: Path) -> Document:
         recover=False,
         huge_tree=False,
     )
-    tree = etree.parse(str(path), parser)
+    try:
+        tree = etree.parse(str(path), parser)
+    except etree.XMLSyntaxError as exc:
+        raise ValueError(f"Invalid XML in {path}: {exc}") from exc
     root = tree.getroot()
     if _local_name(root) != "rfc":
         raise ValueError(f"Expected an <rfc> root element in {path}")
@@ -278,12 +437,17 @@ def parse_xml_document(path: Path) -> Document:
             )
 
     definitions: list[ReferenceDefinition] = []
+    entity_urls = _external_entity_urls(tree)
     back = _first_child(root, "back")
     if back is not None:
         reference_groups = _children(back, "references")
         for group_index, group in enumerate(reference_groups, start=1):
             name_element = _first_child(group, "name")
-            group_title = _element_text(name_element) if name_element is not None else "References"
+            group_title = (
+                _element_text(name_element)
+                if name_element is not None
+                else group.get("title") or "References"
+            )
             section_id = "references" if len(reference_groups) == 1 else f"references.{group_index}"
             reference_section = Section(
                 section_id=section_id,
@@ -293,11 +457,15 @@ def parse_xml_document(path: Path) -> Document:
                 source_location=SourceLocation(xpath=_xpath(tree, group)),
             )
             for reference_element in group.iter():
-                if not isinstance(reference_element.tag, str):
+                if isinstance(reference_element, etree._Entity):
+                    definition = _external_reference_definition(reference_element, entity_urls)
+                elif (
+                    isinstance(reference_element.tag, str)
+                    and _local_name(reference_element) in {"reference", "referencegroup"}
+                ):
+                    definition = _reference_definition(reference_element)
+                else:
                     continue
-                if _local_name(reference_element) not in {"reference", "referencegroup"}:
-                    continue
-                definition = _reference_definition(reference_element)
                 if definition is None:
                     continue
                 definitions.append(definition)
@@ -311,7 +479,14 @@ def parse_xml_document(path: Path) -> Document:
                         index=counter[0],
                         block_type="reference",
                         text=display,
-                        source_location=SourceLocation(xpath=_xpath(tree, reference_element)),
+                        source_location=(
+                            SourceLocation(
+                                line_start=reference_element.sourceline,
+                                line_end=reference_element.sourceline,
+                            )
+                            if isinstance(reference_element, etree._Entity)
+                            else SourceLocation(xpath=_xpath(tree, reference_element))
+                        ),
                     )
                 )
             sections.append(reference_section)

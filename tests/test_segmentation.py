@@ -36,9 +36,16 @@ Internet-Draft                  Example                    January 2026
 
    The client uses the behavior defined in Section 4.2 of [HTTP].
 
+   The client retries as described in Section 1.1.
+   The Section field identifies the selected protocol section.
+
    1.  This numbered sentence is a list item, not a new section.
 
    2.  It remains in the Introduction section.
+
+      vector[sender] = {
+        state: ready
+      }
 
 1.1.  Requirements
 
@@ -94,9 +101,55 @@ XML_V2_DRAFT = """<?xml version="1.0" encoding="utf-8"?>
         </list>
       </t>
       <aside><t>An explanatory aside.</t></aside>
+      <texttable>
+        <ttcol>Mode</ttcol><ttcol>Meaning</ttcol>
+        <c>safe</c><c>Validate input</c>
+        <c>fast</c><c>Skip optional work</c>
+      </texttable>
     </section>
   </middle>
   <back/>
+</rfc>
+"""
+
+
+XML_EXTERNAL_REFERENCE_DRAFT = """<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE rfc [
+  <!ENTITY RFC2119 SYSTEM "https://bib.ietf.org/public/rfc/bibxml/reference.RFC.2119.xml">
+]>
+<rfc docName="draft-external-reference-00">
+  <front><title>External Reference Example</title></front>
+  <middle>
+    <section title="Requirements">
+      <t>The key words are defined by <xref target="RFC2119"/>.</t>
+    </section>
+  </middle>
+  <back>
+    <references title="Normative References">&RFC2119;</references>
+  </back>
+</rfc>
+"""
+
+
+XML_STRUCTURE_EDGE_DRAFT = """<?xml version="1.0" encoding="utf-8"?>
+<rfc docName="draft-structure-edge-00" version="3">
+  <front><title>Structure Edge Cases</title></front>
+  <middle>
+    <section><name>Structures</name>
+      <figure>
+        <preamble>Before the diagram.</preamble>
+        <artwork><![CDATA[client --> server]]></artwork>
+        <postamble>After the diagram.</postamble>
+      </figure>
+      <ul>
+        <li>Outer item.<ul><li>Inner item.</li></ul></li>
+      </ul>
+      <table>
+        <thead><tr><th>Field</th><th>Meaning</th></tr></thead>
+        <tbody><tr><td>TYPE</td><td>Message type</td></tr></tbody>
+      </table>
+    </section>
+  </middle>
 </rfc>
 """
 
@@ -135,8 +188,23 @@ def test_text_parser_extracts_references_and_definitions(tmp_path: Path) -> None
 
     assert reference.target == "HTTP"
     assert reference.target_section == "4.2"
+    internal_reference = introduction.blocks[1].references[0]
+    assert internal_reference.target == "draft-example-00"
+    assert internal_reference.target_section == "1.1"
+    assert len(introduction.blocks[1].references) == 1
     assert document.reference_definitions[0].tag == "HTTP"
     assert document.reference_definitions[0].document_id == "RFC9110"
+    assert document.sections[2].children[0].blocks[0].block_type == "reference"
+
+
+def test_text_artwork_does_not_treat_protocol_syntax_as_a_citation(tmp_path: Path) -> None:
+    source = _write(tmp_path / "draft-example-00.txt", TEXT_DRAFT)
+
+    document = parse_document(source)
+    artwork = next(block for block in document.sections[1].blocks if block.block_type == "artwork")
+
+    assert "vector[sender]" in artwork.text
+    assert artwork.references == []
 
 
 def test_xml_parser_preserves_structure_and_xref_metadata(tmp_path: Path) -> None:
@@ -157,6 +225,8 @@ def test_xml_parser_preserves_structure_and_xref_metadata(tmp_path: Path) -> Non
     assert introduction.children[0].blocks[0].block_type == "sourcecode"
     reference = introduction.blocks[0].references[0]
     assert (reference.target, reference.target_section, reference.kind) == ("HTTP", "4.2", "xref")
+    assert reference.display_text == "Section 4.2 of [HTTP]"
+    assert "Section 4.2 of [HTTP]" in introduction.blocks[0].text
     assert document.reference_definitions[0].document_id == "RFC9110"
     assert document.sections[-1].analysis_scope == "appendix"
     assert all(block.source_location.xpath for block in document.iter_blocks())
@@ -173,14 +243,47 @@ def test_xml2rfc_v2_nested_lists_and_asides_are_preserved(tmp_path: Path) -> Non
         "list_item",
         "list_item",
         "paragraph",
+        "table",
     ]
     assert [block.text for block in blocks] == [
         "Available modes:",
-        "safe: A client follows .",
+        "safe: A client follows [RULES].",
         "fast: A client skips optional work.",
         "An explanatory aside.",
+        "Mode | Meaning\nsafe | Validate input\nfast | Skip optional work",
     ]
     assert blocks[1].references[0].target == "RULES"
+
+
+def test_xml2rfc_v2_external_reference_entities_are_preserved(tmp_path: Path) -> None:
+    source = _write(tmp_path / "draft-external-reference-00.xml", XML_EXTERNAL_REFERENCE_DRAFT)
+
+    document = parse_document(source)
+
+    assert document.sections[-1].title == "Normative References"
+    assert document.sections[-1].blocks[0].text == "[RFC2119]"
+    assert document.reference_definitions[0].tag == "RFC2119"
+    assert document.reference_definitions[0].document_id == "RFC2119"
+    target_url = document.reference_definitions[0].target_url
+    assert target_url is not None
+    assert target_url.endswith("reference.RFC.2119.xml")
+    assert "[RFC2119]" in document.sections[0].blocks[0].text
+
+
+def test_xml_figures_nested_lists_and_tables_preserve_reading_order(tmp_path: Path) -> None:
+    source = _write(tmp_path / "draft-structure-edge-00.xml", XML_STRUCTURE_EDGE_DRAFT)
+
+    document = parse_document(source)
+    blocks = document.sections[0].blocks
+
+    assert [(block.block_type, block.text) for block in blocks] == [
+        ("paragraph", "Before the diagram."),
+        ("artwork", "client --> server"),
+        ("paragraph", "After the diagram."),
+        ("list_item", "Outer item."),
+        ("list_item", "Inner item."),
+        ("table", "Field | Meaning\nTYPE | Message type"),
+    ]
 
 
 def test_parse_is_deterministic(tmp_path: Path) -> None:
@@ -203,6 +306,17 @@ def test_cli_writes_canonical_json(tmp_path: Path, capsys: pytest.CaptureFixture
     assert payload["document_id"] == "draft-example-01"
     assert payload["sections"][1]["title"] == "Introduction"
     assert "Parsed draft-example-01" in capsys.readouterr().err
+
+
+def test_cli_reports_malformed_xml_without_a_traceback(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    source = _write(tmp_path / "draft-malformed-00.xml", "<rfc><middle></rfc>")
+
+    result = segmentation_main([str(source)])
+
+    assert result == 2
+    assert "error:" in capsys.readouterr().err
 
 
 def test_parser_rejects_unsupported_input(tmp_path: Path) -> None:
@@ -280,6 +394,7 @@ def test_all_collected_rfcs_match_metadata_and_have_source_locations() -> None:
     for document_id, record in metadata.items():
         document = parse_document(Path(record["local_txt_path"]))
         blocks = list(document.iter_blocks())
+        section_paths = [tuple(section.path) for section in document.iter_sections()]
 
         assert document.document_type == "rfc", document_id
         assert document.document_id == document_id
@@ -290,6 +405,18 @@ def test_all_collected_rfcs_match_metadata_and_have_source_locations() -> None:
         assert blocks, document_id
         assert all(block.source_location.line_start is not None for block in blocks)
         assert len({block.block_id for block in blocks}) == len(blocks)
+        assert len(set(section_paths)) == len(section_paths), document_id
+
+
+def test_rfc_toc_back_matter_is_not_promoted_to_real_sections() -> None:
+    document = parse_document(Path("corpus/raw/rfcs/RFC9000.txt"))
+    authors_sections = [
+        section for section in document.iter_sections() if section.section_id == "authors-addresses"
+    ]
+
+    assert len(authors_sections) == 1
+    assert authors_sections[0].source_location.line_start == 8474
+    assert authors_sections[0].analysis_scope == "back"
 
 
 def test_rfc_profile_rejects_xml_input(tmp_path: Path) -> None:

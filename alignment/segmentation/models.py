@@ -8,6 +8,7 @@ from typing import Any, Literal
 
 SourceFormat = Literal["text", "xml"]
 DocumentType = Literal["internet-draft", "rfc"]
+AnalysisScope = Literal["body", "front", "back", "references", "appendix"]
 BlockType = Literal[
     "paragraph",
     "list_item",
@@ -71,7 +72,7 @@ class Section:
     blocks: list[Block] = field(default_factory=list)
     children: list[Section] = field(default_factory=list)
     anchor: str | None = None
-    analysis_scope: Literal["body", "front", "references", "appendix"] = "body"
+    analysis_scope: AnalysisScope = "body"
 
     def iter_sections(self) -> Iterator[Section]:
         yield self

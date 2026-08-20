@@ -11,11 +11,13 @@ computation this stage needs.
 Implemented foundation:
 
 - deterministic Internet-Draft TXT/XML and RFC TXT parsing in `segmentation/`
-- a shared document → section → block tree with stable block IDs and source locations
+- a shared document → section → block tree with deterministic per-source block IDs and locations
 - profile-aware handling of legacy indented RFC headings and unnumbered RFC back matter
 - RFC number, title, publication date, and category extraction
-- XML2RFC `<xref>`/`<relref>`/`<eref>` and rendered-text reference extraction
-- preservation of paragraphs, list items, definitions, artwork, source code, tables, and reference definitions
+- XML2RFC `<xref>`/`<relref>`/`<eref>`, internal-section, and rendered-text reference extraction
+- XML2RFC v2 external bibliography-entity stubs when network access is disabled
+- preservation of paragraphs, nested list items, definitions, figure order, source code,
+  table cells, and reference definitions
 
 Planned next contents:
 
@@ -41,7 +43,8 @@ sections, content blocks, references, and warnings is written to stderr.
 
 The parser removes only plaintext rendering noise such as repeated page headers
 and footers. References, appendices, Security Considerations, and IANA
-Considerations are retained and marked by `analysis_scope`; later stages decide
+Considerations are retained and marked by `analysis_scope` (`front`, `body`,
+`references`, `appendix`, or `back`); later stages decide
 which scopes to analyze.
 
 RFC plaintext is detected from an `RFC<number>.txt` filename or its title-page
