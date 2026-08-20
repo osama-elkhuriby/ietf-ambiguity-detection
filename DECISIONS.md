@@ -172,3 +172,27 @@ provenance for thesis reproducibility reporting.
 **Owner:** Osama Elkhuribi
 
 ---
+
+## 2026-08-20 — Format-independent section/block parser before RFCScope partitioning
+
+**Decision:** Parse rendered Internet-Draft plaintext, XML2RFC source, and RFC Editor
+plaintext into one canonical document → section → block tree before clause refinement
+or token-aware partitioning. Use separate plaintext profiles so legacy indented RFC
+subsections and unnumbered reference groups are preserved. Preserve source locations and
+reference metadata, retain substantive back matter, and remove only rendering artifacts
+at this stage.
+
+**Why:** The collected revision histories mix `.txt` and `.xml` sources. RFCScope relies
+on the natural RFC section hierarchy for coherent partitioning, while this project also
+needs smaller provenance-bearing units for revision alignment. A shared loss-aware tree
+supports both uses without tying downstream analysis to one source format.
+
+**Rejected alternatives:** Fixed-size text chunks — they cross section boundaries and lose
+logical structure. XML-only parsing — 79 archived revisions are available only as rendered
+plaintext. Dropping References, IANA Considerations, or Security Considerations during
+parsing — these sections contain dependency and sometimes normative evidence needed by the
+ambiguity taxonomy.
+
+**Owner:** Osama Elkhuribi
+
+---
