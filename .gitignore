@@ -5,6 +5,8 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.test-tmp/
+.*-test-tmp/
 *.egg-info/
 .venv/
 venv/
@@ -31,6 +33,9 @@ corpus/raw/rfcs/.rfcindex-cache/
 # Pilot-local experiment mirrors (not the canonical corpus tree)
 experiments/pilot/data/raw/
 experiments/pilot/data/processed/
+
+# Generated Stage-2 parser/classifier outputs (reproducible from raw corpus)
+corpus/processed/
 
 # Notebooks checkpoints
 .ipynb_checkpoints/
