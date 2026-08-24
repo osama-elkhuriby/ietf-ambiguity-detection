@@ -200,7 +200,7 @@ def test_segment_document_emits_stable_traceable_clauses() -> None:
     assert normative.raw_text == block.text[normative.text_start : normative.text_end]
 
 
-def test_list_item_remains_one_clause() -> None:
+def test_list_item_is_split_into_traceable_sentence_clauses() -> None:
     result = segment_document(
         _document(
             [
@@ -212,9 +212,30 @@ def test_list_item_remains_one_clause() -> None:
         )
     )
 
+    assert [clause.raw_text for clause in result.clauses] == [
+        "1. If X occurs, the client MUST send Y.",
+        "It then closes.",
+    ]
+    assert [clause.classification for clause in result.clauses] == [
+        "NORMATIVE",
+        "CONTEXTUAL",
+    ]
+    assert [clause.sentence_or_item_index for clause in result.clauses] == [1, 2]
+    assert result.clauses[0].text_start == 0
+    assert result.clauses[1].text_start == 40
+
+
+def test_back_matter_is_retained_without_sentence_splitting_and_excluded() -> None:
+    document = _document(
+        [_block("Roy T. Fielding edited this document. Another sentence follows.")]
+    )
+    document.sections[0].analysis_scope = "back"
+
+    result = segment_document(document)
+
     assert len(result.clauses) == 1
-    assert result.clauses[0].classification == "NORMATIVE"
-    assert result.clauses[0].sentence_or_item_index == 1
+    assert result.clauses[0].classification == "EXCLUDED"
+    assert result.clauses[0].classification_reason == "back_matter"
 
 
 def test_reference_sections_are_excluded_without_dropping_text() -> None:

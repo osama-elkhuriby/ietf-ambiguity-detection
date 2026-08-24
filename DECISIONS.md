@@ -201,13 +201,15 @@ ambiguity taxonomy.
 
 **Decision:** Keep TXT/XML/RFC parsing format-specific and loss-aware, then run a
 separate deterministic clause layer over the canonical section/block tree. Treat
-prose sentences and complete list items as traceable clauses; retain formal and
-reference blocks but classify them as `EXCLUDED`. Apply classification evidence in
+prose sentences and sentences within list items as traceable clauses while retaining
+the parent list-item block; retain formal and reference blocks but classify them as
+`EXCLUDED`. Apply classification evidence in
 this order: exclusions, terminology/quoted/imported safeguards, explicit uppercase
 RFC 2119/8174 terms, ambiguous lowercase modal language, and finally weak section
 priors. Route unresolved cases to `MANUAL_REVIEW`. This refines the paragraph-sized
 unit retained for the Phase-1 pilot; that earlier decision remains the historical
-pilot annotation unit, while sentence/list-item clauses are the Phase-2 unit.
+pilot annotation unit, while sentence-level clauses with list-item provenance are the
+Phase-2 unit.
 
 **Why:** Parsing structure and interpreting normative meaning are different decisions.
 The separation gives every clause stable parent/source provenance, keeps the format

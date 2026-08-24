@@ -73,18 +73,20 @@ python -m alignment.clause_segmentation corpus/raw/rfcs/RFC9110.txt \
   --output corpus/processed/clauses/RFC9110.json
 ```
 
-This command first runs the structural parser, then refines prose paragraphs into
-conservative sentence-level clauses. List items remain independently addressable
-units, and conditions remain attached to the sentence containing their requirement.
-Common RFC punctuation such as version numbers, section numbers, abbreviations, and
-URLs is protected from accidental sentence splits.
+This command first runs the structural parser, then refines prose paragraphs and list
+items into conservative sentence-level clauses. Sentences split from a list item keep
+the same parent block and distinct block-relative spans, and conditions remain attached
+to the sentence containing their requirement. Common RFC punctuation such as version
+numbers, section numbers, abbreviations, and URLs is protected from accidental sentence
+splits.
 
 Every output clause records its parent block/section, stable clause ID, source
 location, block-relative character span, revision ID, references, detected BCP 14
-terms, weak section prior, classification reason, and evidence. Formal blocks and
-reference material are retained but labeled `EXCLUDED`; ambiguous lowercase modal
-language and implicit requirements are routed to `MANUAL_REVIEW` rather than forced
-into a high-confidence label.
+terms, weak section prior, classification reason, and evidence. Plaintext tables, table
+captions, ABNF, references, and back matter are retained but labeled `EXCLUDED`.
+Rendered note boxes are restored to prose before sentence refinement. Ambiguous
+lowercase modal language and implicit requirements are routed to `MANUAL_REVIEW` rather
+than forced into a high-confidence label.
 
 The classifier implements the approved deterministic design and has automated
 regression/corpus coverage. Agreement and accuracy against independently annotated

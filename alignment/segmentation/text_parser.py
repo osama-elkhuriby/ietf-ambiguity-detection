@@ -7,7 +7,14 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Literal
 
-from .models import Block, Document, ReferenceDefinition, Section, SourceLocation
+from .models import (
+    Block,
+    BlockType,
+    Document,
+    ReferenceDefinition,
+    Section,
+    SourceLocation,
+)
 from .normalize import (
     block_identifier,
     file_sha256,
@@ -31,7 +38,12 @@ PAGE_HEADER_RE = re.compile(
     re.IGNORECASE,
 )
 TOC_DOTS_RE = re.compile(r"(?:\.\s+){3,}\d+\s*$")
-LIST_ITEM_RE = re.compile(r"^\s*(?:[-*o]|\d+[.)]|[a-zA-Z][.)])\s+")
+LIST_ITEM_RE = re.compile(r"^\s*(?P<marker>[-*o]|\d+[.)]|[a-zA-Z][.)])\s+")
+TABLE_BORDER_RE = re.compile(r"^\s*\+(?:[+=-]+\+){1,}\s*$")
+TABLE_ROW_RE = re.compile(r"^\s*\|.*\|\s*$")
+TABLE_CAPTION_RE = re.compile(r"^\s*Table\s+\d+\s*$", re.IGNORECASE)
+ABNF_RULE_RE = re.compile(r"^\s*[A-Za-z][A-Za-z0-9-]*\s*=/?\s*")
+NOTE_LINE_RE = re.compile(r"^\s*\|\s*(?:\*?Note:\*?)", re.IGNORECASE)
 ABSTRACT_RE = re.compile(r"^\s*Abstract\s*$", re.IGNORECASE)
 FRONT_BOUNDARY_RE = re.compile(
     r"^\s*(?:Status of This Memo|Copyright Notice|Table of Contents)\s*$", re.IGNORECASE
@@ -39,7 +51,9 @@ FRONT_BOUNDARY_RE = re.compile(
 TITLE_BOUNDARY_RE = re.compile(
     r"^\s*(?:Abstract|Status of This Memo|Table of Contents)\s*$", re.IGNORECASE
 )
-RFC_NUMBER_RE = re.compile(r"(?:Request for Comments:\s*|\bRFC\s+)(\d{3,5})\b", re.IGNORECASE)
+RFC_NUMBER_RE = re.compile(
+    r"(?:Request for Comments:\s*|\bRFC\s+)(\d{3,5})\b", re.IGNORECASE
+)
 RFC_CATEGORY_RE = re.compile(r"^\s*Category:\s*(.+?)\s*$", re.IGNORECASE)
 PUBLICATION_DATE_RE = re.compile(
     r"\b(January|February|March|April|May|June|July|August|September|October|November|December)"
@@ -79,6 +93,11 @@ UNNUMBERED_SECTIONS: dict[str, tuple[str, str]] = {
     "index": ("index", "back"),
     "security considerations": ("security-considerations", "body"),
     "iana considerations": ("iana-considerations", "body"),
+}
+REFERENCE_SECTION_TITLES = {
+    "references",
+    "normative references",
+    "informative references",
 }
 
 
@@ -203,7 +222,8 @@ def _build_section_tree(
 
 def _extract_abstract(lines: list[tuple[int, str]]) -> _SectionBuilder | None:
     start_index = next(
-        (index for index, (_, line) in enumerate(lines) if ABSTRACT_RE.match(line)), None
+        (index for index, (_, line) in enumerate(lines) if ABSTRACT_RE.match(line)),
+        None,
     )
     if start_index is None:
         return None
@@ -214,7 +234,9 @@ def _extract_abstract(lines: list[tuple[int, str]]) -> _SectionBuilder | None:
         content.append((line_number, line))
     if not any(line.strip() for _, line in content):
         return None
-    return _SectionBuilder("abstract", "Abstract", lines[start_index][0], content=content)
+    return _SectionBuilder(
+        "abstract", "Abstract", lines[start_index][0], content=content
+    )
 
 
 def _paragraphs(lines: list[tuple[int, str]]) -> list[list[tuple[int, str]]]:
@@ -224,7 +246,7 @@ def _paragraphs(lines: list[tuple[int, str]]) -> list[list[tuple[int, str]]]:
         if item[1].strip():
             # Rendered RFCs do not consistently put blank lines between list
             # items.  Start a new addressable block at every explicit marker.
-            if current and LIST_ITEM_RE.match(item[1]):
+            if current and _starts_new_list_item(current, item[1]):
                 paragraphs.append(current)
                 current = []
             current.append(item)
@@ -236,6 +258,33 @@ def _paragraphs(lines: list[tuple[int, str]]) -> list[list[tuple[int, str]]]:
     return paragraphs
 
 
+def _starts_new_list_item(current: list[tuple[int, str]], candidate: str) -> bool:
+    """Avoid treating wrapped initials such as ``L. Hostetler`` as list items."""
+    match = LIST_ITEM_RE.match(candidate)
+    if match is None:
+        return False
+    marker = match.group("marker")
+    if marker in {"-", "*", "o"} or marker[0].isdigit():
+        return True
+    return LIST_ITEM_RE.match(current[0][1]) is not None
+
+
+def _looks_table(lines: list[str]) -> bool:
+    borders = sum(TABLE_BORDER_RE.match(line) is not None for line in lines)
+    rows = sum(TABLE_ROW_RE.match(line) is not None for line in lines)
+    return borders >= 2 and rows >= 1
+
+
+def _looks_abnf(lines: list[str]) -> bool:
+    nonempty = [line for line in lines if line.strip()]
+    return bool(nonempty) and ABNF_RULE_RE.match(nonempty[0]) is not None
+
+
+def _looks_note(lines: list[str]) -> bool:
+    first = next((line for line in lines if line.strip()), "")
+    return NOTE_LINE_RE.match(first) is not None
+
+
 def _looks_structural(lines: list[str]) -> bool:
     if len(lines) < 2:
         return False
@@ -243,14 +292,40 @@ def _looks_structural(lines: list[str]) -> bool:
     if not indents or min(indents) < 6:
         return False
     symbolic = sum(
-        bool(re.search(r"(?:^\s*[|+{}<>]|::=|-->?|\bstruct\s*\{|\bopaque\s+\w+<)", line))
+        bool(
+            re.search(r"(?:^\s*[|+{}<>]|::=|-->?|\bstruct\s*\{|\bopaque\s+\w+<)", line)
+        )
         for line in lines
     )
     return symbolic >= max(1, len(lines) // 3)
 
 
-def _paragraph_text(lines: list[str], structural: bool) -> str:
-    return normalize_multiline("\n".join(lines)) if structural else join_wrapped_lines(lines)
+def _note_text(lines: list[str]) -> str:
+    unboxed = [re.sub(r"^\s*\|\s?", "", line) for line in lines]
+    return join_wrapped_lines(unboxed)
+
+
+def _plaintext_block_type(lines: list[str]) -> BlockType:
+    first = next((line for line in lines if line.strip()), "")
+    if _looks_note(lines):
+        return "paragraph"
+    if _looks_table(lines) or TABLE_CAPTION_RE.match(first):
+        return "table"
+    if _looks_abnf(lines):
+        return "sourcecode"
+    if _looks_structural(lines):
+        return "artwork"
+    if LIST_ITEM_RE.match(first):
+        return "list_item"
+    return "paragraph"
+
+
+def _paragraph_text(lines: list[str], block_type: BlockType) -> str:
+    if _looks_note(lines):
+        return _note_text(lines)
+    if block_type in {"artwork", "sourcecode", "table"}:
+        return normalize_multiline("\n".join(lines))
+    return join_wrapped_lines(lines)
 
 
 def _convert_section(
@@ -258,26 +333,32 @@ def _convert_section(
     document_id: str,
     counter: list[int],
     parent_path: list[str],
-    analysis_scope: str | None = None,
+    inherited_scope: str | None = None,
 ) -> Section:
-    scope = analysis_scope or builder.analysis_scope or (
-        "appendix"
-        if builder.appendix or builder.identifier[:1].isalpha()
-        else "references"
-        if "reference" in builder.title.casefold()
-        else "body"
+    normalized_title = re.sub(r"\s+", " ", builder.title.casefold()).strip()
+    scope = builder.analysis_scope or (
+        "references"
+        if normalized_title in REFERENCE_SECTION_TITLES
+        else inherited_scope
+        or (
+            "appendix"
+            if builder.appendix or builder.identifier[:1].isalpha()
+            else "body"
+        )
     )
     section = Section(
         section_id=builder.identifier,
         title=builder.title,
         path=[*parent_path, builder.identifier],
         analysis_scope=scope,  # type: ignore[arg-type]
-        source_location=SourceLocation(line_start=builder.line_start, line_end=builder.line_start),
+        source_location=SourceLocation(
+            line_start=builder.line_start, line_end=builder.line_start
+        ),
     )
     for paragraph in _paragraphs(builder.content):
         raw_lines = [line for _, line in paragraph]
-        structural = _looks_structural(raw_lines)
-        text = _paragraph_text(raw_lines, structural)
+        block_type = _plaintext_block_type(raw_lines)
+        text = _paragraph_text(raw_lines, block_type)
         if not text:
             continue
         counter[0] += 1
@@ -289,13 +370,7 @@ def _convert_section(
                 block_id=block_identifier(document_id, builder.identifier, counter[0]),
                 index=counter[0],
                 block_type=(
-                    "reference"
-                    if reference_definition is not None
-                    else "artwork"
-                    if structural
-                    else "list_item"
-                    if LIST_ITEM_RE.match(raw_lines[0])
-                    else "paragraph"
+                    "reference" if reference_definition is not None else block_type
                 ),
                 text=text,
                 source_location=SourceLocation(
@@ -304,20 +379,23 @@ def _convert_section(
                 references=extract_text_references(
                     text,
                     document_id,
-                    include_symbolic_tags=not structural,
+                    include_symbolic_tags=block_type
+                    not in {"artwork", "sourcecode", "table"},
                 ),
             )
         )
     if builder.content:
         section.source_location.line_end = builder.content[-1][0]
     section.children = [
-        _convert_section(child, document_id, counter, section.path)
+        _convert_section(child, document_id, counter, section.path, scope)
         for child in builder.children
     ]
     return section
 
 
-def detect_text_document_type(path: Path, text: str) -> Literal["internet-draft", "rfc"]:
+def detect_text_document_type(
+    path: Path, text: str
+) -> Literal["internet-draft", "rfc"]:
     """Identify a rendered Internet-Draft or RFC from its name and header."""
     header = "\n".join(text.splitlines()[:80])
     if path.stem.casefold().startswith("draft-") or re.search(
@@ -337,7 +415,9 @@ def parse_text_document(
     """Parse a plaintext Internet-Draft or RFC into a section/block tree."""
     text = path.read_text(encoding="utf-8", errors="replace")
     resolved_type = (
-        detect_text_document_type(path, text) if document_type == "auto" else document_type
+        detect_text_document_type(path, text)
+        if document_type == "auto"
+        else document_type
     )
     lines = _clean_lines(text)
     builders = _build_section_tree(lines, resolved_type)
@@ -393,7 +473,9 @@ def parse_text_document(
         source_sha256=file_sha256(path),
         sections=sections,
         rfc_number=rfc_number,
-        publication_date=_extract_publication_date(lines) if resolved_type == "rfc" else None,
+        publication_date=_extract_publication_date(lines)
+        if resolved_type == "rfc"
+        else None,
         category=_extract_rfc_category(lines) if resolved_type == "rfc" else None,
         reference_definitions=definitions,
         warnings=warnings,

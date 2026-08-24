@@ -7,6 +7,7 @@ import pytest
 
 from alignment.segmentation import parse_document
 from alignment.segmentation.cli import main as segmentation_main
+from alignment.segmentation.normalize import join_wrapped_lines
 
 TEXT_DRAFT = """Network Working Group                                      A. Author
 Internet-Draft                                             January 2026
@@ -154,12 +155,61 @@ XML_STRUCTURE_EDGE_DRAFT = """<?xml version="1.0" encoding="utf-8"?>
 """
 
 
+TEXT_STRUCTURE_EDGE_DRAFT = """Internet-Draft                         January 2026
+
+Plaintext Structure Edge Cases
+draft-structure-edge-00
+
+1.  URI References
+
+   It is RECOMMENDED that implementations support long URIs.  This is
+   still body text.
+
+   +=======+=============+
+   | Value | Description |
+   +=======+=============+
+   | one   | First value |
+   +-------+-------------+
+
+                         Table 1
+
+   field-name = token
+   token      = 1*tchar
+
+   |  *Note:* A client MAY retain this value.  It can discard the value
+   |  later.
+
+2.  Requirements
+
+   1.  A client MUST send A.  It then sends B.
+   2.  A server SHOULD acknowledge both values.
+"""
+
+
+RFC_BACK_MATTER_EDGE = """Request for Comments: 9999
+Category: Standards Track                              January 2026
+
+Back Matter Edge Cases
+
+1.  Introduction
+
+   Ordinary body text.
+
+Acknowledgements
+
+   Contributors include Daniel W. Connolly, Phillip M. Hallam-Baker,
+   Jeffery L. Hostetler, and Scott D. Lawrence.
+"""
+
+
 def _write(path: Path, contents: str) -> Path:
     path.write_text(contents, encoding="utf-8")
     return path
 
 
-def test_text_parser_builds_hierarchy_and_ignores_rendering_noise(tmp_path: Path) -> None:
+def test_text_parser_builds_hierarchy_and_ignores_rendering_noise(
+    tmp_path: Path,
+) -> None:
     source = _write(tmp_path / "draft-example-00.txt", TEXT_DRAFT)
 
     document = parse_document(source)
@@ -167,7 +217,11 @@ def test_text_parser_builds_hierarchy_and_ignores_rendering_noise(tmp_path: Path
     assert document.source_format == "text"
     assert document.document_type == "internet-draft"
     assert document.document_id == "draft-example-00"
-    assert [section.section_id for section in document.sections] == ["abstract", "1", "2"]
+    assert [section.section_id for section in document.sections] == [
+        "abstract",
+        "1",
+        "2",
+    ]
     assert document.sections[1].children[0].section_id == "1.1"
     assert document.sections[2].children[0].analysis_scope == "references"
     assert "boilerplate" not in document.sections[0].blocks[0].text
@@ -197,14 +251,64 @@ def test_text_parser_extracts_references_and_definitions(tmp_path: Path) -> None
     assert document.sections[2].children[0].blocks[0].block_type == "reference"
 
 
-def test_text_artwork_does_not_treat_protocol_syntax_as_a_citation(tmp_path: Path) -> None:
+def test_text_artwork_does_not_treat_protocol_syntax_as_a_citation(
+    tmp_path: Path,
+) -> None:
     source = _write(tmp_path / "draft-example-00.txt", TEXT_DRAFT)
 
     document = parse_document(source)
-    artwork = next(block for block in document.sections[1].blocks if block.block_type == "artwork")
+    artwork = next(
+        block for block in document.sections[1].blocks if block.block_type == "artwork"
+    )
 
     assert "vector[sender]" in artwork.text
     assert artwork.references == []
+
+
+def test_plaintext_parser_distinguishes_tables_abnf_notes_and_body_references(
+    tmp_path: Path,
+) -> None:
+    source = _write(tmp_path / "draft-structure-edge-00.txt", TEXT_STRUCTURE_EDGE_DRAFT)
+
+    document = parse_document(source)
+    uri_references = document.sections[0]
+
+    assert uri_references.title == "URI References"
+    assert uri_references.analysis_scope == "body"
+    assert [block.block_type for block in uri_references.blocks] == [
+        "paragraph",
+        "table",
+        "table",
+        "sourcecode",
+        "paragraph",
+    ]
+    assert uri_references.blocks[-1].text == (
+        "*Note:* A client MAY retain this value. It can discard the value later."
+    )
+
+
+def test_plaintext_parser_does_not_promote_wrapped_initials_to_list_items(
+    tmp_path: Path,
+) -> None:
+    source = _write(tmp_path / "RFC9999.txt", RFC_BACK_MATTER_EDGE)
+
+    document = parse_document(source)
+    acknowledgements = document.sections[-1]
+
+    assert acknowledgements.analysis_scope == "back"
+    assert len(acknowledgements.blocks) == 1
+    assert acknowledgements.blocks[0].block_type == "paragraph"
+    assert "Daniel W. Connolly" in acknowledgements.blocks[0].text
+    assert "Jeffery L. Hostetler" in acknowledgements.blocks[0].text
+
+
+def test_join_wrapped_lines_repairs_uppercase_hyphenation_but_not_suspension() -> None:
+    assert join_wrapped_lines(["Accept-", "Encoding is supported."]) == (
+        "Accept-Encoding is supported."
+    )
+    assert join_wrapped_lines(["a transport-", "or session-layer connection"]) == (
+        "a transport- or session-layer connection"
+    )
 
 
 def test_xml_parser_preserves_structure_and_xref_metadata(tmp_path: Path) -> None:
@@ -221,10 +325,17 @@ def test_xml_parser_preserves_structure_and_xref_metadata(tmp_path: Path) -> Non
         "A",
     ]
     introduction = document.sections[1]
-    assert [block.block_type for block in introduction.blocks] == ["paragraph", "list_item"]
+    assert [block.block_type for block in introduction.blocks] == [
+        "paragraph",
+        "list_item",
+    ]
     assert introduction.children[0].blocks[0].block_type == "sourcecode"
     reference = introduction.blocks[0].references[0]
-    assert (reference.target, reference.target_section, reference.kind) == ("HTTP", "4.2", "xref")
+    assert (reference.target, reference.target_section, reference.kind) == (
+        "HTTP",
+        "4.2",
+        "xref",
+    )
     assert reference.display_text == "Section 4.2 of [HTTP]"
     assert "Section 4.2 of [HTTP]" in introduction.blocks[0].text
     assert document.reference_definitions[0].document_id == "RFC9110"
@@ -256,7 +367,9 @@ def test_xml2rfc_v2_nested_lists_and_asides_are_preserved(tmp_path: Path) -> Non
 
 
 def test_xml2rfc_v2_external_reference_entities_are_preserved(tmp_path: Path) -> None:
-    source = _write(tmp_path / "draft-external-reference-00.xml", XML_EXTERNAL_REFERENCE_DRAFT)
+    source = _write(
+        tmp_path / "draft-external-reference-00.xml", XML_EXTERNAL_REFERENCE_DRAFT
+    )
 
     document = parse_document(source)
 
@@ -270,7 +383,9 @@ def test_xml2rfc_v2_external_reference_entities_are_preserved(tmp_path: Path) ->
     assert "[RFC2119]" in document.sections[0].blocks[0].text
 
 
-def test_xml_figures_nested_lists_and_tables_preserve_reading_order(tmp_path: Path) -> None:
+def test_xml_figures_nested_lists_and_tables_preserve_reading_order(
+    tmp_path: Path,
+) -> None:
     source = _write(tmp_path / "draft-structure-edge-00.xml", XML_STRUCTURE_EDGE_DRAFT)
 
     document = parse_document(source)
@@ -295,7 +410,9 @@ def test_parse_is_deterministic(tmp_path: Path) -> None:
     assert first == second
 
 
-def test_cli_writes_canonical_json(tmp_path: Path, capsys: pytest.CaptureFixture[str]) -> None:
+def test_cli_writes_canonical_json(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
     source = _write(tmp_path / "draft-example-01.xml", XML_DRAFT)
     output = tmp_path / "parsed" / "document.json"
 
@@ -341,10 +458,7 @@ def test_real_xml_pilot_parses_without_warnings() -> None:
 
 
 def test_real_text_draft_does_not_promote_numbered_lists_to_sections() -> None:
-    source = Path(
-        "corpus/raw/drafts/draft-ietf-tls-tls13/"
-        "draft-ietf-tls-tls13-28.txt"
-    )
+    source = Path("corpus/raw/drafts/draft-ietf-tls-tls13/draft-ietf-tls-tls13-28.txt")
 
     document = parse_document(source)
 
@@ -411,7 +525,9 @@ def test_all_collected_rfcs_match_metadata_and_have_source_locations() -> None:
 def test_rfc_toc_back_matter_is_not_promoted_to_real_sections() -> None:
     document = parse_document(Path("corpus/raw/rfcs/RFC9000.txt"))
     authors_sections = [
-        section for section in document.iter_sections() if section.section_id == "authors-addresses"
+        section
+        for section in document.iter_sections()
+        if section.section_id == "authors-addresses"
     ]
 
     assert len(authors_sections) == 1

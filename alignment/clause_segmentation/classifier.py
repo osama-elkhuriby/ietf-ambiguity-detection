@@ -142,6 +142,14 @@ def classify_clause(
             keywords,
             ["analysis_scope:references"],
         )
+    if analysis_scope == "back":
+        return ClassificationDecision(
+            "EXCLUDED",
+            "back_matter",
+            prior,
+            keywords,
+            ["analysis_scope:back"],
+        )
 
     if keywords and TERMINOLOGY_META_RE.search(text):
         return ClassificationDecision(

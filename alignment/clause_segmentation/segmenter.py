@@ -20,6 +20,7 @@ URL_RE = re.compile(r"(?:https?://|mailto:)[^\s<>]+", re.IGNORECASE)
 DECIMAL_DOT_RE = re.compile(r"(?<=\d)\.(?=\d)")
 SENTENCE_BOUNDARY_RE = re.compile(r"[.!?][\"'”’)]*\s+(?=(?:[\"'“‘(\[]*\s*)?[A-Z0-9])")
 REVISION_RE = re.compile(r"-(?P<revision>\d{2,3})$")
+LIST_PREFIX_RE = re.compile(r"^\s*(?:[-*o]|\d+[.)]|[A-Za-z][.)])\s+")
 
 
 @dataclass(slots=True)
@@ -98,10 +99,23 @@ def _reference_targets(block: Block, text: str, segment_count: int) -> list[str]
 
 
 def _block_spans(block: Block, analysis_scope: str) -> list[TextSpan]:
-    if block.block_type in EXCLUDED_BLOCK_TYPES or analysis_scope == "references":
+    if block.block_type in EXCLUDED_BLOCK_TYPES or analysis_scope in {
+        "references",
+        "back",
+    }:
         return [TextSpan(block.text, 0, len(block.text))] if block.text else []
     if block.block_type == "list_item":
-        return [TextSpan(block.text, 0, len(block.text))] if block.text else []
+        prefix = LIST_PREFIX_RE.match(block.text)
+        payload_start = prefix.end() if prefix is not None else 0
+        payload_spans = split_sentences(block.text[payload_start:])
+        spans: list[TextSpan] = []
+        for index, span in enumerate(payload_spans):
+            start = 0 if index == 0 else payload_start + span.start
+            end = payload_start + span.end
+            spans.append(TextSpan(block.text[start:end], start, end))
+        return spans or (
+            [TextSpan(block.text, 0, len(block.text))] if block.text else []
+        )
     return split_sentences(block.text)
 
 

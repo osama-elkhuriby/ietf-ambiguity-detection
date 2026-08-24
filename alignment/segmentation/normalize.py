@@ -8,6 +8,7 @@ from pathlib import Path
 
 WHITESPACE_RE = re.compile(r"\s+")
 SAFE_ID_RE = re.compile(r"[^A-Za-z0-9._-]+")
+SUSPENDED_HYPHEN_FOLLOWERS = {"and", "or", "to", "versus", "vs."}
 
 
 def normalize_prose(text: str) -> str:
@@ -17,7 +18,10 @@ def normalize_prose(text: str) -> str:
 
 def normalize_multiline(text: str) -> str:
     """Preserve line structure for artwork and source code."""
-    lines = [line.rstrip() for line in text.replace("\r\n", "\n").replace("\r", "\n").split("\n")]
+    lines = [
+        line.rstrip()
+        for line in text.replace("\r\n", "\n").replace("\r", "\n").split("\n")
+    ]
     while lines and not lines[0].strip():
         lines.pop(0)
     while lines and not lines[-1].strip():
@@ -38,7 +42,12 @@ def join_wrapped_lines(lines: list[str]) -> str:
             continue
         if not result:
             result = part
-        elif result.endswith("-") and part[:1].islower():
+        elif (
+            result.endswith("-")
+            and not result.endswith("--")
+            and part[:1].isalnum()
+            and part.split(maxsplit=1)[0].casefold() not in SUSPENDED_HYPHEN_FOLLOWERS
+        ):
             result += part
         else:
             result += " " + part
@@ -60,4 +69,3 @@ def file_sha256(path: Path) -> str:
         for chunk in iter(lambda: source.read(1024 * 1024), b""):
             digest.update(chunk)
     return digest.hexdigest()
-
