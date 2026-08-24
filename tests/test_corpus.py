@@ -1,6 +1,8 @@
 from __future__ import annotations
 
+from datetime import UTC, datetime
 from pathlib import Path
+from typing import ClassVar
 
 import fetch_errata
 import link_draft_rfc
@@ -193,14 +195,12 @@ def test_fetch_rfc_txt_format_fallback(monkeypatch, tmp_path: Path) -> None:
         wg = "dnsop"
         area = "ops"
         curr_status = "PROPOSED STANDARD"
-        formats = ["HTML", "TXT", "PDF", "XML"]
+        formats: ClassVar[list[str]] = ["HTML", "TXT", "PDF", "XML"]
         draft = "draft-ietf-dnsop-svcb-https-12"
         errata_url = None
 
         def date(self):
-            from datetime import datetime
-
-            return datetime(2023, 11, 1)
+            return datetime(2023, 11, 1, tzinfo=UTC)
 
         def content_url(self, required_format: str) -> str | None:
             return None
