@@ -139,6 +139,27 @@ def test_referenced_normative_text_precedes_keyword_classification() -> None:
     assert "reference:RFC9110" in decision.evidence
 
 
+def test_internal_reference_does_not_exclude_current_document_requirement() -> None:
+    block = _block(
+        "Section 2 states that the client MUST send the field.",
+        references=[
+            Reference(
+                target="draft-example-07",
+                target_section="2",
+                kind="text",
+                display_text="Section 2",
+            )
+        ],
+    )
+
+    result = segment_document(_document([block], heading="Protocol Operation"))
+    clause = result.clauses[0]
+
+    assert clause.classification == "NORMATIVE"
+    assert clause.classification_reason == "explicit_bcp14_keyword"
+    assert clause.reference_targets == ["draft-example-07"]
+
+
 @pytest.mark.parametrize("block_type", ["artwork", "sourcecode", "table", "reference"])
 def test_non_prose_blocks_are_retained_as_excluded(block_type: str) -> None:
     decision = classify_clause(

@@ -117,12 +117,15 @@ def _section_clauses(
         for local_index, span in enumerate(spans, start=1):
             counter[0] += 1
             targets = _reference_targets(block, span.text, len(spans))
+            classification_targets = [
+                target for target in targets if target != document.document_id
+            ]
             decision = classify_clause(
                 span.text,
                 block.block_type,
                 section.title,
                 section.analysis_scope,
-                targets,
+                classification_targets,
             )
             clauses.append(
                 Clause(
