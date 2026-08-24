@@ -16,16 +16,20 @@ Implemented foundation:
 - RFC number, title, publication date, and category extraction
 - XML2RFC `<xref>`/`<relref>`/`<eref>`, internal-section, and rendered-text reference extraction
 - XML2RFC v2 external bibliography-entity stubs when network access is disabled
-- preservation of paragraphs, nested list items, definitions, figure order, source code,
-  table cells, and reference definitions
+- preservation of paragraphs, nested list items, definitions, figure order, artwork,
+  source code, table cells, and reference definitions
+- deterministic block → sentence/clause refinement in `clause_segmentation/`
+- stable clause IDs, source provenance, revision IDs, and block-relative character spans
+- evidence-first `NORMATIVE`, `CONTEXTUAL`, `EXCLUDED`, and `MANUAL_REVIEW` classification
+- uppercase RFC 2119/RFC 8174 detection, quoted/reference safeguards, section priors, and review reasons
 
 Planned next contents:
 
-- clause refinement and normative/contextual classification
 - RFCScope-style hierarchical, token-aware section partitioning
 - version matching: combine **iddiff** hunks with embedding/DP alignment for moved or split paragraphs (SS6.4)
 - revision feature extraction: edit frequency, semantic distance between versions,
   normative-strength changes (BCP 14 keyword shifts), clause stability, proximity to publication (SS6.2)
+- independent human annotation and calibration of the clause-classification heuristics
 
 ## Parse one document
 
@@ -59,6 +63,33 @@ python -m alignment.segmentation corpus/raw/rfcs/RFC9110.txt \
 The parser keeps legacy indented subsections and both numbered and unnumbered
 reference groups. XML input is currently the XML2RFC source profile for
 Internet-Drafts; RFC parsing uses the collected RFC Editor plaintext.
+
+## Segment and classify clauses
+
+Run the clause layer directly on any supported source:
+
+```bash
+python -m alignment.clause_segmentation corpus/raw/rfcs/RFC9110.txt \
+  --output corpus/processed/clauses/RFC9110.json
+```
+
+This command first runs the structural parser, then refines prose paragraphs into
+conservative sentence-level clauses. List items remain independently addressable
+units, and conditions remain attached to the sentence containing their requirement.
+Common RFC punctuation such as version numbers, section numbers, abbreviations, and
+URLs is protected from accidental sentence splits.
+
+Every output clause records its parent block/section, stable clause ID, source
+location, block-relative character span, revision ID, references, detected BCP 14
+terms, weak section prior, classification reason, and evidence. Formal blocks and
+reference material are retained but labeled `EXCLUDED`; ambiguous lowercase modal
+language and implicit requirements are routed to `MANUAL_REVIEW` rather than forced
+into a high-confidence label.
+
+The classifier implements the approved deterministic design and has automated
+regression/corpus coverage. Agreement and accuracy against independently annotated
+clauses remain an evaluation activity; the heuristic labels must not be treated as
+human-validated ground truth until that calibration is complete.
 
 **RFC / IETF specifics:**
 - Prefer Datatracker **plaintext** (`.txt`) for the pilot; note that XML (`*.xml`) preserves structure

@@ -222,6 +222,11 @@ def _paragraphs(lines: list[tuple[int, str]]) -> list[list[tuple[int, str]]]:
     current: list[tuple[int, str]] = []
     for item in lines:
         if item[1].strip():
+            # Rendered RFCs do not consistently put blank lines between list
+            # items.  Start a new addressable block at every explicit marker.
+            if current and LIST_ITEM_RE.match(item[1]):
+                paragraphs.append(current)
+                current = []
             current.append(item)
         elif current:
             paragraphs.append(current)

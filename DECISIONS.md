@@ -196,3 +196,32 @@ ambiguity taxonomy.
 **Owner:** Osama Elkhuribi
 
 ---
+
+## 2026-08-24 — Separate clause refinement from structural document parsing
+
+**Decision:** Keep TXT/XML/RFC parsing format-specific and loss-aware, then run a
+separate deterministic clause layer over the canonical section/block tree. Treat
+prose sentences and complete list items as traceable clauses; retain formal and
+reference blocks but classify them as `EXCLUDED`. Apply classification evidence in
+this order: exclusions, terminology/quoted/imported safeguards, explicit uppercase
+RFC 2119/8174 terms, ambiguous lowercase modal language, and finally weak section
+priors. Route unresolved cases to `MANUAL_REVIEW`. This refines the paragraph-sized
+unit retained for the Phase-1 pilot; that earlier decision remains the historical
+pilot annotation unit, while sentence/list-item clauses are the Phase-2 unit.
+
+**Why:** Parsing structure and interpreting normative meaning are different decisions.
+The separation gives every clause stable parent/source provenance, keeps the format
+parsers deterministic, makes classification reasons auditable, and allows heuristics
+to be recalibrated without reparsing the corpus. Conservative manual review avoids
+turning section headings or lowercase modal verbs into unsupported labels.
+
+**Rejected alternatives:** Embedding classification inside each format parser — this
+would duplicate semantic rules and make TXT/XML results diverge. Classifying every
+uppercase keyword as normative — quoted text and BCP 14 terminology boilerplate are
+counterexamples. Treating all unmarked prose as contextual — this hides implicit
+requirements. Dropping ABNF/code/tables/references — this loses provenance needed by
+alignment and later context construction.
+
+**Owner:** Osama Elkhuribi
+
+---
