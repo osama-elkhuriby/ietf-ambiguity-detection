@@ -235,7 +235,20 @@ def _block_elements(
                     result.append((nested, "paragraph", None))
                 elif nested_name in {"artwork", "sourcecode"}:
                     result.append((nested, nested_name, None))
-        elif name in {"aside", "blockquote"}:
+        elif name == "blockquote":
+            for nested in child:
+                if not isinstance(nested.tag, str):
+                    continue
+                nested_name = _local_name(nested)
+                if nested_name == "t":
+                    result.append((nested, "blockquote", None))
+                elif nested_name in {"artwork", "sourcecode", "table"}:
+                    add_element(nested)
+                elif nested_name in {"ul", "ol", "list"}:
+                    for item_name in ("li", "t"):
+                        for item in _children(nested, item_name):
+                            result.append((item, "blockquote", _element_text(item)))
+        elif name == "aside":
             for nested in child:
                 add_element(nested)
 

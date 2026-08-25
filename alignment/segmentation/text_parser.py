@@ -43,6 +43,12 @@ TABLE_BORDER_RE = re.compile(r"^\s*\+(?:[+=-]+\+){1,}\s*$")
 TABLE_ROW_RE = re.compile(r"^\s*\|.*\|\s*$")
 TABLE_CAPTION_RE = re.compile(r"^\s*Table\s+\d+\s*$", re.IGNORECASE)
 ABNF_RULE_RE = re.compile(r"^\s*[A-Za-z][A-Za-z0-9-]*\s*=/?\s*")
+PSEUDOCODE_CONTROL_RE = re.compile(
+    r"^\s*(?:if\b.*:|else(?:\s+if\b.*)?:|for\s+(?:each\b|\w+\s+in\b).*:|"
+    r"while\b.*:|switch\b.*:|case\s+[A-Za-z_][A-Za-z0-9_.-]*\s*:|default\s*:)",
+    re.IGNORECASE,
+)
+COLUMN_GAP_RE = re.compile(r"(?<=\S) {2,}(?=\S)")
 NOTE_LINE_RE = re.compile(r"^\s*\|\s*(?:\*?Note:\*?)", re.IGNORECASE)
 ABSTRACT_RE = re.compile(r"^\s*Abstract\s*$", re.IGNORECASE)
 FRONT_BOUNDARY_RE = re.compile(
@@ -280,6 +286,37 @@ def _looks_abnf(lines: list[str]) -> bool:
     return bool(nonempty) and ABNF_RULE_RE.match(nonempty[0]) is not None
 
 
+def _looks_pseudocode(lines: list[str]) -> bool:
+    nonempty = [line for line in lines if line.strip()]
+    if len(nonempty) < 2:
+        return False
+    controls = sum(PSEUDOCODE_CONTROL_RE.match(line) is not None for line in nonempty)
+    if controls >= 2:
+        return True
+    indents = [len(line) - len(line.lstrip()) for line in nonempty]
+    prose_punctuation = any(re.search(r"[.!?](?:\s|$)", line) for line in nonempty)
+    return controls == 1 and max(indents) - min(indents) >= 2 and not prose_punctuation
+
+
+def _looks_column_table(lines: list[str]) -> bool:
+    nonempty = [line for line in lines if line.strip()]
+    if len(nonempty) < 3:
+        return False
+    # A leading vertical bar without a closing border is commonly used to
+    # render prose notes and quotations, not a row-and-column table.
+    if any(line.lstrip().startswith("|") for line in nonempty):
+        return False
+    gap_ends = [
+        [match.end() for match in COLUMN_GAP_RE.finditer(line)] for line in nonempty
+    ]
+    if any(not positions for positions in gap_ends):
+        return False
+    return any(
+        all(any(abs(position - candidate) <= 1 for position in positions) for positions in gap_ends)
+        for candidate in gap_ends[0]
+    )
+
+
 def _looks_note(lines: list[str]) -> bool:
     first = next((line for line in lines if line.strip()), "")
     return NOTE_LINE_RE.match(first) is not None
@@ -313,10 +350,14 @@ def _plaintext_block_type(lines: list[str]) -> BlockType:
         return "table"
     if _looks_abnf(lines):
         return "sourcecode"
-    if _looks_structural(lines):
-        return "artwork"
     if LIST_ITEM_RE.match(first):
         return "list_item"
+    if _looks_pseudocode(lines):
+        return "sourcecode"
+    if _looks_column_table(lines):
+        return "table"
+    if _looks_structural(lines):
+        return "artwork"
     return "paragraph"
 
 

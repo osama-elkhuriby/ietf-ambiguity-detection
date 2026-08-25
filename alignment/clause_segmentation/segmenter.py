@@ -7,7 +7,7 @@ from dataclasses import dataclass
 
 from alignment.segmentation.models import Block, Document, Section
 
-from .classifier import EXCLUDED_BLOCK_TYPES, classify_clause
+from .classifier import EXCLUDED_BLOCK_TYPES, classify_clause, extract_bcp14_keywords
 from .models import Clause, ClauseDocument
 
 PROTECTED_DOT = "\ue000"
@@ -18,9 +18,16 @@ ABBREVIATION_RE = re.compile(
 )
 URL_RE = re.compile(r"(?:https?://|mailto:)[^\s<>]+", re.IGNORECASE)
 DECIMAL_DOT_RE = re.compile(r"(?<=\d)\.(?=\d)")
-SENTENCE_BOUNDARY_RE = re.compile(r"[.!?][\"'”’)]*\s+(?=(?:[\"'“‘(\[]*\s*)?[A-Z0-9])")
+SENTENCE_BOUNDARY_RE = re.compile(
+    r"[.!?][\"'”’)]*\s+"
+    r"(?=(?:[\"'“‘]\s*[A-Za-z0-9]|[(\[]\s*[A-Z0-9]|[A-Z0-9]))"
+)
 REVISION_RE = re.compile(r"-(?P<revision>\d{2,3})$")
 LIST_PREFIX_RE = re.compile(r"^\s*(?:[-*o]|\d+[.)]|[A-Za-z][.)])\s+")
+CONDITION_LEAD_RE = re.compile(
+    r"^(?:if|when|whenever|unless|until|while|once|provided(?:\s+that)?|where)\b",
+    re.IGNORECASE,
+)
 
 
 @dataclass(slots=True)
@@ -66,7 +73,34 @@ def split_sentences(text: str) -> list[TextSpan]:
         _append_span(spans, text, start, end)
         start = match.end()
     _append_span(spans, text, start, len(text))
-    return spans
+    return _merge_dependent_conditions(text, spans)
+
+
+def _merge_dependent_conditions(text: str, spans: list[TextSpan]) -> list[TextSpan]:
+    """Keep a condition sentence with an immediately following explicit requirement."""
+    merged: list[TextSpan] = []
+    index = 0
+    while index < len(spans):
+        current = spans[index]
+        if (
+            index + 1 < len(spans)
+            and CONDITION_LEAD_RE.match(current.text)
+            and not extract_bcp14_keywords(current.text)
+            and extract_bcp14_keywords(spans[index + 1].text)
+        ):
+            following = spans[index + 1]
+            merged.append(
+                TextSpan(
+                    text[current.start : following.end],
+                    current.start,
+                    following.end,
+                )
+            )
+            index += 2
+            continue
+        merged.append(current)
+        index += 1
+    return merged
 
 
 def _append_span(spans: list[TextSpan], text: str, start: int, end: int) -> None:

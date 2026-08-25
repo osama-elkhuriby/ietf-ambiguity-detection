@@ -72,6 +72,20 @@ def test_sentence_splitter_protects_rfc_punctuation_and_conditions() -> None:
     assert text[spans[1].start : spans[1].end] == spans[1].text
 
 
+def test_sentence_splitter_handles_quoted_lowercase_starts_and_condition_dependencies() -> None:
+    quoted = 'The flag is set. "client" refers to the initiator.'
+    conditional = "When both conditions hold: X and Y. The client MUST send Z. It then waits."
+
+    assert [span.text for span in split_sentences(quoted)] == [
+        "The flag is set.",
+        '"client" refers to the initiator.',
+    ]
+    assert [span.text for span in split_sentences(conditional)] == [
+        "When both conditions hold: X and Y. The client MUST send Z.",
+        "It then waits.",
+    ]
+
+
 @pytest.mark.parametrize(
     ("text", "heading", "expected_label", "expected_reason"),
     [
@@ -139,6 +153,71 @@ def test_referenced_normative_text_precedes_keyword_classification() -> None:
     assert "reference:RFC9110" in decision.evidence
 
 
+@pytest.mark.parametrize(
+    "text",
+    [
+        "Per RFC 9110, the client MUST send the field.",
+        "RFC 9110: the client MUST send the field.",
+    ],
+)
+def test_reference_lead_ins_are_not_current_document_requirements(text: str) -> None:
+    decision = classify_clause(
+        text,
+        "paragraph",
+        "Protocol Operation",
+        "body",
+        ["RFC9110"],
+    )
+
+    assert decision.classification == "EXCLUDED"
+    assert decision.reason == "referenced_normative_text"
+
+
+def test_per_as_a_rate_does_not_trigger_imported_requirement_detection() -> None:
+    decision = classify_clause(
+        "The client MUST send one request per RFC 9110 connection.",
+        "paragraph",
+        "Protocol Operation",
+        "body",
+        ["RFC9110"],
+    )
+
+    assert decision.classification == "NORMATIVE"
+    assert decision.reason == "explicit_bcp14_keyword"
+
+
+def test_single_quoted_normative_text_is_not_a_current_requirement() -> None:
+    decision = classify_clause(
+        "The specification calls this behavior 'MUST send'.",
+        "paragraph",
+        "Protocol Operation",
+        "body",
+    )
+
+    assert decision.classification == "EXCLUDED"
+    assert decision.reason == "quoted_normative_text"
+
+
+def test_mixed_relative_explanation_and_requirements_language_prior() -> None:
+    mixed = classify_clause(
+        "The client MUST send the field, which prevents replay.",
+        "paragraph",
+        "Protocol Operation",
+        "body",
+    )
+    terminology = classify_clause(
+        "This section explains how requirement terms are used.",
+        "paragraph",
+        "Requirements Language",
+        "body",
+    )
+
+    assert mixed.classification == "NORMATIVE"
+    assert mixed.mixed_clause is True
+    assert terminology.classification == "CONTEXTUAL"
+    assert terminology.section_prior == "contextual"
+
+
 def test_internal_reference_does_not_exclude_current_document_requirement() -> None:
     block = _block(
         "Section 2 states that the client MUST send the field.",
@@ -171,6 +250,66 @@ def test_non_prose_blocks_are_retained_as_excluded(block_type: str) -> None:
 
     assert decision.classification == "EXCLUDED"
     assert decision.reason == "formal_or_non_prose_block"
+
+
+def test_xml_blockquotes_are_preserved_as_imported_content(tmp_path: Path) -> None:
+    source = tmp_path / "draft-blockquote-example-00.xml"
+    source.write_text(
+        """<?xml version="1.0" encoding="utf-8"?>
+<rfc docName="draft-blockquote-example-00" version="3">
+  <front><title>Blockquote Example</title></front>
+  <middle><section><name>Protocol Operation</name>
+    <blockquote><t>An endpoint MUST ignore the field.</t></blockquote>
+  </section></middle>
+</rfc>
+""",
+        encoding="utf-8",
+    )
+
+    parsed = parse_document(source)
+    result = segment_document(parsed)
+
+    assert parsed.sections[0].blocks[0].block_type == "blockquote"
+    assert result.clauses[0].classification == "EXCLUDED"
+    assert result.clauses[0].classification_reason == "quoted_or_imported_block"
+
+
+def test_plaintext_pseudocode_and_borderless_tables_are_excluded(tmp_path: Path) -> None:
+    source = tmp_path / "draft-plain-structures-00.txt"
+    source.write_text(
+        "Internet-Draft                                      January 2026\n\n"
+        "Plain Structures\n"
+        "draft-plain-structures-00\n\n"
+        "1.  Processing Rules\n\n"
+        "      if packet is valid:\n"
+        "          process packet\n"
+        "      else:\n"
+        "          discard packet\n\n"
+        "   Field       Meaning\n"
+        "   TYPE        Message type\n"
+        "   LENGTH      Payload length\n\n"
+        "   If the certificate is empty, the server MAY either\n"
+        "   continue without authentication or abort.  Also, if rejected,\n"
+        "   it MAY continue or abort.\n\n"
+        "   | This quotation contains  deliberate spacing.\n"
+        "   | It remains ordinary  quoted prose.\n\n"
+        "   o  If validation fails, the endpoint MUST return an error.\n",
+        encoding="utf-8",
+    )
+
+    parsed = parse_document(source)
+    result = segment_document(parsed)
+
+    assert [block.block_type for block in parsed.sections[0].blocks] == [
+        "sourcecode",
+        "table",
+        "paragraph",
+        "paragraph",
+        "list_item",
+    ]
+    assert result.clauses[0].classification == "EXCLUDED"
+    assert result.clauses[1].classification == "EXCLUDED"
+    assert result.clauses[-1].classification == "NORMATIVE"
 
 
 def test_segment_document_emits_stable_traceable_clauses() -> None:

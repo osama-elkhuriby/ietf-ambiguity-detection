@@ -16,6 +16,7 @@ BlockType = Literal[
     "artwork",
     "sourcecode",
     "table",
+    "blockquote",
     "reference",
 ]
 

@@ -16,8 +16,8 @@ Implemented foundation:
 - RFC number, title, publication date, and category extraction
 - XML2RFC `<xref>`/`<relref>`/`<eref>`, internal-section, and rendered-text reference extraction
 - XML2RFC v2 external bibliography-entity stubs when network access is disabled
-- preservation of paragraphs, nested list items, definitions, figure order, artwork,
-  source code, table cells, and reference definitions
+- preservation of paragraphs, nested list items, definitions, imported blockquotes,
+  figure order, artwork, source code, table cells, and reference definitions
 - deterministic block → sentence/clause refinement in `clause_segmentation/`
 - stable clause IDs, source provenance, revision IDs, and block-relative character spans
 - evidence-first `NORMATIVE`, `CONTEXTUAL`, `EXCLUDED`, and `MANUAL_REVIEW` classification
@@ -75,15 +75,17 @@ python -m alignment.clause_segmentation corpus/raw/rfcs/RFC9110.txt \
 
 This command first runs the structural parser, then refines prose paragraphs and list
 items into conservative sentence-level clauses. Sentences split from a list item keep
-the same parent block and distinct block-relative spans, and conditions remain attached
-to the sentence containing their requirement. Common RFC punctuation such as version
-numbers, section numbers, abbreviations, and URLs is protected from accidental sentence
-splits.
+the same parent block and distinct block-relative spans. Conditions remain attached to
+requirements in the same sentence; a condition-only sentence is also joined to an
+immediately following explicit BCP 14 requirement. Common RFC punctuation such as
+version numbers, section numbers, abbreviations, and URLs is protected from accidental
+sentence splits.
 
 Every output clause records its parent block/section, stable clause ID, source
 location, block-relative character span, revision ID, references, detected BCP 14
-terms, weak section prior, classification reason, and evidence. Plaintext tables, table
-captions, ABNF, references, and back matter are retained but labeled `EXCLUDED`.
+terms, weak section prior, classification reason, and evidence. Tables, table captions,
+ABNF, pseudocode, imported XML blockquotes, references, and back matter are retained but
+labeled `EXCLUDED`.
 Rendered note boxes are restored to prose before sentence refinement. Ambiguous
 lowercase modal language and implicit requirements are routed to `MANUAL_REVIEW` rather
 than forced into a high-confidence label.

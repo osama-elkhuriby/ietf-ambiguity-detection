@@ -30,10 +30,23 @@ BCP14_RE = re.compile(
 NORMATIVE_LOOKING_RE = re.compile(
     r"\b(?:must|should|shall|may|required|recommended|optional)\b", re.IGNORECASE
 )
-QUOTE_RE = re.compile(r'"[^"\n]*"|“[^”\n]*”|‘[^’\n]*’')
+QUOTE_RE = re.compile(
+    r'''"[^"\n]*"|“[^”\n]*”|‘[^’\n]*’|(?<![A-Za-z0-9])'[^'\n]+'(?![A-Za-z0-9])'''
+)
 REFERENCE_REPORTING_RE = re.compile(
-    r"\b(?:according to|defined by|defined in|requires?|specifies?|states?|says?|"
-    r"quoted from|as described in)\b",
+    r"\b(?:according to|defined by|defined in|required by|specified by|specified in|"
+    r"requires?|specifies?|states?|says?|quoted from|"
+    r"as described in)\b",
+    re.IGNORECASE,
+)
+REFERENCE_LEAD_IN_RE = re.compile(
+    r"\b(?:per|pursuant to)\s+"
+    r"(?:RFC\s*\d{3,5}|\[[A-Za-z0-9._-]+\]|draft-[A-Za-z0-9-]+)"
+    r"(?=\s*[,;:]|$)",
+    re.IGNORECASE,
+)
+REFERENCE_COLON_RE = re.compile(
+    r"(?:\bRFC\s*\d{3,5}|\[[A-Za-z0-9._-]+\]|\bdraft-[A-Za-z0-9-]+)\s*:",
     re.IGNORECASE,
 )
 TERMINOLOGY_META_RE = re.compile(
@@ -44,12 +57,19 @@ TERMINOLOGY_META_RE = re.compile(
     re.IGNORECASE,
 )
 MIXED_EVIDENCE_RE = re.compile(
-    r"\b(?:because|therefore|however|so that|in order to|for example|note that|"
-    r"for interoperability|for compatibility)\b",
+    r"(?:\b(?:because|therefore|however|so that|in order to|for example|note that|"
+    r"for interoperability|for compatibility)\b|,\s+which\b|"
+    r";\s*(?:this|that|however)\b)",
     re.IGNORECASE,
 )
 
-EXCLUDED_BLOCK_TYPES: set[BlockType] = {"artwork", "sourcecode", "table", "reference"}
+EXCLUDED_BLOCK_TYPES: set[BlockType] = {
+    "artwork",
+    "sourcecode",
+    "table",
+    "blockquote",
+    "reference",
+}
 
 CONTEXTUAL_HEADINGS = (
     "abstract",
@@ -59,6 +79,7 @@ CONTEXTUAL_HEADINGS = (
     "overview",
     "terminology",
     "conventions",
+    "requirements language",
 )
 NORMATIVE_HEADINGS = (
     "requirements",
@@ -129,7 +150,11 @@ def classify_clause(
     if block_type in EXCLUDED_BLOCK_TYPES:
         return ClassificationDecision(
             "EXCLUDED",
-            "formal_or_non_prose_block",
+            (
+                "quoted_or_imported_block"
+                if block_type == "blockquote"
+                else "formal_or_non_prose_block"
+            ),
             prior,
             keywords,
             [f"block_type:{block_type}"],
@@ -168,7 +193,11 @@ def classify_clause(
             keywords,
             ["bcp14_keyword_inside_quotation"],
         )
-    if keywords and targets and REFERENCE_REPORTING_RE.search(text):
+    if keywords and targets and (
+        REFERENCE_REPORTING_RE.search(text)
+        or REFERENCE_LEAD_IN_RE.search(text)
+        or REFERENCE_COLON_RE.search(text)
+    ):
         return ClassificationDecision(
             "EXCLUDED",
             "referenced_normative_text",
