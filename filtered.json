@@ -1,0 +1,365 @@
+[
+    {
+        "bcp14_keywords": [
+            "MUST"
+        ],
+        "block_id": "draft-ietf-tls-tls13-24:2:b0239",
+        "block_type": "paragraph",
+        "classification": "NORMATIVE",
+        "classification_reason": "explicit_bcp14_keyword",
+        "clause_id": "draft-ietf-tls-tls13-24:2:b0239:c04",
+        "document_id": "draft-ietf-tls-tls13-24",
+        "evidence": [
+            "bcp14:MUST"
+        ],
+        "index": 285,
+        "manual_review": false,
+        "mixed_clause": false,
+        "paragraph_index": 20,
+        "raw_text": "If (EC)DHE key establishment is in use, then the ServerHello contains a \"key_share\" extension with the server's ephemeral Diffie-Hellman share which MUST be in the same group as one of the client's shares.",
+        "reference_targets": [],
+        "revision_id": "24",
+        "section_heading": "Protocol Overview",
+        "section_id": "2",
+        "section_path": [
+            "2"
+        ],
+        "section_prior": "contextual",
+        "sentence_or_item_index": 4,
+        "source_location": {
+            "line_end": 1032,
+            "line_start": 1021,
+            "xpath": null
+        },
+        "text_end": 514,
+        "text_start": 309
+    },
+    {
+        "bcp14_keywords": [
+            "MUST NOT"
+        ],
+        "block_id": "draft-ietf-tls-tls13-24:2:b0248",
+        "block_type": "paragraph",
+        "classification": "NORMATIVE",
+        "classification_reason": "explicit_bcp14_keyword",
+        "clause_id": "draft-ietf-tls-tls13-24:2:b0248:c02",
+        "document_id": "draft-ietf-tls-tls13-24",
+        "evidence": [
+            "bcp14:MUST NOT"
+        ],
+        "index": 309,
+        "manual_review": false,
+        "mixed_clause": false,
+        "paragraph_index": 29,
+        "raw_text": "Application data MUST NOT be sent prior to sending the Finished message and until the record layer starts using encryption keys.",
+        "reference_targets": [],
+        "revision_id": "24",
+        "section_heading": "Protocol Overview",
+        "section_id": "2",
+        "section_path": [
+            "2"
+        ],
+        "section_prior": "contextual",
+        "sentence_or_item_index": 2,
+        "source_location": {
+            "line_end": 1090,
+            "line_start": 1083,
+            "xpath": null
+        },
+        "text_end": 331,
+        "text_start": 203
+    },
+    {
+        "bcp14_keywords": [
+            "MUST"
+        ],
+        "block_id": "draft-ietf-tls-tls13-24:2.1:b0249",
+        "block_type": "paragraph",
+        "classification": "NORMATIVE",
+        "classification_reason": "explicit_bcp14_keyword",
+        "clause_id": "draft-ietf-tls-tls13-24:2.1:b0249:c01",
+        "document_id": "draft-ietf-tls-tls13-24",
+        "evidence": [
+            "bcp14:MUST"
+        ],
+        "index": 311,
+        "manual_review": false,
+        "mixed_clause": false,
+        "paragraph_index": 1,
+        "raw_text": "If the client has not provided a sufficient \"key_share\" extension (e.g., it includes only DHE or ECDHE groups unacceptable to or unsupported by the server), the server corrects the mismatch with a HelloRetryRequest and the client needs to restart the handshake with an appropriate \"key_share\" extension, as shown in Figure 2. If no common cryptographic parameters can be negotiated, the server MUST abort the handshake with an appropriate alert.",
+        "reference_targets": [],
+        "revision_id": "24",
+        "section_heading": "Incorrect DHE Share",
+        "section_id": "2.1",
+        "section_path": [
+            "2",
+            "2.1"
+        ],
+        "section_prior": "neutral",
+        "sentence_or_item_index": 1,
+        "source_location": {
+            "line_end": 1100,
+            "line_start": 1094,
+            "xpath": null
+        },
+        "text_end": 445,
+        "text_start": 0
+    },
+    {
+        "bcp14_keywords": [
+            "SHOULD"
+        ],
+        "block_id": "draft-ietf-tls-tls13-24:2.2:b0263",
+        "block_type": "paragraph",
+        "classification": "NORMATIVE",
+        "classification_reason": "explicit_bcp14_keyword",
+        "clause_id": "draft-ietf-tls-tls13-24:2.2:b0263:c02",
+        "document_id": "draft-ietf-tls-tls13-24",
+        "evidence": [
+            "bcp14:SHOULD"
+        ],
+        "index": 331,
+        "manual_review": false,
+        "mixed_clause": false,
+        "paragraph_index": 8,
+        "raw_text": "When a client offers resumption via PSK, it SHOULD also supply a \"key_share\" extension to the server to allow the server to decline resumption and fall back to a full handshake, if needed.",
+        "reference_targets": [],
+        "revision_id": "24",
+        "section_heading": "Resumption and Pre-Shared Key (PSK)",
+        "section_id": "2.2",
+        "section_path": [
+            "2",
+            "2.2"
+        ],
+        "section_prior": "neutral",
+        "sentence_or_item_index": 2,
+        "source_location": {
+            "line_end": 1228,
+            "line_start": 1224,
+            "xpath": null
+        },
+        "text_end": 294,
+        "text_start": 106
+    },
+    {
+        "bcp14_keywords": [
+            "MUST"
+        ],
+        "block_id": "draft-ietf-tls-tls13-24:2.2:b0265",
+        "block_type": "paragraph",
+        "classification": "NORMATIVE",
+        "classification_reason": "explicit_bcp14_keyword",
+        "clause_id": "draft-ietf-tls-tls13-24:2.2:b0265:c01",
+        "document_id": "draft-ietf-tls-tls13-24",
+        "evidence": [
+            "bcp14:MUST"
+        ],
+        "index": 334,
+        "manual_review": false,
+        "mixed_clause": false,
+        "paragraph_index": 10,
+        "raw_text": "When PSKs are provisioned out of band, the PSK identity and the KDF hash algorithm to be used with the PSK MUST also be provisioned.",
+        "reference_targets": [],
+        "revision_id": "24",
+        "section_heading": "Resumption and Pre-Shared Key (PSK)",
+        "section_id": "2.2",
+        "section_path": [
+            "2",
+            "2.2"
+        ],
+        "section_prior": "neutral",
+        "sentence_or_item_index": 1,
+        "source_location": {
+            "line_end": 1242,
+            "line_start": 1241,
+            "xpath": null
+        },
+        "text_end": 132,
+        "text_start": 0
+    },
+    {
+        "bcp14_keywords": [
+            "MUST"
+        ],
+        "block_id": "draft-ietf-tls-tls13-24:4:b0333",
+        "block_type": "paragraph",
+        "classification": "NORMATIVE",
+        "classification_reason": "explicit_bcp14_keyword",
+        "clause_id": "draft-ietf-tls-tls13-24:4:b0333:c01",
+        "document_id": "draft-ietf-tls-tls13-24",
+        "evidence": [
+            "bcp14:MUST"
+        ],
+        "index": 449,
+        "manual_review": false,
+        "mixed_clause": false,
+        "paragraph_index": 4,
+        "raw_text": "Protocol messages MUST be sent in the order defined in Section 4.4.1 and shown in the diagrams in Section 2.",
+        "reference_targets": [
+            "draft-ietf-tls-tls13-24"
+        ],
+        "revision_id": "24",
+        "section_heading": "Handshake Protocol",
+        "section_id": "4",
+        "section_path": [
+            "4"
+        ],
+        "section_prior": "neutral",
+        "sentence_or_item_index": 1,
+        "source_location": {
+            "line_end": 1672,
+            "line_start": 1669,
+            "xpath": null
+        },
+        "text_end": 108,
+        "text_start": 0
+    },
+    {
+        "bcp14_keywords": [
+            "MUST"
+        ],
+        "block_id": "draft-ietf-tls-tls13-24:4:b0333",
+        "block_type": "paragraph",
+        "classification": "NORMATIVE",
+        "classification_reason": "explicit_bcp14_keyword",
+        "clause_id": "draft-ietf-tls-tls13-24:4:b0333:c02",
+        "document_id": "draft-ietf-tls-tls13-24",
+        "evidence": [
+            "bcp14:MUST"
+        ],
+        "index": 450,
+        "manual_review": false,
+        "mixed_clause": false,
+        "paragraph_index": 4,
+        "raw_text": "A peer which receives a handshake message in an unexpected order MUST abort the handshake with an \"unexpected_message\" alert.",
+        "reference_targets": [],
+        "revision_id": "24",
+        "section_heading": "Handshake Protocol",
+        "section_id": "4",
+        "section_path": [
+            "4"
+        ],
+        "section_prior": "neutral",
+        "sentence_or_item_index": 2,
+        "source_location": {
+            "line_end": 1672,
+            "line_start": 1669,
+            "xpath": null
+        },
+        "text_end": 234,
+        "text_start": 109
+    },
+    {
+        "bcp14_keywords": [
+            "MUST"
+        ],
+        "block_id": "draft-ietf-tls-tls13-24:4.1.1:b0341",
+        "block_type": "paragraph",
+        "classification": "NORMATIVE",
+        "classification_reason": "explicit_bcp14_keyword",
+        "clause_id": "draft-ietf-tls-tls13-24:4.1.1:b0341:c01",
+        "document_id": "draft-ietf-tls-tls13-24",
+        "evidence": [
+            "bcp14:MUST"
+        ],
+        "index": 458,
+        "manual_review": false,
+        "mixed_clause": false,
+        "paragraph_index": 6,
+        "raw_text": "If the server does not select a PSK, then the first three of these options are entirely orthogonal: the server independently selects a cipher suite, an (EC)DHE group and key share for key establishment, and a signature algorithm/certificate pair to authenticate itself to the client. If there is no overlap between the received \"supported_groups\" and the groups supported by the server then the server MUST abort the handshake with a \"handshake_failure\" or an \"insufficient_security\" alert.",
+        "reference_targets": [],
+        "revision_id": "24",
+        "section_heading": "Cryptographic Negotiation",
+        "section_id": "4.1.1",
+        "section_path": [
+            "4",
+            "4.1",
+            "4.1.1"
+        ],
+        "section_prior": "neutral",
+        "sentence_or_item_index": 1,
+        "source_location": {
+            "line_end": 1720,
+            "line_start": 1713,
+            "xpath": null
+        },
+        "text_end": 490,
+        "text_start": 0
+    },
+    {
+        "bcp14_keywords": [
+            "MUST"
+        ],
+        "block_id": "draft-ietf-tls-tls13-24:4.1.1:b0342",
+        "block_type": "paragraph",
+        "classification": "NORMATIVE",
+        "classification_reason": "explicit_bcp14_keyword",
+        "clause_id": "draft-ietf-tls-tls13-24:4.1.1:b0342:c01",
+        "document_id": "draft-ietf-tls-tls13-24",
+        "evidence": [
+            "bcp14:MUST"
+        ],
+        "index": 459,
+        "manual_review": false,
+        "mixed_clause": false,
+        "paragraph_index": 7,
+        "raw_text": "If the server selects a PSK, then it MUST also select a key establishment mode from the set indicated by client's \"psk_key_exchange_modes\" extension (at present, PSK alone or with (EC)DHE).",
+        "reference_targets": [],
+        "revision_id": "24",
+        "section_heading": "Cryptographic Negotiation",
+        "section_id": "4.1.1",
+        "section_path": [
+            "4",
+            "4.1",
+            "4.1.1"
+        ],
+        "section_prior": "neutral",
+        "sentence_or_item_index": 1,
+        "source_location": {
+            "line_end": 1727,
+            "line_start": 1722,
+            "xpath": null
+        },
+        "text_end": 189,
+        "text_start": 0
+    },
+    {
+        "bcp14_keywords": [
+            "MUST"
+        ],
+        "block_id": "draft-ietf-tls-tls13-24:4.1.1:b0343",
+        "block_type": "paragraph",
+        "classification": "NORMATIVE",
+        "classification_reason": "explicit_bcp14_keyword",
+        "clause_id": "draft-ietf-tls-tls13-24:4.1.1:b0343:c01",
+        "document_id": "draft-ietf-tls-tls13-24",
+        "evidence": [
+            "bcp14:MUST"
+        ],
+        "index": 461,
+        "manual_review": false,
+        "mixed_clause": false,
+        "paragraph_index": 8,
+        "raw_text": "If the server selects an (EC)DHE group and the client did not offer a compatible \"key_share\" extension in the initial ClientHello, the server MUST respond with a HelloRetryRequest (Section 4.1.4) message.",
+        "reference_targets": [
+            "draft-ietf-tls-tls13-24"
+        ],
+        "revision_id": "24",
+        "section_heading": "Cryptographic Negotiation",
+        "section_id": "4.1.1",
+        "section_path": [
+            "4",
+            "4.1",
+            "4.1.1"
+        ],
+        "section_prior": "neutral",
+        "sentence_or_item_index": 1,
+        "source_location": {
+            "line_end": 1731,
+            "line_start": 1729,
+            "xpath": null
+        },
+        "text_end": 204,
+        "text_start": 0
+    }
+]
