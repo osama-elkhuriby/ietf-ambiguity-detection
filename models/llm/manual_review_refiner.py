@@ -9,38 +9,49 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
+
 try:
     from openai import OpenAI
-except ModuleNotFoundError:  # pragma: no cover - optional dependency
-    OpenAI = Any  # type: ignore[misc,assignment]
+except ModuleNotFoundError:  # pragma: no cover
+    OpenAI = Any  # type: ignore[misc, assignment]
 
 
 # ============================================================
 # Configuration
 # ============================================================
 
-LLM_BATCH_SIZE = 20
+LLM_BATCH_SIZE = 5
 
-# Conservative thresholds.
-# NORMATIVE is intentionally stricter because false normative
-# classifications are particularly undesirable in this stage.
+# Be stricter when accepting NORMATIVE.
 NORMATIVE_THRESHOLD = 0.80
 CONTEXTUAL_THRESHOLD = 0.70
 
 
 # ============================================================
-# Environment loading
+# Environment
 # ============================================================
 
 def _load_env_file() -> None:
-    """Load project-level .env variables if present without requiring dotenv."""
+    """
+    Load project-level .env variables without requiring python-dotenv.
+
+    Expected project structure:
+
+        project/
+            .env
+            models/
+                llm/
+                    manual_review_refiner.py
+    """
 
     env_path = Path(__file__).resolve().parents[2] / ".env"
 
     if not env_path.exists():
         return
 
-    for raw_line in env_path.read_text(encoding="utf-8").splitlines():
+    for raw_line in env_path.read_text(
+        encoding="utf-8"
+    ).splitlines():
 
         line = raw_line.strip()
 
@@ -58,24 +69,32 @@ def _load_env_file() -> None:
             for part in line.split("=", 1)
         ]
 
-        if key and value and key not in os.environ:
-            os.environ[key] = value.strip('"\'')
-            
+        if (
+            key
+            and value
+            and key not in os.environ
+        ):
+            os.environ[key] = value.strip("\"'")
+
 
 _load_env_file()
 
 
-def _resolve_llm_config() -> tuple[str | None, str | None, str | None]:
+def _resolve_llm_config() -> tuple[
+    str | None,
+    str | None,
+    str | None,
+]:
     """
-    Resolve LLM configuration.
+    Resolve API key, base URL, and model.
 
-    Supported environment variables:
+    Preferred variables:
 
-    LLM_API_KEY
-    LLM_MODEL
-    LLM_BASE_URL
+        LLM_API_KEY
+        LLM_BASE_URL
+        LLM_MODEL
 
-    Compatibility fallbacks are also supported.
+    Other provider variables are accepted as fallbacks.
     """
 
     api_key = (
@@ -116,34 +135,40 @@ def _resolve_llm_config() -> tuple[str | None, str | None, str | None]:
             base_url,
         )
 
-    return api_key, base_url, model
+    return (
+        api_key,
+        base_url,
+        model,
+    )
 
 
-LLM_API_KEY, LLM_BASE_URL, LLM_MODEL = _resolve_llm_config()
+LLM_API_KEY, LLM_BASE_URL, LLM_MODEL = (
+    _resolve_llm_config()
+)
 
 
 # ============================================================
-# Result representation
+# Result model
 # ============================================================
 
 @dataclass(slots=True)
 class LLMClassification:
     clause_id: str
 
-    # Final classification after confidence filtering
+    # Final classification after our confidence gate.
     classification: str
 
-    # Original classification returned by the model
+    # Classification originally returned by the LLM.
     raw_classification: str
 
-    # Self-reported confidence from the model
+    # Self-reported model confidence.
     confidence: float
 
     reason: str
 
 
 # ============================================================
-# Prompt
+# System prompt
 # ============================================================
 
 SYSTEM_PROMPT = """
@@ -151,23 +176,26 @@ You classify TARGET clauses from IETF Internet-Drafts and RFCs.
 
 The rule-based classifier has already processed these clauses.
 
-You are receiving only clauses for which the rule-based classifier
+You receive only clauses for which the rule-based classifier
 could not make a sufficiently confident decision.
 
-Your task is NOT to identify whether a sentence is technically important.
+Your task is NOT to decide whether text is technically important,
+part of a standard, or associated with a normative protocol component.
 
-Your task is ONLY to determine whether the TARGET clause itself imposes
-normative behavior.
+Your task is ONLY to determine whether the TARGET natural-language
+clause itself imposes normative behavior.
 
-Classify every TARGET clause into exactly one of:
+
+CLASSIFICATIONS
+===============
 
 NORMATIVE
 
-The clause imposes a requirement, permission, prohibition,
+The TARGET clause imposes a requirement, permission, prohibition,
 recommendation, conformance condition, or explicit behavioral
 constraint on a protocol participant or implementation.
 
-Typical actors include:
+Examples of protocol actors include:
 
 - client
 - server
@@ -178,88 +206,82 @@ Typical actors include:
 - implementation
 - protocol participant
 
-A NORMATIVE clause constrains what one of these actors is required,
-permitted, recommended, expected, or prohibited to do.
-
 
 CONTEXTUAL
 
-The clause explains, describes, defines, summarizes, motivates,
+The TARGET clause explains, describes, defines, summarizes, motivates,
 justifies, reports a fact, describes a property, or provides
 background information WITHOUT imposing a behavioral requirement.
-
-Describing protocol behavior, design rationale, interoperability,
-capability, data structures, algorithms, or implementation facts
-does NOT automatically make a clause normative.
 
 
 UNCERTAIN
 
-There is insufficient evidence to determine reliably whether the
-TARGET clause imposes a normative behavioral constraint.
+There is insufficient evidence to reliably determine whether the
+TARGET clause imposes normative behavior.
 
 Use UNCERTAIN instead of guessing.
 
 
-============================================================
+CRITICAL DISTINCTION
+====================
+
+"NORMATIVE" does NOT mean:
+
+- the text occurs in an RFC or Internet-Draft;
+- the text occurs in a normative section;
+- the text defines a protocol component;
+- the text is technically important;
+- implementations need to understand the concept;
+- the statement affects interoperability.
+
+"NORMATIVE" means that the TARGET natural-language clause itself
+clearly imposes or defines participant or implementation behavior.
+
+
 STRICT DECISION RULES
-============================================================
+=====================
 
-1. NORMATIVE requires evidence of an obligation, permission,
-   prohibition, recommendation, conformance condition, or behavioral
-   constraint.
+1. Before selecting NORMATIVE, ask:
 
-2. Ask this question before selecting NORMATIVE:
+   "Does this TARGET clause clearly constrain what a protocol
+   participant or implementation is required, permitted,
+   recommended, or prohibited to do?"
 
-   "Does the TARGET clause constrain what an implementation or
-   protocol participant is required, permitted, recommended,
-   expected, or prohibited to do?"
+   If the answer is not clearly yes, do NOT select NORMATIVE.
 
-   If the answer is not clearly yes, do NOT classify it as NORMATIVE.
 
-3. Do NOT classify a clause as NORMATIVE merely because it occurs
-   in a technical, protocol-processing, security, message-format,
-   or interoperability section.
+2. Do NOT classify a clause as NORMATIVE merely because it appears
+   in a technical, security, processing, message-format,
+   interoperability, or protocol section.
 
-4. Section headings are CONTEXT ONLY.
 
-   A section heading must never be sufficient evidence for a
-   NORMATIVE classification.
+3. Section headings are context only.
 
-5. A statement describing how something works is NOT automatically
+   Never use a section heading alone as evidence of normativity.
+
+
+4. A statement describing how a protocol, function, algorithm,
+   structure, state, field, or message works is NOT automatically
    normative.
 
-   For example:
 
-   "The deprotection functions reverse the process."
-
-   Classification:
-   CONTEXTUAL
-
-   Reason:
-   It describes function behavior without imposing a requirement.
-
-6. A statement describing a protocol property is NOT automatically
-   normative.
-
-   Statements about:
+5. A statement describing:
 
    - interoperability
    - compatibility
    - sufficiency
    - capability
    - availability
-   - performance
+   - expected behavior
    - deployment
-   - expected operation
-   - existing implementations
-   - design intention
+   - implementation status
+   - design rationale
    - protocol architecture
 
-   are normally CONTEXTUAL unless they explicitly constrain
-   participant or implementation behavior.
+   is normally CONTEXTUAL unless it directly imposes behavior.
 
-7. The words:
+
+6. Words such as:
 
    sufficient
    necessary
@@ -274,9 +296,10 @@ STRICT DECISION RULES
    possible
    capable
 
-   do NOT by themselves imply a normative requirement.
+   do NOT themselves make a statement normative.
 
-8. Example:
+
+7. Example:
 
    "The set of curves specified here is sufficient for
    interoperability with currently deployed TLS implementations."
@@ -285,11 +308,23 @@ STRICT DECISION RULES
    CONTEXTUAL
 
    Reason:
-   It states an interoperability property without imposing
-   implementation behavior.
+   It describes an interoperability property without imposing
+   participant behavior.
 
-9. A factual statement about implementations or deployment is
-   normally CONTEXTUAL.
+
+8. Example:
+
+   "The deprotection functions reverse the process."
+
+   Classification:
+   CONTEXTUAL
+
+   Reason:
+   It describes function behavior without imposing a requirement.
+
+
+9. A factual description of current implementations is normally
+   CONTEXTUAL.
 
    Example:
 
@@ -298,19 +333,12 @@ STRICT DECISION RULES
    Classification:
    CONTEXTUAL
 
-10. A definition is normally CONTEXTUAL unless the definition itself
-    imposes implementation or protocol behavior.
 
-11. A sentence describing a field, structure, message, function,
-    algorithm, or state is normally CONTEXTUAL when it merely explains
-    what that object represents or does.
+10. Technical importance does NOT imply normativity.
 
-12. Do NOT infer a hidden requirement merely because following the
-    statement may be important for interoperability.
 
-13. Technical importance does NOT imply normativity.
-
-14. BCP 14 keywords are strong evidence when they impose requirements:
+11. BCP 14 keywords are strong evidence of NORMATIVE usage when
+    they actually impose behavior:
 
     MUST
     MUST NOT
@@ -324,19 +352,20 @@ STRICT DECISION RULES
     MAY
     OPTIONAL
 
-15. However, merely mentioning a BCP 14 keyword does NOT automatically
+
+12. Merely mentioning a BCP 14 keyword does NOT automatically
     make a clause normative.
 
-    For example, a sentence explaining what "MUST" means is
+
+13. Absence of BCP 14 keywords does NOT automatically imply
     CONTEXTUAL.
 
-16. Absence of BCP 14 keywords does NOT automatically imply
-    CONTEXTUAL.
 
-17. A clause may be implicitly NORMATIVE without a BCP 14 keyword,
-    but ONLY when the behavioral or conformance constraint is clear.
+14. A clause may be implicitly NORMATIVE without a BCP 14 keyword,
+    but ONLY when a behavioral or conformance constraint is clear.
 
-18. Example of explicit normative language:
+
+15. Example:
 
     "The client MUST abort the connection if validation fails."
 
@@ -344,9 +373,10 @@ STRICT DECISION RULES
     NORMATIVE
 
     Reason:
-    It imposes mandatory behavior on the client.
+    It imposes mandatory client behavior.
 
-19. Example of implicit normative language:
+
+16. Example:
 
     "A compliant implementation rejects certificates with an
     invalid signature."
@@ -355,55 +385,90 @@ STRICT DECISION RULES
     NORMATIVE
 
     Reason:
-    It defines required behavior for compliant implementations.
+    It defines required conformance behavior.
 
-20. Be especially careful with declarative statements.
 
-    A grammatical statement of fact such as:
+17. Be particularly careful with declarative statements.
 
-    "The server sends X after Y."
+    Example:
 
-    may either describe protocol behavior or impose a rule.
+    "The server sends X after receiving Y."
 
-    Do NOT automatically classify such statements as NORMATIVE.
+    This could be descriptive or prescriptive.
 
-    Use surrounding context only when needed to determine whether
-    the statement is clearly prescribing behavior.
+    Do not automatically classify it as NORMATIVE.
 
-21. Previous and next clauses may help resolve meaning, but the
-    classification must apply to the TARGET clause.
+    Use surrounding context only if necessary to determine whether
+    the TARGET clearly specifies required behavior.
 
-22. Do NOT transfer normativity from a nearby clause to the TARGET
-    clause.
 
-    A nearby MUST statement does not make every sentence around it
-    normative.
+18. Previous and next clauses may help interpretation, but you
+    classify ONLY the TARGET clause.
 
-23. Do NOT infer requirements that are not stated or clearly implied
-    by the TARGET clause.
 
-24. When both NORMATIVE and CONTEXTUAL interpretations remain
+19. Do NOT transfer normativity from neighboring clauses.
+
+    A nearby MUST statement does not make surrounding descriptive
+    sentences normative.
+
+
+20. Do NOT invent implicit requirements that are not stated or
+    clearly implied by the TARGET.
+
+
+21. If both NORMATIVE and CONTEXTUAL interpretations remain
     plausible, return UNCERTAIN.
 
-25. Prefer UNCERTAIN over an unsupported NORMATIVE classification.
 
-26. Be conservative when selecting NORMATIVE.
+22. Prefer UNCERTAIN over unsupported NORMATIVE classification.
 
-27. A clear descriptive explanation should be CONTEXTUAL, not
+
+23. A clearly descriptive sentence should be CONTEXTUAL, not
     UNCERTAIN.
 
-28. Use UNCERTAIN only when genuine semantic ambiguity remains about
-    whether the TARGET clause imposes behavior.
+
+FORMAL / NON-PROSE CONTENT
+=========================
+
+The intended task is classification of natural-language clauses.
+
+If a TARGET consists primarily of:
+
+- protocol grammar
+- ABNF
+- structure declarations
+- field declarations
+- vector declarations
+- schema notation
+- source code
+- pseudocode
+- formal syntax
+
+do NOT infer a behavioral requirement merely because it defines
+a protocol component.
+
+For example:
+
+PskIdentity identities<7..2^16-1>;
+PskBinderEntry binders<33..2^16-1>;
+
+This is formal protocol syntax, not a natural-language normative
+requirement.
+
+If such text unexpectedly reaches this classifier, return:
+
+classification = UNCERTAIN
+
+with low confidence.
+
+The parser/segmenter should normally exclude such content before
+this stage.
 
 
-============================================================
 CONFIDENCE
-============================================================
+==========
 
-Return a confidence value between 0.0 and 1.0.
-
-The confidence represents how strongly the available evidence supports
-a definitive NORMATIVE or CONTEXTUAL decision.
+Return confidence between 0.0 and 1.0.
 
 Use approximately:
 
@@ -420,37 +485,33 @@ Reasonably strong evidence.
 Moderate evidence.
 
 Below 0.60
-The evidence is insufficient for a reliable definitive decision.
-Classification should normally be UNCERTAIN.
+Insufficient evidence for a reliable definitive decision.
 
-Do NOT use high confidence simply because the clause sounds technical.
+If confidence is below 0.60, classification should normally
+be UNCERTAIN.
 
-Do NOT inflate confidence.
-
-If significant interpretation or assumptions are required,
-lower the confidence.
+Do NOT inflate confidence merely because the sentence sounds
+technical.
 
 
-============================================================
 REASON
-============================================================
+======
 
 The reason must:
 
 - refer only to the TARGET clause;
-- explain why it is normative, contextual, or uncertain;
+- explain the selected classification;
 - be one short sentence;
 - contain no more than 20 words;
-- avoid unnecessary chain-of-thought or extended reasoning.
+- avoid extended reasoning.
 
 
-============================================================
 OUTPUT
-============================================================
+======
 
 Return JSON only.
 
-Do not include Markdown.
+Do not return Markdown.
 
 Do not include explanations outside the JSON.
 
@@ -467,7 +528,7 @@ Expected format:
   ]
 }
 
-The classification value must be exactly one of:
+classification must be exactly one of:
 
 NORMATIVE
 CONTEXTUAL
@@ -486,16 +547,17 @@ def make_client() -> OpenAI:
         from openai import OpenAI as OpenAIClient
 
     except ModuleNotFoundError as exc:
-
         raise RuntimeError(
             "The optional dependency 'openai' is not installed. "
             "Install it with: pip install openai"
         ) from exc
 
-    api_key, base_url, _ = _resolve_llm_config()
+    api_key, base_url, _ = (
+        _resolve_llm_config()
+    )
 
-    # Ollama itself does not need authentication, but the OpenAI
-    # Python client expects a non-empty API key.
+    # Ollama does not require authentication,
+    # but OpenAI's Python client expects a key.
     if not api_key:
 
         if (
@@ -510,7 +572,7 @@ def make_client() -> OpenAI:
         else:
             raise RuntimeError(
                 "No API key configured. "
-                "Put LLM_API_KEY in the project .env file."
+                "Set LLM_API_KEY in the project .env file."
             )
 
     kwargs: dict[str, Any] = {
@@ -520,11 +582,13 @@ def make_client() -> OpenAI:
     if base_url:
         kwargs["base_url"] = base_url
 
-    return OpenAIClient(**kwargs)
+    return OpenAIClient(
+        **kwargs
+    )
 
 
 # ============================================================
-# LLM input preparation
+# LLM input
 # ============================================================
 
 def prepare_clause_for_llm(
@@ -537,12 +601,22 @@ def prepare_clause_for_llm(
     item: dict[str, Any] = {
         "clause_id": clause["clause_id"],
         "text": clause["raw_text"],
-        "section_id": clause.get("section_id"),
-        "section_heading": clause.get("section_heading"),
+        "section_id": clause.get(
+            "section_id"
+        ),
+        "section_heading": clause.get(
+            "section_heading"
+        ),
     }
 
-    if clause.get("reference_targets"):
-        item["references"] = clause["reference_targets"]
+    if clause.get(
+        "reference_targets"
+    ):
+        item["references"] = (
+            clause[
+                "reference_targets"
+            ]
+        )
 
     return item
 
@@ -552,76 +626,100 @@ def prepare_batch(
     target_clauses: list[dict[str, Any]],
 ) -> dict[str, Any]:
     """
-    Construct LLM batch with neighboring context.
-
-    Only previous/next clauses from the same section are included.
+    Add the previous and next clauses from the same section
+    as limited local context.
     """
 
     ordered = sorted(
         all_clauses,
-        key=lambda x: x.get("index", 0),
+        key=lambda clause: clause.get(
+            "index",
+            0,
+        ),
     )
 
     index_by_id = {
-        clause["clause_id"]: i
-        for i, clause in enumerate(ordered)
+        clause["clause_id"]: index
+        for index, clause
+        in enumerate(ordered)
     }
 
-    items: list[dict[str, Any]] = []
+    items: list[
+        dict[str, Any]
+    ] = []
 
     for target in target_clauses:
 
-        clause_id = target["clause_id"]
+        clause_id = target[
+            "clause_id"
+        ]
 
         if clause_id not in index_by_id:
             continue
 
-        position = index_by_id[clause_id]
+        position = index_by_id[
+            clause_id
+        ]
 
         previous_clause = None
         next_clause = None
 
-        # ----------------------------------------------------
-        # Previous clause
-        # ----------------------------------------------------
-
+        # Previous
         if position > 0:
 
-            previous = ordered[position - 1]
+            previous = ordered[
+                position - 1
+            ]
 
             if (
                 previous.get("section_id")
                 == target.get("section_id")
             ):
-                previous_clause = previous.get("raw_text")
+                previous_clause = (
+                    previous.get(
+                        "raw_text"
+                    )
+                )
 
-        # ----------------------------------------------------
-        # Next clause
-        # ----------------------------------------------------
+        # Next
+        if (
+            position + 1
+            < len(ordered)
+        ):
 
-        if position + 1 < len(ordered):
-
-            following = ordered[position + 1]
+            following = ordered[
+                position + 1
+            ]
 
             if (
                 following.get("section_id")
                 == target.get("section_id")
             ):
-                next_clause = following.get("raw_text")
+                next_clause = (
+                    following.get(
+                        "raw_text"
+                    )
+                )
 
-        # ----------------------------------------------------
-        # Target
-        # ----------------------------------------------------
-
-        item = prepare_clause_for_llm(target)
+        item = (
+            prepare_clause_for_llm(
+                target
+            )
+        )
 
         if previous_clause:
-            item["previous_clause"] = previous_clause
+            item[
+                "previous_clause"
+            ] = previous_clause
 
         if next_clause:
-            item["next_clause"] = next_clause
+            item[
+                "next_clause"
+            ] = next_clause
 
-        items.append(item)
+        items.append(
+            item
+        )
 
     return {
         "target_clauses": items,
@@ -629,71 +727,107 @@ def prepare_batch(
 
 
 # ============================================================
-# Confidence parsing
+# Confidence handling
 # ============================================================
 
-def _parse_confidence(value: Any) -> float:
+def _parse_confidence(
+    value: Any,
+) -> float:
     """
-    Convert model confidence into a number between 0 and 1.
+    Convert confidence to a float between 0 and 1.
 
-    Handles both:
-
-        0.85
-
-    and accidental percentage-style values such as:
-
-        85
+    Also tolerates accidental percentage values such as 85.
     """
 
     try:
-        confidence = float(value)
+        confidence = float(
+            value
+        )
 
-    except (TypeError, ValueError):
+    except (
+        TypeError,
+        ValueError,
+    ):
         return 0.0
 
-    # Gracefully interpret percentage-style output.
-    if 1.0 < confidence <= 100.0:
-        confidence = confidence / 100.0
+    # Handle 85 -> 0.85
+    if (
+        confidence > 1.0
+        and confidence <= 100.0
+    ):
+        confidence /= 100.0
 
-    # Clamp to valid probability-like range.
     confidence = max(
         0.0,
-        min(1.0, confidence),
+        min(
+            1.0,
+            confidence,
+        ),
     )
 
     return confidence
 
-
-# ============================================================
-# Threshold policy
-# ============================================================
 
 def _apply_confidence_threshold(
     classification: str,
     confidence: float,
 ) -> str:
     """
-    Apply conservative decision thresholds.
-
-    NORMATIVE requires stronger confidence because an incorrect
-    normative assignment is particularly undesirable.
+    Convert low-confidence predictions to UNCERTAIN.
     """
 
     if classification == "NORMATIVE":
 
-        if confidence < NORMATIVE_THRESHOLD:
+        if (
+            confidence
+            < NORMATIVE_THRESHOLD
+        ):
             return "UNCERTAIN"
 
         return "NORMATIVE"
 
     if classification == "CONTEXTUAL":
 
-        if confidence < CONTEXTUAL_THRESHOLD:
+        if (
+            confidence
+            < CONTEXTUAL_THRESHOLD
+        ):
             return "UNCERTAIN"
 
         return "CONTEXTUAL"
 
     return "UNCERTAIN"
+
+
+# ============================================================
+# JSON handling
+# ============================================================
+
+def _clean_json_response(
+    content: str,
+) -> str:
+    """
+    Remove accidental Markdown JSON fences.
+    """
+
+    cleaned = content.strip()
+
+    if cleaned.startswith("```json"):
+        cleaned = cleaned[
+            len("```json"):
+        ].strip()
+
+    elif cleaned.startswith("```"):
+        cleaned = cleaned[
+            len("```"):
+        ].strip()
+
+    if cleaned.endswith("```"):
+        cleaned = cleaned[
+            :-3
+        ].strip()
+
+    return cleaned
 
 
 # ============================================================
@@ -705,54 +839,83 @@ def classify_batch_with_llm(
     payload: dict[str, Any],
 ) -> list[LLMClassification]:
     """
-    Classify one batch of MANUAL_REVIEW clauses.
+    Send one batch to the LLM and parse its classifications.
     """
 
-    _, _, model = _resolve_llm_config()
+    _, _, model = (
+        _resolve_llm_config()
+    )
 
     if not model:
         raise RuntimeError(
-            "LLM_MODEL environment variable is not configured."
+            "LLM_MODEL is not configured."
         )
 
-    response = client.chat.completions.create(
-        model=model,
-        temperature=0,
-        messages=[
-            {
-                "role": "system",
-                "content": SYSTEM_PROMPT,
+    response = (
+        client.chat.completions.create(
+            model=model,
+            temperature=0,
+            messages=[
+                {
+                    "role": "system",
+                    "content": SYSTEM_PROMPT,
+                },
+                {
+                    "role": "user",
+                    "content": json.dumps(
+                        payload,
+                        ensure_ascii=False,
+                    ),
+                },
+            ],
+            response_format={
+                "type": "json_object",
             },
-            {
-                "role": "user",
-                "content": json.dumps(
-                    payload,
-                    ensure_ascii=False,
-                ),
-            },
-        ],
-        response_format={
-            "type": "json_object",
-        },
+        )
     )
 
-    content = response.choices[0].message.content
+    content = (
+        response
+        .choices[0]
+        .message
+        .content
+    )
 
     if not content:
         raise RuntimeError(
             "LLM returned an empty response."
         )
 
+    content = (
+        _clean_json_response(
+            content
+        )
+    )
+
     try:
-        data = json.loads(content)
+        data = json.loads(
+            content
+        )
 
     except json.JSONDecodeError as exc:
-
         raise RuntimeError(
-            f"LLM returned invalid JSON: {content[:500]}"
+            "LLM returned invalid JSON. "
+            f"Response begins with: "
+            f"{content[:500]}"
         ) from exc
 
-    results: list[LLMClassification] = []
+    raw_results = data.get(
+        "results"
+    )
+
+    if not isinstance(
+        raw_results,
+        list,
+    ):
+        raise RuntimeError(
+            "LLM response does not contain "
+            "a valid 'results' list."
+        )
 
     valid_labels = {
         "NORMATIVE",
@@ -760,26 +923,28 @@ def classify_batch_with_llm(
         "UNCERTAIN",
     }
 
-    raw_results = data.get("results", [])
-
-    if not isinstance(raw_results, list):
-        raise RuntimeError(
-            "LLM JSON response does not contain a valid 'results' list."
-        )
+    results: list[
+        LLMClassification
+    ] = []
 
     for item in raw_results:
 
-        if not isinstance(item, dict):
+        if not isinstance(
+            item,
+            dict,
+        ):
             continue
 
-        clause_id = item.get("clause_id")
+        clause_id = item.get(
+            "clause_id"
+        )
 
         if not clause_id:
             continue
 
-        # ----------------------------------------------------
-        # Raw model classification
-        # ----------------------------------------------------
+        # -----------------------------------
+        # Raw classification
+        # -----------------------------------
 
         raw_classification = str(
             item.get(
@@ -788,32 +953,37 @@ def classify_batch_with_llm(
             )
         ).strip().upper()
 
-        if raw_classification not in valid_labels:
-            raw_classification = "UNCERTAIN"
+        if (
+            raw_classification
+            not in valid_labels
+        ):
+            raw_classification = (
+                "UNCERTAIN"
+            )
 
-        # ----------------------------------------------------
+        # -----------------------------------
         # Confidence
-        # ----------------------------------------------------
+        # -----------------------------------
 
-        confidence = _parse_confidence(
-            item.get(
-                "confidence",
-                0.0,
+        confidence = (
+            _parse_confidence(
+                item.get(
+                    "confidence",
+                    0.0,
+                )
             )
         )
 
-        # ----------------------------------------------------
-        # Apply conservative threshold
-        # ----------------------------------------------------
+        # -----------------------------------
+        # Confidence gate
+        # -----------------------------------
 
-        classification = _apply_confidence_threshold(
-            raw_classification,
-            confidence,
+        classification = (
+            _apply_confidence_threshold(
+                raw_classification,
+                confidence,
+            )
         )
-
-        # ----------------------------------------------------
-        # Reason
-        # ----------------------------------------------------
 
         reason = str(
             item.get(
@@ -824,7 +994,9 @@ def classify_batch_with_llm(
 
         results.append(
             LLMClassification(
-                clause_id=str(clause_id),
+                clause_id=str(
+                    clause_id
+                ),
                 classification=classification,
                 raw_classification=raw_classification,
                 confidence=confidence,
@@ -836,7 +1008,7 @@ def classify_batch_with_llm(
 
 
 # ============================================================
-# Refinement
+# Clause refinement
 # ============================================================
 
 def refine_manual_review_clauses(
@@ -845,38 +1017,92 @@ def refine_manual_review_clauses(
     reprocess: bool = False,
 ) -> list[dict[str, Any]]:
     """
-    Refine MANUAL_REVIEW clauses using the LLM.
+    Refine rule-based MANUAL_REVIEW clauses.
 
-    By default, clauses previously processed by the LLM are skipped.
+    Normal mode:
+        Only unresolved MANUAL_REVIEW clauses that have not already
+        been sent to the LLM are processed.
 
-    Set reprocess=True to run them again.
+    Reprocess mode:
+        Re-run every clause whose ORIGINAL rule classification
+        was MANUAL_REVIEW.
     """
 
-    manual: list[dict[str, Any]] = []
+    manual: list[
+        dict[str, Any]
+    ] = []
 
     for clause in clauses:
 
-        if clause.get("classification") != "MANUAL_REVIEW":
-            continue
+        current_classification = (
+            clause.get(
+                "classification"
+            )
+        )
 
-        existing_refinement = clause.get(
-            "llm_refinement",
-            {},
+        original_rule_classification = (
+            clause.get(
+                "rule_classification",
+                current_classification,
+            )
+        )
+
+        existing_refinement = (
+            clause.get(
+                "llm_refinement",
+                {},
+            )
         )
 
         already_processed = (
-            isinstance(existing_refinement, dict)
-            and existing_refinement.get("used") is True
+            isinstance(
+                existing_refinement,
+                dict,
+            )
+            and existing_refinement.get(
+                "used"
+            ) is True
         )
 
-        if already_processed and not reprocess:
+        # -----------------------------------
+        # Reprocess mode
+        # -----------------------------------
+
+        if reprocess:
+
+            if (
+                original_rule_classification
+                != "MANUAL_REVIEW"
+            ):
+                continue
+
+            manual.append(
+                clause
+            )
+
             continue
 
-        manual.append(clause)
+        # -----------------------------------
+        # Normal mode
+        # -----------------------------------
+
+        if (
+            current_classification
+            != "MANUAL_REVIEW"
+        ):
+            continue
+
+        if already_processed:
+            continue
+
+        manual.append(
+            clause
+        )
 
     print(
         f"LLM refinement: "
-        f"{len(manual)} MANUAL_REVIEW clauses."
+        f"{len(manual)} clause(s) selected "
+        f"(reprocess={reprocess})."
     )
 
     if not manual:
@@ -889,9 +1115,15 @@ def refine_manual_review_clauses(
         LLMClassification,
     ] = {}
 
-    # --------------------------------------------------------
+    total_batches = (
+        len(manual)
+        + batch_size
+        - 1
+    ) // batch_size
+
+    # ========================================================
     # Batch processing
-    # --------------------------------------------------------
+    # ========================================================
 
     for start in range(
         0,
@@ -914,73 +1146,112 @@ def refine_manual_review_clauses(
 
         print(
             f"Processing LLM batch "
-            f"{batch_number} "
+            f"{batch_number}/{total_batches} "
             f"({len(targets)} clauses)"
         )
 
         try:
-
-            results = classify_batch_with_llm(
-                client,
-                payload,
+            results = (
+                classify_batch_with_llm(
+                    client,
+                    payload,
+                )
             )
 
         except Exception as exc:
-
             print(
                 f"WARNING: LLM batch "
-                f"{batch_number} failed: {exc}"
+                f"{batch_number} failed: "
+                f"{exc}"
             )
 
             continue
+
+        returned_ids = {
+            result.clause_id
+            for result in results
+        }
+
+        requested_ids = {
+            target["clause_id"]
+            for target in targets
+        }
+
+        missing_ids = (
+            requested_ids
+            - returned_ids
+        )
+
+        if missing_ids:
+            print(
+                f"WARNING: LLM batch "
+                f"{batch_number} omitted "
+                f"{len(missing_ids)} clause(s)."
+            )
 
         for result in results:
             results_by_id[
                 result.clause_id
             ] = result
 
-    # --------------------------------------------------------
-    # Merge results
-    # --------------------------------------------------------
+    # ========================================================
+    # Merge LLM results
+    # ========================================================
 
-    _, _, current_model = _resolve_llm_config()
+    _, _, current_model = (
+        _resolve_llm_config()
+    )
 
     for clause in clauses:
 
-        clause_id = clause.get("clause_id")
+        clause_id = clause.get(
+            "clause_id"
+        )
 
-        result = results_by_id.get(
-            clause_id
+        result = (
+            results_by_id.get(
+                clause_id
+            )
         )
 
         if result is None:
             continue
 
-        # Preserve rule-based classification only if it has not
-        # already been stored.
+        # Preserve original rule output.
         clause.setdefault(
             "rule_classification",
-            clause.get("classification"),
+            clause.get(
+                "classification"
+            ),
         )
 
         clause.setdefault(
             "rule_classification_reason",
-            clause.get("classification_reason"),
+            clause.get(
+                "classification_reason"
+            ),
         )
 
-        # ----------------------------------------------------
+        # -----------------------------------
         # Final classification
-        # ----------------------------------------------------
+        # -----------------------------------
 
-        if result.classification == "UNCERTAIN":
+        if (
+            result.classification
+            == "UNCERTAIN"
+        ):
 
-            clause["classification"] = "MANUAL_REVIEW"
+            clause[
+                "classification"
+            ] = "MANUAL_REVIEW"
 
             clause[
                 "classification_reason"
             ] = "llm_remains_uncertain"
 
-            clause["manual_review"] = True
+            clause[
+                "manual_review"
+            ] = True
 
         else:
 
@@ -990,27 +1261,43 @@ def refine_manual_review_clauses(
 
             clause[
                 "classification_reason"
-            ] = "llm_manual_review_resolution"
+            ] = (
+                "llm_manual_review_resolution"
+            )
 
-            clause["manual_review"] = False
+            clause[
+                "manual_review"
+            ] = False
 
-        # ----------------------------------------------------
-        # Detailed provenance
-        # ----------------------------------------------------
+        # -----------------------------------
+        # LLM provenance
+        # -----------------------------------
 
-        clause["llm_refinement"] = {
+        clause[
+            "llm_refinement"
+        ] = {
             "used": True,
             "model": current_model,
-            "raw_classification": result.raw_classification,
-            "classification": result.classification,
-            "confidence": result.confidence,
+            "raw_classification": (
+                result.raw_classification
+            ),
+            "classification": (
+                result.classification
+            ),
+            "confidence": (
+                result.confidence
+            ),
             "threshold_applied": (
                 result.raw_classification
                 != result.classification
             ),
             "thresholds": {
-                "normative": NORMATIVE_THRESHOLD,
-                "contextual": CONTEXTUAL_THRESHOLD,
+                "normative": (
+                    NORMATIVE_THRESHOLD
+                ),
+                "contextual": (
+                    CONTEXTUAL_THRESHOLD
+                ),
             },
             "reason": result.reason,
         }
@@ -1019,7 +1306,7 @@ def refine_manual_review_clauses(
 
 
 # ============================================================
-# Document-level operations
+# Document refinement
 # ============================================================
 
 def refine_document_manual_review_clauses(
@@ -1027,30 +1314,41 @@ def refine_document_manual_review_clauses(
     **kwargs: Any,
 ) -> dict[str, Any]:
     """
-    Refine clauses inside a complete processed document.
+    Refine MANUAL_REVIEW clauses inside one processed document.
     """
 
-    clauses = document.get("clauses")
+    clauses = document.get(
+        "clauses"
+    )
 
-    if not isinstance(clauses, list):
-
+    if not isinstance(
+        clauses,
+        list,
+    ):
         raise ValueError(
-            "Document payload must contain a 'clauses' list."
+            "Document payload must contain "
+            "a top-level 'clauses' list."
         )
 
-    document["clauses"] = refine_manual_review_clauses(
-        clauses,
-        **kwargs,
+    document["clauses"] = (
+        refine_manual_review_clauses(
+            clauses,
+            **kwargs,
+        )
     )
 
     return document
 
 
+# ============================================================
+# File operations
+# ============================================================
+
 def save_document_json(
     path: Path,
     document: dict[str, Any],
 ) -> None:
-    """Save JSON document."""
+    """Save one processed document."""
 
     path.parent.mkdir(
         parents=True,
@@ -1073,20 +1371,24 @@ def refine_document_manual_review_clauses_in_place(
     **kwargs: Any,
 ) -> dict[str, Any]:
     """
-    Load, refine, and overwrite a processed clause JSON file.
+    Load, refine, and overwrite one processed JSON document.
     """
 
-    source = Path(path)
+    source = Path(
+        path
+    )
 
     payload = json.loads(
         source.read_text(
-            encoding="utf-8",
+            encoding="utf-8"
         )
     )
 
-    refined = refine_document_manual_review_clauses(
-        payload,
-        **kwargs,
+    refined = (
+        refine_document_manual_review_clauses(
+            payload,
+            **kwargs,
+        )
     )
 
     save_document_json(
@@ -1098,15 +1400,359 @@ def refine_document_manual_review_clauses_in_place(
 
 
 # ============================================================
+# Multi-file helpers
+# ============================================================
+
+def _is_clause_document(
+    path: Path,
+) -> bool:
+    """
+    Check that a JSON file contains a top-level clauses list.
+    """
+
+    try:
+        payload = json.loads(
+            path.read_text(
+                encoding="utf-8"
+            )
+        )
+
+    except (
+        json.JSONDecodeError,
+        OSError,
+        UnicodeDecodeError,
+    ):
+        return False
+
+    return (
+        isinstance(
+            payload,
+            dict,
+        )
+        and isinstance(
+            payload.get(
+                "clauses"
+            ),
+            list,
+        )
+    )
+
+
+def _discover_json_files(
+    input_dir: Path,
+    pattern: str,
+    recursive: bool,
+) -> list[Path]:
+    """
+    Discover JSON files.
+
+    Examples:
+
+        *.json
+        draft-ietf-tls-*.json
+    """
+
+    if recursive:
+        candidates = (
+            input_dir.rglob(
+                pattern
+            )
+        )
+
+    else:
+        candidates = (
+            input_dir.glob(
+                pattern
+            )
+        )
+
+    files = [
+        path
+        for path in candidates
+        if path.is_file()
+    ]
+
+    return sorted(
+        files
+    )
+
+
+def _process_single_file(
+    input_path: Path,
+    output_path: Path | None,
+    batch_size: int,
+    reprocess: bool,
+    skip_existing: bool,
+) -> str:
+    """
+    Process one clause JSON file.
+
+    Returns:
+
+        processed
+        skipped
+        invalid
+        failed
+    """
+
+    # -----------------------------------
+    # Validate
+    # -----------------------------------
+
+    if not _is_clause_document(
+        input_path
+    ):
+        print(
+            f"SKIP: Not a clause document: "
+            f"{input_path}"
+        )
+
+        return "invalid"
+
+    # -----------------------------------
+    # Skip existing
+    # -----------------------------------
+
+    if (
+        output_path is not None
+        and skip_existing
+        and output_path.exists()
+    ):
+        print(
+            f"SKIP: Output already exists: "
+            f"{output_path}"
+        )
+
+        return "skipped"
+
+    print()
+    print(
+        "=" * 72
+    )
+
+    print(
+        f"Processing: {input_path}"
+    )
+
+    if output_path is None:
+        print(
+            "Output: IN PLACE"
+        )
+    else:
+        print(
+            f"Output: {output_path}"
+        )
+
+    print(
+        "=" * 72
+    )
+
+    try:
+        payload = json.loads(
+            input_path.read_text(
+                encoding="utf-8"
+            )
+        )
+
+        refined = (
+            refine_document_manual_review_clauses(
+                payload,
+                batch_size=batch_size,
+                reprocess=reprocess,
+            )
+        )
+
+        destination = (
+            input_path
+            if output_path is None
+            else output_path
+        )
+
+        save_document_json(
+            destination,
+            refined,
+        )
+
+        print(
+            f"SUCCESS: {destination}"
+        )
+
+        return "processed"
+
+    except Exception as exc:
+        print(
+            f"ERROR processing "
+            f"{input_path}: {exc}"
+        )
+
+        return "failed"
+
+
+def _process_directory(
+    input_dir: Path,
+    output_dir: Path | None,
+    pattern: str,
+    recursive: bool,
+    batch_size: int,
+    reprocess: bool,
+    skip_existing: bool,
+) -> dict[str, int]:
+    """
+    Process all matching clause JSON files.
+
+    Relative directory structure is preserved.
+
+    Example:
+
+        clauses/TLS13/file.json
+
+    becomes:
+
+        clauses_llm/TLS13/file.json
+    """
+
+    files = _discover_json_files(
+        input_dir=input_dir,
+        pattern=pattern,
+        recursive=recursive,
+    )
+
+    print()
+    print(
+        f"Discovered "
+        f"{len(files)} candidate file(s)."
+    )
+
+    print(
+        f"Input directory: "
+        f"{input_dir}"
+    )
+
+    if output_dir is None:
+        print(
+            "Output mode: IN PLACE"
+        )
+
+    else:
+        output_dir.mkdir(
+            parents=True,
+            exist_ok=True,
+        )
+
+        print(
+            f"Output directory: "
+            f"{output_dir}"
+        )
+
+    print(
+        f"Pattern: {pattern}"
+    )
+
+    print(
+        f"Recursive: {recursive}"
+    )
+
+    print(
+        f"Reprocess: {reprocess}"
+    )
+
+    print(
+        f"Batch size: {batch_size}"
+    )
+
+    stats = {
+        "processed": 0,
+        "skipped": 0,
+        "invalid": 0,
+        "failed": 0,
+    }
+
+    total = len(
+        files
+    )
+
+    for file_number, input_path in enumerate(
+        files,
+        start=1,
+    ):
+
+        # -----------------------------------
+        # Avoid recursively processing output
+        # directory if it sits under input.
+        # -----------------------------------
+
+        if output_dir is not None:
+
+            try:
+                input_path.relative_to(
+                    output_dir
+                )
+
+                continue
+
+            except ValueError:
+                pass
+
+        print()
+        print(
+            f"[{file_number}/{total}] "
+            f"{input_path.name}"
+        )
+
+        # -----------------------------------
+        # Output path
+        # -----------------------------------
+
+        if output_dir is None:
+
+            output_path = None
+
+        else:
+
+            # IMPORTANT:
+            # preserve TLS13/, QUIC/, etc.
+            relative_path = (
+                input_path.relative_to(
+                    input_dir
+                )
+            )
+
+            output_path = (
+                output_dir
+                / relative_path
+            )
+
+        status = (
+            _process_single_file(
+                input_path=input_path,
+                output_path=output_path,
+                batch_size=batch_size,
+                reprocess=reprocess,
+                skip_existing=skip_existing,
+            )
+        )
+
+        stats[
+            status
+        ] += 1
+
+    return stats
+
+
+# ============================================================
 # CLI
 # ============================================================
 
 def _parse_args() -> argparse.Namespace:
+    """
+    Command-line interface.
+    """
 
     parser = argparse.ArgumentParser(
         description=(
-            "Refine MANUAL_REVIEW clauses "
-            "with an LLM."
+            "Refine rule-based MANUAL_REVIEW clauses "
+            "using an LLM. Input may be either one "
+            "processed JSON file or a directory."
         )
     )
 
@@ -1114,8 +1760,8 @@ def _parse_args() -> argparse.Namespace:
         "input",
         type=Path,
         help=(
-            "Path to a processed "
-            "clause JSON file."
+            "Processed clause JSON file "
+            "or directory."
         ),
     )
 
@@ -1124,9 +1770,10 @@ def _parse_args() -> argparse.Namespace:
         "--output",
         type=Path,
         help=(
-            "Optional output copy. "
-            "By default, the input file "
-            "is updated in place."
+            "For file input: output JSON file. "
+            "For directory input: output directory. "
+            "If omitted, input files are modified "
+            "in place."
         ),
     )
 
@@ -1135,7 +1782,8 @@ def _parse_args() -> argparse.Namespace:
         type=int,
         default=LLM_BATCH_SIZE,
         help=(
-            "Number of clauses per LLM batch."
+            "Number of clauses sent to the LLM "
+            "in each request."
         ),
     )
 
@@ -1143,9 +1791,35 @@ def _parse_args() -> argparse.Namespace:
         "--reprocess",
         action="store_true",
         help=(
-            "Re-run the LLM on MANUAL_REVIEW "
-            "clauses that already contain "
-            "llm_refinement results."
+            "Re-run every clause whose original "
+            "rule classification was MANUAL_REVIEW."
+        ),
+    )
+
+    parser.add_argument(
+        "--recursive",
+        action="store_true",
+        help=(
+            "Search subdirectories recursively "
+            "when input is a directory."
+        ),
+    )
+
+    parser.add_argument(
+        "--pattern",
+        default="*.json",
+        help=(
+            "Glob pattern for directory mode. "
+            "Default: *.json"
+        ),
+    )
+
+    parser.add_argument(
+        "--skip-existing",
+        action="store_true",
+        help=(
+            "Skip a file when its destination "
+            "already exists."
         ),
     )
 
@@ -1157,66 +1831,162 @@ def _parse_args() -> argparse.Namespace:
 # ============================================================
 
 def _main() -> int:
-
     args = _parse_args()
+
+    # -----------------------------------
+    # Basic validation
+    # -----------------------------------
 
     if args.batch_size <= 0:
         raise ValueError(
-            "--batch-size must be greater than zero."
+            "--batch-size must be "
+            "greater than zero."
         )
 
-    if not args.input.exists():
+    input_path = (
+        args.input.resolve()
+    )
+
+    if not input_path.exists():
         raise FileNotFoundError(
-            f"Input file does not exist: {args.input}"
+            f"Input path does not exist: "
+            f"{input_path}"
         )
 
-    # --------------------------------------------------------
-    # In-place mode
-    # --------------------------------------------------------
+    # ========================================================
+    # Single-file mode
+    # ========================================================
 
-    if args.output is None:
+    if input_path.is_file():
 
-        refine_document_manual_review_clauses_in_place(
-            args.input,
-            batch_size=args.batch_size,
-            reprocess=args.reprocess,
+        if (
+            input_path.suffix.lower()
+            != ".json"
+        ):
+            raise ValueError(
+                "Input file must be JSON."
+            )
+
+        output_path = (
+            args.output.resolve()
+            if args.output
+            else None
+        )
+
+        # If -o is an existing directory,
+        # put the input filename inside it.
+        if (
+            output_path is not None
+            and output_path.exists()
+            and output_path.is_dir()
+        ):
+            output_path = (
+                output_path
+                / input_path.name
+            )
+
+        status = (
+            _process_single_file(
+                input_path=input_path,
+                output_path=output_path,
+                batch_size=args.batch_size,
+                reprocess=args.reprocess,
+                skip_existing=args.skip_existing,
+            )
+        )
+
+        if status in {
+            "processed",
+            "skipped",
+        }:
+            return 0
+
+        return 1
+
+    # ========================================================
+    # Directory mode
+    # ========================================================
+
+    if input_path.is_dir():
+
+        output_dir = (
+            args.output.resolve()
+            if args.output
+            else None
+        )
+
+        if (
+            output_dir is not None
+            and output_dir.exists()
+            and not output_dir.is_dir()
+        ):
+            raise ValueError(
+                "When input is a directory, "
+                "--output must be a directory."
+            )
+
+        stats = (
+            _process_directory(
+                input_dir=input_path,
+                output_dir=output_dir,
+                pattern=args.pattern,
+                recursive=args.recursive,
+                batch_size=args.batch_size,
+                reprocess=args.reprocess,
+                skip_existing=args.skip_existing,
+            )
+        )
+
+        print()
+        print(
+            "=" * 72
+        )
+        print(
+            "MULTI-FILE REFINEMENT SUMMARY"
+        )
+        print(
+            "=" * 72
         )
 
         print(
-            f"Updated original file in place: "
-            f"{args.input}"
+            f"Processed: "
+            f"{stats['processed']}"
         )
+
+        print(
+            f"Skipped existing: "
+            f"{stats['skipped']}"
+        )
+
+        print(
+            f"Invalid/non-clause JSON: "
+            f"{stats['invalid']}"
+        )
+
+        print(
+            f"Failed: "
+            f"{stats['failed']}"
+        )
+
+        print(
+            "=" * 72
+        )
+
+        if (
+            stats["failed"]
+            > 0
+        ):
+            return 1
 
         return 0
 
-    # --------------------------------------------------------
-    # Separate output mode
-    # --------------------------------------------------------
-
-    payload = json.loads(
-        args.input.read_text(
-            encoding="utf-8",
-        )
+    raise ValueError(
+        f"Unsupported input path: "
+        f"{input_path}"
     )
-
-    refined = refine_document_manual_review_clauses(
-        payload,
-        batch_size=args.batch_size,
-        reprocess=args.reprocess,
-    )
-
-    save_document_json(
-        args.output,
-        refined,
-    )
-
-    print(
-        f"Wrote refined output to "
-        f"{args.output}"
-    )
-
-    return 0
 
 
 if __name__ == "__main__":
-    raise SystemExit(_main())
+    raise SystemExit(
+        _main()
+    )
