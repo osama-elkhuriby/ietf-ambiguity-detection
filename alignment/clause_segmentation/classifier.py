@@ -69,6 +69,7 @@ EXCLUDED_BLOCK_TYPES: set[BlockType] = {
     "table",
     "blockquote",
     "reference",
+    "formal_syntax"
 }
 
 CONTEXTUAL_HEADINGS = (

@@ -79,7 +79,7 @@ def filter_numeric(data, key, operator, value):
 # MAIN
 # =========================
 
-file_path = "corpus\\processed\\clauses\\draft-ietf-tls-tls13-11.json"
+file_path = "corpus\\processed\\clauses\\draft-ietf-tls-tls13-20.json"
 data = load_json(file_path)
 clauses = get_clause_records(data)
 

@@ -1,366 +1,494 @@
 [
     {
-        "bcp14_keywords": [
-            "MUST"
-        ],
-        "block_id": "draft-ietf-tls-tls13-11:4.8.1:b0150",
-        "block_type": "paragraph",
+        "bcp14_keywords": [],
+        "block_id": "draft-ietf-tls-tls13-20:1.2:b0040",
+        "block_type": "list_item",
         "classification": "NORMATIVE",
-        "classification_reason": "explicit_bcp14_keyword",
-        "clause_id": "draft-ietf-tls-tls13-11:4.8.1:b0150:c02",
-        "document_id": "draft-ietf-tls-tls13-11",
+        "classification_reason": "llm_manual_review_resolution",
+        "clause_id": "draft-ietf-tls-tls13-20:1.2:b0040:c01",
+        "document_id": "draft-ietf-tls-tls13-20",
         "evidence": [
-            "bcp14:MUST"
+            "section_prior:neutral"
         ],
-        "index": 227,
+        "index": 59,
         "manual_review": false,
         "mixed_clause": false,
-        "paragraph_index": 7,
-        "raw_text": "The digest used in the mask generation function MUST be the same as the digest which is being signed (i.e., what appears in algorithm.signature).",
+        "paragraph_index": 16,
+        "raw_text": "- Tighten record framing requirements and require checking of them (*).",
         "reference_targets": [],
-        "revision_id": "11",
-        "section_heading": "Digital Signing",
-        "section_id": "4.8.1",
+        "revision_id": "20",
+        "section_heading": "Change Log",
+        "section_id": "1.2",
         "section_path": [
-            "4",
-            "4.8",
-            "4.8.1"
-        ],
-        "section_prior": "neutral",
-        "sentence_or_item_index": 2,
-        "source_location": {
-            "line_end": 831,
-            "line_start": 825,
-            "xpath": null
-        },
-        "text_end": 282,
-        "text_start": 137
-    },
-    {
-        "bcp14_keywords": [
-            "MUST"
-        ],
-        "block_id": "draft-ietf-tls-tls13-11:4.8.1:b0150",
-        "block_type": "paragraph",
-        "classification": "NORMATIVE",
-        "classification_reason": "explicit_bcp14_keyword",
-        "clause_id": "draft-ietf-tls-tls13-11:4.8.1:b0150:c03",
-        "document_id": "draft-ietf-tls-tls13-11",
-        "evidence": [
-            "bcp14:MUST"
-        ],
-        "index": 228,
-        "manual_review": false,
-        "mixed_clause": false,
-        "paragraph_index": 7,
-        "raw_text": "The length of the salt MUST be equal to the length of the digest output.",
-        "reference_targets": [],
-        "revision_id": "11",
-        "section_heading": "Digital Signing",
-        "section_id": "4.8.1",
-        "section_path": [
-            "4",
-            "4.8",
-            "4.8.1"
-        ],
-        "section_prior": "neutral",
-        "sentence_or_item_index": 3,
-        "source_location": {
-            "line_end": 831,
-            "line_start": 825,
-            "xpath": null
-        },
-        "text_end": 355,
-        "text_start": 283
-    },
-    {
-        "bcp14_keywords": [
-            "MUST NOT"
-        ],
-        "block_id": "draft-ietf-tls-tls13-11:4.8.1:b0152",
-        "block_type": "paragraph",
-        "classification": "NORMATIVE",
-        "classification_reason": "explicit_bcp14_keyword",
-        "clause_id": "draft-ietf-tls-tls13-11:4.8.1:b0152:c02",
-        "document_id": "draft-ietf-tls-tls13-11",
-        "evidence": [
-            "bcp14:MUST NOT"
-        ],
-        "index": 234,
-        "manual_review": false,
-        "mixed_clause": false,
-        "paragraph_index": 9,
-        "raw_text": "Signature-only curves MUST NOT be used for ECDSA unless otherwise noted.",
-        "reference_targets": [],
-        "revision_id": "11",
-        "section_heading": "Digital Signing",
-        "section_id": "4.8.1",
-        "section_path": [
-            "4",
-            "4.8",
-            "4.8.1"
-        ],
-        "section_prior": "neutral",
-        "sentence_or_item_index": 2,
-        "source_location": {
-            "line_end": 847,
-            "line_start": 845,
-            "xpath": null
-        },
-        "text_end": 159,
-        "text_start": 87
-    },
-    {
-        "bcp14_keywords": [
-            "MUST"
-        ],
-        "block_id": "draft-ietf-tls-tls13-11:4.8.1:b0153",
-        "block_type": "paragraph",
-        "classification": "NORMATIVE",
-        "classification_reason": "explicit_bcp14_keyword",
-        "clause_id": "draft-ietf-tls-tls13-11:4.8.1:b0153:c04",
-        "document_id": "draft-ietf-tls-tls13-11",
-        "evidence": [
-            "bcp14:MUST"
-        ],
-        "index": 238,
-        "manual_review": false,
-        "mixed_clause": false,
-        "paragraph_index": 10,
-        "raw_text": "The SignatureAndHashAlgorithm.hash value MUST set to none(0).",
-        "reference_targets": [],
-        "revision_id": "11",
-        "section_heading": "Digital Signing",
-        "section_id": "4.8.1",
-        "section_path": [
-            "4",
-            "4.8",
-            "4.8.1"
-        ],
-        "section_prior": "neutral",
-        "sentence_or_item_index": 4,
-        "source_location": {
-            "line_end": 853,
-            "line_start": 849,
-            "xpath": null
-        },
-        "text_end": 300,
-        "text_start": 239
-    },
-    {
-        "bcp14_keywords": [
-            "MUST NOT"
-        ],
-        "block_id": "draft-ietf-tls-tls13-11:5:b0163",
-        "block_type": "paragraph",
-        "classification": "NORMATIVE",
-        "classification_reason": "explicit_bcp14_keyword",
-        "clause_id": "draft-ietf-tls-tls13-11:5:b0163:c01",
-        "document_id": "draft-ietf-tls-tls13-11",
-        "evidence": [
-            "bcp14:MUST NOT"
-        ],
-        "index": 256,
-        "manual_review": false,
-        "mixed_clause": false,
-        "paragraph_index": 3,
-        "raw_text": "Implementations MUST NOT send record types not defined in this document unless negotiated by some extension.",
-        "reference_targets": [],
-        "revision_id": "11",
-        "section_heading": "The TLS Record Protocol",
-        "section_id": "5",
-        "section_path": [
-            "5"
+            "1",
+            "1.2"
         ],
         "section_prior": "neutral",
         "sentence_or_item_index": 1,
         "source_location": {
-            "line_end": 920,
-            "line_start": 917,
+            "line_end": 372,
+            "line_start": 371,
             "xpath": null
         },
-        "text_end": 108,
-        "text_start": 0
+        "text_end": 71,
+        "text_start": 0,
+        "rule_classification": "MANUAL_REVIEW",
+        "rule_classification_reason": "insufficient_classification_evidence",
+        "llm_refinement": {
+            "used": true,
+            "model": "qwen3:8b",
+            "raw_classification": "NORMATIVE",
+            "classification": "NORMATIVE",
+            "confidence": 0.95,
+            "threshold_applied": false,
+            "thresholds": {
+                "normative": 0.8,
+                "contextual": 0.7
+            },
+            "reason": "Requires checking of framing requirements."
+        }
     },
     {
-        "bcp14_keywords": [
-            "MUST"
-        ],
-        "block_id": "draft-ietf-tls-tls13-11:5:b0163",
-        "block_type": "paragraph",
+        "bcp14_keywords": [],
+        "block_id": "draft-ietf-tls-tls13-20:1.2:b0041",
+        "block_type": "list_item",
         "classification": "NORMATIVE",
-        "classification_reason": "explicit_bcp14_keyword",
-        "clause_id": "draft-ietf-tls-tls13-11:5:b0163:c02",
-        "document_id": "draft-ietf-tls-tls13-11",
+        "classification_reason": "llm_manual_review_resolution",
+        "clause_id": "draft-ietf-tls-tls13-20:1.2:b0041:c01",
+        "document_id": "draft-ietf-tls-tls13-20",
         "evidence": [
-            "bcp14:MUST"
+            "section_prior:neutral"
         ],
-        "index": 257,
+        "index": 60,
         "manual_review": false,
         "mixed_clause": false,
-        "paragraph_index": 3,
-        "raw_text": "If a TLS implementation receives an unexpected record type, it MUST send an \"unexpected_message\" alert.",
+        "paragraph_index": 17,
+        "raw_text": "- Consolidate \"ticket_early_data_info\" and \"early_data\" into a single extension (*).",
         "reference_targets": [],
-        "revision_id": "11",
-        "section_heading": "The TLS Record Protocol",
-        "section_id": "5",
+        "revision_id": "20",
+        "section_heading": "Change Log",
+        "section_id": "1.2",
         "section_path": [
-            "5"
+            "1",
+            "1.2"
         ],
         "section_prior": "neutral",
-        "sentence_or_item_index": 2,
+        "sentence_or_item_index": 1,
         "source_location": {
-            "line_end": 920,
-            "line_start": 917,
+            "line_end": 375,
+            "line_start": 374,
             "xpath": null
         },
-        "text_end": 212,
-        "text_start": 109
+        "text_end": 84,
+        "text_start": 0,
+        "rule_classification": "MANUAL_REVIEW",
+        "rule_classification_reason": "insufficient_classification_evidence",
+        "llm_refinement": {
+            "used": true,
+            "model": "qwen3:8b",
+            "raw_classification": "NORMATIVE",
+            "classification": "NORMATIVE",
+            "confidence": 0.95,
+            "threshold_applied": false,
+            "thresholds": {
+                "normative": 0.8,
+                "contextual": 0.7
+            },
+            "reason": "Imposes structural change to protocol messages."
+        }
     },
     {
-        "bcp14_keywords": [
-            "MUST"
-        ],
-        "block_id": "draft-ietf-tls-tls13-11:5.1:b0185",
-        "block_type": "paragraph",
+        "bcp14_keywords": [],
+        "block_id": "draft-ietf-tls-tls13-20:1.2:b0042",
+        "block_type": "list_item",
         "classification": "NORMATIVE",
-        "classification_reason": "explicit_bcp14_keyword",
-        "clause_id": "draft-ietf-tls-tls13-11:5.1:b0185:c01",
-        "document_id": "draft-ietf-tls-tls13-11",
+        "classification_reason": "llm_manual_review_resolution",
+        "clause_id": "draft-ietf-tls-tls13-20:1.2:b0042:c01",
+        "document_id": "draft-ietf-tls-tls13-20",
         "evidence": [
-            "bcp14:MUST"
+            "section_prior:neutral"
         ],
-        "index": 287,
+        "index": 61,
+        "manual_review": false,
+        "mixed_clause": false,
+        "paragraph_index": 18,
+        "raw_text": "- Change end_of_early_data to be a handshake message (*).",
+        "reference_targets": [],
+        "revision_id": "20",
+        "section_heading": "Change Log",
+        "section_id": "1.2",
+        "section_path": [
+            "1",
+            "1.2"
+        ],
+        "section_prior": "neutral",
+        "sentence_or_item_index": 1,
+        "source_location": {
+            "line_end": 377,
+            "line_start": 377,
+            "xpath": null
+        },
+        "text_end": 57,
+        "text_start": 0,
+        "rule_classification": "MANUAL_REVIEW",
+        "rule_classification_reason": "insufficient_classification_evidence",
+        "llm_refinement": {
+            "used": true,
+            "model": "qwen3:8b",
+            "raw_classification": "NORMATIVE",
+            "classification": "NORMATIVE",
+            "confidence": 0.95,
+            "threshold_applied": false,
+            "thresholds": {
+                "normative": 0.8,
+                "contextual": 0.7
+            },
+            "reason": "Defines handshake message requirement."
+        }
+    },
+    {
+        "bcp14_keywords": [],
+        "block_id": "draft-ietf-tls-tls13-20:1.2:b0043",
+        "block_type": "list_item",
+        "classification": "NORMATIVE",
+        "classification_reason": "llm_manual_review_resolution",
+        "clause_id": "draft-ietf-tls-tls13-20:1.2:b0043:c01",
+        "document_id": "draft-ietf-tls-tls13-20",
+        "evidence": [
+            "section_prior:neutral"
+        ],
+        "index": 62,
+        "manual_review": false,
+        "mixed_clause": false,
+        "paragraph_index": 19,
+        "raw_text": "- Add pre-extract Derive-Secret stages to key schedule (*).",
+        "reference_targets": [],
+        "revision_id": "20",
+        "section_heading": "Change Log",
+        "section_id": "1.2",
+        "section_path": [
+            "1",
+            "1.2"
+        ],
+        "section_prior": "neutral",
+        "sentence_or_item_index": 1,
+        "source_location": {
+            "line_end": 379,
+            "line_start": 379,
+            "xpath": null
+        },
+        "text_end": 59,
+        "text_start": 0,
+        "rule_classification": "MANUAL_REVIEW",
+        "rule_classification_reason": "insufficient_classification_evidence",
+        "llm_refinement": {
+            "used": true,
+            "model": "qwen3:8b",
+            "raw_classification": "NORMATIVE",
+            "classification": "NORMATIVE",
+            "confidence": 0.95,
+            "threshold_applied": false,
+            "thresholds": {
+                "normative": 0.8,
+                "contextual": 0.7
+            },
+            "reason": "Mandates key schedule modification."
+        }
+    },
+    {
+        "bcp14_keywords": [],
+        "block_id": "draft-ietf-tls-tls13-20:1.2:b0044",
+        "block_type": "list_item",
+        "classification": "NORMATIVE",
+        "classification_reason": "llm_manual_review_resolution",
+        "clause_id": "draft-ietf-tls-tls13-20:1.2:b0044:c01",
+        "document_id": "draft-ietf-tls-tls13-20",
+        "evidence": [
+            "section_prior:neutral"
+        ],
+        "index": 63,
         "manual_review": false,
         "mixed_clause": false,
         "paragraph_index": 20,
-        "raw_text": "Once the security parameters have been set and the keys have been generated, the connection states can be instantiated by making them the current states. These current states MUST be updated for each record processed.",
+        "raw_text": "- Remove spurious requirement to implement \"pre_shared_key\".",
         "reference_targets": [],
-        "revision_id": "11",
-        "section_heading": "Connection States",
-        "section_id": "5.1",
+        "revision_id": "20",
+        "section_heading": "Change Log",
+        "section_id": "1.2",
         "section_path": [
-            "5",
-            "5.1"
+            "1",
+            "1.2"
         ],
         "section_prior": "neutral",
         "sentence_or_item_index": 1,
         "source_location": {
-            "line_end": 1031,
-            "line_start": 1027,
+            "line_end": 381,
+            "line_start": 381,
             "xpath": null
         },
-        "text_end": 217,
-        "text_start": 0
+        "text_end": 60,
+        "text_start": 0,
+        "rule_classification": "MANUAL_REVIEW",
+        "rule_classification_reason": "insufficient_classification_evidence",
+        "llm_refinement": {
+            "used": true,
+            "model": "qwen3:8b",
+            "raw_classification": "NORMATIVE",
+            "classification": "NORMATIVE",
+            "confidence": 0.95,
+            "threshold_applied": false,
+            "thresholds": {
+                "normative": 0.8,
+                "contextual": 0.7
+            },
+            "reason": "Removes mandatory implementation requirement."
+        }
     },
     {
-        "bcp14_keywords": [
-            "MUST"
-        ],
-        "block_id": "draft-ietf-tls-tls13-11:5.1:b0187",
-        "block_type": "paragraph",
+        "bcp14_keywords": [],
+        "block_id": "draft-ietf-tls-tls13-20:1.2:b0045",
+        "block_type": "list_item",
         "classification": "NORMATIVE",
-        "classification_reason": "explicit_bcp14_keyword",
-        "clause_id": "draft-ietf-tls-tls13-11:5.1:b0187:c03",
-        "document_id": "draft-ietf-tls-tls13-11",
+        "classification_reason": "llm_manual_review_resolution",
+        "clause_id": "draft-ietf-tls-tls13-20:1.2:b0045:c01",
+        "document_id": "draft-ietf-tls-tls13-20",
         "evidence": [
-            "bcp14:MUST"
+            "section_prior:neutral"
         ],
-        "index": 293,
+        "index": 64,
         "manual_review": false,
         "mixed_clause": false,
-        "paragraph_index": 22,
-        "raw_text": "The sequence number is incremented after each record: specifically, the first record transmitted under a particular connection state and record key MUST use sequence number 0.",
+        "paragraph_index": 21,
+        "raw_text": "- Clarify location of \"early_data\" from server (it goes in EE, as indicated by the table in S 10).",
         "reference_targets": [],
-        "revision_id": "11",
-        "section_heading": "Connection States",
-        "section_id": "5.1",
+        "revision_id": "20",
+        "section_heading": "Change Log",
+        "section_id": "1.2",
         "section_path": [
-            "5",
-            "5.1"
+            "1",
+            "1.2"
         ],
         "section_prior": "neutral",
-        "sentence_or_item_index": 3,
+        "sentence_or_item_index": 1,
         "source_location": {
-            "line_end": 1047,
-            "line_start": 1037,
+            "line_end": 384,
+            "line_start": 383,
             "xpath": null
         },
-        "text_end": 401,
-        "text_start": 226
+        "text_end": 98,
+        "text_start": 0,
+        "rule_classification": "MANUAL_REVIEW",
+        "rule_classification_reason": "insufficient_classification_evidence",
+        "llm_refinement": {
+            "used": true,
+            "model": "qwen3:8b",
+            "raw_classification": "NORMATIVE",
+            "classification": "NORMATIVE",
+            "confidence": 0.95,
+            "threshold_applied": false,
+            "thresholds": {
+                "normative": 0.8,
+                "contextual": 0.7
+            },
+            "reason": "Specifies data location requirement."
+        }
     },
     {
-        "bcp14_keywords": [
-            "MUST NOT"
-        ],
-        "block_id": "draft-ietf-tls-tls13-11:5.1:b0187",
-        "block_type": "paragraph",
+        "bcp14_keywords": [],
+        "block_id": "draft-ietf-tls-tls13-20:1.2:b0046",
+        "block_type": "list_item",
         "classification": "NORMATIVE",
-        "classification_reason": "explicit_bcp14_keyword",
-        "clause_id": "draft-ietf-tls-tls13-11:5.1:b0187:c04",
-        "document_id": "draft-ietf-tls-tls13-11",
+        "classification_reason": "llm_manual_review_resolution",
+        "clause_id": "draft-ietf-tls-tls13-20:1.2:b0046:c01",
+        "document_id": "draft-ietf-tls-tls13-20",
         "evidence": [
-            "bcp14:MUST NOT"
+            "section_prior:neutral"
         ],
-        "index": 294,
+        "index": 65,
         "manual_review": false,
         "mixed_clause": false,
         "paragraph_index": 22,
-        "raw_text": "Sequence numbers are of type uint64 and MUST NOT exceed 2^64-1.",
+        "raw_text": "- Require peer public key validation",
         "reference_targets": [],
-        "revision_id": "11",
-        "section_heading": "Connection States",
-        "section_id": "5.1",
+        "revision_id": "20",
+        "section_heading": "Change Log",
+        "section_id": "1.2",
         "section_path": [
-            "5",
-            "5.1"
+            "1",
+            "1.2"
         ],
         "section_prior": "neutral",
-        "sentence_or_item_index": 4,
+        "sentence_or_item_index": 1,
         "source_location": {
-            "line_end": 1047,
-            "line_start": 1037,
+            "line_end": 386,
+            "line_start": 386,
             "xpath": null
         },
-        "text_end": 465,
-        "text_start": 402
+        "text_end": 36,
+        "text_start": 0,
+        "rule_classification": "MANUAL_REVIEW",
+        "rule_classification_reason": "insufficient_classification_evidence",
+        "llm_refinement": {
+            "used": true,
+            "model": "qwen3:8b",
+            "raw_classification": "NORMATIVE",
+            "classification": "NORMATIVE",
+            "confidence": 0.95,
+            "threshold_applied": false,
+            "thresholds": {
+                "normative": 0.8,
+                "contextual": 0.7
+            },
+            "reason": "Requires peer public key validation."
+        }
     },
     {
-        "bcp14_keywords": [
-            "MUST"
-        ],
-        "block_id": "draft-ietf-tls-tls13-11:5.1:b0187",
-        "block_type": "paragraph",
+        "bcp14_keywords": [],
+        "block_id": "draft-ietf-tls-tls13-20:1.2:b0049",
+        "block_type": "list_item",
         "classification": "NORMATIVE",
-        "classification_reason": "explicit_bcp14_keyword",
-        "clause_id": "draft-ietf-tls-tls13-11:5.1:b0187:c06",
-        "document_id": "draft-ietf-tls-tls13-11",
+        "classification_reason": "llm_manual_review_resolution",
+        "clause_id": "draft-ietf-tls-tls13-20:1.2:b0049:c01",
+        "document_id": "draft-ietf-tls-tls13-20",
         "evidence": [
-            "bcp14:MUST"
+            "section_prior:neutral"
         ],
-        "index": 296,
+        "index": 68,
         "manual_review": false,
         "mixed_clause": false,
-        "paragraph_index": 22,
-        "raw_text": "If a TLS implementation would need to wrap a sequence number, it MUST either rekey (Section 6.3.5.3) or terminate the connection.",
+        "paragraph_index": 25,
+        "raw_text": "- Remove unnecessary resumption_psk which is the only thing expanded from the resumption master secret. (*).",
+        "reference_targets": [],
+        "revision_id": "20",
+        "section_heading": "Change Log",
+        "section_id": "1.2",
+        "section_path": [
+            "1",
+            "1.2"
+        ],
+        "section_prior": "neutral",
+        "sentence_or_item_index": 1,
+        "source_location": {
+            "line_end": 400,
+            "line_start": 399,
+            "xpath": null
+        },
+        "text_end": 108,
+        "text_start": 0,
+        "rule_classification": "MANUAL_REVIEW",
+        "rule_classification_reason": "insufficient_classification_evidence",
+        "llm_refinement": {
+            "used": true,
+            "model": "qwen3:8b",
+            "raw_classification": "NORMATIVE",
+            "classification": "NORMATIVE",
+            "confidence": 0.95,
+            "threshold_applied": false,
+            "thresholds": {
+                "normative": 0.8,
+                "contextual": 0.7
+            },
+            "reason": "Fixes extension table entry requirement."
+        }
+    },
+    {
+        "bcp14_keywords": [],
+        "block_id": "draft-ietf-tls-tls13-20:1.2:b0050",
+        "block_type": "list_item",
+        "classification": "NORMATIVE",
+        "classification_reason": "llm_manual_review_resolution",
+        "clause_id": "draft-ietf-tls-tls13-20:1.2:b0050:c01",
+        "document_id": "draft-ietf-tls-tls13-20",
+        "evidence": [
+            "section_prior:neutral"
+        ],
+        "index": 69,
+        "manual_review": false,
+        "mixed_clause": false,
+        "paragraph_index": 26,
+        "raw_text": "- Fix signature_algorithms entry in extensions table.",
+        "reference_targets": [],
+        "revision_id": "20",
+        "section_heading": "Change Log",
+        "section_id": "1.2",
+        "section_path": [
+            "1",
+            "1.2"
+        ],
+        "section_prior": "neutral",
+        "sentence_or_item_index": 1,
+        "source_location": {
+            "line_end": 402,
+            "line_start": 402,
+            "xpath": null
+        },
+        "text_end": 53,
+        "text_start": 0,
+        "rule_classification": "MANUAL_REVIEW",
+        "rule_classification_reason": "insufficient_classification_evidence",
+        "llm_refinement": {
+            "used": true,
+            "model": "qwen3:8b",
+            "raw_classification": "NORMATIVE",
+            "classification": "NORMATIVE",
+            "confidence": 0.95,
+            "threshold_applied": false,
+            "thresholds": {
+                "normative": 0.8,
+                "contextual": 0.7
+            },
+            "reason": "Restates RFC requirement for resumption."
+        }
+    },
+    {
+        "bcp14_keywords": [],
+        "block_id": "draft-ietf-tls-tls13-20:1.2:b0051",
+        "block_type": "list_item",
+        "classification": "NORMATIVE",
+        "classification_reason": "llm_manual_review_resolution",
+        "clause_id": "draft-ietf-tls-tls13-20:1.2:b0051:c01",
+        "document_id": "draft-ietf-tls-tls13-20",
+        "evidence": [
+            "section_prior:neutral"
+        ],
+        "index": 70,
+        "manual_review": false,
+        "mixed_clause": false,
+        "paragraph_index": 27,
+        "raw_text": "- Restate rule from RFC 6066 that you can't resume unless SNI is the same.",
         "reference_targets": [
-            "draft-ietf-tls-tls13-11"
+            "RFC6066"
         ],
-        "revision_id": "11",
-        "section_heading": "Connection States",
-        "section_id": "5.1",
+        "revision_id": "20",
+        "section_heading": "Change Log",
+        "section_id": "1.2",
         "section_path": [
-            "5",
-            "5.1"
+            "1",
+            "1.2"
         ],
         "section_prior": "neutral",
-        "sentence_or_item_index": 6,
+        "sentence_or_item_index": 1,
         "source_location": {
-            "line_end": 1047,
-            "line_start": 1037,
+            "line_end": 405,
+            "line_start": 404,
             "xpath": null
         },
-        "text_end": 625,
-        "text_start": 496
+        "text_end": 74,
+        "text_start": 0,
+        "rule_classification": "MANUAL_REVIEW",
+        "rule_classification_reason": "insufficient_classification_evidence",
+        "llm_refinement": {
+            "used": true,
+            "model": "qwen3:8b",
+            "raw_classification": "NORMATIVE",
+            "classification": "NORMATIVE",
+            "confidence": 0.95,
+            "threshold_applied": false,
+            "thresholds": {
+                "normative": 0.8,
+                "contextual": 0.7
+            },
+            "reason": "Removes 0-RTT features and adds PSK field."
+        }
     }
 ]
