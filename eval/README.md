@@ -4,7 +4,12 @@ Per proposal SS7: **not** random clause splitting as the primary result (adjacen
 of the same draft are too similar). Also avoid splitting **adjacent revisions of the same draft**
 across train and test — that leaks near-duplicate clauses and inflates metrics.
 
-Three protocols, all required:
+The current TLS-only milestone adds `alignment_metrics.py` for provisional alignment
+and workload reporting. Accuracy remains unmeasured without complete reviewed gold
+scopes. See [`alignment/version_alignment/README.md`](../alignment/version_alignment/README.md).
+This milestone does not implement or claim the generalization protocols below.
+
+Three protocols, all required for the later full benchmark:
 
 1. **document-family split** — all versions of a draft family in one partition
 2. **temporal split** — train on earlier drafts, test on later publication periods

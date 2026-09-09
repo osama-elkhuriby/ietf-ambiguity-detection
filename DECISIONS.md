@@ -1,5 +1,22 @@
 # Decisions Log
 
+## 2026-09-09 — Approved TLS-only alignment MVP
+
+Implement the approved milestone only for collected TLS 1.3 drafts and RFC8446.
+Prefer existing `clauses_llm` snapshots, preparing missing TLS-22/RFC8446 snapshots
+only inside new immutable run directories using deterministic segmentation. Do not
+invoke LLM refinement or alter original inputs.
+
+Use pinned MiniLM embeddings with direct token-ID windows, explicit special-token
+budgets, deterministic boundaries and hashes. This replaces decode/retokenize window
+construction after the preserved revision-08 failure. Keep the failed run for audit.
+Use bipartite matching plus bounded split/merge optimization, provisional confidence,
+review sampling and prefix-only feature guards. Do not assign ambiguity labels or
+revision reasons. Human-reviewed accuracy, cross-family evaluation, calibration and
+benchmark construction remain future work.
+
+This entry records the user's approved scope and continuation requirements.
+
 Every methodological choice gets a dated entry: what we decided, why, and what we rejected.
 This becomes the raw material for the thesis methodology chapter — don't skip entries because
 a decision feels "obvious" at the time. It won't be obvious in week 14.

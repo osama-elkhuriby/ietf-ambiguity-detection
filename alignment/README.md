@@ -23,12 +23,20 @@ Implemented foundation:
 - evidence-first `NORMATIVE`, `CONTEXTUAL`, `EXCLUDED`, and `MANUAL_REVIEW` classification
 - uppercase RFC 2119/RFC 8174 detection, quoted/reference safeguards, section priors, and review reasons
 
-Planned next contents:
+The TLS-only alignment MVP is implemented in
+[`version_alignment/`](version_alignment/README.md). It preserves existing clause
+outputs, aligns consecutive TLS drafts through RFC8446, and produces immutable
+candidate, alignment, lineage, review and guarded-feature artifacts. Confidence
+is provisional until reviewed gold data is available.
+
+Remaining broader alignment work:
 
 - RFCScope-style hierarchical, token-aware section partitioning
 - version matching: combine **iddiff** hunks with embedding/DP alignment for moved or split paragraphs (SS6.4)
 - revision feature extraction: edit frequency, semantic distance between versions,
-  normative-strength changes (BCP 14 keyword shifts), clause stability, proximity to publication (SS6.2)
+  normative-strength changes (BCP 14 keyword shifts), clause stability, and observed
+  document age/revision count. Actual future publication proximity belongs only to
+  label analysis, never to prediction-time features.
 - independent human annotation and calibration of the clause-classification heuristics
 
 ## Parse one document

@@ -1,0 +1,503 @@
+{
+  "$defs": {
+    "Alignment": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "record_id": {
+          "title": "Record Id",
+          "type": "string"
+        },
+        "family_id": {
+          "title": "Family Id",
+          "type": "string"
+        },
+        "from_document_id": {
+          "title": "From Document Id",
+          "type": "string"
+        },
+        "to_document_id": {
+          "title": "To Document Id",
+          "type": "string"
+        },
+        "from_revision": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "From Revision"
+        },
+        "to_revision": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "To Revision"
+        },
+        "from_publication_date": {
+          "format": "date",
+          "title": "From Publication Date",
+          "type": "string"
+        },
+        "to_publication_date": {
+          "format": "date",
+          "title": "To Publication Date",
+          "type": "string"
+        },
+        "source_clause_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Clause Ids",
+          "type": "array"
+        },
+        "target_clause_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Target Clause Ids",
+          "type": "array"
+        },
+        "relation": {
+          "enum": [
+            "UNCHANGED",
+            "MODIFIED",
+            "INSERTED",
+            "DELETED",
+            "SPLIT",
+            "MERGED",
+            "MOVED",
+            "UNCERTAIN"
+          ],
+          "title": "Relation",
+          "type": "string"
+        },
+        "text_changed": {
+          "title": "Text Changed",
+          "type": "boolean"
+        },
+        "movement": {
+          "additionalProperties": true,
+          "title": "Movement",
+          "type": "object"
+        },
+        "scores": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": "Scores",
+          "type": "object"
+        },
+        "confidence": {
+          "enum": [
+            "HIGH",
+            "MEDIUM",
+            "LOW"
+          ],
+          "title": "Confidence",
+          "type": "string"
+        },
+        "confidence_method": {
+          "default": "uncalibrated_rule_bands_v1",
+          "title": "Confidence Method",
+          "type": "string"
+        },
+        "calibrated_probability": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Calibrated Probability"
+        },
+        "review_required": {
+          "title": "Review Required",
+          "type": "boolean"
+        },
+        "review_status": {
+          "default": "NOT_REVIEWED",
+          "enum": [
+            "NOT_REVIEWED",
+            "ACCEPTED",
+            "CORRECTED",
+            "REJECTED"
+          ],
+          "title": "Review Status",
+          "type": "string"
+        },
+        "review_reasons": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Review Reasons",
+          "type": "array"
+        },
+        "alternatives": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Alternatives",
+          "type": "array"
+        },
+        "lineage_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Lineage Ids",
+          "type": "array"
+        },
+        "changes": {
+          "additionalProperties": true,
+          "title": "Changes",
+          "type": "object"
+        },
+        "provenance": {
+          "additionalProperties": true,
+          "title": "Provenance",
+          "type": "object"
+        },
+        "algorithm_version": {
+          "title": "Algorithm Version",
+          "type": "string"
+        },
+        "created_at": {
+          "title": "Created At",
+          "type": "string"
+        }
+      },
+      "required": [
+        "record_id",
+        "family_id",
+        "from_document_id",
+        "to_document_id",
+        "from_revision",
+        "to_revision",
+        "from_publication_date",
+        "to_publication_date",
+        "source_clause_ids",
+        "target_clause_ids",
+        "relation",
+        "text_changed",
+        "movement",
+        "scores",
+        "confidence",
+        "review_required",
+        "review_reasons",
+        "provenance",
+        "algorithm_version",
+        "created_at"
+      ],
+      "title": "Alignment",
+      "type": "object"
+    },
+    "Clause": {
+      "additionalProperties": true,
+      "properties": {
+        "clause_id": {
+          "title": "Clause Id",
+          "type": "string"
+        },
+        "document_id": {
+          "title": "Document Id",
+          "type": "string"
+        },
+        "revision_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Revision Id"
+        },
+        "index": {
+          "minimum": 1,
+          "title": "Index",
+          "type": "integer"
+        },
+        "block_id": {
+          "title": "Block Id",
+          "type": "string"
+        },
+        "block_type": {
+          "title": "Block Type",
+          "type": "string"
+        },
+        "section_id": {
+          "title": "Section Id",
+          "type": "string"
+        },
+        "section_heading": {
+          "title": "Section Heading",
+          "type": "string"
+        },
+        "section_path": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Section Path",
+          "type": "array"
+        },
+        "raw_text": {
+          "title": "Raw Text",
+          "type": "string"
+        },
+        "classification": {
+          "enum": [
+            "NORMATIVE",
+            "CONTEXTUAL",
+            "EXCLUDED",
+            "MANUAL_REVIEW"
+          ],
+          "title": "Classification",
+          "type": "string"
+        },
+        "source_location": {
+          "additionalProperties": true,
+          "title": "Source Location",
+          "type": "object"
+        },
+        "text_start": {
+          "minimum": 0,
+          "title": "Text Start",
+          "type": "integer"
+        },
+        "text_end": {
+          "minimum": 0,
+          "title": "Text End",
+          "type": "integer"
+        },
+        "reference_targets": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Reference Targets",
+          "type": "array"
+        },
+        "bcp14_keywords": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Bcp14 Keywords",
+          "type": "array"
+        },
+        "normalized_text": {
+          "default": "",
+          "title": "Normalized Text",
+          "type": "string"
+        },
+        "normalization_steps": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Normalization Steps",
+          "type": "array"
+        }
+      },
+      "required": [
+        "clause_id",
+        "document_id",
+        "revision_id",
+        "index",
+        "block_id",
+        "block_type",
+        "section_id",
+        "section_heading",
+        "section_path",
+        "raw_text",
+        "classification",
+        "source_location",
+        "text_start",
+        "text_end"
+      ],
+      "title": "Clause",
+      "type": "object"
+    },
+    "Document": {
+      "additionalProperties": false,
+      "properties": {
+        "family_id": {
+          "title": "Family Id",
+          "type": "string"
+        },
+        "document_id": {
+          "title": "Document Id",
+          "type": "string"
+        },
+        "revision": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Revision"
+        },
+        "publication_date": {
+          "format": "date",
+          "title": "Publication Date",
+          "type": "string"
+        },
+        "available_at": {
+          "format": "date",
+          "title": "Available At",
+          "type": "string"
+        },
+        "date_precision": {
+          "default": "day",
+          "enum": [
+            "day",
+            "month"
+          ],
+          "title": "Date Precision",
+          "type": "string"
+        },
+        "source_path": {
+          "title": "Source Path",
+          "type": "string"
+        },
+        "source_sha256": {
+          "title": "Source Sha256",
+          "type": "string"
+        },
+        "input_sha256": {
+          "title": "Input Sha256",
+          "type": "string"
+        },
+        "input_path": {
+          "title": "Input Path",
+          "type": "string"
+        },
+        "prepared": {
+          "default": false,
+          "title": "Prepared",
+          "type": "boolean"
+        },
+        "clauses": {
+          "items": {
+            "$ref": "#/$defs/Clause"
+          },
+          "title": "Clauses",
+          "type": "array"
+        },
+        "warnings": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Warnings",
+          "type": "array"
+        }
+      },
+      "required": [
+        "family_id",
+        "document_id",
+        "revision",
+        "publication_date",
+        "available_at",
+        "source_path",
+        "source_sha256",
+        "input_sha256",
+        "input_path",
+        "clauses"
+      ],
+      "title": "Document",
+      "type": "object"
+    },
+    "Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_id": {
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "role": {
+          "enum": [
+            "MODEL_FEATURE",
+            "LABEL_SUPPORT",
+            "ANNOTATION_METADATA"
+          ],
+          "title": "Role",
+          "type": "string"
+        },
+        "available_at": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Available At"
+        },
+        "document_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Document Id"
+        },
+        "dependencies": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "title": "Dependencies",
+          "type": "array"
+        }
+      },
+      "required": [
+        "evidence_id",
+        "role",
+        "available_at"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    }
+  },
+  "anyOf": [
+    {
+      "$ref": "#/$defs/Alignment"
+    },
+    {
+      "$ref": "#/$defs/Document"
+    },
+    {
+      "$ref": "#/$defs/Evidence"
+    }
+  ]
+}

@@ -18,6 +18,7 @@ BlockType = Literal[
     "table",
     "blockquote",
     "reference",
+    "formal_syntax",
 ]
 
 
