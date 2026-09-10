@@ -92,3 +92,23 @@ python corpus/fetch_errata.py --verified-technical 9000 9460
 Manifest schemas: `metadata/README.md`. Raw plaintext under `corpus/raw/` is **committed**
 so collaborators can work offline; only re-fetchable caches (RFC index XML, bulk errata
 JSON, Datatracker SQLite) are gitignored. See `corpus/raw/README.md`.
+
+## TLS 1.3 ground-truth preparation
+
+Build the TLS-only silver review set from verified RFC 8446 technical errata and
+the frozen `draft-ietf-tls-tls13` alignment run:
+
+```bash
+python -m corpus.build_tls_silver_labels
+```
+
+Artifacts are separated by lifecycle under
+`processed/ground_truth/draft-ietf-tls-tls13/`:
+
+- `silver/`: immutable automatic candidates, errata mapping, and audit report
+- `review/`: editable human-review template with pending adjudication fields
+- `gold/`: reserved for completed, adjudicated ground truth
+
+The automatic records are not gold: they retain `ambiguity_label=UNCERTAIN`,
+`ground_truth=false`, and `requires_human_review=true`. Make a working copy of the
+review template before annotation because rebuilding replaces the template.
