@@ -1,0 +1,76 @@
+{
+  "error_type": "PreflightTemporalGuardConflict",
+  "stage": "external_validation_before_feature_generation",
+  "failed_at": "2026-09-09T00:25:16.257850+00:00",
+  "error": "Stopped safely after detecting that numeric predecessor TLS-00 and target TLS-01 share submission date 2014-04-17; current guard falsely rejects validated same-family predecessors. No pair or clause will be silently skipped.",
+  "completed_pairs": 15,
+  "completed_pair_ids": [
+    [
+      "draft-ietf-tls-tls13-00",
+      "draft-ietf-tls-tls13-01"
+    ],
+    [
+      "draft-ietf-tls-tls13-01",
+      "draft-ietf-tls-tls13-02"
+    ],
+    [
+      "draft-ietf-tls-tls13-02",
+      "draft-ietf-tls-tls13-03"
+    ],
+    [
+      "draft-ietf-tls-tls13-03",
+      "draft-ietf-tls-tls13-04"
+    ],
+    [
+      "draft-ietf-tls-tls13-04",
+      "draft-ietf-tls-tls13-05"
+    ],
+    [
+      "draft-ietf-tls-tls13-05",
+      "draft-ietf-tls-tls13-06"
+    ],
+    [
+      "draft-ietf-tls-tls13-06",
+      "draft-ietf-tls-tls13-07"
+    ],
+    [
+      "draft-ietf-tls-tls13-07",
+      "draft-ietf-tls-tls13-08"
+    ],
+    [
+      "draft-ietf-tls-tls13-08",
+      "draft-ietf-tls-tls13-09"
+    ],
+    [
+      "draft-ietf-tls-tls13-09",
+      "draft-ietf-tls-tls13-10"
+    ],
+    [
+      "draft-ietf-tls-tls13-10",
+      "draft-ietf-tls-tls13-11"
+    ],
+    [
+      "draft-ietf-tls-tls13-11",
+      "draft-ietf-tls-tls13-12"
+    ],
+    [
+      "draft-ietf-tls-tls13-12",
+      "draft-ietf-tls-tls13-13"
+    ],
+    [
+      "draft-ietf-tls-tls13-13",
+      "draft-ietf-tls-tls13-14"
+    ],
+    [
+      "draft-ietf-tls-tls13-14",
+      "draft-ietf-tls-tls13-15"
+    ]
+  ],
+  "diagnostic": {
+    "document_id": "draft-ietf-tls-tls13-01",
+    "predecessor": "draft-ietf-tls-tls13-00",
+    "submission_date": "2014-04-17"
+  },
+  "process_stopped": true,
+  "retry_policy": "New immutable run after same-day predecessor regression passes; completed caches retained."
+}

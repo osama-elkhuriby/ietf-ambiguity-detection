@@ -1,0 +1,75 @@
+{
+  "error_type": "ReproducibilityAuditFailure",
+  "stage": "candidate_tie_audit",
+  "failed_at": "2026-09-09T00:29:52.102248+00:00",
+  "error": "Equal lexical-overlap candidates used Counter insertion order from hashed token sets. Same cached semantic inputs produced one insertion/uncertainty difference on TLS06->07. Stopped to enforce index-based deterministic tie breaking.",
+  "completed_pairs": 16,
+  "completed_pair_ids": [
+    [
+      "draft-ietf-tls-tls13-00",
+      "draft-ietf-tls-tls13-01"
+    ],
+    [
+      "draft-ietf-tls-tls13-01",
+      "draft-ietf-tls-tls13-02"
+    ],
+    [
+      "draft-ietf-tls-tls13-02",
+      "draft-ietf-tls-tls13-03"
+    ],
+    [
+      "draft-ietf-tls-tls13-03",
+      "draft-ietf-tls-tls13-04"
+    ],
+    [
+      "draft-ietf-tls-tls13-04",
+      "draft-ietf-tls-tls13-05"
+    ],
+    [
+      "draft-ietf-tls-tls13-05",
+      "draft-ietf-tls-tls13-06"
+    ],
+    [
+      "draft-ietf-tls-tls13-06",
+      "draft-ietf-tls-tls13-07"
+    ],
+    [
+      "draft-ietf-tls-tls13-07",
+      "draft-ietf-tls-tls13-08"
+    ],
+    [
+      "draft-ietf-tls-tls13-08",
+      "draft-ietf-tls-tls13-09"
+    ],
+    [
+      "draft-ietf-tls-tls13-09",
+      "draft-ietf-tls-tls13-10"
+    ],
+    [
+      "draft-ietf-tls-tls13-10",
+      "draft-ietf-tls-tls13-11"
+    ],
+    [
+      "draft-ietf-tls-tls13-11",
+      "draft-ietf-tls-tls13-12"
+    ],
+    [
+      "draft-ietf-tls-tls13-12",
+      "draft-ietf-tls-tls13-13"
+    ],
+    [
+      "draft-ietf-tls-tls13-13",
+      "draft-ietf-tls-tls13-14"
+    ],
+    [
+      "draft-ietf-tls-tls13-14",
+      "draft-ietf-tls-tls13-15"
+    ],
+    [
+      "draft-ietf-tls-tls13-15",
+      "draft-ietf-tls-tls13-16"
+    ]
+  ],
+  "process_stopped": true,
+  "retry_policy": "New immutable run after cross-process hash-seed regression passes; retain completed caches."
+}
