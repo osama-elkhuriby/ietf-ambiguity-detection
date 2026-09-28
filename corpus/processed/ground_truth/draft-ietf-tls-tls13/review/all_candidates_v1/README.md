@@ -1,6 +1,7 @@
 # TLS full-candidate human review
 
-This package contains every automatically generated TLS silver candidate for
+This package contains only automatically generated TLS candidates with uppercase
+RFC 8174 requirement keywords (`MUST`, `SHOULD`, `MAY`, and related forms) for
 independent human review. The automatic files under `silver/` remain unchanged.
 
 Two reviewers independently complete `reviewer_a.csv` and `reviewer_b.csv`.
@@ -27,6 +28,7 @@ the agreed final labels and rationale in `adjudication.csv`; set
 | `annotator` | Your name or initials |
 | `date_annotated` | `YYYY-MM-DD` |
 | `human_notes` | One or two sentences explaining the decision |
+| `human_positive_evidence` | For a final `yes` only: `ERRATUM`, `DRAFT_CLARIFICATION`, or `BOTH`; blank for `no` and `uncertain` |
 
 Keep `adjudication_status` as `PENDING` in reviewer files. Do not consult the
 other reviewer’s file until both reviews are complete.
@@ -39,6 +41,12 @@ other reviewer’s file until both reviews are complete.
   State why only one reasonable reading remains.
 - Choose `uncertain` when deciding would require evidence that is unavailable;
   explain what evidence is missing.
+
+For an `ERRATUM` label, verify that the erratum exposes two plausible readings;
+an erratum can be a typo or technical repair rather than ambiguity. For
+`DRAFT_CLARIFICATION`, compare the earlier and later draft wording. Use it only
+when the newer wording removes one plausible behavior without changing the
+intended protocol behavior. Do not infer ambiguity from an ordinary edit.
 
 Review every row even when it is linked to a verified technical erratum. An
 erratum can be a typo or a technical repair rather than an ambiguity. A gold
