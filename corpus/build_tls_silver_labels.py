@@ -49,6 +49,7 @@ HUMAN_REVIEW_FIELDS = [
     "date_annotated",
     "adjudication_status",
     "human_notes",
+    "human_positive_evidence",
 ]
 
 
@@ -355,6 +356,12 @@ def build_positive_candidates(
             source_ids, relationships = predecessor
             current_ids = source_ids
             candidate_clauses = [clauses[clause_id] for clause_id in source_ids]
+            if any(
+                clause.classification != "NORMATIVE"
+                for clause in candidate_clauses
+            ):
+                target_document = source_document
+                continue
             confidence = min(
                 (row.confidence for row in relationships),
                 key=CONFIDENCE_RANK.get,
@@ -383,6 +390,10 @@ def build_positive_candidates(
                             clause.section_id for clause in candidate_clauses
                         )
                     ),
+                    "classification": "NORMATIVE",
+                    "clause_classifications": [
+                        clause.classification for clause in candidate_clauses
+                    ],
                     "section_headings": list(
                         dict.fromkeys(
                             clause.section_heading for clause in candidate_clauses
@@ -424,7 +435,7 @@ def is_clear_control_eligible(clause: Clause) -> bool:
     heading = (clause.section_heading or "").casefold()
     word_count = len(re.findall(r"\b[A-Za-z][A-Za-z'-]*\b", clause.raw_text))
     return bool(
-        clause.classification in {"NORMATIVE", "CONTEXTUAL"}
+        clause.classification == "NORMATIVE"
         and clause.block_type in {"paragraph", "list_item", "definition"}
         and 40 <= len(clause.raw_text) <= 500
         and word_count >= 8
@@ -516,6 +527,8 @@ def build_clear_controls(
                 "clause_ids": [choice.clause_id],
                 "clause_text": choice.raw_text,
                 "section_ids": [choice.section_id],
+                "classification": choice.classification,
+                "clause_classifications": [choice.classification],
                 "section_headings": [choice.section_heading],
                 "weak_label": "SILVER_CLEAR_CANDIDATE",
                 "ambiguity_label": "UNCERTAIN",
@@ -563,6 +576,8 @@ def _write_csv(
         "clause_ids",
         "clause_text",
         "section_ids",
+        "classification",
+        "clause_classifications",
         "weak_label",
         "ambiguity_label",
         "label_tier",
@@ -595,6 +610,7 @@ def _write_csv(
             for field in (
                 "clause_ids",
                 "section_ids",
+                "clause_classifications",
                 "rfc_clause_ids",
                 "lineage_ids",
             ):
@@ -651,6 +667,10 @@ def build(
         "family_id": FAMILY_ID,
         "ground_truth": False,
         "label_status": "AUTOMATIC_SILVER_CANDIDATES_REQUIRING_HUMAN_REVIEW",
+        "classification_policy": (
+            "All candidate clauses must carry the NORMATIVE label from the "
+            "frozen first-stage clause classifier."
+        ),
         "source_alignment_run": path_reference(run_dir, root),
         "source_alignment_manifest_sha256": file_hash(run_manifest),
         "documents": len(documents),

@@ -107,7 +107,15 @@ def test_clear_control_filter_rejects_draft_notes_and_questions() -> None:
         1,
         "The client sends this value only after it has validated the server response.",
     )
+    good.classification = "NORMATIVE"
     assert is_clear_control_eligible(good)
+
+    contextual = clause(
+        "contextual",
+        2,
+        "The client sends this value only after it has validated the server response.",
+    )
+    assert not is_clear_control_eligible(contextual)
 
     todo = clause("todo", 2, "See the TODO above about early_data and PSK handling.??]")
     assert not is_clear_control_eligible(todo)

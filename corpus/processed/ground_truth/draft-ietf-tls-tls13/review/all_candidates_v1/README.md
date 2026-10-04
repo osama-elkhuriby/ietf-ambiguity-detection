@@ -1,8 +1,10 @@
-# TLS full-candidate human review
+# TLS lineage-deduplicated human review
 
-This package contains only automatically generated TLS candidates with uppercase
-RFC 8174 requirement keywords (`MUST`, `SHOULD`, `MAY`, and related forms) for
-independent human review. The automatic files under `silver/` remain unchanged.
+This package contains one latest-revision representative per TLS clause lineage
+whose constituent clauses were all labeled `NORMATIVE` by the frozen first-stage
+clause classifier. It does not infer normativity again from RFC 8174 keywords.
+The full revision-level history remains in the source review template and the
+automatic files under `silver/`.
 
 Two reviewers independently complete `reviewer_a.csv` and `reviewer_b.csv`.
 They fill only the `human_*` columns. Once both reviews are complete, record
@@ -54,7 +56,15 @@ positive needs an evidence span and an explanation of two plausible technical
 readings; a gold negative needs an explanation of why the clause has one
 reasonable reading. Use `uncertain` if the evidence cannot support either.
 
-These rows include the same clause lineage across several draft revisions.
-They are useful to show how wording changed, but are not independent examples.
-When training and testing, all rows sharing a `lineage_ids` value must be in
-the same split.
+Each `lineage_ids` value occurs once in this review package. If revision-level
+records from the source artifacts are used for longitudinal analysis, treat all
+rows sharing a `lineage_ids` value as one group and keep them in the same
+training, validation, or test split.
+
+Regenerate this package from the repository root with:
+
+```bash
+python -m corpus.create_tls_review_batch --all-lineages \
+  --classification NORMATIVE \
+  --output-dir corpus/processed/ground_truth/draft-ietf-tls-tls13/review/all_candidates_v1
+```
