@@ -1,4 +1,4 @@
-"""TLS alignment workload and optional explicitly reviewed gold metrics."""
+"""Alignment workload and optional explicitly reviewed gold metrics."""
 
 from __future__ import annotations
 
@@ -39,7 +39,10 @@ def evaluate(
         "link_recall": None,
         "link_f1": None,
         "gold_status": "No complete human-reviewed gold scope supplied; accuracy is not measured",
-        "evaluation_scope": "TLS only; no family/protocol generalization or ambiguity evaluation",
+        "evaluation_scope": (
+            "Single-family alignment run; no cross-family generalization or "
+            "ambiguity evaluation"
+        ),
     }
     if gold is not None:
         if not gold or any(

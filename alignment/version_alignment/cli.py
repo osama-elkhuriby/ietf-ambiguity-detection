@@ -1,4 +1,4 @@
-"""TLS-only immutable pilot runner; never invokes collection or LLM refinement."""
+"""Immutable document-family alignment runner; never invokes collection or LLM refinement."""
 
 from __future__ import annotations
 
@@ -39,6 +39,10 @@ def run(
     pair: tuple[str, str] | None = None,
     prepare_only=False,
     gold: Path | None = None,
+    family_id: str = TLS_FAMILY,
+    rfc_id: str | None = None,
+    clause_source: str = "clauses_llm",
+    prepare_all: bool = False,
 ):
     start = time.perf_counter()
     code_paths = sorted((root / "alignment/version_alignment").glob("*.py")) + [
@@ -57,10 +61,13 @@ def run(
     write_json(
         output / "request.json",
         {
-            "family_id": TLS_FAMILY,
+            "family_id": family_id,
+            "rfc_id": rfc_id,
+            "clause_source": clause_source,
             "created_at": created,
             "config": config.model_dump(),
             "prepare_missing": prepare_missing,
+            "prepare_all": prepare_all,
             "pair": pair,
             "algorithm_version": ALGORITHM_VERSION,
         },
@@ -71,6 +78,10 @@ def run(
             output,
             prepare_missing=prepare_missing,
             selected=set(pair) if pair else None,
+            family_id=family_id,
+            rfc_id=rfc_id,
+            clause_source=clause_source,
+            prepare_all=prepare_all,
         )
         if pair and (
             len(docs) != 2
@@ -82,7 +93,7 @@ def run(
             )
         ):
             raise ValueError(
-                "Smoke pair must be consecutive TLS revisions in source-to-target order"
+                "Smoke pair must be consecutive revisions in source-to-target order"
             )
         LOG.info(
             "Validated %s documents; prepared %s",
@@ -304,7 +315,7 @@ def run(
         manifest = {
             "schema_version": "1.0",
             "status": "PREPARED" if prepare_only else "COMPLETE",
-            "family_id": TLS_FAMILY,
+            "family_id": family_id,
             "created_at": created,
             "algorithm_version": ALGORITHM_VERSION,
             "config": config.model_dump(),
@@ -358,7 +369,7 @@ def run(
 
 
 def main(argv=None):
-    parser = argparse.ArgumentParser(description="TLS 1.3-only clause-alignment MVP")
+    parser = argparse.ArgumentParser(description="Versioned clause-alignment runner")
     parser.add_argument(
         "--root", type=Path, default=Path(__file__).resolve().parents[2]
     )
@@ -373,9 +384,32 @@ def main(argv=None):
     parser.add_argument("--model-revision")
     parser.add_argument("--allow-download", action="store_true")
     parser.add_argument("--prepare-missing", action="store_true")
+    parser.add_argument(
+        "--prepare-all",
+        action="store_true",
+        help=(
+            "Deterministically parse and classify every input from current raw "
+            "sources inside the new run; do not overwrite corpus clause artifacts."
+        ),
+    )
     parser.add_argument("--prepare-only", action="store_true")
     parser.add_argument("--pair", nargs=2, metavar=("FROM_DOCUMENT", "TO_DOCUMENT"))
     parser.add_argument("--gold", type=Path)
+    parser.add_argument(
+        "--family",
+        default=TLS_FAMILY,
+        help="Draft family identifier from corpus/metadata/drafts.json.",
+    )
+    parser.add_argument(
+        "--rfc",
+        help="Optional final RFC document ID; inferred from metadata by default.",
+    )
+    parser.add_argument(
+        "--clause-source",
+        choices=["clauses", "clauses_llm"],
+        default="clauses_llm",
+        help="Explicit first-stage clause snapshot directory under corpus/processed.",
+    )
     args = parser.parse_args(argv)
     logging.basicConfig(
         level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s"
@@ -394,6 +428,10 @@ def main(argv=None):
             pair=tuple(args.pair) if args.pair else None,
             prepare_only=args.prepare_only,
             gold=args.gold,
+            family_id=args.family,
+            rfc_id=args.rfc,
+            clause_source=args.clause_source,
+            prepare_all=args.prepare_all,
         )
     except (ValueError, OSError, RuntimeError) as exc:
         LOG.error("%s", exc)

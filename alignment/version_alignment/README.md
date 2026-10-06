@@ -1,9 +1,9 @@
-# TLS 1.3 clause alignment MVP
+# Version-to-version clause alignment
 
-Aligns only `draft-ietf-tls-tls13` revisions and, where valid, the final draft to
-RFC8446. Relationships are correspondence predictions, never ambiguity labels or
-revision reasons. Other families, benchmark splits, training and cross-protocol
-evaluation are outside this milestone.
+Aligns consecutive revisions of an explicitly selected Internet-Draft family and,
+where available, its final RFC. Relationships are correspondence predictions,
+never ambiguity labels or revision reasons. The original validated pilot was TLS
+1.3; additional families use the same contracts and conservative algorithm.
 
 See [the completion report](IMPLEMENTATION_REPORT.md) for the validated 30-document,
 29-pair pilot, exact tests, runtimes and remaining manual review.
@@ -20,6 +20,7 @@ conda activate ietf-ambiguity-detection
 python -m alignment.version_alignment --backend lexical --pair draft-ietf-tls-tls13-00 draft-ietf-tls-tls13-01 --output corpus/processed/alignments/draft-ietf-tls-tls13/my-early-smoke
 python -m alignment.version_alignment --backend semantic --allow-download --pair draft-ietf-tls-tls13-27 draft-ietf-tls-tls13-28 --output corpus/processed/alignments/draft-ietf-tls-tls13/my-late-smoke
 python -m alignment.version_alignment --backend semantic --model-revision 1110a243fdf4706b3f48f1d95db1a4f5529b4d41 --prepare-missing --output corpus/processed/alignments/draft-ietf-tls-tls13/my-full-pilot
+python -m alignment.version_alignment --family draft-ietf-httpbis-semantics --rfc RFC9110 --backend lexical --clause-source clauses --prepare-all --output corpus/processed/alignments/draft-ietf-httpbis-semantics/my-full-run
 ```
 
 The pinned MiniLM commit above is the public snapshot selected for this MVP.
@@ -34,13 +35,15 @@ finished alignment run. Run artifacts are written exclusively, not overwritten.
 
 ## Inputs
 
-- Discover TLS outputs recursively in `corpus/processed/clauses_llm`.
-- Never silently substitute older `clauses` classifications.
+- Discover only the requested family's outputs in the explicitly selected
+  `--clause-source` (`clauses_llm` by default, or `clauses`).
+- Never silently substitute another clause source or classification stage.
 - Validate revision sequence from 00, chronology, duplicate identities, positions,
   raw-source hashes, classifications, and block-relative spans.
 - Preserve existing clause IDs and all rule/LLM extras in immutable input snapshots.
-- Prepare missing TLS-22/RFC8446 using existing deterministic parsing/segmentation,
-  only inside the run directory, only with `--prepare-missing`. No LLM refinement.
+- `--prepare-missing` prepares absent documents; `--prepare-all` deterministically
+  reparses and classifies every document from current raw sources. Both write only
+  inside the new run directory. No LLM refinement is implied.
 - Do not rewrite corpus metadata, links, sources, or existing clause outputs.
 - An absent RFC entry permits draft-only operation; a conflicting association fails.
 

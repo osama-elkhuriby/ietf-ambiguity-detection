@@ -1,7 +1,8 @@
-"""Create a small, lineage-deduplicated TLS human-review batch.
+"""Create a lineage-deduplicated human-review batch.
 
 This never changes automatic silver artifacts.  It copies selected review rows
-into reviewer-specific CSVs and an empty adjudication sheet.
+into reviewer-specific CSVs and an empty adjudication sheet. TLS paths remain
+the defaults for backward compatibility; command-line paths support any family.
 """
 
 from __future__ import annotations
@@ -11,7 +12,6 @@ import csv
 import hashlib
 import json
 from pathlib import Path
-
 
 ROOT = Path(__file__).resolve().parents[1]
 FAMILY_DIR = ROOT / "corpus/processed/ground_truth/draft-ietf-tls-tls13"
@@ -127,7 +127,7 @@ def write_rows(path: Path, fields: list[str], rows: list[dict[str, str]]) -> Non
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Create TLS CSVs for independent human review."
+        description="Create family CSVs for independent human review."
     )
     parser.add_argument(
         "--all-candidates",
@@ -157,6 +157,12 @@ def main() -> None:
         help="Directory containing frozen clause JSON with first-stage labels.",
     )
     parser.add_argument(
+        "--source",
+        type=Path,
+        default=SOURCE,
+        help="Silver review-template CSV to select from.",
+    )
+    parser.add_argument(
         "--output-dir",
         type=Path,
         default=OUTPUT_DIR,
@@ -166,10 +172,13 @@ def main() -> None:
     if args.all_candidates and args.all_lineages:
         parser.error("--all-candidates and --all-lineages are mutually exclusive")
 
-    with SOURCE.open(newline="", encoding="utf-8") as handle:
+    source = args.source
+    if not source.is_absolute():
+        source = ROOT / source
+    with source.open(newline="", encoding="utf-8") as handle:
         reader = csv.DictReader(handle)
         if not reader.fieldnames:
-            raise ValueError(f"Missing header in {SOURCE}")
+            raise ValueError(f"Missing header in {source}")
         fields = list(reader.fieldnames)
         for field in HUMAN_FIELDS:
             if field not in fields:
@@ -201,25 +210,33 @@ def main() -> None:
     all_positives = [
         row for row in rows if row["weak_label"] == "SILVER_POSITIVE_CANDIDATE"
     ]
+    all_changes = [
+        row for row in rows if row["weak_label"] == "SILVER_CHANGE_CANDIDATE"
+    ]
     all_controls = [
         row for row in rows if row["weak_label"] == "SILVER_CLEAR_CANDIDATE"
     ]
     if args.all_candidates:
-        positives, controls = all_positives, all_controls
+        positives, changes, controls = all_positives, all_changes, all_controls
         selection = "all eligible silver candidate records"
     elif args.all_lineages:
         positives = choose_one_per_lineage(all_positives)
+        changes = choose_one_per_lineage(all_changes)
         controls = choose_one_per_lineage(all_controls)
         selection = "one latest-revision record per eligible lineage"
     else:
         positives = choose_one_per_lineage(all_positives)
-        controls = choose_one_per_lineage(all_controls)[: len(positives) * 2]
+        changes = choose_one_per_lineage(all_changes)
+        controls = choose_one_per_lineage(all_controls)[
+            : (len(positives) + len(changes)) * 2
+        ]
         selection = (
-            "one latest-revision record per positive lineage and two clear-control "
-            "lineages per positive lineage"
+            "one latest-revision record per signal lineage and two clear-control "
+            "lineages per signal lineage"
         )
     batch = sorted(
-        [*positives, *controls], key=lambda r: (r["weak_label"], r["record_id"])
+        [*positives, *changes, *controls],
+        key=lambda r: (r["weak_label"], r["record_id"]),
     )
     batch = [blank_human_fields(row) for row in batch]
 
@@ -231,8 +248,8 @@ def main() -> None:
         write_rows(output_dir / name, fields, batch)
     manifest = {
         "purpose": "Independent human review before promotion to gold",
-        "source": SOURCE.relative_to(ROOT).as_posix(),
-        "source_sha256": source_hash(SOURCE),
+        "source": path_reference(source),
+        "source_sha256": source_hash(source),
         "classification_source": path_reference(classification_input_dir),
         "classification_records": len(classifications),
         "selection": {
@@ -245,6 +262,7 @@ def main() -> None:
         "eligible_records": len(rows),
         "records": len(batch),
         "positive_records": len(positives),
+        "change_candidate_records": len(changes),
         "clear_control_records": len(controls),
         "unique_lineages": len({row["lineage_ids"] for row in batch}),
         "record_ids": [row["record_id"] for row in batch],
@@ -255,9 +273,36 @@ def main() -> None:
         json.dumps(manifest, indent=2) + "\n", encoding="utf-8"
     )
     temporary_manifest.replace(manifest_path)
+    family_id = (
+        batch[0]["family_id"]
+        if batch
+        else source.parent.parent.name
+    )
+    readme_path = output_dir / "README.md"
+    temporary_readme = readme_path.with_name(f".{readme_path.name}.tmp")
+    temporary_readme.write_text(
+        f"""# {family_id} independent review batch
+
+This package contains {len(batch)} lineage-deduplicated, normative records:
+{len(positives)} errata-supported candidates, {len(changes)} revision-change
+candidates, and {len(controls)} stable-lineage controls.
+
+`reviewer_a.csv` and `reviewer_b.csv` are identical starting copies for
+independent annotation. Record decisions in the `human_*`, `annotator`, date,
+status, and notes fields. Use `adjudication.csv` only to resolve disagreements.
+
+All records were filtered with the frozen first-stage classifier. Automatic
+labels remain silver and `UNCERTAIN`: a later edit is not proof of ambiguity,
+and stable wording is not proof of clarity. Promote a record to `gold/` only
+after completed independent review and adjudication.
+""",
+        encoding="utf-8",
+    )
+    temporary_readme.replace(readme_path)
     print(
         f"Created {len(batch)} records ({len(positives)} positive candidates, "
-        f"{len(controls)} clear controls) in {output_dir}"
+        f"{len(changes)} change candidates, {len(controls)} clear controls) "
+        f"in {output_dir}"
     )
 
 

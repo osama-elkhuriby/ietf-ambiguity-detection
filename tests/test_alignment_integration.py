@@ -98,9 +98,9 @@ def test_failure_records_pair_stage_and_traceback(tmp_path, monkeypatch):
     assert not (output / "run_manifest.json").exists()
 
 
-def test_rejects_non_tls_or_nonconsecutive_pair(tmp_path):
+def test_rejects_unknown_or_nonconsecutive_pair(tmp_path):
     root = synthetic_root(tmp_path)
-    with pytest.raises(ValueError, match="Unknown TLS"):
+    with pytest.raises(ValueError, match="Unknown draft-ietf-tls-tls13"):
         run(
             root,
             tmp_path / "bad-family",

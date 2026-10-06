@@ -48,6 +48,32 @@ def test_month_precision():
     assert timeline(metadata, rfcs)[-1]["available_at"] == date(2020, 2, 29)
 
 
+def test_timeline_supports_an_explicit_non_tls_family():
+    family = "draft-ietf-example-protocol"
+    metadata = {
+        family: {
+            "versions": [
+                {
+                    "rev": "00",
+                    "submission_date": "2021-01-01",
+                    "local_txt_path": "draft.txt",
+                }
+            ]
+        }
+    }
+    rfcs = {
+        "RFC9999": {
+            "draft": family + "-00",
+            "date": "2021-02-01",
+            "local_txt_path": "rfc.txt",
+        }
+    }
+
+    result = timeline(metadata, rfcs, family, "RFC9999")
+
+    assert [item["document_id"] for item in result] == [family + "-00", "RFC9999"]
+
+
 @pytest.mark.parametrize(
     "text",
     [

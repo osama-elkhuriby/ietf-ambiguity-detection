@@ -6,8 +6,8 @@ from pathlib import Path
 
 from corpus.create_tls_review_batch import (
     attach_first_stage_classifications,
-    classified_entirely_as,
     choose_one_per_lineage,
+    classified_entirely_as,
 )
 
 

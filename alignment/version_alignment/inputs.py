@@ -1,4 +1,4 @@
-"""TLS-only discovery, chronology validation and non-destructive preparation."""
+"""Document-family discovery, chronology validation and input preparation."""
 
 from __future__ import annotations
 
@@ -17,12 +17,17 @@ from .models import Clause, Document
 from .normalize import normalize
 
 
-def timeline(metadata: dict[str, Any], rfcs: dict[str, Any]) -> list[dict[str, Any]]:
-    record = metadata[TLS_FAMILY]
+def timeline(
+    metadata: dict[str, Any],
+    rfcs: dict[str, Any],
+    family_id: str = TLS_FAMILY,
+    rfc_id: str | None = None,
+) -> list[dict[str, Any]]:
+    record = metadata[family_id]
     versions = sorted(record["versions"], key=lambda v: int(v["rev"]))
     numbers = [int(v["rev"]) for v in versions]
     if not numbers or numbers != list(range(max(numbers) + 1)):
-        raise ValueError(f"TLS revisions missing/duplicated: {numbers}")
+        raise ValueError(f"{family_id} revisions missing/duplicated: {numbers}")
     result: list[dict[str, Any]] = []
     for v in versions:
         day = date.fromisoformat(v["submission_date"][:10])
@@ -30,7 +35,7 @@ def timeline(metadata: dict[str, Any], rfcs: dict[str, Any]) -> list[dict[str, A
             raise ValueError(f"Chronology conflicts with revision {v['rev']}")
         result.append(
             {
-                "document_id": f"{TLS_FAMILY}-{v['rev']}",
+                "document_id": f"{family_id}-{v['rev']}",
                 "revision": v["rev"],
                 "publication_date": day,
                 "available_at": day,
@@ -38,11 +43,22 @@ def timeline(metadata: dict[str, Any], rfcs: dict[str, Any]) -> list[dict[str, A
                 "source_path": v["local_txt_path"],
             }
         )
-    rfc = rfcs.get("RFC8446")
+    if rfc_id is None:
+        matches = [
+            key
+            for key, value in rfcs.items()
+            if value.get("draft") == result[-1]["document_id"]
+        ]
+        if len(matches) > 1:
+            raise ValueError(
+                f"Multiple RFC endpoints associated with {family_id}: {matches}"
+            )
+        rfc_id = matches[0] if matches else None
+    rfc = rfcs.get(rfc_id) if rfc_id else None
     if rfc:
         if rfc.get("draft") != result[-1]["document_id"]:
             raise ValueError(
-                "RFC8446 final-draft association conflicts with TLS timeline"
+                f"{rfc_id} final-draft association conflicts with {family_id} timeline"
             )
         day = date.fromisoformat(rfc["date"][:10])
         # RFC index exposes month precision; first-of-month is not exact availability.
@@ -53,7 +69,7 @@ def timeline(metadata: dict[str, Any], rfcs: dict[str, Any]) -> list[dict[str, A
             )
         result.append(
             {
-                "document_id": "RFC8446",
+                "document_id": rfc_id,
                 "revision": None,
                 "publication_date": day,
                 "available_at": upper,
@@ -64,13 +80,21 @@ def timeline(metadata: dict[str, Any], rfcs: dict[str, Any]) -> list[dict[str, A
     return result
 
 
-def discover(root: Path) -> dict[str, Path]:
-    """Use only updated TLS outputs; never silently substitute older classifications."""
+def discover(
+    root: Path,
+    family_id: str = TLS_FAMILY,
+    rfc_id: str | None = "RFC8446",
+    clause_source: str = "clauses_llm",
+) -> dict[str, Path]:
+    """Discover one explicit classifier-output source without silent fallback."""
+    if clause_source not in {"clauses", "clauses_llm"}:
+        raise ValueError(f"Unknown clause source: {clause_source}")
     found: dict[str, Path] = {}
-    folder = root / "corpus/processed/clauses_llm"
+    folder = root / "corpus/processed" / clause_source
     for path in sorted(folder.rglob("*.json")):
         if not (
-            path.stem.startswith(TLS_FAMILY + "-") or path.stem.upper() == "RFC8446"
+            path.stem.startswith(family_id + "-")
+            or (rfc_id is not None and path.stem.upper() == rfc_id.upper())
         ):
             continue
         payload = json.loads(path.read_text(encoding="utf-8"))
@@ -91,19 +115,33 @@ def prepare_inputs(
     *,
     prepare_missing: bool = False,
     selected: set[str] | None = None,
+    family_id: str = TLS_FAMILY,
+    rfc_id: str | None = None,
+    clause_source: str = "clauses_llm",
+    prepare_all: bool = False,
 ) -> tuple[list[Document], dict[str, Any]]:
     metadata_paths = [
         root / "corpus/metadata" / name for name in ("drafts.json", "rfcs.json")
     ]
     metadata, rfcs = [json.loads(p.read_text(encoding="utf-8")) for p in metadata_paths]
-    entries = timeline(metadata, rfcs)
+    entries = timeline(metadata, rfcs, family_id, rfc_id)
     known = {e["document_id"] for e in entries}
     if selected and not selected <= known:
-        raise ValueError(f"Unknown TLS selections: {sorted(selected - known)}")
+        raise ValueError(
+            f"Unknown {family_id} selections: {sorted(selected - known)}"
+        )
     entries = [e for e in entries if selected is None or e["document_id"] in selected]
-    found = discover(root)
+    endpoint = next(
+        (entry["document_id"] for entry in entries if entry["revision"] is None),
+        rfc_id,
+    )
+    found = (
+        {}
+        if prepare_all
+        else discover(root, family_id, endpoint, clause_source)
+    )
     missing = [e["document_id"] for e in entries if e["document_id"] not in found]
-    if missing and not prepare_missing:
+    if missing and not (prepare_missing or prepare_all):
         raise ValueError(
             f"Missing preferred clause snapshots: {missing}; use --prepare-missing"
         )
@@ -135,7 +173,7 @@ def prepare_inputs(
             )
             clauses.append(clause)
         document = Document(
-            family_id=TLS_FAMILY,
+            family_id=family_id,
             **entry,
             source_sha256=file_hash(raw),
             input_sha256=input_hash or file_hash(raw),
@@ -150,5 +188,12 @@ def prepare_inputs(
         "metadata_hashes": {p.name: file_hash(p) for p in metadata_paths},
         "prepared_documents": missing,
         "rfc_link_source": "RFC index draft field; historical cross-check independence unknown",
-        "input_policy": "clauses_llm preferred; missing inputs deterministically prepared only on request",
+        "clause_source": clause_source,
+        "prepared_all_from_raw": prepare_all,
+        "input_policy": (
+            "all inputs deterministically prepared from current raw sources"
+            if prepare_all
+            else f"{clause_source} required; missing inputs deterministically "
+            "prepared only on request"
+        ),
     }

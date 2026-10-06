@@ -23,11 +23,12 @@ Implemented foundation:
 - evidence-first `NORMATIVE`, `CONTEXTUAL`, `EXCLUDED`, and `MANUAL_REVIEW` classification
 - uppercase RFC 2119/RFC 8174 detection, quoted/reference safeguards, section priors, and review reasons
 
-The TLS-only alignment MVP is implemented in
+The version-alignment pipeline is implemented in
 [`version_alignment/`](version_alignment/README.md). It preserves existing clause
-outputs, aligns consecutive TLS drafts through RFC8446, and produces immutable
-candidate, alignment, lineage, review and guarded-feature artifacts. Confidence
-is provisional until reviewed gold data is available.
+outputs, aligns consecutive revisions of an explicitly selected draft family through
+its final RFC, and produces immutable candidate, alignment, lineage, review and
+guarded-feature artifacts. Confidence is provisional until reviewed gold data is
+available. TLS 1.3 remains the original validated pilot.
 
 Remaining broader alignment work:
 

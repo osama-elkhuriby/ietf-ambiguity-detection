@@ -112,3 +112,21 @@ Artifacts are separated by lifecycle under
 The automatic records are not gold: they retain `ambiguity_label=UNCERTAIN`,
 `ground_truth=false`, and `requires_human_review=true`. Make a working copy of the
 review template before annotation because rebuilding replaces the template.
+
+## Additional family review preparation
+
+For a completed family alignment, build normative review signals and the independent
+review package with:
+
+```bash
+python -m corpus.build_family_silver_labels --family draft-ietf-httpbis-semantics --rfc RFC9110 --alignment-run corpus/processed/alignments/draft-ietf-httpbis-semantics/lexical-first-classifier-v1
+python -m corpus.create_tls_review_batch --source corpus/processed/ground_truth/draft-ietf-httpbis-semantics/review/ground_truth_review_template.csv --classification-input-dir corpus/processed/alignments/draft-ietf-httpbis-semantics/lexical-first-classifier-v1/inputs --classification NORMATIVE --all-lineages --output-dir corpus/processed/ground_truth/draft-ietf-httpbis-semantics/review/all_candidates_v1
+```
+
+Normativity always comes from the frozen first-stage classification stored in the
+alignment inputs. Verified technical errata can support a silver-positive candidate
+only when their conservatively traced draft clauses are normative. Because errata are
+sparse, the generic builder also emits `SILVER_CHANGE_CANDIDATE` records for normative
+clauses with confident substantive revision links. A change is only a review signal,
+not an automatic ambiguity label. Stable normative lineages are sampled as controls;
+all records remain pending human review and are deduplicated by lineage.

@@ -13,9 +13,11 @@ import json
 import re
 import sys
 from collections import Counter, defaultdict
+from collections.abc import Callable, Iterable
 from datetime import UTC, datetime
+from itertools import pairwise
 from pathlib import Path
-from typing import Any, Callable, Iterable
+from typing import Any
 
 import numpy as np
 from rapidfuzz.fuzz import partial_ratio, ratio
@@ -227,9 +229,7 @@ def reconstruct_alignments(
     all_rows: list[Alignment] = []
     audits: list[dict[str, Any]] = []
     model_id = digest(model)
-    for pair_index, (source, target) in enumerate(
-        zip(documents, documents[1:]), start=1
-    ):
+    for pair_index, (source, target) in enumerate(pairwise(documents), start=1):
         candidates = candidate_graph(
             source,
             target,
@@ -334,6 +334,7 @@ def build_positive_candidates(
     documents: list[Document],
     rows: list[Alignment],
     lineage_by_clause: dict[str, str],
+    family_id: str = FAMILY_ID,
 ) -> list[dict[str, Any]]:
     clauses = _clause_lookup(documents)
     pair_rows: dict[tuple[str, str], dict[str, Alignment]] = defaultdict(dict)
@@ -378,7 +379,7 @@ def build_positive_candidates(
                 {
                     "record_id": record_id,
                     "schema_version": SILVER_SCHEMA_VERSION,
-                    "family_id": FAMILY_ID,
+                    "family_id": family_id,
                     "document_id": source_document.document_id,
                     "revision": source_document.revision,
                     "clause_ids": source_ids,
@@ -448,6 +449,7 @@ def build_clear_controls(
     positives: list[dict[str, Any]],
     documents: list[Document],
     lineage_by_clause: dict[str, str],
+    family_id: str = FAMILY_ID,
 ) -> list[dict[str, Any]]:
     """Select matched stable controls; these remain weak negative candidates."""
     clauses = _clause_lookup(documents)
@@ -521,7 +523,7 @@ def build_clear_controls(
                     [SILVER_ALGORITHM_VERSION, "clear-control", choice.clause_id]
                 ),
                 "schema_version": SILVER_SCHEMA_VERSION,
-                "family_id": FAMILY_ID,
+                "family_id": family_id,
                 "document_id": choice.document_id,
                 "revision": choice.revision_id,
                 "clause_ids": [choice.clause_id],
