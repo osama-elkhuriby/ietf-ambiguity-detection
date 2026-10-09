@@ -1,0 +1,29 @@
+{
+  "purpose": "Independent human review before promotion to gold",
+  "source": "corpus/processed/ground_truth/draft-ietf-httpbis-cache-header/review/ground_truth_review_template.csv",
+  "source_sha256": "f73935f503b02e14d8ca115a471fcdea45ad38b448c8462e78869eef9ab7c6cf",
+  "classification_source": "corpus/processed/alignments/draft-ietf-httpbis-cache-header/lexical-first-classifier-v1/inputs",
+  "classification_records": 1115,
+  "selection": {
+    "method": "one latest-revision record per eligible lineage",
+    "filters": [
+      "all constituent clauses classified as NORMATIVE by the frozen first-stage classifier"
+    ],
+    "grouping_key": "lineage_ids",
+    "representative": "latest_revision"
+  },
+  "source_records": 5,
+  "eligible_records": 5,
+  "records": 5,
+  "positive_records": 0,
+  "change_candidate_records": 5,
+  "clear_control_records": 0,
+  "unique_lineages": 5,
+  "record_ids": [
+    "16a23128ea688bd9c4d8108f041c8e53580b352a8798cbf6d3b5a6e54e71fd9e",
+    "3742afcb37bd439ce4ba611bfa04108e82cf6c289fd16eeb8c9bd78fab5edc11",
+    "5a3086417e21d1d8a0156667bcab39adca5c9c355eeb875c183fb3df989b3619",
+    "954e147ad036ca6ea489509f8754173ef17875a482ae7b17cc1546937f982323",
+    "98829ab6c6abb0f7c1107eb2397feef0203202bdae12e1ed8620b7d58e361ede"
+  ]
+}

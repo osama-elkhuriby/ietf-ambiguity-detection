@@ -10,9 +10,14 @@ from corpus.create_tls_review_batch import classified_entirely_as
 
 FAMILY_COUNTS = {
     "draft-ietf-6man-rfc2460bis": 1,
+    "draft-ietf-dnsop-svcb-https": 163,
+    "draft-ietf-httpbis-cache-header": 5,
     "draft-ietf-httpbis-http2bis": 266,
     "draft-ietf-httpbis-semantics": 420,
     "draft-ietf-quic-http": 351,
+    "draft-ietf-quic-recovery": 172,
+    "draft-ietf-quic-tls": 200,
+    "draft-ietf-quic-transport": 842,
     "draft-ietf-tcpm-rfc793bis": 143,
 }
 
