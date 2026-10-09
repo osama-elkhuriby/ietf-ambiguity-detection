@@ -504,7 +504,7 @@ def test_rfc_unnumbered_reference_groups_are_segmented() -> None:
 def test_all_collected_rfcs_match_metadata_and_have_source_locations() -> None:
     metadata = json.loads(Path("corpus/metadata/rfcs.json").read_text(encoding="utf-8"))
 
-    assert len(metadata) == 12
+    assert len(metadata) == 13
     for document_id, record in metadata.items():
         document = parse_document(Path(record["local_txt_path"]))
         blocks = list(document.iter_blocks())
