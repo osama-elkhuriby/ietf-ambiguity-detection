@@ -10,6 +10,8 @@ __pycache__/
 *.egg-info/
 .venv/
 venv/
+.uv-cache/
+.uv-python/
 
 # Secrets / local env
 .env
@@ -48,3 +50,6 @@ Thumbs.db
 *.sqlite
 
 *.jsonl
+
+# Local LLM annotations are reproducible but large and model-specific.
+corpus/processed/llm_annotations/
