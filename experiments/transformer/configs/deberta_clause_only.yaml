@@ -1,0 +1,32 @@
+experiment_name: deberta-v3-small-clause-only-v1
+dataset_dir: corpus/processed/transformer_partitioned/v1/development
+variant: target_only
+model:
+  repository: microsoft/deberta-v3-small
+  revision: a36c739020e01763fe789b4b85e2df55d6180012
+  license: MIT
+tokenization:
+  max_length: 256
+  target_overflow: deterministic_head_tail
+training:
+  learning_rates: [1.0e-5, 2.0e-5, 3.0e-5]
+  screening_seed: 1729
+  train_batch_size: 8
+  eval_batch_size: 16
+  max_epochs: 10
+  weight_decay: 0.01
+  warmup_ratio: 0.1
+  max_grad_norm: 1.0
+  checkpoint_metric: pr_auc
+  early_stopping_patience: 2
+  precision: fp32
+selection:
+  cross_validation: grouped_training_families_only
+  n_splits: 5
+  fold_seed: 1729
+  fold_assignment: experiments/transformer/configs/folds_v1.json
+  fold_assignment_sha256: c04dc8424ed96486f8521ef57d17e4b503d2c3f41bb116edeeb9535073dd7884
+  inner_selection_assignment: experiments/transformer/configs/inner_selection_v1.json
+  inner_selection_assignment_sha256: 7db817c91e962a6a921942e14bc2d41737bd1060a111a8c7fb798bb929054616
+  validation_role: independent_calibration_and_routing_verification_only
+  test_role: sealed_final_evaluation

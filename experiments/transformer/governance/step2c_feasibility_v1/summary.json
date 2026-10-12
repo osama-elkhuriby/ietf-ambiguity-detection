@@ -1,0 +1,63 @@
+{
+  "bootstrap_repetitions": 2000,
+  "inner_families_below_20_positives": 0,
+  "input_hashes": {
+    "development_train": "4b0ee17308e26fdc8a2a362e7df1099fa7f55de79a9754ba64d50cb56f5542c4",
+    "inner_assignment": "7db817c91e962a6a921942e14bc2d41737bd1060a111a8c7fb798bb929054616"
+  },
+  "routing_definition": {
+    "local_coverage": "fraction below threshold and handled locally as negative",
+    "local_selective_risk": "ambiguous fraction among locally handled rows",
+    "no_skill": "constant observed-prevalence score within each scope",
+    "oracle": "conceptual perfect label ranking with deterministic unique order",
+    "policy": "refer rows with ambiguity score at or above one threshold",
+    "tie_policy": "all rows tied at the boundary are referred"
+  },
+  "schema_version": 1,
+  "seed_variance": {
+    "ensemble_comparisons": {
+      "tfidf_class": {
+        "mean_fold_comparator_pr_auc": 0.28262216960380626,
+        "mean_fold_ensemble_pr_auc": 0.30610805338548985,
+        "paired_row_bootstrap": {
+          "lower": -0.033231931675329146,
+          "method": "within-fold paired row bootstrap",
+          "point_difference": -0.0013659038266772283,
+          "upper": 0.03172353745402557,
+          "valid_bootstraps": 2000
+        },
+        "pooled_comparator_pr_auc": 0.2784816576562648,
+        "pooled_ensemble_pr_auc": 0.2771157538295876,
+        "section_cluster_bootstrap": {
+          "lower": -0.03226685903382933,
+          "method": "within-fold section-cluster paired bootstrap",
+          "point_difference": -0.0013659038266772283,
+          "upper": 0.029957840935120945,
+          "valid_bootstraps": 2000
+        }
+      },
+      "tfidf_unweighted": {
+        "mean_fold_comparator_pr_auc": 0.2822979678346874,
+        "mean_fold_ensemble_pr_auc": 0.30610805338548985,
+        "paired_row_bootstrap": {
+          "lower": -0.021362098352157848,
+          "method": "within-fold paired row bootstrap",
+          "point_difference": 0.0059589956568086855,
+          "upper": 0.03457898606705646,
+          "valid_bootstraps": 2000
+        },
+        "pooled_comparator_pr_auc": 0.2711567581727789,
+        "pooled_ensemble_pr_auc": 0.2771157538295876,
+        "section_cluster_bootstrap": {
+          "lower": -0.02206670254442127,
+          "method": "within-fold section-cluster paired bootstrap",
+          "point_difference": 0.0059589956568086855,
+          "upper": 0.03595127319738052,
+          "valid_bootstraps": 2000
+        }
+      }
+    },
+    "seed_sample_standard_deviation_maximum": 0.045922557145549714,
+    "seed_sample_standard_deviation_mean_across_folds": 0.023736502407200728
+  }
+}

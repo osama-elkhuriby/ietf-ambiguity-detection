@@ -33,7 +33,35 @@ Existing family-level split assignments are preserved. TF-IDF vocabulary,
 IDF values, and numerical scaling are fitted only on `train`. Validation and
 test rows are transformed with those frozen components.
 
+The reviewed v2 model split replaces the contaminated HTTP/2bis holdout with DNS
+while preserving the original LLM annotation artifact. Build matching classical
+features with:
+
+```powershell
+python -m corpus.build_model_dataset
+python -m models.classical.feature_pipeline `
+  --input corpus/processed/model_datasets/v2/training_dataset.csv `
+  --output-dir corpus/processed/features/v3 `
+  --syntax disabled
+```
+
 Syntax features use the locally installed `en_core_web_sm` model when
 available. Use `--syntax disabled` for a dependency-light deterministic run,
 or `--syntax required` when a missing parser should be an error. No model is
 downloaded by this command.
+
+## Frozen TF-IDF comparator
+
+Run the target-only grouped-CV comparator with:
+
+```powershell
+python -m models.classical.tfidf_comparator
+```
+
+It fits a fresh TF-IDF vocabulary and logistic regression inside each frozen
+`folds_v1.json` fitting partition. The four supported fold-local weighting modes are
+unweighted, class, confidence, and combined. Exact cross-boundary duplicate targets
+remain available to the fitting partition but are excluded from that fold's reported
+score, matching the transformer protocol. The immutable output includes raw logits,
+probabilities, per-fold manifests, percentile bootstrap intervals, and pooled OOF
+summaries under `experiments/classical/results/tfidf-logreg-v1/`.

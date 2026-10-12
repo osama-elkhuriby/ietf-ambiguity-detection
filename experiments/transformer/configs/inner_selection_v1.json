@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "name": "nested-inner-family-selection-v1",
+  "outer_fold_assignment_sha256": "c04dc8424ed96486f8521ef57d17e4b503d2c3f41bb116edeeb9535073dd7884",
+  "train_split_sha256": "4b0ee17308e26fdc8a2a362e7df1099fa7f55de79a9754ba64d50cb56f5542c4",
+  "eligibility": {
+    "minimum_positive_labels_before_duplicate_exclusion": 30,
+    "minimum_positive_labels_after_duplicate_exclusion": 25,
+    "maximum_family_rows": 500
+  },
+  "selection_rule": "Process outer folds 1..5. Among eligible families outside the outer fold, prefer the fewest prior assignments; break ties by ascending SHA256('inner-v1|<outer_fold>|<family_id>').",
+  "outer_fold_to_inner_family": {
+    "1": "draft-ietf-quic-http",
+    "2": "draft-ietf-quic-recovery",
+    "3": "draft-ietf-httpbis-semantics",
+    "4": "draft-ietf-quic-recovery",
+    "5": "draft-ietf-httpbis-http2bis"
+  }
+}

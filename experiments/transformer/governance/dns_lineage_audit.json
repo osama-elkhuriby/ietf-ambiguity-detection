@@ -1,0 +1,143 @@
+{
+  "copied_normative_text_pairs": [],
+  "counts": {
+    "copied_normative_text_pairs": 0,
+    "cross_reference_pairs_not_lineage": 3,
+    "rfc_lineage_pairs": 0,
+    "shared_boilerplate_pairs": 8,
+    "shared_draft_pairs": 0
+  },
+  "created_at": "2026-10-10T14:53:24.312431+00:00",
+  "cross_reference_pairs_not_lineage": [
+    {
+      "referenced_rfc": "RFC9110",
+      "test_family": "draft-ietf-dnsop-svcb-https",
+      "training_family": "draft-ietf-httpbis-semantics"
+    },
+    {
+      "referenced_rfc": "RFC9114",
+      "test_family": "draft-ietf-dnsop-svcb-https",
+      "training_family": "draft-ietf-quic-http"
+    },
+    {
+      "referenced_rfc": "RFC8446",
+      "test_family": "draft-ietf-dnsop-svcb-https",
+      "training_family": "draft-ietf-tls-tls13"
+    }
+  ],
+  "lineage_overlap_detected": false,
+  "rfc_lineage_pairs": [],
+  "schema_version": 1,
+  "scope": {
+    "metadata_relations": [
+      "obsoletes",
+      "updates",
+      "obsoleted_by",
+      "updated_by"
+    ],
+    "near_match": "word 5-gram Jaccard",
+    "near_threshold": 0.85,
+    "normative_filter": "uppercase RFC 2119/8174 keywords",
+    "test_family": "draft-ietf-dnsop-svcb-https",
+    "text_source": "final RFC plaintext",
+    "training_families": [
+      "draft-ietf-6man-rfc2460bis",
+      "draft-ietf-httpbis-cache-header",
+      "draft-ietf-httpbis-http2bis",
+      "draft-ietf-httpbis-semantics",
+      "draft-ietf-quic-http",
+      "draft-ietf-quic-recovery",
+      "draft-ietf-quic-tls",
+      "draft-ietf-quic-transport",
+      "draft-ietf-tls-tls13"
+    ]
+  },
+  "shared_boilerplate_pairs": [
+    {
+      "match": "exact",
+      "test_excerpt": "The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL NOT\", \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"NOT RECOMMENDED\", \"MAY\", and \"OPTIONAL\" in this document are to be interpreted as described in BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all capitals, as shown here.",
+      "test_family": "draft-ietf-dnsop-svcb-https",
+      "test_rfc": "RFC9460",
+      "training_excerpt": "The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL NOT\", \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"NOT RECOMMENDED\", \"MAY\", and \"OPTIONAL\" in this document are to be interpreted as described in BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all capitals, as shown here.",
+      "training_family": "draft-ietf-httpbis-cache-header",
+      "training_rfc": "RFC9211",
+      "word_5gram_jaccard": 1.0
+    },
+    {
+      "match": "exact",
+      "test_excerpt": "The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL NOT\", \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"NOT RECOMMENDED\", \"MAY\", and \"OPTIONAL\" in this document are to be interpreted as described in BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all capitals, as shown here.",
+      "test_family": "draft-ietf-dnsop-svcb-https",
+      "test_rfc": "RFC9460",
+      "training_excerpt": "The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL NOT\", \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"NOT RECOMMENDED\", \"MAY\", and \"OPTIONAL\" in this document are to be interpreted as described in BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all capitals, as shown here.",
+      "training_family": "draft-ietf-httpbis-http2bis",
+      "training_rfc": "RFC9113",
+      "word_5gram_jaccard": 1.0
+    },
+    {
+      "match": "exact",
+      "test_excerpt": "The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL NOT\", \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"NOT RECOMMENDED\", \"MAY\", and \"OPTIONAL\" in this document are to be interpreted as described in BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all capitals, as shown here.",
+      "test_family": "draft-ietf-dnsop-svcb-https",
+      "test_rfc": "RFC9460",
+      "training_excerpt": "The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL NOT\", \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"NOT RECOMMENDED\", \"MAY\", and \"OPTIONAL\" in this document are to be interpreted as described in BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all capitals, as shown here.",
+      "training_family": "draft-ietf-httpbis-semantics",
+      "training_rfc": "RFC9110",
+      "word_5gram_jaccard": 1.0
+    },
+    {
+      "match": "exact",
+      "test_excerpt": "The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL NOT\", \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"NOT RECOMMENDED\", \"MAY\", and \"OPTIONAL\" in this document are to be interpreted as described in BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all capitals, as shown here.",
+      "test_family": "draft-ietf-dnsop-svcb-https",
+      "test_rfc": "RFC9460",
+      "training_excerpt": "The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL NOT\", \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"NOT RECOMMENDED\", \"MAY\", and \"OPTIONAL\" in this document are to be interpreted as described in BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all capitals, as shown here.",
+      "training_family": "draft-ietf-quic-http",
+      "training_rfc": "RFC9114",
+      "word_5gram_jaccard": 1.0
+    },
+    {
+      "match": "exact",
+      "test_excerpt": "The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL NOT\", \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"NOT RECOMMENDED\", \"MAY\", and \"OPTIONAL\" in this document are to be interpreted as described in BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all capitals, as shown here.",
+      "test_family": "draft-ietf-dnsop-svcb-https",
+      "test_rfc": "RFC9460",
+      "training_excerpt": "The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL NOT\", \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"NOT RECOMMENDED\", \"MAY\", and \"OPTIONAL\" in this document are to be interpreted as described in BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all capitals, as shown here.",
+      "training_family": "draft-ietf-quic-recovery",
+      "training_rfc": "RFC9002",
+      "word_5gram_jaccard": 1.0
+    },
+    {
+      "match": "exact",
+      "test_excerpt": "The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL NOT\", \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"NOT RECOMMENDED\", \"MAY\", and \"OPTIONAL\" in this document are to be interpreted as described in BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all capitals, as shown here.",
+      "test_family": "draft-ietf-dnsop-svcb-https",
+      "test_rfc": "RFC9460",
+      "training_excerpt": "The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL NOT\", \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"NOT RECOMMENDED\", \"MAY\", and \"OPTIONAL\" in this document are to be interpreted as described in BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all capitals, as shown here.",
+      "training_family": "draft-ietf-quic-tls",
+      "training_rfc": "RFC9001",
+      "word_5gram_jaccard": 1.0
+    },
+    {
+      "match": "exact",
+      "test_excerpt": "The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL NOT\", \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"NOT RECOMMENDED\", \"MAY\", and \"OPTIONAL\" in this document are to be interpreted as described in BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all capitals, as shown here.",
+      "test_family": "draft-ietf-dnsop-svcb-https",
+      "test_rfc": "RFC9460",
+      "training_excerpt": "The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL NOT\", \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"NOT RECOMMENDED\", \"MAY\", and \"OPTIONAL\" in this document are to be interpreted as described in BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all capitals, as shown here.",
+      "training_family": "draft-ietf-quic-transport",
+      "training_rfc": "RFC9000",
+      "word_5gram_jaccard": 1.0
+    },
+    {
+      "match": "exact",
+      "test_excerpt": "The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL NOT\", \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"NOT RECOMMENDED\", \"MAY\", and \"OPTIONAL\" in this document are to be interpreted as described in BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all capitals, as shown here.",
+      "test_family": "draft-ietf-dnsop-svcb-https",
+      "test_rfc": "RFC9460",
+      "training_excerpt": "The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL NOT\", \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"NOT RECOMMENDED\", \"MAY\", and \"OPTIONAL\" in this document are to be interpreted as described in BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all capitals, as shown here.",
+      "training_family": "draft-ietf-tls-tls13",
+      "training_rfc": "RFC8446",
+      "word_5gram_jaccard": 1.0
+    }
+  ],
+  "shared_draft_pairs": [],
+  "source_hashes": {
+    "rfc_manifest": "d2dc7dc44c92c98a254ba992fa057b30fbb76d1c3c8f3b72ed32c1f38827a1c1",
+    "split_config": "5f6e356a5fa8d0762e4902cf2d1ebab7d2665d3f671f4dad5255242300e74585",
+    "test_rfc_text": "97d4a1208d4bd4006aad0568c470acf840ecfc35d44163390985559ccac9488e"
+  }
+}
