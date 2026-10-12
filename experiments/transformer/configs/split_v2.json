@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "name": "dns-test-tcp-validation-v2",
+  "rationale": "Replace the HTTP/2bis test holdout after the pre-training leakage audit found 13 exact and 3 near-identical train-test clauses. DNS was selected before any model was evaluated on it. All DNS rows are retained, naturally yielding 34 positives; rows were not selected to reach that number. Family sizes and label counts were visible when DNS was chosen, and its distinct protocol family and comparable positive count influenced the choice. This researcher degree of freedom is disclosed. The original LLM annotation dataset remains unchanged.",
+  "assignments": {
+    "train": [
+      "draft-ietf-6man-rfc2460bis",
+      "draft-ietf-httpbis-cache-header",
+      "draft-ietf-httpbis-http2bis",
+      "draft-ietf-httpbis-semantics",
+      "draft-ietf-quic-http",
+      "draft-ietf-quic-recovery",
+      "draft-ietf-quic-tls",
+      "draft-ietf-quic-transport",
+      "draft-ietf-tls-tls13"
+    ],
+    "validation": [
+      "draft-ietf-tcpm-rfc793bis"
+    ],
+    "test": [
+      "draft-ietf-dnsop-svcb-https"
+    ]
+  }
+}

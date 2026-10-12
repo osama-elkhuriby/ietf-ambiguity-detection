@@ -1,0 +1,25 @@
+{
+  "bootstrap_repetitions": 2000,
+  "bootstrap_seed": 314159,
+  "development_dataset_dir": "corpus/processed/transformer_partitioned/v1/development",
+  "development_train_sha256": "4b0ee17308e26fdc8a2a362e7df1099fa7f55de79a9754ba64d50cb56f5542c4",
+  "experiment_name": "tfidf-logreg-grouped-cv-v1",
+  "fold_assignment": "experiments/transformer/configs/folds_v1.json",
+  "fold_assignment_sha256": "c04dc8424ed96486f8521ef57d17e4b503d2c3f41bb116edeeb9535073dd7884",
+  "logistic_regression": {
+    "c": 1.0,
+    "max_iter": 2000,
+    "solver": "liblinear"
+  },
+  "seed": 1729,
+  "tfidf": {
+    "max_features": 20000,
+    "min_df": 2
+  },
+  "weight_strategies": [
+    "unweighted",
+    "class",
+    "confidence",
+    "combined"
+  ]
+}

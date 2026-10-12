@@ -143,14 +143,18 @@ def test_saved_tls_candidate_set_is_review_only_and_traceable() -> None:
     )
     output = family_dir / "silver"
     envelope = json.loads(
-        (output / "tls13_silver_ambiguity_candidates.json").read_text()
+        (output / "tls13_silver_ambiguity_candidates.json").read_text(encoding="utf-8")
     )
-    report = json.loads((output / "tls13_silver_label_report.json").read_text())
+    report = json.loads(
+        (output / "tls13_silver_label_report.json").read_text(encoding="utf-8")
+    )
     records = envelope["records"]
-    with (output / "tls13_silver_ambiguity_candidates.csv").open(newline="") as handle:
+    with (output / "tls13_silver_ambiguity_candidates.csv").open(
+        encoding="utf-8", newline=""
+    ) as handle:
         csv_records = list(csv.DictReader(handle))
     with (family_dir / "review/tls13_ground_truth_review_template.csv").open(
-        newline=""
+        encoding="utf-8", newline=""
     ) as handle:
         review_records = list(csv.DictReader(handle))
 
@@ -162,7 +166,7 @@ def test_saved_tls_candidate_set_is_review_only_and_traceable() -> None:
     known_clause_ids = {
         item["clause_id"]
         for path in input_dir.glob("*.json")
-        for item in json.loads(path.read_text())["clauses"]
+        for item in json.loads(path.read_text(encoding="utf-8"))["clauses"]
     }
 
     assert len(records) == report["candidate_records"] == 242
