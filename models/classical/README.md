@@ -65,3 +65,26 @@ remain available to the fitting partition but are excluded from that fold's repo
 score, matching the transformer protocol. The immutable output includes raw logits,
 probabilities, per-fold manifests, percentile bootstrap intervals, and pooled OOF
 summaries under `experiments/classical/results/tfidf-logreg-v1/`.
+
+## Exploratory experiments
+
+The experiment notebook and standalone Python runners are collected in this
+directory:
+
+- `ambiguity_feature_cleanup.ipynb`: exploratory classical-model comparisons
+  and same-revision previous-clause context.
+- `run_signal_check.py`: revision-predecessor coverage and quick LOFO signal
+  checks. Outputs and local caches remain under `results/revision_features/`.
+- `run_embeddings_context.py`: offline MiniLM/BGE embedding comparisons.
+  Outputs remain under `results/embeddings_context/`; embeddings are cached
+  under its ignored `cache/` directory.
+- `audit_vote_weights.py`: vote-weight distribution and stop-gate audit.
+  Outputs remain under `results/vote_weights/`.
+
+Run the standalone scripts from the repository root, for example:
+
+```powershell
+python -m models.classical.run_embeddings_context
+```
+
+The runners use the existing v3 feature artifacts and do not rewrite them.
