@@ -12,6 +12,7 @@ __pycache__/
 venv/
 .uv-cache/
 .uv-python/
+.hf-modules/
 
 # Secrets / local env
 .env
@@ -31,10 +32,6 @@ venv/
 #   ietf-dt-cache.sqlite        Datatracker HTTP cache (see *.sqlite below)
 # ---------------------------------------------------------------------------
 corpus/raw/rfcs/.rfcindex-cache/
-
-# Pilot-local experiment mirrors (not the canonical corpus tree)
-experiments/pilot/data/raw/
-experiments/pilot/data/processed/
 
 # Generated Stage-2 parser/classifier outputs (reproducible from raw corpus)
 # corpus/processed/
@@ -56,9 +53,12 @@ corpus/processed/llm_annotations/
 
 # Reproducible classical-model feature matrices and fitted preprocessors.
 corpus/processed/features/
-results/revision_features/matcher_cache/
-results/revision_features/embedding_cache/
-results/embeddings_context/cache/
-__pycache__/
-.pytest_cache/
-*.egg-info/
+
+# Reproducible, leakage-audited transformer input artifacts and run outputs.
+corpus/processed/transformer_inputs/
+corpus/processed/transformer_audits/
+corpus/processed/transformer_partitioned/
+corpus/processed/model_datasets/
+experiments/transformer/results/
+experiments/classical/results/
+experiments/transformer/*.lock.json
