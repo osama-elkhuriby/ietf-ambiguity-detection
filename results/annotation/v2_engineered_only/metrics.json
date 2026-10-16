@@ -1,0 +1,69 @@
+{
+  "draft_families": 11,
+  "feature_notes": {
+    "pronoun_without_noun_before": "Conservative start-of-clause subject-pronoun heuristic.",
+    "section_reference_count": "Counts explicit Section/Sections references; section depth omitted.",
+    "syntax_features": "Syntax parser unavailable; syntax features are zero.",
+    "target_context_overlap": "Maximum word-set Jaccard overlap with previous or next clause."
+  },
+  "model": {
+    "C": 0.5,
+    "class_weight": "balanced",
+    "count_transform": "log1p, fit-free and applied before fold-local StandardScaler",
+    "feature_selection": "L1 regularization fit inside each training fold",
+    "feature_set": "engineered_only",
+    "numerical_feature_count": 23,
+    "penalty": "L1",
+    "type": "LogisticRegression"
+  },
+  "near_duplicate_cosine_threshold": 0.9,
+  "near_duplicate_pairs": 56,
+  "positive_prevalence": 0.02020618556701031,
+  "positive_rows": 49,
+  "positive_validation_group_count": 5,
+  "rows": 2425,
+  "validation": {
+    "folds": [
+      {
+        "average_precision": 0.030793247127793383,
+        "fold": 1,
+        "roc_auc": 0.5011428571428571,
+        "selected_features": 19,
+        "train_positives": 24,
+        "train_rows": 1280,
+        "validation_groups": 1,
+        "validation_positives": 25,
+        "validation_rows": 1145
+      },
+      {
+        "average_precision": 0.020875671131130168,
+        "fold": 2,
+        "roc_auc": 0.466626396858955,
+        "selected_features": 19,
+        "train_positives": 38,
+        "train_rows": 1812,
+        "validation_groups": 4,
+        "validation_positives": 11,
+        "validation_rows": 613
+      },
+      {
+        "average_precision": 0.06712118249168429,
+        "fold": 3,
+        "roc_auc": 0.6205598682662903,
+        "selected_features": 20,
+        "train_positives": 36,
+        "train_rows": 1758,
+        "validation_groups": 3,
+        "validation_positives": 13,
+        "validation_rows": 667
+      }
+    ],
+    "mean_fold_average_precision": 0.039596700250202614,
+    "pooled_oof_average_precision": 0.029732061246385673,
+    "pooled_oof_roc_auc": 0.5028945921803065,
+    "random_state": 42,
+    "std_fold_average_precision": 0.01987942689329227,
+    "strategy": "3-fold StratifiedGroupKFold; draft-family and near-duplicate groups kept intact"
+  },
+  "validation_group_count": 8
+}

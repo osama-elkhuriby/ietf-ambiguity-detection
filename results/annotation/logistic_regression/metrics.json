@@ -1,0 +1,85 @@
+{
+  "group_count": 11,
+  "model": {
+    "C": 1.0,
+    "class_weight": "balanced",
+    "features_fitted_within_each_fold": true,
+    "max_iter": 2000,
+    "numerical_features": 37,
+    "tfidf": {
+      "max_features": 20000,
+      "min_df": 2,
+      "ngram_range": [
+        1,
+        2
+      ],
+      "sublinear_tf": true
+    },
+    "type": "LogisticRegression"
+  },
+  "positive_group_count": 8,
+  "positive_prevalence": 0.02020618556701031,
+  "positive_rows": 49,
+  "rows": 2425,
+  "validation": {
+    "folds": [
+      {
+        "average_precision": 0.07710237787839837,
+        "fold": 1,
+        "roc_auc": 0.5378006872852233,
+        "train_positives": 31,
+        "train_rows": 1631,
+        "validation_families": 1,
+        "validation_positives": 18,
+        "validation_rows": 794
+      },
+      {
+        "average_precision": 0.25060510176952655,
+        "fold": 2,
+        "roc_auc": 0.8019197207678883,
+        "train_positives": 40,
+        "train_rows": 2034,
+        "validation_families": 3,
+        "validation_positives": 9,
+        "validation_rows": 391
+      },
+      {
+        "average_precision": 0.019994080315500023,
+        "fold": 3,
+        "roc_auc": 0.5311313591495823,
+        "train_positives": 43,
+        "train_rows": 1980,
+        "validation_families": 2,
+        "validation_positives": 6,
+        "validation_rows": 445
+      },
+      {
+        "average_precision": 0.04282649250077959,
+        "fold": 4,
+        "roc_auc": 0.547389909594634,
+        "train_positives": 40,
+        "train_rows": 2035,
+        "validation_families": 2,
+        "validation_positives": 9,
+        "validation_rows": 390
+      },
+      {
+        "average_precision": 0.06477811524158401,
+        "fold": 5,
+        "roc_auc": 0.7519741564967696,
+        "train_positives": 42,
+        "train_rows": 2020,
+        "validation_families": 3,
+        "validation_positives": 7,
+        "validation_rows": 405
+      }
+    ],
+    "mean_fold_average_precision": 0.09106123354115771,
+    "mean_fold_roc_auc": 0.6340431666588194,
+    "pooled_oof_average_precision": 0.06482483567497452,
+    "pooled_oof_roc_auc": 0.6046261939119083,
+    "random_state": 42,
+    "std_fold_average_precision": 0.08211824201609008,
+    "strategy": "5-fold StratifiedGroupKFold; draft revisions grouped"
+  }
+}

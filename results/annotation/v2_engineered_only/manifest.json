@@ -1,0 +1,58 @@
+{
+  "embedding_dimensions": 0,
+  "feature_columns": [
+    "basic_word_count",
+    "vague_term_count",
+    "anaphora_count",
+    "cross_reference_count",
+    "conditional_count",
+    "exception_count",
+    "temporal_count",
+    "ordering_count",
+    "syntax_mean_dependency_distance",
+    "syntax_subordinate_clause_count",
+    "has_strong_modal",
+    "has_should_modal",
+    "has_may_modal",
+    "modal_level_count",
+    "has_no_modal",
+    "has_numeric_value",
+    "numeric_count",
+    "hedge_term_count",
+    "has_if_without_otherwise",
+    "target_context_overlap",
+    "pronoun_without_noun_before",
+    "bracket_reference_count",
+    "section_reference_count"
+  ],
+  "feature_set": "engineered_only",
+  "log_count_columns": [
+    "basic_word_count",
+    "vague_term_count",
+    "anaphora_count",
+    "cross_reference_count",
+    "conditional_count",
+    "exception_count",
+    "temporal_count",
+    "ordering_count",
+    "syntax_subordinate_clause_count",
+    "modal_level_count",
+    "numeric_count",
+    "hedge_term_count",
+    "bracket_reference_count",
+    "section_reference_count"
+  ],
+  "matrix_shapes": {
+    "engineered_scaled": [
+      2425,
+      23
+    ]
+  },
+  "metrics_file": "metrics.json",
+  "near_duplicate_pairs": 56,
+  "source_path": "/media/yahya/data_stuff/DATA/Final Project/ietf-ambiguity-detection/results/annotation/final_annotation.csv",
+  "source_sha256": "66ecdf14ad85ca5e52aecf0f8f1371f9f3b5687a336b71ecc16d529a850f8cfb",
+  "tfidf_feature_count": 0,
+  "validation_groups": 8,
+  "validation_note": "Evaluation is out-of-fold; final matrices and final_model.joblib are fitted on all annotation rows."
+}

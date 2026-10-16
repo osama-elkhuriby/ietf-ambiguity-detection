@@ -66,6 +66,48 @@ score, matching the transformer protocol. The immutable output includes raw logi
 probabilities, per-fold manifests, percentile bootstrap intervals, and pooled OOF
 summaries under `experiments/classical/results/tfidf-logreg-v1/`.
 
+## Final annotation logistic regression
+
+Train and validate a combined numerical-feature and TF-IDF logistic regression
+on `results/annotation/final_annotation.csv` with:
+
+```powershell
+python -m models.classical.train_annotation_logreg
+```
+
+Validation uses five stratified folds grouped by draft family, balanced class
+weights, and fold-local TF-IDF/scaling. The out-of-fold predictions and fold
+metrics are saved under `results/annotation/logistic_regression/`; the final
+model refit on all annotations is saved there as `final_model.joblib`.
+
+The v2 annotation experiments use the same 23 ambiguity-focused numerical
+features, class-balanced L1 logistic regression, and three-fold validation
+grouped by draft family. TF-IDF vocabulary and all scalers are fit within each
+training fold. Results should be treated as exploratory because there are only
+49 positive labels across 11 draft families.
+
+Run engineered features plus TF-IDF:
+
+```powershell
+python -m models.classical.train_annotation_logreg_v2
+```
+
+Then run the three text-only alternatives:
+
+```powershell
+python -m models.classical.train_annotation_tfidf_only
+python -m models.classical.train_annotation_embeddings_only
+python -m models.classical.train_annotation_tfidf_embeddings
+```
+
+Outputs are saved separately under `results/annotation/v2_engineered_tfidf/`,
+`results/annotation/v2_tfidf_only/`,
+`results/annotation/v2_embeddings_only/`, and
+`results/annotation/v2_tfidf_embeddings/`. The frozen MiniLM encoder is used
+offline for embedding modes; no model download is attempted. Each run also
+refits a final model on all rows for downstream use, while out-of-fold
+predictions and metrics report validation performance.
+
 ## Exploratory experiments
 
 The experiment notebook and standalone Python runners are collected in this
