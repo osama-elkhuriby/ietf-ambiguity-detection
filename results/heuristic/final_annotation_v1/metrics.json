@@ -1,0 +1,103 @@
+{
+  "draft_families": 11,
+  "model": "deterministic engineered-feature heuristic",
+  "positive_prevalence": 0.06103092783505155,
+  "positive_rows": 148,
+  "rows": 2425,
+  "rules": {
+    "context_overlap": {
+      "condition": "subtract points when target overlaps its neighboring clause",
+      "minimum_jaccard": 0.25,
+      "points": -1.0
+    },
+    "exception": {
+      "condition": "one or more exception terms",
+      "points": 1.0
+    },
+    "has_if_without_otherwise": {
+      "condition": "conditional present with no else/otherwise/unless in target or next clause",
+      "points": 3.0
+    },
+    "mixed_modal_levels": {
+      "condition": "modal_level_count greater than one",
+      "points": 2.0
+    },
+    "numeric_value": {
+      "condition": "subtract points when a concrete numeric value is present",
+      "points": -2.0
+    },
+    "prediction_threshold": 0.5,
+    "pronoun_without_noun_before": {
+      "condition": "anaphoric subject pronoun at clause start",
+      "points": 2.0
+    },
+    "repeated_anaphora": {
+      "condition": "anaphora_count, capped at two points",
+      "maximum_points": 2.0,
+      "points_per_occurrence": 1.0
+    },
+    "score": "clamp total points to [0, 12] and divide by 12",
+    "section_reference": {
+      "condition": "subtract a point when an explicit section reference is present",
+      "points": -1.0
+    },
+    "vague_terms": {
+      "condition": "add points for vague or hedge terms",
+      "maximum_points": 2.0,
+      "points_per_term": 1.0
+    }
+  },
+  "validation": {
+    "folds": [
+      {
+        "f1_at_0.5": 0.030303030303030304,
+        "f2_at_0.5": 0.024154589371980676,
+        "fold": 1,
+        "pr_auc": 0.08078104210530442,
+        "precision_at_0.5": 0.05263157894736842,
+        "recall_at_0.5": 0.02127659574468085,
+        "roc_auc": 0.63470461747397,
+        "validation_groups": 2,
+        "validation_positives": 47,
+        "validation_rows": 799
+      },
+      {
+        "f1_at_0.5": 0.058823529411764705,
+        "f2_at_0.5": 0.045871559633027525,
+        "fold": 2,
+        "pr_auc": 0.10350381119133253,
+        "precision_at_0.5": 0.1111111111111111,
+        "recall_at_0.5": 0.04,
+        "roc_auc": 0.6828028169014084,
+        "validation_groups": 5,
+        "validation_positives": 50,
+        "validation_rows": 760
+      },
+      {
+        "f1_at_0.5": 0.07692307692307693,
+        "f2_at_0.5": 0.06493506493506493,
+        "fold": 3,
+        "pr_auc": 0.08670880395999384,
+        "precision_at_0.5": 0.1111111111111111,
+        "recall_at_0.5": 0.058823529411764705,
+        "roc_auc": 0.609924215084807,
+        "validation_groups": 4,
+        "validation_positives": 51,
+        "validation_rows": 866
+      }
+    ],
+    "mean_fold_pr_auc": 0.0903312190855436,
+    "pooled_oof_metrics": {
+      "f1_at_0.5": 0.05660377358490566,
+      "f2_at_0.5": 0.04573170731707317,
+      "pr_auc": 0.08689315389831499,
+      "precision_at_0.5": 0.09375,
+      "recall_at_0.5": 0.04054054054054054,
+      "roc_auc": 0.6426530285225938
+    },
+    "prediction_threshold": 0.5,
+    "random_state": 42,
+    "std_fold_pr_auc": 0.009623667950790126,
+    "strategy": "3-fold StratifiedGroupKFold; draft revisions grouped by family"
+  }
+}
