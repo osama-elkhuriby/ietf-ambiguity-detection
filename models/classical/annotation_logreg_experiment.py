@@ -16,7 +16,14 @@ import pandas as pd
 from scipy import sparse
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import average_precision_score, roc_auc_score
+from sklearn.metrics import (
+    average_precision_score,
+    f1_score,
+    fbeta_score,
+    precision_score,
+    recall_score,
+    roc_auc_score,
+)
 from sklearn.model_selection import StratifiedGroupKFold
 from sklearn.preprocessing import StandardScaler
 
@@ -41,6 +48,7 @@ DEFAULT_OUTPUTS = {
 }
 RANDOM_STATE = 42
 N_SPLITS = 3
+PREDICTION_THRESHOLD = 0.5
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 EMBEDDING_REVISION = "1110a243fdf4706b3f48f1d95db1a4f5529b4d41"
 
@@ -147,6 +155,25 @@ def _new_classifier() -> LogisticRegression:
         random_state=RANDOM_STATE,
         solver="liblinear",
     )
+
+
+def _binary_metrics(
+    labels: np.ndarray,
+    probabilities: np.ndarray,
+) -> dict[str, float]:
+    predictions = probabilities >= PREDICTION_THRESHOLD
+    pr_auc = float(average_precision_score(labels, probabilities))
+    return {
+        "pr_auc": pr_auc,
+        "precision_at_0.5": float(
+            precision_score(labels, predictions, zero_division=0)
+        ),
+        "recall_at_0.5": float(recall_score(labels, predictions, zero_division=0)),
+        "f1_at_0.5": float(f1_score(labels, predictions, zero_division=0)),
+        "f2_at_0.5": float(
+            fbeta_score(labels, predictions, beta=2, zero_division=0)
+        ),
+    }
 
 
 def _encode_target_embeddings(texts: pd.Series) -> np.ndarray:
@@ -327,8 +354,6 @@ def train_and_validate(
 ) -> dict[str, Any]:
     if feature_mode not in DEFAULT_OUTPUTS:
         raise ValueError(f"Unsupported feature mode: {feature_mode}")
-    if output_dir.exists():
-        raise FileExistsError(f"Output directory already exists: {output_dir}")
     frame = pd.read_csv(input_path, encoding="utf-8-sig", dtype=str, keep_default_na=False)
     required = {
         "item_id",
@@ -406,6 +431,7 @@ def train_and_validate(
         classifier = _new_classifier().fit(train_matrix, y[train_idx])
         probabilities = classifier.predict_proba(valid_matrix)[:, 1]
         oof_scores[valid_idx] = probabilities
+        validation_metrics = _binary_metrics(y[valid_idx], probabilities)
         fold_metrics.append(
             {
                 "fold": fold,
@@ -419,12 +445,14 @@ def train_and_validate(
                     average_precision_score(y[valid_idx], probabilities)
                 ),
                 "roc_auc": float(roc_auc_score(y[valid_idx], probabilities)),
+                **validation_metrics,
             }
         )
     if np.isnan(oof_scores).any():
         raise RuntimeError("Cross-validation did not score every row")
 
     fold_frame = pd.DataFrame(fold_metrics)
+    pooled_oof_metrics = _binary_metrics(y, oof_scores)
     model_metrics: dict[str, Any] = {
         "type": "LogisticRegression",
         "penalty": "L1",
@@ -488,19 +516,24 @@ def train_and_validate(
         "validation": {
             "strategy": "3-fold StratifiedGroupKFold; draft revisions grouped by family",
             "random_state": RANDOM_STATE,
+            "prediction_threshold": PREDICTION_THRESHOLD,
             "mean_fold_average_precision": float(fold_frame["average_precision"].mean()),
             "std_fold_average_precision": float(fold_frame["average_precision"].std(ddof=0)),
             "pooled_oof_average_precision": float(average_precision_score(y, oof_scores)),
             "pooled_oof_roc_auc": float(roc_auc_score(y, oof_scores)),
+            "pooled_oof_metrics": {
+                **pooled_oof_metrics,
+                "roc_auc": float(roc_auc_score(y, oof_scores)),
+            },
             "folds": fold_metrics,
         },
         "model": model_metrics,
         "feature_notes": feature_notes,
     }
 
-    output_dir.mkdir(parents=True)
+    output_dir.mkdir(parents=True, exist_ok=True)
     matrices_dir = output_dir / "matrices"
-    matrices_dir.mkdir()
+    matrices_dir.mkdir(exist_ok=True)
     if features is not None:
         features.to_csv(
             output_dir / "numerical_features.csv",
