@@ -108,6 +108,17 @@ offline for embedding modes; no model download is attempted. Each run also
 refits a final model on all rows for downstream use, while out-of-fold
 predictions and metrics report validation performance.
 
+For a single engineered-plus-TF-IDF train/test run with draft families held
+out, use:
+
+```powershell
+python -m models.classical.train_annotation_engineered_tfidf_holdout
+```
+
+Preprocessing and the model are fit on the training families only. Metrics are
+reported once on the held-out test families and saved under
+`results/annotation/v2_engineered_tfidf_holdout/`.
+
 ## Exploratory experiments
 
 The experiment notebook and standalone Python runners are collected in this
