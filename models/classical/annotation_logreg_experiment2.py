@@ -77,9 +77,14 @@ V2_COLUMNS = (
     "subjective_with_context_definition",
     "exception_negation_interaction",
 )
-# All replacement features are nonnegative counts. Keep the existing log1p
-# transformation and train-fitted StandardScaler, now using the new schema.
-LOG_COUNT_COLUMNS = V2_COLUMNS
+# Keep exception_negation_interaction available from the extractor and in the
+# raw feature artifact, but exclude it from every trained numerical matrix.
+TRAINING_FEATURE_COLUMNS = tuple(
+    column for column in V2_COLUMNS if column != "exception_negation_interaction"
+)
+# Training features are nonnegative counts. Apply log1p and the train-fitted
+# StandardScaler to this training-only schema.
+LOG_COUNT_COLUMNS = TRAINING_FEATURE_COLUMNS
 PROXIMITY_WINDOW_TOKENS = 12
 
 FEATURE_LEXICONS = {
@@ -374,7 +379,7 @@ def build_validation_groups(frame: pd.DataFrame) -> np.ndarray:
 
 
 def _log_counts(features: pd.DataFrame) -> pd.DataFrame:
-    transformed = features.copy()
+    transformed = features.loc[:, TRAINING_FEATURE_COLUMNS].copy()
     transformed.loc[:, LOG_COUNT_COLUMNS] = np.log1p(
         transformed.loc[:, LOG_COUNT_COLUMNS].to_numpy(dtype=np.float64)
     )
@@ -563,7 +568,7 @@ def train_and_validate(
     if use_engineered:
         model_metrics.update(
             {
-                "numerical_feature_count": len(V2_COLUMNS),
+                "numerical_feature_count": len(TRAINING_FEATURE_COLUMNS),
                 "count_transform": (
                     "log1p, fit-free and applied before fold-local StandardScaler"
                 ),
@@ -661,7 +666,7 @@ def train_and_validate(
     final_classifier = _new_classifier().fit(final_matrix, y)
     final_components["classifier"] = final_classifier
     final_components["numerical_columns"] = (
-        list(V2_COLUMNS) if use_engineered else []
+        list(TRAINING_FEATURE_COLUMNS) if use_engineered else []
     )
     final_components["log_count_columns"] = (
         list(LOG_COUNT_COLUMNS) if use_engineered else []
@@ -714,7 +719,7 @@ def train_and_validate(
     manifest = {
         "source_path": str(input_path.resolve()),
         "source_sha256": hashlib.sha256(input_path.read_bytes()).hexdigest(),
-        "feature_columns": list(V2_COLUMNS) if use_engineered else [],
+        "feature_columns": list(TRAINING_FEATURE_COLUMNS) if use_engineered else [],
         "log_count_columns": list(LOG_COUNT_COLUMNS) if use_engineered else [],
         "feature_set": feature_mode,
         "matrix_shapes": matrix_shapes,
