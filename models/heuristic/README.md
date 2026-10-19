@@ -10,11 +10,13 @@ and fast to run; it exists to give the hybrid router (`models/hybrid/`) a cheap 
 ## Annotation heuristic
 
 Run `python models/heuristic/ambiguity_heuristic.py` to score the deduplicated
-annotation set with fixed, interpretable rules over the v2 engineered features. The
-rules are not fitted or tuned against the labels. A missing alternative for a
-conditional, anaphora, mixed modal levels, and vague terms increase the score;
-numeric values, neighboring-clause overlap, and explicit section references reduce
-it. The fixed score threshold is 0.5.
+annotation set with fixed, interpretable rules over the engineered features from
+`annotation_logreg_experiment2.py`. The rules are not fitted or tuned against the
+labels. A condition without an exception marker, deictic expressions, mixed modal
+levels, subjective terms, and exception markers increase the score. Numeric bounds
+and target references reduce it. These are the signals available in this feature
+schema; it does not provide the prior heuristic's distinct hedge, pronoun-position,
+or neighboring-clause-overlap features. The fixed score threshold is 0.5.
 
 Evaluation uses the same three-fold stratified group split by draft family and reports
 PR-AUC, precision, recall, F1, F2, and ROC-AUC. Results are written to

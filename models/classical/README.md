@@ -119,6 +119,27 @@ Preprocessing and the model are fit on the training families only. Metrics are
 reported once on the held-out test families and saved under
 `results/annotation/v2_engineered_tfidf_holdout/`.
 
+## Additional annotation classifiers
+
+The separate runner `annotation_classifier_experiments.py` compares a
+class-weighted Linear SVM and a balanced Random Forest using the same three-fold
+draft-family grouped validation and feature preparation. It supports the same four
+feature modes:
+
+```powershell
+python -m models.classical.annotation_classifier_experiments --classifier linear_svm --feature-mode engineered_tfidf
+python -m models.classical.annotation_classifier_experiments --classifier linear_svm --feature-mode tfidf
+python -m models.classical.annotation_classifier_experiments --classifier linear_svm --feature-mode embeddings
+python -m models.classical.annotation_classifier_experiments --classifier linear_svm --feature-mode tfidf_embeddings
+```
+
+Replace `linear_svm` with `random_forest` to run the same feature modes with the
+other classifier. Outputs are kept separately under
+`results/annotation/additional_classifiers/<classifier>/<feature-mode>/`.
+The Linear SVM's decision margin is mapped through a sigmoid for ranking metrics;
+the 0.5 threshold corresponds to its default zero-margin decision boundary. No
+probability calibration is performed.
+
 ## Exploratory experiments
 
 The experiment notebook and standalone Python runners are collected in this

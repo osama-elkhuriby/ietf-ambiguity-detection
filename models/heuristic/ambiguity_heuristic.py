@@ -15,7 +15,7 @@ import pandas as pd
 from sklearn.metrics import average_precision_score, roc_auc_score
 from sklearn.model_selection import StratifiedGroupKFold
 
-from models.classical.annotation_logreg_experiment import (
+from models.classical.annotation_logreg_experiment2 import (
     DEFAULT_INPUT,
     N_SPLITS,
     PREDICTION_THRESHOLD,
@@ -26,49 +26,41 @@ from models.classical.annotation_logreg_experiment import (
 )
 
 DEFAULT_OUTPUT = ROOT / "results/heuristic/final_annotation_v1"
-MAX_RULE_SCORE = 12.0
+MAX_RULE_SCORE = 9.0
 
 RULES: dict[str, Any] = {
-    "has_if_without_otherwise": {
+    "conditional_without_exception_marker": {
         "points": 3.0,
-        "condition": "conditional present with no else/otherwise/unless in target or next clause",
+        "condition": (
+            "condition_marker_count is positive and exception_marker_count is zero"
+        ),
     },
-    "pronoun_without_noun_before": {
+    "deictic_expression": {
         "points": 2.0,
-        "condition": "anaphoric subject pronoun at clause start",
+        "condition": "deictic_expression_count, capped at two points",
     },
     "mixed_modal_levels": {
         "points": 2.0,
-        "condition": "modal_level_count greater than one",
+        "condition": "more than one of MUST, SHOULD, and MAY is present",
     },
-    "vague_terms": {
+    "subjective_terms": {
         "points_per_term": 1.0,
         "maximum_points": 2.0,
-        "condition": "add points for vague or hedge terms",
+        "condition": "subjective_term_count, capped at two points",
     },
-    "repeated_anaphora": {
-        "points_per_occurrence": 1.0,
-        "maximum_points": 2.0,
-        "condition": "anaphora_count, capped at two points",
-    },
-    "exception": {
+    "exception_marker": {
         "points": 1.0,
-        "condition": "one or more exception terms",
+        "condition": "one or more exception_marker_count terms",
     },
-    "numeric_value": {
+    "numeric_bound": {
         "points": -2.0,
-        "condition": "subtract points when a concrete numeric value is present",
+        "condition": "subtract points when numeric_bound_count is positive",
     },
-    "context_overlap": {
+    "target_reference": {
         "points": -1.0,
-        "minimum_jaccard": 0.25,
-        "condition": "subtract points when target overlaps its neighboring clause",
+        "condition": "subtract a point when reference_count_target is positive",
     },
-    "section_reference": {
-        "points": -1.0,
-        "condition": "subtract a point when an explicit section reference is present",
-    },
-    "score": "clamp total points to [0, 12] and divide by 12",
+    "score": "clamp total points to [0, 9] and divide by 9",
     "prediction_threshold": PREDICTION_THRESHOLD,
 }
 
@@ -76,35 +68,41 @@ RULES: dict[str, Any] = {
 def score_ambiguity(features: pd.DataFrame) -> pd.Series:
     """Return a deterministic [0, 1] ambiguity score from engineered features."""
     required = {
-        "has_if_without_otherwise",
-        "pronoun_without_noun_before",
-        "modal_level_count",
-        "vague_term_count",
-        "hedge_term_count",
-        "anaphora_count",
-        "exception_count",
-        "has_numeric_value",
-        "target_context_overlap",
-        "section_reference_count",
+        "condition_marker_count",
+        "exception_marker_count",
+        "must_count",
+        "should_count",
+        "may_count",
+        "subjective_term_count",
+        "deictic_expression_count",
+        "numeric_bound_count",
+        "reference_count_target",
     }
     missing = required - set(features.columns)
     if missing:
         raise ValueError(f"Missing heuristic input features: {sorted(missing)}")
 
     positive_score = (
-        3.0 * features["has_if_without_otherwise"].clip(0, 1)
-        + 2.0 * features["pronoun_without_noun_before"].clip(0, 1)
-        + 2.0 * features["modal_level_count"].gt(1).astype(float)
-        + features[["vague_term_count", "hedge_term_count"]]
-        .max(axis=1)
+        3.0
+        * (
+            features["condition_marker_count"].gt(0)
+            & features["exception_marker_count"].eq(0)
+        ).astype(float)
+        + features["deictic_expression_count"].clip(upper=2)
+        + 2.0
+        * (
+            features[["must_count", "should_count", "may_count"]]
+            .gt(0)
+            .sum(axis=1)
+            .gt(1)
+        ).astype(float)
+        + features["subjective_term_count"]
         .clip(upper=2)
-        + features["anaphora_count"].clip(upper=2)
-        + features["exception_count"].gt(0).astype(float)
+        + features["exception_marker_count"].gt(0).astype(float)
     )
     negative_score = (
-        2.0 * features["has_numeric_value"].clip(0, 1)
-        + features["target_context_overlap"].ge(0.25).astype(float)
-        + features["section_reference_count"].gt(0).astype(float)
+        2.0 * features["numeric_bound_count"].gt(0).astype(float)
+        + features["reference_count_target"].gt(0).astype(float)
     )
     return ((positive_score - negative_score).clip(lower=0, upper=MAX_RULE_SCORE) / MAX_RULE_SCORE).rename(
         "heuristic_score"
@@ -248,7 +246,7 @@ def evaluate(input_path: Path, output_dir: Path) -> dict[str, Any]:
     )
     manifest = {
         "source_path": str(input_path.resolve()),
-        "feature_set": "23 engineered numerical features",
+        "feature_set": "engineered features from annotation_logreg_experiment2",
         "score_method": "fixed weighted rules; no fitting or label-based tuning",
         "threshold": PREDICTION_THRESHOLD,
         "metrics_file": "metrics.json",

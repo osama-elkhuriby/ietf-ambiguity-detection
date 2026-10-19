@@ -1,0 +1,79 @@
+{
+  "draft_families": 11,
+  "model": {
+    "feature_set": "tfidf",
+    "parameters": {
+      "class_weight": "balanced_subsample",
+      "max_features": "sqrt",
+      "min_samples_leaf": 2,
+      "n_estimators": 300,
+      "score_method": "predict_proba"
+    },
+    "type": "random_forest"
+  },
+  "positive_prevalence": 0.06608478802992519,
+  "positive_rows": 159,
+  "rows": 2406,
+  "validation": {
+    "folds": [
+      {
+        "average_precision": 0.2693191458031878,
+        "f1_at_0.5": 0.07407407407407407,
+        "f2_at_0.5": 0.04830917874396135,
+        "fold": 1,
+        "pr_auc": 0.2693191458031878,
+        "precision_at_0.5": 0.6666666666666666,
+        "recall_at_0.5": 0.0392156862745098,
+        "roc_auc": 0.7504288390995697,
+        "train_positives": 108,
+        "train_rows": 1612,
+        "validation_groups": 2,
+        "validation_positives": 51,
+        "validation_rows": 794
+      },
+      {
+        "average_precision": 0.2226625924549856,
+        "f1_at_0.5": 0.0,
+        "f2_at_0.5": 0.0,
+        "fold": 2,
+        "pr_auc": 0.2226625924549856,
+        "precision_at_0.5": 0.0,
+        "recall_at_0.5": 0.0,
+        "roc_auc": 0.7305031768805083,
+        "train_positives": 103,
+        "train_rows": 1653,
+        "validation_groups": 5,
+        "validation_positives": 56,
+        "validation_rows": 753
+      },
+      {
+        "average_precision": 0.18192857221434314,
+        "f1_at_0.5": 0.03773584905660377,
+        "f2_at_0.5": 0.023923444976076555,
+        "fold": 3,
+        "pr_auc": 0.18192857221434314,
+        "precision_at_0.5": 1.0,
+        "recall_at_0.5": 0.019230769230769232,
+        "roc_auc": 0.716733390525212,
+        "train_positives": 107,
+        "train_rows": 1547,
+        "validation_groups": 4,
+        "validation_positives": 52,
+        "validation_rows": 859
+      }
+    ],
+    "mean_fold_average_precision": 0.2246367701575055,
+    "pooled_oof_metrics": {
+      "f1_at_0.5": 0.03680981595092025,
+      "f2_at_0.5": 0.0234375,
+      "pr_auc": 0.20904829958627708,
+      "precision_at_0.5": 0.75,
+      "recall_at_0.5": 0.018867924528301886,
+      "roc_auc": 0.7222432145726098
+    },
+    "prediction_threshold": 0.5,
+    "random_state": 42,
+    "std_fold_average_precision": 0.03570435194060301,
+    "strategy": "3-fold StratifiedGroupKFold; draft revisions grouped by family"
+  }
+}

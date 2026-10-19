@@ -36,14 +36,14 @@ FeatureMode = Literal[
     "tfidf_embeddings",
 ]
 DEFAULT_OUTPUTS = {
-    "engineered_tfidf": ROOT / "results/annotation/v2_engineered_tfidf",
-    "tfidf": ROOT / "results/annotation/v2_tfidf_only",
-    "embeddings": ROOT / "results/annotation/v2_embeddings_only",
-    "tfidf_embeddings": ROOT / "results/annotation/v2_tfidf_embeddings",
+    "engineered_tfidf": ROOT / "results/ML/v2_engineered_tfidf",
+    "tfidf": ROOT / "results/ML/v2_tfidf_only",
+    "embeddings": ROOT / "results/ML/v2_embeddings_only",
+    "tfidf_embeddings": ROOT / "results/ML/v2_tfidf_embeddings",
 }
 RANDOM_STATE = 42
 N_SPLITS = 3
-PREDICTION_THRESHOLD = 0.5
+PREDICTION_THRESHOLD = 0.4
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 EMBEDDING_REVISION = "1110a243fdf4706b3f48f1d95db1a4f5529b4d41"
 

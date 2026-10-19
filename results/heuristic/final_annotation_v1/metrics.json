@@ -1,103 +1,93 @@
 {
   "draft_families": 11,
   "model": "deterministic engineered-feature heuristic",
-  "positive_prevalence": 0.06103092783505155,
-  "positive_rows": 148,
-  "rows": 2425,
+  "positive_prevalence": 0.06608478802992519,
+  "positive_rows": 159,
+  "rows": 2406,
   "rules": {
-    "context_overlap": {
-      "condition": "subtract points when target overlaps its neighboring clause",
-      "minimum_jaccard": 0.25,
-      "points": -1.0
-    },
-    "exception": {
-      "condition": "one or more exception terms",
-      "points": 1.0
-    },
-    "has_if_without_otherwise": {
-      "condition": "conditional present with no else/otherwise/unless in target or next clause",
+    "conditional_without_exception_marker": {
+      "condition": "condition_marker_count is positive and exception_marker_count is zero",
       "points": 3.0
     },
-    "mixed_modal_levels": {
-      "condition": "modal_level_count greater than one",
+    "deictic_expression": {
+      "condition": "deictic_expression_count, capped at two points",
       "points": 2.0
     },
-    "numeric_value": {
-      "condition": "subtract points when a concrete numeric value is present",
+    "exception_marker": {
+      "condition": "one or more exception_marker_count terms",
+      "points": 1.0
+    },
+    "mixed_modal_levels": {
+      "condition": "more than one of MUST, SHOULD, and MAY is present",
+      "points": 2.0
+    },
+    "numeric_bound": {
+      "condition": "subtract points when numeric_bound_count is positive",
       "points": -2.0
     },
     "prediction_threshold": 0.5,
-    "pronoun_without_noun_before": {
-      "condition": "anaphoric subject pronoun at clause start",
-      "points": 2.0
-    },
-    "repeated_anaphora": {
-      "condition": "anaphora_count, capped at two points",
-      "maximum_points": 2.0,
-      "points_per_occurrence": 1.0
-    },
-    "score": "clamp total points to [0, 12] and divide by 12",
-    "section_reference": {
-      "condition": "subtract a point when an explicit section reference is present",
-      "points": -1.0
-    },
-    "vague_terms": {
-      "condition": "add points for vague or hedge terms",
+    "score": "clamp total points to [0, 9] and divide by 9",
+    "subjective_terms": {
+      "condition": "subjective_term_count, capped at two points",
       "maximum_points": 2.0,
       "points_per_term": 1.0
+    },
+    "target_reference": {
+      "condition": "subtract a point when reference_count_target is positive",
+      "points": -1.0
     }
   },
   "validation": {
     "folds": [
       {
-        "f1_at_0.5": 0.030303030303030304,
-        "f2_at_0.5": 0.024154589371980676,
+        "f1_at_0.5": 0.06666666666666667,
+        "f2_at_0.5": 0.046948356807511735,
         "fold": 1,
-        "pr_auc": 0.08078104210530442,
-        "precision_at_0.5": 0.05263157894736842,
-        "recall_at_0.5": 0.02127659574468085,
-        "roc_auc": 0.63470461747397,
+        "pr_auc": 0.10413135591201805,
+        "precision_at_0.5": 0.2222222222222222,
+        "recall_at_0.5": 0.0392156862745098,
+        "roc_auc": 0.6646874092840366,
         "validation_groups": 2,
-        "validation_positives": 47,
-        "validation_rows": 799
-      },
-      {
-        "f1_at_0.5": 0.058823529411764705,
-        "f2_at_0.5": 0.045871559633027525,
-        "fold": 2,
-        "pr_auc": 0.10350381119133253,
-        "precision_at_0.5": 0.1111111111111111,
-        "recall_at_0.5": 0.04,
-        "roc_auc": 0.6828028169014084,
-        "validation_groups": 5,
-        "validation_positives": 50,
-        "validation_rows": 760
-      },
-      {
-        "f1_at_0.5": 0.07692307692307693,
-        "f2_at_0.5": 0.06493506493506493,
-        "fold": 3,
-        "pr_auc": 0.08670880395999384,
-        "precision_at_0.5": 0.1111111111111111,
-        "recall_at_0.5": 0.058823529411764705,
-        "roc_auc": 0.609924215084807,
-        "validation_groups": 4,
         "validation_positives": 51,
-        "validation_rows": 866
+        "validation_rows": 794
+      },
+      {
+        "f1_at_0.5": 0.1111111111111111,
+        "f2_at_0.5": 0.08333333333333333,
+        "fold": 2,
+        "pr_auc": 0.12109576648149628,
+        "precision_at_0.5": 0.25,
+        "recall_at_0.5": 0.07142857142857142,
+        "roc_auc": 0.616058618569379,
+        "validation_groups": 5,
+        "validation_positives": 56,
+        "validation_rows": 753
+      },
+      {
+        "f1_at_0.5": 0.08823529411764706,
+        "f2_at_0.5": 0.06696428571428571,
+        "fold": 3,
+        "pr_auc": 0.09628563728434096,
+        "precision_at_0.5": 0.1875,
+        "recall_at_0.5": 0.057692307692307696,
+        "roc_auc": 0.6189471928319512,
+        "validation_groups": 4,
+        "validation_positives": 52,
+        "validation_rows": 859
       }
     ],
-    "mean_fold_pr_auc": 0.0903312190855436,
+    "mean_fold_pr_auc": 0.10717091989261844,
     "pooled_oof_metrics": {
-      "f1_at_0.5": 0.05660377358490566,
-      "f2_at_0.5": 0.04573170731707317,
-      "pr_auc": 0.08689315389831499,
-      "precision_at_0.5": 0.09375,
-      "recall_at_0.5": 0.04054054054054054,
-      "roc_auc": 0.6426530285225938
+      "f1_at_0.5": 0.09,
+      "f2_at_0.5": 0.06646971935007386,
+      "pr_auc": 0.10114818207923723,
+      "precision_at_0.5": 0.21951219512195122,
+      "recall_at_0.5": 0.05660377358490566,
+      "roc_auc": 0.632306387552376
     },
     "prediction_threshold": 0.5,
     "random_state": 42,
-    "std_fold_pr_auc": 0.009623667950790126,
+    "std_fold_pr_auc": 0.010354221026196906,
     "strategy": "3-fold StratifiedGroupKFold; draft revisions grouped by family"
   }
 }
