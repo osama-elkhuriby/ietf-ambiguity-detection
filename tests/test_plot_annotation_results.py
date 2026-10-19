@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 
 from models.classical.plot_annotation_results import (
+    load_oof_predictions,
     load_experiments,
     select_common_cohort,
     write_metrics_csv,
@@ -110,3 +111,59 @@ def test_metrics_csv_marks_experiments_outside_matched_cohort(tmp_path) -> None:
     assert "cohort_note" in rows[0]
     assert any("matched" in row for row in rows[1:])
     assert any("excluded from plots" in row for row in rows[1:])
+
+
+def test_oof_loader_supports_logistic_svm_and_heuristic_output_schemas(
+    tmp_path,
+) -> None:
+    results_root = tmp_path / "results"
+    paths = (
+        (
+            results_root / "ML/v2_tfidf/metrics.json",
+            results_root / "ML/v2_tfidf/oof_predictions.csv",
+            {
+                "item_id": [1, 2, 3],
+                "final_label": ["No", "Yes", "No"],
+                "oof_probability_yes": [0.1, 0.8, 0.2],
+            },
+        ),
+        (
+            results_root / "ML/additional_classifiers/linear_svm/tfidf/metrics.json",
+            results_root
+            / "ML/additional_classifiers/linear_svm/tfidf/oof_predictions.csv",
+            {
+                "item_id": [1, 2, 3],
+                "final_label": ["No", "Yes", "No"],
+                "oof_score_yes": [0.1, 0.8, 0.2],
+            },
+        ),
+        (
+            results_root / "heuristic/final_annotation_v1/metrics.json",
+            results_root / "heuristic/final_annotation_v1/predictions.csv",
+            {
+                "item_id": [1, 2, 3],
+                "final_label": ["No", "Yes", "No"],
+                "heuristic_score": [0.1, 0.8, 0.2],
+            },
+        ),
+    )
+
+    for metrics_path, prediction_path, prediction_data in paths:
+        _write_metrics(
+            metrics_path,
+            rows=3,
+            positives=1,
+            validation_rows=(1, 1, 1),
+            validation_positives=(0, 1, 0),
+        )
+        import pandas as pd
+
+        pd.DataFrame(prediction_data).to_csv(prediction_path, index=False)
+
+    experiments = load_experiments(results_root)
+
+    assert len(experiments) == 3
+    for experiment in experiments:
+        labels, scores = load_oof_predictions(experiment)
+        assert labels.tolist() == [0, 1, 0]
+        assert scores.tolist() == [0.1, 0.8, 0.2]

@@ -61,6 +61,57 @@ class ExperimentResult:
         return self.rows, self.positives, self.fold_signature
 
 
+def load_oof_predictions(experiment: ExperimentResult) -> tuple[Any, Any]:
+    """Load labels and positive-class scores for an experiment."""
+    import numpy as np
+    import pandas as pd
+
+    if experiment.model == "heuristic":
+        predictions_path = experiment.path.parent / "predictions.csv"
+        score_columns = ("heuristic_score",)
+    else:
+        predictions_path = experiment.path.parent / "oof_predictions.csv"
+        score_columns = ("oof_probability_yes", "oof_score_yes")
+
+    frame = pd.read_csv(
+        predictions_path,
+        dtype=str,
+        encoding="utf-8-sig",
+        keep_default_na=False,
+    )
+    if "final_label" not in frame.columns:
+        raise ValueError(
+            f"{predictions_path} is missing the final_label column"
+        )
+    score_column = next(
+        (column for column in score_columns if column in frame.columns),
+        None,
+    )
+    if score_column is None:
+        raise ValueError(
+            f"{predictions_path} is missing a score column from "
+            f"{list(score_columns)}"
+        )
+    normalized_labels = frame["final_label"].str.strip().str.casefold()
+    if not normalized_labels.isin({"yes", "no"}).all():
+        raise ValueError(f"{predictions_path} contains labels other than yes/no")
+    labels = normalized_labels.eq("yes").to_numpy(dtype=np.int8)
+    scores = pd.to_numeric(frame[score_column], errors="raise").to_numpy(
+        dtype=np.float64
+    )
+    if len(frame) != experiment.rows or int(labels.sum()) != experiment.positives:
+        raise ValueError(
+            f"{predictions_path} does not match its metrics summary "
+            f"({len(frame)} rows, {int(labels.sum())} positives; expected "
+            f"{experiment.rows} rows, {experiment.positives} positives)"
+        )
+    if not np.isfinite(scores).all():
+        raise ValueError(f"{predictions_path} contains non-finite scores")
+    if np.unique(labels).size != 2:
+        raise ValueError(f"{predictions_path} must contain both label classes")
+    return labels, scores
+
+
 def _metric_files(results_root: Path) -> list[Path]:
     paths = [
         *results_root.glob("ML/v2_*/metrics.json"),
@@ -410,6 +461,71 @@ def plot_model_comparison(output_dir: Path, experiments: list[ExperimentResult])
     plt.close(figure)
 
 
+def plot_precision_recall_curves(
+    output_dir: Path,
+    experiments: list[ExperimentResult],
+) -> None:
+    import matplotlib
+
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    import numpy as np
+    from sklearn.metrics import average_precision_score, precision_recall_curve
+
+    columns = 4
+    rows = (len(experiments) + columns - 1) // columns
+    figure, axes = plt.subplots(
+        rows,
+        columns,
+        figsize=(4.5 * columns, 3.8 * rows),
+        squeeze=False,
+    )
+    for axis, experiment in zip(axes.flat, experiments):
+        labels, scores = load_oof_predictions(experiment)
+        precision, recall, _ = precision_recall_curve(labels, scores)
+        average_precision = average_precision_score(labels, scores)
+        prevalence = float(np.mean(labels))
+        axis.step(
+            recall,
+            precision,
+            where="post",
+            label=f"AP = {average_precision:.3f}",
+        )
+        axis.axhline(
+            prevalence,
+            linestyle="--",
+            color="gray",
+            linewidth=1,
+            label=f"Prevalence = {prevalence:.3f}",
+        )
+        axis.set_title(
+            f"{MODEL_LABELS.get(experiment.model, experiment.model)}\n"
+            f"{FEATURE_MODE_LABELS.get(experiment.feature_mode, experiment.feature_mode)}"
+        )
+        axis.set_xlim(0, 1)
+        axis.set_ylim(0, 1.02)
+        axis.set_xlabel("Recall")
+        axis.set_ylabel("Precision")
+        axis.grid(alpha=0.25)
+        axis.legend(fontsize=8, loc="best")
+    for axis in axes.flat[len(experiments) :]:
+        axis.set_visible(False)
+
+    figure.suptitle(
+        "Precision–recall curves from pooled out-of-fold predictions\n"
+        "Matched annotation cohort and grouped folds",
+        fontsize=14,
+    )
+    figure.tight_layout(rect=(0, 0, 1, 0.94))
+    for suffix in ("png", "svg"):
+        figure.savefig(
+            output_dir / f"precision_recall_curves.{suffix}",
+            dpi=180,
+            bbox_inches="tight",
+        )
+    plt.close(figure)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         description="Plot feature and classifier comparisons from saved annotation metrics."
@@ -438,6 +554,7 @@ def main() -> None:
     plot_feature_comparisons(args.output_dir, selected)
     plot_model_comparisons_by_feature(args.output_dir, selected)
     plot_model_comparison(args.output_dir, selected)
+    plot_precision_recall_curves(args.output_dir, selected)
 
     print(
         json.dumps(

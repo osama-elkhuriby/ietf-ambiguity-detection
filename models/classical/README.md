@@ -156,7 +156,9 @@ setup for each model (selected by PR-AUC), plus `experiment_metrics.csv`, under
 matching row counts, positive counts, and fold validation composition for figures;
 all discovered pooled-metric runs, including excluded cohorts, are listed in the CSV.
 The compared metrics are PR-AUC, precision, recall, F1, F2, and ROC-AUC. Threshold
-metrics use each experiment's saved prediction threshold.
+metrics use each experiment's saved prediction threshold. A small-multiples
+precision–recall curve plot is built from the matched experiments' saved out-of-fold
+scores; heuristic scores are read from its `predictions.csv`.
 
 ## Exploratory experiments
 
