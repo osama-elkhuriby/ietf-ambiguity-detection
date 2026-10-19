@@ -1,0 +1,179 @@
+{
+  "actual_class_weights": {
+    "0": 1.0,
+    "1": 16.047619047619047
+  },
+  "artifact_hashes": {
+    "checkpoint_metadata": {
+      "path": "checkpoints/checkpoint_metadata.json",
+      "sha256": "f9e6f30501e9b2f3a8d5514a5af174eead8a07c9630d542b46c4e4637ffd0805"
+    },
+    "error_analysis": {
+      "path": "metrics/error_analysis.json",
+      "sha256": "f2273ff5d5c1dd7281ae49e477bc1bca078950c3076d2466919e511e23b70eb5"
+    },
+    "held_out_predictions": {
+      "path": "predictions/held_out_predictions.csv",
+      "sha256": "777e16121b448b50f7efbd195a73d4824b87a097b889d6027b96e6a4ea5518e7"
+    },
+    "metrics": {
+      "path": "metrics/metrics.json",
+      "sha256": "00bd6097321a553793f4a4878f3be07799e4d06855d05435a59e0196a7713534"
+    },
+    "per_family_metrics": {
+      "path": "metrics/per_family_metrics.csv",
+      "sha256": "399105780c448969d5e836aecdada9ce6b372a664111661ec78f3ea03196471e"
+    },
+    "run_config": {
+      "path": "run_config.json",
+      "sha256": "6ec091d1dc4c3d39edc5ada6a4d9e95f4001e513afee4a623afad560d40c1c59"
+    },
+    "training_history": {
+      "path": "history/training_history.csv",
+      "sha256": "8f6c0e2658aad5f2e3c0c809ac024609aba24cfdc74d9af404f0cb9681df0443"
+    }
+  },
+  "condition": "A2",
+  "config_path": "experiments/transformer_final/final_annotation_ready_pilot_v1/configs/experiment_v1.json",
+  "config_sha256": "65e20062e39f3d2fc9f7c290a92e63577afa2cecfde499b7f43417a3f7e17ef3",
+  "context_sanitizations": [],
+  "created_at": "2026-10-18T18:56:53.098855+00:00",
+  "cross_entropy_input_dtype": "float32",
+  "cuda_driver": "596.59",
+  "cuda_runtime": "13.0",
+  "cudnn": 92501,
+  "dataset_manifest_sha256": "87094485ec829fbfd7d3c19aa9ef70f9424a997cfbec29080a748c0b0bdbf9d0",
+  "dependency_versions": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "safetensors": "0.8.0",
+    "scikit-learn": "1.9.0",
+    "sentencepiece": "0.2.1",
+    "tokenizers": "0.23.1",
+    "torch": "2.12.0",
+    "transformers": "5.16.1"
+  },
+  "device": "cuda",
+  "diagnostic_numerics": true,
+  "effective_dataset_sha256": "a25e99563563f71570e48f63b9515fbb51ff845762ff718763d98e0b3eefae2f",
+  "epoch_policy": "fixed_5_no_early_stopping",
+  "epochs_completed": 5,
+  "evaluation_context_truncated_rows": 0,
+  "evaluation_target_truncated_rows": 0,
+  "fine_tuning_policy": "partial_4",
+  "fitting_exclusion_count": 1,
+  "fitting_exclusions": [
+    {
+      "reasons": [
+        "near_target_of_evaluation:853a6c3da0c1deb70611c0c787fcce304ac31c24398ee635dfdc09908429cfb5"
+      ],
+      "record_id": "d5aa27b2819436e3ef9225f698ed3a7570b85c0ddddc159df486997f14582467"
+    }
+  ],
+  "fitting_negative_labels": 1685,
+  "fitting_positive_labels": 105,
+  "fitting_rows": 1790,
+  "fold": 5,
+  "fold_manifest_sha256": "255a567c14944357cf75e95193e73af42d764c40792077a59f758ccb3185698d",
+  "forward_autocast": "disabled",
+  "fresh_base_initialization": true,
+  "full_encoder_fine_tuned": false,
+  "git_commit": "e8e77bbe0abb74a2916c47897149d291b154f4c5",
+  "gpu": "NVIDIA RTX 5000 Ada Generation",
+  "held_out_families": [
+    "draft-ietf-quic-recovery",
+    "draft-ietf-quic-tls"
+  ],
+  "held_out_negative_labels": 331,
+  "held_out_positive_labels": 20,
+  "held_out_rows": 351,
+  "input_mode": "target_only",
+  "loss": "weighted_ce",
+  "max_length": 256,
+  "model_file_hashes": {
+    ".cache/huggingface/.gitignore": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1",
+    ".cache/huggingface/CACHEDIR.TAG": "e8893e2dcb3f4545ef67a0a5b7b769113d38eef1aa61c7c7ba14659b02af955f",
+    ".cache/huggingface/download/config.json.metadata": "b66e5bfcc5232aaafb663c690d0335869b3fcf1b7b4117f883ed618262cf008b",
+    ".cache/huggingface/download/pytorch_model.bin.metadata": "44ec8c64cbd6062c86e89631d96c9ab91d4c3e02bc02f6338d5a8cb5fda6730c",
+    ".cache/huggingface/download/spm.model.metadata": "b3be67060084258bf526a04ab4b6b48ba38df26c320c1eebdd6470c5e1179eb9",
+    ".cache/huggingface/download/tokenizer_config.json.metadata": "b7ce28d9caea80e533824d3b88a3994e58503d28522ee024a0e4a23bd88672d0",
+    ".cache/huggingface/trees/8ccc9b6f36199bec6961081d44eb72fb3f7353f3.json": "3ee10936526b74252b8223ccb38fd0dc2630c189a11316d369cfabf60e39b9e4",
+    "config.json": "649f6a1ec33c6bdd9a6486d5c66019d461139e54957073eafe9bbc2d34c75b0b",
+    "pytorch_model.bin": "691d48a2800b926a19e3051def466fc2cca4f59a15e42ce4a0cf7f1b380b5e33",
+    "spm.model": "c679fbf93643d19aab7ee10c0b99e460bdbc02fedf34b92b05af343b4af586fd",
+    "tokenizer_config.json": "3f3978e0c036f2c2588cac34a6047cbb0af0b0dc1814254e291028529805496d"
+  },
+  "model_path": "D:\\RFC\\models\\deberta-v3-base",
+  "model_repository": "microsoft/deberta-v3-base",
+  "model_revision": null,
+  "model_source_sha256": "206ee7bb2c7805bcc8fd3bbbc18a09e185bafc19d4e112f31d4a088136717dd7",
+  "numpy": "2.4.6",
+  "offline_environment": {
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1"
+  },
+  "optimizer_parameter_count": 68,
+  "optimizer_parameter_elements": 28943618,
+  "original_dataset_sha256": "c20959acc2db8345c90ee06a71357aaac161b178b240495e516e4710405b2712",
+  "outer_fold_evaluations_after_training": 1,
+  "outer_fold_evaluations_during_training": 0,
+  "pandas": "3.0.5",
+  "parameter_dtypes": {
+    "torch.float32": 202
+  },
+  "parent_v2_protocol_sha256": "e2c0d0feeb05d0e6f49b051690ba6eb598b17a815e46747cab820be40363f3c1",
+  "peak_gpu_memory_allocated_mb": 1722.6259765625,
+  "peak_gpu_memory_reserved_mb": 2316.0,
+  "platform": "Windows-10-10.0.26200-SP0",
+  "precision": "fp32",
+  "protocol_id": null,
+  "protocol_sha256": null,
+  "python": "3.11.16",
+  "python_executable": "C:\\Users\\mosta\\.conda\\envs\\ietf-ambiguity-detection\\python.exe",
+  "resume_checkpoint": null,
+  "runtime_seconds": 108.28176550008357,
+  "schema_version": 1,
+  "seed": 2718,
+  "source_file_hashes": {
+    "models/transformer_final/__init__.py": "376f4c712155e1a5d81bdcb610b90720b40a04f30ab29363a25b977a789ed80f",
+    "models/transformer_final/aggregate.py": "a0086cc8830068db74b8e1a642cd61fb91e4f331e8da174dccd11bc7bf839bb0",
+    "models/transformer_final/common.py": "47fda11f1060ded0ba7bde775040db28e5d75a277ec61596a1831e94f6bf36b0",
+    "models/transformer_final/compare.py": "d4700c0f15d6a780fc880ec7f6351f26716ace9f6fd9495f095d52a08d448f01",
+    "models/transformer_final/config.py": "c9e676b068a54525510d99d322918e7fa3ed909a00b0c792e6462e6ddc9e2a60",
+    "models/transformer_final/dataset.py": "51ac119187dba2b302f43cd336992b8ba8abac6422caa512ba5e378149f72c15",
+    "models/transformer_final/experiment2.py": "2da0c50fae8b857a1c3ee7c6f7488cd8cf683eda9d96a020bfc57d754bcaeba6",
+    "models/transformer_final/experiment2_analysis.py": "190667156eb437a167e7a38b07e0102dce34d0a0701edb726d9317a13dc0556b",
+    "models/transformer_final/experiment2_runner.py": "b4a98da1a96e0efc6287bdbc34b5807e94c1985a7735525fe628f6cc4e5f9af5",
+    "models/transformer_final/experiment_runner.py": "153076f7fb8e34e0e369c962c30e7f6a92d65c1849e427c86e8d90add1668014",
+    "models/transformer_final/leakage.py": "a2b3e7b14685474ae958d4c6a9a28abb893f0c6f9c6272714526053f1be6197e",
+    "models/transformer_final/metrics.py": "6754ad6986c48c895edbdc92658e7706a2c95cde40345ce37f3d3c28cea39533",
+    "models/transformer_final/modeling.py": "228310e5b03dd409b2b8e124a3070f66d4706d9d9d200a81e64856490fc35ee2",
+    "models/transformer_final/preflight.py": "76526b14932586d527ec36f018be534cbde15e58ab71b46f17f3f158c19c9a4f",
+    "models/transformer_final/protocol.py": "6bd09118b69bc64491b882bae1d55024b8d6a3de953b8a18c2e442b85e730de6",
+    "models/transformer_final/research_report.py": "cb70fa8b67a10b056c8fbe217091b6ed0c68b37276e5846535c8fe944a60d171",
+    "models/transformer_final/run_validation.py": "263b0f4e983818f792d037ad29ffb345dfc9c44be9319d0d83eeccea42696102",
+    "models/transformer_final/threshold_analysis.py": "a5574a7608fc09fe41c72180615b0037147c3bf62361ca35a07bc838db246c51",
+    "models/transformer_final/tokenization.py": "7f918fc681f4e7b2b2b21e53946197d6bf3c1ff337228e769681a4f880f3f36e",
+    "models/transformer_final/train.py": "46b9664fe31045dd01b2ba59bd88635ba68822c10dd4cdaa4ce4c99fcb09448a"
+  },
+  "source_files_sha256": "c96b908141cb39f1457157ee20a3fec13e11b0e32c78ed9b49e93136ae2a44dc",
+  "study_attempt_id": "manual-v1-partial4-fold5-seed2718",
+  "study_cell_id": "G_partial_4/fold_5/seed_2718",
+  "study_execution_provenance": {
+    "authorization_sha256": "cf79236ae7c7bccbaea300186707783f51d83654d42b8045c77186b0b1e3cb2b",
+    "automatic_retry": false,
+    "corrected_v1_cell_launcher_sha256": "a36bc91f14f4735105ec124bb40dd2efb1b4c9704d857be9ecc25620b9ace036",
+    "execution_profile": "manual_execution_v1",
+    "manual_launcher_sha256": "d8e7840297672b955c2b441cdfb5779618850c52d407dd877a4bfd9fc5676085",
+    "new_run_executed_under_v3_optimizer_fix": true,
+    "one_cell_per_process": true
+  },
+  "study_fold_manifest_sha256": "32a5754d8a3b30adad85773c93a8dc4c56a9844fc4f7c13c17e943b2d1ca5d84",
+  "study_id": "recall_improvement_study_v3_optimizer_fix",
+  "study_protocol_sha256": "9502e659c1f246f433ce534fa7165959a6519c6637c71b3be0289f6638e72c51",
+  "study_source_snapshot_sha256": "22af9f00506241a4d78918b3b1fc65f1a787281a685c966fc881df99671ee8c4",
+  "threshold_policy": "fixed_0.5_reference_only",
+  "torch": "2.12.0",
+  "trainable_last_layers": 4,
+  "transformers": "5.16.1"
+}

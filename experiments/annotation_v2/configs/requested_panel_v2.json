@@ -1,0 +1,167 @@
+{
+  "development_governance": {
+    "allowed_family_ids": [
+      "draft-ietf-6man-rfc2460bis",
+      "draft-ietf-httpbis-cache-header",
+      "draft-ietf-httpbis-http2bis",
+      "draft-ietf-httpbis-semantics",
+      "draft-ietf-quic-http",
+      "draft-ietf-quic-recovery",
+      "draft-ietf-quic-tls",
+      "draft-ietf-quic-transport",
+      "draft-ietf-tls-tls13"
+    ],
+    "candidate_rows": 2312,
+    "consensus_uncertain_v1_records": 59,
+    "count_reconciliation": "2312 governed candidates = 2253 definitive v1 majority labels + 59 v1 consensus-uncertain records.",
+    "definitive_v1_records": 2253,
+    "excluded_family_ids": [
+      "draft-ietf-tcpm-rfc793bis",
+      "draft-ietf-dnsop-svcb-https"
+    ],
+    "excluded_roles": [
+      "TCP validation",
+      "sealed DNS test",
+      "all non-allowlisted lineages"
+    ],
+    "folds_path": "experiments/transformer/configs/folds_v1.json",
+    "folds_sha256": "c04dc8424ed96486f8521ef57d17e4b503d2c3f41bb116edeeb9535073dd7884",
+    "policy": "deny-by-default; only exact family IDs below may be opened",
+    "source_files": [
+      {
+        "path": "D:/RFC/ietf-ambiguity-detection/corpus/processed/ground_truth/draft-ietf-6man-rfc2460bis/review/all_candidates_v1/reviewer_a.csv",
+        "sha256": "152eeca23582192fa930091916741d7289d894e08ef4f9df15b4dba2fd4052c3"
+      },
+      {
+        "path": "D:/RFC/ietf-ambiguity-detection/corpus/processed/ground_truth/draft-ietf-httpbis-cache-header/review/all_candidates_v1/reviewer_a.csv",
+        "sha256": "2fa36e39da5612fbf86f82bfd2a8c7c4efd9fd89f17ebc9445019778ed4cb0e0"
+      },
+      {
+        "path": "D:/RFC/ietf-ambiguity-detection/corpus/processed/ground_truth/draft-ietf-httpbis-http2bis/review/all_candidates_v1/reviewer_a.csv",
+        "sha256": "86b0f5fa09aa7d270ba5b1a4d11aecb5826cc9517020562b7abbbc7aaff396b6"
+      },
+      {
+        "path": "D:/RFC/ietf-ambiguity-detection/corpus/processed/ground_truth/draft-ietf-httpbis-semantics/review/all_candidates_v1/reviewer_a.csv",
+        "sha256": "78703014496b9b660d95e44f59cfbdb5aea77449c406167248848d3424f42def"
+      },
+      {
+        "path": "D:/RFC/ietf-ambiguity-detection/corpus/processed/ground_truth/draft-ietf-quic-http/review/all_candidates_v1/reviewer_a.csv",
+        "sha256": "8547855d2c300dd93f8fb28861966fd9c6c452dea4333d4c0e5b0bc74fc1b6e6"
+      },
+      {
+        "path": "D:/RFC/ietf-ambiguity-detection/corpus/processed/ground_truth/draft-ietf-quic-recovery/review/all_candidates_v1/reviewer_a.csv",
+        "sha256": "4463b0fc0db45cb269e725d7c456138578d9b51464f3a65f08fbc1cdded06fa6"
+      },
+      {
+        "path": "D:/RFC/ietf-ambiguity-detection/corpus/processed/ground_truth/draft-ietf-quic-tls/review/all_candidates_v1/reviewer_a.csv",
+        "sha256": "ef8170a69a175a647324ddd8612cc06ddbd070e0ce5477de92afec04fdc01db9"
+      },
+      {
+        "path": "D:/RFC/ietf-ambiguity-detection/corpus/processed/ground_truth/draft-ietf-quic-transport/review/all_candidates_v1/reviewer_a.csv",
+        "sha256": "bc3363ec827a30fa688b0e956cf64260db34dd20e8b8ed033d229dbe85584519"
+      },
+      {
+        "path": "D:/RFC/ietf-ambiguity-detection/corpus/processed/ground_truth/draft-ietf-tls-tls13/review/all_candidates_v1/reviewer_a.csv",
+        "sha256": "54a0c38e7da8696f548d6b78f148e71e140040d3a94782803903ffe955ed917e"
+      }
+    ]
+  },
+  "experiment_id": "ietf-ambiguity-annotation-v2-requested-panel",
+  "fallback": {
+    "requested_panel_substitution_allowed": false,
+    "separate_experiment_id_if_requested": "ietf-ambiguity-annotation-v2-gpt-oss-20b-fallback"
+  },
+  "frozen_at": "2026-10-14T15:45:56.214950+00:00",
+  "limits": {
+    "context_cache_gib": 1.0,
+    "context_char_limit": 24000,
+    "heavy_paging_delta_gib": 1.0,
+    "max_retries_per_cell": 1,
+    "num_ctx": 16384,
+    "num_predict": 768,
+    "pilot_first_attempt_ceiling": 72,
+    "pilot_total_request_ceiling": 144,
+    "preflight_request_ceiling_per_model": 3,
+    "preflight_total_request_ceiling": 9,
+    "probe_duration_seconds": 600,
+    "projected_pilot_runtime_ceiling_seconds": 21600,
+    "ram_reserve_gib": 8.0,
+    "runtime_buffer_gib": 2.0,
+    "seed": 20261014,
+    "temperature": 0.0,
+    "weight_staging_fraction": 0.25
+  },
+  "model_settings": {
+    "gemma4:31b": {
+      "num_ctx": 16384,
+      "num_predict": 768,
+      "reasoning_setting": false,
+      "seed": 20261014,
+      "temperature": 0.0,
+      "timeout_seconds": 300
+    },
+    "gpt-oss:120b": {
+      "num_ctx": 16384,
+      "num_predict": 768,
+      "reasoning_setting": "low",
+      "seed": 20261014,
+      "temperature": 0.0,
+      "timeout_seconds": 600
+    },
+    "qwen3.5:27b": {
+      "num_ctx": 16384,
+      "num_predict": 768,
+      "reasoning_setting": false,
+      "seed": 20261014,
+      "temperature": 0.0,
+      "timeout_seconds": 300
+    }
+  },
+  "requested_panel": [
+    "qwen3.5:27b",
+    "gemma4:31b",
+    "gpt-oss:120b"
+  ],
+  "sampling": {
+    "achieved_quotas": {
+      "consensus_uncertain_or_abstention": 8,
+      "explicit_reference": 6,
+      "gemma_only_positive": 8,
+      "gpt_oss_only_positive": 8,
+      "segmentation_or_structural_context": 6,
+      "two_positive_disagreement": 8,
+      "unanimous_negative": 8,
+      "unanimous_positive": 8
+    },
+    "pilot_allowlist_path": "samples/pilot_sample_12_v1.json",
+    "pilot_allowlist_sha256": "2955788ef80924967e1593918cf804120eb76d8ef4d4e6ef41d3201535334883",
+    "private_mapping_path": "private/review_sample_mapping_v1.json",
+    "private_mapping_sha256": "f5909a22d866c95066de96ba0ce3bb4580fcc7df6bfeb1e88cbab26a69624adb",
+    "random_first": 40,
+    "requested_quotas": {
+      "consensus_uncertain_or_abstention": 8,
+      "explicit_reference": 6,
+      "gemma_only_positive": 8,
+      "gpt_oss_only_positive": 8,
+      "segmentation_or_structural_context": 6,
+      "two_positive_disagreement": 8,
+      "unanimous_negative": 8,
+      "unanimous_positive": 8
+    },
+    "review_allowlist_path": "samples/review_sample_100_v1.json",
+    "review_allowlist_sha256": "cf9b711f17ed3d51cfcfa3a54e9245cce9613ecd84c9a7353242d1962aca562c",
+    "seed": 20261014,
+    "shortages_before_topup": {},
+    "targeted_after_exclusion": 60,
+    "topup_count": 0
+  },
+  "v1_immutability": "No v1 prompt, response, vote, consensus, target, split, or result is modified.",
+  "versions": {
+    "adapter": "ollama-adapters-v2.0.0",
+    "aggregation": "conservative-panel-v2.0.0",
+    "context_builder": "same-revision-context-v2.0.0",
+    "rubric": "ietf-ambiguity-rubric-v2.0.0",
+    "runner": "annotation-runner-v2.0.0",
+    "schema": "annotation-response-v2.0.0"
+  }
+}

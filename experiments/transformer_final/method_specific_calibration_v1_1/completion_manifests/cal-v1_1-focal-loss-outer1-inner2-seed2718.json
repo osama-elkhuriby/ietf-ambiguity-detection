@@ -1,0 +1,161 @@
+{
+  "attempt_id": "cal-v1_1-focal-loss-outer1-inner2-seed2718",
+  "cell_id": "focal_loss/outer_1/inner_2/seed_2718",
+  "completed_at": "2026-10-19T00:09:59.032061+03:00",
+  "elapsed_seconds": 227.18700000003446,
+  "gpu_preflight": {
+    "active_compute_processes": [],
+    "free_memory_mib": 30823,
+    "minimum_free_memory_mib": 18000,
+    "name": "NVIDIA RTX 5000 Ada Generation"
+  },
+  "origin": "V1_1_NEW_GPU_EXECUTION",
+  "peak_gpu_memory_allocated_mb": 3955.15087890625,
+  "peak_gpu_memory_reserved_mb": 5822.0,
+  "protocol_sha256": "57c04d15cb3c586c52bc7f59eede3893339f3c67014fdf3e50ccfb95d8fcda4c",
+  "reused": false,
+  "run_manifest_sha256": "d3c79f1fb9298a42769b6902d3f85e1f4c371eeaba1c7bd84998defad3bf7fe8",
+  "semantic_validation": {
+    "audit_sha256": "7646ef3f856765fcf16482df3819923e9cd50d93a349e4e022e08cda4f412a4c",
+    "context_sanitizations": [
+      {
+        "field": "previous_clause",
+        "reasons": [
+          "matches_evaluation_target:85fdb6853110eb3e245705dda5aaa2f439947b754c3924e179feee27638d6ddb"
+        ],
+        "record_id": "028df5d9eb218f0d4385705d8317a75b3433a56b1b9b4f941d835c0c623aec20",
+        "role": "fitting"
+      },
+      {
+        "field": "previous_clause",
+        "reasons": [
+          "matches_fitting_target:fd5ad14f0cef01494583526fb83986ce0651d719e4f541a7f8d8f5b9b327bbfd"
+        ],
+        "record_id": "23f40a633d9311c2a1aad62bd7f7f622e226b24a6abd2c2038f840ae2ccc9782",
+        "role": "evaluation"
+      },
+      {
+        "field": "previous_clause",
+        "reasons": [
+          "matches_fitting_target:1ce7ad828df7db57eeb95fedcb181f34ff768bd77f04935830c760997a028398"
+        ],
+        "record_id": "295681764b3296811380ea24c4de4f3368e94595398700323a770d63cbd577a7",
+        "role": "evaluation"
+      },
+      {
+        "field": "next_clause",
+        "reasons": [
+          "matches_evaluation_target:85fdb6853110eb3e245705dda5aaa2f439947b754c3924e179feee27638d6ddb"
+        ],
+        "record_id": "6113d5b1f5cc25766706be95a26127ac0c709e387b54bb8e75da8960bde66a51",
+        "role": "fitting"
+      },
+      {
+        "field": "previous_clause",
+        "reasons": [
+          "matches_evaluation_target:761696bc73ce91ee0248f383efdf1da86235a352ea8d49967ba445bd522719ec"
+        ],
+        "record_id": "6dd23949881b5c3f11efe185ce5893379ebfc1ab6bb5daed8522935ba6160531",
+        "role": "fitting"
+      },
+      {
+        "field": "previous_clause",
+        "reasons": [
+          "matches_fitting_target:6113d5b1f5cc25766706be95a26127ac0c709e387b54bb8e75da8960bde66a51"
+        ],
+        "record_id": "85fdb6853110eb3e245705dda5aaa2f439947b754c3924e179feee27638d6ddb",
+        "role": "evaluation"
+      },
+      {
+        "field": "previous_clause",
+        "reasons": [
+          "matches_evaluation_target:d5987359e22be12d2997f9c7bd04fb9632ebcb9c342242670a6a25c0e825403f"
+        ],
+        "record_id": "8965c80352414c8331a50c5984964662a9d2a88d7b8cbf0bf715dae94b357e3b",
+        "role": "fitting"
+      },
+      {
+        "field": "previous_clause",
+        "reasons": [
+          "matches_evaluation_target:01b6fc53a6bc86dcffec49870f3a8ad192cbafadbab2cb671abc0421cc20c236"
+        ],
+        "record_id": "907167fe375a43dd3cba54c2f703bb8d7b41e448ea0b2cbb1e643f5f3f79db59",
+        "role": "fitting"
+      },
+      {
+        "field": "next_clause",
+        "reasons": [
+          "matches_evaluation_target:0a1d4eecc85021a655e571aae1eae81b849b33a960ca19eae65b18383e28b370"
+        ],
+        "record_id": "9755e69a294308252631210f2df476a7eee1953752e0194fb1f8084d98b405f3",
+        "role": "fitting"
+      },
+      {
+        "field": "previous_clause",
+        "reasons": [
+          "matches_evaluation_target:121d7d5ef4fa8b3b831bdfcfe281a833975d05fba0f7e91c8f52197f06874946"
+        ],
+        "record_id": "c18b3c75727d0f63c32217fbc912cb4a2d92dcaeaef38d08de522d2556fe56c4",
+        "role": "fitting"
+      }
+    ],
+    "custom_inner_split_sha256": "a04016d180b732cfcdca9112469c3576c91e65e16dab145941a4fa4e3c31cc88",
+    "fitting_exclusions": [
+      {
+        "reasons": [
+          "near_target_of_evaluation:35aa7cd30d2283b07ed60deda726869522899f79f523df8c76472651aad9c1d4"
+        ],
+        "record_id": "028df5d9eb218f0d4385705d8317a75b3433a56b1b9b4f941d835c0c623aec20"
+      },
+      {
+        "reasons": [
+          "near_target_of_evaluation:85f1c586010163e73dd5b9147d5ada85198336737169af1f0f378300c99f765c"
+        ],
+        "record_id": "063c543482a6a7b5eea858e304e6877259baf6494e054d3c30e98561cdc7b03b"
+      },
+      {
+        "reasons": [
+          "near_target_of_evaluation:62b0270931e1a1b0f6d9226da3f191beddeb7b8af06b5f4eedd31b0782d113df"
+        ],
+        "record_id": "29f481979d5c8bdf451cf4630b4404dc45dfde367252cd43dc82c06e22fdd957"
+      }
+    ],
+    "fitting_families": [
+      "draft-ietf-6man-rfc2460bis",
+      "draft-ietf-httpbis-cache-header",
+      "draft-ietf-httpbis-http2bis",
+      "draft-ietf-httpbis-semantics",
+      "draft-ietf-quic-tls",
+      "draft-ietf-tls-tls13"
+    ],
+    "fitting_rows": 870,
+    "leakage_audit_counts": {
+      "cross_fold_bcp14_skeleton_conflicts": 0,
+      "cross_fold_document_overlaps": 0,
+      "cross_fold_lineage_conflicts": 0,
+      "cross_fold_target_context_overlaps": 10,
+      "exact_target_duplicates_all": 1,
+      "exact_target_duplicates_cross_fold": 0,
+      "families_assigned_to_multiple_folds": 0,
+      "near_cross_fold_targets": 3,
+      "targets_with_bcp14_keyword": 1334
+    },
+    "legacy_fold_file": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\final_annotation_ready_pilot_v1\\manifests\\dataset_v1\\folds\\fold_2.json",
+    "legacy_fold_file_sha256": "9acfe6fc469086aa52f9ad4bf30be0d0d3808c7ded02f32a36c3215961e09870",
+    "peak_gpu_memory_allocated_mb": 3955.15087890625,
+    "peak_gpu_memory_reserved_mb": 5822.0,
+    "prediction_rows": 476,
+    "prediction_sha256": "1c5020db1bb7b1e0c6df06766652b08f65c07be45eb89c594c15007d1efc1e60",
+    "run_manifest_sha256": "d3c79f1fb9298a42769b6902d3f85e1f4c371eeaba1c7bd84998defad3bf7fe8",
+    "runtime_seconds": 218.79989649995696,
+    "scoring_families": [
+      "draft-ietf-quic-http",
+      "draft-ietf-quic-recovery"
+    ],
+    "scoring_rows": 476
+  },
+  "spec_sha256": "ac6dc69f91aa82b3ed77fd247ca805de8a6c092f8a04d2aff6f5676ace32d032",
+  "started_at": "2026-10-19T00:06:11.398946+03:00",
+  "status": "COMPLETE",
+  "training_runtime_seconds": 218.79989649995696
+}

@@ -1,0 +1,73 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "ambiguity_subtype": {
+      "enum": [
+        "I-1",
+        "I-2",
+        "I-3",
+        "U-1",
+        "U-2",
+        "U-3",
+        "U-4",
+        "other",
+        "none"
+      ],
+      "type": "string"
+    },
+    "context_issue": {
+      "enum": [
+        "none",
+        "missing_definition",
+        "unresolved_reference",
+        "missing_actor_or_state",
+        "incomplete_list_or_table",
+        "segmentation_fragment",
+        "token_budget_omission",
+        "blocked_source",
+        "other"
+      ],
+      "type": "string"
+    },
+    "evidence_span": {
+      "maxLength": 300,
+      "type": "string"
+    },
+    "interpretation_a": {
+      "maxLength": 600,
+      "type": "string"
+    },
+    "interpretation_b": {
+      "maxLength": 600,
+      "type": "string"
+    },
+    "justification": {
+      "maxLength": 1000,
+      "minLength": 1,
+      "type": "string"
+    },
+    "label": {
+      "enum": [
+        "AMBIGUOUS",
+        "CLEAR",
+        "INSUFFICIENT_CONTEXT"
+      ],
+      "type": "string"
+    },
+    "missing_information": {
+      "maxLength": 600,
+      "type": "string"
+    }
+  },
+  "required": [
+    "label",
+    "ambiguity_subtype",
+    "evidence_span",
+    "interpretation_a",
+    "interpretation_b",
+    "missing_information",
+    "justification",
+    "context_issue"
+  ],
+  "type": "object"
+}

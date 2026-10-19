@@ -3,261 +3,355 @@
 Revision-aware, evidence-grounded ambiguity detection for IETF Internet-Drafts.
 
 **Queen's University School of Computing**
-Supervised by **Prof. Yuanzhu Chen**
-Co-advised by **Dr. Ismail Anwar**
 
-This repository is the research codebase for the five-stage pipeline described in the project proposal:
+Supervised by **Prof. Yuanzhu Chen** and co-advised by **Dr. Ismail Anwar**.
 
-**Corpus → Alignment → Candidate Models → LLM Verification → Evaluation**
+This repository implements a leakage-controlled research pipeline for identifying
+potentially ambiguous normative clauses before an Internet-Draft becomes an RFC:
 
-The project is currently in the **pilot phase**. The initial goal is to validate the data collection, revision alignment, annotation, and ambiguity-detection assumptions on a small DNS-family dataset before scaling to the full corpus.
+**Corpus → parsing and clause segmentation → revision alignment → candidate labels →
+classical/transformer models → calibrated routing → evaluation**
 
----
+## Current status
 
-## Structure
+The earlier classical and transformer studies remain available for provenance. The
+current LLM work includes a completed Qwen3 32B zero/4/8-shot baseline (V1), a completed
+strict-prompt 8/16/24-shot experiment (V2), and a nested lexical/Qwen zero-shot hybrid
+(V3), and a frozen-MiniLM semantic ensemble (V4). V1 and V2 do not fit parameters. V3
+and V4 do not fine-tune Qwen; they fit lightweight classifiers and must be described as
+supervised hybrid modeling. All four use `final_annotation_ready.csv` as their label
+artifact.
+
+| Component | Current state |
+| --- | --- |
+| Corpus | Complete for 12 selected RFC families: 253 draft revisions, 12 RFCs, and 31 verified technical errata |
+| Parsing and clause segmentation | Implemented for plaintext and XML2RFC sources |
+| Revision alignment | Implemented with immutable lineage artifacts, lexical/semantic matching, and review queues |
+| Candidate review sets | Generated for 11 draft families with revision histories |
+| LLM annotation | Complete for three local models with resumable, auditable responses |
+| Model-ready labels | `final_annotation_ready.csv`: 2,424 resolved binary labels plus one explicitly excluded unresolved placeholder |
+| Classical baseline | Leakage-controlled TF-IDF logistic regression complete |
+| Transformer | Earlier nested-CV experiments complete; results belong to their pinned label versions |
+| Qwen3 LLM V1 | Full grouped development evaluation complete; retained as immutable comparison baseline |
+| Qwen3 LLM V2 | Full strict-prompt 8/16/24-shot grouped development comparison complete |
+| Hybrid V3 | Full nested grouped development experiment complete; Qwen remains frozen |
+| Semantic V4 | Full grouped development experiment complete; Qwen and MiniLM remain frozen |
+| Final evaluation | Not started; TCP validation and the sealed DNS test remain untouched by final evaluation |
+| Independent human gold evaluation | Not available |
+
+The current labels combine human annotation with assistance from two AI models. They are
+the project's operational reference labels, but they are not an independently
+human-verified external gold standard. Reported results therefore measure agreement
+with this annotation process and must not be presented as universal ambiguity-detection
+accuracy.
+
+## Dataset snapshot
+
+The new LLM experiment derives the following immutable partitions from
+`results/annotation/final_annotation_ready.csv`:
+
+| Partition | Families | Rows | Positive (`yes`) | Purpose |
+| --- | ---: | ---: | ---: | --- |
+| Development | 9 | 2,142 | 126 | Grouped zero/few-shot evaluation and shot-count selection |
+| Reserved validation | TCP | 131 | 5 | Later independent transfer verification only |
+| Sealed test | DNS SVCB/HTTPS | 151 | 17 | One final evaluation after all choices are frozen |
+
+The source contains 2,425 rows. `item_id=2161` has an unresolved status and a placeholder
+`No` value, so it is explicitly excluded instead of being treated as ground truth. The
+remaining 2,424 labels contain 148 positives. Document-family isolation leaves 126
+positives in development. Dataset and configuration manifests pin the source,
+partition, fold, prompt, and local-model hashes.
+
+The reviewed v2 split replaced HTTP/2bis as the test family after a leakage audit found
+cross-family overlap. The current split has zero reported exact cross-split duplicates,
+near duplicates, or target-as-context overlaps. The development and sealed-test
+artifacts are structurally separated.
+
+## Latest modeling results
+
+The primary metric is PR-AUC because positive ambiguity labels are uncommon.
+
+### Final-annotation LLM development experiments
+
+V3 materially improves the grouped-development ranking and classification metrics. Its
+F1-specific threshold is learned only from each outer fold's inner predictions.
+
+| Experiment | PR-AUC | Precision | Recall | F1 | Balanced accuracy |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| V1 best raw (8-shot) | 0.1960 | 0.0981 | 0.7778 | 0.1742 | 0.6654 |
+| V2 best raw (24-shot) | 0.1035 | 0.1111 | 0.0635 | 0.0808 | 0.5159 |
+| V3 nested hybrid, raw threshold | **0.2554** | 0.1737 | 0.5556 | 0.2647 | 0.6952 |
+| V3 nested hybrid, inner-selected F1 threshold | **0.2554** | **0.2366** | 0.4206 | **0.3029** | 0.6679 |
+| V4 semantic ensemble, raw threshold | **0.3252** | 0.2366 | 0.5238 | 0.3259 | 0.7091 |
+| V4 semantic ensemble, cross-fitted F1 threshold | **0.3252** | **0.3952** | 0.3889 | **0.3920** | 0.6758 |
+
+These are adaptive development results, not sealed-test evidence. V3 and V4 were
+designed after earlier development results were inspected, the labels are not an
+independent human gold standard, TCP has not been opened for these experiments, and DNS
+remains sealed.
+
+The values below are from the earlier label artifact and are retained for provenance;
+they are not results for the new final-annotation LLM dataset and must not be compared
+as though they used the same labels and split protocol.
+
+### Transformer Step 3
+
+The frozen experiment uses target-only `microsoft/deberta-v3-small`, learning rate
+`1e-5`, fp32, five grouped outer folds, nested family-level checkpoint selection, and
+three seeds.
+
+| Weighting | Mean-fold PR-AUC | Pooled three-seed PR-AUC |
+| --- | ---: | ---: |
+| Unweighted | 0.2955 | 0.2663 |
+| Class | **0.3022** | 0.2874 |
+| Confidence | 0.2907 | 0.2708 |
+| Combined | 0.2949 | 0.3016 |
+
+The frozen selection rule chose **class weighting**. However, its section-cluster
+confidence interval against the matching TF-IDF comparator includes zero, so the
+hypothesis that the transformer outperforms the classical surface-text baseline remains
+unsupported.
+
+At 90% development recall, the selected DeBERTa configuration refers approximately
+85.8% of clauses to an LLM, while the selected confidence-weighted TF-IDF configuration
+refers approximately 73.3%. These are uncalibrated development estimates, not deployment
+guarantees.
+
+See:
+
+- `experiments/transformer/STEP3_REPORT.md`
+- `experiments/transformer/EXPERIMENT_PLAN.md`
+- `models/transformer/README.md`
+
+## Repository structure
 
 ```text
-corpus/                 Stage 1 — IETF Internet-Draft, RFC, and errata
-                         data collection and Datatracker access
-
-alignment/              Stage 2 — clause segmentation, version matching,
-                         and revision-aware features
-
+corpus/                  Corpus acquisition, metadata, label construction, and datasets
+alignment/
+  segmentation/         Format-independent document parsing
+  clause_segmentation/  Clause refinement and normative classification
+  version_alignment/    Consecutive-revision matching and lineage construction
 models/
-  heuristic/            Rule-based ambiguity detectors:
-                         normative-keyword conflicts, vague quantifiers,
-                         undefined terms, and related patterns
-
-  classical/            Classical ML models:
-                         logistic regression, SVM, random forest,
-                         gradient-boosted trees
-
-  transformer/          Fine-tuned transformer classifiers:
-                         DeBERTa, RoBERTa, and related models
-
-  llm/                  Zero/few-shot LLM detection with evidence spans
-                         and structured rationales
-
-  hybrid/               Calibrated routing that sends uncertain clauses
-                         to the LLM verifier
-
-eval/                   Stage 5 — evaluation protocols, metrics,
-                         and leakage-resistant dataset splits
-
-docs/                   Project-wide documentation and methodology
-
+  classical/            Engineered features and TF-IDF logistic-regression comparator
+  transformer/          DeBERTa training, audits, analyses, sealing, and final evaluator
+  llm/                  Ollama Qwen3 zero/few-shot evaluation
+  heuristic/            Rule-based detector documentation
+  hybrid/               Planned calibrated routing layer
+eval/                    Alignment and later end-to-end evaluation protocols
 experiments/
-  pilot/                Current pilot experiment
-    docs/               Pilot-specific documentation
-    data/               Pilot raw, processed, and aligned data
-    labels/             Pilot annotation files
-    notebooks/          Pilot exploratory analysis
-    results/             Pilot outputs and experiment results
-
-notebooks/              General exploratory notebooks.
-                         Final results should not depend on notebooks.
-
-DECISIONS.md            Project-wide decision log
+  classical/            Frozen classical-model configuration and results
+  transformer/          Experiment plan, governance artifacts, reports, and results
+tests/                   Offline unit, integration, leakage, and governance tests
+Related Work/            Project literature
+Proposal/                Project proposal and literature review
+DECISIONS.md             Dated methodological decision log
 ```
 
-The `corpus/`, `alignment/`, `models/`, and `eval/` directories contain the core project infrastructure. The `experiments/` directory contains experiment-specific data, configurations, annotations, notebooks, and results.
+## Environment
 
----
+The source-of-truth environments target Python 3.11:
 
-## Reproducible Environment
+- `environment-linux.yml`
+- `environment-windows.yml`
 
-The project uses **Conda** to provide a reproducible development environment across Linux and Windows.
-Install Miniforge, Miniconda, or Anaconda first if the `conda` command is not available.
-
-Two OS-specific environment files are maintained:
-
-```text
-environment-linux.yml
-environment-windows.yml
-```
-
-These files are the source of truth for the project's dependencies.
-
-The environment covers the complete proposal pipeline, not only the current corpus scripts:
-
-* IETF collection and XML/HTML parsing
-* pandas/Arrow data processing
-* spaCy, sentence-transformers, and fuzzy/graph-based clause alignment
-* scikit-learn, imbalance handling, XGBoost, and hyperparameter search
-* PyTorch, Hugging Face training, and local/open-parameter inference
-* provider-independent hosted-LLM calls and token accounting
-* agreement, calibration, statistical testing, plots, and MLflow tracking
-* Jupyter, tests, linting, type checking, and environment locking
-
-### Linux
-
-```bash
-conda env create -f environment-linux.yml
-conda activate ietf-ambiguity-detection
-```
-
-### Windows
+Create the appropriate Conda environment:
 
 ```powershell
 conda env create -f environment-windows.yml
 conda activate ietf-ambiguity-detection
-```
-
-After creating the environment, verify the installation:
-
-```bash
 python scripts/check_environment.py
 ```
 
-The check is offline: it imports the main libraries, loads `en_core_web_sm`, and reports
-whether PyTorch sees a CPU or CUDA device. It does not download corpora or model weights.
+For Linux, use `environment-linux.yml` in the same commands. The environment checker is
+offline; it verifies imports, the spaCy model, command-line tools, and the available
+PyTorch device.
 
-The environment intentionally does not force a CUDA toolkit version, so the same OS file
-can be solved on CPU-only and NVIDIA-equipped machines. Create it on the target machine and
-confirm the reported PyTorch device before transformer or local-LLM experiments. Model weights,
-IETF data, and hosted-provider credentials are runtime resources and are not bundled in Conda.
+## Main workflows
 
-> **Note:** The Linux and Windows environment files may contain platform-specific dependencies where required. Do not manually install or change project dependencies without updating the corresponding environment file.
+Run commands from the repository root.
 
-If a dependency is changed, update the environment using the appropriate file:
-
-```bash
-conda env update -f environment-linux.yml --prune
-```
-
-or on Windows:
+### Build and validate the corpus
 
 ```powershell
-conda env update -f environment-windows.yml --prune
+python corpus/build_from_manifest.py
+python corpus/sync_metadata.py --refresh-manifest --write-audit
+python corpus/validate_corpus.py
 ```
 
----
+Network access is required for collection from the IETF Datatracker and RFC Editor.
+Existing committed sources allow parsing, alignment, and tests to run offline.
 
-## Quickstart
+### Generate LLM-consensus labels
 
-### 1. Create the environment
-
-Use the environment file corresponding to your operating system.
-
-**Linux:**
-
-```bash
-conda env create -f environment-linux.yml
-conda activate ietf-ambiguity-detection
-```
-
-**Windows:**
+The local Ollama annotation pipeline is resumable and records each model response:
 
 ```powershell
-conda env create -f environment-windows.yml
-conda activate ietf-ambiguity-detection
+python corpus/annotate_with_ollama.py
 ```
 
-### 2. Build corpus data for a draft
+The configured models are Gemma 3 27B, GPT-OSS 20B, and Qwen3 32B. Invalid or missing
+responses do not vote. Unanimous valid votes receive `HIGH` confidence, majority votes
+receive `MEDIUM`, and outcomes without a valid majority remain audit-only `UNCERTAIN`.
 
-The pilot currently uses a small DNS-family example. From the **repository root**:
+### Build model artifacts
 
-```bash
-# Full Stage 1 pipeline (draft revisions → RFC link → RFC text → errata)
-python corpus/build_corpus.py draft-ietf-dnsop-svcb-https
-
-# Or only draft revisions:
-python corpus/fetch_datatracker.py draft-ietf-dnsop-svcb-https
+```powershell
+python -m corpus.build_model_dataset
+python -m models.classical.feature_pipeline `
+  --input corpus/processed/model_datasets/v2/training_dataset.csv `
+  --output-dir corpus/processed/features/v3 `
+  --syntax disabled
+python -m models.transformer.dataset
+python -m models.transformer.seal_dataset
 ```
 
-These scripts require normal Internet access (Datatracker, RFC Editor) and will not work from a sandboxed or network-restricted environment.
+Generated directories are immutable. Use a new versioned output path instead of
+overwriting an existing artifact.
 
-Draft plaintext and revision metadata:
+### Prepare and evaluate the final-annotation LLM
 
-```text
-corpus/raw/drafts/<draft-name>/<draft-name>-NN.txt
-corpus/metadata/drafts.json
+The prepared dataset is hash-pinned to
+`results/annotation/final_annotation_ready.csv`. The LLM workflow contains no
+fine-tuning. First audit the data, grouped folds, prompts, and locally installed model;
+then run the six-request smoke test before starting the resumable full evaluation:
+
+```powershell
+.\scripts\run_llm_in_context.ps1 -Stage audit
+.\scripts\run_llm_in_context.ps1 -Stage smoke
+.\scripts\run_llm_in_context.ps1 -Stage all
 ```
 
-Optionally mirror draft files under `experiments/pilot/data/raw/` using `--out-dir` (see `experiments/pilot/README.md`). Metadata always lives in `corpus/metadata/`.
+On Windows, the runner automatically selects a runnable project Conda interpreter if
+Application Control blocks `.venv\Scripts\python.exe`. Use `-PythonPath` only when an
+explicit interpreter override is needed.
 
-Replace the draft name with the DNS-family draft selected by the team for the pilot.
+It reports grouped-fold PR-AUC, precision, recall, F1, F2, accuracy, balanced accuracy,
+per-row scores, label-source slices, precision-recall tables, SVG metric comparisons,
+and confusion matrices. Demonstrations come only from each fold's fitting rows.
+Continuous scores are calculated from Ollama's native `yes`/`no` token
+log-probabilities; no self-reported confidence or fitted threshold is used. Full results
+are saved under
+`experiments/llm/results/qwen3-32b-final-annotation-ready-v1/analysis-final/`.
 
-**Tests (no network):**
+Qwen3 32B also contributed votes during the annotation-support workflow. Its metrics
+therefore measure non-independent agreement with the operational reference labels and
+must not be presented as performance on an external human gold standard.
 
-```bash
-pytest tests/
+The full run requires 6,426 local Qwen3 32B requests. It writes each valid response
+immediately and resumes from matching cache identities after interruption. See
+`experiments/llm/EXPERIMENT_PLAN.md` for the complete protocol and claim boundary.
+
+The separate V2 comparison uses a stricter prompt, prevalence-aware examples,
+fold-safe V1 hard negatives, and cross-fitted threshold estimates:
+
+```powershell
+.\scripts\run_llm_in_context_v2.ps1 -Stage audit
+.\scripts\run_llm_in_context_v2.ps1 -Stage smoke
+.\scripts\run_llm_in_context_v2.ps1 -Stage all
 ```
 
----
+V2 results are written under
+`experiments/llm/results/qwen3-32b-final-annotation-ready-v2/`. Its final analysis
+creates `v1_v2_comparison.csv`, threshold metrics, comparison visualizations, and raw
+and thresholded confusion matrices. See `experiments/llm/EXPERIMENT_PLAN_V2.md`.
 
-## Where to Start
+V3 changes the method instead of modifying the prompt again. It combines nested,
+target-only word/character TF-IDF logistic regression with the frozen, label-independent
+Qwen zero-shot score. It does not call Ollama or fine-tune Qwen:
 
-The immediate objective is **not** to build the complete five-stage pipeline. The first phase is a small end-to-end pilot designed to test the project's highest-risk assumptions.
-
-1. Read `DECISIONS.md` to understand the current pilot scope, tooling decisions, and reuse strategy.
-2. Create the Conda environment using the appropriate OS-specific environment file.
-3. Run the Datatracker fetcher against one or two small DNS-family drafts.
-4. Inspect the downloaded revision history and raw text before implementing alignment logic.
-5. Hand-align a small set of clauses across revisions.
-6. Hand-label approximately 15–20 clauses using:
-   `experiments/pilot/docs/annotation_guide_v0.md`
-7. Store the pilot annotations in:
-   `experiments/pilot/labels/`
-8. Run the initial heuristic detector and a single LLM-based detector on the pilot data.
-9. Record annotation difficulties, data-quality issues, and initial findings in:
-   `experiments/pilot/docs/pilot_memo_template.md`
-10. Review the pilot findings with the advisors before committing to the full Phase 2 corpus build.
-
-For the detailed pilot workflow, see:
-
-```text
-experiments/pilot/README.md
+```powershell
+.\scripts\run_llm_in_context_v3.ps1 -Stage all
 ```
 
----
+Results and V1/V2/V3 visual comparisons are written under
+`experiments/llm/results/qwen3-32b-final-annotation-ready-v3/analysis-final/`. See
+`experiments/llm/EXPERIMENT_PLAN_V3.md` for the nested protocol and claim boundary.
 
-## Current Status
+V4 adds frozen MiniLM target and local-context representations to V3. MiniLM and Qwen
+remain frozen; only class-balanced logistic classifiers are fitted:
 
-The repository is currently focused on **Phase 1: pilot validation**.
+```powershell
+.\scripts\run_llm_in_context_v4.ps1 -Stage all
+```
 
-The pilot is intended to answer several practical questions before scaling:
+Results and V1-V4 comparisons are written under
+`experiments/llm/results/qwen3-32b-final-annotation-ready-v4/analysis-final/`. See
+`experiments/llm/EXPERIMENT_PLAN_V4.md`. The V4 configuration was selected adaptively
+on development data, so TCP transfer verification is required before claiming that the
+improvement generalizes.
 
-* Can the Datatracker revision history be collected reliably?
-* Can clauses be aligned meaningfully across revisions?
-* Does the annotation scheme produce consistent labels?
-* How much verified ambiguity data can realistically be obtained?
-* Can simple heuristic and LLM detectors identify useful candidate signals?
-* What changes between revisions are unrelated to ambiguity?
+### Run tests and lint
 
-The answers will be used to refine the methodology before the full corpus and modeling stages are implemented.
+```powershell
+python -m pytest tests/ -q
+python -m ruff check alignment corpus models eval tests
+```
 
----
+On a Windows machine whose global temporary directory is inaccessible, use a new
+workspace-local pytest directory:
 
-## Reuse of Existing Work
+```powershell
+python -m pytest tests/ -q -p no:cacheprovider --basetemp .test-tmp/local-run
+```
 
-This project builds on public prior art rather than re-deriving existing capabilities from scratch.
+## Experiment governance
 
-* **RFCScope** (Pawagi et al., ASE 2025) — public dataset and code:
-  https://github.com/HIPREL-Group/RFCScope
+The repository deliberately separates model development from final evaluation:
 
-* **SAGE** (Yen et al., SIGCOMM 2021) — public code:
-  https://github.com/USC-NSL/sage
+- Training and cross-validation use nine families only.
+- TCP cannot select the architecture, learning rate, weighting, checkpoint, temperature,
+  or routing thresholds; it is reserved for independent transfer verification.
+- DNS SVCB/HTTPS is stored as a sealed final-test artifact.
+- `models/transformer/final_evaluate.py` requires an explicit `--final` flag and claims
+  an exclusive lock before loading the sealed rows.
+- A second final-test run is refused.
+- Model inputs exclude labels, tiers, weights, subtypes, family IDs, split names, source
+  hashes, LLM votes, and rationales.
+- All run manifests record input/configuration hashes and raw logits.
 
-* **ietfdata** (Glasgow IPL) — Python library for accessing the IETF Datatracker and RFC index:
-  https://github.com/glasgow-ipl/ietfdata
+Do not run the final DNS evaluator until the selected input variant, global epoch policy,
+ensemble strategy, calibration temperature, routing thresholds, code hashes, and final
+command have all been frozen.
 
-The project will explicitly distinguish between **reused resources, adapted methods, and novel contributions**.
+## Next steps
 
-See `DECISIONS.md` for the current reuse plan and the rationale behind methodological and tooling decisions.
+The remaining planned stages are:
 
----
+1. Review V4's fold-level instability and error slices before treating it as the
+   development winner.
+2. Freeze a single full-development V4 fit and a separate TCP transfer-evaluation
+   protocol before opening TCP.
+3. Use TCP once for transfer verification without changing the method from its TCP
+   results.
+4. Freeze the complete final configuration and evaluate DNS exactly once.
+5. If resources become available, build an independently annotated human evaluation
+   set and report agreement before adjudication.
+6. Run protocol-cluster and temporal generalization sensitivity analyses.
 
-## Research Reproducibility
+## Reused resources
 
-To keep the research traceable throughout development:
+The project distinguishes reused resources, adapted methods, and novel contributions.
+Important public foundations include:
 
-* Environment specifications are version-controlled.
-* Major methodological decisions are recorded in `DECISIONS.md`.
-* Pilot data, annotations, and results are kept separate from the core pipeline.
-* Annotation guidelines are maintained as living documents.
-* Raw and processed data are kept separate.
-* Experiments should record their configuration and results.
-* Final results should be reproducible from committed code, environment specifications, and documented data-processing steps.
+- [RFCScope](https://github.com/HIPREL-Group/RFCScope) for errata-derived ambiguity work
+  and the seven-subtype vocabulary.
+- [SAGE](https://github.com/USC-NSL/sage) for prior specification-analysis work.
+- [ietfdata](https://github.com/glasgow-ipl/ietfdata) for Datatracker and RFC-index access.
 
-The goal is to make it possible to determine not only **what result was obtained**, but also **which data, code, environment, and methodological decision produced it**.
+Major methodological decisions and their rationale are recorded in `DECISIONS.md`.
+
+## Reproducibility principles
+
+- Keep raw sources, derived artifacts, model outputs, and human adjudication separate.
+- Preserve uncertain and invalid annotation outcomes for audit, but never treat them as
+  binary training labels.
+- Fit preprocessing and loss weights only on the relevant training partition.
+- Split by document family, not by randomly sampled clauses.
+- Record hashes, model digests, seeds, token log-probabilities, exclusions, and runtime
+  metadata.
+- Prefer immutable versioned outputs over in-place modification.
+- Report negative results and protocol deviations explicitly.
+
+## License
+
+See `LICENSE`.

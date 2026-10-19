@@ -444,7 +444,7 @@ Caption: Complete 36-file implementation contribution; the earlier implementatio
 | `alignment/version_alignment/validate_run.py` | Added | Independent read-only artifact, coverage and temporal/token audit. |
 | `eval/README.md` | Modified | Current alignment evaluation versus future benchmark protocols. |
 | `eval/alignment_metrics.py` | Added | Operational summaries and optional complete reviewed-scope link/candidate metrics. |
-| `experiments/pilot/docs/alignment_annotation_guide_v1.md` | Added | Independent alignment annotation and correction guidance. |
+| Former pilot alignment annotation guide | Retired | Removed on 2026-10-13 with the unused pilot experiment; current review limitations remain in the alignment documentation. |
 | `tests/fixtures/alignment/tls08_overlength.json` | Added | Original TLS-08 text, token IDs, hashes and decode-expansion regression evidence. |
 | `tests/test_alignment_contracts.py` | Added | Deterministic contracts verification; see Appendix K. |
 | `tests/test_alignment_embeddings.py` | Added | Deterministic embeddings verification; see Appendix K. |

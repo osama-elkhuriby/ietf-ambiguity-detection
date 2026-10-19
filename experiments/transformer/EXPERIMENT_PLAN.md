@@ -1,7 +1,10 @@
 # Transformer experiment plan
 
-Status: governance frozen before the learning-rate screen. Human-gold evaluation
-remains pending.
+Status: governance frozen before the learning-rate screen. A multi-annotator human
+gold set is not currently feasible, so the frozen LLM-consensus labels are the
+operational reference labels for this project. They are a proxy gold standard, not
+human-verified ground truth; every result and limitation statement must preserve that
+distinction.
 
 ## Selection rule and deviations
 
@@ -284,3 +287,76 @@ All probability calibration metrics remain secondary and uncalibrated at this st
 Pending: soft-target sensitivity after a vote-fraction artifact exists, context
 ablation, temperature scaling, final routing-threshold optimization, final DNS
 execution, and human gold annotation/evaluation. None begins as part of Step 3.
+
+## Frozen Step 4 factorial: label uncertainty and local context
+
+This section was frozen before any Step 4 scores were produced. Its purpose is to
+test two plausible causes of the weak transformer advantage without expanding the
+search space after looking at outcomes: hard consensus targets may discard annotator
+disagreement, and target-only input may omit context needed to resolve ambiguity.
+
+Use DeBERTa-v3-small at immutable revision
+`a36c739020e01763fe789b4b85e2df55d6180012`, learning rate 1e-5, fp32, class
+weighting, seeds 1729/2718/31415, the five frozen outer folds, and the frozen inner
+family assignments. Fine-tune the full encoder and classification head. Checkpoint
+selection remains the original hard-label PR-AUC on the inner family for every cell;
+the outer fold is evaluated once after selection. Reuse the existing hard-target,
+target-only class-weighted cells and train only the 45 missing cells in this matrix:
+
+| Condition | Training target | Input |
+| --- | --- | --- |
+| Control | Hard consensus label | Target only |
+| Soft-target | Valid-vote positive fraction | Target only |
+| Context | Hard consensus label | Target + local context |
+| Combined | Valid-vote positive fraction | Target + local context |
+
+The soft target is `positive_valid_votes / valid_votes`, using only rationales-free
+vote fields. Invalid or missing votes are excluded from the denominator, never treated
+as negative. At least two valid votes are required. The artifact builder must verify a
+one-to-one mapping to development rows and report any exclusion before training. Votes,
+vote fractions, and rationales never enter tokenized text or inference features.
+
+To isolate the target change, class weights in soft-target cells are computed from the
+unchanged hard labels in each fitting partition: positive weight `N_negative/N_positive`, negative
+weight 1, followed by normalization to mean 1. The weighted soft cross-entropy is the
+per-row binary soft-label cross-entropy multiplied by those same row weights and
+divided by their sum. Do not derive class mass from soft labels. A one-hot soft-target
+test must match hard cross-entropy in both value and gradients.
+
+Local context uses the existing target-first sentence-pair policy: target is segment
+one, previous and next same-section clauses form segment two, and context truncates
+before the target. Because development context can exactly or nearly reproduce a
+target in another nested partition, each fold receives a versioned context policy.
+For fitting, inner-selection, and outer-validation rows, blank any context side whose
+normalized word-trigram Jaccard similarity to a target in either of the other roles is
+at least 0.85. Exact matches are therefore always removed. Preserve target text and
+record the matched target IDs, roles, similarity, source hashes, and every removal.
+This unsupervised sanitation may inspect text but never labels in another role.
+
+Primary factorial estimands are computed from seed-averaged fold PR-AUC:
+
+- soft-target effect: soft target-only minus hard target-only;
+- context effect under hard labels: hard context minus hard target-only;
+- context effect under soft labels: soft context minus soft target-only;
+- interaction: `(soft context - soft target-only) - (hard context - hard target-only)`.
+
+Report each seed and fold, seed-averaged mean-fold PR-AUC, pooled PR-AUC from the
+three-seed logit average, paired fold differences and their standard errors, paired-row
+bootstrap intervals, section-cluster bootstrap intervals, 90%-recall single-threshold
+referral rate, runtime, and peak GPU memory. ECE and Brier remain uncalibrated secondary
+diagnostics. The primary selection statistic is seed-averaged mean-fold PR-AUC. If the
+top two differ by less than one paired-fold standard error, choose the simpler option
+in this frozen order: hard target-only, soft target-only, hard context, soft context.
+Pooled PR-AUC cannot override that rule.
+
+Run one matched class-weighted target-only TF-IDF comparator using the exact transformer
+fitting IDs, which excludes the inner family, and the same outer scoring exclusions.
+Keep its hyperparameters fixed. Report it separately from the original TF-IDF result;
+this matched comparator isolates the architecture contrast, while the original remains
+the operational classical baseline trained on all outer-training families.
+
+Do not tune on or evaluate TCP during Step 4. Do not open the sealed DNS clause file,
+invoke final evaluation, write predictions for DNS, or claim human-verified accuracy.
+The frozen consensus labels are treated as operational proxy gold only because human
+annotation is currently infeasible. A family-count learning curve and cluster-level
+holdout remain later exploratory analyses, not part of this selection experiment.

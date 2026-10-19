@@ -41,6 +41,77 @@ pipeline against known findings.
 
 ---
 
+## 2026-10-18 — Isolate final-annotation context training from prior LLM experiments
+
+**Decision:** Train the new Phi-4 LoRA experiment from the resolved binary labels in
+`results/annotation/final_annotation.csv`, excluding unresolved placeholder
+`item_id=2161`. Use the previous, target, and next clauses with the versioned
+normal-engineer prompt. Preserve document-family grouped nested cross-validation,
+reserve TCP, and keep DNS sealed. Treat the labels as an operational reference produced
+by human annotation supported by two AI models, not as independently verified external
+ground truth.
+
+**Why:** The annotation source, positive prevalence, semantic rubric, and input context
+differ materially from the earlier 2,253-row target-only consensus experiment. Reusing
+old folds, adapters, calibration, or conclusions would mix incompatible experimental
+contracts. Physical partitioning, pinned hashes, and a fresh hyperparameter screen keep
+the new results reproducible and prevent validation/test leakage.
+
+**Rejected alternatives:** Reusing the old adapters or calibration; treating the
+placeholder unresolved label as negative; training on TCP/DNS; using annotation
+provenance or rationales as model inputs; silently truncating local context.
+
+**Owner:** Osama Elkhuribi
+
+---
+
+## 2026-10-18 — Establish zero/4/8-shot baselines before LoRA fine-tuning
+
+**Decision:** Evaluate the pinned Phi-4 Mini base model in zero-shot, four-shot, and
+eight-shot conditions before making any parameter updates. Reuse the frozen grouped
+outer folds, select balanced and family-diverse demonstrations only from each fold's
+fitting rows, tune each classification threshold only on that fold's independent inner
+family, and rank shot conditions by mean fold PR-AUC with a paired one-standard-error
+preference for fewer examples. Report precision, recall, F1, F2, PR-AUC, balanced
+accuracy, accuracy, per-row scores, PR curves, and confusion matrices.
+
+**Why:** The no-training baselines measure how much the task rubric and examples alone
+provide, give LoRA a fair reference point, and expose prompt or label problems before an
+expensive hyperparameter screen. Fold-local demonstrations and thresholds prevent
+evaluation leakage. Accuracy cannot be primary because the development cohort is only
+6.38% positive and an all-negative classifier is approximately 93.6% accurate.
+
+**Rejected alternatives:** Reporting accuracy alone; choosing examples globally;
+letting demonstrations overlap inner or outer targets; fixing 0.5 without validating a
+decision threshold; selecting the number of examples from TCP or sealed DNS; using
+free-form generation whose output parsing could change the evaluation.
+
+**Owner:** Osama Elkhuribi
+
+---
+
+## 2026-10-18 — Version the ordinary-engineer rubric without leaking an example
+
+**Decision:** Add `implementer_context_v2` as a new prompt contract rather than editing
+v1 in place. Encode the requested ordinary-engineer test as fixed A1/A2/A3 criteria,
+require previous/next context, preserve citation and local-pointer exceptions, and keep
+the model output to exactly `yes` or `no`. Start new in-context and LoRA output versions.
+
+**Why:** A v1 LoRA run was already active, so changing that contract would mix prompts
+across folds. The proposed If-Range example is exactly development `item_id=120`; using
+it as a labeled example in every system prompt would contaminate held-out evaluation.
+The positive count and human/AI annotation history are provenance, not evidence about a
+clause, and could bias the model toward the majority class. The dataset has no verified
+rationale column, so rationale generation cannot be a supervised target here.
+
+**Rejected alternatives:** Mutating v1 during an active run; including class prevalence
+in the prompt; copying the labeled If-Range row into the prompt; inventing explanation
+targets; mixing free-form rationales with one-token conditional scoring.
+
+**Owner:** Osama Elkhuribi
+
+---
+
 ## 2026-08-08 — Reuse RFCScope's public dataset rather than re-mining errata from scratch
 
 **Decision:** Build on RFCScope's published artifact (github.com/HIPREL-Group/RFCScope) —
@@ -97,7 +168,8 @@ only — useful as *features*, but not as the primary evaluation subtype axis.
 
 **Decision:** For Phase 1 hand alignment and labeling, treat a **clause** as one paragraph within
 a numbered section of the Datatracker `.txt` revision, with the exceptions documented in
-`experiments/pilot/docs/annotation_guide_v0.md` §1.
+the pilot annotation guide used at that time. The unused pilot experiment templates and
+guides were retired on 2026-10-13 after the production pipeline superseded them.
 
 **Why:** Matches how authors edit I-Ds in practice, aligns with iddiff hunks at paragraph
 granularity, and is coarse enough for 15–20 clause pilot labels in week 1.

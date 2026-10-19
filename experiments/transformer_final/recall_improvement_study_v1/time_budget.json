@@ -1,0 +1,144 @@
+{
+  "actual": {
+    "cell_ids": {
+      "B_nested_threshold_calibration/outer_1_inner_2": {
+        "completed": true,
+        "elapsed_seconds": 152.35999999998603,
+        "stage": "B_nested_threshold_calibration"
+      },
+      "B_nested_threshold_calibration/outer_1_inner_3": {
+        "completed": true,
+        "elapsed_seconds": 238.15599999995902,
+        "stage": "B_nested_threshold_calibration"
+      },
+      "B_nested_threshold_calibration/outer_2_inner_1": {
+        "completed": true,
+        "elapsed_seconds": 161.81200000003446,
+        "stage": "B_nested_threshold_calibration"
+      },
+      "B_nested_threshold_calibration/outer_2_inner_2": {
+        "completed": true,
+        "elapsed_seconds": 205.9220000000205,
+        "stage": "B_nested_threshold_calibration"
+      },
+      "B_nested_threshold_calibration/outer_2_inner_3": {
+        "completed": true,
+        "elapsed_seconds": 297.5929999999935,
+        "stage": "B_nested_threshold_calibration"
+      },
+      "B_nested_threshold_calibration/outer_3_inner_1": {
+        "completed": true,
+        "elapsed_seconds": 169.7970000000205,
+        "stage": "B_nested_threshold_calibration"
+      },
+      "B_nested_threshold_calibration/outer_3_inner_2": {
+        "completed": true,
+        "elapsed_seconds": 209.06200000003446,
+        "stage": "B_nested_threshold_calibration"
+      },
+      "B_nested_threshold_calibration/outer_3_inner_3": {
+        "completed": true,
+        "elapsed_seconds": 395.23400000005495,
+        "stage": "B_nested_threshold_calibration"
+      },
+      "B_nested_threshold_calibration/outer_4_inner_1": {
+        "completed": true,
+        "elapsed_seconds": 255.15600000007544,
+        "stage": "B_nested_threshold_calibration"
+      },
+      "B_nested_threshold_calibration/outer_4_inner_2": {
+        "completed": true,
+        "elapsed_seconds": 211.5470000000205,
+        "stage": "B_nested_threshold_calibration"
+      },
+      "B_nested_threshold_calibration/outer_4_inner_3": {
+        "completed": true,
+        "elapsed_seconds": 220.75,
+        "stage": "B_nested_threshold_calibration"
+      },
+      "B_nested_threshold_calibration/outer_5_inner_1": {
+        "completed": true,
+        "elapsed_seconds": 163.73499999998603,
+        "stage": "B_nested_threshold_calibration"
+      },
+      "B_nested_threshold_calibration/outer_5_inner_2": {
+        "completed": true,
+        "elapsed_seconds": 236.4529999999795,
+        "stage": "B_nested_threshold_calibration"
+      },
+      "B_nested_threshold_calibration/outer_5_inner_3": {
+        "completed": true,
+        "elapsed_seconds": 206.06299999996554,
+        "stage": "B_nested_threshold_calibration"
+      },
+      "C_local_context/fold_1/seed_2718": {
+        "completed": true,
+        "elapsed_seconds": 260.09399999992456,
+        "stage": "C_local_context"
+      },
+      "C_local_context/fold_2/seed_2718": {
+        "completed": true,
+        "elapsed_seconds": 324.78100000007544,
+        "stage": "C_local_context"
+      },
+      "C_local_context/fold_3/seed_2718": {
+        "completed": false,
+        "elapsed_seconds": 2.234000000054948,
+        "stage": "C_local_context"
+      }
+    },
+    "gpu_cell_seconds": 3710.7490000001853,
+    "gpu_cells_completed": 16,
+    "gpu_cells_started": 18,
+    "seconds_by_stage": {
+      "B_nested_threshold_calibration": 3123.6400000001304,
+      "C_local_context": 587.109000000055
+    }
+  },
+  "authorization_window_deadline": "2026-10-18T20:15:15.3950029+03:00",
+  "authorization_window_start": "2026-10-18T14:15:15.3950029+03:00",
+  "budget_seconds": 21600,
+  "deadline_remaining_seconds": 12250,
+  "estimated_total_seconds": 13950,
+  "observed_baseline_cell_seconds": [
+    284.28007197380066,
+    301.20319414136503,
+    292.9217231273651,
+    291.22837376594543,
+    284.18040442466736
+  ],
+  "planning_estimates": {
+    "context_aware_training": {
+      "basis": "Five baseline cells at 300 seconds each, with 1.5x allowance for longer local-context inputs.",
+      "cells": 5,
+      "seconds": 2250
+    },
+    "focal_loss_training": {
+      "basis": "Five baseline cells at 300 seconds each.",
+      "cells": 5,
+      "seconds": 1500
+    },
+    "nested_calibration_inner_training_cells": {
+      "basis": "Three deterministic family-disjoint GroupKFold inner folds for each of five outer folds, at 300 seconds per cell.",
+      "cells": 15,
+      "seconds": 4500
+    },
+    "partial_2_training": {
+      "basis": "Five baseline cells at 300 seconds each.",
+      "cells": 5,
+      "seconds": 1500
+    },
+    "partial_4_training": {
+      "basis": "Five baseline cells at 300 seconds each.",
+      "cells": 5,
+      "seconds": 1500
+    },
+    "validation_and_reporting": {
+      "basis": "Reserved for protocol checks, artifact validation, comparisons, error analysis, and final report.",
+      "seconds": 2700
+    }
+  },
+  "planning_margin_seconds": 7650,
+  "status": "RENEWED_AUTHORIZATION",
+  "updated_at": "2026-10-18T16:51:04.684196+03:00"
+}

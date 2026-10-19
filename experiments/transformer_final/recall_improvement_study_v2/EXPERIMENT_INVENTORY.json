@@ -1,0 +1,352 @@
+{
+  "actual": {
+    "gpu_cell_seconds": 1126.264524700091,
+    "gpu_cells_completed": 3,
+    "gpu_cells_started": 4
+  },
+  "authorized_attempts": {
+    "C_local_context/fold_3/seed_2718": {
+      "attempt_id": "fold3-local-context-20261018T201544+0300",
+      "audit_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\audits\\authorized_attempts\\fold3-local-context-20261018T201544+0300.json",
+      "cell_id": "C_local_context/fold_3/seed_2718",
+      "completed_at": "2026-10-18T20:26:49.065116+03:00",
+      "created_at": "2026-10-18T20:15:44.133327+03:00",
+      "elapsed_seconds": 406.43231270008255,
+      "log_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\logs\\authorized_attempts\\fold3-local-context-20261018T201544+0300",
+      "protocol_sha256": "e2c0d0feeb05d0e6f49b051690ba6eb598b17a815e46747cab820be40363f3c1",
+      "replaces_log_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\logs\\fold_3_seed_2718.stderr.log",
+      "replaces_spec_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\cell_specs\\c2b65e26a3e107038a565460f8e0cb323a44495e3d322b3ea4c4af5038cea4ca.json",
+      "replaces_spec_sha256": "da943ae5a50aca8faa2df72d2011ab7a197f74e979d5ff9dbb297f4faa653a63",
+      "replaces_status": "BLOCKED_GPU_RESOURCE_NO_RETRY",
+      "run_manifest_sha256": "077fae0adaa44ecb34e532eeaca19848b8c09c5e1e50031466d3b22d7aa4bef6",
+      "run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\runs\\C_local_context\\fold_3\\seed_2718\\attempt_fold3-local-context-20261018T201544+0300",
+      "runner_sha256": "5248a86821fc9dd450f8dca5ce8f5bd23d42de9ab4d4c709435918c84db14f29",
+      "scientific_spec_sha256": "7ff460ba7a75f736e430bfc4f1b99fb39465af780348cb5fc382ff12d1df7e8b",
+      "spec_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\cell_specs\\authorized_attempts\\fold3-local-context-20261018T201544+0300.json",
+      "spec_sha256": "c06d24364d33fa62b2ab7338255c796e6e008d9a38a1e1ba3123b25acecb57ef",
+      "started_at": "2026-10-18T20:20:02.618390+03:00",
+      "status": "COMPLETE"
+    }
+  },
+  "compatibility_manifest_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\V1_TO_V2_COMPATIBILITY.json",
+  "compatibility_manifest_sha256": "ca6f783f3ca49867be1edf17e3a352d1ea6c8ea8bd070d2f4098e23c95326527",
+  "dataset": {
+    "dataset_manifest_sha256": "87094485ec829fbfd7d3c19aa9ef70f9424a997cfbec29080a748c0b0bdbf9d0",
+    "dataset_manifest_sha256_verified": "87094485ec829fbfd7d3c19aa9ef70f9424a997cfbec29080a748c0b0bdbf9d0",
+    "effective_dataset_sha256": "a25e99563563f71570e48f63b9515fbb51ff845762ff718763d98e0b3eefae2f",
+    "effective_dataset_sha256_verified": "a25e99563563f71570e48f63b9515fbb51ff845762ff718763d98e0b3eefae2f",
+    "family_fold_source_sha256": "c04dc8424ed96486f8521ef57d17e4b503d2c3f41bb116edeeb9535073dd7884",
+    "fold_manifest_sha256": {
+      "1": "684cac99acb8eca3d34698265f23a9f22e879de9f1ec25280e02cf61bd87643e",
+      "2": "9acfe6fc469086aa52f9ad4bf30be0d0d3808c7ded02f32a36c3215961e09870",
+      "3": "4ec2c3cf49a1923442f9812a75396bd5096c4df5771f2d0ae558a4ac80bfbf45",
+      "4": "993ce072596a80d375b7338e7d94f74659100f40938464999d1e0a8ea2033fbc",
+      "5": "255a567c14944357cf75e95193e73af42d764c40792077a59f758ccb3185698d"
+    },
+    "labels": {
+      "negative": 2016,
+      "positive": 126
+    },
+    "reserved_families": [
+      "draft-ietf-tcpm-rfc793bis",
+      "draft-ietf-dnsop-svcb-https"
+    ],
+    "rows": 2142,
+    "source_rows_verified": 2142,
+    "source_sha256": "c20959acc2db8345c90ee06a71357aaac161b178b240495e516e4710405b2712",
+    "study_nested_splits_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\protocols\\nested_inner_splits_v2.json",
+    "study_nested_splits_sha256": "5f95040a8f385d1b53413504fb5490a7b5810d9aaf3c5f392e537bd8458d4942",
+    "study_outer_fold_manifests_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\protocols\\outer_fold_manifests_v2.json",
+    "study_outer_fold_manifests_sha256": "fcac1579141f7bf53bfab70fd7163fda995a021bb4a1b48cd7a0dedb36c4c293"
+  },
+  "current_execution_stop": {
+    "automatic_retry": false,
+    "cell_id": "G_partial_4/fold_1/seed_2718",
+    "error": "RuntimeError: Partial optimizer input included frozen parameters",
+    "log_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\logs\\fold_1_seed_2718.stderr.log",
+    "session_id": "v2-20261018T201542+0300",
+    "stopped_at": "2026-10-18T20:40:14.6091608+03:00"
+  },
+  "execution_stopped_at": "2026-10-18T17:46:49.7207040+03:00",
+  "failed_v1_cell_not_retried": "C_local_context/fold_3/seed_2718; its V1 logs and failed inventory record are preserved. A V2 cell spec is prepared at a distinct path.",
+  "overall_status": "STOPPED_UNEXPECTED_PROCESS_FAILURE",
+  "pending_v2_cells": {
+    "C_local_context/fold_3/seed_2718": {
+      "fold_manifest_sha256": "26535504f03fa1fd9d46cc8eea4a6aeadb3496b90cc040eb00a4a14b0fede22b",
+      "run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\runs\\C_local_context\\fold_3\\seed_2718",
+      "spec_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\cell_specs\\c2b65e26a3e107038a565460f8e0cb323a44495e3d322b3ea4c4af5038cea4ca.json",
+      "spec_sha256": "da943ae5a50aca8faa2df72d2011ab7a197f74e979d5ff9dbb297f4faa653a63",
+      "status": "BLOCKED_GPU_RESOURCE_NO_RETRY"
+    },
+    "C_local_context/fold_4/seed_2718": {
+      "completed_at": "2026-10-18T20:33:00.315391+03:00",
+      "fold_manifest_sha256": "3d63f4f306595402a814538a4edd4e5abe6ac305cd606e9343faa7cb7d487ac1",
+      "run_manifest_sha256": "d3ce0c3ba80abdaf2705d2b59a5a6544b02023ea3fe52bb2d03eede24966ec12",
+      "run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\runs\\C_local_context\\fold_4\\seed_2718",
+      "spec_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\cell_specs\\8850eeb9fdd68b8eedb89e0a34c0b21942dbed69f306221fb343a889a392b480.json",
+      "spec_sha256": "f22566a992871ef0237c01e6ee398d1c1d084c76c421668be4b8b8bb9136364b",
+      "started_at": "2026-10-18T20:26:56.071194+03:00",
+      "status": "COMPLETE"
+    },
+    "C_local_context/fold_5/seed_2718": {
+      "completed_at": "2026-10-18T20:38:54.452878+03:00",
+      "fold_manifest_sha256": "32a5754d8a3b30adad85773c93a8dc4c56a9844fc4f7c13c17e943b2d1ca5d84",
+      "run_manifest_sha256": "783d285080946ce3b319952878771c046da31249c77160e929d243e71ca04b92",
+      "run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\runs\\C_local_context\\fold_5\\seed_2718",
+      "spec_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\cell_specs\\43e79ec7cc0d4e6964cbcb8e752129d36dff344681714224685672d426601307.json",
+      "spec_sha256": "f31746cbf42502c1f266ba72660cb2886f8edb7f30d466d779609e5067466a82",
+      "started_at": "2026-10-18T20:33:06.053346+03:00",
+      "status": "COMPLETE"
+    },
+    "D_focal_loss/fold_1/seed_2718": {
+      "fold_manifest_sha256": "43c06bb7e074b75c9aaf4f22dc965191f242e96cba77a67d2abe08acabadd162",
+      "run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\runs\\D_focal_loss\\fold_1\\seed_2718",
+      "spec_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\cell_specs\\6fa115eaf9df76b818d8d8032bbf8c953a322d4a6f34241bb98fc0795c582344.json",
+      "spec_sha256": "ab406d42d5524593452ba910d3de2133d9f38829fb195e5399ce4f079f9879ef",
+      "status": "PENDING_SEPARATE_GPU_AUTHORIZATION"
+    },
+    "D_focal_loss/fold_2/seed_2718": {
+      "fold_manifest_sha256": "3b838bd925146f934a629398305a3b0ad4dfd4d7ddf84393252c244565076a42",
+      "run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\runs\\D_focal_loss\\fold_2\\seed_2718",
+      "spec_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\cell_specs\\8d474e0804a44f0ae1050f0eb9bd78cf1c5230fcdda4349be037b12d5bcf126a.json",
+      "spec_sha256": "392af6c92fa7798eb98d0df2bd427c187bd6bb02597a95b1c862efc9ff5f6234",
+      "status": "PENDING_SEPARATE_GPU_AUTHORIZATION"
+    },
+    "D_focal_loss/fold_3/seed_2718": {
+      "fold_manifest_sha256": "26535504f03fa1fd9d46cc8eea4a6aeadb3496b90cc040eb00a4a14b0fede22b",
+      "run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\runs\\D_focal_loss\\fold_3\\seed_2718",
+      "spec_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\cell_specs\\c0039e8e5f8a6d7418390242a8a368b7f6d37a3cb33d840b6c125637321b1662.json",
+      "spec_sha256": "8b4f05e7d9f2a04ce974eda5a41892564facc381c76acfba30ccafd8ee4c7664",
+      "status": "PENDING_SEPARATE_GPU_AUTHORIZATION"
+    },
+    "D_focal_loss/fold_4/seed_2718": {
+      "fold_manifest_sha256": "3d63f4f306595402a814538a4edd4e5abe6ac305cd606e9343faa7cb7d487ac1",
+      "run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\runs\\D_focal_loss\\fold_4\\seed_2718",
+      "spec_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\cell_specs\\454c66fe0fc9e6acd0d0820502e40f6a2213418fb2078a5ac43bdf10a961d86f.json",
+      "spec_sha256": "940beb8984b9c8bbbcc78815a9a342c0b8401aae9f61967bff3c93728d12d73d",
+      "status": "PENDING_SEPARATE_GPU_AUTHORIZATION"
+    },
+    "D_focal_loss/fold_5/seed_2718": {
+      "fold_manifest_sha256": "32a5754d8a3b30adad85773c93a8dc4c56a9844fc4f7c13c17e943b2d1ca5d84",
+      "run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\runs\\D_focal_loss\\fold_5\\seed_2718",
+      "spec_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\cell_specs\\b43da475675d4e01680ddc03311bc358dbea4b518a59c4ea29712a37a63e4df5.json",
+      "spec_sha256": "3b7c685044ce266e8797190e4b14a88b43427c9147b053972d42d4fccccd4b5a",
+      "status": "PENDING_SEPARATE_GPU_AUTHORIZATION"
+    },
+    "G2_partial_2/fold_1/seed_2718": {
+      "fold_manifest_sha256": "43c06bb7e074b75c9aaf4f22dc965191f242e96cba77a67d2abe08acabadd162",
+      "run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\runs\\G2_partial_2\\fold_1\\seed_2718",
+      "spec_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\cell_specs\\be1962ced9b59dbda38f66b9b72776e386947a9a996b40b2c97e0bada6522353.json",
+      "spec_sha256": "87ffae212cd7db8c47656974f811140627a0f9dcc74095a7f77d81c65940a619",
+      "status": "PENDING_SEPARATE_GPU_AUTHORIZATION"
+    },
+    "G2_partial_2/fold_2/seed_2718": {
+      "fold_manifest_sha256": "3b838bd925146f934a629398305a3b0ad4dfd4d7ddf84393252c244565076a42",
+      "run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\runs\\G2_partial_2\\fold_2\\seed_2718",
+      "spec_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\cell_specs\\91fd06f3881c3166af10507f13ffbac51cd3a0373455b6736f63c2f7faa9064d.json",
+      "spec_sha256": "828e76461474c7b0720b10704b22794e35eb70aa8a5f23ea0a8ef8fffabad25c",
+      "status": "PENDING_SEPARATE_GPU_AUTHORIZATION"
+    },
+    "G2_partial_2/fold_3/seed_2718": {
+      "fold_manifest_sha256": "26535504f03fa1fd9d46cc8eea4a6aeadb3496b90cc040eb00a4a14b0fede22b",
+      "run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\runs\\G2_partial_2\\fold_3\\seed_2718",
+      "spec_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\cell_specs\\9ebc155f5e4962cd834c11e5255c7070ab9258a0960c20b3c225c07297cd35af.json",
+      "spec_sha256": "4c595d15768eb842d74ba1401b06bd21dc7095c981f6f98267c971342b90ff12",
+      "status": "PENDING_SEPARATE_GPU_AUTHORIZATION"
+    },
+    "G2_partial_2/fold_4/seed_2718": {
+      "fold_manifest_sha256": "3d63f4f306595402a814538a4edd4e5abe6ac305cd606e9343faa7cb7d487ac1",
+      "run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\runs\\G2_partial_2\\fold_4\\seed_2718",
+      "spec_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\cell_specs\\ac33a4eef2097ce7091b4173d8794252c14fceadb67e8e4e583ecb181c03dd57.json",
+      "spec_sha256": "c122c9b4de1a18715982bc1d375f36d5c2d06105eb00307ce3107a475bbafb28",
+      "status": "PENDING_SEPARATE_GPU_AUTHORIZATION"
+    },
+    "G2_partial_2/fold_5/seed_2718": {
+      "fold_manifest_sha256": "32a5754d8a3b30adad85773c93a8dc4c56a9844fc4f7c13c17e943b2d1ca5d84",
+      "run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\runs\\G2_partial_2\\fold_5\\seed_2718",
+      "spec_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\cell_specs\\560cdf4adbf2644e95c6d0d958f8e327b162eb07e2bae652a8817b088f613065.json",
+      "spec_sha256": "5b37119ddf138090acf60f3a87b366fe8a246ae829cff074ff1e6572443e711a",
+      "status": "PENDING_SEPARATE_GPU_AUTHORIZATION"
+    },
+    "G_partial_4/fold_1/seed_2718": {
+      "failed_at": "2026-10-18T20:39:03.932033+03:00",
+      "fold_manifest_sha256": "43c06bb7e074b75c9aaf4f22dc965191f242e96cba77a67d2abe08acabadd162",
+      "run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\runs\\G_partial_4\\fold_1\\seed_2718",
+      "spec_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\cell_specs\\325c0bbdd9135d654ffd28fb9a660c5826e2fcd0d5577ff42f7ff11336a69067.json",
+      "spec_sha256": "81df43754773fe0e30aee2274c9d70dde5cd3db61bc6201699b8e7379e462e6b",
+      "started_at": "2026-10-18T20:38:59.925967+03:00",
+      "status": "FAILED_NO_AUTOMATIC_RETRY"
+    },
+    "G_partial_4/fold_2/seed_2718": {
+      "fold_manifest_sha256": "3b838bd925146f934a629398305a3b0ad4dfd4d7ddf84393252c244565076a42",
+      "run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\runs\\G_partial_4\\fold_2\\seed_2718",
+      "spec_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\cell_specs\\41bacb7fe8fad68b80635eb37566311661453ab97184f45554f2dd6dcfbb0eec.json",
+      "spec_sha256": "23775c4bd582481da1511259591b7c15b13ec7b50bbf0c24b4544ec499d42fdc",
+      "status": "PENDING_SEPARATE_GPU_AUTHORIZATION"
+    },
+    "G_partial_4/fold_3/seed_2718": {
+      "fold_manifest_sha256": "26535504f03fa1fd9d46cc8eea4a6aeadb3496b90cc040eb00a4a14b0fede22b",
+      "run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\runs\\G_partial_4\\fold_3\\seed_2718",
+      "spec_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\cell_specs\\f5d18540a86b6e48e625301b6100c637a185c03f5c3ad29dec8f4003d9bc573c.json",
+      "spec_sha256": "d21add9e1b297d929b554e0a537ec01409922848eb5ab0e8f58a2c39cda95d4e",
+      "status": "PENDING_SEPARATE_GPU_AUTHORIZATION"
+    },
+    "G_partial_4/fold_4/seed_2718": {
+      "fold_manifest_sha256": "3d63f4f306595402a814538a4edd4e5abe6ac305cd606e9343faa7cb7d487ac1",
+      "run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\runs\\G_partial_4\\fold_4\\seed_2718",
+      "spec_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\cell_specs\\4143e3b12e7a0551fc7a10b87b0f674fef86159001e7109193389ba99128a407.json",
+      "spec_sha256": "316ade7c95e8a9c1291bdd670f79b5a2aad7da4c9785fde2baf0cb72c118d63c",
+      "status": "PENDING_SEPARATE_GPU_AUTHORIZATION"
+    },
+    "G_partial_4/fold_5/seed_2718": {
+      "fold_manifest_sha256": "32a5754d8a3b30adad85773c93a8dc4c56a9844fc4f7c13c17e943b2d1ca5d84",
+      "run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\runs\\G_partial_4\\fold_5\\seed_2718",
+      "spec_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\cell_specs\\c23eefdbc1719fc4679b880cd5c0dfc8489ad22ee2c051bd4b046b82670b9473.json",
+      "spec_sha256": "a390d091357008e100bba1271ba4de28bdae23db206a31fff811dd54ccdd1ffd",
+      "status": "PENDING_SEPARATE_GPU_AUTHORIZATION"
+    }
+  },
+  "preflight_blocker": {
+    "automatic_retry": false,
+    "log_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\logs\\fold_3_seed_2718.stderr.log",
+    "process": "C:\\Users\\mosta\\AppData\\Local\\Programs\\Ollama\\lib\\ollama\\llama-server.exe",
+    "process_id": 24340,
+    "stage": "gpu_preflight",
+    "training_cells_started": 0
+  },
+  "protocol_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\protocols\\recall_improvement_protocol_v2.json",
+  "protocol_sha256": "e2c0d0feeb05d0e6f49b051690ba6eb598b17a815e46747cab820be40363f3c1",
+  "remaining_cells_not_started": 14,
+  "reused_v1_runs": [
+    {
+      "cell_id": "B_nested_threshold_calibration/outer_1_inner_1",
+      "executed_under_protocol": "recall_improvement_study_v1",
+      "status": "REUSED_BY_REFERENCE_AFTER_COMPATIBILITY_CHECK",
+      "v1_run_manifest_sha256": "27dbc06657ac9a93293fa6a1fa8594fa7997c3bf65b885c1e516c6af6279475b",
+      "v1_run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v1\\runs\\B_nested_threshold_calibration\\outer_1_inner_1"
+    },
+    {
+      "cell_id": "B_nested_threshold_calibration/outer_1_inner_2",
+      "executed_under_protocol": "recall_improvement_study_v1",
+      "status": "REUSED_BY_REFERENCE_AFTER_COMPATIBILITY_CHECK",
+      "v1_run_manifest_sha256": "d412660e368933e803c241b377210d97a9437a43331db82518e83eeef59775bf",
+      "v1_run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v1\\runs\\B_nested_threshold_calibration\\outer_1_inner_2"
+    },
+    {
+      "cell_id": "B_nested_threshold_calibration/outer_1_inner_3",
+      "executed_under_protocol": "recall_improvement_study_v1",
+      "status": "REUSED_BY_REFERENCE_AFTER_COMPATIBILITY_CHECK",
+      "v1_run_manifest_sha256": "0020f6bf79b66ad4cb03e3327f999961685760ef4c86224fe50c6d3acbbbf93d",
+      "v1_run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v1\\runs\\B_nested_threshold_calibration\\outer_1_inner_3"
+    },
+    {
+      "cell_id": "B_nested_threshold_calibration/outer_2_inner_1",
+      "executed_under_protocol": "recall_improvement_study_v1",
+      "status": "REUSED_BY_REFERENCE_AFTER_COMPATIBILITY_CHECK",
+      "v1_run_manifest_sha256": "cf13b77f73168ff135af2943df898667aeee20291d14bd3c38eb836f7daebbe2",
+      "v1_run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v1\\runs\\B_nested_threshold_calibration\\outer_2_inner_1"
+    },
+    {
+      "cell_id": "B_nested_threshold_calibration/outer_2_inner_2",
+      "executed_under_protocol": "recall_improvement_study_v1",
+      "status": "REUSED_BY_REFERENCE_AFTER_COMPATIBILITY_CHECK",
+      "v1_run_manifest_sha256": "b41f72be3e37b05fc39599ac4015bcf41988f0a6b1c6fc82965c636f95bd8911",
+      "v1_run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v1\\runs\\B_nested_threshold_calibration\\outer_2_inner_2"
+    },
+    {
+      "cell_id": "B_nested_threshold_calibration/outer_2_inner_3",
+      "executed_under_protocol": "recall_improvement_study_v1",
+      "status": "REUSED_BY_REFERENCE_AFTER_COMPATIBILITY_CHECK",
+      "v1_run_manifest_sha256": "e7fbcad89af353c70f6e2e336e2b6931d03db447f3bea720220be44ef04414b8",
+      "v1_run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v1\\runs\\B_nested_threshold_calibration\\outer_2_inner_3"
+    },
+    {
+      "cell_id": "B_nested_threshold_calibration/outer_3_inner_1",
+      "executed_under_protocol": "recall_improvement_study_v1",
+      "status": "REUSED_BY_REFERENCE_AFTER_COMPATIBILITY_CHECK",
+      "v1_run_manifest_sha256": "8122ff3a442e152d85a71b3db589357132fab8bb8e5e3f516a8ab788fd2defde",
+      "v1_run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v1\\runs\\B_nested_threshold_calibration\\outer_3_inner_1"
+    },
+    {
+      "cell_id": "B_nested_threshold_calibration/outer_3_inner_2",
+      "executed_under_protocol": "recall_improvement_study_v1",
+      "status": "REUSED_BY_REFERENCE_AFTER_COMPATIBILITY_CHECK",
+      "v1_run_manifest_sha256": "c0d6a6081b6dc5db66a54915464cc67d351fa0b015c0c093f5d161049eaa15bf",
+      "v1_run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v1\\runs\\B_nested_threshold_calibration\\outer_3_inner_2"
+    },
+    {
+      "cell_id": "B_nested_threshold_calibration/outer_3_inner_3",
+      "executed_under_protocol": "recall_improvement_study_v1",
+      "status": "REUSED_BY_REFERENCE_AFTER_COMPATIBILITY_CHECK",
+      "v1_run_manifest_sha256": "81962ac09c1e019125823e95208225fbe1d8733b8c0f43ca59aaaaa48738ea70",
+      "v1_run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v1\\runs\\B_nested_threshold_calibration\\outer_3_inner_3"
+    },
+    {
+      "cell_id": "B_nested_threshold_calibration/outer_4_inner_1",
+      "executed_under_protocol": "recall_improvement_study_v1",
+      "status": "REUSED_BY_REFERENCE_AFTER_COMPATIBILITY_CHECK",
+      "v1_run_manifest_sha256": "8a078de8155abbeae7e3113e42aa70ccd0c4f4038e1ece62ff7f773caabc3e1b",
+      "v1_run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v1\\runs\\B_nested_threshold_calibration\\outer_4_inner_1"
+    },
+    {
+      "cell_id": "B_nested_threshold_calibration/outer_4_inner_2",
+      "executed_under_protocol": "recall_improvement_study_v1",
+      "status": "REUSED_BY_REFERENCE_AFTER_COMPATIBILITY_CHECK",
+      "v1_run_manifest_sha256": "d2c980f2cfbbfef3a1036e5f6d110bc75189737e17e987b5238dfe631caed015",
+      "v1_run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v1\\runs\\B_nested_threshold_calibration\\outer_4_inner_2"
+    },
+    {
+      "cell_id": "B_nested_threshold_calibration/outer_4_inner_3",
+      "executed_under_protocol": "recall_improvement_study_v1",
+      "status": "REUSED_BY_REFERENCE_AFTER_COMPATIBILITY_CHECK",
+      "v1_run_manifest_sha256": "1f863fc477a357338ee2719b9f9ef81afb5e159f5b4cb72681903a15945be25e",
+      "v1_run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v1\\runs\\B_nested_threshold_calibration\\outer_4_inner_3"
+    },
+    {
+      "cell_id": "B_nested_threshold_calibration/outer_5_inner_1",
+      "executed_under_protocol": "recall_improvement_study_v1",
+      "status": "REUSED_BY_REFERENCE_AFTER_COMPATIBILITY_CHECK",
+      "v1_run_manifest_sha256": "e65667db1c34ad7c61dde115b849ee4dafceb29aa0e83b67793663458dc32974",
+      "v1_run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v1\\runs\\B_nested_threshold_calibration\\outer_5_inner_1"
+    },
+    {
+      "cell_id": "B_nested_threshold_calibration/outer_5_inner_2",
+      "executed_under_protocol": "recall_improvement_study_v1",
+      "status": "REUSED_BY_REFERENCE_AFTER_COMPATIBILITY_CHECK",
+      "v1_run_manifest_sha256": "6077f87856affd1ed10e5470a8c1d6d0743afb28c0690ceeac556eb556998847",
+      "v1_run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v1\\runs\\B_nested_threshold_calibration\\outer_5_inner_2"
+    },
+    {
+      "cell_id": "B_nested_threshold_calibration/outer_5_inner_3",
+      "executed_under_protocol": "recall_improvement_study_v1",
+      "status": "REUSED_BY_REFERENCE_AFTER_COMPATIBILITY_CHECK",
+      "v1_run_manifest_sha256": "d24995188359bd3d515d9eb21480b67a7d2ed4c920822d379efccf73d2bbd8ae",
+      "v1_run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v1\\runs\\B_nested_threshold_calibration\\outer_5_inner_3"
+    },
+    {
+      "cell_id": "C_local_context/fold_1/seed_2718",
+      "executed_under_protocol": "recall_improvement_study_v1",
+      "status": "REUSED_BY_REFERENCE_AFTER_COMPATIBILITY_CHECK",
+      "v1_run_manifest_sha256": "a3403f46929cb3977c203fbb729782604d696f04239cfa794e857221669a3067",
+      "v1_run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v1\\runs\\C_local_context\\fold_1\\seed_2718"
+    },
+    {
+      "cell_id": "C_local_context/fold_2/seed_2718",
+      "executed_under_protocol": "recall_improvement_study_v1",
+      "status": "REUSED_BY_REFERENCE_AFTER_COMPATIBILITY_CHECK",
+      "v1_run_manifest_sha256": "93ec3d92a4afa199445c8a419f673188d66d72805e02c55ed1cc82818c58e916",
+      "v1_run_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v1\\runs\\C_local_context\\fold_2\\seed_2718"
+    }
+  ],
+  "schema_version": 2,
+  "source_snapshot_sha256": "a849fe5cf7df945ca7443d7de91f1a0c5501eca712882347aab01862c7acf973",
+  "stages": {
+    "B_nested_threshold_calibration": "REUSED_FROM_V1",
+    "C_local_context": "3_PENDING_V2",
+    "D_focal_loss": "5_PENDING_V2",
+    "E_error_analysis": "V1_OUTPUTS_PRESERVED_FOR_COMPATIBILITY_REVIEW",
+    "G2_partial_2": "5_PENDING_V2",
+    "G_partial_4": "5_PENDING_V2"
+  },
+  "study_id": "recall_improvement_study_v2"
+}

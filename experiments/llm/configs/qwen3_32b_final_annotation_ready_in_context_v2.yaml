@@ -1,0 +1,60 @@
+experiment_name: qwen3-32b-final-annotation-ready-in-context-v2
+parameter_updates: false
+dataset_dir: corpus/processed/llm_final_annotation_ready/v1/development
+development_train_sha256: 3e03bd2b1c90530a51a1804c6104c402e4560f1e9dc5a7ef06c96eb50865be18
+source_annotation: results/annotation/final_annotation_ready.csv
+source_annotation_sha256: c20959acc2db8345c90ee06a71357aaac161b178b240495e516e4710405b2712
+variant: local_context
+prompt_contract: ordinary_engineer_strict_v2
+label_contract:
+  column: final_label
+  provenance: human annotation supported by two AI models
+  human_annotation_involved: true
+  independent_human_verification: false
+  operational_reference_not_external_ground_truth: true
+  excluded_unresolved_item_ids: ['2161']
+model:
+  provider: ollama
+  name: qwen3:32b
+  digest: 030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840
+  parameter_size: 32.8B
+  quantization: Q4_K_M
+ollama:
+  base_url: http://127.0.0.1:11434
+  timeout_seconds: 900
+  keep_alive: 30m
+  think: false
+  temperature: 0.0
+  seed: 20261019
+  num_ctx: 8192
+  num_predict: 8
+  top_logprobs: 20
+  max_retries: 1
+in_context:
+  shot_counts: [8, 16, 24]
+  shot_compositions:
+    '8': {positive: 1, negative: 7}
+    '16': {positive: 1, negative: 15}
+    '24': {positive: 2, negative: 22}
+  demonstration_selection: fold_safe_v1_hard_negatives_manual_first_positives_v1
+  demonstration_seed: 20261019
+  hard_negative_scores: experiments/llm/results/qwen3-32b-final-annotation-ready-v1/analysis-final/oof_predictions_8_shot.csv
+  hard_negative_scores_sha256: d371c7a1dd560d7cfdae923adf7e2019cd8314d900910a70bf053796738e036c
+selection:
+  primary_metric: pr_auc
+  selection_rule: highest_mean_fold_pr_auc_with_one_se_preference_for_fewer_shots
+  threshold_objective: f2
+  threshold_objectives: [f1, f2, balanced_accuracy]
+  threshold_protocol: leave_one_grouped_fold_out_cross_fitted_development_estimate
+  cross_validation: grouped_document_families_only
+  n_splits: 5
+  fold_assignment: corpus/processed/llm_final_annotation_ready/v1/development/folds_v1.json
+  fold_assignment_sha256: 7d72c43ea1ffc3ed940c01118777c05d13d28599a48581c46ecab249cce08938
+  validation_role: reserved_tcp_not_used_for_prompt_model_or_threshold_selection
+  test_role: sealed_dns_final_evaluation_only
+comparison:
+  baseline_name: qwen3_32b_in_context_v1
+  baseline_analysis: experiments/llm/results/qwen3-32b-final-annotation-ready-v1/analysis-final/analysis.json
+  baseline_analysis_sha256: 60cedba5b386306be8d21832c2f1ae29d9accfb19239fae247ca31978d85d3dc
+  baseline_metrics: experiments/llm/results/qwen3-32b-final-annotation-ready-v1/analysis-final/pooled_metrics.csv
+  baseline_metrics_sha256: 72379076cc3b7793b71c1b4b92dbe27861dd9cfa31ce0ecc18943c8d222e0748

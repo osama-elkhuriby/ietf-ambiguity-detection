@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "protocol_id": "original_annotation_experiment_1_fp32_v1",
+  "base_config_path": "experiments/transformer_final/original_annotation/configs/experiment_v1.json",
+  "base_config_sha256": "5199b44f085543e7b2e961df9c9c650b213dc0b4ed1c0c74842fdebc1c071d7f",
+  "condition_set": {
+    "A1": "standard_ce",
+    "A2": "weighted_ce"
+  },
+  "dataset": {
+    "source_path": "results/annotation/final_annotation (Copy 2).csv",
+    "source_sha256": "a34df11a87d36dfd14c7d251d96a52a0cac8bb2016db6e4d0475a858f8b382cb",
+    "effective_dataset_path": "experiments/transformer_final/original_annotation/manifests/dataset_v1/dataset.csv",
+    "effective_dataset_sha256": "722874dba5d1a39f1c0e944acd11d012f03c9c30c6d385800d5d7355726606ab",
+    "dataset_manifest_sha256": "e3ad1371526d24067ceb59f18ad899ad71d0b00f2b574e05a122bc3991c4eb69",
+    "fold_source_path": "experiments/transformer/configs/folds_v1.json",
+    "fold_source_sha256": "c04dc8424ed96486f8521ef57d17e4b503d2c3f41bb116edeeb9535073dd7884",
+    "fold_manifest_sha256": {
+      "1": "949036f405d8b32c334ce53287c3ad2d974b424143ad5a0bd3a9b2205578a8ea",
+      "2": "97c08e4395d29b3ee39b7f33581da4dfc826b90d0607d8d7a53a6d98ca084209",
+      "3": "35943a0b94cd3ab39fee1adbbbce1a946f75df7f3cf3ed0cc8e7c28da4729e08",
+      "4": "1385d594a0bd811a1990a8e5f6923a2410b191deba4baa31dd9ad49f805f3411",
+      "5": "a54a4b09959235dfe5d9ad7047a94b27f08abe0f86e7396a7c77c9f485690044"
+    },
+    "reserved_families_excluded": [
+      "draft-ietf-tcpm-rfc793bis",
+      "draft-ietf-dnsop-svcb-https"
+    ]
+  },
+  "model": {
+    "repository": "microsoft/deberta-v3-base",
+    "revision": null,
+    "local_path": "D:\\RFC\\models\\deberta-v3-base",
+    "source_sha256": "206ee7bb2c7805bcc8fd3bbbc18a09e185bafc19d4e112f31d4a088136717dd7",
+    "initialization": "fresh_from_same_local_base_for_every_cell",
+    "parameter_storage_dtype": "float32",
+    "forward_precision": "float32_no_autocast",
+    "cross_entropy_input_dtype": "float32"
+  },
+  "training": {
+    "precision": "fp32",
+    "input_mode": "target_only",
+    "max_length": 256,
+    "optimizer": "AdamW",
+    "learning_rate": 0.00001,
+    "weight_decay": 0.01,
+    "scheduler": "linear",
+    "warmup_ratio": 0.1,
+    "epochs": 5,
+    "early_stopping": false,
+    "train_batch_size": 8,
+    "eval_batch_size": 16,
+    "gradient_accumulation_steps": 1,
+    "gradient_clip_norm": 1.0,
+    "seeds": [
+      1729,
+      2718,
+      31415
+    ],
+    "folds": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "diagnostic_numerics": true,
+    "diagnostics_affect_updates": false
+  },
+  "environment": {
+    "interpreter": "C:\\Users\\mosta\\.conda\\envs\\ietf-ambiguity-detection\\python.exe",
+    "python": "3.11.16",
+    "torch": "2.12.0",
+    "transformers": "5.16.1",
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "scikit-learn": "1.9.0",
+    "tokenizers": "0.23.1",
+    "sentencepiece": "0.2.1",
+    "safetensors": "0.8.0",
+    "cuda_runtime": "13.0",
+    "cudnn": 92501,
+    "gpu": "NVIDIA RTX 5000 Ada Generation",
+    "driver": "596.59"
+  }
+}

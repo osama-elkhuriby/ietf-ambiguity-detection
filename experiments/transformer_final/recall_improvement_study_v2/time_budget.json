@@ -1,0 +1,82 @@
+{
+  "actual": {
+    "cell_ids": {
+      "C_local_context/fold_4/seed_2718": {
+        "completed": true,
+        "elapsed_seconds": 364.23103370005265
+      },
+      "C_local_context/fold_5/seed_2718": {
+        "completed": true,
+        "elapsed_seconds": 348.3875002999557
+      },
+      "G_partial_4/fold_1/seed_2718": {
+        "completed": false,
+        "elapsed_seconds": 7.213678
+      },
+      "fold3-local-context-20261018T201544+0300": {
+        "completed": true,
+        "elapsed_seconds": 406.43231270008255
+      }
+    },
+    "gpu_cell_seconds": 1126.264524700091,
+    "gpu_cells_completed": 3,
+    "gpu_cells_started": 4
+  },
+  "authorization_history": [
+    {
+      "authorization_granted_at": "2026-10-18T20:15:42.943133+03:00",
+      "authorization_window_deadline": "2026-10-19T02:15:42.943133+03:00",
+      "authorization_window_start": "2026-10-18T20:15:42.943133+03:00",
+      "budget_seconds": 21600,
+      "session_id": "v2-20261018T201542+0300"
+    }
+  ],
+  "authorization_session_id": "v2-20261018T201542+0300",
+  "authorization_window_deadline": "2026-10-19T02:15:42.943133+03:00",
+  "authorization_window_start": "2026-10-18T20:15:42.943133+03:00",
+  "budget_seconds": 21600,
+  "execution_authorized": false,
+  "observed_baseline_cell_seconds": [
+    284.28007197380066,
+    301.20319414136503,
+    292.9217231273651,
+    291.22837376594543,
+    284.18040442466736
+  ],
+  "planning_estimates": {
+    "context_aware_training": {
+      "basis": "Five baseline cells at 300 seconds each, with 1.5x allowance for longer local-context inputs.",
+      "cells": 5,
+      "seconds": 2250
+    },
+    "focal_loss_training": {
+      "basis": "Five baseline cells at 300 seconds each.",
+      "cells": 5,
+      "seconds": 1500
+    },
+    "nested_calibration_inner_training_cells": {
+      "basis": "Three deterministic family-disjoint GroupKFold inner folds for each of five outer folds, at 300 seconds per cell.",
+      "cells": 15,
+      "seconds": 4500
+    },
+    "partial_2_training": {
+      "basis": "Five baseline cells at 300 seconds each.",
+      "cells": 5,
+      "seconds": 1500
+    },
+    "partial_4_training": {
+      "basis": "Five baseline cells at 300 seconds each.",
+      "cells": 5,
+      "seconds": 1500
+    },
+    "validation_and_reporting": {
+      "basis": "Reserved for protocol checks, artifact validation, comparisons, error analysis, and final report.",
+      "seconds": 2700
+    }
+  },
+  "planning_margin_seconds": 7650,
+  "status": "STOPPED_UNEXPECTED_PROCESS_FAILURE",
+  "authorization_closed_at": "2026-10-18T20:40:14.6091608+03:00",
+  "stop_reason": "G_partial_4/fold_1/seed_2718 failed during optimizer initialization: Partial optimizer input included frozen parameters. No retry was performed.",
+  "study_id": "recall_improvement_study_v2"
+}

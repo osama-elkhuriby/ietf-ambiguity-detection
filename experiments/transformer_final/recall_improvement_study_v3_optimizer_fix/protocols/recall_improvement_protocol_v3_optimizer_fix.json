@@ -1,0 +1,66 @@
+{
+  "dataset_integrity": {
+    "config_sha256": "65e20062e39f3d2fc9f7c290a92e63577afa2cecfde499b7f43417a3f7e17ef3",
+    "dataset_manifest_sha256": "87094485ec829fbfd7d3c19aa9ef70f9424a997cfbec29080a748c0b0bdbf9d0",
+    "effective_dataset_sha256": "a25e99563563f71570e48f63b9515fbb51ff845762ff718763d98e0b3eefae2f",
+    "family_fold_source_sha256": "c04dc8424ed96486f8521ef57d17e4b503d2c3f41bb116edeeb9535073dd7884",
+    "labels": {
+      "negative": 2016,
+      "positive": 126
+    },
+    "outer_fold_manifests_sha256": "fcac1579141f7bf53bfab70fd7163fda995a021bb4a1b48cd7a0dedb36c4c293",
+    "rows": 2142,
+    "source_sha256": "c20959acc2db8345c90ee06a71357aaac161b178b240495e516e4710405b2712"
+  },
+  "optimizer_correction": {
+    "adamw_groups_before_and_after": 1,
+    "adamw_hyperparameters_unchanged": true,
+    "failure": "The adapter filtered requires_grad parameters but rejected the original model.parameters() iterator before constructing AdamW.",
+    "freeze_policy_unchanged": true,
+    "partial_2_trainable": "encoder layers 10-11, pooler, classifier",
+    "partial_4_trainable": "encoder layers 8-11, pooler, classifier",
+    "partial_freeze": "embeddings, shared encoder-level non-layer parameters, and all lower encoder layers remain frozen",
+    "scheduler_unchanged": true
+  },
+  "parent_protocol": {
+    "path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\protocols\\recall_improvement_protocol_v2.json",
+    "sha256": "e2c0d0feeb05d0e6f49b051690ba6eb598b17a815e46747cab820be40363f3c1",
+    "source_snapshot_sha256": "a849fe5cf7df945ca7443d7de91f1a0c5501eca712882347aab01862c7acf973"
+  },
+  "reuse_compatibility": {
+    "compatibility_manifest_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v2\\V1_TO_V2_COMPATIBILITY.json",
+    "compatibility_manifest_sha256": "ca6f783f3ca49867be1edf17e3a352d1ea6c8ea8bd070d2f4098e23c95326527",
+    "nested_calibration_runs_reusable_by_reference": 15,
+    "nested_inner_oof_rows": 8568,
+    "v1_context_folds_reusable_by_reference": [
+      1,
+      2
+    ],
+    "v2_context_folds_reusable_by_reference": [
+      3,
+      4,
+      5
+    ],
+    "v1_runs_reused_by_reference": 17
+  },
+  "schema_version": 1,
+  "scientific_settings_sha256": "174524ec07bad8b4f30a850bbca00de4c18d03870a9a744253f3530d5cb9f011",
+  "source_snapshot": {
+    "parent_v2_protocol_sha256": "e2c0d0feeb05d0e6f49b051690ba6eb598b17a815e46747cab820be40363f3c1",
+    "parent_v2_source_snapshot_sha256": "a849fe5cf7df945ca7443d7de91f1a0c5501eca712882347aab01862c7acf973",
+    "v1_cell_launcher_sha256": "a36bc91f14f4735105ec124bb40dd2efb1b4c9704d857be9ecc25620b9ace036",
+    "v1_study_protocol_sha256": "40de483e593148705fc60d2fef4c5d02f02a11d84331c2e3ef14e2feec8ca8b0",
+    "v1_study_runner_sha256": "6235a78724dbe49b73e2679ba02b15e9009a4688992b92b6add1869315d5458b",
+    "v3_runner_sha256": "006b7af1325a7b9cc4a207ac102160c4403ed3f193cb099c79528911b9da00e9"
+  },
+  "source_snapshot_sha256": "22af9f00506241a4d78918b3b1fc65f1a787281a685c966fc881df99671ee8c4",
+  "study_id": "recall_improvement_study_v3_optimizer_fix",
+  "training": {
+    "condition": "A2",
+    "epochs": 5,
+    "learning_rate": 1e-05,
+    "precision": "fp32",
+    "seed": 2718,
+    "weight_decay": 0.01
+  }
+}

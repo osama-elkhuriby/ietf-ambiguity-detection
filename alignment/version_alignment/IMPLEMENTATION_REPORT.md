@@ -69,7 +69,7 @@ existing corpus or refinement commands.
 | `validate_run.py` | Read-only hash, coverage, lineage, temporal and window audit; serialized-tokenizer regression and full validation. |
 | `README.md`, `SCHEMA.md`, `LEAKAGE.md`, `IMPLEMENTATION_REPORT.md` | Usage, configuration, contracts, leakage policy, results and limitations. |
 | `eval/alignment_metrics.py` | Workload reports and optional reviewed-scope candidate recall/link metrics; synthetic evaluation tests. |
-| `experiments/pilot/docs/alignment_annotation_guide_v1.md` | Alignment review and correction instructions; limits of sampled gold. |
+| Former pilot alignment annotation guide | Retired on 2026-10-13 after the unused pilot experiment was removed; current review limitations are documented in the alignment README. |
 | `tests/test_alignment_contracts.py` | Schema, configuration and invalid-relation tests. |
 | `tests/test_alignment_embeddings.py` | Windows, real model, caches, TLS-08 and padding-audit regressions. |
 | `tests/test_alignment_inputs.py` | Timeline/discovery and missing-input preparation tests. |

@@ -1,8 +1,9 @@
 # Fine-tuned transformer
 
-The transformer stage is a leakage-controlled binary ambiguity classifier. Its
-current labels are LLM-consensus silver labels, so results measure agreement with
-that silver source rather than human-verified ambiguity-detection accuracy.
+The transformer stage is a leakage-controlled binary ambiguity classifier. A
+multi-annotator human set is not currently feasible, so frozen LLM-consensus labels
+are the project's operational proxy gold standard. Results measure agreement with
+that reference source; they are not human-verified ambiguity-detection accuracy.
 
 ## Current implementation status
 
@@ -151,3 +152,33 @@ across seeds, applies the pre-registered one-standard-error selection rule, repo
 the three required weighting contrasts and direct TF-IDF comparisons with paired-row
 and section-cluster intervals, and records 90%-recall referral rates. ECE and Brier
 scores are explicitly secondary because these probabilities have not been calibrated.
+
+## Step 4 soft-target/context factorial
+
+Build the development-only soft-target and fold-specific context-sanitation artifacts
+before training:
+
+```powershell
+python -m models.transformer.factorial_artifacts
+```
+
+Soft targets use the positive fraction among valid rationales-free votes, with at
+least two valid votes required. Context sanitation blanks a previous/next clause when
+it exactly or nearly reproduces a target in another nested-CV role. Neither votes nor
+vote fractions become input features. The trainer keeps checkpoint selection on hard
+inner-family labels so all four conditions use the same selection target.
+
+Run the three missing conditions (the Step 3 class-weighted target-only condition is
+reused as the control), then create the matched-data TF-IDF comparator and analysis:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass `
+  -File scripts/run_transformer_factorial.ps1
+python -m models.classical.matched_tfidf
+python -m models.transformer.factorial_analysis
+```
+
+The factorial compares hard/soft targets crossed with target-only/local-context input
+at LR 1e-5, fp32, three seeds, and five frozen folds. DNS and TCP are not read during
+this step. Selection uses seed-averaged mean-fold PR-AUC and the pre-registered
+one-standard-error simplicity rule; pooled performance is supporting evidence only.

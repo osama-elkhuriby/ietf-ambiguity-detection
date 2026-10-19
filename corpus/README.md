@@ -85,10 +85,6 @@ python corpus/fetch_errata.py --verified-technical --refresh
 python corpus/fetch_errata.py --verified-technical 9000 9460
 ```
 
-**Pilot mirror:** pass `--out-dir experiments/pilot/data/raw` (alias: `--output-dir`) to
-`fetch_datatracker.py` to keep a copy under the pilot tree; metadata still updates
-`corpus/metadata/drafts.json`.
-
 Manifest schemas: `metadata/README.md`. Raw plaintext under `corpus/raw/` is **committed**
 so collaborators can work offline; only re-fetchable caches (RFC index XML, bulk errata
 JSON, Datatracker SQLite) are gitignored. See `corpus/raw/README.md`.

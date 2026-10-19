@@ -1,0 +1,63 @@
+experiment_name: qwen3-32b-final-annotation-ready-hybrid-v3
+experiment_type: nested_target_lexical_qwen_zero_shot_hybrid
+parameter_updates:
+  qwen3_32b: false
+  lexical_classifier: true
+dataset_dir: corpus/processed/llm_final_annotation_ready/v1/development
+development_train_sha256: 3e03bd2b1c90530a51a1804c6104c402e4560f1e9dc5a7ef06c96eb50865be18
+source_annotation: results/annotation/final_annotation_ready.csv
+source_annotation_sha256: c20959acc2db8345c90ee06a71357aaac161b178b240495e516e4710405b2712
+label_contract:
+  column: final_label
+  provenance: human annotation supported by two AI models
+  independent_human_verification: false
+  operational_reference_not_external_ground_truth: true
+base_signal:
+  model: qwen3:32b
+  model_digest: 030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840
+  condition: zero_shot
+  prompt_contract: ordinary_engineer_v1
+  label_independent: true
+  predictions: experiments/llm/results/qwen3-32b-final-annotation-ready-v1/analysis-final/oof_predictions_zero_shot.csv
+  predictions_sha256: b10761da481d66a9d2adb7408e92d7d932451cdcfeb937def61e333fb229cc28
+lexical_model:
+  input_field: target_clause
+  classifier: logistic_regression
+  solver: liblinear
+  class_weight: balanced
+  max_iter: 3000
+  random_seed: 20261019
+  word_tfidf:
+    ngram_range: [1, 2]
+    min_df: 2
+    max_df: 0.995
+    max_features: 30000
+    sublinear_tf: true
+    strip_accents: unicode
+  character_tfidf:
+    analyzer: char_wb
+    ngram_range: [3, 5]
+    min_df: 3
+    max_features: 30000
+    sublinear_tf: true
+selection:
+  primary_metric: pr_auc
+  protocol: nested_grouped_cross_validation
+  outer_fold_assignment: corpus/processed/llm_final_annotation_ready/v1/development/folds_v1.json
+  outer_fold_assignment_sha256: 7d72c43ea1ffc3ed940c01118777c05d13d28599a48581c46ecab249cce08938
+  n_outer_folds: 5
+  inner_folds: remaining_frozen_document_family_folds
+  c_grid: [0.03, 0.1, 0.3, 1.0, 3.0]
+  lexical_weight_grid: [0.5, 0.6, 0.7, 0.8, 0.85, 0.9, 0.95, 1.0]
+  blend: weighted_log_odds
+  threshold_objectives: [f1, f2, balanced_accuracy]
+  threshold_protocol: selected_inner_oof_predictions_applied_to_outer_fold
+  validation_role: reserved_tcp_not_opened
+  test_role: sealed_dns_not_opened
+comparison:
+  v1_metrics: experiments/llm/results/qwen3-32b-final-annotation-ready-v1/analysis-final/pooled_metrics.csv
+  v1_metrics_sha256: 72379076cc3b7793b71c1b4b92dbe27861dd9cfa31ce0ecc18943c8d222e0748
+  v2_metrics: experiments/llm/results/qwen3-32b-final-annotation-ready-v2/analysis-final/pooled_raw_metrics.csv
+  v2_metrics_sha256: 459c7aa1aefb3c90800bdb2216e6a0cdbdf6f7fec4a7e54f0d67bf12d623ba28
+reporting:
+  development_result_status: adaptive_exploratory_not_final_test_evidence

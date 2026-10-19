@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\RFC\ietf-ambiguity-detection\experiments\transformer_final\recall_improvement_study_v1\cell_launcher.py", line 324, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "D:\RFC\ietf-ambiguity-detection\experiments\transformer_final\recall_improvement_study_v1\cell_launcher.py", line 319, in main
+    print(execute_cell(args.spec.resolve()), flush=True)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RFC\ietf-ambiguity-detection\experiments\transformer_final\recall_improvement_study_v1\cell_launcher.py", line 231, in execute_cell
+    output = train.run_cell(
+             ^^^^^^^^^^^^^^^
+  File "D:\RFC\ietf-ambiguity-detection\models\transformer_final\train.py", line 602, in run_cell
+    fitting, evaluation, fold_manifest, dataset_manifest, dataset_dir = load_fold_data(
+                                                                        ^^^^^^^^^^^^^^^
+  File "D:\RFC\ietf-ambiguity-detection\models\transformer_final\train.py", line 498, in load_fold_data
+    fitting = apply_context_sanitization(fitting, fold_manifest, role="fitting")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RFC\ietf-ambiguity-detection\models\transformer_final\leakage.py", line 345, in apply_context_sanitization
+    raise RuntimeError(
+RuntimeError: Context policy references a missing fitting record: 028df5d9eb218f0d4385705d8317a75b3433a56b1b9b4f941d835c0c623aec20

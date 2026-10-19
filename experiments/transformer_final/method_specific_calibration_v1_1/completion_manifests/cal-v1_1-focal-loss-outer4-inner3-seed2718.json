@@ -1,0 +1,67 @@
+{
+  "attempt_id": "cal-v1_1-focal-loss-outer4-inner3-seed2718",
+  "cell_id": "focal_loss/outer_4/inner_3/seed_2718",
+  "completed_at": "2026-10-19T01:00:41.649701+03:00",
+  "elapsed_seconds": 343.18700000003446,
+  "gpu_preflight": {
+    "active_compute_processes": [],
+    "free_memory_mib": 30823,
+    "minimum_free_memory_mib": 18000,
+    "name": "NVIDIA RTX 5000 Ada Generation"
+  },
+  "origin": "V1_1_NEW_GPU_EXECUTION",
+  "peak_gpu_memory_allocated_mb": 3958.3662109375,
+  "peak_gpu_memory_reserved_mb": 5532.0,
+  "protocol_sha256": "57c04d15cb3c586c52bc7f59eede3893339f3c67014fdf3e50ccfb95d8fcda4c",
+  "reused": false,
+  "run_manifest_sha256": "b823dd12e98b5f21f6734b91c64bc474bfab359c47a98c33e3f91c850233d227",
+  "semantic_validation": {
+    "audit_sha256": "0faa8ccd019bb6368a0d6568cdb46ed2563faf766c337d5f3b946a2118d435e6",
+    "context_sanitizations": [
+      {
+        "field": "previous_clause",
+        "reasons": [
+          "matches_fitting_target:f4f1bfba6ef051076333e37e714671d9fa105ceb0eced066a2b1fa9312909f6d"
+        ],
+        "record_id": "4f83ea63063f6b9618425d2f7af840ea827b90018fa290eff29c2e27185c0c0e",
+        "role": "evaluation"
+      }
+    ],
+    "custom_inner_split_sha256": "98371b995b6a68ab0f566e007948cbba3b186db7fbf3c1a1a8d53dd1bf1eddd7",
+    "fitting_exclusions": [],
+    "fitting_families": [
+      "draft-ietf-httpbis-semantics",
+      "draft-ietf-quic-recovery",
+      "draft-ietf-quic-transport"
+    ],
+    "fitting_rows": 1340,
+    "leakage_audit_counts": {
+      "cross_fold_bcp14_skeleton_conflicts": 0,
+      "cross_fold_document_overlaps": 0,
+      "cross_fold_lineage_conflicts": 0,
+      "cross_fold_target_context_overlaps": 2,
+      "exact_target_duplicates_all": 1,
+      "exact_target_duplicates_cross_fold": 0,
+      "families_assigned_to_multiple_folds": 0,
+      "near_cross_fold_targets": 1,
+      "targets_with_bcp14_keyword": 1842
+    },
+    "legacy_fold_file": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\final_annotation_ready_pilot_v1\\manifests\\dataset_v1\\folds\\fold_3.json",
+    "legacy_fold_file_sha256": "4ec2c3cf49a1923442f9812a75396bd5096c4df5771f2d0ae558a4ac80bfbf45",
+    "peak_gpu_memory_allocated_mb": 3958.3662109375,
+    "peak_gpu_memory_reserved_mb": 5532.0,
+    "prediction_rows": 503,
+    "prediction_sha256": "b05ee44b6aab4594fdb1d7c4247b35a5756961feb8ab7269530c98939ef17c86",
+    "run_manifest_sha256": "b823dd12e98b5f21f6734b91c64bc474bfab359c47a98c33e3f91c850233d227",
+    "runtime_seconds": 334.9015727000078,
+    "scoring_families": [
+      "draft-ietf-quic-http",
+      "draft-ietf-quic-tls"
+    ],
+    "scoring_rows": 503
+  },
+  "spec_sha256": "8340b4807cff9f0c6e3959e678b1dfffb39d8686047271774800f491e13f8180",
+  "started_at": "2026-10-19T00:54:58.065715+03:00",
+  "status": "COMPLETE",
+  "training_runtime_seconds": 334.9015727000078
+}

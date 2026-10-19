@@ -1,0 +1,39 @@
+Loading weights:   0%|          | 0/198 [00:00<?, ?it/s]Loading weights: 100%|██████████| 198/198 [00:00<00:00, 45836.86it/s]
+[transformers] [1mDebertaV2ForSequenceClassification LOAD REPORT[0m from: D:\RFC\models\deberta-v3-base
+Key                                     | Status     | 
+----------------------------------------+------------+-
+mask_predictions.classifier.bias        | UNEXPECTED | 
+lm_predictions.lm_head.dense.bias       | UNEXPECTED | 
+mask_predictions.classifier.weight      | UNEXPECTED | 
+lm_predictions.lm_head.bias             | UNEXPECTED | 
+lm_predictions.lm_head.LayerNorm.bias   | UNEXPECTED | 
+lm_predictions.lm_head.dense.weight     | UNEXPECTED | 
+lm_predictions.lm_head.LayerNorm.weight | UNEXPECTED | 
+mask_predictions.LayerNorm.weight       | UNEXPECTED | 
+mask_predictions.dense.weight           | UNEXPECTED | 
+mask_predictions.LayerNorm.bias         | UNEXPECTED | 
+mask_predictions.dense.bias             | UNEXPECTED | 
+classifier.bias                         | MISSING    | 
+pooler.dense.weight                     | MISSING    | 
+pooler.dense.bias                       | MISSING    | 
+classifier.weight                       | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Traceback (most recent call last):
+  File "D:\RFC\ietf-ambiguity-detection\experiments\transformer_final\recall_improvement_study_v2\cell_launcher.py", line 264, in main
+    output = execute_cell(args.spec.resolve())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RFC\ietf-ambiguity-detection\experiments\transformer_final\recall_improvement_study_v2\cell_launcher.py", line 201, in execute_cell
+    output = execute_v1_cell(temp_spec)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RFC\ietf-ambiguity-detection\experiments\transformer_final\recall_improvement_study_v1\cell_launcher.py", line 231, in execute_cell
+    output = train.run_cell(
+             ^^^^^^^^^^^^^^^
+  File "D:\RFC\ietf-ambiguity-detection\models\transformer_final\train.py", line 697, in run_cell
+    optimizer = AdamW(
+                ^^^^^^
+  File "D:\RFC\ietf-ambiguity-detection\experiments\transformer_final\recall_improvement_study_v1\cell_launcher.py", line 182, in adamw_trainable_only
+    raise RuntimeError("Partial optimizer input included frozen parameters")
+RuntimeError: Partial optimizer input included frozen parameters

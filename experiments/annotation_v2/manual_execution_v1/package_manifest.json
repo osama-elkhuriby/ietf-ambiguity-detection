@@ -1,0 +1,63 @@
+{
+  "status": "PREPARED_NOT_EXECUTED",
+  "package_version": "annotation-v2-manual-execution-v1",
+  "prepared_for_date": "2026-10-14",
+  "runtime": {
+    "expected_version": "0.40.4",
+    "executable": "C:/Users/mosta/AppData/Local/OllamaStandalone/v0.40.4/runtime/ollama.exe",
+    "listen_url": "http://127.0.0.1:11435",
+    "original_server_url_to_leave_unchanged": "http://127.0.0.1:11434"
+  },
+  "frozen_experiment": {
+    "config": "experiments/annotation_v2/configs/requested_panel_v2.json",
+    "config_sha256": "c40da4868872b8f9690e0bcfd482efa744030d70f04c0bb102ca05f4e4bf9925",
+    "pilot_allowlist": "experiments/annotation_v2/samples/pilot_sample_12_v1.json",
+    "pilot_allowlist_sha256": "2955788ef80924967e1593918cf804120eb76d8ef4d4e6ef41d3201535334883",
+    "sampling_seed": 20261014
+  },
+  "saved_qwen_evidence": {
+    "path": "corpus/processed/llm_annotations/v2/diagnostics/standalone-v0404-qwen-gpu-verification-20261014/result.json",
+    "sha256": "260144c848738608b23401b71c8a3171baf8dff97040e1be3d3b80b97b883d9e",
+    "expected_model_digest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+    "reuse_only": true
+  },
+  "manual_gemma_verification": {
+    "model": "gemma4:31b",
+    "expected_model_digest": "17ba34c06c801ba22f6047bab21ced9429c6d43e0e42ecf339b0f3e5a61e8d97",
+    "synthetic_requests": 1,
+    "retries": 0,
+    "num_ctx": 16384,
+    "num_predict": 768,
+    "temperature": 0.0,
+    "seed": 20261014,
+    "thinking": false,
+    "timeout_seconds": 300
+  },
+  "blocked_model": {
+    "model": "gpt-oss:120b",
+    "expected_model_digest": "714d86958b6e870a9320e78126ac1ce3477727a1cd9bf7194b8ace0d84c62fd8",
+    "status": "MODEL_BLOCKED_PREFLIGHT",
+    "substitution_allowed": false
+  },
+  "prepared_output_namespace": {
+    "path": "corpus/processed/llm_annotations/v2/manual-standalone-v0404",
+    "dry_run_report": "corpus/processed/llm_annotations/v2/manual-standalone-v0404/dry_run_report.json",
+    "dry_run_report_sha256": "db6d50c6a75dd2a15f0d5060185c26b798609f316957a04304a4672552bff09d",
+    "frozen_context_cells": 24,
+    "rendered_requests": 72,
+    "network_requests_during_preparation": 0
+  },
+  "pilot_bounds": {
+    "lineages": 12,
+    "context_variants": 2,
+    "eligible_models": [
+      "qwen3.5:27b",
+      "gemma4:31b"
+    ],
+    "eligible_cells": 48,
+    "maximum_first_attempts": 48,
+    "maximum_retries_per_cell": 1,
+    "maximum_requests_for_eligible_cells": 96,
+    "frozen_global_pilot_request_ceiling": 144
+  }
+}

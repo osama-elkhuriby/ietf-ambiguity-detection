@@ -1,0 +1,158 @@
+{
+  "annotated_cohort_omissions": 121,
+  "blank_target_clauses": 0,
+  "canonical_family_counts": {
+    "draft-ietf-6man-rfc2460bis": 1,
+    "draft-ietf-dnsop-svcb-https": 151,
+    "draft-ietf-httpbis-cache-header": 5,
+    "draft-ietf-httpbis-http2bis": 239,
+    "draft-ietf-httpbis-semantics": 385,
+    "draft-ietf-quic-http": 314,
+    "draft-ietf-quic-recovery": 162,
+    "draft-ietf-quic-tls": 189,
+    "draft-ietf-quic-transport": 794,
+    "draft-ietf-tcpm-rfc793bis": 131,
+    "draft-ietf-tls-tls13": 54
+  },
+  "document_versions": 178,
+  "duplicate_item_ids": 0,
+  "effective_cohort_rows": 2142,
+  "effective_families": [
+    "draft-ietf-6man-rfc2460bis",
+    "draft-ietf-httpbis-cache-header",
+    "draft-ietf-httpbis-http2bis",
+    "draft-ietf-httpbis-semantics",
+    "draft-ietf-quic-http",
+    "draft-ietf-quic-recovery",
+    "draft-ietf-quic-tls",
+    "draft-ietf-quic-transport",
+    "draft-ietf-tls-tls13"
+  ],
+  "effective_no": 2016,
+  "effective_prevalence": 0.058823529411764705,
+  "effective_yes": 126,
+  "excluded_unresolved_count": 1,
+  "final_source_counts": {
+    "manual_conflict_verdict": 289,
+    "model_agreement": 2135,
+    "unresolved": 1
+  },
+  "final_status_counts": {
+    "resolved": 2424,
+    "unresolved_blank_manual_verdict": 1
+  },
+  "folds": [
+    {
+      "candidate_fitting_rows": 1349,
+      "context_fields_sanitized": 3,
+      "excluded_fitting_rows": 1,
+      "fitting_positive_labels": 79,
+      "fitting_rows": 1348,
+      "fold": 1,
+      "held_out_families": [
+        "draft-ietf-quic-transport"
+      ],
+      "held_out_positive_labels": 46,
+      "held_out_rows": 793,
+      "scoring_rows": 793
+    },
+    {
+      "candidate_fitting_rows": 1757,
+      "context_fields_sanitized": 0,
+      "excluded_fitting_rows": 0,
+      "fitting_positive_labels": 94,
+      "fitting_rows": 1757,
+      "fold": 2,
+      "held_out_families": [
+        "draft-ietf-httpbis-semantics"
+      ],
+      "held_out_positive_labels": 32,
+      "held_out_rows": 385,
+      "scoring_rows": 385
+    },
+    {
+      "candidate_fitting_rows": 1828,
+      "context_fields_sanitized": 10,
+      "excluded_fitting_rows": 3,
+      "fitting_positive_labels": 116,
+      "fitting_rows": 1825,
+      "fold": 3,
+      "held_out_families": [
+        "draft-ietf-quic-http"
+      ],
+      "held_out_positive_labels": 10,
+      "held_out_rows": 314,
+      "scoring_rows": 314
+    },
+    {
+      "candidate_fitting_rows": 1843,
+      "context_fields_sanitized": 11,
+      "excluded_fitting_rows": 3,
+      "fitting_positive_labels": 108,
+      "fitting_rows": 1840,
+      "fold": 4,
+      "held_out_families": [
+        "draft-ietf-6man-rfc2460bis",
+        "draft-ietf-httpbis-cache-header",
+        "draft-ietf-httpbis-http2bis",
+        "draft-ietf-tls-tls13"
+      ],
+      "held_out_positive_labels": 18,
+      "held_out_rows": 299,
+      "scoring_rows": 299
+    },
+    {
+      "candidate_fitting_rows": 1791,
+      "context_fields_sanitized": 2,
+      "excluded_fitting_rows": 1,
+      "fitting_positive_labels": 105,
+      "fitting_rows": 1790,
+      "fold": 5,
+      "held_out_families": [
+        "draft-ietf-quic-recovery",
+        "draft-ietf-quic-tls"
+      ],
+      "held_out_positive_labels": 20,
+      "held_out_rows": 351,
+      "scoring_rows": 351
+    }
+  ],
+  "label_authority": "final_label is the only binary Yes/No outcome column in the source schema; final_source/final_status are provenance/status fields.",
+  "leakage_audit_counts": {
+    "cross_fold_bcp14_skeleton_conflicts": 0,
+    "cross_fold_document_overlaps": 0,
+    "cross_fold_lineage_conflicts": 0,
+    "cross_fold_target_context_overlaps": 13,
+    "exact_target_duplicates_all": 1,
+    "exact_target_duplicates_cross_fold": 0,
+    "families_assigned_to_multiple_folds": 0,
+    "near_cross_fold_targets": 4,
+    "targets_with_bcp14_keyword": 2127
+  },
+  "raw_final_label_values": {
+    "No": 2277,
+    "Yes": 148
+  },
+  "reserved_partition_counts": {
+    "dns_rows": 151,
+    "tcp_rows": 131
+  },
+  "resolved_label_counts": {
+    "No": 2276,
+    "Yes": 148
+  },
+  "rows": 2425,
+  "schema_version": 1,
+  "source_path": "D:\\RFC\\ietf-ambiguity-detection\\results\\annotation\\final_annotation_ready.csv",
+  "source_sha256": "c20959acc2db8345c90ee06a71357aaac161b178b240495e516e4710405b2712",
+  "unresolved_exclusions": [
+    {
+      "family_id": "draft-ietf-quic-transport",
+      "item_id": "2161",
+      "record_id": "ea8abbf81894b0313cd738bcdd43ec11be6f49a780a7233a3b5bd5ed4587a555"
+    }
+  ],
+  "unresolved_item_ids": [
+    "2161"
+  ]
+}

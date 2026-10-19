@@ -1,0 +1,58 @@
+experiment_name: qwen3-32b-final-annotation-ready-semantic-v4
+experiment_type: frozen_minilm_semantic_v3_score_ensemble
+parameter_updates:
+  qwen3_32b: false
+  sentence_encoder: false
+  semantic_classifiers: true
+dataset_dir: corpus/processed/llm_final_annotation_ready/v1/development
+development_train_sha256: 3e03bd2b1c90530a51a1804c6104c402e4560f1e9dc5a7ef06c96eb50865be18
+source_annotation: results/annotation/final_annotation_ready.csv
+source_annotation_sha256: c20959acc2db8345c90ee06a71357aaac161b178b240495e516e4710405b2712
+base_signal:
+  name: v3_nested_hybrid
+  predictions: experiments/llm/results/qwen3-32b-final-annotation-ready-v3/analysis-final/oof_predictions.csv
+  predictions_sha256: 226e06b787713c33e91dd553c9dd3389ba42771a23f4fc85b732d865a01567e5
+sentence_encoder:
+  repository: sentence-transformers/all-MiniLM-L6-v2
+  revision: 1110a243fdf4706b3f48f1d95db1a4f5529b4d41
+  dimensions: 384
+  device: cpu
+  local_files_only: true
+  normalize_embeddings: true
+  batch_size: 128
+  empty_context_policy: zero_vector
+semantic_classifier:
+  type: logistic_regression
+  solver: liblinear
+  class_weight: balanced
+  c: 0.03
+  max_iter: 3000
+  random_seed: 20261019
+  configurations:
+    - target_embedding
+    - target_previous_next_embeddings
+ensemble:
+  method: weighted_log_odds
+  v3_weight: 0.80
+  target_semantic_weight: 0.10
+  context_semantic_weight: 0.10
+  selection_status: fixed_after_adaptive_development_sweep
+selection:
+  primary_metric: pr_auc
+  outer_fold_assignment: corpus/processed/llm_final_annotation_ready/v1/development/folds_v1.json
+  outer_fold_assignment_sha256: 7d72c43ea1ffc3ed940c01118777c05d13d28599a48581c46ecab249cce08938
+  n_outer_folds: 5
+  threshold_objectives: [f1, f2, balanced_accuracy]
+  threshold_protocol: leave_one_grouped_fold_out_cross_fitted_development_sensitivity
+comparison:
+  v1_metrics: experiments/llm/results/qwen3-32b-final-annotation-ready-v1/analysis-final/pooled_metrics.csv
+  v1_metrics_sha256: 72379076cc3b7793b71c1b4b92dbe27861dd9cfa31ce0ecc18943c8d222e0748
+  v2_metrics: experiments/llm/results/qwen3-32b-final-annotation-ready-v2/analysis-final/pooled_raw_metrics.csv
+  v2_metrics_sha256: 459c7aa1aefb3c90800bdb2216e6a0cdbdf6f7fec4a7e54f0d67bf12d623ba28
+  v3_metrics: experiments/llm/results/qwen3-32b-final-annotation-ready-v3/analysis-final/pooled_metrics.csv
+  v3_metrics_sha256: 94df5ad47e1f39cb857d288922eaeca47b847cee689f18cc28f6f2ec60a62aab
+reporting:
+  development_result_status: adaptive_exploratory_not_final_test_evidence
+  dependency_warning: V3 component scores are OOF per row, but V4 configuration was selected after inspecting the same development cohort; only untouched transfer data can estimate generalization.
+  validation_role: reserved_tcp_not_opened
+  test_role: sealed_dns_not_opened

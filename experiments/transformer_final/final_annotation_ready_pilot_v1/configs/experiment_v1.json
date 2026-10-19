@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "experiment": "final_annotation_ready_pilot_v1",
+  "description": "One-seed, five-family-fold FP32 weighted-CE pilot using the finalized annotation-ready labels",
+  "data": {
+    "source_csv": "results/annotation/final_annotation_ready.csv",
+    "source_sha256": "c20959acc2db8345c90ee06a71357aaac161b178b240495e516e4710405b2712",
+    "private_key_csv": "results/annotation/key_PRIVATE.csv",
+    "metadata_csv": "corpus/processed/model_datasets/v2/training_dataset.csv",
+    "canonical_context_csv": "corpus/processed/transformer_inputs/v3/dataset.csv",
+    "label_column": "final_label",
+    "target_column": "target_clause",
+    "id_column": "item_id",
+    "expected_source_rows": 2425,
+    "expected_unresolved_item_ids": ["2161"],
+    "expected_annotated_cohort_omissions": 121,
+    "approved_source_hashes": {
+      "private_key_csv": "09edc22f73d93998df728378986f039690e5b87fa62e1f52928a80708009cdce",
+      "metadata_csv": "a0e2d4cf81dce960efc15b47bf39abbfbe67ec8ec743b1aa63df00b8395a0dd1",
+      "canonical_context_csv": "d18dfd145305cca61c62d8e3b23ff93a0a76dcd1235f04112c13458ab0f4be3f"
+    },
+    "unresolved_exclusion_policy": "Exclude item_id 2161 because final_status is unresolved_blank_manual_verdict and final_source is unresolved; its placeholder final_label is not treated as ground truth."
+  },
+  "partitions": {
+    "train_families": [
+      "draft-ietf-6man-rfc2460bis",
+      "draft-ietf-httpbis-cache-header",
+      "draft-ietf-httpbis-http2bis",
+      "draft-ietf-httpbis-semantics",
+      "draft-ietf-quic-http",
+      "draft-ietf-quic-recovery",
+      "draft-ietf-quic-tls",
+      "draft-ietf-quic-transport",
+      "draft-ietf-tls-tls13"
+    ],
+    "tcp_family": "draft-ietf-tcpm-rfc793bis",
+    "dns_family": "draft-ietf-dnsop-svcb-https",
+    "sealed_evaluation_enabled": false
+  },
+  "folds": {
+    "fold_source": "experiments/transformer/configs/folds_v1.json",
+    "fold_source_sha256": "c04dc8424ed96486f8521ef57d17e4b503d2c3f41bb116edeeb9535073dd7884",
+    "count": 5,
+    "near_duplicate_threshold": 0.85,
+    "policy": "preserve held-out scoring rows; exclude fitting-side exact, near, lineage, and BCP14-skeleton conflicts"
+  },
+  "model": {
+    "repository": "microsoft/deberta-v3-base",
+    "default_local_path": "D:/RFC/models/deberta-v3-base",
+    "revision": null,
+    "num_labels": 2,
+    "label2id": {"No": 0, "Yes": 1},
+    "offline_only": true,
+    "fully_fine_tune": true
+  },
+  "tokenization": {
+    "input_mode": "target_only",
+    "max_length": 256,
+    "target_overflow": "deterministic_head_tail",
+    "dynamic_padding": true,
+    "add_vocabulary_tokens": false,
+    "context_mode_available": true
+  },
+  "training": {
+    "train_batch_size": 8,
+    "eval_batch_size": 16,
+    "gradient_accumulation_steps": 1,
+    "optimizer": "AdamW",
+    "learning_rate": 0.00001,
+    "weight_decay": 0.01,
+    "scheduler": "linear",
+    "warmup_ratio": 0.1,
+    "epochs": 5,
+    "early_stopping": false,
+    "max_grad_norm": 1.0,
+    "seeds": [2718],
+    "precision": "fp32",
+    "deterministic": true,
+    "threshold": 0.5,
+    "diagnostic_numerics": true
+  },
+  "conditions": {
+    "A2": "weighted_ce"
+  },
+  "outputs": {
+    "dataset_dir": "experiments/transformer_final/final_annotation_ready_pilot_v1/manifests/dataset_v1",
+    "runs_dir": "experiments/transformer_final/final_annotation_ready_pilot_v1/training_outputs",
+    "aggregate_dir": "experiments/transformer_final/final_annotation_ready_pilot_v1/aggregate_metrics",
+    "audit_dir": "experiments/transformer_final/final_annotation_ready_pilot_v1/audit_logs"
+  }
+}

@@ -1,0 +1,335 @@
+{
+  "baseline_protocol_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\final_annotation_ready_pilot_v1\\configs\\fp32_protocol_v1.json",
+  "baseline_protocol_sha256": "242f98c56d88a11dea3b355c4c3b14c693029e3d8a607fdd7a067f29af630b36",
+  "budget": {
+    "actual": {
+      "cell_ids": {
+        "B_nested_threshold_calibration/outer_1_inner_2": {
+          "completed": true,
+          "elapsed_seconds": 152.35999999998603,
+          "stage": "B_nested_threshold_calibration"
+        },
+        "B_nested_threshold_calibration/outer_1_inner_3": {
+          "completed": true,
+          "elapsed_seconds": 238.15599999995902,
+          "stage": "B_nested_threshold_calibration"
+        },
+        "B_nested_threshold_calibration/outer_2_inner_1": {
+          "completed": true,
+          "elapsed_seconds": 161.81200000003446,
+          "stage": "B_nested_threshold_calibration"
+        },
+        "B_nested_threshold_calibration/outer_2_inner_2": {
+          "completed": true,
+          "elapsed_seconds": 205.9220000000205,
+          "stage": "B_nested_threshold_calibration"
+        }
+      },
+      "gpu_cell_seconds": 758.25,
+      "gpu_cells_completed": 4,
+      "gpu_cells_started": 5,
+      "seconds_by_stage": {
+        "B_nested_threshold_calibration": 758.25
+      }
+    },
+    "authorization_window_deadline": "2026-10-18T20:15:15.3950029+03:00",
+    "authorization_window_start": "2026-10-18T14:15:15.3950029+03:00",
+    "budget_seconds": 21600,
+    "deadline_remaining_seconds": 18945,
+    "estimated_total_seconds": 13950,
+    "observed_baseline_cell_seconds": [
+      284.28007197380066,
+      301.20319414136503,
+      292.9217231273651,
+      291.22837376594543,
+      284.18040442466736
+    ],
+    "planning_estimates": {
+      "context_aware_training": {
+        "basis": "Five baseline cells at 300 seconds each, with 1.5x allowance for longer local-context inputs.",
+        "cells": 5,
+        "seconds": 2250
+      },
+      "focal_loss_training": {
+        "basis": "Five baseline cells at 300 seconds each.",
+        "cells": 5,
+        "seconds": 1500
+      },
+      "nested_calibration_inner_training_cells": {
+        "basis": "Three deterministic family-disjoint GroupKFold inner folds for each of five outer folds, at 300 seconds per cell.",
+        "cells": 15,
+        "seconds": 4500
+      },
+      "partial_2_training": {
+        "basis": "Five baseline cells at 300 seconds each.",
+        "cells": 5,
+        "seconds": 1500
+      },
+      "partial_4_training": {
+        "basis": "Five baseline cells at 300 seconds each.",
+        "cells": 5,
+        "seconds": 1500
+      },
+      "validation_and_reporting": {
+        "basis": "Reserved for protocol checks, artifact validation, comparisons, error analysis, and final report.",
+        "seconds": 2700
+      }
+    },
+    "planning_margin_seconds": 7650,
+    "status": "RENEWED_AUTHORIZATION",
+    "updated_at": "2026-10-18T14:59:29.976922+03:00"
+  },
+  "config_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\final_annotation_ready_pilot_v1\\configs\\experiment_v1.json",
+  "config_sha256": "65e20062e39f3d2fc9f7c290a92e63577afa2cecfde499b7f43417a3f7e17ef3",
+  "dataset": {
+    "dataset_manifest_sha256": "87094485ec829fbfd7d3c19aa9ef70f9424a997cfbec29080a748c0b0bdbf9d0",
+    "effective_dataset_sha256": "a25e99563563f71570e48f63b9515fbb51ff845762ff718763d98e0b3eefae2f",
+    "family_fold_source_sha256": "c04dc8424ed96486f8521ef57d17e4b503d2c3f41bb116edeeb9535073dd7884",
+    "fold_manifest_sha256": {
+      "1": "684cac99acb8eca3d34698265f23a9f22e879de9f1ec25280e02cf61bd87643e",
+      "2": "9acfe6fc469086aa52f9ad4bf30be0d0d3808c7ded02f32a36c3215961e09870",
+      "3": "4ec2c3cf49a1923442f9812a75396bd5096c4df5771f2d0ae558a4ac80bfbf45",
+      "4": "993ce072596a80d375b7338e7d94f74659100f40938464999d1e0a8ea2033fbc",
+      "5": "255a567c14944357cf75e95193e73af42d764c40792077a59f758ccb3185698d"
+    },
+    "labels": {
+      "negative": 2016,
+      "positive": 126
+    },
+    "reserved_families": [
+      "draft-ietf-tcpm-rfc793bis",
+      "draft-ietf-dnsop-svcb-https"
+    ],
+    "rows": 2142,
+    "source_sha256": "c20959acc2db8345c90ee06a71357aaac161b178b240495e516e4710405b2712"
+  },
+  "environment": {
+    "cuda_runtime": "13.0",
+    "cudnn": 92501,
+    "driver": "596.59",
+    "gpu": "NVIDIA RTX 5000 Ada Generation",
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "python": "3.11.16",
+    "python_executable": "C:\\Users\\mosta\\.conda\\envs\\ietf-ambiguity-detection\\python.exe",
+    "safetensors": "0.8.0",
+    "scikit-learn": "1.9.0",
+    "sentencepiece": "0.2.1",
+    "tokenizers": "0.23.1",
+    "torch": "2.12.0",
+    "transformers": "5.16.1"
+  },
+  "inner_cv": {
+    "algorithm": "GroupKFold",
+    "assignment_uses_labels": false,
+    "calibration": "none; threshold-only policy leaves probabilities unchanged",
+    "cell_count": 15,
+    "fallback": "if no feasible threshold, maximize F2, then precision, then threshold",
+    "groups": "canonical family_id",
+    "leakage_policy": "existing label-blind exact/near/lineage/BCP14 exclusions and context sanitization",
+    "manifests_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\recall_improvement_study_v1\\protocols\\nested_inner_splits_v1.json",
+    "manifests_sha256": "f0831566f836a88310bcc5079097cf43da0697b53c43229d4b0fd9734707dab8",
+    "primary": "maximize inner OOF recall subject to precision >= 0.20",
+    "splits_per_outer_fold": 3,
+    "threshold_candidates": [
+      0.001,
+      0.002,
+      0.003,
+      0.005,
+      0.01,
+      0.02,
+      0.03,
+      0.05,
+      0.075,
+      0.1,
+      0.15,
+      0.2,
+      0.3,
+      0.4,
+      0.5
+    ],
+    "tie_breaking": "higher precision, then higher threshold"
+  },
+  "interventions": {
+    "context": {
+      "context_truncation_rows": 6,
+      "delimiter_token_ids": {
+        "[NEXT]": [
+          647,
+          98885,
+          592
+        ],
+        "[PREVIOUS]": [
+          647,
+          53714,
+          1989,
+          65516,
+          592
+        ],
+        "[SECTION]": [
+          647,
+          430,
+          81100,
+          592
+        ],
+        "[TARGET]": [
+          647,
+          42696,
+          43576,
+          592
+        ]
+      },
+      "input_mode": "local_context",
+      "max_length": 256,
+      "policy": "reuse existing target-prioritized deterministic allocation; no vocabulary changes",
+      "target_truncation_rows": 0,
+      "token_length_audit": {
+        "context_truncated_rows": 6,
+        "encoded_length": {
+          "max": 256.0,
+          "min": 40.0,
+          "p50": 99.0,
+          "p90": 138.0,
+          "p95": 153.0,
+          "p99": 199.0
+        },
+        "input_mode": "local_context",
+        "max_length": 256,
+        "overflow_policy": "deterministic head+tail target truncation; all context is dropped first",
+        "rows": 2142,
+        "target_truncated_rows": 0,
+        "target_with_special_tokens": {
+          "max": 135.0,
+          "min": 11.0,
+          "p50": 34.0,
+          "p90": 54.0,
+          "p95": 64.0,
+          "p99": 86.0
+        }
+      },
+      "vocabulary_expansion": false
+    },
+    "focal": {
+      "alpha": "existing fitting-side class weights (No=1; Yes=negative/positive)",
+      "formula": "-alpha_y * (1 - p_y)^gamma * log(p_y), batch mean",
+      "gamma": 2.0
+    },
+    "partial_finetuning": {
+      "dropout": "all modules retain the existing model.train() behavior; frozen weights do not disable dropout",
+      "optimizer": "AdamW receives only parameters with requires_grad=True",
+      "partial_2": "freeze embeddings, shared encoder-level non-layer backbone parameters, and layers 0-9; train layers 10-11, pooler, and classifier",
+      "partial_4": "freeze embeddings, shared encoder-level non-layer backbone parameters, and layers 0-7; train layers 8-11, pooler, and classifier"
+    }
+  },
+  "model": {
+    "architecture_class": "DebertaV2ForSequenceClassification",
+    "encoder_layers": 12,
+    "full_parameter_count": 184423682,
+    "local_path": "D:\\RFC\\models\\deberta-v3-base",
+    "model_file_hashes": {
+      ".cache/huggingface/.gitignore": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1",
+      ".cache/huggingface/CACHEDIR.TAG": "e8893e2dcb3f4545ef67a0a5b7b769113d38eef1aa61c7c7ba14659b02af955f",
+      ".cache/huggingface/download/config.json.metadata": "b66e5bfcc5232aaafb663c690d0335869b3fcf1b7b4117f883ed618262cf008b",
+      ".cache/huggingface/download/pytorch_model.bin.metadata": "44ec8c64cbd6062c86e89631d96c9ab91d4c3e02bc02f6338d5a8cb5fda6730c",
+      ".cache/huggingface/download/spm.model.metadata": "b3be67060084258bf526a04ab4b6b48ba38df26c320c1eebdd6470c5e1179eb9",
+      ".cache/huggingface/download/tokenizer_config.json.metadata": "b7ce28d9caea80e533824d3b88a3994e58503d28522ee024a0e4a23bd88672d0",
+      ".cache/huggingface/trees/8ccc9b6f36199bec6961081d44eb72fb3f7353f3.json": "3ee10936526b74252b8223ccb38fd0dc2630c189a11316d369cfabf60e39b9e4",
+      "config.json": "649f6a1ec33c6bdd9a6486d5c66019d461139e54957073eafe9bbc2d34c75b0b",
+      "pytorch_model.bin": "691d48a2800b926a19e3051def466fc2cca4f59a15e42ce4a0cf7f1b380b5e33",
+      "spm.model": "c679fbf93643d19aab7ee10c0b99e460bdbc02fedf34b92b05af343b4af586fd",
+      "tokenizer_config.json": "3f3978e0c036f2c2588cac34a6047cbb0af0b0dc1814254e291028529805496d"
+    },
+    "partial_trainable_parameter_counts": {
+      "12": {
+        "frozen_parameters": 0,
+        "total_parameters": 184423682,
+        "trainable_parameters": 184423682,
+        "trainable_percent": 100.0
+      },
+      "2": {
+        "frozen_parameters": 169655808,
+        "total_parameters": 184423682,
+        "trainable_parameters": 14767874,
+        "trainable_percent": 8.007580067726877
+      },
+      "4": {
+        "frozen_parameters": 155480064,
+        "total_parameters": 184423682,
+        "trainable_parameters": 28943618,
+        "trainable_percent": 15.694089656012832
+      }
+    },
+    "precision": "fp32",
+    "source_sha256": "206ee7bb2c7805bcc8fd3bbbc18a09e185bafc19d4e112f31d4a088136717dd7",
+    "tokenizer_file_hashes": {
+      ".cache/huggingface/download/spm.model.metadata": "b3be67060084258bf526a04ab4b6b48ba38df26c320c1eebdd6470c5e1179eb9",
+      ".cache/huggingface/download/tokenizer_config.json.metadata": "b7ce28d9caea80e533824d3b88a3994e58503d28522ee024a0e4a23bd88672d0",
+      "spm.model": "c679fbf93643d19aab7ee10c0b99e460bdbc02fedf34b92b05af343b4af586fd",
+      "tokenizer_config.json": "3f3978e0c036f2c2588cac34a6047cbb0af0b0dc1814254e291028529805496d"
+    }
+  },
+  "schema_version": 1,
+  "source_snapshot": {
+    "core_files": {
+      "models/transformer_final/__init__.py": "376f4c712155e1a5d81bdcb610b90720b40a04f30ab29363a25b977a789ed80f",
+      "models/transformer_final/aggregate.py": "a0086cc8830068db74b8e1a642cd61fb91e4f331e8da174dccd11bc7bf839bb0",
+      "models/transformer_final/common.py": "47fda11f1060ded0ba7bde775040db28e5d75a277ec61596a1831e94f6bf36b0",
+      "models/transformer_final/compare.py": "d4700c0f15d6a780fc880ec7f6351f26716ace9f6fd9495f095d52a08d448f01",
+      "models/transformer_final/config.py": "c9e676b068a54525510d99d322918e7fa3ed909a00b0c792e6462e6ddc9e2a60",
+      "models/transformer_final/dataset.py": "51ac119187dba2b302f43cd336992b8ba8abac6422caa512ba5e378149f72c15",
+      "models/transformer_final/experiment2.py": "2da0c50fae8b857a1c3ee7c6f7488cd8cf683eda9d96a020bfc57d754bcaeba6",
+      "models/transformer_final/experiment2_analysis.py": "190667156eb437a167e7a38b07e0102dce34d0a0701edb726d9317a13dc0556b",
+      "models/transformer_final/experiment2_runner.py": "b4a98da1a96e0efc6287bdbc34b5807e94c1985a7735525fe628f6cc4e5f9af5",
+      "models/transformer_final/experiment_runner.py": "153076f7fb8e34e0e369c962c30e7f6a92d65c1849e427c86e8d90add1668014",
+      "models/transformer_final/leakage.py": "3a0d8cb9d62ba4b0900ece37a8fe4e58ab0007acfc8286aeff9ef4f55d70caa3",
+      "models/transformer_final/metrics.py": "6754ad6986c48c895edbdc92658e7706a2c95cde40345ce37f3d3c28cea39533",
+      "models/transformer_final/modeling.py": "228310e5b03dd409b2b8e124a3070f66d4706d9d9d200a81e64856490fc35ee2",
+      "models/transformer_final/preflight.py": "76526b14932586d527ec36f018be534cbde15e58ab71b46f17f3f158c19c9a4f",
+      "models/transformer_final/protocol.py": "6bd09118b69bc64491b882bae1d55024b8d6a3de953b8a18c2e442b85e730de6",
+      "models/transformer_final/research_report.py": "cb70fa8b67a10b056c8fbe217091b6ed0c68b37276e5846535c8fe944a60d171",
+      "models/transformer_final/run_validation.py": "263b0f4e983818f792d037ad29ffb345dfc9c44be9319d0d83eeccea42696102",
+      "models/transformer_final/threshold_analysis.py": "a5574a7608fc09fe41c72180615b0037147c3bf62361ca35a07bc838db246c51",
+      "models/transformer_final/tokenization.py": "7f918fc681f4e7b2b2b21e53946197d6bf3c1ff337228e769681a4f880f3f36e",
+      "models/transformer_final/train.py": "46b9664fe31045dd01b2ba59bd88635ba68822c10dd4cdaa4ce4c99fcb09448a"
+    },
+    "study_files": {
+      "experiments/transformer_final/recall_improvement_study_v1/cell_launcher.py": "09d4d23b7ef3274229035bfe0e390aa20901723f36b4b60664ca40db4ca554a8",
+      "experiments/transformer_final/recall_improvement_study_v1/stage_a_family_recall.py": "430c4debba4d2acc4274f3d31a609e0a46d031956f9842769ac3a8fab07ad045",
+      "experiments/transformer_final/recall_improvement_study_v1/study_analysis.py": "683ce52199958fbd176f6f4d7bffcb459dd0ac13e68510748f35ed77f91eafab",
+      "experiments/transformer_final/recall_improvement_study_v1/study_protocol.py": "40de483e593148705fc60d2fef4c5d02f02a11d84331c2e3ef14e2feec8ca8b0",
+      "experiments/transformer_final/recall_improvement_study_v1/study_runner.py": "6235a78724dbe49b73e2679ba02b15e9009a4688992b92b6add1869315d5458b"
+    }
+  },
+  "source_snapshot_sha256": "ec38a650a0b40eedbb87cce4889aa12f58efbf1a1cb9c9f03552ba5eb73a6361",
+  "study_id": "recall_improvement_study_v1",
+  "training": {
+    "class_weight_formula": "No=1.0; Yes=fitting_negative_count/fitting_positive_count",
+    "condition": "A2",
+    "diagnostic_numerics": true,
+    "diagnostics_affect_updates": false,
+    "early_stopping": false,
+    "epochs": 5,
+    "eval_batch_size": 16,
+    "folds": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "gradient_accumulation_steps": 1,
+    "gradient_clip_norm": 1.0,
+    "input_mode": "target_only",
+    "learning_rate": 1e-05,
+    "loss": "weighted_ce",
+    "max_length": 256,
+    "optimizer": "AdamW",
+    "precision": "fp32",
+    "scheduler": "linear",
+    "seed": 2718,
+    "threshold_reference": 0.5,
+    "train_batch_size": 8,
+    "warmup_ratio": 0.1,
+    "weight_decay": 0.01
+  }
+}

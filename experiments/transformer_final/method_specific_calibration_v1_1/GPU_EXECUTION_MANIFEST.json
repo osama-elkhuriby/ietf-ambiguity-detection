@@ -1,0 +1,609 @@
+{
+  "automatic_retry": false,
+  "completed_cells": 30,
+  "created_at": "2026-10-19T00:02:50.730034+03:00",
+  "executions": [
+    {
+      "attempt_id": "compat-v1_1-reuse-cal-v1-focal-loss-outer1-inner1-seed2718",
+      "cell_id": "focal_loss/outer_1/inner_1/seed_2718",
+      "historical_attempt_id": "cal-v1-focal-loss-outer1-inner1-seed2718",
+      "new_gpu_execution": false,
+      "origin": "V1_IMMUTABLE_REUSE",
+      "peak_gpu_memory_allocated_mb": 3645.9921875,
+      "peak_gpu_memory_reserved_mb": 5638.0,
+      "reused": true,
+      "run_manifest_sha256": "37b5f3a2a27a56e4d65db2227e5c8cbc5d50eb168da3e71e14bab7c528580b41",
+      "status": "COMPLETE",
+      "training_runtime_seconds": 145.1015572999604
+    },
+    {
+      "attempt_id": "cal-v1_1-focal-loss-outer1-inner2-seed2718",
+      "cell_id": "focal_loss/outer_1/inner_2/seed_2718",
+      "completed_at": "2026-10-19T00:09:59.032061+03:00",
+      "elapsed_seconds": 227.18700000003446,
+      "gpu_preflight": {
+        "active_compute_processes": [],
+        "free_memory_mib": 30823,
+        "minimum_free_memory_mib": 18000,
+        "name": "NVIDIA RTX 5000 Ada Generation"
+      },
+      "origin": "V1_1_NEW_GPU_EXECUTION",
+      "peak_gpu_memory_allocated_mb": 3955.15087890625,
+      "peak_gpu_memory_reserved_mb": 5822.0,
+      "reused": false,
+      "run_manifest_sha256": "d3c79f1fb9298a42769b6902d3f85e1f4c371eeaba1c7bd84998defad3bf7fe8",
+      "started_at": "2026-10-19T00:06:11.398946+03:00",
+      "status": "COMPLETE",
+      "training_runtime_seconds": 218.79989649995696
+    },
+    {
+      "attempt_id": "cal-v1_1-focal-loss-outer1-inner3-seed2718",
+      "cell_id": "focal_loss/outer_1/inner_3/seed_2718",
+      "completed_at": "2026-10-19T00:13:56.965054+03:00",
+      "elapsed_seconds": 235.89099999994505,
+      "gpu_preflight": {
+        "active_compute_processes": [],
+        "free_memory_mib": 30823,
+        "minimum_free_memory_mib": 18000,
+        "name": "NVIDIA RTX 5000 Ada Generation"
+      },
+      "origin": "V1_1_NEW_GPU_EXECUTION",
+      "peak_gpu_memory_allocated_mb": 3957.5888671875,
+      "peak_gpu_memory_reserved_mb": 5822.0,
+      "reused": false,
+      "run_manifest_sha256": "c19d156c2b609084916c648e94576c298ac504c967e031610309d9d755419dd0",
+      "started_at": "2026-10-19T00:10:00.648624+03:00",
+      "status": "COMPLETE",
+      "training_runtime_seconds": 227.6215033000335
+    },
+    {
+      "attempt_id": "cal-v1_1-focal-loss-outer2-inner1-seed2718",
+      "cell_id": "focal_loss/outer_2/inner_1/seed_2718",
+      "completed_at": "2026-10-19T00:18:09.788651+03:00",
+      "elapsed_seconds": 250.5779999999795,
+      "gpu_preflight": {
+        "active_compute_processes": [],
+        "free_memory_mib": 30823,
+        "minimum_free_memory_mib": 18000,
+        "name": "NVIDIA RTX 5000 Ada Generation"
+      },
+      "origin": "V1_1_NEW_GPU_EXECUTION",
+      "peak_gpu_memory_allocated_mb": 3646.1015625,
+      "peak_gpu_memory_reserved_mb": 4980.0,
+      "reused": false,
+      "run_manifest_sha256": "60b0a9ece4ddde96135f6eae20f5a46b0ff3d0abc62dc7fe448469f2a5d4444f",
+      "started_at": "2026-10-19T00:13:58.755274+03:00",
+      "status": "COMPLETE",
+      "training_runtime_seconds": 242.38527779991273
+    },
+    {
+      "attempt_id": "cal-v1_1-focal-loss-outer2-inner2-seed2718",
+      "cell_id": "focal_loss/outer_2/inner_2/seed_2718",
+      "completed_at": "2026-10-19T00:23:36.482874+03:00",
+      "elapsed_seconds": 324.655999999959,
+      "gpu_preflight": {
+        "active_compute_processes": [],
+        "free_memory_mib": 30823,
+        "minimum_free_memory_mib": 18000,
+        "name": "NVIDIA RTX 5000 Ada Generation"
+      },
+      "origin": "V1_1_NEW_GPU_EXECUTION",
+      "peak_gpu_memory_allocated_mb": 3714.35986328125,
+      "peak_gpu_memory_reserved_mb": 5544.0,
+      "reused": false,
+      "run_manifest_sha256": "bbad9f409b6f3af708db4146a753f727726f70b9f70d90ee96c89db1da477dcc",
+      "started_at": "2026-10-19T00:18:11.413467+03:00",
+      "status": "COMPLETE",
+      "training_runtime_seconds": 316.3153463000199
+    },
+    {
+      "attempt_id": "cal-v1_1-focal-loss-outer2-inner3-seed2718",
+      "cell_id": "focal_loss/outer_2/inner_3/seed_2718",
+      "completed_at": "2026-10-19T00:29:03.787176+03:00",
+      "elapsed_seconds": 325.31299999996554,
+      "gpu_preflight": {
+        "active_compute_processes": [],
+        "free_memory_mib": 30823,
+        "minimum_free_memory_mib": 18000,
+        "name": "NVIDIA RTX 5000 Ada Generation"
+      },
+      "origin": "V1_1_NEW_GPU_EXECUTION",
+      "peak_gpu_memory_allocated_mb": 3716.77001953125,
+      "peak_gpu_memory_reserved_mb": 5082.0,
+      "reused": false,
+      "run_manifest_sha256": "ee17dfe1ac4e104273a35259904e5c940d1dbe7f52dfe6230995e30982565f58",
+      "started_at": "2026-10-19T00:23:38.062939+03:00",
+      "status": "COMPLETE",
+      "training_runtime_seconds": 316.9949966999702
+    },
+    {
+      "attempt_id": "cal-v1_1-focal-loss-outer3-inner1-seed2718",
+      "cell_id": "focal_loss/outer_3/inner_1/seed_2718",
+      "completed_at": "2026-10-19T00:33:34.610328+03:00",
+      "elapsed_seconds": 268.81199999991804,
+      "gpu_preflight": {
+        "active_compute_processes": [],
+        "free_memory_mib": 30823,
+        "minimum_free_memory_mib": 18000,
+        "name": "NVIDIA RTX 5000 Ada Generation"
+      },
+      "origin": "V1_1_NEW_GPU_EXECUTION",
+      "peak_gpu_memory_allocated_mb": 3956.06005859375,
+      "peak_gpu_memory_reserved_mb": 5822.0,
+      "reused": false,
+      "run_manifest_sha256": "35a967aec583e5d31d81ac39f4f57afb8561121e54647284740d5808476a9cff",
+      "started_at": "2026-10-19T00:29:05.408864+03:00",
+      "status": "COMPLETE",
+      "training_runtime_seconds": 259.4949562000111
+    },
+    {
+      "attempt_id": "cal-v1_1-focal-loss-outer3-inner2-seed2718",
+      "cell_id": "focal_loss/outer_3/inner_2/seed_2718",
+      "completed_at": "2026-10-19T00:39:04.594256+03:00",
+      "elapsed_seconds": 327.93799999996554,
+      "gpu_preflight": {
+        "active_compute_processes": [],
+        "free_memory_mib": 30823,
+        "minimum_free_memory_mib": 18000,
+        "name": "NVIDIA RTX 5000 Ada Generation"
+      },
+      "origin": "V1_1_NEW_GPU_EXECUTION",
+      "peak_gpu_memory_allocated_mb": 3718.65283203125,
+      "peak_gpu_memory_reserved_mb": 5438.0,
+      "reused": false,
+      "run_manifest_sha256": "d67fcb520041edd95c233c5e7cfee6f90ced8862fefc7bb01ac7793f8cda6a9a",
+      "started_at": "2026-10-19T00:33:36.190440+03:00",
+      "status": "COMPLETE",
+      "training_runtime_seconds": 318.07267950009555
+    },
+    {
+      "attempt_id": "cal-v1_1-focal-loss-outer3-inner3-seed2718",
+      "cell_id": "focal_loss/outer_3/inner_3/seed_2718",
+      "completed_at": "2026-10-19T00:44:48.808403+03:00",
+      "elapsed_seconds": 342.25,
+      "gpu_preflight": {
+        "active_compute_processes": [],
+        "free_memory_mib": 30823,
+        "minimum_free_memory_mib": 18000,
+        "name": "NVIDIA RTX 5000 Ada Generation"
+      },
+      "origin": "V1_1_NEW_GPU_EXECUTION",
+      "peak_gpu_memory_allocated_mb": 3958.3662109375,
+      "peak_gpu_memory_reserved_mb": 5532.0,
+      "reused": false,
+      "run_manifest_sha256": "ef5d17f9b6e7fde1e59818dece743075d01a20fd0b0d604088022aebd7426693",
+      "started_at": "2026-10-19T00:39:06.184167+03:00",
+      "status": "COMPLETE",
+      "training_runtime_seconds": 334.1152586999815
+    },
+    {
+      "attempt_id": "cal-v1_1-focal-loss-outer4-inner1-seed2718",
+      "cell_id": "focal_loss/outer_4/inner_1/seed_2718",
+      "completed_at": "2026-10-19T00:49:23.751958+03:00",
+      "elapsed_seconds": 272.93699999991804,
+      "gpu_preflight": {
+        "active_compute_processes": [],
+        "free_memory_mib": 30823,
+        "minimum_free_memory_mib": 18000,
+        "name": "NVIDIA RTX 5000 Ada Generation"
+      },
+      "origin": "V1_1_NEW_GPU_EXECUTION",
+      "peak_gpu_memory_allocated_mb": 3956.3427734375,
+      "peak_gpu_memory_reserved_mb": 5740.0,
+      "reused": false,
+      "run_manifest_sha256": "c890ccaa4cec3ebd7c4cef7d27940c443d952ba3bb6af5823eaca56f5d20ce0e",
+      "started_at": "2026-10-19T00:44:50.413344+03:00",
+      "status": "COMPLETE",
+      "training_runtime_seconds": 264.4521490999032
+    },
+    {
+      "attempt_id": "cal-v1_1-focal-loss-outer4-inner2-seed2718",
+      "cell_id": "focal_loss/outer_4/inner_2/seed_2718",
+      "completed_at": "2026-10-19T00:54:56.295675+03:00",
+      "elapsed_seconds": 330.4529999999795,
+      "gpu_preflight": {
+        "active_compute_processes": [],
+        "free_memory_mib": 30823,
+        "minimum_free_memory_mib": 18000,
+        "name": "NVIDIA RTX 5000 Ada Generation"
+      },
+      "origin": "V1_1_NEW_GPU_EXECUTION",
+      "peak_gpu_memory_allocated_mb": 3715.92236328125,
+      "peak_gpu_memory_reserved_mb": 5020.0,
+      "reused": false,
+      "run_manifest_sha256": "c5b0a74de71467c335d31a27e47aca8337b80ed9ee94e2103245e1061db284dd",
+      "started_at": "2026-10-19T00:49:25.436996+03:00",
+      "status": "COMPLETE",
+      "training_runtime_seconds": 322.01761500001885
+    },
+    {
+      "attempt_id": "cal-v1_1-focal-loss-outer4-inner3-seed2718",
+      "cell_id": "focal_loss/outer_4/inner_3/seed_2718",
+      "completed_at": "2026-10-19T01:00:41.649701+03:00",
+      "elapsed_seconds": 343.18700000003446,
+      "gpu_preflight": {
+        "active_compute_processes": [],
+        "free_memory_mib": 30823,
+        "minimum_free_memory_mib": 18000,
+        "name": "NVIDIA RTX 5000 Ada Generation"
+      },
+      "origin": "V1_1_NEW_GPU_EXECUTION",
+      "peak_gpu_memory_allocated_mb": 3958.3662109375,
+      "peak_gpu_memory_reserved_mb": 5532.0,
+      "reused": false,
+      "run_manifest_sha256": "b823dd12e98b5f21f6734b91c64bc474bfab359c47a98c33e3f91c850233d227",
+      "started_at": "2026-10-19T00:54:58.065715+03:00",
+      "status": "COMPLETE",
+      "training_runtime_seconds": 334.9015727000078
+    },
+    {
+      "attempt_id": "cal-v1_1-focal-loss-outer5-inner1-seed2718",
+      "cell_id": "focal_loss/outer_5/inner_1/seed_2718",
+      "completed_at": "2026-10-19T01:05:02.582610+03:00",
+      "elapsed_seconds": 258.844000000041,
+      "gpu_preflight": {
+        "active_compute_processes": [],
+        "free_memory_mib": 30823,
+        "minimum_free_memory_mib": 18000,
+        "name": "NVIDIA RTX 5000 Ada Generation"
+      },
+      "origin": "V1_1_NEW_GPU_EXECUTION",
+      "peak_gpu_memory_allocated_mb": 3956.3427734375,
+      "peak_gpu_memory_reserved_mb": 5740.0,
+      "reused": false,
+      "run_manifest_sha256": "2d967c203ca7a1e5eb5c8b21f9766ed4be1ffe76baca96f9db1abb1be853ac3f",
+      "started_at": "2026-10-19T01:00:43.289721+03:00",
+      "status": "COMPLETE",
+      "training_runtime_seconds": 250.03294820000883
+    },
+    {
+      "attempt_id": "cal-v1_1-focal-loss-outer5-inner2-seed2718",
+      "cell_id": "focal_loss/outer_5/inner_2/seed_2718",
+      "completed_at": "2026-10-19T01:10:49.206534+03:00",
+      "elapsed_seconds": 344.594000000041,
+      "gpu_preflight": {
+        "active_compute_processes": [],
+        "free_memory_mib": 30823,
+        "minimum_free_memory_mib": 18000,
+        "name": "NVIDIA RTX 5000 Ada Generation"
+      },
+      "origin": "V1_1_NEW_GPU_EXECUTION",
+      "peak_gpu_memory_allocated_mb": 3714.54736328125,
+      "peak_gpu_memory_reserved_mb": 5552.0,
+      "reused": false,
+      "run_manifest_sha256": "8e7965ff6cf1bfb8304d8427d99ec4619e6f162fce53a50211e01ef19d2ea4c8",
+      "started_at": "2026-10-19T01:05:04.226993+03:00",
+      "status": "COMPLETE",
+      "training_runtime_seconds": 336.2616723999381
+    },
+    {
+      "attempt_id": "cal-v1_1-focal-loss-outer5-inner3-seed2718",
+      "cell_id": "focal_loss/outer_5/inner_3/seed_2718",
+      "completed_at": "2026-10-19T01:16:07.440129+03:00",
+      "elapsed_seconds": 316.1720000000205,
+      "gpu_preflight": {
+        "active_compute_processes": [],
+        "free_memory_mib": 30823,
+        "minimum_free_memory_mib": 18000,
+        "name": "NVIDIA RTX 5000 Ada Generation"
+      },
+      "origin": "V1_1_NEW_GPU_EXECUTION",
+      "peak_gpu_memory_allocated_mb": 3976.30419921875,
+      "peak_gpu_memory_reserved_mb": 5310.0,
+      "reused": false,
+      "run_manifest_sha256": "04b5cb6f476afd8d99ba4ab9f6aebcccfa1d4213e984043132f1960daf788c24",
+      "started_at": "2026-10-19T01:10:50.844129+03:00",
+      "status": "COMPLETE",
+      "training_runtime_seconds": 308.1241557999747
+    },
+    {
+      "attempt_id": "cal-v1_1-partial-4-outer1-inner1-seed2718",
+      "cell_id": "partial_4/outer_1/inner_1/seed_2718",
+      "completed_at": "2026-10-19T01:18:02.611433+03:00",
+      "elapsed_seconds": 113.03099999995902,
+      "gpu_preflight": {
+        "active_compute_processes": [],
+        "free_memory_mib": 30823,
+        "minimum_free_memory_mib": 18000,
+        "name": "NVIDIA RTX 5000 Ada Generation"
+      },
+      "origin": "V1_1_NEW_GPU_EXECUTION",
+      "peak_gpu_memory_allocated_mb": 1716.5791015625,
+      "peak_gpu_memory_reserved_mb": 2224.0,
+      "reused": false,
+      "run_manifest_sha256": "04446d551f78f5580c580ff7b8ca3b2598e765d595bf213dc80dab670d43a28d",
+      "started_at": "2026-10-19T01:16:09.190342+03:00",
+      "status": "COMPLETE",
+      "training_runtime_seconds": 104.57965339999646
+    },
+    {
+      "attempt_id": "cal-v1_1-partial-4-outer1-inner2-seed2718",
+      "cell_id": "partial_4/outer_1/inner_2/seed_2718",
+      "completed_at": "2026-10-19T01:19:53.822699+03:00",
+      "elapsed_seconds": 109.17200000002049,
+      "gpu_preflight": {
+        "active_compute_processes": [],
+        "free_memory_mib": 30823,
+        "minimum_free_memory_mib": 18000,
+        "name": "NVIDIA RTX 5000 Ada Generation"
+      },
+      "origin": "V1_1_NEW_GPU_EXECUTION",
+      "peak_gpu_memory_allocated_mb": 1721.36279296875,
+      "peak_gpu_memory_reserved_mb": 2318.0,
+      "reused": false,
+      "run_manifest_sha256": "0e9f764d857974ab760aab8de385d12b84bcd9e5faadff34cad3696fb2aa0c0d",
+      "started_at": "2026-10-19T01:18:04.251525+03:00",
+      "status": "COMPLETE",
+      "training_runtime_seconds": 100.24178449995816
+    },
+    {
+      "attempt_id": "cal-v1_1-partial-4-outer1-inner3-seed2718",
+      "cell_id": "partial_4/outer_1/inner_3/seed_2718",
+      "completed_at": "2026-10-19T01:21:49.724011+03:00",
+      "elapsed_seconds": 113.82799999997951,
+      "gpu_preflight": {
+        "active_compute_processes": [],
+        "free_memory_mib": 30823,
+        "minimum_free_memory_mib": 18000,
+        "name": "NVIDIA RTX 5000 Ada Generation"
+      },
+      "origin": "V1_1_NEW_GPU_EXECUTION",
+      "peak_gpu_memory_allocated_mb": 1718.20263671875,
+      "peak_gpu_memory_reserved_mb": 2316.0,
+      "reused": false,
+      "run_manifest_sha256": "2b24011c90a9f993ca9ab919a5eeef15d364d4c6c6c6d5309e38b244afb43a42",
+      "started_at": "2026-10-19T01:19:55.472689+03:00",
+      "status": "COMPLETE",
+      "training_runtime_seconds": 105.02484349999577
+    },
+    {
+      "attempt_id": "cal-v1_1-partial-4-outer2-inner1-seed2718",
+      "cell_id": "partial_4/outer_2/inner_1/seed_2718",
+      "completed_at": "2026-10-19T01:23:51.495280+03:00",
+      "elapsed_seconds": 119.64100000006147,
+      "gpu_preflight": {
+        "active_compute_processes": [],
+        "free_memory_mib": 30823,
+        "minimum_free_memory_mib": 18000,
+        "name": "NVIDIA RTX 5000 Ada Generation"
+      },
+      "origin": "V1_1_NEW_GPU_EXECUTION",
+      "peak_gpu_memory_allocated_mb": 1715.89892578125,
+      "peak_gpu_memory_reserved_mb": 2222.0,
+      "reused": false,
+      "run_manifest_sha256": "1af9dc785ea3413a8ca467b6e854ec790bef5257d01ce27403f924eb77834a02",
+      "started_at": "2026-10-19T01:21:51.386018+03:00",
+      "status": "COMPLETE",
+      "training_runtime_seconds": 110.66124049993232
+    },
+    {
+      "attempt_id": "cal-v1_1-partial-4-outer2-inner2-seed2718",
+      "cell_id": "partial_4/outer_2/inner_2/seed_2718",
+      "completed_at": "2026-10-19T01:26:26.397124+03:00",
+      "elapsed_seconds": 152.81300000008196,
+      "gpu_preflight": {
+        "active_compute_processes": [],
+        "free_memory_mib": 30823,
+        "minimum_free_memory_mib": 18000,
+        "name": "NVIDIA RTX 5000 Ada Generation"
+      },
+      "origin": "V1_1_NEW_GPU_EXECUTION",
+      "peak_gpu_memory_allocated_mb": 1715.61328125,
+      "peak_gpu_memory_reserved_mb": 2222.0,
+      "reused": false,
+      "run_manifest_sha256": "6817f531b6805a7ee420d4660276d981bbc8b553b5f1a1e2819bf0a2cacb84b2",
+      "started_at": "2026-10-19T01:23:53.125612+03:00",
+      "status": "COMPLETE",
+      "training_runtime_seconds": 144.06320069998037
+    },
+    {
+      "attempt_id": "cal-v1_1-partial-4-outer2-inner3-seed2718",
+      "cell_id": "partial_4/outer_2/inner_3/seed_2718",
+      "completed_at": "2026-10-19T01:29:02.124506+03:00",
+      "elapsed_seconds": 153.60999999998603,
+      "gpu_preflight": {
+        "active_compute_processes": [],
+        "free_memory_mib": 30823,
+        "minimum_free_memory_mib": 18000,
+        "name": "NVIDIA RTX 5000 Ada Generation"
+      },
+      "origin": "V1_1_NEW_GPU_EXECUTION",
+      "peak_gpu_memory_allocated_mb": 1717.27099609375,
+      "peak_gpu_memory_reserved_mb": 2316.0,
+      "reused": false,
+      "run_manifest_sha256": "06ca42ce9fdcd9c66f02071acc3ff8fb3b2b8f271b7b9680388d6b7b1ed09e3b",
+      "started_at": "2026-10-19T01:26:28.051365+03:00",
+      "status": "COMPLETE",
+      "training_runtime_seconds": 144.60345270007383
+    },
+    {
+      "attempt_id": "cal-v1_1-partial-4-outer3-inner1-seed2718",
+      "cell_id": "partial_4/outer_3/inner_1/seed_2718",
+      "completed_at": "2026-10-19T01:31:12.850367+03:00",
+      "elapsed_seconds": 128.625,
+      "gpu_preflight": {
+        "active_compute_processes": [],
+        "free_memory_mib": 30823,
+        "minimum_free_memory_mib": 18000,
+        "name": "NVIDIA RTX 5000 Ada Generation"
+      },
+      "origin": "V1_1_NEW_GPU_EXECUTION",
+      "peak_gpu_memory_allocated_mb": 1719.40185546875,
+      "peak_gpu_memory_reserved_mb": 2316.0,
+      "reused": false,
+      "run_manifest_sha256": "6307a8f2c015b35ee4e49be00acc1dbb389f1fa6a04b211ae0519db620440360",
+      "started_at": "2026-10-19T01:29:03.759116+03:00",
+      "status": "COMPLETE",
+      "training_runtime_seconds": 119.4727537999861
+    },
+    {
+      "attempt_id": "cal-v1_1-partial-4-outer3-inner2-seed2718",
+      "cell_id": "partial_4/outer_3/inner_2/seed_2718",
+      "completed_at": "2026-10-19T01:33:49.702231+03:00",
+      "elapsed_seconds": 154.8279999999795,
+      "gpu_preflight": {
+        "active_compute_processes": [],
+        "free_memory_mib": 30823,
+        "minimum_free_memory_mib": 18000,
+        "name": "NVIDIA RTX 5000 Ada Generation"
+      },
+      "origin": "V1_1_NEW_GPU_EXECUTION",
+      "peak_gpu_memory_allocated_mb": 1718.3544921875,
+      "peak_gpu_memory_reserved_mb": 2128.0,
+      "reused": false,
+      "run_manifest_sha256": "8891ad5520e997f51972fb268c4e0dc5252cf1ddae935ba1cc8caa69cec6cf43",
+      "started_at": "2026-10-19T01:31:14.430203+03:00",
+      "status": "COMPLETE",
+      "training_runtime_seconds": 145.70343850005884
+    },
+    {
+      "attempt_id": "cal-v1_1-partial-4-outer3-inner3-seed2718",
+      "cell_id": "partial_4/outer_3/inner_3/seed_2718",
+      "completed_at": "2026-10-19T01:36:32.963902+03:00",
+      "elapsed_seconds": 161.18700000003446,
+      "gpu_preflight": {
+        "active_compute_processes": [],
+        "free_memory_mib": 30823,
+        "minimum_free_memory_mib": 18000,
+        "name": "NVIDIA RTX 5000 Ada Generation"
+      },
+      "origin": "V1_1_NEW_GPU_EXECUTION",
+      "peak_gpu_memory_allocated_mb": 1719.75390625,
+      "peak_gpu_memory_reserved_mb": 2316.0,
+      "reused": false,
+      "run_manifest_sha256": "f776ddf5ea5d2558232ea74f38ac09b2aea0d3dee4ab140d819c0f7c8102a620",
+      "started_at": "2026-10-19T01:33:51.337341+03:00",
+      "status": "COMPLETE",
+      "training_runtime_seconds": 152.21003600000404
+    },
+    {
+      "attempt_id": "cal-v1_1-partial-4-outer4-inner1-seed2718",
+      "cell_id": "partial_4/outer_4/inner_1/seed_2718",
+      "completed_at": "2026-10-19T01:38:45.892649+03:00",
+      "elapsed_seconds": 130.98499999998603,
+      "gpu_preflight": {
+        "active_compute_processes": [],
+        "free_memory_mib": 30823,
+        "minimum_free_memory_mib": 18000,
+        "name": "NVIDIA RTX 5000 Ada Generation"
+      },
+      "origin": "V1_1_NEW_GPU_EXECUTION",
+      "peak_gpu_memory_allocated_mb": 1718.3994140625,
+      "peak_gpu_memory_reserved_mb": 2316.0,
+      "reused": false,
+      "run_manifest_sha256": "ec93a9d41ba997741f4d50102a4a233668063423dde2699bf5bc152f43b273c1",
+      "started_at": "2026-10-19T01:36:34.560917+03:00",
+      "status": "COMPLETE",
+      "training_runtime_seconds": 122.29784869996365
+    },
+    {
+      "attempt_id": "cal-v1_1-partial-4-outer4-inner2-seed2718",
+      "cell_id": "partial_4/outer_4/inner_2/seed_2718",
+      "completed_at": "2026-10-19T01:40:48.281841+03:00",
+      "elapsed_seconds": 120.14000000001397,
+      "gpu_preflight": {
+        "active_compute_processes": [],
+        "free_memory_mib": 30741,
+        "minimum_free_memory_mib": 18000,
+        "name": "NVIDIA RTX 5000 Ada Generation"
+      },
+      "origin": "V1_1_NEW_GPU_EXECUTION",
+      "peak_gpu_memory_allocated_mb": 1716.94189453125,
+      "peak_gpu_memory_reserved_mb": 2222.0,
+      "reused": false,
+      "run_manifest_sha256": "a01530b84cb1c58bc55ba8199193d106c017e85d6ef704ccdd4aee28441e6d6a",
+      "started_at": "2026-10-19T01:38:47.672955+03:00",
+      "status": "COMPLETE",
+      "training_runtime_seconds": 112.53438620001543
+    },
+    {
+      "attempt_id": "cal-v1_1-partial-4-outer4-inner3-seed2718",
+      "cell_id": "partial_4/outer_4/inner_3/seed_2718",
+      "completed_at": "2026-10-19T01:42:41.901358+03:00",
+      "elapsed_seconds": 111.51500000001397,
+      "gpu_preflight": {
+        "active_compute_processes": [],
+        "free_memory_mib": 30798,
+        "minimum_free_memory_mib": 18000,
+        "name": "NVIDIA RTX 5000 Ada Generation"
+      },
+      "origin": "V1_1_NEW_GPU_EXECUTION",
+      "peak_gpu_memory_allocated_mb": 1719.75390625,
+      "peak_gpu_memory_reserved_mb": 2316.0,
+      "reused": false,
+      "run_manifest_sha256": "da0c95471851e7c6fc24502b44fb67da841bb9ad7579d7a3d37a5cf13114a15a",
+      "started_at": "2026-10-19T01:40:50.054066+03:00",
+      "status": "COMPLETE",
+      "training_runtime_seconds": 102.16444520000368
+    },
+    {
+      "attempt_id": "cal-v1_1-partial-4-outer5-inner1-seed2718",
+      "cell_id": "partial_4/outer_5/inner_1/seed_2718",
+      "completed_at": "2026-10-19T01:43:46.971723+03:00",
+      "elapsed_seconds": 63.28099999995902,
+      "gpu_preflight": {
+        "active_compute_processes": [],
+        "free_memory_mib": 30757,
+        "minimum_free_memory_mib": 18000,
+        "name": "NVIDIA RTX 5000 Ada Generation"
+      },
+      "origin": "V1_1_NEW_GPU_EXECUTION",
+      "peak_gpu_memory_allocated_mb": 1718.3994140625,
+      "peak_gpu_memory_reserved_mb": 2316.0,
+      "reused": false,
+      "run_manifest_sha256": "5347a49b1c37194f969f9ad7b9a0cbbea9fcb86ab8bdcc382512bfb4f30c2534",
+      "started_at": "2026-10-19T01:42:43.349153+03:00",
+      "status": "COMPLETE",
+      "training_runtime_seconds": 56.5340555999428
+    },
+    {
+      "attempt_id": "cal-v1_1-partial-4-outer5-inner2-seed2718",
+      "cell_id": "partial_4/outer_5/inner_2/seed_2718",
+      "completed_at": "2026-10-19T01:45:11.171838+03:00",
+      "elapsed_seconds": 82.39099999994505,
+      "gpu_preflight": {
+        "active_compute_processes": [],
+        "free_memory_mib": 30773,
+        "minimum_free_memory_mib": 18000,
+        "name": "NVIDIA RTX 5000 Ada Generation"
+      },
+      "origin": "V1_1_NEW_GPU_EXECUTION",
+      "peak_gpu_memory_allocated_mb": 1714.87646484375,
+      "peak_gpu_memory_reserved_mb": 2222.0,
+      "reused": false,
+      "run_manifest_sha256": "975ae1d16a285b0e6a9d3dfe24ec4b592e112487258b030c1316d0425ec0bf5c",
+      "started_at": "2026-10-19T01:43:48.407622+03:00",
+      "status": "COMPLETE",
+      "training_runtime_seconds": 75.60340889997315
+    },
+    {
+      "attempt_id": "cal-v1_1-partial-4-outer5-inner3-seed2718",
+      "cell_id": "partial_4/outer_5/inner_3/seed_2718",
+      "completed_at": "2026-10-19T01:46:51.610607+03:00",
+      "elapsed_seconds": 98.5,
+      "gpu_preflight": {
+        "active_compute_processes": [],
+        "free_memory_mib": 30734,
+        "minimum_free_memory_mib": 18000,
+        "name": "NVIDIA RTX 5000 Ada Generation"
+      },
+      "origin": "V1_1_NEW_GPU_EXECUTION",
+      "peak_gpu_memory_allocated_mb": 1723.1259765625,
+      "peak_gpu_memory_reserved_mb": 2316.0,
+      "reused": false,
+      "run_manifest_sha256": "a9ef9e975f79d462612f7d4a9938129121eeff94d3d73a4223f8f63cd2352572",
+      "started_at": "2026-10-19T01:45:12.679558+03:00",
+      "status": "COMPLETE",
+      "training_runtime_seconds": 91.0772178999614
+    }
+  ],
+  "failed_cells": 0,
+  "logical_cells": 30,
+  "planned_new_gpu_cells": 29,
+  "protocol_sha256": "57c04d15cb3c586c52bc7f59eede3893339f3c67014fdf3e50ccfb95d8fcda4c",
+  "reused_cells": 1,
+  "schema_version": 1,
+  "sequential": true,
+  "skipped_cells": 0,
+  "updated_at": "2026-10-19T01:46:51.613041+03:00"
+}

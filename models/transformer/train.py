@@ -36,10 +36,18 @@ from models.transformer.experiment import (
     load_frozen_folds,
     load_nested_folds,
 )
+from models.transformer.factorial_artifacts import (
+    DEFAULT_OUTPUT as DEFAULT_FACTORIAL_ARTIFACTS,
+)
+from models.transformer.factorial_artifacts import (
+    apply_context_policy,
+    load_factorial_artifacts,
+)
 from models.transformer.modeling import (
     ClauseDataset,
     collate_clauses,
     weighted_cross_entropy,
+    weighted_soft_cross_entropy,
 )
 
 DEFAULT_CONFIG = ROOT / "experiments/transformer/configs/deberta_clause_only.yaml"
@@ -169,6 +177,13 @@ def run(args: argparse.Namespace) -> Path:
         raise ValueError("--learning-rate must be one of the values pinned in the config")
     seed = args.seed if args.seed is not None else int(training["screening_seed"])
     _set_seed(seed)
+    target_regime = getattr(args, "target_regime", "hard")
+    requested_variant = getattr(args, "variant", None)
+    variant = requested_variant or config["variant"]
+    if target_regime not in {"hard", "soft"}:
+        raise ValueError("target_regime must be hard or soft")
+    if variant not in {"target_only", "local_context"}:
+        raise ValueError("variant must be target_only or local_context")
 
     full_train = load_development_split(dataset_dir, "train")
     dataset_manifest = json.loads(
@@ -205,6 +220,48 @@ def run(args: argparse.Namespace) -> Path:
     outer_scoring_record_ids = set(
         full_train.iloc[fold.scoring_indices]["record_id"].astype(str)
     )
+    factorial_manifest: dict[str, Any] | None = None
+    context_removals: dict[str, dict[str, int]] = {}
+    soft_targets: np.ndarray | None = None
+    if target_regime == "soft" or variant == "local_context":
+        artifact_dir = Path(
+            getattr(args, "factorial_artifacts", DEFAULT_FACTORIAL_ARTIFACTS)
+        ).resolve()
+        soft_artifact, context_policy, factorial_manifest = load_factorial_artifacts(
+            artifact_dir
+        )
+        if target_regime == "soft":
+            target_map = soft_artifact.set_index("record_id")
+            fitting_ids = train_frame["record_id"].astype(str)
+            selected = target_map.reindex(fitting_ids)
+            if selected["soft_target"].isna().any() or not selected[
+                "included_for_soft_training"
+            ].astype(bool).all():
+                raise RuntimeError("Every fitting row must have an eligible soft target")
+            soft_targets = selected["soft_target"].to_numpy(dtype=np.float32)
+        if variant == "local_context":
+            train_frame, context_removals["fitting"] = apply_context_policy(
+                train_frame,
+                context_policy,
+                fold=args.fold,
+                expected_role="fitting",
+            )
+            selection_frame, context_removals["inner_selection"] = (
+                apply_context_policy(
+                    selection_frame,
+                    context_policy,
+                    fold=args.fold,
+                    expected_role="inner_selection",
+                )
+            )
+            outer_validation_frame, context_removals["outer_validation"] = (
+                apply_context_policy(
+                    outer_validation_frame,
+                    context_policy,
+                    fold=args.fold,
+                    expected_role="outer_validation",
+                )
+            )
     if args.smoke:
         train_frame = _tiny_balanced(train_frame, 4)
         selection_frame = _tiny_balanced(selection_frame, 2)
@@ -213,6 +270,10 @@ def run(args: argparse.Namespace) -> Path:
         outer_scoring_record_ids = set(
             outer_validation_frame["record_id"].astype(str)
         )
+        if soft_targets is not None:
+            soft_targets = train_frame["record_id"].map(
+                soft_artifact.set_index("record_id")["soft_target"]
+            ).to_numpy(dtype=np.float32)
 
     weights = compute_training_weights(train_frame, args.weight_strategy)
     repository = config["model"]["repository"]
@@ -244,13 +305,13 @@ def run(args: argparse.Namespace) -> Path:
         )
 
     max_length = int(config["tokenization"]["max_length"])
-    variant = config["variant"]
     train_dataset = ClauseDataset(
         train_frame,
         tokenizer,
         variant=variant,
         max_length=max_length,
         weights=weights,
+        soft_targets=soft_targets,
     )
     selection_dataset = ClauseDataset(
         selection_frame,
@@ -322,13 +383,21 @@ def run(args: argparse.Namespace) -> Path:
                 batch.pop("row_position")
                 labels = batch.pop("labels").to(device)
                 loss_weight = batch.pop("loss_weight").to(device)
+                batch_soft_targets = batch.pop("soft_target", None)
                 inputs = {key: value.to(device) for key, value in batch.items()}
                 optimizer.zero_grad(set_to_none=True)
                 with torch.autocast(
                     device_type="cuda", dtype=torch.bfloat16, enabled=use_bf16
                 ):
                     logits = model(**inputs).logits
-                    loss = weighted_cross_entropy(logits, labels, loss_weight)
+                    if target_regime == "soft":
+                        if batch_soft_targets is None:
+                            raise RuntimeError("Soft-target batch has no soft targets")
+                        loss = weighted_soft_cross_entropy(
+                            logits, batch_soft_targets.to(device), loss_weight
+                        )
+                    else:
+                        loss = weighted_cross_entropy(logits, labels, loss_weight)
                 if not torch.isfinite(loss):
                     raise FloatingPointError(
                         "Non-finite training loss; rerun with --precision fp32"
@@ -441,6 +510,8 @@ def run(args: argparse.Namespace) -> Path:
                 "seed": seed,
                 "fold": args.fold,
                 "weight_strategy": args.weight_strategy,
+                "target_regime": target_regime,
+                "variant": variant,
                 "requested_precision": args.precision,
                 "smoke": args.smoke,
             },
@@ -479,11 +550,21 @@ def run(args: argparse.Namespace) -> Path:
                 ].sum()
             ),
             "checkpoint_selection_partition": "inner_grouped_family",
+            "checkpoint_selection_target": "hard_consensus_label_pr_auc",
             "outer_fold_evaluations_during_training": 0,
             "outer_fold_evaluations_after_selection": 1,
             "validation_rows": len(outer_validation_frame),
             "scored_validation_rows": int(scoring.sum()),
             "seed": seed,
+            "target_regime": target_regime,
+            "input_variant": variant,
+            "full_encoder_fine_tuned": True,
+            "factorial_artifact_hashes": (
+                None
+                if factorial_manifest is None
+                else factorial_manifest["artifact_hashes"]
+            ),
+            "context_removals": context_removals,
             "best_epoch": best_epoch,
             "precision": "bf16" if use_bf16 else "fp32",
             "model_parameter_dtype": str(next(best_model.parameters()).dtype),
@@ -529,6 +610,15 @@ def parse_args() -> argparse.Namespace:
         "--weight-strategy",
         choices=("unweighted", "class", "confidence", "combined"),
         default="unweighted",
+    )
+    parser.add_argument(
+        "--target-regime", choices=("hard", "soft"), default="hard"
+    )
+    parser.add_argument(
+        "--variant", choices=("target_only", "local_context")
+    )
+    parser.add_argument(
+        "--factorial-artifacts", type=Path, default=DEFAULT_FACTORIAL_ARTIFACTS
     )
     parser.add_argument("--allow-download", action="store_true")
     parser.add_argument(
