@@ -14,7 +14,7 @@ from models.classical.annotation_logreg_experiment import (
 from models.classical.train_annotation_embeddings_only import (
     FEATURE_MODE as EMBEDDINGS_ONLY_MODE,
 )
-from models.classical.train_annotation_logreg_v2 import (
+from models.classical.train_annotation_engineered_tfidf import (
     FEATURE_MODE as ENGINEERED_TFIDF_MODE,
 )
 from models.classical.train_annotation_tfidf_embeddings import (

@@ -140,6 +140,24 @@ The Linear SVM's decision margin is mapped through a sigmoid for ranking metrics
 the 0.5 threshold corresponds to its default zero-margin decision boundary. No
 probability calibration is performed.
 
+## Annotation result figures
+
+Generate comparisons from the saved pooled out-of-fold metrics without rerunning
+models:
+
+```powershell
+python -m models.classical.plot_annotation_results
+```
+
+The script writes PNG and SVG versions of feature-setup comparisons by model,
+classifier comparisons within each feature setup, and the best cohort-compatible
+setup for each model (selected by PR-AUC), plus `experiment_metrics.csv`, under
+`results/ML/figures/`. It uses only runs with
+matching row counts, positive counts, and fold validation composition for figures;
+all discovered pooled-metric runs, including excluded cohorts, are listed in the CSV.
+The compared metrics are PR-AUC, precision, recall, F1, F2, and ROC-AUC. Threshold
+metrics use each experiment's saved prediction threshold.
+
 ## Exploratory experiments
 
 The experiment notebook and standalone Python runners are collected in this
