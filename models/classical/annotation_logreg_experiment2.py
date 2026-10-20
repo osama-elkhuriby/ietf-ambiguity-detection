@@ -27,6 +27,12 @@ from sklearn.metrics import (
 from sklearn.model_selection import StratifiedGroupKFold
 from sklearn.preprocessing import StandardScaler
 
+from models.classical.revision_features import (
+    REVISION_FEATURE_COLUMNS,
+    load_revision_features,
+    revision_feature_provenance,
+)
+
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_INPUT = ROOT / "results/annotation/final_annotation.csv"
 FeatureMode = Literal[
@@ -34,12 +40,14 @@ FeatureMode = Literal[
     "tfidf",
     "embeddings",
     "tfidf_embeddings",
+    "engineered_tfidf_revision",
 ]
 DEFAULT_OUTPUTS = {
     "engineered_tfidf": ROOT / "results/ML/v2_engineered_tfidf",
     "tfidf": ROOT / "results/ML/v2_tfidf_only",
     "embeddings": ROOT / "results/ML/v2_embeddings_only",
     "tfidf_embeddings": ROOT / "results/ML/v2_tfidf_embeddings",
+    "engineered_tfidf_revision": ROOT / "results/ML/v2_engineered_tfidf_revision",
 }
 RANDOM_STATE = 42
 N_SPLITS = 3
@@ -391,6 +399,7 @@ def _fit_components(
     train_texts: pd.Series,
     train_features: pd.DataFrame | None,
     train_embeddings: np.ndarray | None,
+    train_revision_features: pd.DataFrame | None = None,
 ) -> tuple[dict[str, Any], sparse.csr_matrix]:
     components: dict[str, Any] = {}
     matrices: list[sparse.csr_matrix] = []
@@ -416,6 +425,17 @@ def _fit_components(
         matrix = sparse.csr_matrix(scaler.fit_transform(train_embeddings))
         matrices.append(matrix)
         components["embedding_scaler"] = scaler
+    if "revision" in feature_mode:
+        if train_revision_features is None:
+            raise ValueError("Revision features are required for this model")
+        scaler = StandardScaler()
+        matrix = sparse.csr_matrix(
+            scaler.fit_transform(
+                train_revision_features.loc[:, REVISION_FEATURE_COLUMNS].to_numpy()
+            )
+        )
+        matrices.append(matrix)
+        components["revision_scaler"] = scaler
     if not matrices:
         raise ValueError(f"No feature components configured for {feature_mode!r}")
     return components, sparse.hstack(matrices, format="csr")
@@ -427,6 +447,7 @@ def _transform_components(
     texts: pd.Series,
     features: pd.DataFrame | None,
     embeddings: np.ndarray | None,
+    revision_features: pd.DataFrame | None = None,
 ) -> sparse.csr_matrix:
     matrices: list[sparse.csr_matrix] = []
     if "tfidf" in feature_mode:
@@ -444,6 +465,17 @@ def _transform_components(
             raise ValueError("Clause embeddings are required for this model")
         scaler = components["embedding_scaler"]
         matrices.append(sparse.csr_matrix(scaler.transform(embeddings)))
+    if "revision" in feature_mode:
+        if revision_features is None:
+            raise ValueError("Revision features are required for this model")
+        scaler = components["revision_scaler"]
+        matrices.append(
+            sparse.csr_matrix(
+                scaler.transform(
+                    revision_features.loc[:, REVISION_FEATURE_COLUMNS].to_numpy()
+                )
+            )
+        )
     if not matrices:
         raise ValueError(f"No feature components configured for {feature_mode!r}")
     return sparse.hstack(matrices, format="csr")
@@ -486,8 +518,10 @@ def train_and_validate(
 
     use_engineered = "engineered" in feature_mode
     use_embeddings = "embeddings" in feature_mode
+    use_revision = "revision" in feature_mode
     features = extract_v2_features(frame) if use_engineered else None
     embeddings = _encode_target_embeddings(frame["target_clause"]) if use_embeddings else None
+    revision_features = load_revision_features(frame) if use_revision else None
     groups = build_validation_groups(frame)
     group_count = len(np.unique(groups))
     positive_group_count = len(np.unique(groups[y == 1]))
@@ -510,6 +544,8 @@ def train_and_validate(
     ):
         if np.unique(y[train_idx]).size != 2 or np.unique(y[valid_idx]).size != 2:
             raise ValueError(f"Fold {fold} does not contain both label classes")
+        if np.intersect1d(groups[train_idx], groups[valid_idx]).size:
+            raise RuntimeError(f"Fold {fold} leaks draft families across partitions")
         train_features = (
             features.iloc[train_idx] if features is not None else None
         )
@@ -518,11 +554,18 @@ def train_and_validate(
         )
         train_embeddings = embeddings[train_idx] if embeddings is not None else None
         valid_embeddings = embeddings[valid_idx] if embeddings is not None else None
+        train_revision_features = (
+            revision_features.iloc[train_idx] if revision_features is not None else None
+        )
+        valid_revision_features = (
+            revision_features.iloc[valid_idx] if revision_features is not None else None
+        )
         components, train_matrix = _fit_components(
             feature_mode,
             frame["target_clause"].iloc[train_idx],
             train_features,
             train_embeddings,
+            train_revision_features,
         )
         valid_matrix = _transform_components(
             feature_mode,
@@ -530,6 +573,7 @@ def train_and_validate(
             frame["target_clause"].iloc[valid_idx],
             valid_features,
             valid_embeddings,
+            valid_revision_features,
         )
         classifier = _new_classifier().fit(train_matrix, y[train_idx])
         probabilities = classifier.predict_proba(valid_matrix)[:, 1]
@@ -609,6 +653,18 @@ def train_and_validate(
         feature_notes["embeddings"] = (
             "Frozen sentence encoder run locally without downloading model files."
         )
+    if use_revision:
+        model_metrics["revision_features"] = {
+            "count": len(REVISION_FEATURE_COLUMNS),
+            "columns": list(REVISION_FEATURE_COLUMNS),
+            "scaler": "fold-local StandardScaler",
+            "history": "H0: t-1 -> t; H1: t-2 -> t-1 via the H0 predecessor",
+        }
+        feature_notes["revision_leakage_control"] = (
+            "Label-free predecessor matches use only numbered drafts at or before "
+            "the row revision; labels, candidate source, later drafts, RFC endpoints, "
+            "errata, votes, and rationales are excluded."
+        )
     metrics: dict[str, Any] = {
         "rows": len(frame),
         "positive_rows": int(y.sum()),
@@ -643,6 +699,12 @@ def train_and_validate(
             index=False,
             lineterminator="\n",
         )
+    if revision_features is not None:
+        revision_features.to_csv(
+            output_dir / "revision_features.csv",
+            index=False,
+            lineterminator="\n",
+        )
     frame[["item_id", "document", "final_label"]].assign(
         validation_group=groups
     ).to_csv(output_dir / "rows_and_labels.csv", index=False, lineterminator="\n")
@@ -662,6 +724,7 @@ def train_and_validate(
         frame["target_clause"],
         features,
         embeddings,
+        revision_features,
     )
     final_classifier = _new_classifier().fit(final_matrix, y)
     final_components["classifier"] = final_classifier
@@ -676,6 +739,9 @@ def train_and_validate(
     )
     final_components["embedding_revision"] = (
         EMBEDDING_REVISION if use_embeddings else None
+    )
+    final_components["revision_columns"] = (
+        list(REVISION_FEATURE_COLUMNS) if use_revision else []
     )
     final_components["feature_mode"] = feature_mode
     sparse.save_npz(matrices_dir / "combined.npz", final_matrix, compressed=True)
@@ -709,6 +775,20 @@ def train_and_validate(
             compressed=True,
         )
         matrix_shapes["embeddings_scaled"] = list(embedding_matrix.shape)
+    if use_revision:
+        assert revision_features is not None
+        revision_scaler = final_components["revision_scaler"]
+        revision_matrix = sparse.csr_matrix(
+            revision_scaler.transform(
+                revision_features.loc[:, REVISION_FEATURE_COLUMNS].to_numpy()
+            )
+        )
+        sparse.save_npz(
+            matrices_dir / "revision_scaled.npz",
+            revision_matrix,
+            compressed=True,
+        )
+        matrix_shapes["revision_scaled"] = list(revision_matrix.shape)
     joblib.dump(final_components, output_dir / "final_model.joblib")
     tfidf_feature_count = (
         len(final_components["vectorizer"].get_feature_names_out())
@@ -725,6 +805,10 @@ def train_and_validate(
         "matrix_shapes": matrix_shapes,
         "tfidf_feature_count": tfidf_feature_count,
         "embedding_dimensions": embeddings_dimension,
+        "revision_feature_columns": (
+            list(REVISION_FEATURE_COLUMNS) if use_revision else []
+        ),
+        "revision_provenance": revision_feature_provenance() if use_revision else None,
         "validation_groups": group_count,
         "metrics_file": "metrics.json",
         "validation_note": (

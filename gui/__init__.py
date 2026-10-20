@@ -1,1 +1,1 @@
-"""Local browser GUI for interactive Qwen clause review."""
+"""Local browser GUI for RFC ambiguity classification."""

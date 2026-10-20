@@ -1,0 +1,68 @@
+{
+  "counts": {
+    "cross_fold_bcp14_skeleton_conflicts": 0,
+    "cross_fold_document_overlaps": 0,
+    "cross_fold_lineage_conflicts": 0,
+    "cross_fold_target_context_overlaps": 2,
+    "exact_target_duplicates_all": 1,
+    "exact_target_duplicates_cross_fold": 0,
+    "families_assigned_to_multiple_folds": 0,
+    "near_cross_fold_targets": 1,
+    "targets_with_bcp14_keyword": 1840
+  },
+  "cross_fold_bcp14_skeleton_conflicts": [],
+  "cross_fold_document_overlaps": [],
+  "cross_fold_lineage_conflicts": [],
+  "cross_fold_target_context_overlaps": [
+    {
+      "context_family": "draft-ietf-quic-transport",
+      "context_field": "next_clause",
+      "context_fold": 1,
+      "context_record_id": "449153889a16d20ac40ed8c5a65d99cd5c0a47c5cde15455d6e9618048ebb864",
+      "normalized_text_sha256": "1a466a30f1e16290b0a764bac075637606fcc4e44319c1b0eaf89a9c81792cdf",
+      "target_family": "draft-ietf-quic-recovery",
+      "target_fold": 2,
+      "target_record_id": "ac7c215ebb828b233c150316a61c679826b5df2df370ed6e911ff75bb5887ada"
+    },
+    {
+      "context_family": "draft-ietf-quic-tls",
+      "context_field": "previous_clause",
+      "context_fold": 3,
+      "context_record_id": "4f83ea63063f6b9618425d2f7af840ea827b90018fa290eff29c2e27185c0c0e",
+      "normalized_text_sha256": "980d25cca5f74353efaea7abba3a7a910d594261768a3130a40f2527b5a8773e",
+      "target_family": "draft-ietf-quic-transport",
+      "target_fold": 1,
+      "target_record_id": "f4f1bfba6ef051076333e37e714671d9fa105ceb0eced066a2b1fa9312909f6d"
+    }
+  ],
+  "exact_target_duplicates": [
+    {
+      "cross_fold": false,
+      "left_family": "draft-ietf-quic-http",
+      "left_fold": 3,
+      "left_record_id": "358d4cb55f8d69b09755551c38ede804958ab033abedacef96153a0cccf3e68e",
+      "normalized_text_sha256": "7f411209a9055a5b265f34df8fc0b298ca1192441872fd8cf10978d0a42dd56c",
+      "right_family": "draft-ietf-quic-http",
+      "right_fold": 3,
+      "right_record_id": "b3aed45dabd69097132d8ef25c648855290002842dffeb9b111800c0d40a2e05"
+    }
+  ],
+  "families_assigned_to_multiple_folds": [],
+  "label_blind": true,
+  "near_cross_fold_targets": [
+    {
+      "left_family": "draft-ietf-quic-recovery",
+      "left_fold": 2,
+      "left_record_id": "853a6c3da0c1deb70611c0c787fcce304ac31c24398ee635dfdc09908429cfb5",
+      "right_family": "draft-ietf-quic-transport",
+      "right_fold": 1,
+      "right_record_id": "d5aa27b2819436e3ef9225f698ed3a7570b85c0ddddc159df486997f14582467",
+      "token_3gram_jaccard": 0.87234043
+    }
+  ],
+  "near_duplicate_method": "word 3-gram Jaccard; shorter targets use all tokens",
+  "near_duplicate_threshold": 0.85,
+  "normalization": "Unicode NFC, case-folded, whitespace-collapsed",
+  "schema_version": 1,
+  "training_blocked": false
+}

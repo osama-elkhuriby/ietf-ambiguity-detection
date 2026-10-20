@@ -83,13 +83,13 @@ model refit on all annotations is saved there as `final_model.joblib`.
 The v2 annotation experiments use the same 23 ambiguity-focused numerical
 features, class-balanced L1 logistic regression, and three-fold validation
 grouped by draft family. TF-IDF vocabulary and all scalers are fit within each
-training fold. Results should be treated as exploratory because there are only
-49 positive labels across 11 draft families.
+training fold. Results should be treated as exploratory because positive labels
+remain sparse across only 11 draft families.
 
 Run engineered features plus TF-IDF:
 
 ```powershell
-python -m models.classical.train_annotation_logreg_v2
+python -m models.classical.train_annotation_engineered_tfidf
 ```
 
 Then run the three text-only alternatives:
@@ -100,13 +100,27 @@ python -m models.classical.train_annotation_embeddings_only
 python -m models.classical.train_annotation_tfidf_embeddings
 ```
 
-Outputs are saved separately under `results/annotation/v2_engineered_tfidf/`,
-`results/annotation/v2_tfidf_only/`,
-`results/annotation/v2_embeddings_only/`, and
-`results/annotation/v2_tfidf_embeddings/`. The frozen MiniLM encoder is used
+Run the new past-draft revision experiment:
+
+```powershell
+python -m models.classical.train_annotation_engineered_tfidf_revision
+```
+
+Its 12 revision features summarize the immediate clause transition
+(`t-1 -> t`, H0) and the preceding historical transition
+(`t-2 -> t-1`, H1): predecessor availability, unchanged/modified/moved flags,
+and match/lexical change distances. The identity join reads no label or
+candidate-source fields. Matching uses only numbered drafts at or before the
+row revision, and revision scaling is fit separately in every CV training fold.
+
+Outputs are saved separately under `results/ML/v2_engineered_tfidf/`,
+`results/ML/v2_tfidf_only/`, `results/ML/v2_embeddings_only/`,
+`results/ML/v2_tfidf_embeddings/`, and
+`results/ML/v2_engineered_tfidf_revision/`. The frozen MiniLM encoder is used
 offline for embedding modes; no model download is attempted. Each run also
 refits a final model on all rows for downstream use, while out-of-fold
-predictions and metrics report validation performance.
+predictions and metrics report validation performance. All feature modes use
+the same 2,406-row, 158-positive annotation cohort and identical grouped folds.
 
 For a single engineered-plus-TF-IDF train/test run with draft families held
 out, use:
@@ -123,7 +137,7 @@ reported once on the held-out test families and saved under
 
 The separate runner `annotation_classifier_experiments.py` compares a
 class-weighted Linear SVM and a balanced Random Forest using the same three-fold
-draft-family grouped validation and feature preparation. It supports the same four
+draft-family grouped validation and feature preparation. It supports the same five
 feature modes:
 
 ```powershell
@@ -131,11 +145,12 @@ python -m models.classical.annotation_classifier_experiments --classifier linear
 python -m models.classical.annotation_classifier_experiments --classifier linear_svm --feature-mode tfidf
 python -m models.classical.annotation_classifier_experiments --classifier linear_svm --feature-mode embeddings
 python -m models.classical.annotation_classifier_experiments --classifier linear_svm --feature-mode tfidf_embeddings
+python -m models.classical.annotation_classifier_experiments --classifier linear_svm --feature-mode engineered_tfidf_revision
 ```
 
 Replace `linear_svm` with `random_forest` to run the same feature modes with the
 other classifier. Outputs are kept separately under
-`results/annotation/additional_classifiers/<classifier>/<feature-mode>/`.
+`results/ML/additional_classifiers/<classifier>/<feature-mode>/`.
 The Linear SVM's decision margin is mapped through a sigmoid for ranking metrics;
 the 0.5 threshold corresponds to its default zero-margin decision boundary. No
 probability calibration is performed.

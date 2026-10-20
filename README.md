@@ -94,20 +94,52 @@ Run commands from the repository root unless noted.
 
 ### Review an RFC in the local GUI
 
-The GUI uploads rendered RFC plaintext (`.txt`) to a loopback-only server,
-segments the document, then ranks explicitly normative clauses with the saved
-engineered-feature + TF–IDF Logistic Regression model. It can optionally ask the
-pinned local Qwen3 32B model for short review notes on up to five selected
-clauses. The classifier score is a ranking value, not a calibrated probability
-or confirmed ambiguity judgment.
+The GUI runs locally and classifies clauses in rendered RFC plaintext. It
+displays only positive (potentially ambiguous) predictions from the saved
+engineered-feature + TF-IDF Logistic Regression model. The 0.5 threshold
+produces the binary result; scores are not calibrated probabilities or
+confirmed ambiguity judgments.
 
-The local model artifact under `results/ML/v2_engineered_tfidf/` is not included
-in Git; restore its `final_model.joblib`, `manifest.json`, and `metrics.json`
-before starting the app:
+#### Before the first run
+
+1. Create and activate the project environment using the [Setup](#setup)
+   instructions.
+2. Restore the model files `final_model.joblib`, `manifest.json`, and
+   `metrics.json` into `results/ML/v2_engineered_tfidf/` from an approved local
+   backup or model-generation workflow. Model artifacts are not included in
+   Git. The artifact was created with scikit-learn 1.9.1; use the matching
+   version to avoid the cross-version loading warning.
+3. For optional explanations, install Ollama, pull the pinned `qwen3:32b`
+   model, and ensure its digest matches the project configuration. The
+   classifier itself does not require Ollama; explanations are optional and
+   limited to five selected positive results.
+
+#### Start and use
+
+From the repository root, run:
 
 ```powershell
 python -m gui.app
 ```
+
+The app opens at `http://127.0.0.1:8765/` and binds only to the local computer.
+Upload a rendered RFC `.txt` file (up to 5 MB), review the positive results,
+and optionally search, filter by section, sort, or download the positive-result
+CSV. Select up to five results to request Qwen explanations. Press `Ctrl+C` in
+the terminal to stop the server.
+
+#### What remains before research or submission claims
+
+- Match the environment to the saved artifact's scikit-learn version and verify
+  model provenance before relying on predictions.
+- Independently evaluate the detector on an approved, held-out dataset with
+  expert-adjudicated labels. Current scores are development estimates against
+  operational reference labels, not independent expert validation.
+- Follow the sealed evaluation protocol for reserved TCP and DNS data; do not
+  inspect or use those partitions outside the approved protocol.
+- Document the evaluation cohort, label source, threshold, and limitations in
+  any paper or presentation. The GUI is a research demonstration, not a
+  validated production detector.
 
 See [`gui/README.md`](gui/README.md) for model provenance, limitations, and
 privacy details.

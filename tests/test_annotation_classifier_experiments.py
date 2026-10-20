@@ -10,12 +10,13 @@ from models.classical.annotation_classifier_experiments import (
 )
 
 
-def test_additional_classifiers_support_all_existing_feature_modes() -> None:
+def test_additional_classifiers_support_revision_feature_mode() -> None:
     assert FEATURE_MODES == (
         "engineered_tfidf",
         "tfidf",
         "embeddings",
         "tfidf_embeddings",
+        "engineered_tfidf_revision",
     )
 
 

@@ -26,10 +26,12 @@ FEATURE_MODE_LABELS = {
     "tfidf": "TF-IDF",
     "embeddings": "Embeddings",
     "tfidf_embeddings": "TF-IDF + embeddings",
+    "engineered_tfidf_revision": "Engineered + TF-IDF + revision",
     "engineered_rules": "Engineered rules",
 }
 FEATURE_MODE_ORDER = (
     "engineered_tfidf",
+    "engineered_tfidf_revision",
     "tfidf",
     "embeddings",
     "tfidf_embeddings",
@@ -131,7 +133,8 @@ def _read_experiment(path: Path) -> ExperimentResult | None:
         return None
 
     model_details = data.get("model")
-    if isinstance(model_details, dict):
+    is_heuristic_path = "heuristic" in path.parts
+    if isinstance(model_details, dict) and not is_heuristic_path:
         model = str(model_details.get("type", "unknown"))
         feature_mode = str(model_details.get("feature_set", "unknown"))
     else:
@@ -341,12 +344,13 @@ def plot_model_comparisons_by_feature(
 
     feature_modes = (
         "engineered_tfidf",
+        "engineered_tfidf_revision",
         "tfidf",
         "embeddings",
         "tfidf_embeddings",
     )
     model_order = ("LogisticRegression", "linear_svm", "random_forest")
-    figure, axes = plt.subplots(2, 2, figsize=(16, 10), sharey=True)
+    figure, axes = plt.subplots(2, 3, figsize=(21, 10), sharey=True)
     for axis, feature_mode in zip(axes.flat, feature_modes):
         series = [
             (
@@ -382,6 +386,8 @@ def plot_model_comparisons_by_feature(
                 fontsize=8,
             )
         axis.legend(fontsize=8, loc="upper left")
+    for axis in axes.flat[len(feature_modes) :]:
+        axis.set_visible(False)
 
     figure.suptitle(
         "Classifier comparison within each feature setup\n"

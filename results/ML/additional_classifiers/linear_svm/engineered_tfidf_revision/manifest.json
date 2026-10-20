@@ -1,0 +1,58 @@
+{
+  "classifier": "linear_svm",
+  "feature_mode": "engineered_tfidf_revision",
+  "revision_feature_columns": [
+    "h0_has_predecessor",
+    "h0_unchanged",
+    "h0_modified",
+    "h0_moved",
+    "h0_match_change_distance",
+    "h0_lexical_change_distance",
+    "h1_has_predecessor",
+    "h1_unchanged",
+    "h1_modified",
+    "h1_moved",
+    "h1_match_change_distance",
+    "h1_lexical_change_distance"
+  ],
+  "revision_provenance": {
+    "cache_sha256": {
+      "draft-ietf-6man-rfc2460bis.parquet": "14a07eef877919297bedf5cbe568a7d31076f94512df6bcf2497d7ca447a3eda",
+      "draft-ietf-dnsop-svcb-https.parquet": "8ceaa24ad4e15d8e6254a22b98e349a6fe390ac4611cff46d30001ee2867dfea",
+      "draft-ietf-httpbis-cache-header.parquet": "c2898c951ad3ff596099a4bbaf88ef4e7536027c10acce55f7f3dd7c02438523",
+      "draft-ietf-httpbis-http2bis.parquet": "a2b7b31ff020681cf62dc06059b1e6bdc6ebabbe9b080bd74abf2ea9ee3ae0b2",
+      "draft-ietf-httpbis-semantics.parquet": "014c5caab446e51ea6b0af7da659577fffe36c3b70cf26b28ce94b6d64058333",
+      "draft-ietf-quic-http.parquet": "c6fcf1646f9dc945aef7bcb256ff865d2181f99859be393a999b38e4e81f811f",
+      "draft-ietf-quic-recovery.parquet": "35d54b438fa1ea7261dc43ce9e4246d4ab9d9115e88efcfb0b0d932dde148137",
+      "draft-ietf-quic-tls.parquet": "4d8bdd751229758b0b50acb848629a8c7ecb9bf893eed2d1bac31fcfcfc8d733",
+      "draft-ietf-quic-transport.parquet": "bd78085aae2c3534f88db10abc34dec4b76ca8ed21ecf9dc1fc3bdc97eb01548",
+      "draft-ietf-tcpm-rfc793bis.parquet": "e28f01e1d059c89867c348ea47ef5343a274efd49387d7cd6c67cd0600fe9220",
+      "draft-ietf-tls-tls13.parquet": "795c77109acbcd4e8f4303c53fa78c48fd20a7c370e3dbe3c96322677690dbe6"
+    },
+    "feature_columns": [
+      "h0_has_predecessor",
+      "h0_unchanged",
+      "h0_modified",
+      "h0_moved",
+      "h0_match_change_distance",
+      "h0_lexical_change_distance",
+      "h1_has_predecessor",
+      "h1_unchanged",
+      "h1_modified",
+      "h1_moved",
+      "h1_match_change_distance",
+      "h1_lexical_change_distance"
+    ],
+    "history": {
+      "h0": "t-1 -> t",
+      "h1": "t-2 -> t-1, following the H0 predecessor"
+    },
+    "identity_key_sha256": "09edc22f73d93998df728378986f039690e5b87fa62e1f52928a80708009cdce",
+    "leakage_control": "Only item_id/record_id/family_id identity fields and cached matches from numbered drafts at or before t are read; labels, candidate source, votes, rationales, later drafts, RFC endpoints, and errata are excluded.",
+    "matcher": "section_constrained_lexical_minilm_v3"
+  },
+  "score_method": "sigmoid of LinearSVC decision_function; 0.5 maps to margin 0",
+  "source_path": "D:\\RFC\\ietf-ambiguity-detection\\results\\annotation\\final_annotation.csv",
+  "source_sha256": "817a76e7936f84a2c464ba62b81f0a49f83e05dafe012ab3822399afdeda3bdf",
+  "validation_note": "Metrics use out-of-fold scores; final_model.joblib is fitted on all rows."
+}

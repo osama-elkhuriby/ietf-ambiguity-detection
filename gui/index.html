@@ -7,141 +7,396 @@
   <style>
     :root {
       color-scheme: light;
-      --navy: #183452;
-      --blue: #2d6596;
-      --teal: #188585;
-      --ink: #26313b;
-      --muted: #5b6974;
-      --line: #d6e0e7;
-      --pale: #f2f7fa;
-      --gold-bg: #fbf2e3;
-      --red-bg: #faedeb;
-      --green-bg: #eaf5ef;
+      --navy: #102b46;
+      --blue: #1769aa;
+      --blue-dark: #12578f;
+      --teal: #16877c;
+      --ink: #172b3e;
+      --muted: #64778a;
+      --line: #dce5ed;
+      --pale: #f4f8fb;
+      --gold-bg: #fff6e5;
+      --red-bg: #fff0ed;
+      --green-bg: #eaf7f0;
+      --shadow: 0 18px 50px rgb(16 43 70 / 8%);
     }
     * { box-sizing: border-box; }
+    html { min-width: 320px; scroll-behavior: smooth; }
     body {
       margin: 0;
-      background: #f3f6f8;
+      background:
+        radial-gradient(ellipse at 82% 0%, rgb(206 229 245 / 46%), transparent 32rem),
+        #f4f7fa;
       color: var(--ink);
-      font-family: "Segoe UI", Arial, sans-serif;
+      font-family: "Segoe UI", Inter, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
       line-height: 1.5;
     }
     header {
-      padding: 25px max(24px, calc((100vw - 1180px) / 2));
-      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+      padding: 18px max(24px, calc((100vw - 1160px) / 2));
+      background:
+        radial-gradient(ellipse at 88% -40%, rgb(48 142 180 / 48%), transparent 32rem),
+        linear-gradient(112deg, #102b46 0%, #153b5b 62%, #14556b 100%);
       color: white;
     }
-    header h1 { margin: 0; font-size: 25px; }
-    header p { margin: 5px 0 0; color: #dce8f1; font-size: 14px; }
-    main { max-width: 1180px; margin: 24px auto; padding: 0 20px 40px; }
+    .topbar {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+    .brand { display: flex; align-items: center; gap: 11px; min-width: 0; }
+    .brand-mark {
+      display: grid;
+      width: 38px;
+      height: 38px;
+      flex: 0 0 38px;
+      place-items: center;
+      border: 1px solid rgb(255 255 255 / 24%);
+      border-radius: 12px;
+      background: rgb(255 255 255 / 10%);
+      color: #a8e2db;
+    }
+    .brand-name { margin: 0; font-size: 15px; font-weight: 700; letter-spacing: .01em; }
+    .brand-caption { margin: 1px 0 0; color: #c5d7e4; font-size: 12px; }
+    .local-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 11px;
+      border: 1px solid rgb(255 255 255 / 18%);
+      border-radius: 999px;
+      background: rgb(255 255 255 / 8%);
+      color: #e1edf4;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .local-badge::before {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #74d3aa;
+      box-shadow: 0 0 0 3px rgb(116 211 170 / 15%);
+      content: "";
+    }
+    main { max-width: 1160px; margin: 0 auto; padding: 38px 24px 54px; }
+    .page-heading { margin: 0 0 23px; }
+    .eyebrow {
+      margin: 0 0 7px;
+      color: var(--teal);
+      font-size: 11px;
+      font-weight: 750;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+    .page-heading h1 { margin: 0; color: var(--navy); font-size: clamp(27px, 4vw, 36px); letter-spacing: -.035em; line-height: 1.15; }
+    .page-heading p:last-child { max-width: 700px; margin: 10px 0 0; color: var(--muted); font-size: 15px; }
     .status, .card {
       background: white;
       border: 1px solid var(--line);
-      border-radius: 12px;
-      box-shadow: 0 3px 12px rgb(24 52 82 / 5%);
+      border-radius: 17px;
+      box-shadow: var(--shadow);
     }
     .status {
       display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      padding: 13px 16px;
-      margin-bottom: 18px;
-      font-size: 14px;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 18px;
+      margin-bottom: 20px;
+      color: #425c71;
+      font-size: 13px;
     }
-    .dot { flex: 0 0 10px; width: 10px; height: 10px; margin-top: 5px; border-radius: 50%; background: #259469; }
-    .card { padding: 22px; margin-bottom: 18px; }
-    h2 { margin: 0 0 13px; color: var(--navy); font-size: 19px; }
+    .status.ready { border-color: #cce6dc; background: #fbfefc; }
+    .status.failed { border-color: #f0d0ca; background: #fffaf9; }
+    .dot {
+      flex: 0 0 9px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #d59b35;
+      box-shadow: 0 0 0 4px rgb(213 155 53 / 12%);
+    }
+    .status.ready .dot { background: #259469; box-shadow: 0 0 0 4px rgb(37 148 105 / 12%); }
+    .status.failed .dot { background: #c4584b; box-shadow: 0 0 0 4px rgb(196 88 75 / 12%); }
+    .card { padding: 25px; margin-bottom: 20px; }
+    .card-heading {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 17px;
+    }
+    .card-heading h2 { margin: 0; color: var(--navy); font-size: 19px; letter-spacing: -.015em; }
+    .step {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: #6f8293;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .step-number {
+      display: grid;
+      width: 24px;
+      height: 24px;
+      place-items: center;
+      border-radius: 8px;
+      background: #eaf3f9;
+      color: var(--blue);
+      font-size: 12px;
+      letter-spacing: 0;
+    }
     p { margin-top: 0; }
     .intro, .hint, .caveat { color: var(--muted); font-size: 13px; }
-    .intro { margin-bottom: 0; }
-    .field-label { display: block; margin: 14px 0 6px; font-weight: 650; font-size: 14px; }
-    input[type="file"] { display: block; max-width: 100%; padding: 10px; border: 1px solid #bac9d3; border-radius: 7px; background: white; }
+    .intro { margin-bottom: 19px; }
+    .field-label { display: block; margin: 0 0 8px; color: #314a5f; font-weight: 650; font-size: 13px; }
+    .drop-zone {
+      position: relative;
+      display: flex;
+      min-height: 138px;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      padding: 22px;
+      border: 1.5px dashed #b9cbd9;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #f8fbfd, #f4f9fc);
+      cursor: pointer;
+      transition: border-color .18s ease, background .18s ease, transform .18s ease;
+    }
+    .drop-zone:hover, .drop-zone.dragover {
+      border-color: #4b91bd;
+      background: #edf7fc;
+    }
+    .drop-zone.dragover { transform: scale(1.005); }
+    .drop-icon {
+      display: grid;
+      width: 46px;
+      height: 46px;
+      flex: 0 0 46px;
+      place-items: center;
+      border: 1px solid #d9eaf3;
+      border-radius: 14px;
+      background: white;
+      color: var(--blue);
+      box-shadow: 0 4px 12px rgb(23 105 170 / 8%);
+    }
+    .drop-copy { min-width: 0; }
+    .drop-copy strong { display: block; color: #25435c; font-size: 14px; }
+    .drop-copy span { display: block; margin-top: 3px; color: var(--muted); font-size: 12px; }
+    .drop-copy .file-name { color: var(--teal); font-weight: 650; overflow-wrap: anywhere; }
+    input[type="file"] {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      clip-path: inset(50%);
+    }
+    .drop-zone:focus-within { outline: 3px solid rgb(23 105 170 / 24%); outline-offset: 3px; }
+    .hint { margin: 10px 0 0; font-size: 12px; }
     button {
       border: 0;
-      border-radius: 7px;
-      padding: 10px 16px;
+      border-radius: 10px;
+      padding: 11px 16px;
       color: white;
-      background: var(--blue);
-      font: 600 14px "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #1d78bb, #155f9d);
+      box-shadow: 0 5px 12px rgb(23 105 170 / 18%);
+      font: 650 13px "Segoe UI", Arial, sans-serif;
       cursor: pointer;
+      transition: transform .16s ease, box-shadow .16s ease, filter .16s ease;
     }
-    button:hover { filter: brightness(.94); }
-    button:disabled { cursor: wait; opacity: .65; }
-    button.secondary { color: var(--navy); background: #e7eef3; }
-    .actions { margin-top: 16px; display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
-    #working { color: var(--muted); font-size: 13px; }
+    button:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 8px 18px rgb(23 105 170 / 23%); }
+    button:focus-visible, input:focus-visible { outline: 3px solid rgb(23 105 170 / 28%); outline-offset: 3px; }
+    button:disabled { cursor: not-allowed; opacity: .52; box-shadow: none; }
+    button.secondary { color: #28506f; background: #edf3f7; box-shadow: none; }
+    button.secondary:hover:not(:disabled) { background: #e5eef4; box-shadow: 0 5px 12px rgb(16 43 70 / 8%); }
+    .actions { margin-top: 17px; display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+    #working { color: var(--muted); font-size: 12px; }
+    #working:not(:empty)::before {
+      display: inline-block;
+      width: 11px;
+      height: 11px;
+      margin-right: 8px;
+      border: 2px solid #c8d7e2;
+      border-top-color: var(--blue);
+      border-radius: 50%;
+      vertical-align: -2px;
+      animation: spin .7s linear infinite;
+      content: "";
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
     #error, #warning {
       display: none;
       margin-top: 14px;
-      padding: 12px;
-      border-radius: 7px;
+      padding: 12px 14px;
+      border: 1px solid transparent;
+      border-radius: 10px;
       white-space: pre-wrap;
+      font-size: 13px;
     }
-    #error { color: #8e322e; background: var(--red-bg); }
-    #warning { color: #765313; background: var(--gold-bg); }
+    #error { border-color: #f0d0ca; color: #8e322e; background: var(--red-bg); }
+    #warning { border-color: #f0dfb9; color: #765313; background: var(--gold-bg); }
     .parse-warning {
       display: none;
-      margin: 12px 0;
-      padding: 11px;
-      border-radius: 7px;
+      margin: 14px 0;
+      padding: 12px 14px;
+      border: 1px solid #f0dfb9;
+      border-radius: 10px;
       color: #765313;
       background: var(--gold-bg);
       font-size: 13px;
     }
-    #results { display: none; }
+    #results { display: none; animation: rise-in .3s ease both; }
+    @keyframes rise-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
     .summary {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
-      gap: 10px;
-      margin: 16px 0;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 12px;
+      margin: 19px 0;
     }
-    .stat { padding: 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--pale); }
-    .stat strong { display: block; color: var(--navy); font-size: 20px; }
-    .stat span { color: var(--muted); font-size: 12px; }
-    .table-wrap { overflow: auto; max-height: 68vh; border: 1px solid var(--line); border-radius: 8px; }
-    table { width: 100%; border-collapse: collapse; font-size: 13px; }
-    th, td { padding: 10px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
-    th { position: sticky; top: 0; z-index: 1; background: #edf3f7; color: var(--navy); white-space: nowrap; }
+    .stat { padding: 15px 17px; border: 1px solid var(--line); border-radius: 12px; background: linear-gradient(145deg, #f7fafc, #f1f7fa); }
+    .stat strong { display: block; color: var(--navy); font-size: 25px; letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+    .stat span { color: var(--muted); font-size: 11px; font-weight: 650; letter-spacing: .04em; text-transform: uppercase; }
+    .caveat { padding: 12px 14px; border-left: 3px solid #d0a34f; border-radius: 0 9px 9px 0; background: #fffaf1; font-size: 12px; }
+    .results-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin: 18px 0 11px; }
+    .results-toolbar .actions { margin: 0; }
+    .results-filters {
+      display: grid;
+      grid-template-columns: minmax(220px, 1fr) minmax(170px, .55fr) minmax(170px, .55fr) auto;
+      align-items: center;
+      gap: 10px;
+      margin: 17px 0 12px;
+    }
+    .filter-control {
+      width: 100%;
+      min-height: 42px;
+      padding: 9px 12px;
+      border: 1px solid #d5e0e8;
+      border-radius: 10px;
+      background: white;
+      color: var(--ink);
+      font: 13px "Segoe UI", Arial, sans-serif;
+    }
+    .filter-control:focus { border-color: #6da3c5; outline: 3px solid rgb(23 105 170 / 12%); }
+    .results-count { margin: 0 0 10px; color: var(--muted); font-size: 12px; }
+    .empty-results { padding: 24px !important; color: var(--muted); text-align: center !important; }
+    .qwen-note { display: inline-block; max-width: 320px; color: #246344; line-height: 1.55; }
+    .qwen-note.pending { color: #718295; font-style: italic; }
+    .table-wrap { overflow: auto; max-height: 68vh; border: 1px solid var(--line); border-radius: 12px; }
+    table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 12px; }
+    th, td { padding: 12px; border-bottom: 1px solid #e8eef3; text-align: left; vertical-align: top; }
+    th { position: sticky; top: 0; z-index: 1; background: #f2f6f9; color: #526a7e; font-size: 10px; font-weight: 750; letter-spacing: .07em; text-transform: uppercase; white-space: nowrap; }
+    tbody tr { transition: background .15s ease; }
+    tbody tr:hover { background: #f8fbfd; }
+    tbody tr:last-child td { border-bottom: 0; }
+    .normativity-meta { display: block; margin-bottom: 4px; color: #8a7447; font-size: 10px; font-weight: 700; }
+    .normativity-text { color: #40576b; font-size: 12px; line-height: 1.6; }
     td.rank, td.score, td.line { white-space: nowrap; }
-    td.score { font-variant-numeric: tabular-nums; font-weight: 650; }
-    td.clause { min-width: 300px; white-space: pre-wrap; overflow-wrap: anywhere; }
-    td.section { min-width: 150px; }
+    td.score { color: #245c83; font-variant-numeric: tabular-nums; font-weight: 700; }
+    td.clause { min-width: 310px; color: #253d52; white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.65; }
+    td.section { min-width: 150px; color: #5d7183; }
     td.reason { min-width: 240px; color: #246344; }
-    td.review { min-width: 145px; }
-    select { max-width: 145px; padding: 6px; border: 1px solid #bac9d3; border-radius: 6px; background: white; color: var(--ink); }
-    .disclaimer { max-width: 980px; margin: 18px auto 0; color: var(--muted); font-size: 12px; text-align: center; }
-    @media (max-width: 650px) {
-      header { padding: 20px; }
-      main { margin-top: 15px; padding: 0 12px 30px; }
-      .card { padding: 16px; }
+    td input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--blue); cursor: pointer; }
+    .disclaimer { max-width: 920px; margin: 21px auto 0; color: #758595; font-size: 11px; line-height: 1.7; text-align: center; }
+    @media (max-width: 680px) {
+      header { padding: 15px 18px; }
+      .brand-caption { display: none; }
+      main { padding: 29px 16px 40px; }
+      .card { padding: 18px; border-radius: 14px; }
+      .card-heading { gap: 12px; }
+      .drop-zone { min-height: 125px; padding: 17px; }
+      .results-toolbar { align-items: flex-start; flex-direction: column; }
+      .results-toolbar .actions { width: 100%; }
+      .results-toolbar button { flex: 1 1 auto; }
+      .results-filters { grid-template-columns: 1fr 1fr; }
+      .results-filters input[type="search"] { grid-column: 1 / -1; }
+      .results-filters button { min-height: 42px; }
       .table-wrap { max-height: 70vh; }
+    }
+    @media (max-width: 420px) {
+      .local-badge { padding: 6px 8px; font-size: 10px; }
+      .brand-mark { width: 34px; height: 34px; flex-basis: 34px; }
+      .brand-name { font-size: 13px; }
+      .drop-zone { align-items: flex-start; }
+      .drop-icon { width: 39px; height: 39px; flex-basis: 39px; }
+      .card-heading { flex-direction: column; }
+      .results-filters { grid-template-columns: 1fr; }
+      .results-filters input[type="search"] { grid-column: auto; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>RFC Ambiguity Review</h1>
-    <p>Local clause ranking with Logistic Regression · optional Qwen3 32B explanations</p>
+    <div class="topbar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M6 4.75h8.5L19 9.2v10.05H6V4.75Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M14 5v4.5h4.5M9 13h7M9 16h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <div>
+          <p class="brand-name">RFC Ambiguity Review</p>
+          <p class="brand-caption">Protocol language research workspace</p>
+        </div>
+      </div>
+      <span class="local-badge">Private · runs on this device</span>
+    </div>
   </header>
   <main>
-    <section class="status" aria-live="polite">
+    <div class="page-heading">
+      <p class="eyebrow">Local-first review tool</p>
+      <h1>Find clauses that may need a closer look.</h1>
+      <p>Screen a rendered RFC for potentially ambiguous requirements, then review the model’s ranked suggestions in context.</p>
+    </div>
+
+    <section id="classifierStatus" class="status" aria-live="polite">
       <span class="dot" aria-hidden="true"></span>
       <span id="statusText">Loading the saved classifier…</span>
     </section>
 
     <section class="card">
-      <h2>Review a rendered RFC</h2>
+      <div class="card-heading">
+        <div>
+          <p class="eyebrow">Start a review</p>
+          <h2>Classify a rendered RFC</h2>
+        </div>
+        <span class="step"><span class="step-number">01</span> Upload document</span>
+      </div>
       <p class="intro">
-        Upload a plaintext RFC <code>.txt</code>. The classifier scores clauses
-        identified as explicitly normative and ranks them for review. It does not
-        provide calibrated probabilities or a definitive ambiguity decision.
+        Upload a plaintext RFC <code>.txt</code>. Explicit BCP 14 requirements
+        are scored automatically; other plausible requirement clauses stay unscored
+        until you confirm they are normative.
       </p>
       <form id="scanForm">
         <label class="field-label" for="rfcFile">RFC plaintext file</label>
-        <input id="rfcFile" type="file" accept=".txt,text/plain" required>
-        <p class="hint">Maximum 5 MB. Processed locally; a temporary copy is removed after parsing.</p>
+        <label id="dropZone" class="drop-zone" for="rfcFile">
+          <input id="rfcFile" type="file" accept=".txt,text/plain" required>
+          <span class="drop-icon" aria-hidden="true">
+            <svg width="23" height="23" viewBox="0 0 24 24" fill="none">
+              <path d="M12 15V4m0 0L8 8m4-4 4 4M5 14v4.5A1.5 1.5 0 0 0 6.5 20h11a1.5 1.5 0 0 0 1.5-1.5V14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="drop-copy">
+            <strong>Drop your RFC file here or browse</strong>
+            <span id="fileName">Choose a rendered plaintext <code>.txt</code> document</span>
+          </span>
+        </label>
+        <p class="hint">Up to 5 MB · Parsed locally · Temporary upload is removed after analysis</p>
         <div class="actions">
-          <button id="scanButton" type="submit" disabled>Rank clauses</button>
+          <button id="scanButton" type="submit" disabled>Find ambiguous clauses</button>
           <span id="working" aria-live="polite"></span>
         </div>
       </form>
@@ -150,33 +405,53 @@
     </section>
 
     <section id="results" class="card" aria-live="polite">
-      <h2 id="documentTitle">Ranked clauses</h2>
-      <p id="scopeText" class="intro"></p>
+      <div class="card-heading">
+        <div>
+          <p class="eyebrow">Review results</p>
+          <h2 id="documentTitle">RFC classifications</h2>
+        </div>
+        <span class="step"><span class="step-number">02</span> Review flagged clauses</span>
+      </div>
+      <p id="scopeText" class="intro">Only potentially ambiguous, explicitly normative clauses are shown.</p>
       <div id="summary" class="summary"></div>
       <p id="parseWarning" class="parse-warning" role="status"></p>
       <p class="caveat">
-        Scores are relative ranking values, not calibrated probabilities or proof
-        that a clause is ambiguous. Out-of-fold AP is development evidence only;
-        the saved model was refit on all annotation rows and has no independent
-        production evaluation. Human review is required.
+        These are positive predictions at the saved model threshold, not
+        independent proof of ambiguity. Scores are not calibrated probabilities.
+        Results are ordered by score; the saved model has not had independent
+        production evaluation.
       </p>
-      <div class="actions">
-        <button id="explainButton" type="button" disabled>Explain selected with Qwen</button>
-        <button id="downloadButton" type="button" class="secondary">Download review CSV</button>
-        <span id="selectionCount" class="hint">Select up to 5 clauses for explanation.</span>
+      <div class="results-toolbar">
+        <span id="selectionCount" class="hint">Select up to 5 YES predictions for an optional Qwen explanation.</span>
+        <div class="actions">
+          <button id="explainButton" type="button" disabled>Explain selected with Qwen</button>
+          <button id="downloadButton" type="button" class="secondary">Download CSV</button>
+        </div>
       </div>
+      <div class="results-filters" role="search" aria-label="Filter ambiguity predictions">
+        <input id="clauseSearch" class="filter-control" type="search"
+          placeholder="Search clause text or section…" aria-label="Search clause text or section">
+        <select id="sectionFilter" class="filter-control" aria-label="Filter by section">
+          <option value="">All sections</option>
+        </select>
+        <select id="sortResults" class="filter-control" aria-label="Sort results">
+          <option value="score-desc">Highest score first</option>
+          <option value="score-asc">Lowest score first</option>
+          <option value="section">Section order</option>
+        </select>
+        <button id="clearFilters" type="button" class="secondary">Clear filters</button>
+      </div>
+      <p id="resultsCount" class="results-count" aria-live="polite"></p>
       <div class="table-wrap">
         <table>
           <thead>
             <tr>
-              <th scope="col">Select</th>
-              <th scope="col">Rank</th>
+              <th scope="col">Explain</th>
               <th scope="col">Score</th>
               <th scope="col">Section</th>
               <th scope="col">Line</th>
               <th scope="col">Clause</th>
-              <th scope="col">Qwen review note</th>
-              <th scope="col">Your review</th>
+              <th scope="col">Qwen explanation (optional)</th>
             </tr>
           </thead>
           <tbody id="resultsBody"></tbody>
@@ -185,9 +460,8 @@
     </section>
     <p class="disclaimer">
       Research demo only. Evaluation metrics come from operational reference labels,
-      not independent expert adjudication. Only explicitly normative clauses are
-      model-scored; manual-review, contextual, and excluded units are counted but
-      not ranked. The GUI binds to this computer only.
+      not independent expert adjudication. Only clauses classified as explicitly
+      normative are scored; the GUI binds to this computer only.
     </p>
   </main>
   <script>
@@ -196,8 +470,43 @@
     const errorBox = document.getElementById("error");
     const warningBox = document.getElementById("warning");
     const resultsBox = document.getElementById("results");
+    const fileInput = document.getElementById("rfcFile");
+    const dropZone = document.getElementById("dropZone");
+    const fileName = document.getElementById("fileName");
+    const statusBanner = document.getElementById("classifierStatus");
     const rowsById = new Map();
+    let ambiguousRows = [];
+    let normativeScoredCount = 0;
+    let selectedClauseIds = new Set();
     let activeScanId = "";
+
+    function showSelectedFile(file) {
+      fileName.textContent = file ? file.name : "Choose a rendered plaintext .txt document";
+      fileName.classList.toggle("file-name", Boolean(file));
+      errorBox.style.display = "none";
+    }
+
+    fileInput.addEventListener("change", () => showSelectedFile(fileInput.files[0]));
+    ["dragenter", "dragover"].forEach((eventName) => {
+      dropZone.addEventListener(eventName, (event) => {
+        event.preventDefault();
+        dropZone.classList.add("dragover");
+      });
+    });
+    ["dragleave", "drop"].forEach((eventName) => {
+      dropZone.addEventListener(eventName, (event) => {
+        event.preventDefault();
+        dropZone.classList.remove("dragover");
+      });
+    });
+    dropZone.addEventListener("drop", (event) => {
+      const [file] = event.dataTransfer.files;
+      if (!file) return;
+      const transfer = new DataTransfer();
+      transfer.items.add(file);
+      fileInput.files = transfer.files;
+      showSelectedFile(file);
+    });
 
     function setError(message) {
       errorBox.textContent = message;
@@ -225,57 +534,105 @@
     function renderRows(rows) {
       const body = document.getElementById("resultsBody");
       body.replaceChildren();
-      rowsById.clear();
-      rows.forEach((row) => {
-        rowsById.set(row.clause_id, row);
+      if (rows.length === 0) {
+        const tr = document.createElement("tr");
+        const cell = document.createElement("td");
+        cell.className = "empty-results";
+        cell.colSpan = 6;
+        cell.textContent = ambiguousRows.length === 0
+          ? normativeScoredCount === 0
+            ? "No explicit BCP 14 normative clauses were found to score."
+            : "No explicitly normative clauses were predicted potentially ambiguous."
+          : "No clauses match these filters. Try a different search or clear the filters.";
+        tr.append(cell);
+        body.append(tr);
+      }
+      rows.forEach((row, index) => {
         const tr = document.createElement("tr");
         const selectorCell = document.createElement("td");
-        const checkbox = document.createElement("input");
-        checkbox.type = "checkbox";
-        checkbox.setAttribute("aria-label", `Select ranked clause ${row.rank}`);
-        checkbox.dataset.clauseId = row.clause_id;
-        checkbox.addEventListener("change", updateSelection);
-        selectorCell.append(checkbox);
+        if (row.decision === "YES") {
+          const checkbox = document.createElement("input");
+          checkbox.type = "checkbox";
+          checkbox.checked = selectedClauseIds.has(row.clause_id);
+          checkbox.setAttribute("aria-label", `Explain YES prediction ${index + 1}`);
+          checkbox.dataset.explainClauseId = row.clause_id;
+          checkbox.addEventListener("change", () => {
+            if (checkbox.checked) selectedClauseIds.add(row.clause_id);
+            else selectedClauseIds.delete(row.clause_id);
+            updateSelection();
+          });
+          selectorCell.append(checkbox);
+        } else {
+          selectorCell.textContent = "—";
+        }
+        const reason = document.createElement("td");
+        reason.className = "reason";
+        if (row.qwen_justification) {
+          reason.textContent = row.qwen_justification;
+          reason.classList.add("qwen-note");
+        } else {
+          reason.textContent = "Not requested";
+          reason.classList.add("qwen-note", "pending");
+        }
         tr.append(
           selectorCell,
-          makeCell(String(row.rank), "rank"),
           makeCell(Number(row.relative_score).toFixed(4), "score"),
           makeCell(row.section_path || row.section_heading || row.section_id, "section"),
           makeCell(row.line_start || "—", "line"),
           makeCell(row.target_clause, "clause"),
-          makeCell(row.qwen_justification || "Not requested", "reason")
+          reason
         );
-        const reviewCell = document.createElement("td");
-        reviewCell.className = "review";
-        const review = document.createElement("select");
-        review.dataset.reviewId = row.clause_id;
-        review.setAttribute("aria-label", `Your review for clause ${row.rank}`);
-        [
-          ["", "Not reviewed"],
-          ["likely_ambiguous", "Likely ambiguous"],
-          ["not_ambiguous", "Not ambiguous"],
-          ["uncertain", "Uncertain"]
-        ].forEach(([value, label]) => {
-          const option = document.createElement("option");
-          option.value = value;
-          option.textContent = label;
-          review.append(option);
-        });
-        reviewCell.append(review);
-        tr.append(reviewCell);
         body.append(tr);
       });
+      document.getElementById("resultsCount").textContent =
+        `Showing ${rows.length} of ${ambiguousRows.length} potentially ambiguous clauses`;
+      updateSelection();
+    }
+
+    function renderFilteredRows() {
+      const query = document.getElementById("clauseSearch").value.trim().toLocaleLowerCase();
+      const selectedSection = document.getElementById("sectionFilter").value;
+      const sortMode = document.getElementById("sortResults").value;
+      const rows = ambiguousRows.filter((row) => {
+        const textMatch = !query ||
+          `${row.target_clause} ${row.section_path} ${row.section_heading} ${row.section_id}`
+            .toLocaleLowerCase().includes(query);
+        return textMatch && (!selectedSection || row.section_id === selectedSection);
+      });
+      rows.sort((left, right) => {
+        if (sortMode === "score-asc") return left.relative_score - right.relative_score;
+        if (sortMode === "section") {
+          return left.section_id.localeCompare(right.section_id, undefined, {numeric: true}) ||
+            left.line_start.localeCompare(right.line_start, undefined, {numeric: true});
+        }
+        return right.relative_score - left.relative_score;
+      });
+      renderRows(rows);
+    }
+
+    function populateSectionFilter(rows) {
+      const filter = document.getElementById("sectionFilter");
+      filter.replaceChildren(new Option("All sections", ""));
+      const sections = new Map();
+      rows.forEach((row) => {
+        if (!sections.has(row.section_id)) {
+          sections.set(row.section_id, row.section_path || row.section_heading || row.section_id);
+        }
+      });
+      [...sections.entries()]
+        .sort((left, right) => left[0].localeCompare(right[0], undefined, {numeric: true}))
+        .forEach(([id, label]) => filter.add(new Option(`${id} · ${label}`, id)));
     }
 
     function updateSelection() {
-      const selected = [...document.querySelectorAll("[data-clause-id]:checked")];
-      const atLimit = selected.length >= 5;
-      document.querySelectorAll("[data-clause-id]:not(:checked)").forEach((box) => {
-        box.disabled = atLimit;
+      const selectedCount = selectedClauseIds.size;
+      const atLimit = selectedCount >= 5;
+      document.querySelectorAll("[data-explain-clause-id]").forEach((box) => {
+        box.disabled = atLimit && !selectedClauseIds.has(box.dataset.explainClauseId);
       });
       document.getElementById("selectionCount").textContent =
-        `${selected.length} selected; choose up to 5 clauses for Qwen.`;
-      document.getElementById("explainButton").disabled = selected.length === 0;
+        `${selectedCount} of 5 YES predictions selected for an optional Qwen explanation.`;
+      document.getElementById("explainButton").disabled = selectedCount === 0;
     }
 
     function csvEscape(value) {
@@ -284,23 +641,24 @@
 
     function downloadCsv() {
       const columns = [
-        "rank", "relative_score", "section_id", "section_path", "line_start",
-        "line_end", "target_clause", "previous_clause", "next_clause",
-        "qwen_justification", "human_review"
+        "decision", "prediction", "relative_score", "prediction_threshold",
+        "candidate_type", "candidate_reason",
+        "section_id", "section_path",
+        "line_start", "line_end", "target_clause", "previous_clause",
+        "next_clause", "qwen_justification"
       ];
-      const rows = [...rowsById.values()].map((row) => {
-        const review = document.querySelector(`[data-review-id="${CSS.escape(row.clause_id)}"]`);
-        return [
-          row.rank, row.relative_score, row.section_id, row.section_path,
-          row.line_start, row.line_end, row.target_clause, row.previous_clause,
-          row.next_clause, row.qwen_justification, review ? review.value : ""
-        ];
-      });
+      const rows = ambiguousRows.map((row) => [
+        row.decision, row.prediction, row.relative_score, row.prediction_threshold,
+        row.candidate_type, row.candidate_reason,
+        row.section_id, row.section_path, row.line_start, row.line_end,
+        row.target_clause, row.previous_clause, row.next_clause,
+        row.qwen_justification
+      ]);
       const csv = [columns, ...rows].map((row) => row.map(csvEscape).join(",")).join("\r\n");
       const blob = new Blob(["\ufeff", csv], {type: "text/csv;charset=utf-8"});
       const link = document.createElement("a");
       link.href = URL.createObjectURL(blob);
-      link.download = `${document.getElementById("documentTitle").dataset.filename || "rfc"}-ranked-review.csv`;
+      link.download = `${document.getElementById("documentTitle").dataset.filename || "rfc"}-ambiguity-only.csv`;
       link.click();
       URL.revokeObjectURL(link.href);
     }
@@ -311,9 +669,11 @@
         const data = await response.json();
         if (!response.ok) throw new Error(data.error || "The classifier is not ready.");
         scanButton.disabled = false;
+        statusBanner.classList.add("ready");
         const classifier = data.classifier;
         document.getElementById("statusText").textContent =
-          `${classifier.name} ready · out-of-fold AP ${Number(classifier.average_precision).toFixed(3)} ` +
+          `${classifier.name} ready · YES threshold ${classifier.prediction_threshold.toFixed(2)} · ` +
+          `out-of-fold AP ${Number(classifier.average_precision).toFixed(3)} ` +
           `(${classifier.validation_rows} clauses; ${classifier.validation_groups} draft families). ` +
           `Qwen ${data.qwen_model} is used only when explanations are requested.`;
         if (classifier.sklearn_compatibility_warnings.length) {
@@ -326,6 +686,7 @@
           warningBox.style.display = "block";
         }
       } catch (error) {
+        statusBanner.classList.add("failed");
         setError(error.message);
       }
     }
@@ -335,7 +696,7 @@
       errorBox.style.display = "none";
       warningBox.style.display = warningBox.textContent ? "block" : "none";
       resultsBox.style.display = "none";
-      const file = document.getElementById("rfcFile").files[0];
+      const file = fileInput.files[0];
       if (!file || !file.name.toLowerCase().endsWith(".txt")) {
         setError("Choose a rendered RFC plaintext .txt file.");
         return;
@@ -346,7 +707,7 @@
       }
       scanButton.disabled = true;
       document.getElementById("working").textContent =
-        "Parsing and ranking normative clauses locally…";
+      "Parsing RFC and scoring explicit BCP 14 requirements locally…";
       try {
         const response = await fetch("/api/scan", {
           method: "POST",
@@ -356,26 +717,37 @@
         const data = await response.json();
         if (!response.ok) throw new Error(data.error || "RFC analysis failed.");
         activeScanId = data.scan_id;
-        document.getElementById("documentTitle").textContent = data.title;
+        statusBanner.classList.remove("failed");
+        document.getElementById("documentTitle").textContent =
+          `${data.title} — classifications`;
         document.getElementById("documentTitle").dataset.filename =
           data.document_id.replace(/[^A-Za-z0-9._-]+/g, "-");
         document.getElementById("scopeText").textContent =
-          `${data.candidate_count} explicitly normative clauses ranked. ` +
-          `${data.manual_review_count} manual-review clauses, ${data.contextual_count} contextual clauses, ` +
-          `and ${data.excluded_count} excluded units were not scored.`;
+          `${data.ambiguous_count} potentially ambiguous clause(s) found among ` +
+          `${data.scored_count} explicitly normative clauses.`;
         const parseWarning = document.getElementById("parseWarning");
         parseWarning.textContent = data.warnings.length
           ? `Parser warning: ${data.warnings.join("; ")}`
           : "";
         parseWarning.style.display = data.warnings.length ? "block" : "none";
+        ambiguousRows = data.rows.filter((row) => row.decision === "YES");
+        normativeScoredCount = data.scored_count;
         const summary = document.getElementById("summary");
         summary.replaceChildren();
-        addStat(summary, data.candidate_count, "Clauses ranked");
-        addStat(summary, data.manual_review_count, "Manual review, not scored");
-        addStat(summary, data.contextual_count, "Contextual, not scored");
-        addStat(summary, data.excluded_count, "Excluded, not scored");
-        renderRows(data.rows);
-        updateSelection();
+        addStat(summary, data.ambiguous_count, "Potentially ambiguous");
+        addStat(summary, data.scored_count, "Explicit normative clauses scored");
+        addStat(
+          summary,
+          new Set(ambiguousRows.map((row) => row.section_id)).size,
+          "Sections represented"
+        );
+        rowsById.clear();
+        ambiguousRows.forEach((row) => rowsById.set(row.clause_id, row));
+        selectedClauseIds = new Set();
+        document.getElementById("clauseSearch").value = "";
+        document.getElementById("sortResults").value = "score-desc";
+        populateSectionFilter(ambiguousRows);
+        renderFilteredRows();
         resultsBox.style.display = "block";
       } catch (error) {
         setError(error.message);
@@ -386,13 +758,8 @@
     });
 
     document.getElementById("explainButton").addEventListener("click", async () => {
-      const clauseIds = [...document.querySelectorAll("[data-clause-id]:checked")]
-        .map((box) => box.dataset.clauseId);
-      const reviews = new Map(
-        [...document.querySelectorAll("[data-review-id]")].map((select) => [
-          select.dataset.reviewId, select.value
-        ])
-      );
+      const clauseIds = [...document.querySelectorAll("[data-explain-clause-id]:checked")]
+        .map((box) => box.dataset.explainClauseId);
       const explainButton = document.getElementById("explainButton");
       errorBox.style.display = "none";
       explainButton.disabled = true;
@@ -410,14 +777,7 @@
           const row = rowsById.get(item.clause_id);
           if (row) row.qwen_justification = item.qwen_justification;
         });
-        renderRows([...rowsById.values()]);
-        document.querySelectorAll("[data-review-id]").forEach((select) => {
-          select.value = reviews.get(select.dataset.reviewId) || "";
-        });
-        document.querySelectorAll("[data-clause-id]").forEach((box) => {
-          box.checked = clauseIds.includes(box.dataset.clauseId);
-        });
-        updateSelection();
+        renderFilteredRows();
       } catch (error) {
         setError(error.message);
       } finally {
@@ -427,6 +787,15 @@
     });
 
     document.getElementById("downloadButton").addEventListener("click", downloadCsv);
+    document.getElementById("clauseSearch").addEventListener("input", renderFilteredRows);
+    document.getElementById("sectionFilter").addEventListener("change", renderFilteredRows);
+    document.getElementById("sortResults").addEventListener("change", renderFilteredRows);
+    document.getElementById("clearFilters").addEventListener("click", () => {
+      document.getElementById("clauseSearch").value = "";
+      document.getElementById("sectionFilter").value = "";
+      document.getElementById("sortResults").value = "score-desc";
+      renderFilteredRows();
+    });
     checkStatus();
   </script>
 </body>

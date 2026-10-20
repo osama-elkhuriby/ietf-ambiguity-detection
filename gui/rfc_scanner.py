@@ -30,7 +30,7 @@ MODEL_DIRECTORY = ROOT / "results/ML/v2_engineered_tfidf"
 MODEL_PATH = MODEL_DIRECTORY / "final_model.joblib"
 MAX_RFC_BYTES = 5_000_000
 MAX_CANDIDATES = 5_000
-MAX_RESPONSE_ROWS = 2_000
+MAX_RESPONSE_ROWS = MAX_CANDIDATES
 
 
 @dataclass(frozen=True)
@@ -99,6 +99,7 @@ def load_classifier(model_path: Path = MODEL_PATH) -> LoadedClassifier:
         "validation_positives": int(metrics["positive_rows"]),
         "validation_groups": int(metrics["validation_group_count"]),
         "validation_protocol": validation["strategy"],
+        "prediction_threshold": float(validation["prediction_threshold"]),
         "artifact_sklearn_versions": artifact_versions,
         "runtime_sklearn_version": sklearn.__version__,
         "sklearn_compatibility_warnings": compatibility_warnings,
@@ -124,12 +125,15 @@ def _prepare_candidate_frame(clauses: list[Any]) -> pd.DataFrame:
 
     rows: list[dict[str, str]] = []
     for position, clause in enumerate(clauses):
-        if clause.classification != "NORMATIVE":
+        explicit_normative = clause.classification == "NORMATIVE"
+        if not explicit_normative:
             continue
         previous, following = contexts[position]
         rows.append(
             {
                 "clause_id": clause.clause_id,
+                "candidate_type": "EXPLICIT_NORMATIVE",
+                "candidate_reason": clause.classification_reason,
                 "section_id": clause.section_id,
                 "section_heading": clause.section_heading,
                 "section_path": " / ".join(clause.section_path),
@@ -140,7 +144,64 @@ def _prepare_candidate_frame(clauses: list[Any]) -> pd.DataFrame:
                 "line_end": str(clause.source_location.line_end or ""),
             }
         )
-    return pd.DataFrame(rows)
+    return pd.DataFrame(
+        rows,
+        columns=[
+            "clause_id",
+            "candidate_type",
+            "candidate_reason",
+            "section_id",
+            "section_heading",
+            "section_path",
+            "target_clause",
+            "previous_clause",
+            "next_clause",
+            "line_start",
+            "line_end",
+        ],
+    )
+
+
+def _score_candidate_rows(
+    candidates: list[dict[str, Any]],
+    loaded_model: LoadedClassifier,
+) -> list[dict[str, Any]]:
+    if not candidates:
+        return []
+    frame = pd.DataFrame(candidates)
+    features = extract_v2_features(frame)
+    matrix = _transform_components(
+        "engineered_tfidf",
+        loaded_model.components,
+        frame["target_clause"],
+        features,
+        embeddings=None,
+    )
+    scores = np.asarray(
+        loaded_model.components["classifier"].predict_proba(matrix)[:, 1],
+        dtype=np.float64,
+    )
+    if scores.shape != (len(frame),) or not np.isfinite(scores).all():
+        raise RuntimeError("Classifier returned invalid RFC clause scores")
+    threshold = float(loaded_model.metadata["prediction_threshold"])
+    if not 0.0 <= threshold <= 1.0:
+        raise ValueError("Model prediction threshold must be between 0 and 1")
+
+    ranked = []
+    for candidate, score in zip(candidates, scores, strict=True):
+        is_ambiguous = bool(score >= threshold)
+        ranked.append(
+            {
+                **candidate,
+                "relative_score": float(score),
+                "prediction_threshold": threshold,
+                "decision": "YES" if is_ambiguous else "NO",
+                "prediction": "AMBIGUOUS" if is_ambiguous else "NOT_AMBIGUOUS",
+                "qwen_justification": candidate.get("qwen_justification", ""),
+            }
+        )
+    ranked.sort(key=lambda row: (-row["relative_score"], row["clause_id"]))
+    return ranked
 
 
 def scan_rfc_text(
@@ -149,7 +210,7 @@ def scan_rfc_text(
     content: str,
     loaded_model: LoadedClassifier,
 ) -> dict[str, Any]:
-    """Parse an RFC plaintext upload and rank its explicit normative clauses."""
+    """Score ambiguity only for clauses classified as explicitly normative."""
     if Path(filename).suffix.casefold() != ".txt":
         raise ValueError("Upload a rendered RFC plaintext file with a .txt extension")
     if not isinstance(content, str) or not content.strip():
@@ -160,48 +221,26 @@ def scan_rfc_text(
 
     with tempfile.TemporaryDirectory(prefix="ietf-rfc-review-") as temporary:
         source = Path(temporary) / "uploaded-rfc.txt"
-        source.write_text(content, encoding="utf-8")
+        normalized_content = content.replace("\r\n", "\n").replace("\r", "\n")
+        source.write_text(normalized_content, encoding="utf-8")
         document = parse_document(source, document_type="rfc")
     clause_document = segment_document(document)
     candidates = _prepare_candidate_frame(clause_document.clauses)
-    if candidates.empty:
-        raise ValueError(
-            "No explicitly normative clauses were found. "
-            "The parser may need another RFC plaintext rendering."
-        )
     if len(candidates) > MAX_CANDIDATES:
         raise ValueError(
-            f"RFC produced {len(candidates)} normative clauses; "
+            f"RFC produced {len(candidates)} candidate clauses; "
             f"the limit is {MAX_CANDIDATES}"
         )
 
-    features = extract_v2_features(candidates)
-    matrix = _transform_components(
-        "engineered_tfidf",
-        loaded_model.components,
-        candidates["target_clause"],
-        features,
-        embeddings=None,
-    )
-    scores = np.asarray(
-        loaded_model.components["classifier"].predict_proba(matrix)[:, 1],
-        dtype=np.float64,
-    )
-    if scores.shape != (len(candidates),) or not np.isfinite(scores).all():
-        raise RuntimeError("Classifier returned invalid RFC clause scores")
+    scored_candidates = candidates
+    threshold = float(loaded_model.metadata["prediction_threshold"])
+    if not 0.0 <= threshold <= 1.0:
+        raise ValueError("Model prediction threshold must be between 0 and 1")
 
-    ranked: list[dict[str, Any]] = []
-    for candidate, score in zip(
-        candidates.to_dict(orient="records"), scores, strict=True
-    ):
-        ranked.append(
-            {
-                **candidate,
-                "relative_score": float(score),
-                "qwen_justification": "",
-            }
-        )
-    ranked.sort(key=lambda row: (-row["relative_score"], row["clause_id"]))
+    ranked = _score_candidate_rows(
+        scored_candidates.to_dict(orient="records"),
+        loaded_model,
+    )
     if len(ranked) > MAX_RESPONSE_ROWS:
         raise ValueError(
             f"RFC produced {len(ranked)} candidate rows, above the response limit "
@@ -211,14 +250,19 @@ def scan_rfc_text(
         row["rank"] = rank
 
     clause_summary = clause_document.summary()
+    ambiguous_count = sum(row["decision"] == "YES" for row in ranked)
+    ambiguous_rows = [row for row in ranked if row["decision"] == "YES"]
     return {
         "document_id": document.document_id,
         "title": document.title or document.document_id,
         "candidate_count": len(ranked),
+        "scored_count": len(scored_candidates),
+        "ambiguous_count": ambiguous_count,
+        "not_ambiguous_count": len(scored_candidates) - ambiguous_count,
+        "prediction_threshold": threshold,
         "normative_count": clause_summary["normative"],
-        "manual_review_count": clause_summary["manual_review"],
         "contextual_count": clause_summary["contextual"],
         "excluded_count": clause_summary["excluded"],
         "warnings": list(document.warnings),
-        "rows": ranked,
+        "rows": ambiguous_rows,
     }

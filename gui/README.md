@@ -1,14 +1,18 @@
 # Local RFC Review GUI
 
-A local browser app for ranking clauses in a rendered RFC plaintext file. The
-saved engineered-feature + TF–IDF Logistic Regression model scores explicitly
-normative clauses; optionally, Qwen3 32B through Ollama generates a short
-human-review note for up to five selected clauses.
+A local browser app for reviewing rendered RFC plaintext. It first uses the
+project's evidence-first clause parser to retain clauses classified as
+**NORMATIVE**: clauses with explicit uppercase BCP 14 requirement keywords that
+are not quoted, imported, or terminology explanations. The saved engineered
+features + TF–IDF Logistic Regression model scores only those clauses. The
+results table and CSV show only YES (potentially ambiguous) predictions.
+Qwen3 32B through Ollama can optionally explain up to five YES predictions.
 
-This is a research demonstration, not a validated ambiguity detector. The
-classifier's score is used for ranking, not as a calibrated probability or a
-definitive yes/no decision. Manual-review, contextual, and excluded clauses are
-counted but not scored. Review all outputs against the RFC.
+This is a research demonstration, not a validated ambiguity detector. Positive
+results use the saved model's threshold; the score is not a calibrated
+probability or an adjudicated ambiguity judgment. Contextual clauses, excluded
+text, lowercase modals, and section-context candidates without explicit BCP 14
+keywords are never treated as normative by this GUI and are not scored.
 
 ## Requirements
 
@@ -44,11 +48,21 @@ browser closed:
 python -m gui.app --port 8766 --no-browser
 ```
 
-Upload a rendered RFC `.txt` file (maximum 5 MB), review the ranked clauses,
-optionally select up to five for Qwen notes, and download a CSV for human
-assessment. The upload is parsed from a temporary file that is removed after
-parsing; recent parsed results are held in process memory only for explanations.
-No document text is written to the repository or sent to a remote service.
+Upload a rendered RFC `.txt` file (maximum 5 MB). The GUI automatically scores
+only clauses the parser classifies as normative based on explicit BCP 14
+keywords, then displays and exports only the positive ambiguity predictions.
+Search clause text, filter by section, or change the sort order. Select up to
+five displayed results for optional Qwen explanations. The upload is parsed
+from a temporary file that is removed after parsing; recent positive results
+are held in process memory only for explanations. No document text is written
+to the repository or sent to a remote service.
+
+This is a deliberately conservative normativity gate, not a comprehensive
+detector of every possible requirement. RFCs using only lowercase modals,
+implicit section context, or other wording without explicit BCP 14 keywords
+may produce no scored clauses. The GUI does not ask reviewers to confirm
+normativity, and it does not promote those uncertain candidates into the
+ambiguity classifier.
 
 ## Model provenance and limitations
 
@@ -61,6 +75,6 @@ Results from different cohorts or studies are not directly comparable.
 
 The saved artifact was produced with scikit-learn 1.9.1. If the active
 environment uses another version, the GUI reports the compatibility warning
-raised by scikit-learn; match the training version before relying on
-predictions. The ranked list is a review aid, not a claim that a clause is
-ambiguous.
+raised by scikit-learn. Match the training version before relying on results.
+The positive-result list is a research result, not a claim that a clause is
+definitively ambiguous.

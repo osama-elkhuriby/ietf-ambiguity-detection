@@ -7,9 +7,12 @@ classical/heuristic grid; earlier LOFO, embedding, context, and revision-signal 
 Qwen V1--V4 prompting and hybrid results; the initial low-prevalence DeBERTa experiment;
 later annotation-ready DeBERTa pilot and nested calibration; staged weighting/context
 ablations; review-budget and routing feasibility; protocol corrections; and blocked or
-incomplete work. Local-only and `.gitignore`-excluded results are included where
-aggregate evidence is available. Missing results (for example, blocked annotation v2,
-TCP, and sealed DNS) are identified as not run, not filled in or implied.
+incomplete work. It now includes the updated revision-feature ML grid, the fixed
+three-model rank ensemble, the implemented local RFC-review GUI, and the latest
+annotation-source update with its error-selected human-review caveat. Local-only and
+`.gitignore`-excluded results are included where aggregate evidence is available.
+Missing or unfinished results (including the current human-reviewed follow-up, blocked
+annotation v2, TCP, and sealed DNS) are identified as such, not filled in or implied.
 
 Evaluation tracks remain separate when snapshots, cohorts, labels, and protocols
 differ. The paper reports negative findings and protocol limitations without turning
@@ -86,23 +89,21 @@ exploratory development summaries, not independent-test results.
 
 ## Author action required before submission
 
-1. Replace `[corresponding-author email to be supplied]` in `main.tex` with the
-   corresponding author's institutional email.
-2. Select the actual IEEE venue and apply its page limit, copyright notice, anonymity,
+1. Select the actual IEEE venue and apply its page limit, copyright notice, anonymity,
    and artifact-availability rules. Use the anonymous author block if double-blind
    review is required.
-3. Confirm author order, spelling, affiliations, acknowledgments, and consent.
-4. Do not rewrite the development results as final-test performance. TCP and DNS were
+2. Confirm author order, spelling, affiliations, acknowledgments, and consent.
+3. Do not rewrite the development results as final-test performance. TCP and DNS were
    not opened in the reported experiment.
-5. If those evaluations are later authorized and completed, update the abstract,
+4. If those evaluations are later authorized and completed, update the abstract,
    Results, Threats to Validity, Conclusion, and all associated tables together.
-6. Obtain an independently adjudicated expert sample before making accuracy or
+5. Obtain an independently adjudicated expert sample before making accuracy or
    deployment claims. The current labels are an operational human/AI-assisted
    reference.
-7. Reconcile the candidate-export discrepancy reported in the manuscript (five
+6. Reconcile the candidate-export discrepancy reported in the manuscript (five
    errata-derived rows versus a prior progress report's 121 positives and 242 TLS
    records) before making errata-coverage claims.
-8. Review all source outputs and data versions before submission; this is a
+7. Review all source outputs and data versions before submission; this is a
    development-stage research report, not evidence of a validated production system.
 
 The paper deliberately calls the repository's `average_precision_score` output
@@ -112,3 +113,10 @@ fold-specific models and are not a deployment calibration. The classical/heurist
 earlier LOFO, earlier transformer-ablation, Qwen/hybrid, and final target-only DeBERTa
 results have different evaluation cohorts, label definitions, or protocols; the paper
 explicitly avoids direct model ranking across these studies.
+
+The classical precision--recall grid and best-model metric summary were regenerated
+from the current matched result artifacts. The classical table reports learned-model
+threshold metrics at 0.5 and the fixed heuristic at 0.4. Revision-feature changes are
+small and mixed. The 100 human-confirmed records in the latest annotation source were
+selected from historical OOF errors; they are not an independent test set, and no
+completed results from the active follow-up training run are included.

@@ -42,4 +42,26 @@ R2_H0_predecessor_only,2540,draft-ietf-dnsop-svcb-https|draft-ietf-httpbis-http2
 
 Rows are an enriched candidate cohort selected using future information; AP and prevalence do not transfer to the full clause population. Revision features measure change/churn signal and may not reflect ambiguity.
 
+## Combined ML experiment
+
+The 12 compact H0/H1 features were added to the existing engineered + TF-IDF
+setup for every classical model. Evaluation uses the same 2,406 annotation rows,
+158 positives, 11 draft-family groups, and three grouped folds as the existing
+ML comparisons. TF-IDF, engineered-feature scaling, revision-feature scaling,
+and model fitting are performed inside each training fold.
+
+| Model | Baseline PR-AUC | + revision PR-AUC | Delta | Baseline ROC-AUC | + revision ROC-AUC | Delta |
+|---|---:|---:|---:|---:|---:|---:|
+| Logistic regression | 0.5225 | 0.5172 | -0.0053 | 0.8122 | 0.8157 | +0.0036 |
+| Linear SVM | 0.5109 | 0.5119 | +0.0010 | 0.8111 | 0.8142 | +0.0032 |
+| Random forest | 0.4167 | 0.4308 | +0.0141 | 0.8088 | 0.8120 | +0.0032 |
+
+The revision signals give a modest Random Forest PR-AUC improvement, are nearly
+neutral for the Linear SVM, and slightly reduce Logistic Regression PR-AUC.
+They are therefore useful as an ablation result, not evidence of a uniformly
+better feature set. Full fold metrics, OOF predictions, manifests, fitted
+models, and raw revision features are under
+`results/ML/*engineered_tfidf_revision*/`; the regenerated comparison plots are
+under `results/ML/figures/`.
+
 Discrepancy to resolve: this dataset contains only 5 errata rows, all label 0, all in TLS. The progress report stated 121 errata positives and 242 TLS records. These counts do not agree; the source/dataset definition needs reconciliation. As requested, the 5 errata rows form an unseen category in the fold where TLS is held out.

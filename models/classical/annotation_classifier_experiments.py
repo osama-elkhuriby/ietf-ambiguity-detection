@@ -39,6 +39,11 @@ from models.classical.annotation_logreg_experiment2 import (
     build_validation_groups,
     extract_v2_features,
 )
+from models.classical.revision_features import (
+    REVISION_FEATURE_COLUMNS,
+    load_revision_features,
+    revision_feature_provenance,
+)
 
 ClassifierName = Literal["linear_svm", "random_forest"]
 CLASSIFIERS: tuple[ClassifierName, ...] = ("linear_svm", "random_forest")
@@ -138,10 +143,12 @@ def train_and_validate(
     frame, labels = _validate_input(input_path)
     use_engineered = "engineered" in feature_mode
     use_embeddings = "embeddings" in feature_mode
+    use_revision = "revision" in feature_mode
     features = extract_v2_features(frame) if use_engineered else None
     embeddings = (
         _encode_target_embeddings(frame["target_clause"]) if use_embeddings else None
     )
+    revision_features = load_revision_features(frame) if use_revision else None
     groups = build_validation_groups(frame)
     group_count = len(np.unique(groups))
     positive_group_count = len(np.unique(groups[labels == 1]))
@@ -175,11 +182,22 @@ def train_and_validate(
         valid_features = features.iloc[valid_indices] if features is not None else None
         train_embeddings = embeddings[train_indices] if embeddings is not None else None
         valid_embeddings = embeddings[valid_indices] if embeddings is not None else None
+        train_revision_features = (
+            revision_features.iloc[train_indices]
+            if revision_features is not None
+            else None
+        )
+        valid_revision_features = (
+            revision_features.iloc[valid_indices]
+            if revision_features is not None
+            else None
+        )
         components, train_matrix = _fit_components(
             feature_mode,
             frame["target_clause"].iloc[train_indices],
             train_features,
             train_embeddings,
+            train_revision_features,
         )
         valid_matrix = _transform_components(
             feature_mode,
@@ -187,6 +205,7 @@ def train_and_validate(
             frame["target_clause"].iloc[valid_indices],
             valid_features,
             valid_embeddings,
+            valid_revision_features,
         )
         classifier = _new_classifier(classifier_name).fit(
             train_matrix,
@@ -260,6 +279,17 @@ def train_and_validate(
             "feature_set": feature_mode,
         },
     }
+    if use_revision:
+        metrics["model"]["revision_features"] = {
+            "count": len(REVISION_FEATURE_COLUMNS),
+            "columns": list(REVISION_FEATURE_COLUMNS),
+            "scaler": "fold-local StandardScaler",
+            "history": "H0: t-1 -> t; H1: t-2 -> t-1 via the H0 predecessor",
+            "leakage_control": (
+                "Only label-free predecessor matches from numbered drafts at or "
+                "before t are used."
+            ),
+        }
 
     output_dir.mkdir(parents=True, exist_ok=True)
     fold_frame.to_csv(output_dir / "fold_metrics.csv", index=False, lineterminator="\n")
@@ -272,12 +302,17 @@ def train_and_validate(
             "oof_score_yes": oof_scores,
         }
     ).to_csv(output_dir / "oof_predictions.csv", index=False, lineterminator="\n")
+    if revision_features is not None:
+        revision_features.to_csv(
+            output_dir / "revision_features.csv", index=False, lineterminator="\n"
+        )
 
     final_components, final_matrix = _fit_components(
         feature_mode,
         frame["target_clause"],
         features,
         embeddings,
+        revision_features,
     )
     final_classifier = _new_classifier(classifier_name).fit(final_matrix, labels)
     final_components.update(
@@ -285,6 +320,9 @@ def train_and_validate(
             "classifier": final_classifier,
             "classifier_name": classifier_name,
             "feature_mode": feature_mode,
+            "revision_columns": (
+                list(REVISION_FEATURE_COLUMNS) if use_revision else []
+            ),
         }
     )
     joblib.dump(final_components, output_dir / "final_model.joblib")
@@ -294,6 +332,10 @@ def train_and_validate(
         "classifier": classifier_name,
         "feature_mode": feature_mode,
         "score_method": model_parameters["score_method"],
+        "revision_feature_columns": (
+            list(REVISION_FEATURE_COLUMNS) if use_revision else []
+        ),
+        "revision_provenance": revision_feature_provenance() if use_revision else None,
         "validation_note": (
             "Metrics use out-of-fold scores; final_model.joblib is fitted on all rows."
         ),
@@ -311,12 +353,36 @@ def train_and_validate(
     return metrics
 
 
+def refresh_summary(root_dir: Path) -> pd.DataFrame:
+    """Rebuild the classifier summary from every complete saved experiment."""
+    rows: list[dict[str, Any]] = []
+    for classifier_name, mode in itertools.product(CLASSIFIERS, FEATURE_MODES):
+        metrics_path = root_dir / classifier_name / mode / "metrics.json"
+        if not metrics_path.is_file():
+            continue
+        metrics = json.loads(metrics_path.read_text(encoding="utf-8"))
+        pooled = metrics["validation"]["pooled_oof_metrics"]
+        rows.append(
+            {
+                "classifier": classifier_name,
+                "feature_mode": mode,
+                "mean_fold_ap": metrics["validation"]["mean_fold_average_precision"],
+                "std_fold_ap": metrics["validation"]["std_fold_average_precision"],
+                **{key: value for key, value in pooled.items() if isinstance(value, (int, float))},
+            }
+        )
+    summary = pd.DataFrame(rows)
+    root_dir.mkdir(parents=True, exist_ok=True)
+    summary.to_csv(root_dir / "summary.csv", index=False, lineterminator="\n")
+    return summary
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         description=(
             "Run grouped-CV annotation classifier experiments. "
             "Omit --classifier and/or --feature-mode to run every value "
-            "(no arguments = all 8 experiments)."
+            "(no arguments = all 10 experiments)."
         )
     )
     parser.add_argument("--input", type=Path, default=DEFAULT_INPUT)
@@ -362,10 +428,9 @@ def main() -> None:
             }
         )
 
+    if rows:
+        summary = refresh_summary(root_dir)
     if rows and not single:
-        summary = pd.DataFrame(rows)
-        root_dir.mkdir(parents=True, exist_ok=True)
-        summary.to_csv(root_dir / "summary.csv", index=False, lineterminator="\n")
         with pd.option_context("display.width", 200, "display.max_columns", None):
             print("\n=== Summary (pooled out-of-fold) ===")
             print(summary.round(4).to_string(index=False))

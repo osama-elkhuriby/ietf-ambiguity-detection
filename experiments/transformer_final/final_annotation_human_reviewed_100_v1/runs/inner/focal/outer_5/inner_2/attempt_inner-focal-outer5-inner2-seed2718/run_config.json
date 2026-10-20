@@ -1,0 +1,176 @@
+{
+  "base_configuration": {
+    "calibration": {
+      "infeasible": "explicit; no always-positive fallback",
+      "outer_labels_used": false,
+      "precision_targets": [
+        0.2,
+        0.3,
+        0.5
+      ],
+      "primary_precision_target": 0.3,
+      "selection": "maximize recall subject to fitting-side precision target; ties: higher precision, then higher threshold"
+    },
+    "conditions": {
+      "A2": "weighted_ce"
+    },
+    "data": {
+      "approved_source_hashes": {
+        "canonical_context_csv": "d18dfd145305cca61c62d8e3b23ff93a0a76dcd1235f04112c13458ab0f4be3f",
+        "metadata_csv": "a0e2d4cf81dce960efc15b47bf39abbfbe67ec8ec743b1aa63df00b8395a0dd1",
+        "private_key_csv": "09edc22f73d93998df728378986f039690e5b87fa62e1f52928a80708009cdce"
+      },
+      "canonical_context_csv": "corpus/processed/transformer_inputs/v3/dataset.csv",
+      "expected_source_no": 2265,
+      "expected_source_rows": 2425,
+      "expected_source_yes": 160,
+      "expected_unresolved_item_ids": [],
+      "id_column": "item_id",
+      "item_2161_policy": "Current row is resolved with final_source=manual_conflict_verdict; include if all other eligibility rules pass.",
+      "label_column": "final_label",
+      "metadata_csv": "corpus/processed/model_datasets/v2/training_dataset.csv",
+      "private_key_csv": "results/annotation/key_PRIVATE.csv",
+      "reviewed_item_count": 100,
+      "reviewed_label_changes": {
+        "No_to_Yes": 29,
+        "Yes_to_No": 17,
+        "total": 46
+      },
+      "source_csv": "results/annotation/final_annotation_ready.csv",
+      "source_sha256": "8ffa654c2c405dd3eef72901c600f1ef3823e6dbff663020bb824c57ff65bdbf",
+      "target_column": "target_clause",
+      "unresolved_exclusion_policy": "Exclude every row whose final_status is not resolved or whose final_source is unresolved; configuration pins the exact expected unresolved ID set."
+    },
+    "description": "Fresh leakage-safe nested family CV for the human-reviewed final_annotation_ready.csv labels; Focal, Partial-4, and fitting-side ECDF ensemble",
+    "ensemble": {
+      "method": "outer-specific fitting-side empirical CDF",
+      "outer_distribution_fitting": false,
+      "score_semantics": "ranking score distinct from raw model probability",
+      "weight_fitting": "none",
+      "weights": {
+        "focal": 0.5,
+        "partial4": 0.5
+      }
+    },
+    "evaluation": {
+      "bootstrap_cluster": "rfc_family",
+      "bootstrap_replicates": 2000,
+      "error_primary_policy": "nested_precision_0.30",
+      "primary_ranking_metric": "average_precision",
+      "selection_bias_warning": "The 100 reviewed clauses were chosen from historical OOF errors. Evaluation on those families is not an independent estimate of improvement; no unbiased generalization-improvement claim is permitted without a genuinely independent evaluation set.",
+      "top_k": [
+        10,
+        20,
+        25,
+        50,
+        100
+      ]
+    },
+    "experiment": "final_annotation_human_reviewed_100_v1",
+    "folds": {
+      "count": 5,
+      "fold_source": "experiments/transformer/configs/folds_v1.json",
+      "fold_source_sha256": "c04dc8424ed96486f8521ef57d17e4b503d2c3f41bb116edeeb9535073dd7884",
+      "inner_count": 3,
+      "near_duplicate_threshold": 0.85,
+      "policy": "Preserve frozen family-to-outer-fold boundaries; restrict each inner design to that outer manifest's fitting_record_ids; apply label-blind exact, near, lineage, BCP14-skeleton, and context leakage controls within each fitting design."
+    },
+    "methods": {
+      "focal": {
+        "alpha": "fitting-side class weights No=1, Yes=negative/positive",
+        "fine_tuning": "full_encoder",
+        "gamma": 2.0,
+        "loss": "focal_gamma_2",
+        "reduction": "batch_mean"
+      },
+      "partial4": {
+        "loss": "weighted_ce",
+        "optimizer_membership": "trainable_parameters_only",
+        "policy": "freeze embeddings, shared encoder backbone, and layers 0-7; train layers 8-11, pooler, and classifier",
+        "trainable_last_layers": 4
+      }
+    },
+    "model": {
+      "default_local_path": "D:/RFC/models/deberta-v3-base",
+      "fresh_initialization_each_cell": true,
+      "label2id": {
+        "No": 0,
+        "Yes": 1
+      },
+      "num_labels": 2,
+      "offline_only": true,
+      "repository": "microsoft/deberta-v3-base",
+      "resume_from_checkpoint": false,
+      "revision": null,
+      "source_sha256": "206ee7bb2c7805bcc8fd3bbbc18a09e185bafc19d4e112f31d4a088136717dd7"
+    },
+    "outputs": {
+      "audit_dir": "experiments/transformer_final/final_annotation_human_reviewed_100_v1/audits",
+      "dataset_dir": "experiments/transformer_final/final_annotation_human_reviewed_100_v1/manifests/dataset_v1",
+      "runs_dir": "experiments/transformer_final/final_annotation_human_reviewed_100_v1/runs"
+    },
+    "partitions": {
+      "dns_family": "draft-ietf-dnsop-svcb-https",
+      "sealed_evaluation_enabled": false,
+      "tcp_family": "draft-ietf-tcpm-rfc793bis",
+      "train_families": [
+        "draft-ietf-6man-rfc2460bis",
+        "draft-ietf-httpbis-cache-header",
+        "draft-ietf-httpbis-http2bis",
+        "draft-ietf-httpbis-semantics",
+        "draft-ietf-quic-http",
+        "draft-ietf-quic-recovery",
+        "draft-ietf-quic-tls",
+        "draft-ietf-quic-transport",
+        "draft-ietf-tls-tls13"
+      ]
+    },
+    "schema_version": 1,
+    "tokenization": {
+      "add_vocabulary_tokens": false,
+      "dynamic_padding": true,
+      "input_mode": "target_only",
+      "max_length": 256,
+      "target_overflow": "deterministic_head_tail"
+    },
+    "training": {
+      "deterministic": true,
+      "diagnostic_numerics": true,
+      "early_stopping": false,
+      "epochs": 5,
+      "eval_batch_size": 16,
+      "gradient_accumulation_steps": 1,
+      "learning_rate": 1e-05,
+      "max_grad_norm": 1.0,
+      "optimizer": "AdamW",
+      "precision": "fp32",
+      "scheduler": "linear",
+      "seeds": [
+        2718
+      ],
+      "threshold": 0.5,
+      "train_batch_size": 8,
+      "warmup_ratio": 0.1,
+      "weight_decay": 0.01
+    }
+  },
+  "cell_id": "inner-focal-outer5-inner2-seed2718",
+  "inner_fold": 2,
+  "kind": "inner",
+  "outer_fold": 5,
+  "protocol_sha256": "122057289686ab6fae0edde521e30f480020b5a76eb4dd2bf84543f9367b5f77",
+  "resolved": {
+    "analysis_method": "focal",
+    "condition": "A2",
+    "diagnostic_numerics": true,
+    "focal_alpha": "fitting-side class weights No=1, Yes=negative/positive",
+    "focal_gamma": 2.0,
+    "fold": 2,
+    "input_mode": "target_only",
+    "loss": "focal_gamma_2",
+    "loss_reduction": "batch_mean",
+    "model_path": "D:\\RFC\\models\\deberta-v3-base",
+    "precision": "fp32",
+    "seed": 2718
+  }
+}
