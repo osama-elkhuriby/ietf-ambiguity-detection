@@ -1,0 +1,41 @@
+{
+  "artifacts": [
+    "final_model.joblib",
+    "metrics.json",
+    "test_predictions.csv",
+    "train_rows.csv"
+  ],
+  "engineered_features": [
+    "target_word_count",
+    "target_sentence_count",
+    "subjective_term_count",
+    "vague_time_count",
+    "vague_quantity_count",
+    "vague_quality_count",
+    "numeric_bound_count",
+    "measurement_unit_count",
+    "named_threshold_count",
+    "formula_count",
+    "reference_count_target",
+    "reference_count_context",
+    "definition_cue_count_target",
+    "definition_cue_count_context",
+    "condition_marker_count",
+    "exception_marker_count",
+    "negation_count",
+    "explicit_alternative_count",
+    "must_count",
+    "should_count",
+    "may_count",
+    "deictic_expression_count",
+    "subjective_near_bound_count",
+    "subjective_near_reference_count",
+    "subjective_with_context_definition",
+    "exception_negation_interaction"
+  ],
+  "feature_set": "engineered_tfidf",
+  "fit_scope": "training partition only",
+  "source_path": "/media/yahya/data_stuff/DATA/Final Project/ietf-ambiguity-detection/results/annotation/final_annotation_ready.csv",
+  "source_sha256": "66d9013d50ad0cb8a66c9523c77624ae388a3dc24aa133d7975a4f5730aa27f0",
+  "test_scope": "held-out draft families; used once for reporting metrics"
+}

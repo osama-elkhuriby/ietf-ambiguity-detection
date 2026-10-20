@@ -34,7 +34,7 @@ from models.classical.revision_features import (
 )
 
 ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_INPUT = ROOT / "results/annotation/final_annotation.csv"
+DEFAULT_INPUT = ROOT / "results/annotation/final_annotation_ready.csv"
 FeatureMode = Literal[
     "engineered_tfidf",
     "tfidf",

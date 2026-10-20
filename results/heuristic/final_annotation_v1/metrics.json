@@ -1,9 +1,9 @@
 {
   "draft_families": 11,
   "model": "deterministic engineered-feature heuristic",
-  "positive_prevalence": 0.0656691604322527,
-  "positive_rows": 158,
-  "rows": 2406,
+  "positive_prevalence": 0.06597938144329897,
+  "positive_rows": 160,
+  "rows": 2425,
   "rules": {
     "conditional_without_exception_marker": {
       "condition": "condition_marker_count is positive and exception_marker_count is zero",
@@ -25,7 +25,7 @@
       "condition": "subtract points when numeric_bound_count is positive",
       "points": -2.0
     },
-    "prediction_threshold": 0.4,
+    "prediction_threshold": 0.5,
     "score": "clamp total points to [0, 9] and divide by 9",
     "subjective_terms": {
       "condition": "subjective_term_count, capped at two points",
@@ -40,54 +40,54 @@
   "validation": {
     "folds": [
       {
-        "f1_at_0.5": 0.1346153846153846,
-        "f2_at_0.5": 0.13307984790874525,
+        "f1_at_0.5": 0.030303030303030304,
+        "f2_at_0.5": 0.02109704641350211,
         "fold": 1,
-        "pr_auc": 0.10099693212785883,
-        "precision_at_0.5": 0.13725490196078433,
-        "recall_at_0.5": 0.1320754716981132,
-        "roc_auc": 0.6675423931215667,
-        "validation_groups": 2,
-        "validation_positives": 53,
-        "validation_rows": 843
+        "pr_auc": 0.09338040167768598,
+        "precision_at_0.5": 0.1111111111111111,
+        "recall_at_0.5": 0.017543859649122806,
+        "roc_auc": 0.6194267894974885,
+        "validation_groups": 1,
+        "validation_positives": 57,
+        "validation_rows": 794
       },
       {
-        "f1_at_0.5": 0.16842105263157894,
-        "f2_at_0.5": 0.15384615384615385,
+        "f1_at_0.5": 0.057971014492753624,
+        "f2_at_0.5": 0.044444444444444446,
         "fold": 2,
-        "pr_auc": 0.14248361242475094,
-        "precision_at_0.5": 0.2,
-        "recall_at_0.5": 0.14545454545454545,
-        "roc_auc": 0.639241440377804,
-        "validation_groups": 4,
-        "validation_positives": 55,
-        "validation_rows": 671
+        "pr_auc": 0.08885738909586892,
+        "precision_at_0.5": 0.11764705882352941,
+        "recall_at_0.5": 0.038461538461538464,
+        "roc_auc": 0.6085068507929658,
+        "validation_groups": 6,
+        "validation_positives": 52,
+        "validation_rows": 765
       },
       {
-        "f1_at_0.5": 0.1896551724137931,
-        "f2_at_0.5": 0.20676691729323307,
+        "f1_at_0.5": 0.05970149253731343,
+        "f2_at_0.5": 0.045454545454545456,
         "fold": 3,
-        "pr_auc": 0.0919897711955724,
-        "precision_at_0.5": 0.16666666666666666,
-        "recall_at_0.5": 0.22,
-        "roc_auc": 0.599893111638955,
-        "validation_groups": 5,
-        "validation_positives": 50,
-        "validation_rows": 892
+        "pr_auc": 0.08544509388465171,
+        "precision_at_0.5": 0.125,
+        "recall_at_0.5": 0.0392156862745098,
+        "roc_auc": 0.6022494887525561,
+        "validation_groups": 4,
+        "validation_positives": 51,
+        "validation_rows": 866
       }
     ],
-    "mean_fold_pr_auc": 0.11182343858272738,
+    "mean_fold_pr_auc": 0.08922762821940221,
     "pooled_oof_metrics": {
-      "f1_at_0.5": 0.16507936507936508,
-      "f2_at_0.5": 0.16476552598225602,
-      "pr_auc": 0.10494769564826795,
-      "precision_at_0.5": 0.16560509554140126,
-      "recall_at_0.5": 0.16455696202531644,
-      "roc_auc": 0.6394755957475562
+      "f1_at_0.5": 0.04950495049504951,
+      "f2_at_0.5": 0.036656891495601175,
+      "pr_auc": 0.08732524990200637,
+      "precision_at_0.5": 0.11904761904761904,
+      "recall_at_0.5": 0.03125,
+      "roc_auc": 0.6082022626931567
     },
-    "prediction_threshold": 0.4,
+    "prediction_threshold": 0.5,
     "random_state": 42,
-    "std_fold_pr_auc": 0.021989648049818886,
+    "std_fold_pr_auc": 0.0032501369406014884,
     "strategy": "3-fold StratifiedGroupKFold; draft revisions grouped by family"
   }
 }

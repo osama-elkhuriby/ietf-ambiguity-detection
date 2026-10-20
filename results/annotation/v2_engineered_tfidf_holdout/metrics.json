@@ -1,0 +1,39 @@
+{
+  "feature_selection": "L1 regularization fit on training data only",
+  "feature_set": "engineered_tfidf",
+  "positive_rows": 160,
+  "random_state": 42,
+  "rows": 2425,
+  "split_strategy": "single draft-family-grouped holdout",
+  "test_families": [
+    "draft-ietf-6man-rfc2460bis",
+    "draft-ietf-quic-http",
+    "draft-ietf-tcpm-rfc793bis"
+  ],
+  "test_group_count": 3,
+  "test_metrics": {
+    "f1_at_0.5": 0.1836734693877551,
+    "f2_at_0.5": 0.30201342281879195,
+    "pr_auc": 0.17477059671869383,
+    "precision_at_0.5": 0.1111111111111111,
+    "recall_at_0.5": 0.5294117647058824,
+    "roc_auc": 0.6835321541203895
+  },
+  "test_positives": 17,
+  "test_rows": 446,
+  "test_size_fraction_of_families": 0.25,
+  "threshold": 0.5,
+  "train_families": [
+    "draft-ietf-dnsop-svcb-https",
+    "draft-ietf-httpbis-cache-header",
+    "draft-ietf-httpbis-http2bis",
+    "draft-ietf-httpbis-semantics",
+    "draft-ietf-quic-recovery",
+    "draft-ietf-quic-tls",
+    "draft-ietf-quic-transport",
+    "draft-ietf-tls-tls13"
+  ],
+  "train_group_count": 8,
+  "train_positives": 143,
+  "train_rows": 1979
+}
