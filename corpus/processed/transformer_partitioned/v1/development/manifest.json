@@ -1,0 +1,29 @@
+{
+  "artifact_role": "development_only",
+  "created_at": "2026-10-10T14:48:17.136069+00:00",
+  "leakage_audit_counts": {
+    "exact_cross_split_duplicates": 0,
+    "near_cross_split_duplicates": 0,
+    "target_as_cross_split_context": 0,
+    "unreviewed_exact_cross_split_duplicates": 0
+  },
+  "permitted_splits": [
+    "train",
+    "validation"
+  ],
+  "schema_version": 1,
+  "source_manifest_sha256": "b07d4925f1941f4b0e203e63337762730ea697bdf509c98eef5dfb85c66da010",
+  "split_files": {
+    "train": {
+      "path": "train.csv",
+      "rows": 2253,
+      "sha256": "4b0ee17308e26fdc8a2a362e7df1099fa7f55de79a9754ba64d50cb56f5542c4"
+    },
+    "validation": {
+      "path": "validation.csv",
+      "rows": 139,
+      "sha256": "bc1447736fb779f288b40bfef2a93a9a85240231d58c51294773e4e009931a2f"
+    }
+  },
+  "training_blocked": false
+}

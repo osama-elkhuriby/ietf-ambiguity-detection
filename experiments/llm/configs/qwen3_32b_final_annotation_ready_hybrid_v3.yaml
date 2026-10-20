@@ -18,7 +18,7 @@ base_signal:
   condition: zero_shot
   prompt_contract: ordinary_engineer_v1
   label_independent: true
-  predictions: experiments/llm/results/qwen3-32b-final-annotation-ready-v1/analysis-final/oof_predictions_zero_shot.csv
+  predictions: results/LLM/qwen3-32b-final-annotation-ready-v1/analysis-final/oof_predictions_zero_shot.csv
   predictions_sha256: b10761da481d66a9d2adb7408e92d7d932451cdcfeb937def61e333fb229cc28
 lexical_model:
   input_field: target_clause
@@ -55,9 +55,9 @@ selection:
   validation_role: reserved_tcp_not_opened
   test_role: sealed_dns_not_opened
 comparison:
-  v1_metrics: experiments/llm/results/qwen3-32b-final-annotation-ready-v1/analysis-final/pooled_metrics.csv
+  v1_metrics: results/LLM/qwen3-32b-final-annotation-ready-v1/analysis-final/pooled_metrics.csv
   v1_metrics_sha256: 72379076cc3b7793b71c1b4b92dbe27861dd9cfa31ce0ecc18943c8d222e0748
-  v2_metrics: experiments/llm/results/qwen3-32b-final-annotation-ready-v2/analysis-final/pooled_raw_metrics.csv
+  v2_metrics: results/LLM/qwen3-32b-final-annotation-ready-v2/analysis-final/pooled_raw_metrics.csv
   v2_metrics_sha256: 459c7aa1aefb3c90800bdb2216e6a0cdbdf6f7fec4a7e54f0d67bf12d623ba28
 reporting:
   development_result_status: adaptive_exploratory_not_final_test_evidence

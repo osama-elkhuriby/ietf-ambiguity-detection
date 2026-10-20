@@ -19,7 +19,7 @@ from models.classical.feature_pipeline import sha256_file
 DEFAULT_SPLIT_CONFIG = REPO_ROOT / "experiments/transformer/configs/split_v2.json"
 DEFAULT_MANIFEST = REPO_ROOT / "corpus/metadata/final_rfc_manifest.csv"
 DEFAULT_OUTPUT = (
-    REPO_ROOT / "experiments/transformer/governance/dns_lineage_audit.json"
+    REPO_ROOT / "results/transformer/governance/dns_lineage_audit.json"
 )
 RELATION_COLUMNS = ("obsoletes", "updates", "obsoleted_by", "updated_by")
 NORMATIVE = re.compile(r"\b(?:MUST|MUST NOT|SHOULD|SHOULD NOT|MAY|REQUIRED|SHALL|RECOMMENDED|OPTIONAL)\b")

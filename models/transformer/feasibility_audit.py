@@ -23,7 +23,7 @@ from models.transformer.lr_screen_analysis import (
     _read_transformer_run,
 )
 
-V2_ROOT = ROOT / "experiments/transformer/results/lr-screen-v2"
+V2_ROOT = ROOT / "results/transformer/studies/lr-screen-v2"
 INNER_ASSIGNMENT = ROOT / "experiments/transformer/configs/inner_selection_v1.json"
 TARGET_RECALLS = (0.80, 0.90, 0.95)
 PRIMARY_SEED = 1729
@@ -568,7 +568,7 @@ def main() -> int:
     parser.add_argument(
         "--output",
         type=Path,
-        default=ROOT / "experiments/transformer/governance/step2c_feasibility_v1",
+        default=ROOT / "results/transformer/governance/step2c_feasibility_v1",
     )
     parser.add_argument("--bootstrap-repetitions", type=int, default=2000)
     args = parser.parse_args()

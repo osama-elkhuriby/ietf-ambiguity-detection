@@ -62,7 +62,7 @@ do not delete a partial result directory because rerunning skips every response 
 cache identity still matches.
 
 Results are written to
-`experiments/llm/results/qwen3-32b-final-annotation-ready-v1/` and are ignored by
+`results/LLM/qwen3-32b-final-annotation-ready-v1/` and are ignored by
 Git. The model digest, Ollama version, source/config/code hashes, prompt token counts,
 raw response envelope, and `yes`/`no` log-probabilities are retained for audit.
 
@@ -74,7 +74,7 @@ Run the isolated V2 experiment with:
 .\scripts\run_llm_in_context_v2.ps1 -Stage all
 ```
 
-V2 writes to `experiments/llm/results/qwen3-32b-final-annotation-ready-v2/` and never
+V2 writes to `results/LLM/qwen3-32b-final-annotation-ready-v2/` and never
 reuses a V1 response as a V2 response. See `experiments/llm/EXPERIMENT_PLAN_V2.md` for
 the class compositions, hard-negative boundary, threshold protocol, and claim limits.
 
@@ -86,7 +86,7 @@ Run V3 with:
 
 V3 reuses the hash-pinned V1 zero-shot scores and therefore requires no Ollama calls.
 Its outputs are written to
-`experiments/llm/results/qwen3-32b-final-annotation-ready-v3/`. See
+`results/LLM/qwen3-32b-final-annotation-ready-v3/`. See
 `experiments/llm/EXPERIMENT_PLAN_V3.md` for the nested protocol and limitations.
 
 Run V4 with:
@@ -97,7 +97,7 @@ Run V4 with:
 
 V4 runs the pinned local `all-MiniLM-L6-v2` encoder offline and reuses a hash-recorded
 embedding cache. Outputs are written to
-`experiments/llm/results/qwen3-32b-final-annotation-ready-v4/`. See
+`results/LLM/qwen3-32b-final-annotation-ready-v4/`. See
 `experiments/llm/EXPERIMENT_PLAN_V4.md` for the adaptive-selection limitation.
 
 The labels combine human annotation with assistance from two AI models. They are the

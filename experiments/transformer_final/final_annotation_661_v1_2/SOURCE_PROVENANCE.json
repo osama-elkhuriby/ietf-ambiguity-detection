@@ -1,0 +1,50 @@
+{
+  "authoritative_dataset": {
+    "path": "results/annotation/final_annotation.csv",
+    "sha256": "8e395e83087c28cdc8e5b514f6fb4eca96e54a31fb525be770810db6f9e22e1d"
+  },
+  "authoritative_manifest_producer": {
+    "fields": [
+      "approved_metadata_hashes",
+      "config_path",
+      "config_sha256",
+      "created_at",
+      "dataset_columns",
+      "dataset_file",
+      "effective_dataset_sha256",
+      "effective_summary",
+      "experiment",
+      "fold_source_path",
+      "fold_source_sha256",
+      "git_commit",
+      "label_mapping",
+      "leakage_audit",
+      "leakage_audit_sha256",
+      "original_dataset_sha256",
+      "private_key_reporting",
+      "reserved_partitions",
+      "schema_version",
+      "source_path",
+      "unresolved_exclusions",
+      "validation_report",
+      "validation_report_sha256"
+    ],
+    "function": "prepare_dataset",
+    "path": "models/transformer_final/dataset.py",
+    "schema_version": 1,
+    "source_sha256": "7777aa8319753f5f6782cc06e9dc86c9a7fe616fa81a2cb69f2b17d46f21b4e9"
+  },
+  "created_at": "2026-10-19T16:33:18.695111+00:00",
+  "effective_global_dataset": {
+    "path": "experiments/transformer_final/final_annotation_661_v1_1/manifests/dataset_v1/dataset.csv",
+    "sha256": "19364a405048c279c2959ed6110a2e6868f2b4759ea21c659399038e6fbcec23"
+  },
+  "historical_interface": "train.run_cell hashes dataset_dir/manifest.json and dataset_dir/folds/fold_N.json; V1.2 adapter returns the complete inner dataset root.",
+  "inner_derivation": "Each inner root is exactly the corresponding outer fold manifest's fitting_record_ids; V1.1 inner family assignments are retained for those IDs and leakage manifests are regenerated.",
+  "schema_version": 1,
+  "source_experiment": {
+    "dataset_manifest_sha256": "c4b7de8ffada5bb75d37eedfba651dbf7612f159b43ecde094aff9b889c67676",
+    "path": "experiments/transformer_final/final_annotation_661_v1_1",
+    "protocol_sha256": "94024e67ddd61fc5562a7a3f09a4f6b136c765a0f590fbea5330ce26baddb4c0"
+  }
+}

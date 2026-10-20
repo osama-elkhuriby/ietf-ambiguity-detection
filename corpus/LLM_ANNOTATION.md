@@ -37,14 +37,14 @@ for a full corpus on CPU. See Ollama's official
 Run a 60-record stratified pilot first:
 
 ```powershell
-.\run_llm_annotation.cmd --limit 60
+.\scripts\annotation\run_llm_annotation.cmd --limit 60
 ```
 
 Inspect `corpus/processed/llm_annotations/v1/consensus.csv`. Then continue to
 the complete dataset with the same output directory:
 
 ```powershell
-.\run_llm_annotation.cmd
+.\scripts\annotation\run_llm_annotation.cmd
 ```
 
 Completed responses are reused, so an interrupted run can be resumed by

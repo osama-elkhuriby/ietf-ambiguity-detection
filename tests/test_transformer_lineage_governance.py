@@ -9,7 +9,7 @@ from models.classical.feature_pipeline import sha256_file
 def test_frozen_dns_lineage_audit_has_no_training_lineage_overlap() -> None:
     root = Path(__file__).resolve().parents[1]
     report = json.loads(
-        (root / "experiments/transformer/governance/dns_lineage_audit.json").read_text(
+        (root / "results/transformer/governance/dns_lineage_audit.json").read_text(
             encoding="utf-8"
         )
     )
@@ -40,7 +40,7 @@ def test_official_rfc_crosscheck_records_no_dns_chain_relationships() -> None:
     crosscheck = json.loads(
         (
             root
-            / "experiments/transformer/governance/dns_official_rfc_crosscheck.json"
+            / "results/transformer/governance/dns_official_rfc_crosscheck.json"
         ).read_text(encoding="utf-8")
     )
     assert crosscheck["rfc"] == "RFC9460"

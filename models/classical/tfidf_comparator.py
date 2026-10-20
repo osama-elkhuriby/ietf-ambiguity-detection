@@ -394,7 +394,7 @@ def _parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=ROOT / "experiments/classical/results/tfidf-logreg-v1",
+        default=ROOT / "results/ML/classical_studies/tfidf-logreg-v1",
     )
     return parser.parse_args(argv)
 

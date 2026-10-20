@@ -28,7 +28,7 @@ DEFAULT_CONFIG = ROOT / "experiments/classical/configs/tfidf_logreg_v1.json"
 DEFAULT_TRANSFORMER_CONFIG = (
     ROOT / "experiments/transformer/configs/deberta_clause_only.yaml"
 )
-DEFAULT_OUTPUT = ROOT / "experiments/classical/results/tfidf-matched-nested-v1"
+DEFAULT_OUTPUT = ROOT / "results/ML/classical_studies/tfidf-matched-nested-v1"
 
 
 def _write_json(path: Path, value: Any) -> None:

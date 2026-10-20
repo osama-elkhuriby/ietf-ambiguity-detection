@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "experiment": "final_annotation_661_v1",
+  "description": "Independent Focal Loss, Partial-4, and fitting-side ECDF ensemble study on final_annotation.csv",
+  "data": {
+    "source_csv": "results/annotation/final_annotation.csv",
+    "source_sha256": "8e395e83087c28cdc8e5b514f6fb4eca96e54a31fb525be770810db6f9e22e1d",
+    "private_key_csv": "results/annotation/key_PRIVATE.csv",
+    "metadata_csv": "corpus/processed/model_datasets/v2/training_dataset.csv",
+    "canonical_context_csv": "corpus/processed/transformer_inputs/v3/dataset.csv",
+    "label_column": "final_label",
+    "target_column": "target_clause",
+    "id_column": "item_id",
+    "expected_source_rows": 2406,
+    "expected_source_yes": 159,
+    "expected_source_no": 2247,
+    "expected_unresolved_item_ids": ["2161"],
+    "approved_source_hashes": {
+      "private_key_csv": "09edc22f73d93998df728378986f039690e5b87fa62e1f52928a80708009cdce",
+      "metadata_csv": "a0e2d4cf81dce960efc15b47bf39abbfbe67ec8ec743b1aa63df00b8395a0dd1",
+      "canonical_context_csv": "d18dfd145305cca61c62d8e3b23ff93a0a76dcd1235f04112c13458ab0f4be3f"
+    },
+    "unresolved_exclusion_policy": "Exclude item_id 2161 because final_status is unresolved_blank_manual_verdict and final_source is unresolved; its placeholder final_label is not ground truth."
+  },
+  "partitions": {
+    "train_families": [
+      "draft-ietf-6man-rfc2460bis",
+      "draft-ietf-httpbis-cache-header",
+      "draft-ietf-httpbis-http2bis",
+      "draft-ietf-httpbis-semantics",
+      "draft-ietf-quic-http",
+      "draft-ietf-quic-recovery",
+      "draft-ietf-quic-tls",
+      "draft-ietf-quic-transport",
+      "draft-ietf-tls-tls13"
+    ],
+    "tcp_family": "draft-ietf-tcpm-rfc793bis",
+    "dns_family": "draft-ietf-dnsop-svcb-https",
+    "sealed_evaluation_enabled": false
+  },
+  "folds": {
+    "fold_source": "experiments/transformer/configs/folds_v1.json",
+    "fold_source_sha256": "c04dc8424ed96486f8521ef57d17e4b503d2c3f41bb116edeeb9535073dd7884",
+    "count": 5,
+    "inner_count": 3,
+    "near_duplicate_threshold": 0.85,
+    "policy": "Preserve frozen family-to-outer-fold boundaries; apply label-blind exact, near, lineage, BCP14-skeleton, and context leakage controls within each fitting design."
+  },
+  "model": {
+    "repository": "microsoft/deberta-v3-base",
+    "default_local_path": "D:/RFC/models/deberta-v3-base",
+    "source_sha256": "206ee7bb2c7805bcc8fd3bbbc18a09e185bafc19d4e112f31d4a088136717dd7",
+    "revision": null,
+    "num_labels": 2,
+    "label2id": {"No": 0, "Yes": 1},
+    "offline_only": true
+  },
+  "tokenization": {
+    "input_mode": "target_only",
+    "max_length": 256,
+    "target_overflow": "deterministic_head_tail",
+    "dynamic_padding": true,
+    "add_vocabulary_tokens": false
+  },
+  "training": {
+    "train_batch_size": 8,
+    "eval_batch_size": 16,
+    "gradient_accumulation_steps": 1,
+    "optimizer": "AdamW",
+    "learning_rate": 0.00001,
+    "weight_decay": 0.01,
+    "scheduler": "linear",
+    "warmup_ratio": 0.1,
+    "epochs": 5,
+    "early_stopping": false,
+    "max_grad_norm": 1.0,
+    "seeds": [2718],
+    "precision": "fp32",
+    "deterministic": true,
+    "threshold": 0.5,
+    "diagnostic_numerics": true
+  },
+  "methods": {
+    "focal": {
+      "loss": "focal_gamma_2",
+      "gamma": 2.0,
+      "alpha": "fitting-side class weights No=1, Yes=negative/positive",
+      "reduction": "batch_mean"
+    },
+    "partial4": {
+      "loss": "weighted_ce",
+      "policy": "freeze embeddings, shared encoder backbone, and layers 0-7; train layers 8-11, pooler, and classifier",
+      "trainable_last_layers": 4
+    }
+  },
+  "calibration": {
+    "precision_targets": [0.2, 0.3, 0.5],
+    "primary_precision_target": 0.3,
+    "selection": "maximize recall subject to fitting-side precision target; ties: higher precision, then higher threshold",
+    "infeasible": "explicit; no always-positive fallback"
+  },
+  "ensemble": {
+    "method": "outer-specific fitting-side empirical CDF",
+    "weights": {"focal": 0.5, "partial4": 0.5},
+    "outer_distribution_fitting": false
+  },
+  "evaluation": {
+    "primary_ranking_metric": "average_precision",
+    "top_k": [10, 20, 25, 50, 100],
+    "bootstrap_replicates": 2000,
+    "bootstrap_cluster": "rfc_family",
+    "error_primary_policy": "nested_precision_0.30"
+  },
+  "conditions": {"A2": "weighted_ce"},
+  "outputs": {
+    "dataset_dir": "experiments/transformer_final/final_annotation_661_v1/manifests/dataset_v1",
+    "runs_dir": "experiments/transformer_final/final_annotation_661_v1/runs",
+    "audit_dir": "experiments/transformer_final/final_annotation_661_v1/audits"
+  }
+}

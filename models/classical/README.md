@@ -64,7 +64,7 @@ unweighted, class, confidence, and combined. Exact cross-boundary duplicate targ
 remain available to the fitting partition but are excluded from that fold's reported
 score, matching the transformer protocol. The immutable output includes raw logits,
 probabilities, per-fold manifests, percentile bootstrap intervals, and pooled OOF
-summaries under `experiments/classical/results/tfidf-logreg-v1/`.
+summaries under `results/ML/classical_studies/tfidf-logreg-v1/`.
 
 ## Final annotation logistic regression
 

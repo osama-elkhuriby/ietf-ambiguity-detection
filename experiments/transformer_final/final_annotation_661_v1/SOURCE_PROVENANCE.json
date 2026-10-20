@@ -1,0 +1,50 @@
+{
+  "approved_static_sources": {
+    "authoritative_dataset": "8e395e83087c28cdc8e5b514f6fb4eca96e54a31fb525be770810db6f9e22e1d",
+    "canonical_context_csv": "d18dfd145305cca61c62d8e3b23ff93a0a76dcd1235f04112c13458ab0f4be3f",
+    "fold_source": "c04dc8424ed96486f8521ef57d17e4b503d2c3f41bb116edeeb9535073dd7884",
+    "metadata_csv": "a0e2d4cf81dce960efc15b47bf39abbfbe67ec8ec743b1aa63df00b8395a0dd1",
+    "model_file_hashes": {
+      ".cache/huggingface/.gitignore": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1",
+      ".cache/huggingface/CACHEDIR.TAG": "e8893e2dcb3f4545ef67a0a5b7b769113d38eef1aa61c7c7ba14659b02af955f",
+      ".cache/huggingface/download/config.json.metadata": "b66e5bfcc5232aaafb663c690d0335869b3fcf1b7b4117f883ed618262cf008b",
+      ".cache/huggingface/download/pytorch_model.bin.metadata": "44ec8c64cbd6062c86e89631d96c9ab91d4c3e02bc02f6338d5a8cb5fda6730c",
+      ".cache/huggingface/download/spm.model.metadata": "b3be67060084258bf526a04ab4b6b48ba38df26c320c1eebdd6470c5e1179eb9",
+      ".cache/huggingface/download/tokenizer_config.json.metadata": "b7ce28d9caea80e533824d3b88a3994e58503d28522ee024a0e4a23bd88672d0",
+      ".cache/huggingface/trees/8ccc9b6f36199bec6961081d44eb72fb3f7353f3.json": "3ee10936526b74252b8223ccb38fd0dc2630c189a11316d369cfabf60e39b9e4",
+      "config.json": "649f6a1ec33c6bdd9a6486d5c66019d461139e54957073eafe9bbc2d34c75b0b",
+      "pytorch_model.bin": "691d48a2800b926a19e3051def466fc2cca4f59a15e42ce4a0cf7f1b380b5e33",
+      "spm.model": "c679fbf93643d19aab7ee10c0b99e460bdbc02fedf34b92b05af343b4af586fd",
+      "tokenizer_config.json": "3f3978e0c036f2c2588cac34a6047cbb0af0b0dc1814254e291028529805496d"
+    },
+    "model_path": "D:\\RFC\\models\\deberta-v3-base",
+    "model_source_sha256": "206ee7bb2c7805bcc8fd3bbbc18a09e185bafc19d4e112f31d4a088136717dd7",
+    "private_key_csv": "09edc22f73d93998df728378986f039690e5b87fa62e1f52928a80708009cdce"
+  },
+  "authoritative_dataset": {
+    "path": "D:\\RFC\\ietf-ambiguity-detection\\results\\annotation\\final_annotation.csv",
+    "sha256": "8e395e83087c28cdc8e5b514f6fb4eca96e54a31fb525be770810db6f9e22e1d"
+  },
+  "created_at": "2026-10-19T13:43:43.467190+00:00",
+  "historical_artifacts_modified": false,
+  "historical_references_read_only": {
+    "experiments/transformer_final/method_specific_calibration_v1/study.py": "822cd6b03969cf04a5999dd666fec034df8920721da3631f564dc5e31914c703",
+    "experiments/transformer_final/method_specific_calibration_v1_1/study.py": "cab657049d41e2d35a26c14b46ec88520fa2d6b99c31af18fbf2dd90b61e3292",
+    "experiments/transformer_final/recall_improvement_study_v1/cell_launcher.py": "a36bc91f14f4735105ec124bb40dd2efb1b4c9704d857be9ecc25620b9ace036",
+    "experiments/transformer_final/recall_improvement_study_v1/study_protocol.py": "40de483e593148705fc60d2fef4c5d02f02a11d84331c2e3ef14e2feec8ca8b0",
+    "experiments/transformer_final/recall_improvement_study_v3_optimizer_fix.py": "006b7af1325a7b9cc4a207ac102160c4403ed3f193cb099c79528911b9da00e9",
+    "models/transformer_final/leakage.py": "0fab327b66bf97290fb72c5e8a135e7f12c5618614172f353189b27e32fe873e",
+    "models/transformer_final/modeling.py": "ac69032a42e5631478a6343ff22b6b403dd86b6fbb00506dd84c7458460b5e0f",
+    "models/transformer_final/train.py": "d9df6f48a1622933c472587b07fe8a5eb5c58ab883867bdb0317e26a71eef7ac"
+  },
+  "reuse_summary": {
+    "calibration": "method-specific three-fold family OOF",
+    "ensemble": "outer-specific fitting-side ECDF, equal weights",
+    "family_governance": "frozen folds_v1 family boundaries",
+    "focal": "gamma=2; fitting-side class weights; mean reduction",
+    "leakage": "models.transformer_final.leakage label-blind audit/manifests",
+    "partial4": "encoder layers 8-11 plus pooler/classifier; trainable-only AdamW",
+    "training_loop": "guarded fixed-epoch FP32 core with experiment-local method wrapper"
+  },
+  "schema_version": 1
+}

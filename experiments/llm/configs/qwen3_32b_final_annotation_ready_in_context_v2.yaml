@@ -38,7 +38,7 @@ in_context:
     '24': {positive: 2, negative: 22}
   demonstration_selection: fold_safe_v1_hard_negatives_manual_first_positives_v1
   demonstration_seed: 20261019
-  hard_negative_scores: experiments/llm/results/qwen3-32b-final-annotation-ready-v1/analysis-final/oof_predictions_8_shot.csv
+  hard_negative_scores: results/LLM/qwen3-32b-final-annotation-ready-v1/analysis-final/oof_predictions_8_shot.csv
   hard_negative_scores_sha256: d371c7a1dd560d7cfdae923adf7e2019cd8314d900910a70bf053796738e036c
 selection:
   primary_metric: pr_auc
@@ -54,7 +54,7 @@ selection:
   test_role: sealed_dns_final_evaluation_only
 comparison:
   baseline_name: qwen3_32b_in_context_v1
-  baseline_analysis: experiments/llm/results/qwen3-32b-final-annotation-ready-v1/analysis-final/analysis.json
+  baseline_analysis: results/LLM/qwen3-32b-final-annotation-ready-v1/analysis-final/analysis.json
   baseline_analysis_sha256: 60cedba5b386306be8d21832c2f1ae29d9accfb19239fae247ca31978d85d3dc
-  baseline_metrics: experiments/llm/results/qwen3-32b-final-annotation-ready-v1/analysis-final/pooled_metrics.csv
+  baseline_metrics: results/LLM/qwen3-32b-final-annotation-ready-v1/analysis-final/pooled_metrics.csv
   baseline_metrics_sha256: 72379076cc3b7793b71c1b4b92dbe27861dd9cfa31ce0ecc18943c8d222e0748

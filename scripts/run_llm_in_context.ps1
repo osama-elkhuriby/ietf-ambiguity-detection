@@ -18,8 +18,8 @@ Write-Host "Python runtime: $Python"
 
 $Config = Join-Path $ProjectRoot "experiments\llm\configs\qwen3_32b_final_annotation_ready_in_context.yaml"
 $DatasetRoot = Join-Path $ProjectRoot "corpus\processed\llm_final_annotation_ready\v1"
-$RunRoot = Join-Path $ProjectRoot "experiments\llm\results\qwen3-32b-final-annotation-ready-v1"
-$SmokeRoot = Join-Path $ProjectRoot "experiments\llm\results\qwen3-32b-final-annotation-ready-smoke-v1"
+$RunRoot = Join-Path $ProjectRoot "results\experiments\llm\qwen3-32b-final-annotation-ready-v1"
+$SmokeRoot = Join-Path $ProjectRoot "results\experiments\llm\qwen3-32b-final-annotation-ready-smoke-v1"
 
 function Invoke-CheckedPython {
     param([Parameter(Mandatory = $true)][string[]]$Arguments)

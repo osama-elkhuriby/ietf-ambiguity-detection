@@ -1,69 +1,112 @@
-# Python
+# Python environments, bytecode, and tooling caches
 __pycache__/
 *.py[cod]
-*.pyo
+*.egg-info/
+.venv/
+venv/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
 .test-tmp/
 .*-test-tmp/
-*.egg-info/
-.venv/
-venv/
-.uv-cache/
-.uv-python/
-.hf-modules/
+.ipynb_checkpoints/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+build/
+dist/
 
-# Secrets / local env
+# Local credentials and environment-specific settings
 .env
 .env.*
+!.env.example
+!.env.template
 
-# ---------------------------------------------------------------------------
-# Corpus data policy (Stage 1)
-#
-# COMMITTED (shared with collaborators):
-#   corpus/metadata/          manifests, manifest CSV, audit JSON
-#   corpus/raw/drafts/          Internet-Draft revision plaintext/XML
-#   corpus/raw/rfcs/*.txt     RFC plaintext
-#   corpus/raw/errata/
-#
-# IGNORED (re-fetchable local caches — not needed on other machines):
-#   corpus/raw/rfcs/.rfcindex-cache/
-#   ietf-dt-cache.sqlite        Datatracker HTTP cache (see *.sqlite below)
-# ---------------------------------------------------------------------------
+# Local model, package, and corpus caches
+.hf-modules/
+.uv-cache/
+.uv-python/
+.cache/huggingface/
 corpus/raw/rfcs/.rfcindex-cache/
-results/revision_features/embedding_cache
-# Generated Stage-2 parser/classifier outputs (reproducible from raw corpus)
-# corpus/processed/
-results/revision_features/matcher_cache
-# Notebooks checkpoints
-.ipynb_checkpoints/
+corpus/processed/alignments/_embedding_cache/
 
-# OS
+# Operating-system and editor temporary files
 .DS_Store
 Thumbs.db
+desktop.ini
+.idea/
+~$*
+.~lock.*
+*.swp
+*.swo
+*.tmp
+*.bak
 
-# Local Datatracker / tool caches
+# Local databases, logs, checkpoints, and fitted models
 *.sqlite
-
+*.sqlite3
 *.jsonl
+*.log
+*.safetensors
+*.joblib
+*.npz
 
-# Local LLM annotations are reproducible but large and model-specific.
+# Private or reproducible corpus artifacts
 corpus/processed/llm_annotations/
-
-# Reproducible classical-model feature matrices and fitted preprocessors.
 corpus/processed/features/
-
-# Reproducible, leakage-audited transformer input artifacts and run outputs.
 corpus/processed/transformer_inputs/
 corpus/processed/transformer_audits/
-corpus/processed/transformer_partitioned/
 corpus/processed/model_datasets/
-experiments/transformer/results/
+corpus/processed/llm_final_annotation_ready/
+corpus/processed/filtered.json
+experiments/annotation_v2/private/
+experiments/annotation_v2/review/
+experiments/annotation_v2/samples/
+results/annotation/
+
+# Root-level local result exports
+results/*.csv
+results/*.xlsx
+
+# Generated result runs; keep compact reports and publication assets
+results/ML/classical_studies/
+results/LLM/
+results/hybrid/
+results/transformer/studies/
+results/transformer/analysis_exports/
+results/transformer/final_studies/
+results/transformer/governance/*
+!results/transformer/governance/dns_lineage_audit.json
+!results/transformer/governance/dns_official_rfc_crosscheck.json
+
+# Row-level derived data and large feature matrices
+results/ML/**/matrices/
+results/ML/**/oof_predictions.csv
+results/ML/**/rows_and_labels.csv
+results/ML/**/numerical_features.csv
+results/heuristic/**/predictions.csv
+results/heuristic/**/engineered_features.csv
+results/embeddings_context/cache/
+results/transformer/tables/method_specific_calibration_v1/PREDICTION_COMPLEMENTARITY.csv
+results/transformer/tables/method_specific_calibration_v1_1/PREDICTION_COMPLEMENTARITY.csv
+
+# Generated outputs from legacy experiment directories
 experiments/classical/results/
 experiments/llm/results/
-experiments/transformer/*.lock.json
-corpus/processed/llm_final_annotation_ready/
-
-# Generated model checkpoints (store externally or with Git LFS).
-*.safetensors
+experiments/transformer/results/
+experiments/transformer_final/**/audits/
+experiments/transformer_final/**/completion_manifests/
+experiments/transformer_final/**/failure_manifests/
+experiments/transformer_final/**/logs/
+experiments/transformer_final/**/pretraining_failures/
+experiments/transformer_final/**/runs/
+experiments/transformer_final/**/training_outputs/
+experiments/transformer_final/**/aggregate_metrics/
+experiments/transformer_final/**/analysis/
+experiments/transformer_final/**/plots/
+experiments/transformer_final/**/attempt_markers/
+experiments/transformer_final/**/final_predictions/
+experiments/transformer_final/**/manifests/
+experiments/transformer_final/*/*.csv
+experiments/transformer_final/original_annotation/*.png

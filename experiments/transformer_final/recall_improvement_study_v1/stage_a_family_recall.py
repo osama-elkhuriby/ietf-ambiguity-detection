@@ -29,7 +29,7 @@ from models.transformer_final.experiment2_analysis import (
 
 STUDY_ROOT = Path(__file__).resolve().parent
 BASELINE_ROOT = resolve_path(
-    "experiments/transformer_final/final_annotation_ready_pilot_v1/aggregate_metrics"
+    "results/transformer/final_studies/final_annotation_ready_pilot_v1/aggregate_metrics"
 )
 THRESHOLDS = (
     0.001,
