@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import itertools
 import os
 from pathlib import Path
 from typing import Any, Literal
@@ -32,7 +33,7 @@ from models.classical.annotation_logreg_experiment2 import (
     RANDOM_STATE,
     ROOT,
     _binary_metrics,
-    _encode_target_embeddings,
+    _encode_target_embeddings as _encode_uncached,
     _fit_components,
     _transform_components,
     build_validation_groups,
@@ -44,6 +45,16 @@ CLASSIFIERS: tuple[ClassifierName, ...] = ("linear_svm", "random_forest")
 FEATURE_MODES = tuple(DEFAULT_OUTPUTS)
 DEFAULT_OUTPUT_ROOT = ROOT / "results/ML/additional_classifiers"
 SVM_SCORE_METHOD = "sigmoid of LinearSVC decision_function; 0.5 maps to margin 0"
+
+_EMBEDDING_CACHE: dict[str, np.ndarray] = {}
+
+
+def _encode_target_embeddings(texts: Any) -> np.ndarray:
+    """Encode once per run of this script; the 4 embedding experiments reuse it."""
+    key = hashlib.sha256("\x00".join(map(str, texts)).encode("utf-8")).hexdigest()
+    if key not in _EMBEDDING_CACHE:
+        _EMBEDDING_CACHE[key] = _encode_uncached(texts)
+    return _EMBEDDING_CACHE[key]
 
 
 def _new_classifier(classifier_name: ClassifierName) -> Any:
@@ -117,6 +128,7 @@ def train_and_validate(
     *,
     classifier_name: ClassifierName,
     feature_mode: str,
+    quiet: bool = False,
 ) -> dict[str, Any]:
     if classifier_name not in CLASSIFIERS:
         raise ValueError(f"Unsupported classifier: {classifier_name}")
@@ -294,40 +306,75 @@ def train_and_validate(
         json.dumps(manifest, indent=2, sort_keys=True) + "\n",
         encoding="utf-8",
     )
-    print(json.dumps(metrics, indent=2))
+    if not quiet:
+        print(json.dumps(metrics, indent=2))
     return metrics
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Run grouped-CV annotation classifier experiments."
+        description=(
+            "Run grouped-CV annotation classifier experiments. "
+            "Omit --classifier and/or --feature-mode to run every value "
+            "(no arguments = all 8 experiments)."
+        )
     )
     parser.add_argument("--input", type=Path, default=DEFAULT_INPUT)
-    parser.add_argument(
-        "--classifier",
-        choices=CLASSIFIERS,
-        required=True,
-    )
-    parser.add_argument(
-        "--feature-mode",
-        choices=FEATURE_MODES,
-        required=True,
-    )
+    parser.add_argument("--classifier", choices=CLASSIFIERS, default=None)
+    parser.add_argument("--feature-mode", choices=FEATURE_MODES, default=None)
     parser.add_argument(
         "--output-dir",
         type=Path,
-        help="Defaults to results/annotation/additional_classifiers/<classifier>/<mode>.",
+        help="Output root; each run goes to <output-dir>/<classifier>/<mode>. "
+        f"Default: {DEFAULT_OUTPUT_ROOT}",
     )
     args = parser.parse_args()
-    output_dir = args.output_dir or (
-        DEFAULT_OUTPUT_ROOT / args.classifier / args.feature_mode
-    )
-    train_and_validate(
-        args.input,
-        output_dir,
-        classifier_name=args.classifier,
-        feature_mode=args.feature_mode,
-    )
+    root_dir = args.output_dir or DEFAULT_OUTPUT_ROOT
+    classifiers = [args.classifier] if args.classifier else list(CLASSIFIERS)
+    modes = [args.feature_mode] if args.feature_mode else list(FEATURE_MODES)
+    combos = list(itertools.product(classifiers, modes))
+    single = len(combos) == 1
+
+    rows: list[dict[str, Any]] = []
+    failures: list[tuple[str, str, str]] = []
+    for number, (classifier_name, mode) in enumerate(combos, start=1):
+        print(f"\n=== [{number}/{len(combos)}] {classifier_name} + {mode} ===", flush=True)
+        try:
+            metrics = train_and_validate(
+                args.input,
+                root_dir / classifier_name / mode,
+                classifier_name=classifier_name,
+                feature_mode=mode,
+                quiet=not single,
+            )
+        except Exception as exc:  # keep going; report at the end
+            print(f"FAILED: {exc!r}", flush=True)
+            failures.append((classifier_name, mode, repr(exc)))
+            continue
+        pooled = metrics["validation"]["pooled_oof_metrics"]
+        rows.append(
+            {
+                "classifier": classifier_name,
+                "feature_mode": mode,
+                "mean_fold_ap": metrics["validation"]["mean_fold_average_precision"],
+                "std_fold_ap": metrics["validation"]["std_fold_average_precision"],
+                **{k: v for k, v in pooled.items() if isinstance(v, (int, float))},
+            }
+        )
+
+    if rows and not single:
+        summary = pd.DataFrame(rows)
+        root_dir.mkdir(parents=True, exist_ok=True)
+        summary.to_csv(root_dir / "summary.csv", index=False, lineterminator="\n")
+        with pd.option_context("display.width", 200, "display.max_columns", None):
+            print("\n=== Summary (pooled out-of-fold) ===")
+            print(summary.round(4).to_string(index=False))
+        print(f"\nSaved {root_dir / 'summary.csv'}")
+    if failures:
+        print("\nFailed runs:")
+        for classifier_name, mode, error in failures:
+            print(f"  {classifier_name} + {mode}: {error}")
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":
