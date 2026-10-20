@@ -36,8 +36,8 @@ CONTRASTS = (
     ("class", "combined"),
     ("class", "unweighted"),
 )
-LR_SCREEN_ROOT = ROOT / "experiments/transformer/results/lr-screen-v2/lr-1e-5"
-WEIGHTING_ROOT = ROOT / "experiments/transformer/results/weighting-ablation-v1"
+LR_SCREEN_ROOT = ROOT / "results/transformer/studies/lr-screen-v2/lr-1e-5"
+WEIGHTING_ROOT = ROOT / "results/transformer/studies/weighting-ablation-v1"
 
 
 def expected_calibration_error(

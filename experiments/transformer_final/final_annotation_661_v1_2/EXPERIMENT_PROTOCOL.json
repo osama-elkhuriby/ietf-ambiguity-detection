@@ -1,0 +1,181 @@
+{
+  "authoritative_dataset_sha256": "8e395e83087c28cdc8e5b514f6fb4eca96e54a31fb525be770810db6f9e22e1d",
+  "config_sha256": "5106c05f2c535d2b567d9790c71f40b583be3e91c979e6e02208661fd8a6f087",
+  "created_at": "2026-10-19T16:33:19.276299+00:00",
+  "effective_global_dataset_sha256": "19364a405048c279c2959ed6110a2e6868f2b4759ea21c659399038e6fbcec23",
+  "ensemble_policy_changed": false,
+  "failed_cell_policy": "preserve evidence; never complete or reuse; V1.2 path is a fresh attempt",
+  "failed_v1_1_cell": "inner-focal-outer1-inner1-seed2718",
+  "git_commit": "301070716542cf2991e3b2049b74aa7d44225146",
+  "inner_datasets": [
+    {
+      "effective_dataset_sha256": "2e081410b979c8a65c2566352bc58ffb55a93f38b8c475e9f7c6633ae618eb38",
+      "manifest_sha256": "0a9bd034861eb9cca849dc24a15375fddfbfa3bd0552860598e0c7f5b3c2efc2",
+      "outer_fold": 1
+    },
+    {
+      "effective_dataset_sha256": "e5306a6d23e52ab6109c35abfc1582b786f4065737972e4f4732f86ad0ca5eec",
+      "manifest_sha256": "5adf9c05e7a4a807a2ef94a8dcdbcc801ce6bd55aceaf83b099650871a899415",
+      "outer_fold": 2
+    },
+    {
+      "effective_dataset_sha256": "d81029658f0ce127e3dce7168c924e23ad518437145960bbb5dceb51b3f3c011",
+      "manifest_sha256": "86ca343a533740e4af0f2ebd5eacdbf78578470768db8aa78d4ac468bd7f1d28",
+      "outer_fold": 3
+    },
+    {
+      "effective_dataset_sha256": "bf639b1be7240a920465feb836618fcdc6cfc03f8224f85adcc2b6b66ec432e9",
+      "manifest_sha256": "cd3323f9fa8286543d5f40840a05d131474e62be4172242c6642a4715588f143",
+      "outer_fold": 4
+    },
+    {
+      "effective_dataset_sha256": "5e274a22d94f4f58400fc1a8ef07ec1c962c28ac0ad322540779010c4827668b",
+      "manifest_sha256": "545015a06caf156afb1877e5f0b28d2d1a1964b7c32b9ff142f6ebeb33f7329d",
+      "outer_fold": 5
+    }
+  ],
+  "inner_policy": "30 fresh V1.2 cells, explicit user execution only, no automatic retry",
+  "model_source_sha256": "206ee7bb2c7805bcc8fd3bbbc18a09e185bafc19d4e112f31d4a088136717dd7",
+  "outer_policy": "reuse 10 validated V1.1 cells by immutable absolute reference; never copy or retrain",
+  "protocol_id": "final_annotation_661_v1_2",
+  "recovery_scope": "inner dataset provenance-manifest compatibility only",
+  "schema_version": 2,
+  "scientific_configuration": {
+    "calibration": {
+      "infeasible": "explicit; no always-positive fallback",
+      "precision_targets": [
+        0.2,
+        0.3,
+        0.5
+      ],
+      "primary_precision_target": 0.3,
+      "selection": "maximize recall subject to fitting-side precision target; ties: higher precision, then higher threshold"
+    },
+    "conditions": {
+      "A2": "weighted_ce"
+    },
+    "data": {
+      "approved_source_hashes": {
+        "canonical_context_csv": "d18dfd145305cca61c62d8e3b23ff93a0a76dcd1235f04112c13458ab0f4be3f",
+        "metadata_csv": "a0e2d4cf81dce960efc15b47bf39abbfbe67ec8ec743b1aa63df00b8395a0dd1",
+        "private_key_csv": "09edc22f73d93998df728378986f039690e5b87fa62e1f52928a80708009cdce"
+      },
+      "canonical_context_csv": "corpus/processed/transformer_inputs/v3/dataset.csv",
+      "expected_source_no": 2247,
+      "expected_source_rows": 2406,
+      "expected_source_yes": 159,
+      "expected_unresolved_item_ids": [
+        "2161"
+      ],
+      "id_column": "item_id",
+      "label_column": "final_label",
+      "metadata_csv": "corpus/processed/model_datasets/v2/training_dataset.csv",
+      "private_key_csv": "results/annotation/key_PRIVATE.csv",
+      "source_csv": "results/annotation/final_annotation.csv",
+      "source_sha256": "8e395e83087c28cdc8e5b514f6fb4eca96e54a31fb525be770810db6f9e22e1d",
+      "target_column": "target_clause",
+      "unresolved_exclusion_policy": "Exclude item_id 2161 because final_status is unresolved_blank_manual_verdict and final_source is unresolved; its placeholder final_label is not ground truth."
+    },
+    "ensemble": {
+      "method": "outer-specific fitting-side empirical CDF",
+      "outer_distribution_fitting": false,
+      "weights": {
+        "focal": 0.5,
+        "partial4": 0.5
+      }
+    },
+    "evaluation": {
+      "bootstrap_cluster": "rfc_family",
+      "bootstrap_replicates": 2000,
+      "error_primary_policy": "nested_precision_0.30",
+      "primary_ranking_metric": "average_precision",
+      "top_k": [
+        10,
+        20,
+        25,
+        50,
+        100
+      ]
+    },
+    "folds": {
+      "count": 5,
+      "fold_source": "experiments/transformer/configs/folds_v1.json",
+      "fold_source_sha256": "c04dc8424ed96486f8521ef57d17e4b503d2c3f41bb116edeeb9535073dd7884",
+      "inner_count": 3,
+      "near_duplicate_threshold": 0.85,
+      "policy": "Preserve frozen family-to-outer-fold boundaries; apply label-blind exact, near, lineage, BCP14-skeleton, and context leakage controls within each fitting design."
+    },
+    "methods": {
+      "focal": {
+        "alpha": "fitting-side class weights No=1, Yes=negative/positive",
+        "gamma": 2.0,
+        "loss": "focal_gamma_2",
+        "reduction": "batch_mean"
+      },
+      "partial4": {
+        "loss": "weighted_ce",
+        "policy": "freeze embeddings, shared encoder backbone, and layers 0-7; train layers 8-11, pooler, and classifier",
+        "trainable_last_layers": 4
+      }
+    },
+    "model": {
+      "default_local_path": "D:/RFC/models/deberta-v3-base",
+      "label2id": {
+        "No": 0,
+        "Yes": 1
+      },
+      "num_labels": 2,
+      "offline_only": true,
+      "repository": "microsoft/deberta-v3-base",
+      "revision": null,
+      "source_sha256": "206ee7bb2c7805bcc8fd3bbbc18a09e185bafc19d4e112f31d4a088136717dd7"
+    },
+    "partitions": {
+      "dns_family": "draft-ietf-dnsop-svcb-https",
+      "sealed_evaluation_enabled": false,
+      "tcp_family": "draft-ietf-tcpm-rfc793bis",
+      "train_families": [
+        "draft-ietf-6man-rfc2460bis",
+        "draft-ietf-httpbis-cache-header",
+        "draft-ietf-httpbis-http2bis",
+        "draft-ietf-httpbis-semantics",
+        "draft-ietf-quic-http",
+        "draft-ietf-quic-recovery",
+        "draft-ietf-quic-tls",
+        "draft-ietf-quic-transport",
+        "draft-ietf-tls-tls13"
+      ]
+    },
+    "tokenization": {
+      "add_vocabulary_tokens": false,
+      "dynamic_padding": true,
+      "input_mode": "target_only",
+      "max_length": 256,
+      "target_overflow": "deterministic_head_tail"
+    },
+    "training": {
+      "deterministic": true,
+      "diagnostic_numerics": true,
+      "early_stopping": false,
+      "epochs": 5,
+      "eval_batch_size": 16,
+      "gradient_accumulation_steps": 1,
+      "learning_rate": 1e-05,
+      "max_grad_norm": 1.0,
+      "optimizer": "AdamW",
+      "precision": "fp32",
+      "scheduler": "linear",
+      "seeds": [
+        2718
+      ],
+      "threshold": 0.5,
+      "train_batch_size": 8,
+      "warmup_ratio": 0.1,
+      "weight_decay": 0.01
+    }
+  },
+  "source_protocol_sha256": "94024e67ddd61fc5562a7a3f09a4f6b136c765a0f590fbea5330ce26baddb4c0",
+  "source_provenance_sha256": "698c4899d3cade1ae2187827aeaf62d4a192915cc1b5d8055e5f92b96c63c436",
+  "training_executed": false,
+  "v1_1_immutability_sha256": "1483b936f9ec0b6d1e45a45f54518cf955f708f7c514459d81e98d9c35e3a6fd"
+}

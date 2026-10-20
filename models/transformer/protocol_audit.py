@@ -23,7 +23,7 @@ from models.transformer.experiment import (
 FOLDS_PATH = ROOT / "experiments/transformer/configs/folds_v1.json"
 INNER_PATH = ROOT / "experiments/transformer/configs/inner_selection_v1.json"
 DEVELOPMENT_DIR = ROOT / "corpus/processed/transformer_partitioned/v1/development"
-V1_ROOT = ROOT / "experiments/transformer/results/lr-screen-v1"
+V1_ROOT = ROOT / "results/transformer/studies/lr-screen-v1"
 
 
 def history_checkpoint_record(
@@ -217,7 +217,7 @@ def main() -> int:
     parser.add_argument(
         "--output",
         type=Path,
-        default=ROOT / "experiments/transformer/governance/step2b_protocol_audit_v1",
+        default=ROOT / "results/transformer/governance/step2b_protocol_audit_v1",
     )
     args = parser.parse_args()
     print(run(args.output.resolve()))

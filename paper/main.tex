@@ -13,7 +13,7 @@
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 \newcommand{\system}{\textsc{DraftAmbiguity}}
 \newcommand{\ap}{\mathrm{AP}}
-\newcommand{\todoauthor}{\textcolor{red}{[corresponding email]}}
+\newcommand{\todoauthor}{\texttt{[corresponding-author email to be supplied]}}
 
 \title{Leakage-Controlled Pre-Publication Ambiguity Detection in Internet-Drafts}
 
@@ -27,11 +27,11 @@
 \maketitle
 
 \begin{abstract}
-Natural-language protocol specifications can admit multiple plausible implementations despite using the normative keywords of BCP~14. Detecting ambiguity before an Internet-Draft becomes a Request for Comments (RFC) is methodologically difficult: clauses repeat across revisions and related protocols, positives are rare, and final-RFC or later-erratum evidence can leak into draft-stage prediction. We present \system, a reproducible pipeline for collecting and segmenting draft histories, aligning consecutive revisions, constructing an operational ambiguity reference, and evaluating detectors with protocol-family isolation and temporal feature guards. The corpus contains 253 draft revisions, 12 RFCs, and 31 verified technical errata. The current artifact has 2,424 resolved clause labels; 2,142 clauses from nine families form the development cohort, with 126 positives (5.88\%), while TCP is reserved for transfer validation and DNS for one sealed evaluation. On grouped out-of-fold development predictions, target-only DeBERTa-v3-base with focal loss obtains average precision (AP) 0.3295. Its rank-normalized ensemble with a partially fine-tuned DeBERTa obtains AP 0.3715 (95\% family-cluster bootstrap interval 0.2551--0.5980) and retrieves 31 reference positives in the top 50 clauses. A separate frozen-Qwen/lexical/MiniLM ensemble obtains AP 0.3252. These results establish useful prioritization signal, not deployment-ready accuracy: labels are human/AI-assisted operational references rather than independent expert gold, model selection is adaptive, the newest transformer study uses one seed, and TCP and DNS remain unopened. We therefore position \system{} as a ranked review assistant and state the remaining validation steps explicitly.
+Natural-language protocol specifications can admit multiple plausible implementations despite using the normative keywords of BCP~14. Detecting ambiguity before an Internet-Draft becomes a Request for Comments (RFC) is methodologically difficult: clauses repeat across revisions and related protocols, positives are rare, and later RFC or erratum evidence can leak into draft-stage prediction. We present \system, a reproducible corpus and modeling pipeline with explicit revision, family, and information-boundary controls. The source corpus covers 253 draft revisions, 12 RFCs, and 31 verified technical errata. In the latest hash-pinned transformer experiment, five-fold family-isolated out-of-fold (OOF) evaluation covers 2,125 development clauses from nine protocol families, including 136 operational-reference positives (6.4\%). A target-only DeBERTa-v3-base ensemble, averaging fitting-side empirical-percentile ranks from focal-loss and partially fine-tuned models, obtains average precision (AP) 0.3711 (95\% family-cluster bootstrap interval 0.3151--0.5084), compared with a 0.064 prevalence baseline. In a pooled OOF review-budget analysis, it retrieves 26 reference positives among the top 50 clauses and 49 among the top 100. A separate three-fold classical/heuristic cohort of 2,406 clauses (158 positives) yields AP 0.522 for logistic regression with engineered and TF--IDF features and 0.105 for the fixed heuristic. A Qwen/hybrid study on a different label artifact reports AP 0.196 for eight-shot prompting and 0.325 for its V4 lexical/semantic hybrid; these values are not directly comparable across cohorts. All metrics are development estimates, not independent accuracy or final generalization results: labels are human/AI-assisted operational references rather than adjudicated expert gold, transformer training uses one seed, and reserved TCP and sealed DNS data remain unopened. We therefore position \system{} as a research-stage review-prioritization aid, not an autonomous ambiguity judge.
 \end{abstract}
 
 \begin{IEEEkeywords}
-Internet-Drafts, RFC, ambiguity detection, protocol specifications, natural language processing, DeBERTa, large language models, document evolution, leakage control
+Internet-Drafts, RFC, ambiguity detection, protocol specifications, natural language processing, DeBERTa, document evolution, leakage control
 \end{IEEEkeywords}
 
 \section{Introduction}
@@ -44,14 +44,16 @@ That question introduces three hazards. First, a final RFC, later revision, or l
 
 This paper reports a complete development-stage study of \system. Its central design principle is separation: source collection, structural parsing, revision alignment, candidate construction, annotation, model input, model selection, reserved validation, and sealed testing are distinct, hash-recorded stages. The intended output is not an automatic declaration that a standard is defective. It is a ranking that helps an author or reviewer allocate attention.
 
+We investigate four questions: (RQ1) how do transparent heuristic and classical ML baselines perform on the matched annotation cohort? (RQ2) does target-only clause text rank operational-reference positives above negatives under family-isolated transformer evaluation? (RQ3) how do prompt-only and hybrid language-model configurations behave on their separate label artifact? (RQ4) how many reference positives would a reviewer encounter at fixed review budgets, and how much does performance vary by family?
+
 The contributions are:
 
 \begin{itemize}
-  \item A reproducible, multi-format corpus and clause-lineage pipeline spanning 253 draft revisions, 12 RFCs, and 31 verified technical errata, with explicit temporal guards and immutable artifacts.
-  \item A current operational reference artifact of 2,424 resolved clause labels, physically partitioned into nine-family development, TCP transfer-validation, and DNS sealed-test cohorts.
-  \item A family-grouped comparison of prompting, lexical hybrids, frozen semantic encoders, full and partial DeBERTa fine-tuning, focal loss, method-specific thresholding, and score-rank ensembling.
-  \item An evidence-backed negative result: adding local previous/next context reduces the newest DeBERTa model's AP from 0.2332 to 0.1592, while partial fine-tuning and focal loss improve ranking.
-  \item A publication claim boundary that distinguishes out-of-fold development agreement from independent expert validity and from final generalization evidence.
+  \item A revision-aware corpus and clause-lineage pipeline covering 253 draft revisions, 12 RFCs, and 31 verified technical errata, with future-information guards.
+  \item Matched-cohort evaluation of classical ML models and a deterministic, interpretable heuristic, alongside a distinct nine-family LOFO baseline study.
+  \item A hash-pinned, five-fold family-isolated DeBERTa-v3-base study on 2,125 eligible clauses across nine families, with 136 operational-reference positives.
+  \item An OOF comparison of focal-loss fine-tuning, partial fine-tuning, and a fitting-side ECDF rank ensemble, including family-clustered uncertainty and review-budget analyses; and separately reported Qwen-prompt/hybrid results.
+  \item An explicit claim boundary: the labels are not independently adjudicated expert gold, the study uses one seed, and reserved TCP/DNS evaluations remain unopened.
 \end{itemize}
 
 \section{Background and Related Work}
@@ -70,7 +72,7 @@ Document evolution has been studied outside networking. arXivEdits provides mult
 
 \subsection{Models for imbalanced text classification}
 
-The study uses three representation families. TF--IDF logistic regression supplies a strong sparse-text baseline. DeBERTa-v3 uses replaced-token detection and gradient-disentangled embedding sharing~\cite{he2023debertav3}; we compare full and partial fine-tuning. Focal loss downweights easy examples and emphasizes hard cases under imbalance~\cite{lin2017focal}. Frozen MiniLM sentence embeddings follow the bi-encoder paradigm popularized by Sentence-BERT~\cite{reimers2019sbert}. Finally, local Qwen3-32B inference supplies zero/few-shot scores~\cite{yang2025qwen3}. The semantic and LLM encoders remain frozen in the hybrid study; only lightweight classifiers are fitted.
+The present experiment compares two target-only \texttt{microsoft/deberta-v3-base} classifiers and an equal-weight rank ensemble. DeBERTa-v3 uses replaced-token detection and gradient-disentangled embedding sharing~\cite{he2023debertav3}. Focal loss emphasizes hard examples under class imbalance~\cite{lin2017focal}. The partial model freezes embeddings, the shared backbone, and layers 0--7, and trains layers 8--11, the pooler, and classifier. A separate local-Qwen/hybrid line of work is reported below; its different effective cohort and evaluation artifact preclude direct comparison with this transformer study.
 
 \section{System Overview}
 
@@ -78,22 +80,8 @@ Figure~\ref{fig:pipeline} summarizes the pipeline. Every arrow crosses an artifa
 
 \begin{figure*}[t]
 \centering
-\fbox{\begin{minipage}{0.96\textwidth}
-\centering
-\textbf{IETF sources} (draft revisions, RFCs, verified technical errata)
-$\rightarrow$ \textbf{TXT/XML parsing}
-$\rightarrow$ \textbf{clause segmentation and BCP~14 classification}
-$\rightarrow$ \textbf{consecutive-revision alignment and lineage}
-$\rightarrow$ \textbf{candidate review cohort}
-$\rightarrow$ \textbf{human/AI-assisted operational labels}
-$\rightarrow$ \textbf{family-isolated development / TCP validation / DNS test}
-$\rightarrow$ \textbf{classical, DeBERTa, Qwen, and hybrid rankings}
-$\rightarrow$ \textbf{human review queue}.
-
-\vspace{2mm}
-Future revisions, final-RFC text, errata, votes, rationales, family identifiers, and split names are excluded from model features. TCP cannot select a method; DNS is stored separately and requires an explicit one-time final-evaluation path.
-\end{minipage}}
-\caption{The \system{} research pipeline and its information boundaries.}
+\includegraphics[width=\textwidth]{figures/project_pipeline.png}
+\caption{The \system{} research pipeline. Future revisions, final-RFC text, later errata, votes, rationales, family identifiers, and split names are excluded from model features. TCP cannot select a method; DNS is reserved for a one-time final evaluation.}
 \label{fig:pipeline}
 \end{figure*}
 
@@ -111,7 +99,14 @@ s(i,j)=\sum_{k} w_k s_k(i,j),
 \end{equation}
 where semantic and lexical similarity each receive weight 0.38 in the semantic pilot, structure 0.12, and position, block compatibility, and protected-token evidence 0.04 each. Distinctive exact anchors are locked only when supported by section structure. One-to-one components use bipartite assignment with unmatched choices. Competing split and merge candidates of at most three adjacent clauses use a mixed-integer program with non-overlap constraints. Moves require section correspondence or reliable anchor inversions; close alternatives remain \textsc{Uncertain}.
 
-MiniLM embeddings are computed from direct tokenizer-ID windows, avoiding decode/re-tokenize drift. The validated TLS pilot aligns 30 documents across 29 consecutive pairs: 52,137 clause-version occurrences produce 52,953 relationships, including 4,452 modified, 2,356 inserted, 2,025 deleted, 261 split, 260 merged, 1,808 moved, and 5,199 uncertain relationships. These figures establish pipeline coverage, not alignment accuracy: the stratified 150-link review sample has not been adjudicated, so link precision and recall are intentionally unreported.
+MiniLM embeddings are computed from direct tokenizer-ID windows, avoiding decode/re-tokenize drift. The TLS coverage pilot aligns 30 documents across 29 consecutive pairs: 52,137 clause-version occurrences produce 52,953 relationships, including 4,452 modified, 2,356 inserted, 2,025 deleted, 261 split, 260 merged, 1,808 moved, and 5,199 uncertain relationships. Fig.~\ref{fig:alignment-counts} visualizes these counts. They establish pipeline coverage, not alignment accuracy: the stratified 150-link review sample has not been adjudicated, so link precision and recall are intentionally unreported. Revision links are not model features in the transformer experiment reported below.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures/tls_alignment_counts.png}
+\caption{Relation counts from the TLS alignment coverage pilot. Uncertain links are retained for review; counts are not accuracy estimates.}
+\label{fig:alignment-counts}
+\end{figure}
 
 \subsection{Temporal and leakage controls}
 
@@ -121,32 +116,14 @@ For a clause in revision $t$, revision features may depend only on revisions $\l
 
 \subsection{Operational annotation reference}
 
-The current source contains 2,425 candidate clauses drawn from 178 document revisions. Two AI annotations were compared, and conflicts were assigned a manual verdict. Agreement resolves 2,135 rows; manual conflict verdicts resolve 289. One row (item 2161) has a blank manual verdict and a placeholder negative value; the builder explicitly excludes it rather than treating it as truth. Among the 2,424 resolved rows, 148 are positive (6.11\%). Table~\ref{tab:labelsource} gives the provenance counts.
-
-\begin{table}[t]
-\caption{Resolved-label provenance.}
-\label{tab:labelsource}
-\centering
-\begin{tabular}{lrrr}
-\toprule
-Source & No & Yes & Total \\
-\midrule
-Model agreement & 2,020 & 115 & 2,135 \\
-Manual conflict verdict & 256 & 33 & 289 \\
-\midrule
-Resolved total & 2,276 & 148 & 2,424 \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-These labels are an \emph{operational reference}, not an independently double-annotated expert gold standard. Moreover, Qwen3 contributed to the earlier annotation-support process, so later Qwen agreement is not independent of label construction. Reported results therefore quantify agreement with this workflow, not universal ambiguity-detection accuracy.
+The project annotation workflow was supported by two AI models. The checked-in \texttt{final\_annotation.csv} contains 2,406 labeled clauses (158 positive and 2,248 negative) across 11 draft families; these are the rows used by the matched classical/heuristic comparison. The latest transformer study evaluates its separately frozen eligible subset of 2,125 clauses after family and label-blind fitting exclusions. The Qwen/hybrid study uses another frozen label artifact, described in Section~\ref{sec:llm-results}. Labels are an \emph{operational reference}, not independently double-annotated expert gold; results quantify agreement with this workflow rather than universal ambiguity-detection accuracy.
 
 \subsection{Family-isolated partitions}
 
-The 11 labeled families are assigned by protocol family, as shown in Table~\ref{tab:partition}. Nine development families contain 2,142 rows and 126 positives. TCP contains 131 rows and five positives and is reserved for a single transfer check after freezing the method. DNS contains 151 rows and 17 positives and is physically stored as a sealed final test. No experiment reported here has opened TCP or DNS.
+The 11 labeled families are assigned by protocol family. The latest transformer study evaluates 2,125 development clauses from nine families (136 positives and 1,989 negatives; prevalence 6.4\%). TCP is reserved for a transfer check after the method is frozen, and DNS is reserved for one final test. Neither reserved partition was used for training, tuning, calibration, or analysis in the reported study.
 
 \begin{table}[t]
-\caption{Current immutable label partitions.}
+\caption{Development cohort evaluated in the latest transformer study. Reserved TCP/DNS rows are not included in this experiment.}
 \label{tab:partition}
 \centering
 \resizebox{\columnwidth}{!}{%
@@ -154,50 +131,51 @@ The 11 labeled families are assigned by protocol family, as shown in Table~\ref{
 \toprule
 Role & Families & Rows & Yes & Use \\
 \midrule
-Development & 9 & 2,142 & 126 & Grouped model development \\
-TCP validation & 1 & 131 & 5 & Frozen transfer check \\
-DNS sealed test & 1 & 151 & 17 & One final evaluation \\
-\midrule
-Resolved total & 11 & 2,424 & 148 & -- \\
+Development & 9 & 2,125 & 136 & Five-fold family-isolated OOF \\
 \bottomrule
 \end{tabular}}
 \end{table}
 
-Development uses five fixed outer folds. QUIC Transport, HTTP Semantics, and QUIC HTTP each form a large held-out fold; the smaller IPv6, Cache-Status, HTTP/2, and TLS families share one fold; QUIC Recovery and QUIC TLS share the remaining fold. Every fold has both classes. Fold assignments are fixed and hash-pinned rather than regenerated from labels.
+Development uses five fixed outer folds. QUIC Transport, HTTP Semantics, and QUIC HTTP each form a held-out fold; IPv6, Cache-Status, HTTP/2, and TLS share one fold; QUIC Recovery and QUIC TLS share the remaining fold. Every fold assignment is fixed and hash-pinned. Exact, near-duplicate, lineage, BCP~14-skeleton, and target-as-context exclusions are applied to fitting designs.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.92\textwidth]{figures/project_cohorts.png}
+\caption{Corpus scale and the three separately analyzed development cohorts. Differences in row counts and prevalence reflect distinct source artifacts and eligibility rules; the scores are not a single head-to-head model comparison.}
+\label{fig:cohorts}
+\end{figure*}
 
 \section{Models and Experimental Protocol}
 
 \subsection{Evaluation measures}
 
-For scores $p_i$ and labels $y_i$, the primary ranking metric is average precision (AP), computed as the stepwise precision-weighted increase in recall. Repository reports historically call this ``PR-AUC''; here we use the more precise name AP. Its no-skill reference is the positive prevalence, 0.0588 in development. We also report ROC-AUC, precision, recall, $F_1$, $F_2$, balanced accuracy, confusion counts, and retrieval at fixed review budgets. Threshold-free rankings are primary because the appropriate operating point depends on reviewer capacity and the relative cost of missed ambiguity.
+For scores $p_i$ and labels $y_i$, the primary ranking metric is average precision (AP), computed as the stepwise precision-weighted increase in recall. Repository reports historically call this ``PR-AUC''; here we use the more precise name AP. Its no-skill reference is the positive prevalence, 0.064 in the evaluated development cohort. We also report ROC-AUC, precision, recall, $F_1$, $F_2$, balanced accuracy, confusion counts, and retrieval at fixed review budgets. Threshold-free rankings are primary because the appropriate operating point depends on reviewer capacity and the relative cost of missed ambiguity.
 
 Uncertainty for the latest transformer study is estimated with 2,000 bootstrap resamples of the nine RFC families. These intervals represent sampling variation across the observed families; they do not include model-training variability, since the newest study has one seed.
 
-\subsection{Qwen and lightweight hybrids}
+\subsection{DeBERTa variants and rank ensemble}
 
-The LLM baseline uses a local Qwen3-32B Q4\_K\_M model at temperature zero. V1 evaluates 0-, 4-, and 8-shot prompts. Demonstrations are selected only from the fitting families, with positive exposure but without a 50/50 artificial prior. A continuous score is derived from native \texttt{yes}/\texttt{no} token log-probabilities; self-reported confidence is not used.
+Inputs contain only the target clause, with a maximum length of 256 tokens and deterministic head--tail truncation; the experiment reports no target truncation. Both models use five epochs, AdamW, learning rate $10^{-5}$, weight decay 0.01, a linear schedule with 10\% warmup, batch size 8, FP32, deterministic execution, and seed 2718. The focal model uses $\gamma=2$ and fitting-side class weights ($\alpha_0=1$, $\alpha_1=N_{-}/N_{+}$):
+\begin{equation}
+\mathcal{L}_{\mathrm{focal}}=-\alpha_y(1-p_y)^\gamma\log p_y.
+\end{equation}
+The partial model uses weighted cross-entropy and trains only layers 8--11, the pooler, and classifier.
 
-V3 fits word/character TF--IDF logistic regression inside nested family-grouped folds and blends its output with the frozen Qwen zero-shot score. V4 adds two frozen 384-dimensional \texttt{all-MiniLM-L6-v2} representations: the target clause alone and target plus previous/next local context. Class-balanced logistic regressions with $C=0.03$ operate on these embeddings. V4 combines V3, target-semantic, and context-semantic scores in log-odds space with weights 0.80, 0.10, and 0.10. The V4 configuration was chosen after development sweeps and is therefore adaptive exploratory evidence.
+For the ensemble, each method's empirical cumulative distribution function is fit on the corresponding fitting-side inner OOF scores. The two percentile ranks are averaged with equal weight and applied to the untouched outer-fold predictions. The resulting value is a ranking score, not a calibrated probability.
 
-\subsection{DeBERTa variants}
+\subsection{Classical machine learning and heuristic}
 
-The newer transformer cohort uses target-only \texttt{microsoft/deberta-v3-base}, a 12-layer model with 184.4 million parameters. Inputs are capped at 256 tokens with deterministic head--tail handling after context is removed; no target in the current cohort requires truncation. All conditions use five epochs, AdamW, learning rate $10^{-5}$, weight decay 0.01, linear scheduling with 10\% warmup, batch size 8, FP32, seed 2718, and fitting-side positive class weight $N_{-}/N_{+}$.
+The classical/heuristic comparison uses the separate 2,406-row annotation cohort, with 158 positives (6.57\%) from 11 draft families. Models are evaluated using three-fold stratified group cross-validation, keeping draft-family groups intact; feature scaling, TF--IDF vocabulary, and feature selection are fitted within each training fold. The main logistic-regression model uses 25 engineered clause features concatenated with word unigram/bigram TF--IDF, class-balanced L1 regularization, and $C=0.5$. We compare it with logistic regression on TF--IDF only and on frozen 384-dimensional MiniLM embeddings, and with Linear SVM and random forest using the engineered-plus-TF--IDF representation. This is an exploratory experiment on an annotation artifact distinct from both the newer DeBERTa and the Qwen/hybrid evaluation cohorts.
 
-We evaluate:
+The fixed heuristic is not trained on labels. It assigns hand-set points to conditional clauses lacking exception markers, deictic expressions, mixed BCP~14 modal levels, subjective terms, and exceptions; numeric bounds and explicit target references subtract points. The score is clipped to $[0,9]$, normalized by nine, and thresholded at 0.4. Its rules and threshold are fixed rather than fit per fold. We report average precision from OOF scores and threshold metrics at the recorded operating threshold; the heuristic is a transparent low-cost baseline, not a learned classifier.
 
-\begin{itemize}
-  \item \textbf{Full weighted CE}: all parameters train with weighted cross entropy.
-  \item \textbf{Local context}: previous, target, and next clauses under the same full model.
-  \item \textbf{Partial-4}: embeddings, shared non-layer backbone parameters, and layers 0--7 are frozen; layers 8--11, pooler, and classifier train (15.69\% of parameters).
-  \item \textbf{Partial-2}: only layers 10--11, pooler, and classifier train (8.01\% of parameters).
-  \item \textbf{Focal}: full fine-tuning with
-  \begin{equation}
-  \mathcal{L}_{\mathrm{focal}}=-\alpha_y(1-p_y)^2\log p_y,
-  \end{equation}
-  where $\alpha_0=1$ and $\alpha_1=N_{-}/N_{+}$ are computed from the fitting partition.
-\end{itemize}
+\subsection{Earlier family-held-out classical study}
 
-The strongest complementary pair, focal and Partial-4, is combined without fitting an outer-label weight. For each outer fold, separate empirical cumulative distribution functions (ECDFs) are learned from each method's inner out-of-fold scores; their percentile ranks are averaged and then applied to untouched outer predictions. This controls incompatible score scales and gives both methods equal weight.
+The repository also contains a distinct earlier study with a nine-family leave-one-family-out protocol, 2,540 evaluated clauses, and 17.8\% positive prevalence. Its combined target TF--IDF/engineered baseline (E0) has pooled OOF AP 0.291 (95\% bootstrap interval 0.260--0.335). Frozen MiniLM and BGE-small representations with engineered features reach AP 0.246 and 0.245, respectively. Simple one-revision predecessor signals yield AP 0.168 and 0.165. These results provide historical methodology context only; their cohort and labels differ from the later 2,406-row ML/heuristic comparison and from the current transformer/LM cohorts.
+
+\subsection{Language-model and hybrid study}
+
+We also report the repository's separate Qwen3-32B development study~\cite{yang2025qwen3}, which uses the frozen \texttt{final\_annotation\_ready.csv} label artifact: 2,142 clauses from nine families, including 126 positives (5.88\%). It uses the same five family-grouped outer folds as defined for that label artifact, but it is not the 2,125-row transformer cohort described above. The model is a local quantized Qwen3 32B inference model; V1 and V2 update no model parameters. V1 compares zero-, four-, and eight-shot prompts, selecting demonstrations from fitting families and scoring the \texttt{yes}/\texttt{no} alternatives from native token log-probabilities. V2 tests stricter prompts with 8, 16, or 24 fold-safe demonstrations, including prevalence-aware class proportions, and estimates threshold operating points by cross-fitting. V3 combines frozen Qwen zero-shot scores with a nested, target-only word/character TF--IDF logistic classifier; its regularization and blend weight are chosen using inner-fold predictions. V4 combines the V3 score with frozen MiniLM semantic representations of the target and local context using the Sentence-BERT bi-encoder paradigm~\cite{reimers2019sbert}. The semantic classifiers use class-balanced logistic regression ($C=0.03$); the 0.80/0.10/0.10 V3/target/context combination was selected on development data. V3 and V4 are supervised hybrid models, not parameter-fine-tuned LLMs. Results for this distinct cohort are reported in Section~\ref{sec:llm-results}.
 
 \subsection{Nested operating points}
 
@@ -207,135 +185,215 @@ Threshold selection is performed only on the fitting side. For each outer fold, 
 
 \subsection{Ranking performance}
 
-Table~\ref{tab:ranking} compares methods on the same 2,142-row out-of-fold development cohort. Because later methods were designed after inspecting earlier development results, the table is a controlled cohort comparison but not a sequence of unbiased hypothesis tests.
-
-\begin{table*}[t]
-\caption{Grouped out-of-fold development ranking. All methods use the current label artifact. AP prevalence baseline is 0.0588.}
-\label{tab:ranking}
-\centering
-\begin{tabular}{llrrl}
-\toprule
-Family & Method & AP & ROC-AUC & Qualification \\
-\midrule
-LLM & Qwen3 8-shot & 0.1960 & -- & Raw token-probability score \\
-Hybrid & Nested lexical + Qwen (V3) & 0.2554 & -- & Frozen Qwen; fitted lexical classifier \\
-Hybrid & V3 + frozen MiniLM semantic ensemble (V4) & 0.3252 & -- & Adaptive development configuration \\
-Transformer & Full DeBERTa, weighted CE & 0.2332 & 0.7286 & One seed \\
-Transformer & Full DeBERTa, local context & 0.1592 & 0.7303 & One seed \\
-Transformer & Partial-2 & 0.1834 & 0.7489 & One seed \\
-Transformer & Partial-4 & 0.3008 & 0.7950 & One seed \\
-Transformer & Full DeBERTa, focal loss & 0.3295 & 0.7921 & One seed \\
-Transformer & Focal/Partial-4 ECDF ensemble & \textbf{0.3715} & \textbf{0.8125} & Equal rank weight; one seed \\
-\bottomrule
-\end{tabular}
-\end{table*}
-
-The ECDF ensemble achieves a 6.32-fold AP lift over prevalence. Its 95\% family-cluster bootstrap interval is 0.2551--0.5980; the breadth reflects only nine clusters and substantial family heterogeneity. Focal loss alone reaches AP 0.3295 (0.2208--0.5635), Partial-4 reaches 0.3008 (0.2394--0.4866), and full weighted-CE reaches 0.2332 (0.2020--0.3371). The intervals overlap and no paired significance claim is made.
-
-The context result is negative and practically relevant. Adding previous and next clauses to the full DeBERTa lowers pooled AP from 0.2332 to 0.1592, despite similar ROC-AUC. A prior DeBERTa-v3-small factorial on an older silver-label artifact similarly selected target-only input. Context may add irrelevant prose, increase optimization difficulty, or expose family-specific correlations; this result does not establish that context is intrinsically useless.
-
-The Qwen progression also cautions against assuming that stricter or longer prompts monotonically improve performance. The best V1 few-shot score is AP 0.1960, the strict-prompt V2 best raw condition falls to 0.1035, and fitted hybrids recover performance. V4 reaches AP 0.3252, close to focal DeBERTa, by combining complementary lexical, Qwen, and frozen semantic signals. Since V4 weights and $C$ were selected adaptively, TCP validation is required before claiming that gain generalizes.
-
-\subsection{Operating points}
-
-Table~\ref{tab:thresholds} reports representative cross-fitted operating policies. V4 uses its cross-fitted $F_1$ threshold. Transformer thresholds target at least 0.30 inner precision. Partial-4 produces the highest observed $F_1$ (0.3968), while the ECDF ensemble trades some precision for recall. The fitting precision constraint does not guarantee outer precision: the focal model's outer precision is 0.2644 at the 0.30 target.
+Table~\ref{tab:ranking} reports the latest five-fold family-isolated OOF estimates on the same 2,125-row cohort. The AP of the equal-weight ECDF ensemble is 0.3711, about 5.8 times the 0.064 prevalence baseline. The family-cluster bootstrap interval is 0.3151--0.5084. This interval resamples only nine families and is not a training-seed interval or a test-set confidence guarantee.
 
 \begin{table}[t]
-\caption{Representative development operating points.}
-\label{tab:thresholds}
+\caption{Five-fold family-isolated OOF ranking results. All methods use the same 2,125-row development cohort.}
+\label{tab:ranking}
 \centering
 \resizebox{\columnwidth}{!}{%
-\begin{tabular}{lrrrr}
+\begin{tabular}{lrrr}
 \toprule
-Method/policy & Precision & Recall & $F_1$ & $F_2$ \\
+Method & AP & ROC-AUC & 95\% family CI for AP \\
 \midrule
-V4 cross-fit $F_1$ & 0.3952 & 0.3889 & 0.3920 & 0.3901 \\
-Focal, inner $P\geq0.30$ & 0.2644 & 0.4365 & 0.3293 & 0.3862 \\
-Partial-4, inner $P\geq0.30$ & 0.4050 & 0.3889 & \textbf{0.3968} & 0.3920 \\
-ECDF ensemble, inner $P\geq0.30$ & 0.3273 & 0.4286 & 0.3711 & \textbf{0.4036} \\
+Focal loss & 0.3054 & 0.7820 & 0.2872--0.4200 \\
+Partial fine-tuning & 0.3262 & 0.8284 & 0.2694--0.4699 \\
+Equal-weight ECDF ensemble & \textbf{0.3711} & \textbf{0.8274} & 0.3151--0.5084 \\
+\midrule
+Prevalence baseline & 0.0640 & -- & -- \\
 \bottomrule
 \end{tabular}}
 \end{table}
 
-This variation supports a ranking-first interface. A standards team concerned primarily with missed cases can choose a lower precision target; a resource-constrained team can review only the highest-ranked clauses.
+The intervals overlap substantially. Accordingly, the AP ordering is descriptive; we make no claim of statistically significant superiority. Each model was trained with one seed, so the family bootstrap does not quantify run-to-run variability.
 
-\subsection{Human-review budgets}
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures/deberta_ap.png}
+\caption{DeBERTa OOF AP with 95\% family-cluster bootstrap intervals. These intervals cover family sampling, not training-seed variation.}
+\label{fig:deberta-ap}
+\end{figure}
 
-Table~\ref{tab:topk} gives global pooled retrieval for the newest transformer models. At $K=50$, focal loss retrieves 28 reference positives and the ECDF ensemble retrieves 31, compared with about three expected from random review at 5.88\% prevalence. At $K=100$, Partial-4 and the ensemble both retrieve 43 positives (34.1\% recall). Thus, the system is more defensible as a triage mechanism than as an automatic binary gate.
+\subsection{Classical ML and heuristic results}
+\label{sec:classical-results}
+
+Table~\ref{tab:classical} and Fig.~\ref{fig:classical-ap} report the same 2,406-row, 11-family grouped-OOF cohort (158 positives; prevalence 6.57\%). Logistic regression with engineered features plus TF--IDF attains the highest AP (0.5225), closely followed by Linear SVM with the same feature family (0.5109). The fixed heuristic has AP 0.1049, above the prevalence baseline but substantially below the learned text-feature models. At the recorded 0.4 decision threshold, the heuristic has precision 0.166 and recall 0.165. The logistic combined model has high recall (0.741) but modest precision (0.167) at that same threshold. These are exploratory estimates for this cohort and should not be compared directly with the transformer or LM cohorts.
+
+\begin{table*}[t]
+\caption{Classical ML and fixed-heuristic OOF results on the matched 2,406-row cohort (158 positives). Threshold metrics use the recorded 0.4 operating threshold; AP and ROC-AUC are threshold-free.}
+\label{tab:classical}
+\centering
+\begin{tabular}{lrrrrr}
+\toprule
+Model and feature set & AP & ROC-AUC & Precision & Recall & $F_1$ \\
+\midrule
+Logistic regression, engineered + TF--IDF & \textbf{0.5225} & 0.8122 & 0.1669 & 0.7405 & 0.2724 \\
+Linear SVM, engineered + TF--IDF & 0.5109 & 0.8111 & 0.3362 & 0.4937 & 0.4000 \\
+Random forest, engineered + TF--IDF & 0.4167 & 0.8088 & 0.6528 & 0.2975 & 0.4087 \\
+Logistic regression, TF--IDF only & 0.1912 & 0.7626 & 0.1301 & 0.8101 & 0.2242 \\
+Logistic regression, MiniLM embeddings & 0.1327 & 0.6380 & 0.1317 & 0.3101 & 0.1849 \\
+Fixed engineered heuristic & 0.1049 & 0.6395 & 0.1656 & 0.1646 & 0.1651 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures/ml_heuristic_ap.png}
+\caption{Average precision for classical classifiers and the fixed heuristic on their common grouped-OOF cohort. The dashed line marks cohort prevalence.}
+\label{fig:classical-ap}
+\end{figure}
+
+\subsection{Earlier family-held-out classical results}
+
+In the distinct earlier nine-family LOFO study, the target TF--IDF plus engineered-feature baseline reaches AP 0.291 (95\% bootstrap interval 0.260--0.335) against 0.178 prevalence. MiniLM and BGE-small embeddings paired with engineered features reach 0.246 and 0.245, respectively, while simple previous-revision signals remain at or below prevalence (0.168 and 0.165). Fig.~\ref{fig:lofo} summarizes these results. This separate analysis suggests that sparse target text and engineered features were more useful than the tested frozen embeddings or simple churn features in that cohort; the comparison is not merged with the newer 2,406-row experiment.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures/classical_lofo.png}
+\caption{Earlier nine-family LOFO AP results with reported bootstrap intervals where available. The dashed line is this cohort's 0.178 positive prevalence.}
+\label{fig:lofo}
+\end{figure}
+
+\subsection{Language-model and hybrid results}
+\label{sec:llm-results}
+
+Table~\ref{tab:llm-results} reports the best development condition for each version on the separate 2,142-row label artifact. AP is threshold-free; precision, recall, F1, and balanced accuracy in the cross-fitted rows use thresholds selected without the evaluated fold. The raw rows use the versions' reported raw decision rules. V3 and V4 were developed after inspecting prior development results, so their improvements are adaptive development evidence rather than unbiased estimates of transfer performance.
+
+\begin{table*}[t]
+\caption{Qwen and hybrid development results on the separate 2,142-row, nine-family label artifact (126 positives; prevalence 0.0588). These results are not directly comparable to the 2,125-row transformer study.}
+\label{tab:llm-results}
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llrrrrr}
+\toprule
+Version & Condition / decision rule & AP & Precision & Recall & $F_1$ & Balanced accuracy \\
+\midrule
+V1 & Qwen3 32B, 8-shot, raw & 0.1960 & 0.0981 & 0.7778 & 0.1742 & 0.6654 \\
+V2 & Qwen3 32B, 24-shot, raw & 0.1035 & 0.1111 & 0.0635 & 0.0808 & 0.5159 \\
+V3 & TF--IDF + frozen Qwen, raw & 0.2554 & 0.1737 & 0.5556 & 0.2647 & 0.6952 \\
+V3 & TF--IDF + frozen Qwen, cross-fitted $F_1$ & 0.2554 & 0.2366 & 0.4206 & 0.3029 & 0.6679 \\
+V4 & V3 + frozen MiniLM, raw & 0.3252 & 0.2366 & 0.5238 & 0.3259 & 0.7091 \\
+V4 & V3 + frozen MiniLM, cross-fitted $F_1$ & 0.3252 & \textbf{0.3952} & 0.3889 & \textbf{0.3920} & 0.6758 \\
+\bottomrule
+\end{tabular}}
+\end{table*}
+
+Figure~\ref{fig:llm-ap} plots the best reported AP from each version. The strict V2 prompt did not improve ranking over V1. The fitted lexical component in V3 increased AP over prompting alone, and V4's frozen semantic features provided a further development-set increase when combined with V3. The operating-point results also reveal the V1 precision--recall tradeoff and V2's low-recall behavior. These results do not establish that LLMs outperform DeBERTa and must not be directly compared across the two cohorts.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures/language_model_ap.png}
+\caption{Best reported average precision for the separate Qwen/hybrid study. The dashed horizontal line denotes its positive prevalence (0.0588). V1/V2 are prompting conditions; V3/V4 include fitted classifiers.}
+\label{fig:llm-ap}
+\end{figure}
+
+\subsection{Review-budget analysis}
+
+Figure~\ref{fig:topk} plots the number of operational-reference positives retrieved at fixed global pooled OOF review budgets. The ensemble retrieves 26 of 50 clauses and 49 of 100. At the cohort prevalence, random selection would retrieve 3.2 and 6.4 positives on average. This plot is an exploratory prioritization diagnostic: scores were generated by different fold-specific models, and the ensemble score is not calibrated as a probability. It should not be interpreted as a promised deployment yield.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures/transformer_review_budget.png}
+\caption{Reference-positive retrieval at pooled OOF review budgets. Counts are cohort-specific and operational-reference based; the random line is the expected count under uniform sampling.}
+\label{fig:topk}
+\end{figure}
+
+\subsection{Threshold-dependent performance}
+
+The inner-fold policy selects thresholds to maximize recall subject to a minimum fitting-side precision target. With target precision 0.30, pooled outer OOF ensemble precision is 0.456, recall 0.382, and $F_1$ 0.416. This does not mean a held-out family will achieve 0.30 precision: observed results vary by fold, and one fold's selected decision rule predicts every row positive for the focal model at this target. Table~\ref{tab:thresholds} summarizes the pooled results.
 
 \begin{table}[t]
-\caption{Retrieved reference positives at fixed review budgets.}
-\label{tab:topk}
+\caption{Pooled OOF operating points using thresholds selected on inner folds for a 0.30 precision target.}
+\label{tab:thresholds}
 \centering
 \begin{tabular}{lrrrr}
 \toprule
-Method & $K=10$ & $K=25$ & $K=50$ & $K=100$ \\
+Method & Precision & Recall & $F_1$ & $F_2$ \\
 \midrule
-Full weighted CE & 6 & 11 & 18 & 32 \\
-Focal loss & 9 & 15 & 28 & 38 \\
-Partial-4 & 4 & 10 & 26 & 43 \\
-ECDF ensemble & 8 & 19 & \textbf{31} & \textbf{43} \\
+Focal loss & 0.372 & 0.235 & 0.288 & 0.254 \\
+Partial fine-tuning & 0.424 & 0.390 & 0.406 & 0.396 \\
+ECDF ensemble & \textbf{0.456} & 0.382 & \textbf{0.416} & 0.395 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\subsection{Cross-family variation}
+\subsection{Family-level heterogeneity}
 
-Performance differs sharply by held-out family. For focal loss, family AP ranges from 0.187 on QUIC Recovery and 0.213 on QUIC Transport to 0.701 on HTTP Semantics and 0.780 on TLS; the one-row IPv6 family has no positive and therefore undefined AP. The ensemble ranges from 0.239 on QUIC Transport to 0.776 on TLS among nontrivial positive families. This variability is not a minor detail: it is the main reason row-level random splits and pooled-only reporting would be misleading.
+The ensemble's family-specific AP ranges from 0.309 on QUIC HTTP to 0.717 on TLS among families with at least one positive. The Cache-Status cohort has only five rows and one positive; its AP of 1.0 is not a stable estimate. The one-row IPv6 family has no positive and AP is undefined. These small and heterogeneous groups make pooled summaries insufficient on their own.
+
+\begin{table}[t]
+\caption{Ensemble OOF AP by RFC family. Small-family estimates are especially uncertain.}
+\label{tab:family-ap}
+\centering
+\begin{tabular}{lrrr}
+\toprule
+Family & Rows & Positives & AP \\
+\midrule
+HTTP/2bis & 237 & 13 & 0.358 \\
+HTTP Semantics & 380 & 36 & 0.583 \\
+QUIC HTTP & 310 & 9 & 0.309 \\
+QUIC Recovery & 161 & 13 & 0.461 \\
+QUIC TLS & 189 & 10 & 0.405 \\
+QUIC Transport & 788 & 50 & 0.332 \\
+TLS 1.3 & 54 & 4 & 0.717 \\
+Cache-Status & 5 & 1 & 1.000 \\
+IPv6 & 1 & 0 & -- \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \section{Discussion}
 
-\subsection{Answers to the research questions}
+\subsection{Interpretation of the development results}
 
-\textbf{Can pre-publication ambiguity be prioritized from draft text?} Yes, in the limited sense supported by current development evidence. AP values of 0.325--0.372 at 5.88\% prevalence and the top-$K$ results show nontrivial ranking signal. They do not show a safe autonomous detector.
+The family-isolated OOF scores indicate that clause text contains a useful ranking signal relative to the operational labels. They do not establish that the model identifies ambiguity in an independently verified sense. The focal-loss and partial-fine-tuning models have overlapping family-cluster intervals, and the ensemble's nominal advantage is not a significance result. A second run across multiple seeds and independent expert annotations is needed before choosing a winner.
 
-\textbf{Does revision history help?} Not yet in the simple form tested. On an older cohort, predecessor-availability, relation, and similarity features yielded AP 0.165--0.168 against 0.178 prevalence, while target TF--IDF plus engineered features reached about 0.291. Revision alignment remains valuable for provenance, deduplication, temporal control, candidate construction, and future richer features, but basic churn is not a substitute for semantic ambiguity evidence.
+The separate language-model study shows a different pattern: direct Qwen prompting gives high recall at low precision in V1, while the stricter V2 prompt substantially reduces recall and AP. Adding a nested lexical classifier in V3 and frozen semantic features in V4 improves AP within that study's development cohort. These are adaptive comparisons with an operational label reference; they neither establish that LLMs outperform DeBERTa nor support direct numeric comparison across the two cohorts.
 
-\textbf{Do larger semantic models automatically outperform sparse text?} No. Earlier frozen MiniLM and BGE classifiers underperformed a TF--IDF/engineered baseline. In the current artifact, frozen semantic features help only as a small complementary component of V4. DeBERTa focal and partial fine-tuning are competitive, but the newest results use one seed.
+Ranking is more defensible than treating the model as a binary gate. The selected inner-fold thresholds optimize a precision constraint on fitting data, but pooled OOF behavior and family-specific outcomes show that the constraint does not transfer uniformly. A user-facing system should present clauses for expert review, expose source revision and surrounding context, and avoid claims that a low score certifies correctness.
 
-\textbf{When is LLM inference justified?} Raw Qwen prompting has high recall but low precision. Its strongest role in the present evidence is as one feature in a lightweight hybrid, not as an unquestioned final judge. A practical deployment can run a local encoder first and reserve an LLM or human reviewer for high-score or uncertain cases, but the actual routing policy must be frozen and validated on TCP before cost savings are claimed.
+On the separate classical/heuristic cohort, engineered features combined with TF--IDF produced stronger AP than the fixed heuristic and the tested embeddings-only baselines. This supports the value of lexical and explicit clause cues for ranking within that cohort, but the high-recall logistic operating point has low precision and does not remove the need for human review. The earlier LOFO results offer additional historical evidence for sparse lexical features, but differ in annotation, cohort, and validation setup. Likewise, the Qwen/hybrid results cannot be ranked against the DeBERTa or classical models because their label artifacts and evaluated populations differ.
+
+Revision alignment provides useful lineage and leakage-control infrastructure, but its pilot has not been evaluated against adjudicated gold links and its outputs are not used as predictive features in the transformer study.
 
 \subsection{Deployment interpretation}
 
-The recommended interface is a ranked review queue with the target clause, local context, provenance, score, and an explicit uncertain region. Automatic rejection or publication certification is inappropriate. The tool should support three actions: accept as low-priority, refer for human review, or request broader context. Reviewers should be able to inspect the exact draft revision and avoid explanations containing information published later.
-
-The ensemble's top-50 precision of 0.62 is promising for a bounded review session, but it is measured against an operational reference. If expert adjudication reverses a material fraction of positives or negatives, both the apparent precision and the learned ranking can change.
+The recommended future interface is a ranked review queue with the target clause, local context, source revision, score, and an explicit uncertain region. Automatic rejection or publication certification is inappropriate. The global pooled OOF top-50 precision is 0.52 against the operational reference; this is a retrospective development diagnostic, not an estimate of production precision or guaranteed reviewer yield.
 
 \subsection{Reproducibility and governance}
 
-The repository records source, split, prompt, model, code, and output hashes; raw logits or token probabilities are retained. Generated directories are immutable, failed runs remain auditable, and the final evaluator requires an explicit final flag and exclusive lock. The development source hash is \texttt{c20959ac...b2712}; the V4 analysis manifest records \texttt{tcp\_opened=false} and \texttt{dns\_opened=false}. Code and documentation are available in the project repository~\cite{artifact2026}.
-
-The current environments pin Python 3.11 and the training manifests record PyTorch, Transformers, tokenizer, CUDA, cuDNN, GPU, and driver versions. The newest DeBERTa study used an NVIDIA RTX 5000 Ada Generation GPU. Thirty inner calibration cells consumed 5,881.5 recorded seconds including one compatibility-validated reused cell; peak allocated memory was 3,976.3 MiB.
+The experiment records hashes for the authoritative label source, effective dataset, model snapshot, folds, configuration, and derived predictions. The source-label SHA-256 is \texttt{8e395e83087c28cdc8e5b514f6fb4eca96e54a31fb525be770810db6f9e22e1d}; the effective dataset SHA-256 is \texttt{19364a405048c279c2959ed6110a2e6868f2b4759ea21c659399038e6fbcec23}. The model snapshot is used offline, and the experiment manifest pins seed, tokenizer, and training configuration. Code and documentation are available in the project repository~\cite{artifact2026}. The latest run artifacts are not yet part of a reviewed, immutable public release.
 
 \section{Threats to Validity}
 
 \subsection{Construct validity}
 
-The binary reference operationalizes ambiguity through a particular rubric and annotation workflow. It does not exhaust RFCScope's seven subtypes, and model agreement can reproduce shared model biases. The manual-conflict process is not equivalent to blinded, independent, double expert annotation. Qwen's participation in annotation support makes Qwen-based evaluation partially non-independent. These issues limit claims about the real-world construct of ambiguity.
+The binary reference operationalizes ambiguity through a particular rubric and annotation workflow. It does not exhaust RFCScope's seven subtypes, and AI-supported labels can reproduce shared model biases. Qwen3 contributed to annotation support, making the Qwen agreement analysis non-independent of label construction. The manual-conflict process is not equivalent to blinded, independent, double expert annotation. These issues limit claims about the real-world construct of ambiguity.
 
 Candidate selection is also enriched rather than population-random. Metrics estimate performance on the reviewed candidate cohort, not on every sentence or clause in all Internet-Drafts. AP and prevalence therefore must not be transported to the full IETF corpus.
 
 \subsection{Internal validity}
 
-Family splits, fitting-only preprocessing, inner-only thresholds, and exact/near/lineage exclusion reduce leakage. They cannot eliminate pretraining contamination: modern encoders may have seen historical RFCs or drafts. V4 and several transformer choices were developed adaptively on the same cohort. The newest focal, partial, and ensemble results use a single seed; family bootstrapping does not account for training variance. The ensemble was pre-registered within its calibration study, but selecting that study for reporting is itself part of the wider adaptive development history.
+Family splits, fitting-only preprocessing, inner-only thresholds, and exact/near/lineage exclusion reduce leakage. They cannot eliminate pretraining contamination: modern encoders may have seen historical RFCs or drafts. The experiment uses a single seed, and family bootstrapping does not account for training variance. Architecture and analysis choices were made within the wider development process; the reported OOF study should therefore be interpreted as development evidence, not a pre-registered confirmatory benchmark.
 
 \subsection{External validity}
 
-Only nine families contribute scored development rows, and QUIC/HTTP dominate row counts. The smallest families cannot independently support meaningful AP estimates. TCP and DNS provide useful protocol shifts but remain unopened; no evidence yet covers routing protocols with historical drafts outside the current cohort, standards from other organizations, or newly authored drafts after the models' pretraining period.
+Only nine families contribute scored development rows, and QUIC/HTTP dominate row counts. The smallest families cannot independently support meaningful AP estimates. TCP and DNS are reserved and unopened; the reported study therefore provides no evidence about performance on those families. Routing protocols with historical drafts outside the current cohort, standards from other organizations, and newly authored drafts after the models' pretraining period are also untested.
 
 \subsection{Alignment validity}
 
-The TLS alignment run has complete structural coverage and deterministic audits but no reviewed gold links. Alignment confidence is rule-based and uncalibrated. Split/merge grouping, move heuristics, and long-clause pooling are approximations. Accordingly, correspondence statistics are engineering validation, not evidence of alignment accuracy, and automatic revision relationships are not used as ground-truth ambiguity labels.
+The TLS alignment run has deterministic audits but no reviewed gold links. Alignment confidence is rule-based and uncalibrated. Split/merge grouping, move heuristics, and long-clause pooling are approximations. Accordingly, correspondence statistics are engineering coverage, not evidence of alignment accuracy, and automatic revision relationships are not used as ground-truth ambiguity labels.
 
 \section{Ethical and Practical Considerations}
 
 All source standards and errata are public technical documents. The principal risk is epistemic rather than personal: an incorrect ``ambiguous'' flag could waste reviewer time or unfairly characterize an author's work, while a false negative could create unwarranted confidence. The system must expose uncertainty, provenance, and its non-certification role. Generated explanations should be treated as hypotheses and checked against the exact contemporaneous text. Final evaluation should be reported once, including negative outcomes, and the sealed set should not be recycled for iterative tuning.
 
-\section{Conclusion and Required Final Validation}
+\section{Conclusion}
 
-\system demonstrates that leakage-controlled family-held-out models can prioritize potentially ambiguous clauses in historical Internet-Drafts. On the current development artifact, focal DeBERTa and a partially fine-tuned DeBERTa provide complementary rankings; their equal ECDF ensemble reaches AP 0.3715 at 5.88\% prevalence and retrieves 31 reference positives in the top 50 clauses. A separate lexical/Qwen/MiniLM ensemble reaches AP 0.3252. Local context is not uniformly helpful, raw few-shot prompting is not sufficient, and performance varies materially across protocol families.
+\system{} provides a reproducible pipeline and development evidence for prioritizing potentially ambiguous clauses in historical Internet-Drafts. On the latest nine-family transformer cohort, the equal-weight ECDF ensemble reaches AP 0.3711 at 6.4\% prevalence, with a 95\% family-cluster bootstrap interval of 0.3151--0.5084; it retrieves 26 operational-reference positives in the top 50 pooled OOF clauses. On a separate 2,406-clause cohort, logistic regression with engineered and TF--IDF features reaches AP 0.5225, while the fixed heuristic reaches 0.1049. The separate Qwen/hybrid study reports AP 0.1960 for eight-shot prompting and 0.3252 for its V4 hybrid. These results come from distinct label artifacts and evaluation cohorts and are not a head-to-head comparison. Across the studies, performance estimates remain development evidence: outcomes vary by family, the transformer evaluation uses one seed, and the operational labels are not independently adjudicated expert gold.
 
-Four steps remain before a deployment or final-generalization claim: (1) independently double-annotate and adjudicate a stratified expert sample; (2) repeat the selected transformer configurations across multiple seeds; (3) freeze one method, threshold/routing policy, code snapshot, and analysis plan before opening TCP; and (4) after the TCP decision rule is fixed, execute exactly one DNS evaluation. Until those steps are complete, the correct claim is a reproducible, promising development-stage review assistant---not a published-standard oracle or autonomous quality gate.
+Before making a deployment or final-generalization claim, the project should: (1) independently double-annotate and adjudicate a stratified expert sample; (2) repeat the selected transformer configurations across multiple seeds; (3) freeze one method, threshold/routing policy, code snapshot, and analysis plan before opening TCP; and (4) after the TCP decision rule is fixed, execute exactly one DNS evaluation. Until those steps are complete, the appropriate claim is a reproducible, promising development-stage review aid---not a published-standard oracle or autonomous quality gate.
 
 \section*{Acknowledgment}
 

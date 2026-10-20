@@ -3,7 +3,7 @@ $env:HF_HUB_OFFLINE = "1"
 $env:TRANSFORMERS_OFFLINE = "1"
 
 $Python = Join-Path $PSScriptRoot "..\.venv\Scripts\python.exe"
-$ResultRoot = Join-Path $PSScriptRoot "..\experiments\transformer\results\factorial-v1"
+$ResultRoot = Join-Path $PSScriptRoot "..\results\experiments\transformer\factorial-v1"
 $Seeds = @(1729, 2718, 31415)
 $Conditions = @(
     @{ Name = "soft-target-only"; Target = "soft"; Variant = "target_only" },

@@ -17,7 +17,7 @@ $Python = Resolve-ProjectPython `
 Write-Host "Python runtime: $Python"
 
 $Config = Join-Path $ProjectRoot "experiments\llm\configs\qwen3_32b_final_annotation_ready_semantic_v4.yaml"
-$RunRoot = Join-Path $ProjectRoot "experiments\llm\results\qwen3-32b-final-annotation-ready-v4"
+$RunRoot = Join-Path $ProjectRoot "results\experiments\llm\qwen3-32b-final-annotation-ready-v4"
 $Audit = Join-Path $RunRoot "protocol-audit.json"
 $Results = Join-Path $RunRoot "analysis-final"
 $EmbeddingCache = Join-Path $RunRoot "minilm-embeddings.npz"

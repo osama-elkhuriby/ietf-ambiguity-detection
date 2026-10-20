@@ -156,8 +156,8 @@ An optional exploratory threshold table is deliberately separate from unbiased r
 
 ```powershell
 python -m models.transformer_final.threshold_analysis `
-  --predictions experiments/transformer_final/original_annotation/aggregate_metrics/A1/oof_predictions.csv `
-  --output experiments/transformer_final/original_annotation/aggregate_metrics/A1_threshold_exploratory_v1
+  --predictions results/transformer/final_studies/original_annotation/aggregate_metrics/A1/oof_predictions.csv `
+  --output results/transformer/final_studies/original_annotation/aggregate_metrics/A1_threshold_exploratory_v1
 ```
 
 CPU/GPU: CPU. Loads pretrained weights: no. Downloads: no. Writes: an explicitly marked exploratory artifact. Never present a threshold chosen here as an unbiased result on these same OOF predictions.
@@ -167,7 +167,7 @@ CPU/GPU: CPU. Loads pretrained weights: no. Downloads: no. Writes: an explicitly
 ```powershell
 python -m models.transformer_final.compare `
   --config experiments/transformer_final/original_annotation/configs/experiment_v1.json `
-  --output experiments/transformer_final/original_annotation/aggregate_metrics/A1_vs_A2_v1
+  --output results/transformer/final_studies/original_annotation/aggregate_metrics/A1_vs_A2_v1
 ```
 
 CPU/GPU: CPU. Loads pretrained weights: no. Downloads: no. Writes: a paired fold/seed table and summary for AP, precision, recall, and F1, including sample standard deviation, standard error, a descriptive normal 95% interval, and prevalence. The report explicitly treats differences as descriptive rather than proof of superiority.

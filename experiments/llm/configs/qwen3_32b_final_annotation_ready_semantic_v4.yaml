@@ -10,7 +10,7 @@ source_annotation: results/annotation/final_annotation_ready.csv
 source_annotation_sha256: c20959acc2db8345c90ee06a71357aaac161b178b240495e516e4710405b2712
 base_signal:
   name: v3_nested_hybrid
-  predictions: experiments/llm/results/qwen3-32b-final-annotation-ready-v3/analysis-final/oof_predictions.csv
+  predictions: results/LLM/qwen3-32b-final-annotation-ready-v3/analysis-final/oof_predictions.csv
   predictions_sha256: 226e06b787713c33e91dd553c9dd3389ba42771a23f4fc85b732d865a01567e5
 sentence_encoder:
   repository: sentence-transformers/all-MiniLM-L6-v2
@@ -45,11 +45,11 @@ selection:
   threshold_objectives: [f1, f2, balanced_accuracy]
   threshold_protocol: leave_one_grouped_fold_out_cross_fitted_development_sensitivity
 comparison:
-  v1_metrics: experiments/llm/results/qwen3-32b-final-annotation-ready-v1/analysis-final/pooled_metrics.csv
+  v1_metrics: results/LLM/qwen3-32b-final-annotation-ready-v1/analysis-final/pooled_metrics.csv
   v1_metrics_sha256: 72379076cc3b7793b71c1b4b92dbe27861dd9cfa31ce0ecc18943c8d222e0748
-  v2_metrics: experiments/llm/results/qwen3-32b-final-annotation-ready-v2/analysis-final/pooled_raw_metrics.csv
+  v2_metrics: results/LLM/qwen3-32b-final-annotation-ready-v2/analysis-final/pooled_raw_metrics.csv
   v2_metrics_sha256: 459c7aa1aefb3c90800bdb2216e6a0cdbdf6f7fec4a7e54f0d67bf12d623ba28
-  v3_metrics: experiments/llm/results/qwen3-32b-final-annotation-ready-v3/analysis-final/pooled_metrics.csv
+  v3_metrics: results/LLM/qwen3-32b-final-annotation-ready-v3/analysis-final/pooled_metrics.csv
   v3_metrics_sha256: 94df5ad47e1f39cb857d288922eaeca47b847cee689f18cc28f6f2ec60a62aab
 reporting:
   development_result_status: adaptive_exploratory_not_final_test_evidence

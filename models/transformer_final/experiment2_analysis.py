@@ -742,7 +742,7 @@ def create_experiment2_analysis(
     families = _family_metrics(pooled)
     examples = _error_examples(pooled)
     original_root = resolve_path(
-        "experiments/transformer_final/original_annotation/aggregate_metrics"
+        "results/transformer/final_studies/original_annotation/aggregate_metrics"
     )
     comparison = _exp1_comparison(original_root)
     source_audit = read_json(

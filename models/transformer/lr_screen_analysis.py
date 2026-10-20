@@ -23,7 +23,7 @@ PRIMARY_SEED = 1729
 SECOND_SEED = 2718
 FOLD_ASSIGNMENT = ROOT / "experiments/transformer/configs/folds_v1.json"
 DEVELOPMENT_DIR = ROOT / "corpus/processed/transformer_partitioned/v1/development"
-CLASSICAL_ROOT = ROOT / "experiments/classical/results/tfidf-logreg-v1"
+CLASSICAL_ROOT = ROOT / "results/ML/classical_studies/tfidf-logreg-v1"
 
 
 def lr_slug(learning_rate: float) -> str:
@@ -442,7 +442,7 @@ def main() -> int:
     parser.add_argument(
         "--run-root",
         type=Path,
-        default=ROOT / "experiments/transformer/results/lr-screen-v1",
+        default=ROOT / "results/transformer/studies/lr-screen-v1",
     )
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--seed", type=int, default=PRIMARY_SEED)

@@ -48,10 +48,10 @@ CONDITIONS = (
 SIMPLICITY_ORDER = {name: index for index, name in enumerate(CONDITIONS)}
 SEEDS = (1729, 2718, 31415)
 FOLDS = (1, 2, 3, 4, 5)
-BASELINE_ROOT = ROOT / "experiments/transformer/results/weighting-ablation-v1/class"
-FACTORIAL_ROOT = ROOT / "experiments/transformer/results/factorial-v1"
-MATCHED_TFIDF_ROOT = ROOT / "experiments/classical/results/tfidf-matched-nested-v1"
-DEFAULT_OUTPUT = ROOT / "experiments/transformer/results/factorial-v1-analysis"
+BASELINE_ROOT = ROOT / "results/transformer/studies/weighting-ablation-v1/class"
+FACTORIAL_ROOT = ROOT / "results/transformer/studies/factorial-v1"
+MATCHED_TFIDF_ROOT = ROOT / "results/ML/classical_studies/tfidf-matched-nested-v1"
+DEFAULT_OUTPUT = ROOT / "results/transformer/studies/factorial-v1-analysis"
 CONTRASTS = (
     ("soft_target_only", "hard_target_only", "soft_target_effect"),
     ("hard_local_context", "hard_target_only", "context_effect_hard"),

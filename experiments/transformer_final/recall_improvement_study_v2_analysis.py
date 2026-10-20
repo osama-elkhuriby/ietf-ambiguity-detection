@@ -36,7 +36,7 @@ from experiments.transformer_final.recall_improvement_study_v1.study_analysis im
 )
 
 BASELINE_ROOT = resolve_path(
-    "experiments/transformer_final/final_annotation_ready_pilot_v1/aggregate_metrics"
+    "results/transformer/final_studies/final_annotation_ready_pilot_v1/aggregate_metrics"
 )
 METHODS = {
     "target_only_full": "Full fine-tuning - target-only",

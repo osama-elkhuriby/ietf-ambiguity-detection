@@ -62,7 +62,7 @@ Run a cheap end-to-end architecture check with a randomly initialized tiny DeBER
 
 ```powershell
 python -m models.transformer.train `
-  --output experiments/transformer/results/smoke-clause-only-v2 `
+  --output results/transformer/studies/smoke-clause-only-v2 `
   --learning-rate 1e-5 --fold 1 --smoke
 ```
 
@@ -70,7 +70,7 @@ Run one pinned pretrained development cell with:
 
 ```powershell
 python -m models.transformer.train `
-  --output experiments/transformer/results/clause-lr1e-5-fold1-seed1729 `
+  --output results/transformer/studies/clause-lr1e-5-fold1-seed1729 `
   --learning-rate 1e-5 --fold 1 --weight-strategy unweighted `
   --precision fp32 --allow-download
 ```
@@ -93,8 +93,8 @@ and 3e-5 over all five folds at seed 1729. Analyze completed immutable run cells
 
 ```powershell
 python -m models.transformer.lr_screen_analysis `
-  --run-root experiments/transformer/results/lr-screen-v2 `
-  --output experiments/transformer/results/lr-screen-v2/analysis-primary-final
+  --run-root results/transformer/studies/lr-screen-v2 `
+  --output results/transformer/studies/lr-screen-v2/analysis-primary-final
 ```
 
 The frozen one-standard-error rule selected 1e-5 and required seed 2718 reruns for
@@ -111,7 +111,7 @@ regenerated from saved development OOF predictions without loading a model:
 
 ```powershell
 python -m models.transformer.feasibility_audit `
-  --output experiments/transformer/governance/step2c_feasibility_v2
+  --output results/transformer/governance/step2c_feasibility_v2
 ```
 
 The v1 audit uses 2,000 within-fold bootstrap replicates and saves the complete
@@ -129,7 +129,7 @@ training or inference code:
 
 ```powershell
 python -m models.transformer.ceiling_audit `
-  --output experiments/transformer/governance/step2d_ceiling_v1
+  --output results/transformer/governance/step2d_ceiling_v1
 ```
 
 It writes leave-one-LLM-out agreement metrics, pairwise agreement and Cohen's kappa,
@@ -144,7 +144,7 @@ the immutable predictions with:
 
 ```powershell
 python -m models.transformer.weighting_analysis `
-  --output-dir experiments/transformer/results/weighting-ablation-v1/analysis-final
+  --output-dir results/transformer/studies/weighting-ablation-v1/analysis-final
 ```
 
 The analysis validates every run against the frozen protocol, averages raw log-odds

@@ -1,0 +1,85 @@
+{
+  "authoritative_source_path": "D:\\RFC\\ietf-ambiguity-detection\\results\\annotation\\final_annotation.csv",
+  "columns": [
+    "item_id",
+    "record_id",
+    "family_id",
+    "document_id",
+    "revision",
+    "clause_ids",
+    "section_ids",
+    "lineage_ids",
+    "target_clause",
+    "section_heading",
+    "previous_clause",
+    "next_clause",
+    "context_source_ids",
+    "context_resolution_status",
+    "alignment_source_path",
+    "source_hashes",
+    "label",
+    "final_source",
+    "final_status",
+    "fold"
+  ],
+  "created_at": "2026-10-19T13:47:16.043255+00:00",
+  "dataset_file": "dataset.csv",
+  "effective_dataset_sha256": "19364a405048c279c2959ed6110a2e6868f2b4759ea21c659399038e6fbcec23",
+  "families": [
+    "draft-ietf-6man-rfc2460bis",
+    "draft-ietf-httpbis-cache-header",
+    "draft-ietf-httpbis-http2bis",
+    "draft-ietf-httpbis-semantics",
+    "draft-ietf-quic-http",
+    "draft-ietf-quic-recovery",
+    "draft-ietf-quic-tls",
+    "draft-ietf-quic-transport",
+    "draft-ietf-tls-tls13"
+  ],
+  "inner_fold_manifest_sha256": {
+    "1": {
+      "1": "40db7c39d0941831cd344145a54d92feaed4cd798cfe70724b93582d3663be0c",
+      "2": "2dc058a4a54e4cda91447d767a711443e53f6f106ec798036d8a3e49d84a603a",
+      "3": "33fda07b0cf51da5deb3e7fb7c63230ee4a9fbed75d42774fedc17ffb4e18607"
+    },
+    "2": {
+      "1": "91fc58517a29b6458b442ec4da5ac3b7c6fb9cfd8dde398c7213c874a6603592",
+      "2": "61869e232d82d0e1251b1599f7a95a7f5a5f399aa850169eb0d1c8754a9b40f3",
+      "3": "f79db200cf295a0f815edc2da2395b4d6c43009dc1405bd906ac39eed3214354"
+    },
+    "3": {
+      "1": "483fa6762f0f7bbe8ce4e3adb6bc674117cfaad0f875bd0bd3162b6b13d1d5e1",
+      "2": "1ff8bc94dc2e28e407a96db1711355097b6cdf7455a31bc2993fdb8836782de7",
+      "3": "bdf765cb4ec8015842664db3e0bf42c69a8a14cf18e26487d9663cc2f070faa4"
+    },
+    "4": {
+      "1": "925dc0b3c4abbed974fda92937e701c6c2f95500ed215858275b92da5531aad9",
+      "2": "8e8c4dac5afab9d2f7d12a562734e1c60d37ac238169cd05b18e49cc169cf4f1",
+      "3": "a5b739cf2431da57787021fd0ab716d8b4ff645aa93d4656d4139e6f39695fa1"
+    },
+    "5": {
+      "1": "4353ce2c2aac6c80f5955c8a18d2f1dca3a3f69c354c449702622f65ae2606ed",
+      "2": "db8dd697e5f3087ed04d2fc9f09a24832590f5d170c3fff3c620ee5aa023fe09",
+      "3": "11f8d9cbe8590450789572f73b42273b50a5393ac81e03165d607878b11ec95f"
+    }
+  },
+  "labels": {
+    "0": 1989,
+    "1": 136
+  },
+  "leakage_audit_sha256": "a5e47ea408706a7e9af0d50dfcbbf62e396ae2ae18d7da8487293469f08af6e0",
+  "original_dataset_sha256": "8e395e83087c28cdc8e5b514f6fb4eca96e54a31fb525be770810db6f9e22e1d",
+  "outer_fold_manifest_sha256": {
+    "1": "20cf0a5eea03f5cb9cdff642618778d7beebe8042b6706a9fd459fb631106dbb",
+    "2": "10ee9e80be27e5a3e550f67e7576cc294a185be3677ddf5c5981d700cea33fa5",
+    "3": "794d57d24d817aae014c837118ee1b9ab32721ec171506cefce53611291d1358",
+    "4": "5840774506522891a41e9398b1b0054d8689b77e6c4caaed74c6254fe26e2811",
+    "5": "7a2379c47ef897677d68da2e1bb46617101173addc4ca272f5eacf7d64c154ee"
+  },
+  "reserved_partitions": {
+    "dns": "sealed_no_label_consumption",
+    "tcp": "reserved_no_training_tuning_calibration_or_analysis"
+  },
+  "rows": 2125,
+  "schema_version": 1
+}

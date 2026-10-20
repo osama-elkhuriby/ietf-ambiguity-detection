@@ -337,7 +337,7 @@ def main() -> int:
     parser.add_argument(
         "--output",
         type=Path,
-        default=ROOT / "experiments/transformer/governance/step2d_ceiling_v1",
+        default=ROOT / "results/transformer/governance/step2d_ceiling_v1",
     )
     args = parser.parse_args()
     print(run(args.output.resolve()))

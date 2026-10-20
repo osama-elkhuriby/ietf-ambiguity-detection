@@ -1,0 +1,213 @@
+{
+  "calibration": {
+    "infeasible": "explicit; no always-positive fallback",
+    "precision_targets": [
+      0.2,
+      0.3,
+      0.5
+    ],
+    "primary_precision_target": 0.3,
+    "selection": "maximize recall subject to fitting-side precision target; ties: higher precision, then higher threshold"
+  },
+  "config_path": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\final_annotation_661_v1\\config.json",
+  "config_sha256": "764466e5846d41755f9e59c672983a139c35ab82b9e380984019f9633d1b5edd",
+  "created_at": "2026-10-19T13:43:43.476958+00:00",
+  "dataset": {
+    "authoritative_source_path": "D:\\RFC\\ietf-ambiguity-detection\\results\\annotation\\final_annotation.csv",
+    "columns": [
+      "item_id",
+      "record_id",
+      "family_id",
+      "document_id",
+      "revision",
+      "clause_ids",
+      "section_ids",
+      "lineage_ids",
+      "target_clause",
+      "section_heading",
+      "previous_clause",
+      "next_clause",
+      "context_source_ids",
+      "context_resolution_status",
+      "alignment_source_path",
+      "source_hashes",
+      "label",
+      "final_source",
+      "final_status",
+      "fold"
+    ],
+    "created_at": "2026-10-19T13:43:43.449070+00:00",
+    "dataset_file": "dataset.csv",
+    "effective_dataset_sha256": "19364a405048c279c2959ed6110a2e6868f2b4759ea21c659399038e6fbcec23",
+    "families": [
+      "draft-ietf-6man-rfc2460bis",
+      "draft-ietf-httpbis-cache-header",
+      "draft-ietf-httpbis-http2bis",
+      "draft-ietf-httpbis-semantics",
+      "draft-ietf-quic-http",
+      "draft-ietf-quic-recovery",
+      "draft-ietf-quic-tls",
+      "draft-ietf-quic-transport",
+      "draft-ietf-tls-tls13"
+    ],
+    "inner_fold_manifest_sha256": {
+      "1": {
+        "1": "40db7c39d0941831cd344145a54d92feaed4cd798cfe70724b93582d3663be0c",
+        "2": "2dc058a4a54e4cda91447d767a711443e53f6f106ec798036d8a3e49d84a603a",
+        "3": "33fda07b0cf51da5deb3e7fb7c63230ee4a9fbed75d42774fedc17ffb4e18607"
+      },
+      "2": {
+        "1": "91fc58517a29b6458b442ec4da5ac3b7c6fb9cfd8dde398c7213c874a6603592",
+        "2": "61869e232d82d0e1251b1599f7a95a7f5a5f399aa850169eb0d1c8754a9b40f3",
+        "3": "f79db200cf295a0f815edc2da2395b4d6c43009dc1405bd906ac39eed3214354"
+      },
+      "3": {
+        "1": "483fa6762f0f7bbe8ce4e3adb6bc674117cfaad0f875bd0bd3162b6b13d1d5e1",
+        "2": "1ff8bc94dc2e28e407a96db1711355097b6cdf7455a31bc2993fdb8836782de7",
+        "3": "bdf765cb4ec8015842664db3e0bf42c69a8a14cf18e26487d9663cc2f070faa4"
+      },
+      "4": {
+        "1": "925dc0b3c4abbed974fda92937e701c6c2f95500ed215858275b92da5531aad9",
+        "2": "8e8c4dac5afab9d2f7d12a562734e1c60d37ac238169cd05b18e49cc169cf4f1",
+        "3": "a5b739cf2431da57787021fd0ab716d8b4ff645aa93d4656d4139e6f39695fa1"
+      },
+      "5": {
+        "1": "4353ce2c2aac6c80f5955c8a18d2f1dca3a3f69c354c449702622f65ae2606ed",
+        "2": "db8dd697e5f3087ed04d2fc9f09a24832590f5d170c3fff3c620ee5aa023fe09",
+        "3": "11f8d9cbe8590450789572f73b42273b50a5393ac81e03165d607878b11ec95f"
+      }
+    },
+    "labels": {
+      "0": 1989,
+      "1": 136
+    },
+    "leakage_audit_sha256": "a5e47ea408706a7e9af0d50dfcbbf62e396ae2ae18d7da8487293469f08af6e0",
+    "original_dataset_sha256": "8e395e83087c28cdc8e5b514f6fb4eca96e54a31fb525be770810db6f9e22e1d",
+    "outer_fold_manifest_sha256": {
+      "1": "20cf0a5eea03f5cb9cdff642618778d7beebe8042b6706a9fd459fb631106dbb",
+      "2": "10ee9e80be27e5a3e550f67e7576cc294a185be3677ddf5c5981d700cea33fa5",
+      "3": "794d57d24d817aae014c837118ee1b9ab32721ec171506cefce53611291d1358",
+      "4": "5840774506522891a41e9398b1b0054d8689b77e6c4caaed74c6254fe26e2811",
+      "5": "7a2379c47ef897677d68da2e1bb46617101173addc4ca272f5eacf7d64c154ee"
+    },
+    "reserved_partitions": {
+      "dns": "sealed_no_label_consumption",
+      "tcp": "reserved_no_training_tuning_calibration_or_analysis"
+    },
+    "rows": 2125,
+    "schema_version": 1
+  },
+  "dataset_manifest_sha256": "04cbe56df91e58e897c6fcea0cd71632eebcdea7623bd4714b1da14fb4037f19",
+  "ensemble": {
+    "method": "outer-specific fitting-side empirical CDF",
+    "outer_distribution_fitting": false,
+    "weights": {
+      "focal": 0.5,
+      "partial4": 0.5
+    }
+  },
+  "error_analysis": {
+    "false_negative": "actual Yes, predicted No; ascending exact decision score; stable record_id tie-break",
+    "false_positive": "actual No, predicted Yes; descending exact decision score; stable record_id tie-break",
+    "primary_policy": "outer-specific method threshold selected from inner OOF at precision target 0.30",
+    "text": "untruncated authoritative source text",
+    "threshold_independent": "No/high-Yes and Yes/low-Yes score lists"
+  },
+  "evaluation": {
+    "bootstrap_cluster": "rfc_family",
+    "bootstrap_replicates": 2000,
+    "error_primary_policy": "nested_precision_0.30",
+    "primary_ranking_metric": "average_precision",
+    "top_k": [
+      10,
+      20,
+      25,
+      50,
+      100
+    ]
+  },
+  "execution": {
+    "automatic_retries": false,
+    "cpu_fallback": false,
+    "cuda_required": true,
+    "manual_only": true,
+    "sequential": true
+  },
+  "experiment_id": "final_annotation_661_v1",
+  "inner_cv": {
+    "algorithm": "GroupKFold(shuffle=False)",
+    "assignment_uses_labels": false,
+    "folds_per_outer": 3,
+    "groups": "RFC family"
+  },
+  "leakage_policy": "Preserve frozen family-to-outer-fold boundaries; apply label-blind exact, near, lineage, BCP14-skeleton, and context leakage controls within each fitting design.",
+  "methods": {
+    "focal": {
+      "alpha": "fitting-side class weights No=1, Yes=negative/positive",
+      "gamma": 2.0,
+      "loss": "focal_gamma_2",
+      "reduction": "batch_mean"
+    },
+    "partial4": {
+      "loss": "weighted_ce",
+      "policy": "freeze embeddings, shared encoder backbone, and layers 0-7; train layers 8-11, pooler, and classifier",
+      "trainable_last_layers": 4
+    }
+  },
+  "model": {
+    "default_local_path": "D:/RFC/models/deberta-v3-base",
+    "label2id": {
+      "No": 0,
+      "Yes": 1
+    },
+    "num_labels": 2,
+    "offline_only": true,
+    "repository": "microsoft/deberta-v3-base",
+    "revision": null,
+    "source_sha256": "206ee7bb2c7805bcc8fd3bbbc18a09e185bafc19d4e112f31d4a088136717dd7"
+  },
+  "outer_cv": {
+    "folds": 5,
+    "groups": "frozen RFC family mapping",
+    "row_level_random_split": false
+  },
+  "schema_version": 1,
+  "source_provenance_sha256": "08442e98d1a2d09e3fdf12c476fa691d1ec31b67ccbd603ab785467b03805256",
+  "source_snapshot": {
+    "experiments/transformer_final/final_annotation_661_v1/__init__.py": "b013c47b87575ee98a62f718b4287a2dd9751d7c2382a011d20cab701521b0d8",
+    "experiments/transformer_final/final_annotation_661_v1/analysis.py": "82f70ca70a58f1fd7ce1812dde9ad1494900a829f822388236f539fc8ce2d723",
+    "experiments/transformer_final/final_annotation_661_v1/cli.py": "e1c50c9c24294175c9bd3c869883ce504d812da51768dc18e1156088118a6094",
+    "experiments/transformer_final/final_annotation_661_v1/config.json": "764466e5846d41755f9e59c672983a139c35ab82b9e380984019f9633d1b5edd",
+    "experiments/transformer_final/final_annotation_661_v1/core.py": "594f4cbd2e9df4e6a3c1916c49b66cf0ab8efdb040978f5409c9e57651a7782b",
+    "experiments/transformer_final/final_annotation_661_v1/runner.py": "a9230bf78e7417bfe5a47a8954e1ddd1f9286667473abf0e906f0282fcd82ff0",
+    "experiments/transformer_final/final_annotation_661_v1/tests/test_experiment.py": "ed6461de932078aca6d0f0eee9c7a9726b0e25e42b02bf692cbece4ee6bc3ff4"
+  },
+  "source_snapshot_sha256": "12e3a1c05b3cdb65a2d525c73c6d35ffdefd33f5f4e180773f34ce60ac89baff",
+  "tokenization": {
+    "add_vocabulary_tokens": false,
+    "dynamic_padding": true,
+    "input_mode": "target_only",
+    "max_length": 256,
+    "target_overflow": "deterministic_head_tail"
+  },
+  "training": {
+    "deterministic": true,
+    "diagnostic_numerics": true,
+    "early_stopping": false,
+    "epochs": 5,
+    "eval_batch_size": 16,
+    "gradient_accumulation_steps": 1,
+    "learning_rate": 1e-05,
+    "max_grad_norm": 1.0,
+    "optimizer": "AdamW",
+    "precision": "fp32",
+    "scheduler": "linear",
+    "seeds": [
+      2718
+    ],
+    "threshold": 0.5,
+    "train_batch_size": 8,
+    "warmup_ratio": 0.1,
+    "weight_decay": 0.01
+  }
+}

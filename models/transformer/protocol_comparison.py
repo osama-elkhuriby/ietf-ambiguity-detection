@@ -27,8 +27,8 @@ from models.transformer.lr_screen_analysis import (
     lr_slug,
 )
 
-V1_ROOT = ROOT / "experiments/transformer/results/lr-screen-v1"
-V2_ROOT = ROOT / "experiments/transformer/results/lr-screen-v2"
+V1_ROOT = ROOT / "results/transformer/studies/lr-screen-v1"
+V2_ROOT = ROOT / "results/transformer/studies/lr-screen-v2"
 
 
 def _metadata() -> pd.DataFrame:

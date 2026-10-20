@@ -572,7 +572,7 @@ def run(config_path: Path, output: Path) -> Path:
         v1_predictions = pd.read_csv(v1_score_path).sort_values("record_id")
         v2_predictions = pd.read_csv(
             ROOT
-            / "experiments/llm/results/qwen3-32b-final-annotation-ready-v2/analysis-final/oof_predictions_24_shot.csv"
+            / "results/LLM/qwen3-32b-final-annotation-ready-v2/analysis-final/oof_predictions_24_shot.csv"
         ).sort_values("record_id")
         ordered = predictions.sort_values("record_id")
         if not np.array_equal(

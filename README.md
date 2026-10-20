@@ -47,8 +47,8 @@ accuracy.
 
 ## Dataset snapshot
 
-The new LLM experiment derives the following immutable partitions from
-`results/annotation/final_annotation_ready.csv`:
+The new LLM experiment derives the following immutable partitions from the local
+`results/annotation/final_annotation_ready.csv` artifact:
 
 | Partition | Families | Rows | Positive (`yes`) | Purpose |
 | --- | ---: | ---: | ---: | --- |
@@ -56,7 +56,9 @@ The new LLM experiment derives the following immutable partitions from
 | Reserved validation | TCP | 131 | 5 | Later independent transfer verification only |
 | Sealed test | DNS SVCB/HTTPS | 151 | 17 | One final evaluation after all choices are frozen |
 
-The source contains 2,425 rows. `item_id=2161` has an unresolved status and a placeholder
+Annotation exports and row-level labels are intentionally excluded from GitHub; this
+path is a local prerequisite and is not present in a fresh clone. The source contains
+2,425 rows. `item_id=2161` has an unresolved status and a placeholder
 `No` value, so it is explicitly excluded instead of being treated as ground truth. The
 remaining 2,424 labels contain 148 positives. Document-family isolation leaves 126
 positives in development. Dataset and configuration manifests pin the source,
@@ -119,7 +121,7 @@ guarantees.
 
 See:
 
-- `experiments/transformer/STEP3_REPORT.md`
+- `results/transformer/reports/STEP3_REPORT.md`
 - `experiments/transformer/EXPERIMENT_PLAN.md`
 - `models/transformer/README.md`
 
@@ -139,13 +141,24 @@ models/
   hybrid/               Planned calibrated routing layer
 eval/                    Alignment and later end-to-end evaluation protocols
 experiments/
-  classical/            Frozen classical-model configuration and results
-  transformer/          Experiment plan, governance artifacts, reports, and results
+  classical/            Frozen classical-model configuration
+  llm/                  LLM experiment plans and configurations
+  transformer/          Experiment plans and configurations
+  transformer_final/    Reproduction code, protocols, and run specifications
+results/
+  ML/                   Classical-model metrics, plots, and study outputs
+  LLM/                  LLM experiment outputs (local-only)
+  transformer/          Transformer results, reports, and run outputs
+  heuristic/, ...       Other model and project result summaries
 tests/                   Offline unit, integration, leakage, and governance tests
 Related Work/            Project literature
 Proposal/                Project proposal and literature review
 DECISIONS.md             Dated methodological decision log
 ```
+
+Generated outputs are organized under `results/`, not mixed into experiment source
+directories. Large checkpoints, row-level predictions, private labels, and derived
+corpus artifacts remain local and are ignored by Git; see [results/README.md](results/README.md).
 
 ## Environment
 
@@ -210,8 +223,10 @@ overwriting an existing artifact.
 
 ### Prepare and evaluate the final-annotation LLM
 
-The prepared dataset is hash-pinned to
-`results/annotation/final_annotation_ready.csv`. The LLM workflow contains no
+The prepared dataset is hash-pinned to the local-only
+`results/annotation/final_annotation_ready.csv` artifact. Supply this approved dataset
+locally before running the workflow; annotation data is not distributed in this
+repository. The LLM workflow contains no
 fine-tuning. First audit the data, grouped folds, prompts, and locally installed model;
 then run the six-request smoke test before starting the resumable full evaluation:
 
@@ -231,7 +246,7 @@ and confusion matrices. Demonstrations come only from each fold's fitting rows.
 Continuous scores are calculated from Ollama's native `yes`/`no` token
 log-probabilities; no self-reported confidence or fitted threshold is used. Full results
 are saved under
-`experiments/llm/results/qwen3-32b-final-annotation-ready-v1/analysis-final/`.
+`results/LLM/qwen3-32b-final-annotation-ready-v1/analysis-final/`.
 
 Qwen3 32B also contributed votes during the annotation-support workflow. Its metrics
 therefore measure non-independent agreement with the operational reference labels and
@@ -251,7 +266,7 @@ fold-safe V1 hard negatives, and cross-fitted threshold estimates:
 ```
 
 V2 results are written under
-`experiments/llm/results/qwen3-32b-final-annotation-ready-v2/`. Its final analysis
+`results/LLM/qwen3-32b-final-annotation-ready-v2/`. Its final analysis
 creates `v1_v2_comparison.csv`, threshold metrics, comparison visualizations, and raw
 and thresholded confusion matrices. See `experiments/llm/EXPERIMENT_PLAN_V2.md`.
 
@@ -264,7 +279,7 @@ Qwen zero-shot score. It does not call Ollama or fine-tune Qwen:
 ```
 
 Results and V1/V2/V3 visual comparisons are written under
-`experiments/llm/results/qwen3-32b-final-annotation-ready-v3/analysis-final/`. See
+`results/LLM/qwen3-32b-final-annotation-ready-v3/analysis-final/`. See
 `experiments/llm/EXPERIMENT_PLAN_V3.md` for the nested protocol and claim boundary.
 
 V4 adds frozen MiniLM target and local-context representations to V3. MiniLM and Qwen
@@ -275,7 +290,7 @@ remain frozen; only class-balanced logistic classifiers are fitted:
 ```
 
 Results and V1-V4 comparisons are written under
-`experiments/llm/results/qwen3-32b-final-annotation-ready-v4/analysis-final/`. See
+`results/LLM/qwen3-32b-final-annotation-ready-v4/analysis-final/`. See
 `experiments/llm/EXPERIMENT_PLAN_V4.md`. The V4 configuration was selected adaptively
 on development data, so TCP transfer verification is required before claiming that the
 improvement generalizes.
