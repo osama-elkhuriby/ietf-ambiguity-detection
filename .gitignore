@@ -1,7 +1,6 @@
-# Python environments, bytecode, and test/lint caches
+# Python environments, bytecode, and tooling caches
 __pycache__/
 *.py[cod]
-*.pyo
 *.egg-info/
 .venv/
 venv/
@@ -11,27 +10,49 @@ venv/
 .test-tmp/
 .*-test-tmp/
 .ipynb_checkpoints/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+build/
+dist/
 
-# Local credentials, databases, and tool caches
+# Local credentials and environment-specific settings
 .env
 .env.*
-*.sqlite
-*.jsonl
+!.env.example
+!.env.template
+
+# Local model, package, and corpus caches
 .hf-modules/
 .uv-cache/
 .uv-python/
+.cache/huggingface/
 corpus/raw/rfcs/.rfcindex-cache/
+corpus/processed/alignments/_embedding_cache/
 
-# OS and editor temporary files
+# Operating-system and editor temporary files
 .DS_Store
 Thumbs.db
+desktop.ini
+.idea/
 ~$*
 .~lock.*
+*.swp
+*.swo
 *.tmp
 *.bak
 
-# Reproducible corpus caches and private annotation data.
-corpus/processed/alignments/_embedding_cache/
+# Local databases, logs, checkpoints, and fitted models
+*.sqlite
+*.sqlite3
+*.jsonl
+*.log
+*.safetensors
+*.joblib
+*.npz
+
+# Private or reproducible corpus artifacts
 corpus/processed/llm_annotations/
 corpus/processed/features/
 corpus/processed/transformer_inputs/
@@ -43,13 +64,15 @@ experiments/annotation_v2/review/
 experiments/annotation_v2/samples/
 results/annotation/
 /filtered.json
+
+# Root-level local result exports
 results/*.csv
 results/*.xlsx
 
-# Generated experiment outputs live under results/, grouped by model family.
-# Keep code, configs, protocols, aggregate metrics, and publication figures in Git.
+# Generated result runs; keep compact reports and publication assets
 results/ML/classical_studies/
 results/LLM/
+results/hybrid/
 results/transformer/studies/
 results/transformer/analysis_exports/
 results/transformer/final_studies/
@@ -57,11 +80,7 @@ results/transformer/governance/*
 !results/transformer/governance/dns_lineage_audit.json
 !results/transformer/governance/dns_official_rfc_crosscheck.json
 
-# Model checkpoints and derived feature/prediction artifacts
-*.safetensors
-*.joblib
-*.npz
-*.log
+# Row-level derived data and large feature matrices
 results/ML/**/matrices/
 results/ML/**/oof_predictions.csv
 results/ML/**/rows_and_labels.csv
@@ -72,7 +91,7 @@ results/embeddings_context/cache/
 results/transformer/tables/method_specific_calibration_v1/PREDICTION_COMPLEMENTARITY.csv
 results/transformer/tables/method_specific_calibration_v1_1/PREDICTION_COMPLEMENTARITY.csv
 
-# Runtime outputs should not be committed from legacy experiment directories.
+# Generated outputs from legacy experiment directories
 experiments/classical/results/
 experiments/llm/results/
 experiments/transformer/results/
@@ -88,6 +107,6 @@ experiments/transformer_final/**/analysis/
 experiments/transformer_final/**/plots/
 experiments/transformer_final/**/attempt_markers/
 experiments/transformer_final/**/final_predictions/
-experiments/transformer_final/*/*.csv
 experiments/transformer_final/**/manifests/
+experiments/transformer_final/*/*.csv
 experiments/transformer_final/original_annotation/*.png

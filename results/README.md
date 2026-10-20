@@ -9,6 +9,7 @@ model or analysis family. Experiment code, plans, and configurations remain unde
 - `ML/` — classical ML and heuristic metrics, fold summaries, and plots.
 - `ML/classical_studies/` — generated classical study runs; local-only.
 - `LLM/` — generated language-model runs; local-only.
+- `hybrid/` — generated cross-model ensemble predictions and metrics; local-only.
 - `transformer/` — transformer study outputs, reports, and the small DNS audit
   fixtures used by regression tests.
 - `transformer/tables/` — compact transformer result tables and figures, separated
