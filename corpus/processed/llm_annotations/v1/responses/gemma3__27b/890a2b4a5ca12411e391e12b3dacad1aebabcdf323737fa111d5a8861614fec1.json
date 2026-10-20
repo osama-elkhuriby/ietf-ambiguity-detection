@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD ignore the peer's max_ack_delay until the handshake is confirmed",
+    "interpretation_a": "Implementations *must* ignore the peer's max_ack_delay until the handshake is confirmed, as 'SHOULD' is often interpreted as a strong recommendation approaching a requirement in QUIC drafts.",
+    "interpretation_b": "Implementations *may* ignore the peer's max_ack_delay until the handshake is confirmed, but are not strictly required to do so, as 'SHOULD' allows for discretion.",
+    "is_ambiguous": "yes",
+    "justification": "The word 'SHOULD' is open to interpretation. While often treated as a strong recommendation in QUIC, it technically allows for non-compliance. The clause does not specify consequences for not ignoring the max_ack_delay, creating a missing constraint.",
+    "missing_information": "The strength of 'SHOULD' in this context is unclear. A precise definition of how 'SHOULD' is intended to be interpreted would resolve the ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:23:41.088217+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "017b48689040ee16420ea4605fc087ef160b13d6f6a898e8850ff8da5538b027",
+  "lineage_ids": "lineage:df208acf1e11d10540882ce7",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 233,
+    "load_duration": 5659000,
+    "prompt_eval_count": 595,
+    "total_duration": 8745550900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD ignore the peer's max_ack_delay until the handshake is confirmed\", \"interpretation_a\": \"Implementations *must* ignore the peer's max_ack_delay until the handshake is confirmed, as 'SHOULD' is often interpreted as a strong recommendation approaching a requirement in QUIC drafts.\", \"interpretation_b\": \"Implementations *may* ignore the peer's max_ack_delay until the handshake is confirmed, but are not strictly required to do so, as 'SHOULD' allows for discretion.\", \"missing_information\": \"The strength of 'SHOULD' in this context is unclear. A precise definition of how 'SHOULD' is intended to be interpreted would resolve the ambiguity.\", \"justification\": \"The word 'SHOULD' is open to interpretation. While often treated as a strong recommendation in QUIC, it technically allows for non-compliance. The clause does not specify consequences for not ignoring the max_ack_delay, creating a missing constraint.\"}",
+  "record_id": "890a2b4a5ca12411e391e12b3dacad1aebabcdf323737fa111d5a8861614fec1",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "5.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.75
+}

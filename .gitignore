@@ -53,43 +53,44 @@ desktop.ini
 *.npz
 
 # Private or reproducible corpus artifacts
-corpus/processed/llm_annotations/
-corpus/processed/features/
-corpus/processed/transformer_inputs/
-corpus/processed/transformer_audits/
-corpus/processed/model_datasets/
-corpus/processed/llm_final_annotation_ready/
-corpus/processed/filtered.json
-experiments/annotation_v2/private/
-experiments/annotation_v2/review/
-experiments/annotation_v2/samples/
-results/annotation/
+
+# corpus/processed/llm_annotations/
+# corpus/processed/features/
+#corpus/processed/transformer_inputs/
+#corpus/processed/transformer_audits/
+#corpus/processed/model_datasets/
+#corpus/processed/llm_final_annotation_ready/
+#corpus/processed/filtered.json
+#experiments/annotation_v2/private/
+#experiments/annotation_v2/review/
+#experiments/annotation_v2/samples/
+#results/annotation/
 
 # Root-level local result exports
-results/*.csv
-results/*.xlsx
+#results/*.csv
+#results/*.xlsx
 
 # Generated result runs; keep compact reports and publication assets
-results/ML/classical_studies/
-results/LLM/
-results/hybrid/
-results/transformer/studies/
-results/transformer/analysis_exports/
-results/transformer/final_studies/
-results/transformer/governance/*
-!results/transformer/governance/dns_lineage_audit.json
-!results/transformer/governance/dns_official_rfc_crosscheck.json
+# results/ML/classical_studies/
+# results/LLM/
+# results/hybrid/
+#results/transformer/studies/
+#results/transformer/analysis_exports/
+#results/transformer/final_studies/
+#results/transformer/governance/*
+#!results/transformer/governance/dns_lineage_audit.json
+#!results/transformer/governance/dns_official_rfc_crosscheck.json
 
 # Row-level derived data and large feature matrices
-results/ML/**/matrices/
-results/ML/**/oof_predictions.csv
-results/ML/**/rows_and_labels.csv
-results/ML/**/numerical_features.csv
-results/heuristic/**/predictions.csv
-results/heuristic/**/engineered_features.csv
-results/embeddings_context/cache/
-results/transformer/tables/method_specific_calibration_v1/PREDICTION_COMPLEMENTARITY.csv
-results/transformer/tables/method_specific_calibration_v1_1/PREDICTION_COMPLEMENTARITY.csv
+#results/ML/**/matrices/
+#results/ML/**/oof_predictions.csv
+#results/ML/**/rows_and_labels.csv
+#results/ML/**/numerical_features.csv
+#results/heuristic/**/predictions.csv
+#results/heuristic/**/engineered_features.csv
+#results/embeddings_context/cache/
+#results/transformer/tables/method_specific_calibration_v1/PREDICTION_COMPLEMENTARITY.csv
+#results/transformer/tables/method_specific_calibration_v1_1/PREDICTION_COMPLEMENTARITY.csv
 
 # Generated outputs from legacy experiment directories
 experiments/classical/results/

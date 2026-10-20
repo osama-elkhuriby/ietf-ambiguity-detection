@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear directive for clients receiving a 417 (Expectation Failed) response: they should retry the request without the 100-continue expectation. The language is prescriptive and does not allow for multiple materially different interpretations. There is no missing constraint or undefined term that would lead to ambiguity in implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:31:35.262788+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-14",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "fcf716b8d81771f5b5787e874bbfac373207a62075e145663f90893463943c52",
+  "lineage_ids": "lineage:9dd0748d736cbd561bcfb6fa",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 124,
+    "load_duration": 11449500,
+    "prompt_eval_count": 592,
+    "total_duration": 5220881800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear directive for clients receiving a 417 (Expectation Failed) response: they should retry the request without the 100-continue expectation. The language is prescriptive and does not allow for multiple materially different interpretations. There is no missing constraint or undefined term that would lead to ambiguity in implementation behavior.\"\n}",
+  "record_id": "d9b479613df626b3dc6e1f6ea4e71c74491658b3a9ac1a7f452a3d6794e8aafc",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "10.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.219
+}

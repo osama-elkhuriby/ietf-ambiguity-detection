@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that if an endpoint receives more connection IDs than the limit it advertised to its peer, it must close the connection with a CONNECTION_ID_LIMIT_ERROR. The pronoun 'its' clearly refers to the endpoint, and no additional context or definition is required to understand the rule.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T18:05:25.819976+00:00",
+  "document_id": "draft-ietf-quic-transport-27",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "c3115a3ce2ff2926d0d6c3aa0b650693ca22b4e1f5c08ac6c251775a9ba4fdad",
+  "lineage_ids": "lineage:a16395173216623287f4773e",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2682,
+    "load_duration": 1006100,
+    "prompt_eval_count": 582,
+    "total_duration": 23072045500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that if an endpoint receives more connection IDs than the limit it advertised to its peer, it must close the connection with a CONNECTION_ID_LIMIT_ERROR. The pronoun 'its' clearly refers to the endpoint, and no additional context or definition is required to understand the rule.\"\n}",
+  "record_id": "bd6fba6e93b2bfc043262ea08f9eefab2eec035a5c5548ec9acb39983cabf3bc",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "5.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 23.063
+}

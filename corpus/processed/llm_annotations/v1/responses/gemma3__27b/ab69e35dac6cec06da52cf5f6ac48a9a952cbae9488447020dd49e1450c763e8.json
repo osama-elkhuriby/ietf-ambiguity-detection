@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "is not required to wait for any specific length of time",
+    "interpretation_a": "The client can send content immediately after sending the Expect header, without waiting at all.",
+    "interpretation_b": "The client can wait a short, unspecified amount of time before sending content, but is not obligated to wait a long time.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'any specific length of time' is vague. A reasonable implementation could interpret this as 'no time at all', while another could interpret it as 'not an unreasonably long time'. This difference in interpretation affects implementation behavior.",
+    "missing_information": "The clause does not define what constitutes a 'specific length of time'. This lack of definition allows for materially different implementations regarding how long a client *should* wait before proceeding, even though it is not *required* to wait."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:23:32.484929+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-14",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "58472c5c68b0f2bbf480ad371a22d8b7a4d19a1438a73baaba7694c8c485eabb",
+  "lineage_ids": "lineage:d0da7aa39dfdc3b83cc4a463",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 197,
+    "load_duration": 8848300,
+    "prompt_eval_count": 628,
+    "total_duration": 7628294500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"is not required to wait for any specific length of time\", \"interpretation_a\": \"The client can send content immediately after sending the Expect header, without waiting at all.\", \"interpretation_b\": \"The client can wait a short, unspecified amount of time before sending content, but is not obligated to wait a long time.\", \"missing_information\": \"The clause does not define what constitutes a 'specific length of time'. This lack of definition allows for materially different implementations regarding how long a client *should* wait before proceeding, even though it is not *required* to wait.\",\"justification\": \"The phrase 'any specific length of time' is vague. A reasonable implementation could interpret this as 'no time at all', while another could interpret it as 'not an unreasonably long time'. This difference in interpretation affects implementation behavior.\"}",
+  "record_id": "ab69e35dac6cec06da52cf5f6ac48a9a952cbae9488447020dd49e1450c763e8",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "10.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.625
+}

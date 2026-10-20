@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "over a long period",
+    "interpretation_a": "The server should avoid reusing a Push ID after a short time, such as a few seconds or minutes.",
+    "interpretation_b": "The server should avoid reusing a Push ID for an extended time, such as days or weeks.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'long period' is subjective and lacks a concrete definition. This allows for materially different implementations, as what constitutes a 'long period' can vary significantly.",
+    "missing_information": "The definition of 'long period' is missing. Without a defined duration, implementations may differ on how long is acceptable before reusing a Push ID."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:56:15.088861+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "d2d10ccef95cfe63ee1cd9ae970283927fa5bdd45138ac182bea2d84cc370b30",
+  "lineage_ids": "lineage:49cc2d373c7c2fabb8e4f4c0",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 158,
+    "load_duration": 10127900,
+    "prompt_eval_count": 561,
+    "total_duration": 6193129300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"over a long period\", \"interpretation_a\": \"The server should avoid reusing a Push ID after a short time, such as a few seconds or minutes.\", \"interpretation_b\": \"The server should avoid reusing a Push ID for an extended time, such as days or weeks.\", \"missing_information\": \"The definition of 'long period' is missing. Without a defined duration, implementations may differ on how long is acceptable before reusing a Push ID.\",\"justification\": \"The phrase 'long period' is subjective and lacks a concrete definition. This allows for materially different implementations, as what constitutes a 'long period' can vary significantly.\"}",
+  "record_id": "8205259e761ae201318fa88fac6fd7472a3e465825aff9395c6fdaff54dd2ff2",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.2.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.188
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY continue to process delayed packets",
+    "interpretation_a": "The server might continue processing delayed packets received on the old IP address, potentially leading to out-of-order delivery or state confusion.",
+    "interpretation_b": "The server might immediately discard all delayed packets received on the old IP address, ensuring strict adherence to the new preferred address and simplifying state management.",
+    "is_ambiguous": "yes",
+    "justification": "The MAY clause introduces ambiguity because it doesn't define what constitutes a 'delayed packet' or how long the server is permitted to continue processing them. This leaves room for different implementations to handle delayed packets differently, potentially leading to inconsistencies in connection behavior.",
+    "missing_information": "The definition of 'delayed packets' is not provided, and the criteria for determining whether a packet is considered delayed are missing. This affects the implementation of the MAY clause."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:14:57.588816+00:00",
+  "document_id": "draft-ietf-quic-transport-33",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "c2b9c31047040f35633fc6b52ed524ab9a1b27dc64454f29655a57a7082cc45b",
+  "lineage_ids": "lineage:57123650ad177e3374702af6",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 198,
+    "load_duration": 4041100,
+    "prompt_eval_count": 618,
+    "total_duration": 7478368600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY continue to process delayed packets\", \"interpretation_a\": \"The server might continue processing delayed packets received on the old IP address, potentially leading to out-of-order delivery or state confusion.\", \"interpretation_b\": \"The server might immediately discard all delayed packets received on the old IP address, ensuring strict adherence to the new preferred address and simplifying state management.\", \"missing_information\": \"The definition of 'delayed packets' is not provided, and the criteria for determining whether a packet is considered delayed are missing. This affects the implementation of the MAY clause.\", \"justification\": \"The MAY clause introduces ambiguity because it doesn't define what constitutes a 'delayed packet' or how long the server is permitted to continue processing them. This leaves room for different implementations to handle delayed packets differently, potentially leading to inconsistencies in connection behavior.\"}",
+  "record_id": "eff7b5dfd2bd14bd7b895fcd31a4ee72479db3ecf9d9878b94fc90e705460764",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "9.6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.485
+}

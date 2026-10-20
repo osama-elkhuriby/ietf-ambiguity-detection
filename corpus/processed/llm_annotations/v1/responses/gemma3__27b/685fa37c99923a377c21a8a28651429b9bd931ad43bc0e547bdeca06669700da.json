@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST have an entry",
+    "interpretation_a": "The specification *itself* must create the IANA entry for its scheme.",
+    "interpretation_b": "The scheme must *already* have an entry created by some other process before the specification can use it.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'MUST have an entry' is incomplete. It doesn't specify *who* is responsible for ensuring the entry exists. This is a concrete missing constraint that affects implementation.",
+    "missing_information": "It is unclear whether the specification is responsible for *creating* the IANA entry, or merely *referencing* an existing one. This affects implementation because a specification author might incorrectly assume an entry exists, or attempt to create one when it should not."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:04:59.721181+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "082a8294e049cb4b8d804aaf8c3e2c5145455e14763ae72fad005263487dbc91",
+  "lineage_ids": "lineage:fbaae0c0b68b4b23c767921e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 182,
+    "load_duration": 4613800,
+    "prompt_eval_count": 604,
+    "total_duration": 6877427100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST have an entry\", \"interpretation_a\": \"The specification *itself* must create the IANA entry for its scheme.\", \"interpretation_b\": \"The scheme must *already* have an entry created by some other process before the specification can use it.\", \"missing_information\": \"It is unclear whether the specification is responsible for *creating* the IANA entry, or merely *referencing* an existing one. This affects implementation because a specification author might incorrectly assume an entry exists, or attempt to create one when it should not.\", \"justification\": \"The phrase 'MUST have an entry' is incomplete. It doesn't specify *who* is responsible for ensuring the entry exists. This is a concrete missing constraint that affects implementation.\"}",
+  "record_id": "685fa37c99923a377c21a8a28651429b9bd931ad43bc0e547bdeca06669700da",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "11",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.875
+}

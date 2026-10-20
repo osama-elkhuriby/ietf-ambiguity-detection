@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "encoded TransportParameters:",
+    "interpretation_a": "The parameters must be included as part of the initial TransportParameters sent during connection establishment.",
+    "interpretation_b": "The parameters can be included in any subsequent TransportParameters update after connection establishment.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states that the parameters \"MUST\" be included in \"encoded TransportParameters:\" but does not specify *when* these TransportParameters are sent. This allows for two reasonable interpretations: the initial handshake, or any subsequent update.",
+    "missing_information": "It is unclear whether the parameters must be included only in the initial TransportParameters or can be included in any TransportParameters update."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:26:22.299711+00:00",
+  "document_id": "draft-ietf-quic-transport-14",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "2a7544aebd056b548326a338ad6e9ddedee87cf092db12b37eff1c22e88a71de",
+  "lineage_ids": "lineage:e6e66916b65f385ba5f767ed",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 160,
+    "load_duration": 4296500,
+    "prompt_eval_count": 556,
+    "total_duration": 6112219100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"encoded TransportParameters:\", \"interpretation_a\": \"The parameters must be included as part of the initial TransportParameters sent during connection establishment.\", \"interpretation_b\": \"The parameters can be included in any subsequent TransportParameters update after connection establishment.\", \"missing_information\": \"It is unclear whether the parameters must be included only in the initial TransportParameters or can be included in any TransportParameters update.\", \"justification\": \"The clause states that the parameters \\\"MUST\\\" be included in \\\"encoded TransportParameters:\\\" but does not specify *when* these TransportParameters are sent. This allows for two reasonable interpretations: the initial handshake, or any subsequent update.\"}",
+  "record_id": "5acedb34c3ee6f63453555c101b77f4c7ae16a4e866535764bdff56d16da5c99",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "6.6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.125
+}

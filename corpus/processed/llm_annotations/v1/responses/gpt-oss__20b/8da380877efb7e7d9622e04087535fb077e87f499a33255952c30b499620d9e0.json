@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause defines a constant named kMaxDatagramSize with a recommended value of 1200 bytes and describes it as the sender’s maximum payload size. The following clause clarifies that this size does not include UDP or IP overhead, making it clear that the constant refers to the maximum size of the QUIC packet payload that can be sent in a single datagram. No ambiguity in interpretation or missing constraint is present.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T11:32:04.656162+00:00",
+  "document_id": "draft-ietf-quic-recovery-14",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "dc30fbb7ecf3ddbd93942cde2dc4828bee8beb726d30fd1d0c1fc6ba4666a5a3",
+  "lineage_ids": "lineage:626d6230e58fece197295a2c",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 7383,
+    "load_duration": 3943800,
+    "prompt_eval_count": 569,
+    "total_duration": 64084921600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause defines a constant named kMaxDatagramSize with a recommended value of 1200 bytes and describes it as the sender’s maximum payload size. The following clause clarifies that this size does not include UDP or IP overhead, making it clear that the constant refers to the maximum size of the QUIC packet payload that can be sent in a single datagram. No ambiguity in interpretation or missing constraint is present.\"\n}",
+  "record_id": "8da380877efb7e7d9622e04087535fb077e87f499a33255952c30b499620d9e0",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "5.8.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 64.094
+}

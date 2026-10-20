@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "either by TCP or by the IP layer",
+    "interpretation_a": "TCP is responsible for validating the source address and discarding invalid SYN packets.",
+    "interpretation_b": "The IP layer is responsible for validating the source address and discarding invalid SYN packets.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'either by TCP or by the IP layer' creates ambiguity. It's unclear whether TCP *or* the IP layer is responsible for the validation and discarding. This affects implementation because the validation logic would reside in different parts of the stack depending on which layer is assigned the task.",
+    "missing_information": "The clause does not specify which layer (TCP or IP) is responsible for source address validation, leading to two possible implementations. A clear assignment of responsibility is needed."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:21:19.453921+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "0efa70607436d4283ad3db32309f0e1ec728093528b72210a08250d20b1edd64",
+  "lineage_ids": "lineage:405669210f16b050b5e23456|lineage:5f9770cf466d14e0256c0785",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 182,
+    "load_duration": 12393200,
+    "prompt_eval_count": 643,
+    "total_duration": 7142238500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"either by TCP or by the IP layer\", \"interpretation_a\": \"TCP is responsible for validating the source address and discarding invalid SYN packets.\", \"interpretation_b\": \"The IP layer is responsible for validating the source address and discarding invalid SYN packets.\", \"missing_information\": \"The clause does not specify which layer (TCP or IP) is responsible for source address validation, leading to two possible implementations. A clear assignment of responsibility is needed.\",\"justification\": \"The phrase 'either by TCP or by the IP layer' creates ambiguity. It's unclear whether TCP *or* the IP layer is responsible for the validation and discarding. This affects implementation because the validation logic would reside in different parts of the stack depending on which layer is assigned the task.\"}",
+  "record_id": "49701754a812f1026d1f2d3cc48839e6d402470d16de192ab96cf2bb490bab51",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.9.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.141
+}

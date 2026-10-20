@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD set the alarm",
+    "interpretation_a": "The endpoint is encouraged, but not required, to set the alarm. It may choose not to set the alarm at all, or to set it at a different time.",
+    "interpretation_b": "The endpoint is expected to set the alarm, but has some flexibility in the exact timing, as long as it adheres to the 1.25 * max(SRTT, latest_RTT) constraint. The degree of flexibility is not specified.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' introduces ambiguity. While it suggests a recommended behavior, it doesn't definitively require it. This allows for implementations that might not set the alarm or might deviate from the specified timing, creating different behaviors.",
+    "missing_information": "The strength of 'SHOULD' is not defined. Is it a strong recommendation, or merely a suggestion? This affects whether an implementation can deviate from the timing constraint."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:16:58.529712+00:00",
+  "document_id": "draft-ietf-quic-recovery-13",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "cf1a84088a117092a4550d962b70d90665d780ba53eb7ea48b7cf50ef3021b47",
+  "lineage_ids": "lineage:d74fbec960194a12a82b9331",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 223,
+    "load_duration": 4015100,
+    "prompt_eval_count": 592,
+    "total_duration": 8376839100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD set the alarm\", \"interpretation_a\": \"The endpoint is encouraged, but not required, to set the alarm. It may choose not to set the alarm at all, or to set it at a different time.\", \"interpretation_b\": \"The endpoint is expected to set the alarm, but has some flexibility in the exact timing, as long as it adheres to the 1.25 * max(SRTT, latest_RTT) constraint. The degree of flexibility is not specified.\", \"missing_information\": \"The strength of 'SHOULD' is not defined. Is it a strong recommendation, or merely a suggestion? This affects whether an implementation can deviate from the timing constraint.\", \"justification\": \"The use of 'SHOULD' introduces ambiguity. While it suggests a recommended behavior, it doesn't definitively require it. This allows for implementations that might not set the alarm or might deviate from the specified timing, creating different behaviors.\"}",
+  "record_id": "1abdeafc39b0ca790c1a0009a88f4cdf5b787d537d892372bbf8487eed526a9a",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "3.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.375
+}

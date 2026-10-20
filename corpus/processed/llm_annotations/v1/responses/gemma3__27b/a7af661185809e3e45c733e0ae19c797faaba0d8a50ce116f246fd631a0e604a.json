@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "It SHOULD be subtracted from the RTT as long as the result is larger than the min_rtt.",
+    "interpretation_a": "If RTT - ack_delay > min_rtt, then use RTT - ack_delay as the new RTT estimate.",
+    "interpretation_b": "If RTT - ack_delay > min_rtt, then use RTT - ack_delay only for a specific purpose (e.g., timeout calculation) but retain the original RTT for other purposes.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'the RTT' is ambiguous. It is unclear whether the subtraction permanently updates the RTT value, or if it is only used for a specific calculation. This affects implementation because it determines whether the RTT value is modified or not.",
+    "missing_information": "The clause does not specify *how* the result of the subtraction is used. Is the RTT value itself updated, or is the subtracted value used only for a specific calculation?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:26:46.719418+00:00",
+  "document_id": "draft-ietf-quic-recovery-19",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "2566bb25b0ed2d1bd0843e29f3d2292867212e7d0658bcc3c4b4e0e8b53510c5",
+  "lineage_ids": "lineage:8783692601cea23356129797",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 232,
+    "load_duration": 4117100,
+    "prompt_eval_count": 600,
+    "total_duration": 8705862200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"It SHOULD be subtracted from the RTT as long as the result is larger than the min_rtt.\", \"interpretation_a\": \"If RTT - ack_delay > min_rtt, then use RTT - ack_delay as the new RTT estimate.\", \"interpretation_b\": \"If RTT - ack_delay > min_rtt, then use RTT - ack_delay only for a specific purpose (e.g., timeout calculation) but retain the original RTT for other purposes.\", \"missing_information\": \"The clause does not specify *how* the result of the subtraction is used. Is the RTT value itself updated, or is the subtracted value used only for a specific calculation?\",\"justification\": \"The use of 'the RTT' is ambiguous. It is unclear whether the subtraction permanently updates the RTT value, or if it is only used for a specific calculation. This affects implementation because it determines whether the RTT value is modified or not.\"}",
+  "record_id": "a7af661185809e3e45c733e0ae19c797faaba0d8a50ce116f246fd631a0e604a",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.703
+}

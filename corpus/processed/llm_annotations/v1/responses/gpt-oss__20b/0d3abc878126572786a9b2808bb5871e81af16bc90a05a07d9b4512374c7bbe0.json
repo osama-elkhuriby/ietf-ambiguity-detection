@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously requires intermediaries to parse the Connection header, remove any header or trailer fields named by each connection-option, and then either remove the Connection header itself or replace it with the intermediary’s own connection options. The use of “or” indicates a choice, not an ambiguity, and no other part of the clause lacks a concrete constraint that would lead to materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T05:25:07.469541+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "95a2580f5e43761389d38c6e5caff45660b92a6e08e5ec2a032e2dc2d387b465",
+  "lineage_ids": "lineage:0d7284d515b81a4d31098003",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3685,
+    "load_duration": 503000,
+    "prompt_eval_count": 692,
+    "total_duration": 31795636500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously requires intermediaries to parse the Connection header, remove any header or trailer fields named by each connection-option, and then either remove the Connection header itself or replace it with the intermediary’s own connection options. The use of “or” indicates a choice, not an ambiguity, and no other part of the clause lacks a concrete constraint that would lead to materially different implementation behaviours.\"\n}",
+  "record_id": "0d3abc878126572786a9b2808bb5871e81af16bc90a05a07d9b4512374c7bbe0",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "7.6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 31.797
+}

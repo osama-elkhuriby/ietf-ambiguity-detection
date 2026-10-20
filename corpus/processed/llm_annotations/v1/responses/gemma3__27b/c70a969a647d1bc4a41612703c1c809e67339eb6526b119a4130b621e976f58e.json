@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-4",
+    "evidence_span": "Section 8.2 of [HTTP2]",
+    "interpretation_a": "Implementations might interpret this to mean the entirety of Section 8.2 applies, including all subsections and requirements.",
+    "interpretation_b": "Implementations might interpret this to mean only the core principles of Section 8.2 apply, and not necessarily every detailed requirement within it.",
+    "is_ambiguous": "yes",
+    "justification": "The reference to Section 8.2 of HTTP/2 is broad. Without specifying which parts of that section are applicable, different implementations could reasonably include or exclude certain requirements, leading to interoperability issues.",
+    "missing_information": "The document does not specify which parts of Section 8.2 of HTTP/2 are relevant, leading to potential divergence in implementation. A more precise reference (e.g., specific subsections) would resolve this."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:07:25.753296+00:00",
+  "document_id": "draft-ietf-quic-http-27",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "1fd5f6e451583a6eec274f2135f2d200606fb113ad906df00a46e9bca6291e33",
+  "lineage_ids": "lineage:ee1384eb2c7de881a2db1645",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 196,
+    "load_duration": 10085600,
+    "prompt_eval_count": 574,
+    "total_duration": 7557868200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-4\", \"evidence_span\": \"Section 8.2 of [HTTP2]\", \"interpretation_a\": \"Implementations might interpret this to mean the entirety of Section 8.2 applies, including all subsections and requirements.\", \"interpretation_b\": \"Implementations might interpret this to mean only the core principles of Section 8.2 apply, and not necessarily every detailed requirement within it.\", \"missing_information\": \"The document does not specify which parts of Section 8.2 of HTTP/2 are relevant, leading to potential divergence in implementation. A more precise reference (e.g., specific subsections) would resolve this.\",\"justification\": \"The reference to Section 8.2 of HTTP/2 is broad. Without specifying which parts of that section are applicable, different implementations could reasonably include or exclude certain requirements, leading to interoperability issues.\"}",
+  "record_id": "c70a969a647d1bc4a41612703c1c809e67339eb6526b119a4130b621e976f58e",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "4.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.578
+}

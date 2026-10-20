@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "An endpoint that sends a stateless reset in response to a packet that is 43 bytes or shorter SHOULD send a stateless reset that is one byte shorter than the packet it responds to.",
+    "interpretation_a": "If the packet is 1 byte, the reset would be 0 bytes, which is impossible, so the clause is ambiguous.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a constraint for the case where the packet is 1 byte, leading to an impossible reset length. This is a concrete missing constraint that makes the clause ambiguous.",
+    "missing_information": "The clause does not specify a minimum packet length or a fallback for 1-byte packets. This missing constraint prevents a unique operational interpretation.  "
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T15:34:46.754026+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "02e44799c012d6b0cf8e3778c2013fcd948c3b8ca371f6a282f373999bb04571",
+  "lineage_ids": "lineage:9da1309a0e24f22fdb143301",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1406,
+    "load_duration": 6282000,
+    "prompt_eval_count": 636,
+    "total_duration": 12574474100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"An endpoint that sends a stateless reset in response to a packet that is 43 bytes or shorter SHOULD send a stateless reset that is one byte shorter than the packet it responds to.\",\n  \"interpretation_a\": \"If the packet is 1 byte, the reset would be 0 bytes, which is impossible, so the clause is ambiguous.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The clause does not specify a minimum packet length or a fallback for 1-byte packets. This missing constraint prevents a unique operational interpretation.  \",\n  \"justification\": \"The clause lacks a constraint for the case where the packet is 1 byte, leading to an impossible reset length. This is a concrete missing constraint that makes the clause ambiguous.\"\n}",
+  "record_id": "4a960935667230f91501328584eaf1eb028032245c9020fa931407c94809bfb9",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "10.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 80.547
+}

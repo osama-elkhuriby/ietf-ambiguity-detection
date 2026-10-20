@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY emit a warning",
+    "interpretation_a": "Zone-file parsers are permitted to emit a warning if SvcParams are present in an AliasMode record, but they are not required to do so.",
+    "interpretation_b": "Zone-file parsers are permitted to emit a warning if SvcParams are present in an AliasMode record, and should do so as best practice.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' allows for two reasonable interpretations: parsers can choose to warn or not. The lack of further guidance on *when* to warn creates an incomplete constraint.",
+    "missing_information": "The specification does not define the criteria for when a warning *should* be emitted, leaving it open to implementation discretion. A concrete constraint on when a warning is required would remove the ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:00:32.395901+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "587881e0ff1a8a95735e8bac049a53326b4fca515bb10f02b770a361f2469861",
+  "lineage_ids": "lineage:a5683ef2f7e33c22af3ff6ea",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 194,
+    "load_duration": 4493900,
+    "prompt_eval_count": 576,
+    "total_duration": 7326905700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY emit a warning\", \"interpretation_a\": \"Zone-file parsers are permitted to emit a warning if SvcParams are present in an AliasMode record, but they are not required to do so.\", \"interpretation_b\": \"Zone-file parsers are permitted to emit a warning if SvcParams are present in an AliasMode record, and should do so as best practice.\", \"missing_information\": \"The specification does not define the criteria for when a warning *should* be emitted, leaving it open to implementation discretion. A concrete constraint on when a warning is required would remove the ambiguity.\",\"justification\": \"The use of 'MAY' allows for two reasonable interpretations: parsers can choose to warn or not. The lack of further guidance on *when* to warn creates an incomplete constraint.\"}",
+  "record_id": "30f872006dc7cda112bac938fa79797b1cdcdd25de5d1681f145fa964087a109",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "2.4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.328
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "2^62 - 1",
+    "interpretation_a": "The sender stops sending packets immediately upon reaching the maximum packet number.",
+    "interpretation_b": "The sender may continue to process and potentially buffer packets internally even after reaching the maximum packet number, but must not *send* any further packets. The exact behavior of internal processing is not specified.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states the sender 'MUST close the connection' when reaching 2^62 - 1, but doesn't specify *when* this closure must be complete. Does it need to happen before any further internal processing, or can some processing continue before the connection is fully closed? This creates a concrete missing constraint.",
+    "missing_information": "It is unclear whether the sender is allowed to continue internal processing of packets after reaching 2^62 - 1, or if all processing must cease immediately. This affects implementation of error handling and resource cleanup."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:21:02.094241+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "1a384b565e317111c9eebfd248d35b7f8dce26307306ca0699fa5f44b21a3d6d",
+  "lineage_ids": "lineage:c433f9eab113d10a31d70973",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 221,
+    "load_duration": 3242200,
+    "prompt_eval_count": 615,
+    "total_duration": 8289357400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"2^62 - 1\", \"interpretation_a\": \"The sender stops sending packets immediately upon reaching the maximum packet number.\", \"interpretation_b\": \"The sender may continue to process and potentially buffer packets internally even after reaching the maximum packet number, but must not *send* any further packets. The exact behavior of internal processing is not specified.\", \"missing_information\": \"It is unclear whether the sender is allowed to continue internal processing of packets after reaching 2^62 - 1, or if all processing must cease immediately. This affects implementation of error handling and resource cleanup.\", \"justification\": \"The clause states the sender 'MUST close the connection' when reaching 2^62 - 1, but doesn't specify *when* this closure must be complete. Does it need to happen before any further internal processing, or can some processing continue before the connection is fully closed? This creates a concrete missing constraint.\"}",
+  "record_id": "fddcbcf9cc1a7250e7416b29e24ce46c0163bc26e5c04086cf3c246da7cfe77a",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "12.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.281
+}

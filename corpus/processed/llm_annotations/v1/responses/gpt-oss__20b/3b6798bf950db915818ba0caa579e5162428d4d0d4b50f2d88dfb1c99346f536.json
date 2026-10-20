@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "or the connection terminated",
+    "interpretation_a": "The connection is terminated immediately when a block is missing, instead of holding subsequent HPACK frames.",
+    "interpretation_b": "The connection is terminated only if the missing block never arrives (e.g., after a timeout).",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a clear constraint on when the connection should be terminated, making the interpretation of the 'or' ambiguous.",
+    "missing_information": "The conditions under which the connection should be terminated are not specified."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T09:11:19.957605+00:00",
+  "document_id": "draft-ietf-quic-http-04",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "9eff89c9ab9333a2c0b1859b630c58987370efb4867ba4df10cee03350cb8bac",
+  "lineage_ids": "lineage:2ef8cd433d669649215e57ce",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 426,
+    "load_duration": 5017700,
+    "prompt_eval_count": 720,
+    "total_duration": 3854946500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\":\"yes\",\"ambiguity_subtype\":\"U-2\",\"evidence_span\":\"or the connection terminated\",\"interpretation_a\":\"The connection is terminated immediately when a block is missing, instead of holding subsequent HPACK frames.\",\"interpretation_b\":\"The connection is terminated only if the missing block never arrives (e.g., after a timeout).\",\"missing_information\":\"The conditions under which the connection should be terminated are not specified.\", \"justification\":\"The clause lacks a clear constraint on when the connection should be terminated, making the interpretation of the 'or' ambiguous.\"}",
+  "record_id": "3b6798bf950db915818ba0caa579e5162428d4d0d4b50f2d88dfb1c99346f536",
+  "revision": "04",
+  "schema_version": 1,
+  "section_ids": "5.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 13.781
+}

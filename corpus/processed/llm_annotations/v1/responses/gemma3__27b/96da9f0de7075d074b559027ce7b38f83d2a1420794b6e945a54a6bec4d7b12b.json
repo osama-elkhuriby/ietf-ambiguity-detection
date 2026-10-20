@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD be prepared",
+    "interpretation_a": "The endpoint is required to attempt retransmission, but may fail.",
+    "interpretation_b": "The endpoint is not required to attempt retransmission, but it is considered best practice.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' creates ambiguity. While it indicates a recommendation, it doesn't clearly define the level of effort required. Is it a strong recommendation bordering on a requirement, or merely a suggestion? This affects implementation choices regarding resource allocation for retransmission attempts.",
+    "missing_information": "The degree to which the endpoint *must* prepare to retransmit is not specified. Does 'prepared' mean 'must attempt' or 'may attempt'?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:46:39.845934+00:00",
+  "document_id": "draft-ietf-quic-transport-18",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "cfbdd2528c39033df9f8b01dbeb756324ad27a99c4254cd1e4ec5f8ac579c1ac",
+  "lineage_ids": "lineage:ce24b6c9e34889ef009941c4",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 173,
+    "load_duration": 4273800,
+    "prompt_eval_count": 576,
+    "total_duration": 6591025400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD be prepared\", \"interpretation_a\": \"The endpoint is required to attempt retransmission, but may fail.\", \"interpretation_b\": \"The endpoint is not required to attempt retransmission, but it is considered best practice.\", \"missing_information\": \"The degree to which the endpoint *must* prepare to retransmit is not specified. Does 'prepared' mean 'must attempt' or 'may attempt'?\",\"justification\": \"The use of 'SHOULD' creates ambiguity. While it indicates a recommendation, it doesn't clearly define the level of effort required. Is it a strong recommendation bordering on a requirement, or merely a suggestion? This affects implementation choices regarding resource allocation for retransmission attempts.\"}",
+  "record_id": "96da9f0de7075d074b559027ce7b38f83d2a1420794b6e945a54a6bec4d7b12b",
+  "revision": "18",
+  "schema_version": 1,
+  "section_ids": "11.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.594
+}

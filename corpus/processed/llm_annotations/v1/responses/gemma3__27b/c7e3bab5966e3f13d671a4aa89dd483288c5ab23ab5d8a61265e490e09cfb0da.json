@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY choose to send field sections that exceed this limit",
+    "interpretation_a": "An endpoint is permitted to send field sections exceeding the limit, even if it knows the peer might reject them as malformed.",
+    "interpretation_b": "An endpoint is permitted to send field sections exceeding the limit, but should only do so after some evaluation of the peer's capabilities or network conditions to minimize the risk of rejection.",
+    "is_ambiguous": "yes",
+    "justification": "The use of \"MAY\" grants discretion, but the lack of further guidance on *when* to exceed the limit creates ambiguity. It's unclear if exceeding the limit is simply permitted in all cases, or if there are conditions under which it's appropriate to do so. This affects implementation because an endpoint could be overly aggressive or overly conservative in exceeding the limit.",
+    "missing_information": "The criteria for when an endpoint *should* exceed the limit are not specified. The degree of risk tolerance is not defined."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:07:42.296181+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "228d7e7436dbc99fe87293d244943f6fdbd1346a6443fe7b7e33dba44a44eb47",
+  "lineage_ids": "lineage:a3e30a40a4f3176440948cb1",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 223,
+    "load_duration": 17458500,
+    "prompt_eval_count": 609,
+    "total_duration": 8567088100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY choose to send field sections that exceed this limit\", \"interpretation_a\": \"An endpoint is permitted to send field sections exceeding the limit, even if it knows the peer might reject them as malformed.\", \"interpretation_b\": \"An endpoint is permitted to send field sections exceeding the limit, but should only do so after some evaluation of the peer's capabilities or network conditions to minimize the risk of rejection.\", \"missing_information\": \"The criteria for when an endpoint *should* exceed the limit are not specified. The degree of risk tolerance is not defined.\", \"justification\": \"The use of \\\"MAY\\\" grants discretion, but the lack of further guidance on *when* to exceed the limit creates ambiguity. It's unclear if exceeding the limit is simply permitted in all cases, or if there are conditions under which it's appropriate to do so. This affects implementation because an endpoint could be overly aggressive or overly conservative in exceeding the limit.\"}",
+  "record_id": "c7e3bab5966e3f13d671a4aa89dd483288c5ab23ab5d8a61265e490e09cfb0da",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "10.5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.563
+}

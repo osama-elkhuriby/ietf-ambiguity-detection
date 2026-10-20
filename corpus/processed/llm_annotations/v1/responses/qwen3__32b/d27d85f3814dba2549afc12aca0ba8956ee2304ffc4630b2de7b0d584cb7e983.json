@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause uses 'MAY', which grants discretion to the implementation. However, it does not introduce ambiguity in terms of materially different behaviors because it clearly describes a condition under which ACK frames may be sent. The condition is well-defined: when the crypto stack indicates all data for that packet number space has been received. There is no conflicting or missing constraint that would lead to multiple reasonable interpretations affecting implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:27:36.762618+00:00",
+  "document_id": "draft-ietf-quic-recovery-19",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "6d1a13dbbe7b6d13b13ed4d4ed3bbf6afae79008f260bd934959c841ef381b56",
+  "lineage_ids": "lineage:388d75535648c8be43a3c2c6",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 137,
+    "load_duration": 4348600,
+    "prompt_eval_count": 533,
+    "total_duration": 5637802300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause uses 'MAY', which grants discretion to the implementation. However, it does not introduce ambiguity in terms of materially different behaviors because it clearly describes a condition under which ACK frames may be sent. The condition is well-defined: when the crypto stack indicates all data for that packet number space has been received. There is no conflicting or missing constraint that would lead to multiple reasonable interpretations affecting implementation behavior.\"\n}",
+  "record_id": "d27d85f3814dba2549afc12aca0ba8956ee2304ffc4630b2de7b0d584cb7e983",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.641
+}

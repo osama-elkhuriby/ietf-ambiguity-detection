@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "adequately supported",
+    "interpretation_a": "The origin server has explicitly stated it can handle content in DELETE requests and will process it correctly.",
+    "interpretation_b": "The origin server has stated it can handle content in DELETE requests, but the level of processing or error handling is not guaranteed to be complete or robust.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'adequately supported' is subjective. It doesn't define what constitutes adequate support, leading to different implementations potentially allowing or disallowing content in DELETE requests based on varying interpretations of this phrase.",
+    "missing_information": "The definition of 'adequately supported' is not provided, leaving room for interpretation of what level of support is sufficient to satisfy the SHOULD NOT requirement."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:22:26.548075+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "c4f54bfcd78b61fcbe2db409d77ad77b69424ce54eb54c8a419c5e67cc59fa13",
+  "lineage_ids": "lineage:d447b2eabcb71c061e582fb0",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 175,
+    "load_duration": 20265300,
+    "prompt_eval_count": 648,
+    "total_duration": 6876291000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"adequately supported\", \"interpretation_a\": \"The origin server has explicitly stated it can handle content in DELETE requests and will process it correctly.\", \"interpretation_b\": \"The origin server has stated it can handle content in DELETE requests, but the level of processing or error handling is not guaranteed to be complete or robust.\", \"missing_information\": \"The definition of 'adequately supported' is not provided, leaving room for interpretation of what level of support is sufficient to satisfy the SHOULD NOT requirement.\",\"justification\": \"The phrase 'adequately supported' is subjective. It doesn't define what constitutes adequate support, leading to different implementations potentially allowing or disallowing content in DELETE requests based on varying interpretations of this phrase.\"}",
+  "record_id": "a65ea472e90ebb59420e382eb9ff5c70310d67d4f880ad29b5b7a9982c5f821e",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "9.3.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.89
+}

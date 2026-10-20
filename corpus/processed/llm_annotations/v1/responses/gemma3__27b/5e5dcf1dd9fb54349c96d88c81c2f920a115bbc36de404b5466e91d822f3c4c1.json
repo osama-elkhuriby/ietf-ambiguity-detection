@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "MAY relax confidentiality or integrity limits",
+    "interpretation_a": "Future analyses could allow *higher* confidentiality or integrity limits than currently specified.",
+    "interpretation_b": "Future analyses could allow *lower* confidentiality or integrity limits than currently specified.",
+    "is_ambiguous": "yes",
+    "justification": "The word \"relax\" is ambiguous. It can mean to make less strict (increase limits) or to make more strict (decrease limits). Without further clarification, implementations could reasonably interpret this clause in either direction, leading to interoperability issues.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:39:23.527462+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "8d17f18ad689ac0312afef8ea31ded11e1338174720674d75623b418868e56fa",
+  "lineage_ids": "lineage:1c3b0ba562035cd13bad6f5d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 136,
+    "load_duration": 4022100,
+    "prompt_eval_count": 582,
+    "total_duration": 5255941600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"MAY relax confidentiality or integrity limits\", \"interpretation_a\": \"Future analyses could allow *higher* confidentiality or integrity limits than currently specified.\", \"interpretation_b\": \"Future analyses could allow *lower* confidentiality or integrity limits than currently specified.\", \"missing_information\": \"\", \"justification\": \"The word \\\"relax\\\" is ambiguous. It can mean to make less strict (increase limits) or to make more strict (decrease limits). Without further clarification, implementations could reasonably interpret this clause in either direction, leading to interoperability issues.\"}",
+  "record_id": "5e5dcf1dd9fb54349c96d88c81c2f920a115bbc36de404b5466e91d822f3c4c1",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.25
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause provides a clear directive for the server to send a CONNECTION_CLOSE frame in both Handshake and Initial packets under specific circumstances. The use of 'SHOULD' indicates a recommendation, not a mandatory action, and the purpose (ensuring at least one is processable by the client) is unambiguous. There is no language that permits materially different interpretations or missing constraints that would affect implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:59:25.559651+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "6ec3c58347e02d17b75fa185064300e7e3468206f36acd4e1e5abeb3bb5b5155",
+  "lineage_ids": "lineage:4c5f68d9936fa507999dc276",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 137,
+    "load_duration": 716600,
+    "prompt_eval_count": 575,
+    "total_duration": 5648693200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause provides a clear directive for the server to send a CONNECTION_CLOSE frame in both Handshake and Initial packets under specific circumstances. The use of 'SHOULD' indicates a recommendation, not a mandatory action, and the purpose (ensuring at least one is processable by the client) is unambiguous. There is no language that permits materially different interpretations or missing constraints that would affect implementation behavior.\"\n}",
+  "record_id": "31988596e3462b482d244296240f218e5641b17447476b0ed4c54c8178f2a817",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "10.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.64
+}

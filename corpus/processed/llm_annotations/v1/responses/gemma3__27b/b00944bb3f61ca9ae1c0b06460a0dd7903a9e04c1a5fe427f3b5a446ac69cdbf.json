@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless that field's definition allows multiple field line values to be recombined as a comma-separated list [i.e., at least one alternative of the field's definition allows a comma-separated list, such as an ABNF rule of #(values) defined in Section 5.6.1].",
+    "interpretation_a": "A field can have multiple lines if *any* alternative in its definition allows a comma-separated list, even if the actual value being sent doesn't use that alternative.",
+    "interpretation_b": "A field can have multiple lines *only* if the specific value being sent conforms to an alternative in its definition that allows a comma-separated list.",
+    "is_ambiguous": "yes",
+    "justification": "The conditional clause 'unless that field's definition allows...' is open to interpretation. The use of 'allows' is ambiguous. It's unclear whether the field definition needs to *specifically* allow the current value as a comma-separated list, or merely *generally* allow comma-separated lists as a possibility.",
+    "missing_information": "The phrase 'allows' is vague. Does it mean 'allows in principle' or 'allows for this specific instance'? The meaning impacts whether a field definition permitting comma-separated lists generally justifies multiple field lines, or only when the actual value is a comma-separated list."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:24:18.275944+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-14",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "5e1cd078317fb23b9a5b29cbfee5486bdde2fdf29e896cedd213bfb13399e2db",
+  "lineage_ids": "lineage:3653a9b25ec4100c7a2ac18d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 301,
+    "load_duration": 10021400,
+    "prompt_eval_count": 720,
+    "total_duration": 11412801400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless that field's definition allows multiple field line values to be recombined as a comma-separated list [i.e., at least one alternative of the field's definition allows a comma-separated list, such as an ABNF rule of #(values) defined in Section 5.6.1].\", \"interpretation_a\": \"A field can have multiple lines if *any* alternative in its definition allows a comma-separated list, even if the actual value being sent doesn't use that alternative.\", \"interpretation_b\": \"A field can have multiple lines *only* if the specific value being sent conforms to an alternative in its definition that allows a comma-separated list.\", \"missing_information\": \"The phrase 'allows' is vague. Does it mean 'allows in principle' or 'allows for this specific instance'? The meaning impacts whether a field definition permitting comma-separated lists generally justifies multiple field lines, or only when the actual value is a comma-separated list.\", \"justification\": \"The conditional clause 'unless that field's definition allows...' is open to interpretation. The use of 'allows' is ambiguous. It's unclear whether the field definition needs to *specifically* allow the current value as a comma-separated list, or merely *generally* allow comma-separated lists as a possibility.\"}",
+  "record_id": "b00944bb3f61ca9ae1c0b06460a0dd7903a9e04c1a5fe427f3b5a446ac69cdbf",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "5.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.437
+}

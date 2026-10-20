@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "some delay, including receiving an arbitrary number of other messages",
+    "interpretation_a": "The server must tolerate any number of messages from the client before receiving the certificate response, even if those messages are unrelated to authentication.",
+    "interpretation_b": "The server must tolerate a reasonable delay, but there is an implicit upper bound on the number of messages it must process before considering the authentication failed. The phrase 'arbitrary number' is hyperbole.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"arbitrary number\" is vague. While it intends to convey that the server must be patient, it doesn't define a limit. A server could reasonably interpret this as needing to handle an infinite stream of unrelated messages, or as needing to handle a 'reasonable' number. This creates an incomplete constraint on server behavior.",
+    "missing_information": "A definition of 'some delay' or a maximum number of messages the server must tolerate before considering the authentication failed would remove the ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:34:09.128738+00:00",
+  "document_id": "draft-ietf-tls-tls13-25",
+  "family_id": "draft-ietf-tls-tls13",
+  "input_fingerprint": "6ffb2470e41afd1fa9ede54bf2607502ee6e7559037369fe2acb800c24ca7b1c",
+  "lineage_ids": "lineage:5c37332fae747e4647b7d6c6",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 224,
+    "load_duration": 9413600,
+    "prompt_eval_count": 624,
+    "total_duration": 8616733700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"some delay, including receiving an arbitrary number of other messages\", \"interpretation_a\": \"The server must tolerate any number of messages from the client before receiving the certificate response, even if those messages are unrelated to authentication.\", \"interpretation_b\": \"The server must tolerate a reasonable delay, but there is an implicit upper bound on the number of messages it must process before considering the authentication failed. The phrase 'arbitrary number' is hyperbole.\", \"missing_information\": \"A definition of 'some delay' or a maximum number of messages the server must tolerate before considering the authentication failed would remove the ambiguity.\", \"justification\": \"The phrase \\\"arbitrary number\\\" is vague. While it intends to convey that the server must be patient, it doesn't define a limit. A server could reasonably interpret this as needing to handle an infinite stream of unrelated messages, or as needing to handle a 'reasonable' number. This creates an incomplete constraint on server behavior.\"}",
+  "record_id": "51f6e74af5dc2187ff4415a34c3b084e3c8df83ff2d051340c3fe1946dbcd04a",
+  "revision": "25",
+  "schema_version": 1,
+  "section_ids": "4.6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.625
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "other",
+    "evidence_span": "suspicious",
+    "interpretation_a": "An endpoint could interpret any unusual activity as 'suspicious', even legitimate traffic, and thus close the connection.",
+    "interpretation_b": "An endpoint could interpret only clearly malicious activity as 'suspicious', allowing legitimate but high-volume traffic to continue.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'suspicious' is subjective and lacks a concrete definition. This allows for materially different implementations regarding what constitutes suspicious activity, leading to inconsistent behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:49:33.242534+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "aa177b788b844bb4f293eb19ddc73b244ace7cd4a68ae9ffa78bf146cdef3dcd",
+  "lineage_ids": "lineage:b58e4cf1a69b6fa73b9ba061",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 128,
+    "load_duration": 8423100,
+    "prompt_eval_count": 554,
+    "total_duration": 5124136000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"other\", \"evidence_span\": \"suspicious\", \"interpretation_a\": \"An endpoint could interpret any unusual activity as 'suspicious', even legitimate traffic, and thus close the connection.\", \"interpretation_b\": \"An endpoint could interpret only clearly malicious activity as 'suspicious', allowing legitimate but high-volume traffic to continue.\", \"missing_information\": \"\", \"justification\": \"The term 'suspicious' is subjective and lacks a concrete definition. This allows for materially different implementations regarding what constitutes suspicious activity, leading to inconsistent behavior.\"}",
+  "record_id": "d70ca0ad3cef9ef81194c6fed8e7d6d87a97cff8ab02cb0cd170ba086285be43",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "10.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.14
+}

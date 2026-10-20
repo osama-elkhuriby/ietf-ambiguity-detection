@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Clients SHOULD assume the server is actively performing such pruning",
+    "interpretation_a": "Clients should proactively model server pruning, even if not explicitly signaled, and adjust their behavior accordingly.",
+    "interpretation_b": "Clients may optionally assume server pruning, but are not required to actively model it; the server is responsible for handling closed streams.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' twice creates ambiguity. The first 'SHOULD' suggests a proactive assumption, while the second 'SHOULD NOT' implies a reactive avoidance. It's unclear if the first 'SHOULD' is a prerequisite for the second, or if they are independent recommendations. A missing constraint would clarify the level of client modeling required.",
+    "missing_information": "The degree to which clients *must* model server pruning is unclear. Is it a strong recommendation, or merely a suggestion to avoid errors?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:15:48.659701+00:00",
+  "document_id": "draft-ietf-quic-http-22",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "d47f3426d7e8dc663ef9e301e7a26d5230eba245ea603d210a475822add08fa5",
+  "lineage_ids": "lineage:82f936db163f1f32e3deaa69",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 207,
+    "load_duration": 19550400,
+    "prompt_eval_count": 555,
+    "total_duration": 7965810900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Clients SHOULD assume the server is actively performing such pruning\", \"interpretation_a\": \"Clients should proactively model server pruning, even if not explicitly signaled, and adjust their behavior accordingly.\", \"interpretation_b\": \"Clients may optionally assume server pruning, but are not required to actively model it; the server is responsible for handling closed streams.\", \"missing_information\": \"The degree to which clients *must* model server pruning is unclear. Is it a strong recommendation, or merely a suggestion to avoid errors?\", \"justification\": \"The use of 'SHOULD' twice creates ambiguity. The first 'SHOULD' suggests a proactive assumption, while the second 'SHOULD NOT' implies a reactive avoidance. It's unclear if the first 'SHOULD' is a prerequisite for the second, or if they are independent recommendations. A missing constraint would clarify the level of client modeling required.\"}",
+  "record_id": "fb62b929257cf4d2c5df1981d256eea676903ea1fbbdaa1c5539d2a166c92d57",
+  "revision": "22",
+  "schema_version": 1,
+  "section_ids": "4.3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.968
+}

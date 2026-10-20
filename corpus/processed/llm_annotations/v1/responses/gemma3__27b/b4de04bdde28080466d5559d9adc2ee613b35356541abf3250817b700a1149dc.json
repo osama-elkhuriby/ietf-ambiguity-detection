@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "all other transport parameters",
+    "interpretation_a": "The client must remember all transport parameters *except* those explicitly provided in the 0-RTT data.",
+    "interpretation_b": "The client must remember *all* transport parameters, including those potentially conveyed in the 0-RTT data itself.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'all other transport parameters' is incomplete. It doesn't specify if it includes parameters that are also sent in the 0-RTT data. This leads to two reasonable interpretations regarding what the client is expected to remember.",
+    "missing_information": "It is unclear whether the 'other' transport parameters include those that might be present within the 0-RTT data stream. A clarification on the scope of 'other' is needed."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:55:59.527695+00:00",
+  "document_id": "draft-ietf-quic-transport-30",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "8145454ff0d9f140a112258cae3abb46e0cd124882e9179816937adecd1c4aa7",
+  "lineage_ids": "lineage:11f3fa2ba7ca00ff1dfe9e17",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 185,
+    "load_duration": 4517900,
+    "prompt_eval_count": 601,
+    "total_duration": 7023676700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"all other transport parameters\", \"interpretation_a\": \"The client must remember all transport parameters *except* those explicitly provided in the 0-RTT data.\", \"interpretation_b\": \"The client must remember *all* transport parameters, including those potentially conveyed in the 0-RTT data itself.\", \"missing_information\": \"It is unclear whether the 'other' transport parameters include those that might be present within the 0-RTT data stream. A clarification on the scope of 'other' is needed.\", \"justification\": \"The phrase 'all other transport parameters' is incomplete. It doesn't specify if it includes parameters that are also sent in the 0-RTT data. This leads to two reasonable interpretations regarding what the client is expected to remember.\"}",
+  "record_id": "b4de04bdde28080466d5559d9adc2ee613b35356541abf3250817b700a1149dc",
+  "revision": "30",
+  "schema_version": 1,
+  "section_ids": "7.4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.031
+}

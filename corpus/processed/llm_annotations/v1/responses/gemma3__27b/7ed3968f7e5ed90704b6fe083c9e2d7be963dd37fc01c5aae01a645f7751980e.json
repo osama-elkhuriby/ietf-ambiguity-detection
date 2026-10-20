@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY carry retransmitted unacknowledged data",
+    "interpretation_a": "The implementation may choose to include retransmitted data in probe packets if no new data is available.",
+    "interpretation_b": "The implementation must include retransmitted data in probe packets if no new data is available.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' is ambiguous. It is unclear whether the implementation is permitted to include retransmitted data, or whether it should include it if no new data is available. This affects implementation behavior.",
+    "missing_information": "The degree of freedom granted by 'MAY' is unclear. Does 'MAY' mean 'is permitted to' or 'should, if possible'?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:22:50.850826+00:00",
+  "document_id": "draft-ietf-quic-recovery-29",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "8c5ae0720bacb1d2863b3cb1c8923ade919d05a30777308928dbc9d32bc7d528",
+  "lineage_ids": "lineage:cb1d31286192531226dfd6fc",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 167,
+    "load_duration": 6807900,
+    "prompt_eval_count": 588,
+    "total_duration": 6392377200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY carry retransmitted unacknowledged data\", \"interpretation_a\": \"The implementation may choose to include retransmitted data in probe packets if no new data is available.\", \"interpretation_b\": \"The implementation must include retransmitted data in probe packets if no new data is available.\", \"missing_information\": \"The degree of freedom granted by 'MAY' is unclear. Does 'MAY' mean 'is permitted to' or 'should, if possible'?\",\"justification\": \"The use of 'MAY' is ambiguous. It is unclear whether the implementation is permitted to include retransmitted data, or whether it should include it if no new data is available. This affects implementation behavior.\"}",
+  "record_id": "7ed3968f7e5ed90704b6fe083c9e2d7be963dd37fc01c5aae01a645f7751980e",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "6.2.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.407
+}

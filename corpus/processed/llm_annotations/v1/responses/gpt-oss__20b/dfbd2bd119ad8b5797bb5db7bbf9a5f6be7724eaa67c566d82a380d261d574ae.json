@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "reduce any limits or alter any values",
+    "interpretation_a": "The server must not reduce any limits or alter any values that might be violated by the client with its 0-RTT data, meaning any transport parameter values that the client might violate.",
+    "interpretation_b": "The server must not reduce any limits or alter any values that might be violated by the client with its 0-RTT data, meaning any limits or values in the protocol, including flow control, stream limits, etc.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify which limits or values are referenced, leaving room for interpretation as either transport parameters or any protocol limits.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T18:46:39.401429+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "a817f00a37661310f4c6b5746726f220c1feeddddf5ca6ec3c6a897db7ac4f19",
+  "lineage_ids": "lineage:fbe36cde9abf7705b13994d4",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3229,
+    "load_duration": 4491500,
+    "prompt_eval_count": 626,
+    "total_duration": 27973615400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"reduce any limits or alter any values\",\n  \"interpretation_a\": \"The server must not reduce any limits or alter any values that might be violated by the client with its 0-RTT data, meaning any transport parameter values that the client might violate.\",\n  \"interpretation_b\": \"The server must not reduce any limits or alter any values that might be violated by the client with its 0-RTT data, meaning any limits or values in the protocol, including flow control, stream limits, etc.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify which limits or values are referenced, leaving room for interpretation as either transport parameters or any protocol limits.\"\n}",
+  "record_id": "dfbd2bd119ad8b5797bb5db7bbf9a5f6be7724eaa67c566d82a380d261d574ae",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 27.969
+}

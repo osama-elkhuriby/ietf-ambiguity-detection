@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD be restricted to just letters, digits, hyphen ('-') and underscore ('_') characters",
+    "interpretation_a": "Implementations MAY allow other characters beyond letters, digits, hyphen, and underscore.",
+    "interpretation_b": "Implementations MAY disallow other characters beyond letters, digits, hyphen, and underscore.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' introduces ambiguity. While it indicates a recommendation, it doesn't definitively mandate the restriction. An implementation could choose to allow other characters, and still be considered compliant. A MUST statement would have removed the ambiguity.",
+    "missing_information": "The document does not specify the consequences of not restricting field names to the suggested characters. Is non-conformance an error, or is it merely discouraged?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:17:54.928894+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-14",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "1c9f531616e77f86613ee3b0911aaf17e10ba0c6e8211c99aaae3e89bcd13674",
+  "lineage_ids": "lineage:d94d69550bcb8c48ee21f0da",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 186,
+    "load_duration": 4580500,
+    "prompt_eval_count": 576,
+    "total_duration": 7204461800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD be restricted to just letters, digits, hyphen ('-') and underscore ('_') characters\", \"interpretation_a\": \"Implementations MAY allow other characters beyond letters, digits, hyphen, and underscore.\", \"interpretation_b\": \"Implementations MAY disallow other characters beyond letters, digits, hyphen, and underscore.\", \"missing_information\": \"The document does not specify the consequences of not restricting field names to the suggested characters. Is non-conformance an error, or is it merely discouraged?\", \"justification\": \"The use of 'SHOULD' introduces ambiguity. While it indicates a recommendation, it doesn't definitively mandate the restriction. An implementation could choose to allow other characters, and still be considered compliant. A MUST statement would have removed the ambiguity.\"}",
+  "record_id": "91e2e5c5332726ee3cac905890e96b5bd0272422643adfe15e33f5c1d3cae196",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "16.3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.218
+}

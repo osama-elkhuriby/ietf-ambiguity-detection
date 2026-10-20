@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY still abruptly terminate the stream or MAY take no action",
+    "interpretation_a": "The server can choose to terminate the stream even if it's already ended, potentially for logging or state cleanup.",
+    "interpretation_b": "The server can choose to do nothing if the stream is already ended, avoiding unnecessary operations.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' twice creates a genuine choice for the implementer, but doesn't provide any guidance on *when* to choose one option over the other. This is a missing constraint that affects implementation.",
+    "missing_information": "The clause does not specify *why* the server might choose one action over the other, or if there are any constraints on which action is preferred. This leaves implementation open to potentially inconsistent behavior."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:59:08.792634+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "b513f41eb004eca78f918609232fac3ebb351474a48adb902d7a168c2fb0ec5e",
+  "lineage_ids": "lineage:6f40d19b9700acff09e39238",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 188,
+    "load_duration": 13102300,
+    "prompt_eval_count": 586,
+    "total_duration": 7277894100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY still abruptly terminate the stream or MAY take no action\", \"interpretation_a\": \"The server can choose to terminate the stream even if it's already ended, potentially for logging or state cleanup.\", \"interpretation_b\": \"The server can choose to do nothing if the stream is already ended, avoiding unnecessary operations.\", \"missing_information\": \"The clause does not specify *why* the server might choose one action over the other, or if there are any constraints on which action is preferred. This leaves implementation open to potentially inconsistent behavior.\", \"justification\": \"The use of 'MAY' twice creates a genuine choice for the implementer, but doesn't provide any guidance on *when* to choose one option over the other. This is a missing constraint that affects implementation.\"}",
+  "record_id": "94e43f8c4a1a0cd598abf79f07155db1166dd1b1a6b102591980442e7e8f11cb",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.297
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "self-contained trigger",
+    "interpretation_a": "The clause could be interpreted to mean that any data that, when received, automatically triggers a non-idempotent action (e.g., a payment) must be avoided.",
+    "interpretation_b": "Alternatively, it could be interpreted to mean that any data that contains a trigger that can be executed without external input (e.g., a script) must be avoided.",
+    "is_ambiguous": "yes",
+    "justification": "The clause uses an undefined term that could be interpreted in multiple materially different ways, making the requirement ambiguous.",
+    "missing_information": "Definition of the term \"self-contained trigger\" is missing, which is required to determine the exact scope of the restriction."
+  },
+  "attempts": 3,
+  "created_at": "2026-10-08T12:40:12.676566+00:00",
+  "document_id": "draft-ietf-quic-tls-31",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "927aef9a8d0481f3dd5022f869b2676402208877fbed69547bf90d210126e56f",
+  "lineage_ids": "lineage:c732ba53591eaecccce4ceea",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 414,
+    "load_duration": 6114300,
+    "prompt_eval_count": 7256,
+    "total_duration": 4915332400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\":\"yes\",\"ambiguity_subtype\":\"U-1\",\"evidence_span\":\"self-contained trigger\",\"interpretation_a\":\"The clause could be interpreted to mean that any data that, when received, automatically triggers a non-idempotent action (e.g., a payment) must be avoided.\",\"interpretation_b\":\"Alternatively, it could be interpreted to mean that any data that contains a trigger that can be executed without external input (e.g., a script) must be avoided.\",\"missing_information\":\"Definition of the term \\\"self-contained trigger\\\" is missing, which is required to determine the exact scope of the restriction.\",\"justification\":\"The clause uses an undefined term that could be interpreted in multiple materially different ways, making the requirement ambiguous.\"}",
+  "record_id": "59494d7e6d105d8eabc728e8af55eedc41c8a8655a77256e4f300bd54c1bcf40",
+  "revision": "31",
+  "schema_version": 1,
+  "section_ids": "2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 143.547
+}

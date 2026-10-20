@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause is clear in its requirement: a receiver must discard a newly unprotected packet unless it is certain it has not processed another packet with the same packet number in the same packet number space. There is no ambiguity in the language, as it directly specifies the condition under which a packet must be discarded. No alternative interpretations are reasonable, and no missing constraints affect implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:21:19.290008+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "6919076e7c66cce1b81790a50f26a68f44d4c57748082224106fbae973aebf12",
+  "lineage_ids": "lineage:5fd9350b51fa4db9b7ea030c",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 130,
+    "load_duration": 5082500,
+    "prompt_eval_count": 582,
+    "total_duration": 5389858200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause is clear in its requirement: a receiver must discard a newly unprotected packet unless it is certain it has not processed another packet with the same packet number in the same packet number space. There is no ambiguity in the language, as it directly specifies the condition under which a packet must be discarded. No alternative interpretations are reasonable, and no missing constraints affect implementation behavior.\"\n}",
+  "record_id": "83c9eeeea38d0a013405b4e5b04404f05165f199fc73c3d91a3a1643d9d3a0cc",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "12.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.391
+}

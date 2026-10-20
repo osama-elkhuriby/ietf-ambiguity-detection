@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "absence of the initial_source_connection_id transport parameter from either endpoint or absence of the original_destination_connection_id transport parameter from the server",
+    "interpretation_a": "If *either* the initial_source_connection_id is missing from either endpoint *or* the original_destination_connection_id is missing from the server, it's an error.",
+    "interpretation_b": "If the initial_source_connection_id is missing from either endpoint, *and* the original_destination_connection_id is missing from the server, it's an error. The 'or' could be read as an inclusive or, requiring both conditions to be met.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'or' is ambiguous. It could mean either condition triggers the error, or both conditions must be true for the error to occur. This affects how an endpoint would validate the transport parameters.",
+    "missing_information": "The logical relationship between the two conditions is unclear. Is it an error if either condition is true, or only if both are true?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:47:43.202322+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "af6c6a268d50c1db162d73521393dbafc08394ffe6c1e3318a59886bacfe4b2b",
+  "lineage_ids": "lineage:f0051eb113ec6d8dd5a29935",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 248,
+    "load_duration": 4379000,
+    "prompt_eval_count": 620,
+    "total_duration": 9292005200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"absence of the initial_source_connection_id transport parameter from either endpoint or absence of the original_destination_connection_id transport parameter from the server\", \"interpretation_a\": \"If *either* the initial_source_connection_id is missing from either endpoint *or* the original_destination_connection_id is missing from the server, it's an error.\", \"interpretation_b\": \"If the initial_source_connection_id is missing from either endpoint, *and* the original_destination_connection_id is missing from the server, it's an error. The 'or' could be read as an inclusive or, requiring both conditions to be met.\", \"missing_information\": \"The logical relationship between the two conditions is unclear. Is it an error if either condition is true, or only if both are true?\",\"justification\": \"The use of 'or' is ambiguous. It could mean either condition triggers the error, or both conditions must be true for the error to occur. This affects how an endpoint would validate the transport parameters.\"}",
+  "record_id": "9b55b30b38443916f77945e7a1863943d1d4a1e97286f95a3ed0f40015d53598",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.281
+}

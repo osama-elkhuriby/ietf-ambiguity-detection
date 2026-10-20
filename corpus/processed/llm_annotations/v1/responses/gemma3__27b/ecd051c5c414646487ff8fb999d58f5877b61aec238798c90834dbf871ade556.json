@@ -1,0 +1,37 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "the recipient's maximum supported value for Max-Forwards",
+    "interpretation_a": "The recipient's maximum supported value is a configuration parameter of the intermediary, limiting how far a request can propagate.",
+    "interpretation_b": "The recipient's maximum supported value is a property of the ultimate destination server, and the intermediary must know this value.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'recipient's maximum supported value for Max-Forwards' is ambiguous. It is unclear whether 'recipient' refers to the intermediary itself or the final destination server. This affects how the intermediary determines the updated Max-Forwards value.",
+    "missing_information": "The document does not define where the 'recipient's maximum supported value for Max-Forwards' comes from. Is it a property of the intermediary, or the ultimate recipient?"
+  },
+  "attempts": 3,
+  "created_at": "2026-10-07T04:35:11.389844+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "04d59636779b766ba464c860595666fd394185d04367840b7a413887db88d609",
+  "lineage_ids": "lineage:6015f840e53fc440ec4aef62",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 197,
+    "load_duration": 5427300,
+    "prompt_eval_count": 867,
+    "total_duration": 7821054400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"the recipient's maximum supported value for Max-Forwards\", \"interpretation_a\": \"The recipient's maximum supported value is a configuration parameter of the intermediary, limiting how far a request can propagate.\", \"interpretation_b\": \"The recipient's maximum supported value is a property of the ultimate destination server, and the intermediary must know this value.\", \"missing_information\": \"The document does not define where the 'recipient's maximum supported value for Max-Forwards' comes from. Is it a property of the intermediary, or the ultimate recipient?\",\"justification\": \"The phrase 'recipient's maximum supported value for Max-Forwards' is ambiguous. It is unclear whether 'recipient' refers to the intermediary itself or the final destination server. This affects how the intermediary determines the updated Max-Forwards value.\"}",
+  "record_id": "ecd051c5c414646487ff8fb999d58f5877b61aec238798c90834dbf871ade556",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "7.6.2",
+  "status": "invalid",
+  "validation_errors": [
+    "evidence_span is not an exact target-clause substring"
+  ],
+  "wall_seconds": 29.031
+}

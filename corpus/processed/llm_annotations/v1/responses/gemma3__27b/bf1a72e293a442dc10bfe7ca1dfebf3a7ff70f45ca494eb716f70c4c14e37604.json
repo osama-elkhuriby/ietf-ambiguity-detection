@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "incrementing the packet sequence number by an externally unpredictable value",
+    "interpretation_a": "The packet sequence number is incremented by a value that is unpredictable to an attacker observing network traffic, but predictable to the client and server.",
+    "interpretation_b": "The packet sequence number is incremented by a cryptographically random value, ensuring complete unpredictability even to the client and server.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'externally unpredictable value' is underspecified. It could mean a value unpredictable to an external observer (e.g., an attacker) but known to the endpoints, or it could mean a truly random value. These two interpretations lead to different implementations and security properties.",
+    "missing_information": "The definition of 'externally unpredictable value' is not precise. It is unclear whether the value needs to be predictable to the endpoints or truly random."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:58:54.693315+00:00",
+  "document_id": "draft-ietf-quic-transport-06",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "32a4671b5ed2ad3ef79a7abaae4a4f8344995106ff16b78844d912fffef4a88c",
+  "lineage_ids": "lineage:c676c0c80cdf9e985ca57524",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 204,
+    "load_duration": 3733200,
+    "prompt_eval_count": 580,
+    "total_duration": 7685752900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"incrementing the packet sequence number by an externally unpredictable value\", \"interpretation_a\": \"The packet sequence number is incremented by a value that is unpredictable to an attacker observing network traffic, but predictable to the client and server.\", \"interpretation_b\": \"The packet sequence number is incremented by a cryptographically random value, ensuring complete unpredictability even to the client and server.\", \"missing_information\": \"The definition of 'externally unpredictable value' is not precise. It is unclear whether the value needs to be predictable to the endpoints or truly random.\", \"justification\": \"The phrase 'externally unpredictable value' is underspecified. It could mean a value unpredictable to an external observer (e.g., an attacker) but known to the endpoints, or it could mean a truly random value. These two interpretations lead to different implementations and security properties.\"}",
+  "record_id": "bf1a72e293a442dc10bfe7ca1dfebf3a7ff70f45ca494eb716f70c4c14e37604",
+  "revision": "06",
+  "schema_version": 1,
+  "section_ids": "7.6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.687
+}

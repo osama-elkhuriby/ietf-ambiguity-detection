@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "any currently defined options",
+    "interpretation_a": "An implementation must support all options that are currently defined in any RFC, even if those RFCs are experimental or obsolete.",
+    "interpretation_b": "An implementation must support all options that are currently defined in a standards-track RFC.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'any currently defined options' is vague. It's unclear whether 'currently defined' refers to all RFCs that *have* defined options at any point, or only those options defined in RFCs that are currently valid (e.g., not obsoleted or experimental). This impacts the implementation's required support.",
+    "missing_information": "The definition of 'currently defined options' is not precise. Does it include experimental, draft, or obsolete options? This affects the scope of the MUST requirement."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:20:23.115277+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "f5effcbc7cf011f65a4537467639d335661615d764c2ef600036f95a472a2744",
+  "lineage_ids": "lineage:fa5f36b6f34423cd0f7e0fec",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 197,
+    "load_duration": 11058800,
+    "prompt_eval_count": 591,
+    "total_duration": 7552026400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"any currently defined options\", \"interpretation_a\": \"An implementation must support all options that are currently defined in any RFC, even if those RFCs are experimental or obsolete.\", \"interpretation_b\": \"An implementation must support all options that are currently defined in a standards-track RFC.\", \"missing_information\": \"The definition of 'currently defined options' is not precise. Does it include experimental, draft, or obsolete options? This affects the scope of the MUST requirement.\", \"justification\": \"The phrase 'any currently defined options' is vague. It's unclear whether 'currently defined' refers to all RFCs that *have* defined options at any point, or only those options defined in RFCs that are currently valid (e.g., not obsoleted or experimental). This impacts the implementation's required support.\"}",
+  "record_id": "38ee93ab22da0479b65ebef5894d3c90ad43d34ab0b69c0980507aa57c9719ec",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.579
+}

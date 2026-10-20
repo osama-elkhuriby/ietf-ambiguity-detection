@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY use the delay",
+    "interpretation_a": "The connection is permitted, but not required, to use the delay to set the initial RTT.",
+    "interpretation_b": "The connection is not permitted to use the delay to set the initial RTT.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' without further constraint allows for two reasonable interpretations. The clause does not specify *under what conditions* the delay can be used, only that it *may* be used. This creates ambiguity in implementation.",
+    "missing_information": "The conditional 'MAY' is not further constrained. It is unclear whether the connection *can* use the delay, or *is allowed* to use the delay. Without further clarification, both interpretations are reasonable."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:31:05.428077+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "16eb6a6321108da90d26a270444da992a9acc60a659b15b1edc9977008468d9d",
+  "lineage_ids": "lineage:c7a1df9f861ebda5a8104e6f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 180,
+    "load_duration": 4068600,
+    "prompt_eval_count": 646,
+    "total_duration": 6893043000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY use the delay\", \"interpretation_a\": \"The connection is permitted, but not required, to use the delay to set the initial RTT.\", \"interpretation_b\": \"The connection is not permitted to use the delay to set the initial RTT.\", \"missing_information\": \"The conditional 'MAY' is not further constrained. It is unclear whether the connection *can* use the delay, or *is allowed* to use the delay. Without further clarification, both interpretations are reasonable.\",\"justification\": \"The use of 'MAY' without further constraint allows for two reasonable interpretations. The clause does not specify *under what conditions* the delay can be used, only that it *may* be used. This creates ambiguity in implementation.\"}",
+  "record_id": "dada4df442ea6d70e162c7dfc4133f850a3c723bbd0419bb828ddf9b7e4e1b19",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.891
+}

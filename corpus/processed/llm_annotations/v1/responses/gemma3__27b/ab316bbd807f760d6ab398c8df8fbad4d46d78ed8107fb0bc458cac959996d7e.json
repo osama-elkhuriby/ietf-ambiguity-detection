@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD cancel requests",
+    "interpretation_a": "Implementations may choose to continue processing the request stream even after the client aborts reading the response.",
+    "interpretation_b": "Implementations may choose to immediately terminate the request stream after the client aborts reading the response.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' introduces discretion. While the text suggests cancellation is the preferred behaviour, it does not *require* it. This allows for implementations that continue processing despite the client aborting the read, which is a materially different behaviour than immediate cancellation.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:02:21.273684+00:00",
+  "document_id": "draft-ietf-quic-http-29",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "6cd51ac20fd2304beb40c4d12bc97fb7595e60206eb00c0f5a8db5e83dc1ca82",
+  "lineage_ids": "lineage:51861908512aa2a549c208d5",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 148,
+    "load_duration": 8641100,
+    "prompt_eval_count": 613,
+    "total_duration": 5861744500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD cancel requests\", \"interpretation_a\": \"Implementations may choose to continue processing the request stream even after the client aborts reading the response.\", \"interpretation_b\": \"Implementations may choose to immediately terminate the request stream after the client aborts reading the response.\", \"missing_information\": \"\", \"justification\": \"The use of 'SHOULD' introduces discretion. While the text suggests cancellation is the preferred behaviour, it does not *require* it. This allows for implementations that continue processing despite the client aborting the read, which is a materially different behaviour than immediate cancellation.\"}",
+  "record_id": "ab316bbd807f760d6ab398c8df8fbad4d46d78ed8107fb0bc458cac959996d7e",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "4.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.86
+}

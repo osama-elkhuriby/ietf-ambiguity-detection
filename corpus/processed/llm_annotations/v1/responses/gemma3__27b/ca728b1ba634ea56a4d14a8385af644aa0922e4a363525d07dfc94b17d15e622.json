@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "queued segments",
+    "interpretation_a": "The TCP implementation must process all queued segments in FIFO order before sending any ACKs.",
+    "interpretation_b": "The TCP implementation can process queued segments in any order, but must complete processing of all queued segments before sending any ACKs.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'queued segments' does not specify an order of processing. Without a defined order, implementations could process them in FIFO, priority, or other arbitrary orders, all while still satisfying the requirement to process 'all' before sending ACKs.",
+    "missing_information": "The clause does not specify the order in which queued segments must be processed. This missing constraint affects implementation behavior."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:28:06.160433+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-14",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "adbed32be0d15e21b5dd86efc42807eec914d159d171954b8d6f8fa1140bf24a",
+  "lineage_ids": "lineage:567ea0c2f9d19d9486598550",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 168,
+    "load_duration": 10044700,
+    "prompt_eval_count": 580,
+    "total_duration": 6589852400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"queued segments\", \"interpretation_a\": \"The TCP implementation must process all queued segments in FIFO order before sending any ACKs.\", \"interpretation_b\": \"The TCP implementation can process queued segments in any order, but must complete processing of all queued segments before sending any ACKs.\", \"missing_information\": \"The clause does not specify the order in which queued segments must be processed. This missing constraint affects implementation behavior.\", \"justification\": \"The phrase 'queued segments' does not specify an order of processing. Without a defined order, implementations could process them in FIFO, priority, or other arbitrary orders, all while still satisfying the requirement to process 'all' before sending ACKs.\"}",
+  "record_id": "ca728b1ba634ea56a4d14a8385af644aa0922e4a363525d07dfc94b17d15e622",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "3.10",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.594
+}

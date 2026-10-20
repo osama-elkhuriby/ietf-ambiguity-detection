@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "exactly one valid value",
+    "interpretation_a": "The request must include one and only one value for each of the specified pseudo-header fields.",
+    "interpretation_b": "The request must include at least one value for each of the specified pseudo-header fields, but multiple values are permitted as long as one is considered 'valid'.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'exactly one valid value' is ambiguous. Does it mean only one value can be present, or that of any number of values present, only one must be valid? Without a definition of 'valid', multiple interpretations are possible.",
+    "missing_information": "The definition of 'valid' is not provided, and it is unclear if multiple values are allowed for each pseudo-header field as long as one is valid."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:32:45.800407+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "67f2ed0e80d7f558d479901717e3ce0dd21cfccdde9ee80516ad0aa535280594",
+  "lineage_ids": "lineage:7c64d3dbe568b39b8164c0d0",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 188,
+    "load_duration": 17404900,
+    "prompt_eval_count": 577,
+    "total_duration": 7277464400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"exactly one valid value\", \"interpretation_a\": \"The request must include one and only one value for each of the specified pseudo-header fields.\", \"interpretation_b\": \"The request must include at least one value for each of the specified pseudo-header fields, but multiple values are permitted as long as one is considered 'valid'.\", \"missing_information\": \"The definition of 'valid' is not provided, and it is unclear if multiple values are allowed for each pseudo-header field as long as one is valid.\",\"justification\": \"The phrase 'exactly one valid value' is ambiguous. Does it mean only one value can be present, or that of any number of values present, only one must be valid? Without a definition of 'valid', multiple interpretations are possible.\"}",
+  "record_id": "40d22cf87fae536902899f2ad17a89d82257a3141e22d0578ad102a48a13874e",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.297
+}

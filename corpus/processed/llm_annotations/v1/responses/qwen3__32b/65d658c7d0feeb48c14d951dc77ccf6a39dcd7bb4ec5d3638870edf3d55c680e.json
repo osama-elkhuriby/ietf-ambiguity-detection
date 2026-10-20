@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause uses 'MAY' to describe optional behavior, which grants discretion to the sender. However, it does not introduce ambiguity because it clearly states the condition under which the sender may retain its congestion window (i.e., if it paces the sending of packets in excess of the initial congestion window). There is no conflicting or missing constraint that would lead to multiple materially different interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:20:41.403352+00:00",
+  "document_id": "draft-ietf-quic-recovery-19",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "c8f4fa491c3fedc8b6c399dfa6b30d9b3fd2212f996997f435f3f0920ec41011",
+  "lineage_ids": "lineage:368d5daa070e29137c8fa383",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 133,
+    "load_duration": 5519000,
+    "prompt_eval_count": 571,
+    "total_duration": 5480252100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause uses 'MAY' to describe optional behavior, which grants discretion to the sender. However, it does not introduce ambiguity because it clearly states the condition under which the sender may retain its congestion window (i.e., if it paces the sending of packets in excess of the initial congestion window). There is no conflicting or missing constraint that would lead to multiple materially different interpretations.\"\n}",
+  "record_id": "65d658c7d0feeb48c14d951dc77ccf6a39dcd7bb4ec5d3638870edf3d55c680e",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "7.9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.469
+}

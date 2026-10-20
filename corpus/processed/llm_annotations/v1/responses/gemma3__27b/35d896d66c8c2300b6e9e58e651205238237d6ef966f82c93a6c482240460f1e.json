@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "All subsequent packets sent by the server MUST have the VERSION flag unset.",
+    "interpretation_a": "The VERSION flag must be unset on *all* packets after the initial acceptable version is received, including handshake packets.",
+    "interpretation_b": "The VERSION flag must be unset on all packets after the initial acceptable version is received, *excluding* handshake packets (which may need it for other reasons).",
+    "is_ambiguous": "yes",
+    "justification": "The clause states \"All subsequent packets... MUST have the VERSION flag unset.\" The term \"subsequent\" is not clearly defined to include or exclude handshake packets. This creates ambiguity as to whether the server must unset the VERSION flag on handshake packets, which could affect the handshake process.",
+    "missing_information": "It is unclear whether the requirement to unset the VERSION flag applies to handshake packets themselves, or only to data/control packets."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:12:29.446129+00:00",
+  "document_id": "draft-ietf-quic-transport-01",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "b300ed8acf7d41f41e5b78f5506586d6e1eface4846fb9fbee5f8d4bb6d7554a",
+  "lineage_ids": "lineage:bc978a474b5105325a496881",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 202,
+    "load_duration": 4274300,
+    "prompt_eval_count": 578,
+    "total_duration": 7572334900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"All subsequent packets sent by the server MUST have the VERSION flag unset.\", \"interpretation_a\": \"The VERSION flag must be unset on *all* packets after the initial acceptable version is received, including handshake packets.\", \"interpretation_b\": \"The VERSION flag must be unset on all packets after the initial acceptable version is received, *excluding* handshake packets (which may need it for other reasons).\", \"missing_information\": \"It is unclear whether the requirement to unset the VERSION flag applies to handshake packets themselves, or only to data/control packets.\", \"justification\": \"The clause states \\\"All subsequent packets... MUST have the VERSION flag unset.\\\" The term \\\"subsequent\\\" is not clearly defined to include or exclude handshake packets. This creates ambiguity as to whether the server must unset the VERSION flag on handshake packets, which could affect the handshake process.\"}",
+  "record_id": "35d896d66c8c2300b6e9e58e651205238237d6ef966f82c93a6c482240460f1e",
+  "revision": "01",
+  "schema_version": 1,
+  "section_ids": "6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.578
+}

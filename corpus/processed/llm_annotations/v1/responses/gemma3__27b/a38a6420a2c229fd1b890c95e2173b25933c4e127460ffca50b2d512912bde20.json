@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "disable or disallow that action",
+    "interpretation_a": "The resource owner could completely prevent the action from being performed when accessed via a safe method (e.g., by returning an error).",
+    "interpretation_b": "The resource owner could allow the action to be attempted, but prevent it from succeeding (e.g., by ignoring the request or returning a different result).",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"disable or disallow\" is vague. 'Disable' implies preventing the action from being initiated, while 'disallow' could mean allowing initiation but preventing completion. Both are reasonable interpretations, and the document doesn't clarify which is intended.",
+    "missing_information": "The clause does not specify *how* the action should be disabled or disallowed. This leaves open the question of whether a failed attempt to perform the action counts as compliance with the MUST requirement."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:21:20.735240+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-10",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "f92187992e2489eeae1d6eb2925e1bfd65b3831d60698d700ef3c0c65c123ede",
+  "lineage_ids": "lineage:150f782f25037eea1c8d20d3",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 208,
+    "load_duration": 9246400,
+    "prompt_eval_count": 575,
+    "total_duration": 7991279600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"disable or disallow that action\", \"interpretation_a\": \"The resource owner could completely prevent the action from being performed when accessed via a safe method (e.g., by returning an error).\", \"interpretation_b\": \"The resource owner could allow the action to be attempted, but prevent it from succeeding (e.g., by ignoring the request or returning a different result).\", \"missing_information\": \"The clause does not specify *how* the action should be disabled or disallowed. This leaves open the question of whether a failed attempt to perform the action counts as compliance with the MUST requirement.\", \"justification\": \"The phrase \\\"disable or disallow\\\" is vague. 'Disable' implies preventing the action from being initiated, while 'disallow' could mean allowing initiation but preventing completion. Both are reasonable interpretations, and the document doesn't clarify which is intended.\"}",
+  "record_id": "a38a6420a2c229fd1b890c95e2173b25933c4e127460ffca50b2d512912bde20",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "8.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.0
+}

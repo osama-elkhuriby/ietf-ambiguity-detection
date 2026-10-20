@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST do one of the following",
+    "interpretation_a": "The server must choose exactly one of the three methods listed.",
+    "interpretation_b": "The server must choose at least one of the methods, and may include multiple methods (e.g., both Content-Length: 0 and Transfer-Encoding: chunked).",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not explicitly forbid combining methods, leading to two reasonable interpretations.",
+    "missing_information": "Clarification is needed on whether a server may include more than one of the specified methods (e.g., both Content-Length: 0 and Transfer-Encoding: chunked)."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T07:27:58.220595+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-07",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "75a86caac02bcaf1e252c798d5d84d3b3f8bfc1c1d255368f4f1305d75adddda",
+  "lineage_ids": "lineage:02708c80090a733cf557e8bd",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1192,
+    "load_duration": 5681600,
+    "prompt_eval_count": 678,
+    "total_duration": 10434160300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"MUST do one of the following\",\n  \"interpretation_a\": \"The server must choose exactly one of the three methods listed.\",\n  \"interpretation_b\": \"The server must choose at least one of the methods, and may include multiple methods (e.g., both Content-Length: 0 and Transfer-Encoding: chunked).\",\n  \"missing_information\": \"Clarification is needed on whether a server may include more than one of the specified methods (e.g., both Content-Length: 0 and Transfer-Encoding: chunked).\",\n  \"justification\": \"The clause does not explicitly forbid combining methods, leading to two reasonable interpretations.\"\n}",
+  "record_id": "a563166acdd9d71604e71175f9b24ee70f10bd4a3f1518be962f258b953645eb",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "9.3.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 77.891
+}

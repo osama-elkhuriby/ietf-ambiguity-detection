@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause provides a clear directive: the ack delay should be subtracted from the RTT only if the result is larger than the min_rtt. There is no ambiguity in the condition or the action to be taken. The use of 'SHOULD' indicates a recommendation, not a mandatory requirement, but it does not introduce multiple materially different interpretations. The clause is consistent with the surrounding context and does not leave any critical constraints undefined.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:24:35.504396+00:00",
+  "document_id": "draft-ietf-quic-recovery-19",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "2566bb25b0ed2d1bd0843e29f3d2292867212e7d0658bcc3c4b4e0e8b53510c5",
+  "lineage_ids": "lineage:8783692601cea23356129797",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 144,
+    "load_duration": 4037100,
+    "prompt_eval_count": 556,
+    "total_duration": 5935965100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause provides a clear directive: the ack delay should be subtracted from the RTT only if the result is larger than the min_rtt. There is no ambiguity in the condition or the action to be taken. The use of 'SHOULD' indicates a recommendation, not a mandatory requirement, but it does not introduce multiple materially different interpretations. The clause is consistent with the surrounding context and does not leave any critical constraints undefined.\"\n}",
+  "record_id": "a7af661185809e3e45c733e0ae19c797faaba0d8a50ce116f246fd631a0e604a",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.954
+}

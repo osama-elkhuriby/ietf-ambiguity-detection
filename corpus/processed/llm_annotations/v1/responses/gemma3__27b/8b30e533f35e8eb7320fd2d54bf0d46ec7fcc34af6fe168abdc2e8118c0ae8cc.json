@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "more than twice as large a range than the difference between the largest acknowledged packet and packet number being sent",
+    "interpretation_a": "The packet number size must be able to represent a range greater than 2 * (largest_acknowledged - current_packet_number). This implies a linear scaling of the packet number space based on the difference.",
+    "interpretation_b": "The packet number size must be able to represent a range greater than 2 times the *magnitude* of the difference between the largest acknowledged packet and the current packet number. This allows for a non-linear scaling, potentially using a power of 2 or other function.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'more than twice as large a range than the difference' is open to interpretation. 'Range' could refer to the absolute difference between the packet numbers, or it could refer to a different measure of the packet number space. Without a precise definition of 'range', two different implementations could reasonably satisfy the requirement but produce different results.",
+    "missing_information": "The meaning of 'range' is not clearly defined. Is it the absolute difference, or some other measure of the packet number space?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:42:26.652107+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "0de8f0f5512a1ab9036b4821a0d7560e87adb8942ca8060bc022de74a4892369",
+  "lineage_ids": "lineage:e2c0070f03e89992dd00e180",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 264,
+    "load_duration": 2506300,
+    "prompt_eval_count": 617,
+    "total_duration": 9839106000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"more than twice as large a range than the difference between the largest acknowledged packet and packet number being sent\", \"interpretation_a\": \"The packet number size must be able to represent a range greater than 2 * (largest_acknowledged - current_packet_number). This implies a linear scaling of the packet number space based on the difference.\", \"interpretation_b\": \"The packet number size must be able to represent a range greater than 2 times the *magnitude* of the difference between the largest acknowledged packet and the current packet number. This allows for a non-linear scaling, potentially using a power of 2 or other function.\", \"missing_information\": \"The meaning of 'range' is not clearly defined. Is it the absolute difference, or some other measure of the packet number space?\",\"justification\": \"The phrase 'more than twice as large a range than the difference' is open to interpretation. 'Range' could refer to the absolute difference between the packet numbers, or it could refer to a different measure of the packet number space. Without a precise definition of 'range', two different implementations could reasonably satisfy the requirement but produce different results.\"}",
+  "record_id": "8b30e533f35e8eb7320fd2d54bf0d46ec7fcc34af6fe168abdc2e8118c0ae8cc",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "17.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.828
+}

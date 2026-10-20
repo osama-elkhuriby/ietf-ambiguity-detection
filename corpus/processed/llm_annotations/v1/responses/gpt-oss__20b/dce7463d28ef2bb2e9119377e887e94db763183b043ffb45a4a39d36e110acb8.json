@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Implemementations SHOULD either use pacing or reduce their congestion window to limit such bursts.",
+    "interpretation_a": "The clause allows implementations to either use pacing or reduce cwnd, but does not specify whether both can be used or whether one must be chosen exclusively.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause’s use of \"either … or\" leaves open whether both mechanisms may be employed or whether one must be chosen exclusively, creating an incomplete constraint that permits materially different implementation behaviours.",
+    "missing_information": "Whether implementations may use both pacing and cwnd reduction simultaneously, or must choose one exclusively."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T12:07:09.012353+00:00",
+  "document_id": "draft-ietf-quic-recovery-23",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "f8d9871f0c4b118fb8fa9e7a1fc2613d928d5d5e4bd2d727e032d3620ab62c58",
+  "lineage_ids": "lineage:e43209d9799f9bbcb9e65971",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3413,
+    "load_duration": 5564200,
+    "prompt_eval_count": 627,
+    "total_duration": 29557830000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Implemementations SHOULD either use pacing or reduce their congestion window to limit such bursts.\", \"interpretation_a\": \"The clause allows implementations to either use pacing or reduce cwnd, but does not specify whether both can be used or whether one must be chosen exclusively.\", \"interpretation_b\": \"\", \"missing_information\": \"Whether implementations may use both pacing and cwnd reduction simultaneously, or must choose one exclusively.\",\"justification\":\"The clause’s use of \\\"either … or\\\" leaves open whether both mechanisms may be employed or whether one must be chosen exclusively, creating an incomplete constraint that permits materially different implementation behaviours.\"}",
+  "record_id": "dce7463d28ef2bb2e9119377e887e94db763183b043ffb45a4a39d36e110acb8",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "6.9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 97.75
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "if one has not been sent recently",
+    "interpretation_a": "The clause does not define what constitutes 'recently', allowing different implementations to choose different time windows for bundling ACK frames.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a concrete constraint on the term 'recently', which is a material implementation detail. This omission permits multiple reasonable interpretations, making the clause ambiguous.",
+    "missing_information": "Definition of the time window for 'recently' is missing, preventing a unique operational interpretation of when an ACK frame should be bundled with a packet."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T16:33:29.153435+00:00",
+  "document_id": "draft-ietf-quic-transport-29",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "8ee02da5c9c88d975f863f8a22df5c3de3afa0a263923c6c02cbb49ace78532f",
+  "lineage_ids": "lineage:3e94bbfc54743db1e5d5283b",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1521,
+    "load_duration": 5808000,
+    "prompt_eval_count": 578,
+    "total_duration": 13281196200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"if one has not been sent recently\",\n  \"interpretation_a\": \"The clause does not define what constitutes 'recently', allowing different implementations to choose different time windows for bundling ACK frames.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"Definition of the time window for 'recently' is missing, preventing a unique operational interpretation of when an ACK frame should be bundled with a packet.\",\n  \"justification\": \"The clause lacks a concrete constraint on the term 'recently', which is a material implementation detail. This omission permits multiple reasonable interpretations, making the clause ambiguous.\"\n}",
+  "record_id": "7dc9cdf9391eee6c3d46a1804c2acadb28759ea71f7e316d54247a5d8fab916d",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "13.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 13.281
+}

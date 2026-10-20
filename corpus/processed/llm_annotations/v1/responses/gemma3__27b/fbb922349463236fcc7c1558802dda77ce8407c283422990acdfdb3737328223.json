@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "each connection ID MUST be used on packets sent from only one local address",
+    "interpretation_a": "Each connection ID must be used exclusively from a single source IP address and port combination.",
+    "interpretation_b": "Each connection ID must be used exclusively from a single network interface, regardless of IP address or port.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'local address' is not clearly defined. It could refer to the IP address and port, or the network interface. This ambiguity leads to different interpretations of how the connection ID usage is restricted, impacting implementation.",
+    "missing_information": "The definition of 'local address' is not precise. Does it refer to the IP address and port, the network interface, or something else? This affects how the constraint is implemented."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:20:14.967180+00:00",
+  "document_id": "draft-ietf-quic-transport-27",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "80aa1fecf4e50805f171defa3cc0252f4a86f0f4b09deb59a949e8d4ed15927b",
+  "lineage_ids": "lineage:1aa53fbf29399f4431200040",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 184,
+    "load_duration": "",
+    "prompt_eval_count": 607,
+    "total_duration": 6988899800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"each connection ID MUST be used on packets sent from only one local address\", \"interpretation_a\": \"Each connection ID must be used exclusively from a single source IP address and port combination.\", \"interpretation_b\": \"Each connection ID must be used exclusively from a single network interface, regardless of IP address or port.\", \"missing_information\": \"The definition of 'local address' is not precise. Does it refer to the IP address and port, the network interface, or something else? This affects how the constraint is implemented.\",\"justification\": \"The term 'local address' is not clearly defined. It could refer to the IP address and port, or the network interface. This ambiguity leads to different interpretations of how the connection ID usage is restricted, impacting implementation.\"}",
+  "record_id": "fbb922349463236fcc7c1558802dda77ce8407c283422990acdfdb3737328223",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "5.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.985
+}

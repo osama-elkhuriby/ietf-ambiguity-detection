@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "stream identifier field value other than 0x0",
+    "interpretation_a": "Any non-zero value in the stream identifier field triggers a PROTOCOL_ERROR.",
+    "interpretation_b": "Only values other than 0x0 that are *valid* stream IDs (i.e., not already in use) trigger a PROTOCOL_ERROR. An invalid stream ID might be handled differently.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states that a PING frame with a stream identifier other than 0x0 MUST cause a connection error. However, it doesn't specify what to do if the non-zero stream ID is already in use for another stream. This creates ambiguity because an implementation could either treat it as a protocol error, or handle it as a stream-level error (or some other error condition).",
+    "missing_information": "It is unclear whether the requirement applies to all non-zero values, or only to valid (unused) stream IDs. The specification does not define how to handle a PING frame with an already-in-use stream ID."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:30:02.671673+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "e7b6a4308fe4da3fae5d946d005602b9571c8abd0ef384fa6aa72a5b0ea0a327",
+  "lineage_ids": "lineage:d49c687f996eb7e7ce419471",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 247,
+    "load_duration": 8568400,
+    "prompt_eval_count": 583,
+    "total_duration": 9386132800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"stream identifier field value other than 0x0\", \"interpretation_a\": \"Any non-zero value in the stream identifier field triggers a PROTOCOL_ERROR.\", \"interpretation_b\": \"Only values other than 0x0 that are *valid* stream IDs (i.e., not already in use) trigger a PROTOCOL_ERROR. An invalid stream ID might be handled differently.\", \"missing_information\": \"It is unclear whether the requirement applies to all non-zero values, or only to valid (unused) stream IDs. The specification does not define how to handle a PING frame with an already-in-use stream ID.\", \"justification\": \"The clause states that a PING frame with a stream identifier other than 0x0 MUST cause a connection error. However, it doesn't specify what to do if the non-zero stream ID is already in use for another stream. This creates ambiguity because an implementation could either treat it as a protocol error, or handle it as a stream-level error (or some other error condition).\"}",
+  "record_id": "22a42ec080a706d658d9e82b7ffde0fdd8773df84fd9da3420ed400039f39c08",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.391
+}

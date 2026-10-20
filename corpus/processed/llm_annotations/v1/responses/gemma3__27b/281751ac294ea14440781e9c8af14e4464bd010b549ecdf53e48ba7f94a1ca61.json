@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY choose to offer the ability",
+    "interpretation_a": "Implementations are permitted, but not required, to deliver data out of order. An implementation could choose to *always* deliver out of order, or *never* deliver out of order.",
+    "interpretation_b": "Implementations are permitted, but not required, to deliver data out of order. An implementation could choose to deliver out of order *conditionally*, based on network conditions or other factors.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' grants discretion, but the lack of further specification creates ambiguity about the scope of that discretion. It's unclear if the 'ability' refers to a global setting, a per-stream setting, or a dynamic decision.",
+    "missing_information": "The clause does not specify *when* or *under what conditions* an implementation might choose to deliver data out of order. This missing constraint affects implementation behavior."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:06:42.483912+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "f7913d753a273f8d171a67da58f5eddcb4454ede0b94f3536be1503a31e73ac4",
+  "lineage_ids": "lineage:3e89a93b6e727007617e4d3c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 216,
+    "load_duration": 3538300,
+    "prompt_eval_count": 560,
+    "total_duration": 8087962500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY choose to offer the ability\", \"interpretation_a\": \"Implementations are permitted, but not required, to deliver data out of order. An implementation could choose to *always* deliver out of order, or *never* deliver out of order.\", \"interpretation_b\": \"Implementations are permitted, but not required, to deliver data out of order. An implementation could choose to deliver out of order *conditionally*, based on network conditions or other factors.\", \"missing_information\": \"The clause does not specify *when* or *under what conditions* an implementation might choose to deliver data out of order. This missing constraint affects implementation behavior.\", \"justification\": \"The use of 'MAY' grants discretion, but the lack of further specification creates ambiguity about the scope of that discretion. It's unclear if the 'ability' refers to a global setting, a per-stream setting, or a dynamic decision.\"}",
+  "record_id": "281751ac294ea14440781e9c8af14e4464bd010b549ecdf53e48ba7f94a1ca61",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.078
+}

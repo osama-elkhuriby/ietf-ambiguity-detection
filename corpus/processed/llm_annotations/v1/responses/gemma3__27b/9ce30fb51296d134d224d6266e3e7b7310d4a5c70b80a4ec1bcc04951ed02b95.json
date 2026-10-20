@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "three times the PTO",
+    "interpretation_a": "The endpoint must retain old read keys for a duration up to, but not exceeding, three times the PTO.",
+    "interpretation_b": "The endpoint must retain old read keys for a duration of exactly three times the PTO.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'no more than' is ambiguous. It could mean 'less than or equal to' (allowing retention for exactly three PTOs) or 'at most' (allowing retention for a duration shorter than three PTOs). This affects the implementation of the key retention timer.",
+    "missing_information": "The meaning of 'no more than' is ambiguous. Does it mean 'less than or equal to' or 'at most' allowing for some leeway?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:43:38.984497+00:00",
+  "document_id": "draft-ietf-quic-tls-29",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "e17771f244163c6bc5e3675c884fc5eaaf82340a819a174d6f7a847187a55768",
+  "lineage_ids": "lineage:873ebe32567e29d871ee5e9b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 183,
+    "load_duration": 6414500,
+    "prompt_eval_count": 554,
+    "total_duration": 6911272300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"three times the PTO\", \"interpretation_a\": \"The endpoint must retain old read keys for a duration up to, but not exceeding, three times the PTO.\", \"interpretation_b\": \"The endpoint must retain old read keys for a duration of exactly three times the PTO.\", \"missing_information\": \"The meaning of 'no more than' is ambiguous. Does it mean 'less than or equal to' or 'at most' allowing for some leeway?\", \"justification\": \"The phrase 'no more than' is ambiguous. It could mean 'less than or equal to' (allowing retention for exactly three PTOs) or 'at most' (allowing retention for a duration shorter than three PTOs). This affects the implementation of the key retention timer.\"}",
+  "record_id": "9ce30fb51296d134d224d6266e3e7b7310d4a5c70b80a4ec1bcc04951ed02b95",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "6.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.906
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "has failed",
+    "interpretation_a": "The client has attempted all SVCB endpoints and each attempt resulted in a connection failure (e.g., timeout, refused connection).",
+    "interpretation_b": "The client has attempted at least one SVCB endpoint, and that attempt resulted in a connection failure. Further attempts may not have been made.",
+    "is_ambiguous": "yes",
+    "justification": "The word 'failed' is vague. It's unclear whether the client must attempt *all* SVCB endpoints before falling back to non-SVCB modes, or if a single failure is sufficient to trigger the fallback. This affects implementation because a client could choose to be more or less aggressive in attempting SVCB connections before falling back.",
+    "missing_information": "The meaning of 'failed' is not precisely defined. Does it require all endpoints to fail, or just one?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:09:14.660422+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-08",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "02aae6b4aef9c9b9a775233313ffdcd9ef2620db3b5f67a65b249e9a00dba3aa",
+  "lineage_ids": "lineage:2f9b0858bce67f57d005ae10",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 200,
+    "load_duration": 4678400,
+    "prompt_eval_count": 601,
+    "total_duration": 7535706800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"has failed\", \"interpretation_a\": \"The client has attempted all SVCB endpoints and each attempt resulted in a connection failure (e.g., timeout, refused connection).\", \"interpretation_b\": \"The client has attempted at least one SVCB endpoint, and that attempt resulted in a connection failure. Further attempts may not have been made.\", \"missing_information\": \"The meaning of 'failed' is not precisely defined. Does it require all endpoints to fail, or just one?\",\"justification\": \"The word 'failed' is vague. It's unclear whether the client must attempt *all* SVCB endpoints before falling back to non-SVCB modes, or if a single failure is sufficient to trigger the fallback. This affects implementation because a client could choose to be more or less aggressive in attempting SVCB connections before falling back.\"}",
+  "record_id": "99e44eac14086982e2cdbc20c7ca4cda61136f58c68bd358d0c3fee53253c92e",
+  "revision": "08",
+  "schema_version": 1,
+  "section_ids": "3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.531
+}

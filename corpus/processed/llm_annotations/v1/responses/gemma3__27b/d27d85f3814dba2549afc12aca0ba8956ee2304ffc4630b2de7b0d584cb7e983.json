@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY be sent immediately",
+    "interpretation_a": "ACK frames are sent as soon as the crypto stack signals data receipt, regardless of other factors.",
+    "interpretation_b": "ACK frames *can* be sent immediately, but other conditions (e.g., coalescing with other ACKs, rate limiting) might delay transmission.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' combined with 'immediately' creates ambiguity. 'Immediately' could mean 'as soon as possible' without delay, or it could mean 'permitted to be sent without delay if certain conditions are met'. The draft does not specify those conditions.",
+    "missing_information": "The conditions under which the 'MAY' is exercised are not specified. It's unclear if 'immediately' is absolute or relative to other potential actions."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:30:36.803262+00:00",
+  "document_id": "draft-ietf-quic-recovery-19",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "6d1a13dbbe7b6d13b13ed4d4ed3bbf6afae79008f260bd934959c841ef381b56",
+  "lineage_ids": "lineage:388d75535648c8be43a3c2c6",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 191,
+    "load_duration": 5245700,
+    "prompt_eval_count": 568,
+    "total_duration": 7225468800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY be sent immediately\", \"interpretation_a\": \"ACK frames are sent as soon as the crypto stack signals data receipt, regardless of other factors.\", \"interpretation_b\": \"ACK frames *can* be sent immediately, but other conditions (e.g., coalescing with other ACKs, rate limiting) might delay transmission.\", \"missing_information\": \"The conditions under which the 'MAY' is exercised are not specified. It's unclear if 'immediately' is absolute or relative to other potential actions.\", \"justification\": \"The use of 'MAY' combined with 'immediately' creates ambiguity. 'Immediately' could mean 'as soon as possible' without delay, or it could mean 'permitted to be sent without delay if certain conditions are met'. The draft does not specify those conditions.\"}",
+  "record_id": "d27d85f3814dba2549afc12aca0ba8956ee2304ffc4630b2de7b0d584cb7e983",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.219
+}

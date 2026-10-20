@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "any other DNS queries that might be needed",
+    "interpretation_a": "The client should issue all DNS queries that might be needed for connection establishment.",
+    "interpretation_b": "The client should issue only the DNS queries that are actually needed for connection establishment.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify which DNS queries are considered \"needed\" or how many should be issued, allowing two materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:38:39.609103+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "7f68b4a3c3051ee78ae1ac7de9212ac01759bfb7339061940d2f1ded84ea71af",
+  "lineage_ids": "lineage:b14c1720512dba8e32914712",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1698,
+    "load_duration": 6109100,
+    "prompt_eval_count": 669,
+    "total_duration": 14834443200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"any other DNS queries that might be needed\",\n  \"interpretation_a\": \"The client should issue all DNS queries that might be needed for connection establishment.\",\n  \"interpretation_b\": \"The client should issue only the DNS queries that are actually needed for connection establishment.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify which DNS queries are considered \\\"needed\\\" or how many should be issued, allowing two materially different implementation behaviours.\"\n}",
+  "record_id": "43c1ebe1f9429afddcaab5f310be863828fd4e8333bf4a87f7b71622bbfa46e5",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 14.828
+}

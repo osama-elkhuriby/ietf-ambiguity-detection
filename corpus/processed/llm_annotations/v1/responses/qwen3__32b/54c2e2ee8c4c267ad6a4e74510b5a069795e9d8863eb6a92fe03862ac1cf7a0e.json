@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause is clear in stating that receivers can discard all ACK Ranges but must retain the largest packet number for use in recovering packet numbers from subsequent packets. The requirement to retain the largest packet number is unambiguous, and the reference to [packet-encoding] is normative and does not introduce ambiguity in this context. There is no conflicting or inconsistent language, and no undefined terms that would lead to multiple reasonable interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:09:39.692125+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "55f3ec6aa3bcaf38002061cc464f79ae90f1f0070bac5ddb5641fcfcaedf6111",
+  "lineage_ids": "lineage:d7083b72d7b99d44f54068fa",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 140,
+    "load_duration": 5115500,
+    "prompt_eval_count": 557,
+    "total_duration": 5758180100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause is clear in stating that receivers can discard all ACK Ranges but must retain the largest packet number for use in recovering packet numbers from subsequent packets. The requirement to retain the largest packet number is unambiguous, and the reference to [packet-encoding] is normative and does not introduce ambiguity in this context. There is no conflicting or inconsistent language, and no undefined terms that would lead to multiple reasonable interpretations.\"\n}",
+  "record_id": "54c2e2ee8c4c267ad6a4e74510b5a069795e9d8863eb6a92fe03862ac1cf7a0e",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "13.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.765
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "invalid status code",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify which status codes are considered invalid, leaving the implementation to determine the boundary between valid and invalid codes. This incomplete constraint can lead to different implementation behaviours.",
+    "missing_information": "definition of what constitutes an invalid status code in the context of HTTP status codes"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T08:18:20.691800+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "ed3bb1665d9c2a1e90ddec01099672e3e6beb9d03b327ef28f19732a88c8fe0c",
+  "lineage_ids": "lineage:e517dc0a2f38b19de5a08cd8",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1493,
+    "load_duration": 3019400,
+    "prompt_eval_count": 635,
+    "total_duration": 12892156400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"invalid status code\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"definition of what constitutes an invalid status code in the context of HTTP status codes\",\n  \"justification\": \"The clause does not specify which status codes are considered invalid, leaving the implementation to determine the boundary between valid and invalid codes. This incomplete constraint can lead to different implementation behaviours.\"\n}",
+  "record_id": "e816a8cdd3728617f97a98e2c28c07ffa747901761b8dfb50968247c15607c43",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "15",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 12.891
+}

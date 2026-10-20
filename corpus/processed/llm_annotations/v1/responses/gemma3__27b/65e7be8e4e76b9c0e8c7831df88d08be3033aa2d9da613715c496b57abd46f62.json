@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "at any time",
+    "interpretation_a": "The server can request authentication immediately after the handshake completes.",
+    "interpretation_b": "The server can request authentication significantly later, even after a period of normal operation.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"at any time\" is unbounded. Without further constraints, it's unclear if the server could delay the request for an unreasonable duration, impacting client functionality.",
+    "missing_information": "The clause does not specify a time limit or any constraints on *when* 'any time' is. This leaves open the possibility of a server delaying the request indefinitely, which could be problematic for clients expecting timely authentication."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:34:18.322486+00:00",
+  "document_id": "draft-ietf-tls-tls13-28",
+  "family_id": "draft-ietf-tls-tls13",
+  "input_fingerprint": "25aace206663fcb9ce4d117804a498ceab423fe3b8b160c4b34dea3688d7346d",
+  "lineage_ids": "lineage:3c8ceb5dc1800257fc1a5870",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 160,
+    "load_duration": 8552500,
+    "prompt_eval_count": 566,
+    "total_duration": 6307583500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"at any time\", \"interpretation_a\": \"The server can request authentication immediately after the handshake completes.\", \"interpretation_b\": \"The server can request authentication significantly later, even after a period of normal operation.\", \"missing_information\": \"The clause does not specify a time limit or any constraints on *when* 'any time' is. This leaves open the possibility of a server delaying the request indefinitely, which could be problematic for clients expecting timely authentication.\",\"justification\": \"The phrase \\\"at any time\\\" is unbounded. Without further constraints, it's unclear if the server could delay the request for an unreasonable duration, impacting client functionality.\"}",
+  "record_id": "65e7be8e4e76b9c0e8c7831df88d08be3033aa2d9da613715c496b57abd46f62",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "4.6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.297
+}

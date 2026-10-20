@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST be difficult to guess",
+    "interpretation_a": "The token must be generated in a way that makes it computationally infeasible for an attacker to guess it without access to the server's internal state.",
+    "interpretation_b": "The token must be generated with sufficient entropy (e.g., 128 bits) to prevent guessing, but the server must retain the value to validate it later.",
+    "is_ambiguous": "yes",
+    "justification": "The requirement that the token 'MUST be difficult to guess' is a high-level security goal but lacks concrete constraints on how this must be achieved. While the next clause suggests using a random value with at least 128 bits of entropy, the target clause itself does not specify this. This creates an incomplete constraint, allowing for multiple reasonable interpretations of what 'difficult to guess' entails, which could lead to different implementations with varying levels of security.",
+    "missing_information": "The clause does not specify how the difficulty of guessing is to be achieved or measured, nor does it clarify the constraints on the server's ability to remember and validate the token. This leaves room for different implementations to use varying methods of entropy generation and storage, potentially leading to inconsistent security outcomes."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:13:53.556171+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "3b52d4bce62a679fc02b258a235a9f031965298c8c64c034d897ed10c87e9ca7",
+  "lineage_ids": "lineage:b366239c4f6deff9ffe16fb7",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 280,
+    "load_duration": 4392200,
+    "prompt_eval_count": 519,
+    "total_duration": 11460923200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"MUST be difficult to guess\",\n  \"interpretation_a\": \"The token must be generated in a way that makes it computationally infeasible for an attacker to guess it without access to the server's internal state.\",\n  \"interpretation_b\": \"The token must be generated with sufficient entropy (e.g., 128 bits) to prevent guessing, but the server must retain the value to validate it later.\",\n  \"missing_information\": \"The clause does not specify how the difficulty of guessing is to be achieved or measured, nor does it clarify the constraints on the server's ability to remember and validate the token. This leaves room for different implementations to use varying methods of entropy generation and storage, potentially leading to inconsistent security outcomes.\",\n  \"justification\": \"The requirement that the token 'MUST be difficult to guess' is a high-level security goal but lacks concrete constraints on how this must be achieved. While the next clause suggests using a random value with at least 128 bits of entropy, the target clause itself does not specify this. This creates an incomplete constraint, allowing for multiple reasonable interpretations of what 'difficult to guess' entails, which could lead to different implementations with varying levels of security.\"\n}",
+  "record_id": "687333a1ea6208ab52bebed795afb6f32b41d954c1f7e2eeb6517fa34b4cf90e",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "8.1.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.469
+}

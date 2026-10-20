@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "10 * kMaxDatagramSize and max(2* kMaxDatagramSize, 14720)",
+    "interpretation_a": "The value is the minimum of (10 * kMaxDatagramSize) and the maximum of (2 * kMaxDatagramSize) and 14720.",
+    "interpretation_b": "The value is the minimum of (10 * kMaxDatagramSize) and (2 * kMaxDatagramSize, 14720) which could be interpreted as 2 * kMaxDatagramSize or 14720 depending on how the comma is parsed.",
+    "is_ambiguous": "yes",
+    "justification": "The expression `max(2* kMaxDatagramSize, 14720)` is ambiguous due to the comma. It could be interpreted as the maximum of two values, or as a single value with a comma within it. This affects the final result of the minimum calculation.",
+    "missing_information": "The precedence of the comma in the max() function is not clear. Is it a separator between arguments, or part of the second argument?"
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T00:25:34.855486+00:00",
+  "document_id": "draft-ietf-quic-recovery-23",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "eca7f2e1df08a793f6423652877fd6fc5fc0a07d8528d0b11cd232696c97c46c",
+  "lineage_ids": "lineage:c1911b80b27671489d94fa60",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 262,
+    "load_duration": 6356700,
+    "prompt_eval_count": 886,
+    "total_duration": 9755202100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"10 * kMaxDatagramSize and max(2* kMaxDatagramSize, 14720)\", \"interpretation_a\": \"The value is the minimum of (10 * kMaxDatagramSize) and the maximum of (2 * kMaxDatagramSize) and 14720.\", \"interpretation_b\": \"The value is the minimum of (10 * kMaxDatagramSize) and (2 * kMaxDatagramSize, 14720) which could be interpreted as 2 * kMaxDatagramSize or 14720 depending on how the comma is parsed.\", \"missing_information\": \"The precedence of the comma in the max() function is not clear. Is it a separator between arguments, or part of the second argument?\",\"justification\": \"The expression `max(2* kMaxDatagramSize, 14720)` is ambiguous due to the comma. It could be interpreted as the maximum of two values, or as a single value with a comma within it. This affects the final result of the minimum calculation.\"}",
+  "record_id": "96e49d1d6ee24150e2b6b68d3115026602e6d6bc81b3ac9958d75b64e58cdb6a",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "B.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 21.61
+}

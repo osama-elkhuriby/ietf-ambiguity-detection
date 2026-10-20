@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD send a TCP segment with the RST bit set",
+    "interpretation_a": "The proxy may choose to send an RST segment, but is not required to do so.",
+    "interpretation_b": "The proxy is encouraged to send an RST segment, and a reasonable implementation would do so unless there is a specific reason not to.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' creates ambiguity. While it indicates a recommendation, the strength of that recommendation is not specified. A proxy could reasonably interpret 'SHOULD' as a strong recommendation and prioritize sending the RST segment, or as a weaker suggestion and only do so under certain conditions. This difference in interpretation affects implementation behavior.",
+    "missing_information": "The degree of encouragement implied by 'SHOULD' is not defined. Is it a strong recommendation, or merely a suggestion? Without further clarification, implementations could reasonably differ on whether to prioritize sending the RST segment or other actions."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:52:02.450417+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "bbb4e47d149374b027deb7e0af8224ea3ceec1c325b3dfe76ef77f71def50ef3",
+  "lineage_ids": "lineage:16741f89e72924ad2458aee6",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 218,
+    "load_duration": 22491900,
+    "prompt_eval_count": 604,
+    "total_duration": 8385228300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD send a TCP segment with the RST bit set\", \"interpretation_a\": \"The proxy may choose to send an RST segment, but is not required to do so.\", \"interpretation_b\": \"The proxy is encouraged to send an RST segment, and a reasonable implementation would do so unless there is a specific reason not to.\", \"missing_information\": \"The degree of encouragement implied by 'SHOULD' is not defined. Is it a strong recommendation, or merely a suggestion? Without further clarification, implementations could reasonably differ on whether to prioritize sending the RST segment or other actions.\",\"justification\": \"The use of 'SHOULD' creates ambiguity. While it indicates a recommendation, the strength of that recommendation is not specified. A proxy could reasonably interpret 'SHOULD' as a strong recommendation and prioritize sending the RST segment, or as a weaker suggestion and only do so under certain conditions. This difference in interpretation affects implementation behavior.\"}",
+  "record_id": "5eba8eef928dfa356713bf16388ac1cbbdb5bb65df4bc41df3ef896907998fd5",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.391
+}

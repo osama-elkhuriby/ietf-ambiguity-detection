@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "sufficient state",
+    "interpretation_a": "The endpoint has enough state to construct a valid CONNECTION_CLOSE frame, including all necessary parameters and data.",
+    "interpretation_b": "The endpoint has *any* state related to the connection, even if it's not enough to fully populate a CONNECTION_CLOSE frame, but enough to indicate that a frame *could* be sent. This could lead to partially formed or incomplete frames.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'sufficient state' is vague. It's unclear what level of state is required to trigger the use of a CONNECTION_CLOSE frame. This ambiguity could lead to different implementations, where some endpoints require complete state, while others only require minimal state.",
+    "missing_information": "The definition of 'sufficient state' is not precise. Does it mean having all the data needed for a complete and valid frame, or simply having *some* state related to the connection?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:08:47.843276+00:00",
+  "document_id": "draft-ietf-quic-transport-06",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "f83b724bc83ee63c0615ee3914a0d7d0a4cb51068a78f4a9d1508c4c233d0ad7",
+  "lineage_ids": "lineage:77b1fb2e313ecfa94308b0fc",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 217,
+    "load_duration": 4027800,
+    "prompt_eval_count": 547,
+    "total_duration": 8105424000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"sufficient state\", \"interpretation_a\": \"The endpoint has enough state to construct a valid CONNECTION_CLOSE frame, including all necessary parameters and data.\", \"interpretation_b\": \"The endpoint has *any* state related to the connection, even if it's not enough to fully populate a CONNECTION_CLOSE frame, but enough to indicate that a frame *could* be sent. This could lead to partially formed or incomplete frames.\", \"missing_information\": \"The definition of 'sufficient state' is not precise. Does it mean having all the data needed for a complete and valid frame, or simply having *some* state related to the connection?\", \"justification\": \"The phrase 'sufficient state' is vague. It's unclear what level of state is required to trigger the use of a CONNECTION_CLOSE frame. This ambiguity could lead to different implementations, where some endpoints require complete state, while others only require minimal state.\"}",
+  "record_id": "2e899c084cdb8c016963d45423f8770f49a68eb310f3817f0415a20e00692410",
+  "revision": "06",
+  "schema_version": 1,
+  "section_ids": "7.7.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.11
+}

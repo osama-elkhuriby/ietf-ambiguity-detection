@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "new Data field",
+    "interpretation_a": "The new PING frame must contain a Data field that is random or otherwise unpredictable, i.e., a field that is difficult to guess.",
+    "interpretation_b": "The new PING frame must contain a Data field that is similar to the Data field in the original PING frame (if any), implying that the new field should be difficult to guess in the same way as the original, even though the original PING frame had no Data field.",
+    "is_ambiguous": "yes",
+    "justification": "The clause uses the undefined term 'Data field' and the phrase 'similarly difficult to guess' without specifying the format, content, or reference point, allowing at least two materially different implementation behaviours.",
+    "missing_information": "Definition of the term 'Data field' and clarification of what 'similarly difficult to guess' refers to in this context are missing, leading to multiple reasonable implementation interpretations."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T17:53:18.517419+00:00",
+  "document_id": "draft-ietf-quic-transport-09",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "1fa31b61f8fcb0c2decb0d4895c1587be3631815d58a8e69fe0a3a4d352ad4cf",
+  "lineage_ids": "lineage:bca91ab6207196c834521436",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1588,
+    "load_duration": 4334200,
+    "prompt_eval_count": 628,
+    "total_duration": 13899562200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-1\",\n  \"evidence_span\": \"new Data field\",\n  \"interpretation_a\": \"The new PING frame must contain a Data field that is random or otherwise unpredictable, i.e., a field that is difficult to guess.\",\n  \"interpretation_b\": \"The new PING frame must contain a Data field that is similar to the Data field in the original PING frame (if any), implying that the new field should be difficult to guess in the same way as the original, even though the original PING frame had no Data field.\",\n  \"missing_information\": \"Definition of the term 'Data field' and clarification of what 'similarly difficult to guess' refers to in this context are missing, leading to multiple reasonable implementation interpretations.\",\n  \"justification\": \"The clause uses the undefined term 'Data field' and the phrase 'similarly difficult to guess' without specifying the format, content, or reference point, allowing at least two materially different implementation behaviours.\"\n}",
+  "record_id": "b140dcf45be5f2ad397f7b3a0c86e96c3a68fad78edff596cd83e96c9944a0de",
+  "revision": "09",
+  "schema_version": 1,
+  "section_ids": "7.7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 81.812
+}

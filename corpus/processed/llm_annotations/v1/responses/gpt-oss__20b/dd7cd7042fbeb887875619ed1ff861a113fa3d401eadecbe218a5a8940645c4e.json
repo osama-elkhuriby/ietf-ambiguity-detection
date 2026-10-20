@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "clients SHOULD attempt to use TCP-based versions of HTTP",
+    "interpretation_a": "Attempt only HTTP/1.1",
+    "interpretation_b": "Attempt HTTP/2 (or both HTTP/1.1 and HTTP/2)",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify which TCP-based HTTP version(s) to try, allowing multiple reasonable implementation choices.",
+    "missing_information": ""
+  },
+  "attempts": 3,
+  "created_at": "2026-10-08T10:36:06.609221+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "0a169b9f4a652d8942995b5541ac3a267190ad3d7cd721530f44afacd005c68b",
+  "lineage_ids": "lineage:6431922da110ad12fcfb3013",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 276,
+    "load_duration": 4035200,
+    "prompt_eval_count": 750,
+    "total_duration": 2754454100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"clients SHOULD attempt to use TCP-based versions of HTTP\",\n  \"interpretation_a\": \"Attempt only HTTP/1.1\",\n  \"interpretation_b\": \"Attempt HTTP/2 (or both HTTP/1.1 and HTTP/2)\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify which TCP-based HTTP version(s) to try, allowing multiple reasonable implementation choices.\"\n}",
+  "record_id": "dd7cd7042fbeb887875619ed1ff861a113fa3d401eadecbe218a5a8940645c4e",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 82.172
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "numerically greater than all streams",
+    "interpretation_a": "The new stream ID must be strictly greater than the highest stream ID currently in use by the endpoint. For example, if the highest stream ID is 10, the new stream ID must be 11 or higher.",
+    "interpretation_b": "The new stream ID must be greater than or equal to the highest stream ID currently in use by the endpoint. For example, if the highest stream ID is 10, the new stream ID could be 10 or 11 or higher.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"numerically greater than\" is ambiguous. It is unclear whether 'greater than' includes equality. The requirement could be interpreted as strictly greater than (exclusive) or greater than or equal to (inclusive). This affects the minimum valid value for a new stream identifier.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:38:13.965581+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "9875eccd960aee2e80366bc6ee2a10d46f6eb9e80a158b93da08616bed0901c9",
+  "lineage_ids": "lineage:4909e3ecbcb9367691307a94",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 209,
+    "load_duration": 9441400,
+    "prompt_eval_count": 590,
+    "total_duration": 8070907300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"numerically greater than all streams\", \"interpretation_a\": \"The new stream ID must be strictly greater than the highest stream ID currently in use by the endpoint. For example, if the highest stream ID is 10, the new stream ID must be 11 or higher.\", \"interpretation_b\": \"The new stream ID must be greater than or equal to the highest stream ID currently in use by the endpoint. For example, if the highest stream ID is 10, the new stream ID could be 10 or 11 or higher.\", \"missing_information\": \"\", \"justification\": \"The phrase \\\"numerically greater than\\\" is ambiguous. It is unclear whether 'greater than' includes equality. The requirement could be interpreted as strictly greater than (exclusive) or greater than or equal to (inclusive). This affects the minimum valid value for a new stream identifier.\"}",
+  "record_id": "7af4cfab222c492e3992df240befa94c53e56f685f33702093df0c3935d8b6e2",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "5.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.078
+}

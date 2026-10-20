@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST increase by 1",
+    "interpretation_a": "The sequence number increases by exactly one, regardless of the initial value.",
+    "interpretation_b": "The sequence number increases by one relative to the *previous* issued connection ID, implying a need to track the last issued ID.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states the sequence number 'MUST increase by 1', but does not specify a starting point or reset condition. This allows for multiple valid implementations. For example, the first connection ID could be 0, 1, or any other arbitrary value. The increment is relative, and the absolute value is undefined.",
+    "missing_information": "It is unclear what the starting value of the sequence number is, and whether it is reset on connection establishment. Without this information, it is impossible to determine the absolute value of the sequence number, only the increment."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:19:04.101352+00:00",
+  "document_id": "draft-ietf-quic-transport-29",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "0945d2790f91f2d6996ee7e5d8215645e7000790e5338b79e59b24136a5c0de5",
+  "lineage_ids": "lineage:c76b47a9af4226f09f034d9f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 205,
+    "load_duration": 5348900,
+    "prompt_eval_count": 591,
+    "total_duration": 7709503600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST increase by 1\", \"interpretation_a\": \"The sequence number increases by exactly one, regardless of the initial value.\", \"interpretation_b\": \"The sequence number increases by one relative to the *previous* issued connection ID, implying a need to track the last issued ID.\", \"missing_information\": \"It is unclear what the starting value of the sequence number is, and whether it is reset on connection establishment. Without this information, it is impossible to determine the absolute value of the sequence number, only the increment.\", \"justification\": \"The clause states the sequence number 'MUST increase by 1', but does not specify a starting point or reset condition. This allows for multiple valid implementations. For example, the first connection ID could be 0, 1, or any other arbitrary value. The increment is relative, and the absolute value is undefined.\"}",
+  "record_id": "4596701e2d1e468f9584f630ec31eb3718d91305360a115c0b093829d55b863c",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "5.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.703
+}

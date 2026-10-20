@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "following the urgent data",
+    "interpretation_a": "The urgent pointer indicates the *start* of the urgent data. The urgent data begins immediately after the byte indicated by the urgent pointer.",
+    "interpretation_b": "The urgent pointer indicates the byte *after* the urgent data. The urgent data ends at the byte indicated by the urgent pointer.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'following the urgent data' is open to interpretation. Does it mean 'immediately after the last byte of urgent data' or 'the byte where the urgent data begins'? This impacts how the receiver determines the start and end of the urgent data.",
+    "missing_information": "It is unclear whether the urgent pointer points to the first byte of urgent data or the byte immediately following the last byte of urgent data. This affects how the application layer interprets the urgent data's boundaries."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:27:02.406636+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "6bf176e869722be653eebb1486fbd7dd08273c2fce76eca1e17498089dd0bda5",
+  "lineage_ids": "lineage:fd7a01b7004f68842cffb006",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 201,
+    "load_duration": 12828500,
+    "prompt_eval_count": 587,
+    "total_duration": 7679717300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"following the urgent data\", \"interpretation_a\": \"The urgent pointer indicates the *start* of the urgent data. The urgent data begins immediately after the byte indicated by the urgent pointer.\", \"interpretation_b\": \"The urgent pointer indicates the byte *after* the urgent data. The urgent data ends at the byte indicated by the urgent pointer.\", \"missing_information\": \"It is unclear whether the urgent pointer points to the first byte of urgent data or the byte immediately following the last byte of urgent data. This affects how the application layer interprets the urgent data's boundaries.\",\"justification\": \"The phrase 'following the urgent data' is open to interpretation. Does it mean 'immediately after the last byte of urgent data' or 'the byte where the urgent data begins'? This impacts how the receiver determines the start and end of the urgent data.\"}",
+  "record_id": "b2bfc35a0764bcbef16272fda95b66e42cd1cfa3fd4256fe0e98483d52aabc01",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.8.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.688
+}

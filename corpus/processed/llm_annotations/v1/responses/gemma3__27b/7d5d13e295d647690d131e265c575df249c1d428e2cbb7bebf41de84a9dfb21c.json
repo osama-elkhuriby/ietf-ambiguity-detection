@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "more frequently than it would an Initial packet",
+    "interpretation_a": "The rate limit is based on the average time between sending Initial packets during connection establishment. A slow connection establishment would allow for slower PATH_CHALLENGE sending.",
+    "interpretation_b": "The rate limit is based on the maximum possible rate of sending Initial packets. A fast connection establishment would allow for faster PATH_CHALLENGE sending.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'more frequently than it would an Initial packet' is open to interpretation. It's unclear whether the comparison is to the average rate, the maximum rate, or some other metric. This lack of precision creates ambiguity in how the rate limiting should be implemented.",
+    "missing_information": "The meaning of 'more frequently than' is not clearly defined. Is it an average rate, a maximum rate, or something else? The document does not specify how to determine the frequency of sending Initial packets."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:36:23.242402+00:00",
+  "document_id": "draft-ietf-quic-transport-30",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "313c8c0a5b86cbfc1aa4310ab9f99ce06d3a714c6488df9994a3f08ce8d66346",
+  "lineage_ids": "lineage:bfe093c07feae72f9d35a395",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 219,
+    "load_duration": 4558500,
+    "prompt_eval_count": 599,
+    "total_duration": 8232165800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"more frequently than it would an Initial packet\", \"interpretation_a\": \"The rate limit is based on the average time between sending Initial packets during connection establishment. A slow connection establishment would allow for slower PATH_CHALLENGE sending.\", \"interpretation_b\": \"The rate limit is based on the maximum possible rate of sending Initial packets. A fast connection establishment would allow for faster PATH_CHALLENGE sending.\", \"missing_information\": \"The meaning of 'more frequently than' is not clearly defined. Is it an average rate, a maximum rate, or something else? The document does not specify how to determine the frequency of sending Initial packets.\", \"justification\": \"The phrase 'more frequently than it would an Initial packet' is open to interpretation. It's unclear whether the comparison is to the average rate, the maximum rate, or some other metric. This lack of precision creates ambiguity in how the rate limiting should be implemented.\"}",
+  "record_id": "7d5d13e295d647690d131e265c575df249c1d428e2cbb7bebf41de84a9dfb21c",
+  "revision": "30",
+  "schema_version": 1,
+  "section_ids": "8.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.234
+}

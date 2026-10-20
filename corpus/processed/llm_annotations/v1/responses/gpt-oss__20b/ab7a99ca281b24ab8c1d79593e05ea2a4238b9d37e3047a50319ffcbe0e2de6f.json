@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause states that servers may reject requests on streams below the indicated ID if those requests were not processed. The phrase “below the indicated ID” is unambiguous (less than the ID in the GOAWAY frame), and the condition “if these requests were not processed” is clarified by the surrounding context, which explains that the status of such requests cannot be known until they are completed, reset, or the connection terminates. No alternative reasonable interpretations or missing constraints are evident.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T10:04:41.209230+00:00",
+  "document_id": "draft-ietf-quic-http-18",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "fbdaf0a05b4f5f1f3ef7030f634c7fa476b83381105d6d2af49f2b9fe5503031",
+  "lineage_ids": "lineage:23540f32f0664bc30ef74b0e",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1111,
+    "load_duration": 6054400,
+    "prompt_eval_count": 623,
+    "total_duration": 9752988000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause states that servers may reject requests on streams below the indicated ID if those requests were not processed. The phrase “below the indicated ID” is unambiguous (less than the ID in the GOAWAY frame), and the condition “if these requests were not processed” is clarified by the surrounding context, which explains that the status of such requests cannot be known until they are completed, reset, or the connection terminates. No alternative reasonable interpretations or missing constraints are evident.\"\n}",
+  "record_id": "ab7a99ca281b24ab8c1d79593e05ea2a4238b9d37e3047a50319ffcbe0e2de6f",
+  "revision": "18",
+  "schema_version": 1,
+  "section_ids": "6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.75
+}

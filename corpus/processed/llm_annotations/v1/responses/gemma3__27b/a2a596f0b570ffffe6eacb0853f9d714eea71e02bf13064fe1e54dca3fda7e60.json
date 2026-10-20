@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "all settings which differ from their default values",
+    "interpretation_a": "The server MUST send all settings that are non-default, even if the client already knows them (e.g., from a previous connection).",
+    "interpretation_b": "The server MUST send only those settings that differ from their default values *and* that the client does not already know.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'all settings which differ from their default values' can be interpreted in two ways. Does it mean *any* setting that is not the default, or only those settings that the client doesn't already know are non-default? The latter interpretation is more efficient, but the text does not explicitly state this.",
+    "missing_information": "It is unclear whether the server is required to send settings the client already knows, or only those settings that are both non-default and unknown to the client."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:00:45.907304+00:00",
+  "document_id": "draft-ietf-quic-http-29",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "3d5500b7ad51a1795e671ea034ac15e211093d51c907405bd2caf5c05eda572c",
+  "lineage_ids": "lineage:f944a71eb587df86a412ba48",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 212,
+    "load_duration": 9923700,
+    "prompt_eval_count": 602,
+    "total_duration": 8165509400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"all settings which differ from their default values\", \"interpretation_a\": \"The server MUST send all settings that are non-default, even if the client already knows them (e.g., from a previous connection).\", \"interpretation_b\": \"The server MUST send only those settings that differ from their default values *and* that the client does not already know.\", \"missing_information\": \"It is unclear whether the server is required to send settings the client already knows, or only those settings that are both non-default and unknown to the client.\", \"justification\": \"The phrase 'all settings which differ from their default values' can be interpreted in two ways. Does it mean *any* setting that is not the default, or only those settings that the client doesn't already know are non-default? The latter interpretation is more efficient, but the text does not explicitly state this.\"}",
+  "record_id": "a2a596f0b570ffffe6eacb0853f9d714eea71e02bf13064fe1e54dca3fda7e60",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "7.2.4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.172
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "contiguous sequence of frames",
+    "interpretation_a": "Frames must be sent back-to-back without any intervening frames, even if network conditions require packetization or reordering.",
+    "interpretation_b": "Frames must be sent in order, but network-level packetization or reordering is permitted between frames in the sequence.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'contiguous' can be interpreted strictly (back-to-back) or more loosely (in order, but potentially separated by network packets). Without clarification, implementations could differ in how they handle network conditions that might cause frames to be delivered out of order or with gaps.",
+    "missing_information": "The clause does not specify whether network-level packetization or reordering is permitted between frames in the sequence. This affects how implementations handle network conditions and potential out-of-order delivery."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:39:40.939612+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-00",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "bf2c11b2833ce45bb32e74d1802dd7d7212e14e64dc7bd2d3c3e28a6300cde16",
+  "lineage_ids": "lineage:223b749b349136c4ea278cc1",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 200,
+    "load_duration": 9118300,
+    "prompt_eval_count": 569,
+    "total_duration": 7691877800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"contiguous sequence of frames\", \"interpretation_a\": \"Frames must be sent back-to-back without any intervening frames, even if network conditions require packetization or reordering.\", \"interpretation_b\": \"Frames must be sent in order, but network-level packetization or reordering is permitted between frames in the sequence.\", \"missing_information\": \"The clause does not specify whether network-level packetization or reordering is permitted between frames in the sequence. This affects how implementations handle network conditions and potential out-of-order delivery.\", \"justification\": \"The term 'contiguous' can be interpreted strictly (back-to-back) or more loosely (in order, but potentially separated by network packets). Without clarification, implementations could differ in how they handle network conditions that might cause frames to be delivered out of order or with gaps.\"}",
+  "record_id": "8497c14f180e4fc0cd09e35c460e9fb551e0460c50c2dbc1ce3d6c64579ce926",
+  "revision": "00",
+  "schema_version": 1,
+  "section_ids": "4.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.704
+}

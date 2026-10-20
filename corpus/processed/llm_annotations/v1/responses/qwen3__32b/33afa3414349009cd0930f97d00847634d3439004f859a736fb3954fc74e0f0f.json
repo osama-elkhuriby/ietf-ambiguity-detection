@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Endpoints MAY re-establish the min_rtt at other times in the connection, such as when traffic volume is low and an acknowledgment is received with a low acknowledgment delay.",
+    "interpretation_a": "Endpoints are allowed to reset min_rtt whenever traffic is low and a low acknowledgment delay is observed, implying that these conditions are sufficient to justify a reset.",
+    "interpretation_b": "Endpoints are allowed to reset min_rtt at other times, but the phrase 'such as' implies that the listed conditions are examples, not strict criteria, leaving the exact conditions for resetting min_rtt undefined.",
+    "is_ambiguous": "yes",
+    "justification": "The target clause uses the term 'MAY' and provides an example scenario without defining the exact conditions for re-establishing min_rtt. This creates an incomplete constraint (U-2) because the lack of concrete definitions for 'low traffic volume' and 'low acknowledgment delay' allows for multiple interpretations, which could lead to different implementation behaviors.",
+    "missing_information": "The specification does not define what constitutes 'low traffic volume' or 'low acknowledgment delay', nor does it provide a clear algorithm or threshold for when min_rtt should be re-established, leading to different possible implementations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:18:17.101116+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "c7aabe886538a7b995ea0eb645b353a35010000ae26fc5bc57bbad073c0f2fc1",
+  "lineage_ids": "lineage:9d885e67e51650652320b4a1",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 276,
+    "load_duration": 4218400,
+    "prompt_eval_count": 583,
+    "total_duration": 11323258200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"Endpoints MAY re-establish the min_rtt at other times in the connection, such as when traffic volume is low and an acknowledgment is received with a low acknowledgment delay.\",\n  \"interpretation_a\": \"Endpoints are allowed to reset min_rtt whenever traffic is low and a low acknowledgment delay is observed, implying that these conditions are sufficient to justify a reset.\",\n  \"interpretation_b\": \"Endpoints are allowed to reset min_rtt at other times, but the phrase 'such as' implies that the listed conditions are examples, not strict criteria, leaving the exact conditions for resetting min_rtt undefined.\",\n  \"missing_information\": \"The specification does not define what constitutes 'low traffic volume' or 'low acknowledgment delay', nor does it provide a clear algorithm or threshold for when min_rtt should be re-established, leading to different possible implementations.\",\n  \"justification\": \"The target clause uses the term 'MAY' and provides an example scenario without defining the exact conditions for re-establishing min_rtt. This creates an incomplete constraint (U-2) because the lack of concrete definitions for 'low traffic volume' and 'low acknowledgment delay' allows for multiple interpretations, which could lead to different implementation behaviors.\"\n}",
+  "record_id": "33afa3414349009cd0930f97d00847634d3439004f859a736fb3954fc74e0f0f",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.328
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "OPTIONAL",
+    "interpretation_a": "DNSSEC signing and verification may be implemented, providing assurance of authenticity.",
+    "interpretation_b": "DNSSEC signing and verification may be omitted, providing no assurance of authenticity.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'OPTIONAL' creates ambiguity. It doesn't specify the consequences of *not* implementing DNSSEC. Does the record remain valid? Is it treated differently? This missing constraint affects implementation behavior.",
+    "missing_information": "The clause does not specify whether the absence of DNSSEC signing and verification impacts the validity or processing of the HTTPS record. It is unclear if a record lacking DNSSEC is still considered valid, or if it triggers specific error handling."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:06:47.986051+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "e0219c39be1b62e089c4b19a29584e1a33631cd5aaa91a9d9553b9fe616736d6",
+  "lineage_ids": "lineage:9e27d18c76e04e49dd493e74",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 173,
+    "load_duration": 5190400,
+    "prompt_eval_count": 586,
+    "total_duration": 6591427800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"OPTIONAL\", \"interpretation_a\": \"DNSSEC signing and verification may be implemented, providing assurance of authenticity.\", \"interpretation_b\": \"DNSSEC signing and verification may be omitted, providing no assurance of authenticity.\", \"missing_information\": \"The clause does not specify whether the absence of DNSSEC signing and verification impacts the validity or processing of the HTTPS record. It is unclear if a record lacking DNSSEC is still considered valid, or if it triggers specific error handling.\", \"justification\": \"The use of 'OPTIONAL' creates ambiguity. It doesn't specify the consequences of *not* implementing DNSSEC. Does the record remain valid? Is it treated differently? This missing constraint affects implementation behavior.\"}",
+  "record_id": "7c68047cc12951096787f22e3b55a60266fdb26568f9ef6f71f3b4ca5151132b",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "9.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.609
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY be defined to take precedence",
+    "interpretation_a": "An HTTP-based protocol mapping can be configured to always override HTTPS RRs.",
+    "interpretation_b": "An HTTP-based protocol mapping can be configured to not override HTTPS RRs.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' twice creates ambiguity. It's unclear whether the mapping *can* take precedence, or whether it *might* be defined to take precedence, and if so, under what conditions. This leaves open the possibility of different implementations where some always override and others never do.",
+    "missing_information": "The conditions under which the precedence is taken are not defined. It is unclear if the precedence is configurable, or if it is a default behaviour."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:08:33.146400+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-07",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "6c0efb03bc50ef2b643ff28e8dc0478731627311766887f061ff8992cceb5265",
+  "lineage_ids": "lineage:04b5abdf690d9cffe1b394b4",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 180,
+    "load_duration": 4069800,
+    "prompt_eval_count": 538,
+    "total_duration": 6800576100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY be defined to take precedence\", \"interpretation_a\": \"An HTTP-based protocol mapping can be configured to always override HTTPS RRs.\", \"interpretation_b\": \"An HTTP-based protocol mapping can be configured to not override HTTPS RRs.\", \"missing_information\": \"The conditions under which the precedence is taken are not defined. It is unclear if the precedence is configurable, or if it is a default behaviour.\", \"justification\": \"The use of 'MAY' twice creates ambiguity. It's unclear whether the mapping *can* take precedence, or whether it *might* be defined to take precedence, and if so, under what conditions. This leaves open the possibility of different implementations where some always override and others never do.\"}",
+  "record_id": "96d10c7a2e0ee6c76731f7992d735e2b96df27a2cc4b95ec52ef4eba8e7542ef",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.796
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "TCP MAY pass",
+    "interpretation_a": "TCP is permitted to pass the DS field to the application.",
+    "interpretation_b": "TCP is permitted to *not* pass the DS field to the application.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' indicates permission, but does not mandate the behavior. Thus, TCP implementations could choose to pass the DS field, or not, both being valid interpretations. A missing constraint would be a requirement to always pass the field, or never pass the field.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:27:14.888977+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-14",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "01bf156194809b9ea81911487c181bf559e9f98c78cc6da55cb5eac879f8475c",
+  "lineage_ids": "lineage:095733c8304d0879a554122d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 137,
+    "load_duration": 8640700,
+    "prompt_eval_count": 569,
+    "total_duration": 5409811400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"TCP MAY pass\", \"interpretation_a\": \"TCP is permitted to pass the DS field to the application.\", \"interpretation_b\": \"TCP is permitted to *not* pass the DS field to the application.\", \"missing_information\": \"\", \"justification\": \"The use of 'MAY' indicates permission, but does not mandate the behavior. Thus, TCP implementations could choose to pass the DS field, or not, both being valid interpretations. A missing constraint would be a requirement to always pass the field, or never pass the field.\"}",
+  "record_id": "bdfeaadd5e63797b4d1ac3b0ad0a2e96e121a1d86e0b212f24c946e110cc5f2f",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "3.9.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.437
+}

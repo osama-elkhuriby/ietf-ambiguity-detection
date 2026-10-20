@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously requires a client to parse the first digit of any status code and, if the status code is not recognized, to treat it as equivalent to the x00 status code of that class (e.g., 471 treated as 400). The example provided clarifies the intended behavior, leaving no materially different reasonable implementation interpretations or missing constraints.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T06:44:40.265961+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "b11ffad3f5b1acb4fa26b104d02bffdeb800cb570f3683406723b878b034a5fc",
+  "lineage_ids": "lineage:12feedd173aeff83b80db486",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1018,
+    "load_duration": 4903400,
+    "prompt_eval_count": 630,
+    "total_duration": 8878482700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously requires a client to parse the first digit of any status code and, if the status code is not recognized, to treat it as equivalent to the x00 status code of that class (e.g., 471 treated as 400). The example provided clarifies the intended behavior, leaving no materially different reasonable implementation interpretations or missing constraints.\"\n}",
+  "record_id": "6d56fe0a92fe4a02b17c392a99b4fd7fac7a4bc3a86119a4de4c7b5c9fb761b4",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "15",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.875
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "A client that attempts to send 0-RTT data MUST remember all other transport parameters used by the server.",
+    "interpretation_a": "It is unclear whether the client must persistently store the parameters for future connections or only keep them in memory for the current session.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify the persistence or scope of the remembered parameters, leading to an incomplete constraint that could affect implementation.",
+    "missing_information": "Whether the client must persistently store the parameters across connections or only retain them temporarily for the current session."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T17:56:10.986871+00:00",
+  "document_id": "draft-ietf-quic-transport-30",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "8145454ff0d9f140a112258cae3abb46e0cd124882e9179816937adecd1c4aa7",
+  "lineage_ids": "lineage:11f3fa2ba7ca00ff1dfe9e17",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 907,
+    "load_duration": 5572300,
+    "prompt_eval_count": 646,
+    "total_duration": 8074122200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"A client that attempts to send 0-RTT data MUST remember all other transport parameters used by the server.\",\n  \"interpretation_a\": \"It is unclear whether the client must persistently store the parameters for future connections or only keep them in memory for the current session.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"Whether the client must persistently store the parameters across connections or only retain them temporarily for the current session.\",\n  \"justification\": \"The clause does not specify the persistence or scope of the remembered parameters, leading to an incomplete constraint that could affect implementation.\"\n}",
+  "record_id": "b4de04bdde28080466d5559d9adc2ee613b35356541abf3250817b700a1149dc",
+  "revision": "30",
+  "schema_version": 1,
+  "section_ids": "7.4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 75.765
+}

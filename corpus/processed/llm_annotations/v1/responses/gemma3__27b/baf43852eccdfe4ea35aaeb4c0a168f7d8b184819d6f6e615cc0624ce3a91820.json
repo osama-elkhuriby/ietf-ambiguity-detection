@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "half the value of the congestion window",
+    "interpretation_a": "The slow start threshold is set to the integer division of the congestion window by 2 (e.g., cwnd=11, ssthresh=5).",
+    "interpretation_b": "The slow start threshold is set to the result of rounding the congestion window divided by 2 (e.g., cwnd=11, ssthresh=6).",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"half the value\" does not specify whether integer division or rounding should be used when the congestion window is odd. This affects the precise value of the slow start threshold and therefore implementation behaviour.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:28:02.902065+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "290d7ad3815a7dd67663c3e4c5cd3815d954287801dd401a51f9267a7a897521",
+  "lineage_ids": "lineage:2cdc698f9846ece680056135",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 168,
+    "load_duration": 4179100,
+    "prompt_eval_count": 576,
+    "total_duration": 6393840800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"half the value of the congestion window\", \"interpretation_a\": \"The slow start threshold is set to the integer division of the congestion window by 2 (e.g., cwnd=11, ssthresh=5).\", \"interpretation_b\": \"The slow start threshold is set to the result of rounding the congestion window divided by 2 (e.g., cwnd=11, ssthresh=6).\", \"missing_information\": \"\", \"justification\": \"The phrase \\\"half the value\\\" does not specify whether integer division or rounding should be used when the congestion window is odd. This affects the precise value of the slow start threshold and therefore implementation behaviour.\"}",
+  "record_id": "baf43852eccdfe4ea35aaeb4c0a168f7d8b184819d6f6e615cc0624ce3a91820",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.406
+}

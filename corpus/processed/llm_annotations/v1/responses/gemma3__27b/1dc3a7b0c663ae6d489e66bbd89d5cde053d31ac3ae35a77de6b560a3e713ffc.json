@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "before verifying either the client Finished message or - in the case that the server has chosen to use a pre-shared key - the pre-shared key binder",
+    "interpretation_a": "The server must verify *at least one* of these before using 1-RTT packets. It could verify the Finished message, or the PSK binder, or both.",
+    "interpretation_b": "The server must verify *both* the Finished message *and* the PSK binder before using 1-RTT packets. The 'or' is interpreted as 'and' in this context.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'or' creates ambiguity. It is unclear whether the server must verify at least one of the conditions, or both. This impacts implementation, as a server might only implement verification of one of the conditions if it believes only one is required.",
+    "missing_information": "The meaning of 'or' is unclear. Is it inclusive or exclusive? This affects whether the server needs to verify both conditions before using 1-RTT packets."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:34:57.384312+00:00",
+  "document_id": "draft-ietf-quic-tls-05",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "e8d7410c1946251e59fb076407b47579aa4c70bc99f5bb7371808295d7ae14c7",
+  "lineage_ids": "lineage:fd66fd13811e085f468e17e4",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 242,
+    "load_duration": 3956700,
+    "prompt_eval_count": 623,
+    "total_duration": 9110724900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"before verifying either the client Finished message or - in the case that the server has chosen to use a pre-shared key - the pre-shared key binder\", \"interpretation_a\": \"The server must verify *at least one* of these before using 1-RTT packets. It could verify the Finished message, or the PSK binder, or both.\", \"interpretation_b\": \"The server must verify *both* the Finished message *and* the PSK binder before using 1-RTT packets. The 'or' is interpreted as 'and' in this context.\", \"missing_information\": \"The meaning of 'or' is unclear. Is it inclusive or exclusive? This affects whether the server needs to verify both conditions before using 1-RTT packets.\", \"justification\": \"The use of 'or' creates ambiguity. It is unclear whether the server must verify at least one of the conditions, or both. This impacts implementation, as a server might only implement verification of one of the conditions if it believes only one is required.\"}",
+  "record_id": "1dc3a7b0c663ae6d489e66bbd89d5cde053d31ac3ae35a77de6b560a3e713ffc",
+  "revision": "05",
+  "schema_version": 1,
+  "section_ids": "9.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.109
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "reasonable length",
+    "interpretation_a": "A recipient might interpret 'reasonable length' as a fixed, pre-defined maximum length (e.g., 10KB).",
+    "interpretation_b": "A recipient might interpret 'reasonable length' as a dynamically determined length based on available resources (e.g., memory, processing power) at the time of parsing.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'reasonable length' is subjective and lacks a concrete definition. This allows for different implementations to interpret what constitutes a 'reasonable' length, leading to potential interoperability issues. Without a defined limit or a method for calculating it, the requirement is incomplete.",
+    "missing_information": "The definition of 'reasonable length' is missing. A concrete maximum length or a method for determining 'reasonable length' is needed to avoid ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:19:36.542516+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-13",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "a1c5bdc9f71e5e54f11d0f8f73dce24e629e50f91e224f63dbe650940012975a",
+  "lineage_ids": "lineage:1ab06ddd826774538f24315a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 197,
+    "load_duration": 9840900,
+    "prompt_eval_count": 564,
+    "total_duration": 7580433400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"reasonable length\", \"interpretation_a\": \"A recipient might interpret 'reasonable length' as a fixed, pre-defined maximum length (e.g., 10KB).\", \"interpretation_b\": \"A recipient might interpret 'reasonable length' as a dynamically determined length based on available resources (e.g., memory, processing power) at the time of parsing.\", \"missing_information\": \"The definition of 'reasonable length' is missing. A concrete maximum length or a method for determining 'reasonable length' is needed to avoid ambiguity.\", \"justification\": \"The term 'reasonable length' is subjective and lacks a concrete definition. This allows for different implementations to interpret what constitutes a 'reasonable' length, leading to potential interoperability issues. Without a defined limit or a method for calculating it, the requirement is incomplete.\"}",
+  "record_id": "9aaf338417d25a6350ec1b0f723549c65db19a49024225aa87f8c5a78d75bda3",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.609
+}

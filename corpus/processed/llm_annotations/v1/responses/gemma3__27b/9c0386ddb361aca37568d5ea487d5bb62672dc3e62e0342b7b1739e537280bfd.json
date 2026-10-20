@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY treat the entire SvcParams portion of the record as opaque",
+    "interpretation_a": "The resolver can ignore all SvcParams and proceed as if they weren't present.",
+    "interpretation_b": "The resolver can parse the SvcParams but not act on unrecognized keys, effectively treating them as no-ops.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' combined with 'opaque' allows for two distinct behaviors. A resolver could choose to completely ignore the SvcParams, or it could parse them but not act on any unrecognized keys. This difference in behavior is material, as it affects the resolver's processing of the record.",
+    "missing_information": "It is unclear whether 'opaque' means 'completely ignored' or 'parsed but not acted upon'. This affects how the resolver handles potentially malicious or unexpected parameters."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:09:39.308065+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-07",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "d67ebd74b2f05c5167677d86d87dd63ac1a90cdc0c61aa764398ce6a4f89ad88",
+  "lineage_ids": "lineage:6f0bf7179040d2a61b42111e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 199,
+    "load_duration": 5837900,
+    "prompt_eval_count": 566,
+    "total_duration": 7497342800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY treat the entire SvcParams portion of the record as opaque\", \"interpretation_a\": \"The resolver can ignore all SvcParams and proceed as if they weren't present.\", \"interpretation_b\": \"The resolver can parse the SvcParams but not act on unrecognized keys, effectively treating them as no-ops.\", \"missing_information\": \"It is unclear whether 'opaque' means 'completely ignored' or 'parsed but not acted upon'. This affects how the resolver handles potentially malicious or unexpected parameters.\",\"justification\": \"The use of 'MAY' combined with 'opaque' allows for two distinct behaviors. A resolver could choose to completely ignore the SvcParams, or it could parse them but not act on any unrecognized keys. This difference in behavior is material, as it affects the resolver's processing of the record.\"}",
+  "record_id": "9c0386ddb361aca37568d5ea487d5bb62672dc3e62e0342b7b1739e537280bfd",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "4.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.485
+}

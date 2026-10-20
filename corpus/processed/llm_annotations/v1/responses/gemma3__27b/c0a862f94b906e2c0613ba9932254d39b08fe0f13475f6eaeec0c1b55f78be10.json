@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST be ignored",
+    "interpretation_a": "The timestamps are discarded without any logging or processing.",
+    "interpretation_b": "The timestamps are discarded after some minimal processing (e.g., checking for validity) but not used for any stateful operation.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'ignored' is incomplete. It doesn't specify whether any processing is done on the timestamp before it is ignored. This could lead to different implementations, some of which might perform more processing than others, potentially impacting resource usage or security.",
+    "missing_information": "The level of 'ignored' is not defined. Does 'ignored' mean discarded immediately, or discarded after some minimal validation? This affects implementation choices around resource usage and potential denial-of-service concerns."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:47:17.239272+00:00",
+  "document_id": "draft-ietf-quic-tls-00",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "005229e244ba9b64fe8fa0f30b71eed45ede6abeec8d975c0b0b8dceecb5c62a",
+  "lineage_ids": "lineage:10279faa14f4bf914fd4f62d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 183,
+    "load_duration": 3505600,
+    "prompt_eval_count": 563,
+    "total_duration": 6901798700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST be ignored\", \"interpretation_a\": \"The timestamps are discarded without any logging or processing.\", \"interpretation_b\": \"The timestamps are discarded after some minimal processing (e.g., checking for validity) but not used for any stateful operation.\", \"missing_information\": \"The level of 'ignored' is not defined. Does 'ignored' mean discarded immediately, or discarded after some minimal validation? This affects implementation choices around resource usage and potential denial-of-service concerns.\", \"justification\": \"The term 'ignored' is incomplete. It doesn't specify whether any processing is done on the timestamp before it is ignored. This could lead to different implementations, some of which might perform more processing than others, potentially impacting resource usage or security.\"}",
+  "record_id": "c0a862f94b906e2c0613ba9932254d39b08fe0f13475f6eaeec0c1b55f78be10",
+  "revision": "00",
+  "schema_version": 1,
+  "section_ids": "5.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.891
+}

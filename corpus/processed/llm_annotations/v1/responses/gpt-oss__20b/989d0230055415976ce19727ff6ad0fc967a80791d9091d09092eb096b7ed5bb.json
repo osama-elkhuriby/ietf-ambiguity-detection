@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause explicitly states that the field may be sent only in segments with the SYN control bit set (the initial connection request) and must not be sent in any other segments. This provides a clear, unambiguous constraint on implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T20:11:50.332377+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "a13d5eb7b5726ad18d4677afed624918e047400fcafadc046f31385b4a53639b",
+  "lineage_ids": "lineage:0a780b55300c0a7bde1608a1",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 608,
+    "load_duration": 2023300,
+    "prompt_eval_count": 585,
+    "total_duration": 5352034200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause explicitly states that the field may be sent only in segments with the SYN control bit set (the initial connection request) and must not be sent in any other segments. This provides a clear, unambiguous constraint on implementation behavior.\"\n}",
+  "record_id": "989d0230055415976ce19727ff6ad0fc967a80791d9091d09092eb096b7ed5bb",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.36
+}

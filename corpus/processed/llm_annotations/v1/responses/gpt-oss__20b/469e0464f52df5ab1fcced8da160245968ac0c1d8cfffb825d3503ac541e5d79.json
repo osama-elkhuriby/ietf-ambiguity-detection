@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD limit the number of packets they generate containing a CONNECTION_CLOSE frame.",
+    "interpretation_a": "Endpoints could interpret 'limit' as sending at most one CONNECTION_CLOSE frame.",
+    "interpretation_b": "Endpoints could interpret 'limit' as sending a bounded number of CONNECTION_CLOSE frames, e.g., a small fixed number.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states a SHOULD but does not provide a concrete constraint or method for limiting the number of packets, allowing materially different implementation behaviours.",
+    "missing_information": "The clause does not specify a numeric limit or a method for determining how many packets to generate containing a CONNECTION_CLOSE frame, leaving the implementation choice open to interpretation.  This lack of a concrete constraint makes the clause ambiguous.  Additional context or a defined limit would resolve the ambiguity.  (No external definitions are required.)"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T15:30:43.104807+00:00",
+  "document_id": "draft-ietf-quic-transport-24",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "ab77af23bf02536cd6181f7295f331525cb5b6232aa915923cd9c73765cf042e",
+  "lineage_ids": "lineage:5584f0a243601001d177fd2f",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1089,
+    "load_duration": 3972400,
+    "prompt_eval_count": 583,
+    "total_duration": 9955110800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"SHOULD limit the number of packets they generate containing a CONNECTION_CLOSE frame.\",\n  \"interpretation_a\": \"Endpoints could interpret 'limit' as sending at most one CONNECTION_CLOSE frame.\",\n  \"interpretation_b\": \"Endpoints could interpret 'limit' as sending a bounded number of CONNECTION_CLOSE frames, e.g., a small fixed number.\",\n  \"missing_information\": \"The clause does not specify a numeric limit or a method for determining how many packets to generate containing a CONNECTION_CLOSE frame, leaving the implementation choice open to interpretation.  This lack of a concrete constraint makes the clause ambiguous.  Additional context or a defined limit would resolve the ambiguity.  (No external definitions are required.)\",\n  \"justification\": \"The clause states a SHOULD but does not provide a concrete constraint or method for limiting the number of packets, allowing materially different implementation behaviours.\"\n}",
+  "record_id": "469e0464f52df5ab1fcced8da160245968ac0c1d8cfffb825d3503ac541e5d79",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "10.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.953
+}

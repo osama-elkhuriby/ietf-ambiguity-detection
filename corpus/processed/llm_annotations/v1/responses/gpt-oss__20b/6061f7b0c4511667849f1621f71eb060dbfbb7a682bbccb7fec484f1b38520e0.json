@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that a PRIORITY frame may specify a Stream Dependency ID of 0, which, per RFC7540, makes the request dependent on the root of the dependency tree. The subsequent clause clarifies that the frame must be on a client‑initiated, bidirectional stream, ruling out any interpretation that the frame’s own Stream ID could be 0. No missing constraints or conflicting definitions are present.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T09:28:59.649864+00:00",
+  "document_id": "draft-ietf-quic-http-12",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "7195225dcfecb39e6080111b67dca415f07d1ee2d3157a5265a04edce5a91f62",
+  "lineage_ids": "lineage:955a6b01921485d273d402ff",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1757,
+    "load_duration": 6773600,
+    "prompt_eval_count": 624,
+    "total_duration": 15197093100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that a PRIORITY frame may specify a Stream Dependency ID of 0, which, per RFC7540, makes the request dependent on the root of the dependency tree. The subsequent clause clarifies that the frame must be on a client‑initiated, bidirectional stream, ruling out any interpretation that the frame’s own Stream ID could be 0. No missing constraints or conflicting definitions are present.\"\n}",
+  "record_id": "6061f7b0c4511667849f1621f71eb060dbfbb7a682bbccb7fec484f1b38520e0",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "4.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 15.203
+}

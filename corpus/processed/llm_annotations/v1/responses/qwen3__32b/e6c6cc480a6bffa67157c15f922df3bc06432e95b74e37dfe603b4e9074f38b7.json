@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear condition under which an endpoint must terminate a connection with a STREAM_ID_ERROR error. It specifies that this applies when a peer initiates a stream with a higher stream ID than the endpoint has sent, with an explicit exception for changes in initial limits. The language is precise and does not allow for multiple materially different interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:47:40.569439+00:00",
+  "document_id": "draft-ietf-quic-transport-06",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "ffcbda7d1abc4b3be32596c7a039920b1fb649f8b704e56c8136b120c133d633",
+  "lineage_ids": "lineage:cebe7b78576615b312c20d9d",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 124,
+    "load_duration": 3543400,
+    "prompt_eval_count": 546,
+    "total_duration": 5087003900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear condition under which an endpoint must terminate a connection with a STREAM_ID_ERROR error. It specifies that this applies when a peer initiates a stream with a higher stream ID than the endpoint has sent, with an explicit exception for changes in initial limits. The language is precise and does not allow for multiple materially different interpretations.\"\n}",
+  "record_id": "e6c6cc480a6bffa67157c15f922df3bc06432e95b74e37dfe603b4e9074f38b7",
+  "revision": "06",
+  "schema_version": 1,
+  "section_ids": "8.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.094
+}

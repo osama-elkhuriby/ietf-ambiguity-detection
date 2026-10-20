@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "do not uniquely identify a protocol suite",
+    "interpretation_a": "An ALPN identifier is considered to not uniquely identify a protocol suite if it could be used with multiple distinct protocol suites (TLS and DTLS being one example).",
+    "interpretation_b": "An ALPN identifier is considered to not uniquely identify a protocol suite if it doesn't provide enough information to *fully* determine the specific configuration within a protocol suite (e.g., cipher suite, key exchange method).",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'do not uniquely identify a protocol suite' is open to interpretation. It's unclear whether the requirement applies to any ALPN identifier that *could* be used with multiple protocols, or only those that lack sufficient specificity to determine the exact protocol configuration.",
+    "missing_information": "The definition of 'uniquely identify a protocol suite' is not precise. Does it mean any possibility of use with another protocol, or a lack of sufficient detail to configure the protocol correctly?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:58:42.519885+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "888c4aef29ed708156efa0fcd2c833e137397749805e25c2ec30938855eaa705",
+  "lineage_ids": "lineage:2e28910342aa9bded45c2eda",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 230,
+    "load_duration": 5070300,
+    "prompt_eval_count": 613,
+    "total_duration": 8628442700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"do not uniquely identify a protocol suite\", \"interpretation_a\": \"An ALPN identifier is considered to not uniquely identify a protocol suite if it could be used with multiple distinct protocol suites (TLS and DTLS being one example).\", \"interpretation_b\": \"An ALPN identifier is considered to not uniquely identify a protocol suite if it doesn't provide enough information to *fully* determine the specific configuration within a protocol suite (e.g., cipher suite, key exchange method).\", \"missing_information\": \"The definition of 'uniquely identify a protocol suite' is not precise. Does it mean any possibility of use with another protocol, or a lack of sufficient detail to configure the protocol correctly?\",\"justification\": \"The phrase 'do not uniquely identify a protocol suite' is open to interpretation. It's unclear whether the requirement applies to any ALPN identifier that *could* be used with multiple protocols, or only those that lack sufficient specificity to determine the exact protocol configuration.\"}",
+  "record_id": "1a75f3394bab69053d62de2d2528b3931e872daf5149e2261e70f40055a4fa53",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "7.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.625
+}

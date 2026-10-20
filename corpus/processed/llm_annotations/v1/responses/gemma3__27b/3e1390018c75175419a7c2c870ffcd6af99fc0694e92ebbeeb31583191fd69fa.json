@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST be followed by a CONTINUATION frame",
+    "interpretation_a": "A HEADERS frame without the END_HEADERS flag MUST be immediately followed by a single CONTINUATION frame.",
+    "interpretation_b": "A HEADERS frame without the END_HEADERS flag MUST be followed by one or more CONTINUATION frames, potentially with other frames interspersed, as long as a CONTINUATION frame exists for the same stream.",
+    "is_ambiguous": "yes",
+    "justification": "The word 'followed' is ambiguous. It could mean 'immediately followed' or 'eventually followed'. The lack of a time constraint or allowance for other frames creates two reasonable interpretations.",
+    "missing_information": "The clause does not specify whether the CONTINUATION frame must be immediate, or if other frames are permitted between the HEADERS and CONTINUATION frames. This affects implementation of frame ordering and error handling."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:32:06.698237+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "b9bf7799c547758d68d741910b0a4c85fb93b2d2d0b8f7a3e15266b6a6779090",
+  "lineage_ids": "lineage:052d6c48799b7465b201ab4f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 198,
+    "load_duration": 9069500,
+    "prompt_eval_count": 598,
+    "total_duration": 7663839900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST be followed by a CONTINUATION frame\", \"interpretation_a\": \"A HEADERS frame without the END_HEADERS flag MUST be immediately followed by a single CONTINUATION frame.\", \"interpretation_b\": \"A HEADERS frame without the END_HEADERS flag MUST be followed by one or more CONTINUATION frames, potentially with other frames interspersed, as long as a CONTINUATION frame exists for the same stream.\", \"missing_information\": \"The clause does not specify whether the CONTINUATION frame must be immediate, or if other frames are permitted between the HEADERS and CONTINUATION frames. This affects implementation of frame ordering and error handling.\", \"justification\": \"The word 'followed' is ambiguous. It could mean 'immediately followed' or 'eventually followed'. The lack of a time constraint or allowance for other frames creates two reasonable interpretations.\"}",
+  "record_id": "3e1390018c75175419a7c2c870ffcd6af99fc0694e92ebbeeb31583191fd69fa",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.672
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously specifies that an endpoint should supply a new connection ID when either (1) a connection ID is retired by its peer or (2) it receives a packet with a previously unused connection ID. The conditions and required action are clear, with no missing constraints that would allow materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T18:03:49.924519+00:00",
+  "document_id": "draft-ietf-quic-transport-20",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "d557c60b4513a2809fccde590346db52f2f1c84348afd4d56f4ce96cf4f7083f",
+  "lineage_ids": "lineage:92564fb31ba28965e21a0e81",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2281,
+    "load_duration": 3797600,
+    "prompt_eval_count": 615,
+    "total_duration": 19735337800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously specifies that an endpoint should supply a new connection ID when either (1) a connection ID is retired by its peer or (2) it receives a packet with a previously unused connection ID. The conditions and required action are clear, with no missing constraints that would allow materially different implementation behaviours.\"\n}",
+  "record_id": "bc0cc49982a1327650e8c0fb9e028fb8105e6ec80f661297d2e7809ca55bbeb5",
+  "revision": "20",
+  "schema_version": 1,
+  "section_ids": "5.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 19.734
+}

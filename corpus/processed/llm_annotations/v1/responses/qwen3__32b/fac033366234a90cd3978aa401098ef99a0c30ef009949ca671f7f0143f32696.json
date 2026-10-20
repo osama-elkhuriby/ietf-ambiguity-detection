@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear condition for handling data from different encryption levels in TLS. It specifies that if data from a new encryption level is provided to TLS and there is unconsumed data from a previous level, it must be treated as a connection error. There is no ambiguity in the condition or the required action.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:45:39.943071+00:00",
+  "document_id": "draft-ietf-quic-tls-30",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "65bf74e397319fd959f08496eb7b9ed4469b17409d8a3412ba73ea43a60a73cb",
+  "lineage_ids": "lineage:17d28136c2f96508a9ae644f",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 119,
+    "load_duration": 7411100,
+    "prompt_eval_count": 575,
+    "total_duration": 4937981700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear condition for handling data from different encryption levels in TLS. It specifies that if data from a new encryption level is provided to TLS and there is unconsumed data from a previous level, it must be treated as a connection error. There is no ambiguity in the condition or the required action.\"\n}",
+  "record_id": "fac033366234a90cd3978aa401098ef99a0c30ef009949ca671f7f0143f32696",
+  "revision": "30",
+  "schema_version": 1,
+  "section_ids": "4.1.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 4.937
+}

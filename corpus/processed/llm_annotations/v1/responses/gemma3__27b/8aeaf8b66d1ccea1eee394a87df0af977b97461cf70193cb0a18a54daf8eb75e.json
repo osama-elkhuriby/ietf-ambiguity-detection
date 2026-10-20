@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY limit the rate",
+    "interpretation_a": "The endpoint can choose to limit the rate of PATH_RESPONSE frames to any value it deems appropriate, even a very low value.",
+    "interpretation_b": "The endpoint should limit the rate of PATH_RESPONSE frames to a reasonable value to prevent denial-of-service, but the definition of 'reasonable' is not provided.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY limit the rate' without specifying any constraints on the rate creates ambiguity. Different implementations could interpret this in vastly different ways, leading to interoperability issues.",
+    "missing_information": "The document does not define what constitutes a reasonable rate limit, leaving implementation open to interpretation."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:42:16.810003+00:00",
+  "document_id": "draft-ietf-quic-transport-15",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "e6f00837bd3300e2c6b9d6041679cd0dc2a93d961cceb855840ddcb1ed5ee77e",
+  "lineage_ids": "lineage:93624d999562a4d67b89fd95",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 169,
+    "load_duration": 4155700,
+    "prompt_eval_count": 667,
+    "total_duration": 6510333600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY limit the rate\", \"interpretation_a\": \"The endpoint can choose to limit the rate of PATH_RESPONSE frames to any value it deems appropriate, even a very low value.\", \"interpretation_b\": \"The endpoint should limit the rate of PATH_RESPONSE frames to a reasonable value to prevent denial-of-service, but the definition of 'reasonable' is not provided.\", \"missing_information\": \"The document does not define what constitutes a reasonable rate limit, leaving implementation open to interpretation.\",\"justification\": \"The use of 'MAY limit the rate' without specifying any constraints on the rate creates ambiguity. Different implementations could interpret this in vastly different ways, leading to interoperability issues.\"}",
+  "record_id": "8aeaf8b66d1ccea1eee394a87df0af977b97461cf70193cb0a18a54daf8eb75e",
+  "revision": "15",
+  "schema_version": 1,
+  "section_ids": "6.10.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.516
+}

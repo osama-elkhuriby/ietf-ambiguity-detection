@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "when sending to more than one destination address",
+    "interpretation_a": "The restriction applies to sending packets to multiple *different* destination addresses simultaneously. An endpoint must not use the same connection ID if it is actively sending to both 1.2.3.4 and 5.6.7.8.",
+    "interpretation_b": "The restriction applies to any situation where a packet *could* be sent to multiple destination addresses, even if only one is currently being used. An endpoint must not use a connection ID if it has the capability to send to multiple destination addresses, even if it is only sending to one at a time.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'more than one destination address' is incomplete. It is unclear whether the restriction applies to simultaneous sending to multiple addresses, or to the mere capability of sending to multiple addresses. This affects implementation because an endpoint might choose to implement a more restrictive policy if it interprets the clause as prohibiting the use of a connection ID if the endpoint *could* send to multiple addresses, even if it isn't currently doing so.",
+    "missing_information": "The clause does not define what constitutes 'more than one destination address'. Is it simultaneous sending, or simply the capability to send to multiple addresses?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:15:26.394023+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "6fef5b409d2f0509f4c6e34b37ef5269cf950769e020b659a6c77686c9e8550f",
+  "lineage_ids": "lineage:39bd3767ab943641cca2c044",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 283,
+    "load_duration": 3514100,
+    "prompt_eval_count": 630,
+    "total_duration": 10484002800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"when sending to more than one destination address\", \"interpretation_a\": \"The restriction applies to sending packets to multiple *different* destination addresses simultaneously. An endpoint must not use the same connection ID if it is actively sending to both 1.2.3.4 and 5.6.7.8.\", \"interpretation_b\": \"The restriction applies to any situation where a packet *could* be sent to multiple destination addresses, even if only one is currently being used. An endpoint must not use a connection ID if it has the capability to send to multiple destination addresses, even if it is only sending to one at a time.\", \"missing_information\": \"The clause does not define what constitutes 'more than one destination address'. Is it simultaneous sending, or simply the capability to send to multiple addresses?\",\"justification\": \"The phrase 'more than one destination address' is incomplete. It is unclear whether the restriction applies to simultaneous sending to multiple addresses, or to the mere capability of sending to multiple addresses. This affects implementation because an endpoint might choose to implement a more restrictive policy if it interprets the clause as prohibiting the use of a connection ID if the endpoint *could* send to multiple addresses, even if it isn't currently doing so.\"}",
+  "record_id": "3e0b8ccd44dc227d3904e9d866979c943b05836731ecf83e99db06bf45d4ae25",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.485
+}

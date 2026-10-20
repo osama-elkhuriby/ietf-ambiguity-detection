@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Unsupported parameters",
+    "interpretation_a": "A recipient might silently discard unsupported parameters without any indication to the sender.",
+    "interpretation_b": "A recipient might signal an error to the sender upon receiving unsupported parameters, potentially leading to connection termination.",
+    "is_ambiguous": "yes",
+    "justification": "The clause 'Unsupported parameters MUST be ignored' does not define what constitutes 'ignored'. Does it mean silently dropping the parameter, or signaling an error? Both are reasonable interpretations, and the lack of clarity creates ambiguity.",
+    "missing_information": "The draft does not specify whether unsupported parameters should be silently ignored or if an error should be signaled. This missing constraint affects implementation behavior as different implementations might handle unsupported parameters in different ways."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:27:10.077234+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-01",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "12e701f3796016214accab65cac1e616dade2c46ceb9477818d6448a4ec70ee9",
+  "lineage_ids": "lineage:6f5fc35d134f51659e88c95c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 169,
+    "load_duration": 11447200,
+    "prompt_eval_count": 563,
+    "total_duration": 6599100800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Unsupported parameters\", \"interpretation_a\": \"A recipient might silently discard unsupported parameters without any indication to the sender.\", \"interpretation_b\": \"A recipient might signal an error to the sender upon receiving unsupported parameters, potentially leading to connection termination.\", \"missing_information\": \"The draft does not specify whether unsupported parameters should be silently ignored or if an error should be signaled. This missing constraint affects implementation behavior as different implementations might handle unsupported parameters in different ways.\", \"justification\": \"The clause 'Unsupported parameters MUST be ignored' does not define what constitutes 'ignored'. Does it mean silently dropping the parameter, or signaling an error? Both are reasonable interpretations, and the lack of clarity creates ambiguity.\"}",
+  "record_id": "05ad0ebfa5ffffdeb5d43780458ac9c1d68e4d8f4022ae89e60ead4a64713c0b",
+  "revision": "01",
+  "schema_version": 1,
+  "section_ids": "6.5.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.61
+}

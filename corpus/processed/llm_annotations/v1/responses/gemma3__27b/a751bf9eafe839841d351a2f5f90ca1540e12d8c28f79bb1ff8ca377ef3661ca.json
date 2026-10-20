@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "0x3FFFFFFFFFFFFFFE",
+    "interpretation_a": "The maximum value is 0x3FFFFFFFFFFFFFFE, which is the largest possible 64-bit integer value that is even.",
+    "interpretation_b": "The maximum value is 0x3FFFFFFFFFFFFFFE, which is the largest possible 64-bit integer value that is less than or equal to 0x3FFFFFFFFFFFFFFE. This seems redundant, but could be interpreted as a safety check.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'through 0x3FFFFFFFFFFFFFFE' is ambiguous. It could mean that 0x3FFFFFFFFFFFFFFE is included in the range of disallowed values, or that it is the upper bound of the range. This affects implementation because a compliant implementation needs to know whether to disallow 0x3FFFFFFFFFFFFFFE or not.",
+    "missing_information": "It is unclear if the upper bound is inclusive or exclusive. The phrase 'through' is ambiguous in this context. Is 0x3FFFFFFFFFFFFFFE a valid value that MUST NOT be assigned, or is it the upper limit that MUST NOT be exceeded?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:01:37.110083+00:00",
+  "document_id": "draft-ietf-quic-http-27",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "05fff192bf91c0d2221ee5d925d3ea85f4be0440808414fd92cf70fb715c5fdd",
+  "lineage_ids": "lineage:c47d59b2fae0ea38a9e0ea8a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 268,
+    "load_duration": 23050500,
+    "prompt_eval_count": 665,
+    "total_duration": 10213707200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"0x3FFFFFFFFFFFFFFE\", \"interpretation_a\": \"The maximum value is 0x3FFFFFFFFFFFFFFE, which is the largest possible 64-bit integer value that is even.\", \"interpretation_b\": \"The maximum value is 0x3FFFFFFFFFFFFFFE, which is the largest possible 64-bit integer value that is less than or equal to 0x3FFFFFFFFFFFFFFE. This seems redundant, but could be interpreted as a safety check.\", \"missing_information\": \"It is unclear if the upper bound is inclusive or exclusive. The phrase 'through' is ambiguous in this context. Is 0x3FFFFFFFFFFFFFFE a valid value that MUST NOT be assigned, or is it the upper limit that MUST NOT be exceeded?\",\"justification\": \"The phrase 'through 0x3FFFFFFFFFFFFFFE' is ambiguous. It could mean that 0x3FFFFFFFFFFFFFFE is included in the range of disallowed values, or that it is the upper bound of the range. This affects implementation because a compliant implementation needs to know whether to disallow 0x3FFFFFFFFFFFFFFE or not.\"}",
+  "record_id": "a751bf9eafe839841d351a2f5f90ca1540e12d8c28f79bb1ff8ca377ef3661ca",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "11.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.218
+}

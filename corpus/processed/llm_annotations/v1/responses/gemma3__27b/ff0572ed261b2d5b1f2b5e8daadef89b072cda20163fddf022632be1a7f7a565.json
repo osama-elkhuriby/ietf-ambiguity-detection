@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY treat receipt of a changed octet as a connection error",
+    "interpretation_a": "An endpoint is permitted to treat a changed octet as a connection error, but is not required to do so.",
+    "interpretation_b": "An endpoint is permitted to ignore a changed octet without treating it as an error.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' creates ambiguity. It's unclear if the endpoint has a choice in how it handles a changed octet, or if 'MAY' simply means it's allowed to signal an error if it detects one. The lack of a clear requirement creates a potential for inconsistent behavior.",
+    "missing_information": "The clause does not specify whether the endpoint *must* treat a changed octet as an error if it detects one, or if it is merely permitted to do so. This affects implementation because an endpoint could choose to silently discard changed octets, leading to data corruption, or it could actively signal an error."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:21:18.995111+00:00",
+  "document_id": "draft-ietf-quic-transport-16",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "1513a6abc41fefb3e9554e566be5f19a3ba01068d885c7b383de74ee3ada03bc",
+  "lineage_ids": "lineage:ba40f194e56db1e631c80cd6",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 228,
+    "load_duration": 4038500,
+    "prompt_eval_count": 594,
+    "total_duration": 8552818000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY treat receipt of a changed octet as a connection error\", \"interpretation_a\": \"An endpoint is permitted to treat a changed octet as a connection error, but is not required to do so.\", \"interpretation_b\": \"An endpoint is permitted to ignore a changed octet without treating it as an error.\", \"missing_information\": \"The clause does not specify whether the endpoint *must* treat a changed octet as an error if it detects one, or if it is merely permitted to do so. This affects implementation because an endpoint could choose to silently discard changed octets, leading to data corruption, or it could actively signal an error.\", \"justification\": \"The use of 'MAY' creates ambiguity. It's unclear if the endpoint has a choice in how it handles a changed octet, or if 'MAY' simply means it's allowed to signal an error if it detects one. The lack of a clear requirement creates a potential for inconsistent behavior.\"}",
+  "record_id": "ff0572ed261b2d5b1f2b5e8daadef89b072cda20163fddf022632be1a7f7a565",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.562
+}

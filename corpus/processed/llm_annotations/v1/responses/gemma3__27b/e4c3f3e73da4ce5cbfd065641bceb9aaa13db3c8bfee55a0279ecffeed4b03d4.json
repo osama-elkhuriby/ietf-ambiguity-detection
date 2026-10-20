@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "approximately equivalent to two TLPs before an RTO in TCP",
+    "interpretation_a": "The value of kPersistentCongestionThreshold (3) should result in behavior similar to TCP triggering an RTO after two Tail Loss Probes (TLPs).",
+    "interpretation_b": "The value of kPersistentCongestionThreshold (3) is merely *suggested* to be similar to TCP behavior, but may differ significantly in practice, and the document does not define how to measure equivalence.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'approximately equivalent' is an incomplete constraint. It doesn't specify a tolerance or a method for determining equivalence between the QUIC and TCP behaviors. This allows for materially different implementations of kPersistentCongestionThreshold while still claiming to adhere to the recommendation.",
+    "missing_information": "The document does not define what 'approximately equivalent' means in terms of packet loss rate, time, or other measurable metric. Without a concrete definition, implementations could reasonably interpret the recommendation differently."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:31:54.491354+00:00",
+  "document_id": "draft-ietf-quic-recovery-31",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "9b21b2cd389e25dc27acdb4a0844e18ae7480b4c721ab19a4f0a712783abaa2b",
+  "lineage_ids": "lineage:6c4c90f280d74b0c89273976",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 231,
+    "load_duration": 5037800,
+    "prompt_eval_count": 607,
+    "total_duration": 8621211000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"approximately equivalent to two TLPs before an RTO in TCP\", \"interpretation_a\": \"The value of kPersistentCongestionThreshold (3) should result in behavior similar to TCP triggering an RTO after two Tail Loss Probes (TLPs).\", \"interpretation_b\": \"The value of kPersistentCongestionThreshold (3) is merely *suggested* to be similar to TCP behavior, but may differ significantly in practice, and the document does not define how to measure equivalence.\", \"missing_information\": \"The document does not define what 'approximately equivalent' means in terms of packet loss rate, time, or other measurable metric. Without a concrete definition, implementations could reasonably interpret the recommendation differently.\", \"justification\": \"The phrase 'approximately equivalent' is an incomplete constraint. It doesn't specify a tolerance or a method for determining equivalence between the QUIC and TCP behaviors. This allows for materially different implementations of kPersistentCongestionThreshold while still claiming to adhere to the recommendation.\"}",
+  "record_id": "e4c3f3e73da4ce5cbfd065641bceb9aaa13db3c8bfee55a0279ecffeed4b03d4",
+  "revision": "31",
+  "schema_version": 1,
+  "section_ids": "7.6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.625
+}

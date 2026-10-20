@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "resolving the host identifier to an IP address",
+    "interpretation_a": "The client resolves the host identifier to a single IP address and attempts a connection to that address only.",
+    "interpretation_b": "The client resolves the host identifier to all IP addresses and attempts connections to each until one succeeds.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"resolving the host identifier to an IP address\" is singular, yet a host identifier may resolve to multiple addresses.  The clause does not constrain whether a client must try all addresses or just one, creating a concrete missing constraint that can lead to materially different implementation behaviours.",
+    "missing_information": "The clause does not specify how to handle multiple IP addresses resolved from the host identifier, leaving the implementation behaviour open to interpretation."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T07:34:35.371113+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "122ea45158fe4682554c4cf40074adb969f730205fe7e98316435791991a3089",
+  "lineage_ids": "lineage:fcb49c470a905e12ae28b4e8",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 447,
+    "load_duration": 4014700,
+    "prompt_eval_count": 905,
+    "total_duration": 4042989900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"resolving the host identifier to an IP address\",\n  \"interpretation_a\": \"The client resolves the host identifier to a single IP address and attempts a connection to that address only.\",\n  \"interpretation_b\": \"The client resolves the host identifier to all IP addresses and attempts connections to each until one succeeds.\",\n  \"missing_information\": \"The clause does not specify how to handle multiple IP addresses resolved from the host identifier, leaving the implementation behaviour open to interpretation.\",\n  \"justification\": \"The phrase \\\"resolving the host identifier to an IP address\\\" is singular, yet a host identifier may resolve to multiple addresses.  The clause does not constrain whether a client must try all addresses or just one, creating a concrete missing constraint that can lead to materially different implementation behaviours.\"\n}",
+  "record_id": "a80e06a2e51b3dc63bfa5b6f732e4116343c52f58a51b2cb0b8f838361cd6849",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "4.3.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 25.203
+}

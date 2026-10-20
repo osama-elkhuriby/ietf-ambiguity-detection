@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST be ignored until the handshake completes",
+    "interpretation_a": "ApplicationData packets are completely excluded from PTO calculation until handshake completion, meaning no PTO timer is ever set for them during the handshake.",
+    "interpretation_b": "ApplicationData packets contribute to PTO calculation *after* the handshake completes, but are temporarily excluded during the handshake, potentially affecting the earliest timeout calculation.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'ignored until the handshake completes' is incomplete. It doesn't specify *how* ApplicationData is ignored. Does it mean that ApplicationData packets are not considered at all for PTO calculation until the handshake is complete, or are they simply excluded from the earliest timeout determination during the handshake, but contribute to the calculation once the handshake is done? This affects implementation because a server might set a PTO timer for ApplicationData even before the handshake completes if it interprets 'ignored' as only affecting the earliest timeout selection.",
+    "missing_information": "It is unclear whether 'ignored' means excluded from PTO calculation entirely, or simply not considered for the earliest timeout *during* the handshake. The duration of the handshake is also not defined, which affects the period of exclusion."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:25:13.241820+00:00",
+  "document_id": "draft-ietf-quic-recovery-27",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "db18f822e7a8f9612c1a438713fb705f8803783807bb3296cb15bf0368ee536f",
+  "lineage_ids": "lineage:92c78055198b91274533e149",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 263,
+    "load_duration": 4170700,
+    "prompt_eval_count": 630,
+    "total_duration": 9783019200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST be ignored until the handshake completes\", \"interpretation_a\": \"ApplicationData packets are completely excluded from PTO calculation until handshake completion, meaning no PTO timer is ever set for them during the handshake.\", \"interpretation_b\": \"ApplicationData packets contribute to PTO calculation *after* the handshake completes, but are temporarily excluded during the handshake, potentially affecting the earliest timeout calculation.\", \"missing_information\": \"It is unclear whether 'ignored' means excluded from PTO calculation entirely, or simply not considered for the earliest timeout *during* the handshake. The duration of the handshake is also not defined, which affects the period of exclusion.\",\"justification\": \"The phrase 'ignored until the handshake completes' is incomplete. It doesn't specify *how* ApplicationData is ignored. Does it mean that ApplicationData packets are not considered at all for PTO calculation until the handshake is complete, or are they simply excluded from the earliest timeout determination during the handshake, but contribute to the calculation once the handshake is done? This affects implementation because a server might set a PTO timer for ApplicationData even before the handshake completes if it interprets 'ignored' as only affecting the earliest timeout selection.\"}",
+  "record_id": "966fa8e3dfd703feb5b6fa21baa9cbbe2f366081697802e997704fa1b8bd6640",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "5.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.782
+}

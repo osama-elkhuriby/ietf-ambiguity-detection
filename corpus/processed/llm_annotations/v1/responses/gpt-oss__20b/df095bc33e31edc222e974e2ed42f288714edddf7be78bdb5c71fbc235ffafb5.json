@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "An endpoint SHOULD retain old keys so that packets sent by its peer prior to receiving the key update can be processed.",
+    "interpretation_a": "The clause does not specify how long old keys should be retained, so implementations may choose different retention periods or packet counts.",
+    "interpretation_b": "An implementation might retain old keys only until the next key update, or for a fixed number of packets, or indefinitely.",
+    "is_ambiguous": "yes",
+    "justification": "The lack of a concrete constraint on the duration or number of packets for which old keys must be kept leads to multiple reasonable implementation behaviours.",
+    "missing_information": "The clause should specify a time window or a number of packets for which old keys must be retained to process delayed packets from the peer after a key update."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T13:21:02.277120+00:00",
+  "document_id": "draft-ietf-quic-tls-29",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "ee29217eb9acb369aadb38b9330cc1bfc11dbca785b3945ce8197332c2251193",
+  "lineage_ids": "lineage:db278f627c52062c8cee8c17",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 911,
+    "load_duration": 4551600,
+    "prompt_eval_count": 573,
+    "total_duration": 8044351700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"An endpoint SHOULD retain old keys so that packets sent by its peer prior to receiving the key update can be processed.\",\n  \"interpretation_a\": \"The clause does not specify how long old keys should be retained, so implementations may choose different retention periods or packet counts.\",\n  \"interpretation_b\": \"An implementation might retain old keys only until the next key update, or for a fixed number of packets, or indefinitely.\",\n  \"missing_information\": \"The clause should specify a time window or a number of packets for which old keys must be retained to process delayed packets from the peer after a key update.\",\n  \"justification\": \"The lack of a concrete constraint on the duration or number of packets for which old keys must be kept leads to multiple reasonable implementation behaviours.\"\n}",
+  "record_id": "df095bc33e31edc222e974e2ed42f288714edddf7be78bdb5c71fbc235ffafb5",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.063
+}

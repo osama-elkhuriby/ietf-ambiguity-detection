@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "source of data cannot be reliably determined",
+    "interpretation_a": "Compression is prohibited if the origin of the data (e.g., whether it is confidential or attacker-controlled) cannot be determined with certainty.",
+    "interpretation_b": "Compression is prohibited if the exact source (e.g., specific endpoint or system) of the data cannot be determined, regardless of whether the data is confidential or attacker-controlled.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'source of data cannot be reliably determined' is under-specified. It is unclear whether the 'source' refers to the origin of the data (e.g., confidential vs. attacker-controlled) or the exact system or endpoint generating the data. This ambiguity affects whether compression is allowed in specific scenarios, making it a missing constraint that impacts implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:38:41.926164+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "d85a58e217765784c6dea892d1be9ea60ab8a33a5124fb4c2aa6d83704d4f22e",
+  "lineage_ids": "lineage:4267703d353e3ddf98aa3ba4",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 199,
+    "load_duration": 22526800,
+    "prompt_eval_count": 533,
+    "total_duration": 8220951300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"source of data cannot be reliably determined\",\n  \"interpretation_a\": \"Compression is prohibited if the origin of the data (e.g., whether it is confidential or attacker-controlled) cannot be determined with certainty.\",\n  \"interpretation_b\": \"Compression is prohibited if the exact source (e.g., specific endpoint or system) of the data cannot be determined, regardless of whether the data is confidential or attacker-controlled.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The phrase 'source of data cannot be reliably determined' is under-specified. It is unclear whether the 'source' refers to the origin of the data (e.g., confidential vs. attacker-controlled) or the exact system or endpoint generating the data. This ambiguity affects whether compression is allowed in specific scenarios, making it a missing constraint that impacts implementation behavior.\"\n}",
+  "record_id": "01b6fc53a6bc86dcffec49870f3a8ad192cbafadbab2cb671abc0421cc20c236",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "10.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.235
+}

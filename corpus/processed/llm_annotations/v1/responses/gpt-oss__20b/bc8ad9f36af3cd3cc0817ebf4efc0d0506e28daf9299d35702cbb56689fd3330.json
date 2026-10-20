@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that streams for pushed resources may be initiated out-of-order, but the stream IDs for promised resources should be allocated sequentially. The term \"promised resources\" refers to the HTTP push promises, and \"sequentially\" implies allocation in the order of those promises. No alternative reasonable interpretation or missing constraint is evident from the supplied text.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T10:15:19.052604+00:00",
+  "document_id": "draft-ietf-quic-http-07",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "59ad40f1c04cd6c67f8c3247d1e8518f3a3dbcce8063016b9c4bb18b8fd0c912",
+  "lineage_ids": "lineage:c7d8bc9caa2d093029e36a4c",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 4807,
+    "load_duration": 4769800,
+    "prompt_eval_count": 583,
+    "total_duration": 41396650500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that streams for pushed resources may be initiated out-of-order, but the stream IDs for promised resources should be allocated sequentially. The term \\\"promised resources\\\" refers to the HTTP push promises, and \\\"sequentially\\\" implies allocation in the order of those promises. No alternative reasonable interpretation or missing constraint is evident from the supplied text.\"\n}",
+  "record_id": "bc8ad9f36af3cd3cc0817ebf4efc0d0506e28daf9299d35702cbb56689fd3330",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 41.406
+}

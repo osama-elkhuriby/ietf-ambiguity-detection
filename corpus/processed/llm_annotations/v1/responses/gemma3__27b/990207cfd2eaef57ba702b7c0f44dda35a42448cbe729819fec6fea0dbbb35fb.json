@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "all alternative endpoints have an “echconfig” key",
+    "interpretation_a": "The client switches to SVCB if *every* alternative endpoint returned by the DNS resolution has an \"echconfig\" key.",
+    "interpretation_b": "The client switches to SVCB if *at least one* alternative endpoint returned by the DNS resolution has an \"echconfig\" key.",
+    "is_ambiguous": "yes",
+    "justification": "The word 'all' is ambiguous. It could mean 'every' or 'at least one'. This affects whether the client switches to SVCB if only some endpoints have the 'echconfig' key.",
+    "missing_information": "The meaning of 'all' is ambiguous. Does it mean every endpoint, or at least one?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:09:03.401867+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-04",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "73139e660dd4e9ae11c9f6b3ab5494689914f12ab4aaf299e619bbf5edf758ad",
+  "lineage_ids": "lineage:ed9623b64d5e3507fb34b6ee",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 175,
+    "load_duration": 4018400,
+    "prompt_eval_count": 597,
+    "total_duration": 6652961600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"all alternative endpoints have an “echconfig” key\", \"interpretation_a\": \"The client switches to SVCB if *every* alternative endpoint returned by the DNS resolution has an \\\"echconfig\\\" key.\", \"interpretation_b\": \"The client switches to SVCB if *at least one* alternative endpoint returned by the DNS resolution has an \\\"echconfig\\\" key.\", \"missing_information\": \"The meaning of 'all' is ambiguous. Does it mean every endpoint, or at least one?\",\"justification\": \"The word 'all' is ambiguous. It could mean 'every' or 'at least one'. This affects whether the client switches to SVCB if only some endpoints have the 'echconfig' key.\"}",
+  "record_id": "990207cfd2eaef57ba702b7c0f44dda35a42448cbe729819fec6fea0dbbb35fb",
+  "revision": "04",
+  "schema_version": 1,
+  "section_ids": "9.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.656
+}

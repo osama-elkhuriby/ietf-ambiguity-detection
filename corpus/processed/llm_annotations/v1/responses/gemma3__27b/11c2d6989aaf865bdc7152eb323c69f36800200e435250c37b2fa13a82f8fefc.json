@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "does not include a path component",
+    "interpretation_a": "A URI without a path component is one that ends immediately after the scheme and authority (e.g., `https://example.com`).",
+    "interpretation_b": "A URI without a path component is one that is missing the entire path portion, including the leading `/` (e.g., `https://example.com`).",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'does not include a path component' is open to interpretation. Does it mean the URI ends immediately after the authority, or does it mean there is no path at all? This affects whether the `*` path is required.",
+    "missing_information": "The definition of 'path component' is not explicitly defined in this document, leading to different interpretations of what constitutes a URI 'without a path component'."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:40:38.442978+00:00",
+  "document_id": "draft-ietf-quic-http-33",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "1a709d394d5e9699338ee368e8a8abf63b570cd1286999e86b37f6846c9390d6",
+  "lineage_ids": "lineage:1c5f6268ba5f72b0f1407e36",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 200,
+    "load_duration": 8910200,
+    "prompt_eval_count": 658,
+    "total_duration": 7791931600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"does not include a path component\", \"interpretation_a\": \"A URI without a path component is one that ends immediately after the scheme and authority (e.g., `https://example.com`).\", \"interpretation_b\": \"A URI without a path component is one that is missing the entire path portion, including the leading `/` (e.g., `https://example.com`).\", \"missing_information\": \"The definition of 'path component' is not explicitly defined in this document, leading to different interpretations of what constitutes a URI 'without a path component'.\", \"justification\": \"The phrase 'does not include a path component' is open to interpretation. Does it mean the URI ends immediately after the authority, or does it mean there is no path at all? This affects whether the `*` path is required.\"}",
+  "record_id": "11c2d6989aaf865bdc7152eb323c69f36800200e435250c37b2fa13a82f8fefc",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "4.1.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.812
+}

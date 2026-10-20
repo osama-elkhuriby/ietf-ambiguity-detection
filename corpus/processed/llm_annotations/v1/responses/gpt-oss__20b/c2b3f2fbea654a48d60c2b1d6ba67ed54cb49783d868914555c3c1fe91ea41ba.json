@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "send-only stream",
+    "interpretation_a": "The clause means that if an endpoint receives a STREAM frame for a stream that is send‑only from the perspective of the endpoint that created it (i.e., a uni‑directional stream), then it must terminate the connection.",
+    "interpretation_b": "The clause means that if an endpoint receives a STREAM frame for a stream that it has marked as send‑only (i.e., it will not receive data on that stream), then it must terminate the connection.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify which endpoint’s perspective defines the stream as send‑only, leading to two materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T18:11:06.768351+00:00",
+  "document_id": "draft-ietf-quic-transport-17",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "92f2de32ac39cbc2087f724d9f407180c8c856ed4e6c32efade93e08f6e442bc",
+  "lineage_ids": "lineage:153e3e86111e1a2d98975861",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1783,
+    "load_duration": 5399700,
+    "prompt_eval_count": 565,
+    "total_duration": 15327453700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"send-only stream\",\n  \"interpretation_a\": \"The clause means that if an endpoint receives a STREAM frame for a stream that is send‑only from the perspective of the endpoint that created it (i.e., a uni‑directional stream), then it must terminate the connection.\",\n  \"interpretation_b\": \"The clause means that if an endpoint receives a STREAM frame for a stream that it has marked as send‑only (i.e., it will not receive data on that stream), then it must terminate the connection.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify which endpoint’s perspective defines the stream as send‑only, leading to two materially different implementation behaviours.\"\n}",
+  "record_id": "c2b3f2fbea654a48d60c2b1d6ba67ed54cb49783d868914555c3c1fe91ea41ba",
+  "revision": "17",
+  "schema_version": 1,
+  "section_ids": "19.8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 15.328
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD first check that the sequence number exactly matches RCV.NXT",
+    "interpretation_a": "The implementation must check the sequence number *before* any other processing of the segment, including validation of checksums or other header fields.",
+    "interpretation_b": "The implementation may perform some minimal validation (e.g. checksum) before checking the sequence number, as long as the sequence number check is performed before the action in the next paragraph.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'first check' is vague. Does it mean *immediately* check, or check *before any other significant processing*? The lack of a precise definition of 'first' creates ambiguity.",
+    "missing_information": "The degree of pre-processing allowed before the sequence number check is not specified. It is unclear if minimal validation is permitted or if the check must be the very first operation performed on the segment."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:22:49.758456+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "8f2c83b43cfa0a4fb9589c47409b060d06915ec007158a1624d91291e3a6d6d7",
+  "lineage_ids": "lineage:dc91ca84715f3552684405ca",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 211,
+    "load_duration": 9990700,
+    "prompt_eval_count": 618,
+    "total_duration": 8105210500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD first check that the sequence number exactly matches RCV.NXT\", \"interpretation_a\": \"The implementation must check the sequence number *before* any other processing of the segment, including validation of checksums or other header fields.\", \"interpretation_b\": \"The implementation may perform some minimal validation (e.g. checksum) before checking the sequence number, as long as the sequence number check is performed before the action in the next paragraph.\", \"missing_information\": \"The degree of pre-processing allowed before the sequence number check is not specified. It is unclear if minimal validation is permitted or if the check must be the very first operation performed on the segment.\",\"justification\": \"The use of 'first check' is vague. Does it mean *immediately* check, or check *before any other significant processing*? The lack of a precise definition of 'first' creates ambiguity.\"}",
+  "record_id": "636b7ec0486a41c451e78cf30401210b0c99b03c59a329f1ae93571c67588fb2",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.10.7.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.109
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "reasonable buffer size",
+    "interpretation_a": "A small buffer size is acceptable, allowing for resource-constrained devices.",
+    "interpretation_b": "A large buffer size is acceptable, allowing for handling of very large messages, potentially at the cost of increased memory usage.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'reasonable buffer size' is not defined. What constitutes 'reasonable' is subjective and depends on the implementation's context, leading to different buffer size choices and thus different implementations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:27:36.582417+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "0085831f104e3bb25efcbf3f900d343bf841897f5172dbc033cadfe1cc44cddf",
+  "lineage_ids": "lineage:96b98bd33404453664ea5d8d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 131,
+    "load_duration": 8245800,
+    "prompt_eval_count": 575,
+    "total_duration": 5218766200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"reasonable buffer size\", \"interpretation_a\": \"A small buffer size is acceptable, allowing for resource-constrained devices.\", \"interpretation_b\": \"A large buffer size is acceptable, allowing for handling of very large messages, potentially at the cost of increased memory usage.\", \"missing_information\": \"\", \"justification\": \"The phrase 'reasonable buffer size' is not defined. What constitutes 'reasonable' is subjective and depends on the implementation's context, leading to different buffer size choices and thus different implementations.\"}",
+  "record_id": "c8887050a0cca846cc4f5da42a2094ca4500cd294d0de08ff420e3db676df163",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.234
+}

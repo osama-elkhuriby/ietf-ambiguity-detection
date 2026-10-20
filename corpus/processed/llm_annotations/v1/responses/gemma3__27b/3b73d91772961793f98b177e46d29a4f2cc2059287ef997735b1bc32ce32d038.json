@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "cannot process",
+    "interpretation_a": "The client is unable to parse the multipart response.",
+    "interpretation_b": "The client is unable to *handle* the data contained within the multipart response (e.g. due to memory constraints or application logic).",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'cannot process' is underspecified. It's unclear whether it refers to parsing the multipart structure itself, or handling the data within the parts. This affects implementation because a client that can parse the structure but not handle the data might still send range requests, while a client unable to parse might not.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:03:14.639202+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "9d2eb052864ec5e73f3d3058595d996a9af7e57b2d10817a9c5b98bf8935b9bc",
+  "lineage_ids": "lineage:3b805745131a271ce8ba2e9c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 157,
+    "load_duration": 8621700,
+    "prompt_eval_count": 621,
+    "total_duration": 6219021500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"cannot process\", \"interpretation_a\": \"The client is unable to parse the multipart response.\", \"interpretation_b\": \"The client is unable to *handle* the data contained within the multipart response (e.g. due to memory constraints or application logic).\", \"missing_information\": \"\", \"justification\": \"The phrase 'cannot process' is underspecified. It's unclear whether it refers to parsing the multipart structure itself, or handling the data within the parts. This affects implementation because a client that can parse the structure but not handle the data might still send range requests, while a client unable to parse might not.\"}",
+  "record_id": "3b73d91772961793f98b177e46d29a4f2cc2059287ef997735b1bc32ce32d038",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "15.3.7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.219
+}

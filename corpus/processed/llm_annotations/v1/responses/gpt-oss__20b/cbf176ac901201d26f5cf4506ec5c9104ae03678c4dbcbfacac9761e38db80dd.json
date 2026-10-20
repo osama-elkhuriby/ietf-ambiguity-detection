@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "I-2",
+    "evidence_span": "If the client has external information as to the expected identity of the server, the hostname check MAY be omitted.",
+    "interpretation_a": "The hostname check is mandatory whenever the hostname is available, regardless of any external information about the server’s identity.",
+    "interpretation_b": "The hostname check may be omitted when the client has external information about the expected identity, even if the hostname is available.",
+    "is_ambiguous": "yes",
+    "justification": "The clause conflicts with the preceding requirement that a hostname check is mandatory if the hostname is available. This creates two materially different implementation behaviours: one where the check is always performed when a hostname is present, and another where the check can be skipped if external identity information is known.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T07:58:40.474774+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-10",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "8e9748a6fa51bd0dd5a106c758df7861fe0ac2156c9427fdff92d97db3291a9b",
+  "lineage_ids": "lineage:79bb91be33c654b1b0d4ff1f",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 414,
+    "load_duration": 4536000,
+    "prompt_eval_count": 805,
+    "total_duration": 3765410200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"I-2\",\n  \"evidence_span\": \"If the client has external information as to the expected identity of the server, the hostname check MAY be omitted.\",\n  \"interpretation_a\": \"The hostname check is mandatory whenever the hostname is available, regardless of any external information about the server’s identity.\",\n  \"interpretation_b\": \"The hostname check may be omitted when the client has external information about the expected identity, even if the hostname is available.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause conflicts with the preceding requirement that a hostname check is mandatory if the hostname is available. This creates two materially different implementation behaviours: one where the check is always performed when a hostname is present, and another where the check can be skipped if external identity information is known.\"\n}",
+  "record_id": "cbf176ac901201d26f5cf4506ec5c9104ae03678c4dbcbfacac9761e38db80dd",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "6.4.3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 50.204
+}

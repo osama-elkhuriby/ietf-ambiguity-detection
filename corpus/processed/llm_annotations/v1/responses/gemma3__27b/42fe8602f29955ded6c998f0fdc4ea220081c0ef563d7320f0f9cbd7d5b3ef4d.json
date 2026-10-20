@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "at least the smallest allowed maximum datagram size of 1200 bytes",
+    "interpretation_a": "The server must expand the payload to *exactly* 1200 bytes.",
+    "interpretation_b": "The server must expand the payload to 1200 bytes or more, but it is permissible to exceed 1200 bytes.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'at least' introduces ambiguity. Does it mean 'exactly' or 'greater than or equal to'? Without further clarification, implementations could reasonably differ on whether they are permitted to send datagrams larger than 1200 bytes.",
+    "missing_information": "The specification does not explicitly state whether the server is allowed to exceed the 1200-byte minimum. The use of 'at least' suggests it may, but this is not definitive."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:17:24.737143+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "0525e03dbbae33e99a80431284e862d4f1792c311b51c8f1197fe5f033d0a135",
+  "lineage_ids": "lineage:7bb036d6561a451636deaec1",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 205,
+    "load_duration": 4179300,
+    "prompt_eval_count": 594,
+    "total_duration": 7724068500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"at least the smallest allowed maximum datagram size of 1200 bytes\", \"interpretation_a\": \"The server must expand the payload to *exactly* 1200 bytes.\", \"interpretation_b\": \"The server must expand the payload to 1200 bytes or more, but it is permissible to exceed 1200 bytes.\", \"missing_information\": \"The specification does not explicitly state whether the server is allowed to exceed the 1200-byte minimum. The use of 'at least' suggests it may, but this is not definitive.\", \"justification\": \"The phrase 'at least' introduces ambiguity. Does it mean 'exactly' or 'greater than or equal to'? Without further clarification, implementations could reasonably differ on whether they are permitted to send datagrams larger than 1200 bytes.\"}",
+  "record_id": "42fe8602f29955ded6c998f0fdc4ea220081c0ef563d7320f0f9cbd7d5b3ef4d",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "14.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.718
+}

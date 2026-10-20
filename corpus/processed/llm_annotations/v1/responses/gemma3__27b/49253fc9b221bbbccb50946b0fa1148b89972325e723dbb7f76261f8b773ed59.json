@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "An endpoint MAY transition",
+    "interpretation_a": "An endpoint can transition to draining as soon as it *believes* its peer is closing or draining, even if that belief is based on incomplete or potentially incorrect information.",
+    "interpretation_b": "An endpoint can transition to draining only when it has *confirmed* its peer is closing or draining, requiring a higher degree of certainty and potentially more signaling.",
+    "is_ambiguous": "yes",
+    "justification": "The word 'confirm' is underspecified. It's unclear what level of assurance is needed before an endpoint can transition to the draining period. This affects implementation because an endpoint might be overly aggressive in transitioning (leading to potential issues if the peer isn't actually closing) or overly conservative (delaying draining unnecessarily).",
+    "missing_information": "The degree of confirmation required for the transition is not specified. Does 'confirm' mean a strong guarantee, or merely a reasonable belief?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:20:21.229401+00:00",
+  "document_id": "draft-ietf-quic-transport-18",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "dcb451dfa2836b1a63ee964252b08d24138e104395f57bc5f701f6abbb031885",
+  "lineage_ids": "lineage:0f6880da609f2033de9d4980",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 213,
+    "load_duration": 501700,
+    "prompt_eval_count": 571,
+    "total_duration": 7990149600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"An endpoint MAY transition\", \"interpretation_a\": \"An endpoint can transition to draining as soon as it *believes* its peer is closing or draining, even if that belief is based on incomplete or potentially incorrect information.\", \"interpretation_b\": \"An endpoint can transition to draining only when it has *confirmed* its peer is closing or draining, requiring a higher degree of certainty and potentially more signaling.\", \"missing_information\": \"The degree of confirmation required for the transition is not specified. Does 'confirm' mean a strong guarantee, or merely a reasonable belief?\",\"justification\": \"The word 'confirm' is underspecified. It's unclear what level of assurance is needed before an endpoint can transition to the draining period. This affects implementation because an endpoint might be overly aggressive in transitioning (leading to potential issues if the peer isn't actually closing) or overly conservative (delaying draining unnecessarily).\"}",
+  "record_id": "49253fc9b221bbbccb50946b0fa1148b89972325e723dbb7f76261f8b773ed59",
+  "revision": "18",
+  "schema_version": 1,
+  "section_ids": "10.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.985
+}

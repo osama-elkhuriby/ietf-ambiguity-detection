@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "asynchronously",
+    "interpretation_a": "The notification to the application layer happens immediately upon receiving the Urgent pointer or its advancement, potentially interrupting other processing.",
+    "interpretation_b": "The notification is queued or scheduled for delivery at some later time, allowing the TCP implementation to batch or prioritize notifications.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'asynchronously' lacks a precise definition in this context. It could mean immediate notification, or notification at a later, unspecified time. This affects how an application would handle urgent data.",
+    "missing_information": "The degree of asynchronicity is not defined. Does 'asynchronously' mean immediately, or simply not synchronized with the current TCP processing thread?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:28:36.410437+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "4fce8c1a12702df59fb605f168846b272fea1cb0e71916ef90b660c11a9cee06",
+  "lineage_ids": "lineage:78926f253129f70fd069f6e0",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 167,
+    "load_duration": 11368600,
+    "prompt_eval_count": 631,
+    "total_duration": 6531933400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"asynchronously\", \"interpretation_a\": \"The notification to the application layer happens immediately upon receiving the Urgent pointer or its advancement, potentially interrupting other processing.\", \"interpretation_b\": \"The notification is queued or scheduled for delivery at some later time, allowing the TCP implementation to batch or prioritize notifications.\", \"missing_information\": \"The degree of asynchronicity is not defined. Does 'asynchronously' mean immediately, or simply not synchronized with the current TCP processing thread?\",\"justification\": \"The term 'asynchronously' lacks a precise definition in this context. It could mean immediate notification, or notification at a later, unspecified time. This affects how an application would handle urgent data.\"}",
+  "record_id": "cdecf1ac0f4a6a22bb938da70456ee64c24b32cab81bedc8044d3c1bb6e5688d",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.8.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.547
+}

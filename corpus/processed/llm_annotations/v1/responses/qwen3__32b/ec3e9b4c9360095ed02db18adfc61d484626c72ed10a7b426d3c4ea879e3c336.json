@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "A server MAY treat use of updated transport parameters in 0-RTT as a connection error of type PROTOCOL_VIOLATION.",
+    "interpretation_a": "The server may choose to reject 0-RTT packets if they include updated transport parameters, treating it as a protocol violation.",
+    "interpretation_b": "The server may choose to accept 0-RTT packets even if they include updated transport parameters, without treating it as a protocol violation.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' allows for multiple reasonable behaviors, and the lack of specific conditions for triggering a PROTOCOL_VIOLATION error creates an incomplete constraint that affects implementation behavior.",
+    "missing_information": "The clause does not specify under what conditions or criteria the server should treat the use of updated transport parameters as a protocol violation, leaving the implementation behavior open to interpretation."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:49:03.202984+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "f1f1a2db8a92ffa4b801bb301e25e52accf32510eecfb2f175a450a5c70fba4b",
+  "lineage_ids": "lineage:61b7cec2c096abfb320c0fb4",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 211,
+    "load_duration": 7424500,
+    "prompt_eval_count": 548,
+    "total_duration": 8643454500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"A server MAY treat use of updated transport parameters in 0-RTT as a connection error of type PROTOCOL_VIOLATION.\",\n  \"interpretation_a\": \"The server may choose to reject 0-RTT packets if they include updated transport parameters, treating it as a protocol violation.\",\n  \"interpretation_b\": \"The server may choose to accept 0-RTT packets even if they include updated transport parameters, without treating it as a protocol violation.\",\n  \"missing_information\": \"The clause does not specify under what conditions or criteria the server should treat the use of updated transport parameters as a protocol violation, leaving the implementation behavior open to interpretation.\",\n  \"justification\": \"The use of 'MAY' allows for multiple reasonable behaviors, and the lack of specific conditions for triggering a PROTOCOL_VIOLATION error creates an incomplete constraint that affects implementation behavior.\"\n}",
+  "record_id": "ec3e9b4c9360095ed02db18adfc61d484626c72ed10a7b426d3c4ea879e3c336",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.657
+}

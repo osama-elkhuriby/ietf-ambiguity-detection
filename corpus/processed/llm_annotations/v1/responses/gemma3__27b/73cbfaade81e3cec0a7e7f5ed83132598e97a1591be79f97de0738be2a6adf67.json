@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "cached settings",
+    "interpretation_a": "The client must use the previously cached settings even if they are stale or invalid, until new settings are received.",
+    "interpretation_b": "The client must validate the cached settings before using them, and if they are invalid, discard them and operate without settings until new settings are received.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'cached settings' is not defined, and it's unclear whether the client is expected to use potentially invalid cached settings or to validate them before use. This creates ambiguity in implementation.",
+    "missing_information": "The clause does not specify what constitutes 'cached settings' being valid or invalid, or how a client should handle invalid cached settings. This missing constraint affects implementation behaviour."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:54:39.221763+00:00",
+  "document_id": "draft-ietf-quic-http-06",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "1ea0d7dea3eb89f4fdaae26ee11c9c5e4e088aa14062bddb1bf3b7969bc1cdb3",
+  "lineage_ids": "lineage:4ed884eaf118b78cff563467",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 178,
+    "load_duration": 8844700,
+    "prompt_eval_count": 559,
+    "total_duration": 6898811600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"cached settings\", \"interpretation_a\": \"The client must use the previously cached settings even if they are stale or invalid, until new settings are received.\", \"interpretation_b\": \"The client must validate the cached settings before using them, and if they are invalid, discard them and operate without settings until new settings are received.\", \"missing_information\": \"The clause does not specify what constitutes 'cached settings' being valid or invalid, or how a client should handle invalid cached settings. This missing constraint affects implementation behaviour.\", \"justification\": \"The term 'cached settings' is not defined, and it's unclear whether the client is expected to use potentially invalid cached settings or to validate them before use. This creates ambiguity in implementation.\"}",
+  "record_id": "73cbfaade81e3cec0a7e7f5ed83132598e97a1591be79f97de0738be2a6adf67",
+  "revision": "06",
+  "schema_version": 1,
+  "section_ids": "5.2.5.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.921
+}

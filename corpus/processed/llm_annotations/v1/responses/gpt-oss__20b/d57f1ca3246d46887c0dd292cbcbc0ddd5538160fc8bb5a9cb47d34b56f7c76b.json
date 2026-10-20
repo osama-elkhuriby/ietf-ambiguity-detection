@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause states a clear condition: discard keys when all packets with sequence numbers lower than the lowest sequence number used for the new key have been received. This condition is unambiguous and does not leave room for materially different implementation behaviours or missing constraints.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T13:17:23.183531+00:00",
+  "document_id": "draft-ietf-quic-tls-05",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "e7193426b2c77b56d7921b7a5c5f952b0828f82a6c81d41ce1c31eab2d29161a",
+  "lineage_ids": "lineage:c5403b338256c3e83565d4bf",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1136,
+    "load_duration": 6099100,
+    "prompt_eval_count": 588,
+    "total_duration": 9803822600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause states a clear condition: discard keys when all packets with sequence numbers lower than the lowest sequence number used for the new key have been received. This condition is unambiguous and does not leave room for materially different implementation behaviours or missing constraints.\"\n}",
+  "record_id": "d57f1ca3246d46887c0dd292cbcbc0ddd5538160fc8bb5a9cb47d34b56f7c76b",
+  "revision": "05",
+  "schema_version": 1,
+  "section_ids": "7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.797
+}

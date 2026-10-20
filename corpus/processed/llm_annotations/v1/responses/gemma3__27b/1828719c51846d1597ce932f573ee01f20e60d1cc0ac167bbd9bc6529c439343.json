@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "the same request",
+    "interpretation_a": "The request that initiated the 206 response. This implies the headers should match what would have been sent for the *original* full request.",
+    "interpretation_b": "The request that resulted in the 206 response. This could be a partial request, and the headers should match what would have been sent for *that* partial request.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'the same request' is ambiguous. It's not clear if it refers to the initial request that would have received a 200, or the request that specifically resulted in the 206 response (likely a Range request).",
+    "missing_information": "It is unclear whether 'the same request' refers to the original full request or the partial request that triggered the 206 response. This affects which headers are included."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:56:50.045550+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-14",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "7ed295c4f8f5584458eb2306b7b88e53e97bea0a77b22d477e436f67746d4145",
+  "lineage_ids": "lineage:cf84db1f08d61577e60eae9d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 207,
+    "load_duration": 23647400,
+    "prompt_eval_count": 632,
+    "total_duration": 8032389500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"the same request\", \"interpretation_a\": \"The request that initiated the 206 response. This implies the headers should match what would have been sent for the *original* full request.\", \"interpretation_b\": \"The request that resulted in the 206 response. This could be a partial request, and the headers should match what would have been sent for *that* partial request.\", \"missing_information\": \"It is unclear whether 'the same request' refers to the original full request or the partial request that triggered the 206 response. This affects which headers are included.\",\"justification\": \"The phrase 'the same request' is ambiguous. It's not clear if it refers to the initial request that would have received a 200, or the request that specifically resulted in the 206 response (likely a Range request).\"}",
+  "record_id": "1828719c51846d1597ce932f573ee01f20e60d1cc0ac167bbd9bc6529c439343",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "15.3.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.047
+}

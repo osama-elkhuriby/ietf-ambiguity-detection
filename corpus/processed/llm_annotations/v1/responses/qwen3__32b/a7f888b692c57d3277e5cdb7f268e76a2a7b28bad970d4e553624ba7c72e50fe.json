@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD be able to effectively disable these calls (SHLD-20)",
+    "interpretation_a": "The application must have the capability to disable asynchronous error reports, but the method for doing so is not specified, leaving implementation details open.",
+    "interpretation_b": "The application must be able to disable asynchronous error reports, and the specification implies that the mechanism for doing so is mandatory, but it is not defined here.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD be able to effectively disable these calls' introduces an incomplete constraint. While it mandates the ability to disable asynchronous reports, it does not specify the mechanism or interface for doing so, which could lead to different implementations handling it in different ways.",
+    "missing_information": "The specification does not define how the application should disable these calls, which could lead to different implementations handling it in different ways."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:15:48.025375+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "49473d69875f44cb8fca796a73ce6a62554af388126389c7be1c2b1eed138e88",
+  "lineage_ids": "lineage:ea1a2b2b6e297400cc49665b",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 210,
+    "load_duration": 11191200,
+    "prompt_eval_count": 579,
+    "total_duration": 8734874700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"SHOULD be able to effectively disable these calls (SHLD-20)\",\n  \"interpretation_a\": \"The application must have the capability to disable asynchronous error reports, but the method for doing so is not specified, leaving implementation details open.\",\n  \"interpretation_b\": \"The application must be able to disable asynchronous error reports, and the specification implies that the mechanism for doing so is mandatory, but it is not defined here.\",\n  \"missing_information\": \"The specification does not define how the application should disable these calls, which could lead to different implementations handling it in different ways.\",\n  \"justification\": \"The use of 'SHOULD be able to effectively disable these calls' introduces an incomplete constraint. While it mandates the ability to disable asynchronous reports, it does not specify the mechanism or interface for doing so, which could lead to different implementations handling it in different ways.\"\n}",
+  "record_id": "a7f888b692c57d3277e5cdb7f268e76a2a7b28bad970d4e553624ba7c72e50fe",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.9.1.8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.766
+}

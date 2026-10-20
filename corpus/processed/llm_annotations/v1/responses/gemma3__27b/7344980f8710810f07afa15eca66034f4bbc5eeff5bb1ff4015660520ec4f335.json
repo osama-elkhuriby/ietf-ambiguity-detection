@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "All probe packets sent on a PTO",
+    "interpretation_a": "Any packet sent while a PTO is active must elicit an acknowledgement.",
+    "interpretation_b": "Only the specific packets *intended* as probes, sent *because* of the PTO, must elicit an acknowledgement. Other packets sent during the PTO period do not need to.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'on a PTO' is ambiguous. It could mean 'while the PTO timer is active' (any packet sent during that time) or 'specifically triggered by the PTO' (only the probe packets themselves). This affects which packets must be ack-eliciting.",
+    "missing_information": "The scope of 'on a PTO' is unclear. Does it refer to any packet sent while the PTO timer is running, or only packets specifically sent in response to the PTO expiring?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:22:26.257603+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "ad2790ffd41b156662baf34f94e3bcc430a524b688b1b4138c8199c595c12cc9",
+  "lineage_ids": "lineage:bab0bed2b0daeda8cdbe5b8f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 199,
+    "load_duration": 4041900,
+    "prompt_eval_count": 611,
+    "total_duration": 7494250800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"All probe packets sent on a PTO\", \"interpretation_a\": \"Any packet sent while a PTO is active must elicit an acknowledgement.\", \"interpretation_b\": \"Only the specific packets *intended* as probes, sent *because* of the PTO, must elicit an acknowledgement. Other packets sent during the PTO period do not need to.\", \"missing_information\": \"The scope of 'on a PTO' is unclear. Does it refer to any packet sent while the PTO timer is running, or only packets specifically sent in response to the PTO expiring?\",\"justification\": \"The phrase 'on a PTO' is ambiguous. It could mean 'while the PTO timer is active' (any packet sent during that time) or 'specifically triggered by the PTO' (only the probe packets themselves). This affects which packets must be ack-eliciting.\"}",
+  "record_id": "7344980f8710810f07afa15eca66034f4bbc5eeff5bb1ff4015660520ec4f335",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.2.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.5
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "at least 3 retransmissions, at the current RTO",
+    "interpretation_a": "R1 should be triggered after 3 retransmissions *have occurred* at the current RTO.",
+    "interpretation_b": "R1 should be set to a value that will cause it to trigger after 3 retransmissions *would have occurred* at the current RTO, even if they haven't yet.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'at least 3 retransmissions, at the current RTO' can be interpreted in two ways. It could mean that R1 should be triggered after 3 retransmissions have already been sent and timed out. Alternatively, it could mean that R1 should be set to a value that will cause it to trigger after 3 retransmissions would have been sent and timed out, even if they haven't yet. This difference affects implementation because it determines when the failure detection mechanism is activated.",
+    "missing_information": "It is unclear whether the 3 retransmissions must have already happened, or if R1 is a *prediction* of when 3 retransmissions will occur."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:17:10.242079+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-10",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "19994c4d4cb2a95afb4f66f5ec6b24c05ab324e6bbe6b930a1a766a07fa21491",
+  "lineage_ids": "lineage:ab3297bf7a3528b7b25addf1",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 264,
+    "load_duration": 10165400,
+    "prompt_eval_count": 574,
+    "total_duration": 9996217400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"at least 3 retransmissions, at the current RTO\", \"interpretation_a\": \"R1 should be triggered after 3 retransmissions *have occurred* at the current RTO.\", \"interpretation_b\": \"R1 should be set to a value that will cause it to trigger after 3 retransmissions *would have occurred* at the current RTO, even if they haven't yet.\", \"missing_information\": \"It is unclear whether the 3 retransmissions must have already happened, or if R1 is a *prediction* of when 3 retransmissions will occur.\", \"justification\": \"The phrase 'at least 3 retransmissions, at the current RTO' can be interpreted in two ways. It could mean that R1 should be triggered after 3 retransmissions have already been sent and timed out. Alternatively, it could mean that R1 should be set to a value that will cause it to trigger after 3 retransmissions would have been sent and timed out, even if they haven't yet. This difference affects implementation because it determines when the failure detection mechanism is activated.\"}",
+  "record_id": "0a089a29dcf6f695ea2e33808b689d6d0afc92aac1fff4167c24b083d18c2b6d",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "3.8.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.0
+}

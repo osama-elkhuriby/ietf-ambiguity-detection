@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously refers to the boolean flag is_retransmittable: if it is false, an ACK may still be received, and a caller must not set it to true when an ACK is not expected. No alternative reasonable interpretations or missing constraints are evident.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T11:02:17.530296+00:00",
+  "document_id": "draft-ietf-quic-recovery-05",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "50a9fdfc682a87753e6211603366c38bad49bf69cb2f56292087a0e5a1f482e5",
+  "lineage_ids": "lineage:bce4d17bd593a1c736f2de61",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1480,
+    "load_duration": 4514400,
+    "prompt_eval_count": 593,
+    "total_duration": 12741929300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously refers to the boolean flag is_retransmittable: if it is false, an ACK may still be received, and a caller must not set it to true when an ACK is not expected. No alternative reasonable interpretations or missing constraints are evident.\"\n}",
+  "record_id": "1cb30a9f38fcd069ddabd51eab45971b6d0e7d2db43f5302c9706f2266a29860",
+  "revision": "05",
+  "schema_version": 1,
+  "section_ids": "3.2.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 12.75
+}

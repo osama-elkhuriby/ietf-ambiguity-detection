@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY omit the Additional A records",
+    "interpretation_a": "The resolver may include the Additional A records.",
+    "interpretation_b": "The resolver may not include the Additional A records.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' creates a choice for the resolver. While not strictly an error, it introduces a potential difference in behavior that could affect interoperability. The clause does not specify under what conditions the resolver should choose one option over the other, creating ambiguity.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:58:29.894552+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "d1a7d96278bd5a63f2b7631dc39876865ec1f97412a3fd625cd00ab5edafda36",
+  "lineage_ids": "lineage:304d96a5d254f83cc1680b50",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 130,
+    "load_duration": 4006000,
+    "prompt_eval_count": 624,
+    "total_duration": 5068376500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY omit the Additional A records\", \"interpretation_a\": \"The resolver may include the Additional A records.\", \"interpretation_b\": \"The resolver may not include the Additional A records.\", \"missing_information\": \"\", \"justification\": \"The use of 'MAY' creates a choice for the resolver. While not strictly an error, it introduces a potential difference in behavior that could affect interoperability. The clause does not specify under what conditions the resolver should choose one option over the other, creating ambiguity.\"}",
+  "record_id": "173244ca0de15d9948d52d7ff8eb8efee24e5d4679e6a3bb1b51420bc67857ba",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "4.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.062
+}

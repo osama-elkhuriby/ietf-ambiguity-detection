@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause uses the word 'MAY', which grants the receiver discretion in its behavior. While this allows for flexibility, it does not introduce ambiguity in the sense of permitting materially different implementations. The guidance is clear: receivers are allowed to send multiple MAX_STREAM_DATA or MAX_DATA frames to avoid sender blocking. There is no conflicting or missing constraint that would lead to different operational interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:49:57.470380+00:00",
+  "document_id": "draft-ietf-quic-transport-30",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "709883c53e3e7e3565592f4c447ed5e4fcfff18cc70eb85ebdc632c8599d3421",
+  "lineage_ids": "lineage:fb2ca4faaa0b64fda70cfe13",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 132,
+    "load_duration": 3740700,
+    "prompt_eval_count": 545,
+    "total_duration": 5432718000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause uses the word 'MAY', which grants the receiver discretion in its behavior. While this allows for flexibility, it does not introduce ambiguity in the sense of permitting materially different implementations. The guidance is clear: receivers are allowed to send multiple MAX_STREAM_DATA or MAX_DATA frames to avoid sender blocking. There is no conflicting or missing constraint that would lead to different operational interpretations.\"\n}",
+  "record_id": "1017fd1f4a9ce167d4a91f0cffd935a8ebfa1b626d009c7d2125641620dd7467",
+  "revision": "30",
+  "schema_version": 1,
+  "section_ids": "4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.437
+}

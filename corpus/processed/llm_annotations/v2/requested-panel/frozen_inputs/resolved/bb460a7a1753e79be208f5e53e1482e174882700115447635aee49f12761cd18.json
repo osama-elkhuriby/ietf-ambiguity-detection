@@ -1,0 +1,90 @@
+{
+  "context_builder_version": "same-revision-context-v2.0.0",
+  "context_char_limit": 24000,
+  "context_chars": 765,
+  "coverage_claim": "bounded_same_document_same_revision_context_only",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "items": [
+    {
+      "block_id": "draft-ietf-httpbis-semantics-19:15.3.7.3:b1190",
+      "clause_id": "draft-ietf-httpbis-semantics-19:15.3.7.3:b1190:c03",
+      "content": "Otherwise, the client MUST process the set of continuous ranges as one of the following: an incomplete 200 (OK) response if the combined response is a prefix of the representation, a single 206 (Partial Content) response containing multipart/byteranges content, or multiple 206 (Partial Content) responses, each with one continuous range that is indicated by a Content-Range header field.",
+      "content_sha256": "3799fc2199bd8138a0b462b6cb598abd7d124f0c34406152859c71e7531a2b8e",
+      "document_id": "draft-ietf-httpbis-semantics-19",
+      "kind": "target",
+      "retrieval_reason": "frozen_target_clause",
+      "revision": "19",
+      "section_heading": "Combining Parts",
+      "section_id": "15.3.7.3",
+      "source_sha256": "3abaea7266f65bbfb14536d33591e8c7704001cb334d045e8fb235598a3b73cf",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[15]/section[3]/section[7]/section[3]/t[5]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-semantics-19:15.3.7.3:b1190",
+      "clause_id": "draft-ietf-httpbis-semantics-19:15.3.7.3:b1190:c02",
+      "content": "If the union consists of the entire range of the representation, then the client MUST process the combined response as if it were a complete 200 (OK) response, including a Content-Length header field that reflects the complete length.",
+      "content_sha256": "3d5d932fcb209d98fb06025a5d999503c8a7a6ab6be279ddb5ffb97faf4cfab6",
+      "document_id": "draft-ietf-httpbis-semantics-19",
+      "kind": "previous",
+      "retrieval_reason": "local_previous_clause",
+      "revision": "19",
+      "section_heading": "Combining Parts",
+      "section_id": "15.3.7.3",
+      "source_sha256": "3abaea7266f65bbfb14536d33591e8c7704001cb334d045e8fb235598a3b73cf",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[15]/section[3]/section[7]/section[3]/t[5]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-semantics-19:15.3.7.3:b1190",
+      "clause_id": "draft-ietf-httpbis-semantics-19:15.3.7.3:b1190:c01",
+      "content": "The combined response content consists of the union of partial content ranges within the new response and all of the matching stored responses.",
+      "content_sha256": "5ac566685d523e0c156a06f1c9cf5f3eb7c4424b3589a3bfbca16d03abd43667",
+      "document_id": "draft-ietf-httpbis-semantics-19",
+      "kind": "parent_structure",
+      "retrieval_reason": "same_parent_block",
+      "revision": "19",
+      "section_heading": "Combining Parts",
+      "section_id": "15.3.7.3",
+      "source_sha256": "3abaea7266f65bbfb14536d33591e8c7704001cb334d045e8fb235598a3b73cf",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[15]/section[3]/section[7]/section[3]/t[5]"
+      }
+    }
+  ],
+  "omitted": [],
+  "record_id": "bb460a7a1753e79be208f5e53e1482e174882700115447635aee49f12761cd18",
+  "retrieval": [
+    {
+      "reason": "external_reference_not_resolved_without_exact_permitted_version",
+      "reference": "field.content-range",
+      "status": "unavailable_source"
+    },
+    {
+      "reason": "external_reference_not_resolved_without_exact_permitted_version",
+      "reference": "status.200",
+      "status": "unavailable_source"
+    },
+    {
+      "reason": "external_reference_not_resolved_without_exact_permitted_version",
+      "reference": "status.206",
+      "status": "unavailable_source"
+    }
+  ],
+  "revision": "19",
+  "section_heading": "Combining Parts",
+  "section_id": "15.3.7.3",
+  "source_artifact": "D:/RFC/ietf-ambiguity-detection/corpus/processed/alignments/draft-ietf-httpbis-semantics/lexical-first-classifier-v1/inputs/draft-ietf-httpbis-semantics-19.json",
+  "source_sha256": "3abaea7266f65bbfb14536d33591e8c7704001cb334d045e8fb235598a3b73cf",
+  "target_clause": "Otherwise, the client MUST process the set of continuous ranges as one of the following: an incomplete 200 (OK) response if the combined response is a prefix of the representation, a single 206 (Partial Content) response containing multipart/byteranges content, or multiple 206 (Partial Content) responses, each with one continuous range that is indicated by a Content-Range header field.",
+  "variant": "resolved"
+}

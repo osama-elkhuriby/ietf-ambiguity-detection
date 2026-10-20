@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "had it acknowledged",
+    "interpretation_a": "The client must have received a SETTINGS frame from the server acknowledging the client's setting of SETTINGS_ENABLE_PUSH to 0.",
+    "interpretation_b": "The client must have sent a SETTINGS frame to the server setting SETTINGS_ENABLE_PUSH to 0 and received an ACK from the server (e.g. a subsequent frame).",
+    "is_ambiguous": "yes",
+    "justification": "The term 'acknowledged' is vague. It is unclear whether it refers to the server acknowledging the client's setting, or the client receiving an acknowledgement of its transmission. This affects how a client would determine if it should treat a PUSH_PROMISE as an error.",
+    "missing_information": "The meaning of 'acknowledged' is not defined. Does it mean the server sent a SETTINGS frame acknowledging the client's setting, or that the client sent a SETTINGS frame and received some form of acknowledgement?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:49:52.766834+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "1c0d1acc40d1a8e011bb556c0d2efb4abc1b393c627e988b6ca0746307806178",
+  "lineage_ids": "lineage:7014e53bdf7e51836cb637ec",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 225,
+    "load_duration": 9781100,
+    "prompt_eval_count": 590,
+    "total_duration": 8656667300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"had it acknowledged\", \"interpretation_a\": \"The client must have received a SETTINGS frame from the server acknowledging the client's setting of SETTINGS_ENABLE_PUSH to 0.\", \"interpretation_b\": \"The client must have sent a SETTINGS frame to the server setting SETTINGS_ENABLE_PUSH to 0 and received an ACK from the server (e.g. a subsequent frame).\", \"missing_information\": \"The meaning of 'acknowledged' is not defined. Does it mean the server sent a SETTINGS frame acknowledging the client's setting, or that the client sent a SETTINGS frame and received some form of acknowledgement?\", \"justification\": \"The term 'acknowledged' is vague. It is unclear whether it refers to the server acknowledging the client's setting, or the client receiving an acknowledgement of its transmission. This affects how a client would determine if it should treat a PUSH_PROMISE as an error.\"}",
+  "record_id": "db01019243db0beb8f99e5cc633fcbd3d0dc1a9f54993371cb13971c2fbee7ac",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.672
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "directing it to the connection that created the error",
+    "interpretation_a": "The ICMP error message should be directed to the TCP connection that *sent* the packet that caused the ICMP error.",
+    "interpretation_b": "The ICMP error message should be directed to the TCP connection that *received* the packet that caused the ICMP error.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'created the error' is ambiguous. It could reasonably refer to either the sending or receiving end of the TCP connection. Without further clarification, implementations could differ on which connection receives the ICMP error message.",
+    "missing_information": "It is unclear whether 'created the error' refers to the sending or receiving end of the connection. A missing constraint specifying which connection the ICMP message should be directed to would resolve the ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:25:19.036926+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-14",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "113645d513044edd9be2b9892fa8707ad01d344cab5a28b4a8cb2e05c579f609",
+  "lineage_ids": "lineage:294bd52e42bb9f4c14cbc0d8",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 194,
+    "load_duration": 19822500,
+    "prompt_eval_count": 570,
+    "total_duration": 7503400200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"directing it to the connection that created the error\", \"interpretation_a\": \"The ICMP error message should be directed to the TCP connection that *sent* the packet that caused the ICMP error.\", \"interpretation_b\": \"The ICMP error message should be directed to the TCP connection that *received* the packet that caused the ICMP error.\", \"missing_information\": \"It is unclear whether 'created the error' refers to the sending or receiving end of the connection. A missing constraint specifying which connection the ICMP message should be directed to would resolve the ambiguity.\",\"justification\": \"The phrase 'created the error' is ambiguous. It could reasonably refer to either the sending or receiving end of the TCP connection. Without further clarification, implementations could differ on which connection receives the ICMP error message.\"}",
+  "record_id": "93fc7cbc077e543b269e190062b495489fe64126d1078cc853bb05910e5666fd",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "3.9.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.5
+}

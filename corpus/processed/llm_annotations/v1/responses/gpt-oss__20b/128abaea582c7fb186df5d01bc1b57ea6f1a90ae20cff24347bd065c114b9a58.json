@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST limit the amount of data and packets",
+    "interpretation_a": "The endpoint must limit the amount of data and packets to a small number (e.g., 10) before validating the new remote address.",
+    "interpretation_b": "The endpoint must limit the amount of data and packets to zero until the new remote address is validated.",
+    "is_ambiguous": "yes",
+    "justification": "The clause requires the endpoint to limit the amount of data and packets it sends, but it does not specify a numeric threshold or method, allowing materially different implementation behaviours.",
+    "missing_information": "The clause does not specify the amount or method of limiting the data and packets."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T14:02:49.426931+00:00",
+  "document_id": "draft-ietf-quic-transport-10",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "dc52caaa905ed42385793fb821cb94ed2478993b3a4b492259f6cc00b0a5b406",
+  "lineage_ids": "lineage:4b9b644560ece52e1e47a0e6",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1933,
+    "load_duration": 4435300,
+    "prompt_eval_count": 597,
+    "total_duration": 16740091800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"MUST limit the amount of data and packets\",\n  \"interpretation_a\": \"The endpoint must limit the amount of data and packets to a small number (e.g., 10) before validating the new remote address.\",\n  \"interpretation_b\": \"The endpoint must limit the amount of data and packets to zero until the new remote address is validated.\",\n  \"missing_information\": \"The clause does not specify the amount or method of limiting the data and packets.\",\n  \"justification\": \"The clause requires the endpoint to limit the amount of data and packets it sends, but it does not specify a numeric threshold or method, allowing materially different implementation behaviours.\"\n}",
+  "record_id": "128abaea582c7fb186df5d01bc1b57ea6f1a90ae20cff24347bd065c114b9a58",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "7.7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 16.75
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear directive: if a client receives a response with an invalid status code, it should treat it as if it were a 5xx (Server Error) status code. There is no ambiguity in the instruction, as it specifies a single, unambiguous action to be taken in the event of an invalid status code. The wording does not allow for multiple materially different interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:34:10.077648+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "ed3bb1665d9c2a1e90ddec01099672e3e6beb9d03b327ef28f19732a88c8fe0c",
+  "lineage_ids": "lineage:e517dc0a2f38b19de5a08cd8",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 134,
+    "load_duration": 20185600,
+    "prompt_eval_count": 590,
+    "total_duration": 5645349000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear directive: if a client receives a response with an invalid status code, it should treat it as if it were a 5xx (Server Error) status code. There is no ambiguity in the instruction, as it specifies a single, unambiguous action to be taken in the event of an invalid status code. The wording does not allow for multiple materially different interpretations.\"\n}",
+  "record_id": "e816a8cdd3728617f97a98e2c28c07ffa747901761b8dfb50968247c15607c43",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "15",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.64
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides clear guidance on the server's behavior after completing path validation and receiving a non-probing packet with a new largest packet number on the preferred address. It specifies that the server should drop packets received on the old IP address but may process delayed packets. The use of 'SHOULD' and 'MAY' introduces flexibility but does not create ambiguity in implementation behavior, as the options are clearly defined and do not lead to materially different outcomes.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:50:09.330215+00:00",
+  "document_id": "draft-ietf-quic-transport-33",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "c2b9c31047040f35633fc6b52ed524ab9a1b27dc64454f29655a57a7082cc45b",
+  "lineage_ids": "lineage:57123650ad177e3374702af6",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 146,
+    "load_duration": 4343300,
+    "prompt_eval_count": 579,
+    "total_duration": 6005854200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides clear guidance on the server's behavior after completing path validation and receiving a non-probing packet with a new largest packet number on the preferred address. It specifies that the server should drop packets received on the old IP address but may process delayed packets. The use of 'SHOULD' and 'MAY' introduces flexibility but does not create ambiguity in implementation behavior, as the options are clearly defined and do not lead to materially different outcomes.\"\n}",
+  "record_id": "eff7b5dfd2bd14bd7b895fcd31a4ee72479db3ecf9d9878b94fc90e705460764",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "9.6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.016
+}

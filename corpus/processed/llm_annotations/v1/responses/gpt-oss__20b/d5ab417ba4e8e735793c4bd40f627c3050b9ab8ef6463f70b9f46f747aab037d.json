@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "receipt of a GOAWAY frame on any stream",
+    "interpretation_a": "The clause could be read as requiring a server to treat a GOAWAY frame received on any stream as a connection error.",
+    "interpretation_b": "Alternatively, it could be read as requiring a server to treat a GOAWAY frame received on the connection as a connection error, since GOAWAY frames are not sent on streams.",
+    "is_ambiguous": "yes",
+    "justification": "The clause references \"on any stream\" for a GOAWAY frame, which is a connection‑level frame, creating an incomplete constraint that allows two reasonable interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T10:28:40.617013+00:00",
+  "document_id": "draft-ietf-quic-http-23",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "ff5a24abaf2aaaf1eacec13831f808cb51672e11dce3fd0a0c2f030cfa65ec82",
+  "lineage_ids": "lineage:ff99915db07205f7c320ef34",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1368,
+    "load_duration": 4008100,
+    "prompt_eval_count": 617,
+    "total_duration": 11990057700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\",\"ambiguity_subtype\":\"U-2\",\"evidence_span\":\"receipt of a GOAWAY frame on any stream\",\"interpretation_a\":\"The clause could be read as requiring a server to treat a GOAWAY frame received on any stream as a connection error.\",\"interpretation_b\":\"Alternatively, it could be read as requiring a server to treat a GOAWAY frame received on the connection as a connection error, since GOAWAY frames are not sent on streams.\",\"missing_information\":\"\",\"justification\":\"The clause references \\\"on any stream\\\" for a GOAWAY frame, which is a connection‑level frame, creating an incomplete constraint that allows two reasonable interpretations.\"}",
+  "record_id": "d5ab417ba4e8e735793c4bd40f627c3050b9ab8ef6463f70b9f46f747aab037d",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "7.2.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 79.985
+}

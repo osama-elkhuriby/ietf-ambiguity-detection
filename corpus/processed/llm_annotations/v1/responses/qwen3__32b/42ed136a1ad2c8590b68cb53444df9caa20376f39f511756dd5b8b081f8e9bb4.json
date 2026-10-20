@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause provides a clear and unambiguous requirement for servers to respond with a 400 (Bad Request) status code under specific conditions: (1) when an HTTP/1.1 request lacks a Host header field, (2) when it contains more than one Host header field, or (3) when the Host header field has an invalid field value. These conditions are well-defined and do not allow for multiple materially different interpretations. There is no missing constraint or undefined term that would lead to ambiguity in implementation.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:10:20.578349+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-10",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "4334406a700e60e7ad54b1d8bdfd68e33ef9e99a7e51402378f834a41dda73a7",
+  "lineage_ids": "lineage:cacf71ecd486fbe670d1af7e",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 162,
+    "load_duration": 10910000,
+    "prompt_eval_count": 575,
+    "total_duration": 6760211700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause provides a clear and unambiguous requirement for servers to respond with a 400 (Bad Request) status code under specific conditions: (1) when an HTTP/1.1 request lacks a Host header field, (2) when it contains more than one Host header field, or (3) when the Host header field has an invalid field value. These conditions are well-defined and do not allow for multiple materially different interpretations. There is no missing constraint or undefined term that would lead to ambiguity in implementation.\"\n}",
+  "record_id": "42ed136a1ad2c8590b68cb53444df9caa20376f39f511756dd5b8b081f8e9bb4",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "6.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.766
+}

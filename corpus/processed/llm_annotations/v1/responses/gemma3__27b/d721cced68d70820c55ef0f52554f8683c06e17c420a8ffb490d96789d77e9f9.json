@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "allows the server to identify how it was provided to a client",
+    "interpretation_a": "The server must be able to determine *which* mechanism (e.g., initial handshake, 0-RTT resumption) delivered the token to the client.",
+    "interpretation_b": "The server must be able to determine *who* (e.g., which client) provided the token.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'how it was provided' is open to interpretation. It could refer to the transport mechanism or the specific client. A missing constraint on *what* information the token must contain to allow identification creates ambiguity.",
+    "missing_information": "The clause does not specify what information the token must encode to allow the server to identify the source. Without this, implementations could reasonably choose different methods for encoding this information, leading to interoperability issues."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:07:33.340223+00:00",
+  "document_id": "draft-ietf-quic-transport-33",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "24338f86e29fc69be2232f5c36cffb5b1cce9a0c428ab918eea37962ac77ab36",
+  "lineage_ids": "lineage:9b6d58e01142efe08c62e828",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 201,
+    "load_duration": 4262100,
+    "prompt_eval_count": 558,
+    "total_duration": 7520474100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"allows the server to identify how it was provided to a client\", \"interpretation_a\": \"The server must be able to determine *which* mechanism (e.g., initial handshake, 0-RTT resumption) delivered the token to the client.\", \"interpretation_b\": \"The server must be able to determine *who* (e.g., which client) provided the token.\", \"missing_information\": \"The clause does not specify what information the token must encode to allow the server to identify the source. Without this, implementations could reasonably choose different methods for encoding this information, leading to interoperability issues.\",\"justification\": \"The phrase 'how it was provided' is open to interpretation. It could refer to the transport mechanism or the specific client. A missing constraint on *what* information the token must contain to allow identification creates ambiguity.\"}",
+  "record_id": "d721cced68d70820c55ef0f52554f8683c06e17c420a8ffb490d96789d77e9f9",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "8.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.516
+}

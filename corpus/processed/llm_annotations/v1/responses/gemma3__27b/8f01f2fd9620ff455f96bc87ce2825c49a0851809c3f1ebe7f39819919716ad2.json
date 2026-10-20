@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "immediately begin sending all future packets",
+    "interpretation_a": "The client must start sending packets on the very next RTT, without waiting for any acknowledgement or other signal.",
+    "interpretation_b": "The client can delay sending packets for a reasonable amount of time (e.g., to batch packets or avoid unnecessary retransmissions) before switching to the new address, as long as it eventually does so.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'immediately' is vague. It doesn't specify a time constraint, leading to different interpretations of when the client should switch to the new address.",
+    "missing_information": "The definition of 'immediately' is missing. Does it mean 'without delay' or 'as soon as reasonably possible'?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:43:43.293000+00:00",
+  "document_id": "draft-ietf-quic-transport-29",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "1ac11920cae69c6ee274065a11e0aa44727f3e981053fb04b6f734bbbdd0ec5e",
+  "lineage_ids": "lineage:d507b08e5e79bdce2f0974a2",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 179,
+    "load_duration": 4232200,
+    "prompt_eval_count": 626,
+    "total_duration": 6826974100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"immediately begin sending all future packets\", \"interpretation_a\": \"The client must start sending packets on the very next RTT, without waiting for any acknowledgement or other signal.\", \"interpretation_b\": \"The client can delay sending packets for a reasonable amount of time (e.g., to batch packets or avoid unnecessary retransmissions) before switching to the new address, as long as it eventually does so.\", \"missing_information\": \"The definition of 'immediately' is missing. Does it mean 'without delay' or 'as soon as reasonably possible'?\",\"justification\": \"The term 'immediately' is vague. It doesn't specify a time constraint, leading to different interpretations of when the client should switch to the new address.\"}",
+  "record_id": "8f01f2fd9620ff455f96bc87ce2825c49a0851809c3f1ebe7f39819919716ad2",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "9.6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.813
+}

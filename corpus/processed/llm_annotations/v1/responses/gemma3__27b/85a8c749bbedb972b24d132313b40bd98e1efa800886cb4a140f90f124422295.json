@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "clients MUST omit or specify a value of zero for the QUIC transport parameter initial_max_bidi_streams",
+    "interpretation_a": "Clients can either not include the `initial_max_bidi_streams` parameter in the QUIC connection setup, or include it and set its value to zero.",
+    "interpretation_b": "Clients are required to set the `initial_max_bidi_streams` parameter to zero, but are not allowed to omit it. Omitting it is a violation.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'omit or specify a value of zero' allows for two interpretations. One is that the client has a choice to either omit the parameter or set it to zero. The other is that the client *must* set it to zero, and omitting it is not allowed. This is a concrete missing constraint that affects implementation.",
+    "missing_information": "It is unclear whether omitting the parameter is equivalent to setting it to zero, or if omitting it is an error. The use of 'or' is ambiguous in this context."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:56:56.683008+00:00",
+  "document_id": "draft-ietf-quic-http-16",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "dcad69c025e9427b80a9ea513be3950165e81561b976d8069ad335807c8858e9",
+  "lineage_ids": "lineage:c608ea5180250c445c7b8a0d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 246,
+    "load_duration": 9175200,
+    "prompt_eval_count": 559,
+    "total_duration": 9244364200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"clients MUST omit or specify a value of zero for the QUIC transport parameter initial_max_bidi_streams\", \"interpretation_a\": \"Clients can either not include the `initial_max_bidi_streams` parameter in the QUIC connection setup, or include it and set its value to zero.\", \"interpretation_b\": \"Clients are required to set the `initial_max_bidi_streams` parameter to zero, but are not allowed to omit it. Omitting it is a violation.\", \"missing_information\": \"It is unclear whether omitting the parameter is equivalent to setting it to zero, or if omitting it is an error. The use of 'or' is ambiguous in this context.\", \"justification\": \"The phrase 'omit or specify a value of zero' allows for two interpretations. One is that the client has a choice to either omit the parameter or set it to zero. The other is that the client *must* set it to zero, and omitting it is not allowed. This is a concrete missing constraint that affects implementation.\"}",
+  "record_id": "85a8c749bbedb972b24d132313b40bd98e1efa800886cb4a140f90f124422295",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.25
+}

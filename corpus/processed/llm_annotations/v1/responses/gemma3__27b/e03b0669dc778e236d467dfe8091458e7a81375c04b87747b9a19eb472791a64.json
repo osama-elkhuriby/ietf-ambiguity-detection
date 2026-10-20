@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "the client MUST process the combined response as if it were a complete 200 (OK) response",
+    "interpretation_a": "The client treats the combined response *exactly* as if it had received a standard 200 OK response, including all associated processing (e.g., caching, error handling).",
+    "interpretation_b": "The client treats the combined response *logically* as a 200 OK response, but may still need to perform additional checks or processing due to the way the response was constructed (e.g., verifying the Content-Length).",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'as if' is vague. Does it mean the client should treat the combined response *exactly* as a 200 OK, or simply *logically* as a 200 OK? The lack of clarity affects how the client handles caching, error conditions, and other aspects of response processing.",
+    "missing_information": "It is unclear whether 'as if' implies complete equivalence or merely logical equivalence. A precise definition of how the client should 'process' the response is missing."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:32:19.011760+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "2af172c6ebc327cf2d919e5130779f612924a63822bed6d057fe72d2b88f7cad",
+  "lineage_ids": "lineage:b906894a279af31975f48ce8",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 258,
+    "load_duration": 10325600,
+    "prompt_eval_count": 668,
+    "total_duration": 9853365400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"the client MUST process the combined response as if it were a complete 200 (OK) response\", \"interpretation_a\": \"The client treats the combined response *exactly* as if it had received a standard 200 OK response, including all associated processing (e.g., caching, error handling).\", \"interpretation_b\": \"The client treats the combined response *logically* as a 200 OK response, but may still need to perform additional checks or processing due to the way the response was constructed (e.g., verifying the Content-Length).\", \"missing_information\": \"It is unclear whether 'as if' implies complete equivalence or merely logical equivalence. A precise definition of how the client should 'process' the response is missing.\", \"justification\": \"The phrase 'as if' is vague. Does it mean the client should treat the combined response *exactly* as a 200 OK, or simply *logically* as a 200 OK? The lack of clarity affects how the client handles caching, error conditions, and other aspects of response processing.\"}",
+  "record_id": "e03b0669dc778e236d467dfe8091458e7a81375c04b87747b9a19eb472791a64",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "15.3.7.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.859
+}

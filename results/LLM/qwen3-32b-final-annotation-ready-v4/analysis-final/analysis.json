@@ -1,0 +1,134 @@
+{
+  "best_adaptive_weight_sensitivity": {
+    "context_semantic_weight": 0.09999999999999984,
+    "pr_auc": 0.3252140363744398,
+    "target_semantic_weight": 0.1,
+    "v3_weight": 0.8000000000000002
+  },
+  "comparison": [
+    {
+      "balanced_accuracy": 0.6654265873015873,
+      "f1": 0.1742222222222222,
+      "pr_auc": 0.1959721675153843,
+      "precision": 0.0980980980980981,
+      "recall": 0.7777777777777778,
+      "series": "V1 best raw"
+    },
+    {
+      "balanced_accuracy": 0.5158730158730158,
+      "f1": 0.0808080808080808,
+      "pr_auc": 0.1034665031423884,
+      "precision": 0.1111111111111111,
+      "recall": 0.0634920634920634,
+      "series": "V2 best raw"
+    },
+    {
+      "balanced_accuracy": 0.6951884920634921,
+      "f1": 0.2646502835538752,
+      "pr_auc": 0.2554465040071021,
+      "precision": 0.173697270471464,
+      "recall": 0.5555555555555556,
+      "series": "V3 nested hybrid raw"
+    },
+    {
+      "balanced_accuracy": 0.7090773809523809,
+      "f1": 0.32592592592592595,
+      "pr_auc": 0.3252140363744398,
+      "precision": 0.23655913978494625,
+      "recall": 0.5238095238095238,
+      "series": "V4 semantic ensemble raw"
+    }
+  ],
+  "created_at_utc": "2026-10-19T11:18:16.494649+00:00",
+  "dependency_warning": "V3 component scores are OOF per row, but V4 configuration was selected after inspecting the same development cohort; only untouched transfer data can estimate generalization.",
+  "dns_opened": false,
+  "experiment": "qwen3-32b-final-annotation-ready-semantic-v4",
+  "fixed_configuration": {
+    "ensemble": {
+      "context_semantic_weight": 0.1,
+      "method": "weighted_log_odds",
+      "selection_status": "fixed_after_adaptive_development_sweep",
+      "target_semantic_weight": 0.1,
+      "v3_weight": 0.8
+    },
+    "semantic_classifier_c": 0.03
+  },
+  "positives": 126,
+  "primary_metric": "pr_auc",
+  "qwen_parameter_updates": false,
+  "raw_metrics": {
+    "accuracy": 0.8725490196078431,
+    "balanced_accuracy": 0.7090773809523809,
+    "f1": 0.32592592592592595,
+    "f2": 0.421455938697318,
+    "fn": 60,
+    "fp": 213,
+    "positives": 126,
+    "pr_auc": 0.3252140363744398,
+    "precision": 0.23655913978494625,
+    "prevalence": 0.058823529411764705,
+    "recall": 0.5238095238095238,
+    "rows": 2142,
+    "series": "v4_semantic_ensemble_raw",
+    "tn": 1803,
+    "tp": 66
+  },
+  "result_status": "adaptive_exploratory_not_final_test_evidence",
+  "rows": 2142,
+  "semantic_classifier_fitted": true,
+  "sentence_encoder_updates": false,
+  "tcp_opened": false,
+  "threshold_sensitivity": [
+    {
+      "accuracy": 0.9290382819794585,
+      "balanced_accuracy": 0.675843253968254,
+      "f1": 0.392,
+      "f2": 0.39012738853503187,
+      "fn": 77,
+      "fp": 75,
+      "positives": 126,
+      "pr_auc": 0.3252140363744398,
+      "precision": 0.3951612903225806,
+      "prevalence": 0.058823529411764705,
+      "recall": 0.3888888888888889,
+      "rows": 2142,
+      "series": "v4_semantic_ensemble_f1_threshold",
+      "tn": 1941,
+      "tp": 49
+    },
+    {
+      "accuracy": 0.8440709617180205,
+      "balanced_accuracy": 0.7013888888888888,
+      "f1": 0.28936170212765955,
+      "f2": 0.4009433962264151,
+      "fn": 58,
+      "fp": 276,
+      "positives": 126,
+      "pr_auc": 0.3252140363744398,
+      "precision": 0.19767441860465115,
+      "prevalence": 0.058823529411764705,
+      "recall": 0.5396825396825397,
+      "rows": 2142,
+      "series": "v4_semantic_ensemble_f2_threshold",
+      "tn": 1740,
+      "tp": 68
+    },
+    {
+      "accuracy": 0.7287581699346405,
+      "balanced_accuracy": 0.7294146825396826,
+      "f1": 0.24052287581699347,
+      "f2": 0.40244969378827644,
+      "fn": 34,
+      "fp": 547,
+      "positives": 126,
+      "pr_auc": 0.3252140363744398,
+      "precision": 0.14397496087636932,
+      "prevalence": 0.058823529411764705,
+      "recall": 0.7301587301587301,
+      "rows": 2142,
+      "series": "v4_semantic_ensemble_balanced_accuracy_threshold",
+      "tn": 1469,
+      "tp": 92
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "initial value of BASE_PMTU",
+    "interpretation_a": "The initial BASE_PMTU is set to the smallest possible QUIC packet size, regardless of the network path.",
+    "interpretation_b": "The initial BASE_PMTU is set to the smallest possible QUIC packet size *considering* the network path (e.g., based on initial RTT estimates or other heuristics).",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"consistent with\" is vague. It doesn't specify whether the BASE_PMTU should be *equal* to the minimum QUIC packet size, or merely *derived* from it, potentially incorporating network path characteristics. This allows for different implementations.",
+    "missing_information": "The clause does not specify how 'consistent with' is to be interpreted. Does it mean 'equal to', or 'derived from' while considering network conditions?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:30:01.400402+00:00",
+  "document_id": "draft-ietf-quic-transport-31",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "2693ca739ebdec1f24872605413840bc67db4f67c3f0f61faa008a12e99d5471",
+  "lineage_ids": "lineage:47f9bcc04e6ecdce6c10a430",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 205,
+    "load_duration": 3713000,
+    "prompt_eval_count": 607,
+    "total_duration": 7717392500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"initial value of BASE_PMTU\", \"interpretation_a\": \"The initial BASE_PMTU is set to the smallest possible QUIC packet size, regardless of the network path.\", \"interpretation_b\": \"The initial BASE_PMTU is set to the smallest possible QUIC packet size *considering* the network path (e.g., based on initial RTT estimates or other heuristics).\", \"missing_information\": \"The clause does not specify how 'consistent with' is to be interpreted. Does it mean 'equal to', or 'derived from' while considering network conditions?\",\"justification\": \"The phrase \\\"consistent with\\\" is vague. It doesn't specify whether the BASE_PMTU should be *equal* to the minimum QUIC packet size, or merely *derived* from it, potentially incorporating network path characteristics. This allows for different implementations.\"}",
+  "record_id": "69abcb9366931605e69e0f3349c88e542c23a0e064c0759f5dcdb2c831c2799f",
+  "revision": "31",
+  "schema_version": 1,
+  "section_ids": "14.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.719
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "limit bursts to the initial congestion window",
+    "interpretation_a": "Senders limit bursts to at most the initial congestion window (no more than that size).",
+    "interpretation_b": "Senders limit bursts to exactly the initial congestion window (the burst size must equal that size).",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a concrete constraint on the burst size relative to the initial congestion window, allowing two materially different implementation behaviours.",
+    "missing_information": "The clause does not specify whether the burst size should be limited to at most or exactly the initial congestion window, nor does it specify the unit (bytes or packets)."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T11:18:00.125771+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "93cd1c3902f80bb6e09666ff00c487ab82dba59c20c67d1b71ab7bca93edd475",
+  "lineage_ids": "lineage:41db8718d94517f207c1aa7f",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 5318,
+    "load_duration": 4546000,
+    "prompt_eval_count": 569,
+    "total_duration": 46043209600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"limit bursts to the initial congestion window\",\n  \"interpretation_a\": \"Senders limit bursts to at most the initial congestion window (no more than that size).\",\n  \"interpretation_b\": \"Senders limit bursts to exactly the initial congestion window (the burst size must equal that size).\",\n  \"missing_information\": \"The clause does not specify whether the burst size should be limited to at most or exactly the initial congestion window, nor does it specify the unit (bytes or packets).\",\n  \"justification\": \"The clause lacks a concrete constraint on the burst size relative to the initial congestion window, allowing two materially different implementation behaviours.\"\n}",
+  "record_id": "4757b9208234906a4d5c202ecb0264af113c4ab2caaeac4626d4679e93a3a244",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 46.031
+}

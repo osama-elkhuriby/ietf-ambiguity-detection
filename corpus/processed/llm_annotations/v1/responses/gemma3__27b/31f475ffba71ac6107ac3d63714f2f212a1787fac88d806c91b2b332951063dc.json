@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "congestion state",
+    "interpretation_a": "The client may retain congestion state information, such as estimates of round-trip time and loss rates, to improve future congestion control.",
+    "interpretation_b": "The client may retain only a simple flag indicating that congestion control was active, without retaining any specific congestion state variables.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'congestion state' is underspecified. It is unclear whether the client is permitted to retain detailed congestion control variables (e.g., ssthresh, cwnd, rtt estimates) or only a minimal amount of information indicating that congestion control was active. Both interpretations are reasonable, and the missing constraint affects implementation.",
+    "missing_information": "The level of detail of 'congestion state' that the client is permitted to retain is not specified. This impacts implementation choices regarding memory usage and the ability to resume congestion control efficiently."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:10:49.544295+00:00",
+  "document_id": "draft-ietf-quic-transport-12",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "2e7508bbc4eb623c896ce9b652be05c5baffc5a67bd8ad5a143608382aa3ead7",
+  "lineage_ids": "lineage:44cc7186d3af77d5460a4aba",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 206,
+    "load_duration": 4358400,
+    "prompt_eval_count": 578,
+    "total_duration": 7769964200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"congestion state\", \"interpretation_a\": \"The client may retain congestion state information, such as estimates of round-trip time and loss rates, to improve future congestion control.\", \"interpretation_b\": \"The client may retain only a simple flag indicating that congestion control was active, without retaining any specific congestion state variables.\", \"missing_information\": \"The level of detail of 'congestion state' that the client is permitted to retain is not specified. This impacts implementation choices regarding memory usage and the ability to resume congestion control efficiently.\", \"justification\": \"The phrase 'congestion state' is underspecified. It is unclear whether the client is permitted to retain detailed congestion control variables (e.g., ssthresh, cwnd, rtt estimates) or only a minimal amount of information indicating that congestion control was active. Both interpretations are reasonable, and the missing constraint affects implementation.\"}",
+  "record_id": "31f475ffba71ac6107ac3d63714f2f212a1787fac88d806c91b2b332951063dc",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "4.4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.766
+}

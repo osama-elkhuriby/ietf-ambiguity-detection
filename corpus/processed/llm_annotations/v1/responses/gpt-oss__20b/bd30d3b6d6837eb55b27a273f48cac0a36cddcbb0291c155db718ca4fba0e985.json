@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "an RTO alarm SHOULD be scheduled [rto]",
+    "interpretation_a": "The clause does not specify whether an existing RTO alarm should be cancelled or reset when the second TLP packet is sent.",
+    "interpretation_b": "Alternatively, it could be interpreted that the RTO alarm should only be scheduled if one is not already pending.",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a concrete constraint on whether to reschedule an already pending RTO alarm, which is a missing implementation‑relevant detail.",
+    "missing_information": "The normative reference [rto] may clarify the intended scheduling semantics for the RTO alarm in this context. Without that reference, the clause is under‑specified.  (The clause itself is otherwise unambiguous.)"
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T11:51:53.424589+00:00",
+  "document_id": "draft-ietf-quic-recovery-13",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "0f1f8d5cc269ce974d2d67f87fdbde65a06c831c0b234429dd6e33cb99f7fa4e",
+  "lineage_ids": "lineage:a73c2f42209732a9095df094",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3278,
+    "load_duration": 5365300,
+    "prompt_eval_count": 634,
+    "total_duration": 29021049100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"an RTO alarm SHOULD be scheduled [rto]\",\n  \"interpretation_a\": \"The clause does not specify whether an existing RTO alarm should be cancelled or reset when the second TLP packet is sent.\",\n  \"interpretation_b\": \"Alternatively, it could be interpreted that the RTO alarm should only be scheduled if one is not already pending.\",\n  \"missing_information\": \"The normative reference [rto] may clarify the intended scheduling semantics for the RTO alarm in this context. Without that reference, the clause is under‑specified.  (The clause itself is otherwise unambiguous.)\",\n  \"justification\": \"The clause lacks a concrete constraint on whether to reschedule an already pending RTO alarm, which is a missing implementation‑relevant detail.\"\n}",
+  "record_id": "bd30d3b6d6837eb55b27a273f48cac0a36cddcbb0291c155db718ca4fba0e985",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "3.3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 96.907
+}

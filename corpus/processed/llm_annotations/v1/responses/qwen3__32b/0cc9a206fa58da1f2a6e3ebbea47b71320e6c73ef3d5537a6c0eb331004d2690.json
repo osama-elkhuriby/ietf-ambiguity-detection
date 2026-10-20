@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause clearly defines the handling of specific characters in HTTP header field values and explicitly states that any request or response containing such characters must be treated as malformed. The reference to the ABNF rule in Section 3.2 of [RFC7230] provides a concrete definition of valid characters, which eliminates ambiguity in implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T01:41:06.301242+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-00",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "a4ee413d6e4036f1181c0820f1976d57e48fe21e9b2b2d6d5ad68fc6d217db15",
+  "lineage_ids": "lineage:8ebcef40acee4889aa4b8e49",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 123,
+    "load_duration": 4888500,
+    "prompt_eval_count": 600,
+    "total_duration": 5288015500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause clearly defines the handling of specific characters in HTTP header field values and explicitly states that any request or response containing such characters must be treated as malformed. The reference to the ABNF rule in Section 3.2 of [RFC7230] provides a concrete definition of valid characters, which eliminates ambiguity in implementation behavior.\"\n}",
+  "record_id": "0cc9a206fa58da1f2a6e3ebbea47b71320e6c73ef3d5537a6c0eb331004d2690",
+  "revision": "00",
+  "schema_version": 1,
+  "section_ids": "10.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.297
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause 'An endpoint SHOULD NOT provide more connection IDs than the peer’s limit' is clear and prescriptive. It sets a constraint based on the peer's active_connection_id_limit transport parameter. The language 'SHOULD NOT' implies a strong recommendation to avoid exceeding the limit, but it does not allow for multiple materially different interpretations. There is no missing constraint or undefined term that would lead to ambiguity in implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:06:32.169905+00:00",
+  "document_id": "draft-ietf-quic-transport-24",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "fbea16702349929fa40ba3f3d21f1af9abba6419ab2e350e2c2b12406f461dbb",
+  "lineage_ids": "lineage:59301b747a1778216fb72adf",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 140,
+    "load_duration": 5484700,
+    "prompt_eval_count": 557,
+    "total_duration": 5761173800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause 'An endpoint SHOULD NOT provide more connection IDs than the peer’s limit' is clear and prescriptive. It sets a constraint based on the peer's active_connection_id_limit transport parameter. The language 'SHOULD NOT' implies a strong recommendation to avoid exceeding the limit, but it does not allow for multiple materially different interpretations. There is no missing constraint or undefined term that would lead to ambiguity in implementation behavior.\"\n}",
+  "record_id": "48b51f3876abba00b38ec4d3b5240aa8fb2c84d5b62f3cf97bde1a9f87278e4d",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "5.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.766
+}

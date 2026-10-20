@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "until the TLS handshake is reported as complete",
+    "interpretation_a": "The server continues processing ACKs in unprotected packets indefinitely until the TLS handshake is reported as complete, even if it receives ACKs for all handshake messages in protected packets before that completion report.",
+    "interpretation_b": "The server stops processing ACKs in unprotected packets as soon as it receives an ACK in a protected packet acknowledging all handshake messages, regardless of whether the TLS handshake is reported as complete.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'until the TLS handshake is reported as complete' introduces ambiguity. It's unclear what constitutes 'reported as complete' and whether this condition overrides the other condition (receiving an ACK in a protected packet). This creates two plausible interpretations regarding when the server should stop processing ACKs in unprotected packets.",
+    "missing_information": "The definition of 'reported as complete' is not provided. It is unclear if this refers to an internal state change or an external signal, and the timing relative to receiving ACKs in protected packets is not specified."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:46:45.150190+00:00",
+  "document_id": "draft-ietf-quic-tls-12",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "a3ba4a95df68b34736f5186802f5af815499fa5c903905fe9e5a0bf9ae178774",
+  "lineage_ids": "lineage:cda4f9340302e33c00c4057d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 238,
+    "load_duration": 3852700,
+    "prompt_eval_count": 616,
+    "total_duration": 8916408100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"until the TLS handshake is reported as complete\", \"interpretation_a\": \"The server continues processing ACKs in unprotected packets indefinitely until the TLS handshake is reported as complete, even if it receives ACKs for all handshake messages in protected packets before that completion report.\", \"interpretation_b\": \"The server stops processing ACKs in unprotected packets as soon as it receives an ACK in a protected packet acknowledging all handshake messages, regardless of whether the TLS handshake is reported as complete.\", \"missing_information\": \"The definition of 'reported as complete' is not provided. It is unclear if this refers to an internal state change or an external signal, and the timing relative to receiving ACKs in protected packets is not specified.\", \"justification\": \"The phrase 'until the TLS handshake is reported as complete' introduces ambiguity. It's unclear what constitutes 'reported as complete' and whether this condition overrides the other condition (receiving an ACK in a protected packet). This creates two plausible interpretations regarding when the server should stop processing ACKs in unprotected packets.\"}",
+  "record_id": "bdc213f28f500787e85d4711a42af62b476658587dbba48f24cbd245655f942a",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "6.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.922
+}

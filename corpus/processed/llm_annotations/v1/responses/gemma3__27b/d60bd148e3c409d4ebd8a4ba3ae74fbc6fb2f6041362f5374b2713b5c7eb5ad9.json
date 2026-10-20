@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "the most recent MAX_DATA frame MUST be retransmitted",
+    "interpretation_a": "Only the single, latest MAX_DATA frame needs to be retransmitted, even if older ones exist.",
+    "interpretation_b": "All MAX_DATA frames, up to and including the most recent, must be retransmitted, though the older ones are discouraged.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states the most recent frame *must* be retransmitted, but does not explicitly state that older frames *cannot* be retransmitted, only that they *should not* be. This leaves open the possibility that older frames could be retransmitted in addition to the most recent one, creating two reasonable interpretations.",
+    "missing_information": "It is unclear whether the 'most recent' frame is the only one that *needs* to be retransmitted, or if all frames up to the most recent *may* be retransmitted, but only the most recent *must* be."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:06:28.425348+00:00",
+  "document_id": "draft-ietf-quic-transport-09",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "6ad8407b162b1f9168720a828745dfb0114ba4e171f4d650d78b36be0bde42e4",
+  "lineage_ids": "lineage:0f9b480b397062ccd7cb3629",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 223,
+    "load_duration": 4507800,
+    "prompt_eval_count": 604,
+    "total_duration": 8367655700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"the most recent MAX_DATA frame MUST be retransmitted\", \"interpretation_a\": \"Only the single, latest MAX_DATA frame needs to be retransmitted, even if older ones exist.\", \"interpretation_b\": \"All MAX_DATA frames, up to and including the most recent, must be retransmitted, though the older ones are discouraged.\", \"missing_information\": \"It is unclear whether the 'most recent' frame is the only one that *needs* to be retransmitted, or if all frames up to the most recent *may* be retransmitted, but only the most recent *must* be.\", \"justification\": \"The clause states the most recent frame *must* be retransmitted, but does not explicitly state that older frames *cannot* be retransmitted, only that they *should not* be. This leaves open the possibility that older frames could be retransmitted in addition to the most recent one, creating two reasonable interpretations.\"}",
+  "record_id": "d60bd148e3c409d4ebd8a4ba3ae74fbc6fb2f6041362f5374b2713b5c7eb5ad9",
+  "revision": "09",
+  "schema_version": 1,
+  "section_ids": "9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.375
+}

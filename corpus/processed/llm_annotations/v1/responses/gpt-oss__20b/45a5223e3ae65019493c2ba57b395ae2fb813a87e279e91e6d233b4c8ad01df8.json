@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY combine those responses into a larger continuous range if they share the same strong validator.",
+    "interpretation_a": "The client must combine all partial responses that share the same strong validator into a single continuous range.",
+    "interpretation_b": "The client may combine any subset of partial responses that share the same strong validator into a continuous range.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether the client must combine all partial responses that share the same strong validator or may combine only a subset, leaving a concrete missing constraint that affects implementation behaviour.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T06:08:25.615690+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "2c29f3e6ada9fbaa4f8506299e03ff1df04597493ffa423d9ad59603b29429ea",
+  "lineage_ids": "lineage:9a452b6d0fa3cfc25f31dc26",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2012,
+    "load_duration": 4636800,
+    "prompt_eval_count": 619,
+    "total_duration": 17321548500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"MAY combine those responses into a larger continuous range if they share the same strong validator.\",\n  \"interpretation_a\": \"The client must combine all partial responses that share the same strong validator into a single continuous range.\",\n  \"interpretation_b\": \"The client may combine any subset of partial responses that share the same strong validator into a continuous range.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify whether the client must combine all partial responses that share the same strong validator or may combine only a subset, leaving a concrete missing constraint that affects implementation behaviour.\"\n}",
+  "record_id": "45a5223e3ae65019493c2ba57b395ae2fb813a87e279e91e6d233b4c8ad01df8",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "15.3.7.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 17.328
+}

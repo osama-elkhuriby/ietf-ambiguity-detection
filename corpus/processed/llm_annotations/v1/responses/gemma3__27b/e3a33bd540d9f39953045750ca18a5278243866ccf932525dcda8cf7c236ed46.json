@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Unless expressly permitted",
+    "interpretation_a": "Any unprotected message received without explicit permission in a defined standard or extension is a fatal error.",
+    "interpretation_b": "Unprotected messages are allowed if a specific, but not necessarily standardized, agreement exists between the endpoints to accept them.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'expressly permitted' is vague. It doesn't specify *how* permission is granted. This allows for different interpretations of what constitutes valid permission, leading to potentially incompatible implementations.",
+    "missing_information": "The definition of 'expressly permitted' is not clear. Does it require a standardized mechanism, or is a bilateral out-of-band agreement sufficient?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:50:55.753663+00:00",
+  "document_id": "draft-ietf-quic-tls-12",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "c084113c2038748f65c35c7dbdf5792bc2603348e35753ddf222166bd724e65d",
+  "lineage_ids": "lineage:108d2731faa0d2baf2f1eb52",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 167,
+    "load_duration": 4634700,
+    "prompt_eval_count": 542,
+    "total_duration": 6305426800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Unless expressly permitted\", \"interpretation_a\": \"Any unprotected message received without explicit permission in a defined standard or extension is a fatal error.\", \"interpretation_b\": \"Unprotected messages are allowed if a specific, but not necessarily standardized, agreement exists between the endpoints to accept them.\", \"missing_information\": \"The definition of 'expressly permitted' is not clear. Does it require a standardized mechanism, or is a bilateral out-of-band agreement sufficient?\", \"justification\": \"The phrase 'expressly permitted' is vague. It doesn't specify *how* permission is granted. This allows for different interpretations of what constitutes valid permission, leading to potentially incompatible implementations.\"}",
+  "record_id": "e3a33bd540d9f39953045750ca18a5278243866ccf932525dcda8cf7c236ed46",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "8.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.297
+}

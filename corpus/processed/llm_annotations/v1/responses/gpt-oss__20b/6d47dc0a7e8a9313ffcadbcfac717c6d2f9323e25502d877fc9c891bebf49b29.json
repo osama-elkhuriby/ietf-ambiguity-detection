@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously requires that if a connection is closed before a SETTINGS frame is received, the client must discard all cached values and use the defaults defined earlier. The phrase “any cached values” refers to all cached configuration values, and “the defaults above” clearly points to the defaults specified earlier in the section. No missing constraint or alternative interpretation is evident.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T09:32:49.821638+00:00",
+  "document_id": "draft-ietf-quic-http-10",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "ca0584decbdc5a5434796c01b03248675f506d220d1e3c5158681ea7ee004239",
+  "lineage_ids": "lineage:613f674a021794eb385f53b2",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1091,
+    "load_duration": 4452500,
+    "prompt_eval_count": 575,
+    "total_duration": 9496828900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"no\",\"ambiguity_subtype\":\"none\",\"evidence_span\":\"\",\"interpretation_a\":\"\",\"interpretation_b\":\"\",\"missing_information\":\"\",\"justification\":\"The clause unambiguously requires that if a connection is closed before a SETTINGS frame is received, the client must discard all cached values and use the defaults defined earlier. The phrase “any cached values” refers to all cached configuration values, and “the defaults above” clearly points to the defaults specified earlier in the section. No missing constraint or alternative interpretation is evident.\"}",
+  "record_id": "6d47dc0a7e8a9313ffcadbcfac717c6d2f9323e25502d877fc9c891bebf49b29",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "4.2.5.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.5
+}

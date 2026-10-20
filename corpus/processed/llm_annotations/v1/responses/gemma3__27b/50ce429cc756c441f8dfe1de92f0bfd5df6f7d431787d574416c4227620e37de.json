@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD also include positive or negative DNSSEC responses",
+    "interpretation_a": "The server should include DNSSEC responses if the DNSSEC validation succeeds (positive response).",
+    "interpretation_b": "The server should include DNSSEC responses even if the DNSSEC validation fails (negative response).",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'positive or negative DNSSEC responses' is ambiguous. It could mean that the server should include a DNSSEC record indicating a successful validation (positive) or a failed validation (negative). Alternatively, it could mean that the server should include either a validating DNSSEC record (positive) or a non-validating DNSSEC record (negative).",
+    "missing_information": "It is unclear whether 'positive or negative' refers to the *result* of DNSSEC validation, or the *type* of DNSSEC record returned."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:03:01.194243+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "721ec68b699af238c00c0106ac1c7f5bab6f713039e276b73939714eaeee4e90",
+  "lineage_ids": "lineage:e351d45ec8b6709aca925780",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 200,
+    "load_duration": 4007400,
+    "prompt_eval_count": 579,
+    "total_duration": 7550349300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD also include positive or negative DNSSEC responses\", \"interpretation_a\": \"The server should include DNSSEC responses if the DNSSEC validation succeeds (positive response).\", \"interpretation_b\": \"The server should include DNSSEC responses even if the DNSSEC validation fails (negative response).\", \"missing_information\": \"It is unclear whether 'positive or negative' refers to the *result* of DNSSEC validation, or the *type* of DNSSEC record returned.\",\"justification\": \"The phrase 'positive or negative DNSSEC responses' is ambiguous. It could mean that the server should include a DNSSEC record indicating a successful validation (positive) or a failed validation (negative). Alternatively, it could mean that the server should include either a validating DNSSEC record (positive) or a non-validating DNSSEC record (negative).\"}",
+  "record_id": "50ce429cc756c441f8dfe1de92f0bfd5df6f7d431787d574416c4227620e37de",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.547
+}

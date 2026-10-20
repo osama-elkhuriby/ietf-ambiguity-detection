@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause specifies that values of the form 31*N+27 for integer N are reserved and must not be assigned by IANA or appear in the registry. The wording does not allow two materially different implementation behaviours, nor does it omit a concrete constraint that would prevent a unique operational interpretation. The only potential ambiguity (e.g., whether negative N values are included) does not affect implementation because parameter IDs are non‑negative. Therefore the clause is not ambiguous.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T19:28:44.848429+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "0ea53916955587229723a25977b6f84e7e6c285b95cb0ceeb880ac62ef9552dd",
+  "lineage_ids": "lineage:f3e9d640d25ab7a50da1c7c8",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1345,
+    "load_duration": 5341600,
+    "prompt_eval_count": 882,
+    "total_duration": 11732493800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause specifies that values of the form 31*N+27 for integer N are reserved and must not be assigned by IANA or appear in the registry. The wording does not allow two materially different implementation behaviours, nor does it omit a concrete constraint that would prevent a unique operational interpretation. The only potential ambiguity (e.g., whether negative N values are included) does not affect implementation because parameter IDs are non‑negative. Therefore the clause is not ambiguous.\"\n}",
+  "record_id": "f9b9a122c797854f4eba935d146f8364d58e070f0eabf206fc5b31a8f7a56a53",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "22.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.734
+}

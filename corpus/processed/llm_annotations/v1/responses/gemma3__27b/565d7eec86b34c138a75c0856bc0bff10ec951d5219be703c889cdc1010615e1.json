@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "per received packet",
+    "interpretation_a": "For every packet containing data or other non-ACK frames, an implementation may send at most one ACK-only packet.",
+    "interpretation_b": "An implementation may send at most one ACK-only packet for each packet it *has* received that contains data or other non-ACK frames, even if multiple packets have been received containing data or other non-ACK frames.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"per received packet\" is ambiguous. It could refer to the packet currently being processed, or to all packets received up to that point. The difference affects the rate at which ACK-only packets can be sent.",
+    "missing_information": "The clause does not specify whether the limit applies to each packet *sent* or to each packet *received*. This affects how an implementation handles multiple received packets before sending an ACK."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:24:28.298722+00:00",
+  "document_id": "draft-ietf-quic-transport-14",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "307f7b9485333fb4468b1568ce6f96f66930ba7e178e3e2e594f7b75a3db4ff4",
+  "lineage_ids": "lineage:578d0ec8fa954022173d10b8",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 206,
+    "load_duration": 3573900,
+    "prompt_eval_count": 574,
+    "total_duration": 7786193200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"per received packet\", \"interpretation_a\": \"For every packet containing data or other non-ACK frames, an implementation may send at most one ACK-only packet.\", \"interpretation_b\": \"An implementation may send at most one ACK-only packet for each packet it *has* received that contains data or other non-ACK frames, even if multiple packets have been received containing data or other non-ACK frames.\", \"missing_information\": \"The clause does not specify whether the limit applies to each packet *sent* or to each packet *received*. This affects how an implementation handles multiple received packets before sending an ACK.\", \"justification\": \"The phrase \\\"per received packet\\\" is ambiguous. It could refer to the packet currently being processed, or to all packets received up to that point. The difference affects the rate at which ACK-only packets can be sent.\"}",
+  "record_id": "565d7eec86b34c138a75c0856bc0bff10ec951d5219be703c889cdc1010615e1",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "7.15.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.797
+}

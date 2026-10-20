@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "directly to an origin server",
+    "interpretation_a": "The request must be sent directly to the origin server, i.e., without any intermediaries (proxies, gateways, etc.) in the path.",
+    "interpretation_b": "The request must be addressed to the origin server, but may still pass through intermediaries; the word 'directly' refers only to the target, not the transmission path.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether 'directly' means the request must bypass intermediaries or merely be addressed to the origin server, allowing two materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T07:31:09.404288+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "c4f54bfcd78b61fcbe2db409d77ad77b69424ce54eb54c8a419c5e67cc59fa13",
+  "lineage_ids": "lineage:d447b2eabcb71c061e582fb0",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 457,
+    "load_duration": 5267000,
+    "prompt_eval_count": 805,
+    "total_duration": 4142694800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"directly to an origin server\",\n  \"interpretation_a\": \"The request must be sent directly to the origin server, i.e., without any intermediaries (proxies, gateways, etc.) in the path.\",\n  \"interpretation_b\": \"The request must be addressed to the origin server, but may still pass through intermediaries; the word 'directly' refers only to the target, not the transmission path.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify whether 'directly' means the request must bypass intermediaries or merely be addressed to the origin server, allowing two materially different implementation behaviours.\"\n}",
+  "record_id": "a65ea472e90ebb59420e382eb9ff5c70310d67d4f880ad29b5b7a9982c5f821e",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "9.3.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 33.266
+}

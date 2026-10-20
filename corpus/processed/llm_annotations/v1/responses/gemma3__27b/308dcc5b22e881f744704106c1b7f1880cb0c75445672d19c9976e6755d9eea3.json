@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Streams SHOULD be used sequentially, with no gaps.",
+    "interpretation_a": "Streams must be assigned in order, starting from 1, and incrementing with each new stream. Any unused stream ID constitutes a violation.",
+    "interpretation_b": "Streams should be used in a logical order, but gaps in stream IDs are permissible as long as the overall flow of HTTP transactions remains sequential. Stream IDs could be assigned randomly, but the application should attempt to avoid gaps for efficiency.",
+    "is_ambiguous": "yes",
+    "justification": "The word 'sequentially' is open to interpretation. It could mean that stream IDs must be assigned in order, or simply that HTTP transactions should be processed in a logical order. The lack of a specific constraint on stream ID assignment creates ambiguity.",
+    "missing_information": "The meaning of 'sequentially' is not clearly defined. Does it refer to stream IDs, or the order of HTTP transactions? A concrete constraint on stream ID assignment is missing."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:45:03.902148+00:00",
+  "document_id": "draft-ietf-quic-http-12",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "d040d82050ab7ff7fee64a6e2491d819bc521e2a44c9dd934a5a74146268f417",
+  "lineage_ids": "lineage:004c2164f39047ac9a369038",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 221,
+    "load_duration": 9961600,
+    "prompt_eval_count": 561,
+    "total_duration": 8407625800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Streams SHOULD be used sequentially, with no gaps.\", \"interpretation_a\": \"Streams must be assigned in order, starting from 1, and incrementing with each new stream. Any unused stream ID constitutes a violation.\", \"interpretation_b\": \"Streams should be used in a logical order, but gaps in stream IDs are permissible as long as the overall flow of HTTP transactions remains sequential. Stream IDs could be assigned randomly, but the application should attempt to avoid gaps for efficiency.\", \"missing_information\": \"The meaning of 'sequentially' is not clearly defined. Does it refer to stream IDs, or the order of HTTP transactions? A concrete constraint on stream ID assignment is missing.\", \"justification\": \"The word 'sequentially' is open to interpretation. It could mean that stream IDs must be assigned in order, or simply that HTTP transactions should be processed in a logical order. The lack of a specific constraint on stream ID assignment creates ambiguity.\"}",
+  "record_id": "308dcc5b22e881f744704106c1b7f1880cb0c75445672d19c9976e6755d9eea3",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.407
+}

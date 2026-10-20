@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "the two least significant bits are set to 0 by a server and to 1 by a client",
+    "interpretation_a": "A server sets the two least significant bits to 0, and a client sets them to 1. This implies different bit patterns for server and client.",
+    "interpretation_b": "A stream ID is valid for a server if the two least significant bits are 0, and valid for a client if the two least significant bits are 1. This implies the same stream ID cannot be used by both server and client.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'by a server and to 1 by a client' can be interpreted in two ways: 1) the server *sets* the bits to 0 and the client *sets* them to 1, implying different bit patterns for server and client, or 2) a stream ID is valid for a server if the bits are 0 and for a client if the bits are 1, implying the same stream ID cannot be used by both. The statement lacks clarity on whether it's a setting rule or a validation rule.",
+    "missing_information": "It is unclear whether the statement intends to define how the stream ID *should* be set, or whether it is a *validation* rule. If it's a validation rule, it's unclear if a stream ID can be valid for only one endpoint, or if both endpoints can use the same ID with different bit patterns."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:54:57.325118+00:00",
+  "document_id": "draft-ietf-quic-transport-10",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "c7134bc2a04177596a458c09f9d73429fb7cefdeb79089838c26fe7de595b943",
+  "lineage_ids": "lineage:92170cd8f68ce7696401b33c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 330,
+    "load_duration": 4008000,
+    "prompt_eval_count": 623,
+    "total_duration": 12166501700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"the two least significant bits are set to 0 by a server and to 1 by a client\", \"interpretation_a\": \"A server sets the two least significant bits to 0, and a client sets them to 1. This implies different bit patterns for server and client.\", \"interpretation_b\": \"A stream ID is valid for a server if the two least significant bits are 0, and valid for a client if the two least significant bits are 1. This implies the same stream ID cannot be used by both server and client.\", \"missing_information\": \"It is unclear whether the statement intends to define how the stream ID *should* be set, or whether it is a *validation* rule. If it's a validation rule, it's unclear if a stream ID can be valid for only one endpoint, or if both endpoints can use the same ID with different bit patterns.\", \"justification\": \"The phrase 'by a server and to 1 by a client' can be interpreted in two ways: 1) the server *sets* the bits to 0 and the client *sets* them to 1, implying different bit patterns for server and client, or 2) a stream ID is valid for a server if the bits are 0 and for a client if the bits are 1, implying the same stream ID cannot be used by both. The statement lacks clarity on whether it's a setting rule or a validation rule.\"}",
+  "record_id": "b0c31c4814d674787500a19015c6241754c6ad3604d34b0edf8141eea81b05a0",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "7.4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 12.172
+}

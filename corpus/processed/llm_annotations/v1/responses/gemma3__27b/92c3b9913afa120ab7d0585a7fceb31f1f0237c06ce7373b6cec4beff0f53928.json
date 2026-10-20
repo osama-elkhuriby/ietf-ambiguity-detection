@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT generate packets that only contain ACK frames in response to packets which only contain ACK frames.",
+    "interpretation_a": "If a packet contains *only* ACK frames, the responder should not send a packet containing *only* ACK frames in return. It must bundle the ACK with other data or control frames.",
+    "interpretation_b": "If a packet contains *only* ACK frames, the responder should not send a packet containing *only* ACK frames in return *immediately*. It is permissible to delay the ACK and bundle it with other data or control frames later.",
+    "is_ambiguous": "yes",
+    "justification": "The clause prohibits sending a packet with only ACK frames in response to a packet with only ACK frames, but does not specify a time constraint. This allows for two interpretations: an immediate restriction, or a restriction that applies until other data is sent.",
+    "missing_information": "The time window for the restriction is not specified. Does this apply to the very next packet, or to any packet in the future?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:44:55.741720+00:00",
+  "document_id": "draft-ietf-quic-transport-14",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "cecdd086cdd216b7bf5cc7e4f4a8e105ed1aacddf9bbb6e6d8571bf0cbb585a9",
+  "lineage_ids": "lineage:666bf4fc26206c3709e2a649",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 230,
+    "load_duration": 3973300,
+    "prompt_eval_count": 552,
+    "total_duration": 8572976800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT generate packets that only contain ACK frames in response to packets which only contain ACK frames.\", \"interpretation_a\": \"If a packet contains *only* ACK frames, the responder should not send a packet containing *only* ACK frames in return. It must bundle the ACK with other data or control frames.\", \"interpretation_b\": \"If a packet contains *only* ACK frames, the responder should not send a packet containing *only* ACK frames in return *immediately*. It is permissible to delay the ACK and bundle it with other data or control frames later.\", \"missing_information\": \"The time window for the restriction is not specified. Does this apply to the very next packet, or to any packet in the future?\",\"justification\": \"The clause prohibits sending a packet with only ACK frames in response to a packet with only ACK frames, but does not specify a time constraint. This allows for two interpretations: an immediate restriction, or a restriction that applies until other data is sent.\"}",
+  "record_id": "92c3b9913afa120ab7d0585a7fceb31f1f0237c06ce7373b6cec4beff0f53928",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "7.15.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.578
+}

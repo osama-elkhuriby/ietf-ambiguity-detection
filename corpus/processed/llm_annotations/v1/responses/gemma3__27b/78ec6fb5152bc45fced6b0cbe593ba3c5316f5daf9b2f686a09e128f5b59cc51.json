@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "stream it has not opened",
+    "interpretation_a": "The endpoint has not initiated the stream (i.e., it is the receiver).",
+    "interpretation_b": "The endpoint has not fully established the stream (i.e., the handshake is incomplete).",
+    "is_ambiguous": "yes",
+    "justification": "The term 'opened' is not defined, and it is unclear whether it refers to the initiation of the stream or the completion of the handshake. This leads to two reasonable interpretations of the clause.",
+    "missing_information": "The definition of 'opened' is not provided. Does 'opened' mean the stream has been initiated by the endpoint, or that the stream has completed its handshake?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:34:52.354385+00:00",
+  "document_id": "draft-ietf-quic-transport-17",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "9535780451e2b6c81ddde1f63976b798e655deb7c51072ee975fb794f67cf72c",
+  "lineage_ids": "lineage:64ccdd4db86f2fdb731a08be",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 166,
+    "load_duration": 4129800,
+    "prompt_eval_count": 600,
+    "total_duration": 6355912600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"stream it has not opened\", \"interpretation_a\": \"The endpoint has not initiated the stream (i.e., it is the receiver).\", \"interpretation_b\": \"The endpoint has not fully established the stream (i.e., the handshake is incomplete).\", \"missing_information\": \"The definition of 'opened' is not provided. Does 'opened' mean the stream has been initiated by the endpoint, or that the stream has completed its handshake?\",\"justification\": \"The term 'opened' is not defined, and it is unclear whether it refers to the initiation of the stream or the completion of the handshake. This leads to two reasonable interpretations of the clause.\"}",
+  "record_id": "78ec6fb5152bc45fced6b0cbe593ba3c5316f5daf9b2f686a09e128f5b59cc51",
+  "revision": "17",
+  "schema_version": 1,
+  "section_ids": "19.10",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.36
+}

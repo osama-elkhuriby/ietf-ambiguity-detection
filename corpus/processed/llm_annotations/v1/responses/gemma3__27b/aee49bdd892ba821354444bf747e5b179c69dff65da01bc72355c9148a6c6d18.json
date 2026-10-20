@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY be omitted",
+    "interpretation_a": "The server could send all payload header fields, even in a HEAD request.",
+    "interpretation_b": "The server could omit all payload header fields in a HEAD request.",
+    "is_ambiguous": "yes",
+    "justification": "The use of \"MAY\" creates ambiguity. While the server is not *required* to omit payload header fields, it is permitted to do so. This allows for two reasonable implementations: one where they are always included, and one where they are always omitted. A concrete constraint specifying whether or not payload header fields *should* be included would resolve this.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:23:58.279095+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-12",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "659a1a288d126ea06764162c6111887928bb15ac906e9cf102550f59179f9057",
+  "lineage_ids": "lineage:6b949c059bdf149f0a83c92b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 154,
+    "load_duration": 8425200,
+    "prompt_eval_count": 623,
+    "total_duration": 6068702800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY be omitted\", \"interpretation_a\": \"The server could send all payload header fields, even in a HEAD request.\", \"interpretation_b\": \"The server could omit all payload header fields in a HEAD request.\", \"missing_information\": \"\", \"justification\": \"The use of \\\"MAY\\\" creates ambiguity. While the server is not *required* to omit payload header fields, it is permitted to do so. This allows for two reasonable implementations: one where they are always included, and one where they are always omitted. A concrete constraint specifying whether or not payload header fields *should* be included would resolve this.\"}",
+  "record_id": "aee49bdd892ba821354444bf747e5b179c69dff65da01bc72355c9148a6c6d18",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "8.3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.062
+}

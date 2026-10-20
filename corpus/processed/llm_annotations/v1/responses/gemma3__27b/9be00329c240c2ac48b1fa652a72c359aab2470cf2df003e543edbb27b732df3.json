@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Once an endpoint has sent a packet encrypted with a given key phase",
+    "interpretation_a": "The restriction applies immediately after the *completion* of sending a packet with the new key phase.",
+    "interpretation_b": "The restriction applies after the *reception* of an acknowledgement of the packet sent with the new key phase.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'Once an endpoint has sent a packet' is ambiguous. Does 'sent' mean the packet has left the sending application, or has it been successfully acknowledged by the receiver? Both interpretations are reasonable and lead to different implementations.",
+    "missing_information": "The clause does not specify whether the restriction is triggered by sending the packet or receiving acknowledgement of the packet. This affects the timing of key phase transitions and impacts implementation of packet ordering and retransmission logic."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:43:32.070418+00:00",
+  "document_id": "draft-ietf-quic-tls-23",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "73cdca9f529ffc871e92f6fccd500dcd5b549f455ee2ff841a68c3d328df4989",
+  "lineage_ids": "lineage:edd096844c75397a07ef95e1",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 194,
+    "load_duration": "",
+    "prompt_eval_count": 593,
+    "total_duration": 7294766700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Once an endpoint has sent a packet encrypted with a given key phase\", \"interpretation_a\": \"The restriction applies immediately after the *completion* of sending a packet with the new key phase.\", \"interpretation_b\": \"The restriction applies after the *reception* of an acknowledgement of the packet sent with the new key phase.\", \"missing_information\": \"The clause does not specify whether the restriction is triggered by sending the packet or receiving acknowledgement of the packet. This affects the timing of key phase transitions and impacts implementation of packet ordering and retransmission logic.\", \"justification\": \"The phrase 'Once an endpoint has sent a packet' is ambiguous. Does 'sent' mean the packet has left the sending application, or has it been successfully acknowledged by the receiver? Both interpretations are reasonable and lead to different implementations.\"}",
+  "record_id": "9be00329c240c2ac48b1fa652a72c359aab2470cf2df003e543edbb27b732df3",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.297
+}

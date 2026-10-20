@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD not be acknowledged again",
+    "interpretation_a": "The receiver will not re-transmit the same ACK frame, even if it detects packet loss.",
+    "interpretation_b": "The receiver will not send another ACK frame covering the same packets, even if a later ACK frame could include additional packets.",
+    "is_ambiguous": "yes",
+    "justification": "The clause uses 'again' without specifying whether it refers to the ACK frame itself or the packets it acknowledges. This allows for two reasonable interpretations regarding how the receiver should handle acknowledgements.",
+    "missing_information": "It is unclear whether 'acknowledged again' refers to re-transmitting the same ACK frame, or to acknowledging the same packets in a different ACK frame. The scope of 'again' is not defined."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:13:04.159124+00:00",
+  "document_id": "draft-ietf-quic-transport-06",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "9a40132b25bf5293902a52964c6d3bb8b3e13f522a490dcaf9494a3667845525",
+  "lineage_ids": "lineage:92e6729146753ddfc2c8b248",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 181,
+    "load_duration": 4274700,
+    "prompt_eval_count": 573,
+    "total_duration": 6865697700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD not be acknowledged again\", \"interpretation_a\": \"The receiver will not re-transmit the same ACK frame, even if it detects packet loss.\", \"interpretation_b\": \"The receiver will not send another ACK frame covering the same packets, even if a later ACK frame could include additional packets.\", \"missing_information\": \"It is unclear whether 'acknowledged again' refers to re-transmitting the same ACK frame, or to acknowledging the same packets in a different ACK frame. The scope of 'again' is not defined.\",\"justification\": \"The clause uses 'again' without specifying whether it refers to the ACK frame itself or the packets it acknowledges. This allows for two reasonable interpretations regarding how the receiver should handle acknowledgements.\"}",
+  "record_id": "370b173d61f2772a7039ea7901775c4db01bdb606dbf085591a20db432fb58fc",
+  "revision": "06",
+  "schema_version": 1,
+  "section_ids": "8.13",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.875
+}

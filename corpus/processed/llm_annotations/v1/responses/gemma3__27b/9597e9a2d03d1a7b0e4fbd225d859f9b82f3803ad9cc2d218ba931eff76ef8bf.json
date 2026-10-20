@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST be used",
+    "interpretation_a": "The dNSName MUST be used as the *sole* identity, and any other potential identity information is discarded.",
+    "interpretation_b": "The dNSName MUST be used as *an* identity, but other identity information might also be considered or used in conjunction with it.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'MUST be used' is incomplete. It doesn't specify *how* it must be used. Does it mean it's the only identity to be used, or just one of potentially multiple identities?",
+    "missing_information": "It is unclear whether the 'MUST be used' implies exclusive use or simply inclusion in a set of possible identities."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:18:38.699005+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-10",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "d2be08976359514bbeb69194ecbac7a02122a172f2e3d1b8f7f5063bb5814908",
+  "lineage_ids": "lineage:1bf498ee4eb204571c7c0df4",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 173,
+    "load_duration": 8391200,
+    "prompt_eval_count": 590,
+    "total_duration": 6748520400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST be used\", \"interpretation_a\": \"The dNSName MUST be used as the *sole* identity, and any other potential identity information is discarded.\", \"interpretation_b\": \"The dNSName MUST be used as *an* identity, but other identity information might also be considered or used in conjunction with it.\", \"missing_information\": \"It is unclear whether the 'MUST be used' implies exclusive use or simply inclusion in a set of possible identities.\",\"justification\": \"The phrase 'MUST be used' is incomplete. It doesn't specify *how* it must be used. Does it mean it's the only identity to be used, or just one of potentially multiple identities?\"}",
+  "record_id": "9597e9a2d03d1a7b0e4fbd225d859f9b82f3803ad9cc2d218ba931eff76ef8bf",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "6.4.3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.75
+}

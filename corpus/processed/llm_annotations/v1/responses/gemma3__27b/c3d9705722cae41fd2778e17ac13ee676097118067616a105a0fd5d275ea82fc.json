@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "an origin server is not authoritative",
+    "interpretation_a": "The origin server identified in the HTTP/3 request is not the authoritative server for the requested resource.",
+    "interpretation_b": "The QUIC connection itself is not established with an authoritative server, meaning the server is not trusted to provide valid responses.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'authoritative' is not defined within the target clause itself. It relies on an external reference ([connection-reuse]). Depending on how 'authoritative' is defined in that reference, the clause could be interpreted in two different ways, leading to different implementation behaviours.",
+    "missing_information": "The definition of 'authoritative' is referenced in [connection-reuse] but not repeated here. Without knowing the precise definition from that reference, it's unclear whether it refers to the origin of the content or the server establishing the connection."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:06:27.748156+00:00",
+  "document_id": "draft-ietf-quic-http-30",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "a272bb27f21a19c10d8bc9ae7a4e772888b77bd854d8350270931cbc1a5e1849",
+  "lineage_ids": "lineage:9bd1dfcb06577a6150fac25d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 206,
+    "load_duration": 11749800,
+    "prompt_eval_count": 567,
+    "total_duration": 7925813500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-1\", \"evidence_span\": \"an origin server is not authoritative\", \"interpretation_a\": \"The origin server identified in the HTTP/3 request is not the authoritative server for the requested resource.\", \"interpretation_b\": \"The QUIC connection itself is not established with an authoritative server, meaning the server is not trusted to provide valid responses.\", \"missing_information\": \"The definition of 'authoritative' is referenced in [connection-reuse] but not repeated here. Without knowing the precise definition from that reference, it's unclear whether it refers to the origin of the content or the server establishing the connection.\",\"justification\": \"The term 'authoritative' is not defined within the target clause itself. It relies on an external reference ([connection-reuse]). Depending on how 'authoritative' is defined in that reference, the clause could be interpreted in two different ways, leading to different implementation behaviours.\"}",
+  "record_id": "c3d9705722cae41fd2778e17ac13ee676097118067616a105a0fd5d275ea82fc",
+  "revision": "30",
+  "schema_version": 1,
+  "section_ids": "10.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.937
+}

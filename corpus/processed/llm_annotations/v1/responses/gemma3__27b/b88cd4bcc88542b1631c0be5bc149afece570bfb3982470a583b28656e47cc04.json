@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "until it receives a packet from the server with the VERSION flag off",
+    "interpretation_a": "The client stops sending its version information as soon as *any* packet with the VERSION flag off is received, even if that packet indicates a negotiation failure or is otherwise invalid.",
+    "interpretation_b": "The client stops sending its version information only when it receives a valid packet with the VERSION flag off, signifying successful negotiation.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'receives a packet...with the VERSION flag off' is incomplete. It doesn't specify whether the packet must be valid or successfully negotiate a version. This creates ambiguity about when the client should stop sending its version information.",
+    "missing_information": "The draft does not define what constitutes a 'valid' packet for the purpose of ending version negotiation. A packet with the VERSION flag off could be malformed or indicate a negotiation failure, and it's unclear whether the client should continue sending its version in such cases."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:57:06.225821+00:00",
+  "document_id": "draft-ietf-quic-transport-00",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "8256f7ba36381455a36885d577b9bcdd243308dd6ed293d25706713614296da5",
+  "lineage_ids": "lineage:ca0bcddc7d20fc7a6b8d9240",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 227,
+    "load_duration": 4343400,
+    "prompt_eval_count": 589,
+    "total_duration": 8496950000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"until it receives a packet from the server with the VERSION flag off\", \"interpretation_a\": \"The client stops sending its version information as soon as *any* packet with the VERSION flag off is received, even if that packet indicates a negotiation failure or is otherwise invalid.\", \"interpretation_b\": \"The client stops sending its version information only when it receives a valid packet with the VERSION flag off, signifying successful negotiation.\", \"missing_information\": \"The draft does not define what constitutes a 'valid' packet for the purpose of ending version negotiation. A packet with the VERSION flag off could be malformed or indicate a negotiation failure, and it's unclear whether the client should continue sending its version in such cases.\", \"justification\": \"The phrase 'receives a packet...with the VERSION flag off' is incomplete. It doesn't specify whether the packet must be valid or successfully negotiate a version. This creates ambiguity about when the client should stop sending its version information.\"}",
+  "record_id": "b88cd4bcc88542b1631c0be5bc149afece570bfb3982470a583b28656e47cc04",
+  "revision": "00",
+  "schema_version": 1,
+  "section_ids": "5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.5
+}

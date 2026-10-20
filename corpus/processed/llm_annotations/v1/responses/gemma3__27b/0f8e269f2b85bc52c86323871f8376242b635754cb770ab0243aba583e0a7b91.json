@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT refer",
+    "interpretation_a": "The sequence number in the frame cannot identify the Connection ID of the packet carrying it.",
+    "interpretation_b": "The sequence number in the frame cannot *be equal to* the Connection ID of the packet carrying it. (e.g. it could refer to a different Connection ID)",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'refer to' is ambiguous. Does it mean 'identify' or 'be equal to'? The latter allows for the sequence number to refer to a different Connection ID, while the former does not.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:58:37.096252+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "f29f356e69b4b45df1093570e6b736aab39bd9b3e70a0e0223943162badc994f",
+  "lineage_ids": "lineage:26b397085d167eff9b4adbb0",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 149,
+    "load_duration": 5381800,
+    "prompt_eval_count": 603,
+    "total_duration": 5729055100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT refer\", \"interpretation_a\": \"The sequence number in the frame cannot identify the Connection ID of the packet carrying it.\", \"interpretation_b\": \"The sequence number in the frame cannot *be equal to* the Connection ID of the packet carrying it. (e.g. it could refer to a different Connection ID)\", \"missing_information\": \"\", \"justification\": \"The phrase 'refer to' is ambiguous. Does it mean 'identify' or 'be equal to'? The latter allows for the sequence number to refer to a different Connection ID, while the former does not.\"}",
+  "record_id": "0f8e269f2b85bc52c86323871f8376242b635754cb770ab0243aba583e0a7b91",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "19.16",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.734
+}

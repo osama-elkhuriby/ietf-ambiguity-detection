@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "at most one stream and one connection error",
+    "interpretation_a": "Implementations should report at most one stream error and at most one connection error (i.e., up to two errors total, one per category).",
+    "interpretation_b": "Implementations should report at most one error overall, which may be either a stream error or a connection error.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"at most one stream and one connection error\" can be read as two separate limits or as a single combined limit, and the clause does not provide a definitive constraint on the total number of errors that may be reported.",
+    "missing_information": "The clause does not explicitly state whether the limits apply per stream, per connection, or overall, nor does it clarify whether multiple stream errors across different streams are allowed. The following clause only limits errors per stream, leaving the overall count ambiguous."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T03:43:25.747432+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "2eb563e8eeae2d80efbd1d1ceee6654dce80611c2645cfe985915845cff7f755",
+  "lineage_ids": "lineage:e90daa218a7f49f156f22372",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 4143,
+    "load_duration": 4188400,
+    "prompt_eval_count": 580,
+    "total_duration": 35690247800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"at most one stream and one connection error\",\n  \"interpretation_a\": \"Implementations should report at most one stream error and at most one connection error (i.e., up to two errors total, one per category).\",\n  \"interpretation_b\": \"Implementations should report at most one error overall, which may be either a stream error or a connection error.\",\n  \"missing_information\": \"The clause does not explicitly state whether the limits apply per stream, per connection, or overall, nor does it clarify whether multiple stream errors across different streams are allowed. The following clause only limits errors per stream, leaving the overall count ambiguous.\",\n  \"justification\": \"The phrase \\\"at most one stream and one connection error\\\" can be read as two separate limits or as a single combined limit, and the clause does not provide a definitive constraint on the total number of errors that may be reported.\"\n}",
+  "record_id": "01ce9771ea4c2c66c62a5e4336d9d9bc9be55925a209b911e64f297c2d15a50d",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "5.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 35.687
+}

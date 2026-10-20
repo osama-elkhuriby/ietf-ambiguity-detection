@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "with the Prioritized Element Type set to any value other than 11",
+    "interpretation_a": "The condition applies to any value *not* equal to 11, including values less than 11 and values greater than 11.",
+    "interpretation_b": "The condition applies only to values less than 11, as values greater than 11 are not relevant for prioritization (and thus don't need to be checked).",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'any value other than 11' is open to interpretation. Does it include all values not equal to 11, or only those that are valid/relevant in the context of prioritization? The lack of a lower bound on the Prioritized Element Type creates ambiguity.",
+    "missing_information": "It is unclear whether the intent is to check all non-11 values or only those that could reasonably be used for prioritization."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:09:40.704604+00:00",
+  "document_id": "draft-ietf-quic-http-20",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "da13dfce582d0c19d6998831569a942b9411f7fb481348f1ef591658977cf480",
+  "lineage_ids": "lineage:f46106f49db40168bd3c7a23",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 217,
+    "load_duration": 4555000,
+    "prompt_eval_count": 617,
+    "total_duration": 8331350600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"with the Prioritized Element Type set to any value other than 11\", \"interpretation_a\": \"The condition applies to any value *not* equal to 11, including values less than 11 and values greater than 11.\", \"interpretation_b\": \"The condition applies only to values less than 11, as values greater than 11 are not relevant for prioritization (and thus don't need to be checked).\", \"missing_information\": \"It is unclear whether the intent is to check all non-11 values or only those that could reasonably be used for prioritization.\", \"justification\": \"The phrase 'any value other than 11' is open to interpretation. Does it include all values not equal to 11, or only those that are valid/relevant in the context of prioritization? The lack of a lower bound on the Prioritized Element Type creates ambiguity.\"}",
+  "record_id": "d3f38d57d9533c0a346f97509e64619f229fc71c5f4da42dd0e648b990ed5d0c",
+  "revision": "20",
+  "schema_version": 1,
+  "section_ids": "4.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.344
+}

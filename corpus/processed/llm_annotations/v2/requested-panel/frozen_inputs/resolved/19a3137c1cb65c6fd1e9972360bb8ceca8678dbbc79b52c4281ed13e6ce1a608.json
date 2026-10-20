@@ -1,0 +1,236 @@
+{
+  "context_builder_version": "same-revision-context-v2.0.0",
+  "context_char_limit": 24000,
+  "context_chars": 1109,
+  "coverage_claim": "bounded_same_document_same_revision_context_only",
+  "document_id": "draft-ietf-quic-http-27",
+  "family_id": "draft-ietf-quic-http",
+  "items": [
+    {
+      "block_id": "draft-ietf-quic-http-27:4.1.1:b0081",
+      "clause_id": "draft-ietf-quic-http-27:4.1.1:b0081:c03",
+      "content": "As in HTTP/2, header field names MUST be converted to lowercase prior to their encoding.",
+      "content_sha256": "5390d6112a8ff0e83b8c3f3e4aa5916b685f87f391fc4bac7dc6287917c8a034",
+      "document_id": "draft-ietf-quic-http-27",
+      "kind": "target",
+      "retrieval_reason": "frozen_target_clause",
+      "revision": "27",
+      "section_heading": "Header Formatting and Compression",
+      "section_id": "4.1.1",
+      "source_sha256": "43d16aee7fde9ada7c4e0880168c78c909a6c29730173c1ad26d205f0ced3b90",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[4]/section[1]/section[1]/t[2]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-quic-http-27:4.1.1:b0081",
+      "clause_id": "draft-ietf-quic-http-27:4.1.1:b0081:c02",
+      "content": "Properties of HTTP header field names and values are discussed in more detail in Section 3.2 of [RFC7230], though the wire rendering in HTTP/3 differs.",
+      "content_sha256": "aa3de80c18c1f8ef3a9f2bf99a3966a8115ba5d8fe9936e18639ad3c9bf7a941",
+      "document_id": "draft-ietf-quic-http-27",
+      "kind": "previous",
+      "retrieval_reason": "local_previous_clause",
+      "revision": "27",
+      "section_heading": "Header Formatting and Compression",
+      "section_id": "4.1.1",
+      "source_sha256": "43d16aee7fde9ada7c4e0880168c78c909a6c29730173c1ad26d205f0ced3b90",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[4]/section[1]/section[1]/t[2]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-quic-http-27:4.1.1:b0081",
+      "clause_id": "draft-ietf-quic-http-27:4.1.1:b0081:c04",
+      "content": "A request or response containing uppercase header field names MUST be treated as malformed ([malformed]).",
+      "content_sha256": "7332fb42feb3ec39552f0fea67b251c28a0093d76c3b346eea54af97553053f7",
+      "document_id": "draft-ietf-quic-http-27",
+      "kind": "next",
+      "retrieval_reason": "local_next_clause",
+      "revision": "27",
+      "section_heading": "Header Formatting and Compression",
+      "section_id": "4.1.1",
+      "source_sha256": "43d16aee7fde9ada7c4e0880168c78c909a6c29730173c1ad26d205f0ced3b90",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[4]/section[1]/section[1]/t[2]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-quic-http-27:4.1.1:b0081",
+      "clause_id": "draft-ietf-quic-http-27:4.1.1:b0081:c01",
+      "content": "Just as in previous versions of HTTP, header field names are strings of ASCII characters that are compared in a case-insensitive fashion.",
+      "content_sha256": "a09d30adb769531a74316e68919a6a81e5300535b5a242e9bef7a6ccadcc07c7",
+      "document_id": "draft-ietf-quic-http-27",
+      "kind": "parent_structure",
+      "retrieval_reason": "same_parent_block",
+      "revision": "27",
+      "section_heading": "Header Formatting and Compression",
+      "section_id": "4.1.1",
+      "source_sha256": "43d16aee7fde9ada7c4e0880168c78c909a6c29730173c1ad26d205f0ced3b90",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[4]/section[1]/section[1]/t[2]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-quic-http-27:2.2:b0026",
+      "clause_id": "draft-ietf-quic-http-27:2.2:b0026:c01",
+      "content": "Field definitions are given in Augmented Backus-Naur Form (ABNF), as defined in [RFC5234].",
+      "content_sha256": "40ed9546231dc6d6cd02a5868a9370b147283b917d1246e9e5993e9c8fd7ad48",
+      "document_id": "draft-ietf-quic-http-27",
+      "kind": "definition",
+      "retrieval_reason": "same_revision_definition_candidate",
+      "revision": "27",
+      "section_heading": "Conventions and Terminology",
+      "section_id": "2.2",
+      "source_sha256": "43d16aee7fde9ada7c4e0880168c78c909a6c29730173c1ad26d205f0ced3b90",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[2]/section[2]/t[2]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-quic-http-27:2.2:b0027",
+      "clause_id": "draft-ietf-quic-http-27:2.2:b0027:c01",
+      "content": "This document uses the variable-length integer encoding from [QUIC-TRANSPORT].",
+      "content_sha256": "aead114f41b5d3f7c80838a89c663eb494015297196a461e47cc6422c4de9b4e",
+      "document_id": "draft-ietf-quic-http-27",
+      "kind": "definition",
+      "retrieval_reason": "same_revision_definition_candidate",
+      "revision": "27",
+      "section_heading": "Conventions and Terminology",
+      "section_id": "2.2",
+      "source_sha256": "43d16aee7fde9ada7c4e0880168c78c909a6c29730173c1ad26d205f0ced3b90",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[2]/section[2]/t[3]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-quic-http-27:2.2:b0030",
+      "clause_id": "draft-ietf-quic-http-27:2.2:b0030:c01",
+      "content": "client:: The endpoint that initiates an HTTP/3 connection.",
+      "content_sha256": "fee8884e46bb2cb2caccdcd763911121e070309049bfa97926b56c05463db055",
+      "document_id": "draft-ietf-quic-http-27",
+      "kind": "definition",
+      "retrieval_reason": "same_revision_definition_candidate",
+      "revision": "27",
+      "section_heading": "Conventions and Terminology",
+      "section_id": "2.2",
+      "source_sha256": "43d16aee7fde9ada7c4e0880168c78c909a6c29730173c1ad26d205f0ced3b90",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[2]/section[2]/dl/dd[2]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-quic-http-27:2.2:b0030",
+      "clause_id": "draft-ietf-quic-http-27:2.2:b0030:c02",
+      "content": "Clients send HTTP requests and receive HTTP responses.",
+      "content_sha256": "4e6ce99db4c88e011ce733cd19ee417448001e79ca4e1c6a21dc50cc7ca6d5a3",
+      "document_id": "draft-ietf-quic-http-27",
+      "kind": "definition",
+      "retrieval_reason": "same_revision_definition_candidate",
+      "revision": "27",
+      "section_heading": "Conventions and Terminology",
+      "section_id": "2.2",
+      "source_sha256": "43d16aee7fde9ada7c4e0880168c78c909a6c29730173c1ad26d205f0ced3b90",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[2]/section[2]/dl/dd[2]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-quic-http-27:2.2:b0032",
+      "clause_id": "draft-ietf-quic-http-27:2.2:b0032:c01",
+      "content": "connection error:: An error that affects the entire HTTP/3 connection.",
+      "content_sha256": "fa649e8d704a4ab4591583960b404b55223cb3955c3cd9a30519fcfe54f5e270",
+      "document_id": "draft-ietf-quic-http-27",
+      "kind": "definition",
+      "retrieval_reason": "same_revision_definition_candidate",
+      "revision": "27",
+      "section_heading": "Conventions and Terminology",
+      "section_id": "2.2",
+      "source_sha256": "43d16aee7fde9ada7c4e0880168c78c909a6c29730173c1ad26d205f0ced3b90",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[2]/section[2]/dl/dd[4]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-quic-http-27:2.2:b0034",
+      "clause_id": "draft-ietf-quic-http-27:2.2:b0034:c01",
+      "content": "frame:: The smallest unit of communication on a stream in HTTP/3, consisting of a header and a variable-length sequence of bytes structured according to the frame type.",
+      "content_sha256": "97d46002d5731ac8052b949b899004cafdb3861d13d9b01dbed02155d79b94d0",
+      "document_id": "draft-ietf-quic-http-27",
+      "kind": "definition",
+      "retrieval_reason": "same_revision_definition_candidate",
+      "revision": "27",
+      "section_heading": "Conventions and Terminology",
+      "section_id": "2.2",
+      "source_sha256": "43d16aee7fde9ada7c4e0880168c78c909a6c29730173c1ad26d205f0ced3b90",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[2]/section[2]/dl/dd[6]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-quic-http-27:2.2:b0038",
+      "clause_id": "draft-ietf-quic-http-27:2.2:b0038:c01",
+      "content": "server:: The endpoint that accepts an HTTP/3 connection.",
+      "content_sha256": "a35e2b9dc6581106eecbfebafa9c6917325ce7ececf2dac441782694d8ae57be",
+      "document_id": "draft-ietf-quic-http-27",
+      "kind": "definition",
+      "retrieval_reason": "same_revision_definition_candidate",
+      "revision": "27",
+      "section_heading": "Conventions and Terminology",
+      "section_id": "2.2",
+      "source_sha256": "43d16aee7fde9ada7c4e0880168c78c909a6c29730173c1ad26d205f0ced3b90",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[2]/section[2]/dl/dd[10]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-quic-http-27:2.2:b0038",
+      "clause_id": "draft-ietf-quic-http-27:2.2:b0038:c02",
+      "content": "Servers receive HTTP requests and send HTTP responses.",
+      "content_sha256": "02983fcd15e8b953e44f57eb8696b9a3a54438cb11b097fd0dc9c783c2425711",
+      "document_id": "draft-ietf-quic-http-27",
+      "kind": "definition",
+      "retrieval_reason": "same_revision_definition_candidate",
+      "revision": "27",
+      "section_heading": "Conventions and Terminology",
+      "section_id": "2.2",
+      "source_sha256": "43d16aee7fde9ada7c4e0880168c78c909a6c29730173c1ad26d205f0ced3b90",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[2]/section[2]/dl/dd[10]"
+      }
+    }
+  ],
+  "omitted": [],
+  "record_id": "19a3137c1cb65c6fd1e9972360bb8ceca8678dbbc79b52c4281ed13e6ce1a608",
+  "retrieval": [],
+  "revision": "27",
+  "section_heading": "Header Formatting and Compression",
+  "section_id": "4.1.1",
+  "source_artifact": "D:/RFC/ietf-ambiguity-detection/corpus/processed/alignments/draft-ietf-quic-http/lexical-first-classifier-v1/inputs/draft-ietf-quic-http-27.json",
+  "source_sha256": "43d16aee7fde9ada7c4e0880168c78c909a6c29730173c1ad26d205f0ced3b90",
+  "target_clause": "As in HTTP/2, header field names MUST be converted to lowercase prior to their encoding.",
+  "variant": "resolved"
+}

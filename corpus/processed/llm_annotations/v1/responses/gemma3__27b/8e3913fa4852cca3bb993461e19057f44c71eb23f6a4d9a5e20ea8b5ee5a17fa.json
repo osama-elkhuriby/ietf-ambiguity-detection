@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "threshold amount of time",
+    "interpretation_a": "The threshold could be a fixed duration (e.g., 100ms).",
+    "interpretation_b": "The threshold could be a variable duration, dependent on RTT or other network conditions.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'threshold amount of time' is vague. It doesn't specify whether this is an absolute time, a multiple of a base unit, or a function of network conditions. This allows for materially different implementations.",
+    "missing_information": "The document does not define what constitutes a 'threshold amount of time'. This missing constraint affects implementation because different endpoints could use different values, leading to inconsistent loss detection."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:24:06.505170+00:00",
+  "document_id": "draft-ietf-quic-recovery-24",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "d9f1ec1f5ead05b15bb2b17b7f1e76f55a49f5fa5ea0be21a357e62e6a96a700",
+  "lineage_ids": "lineage:5bca418b60b532b5b28c9968",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 170,
+    "load_duration": 3605800,
+    "prompt_eval_count": 567,
+    "total_duration": 6464154700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"threshold amount of time\", \"interpretation_a\": \"The threshold could be a fixed duration (e.g., 100ms).\", \"interpretation_b\": \"The threshold could be a variable duration, dependent on RTT or other network conditions.\", \"missing_information\": \"The document does not define what constitutes a 'threshold amount of time'. This missing constraint affects implementation because different endpoints could use different values, leading to inconsistent loss detection.\", \"justification\": \"The phrase 'threshold amount of time' is vague. It doesn't specify whether this is an absolute time, a multiple of a base unit, or a function of network conditions. This allows for materially different implementations.\"}",
+  "record_id": "8e3913fa4852cca3bb993461e19057f44c71eb23f6a4d9a5e20ea8b5ee5a17fa",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "5.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.453
+}

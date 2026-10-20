@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "appropriate 3xx (Redirection) response",
+    "interpretation_a": "The server could respond with a 301 Moved Permanently, indicating the resource has permanently moved to a new URI.",
+    "interpretation_b": "The server could respond with a 307 Temporary Redirect, indicating the resource has temporarily moved and the client should retry the request at the new URI.",
+    "is_ambiguous": "yes",
+    "justification": "The clause requires the server to send an \"appropriate 3xx (Redirection) response\" but does not specify which 3xx status code to use, leaving a concrete missing constraint that allows multiple materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T06:20:22.439117+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-14",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "3c190dbe73cf097c7589ca8d583985288721d49dd46cd3cca7f68a584906cf5d",
+  "lineage_ids": "lineage:85f51024f82983c8606780b6",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 344,
+    "load_duration": 5470100,
+    "prompt_eval_count": 788,
+    "total_duration": 3160787300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"appropriate 3xx (Redirection) response\",\n  \"interpretation_a\": \"The server could respond with a 301 Moved Permanently, indicating the resource has permanently moved to a new URI.\",\n  \"interpretation_b\": \"The server could respond with a 307 Temporary Redirect, indicating the resource has temporarily moved and the client should retry the request at the new URI.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause requires the server to send an \\\"appropriate 3xx (Redirection) response\\\" but does not specify which 3xx status code to use, leaving a concrete missing constraint that allows multiple materially different implementation behaviours.\"\n}",
+  "record_id": "53f115ac6a48ec040b4eb273ab6917a0dc9ecd4b73026587b216aa5ec41e0550",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "9.3.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 43.844
+}

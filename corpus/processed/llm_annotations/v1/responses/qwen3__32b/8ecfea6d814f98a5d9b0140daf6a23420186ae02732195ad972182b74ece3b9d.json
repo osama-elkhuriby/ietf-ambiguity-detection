@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear condition for when a sender may send multiple BLOCKED or STREAM_BLOCKED frames for the same data limit (i.e., only if the original frame is determined to be lost). It does not permit multiple interpretations that would lead to materially different implementations. The language is precise and does not introduce ambiguity.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:24:55.147493+00:00",
+  "document_id": "draft-ietf-quic-transport-16",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "808d558c6680f80f3d2680dab87853cd123f5ab9ed6cb02a31e83c1f67ff9c63",
+  "lineage_ids": "lineage:90ba3a9ffc331505542674e2",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 120,
+    "load_duration": 6949000,
+    "prompt_eval_count": 540,
+    "total_duration": 4926959500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear condition for when a sender may send multiple BLOCKED or STREAM_BLOCKED frames for the same data limit (i.e., only if the original frame is determined to be lost). It does not permit multiple interpretations that would lead to materially different implementations. The language is precise and does not introduce ambiguity.\"\n}",
+  "record_id": "8ecfea6d814f98a5d9b0140daf6a23420186ae02732195ad972182b74ece3b9d",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 4.922
+}

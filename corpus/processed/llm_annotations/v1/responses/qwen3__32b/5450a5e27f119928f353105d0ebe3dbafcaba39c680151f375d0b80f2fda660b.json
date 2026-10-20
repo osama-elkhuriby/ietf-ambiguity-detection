@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause is clear and unambiguous. It specifies that if the first frame on the control stream is not a SETTINGS frame, it must be treated as a connection error of type HTTP_MISSING_SETTINGS. There is no room for multiple interpretations, and the condition and consequence are explicitly defined.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:47:50.412940+00:00",
+  "document_id": "draft-ietf-quic-http-23",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "103b6678b9a0fb815230e530005cbc146992a60636f53603e316fd8c8f22af2f",
+  "lineage_ids": "lineage:e0939e20d729c376deca09fe",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 112,
+    "load_duration": 10057200,
+    "prompt_eval_count": 562,
+    "total_duration": 4702344300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause is clear and unambiguous. It specifies that if the first frame on the control stream is not a SETTINGS frame, it must be treated as a connection error of type HTTP_MISSING_SETTINGS. There is no room for multiple interpretations, and the condition and consequence are explicitly defined.\"\n}",
+  "record_id": "5450a5e27f119928f353105d0ebe3dbafcaba39c680151f375d0b80f2fda660b",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "6.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 4.704
+}

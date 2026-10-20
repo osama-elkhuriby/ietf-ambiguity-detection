@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST specify whether storing the transport parameter for 0-RTT is mandatory, optional, or prohibited.",
+    "interpretation_a": "A new transport parameter definition *must* include a clear statement explicitly stating that 0-RTT storage is mandatory.",
+    "interpretation_b": "A new transport parameter definition *must* include a clear statement explicitly stating that 0-RTT storage is optional.",
+    "is_ambiguous": "yes",
+    "justification": "The clause requires a specification of whether storage is mandatory, optional, or prohibited, but does not specify the *form* of that specification. This allows for different interpretations of what constitutes a sufficient specification.",
+    "missing_information": "The clause does not specify *how* this specification must be done. For example, is a keyword sufficient ('0-RTT storage: mandatory') or is a full sentence required? Without this, implementations could reasonably differ on whether a simple keyword is sufficient to satisfy the requirement."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:28:29.829153+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "4da1344caf0393bbf8374e5d8d4aa20030e5ab259aa9dca3a527499c0ea4fbe0",
+  "lineage_ids": "lineage:1c444f7e433e6726e60c2021",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 212,
+    "load_duration": 3789700,
+    "prompt_eval_count": 590,
+    "total_duration": 8000389200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST specify whether storing the transport parameter for 0-RTT is mandatory, optional, or prohibited.\", \"interpretation_a\": \"A new transport parameter definition *must* include a clear statement explicitly stating that 0-RTT storage is mandatory.\", \"interpretation_b\": \"A new transport parameter definition *must* include a clear statement explicitly stating that 0-RTT storage is optional.\", \"missing_information\": \"The clause does not specify *how* this specification must be done. For example, is a keyword sufficient ('0-RTT storage: mandatory') or is a full sentence required? Without this, implementations could reasonably differ on whether a simple keyword is sufficient to satisfy the requirement.\",\"justification\": \"The clause requires a specification of whether storage is mandatory, optional, or prohibited, but does not specify the *form* of that specification. This allows for different interpretations of what constitutes a sufficient specification.\"}",
+  "record_id": "62889c1934d069b09f47f5b1e4e24829b587689cb5991dc8e7801221231a2acc",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.0
+}

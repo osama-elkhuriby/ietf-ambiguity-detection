@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "There is no default port; a client MUST send the port number even if the CONNECT request is based on a URI reference that contains an authority component with an elided port ([uri.references]).",
+    "interpretation_a": "The clause could be interpreted as requiring the client to send the default port for the scheme (e.g., 80 for HTTP, 443 for HTTPS) even when the URI reference elides the port.",
+    "interpretation_b": "Alternatively, it could be interpreted as requiring the client to send the port number that the server will actually use for the connection, which may not be the scheme's default and is not specified in the clause.",
+    "is_ambiguous": "yes",
+    "justification": "The lack of a concrete constraint on the port number to be sent creates an incomplete specification that can be reasonably interpreted in multiple ways, making the clause ambiguous.",
+    "missing_information": "The clause does not specify which port number the client must send when the URI reference has an elided port, leaving the implementation choice undefined and potentially leading to different operational behaviours."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T05:21:28.112238+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "f153ccfb8504de9ec0d0c697527de7005281dfbaa8e1d6cc857e9862dd664a5b",
+  "lineage_ids": "lineage:d20e3d982d6c55190bf05dd9",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1577,
+    "load_duration": 5452300,
+    "prompt_eval_count": 595,
+    "total_duration": 13663562900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"There is no default port; a client MUST send the port number even if the CONNECT request is based on a URI reference that contains an authority component with an elided port ([uri.references]).\",\n  \"interpretation_a\": \"The clause could be interpreted as requiring the client to send the default port for the scheme (e.g., 80 for HTTP, 443 for HTTPS) even when the URI reference elides the port.\",\n  \"interpretation_b\": \"Alternatively, it could be interpreted as requiring the client to send the port number that the server will actually use for the connection, which may not be the scheme's default and is not specified in the clause.\",\n  \"missing_information\": \"The clause does not specify which port number the client must send when the URI reference has an elided port, leaving the implementation choice undefined and potentially leading to different operational behaviours.\",\n  \"justification\": \"The lack of a concrete constraint on the port number to be sent creates an incomplete specification that can be reasonably interpreted in multiple ways, making the clause ambiguous.\"\n}",
+  "record_id": "04d9a19f8cee4cca9eea86f285b31f7afa6f5b72fecc2b07fccec6b6b0192cf1",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "9.3.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 13.671
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "the smaller of the send MSS (which reflects the available reassembly buffer size at the remote host) and the largest size permitted by the IP layer",
+    "interpretation_a": "The effective send MSS is determined by taking the minimum of the send MSS and the IP layer's maximum segment size. This implies a direct comparison of two values.",
+    "interpretation_b": "The effective send MSS is determined by the send MSS, unless the IP layer's maximum segment size is smaller, in which case the IP layer's size is used. This suggests a conditional application of the IP layer limit.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'the smaller of' is ambiguous. It could mean a simple minimum function, or it could imply that the IP layer size only applies if it's smaller than the send MSS. Without further clarification, implementations could differ in how they calculate the effective send MSS.",
+    "missing_information": "The precise method of determining 'the largest size permitted by the IP layer' is not specified. Is it the maximum IP packet size minus IP and TCP headers, or some other value? This affects how the minimum is calculated."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-07T05:24:44.483455+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-05",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "919c399f2baca1a8e123b3795a04a4ad7789ac88a0578c990724d9d89a52607e",
+  "lineage_ids": "lineage:3dfcd32c41975bf8e11b472e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 260,
+    "load_duration": 6281600,
+    "prompt_eval_count": 906,
+    "total_duration": 9895315500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"the smaller of the send MSS (which reflects the available reassembly buffer size at the remote host) and the largest size permitted by the IP layer\", \"interpretation_a\": \"The effective send MSS is determined by taking the minimum of the send MSS and the IP layer's maximum segment size. This implies a direct comparison of two values.\", \"interpretation_b\": \"The effective send MSS is determined by the send MSS, unless the IP layer's maximum segment size is smaller, in which case the IP layer's size is used. This suggests a conditional application of the IP layer limit.\", \"missing_information\": \"The precise method of determining 'the largest size permitted by the IP layer' is not specified. Is it the maximum IP packet size minus IP and TCP headers, or some other value? This affects how the minimum is calculated.\", \"justification\": \"The phrase 'the smaller of' is ambiguous. It could mean a simple minimum function, or it could imply that the IP layer size only applies if it's smaller than the send MSS. Without further clarification, implementations could differ in how they calculate the effective send MSS.\"}",
+  "record_id": "85125a346e9182fc491399af4db52d04b3c250d8ac1e21473e05da670d25893b",
+  "revision": "05",
+  "schema_version": 1,
+  "section_ids": "3.7.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 21.344
+}

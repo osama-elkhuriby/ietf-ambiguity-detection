@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT be used outside of draft implementations",
+    "interpretation_a": "Implementations that are not draft implementations are prohibited from using this mechanism.",
+    "interpretation_b": "This mechanism is not recommended for production use, but implementations may choose to use it at their own risk.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'draft implementations' is not defined. It is unclear whether this restriction applies to any implementation of a draft standard, or only those explicitly labeled as such. This missing definition creates ambiguity about which implementations are permitted to use the mechanism.",
+    "missing_information": "The definition of 'draft implementation' is not provided. Is a 'draft implementation' one that is explicitly labeled as such, or any implementation of a draft standard? This affects whether a production implementation of a draft standard is permitted or not."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:00:29.995655+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "ed97665eb199033bfb1f43e9110e114aa1fbf89f450b818252bec365bf01883e",
+  "lineage_ids": "lineage:4f5402423abbb132738178bc",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 192,
+    "load_duration": 3672100,
+    "prompt_eval_count": 552,
+    "total_duration": 7231139100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT be used outside of draft implementations\", \"interpretation_a\": \"Implementations that are not draft implementations are prohibited from using this mechanism.\", \"interpretation_b\": \"This mechanism is not recommended for production use, but implementations may choose to use it at their own risk.\", \"missing_information\": \"The definition of 'draft implementation' is not provided. Is a 'draft implementation' one that is explicitly labeled as such, or any implementation of a draft standard? This affects whether a production implementation of a draft standard is permitted or not.\", \"justification\": \"The phrase 'draft implementations' is not defined. It is unclear whether this restriction applies to any implementation of a draft standard, or only those explicitly labeled as such. This missing definition creates ambiguity about which implementations are permitted to use the mechanism.\"}",
+  "record_id": "c544a6308b62f9a7fac62bfde03a4677df4a9d6596c2ebaf00355664a1d74f8b",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.235
+}

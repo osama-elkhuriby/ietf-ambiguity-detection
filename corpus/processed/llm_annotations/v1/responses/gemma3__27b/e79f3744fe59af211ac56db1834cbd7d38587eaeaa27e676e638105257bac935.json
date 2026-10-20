@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD retire connection IDs",
+    "interpretation_a": "An endpoint *must* retire connection IDs when the associated addresses are no longer in use, though it may choose to delay retirement.",
+    "interpretation_b": "An endpoint *may* retire connection IDs when the associated addresses are no longer in use, but is not required to do so.",
+    "is_ambiguous": "yes",
+    "justification": "The keyword 'SHOULD' is known to be ambiguous. Without a definition of its strength in this document, it is unclear whether retirement is required or optional.",
+    "missing_information": "The strength of 'SHOULD' is not defined. Is it a strong recommendation approaching a requirement, or a weak suggestion? This affects the implementation decision of whether to retire or not."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:12:23.400555+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "e31d6e52ab6cb75b8b2da30c7a45952139c93c773d8d3ceaf5fc7d2d7f53d958",
+  "lineage_ids": "lineage:c82ab0ca20e5cc9ed3387794",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 178,
+    "load_duration": 4088200,
+    "prompt_eval_count": 586,
+    "total_duration": 6761272000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD retire connection IDs\", \"interpretation_a\": \"An endpoint *must* retire connection IDs when the associated addresses are no longer in use, though it may choose to delay retirement.\", \"interpretation_b\": \"An endpoint *may* retire connection IDs when the associated addresses are no longer in use, but is not required to do so.\", \"missing_information\": \"The strength of 'SHOULD' is not defined. Is it a strong recommendation approaching a requirement, or a weak suggestion? This affects the implementation decision of whether to retire or not.\",\"justification\": \"The keyword 'SHOULD' is known to be ambiguous. Without a definition of its strength in this document, it is unclear whether retirement is required or optional.\"}",
+  "record_id": "e79f3744fe59af211ac56db1834cbd7d38587eaeaa27e676e638105257bac935",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "5.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.765
+}

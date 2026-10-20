@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that an endpoint may treat receipt of any frame type other than PRIORITY on a closed stream as a connection error of type STREAM_CLOSED, with exceptions noted below. The preceding clause clarifies that only PRIORITY frames are allowed on a closed stream, eliminating any ambiguity about what “any other type of frame” refers to. No missing constraints or inconsistencies are present.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T04:11:55.625914+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "441dcaca775f75777491d634359452c90fe0d7a0cf57a62c5c8612ad0a059f59",
+  "lineage_ids": "lineage:6001c155499a0c7014e71d82",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3738,
+    "load_duration": 4767200,
+    "prompt_eval_count": 612,
+    "total_duration": 32316350800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that an endpoint may treat receipt of any frame type other than PRIORITY on a closed stream as a connection error of type STREAM_CLOSED, with exceptions noted below. The preceding clause clarifies that only PRIORITY frames are allowed on a closed stream, eliminating any ambiguity about what “any other type of frame” refers to. No missing constraints or inconsistencies are present.\"\n}",
+  "record_id": "54b497ff2b0a69c5ed5a25f800667b0e1f25f5cd6aff0693adbc429c5879af37",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 32.328
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "0x3FFFFFFFFFFFFFFE",
+    "interpretation_a": "The range of disallowed codes extends to the maximum possible 64-bit unsigned integer value, 0x3FFFFFFFFFFFFFFE, inclusive.",
+    "interpretation_b": "The range of disallowed codes extends to just below the maximum possible 64-bit unsigned integer value, excluding 0x3FFFFFFFFFFFFFFE.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'through' can be interpreted in two ways: inclusive or exclusive of the final value. This affects the upper bound of the disallowed range and therefore impacts implementation.",
+    "missing_information": "It is unclear whether 0x3FFFFFFFFFFFFFFE is included or excluded from the disallowed range. The phrase 'through' is ambiguous in this context."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:55:28.185139+00:00",
+  "document_id": "draft-ietf-quic-http-27",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "02ca020253b9f716d617a96aaba077d8b5910fec805b79f2a751949608f18bb8",
+  "lineage_ids": "lineage:a7500ee586fe2f5ce02068e1",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 188,
+    "load_duration": 13352000,
+    "prompt_eval_count": 736,
+    "total_duration": 7482574700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"0x3FFFFFFFFFFFFFFE\", \"interpretation_a\": \"The range of disallowed codes extends to the maximum possible 64-bit unsigned integer value, 0x3FFFFFFFFFFFFFFE, inclusive.\", \"interpretation_b\": \"The range of disallowed codes extends to just below the maximum possible 64-bit unsigned integer value, excluding 0x3FFFFFFFFFFFFFFE.\", \"missing_information\": \"It is unclear whether 0x3FFFFFFFFFFFFFFE is included or excluded from the disallowed range. The phrase 'through' is ambiguous in this context.\", \"justification\": \"The use of 'through' can be interpreted in two ways: inclusive or exclusive of the final value. This affects the upper bound of the disallowed range and therefore impacts implementation.\"}",
+  "record_id": "7ec7ba9e2ce61e7be9d836f7906dcb138420e4b5f53d20311790751f661ec63b",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "11.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.469
+}

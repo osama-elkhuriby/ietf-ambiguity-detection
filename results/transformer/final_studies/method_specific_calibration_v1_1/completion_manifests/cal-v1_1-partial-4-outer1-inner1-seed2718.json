@@ -1,0 +1,61 @@
+{
+  "attempt_id": "cal-v1_1-partial-4-outer1-inner1-seed2718",
+  "cell_id": "partial_4/outer_1/inner_1/seed_2718",
+  "completed_at": "2026-10-19T01:18:02.611433+03:00",
+  "elapsed_seconds": 113.03099999995902,
+  "gpu_preflight": {
+    "active_compute_processes": [],
+    "free_memory_mib": 30823,
+    "minimum_free_memory_mib": 18000,
+    "name": "NVIDIA RTX 5000 Ada Generation"
+  },
+  "origin": "V1_1_NEW_GPU_EXECUTION",
+  "peak_gpu_memory_allocated_mb": 1716.5791015625,
+  "peak_gpu_memory_reserved_mb": 2224.0,
+  "protocol_sha256": "57c04d15cb3c586c52bc7f59eede3893339f3c67014fdf3e50ccfb95d8fcda4c",
+  "reused": false,
+  "run_manifest_sha256": "04446d551f78f5580c580ff7b8ca3b2598e765d595bf213dc80dab670d43a28d",
+  "semantic_validation": {
+    "audit_sha256": "bee7f7c269fda82c48dbcabb44c2d2dc025597614874cb9f3e2ebb74397f3de7",
+    "context_sanitizations": [],
+    "custom_inner_split_sha256": "df7bcbb6af0d6e781f8a55f0101c8820366f3435718e3180fdd12aa501d61b38",
+    "fitting_exclusions": [],
+    "fitting_families": [
+      "draft-ietf-6man-rfc2460bis",
+      "draft-ietf-httpbis-cache-header",
+      "draft-ietf-httpbis-http2bis",
+      "draft-ietf-quic-http",
+      "draft-ietf-quic-recovery",
+      "draft-ietf-quic-tls"
+    ],
+    "fitting_rows": 910,
+    "leakage_audit_counts": {
+      "cross_fold_bcp14_skeleton_conflicts": 0,
+      "cross_fold_document_overlaps": 0,
+      "cross_fold_lineage_conflicts": 0,
+      "cross_fold_target_context_overlaps": 10,
+      "exact_target_duplicates_all": 1,
+      "exact_target_duplicates_cross_fold": 0,
+      "families_assigned_to_multiple_folds": 0,
+      "near_cross_fold_targets": 3,
+      "targets_with_bcp14_keyword": 1334
+    },
+    "legacy_fold_file": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\final_annotation_ready_pilot_v1\\manifests\\dataset_v1\\folds\\fold_1.json",
+    "legacy_fold_file_sha256": "684cac99acb8eca3d34698265f23a9f22e879de9f1ec25280e02cf61bd87643e",
+    "peak_gpu_memory_allocated_mb": 1716.5791015625,
+    "peak_gpu_memory_reserved_mb": 2224.0,
+    "prediction_rows": 439,
+    "prediction_sha256": "47a23ecf1702ad5ae5446b3192c23ea84f8f4414d2a29457030aa1d37eca5d07",
+    "run_manifest_sha256": "04446d551f78f5580c580ff7b8ca3b2598e765d595bf213dc80dab670d43a28d",
+    "runtime_seconds": 104.57965339999646,
+    "scoring_families": [
+      "draft-ietf-httpbis-semantics",
+      "draft-ietf-tls-tls13"
+    ],
+    "scoring_rows": 439
+  },
+  "spec_sha256": "74b647c5bf638366bf9499b4c449f88ea9d251f318d85a725d2bc899cc659849",
+  "started_at": "2026-10-19T01:16:09.190342+03:00",
+  "status": "COMPLETE",
+  "training_runtime_seconds": 104.57965339999646
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "no other frame processing between values",
+    "interpretation_a": "All other frame processing must be paused while a SETTINGS frame is being processed, value by value.",
+    "interpretation_b": "Only processing of *new* SETTINGS frames must be paused while a SETTINGS frame is being processed, value by value; other frame types can continue to be processed.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'no other frame processing' is open to interpretation. Does it mean *all* frame processing must halt until the SETTINGS frame is fully processed, or only the processing of other SETTINGS frames? This impacts how an endpoint handles concurrent frames.",
+    "missing_information": "It is unclear whether 'other frame processing' refers to all frames, or only to other SETTINGS frames. The scope of 'other frame processing' needs to be clarified."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:52:24.105278+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "db608db7e12a6d7587453a5a8e9c0bb5a97f5c3bb4b49d76dba91b03f61a2d1e",
+  "lineage_ids": "lineage:ec19e7dac718be5817234c0f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 199,
+    "load_duration": 20686000,
+    "prompt_eval_count": 554,
+    "total_duration": 7732706300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"no other frame processing between values\", \"interpretation_a\": \"All other frame processing must be paused while a SETTINGS frame is being processed, value by value.\", \"interpretation_b\": \"Only processing of *new* SETTINGS frames must be paused while a SETTINGS frame is being processed, value by value; other frame types can continue to be processed.\", \"missing_information\": \"It is unclear whether 'other frame processing' refers to all frames, or only to other SETTINGS frames. The scope of 'other frame processing' needs to be clarified.\", \"justification\": \"The phrase 'no other frame processing' is open to interpretation. Does it mean *all* frame processing must halt until the SETTINGS frame is fully processed, or only the processing of other SETTINGS frames? This impacts how an endpoint handles concurrent frames.\"}",
+  "record_id": "f615ac76637180a13c41838ef70d4fbe4f132341ba02cbc19503d56a0abe6cb5",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.5.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.735
+}

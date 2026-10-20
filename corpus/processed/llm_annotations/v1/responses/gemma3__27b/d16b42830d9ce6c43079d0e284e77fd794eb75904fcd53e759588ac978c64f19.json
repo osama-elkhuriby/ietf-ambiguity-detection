@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "packet with the highest packet number",
+    "interpretation_a": "If multiple packets arrive out of order, the packet with the highest packet number *among those received* determines the path. This implies a local decision based on the current reception state.",
+    "interpretation_b": "The packet with the highest packet number *ever seen* determines the path. This implies a global decision, potentially requiring state to track the highest packet number across all received packets, even those that may have been lost.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'highest packet number' is not fully constrained. Does it refer to the highest number among packets currently in the reception buffer, or the highest number observed since the connection began? The latter requires maintaining more state and affects how out-of-order packets are handled.",
+    "missing_information": "It is unclear whether the 'highest packet number' refers to the highest among currently received packets, or the highest ever seen. This affects how endpoints maintain state and handle out-of-order delivery."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:04:34.513041+00:00",
+  "document_id": "draft-ietf-quic-transport-10",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "20743ea7938b1121b97abc4297fb5d538dd173611b99e33388b0b2c2e9053456",
+  "lineage_ids": "lineage:db4c7fd7bfdfaa2638e4acd0",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 233,
+    "load_duration": 4145000,
+    "prompt_eval_count": 560,
+    "total_duration": 8690642400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"packet with the highest packet number\", \"interpretation_a\": \"If multiple packets arrive out of order, the packet with the highest packet number *among those received* determines the path. This implies a local decision based on the current reception state.\", \"interpretation_b\": \"The packet with the highest packet number *ever seen* determines the path. This implies a global decision, potentially requiring state to track the highest packet number across all received packets, even those that may have been lost.\", \"missing_information\": \"It is unclear whether the 'highest packet number' refers to the highest among currently received packets, or the highest ever seen. This affects how endpoints maintain state and handle out-of-order delivery.\", \"justification\": \"The phrase 'highest packet number' is not fully constrained. Does it refer to the highest number among packets currently in the reception buffer, or the highest number observed since the connection began? The latter requires maintaining more state and affects how out-of-order packets are handled.\"}",
+  "record_id": "d16b42830d9ce6c43079d0e284e77fd794eb75904fcd53e759588ac978c64f19",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "7.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.703
+}

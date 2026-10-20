@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "which could be either an explicit expiration time or an issued timestamp",
+    "interpretation_a": "The token MUST include one of these two methods for determining expiration, but not both.",
+    "interpretation_b": "The token MAY include either an explicit expiration time, or an issued timestamp, or both.",
+    "is_ambiguous": "yes",
+    "justification": "The clause uses 'or' which could mean either exclusive or inclusive. This affects how an implementer would design the token format and validation logic.",
+    "missing_information": "It is unclear whether the token must include one or both of the described methods for determining expiration. The use of 'or' is ambiguous in this context."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:31:13.382290+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "ba1550dfa48b06375afa8ed5f8f40dac7748831e847d9e561c82a9e1054a7c70",
+  "lineage_ids": "lineage:115fae0872ca9246edd15c32",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 160,
+    "load_duration": 4417400,
+    "prompt_eval_count": 599,
+    "total_duration": 6111821600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"which could be either an explicit expiration time or an issued timestamp\", \"interpretation_a\": \"The token MUST include one of these two methods for determining expiration, but not both.\", \"interpretation_b\": \"The token MAY include either an explicit expiration time, or an issued timestamp, or both.\", \"missing_information\": \"It is unclear whether the token must include one or both of the described methods for determining expiration. The use of 'or' is ambiguous in this context.\", \"justification\": \"The clause uses 'or' which could mean either exclusive or inclusive. This affects how an implementer would design the token format and validation logic.\"}",
+  "record_id": "6d36a30c563817de1c2d0cd44b7d268199f41d2021b6b55ec2e9f4abff386fd7",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "8.1.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.125
+}

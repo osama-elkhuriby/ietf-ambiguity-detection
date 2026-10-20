@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that an endpoint must terminate the connection with a FLOW_CONTROL_ERROR if it receives more data than the maximum data value it has advertised (sent). The wording does not allow for multiple materially different implementation behaviours, nor does it omit a concrete constraint that would change the operational interpretation.",
+    "missing_information": ""
+  },
+  "attempts": 3,
+  "created_at": "2026-10-08T16:54:22.823790+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "b8a66f3d257487c6df3a63ddee1ca64930d4ac058a7937b01cf588a7cb98b113",
+  "lineage_ids": "lineage:ce6e923f566d643342204b16",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1670,
+    "load_duration": 4437900,
+    "prompt_eval_count": 623,
+    "total_duration": 14691248200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that an endpoint must terminate the connection with a FLOW_CONTROL_ERROR if it receives more data than the maximum data value it has advertised (sent). The wording does not allow for multiple materially different implementation behaviours, nor does it omit a concrete constraint that would change the operational interpretation.\"\n}",
+  "record_id": "87c8aae93deb4649864ba9c429b31e5977c264ef4f82398a6deb9ae4dd4f7b2f",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "19.9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 152.453
+}

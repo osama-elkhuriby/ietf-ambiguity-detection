@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously specifies that the client must send an Initial packet in a UDP datagram of at least 1200 bytes when it lacks Handshake keys, and otherwise must send a Handshake packet. The size requirement applies only to the Initial packet, and the clause does not leave any implementation‑level choice or missing constraint.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T15:44:53.407462+00:00",
+  "document_id": "draft-ietf-quic-transport-28",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "3ba13df27d15f0ec34eda6fd174ce52012da74ce60949628b89d562640d1484e",
+  "lineage_ids": "lineage:6a0c85ea0e755beec6090585",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1357,
+    "load_duration": 7715000,
+    "prompt_eval_count": 643,
+    "total_duration": 11924219600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously specifies that the client must send an Initial packet in a UDP datagram of at least 1200 bytes when it lacks Handshake keys, and otherwise must send a Handshake packet. The size requirement applies only to the Initial packet, and the clause does not leave any implementation‑level choice or missing constraint.\"\n}",
+  "record_id": "51c7729093d4643effacb356316ff73360bf1f9706734f4b80751fe6da0ff20f",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "8.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 79.75
+}

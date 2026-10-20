@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "NOT exceed the current RTT estimate or the value it indicates in the max_ack_delay transport parameter",
+    "interpretation_a": "The timer must not exceed both the current RTT estimate and the max_ack_delay value (i.e., timer <= min(RTT, max_ack_delay)).",
+    "interpretation_b": "The timer must not exceed either the current RTT estimate or the max_ack_delay value, but not necessarily both, allowing the timer to be <= one of them while exceeding the other.",
+    "is_ambiguous": "yes",
+    "justification": "The clause uses “or” without clarifying whether both constraints apply, leading to two materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 3,
+  "created_at": "2026-10-08T16:48:35.672604+00:00",
+  "document_id": "draft-ietf-quic-transport-22",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "c9d0fba0aad07a53ca39afef7e7f47d8a4ad94a8625cd5d672c07a2320c37dd2",
+  "lineage_ids": "lineage:9d9e42ea4e74bba53e2ca501",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 312,
+    "load_duration": 6730200,
+    "prompt_eval_count": 782,
+    "total_duration": 3006158700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\":\"yes\",\"ambiguity_subtype\":\"U-2\",\"evidence_span\":\"NOT exceed the current RTT estimate or the value it indicates in the max_ack_delay transport parameter\",\"interpretation_a\":\"The timer must not exceed both the current RTT estimate and the max_ack_delay value (i.e., timer <= min(RTT, max_ack_delay)).\",\"interpretation_b\":\"The timer must not exceed either the current RTT estimate or the max_ack_delay value, but not necessarily both, allowing the timer to be <= one of them while exceeding the other.\",\"missing_information\":\"\",\"justification\":\"The clause uses “or” without clarifying whether both constraints apply, leading to two materially different implementation behaviours.\"}",
+  "record_id": "8653df4431bcd3838d51430e880ff46b9cee784455de352761b30ce1316a5e3b",
+  "revision": "22",
+  "schema_version": 1,
+  "section_ids": "13.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 89.297
+}

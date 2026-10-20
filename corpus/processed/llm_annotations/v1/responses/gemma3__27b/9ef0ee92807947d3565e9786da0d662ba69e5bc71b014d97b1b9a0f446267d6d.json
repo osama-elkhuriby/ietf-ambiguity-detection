@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "able to turn them on or off",
+    "interpretation_a": "The application provides a simple boolean setting to enable or disable keep-alives globally for all connections.",
+    "interpretation_b": "The application provides a per-connection setting, allowing fine-grained control over keep-alives for each individual TCP connection.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'able to turn them on or off' is vague. It doesn't specify the granularity of control the application must provide. A global on/off switch satisfies the requirement, but so does a per-connection setting, leading to different implementation approaches.",
+    "missing_information": "The clause does not specify *how* the application must be able to turn keep-alives on or off. Is it a global setting, a per-connection setting, or both? This affects implementation complexity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:26:06.799522+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-10",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "4a936480cacb2f0ef8e93949a8c1728924895d92024ea5dc11774c48ae986059",
+  "lineage_ids": "lineage:ee58ca280005fde7c28dd869",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 200,
+    "load_duration": 8256300,
+    "prompt_eval_count": 594,
+    "total_duration": 7738036200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"able to turn them on or off\", \"interpretation_a\": \"The application provides a simple boolean setting to enable or disable keep-alives globally for all connections.\", \"interpretation_b\": \"The application provides a per-connection setting, allowing fine-grained control over keep-alives for each individual TCP connection.\", \"missing_information\": \"The clause does not specify *how* the application must be able to turn keep-alives on or off. Is it a global setting, a per-connection setting, or both? This affects implementation complexity.\",\"justification\": \"The phrase 'able to turn them on or off' is vague. It doesn't specify the granularity of control the application must provide. A global on/off switch satisfies the requirement, but so does a per-connection setting, leading to different implementation approaches.\"}",
+  "record_id": "9ef0ee92807947d3565e9786da0d662ba69e5bc71b014d97b1b9a0f446267d6d",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "3.8.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.734
+}

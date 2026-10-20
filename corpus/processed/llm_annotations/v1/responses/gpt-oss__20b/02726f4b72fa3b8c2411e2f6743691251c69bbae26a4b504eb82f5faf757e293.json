@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless otherwise indicated by the Cache-Control header field",
+    "interpretation_a": "The clause does not specify whether the Cache-Control header field refers to the response or the request, leading to different caching behaviours.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The target clause lacks a concrete constraint specifying which Cache-Control header field governs the cache's use of a HEAD response, resulting in an incomplete specification that can lead to divergent implementations.",
+    "missing_information": "Which Cache-Control header field (request or response) is intended to control the cache usage of a HEAD response? The clause omits this constraint, allowing two materially different implementations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T05:20:51.673257+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-16",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "f6e3ecf45e3a3af5d43cca4e3aad6c0d8ab739babf6dd151f0b98fbcd644c698",
+  "lineage_ids": "lineage:2e2f4b48a512d5783e36529c",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1230,
+    "load_duration": 2506400,
+    "prompt_eval_count": 641,
+    "total_duration": 10955489300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"unless otherwise indicated by the Cache-Control header field\",\n  \"interpretation_a\": \"The clause does not specify whether the Cache-Control header field refers to the response or the request, leading to different caching behaviours.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"Which Cache-Control header field (request or response) is intended to control the cache usage of a HEAD response? The clause omits this constraint, allowing two materially different implementations.\",\n  \"justification\": \"The target clause lacks a concrete constraint specifying which Cache-Control header field governs the cache's use of a HEAD response, resulting in an incomplete specification that can lead to divergent implementations.\"\n}",
+  "record_id": "02726f4b72fa3b8c2411e2f6743691251c69bbae26a4b504eb82f5faf757e293",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "9.3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.969
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously requires that TLS provide a NewSessionTicket message containing the early_data extension with a max_early_data_size of 0xffffffff, and that the amount of data the client can send in 0-RTT is controlled by the initial_max_data transport parameter supplied by the server. No term is undefined, no constraint is incomplete, and the normative language is clear.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T13:15:37.646529+00:00",
+  "document_id": "draft-ietf-quic-tls-23",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "c5f8c1c58485d69dcbe15f08ac10c229de01063603e8652c2f39b5a2213f621b",
+  "lineage_ids": "lineage:3df350b8c7aee23b3462f4a7",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3226,
+    "load_duration": 4007400,
+    "prompt_eval_count": 661,
+    "total_duration": 27915536700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"no\", \"ambiguity_subtype\": \"none\", \"evidence_span\": \"\", \"interpretation_a\": \"\", \"interpretation_b\": \"\", \"missing_information\": \"\", \"justification\": \"The clause unambiguously requires that TLS provide a NewSessionTicket message containing the early_data extension with a max_early_data_size of 0xffffffff, and that the amount of data the client can send in 0-RTT is controlled by the initial_max_data transport parameter supplied by the server. No term is undefined, no constraint is incomplete, and the normative language is clear.\"}",
+  "record_id": "d0b20ea592b349848f18f6a8d3e99e13191ad133528cf4d23a8c6c648bb3bda3",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "4.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 95.5
+}

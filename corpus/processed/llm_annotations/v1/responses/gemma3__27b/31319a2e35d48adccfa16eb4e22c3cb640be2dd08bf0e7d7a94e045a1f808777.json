@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "easily distinguish it",
+    "interpretation_a": "The token should be constructed in a way that allows the server to quickly and with minimal processing effort differentiate it from tokens in Retry packets.",
+    "interpretation_b": "The token should be constructed in a way that makes it conceptually clear to a human reviewing the code or packets how it differs from tokens in Retry packets.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'easily distinguish' is subjective. What constitutes 'easy' is not defined, leading to different implementations. One implementation might prioritize computational efficiency, while another might prioritize code readability. This difference in interpretation affects implementation.",
+    "missing_information": "The meaning of 'easily' is not defined. A quantitative or qualitative measure of 'easily' would remove ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:09:54.196292+00:00",
+  "document_id": "draft-ietf-quic-transport-22",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "bc8119615ff0b4356fd801b1399db452afc09981476015e6492b698ef414d304",
+  "lineage_ids": "lineage:b35ac54dd04d9e1be9412fd4",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 179,
+    "load_duration": 3911400,
+    "prompt_eval_count": 583,
+    "total_duration": 6785243500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"easily distinguish it\", \"interpretation_a\": \"The token should be constructed in a way that allows the server to quickly and with minimal processing effort differentiate it from tokens in Retry packets.\", \"interpretation_b\": \"The token should be constructed in a way that makes it conceptually clear to a human reviewing the code or packets how it differs from tokens in Retry packets.\", \"missing_information\": \"The meaning of 'easily' is not defined. A quantitative or qualitative measure of 'easily' would remove ambiguity.\",\"justification\": \"The term 'easily distinguish' is subjective. What constitutes 'easy' is not defined, leading to different implementations. One implementation might prioritize computational efficiency, while another might prioritize code readability. This difference in interpretation affects implementation.\"}",
+  "record_id": "31319a2e35d48adccfa16eb4e22c3cb640be2dd08bf0e7d7a94e045a1f808777",
+  "revision": "22",
+  "schema_version": 1,
+  "section_ids": "8.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.797
+}

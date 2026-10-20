@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Prior to making an “http” scheme request, the client SHOULD perform a lookup to determine if any HTTPS RRs exist for that origin.",
+    "interpretation_a": "The client performs the lookup before every individual HTTP request to that origin.",
+    "interpretation_b": "The client performs the lookup only once per origin (e.g., on first request or during a cache warm‑up), then reuses the result for subsequent HTTP requests.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify the frequency of the lookup, allowing two materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 3,
+  "created_at": "2026-10-08T03:28:33.005090+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-04",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "daeeb6f1726a1715434732530df6c9902c8513f3ee7982279a8f014cee43d992",
+  "lineage_ids": "lineage:7aa7cd275488598e1f6d187c",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 270,
+    "load_duration": 4008400,
+    "prompt_eval_count": 781,
+    "total_duration": 2560622800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"Prior to making an “http” scheme request, the client SHOULD perform a lookup to determine if any HTTPS RRs exist for that origin.\",\n  \"interpretation_a\": \"The client performs the lookup before every individual HTTP request to that origin.\",\n  \"interpretation_b\": \"The client performs the lookup only once per origin (e.g., on first request or during a cache warm‑up), then reuses the result for subsequent HTTP requests.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify the frequency of the lookup, allowing two materially different implementation behaviours.\"\n}",
+  "record_id": "d215d283a8b16abed601eb7a75e2cd31e38e7c8ce17be15d4fa7de2f71dc730c",
+  "revision": "04",
+  "schema_version": 1,
+  "section_ids": "8.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 94.406
+}

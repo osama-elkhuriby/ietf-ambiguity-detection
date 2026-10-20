@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT use this response to satisfy a later request",
+    "interpretation_a": "The cache recipient is prohibited from serving the cached response if the listed header fields differ, even if other validation mechanisms (e.g., ETag) could confirm the response is still valid.",
+    "interpretation_b": "The cache recipient is prohibited from serving the cached response if the listed header fields differ, but validation mechanisms are permitted to override this prohibition.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"unless...validated by the origin server\" could be read as the *only* way to override the prohibition, or as simply *a* way to override it. Without clarification, implementations could reasonably differ on whether other validation methods are permitted.",
+    "missing_information": "The clause does not explicitly state whether other validation mechanisms can override the prohibition against serving the cached response. This missing constraint affects implementation behavior."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:10:51.578929+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "a700fe378d0fb35e979906cf408544afd74bc5c6c4b6cd43ac0fe375683af7be",
+  "lineage_ids": "lineage:ac45e5e4f2787600cd2f43ea",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 206,
+    "load_duration": 22386000,
+    "prompt_eval_count": 602,
+    "total_duration": 7926008600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT use this response to satisfy a later request\", \"interpretation_a\": \"The cache recipient is prohibited from serving the cached response if the listed header fields differ, even if other validation mechanisms (e.g., ETag) could confirm the response is still valid.\", \"interpretation_b\": \"The cache recipient is prohibited from serving the cached response if the listed header fields differ, but validation mechanisms are permitted to override this prohibition.\", \"missing_information\": \"The clause does not explicitly state whether other validation mechanisms can override the prohibition against serving the cached response. This missing constraint affects implementation behavior.\", \"justification\": \"The phrase \\\"unless...validated by the origin server\\\" could be read as the *only* way to override the prohibition, or as simply *a* way to override it. Without clarification, implementations could reasonably differ on whether other validation methods are permitted.\"}",
+  "record_id": "65c8b64e23e25bfb76e3b22dcd6eb73ab5fbd3b2424aea9703db9b924a200d2a",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "12.5.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.922
+}

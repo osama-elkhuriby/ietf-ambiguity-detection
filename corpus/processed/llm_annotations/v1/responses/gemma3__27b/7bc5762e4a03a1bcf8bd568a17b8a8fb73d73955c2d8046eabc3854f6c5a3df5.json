@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "any of the following header fields",
+    "interpretation_a": "The server MUST include all of the listed header fields if they would have been present in a 200 response.",
+    "interpretation_b": "The server MUST include at least one of the listed header fields if any of them would have been present in a 200 response.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'any of' is ambiguous in a normative context. It could be interpreted as 'all of' or 'at least one of', leading to different implementations.",
+    "missing_information": "The meaning of 'any of' is unclear. Does it mean 'all of' or 'at least one of'? A clearer phrasing would remove the ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:14:17.736723+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-07",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "51f35be642941fa7f6ed75f28bc88e63c623deb7b69ef0f0659c739774cfe1c3",
+  "lineage_ids": "lineage:2213783b9ade5f929b44b76d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 176,
+    "load_duration": 10221800,
+    "prompt_eval_count": 638,
+    "total_duration": 6885579300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"any of the following header fields\", \"interpretation_a\": \"The server MUST include all of the listed header fields if they would have been present in a 200 response.\", \"interpretation_b\": \"The server MUST include at least one of the listed header fields if any of them would have been present in a 200 response.\", \"missing_information\": \"The meaning of 'any of' is unclear. Does it mean 'all of' or 'at least one of'? A clearer phrasing would remove the ambiguity.\",\"justification\": \"The phrase 'any of' is ambiguous in a normative context. It could be interpreted as 'all of' or 'at least one of', leading to different implementations.\"}",
+  "record_id": "7bc5762e4a03a1bcf8bd568a17b8a8fb73d73955c2d8046eabc3854f6c5a3df5",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "9.4.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.891
+}

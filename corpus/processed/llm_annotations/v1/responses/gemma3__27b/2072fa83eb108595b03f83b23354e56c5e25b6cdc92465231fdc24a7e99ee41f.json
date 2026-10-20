@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "when a packet is lost or when the ECN-CE count reported by its peer increases",
+    "interpretation_a": "The sender exits slow start if *either* a packet is lost *or* the ECN-CE count increases.",
+    "interpretation_b": "The sender exits slow start if a packet is lost *and* the ECN-CE count increases. The 'or' could be read as an 'and' in this context.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'or' is ambiguous. It could mean either condition triggers the exit, or both conditions must be met. This affects implementation because a sender might implement different logic based on which interpretation is correct.",
+    "missing_information": "It is unclear whether both conditions must be met, or if either condition is sufficient to trigger the exit from slow start. A clearer conjunction ('and' vs 'or') is needed."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:17:30.670728+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "8f0dc7007ef7222b7d25ef106beb0ecca51c3d8a6c227041d3f11c0c4c0e4b92",
+  "lineage_ids": "lineage:a325bc7e747f0d6519a7bab9",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 210,
+    "load_duration": 4014600,
+    "prompt_eval_count": 578,
+    "total_duration": 7917721700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"when a packet is lost or when the ECN-CE count reported by its peer increases\", \"interpretation_a\": \"The sender exits slow start if *either* a packet is lost *or* the ECN-CE count increases.\", \"interpretation_b\": \"The sender exits slow start if a packet is lost *and* the ECN-CE count increases. The 'or' could be read as an 'and' in this context.\", \"missing_information\": \"It is unclear whether both conditions must be met, or if either condition is sufficient to trigger the exit from slow start. A clearer conjunction ('and' vs 'or') is needed.\",\"justification\": \"The use of 'or' is ambiguous. It could mean either condition triggers the exit, or both conditions must be met. This affects implementation because a sender might implement different logic based on which interpretation is correct.\"}",
+  "record_id": "2072fa83eb108595b03f83b23354e56c5e25b6cdc92465231fdc24a7e99ee41f",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.922
+}

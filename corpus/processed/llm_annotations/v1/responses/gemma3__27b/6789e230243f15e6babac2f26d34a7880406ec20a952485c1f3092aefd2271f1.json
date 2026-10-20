@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "to at least the smallest allowed maximum datagram size of 1200 bytes",
+    "interpretation_a": "The endpoint must expand datagrams to *exactly* 1200 bytes if they contain a PATH_RESPONSE frame.",
+    "interpretation_b": "The endpoint must expand datagrams to *at least* 1200 bytes, potentially larger, if they contain a PATH_RESPONSE frame.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"at least\" combined with the lack of an upper bound creates ambiguity. Does the endpoint expand to the minimum of 1200 bytes, or to 1200 bytes or more?",
+    "missing_information": "The clause does not specify an upper bound on the expansion. Is there a maximum datagram size beyond which expansion is not allowed?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:29:18.830280+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "00f0190ad36748b06d5f6ef182b3a437dd9efcc590ba2f0ddcadf9adcbe776e3",
+  "lineage_ids": "lineage:1520ebd00d1228816c8687f0",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 195,
+    "load_duration": 3974200,
+    "prompt_eval_count": 592,
+    "total_duration": 7397162300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"to at least the smallest allowed maximum datagram size of 1200 bytes\", \"interpretation_a\": \"The endpoint must expand datagrams to *exactly* 1200 bytes if they contain a PATH_RESPONSE frame.\", \"interpretation_b\": \"The endpoint must expand datagrams to *at least* 1200 bytes, potentially larger, if they contain a PATH_RESPONSE frame.\", \"missing_information\": \"The clause does not specify an upper bound on the expansion. Is there a maximum datagram size beyond which expansion is not allowed?\",\"justification\": \"The phrase \\\"at least\\\" combined with the lack of an upper bound creates ambiguity. Does the endpoint expand to the minimum of 1200 bytes, or to 1200 bytes or more?\"}",
+  "record_id": "6789e230243f15e6babac2f26d34a7880406ec20a952485c1f3092aefd2271f1",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "8.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.39
+}

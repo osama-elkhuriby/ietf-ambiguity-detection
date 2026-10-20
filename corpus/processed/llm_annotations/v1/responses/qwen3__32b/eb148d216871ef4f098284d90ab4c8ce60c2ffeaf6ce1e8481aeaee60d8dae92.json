@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear mapping between TLS errors and QUIC connection errors. It specifies that a TLS alert sent or received after handshake completion must be treated as a specific QUIC connection error type. There is no ambiguity in the mapping or in the conditions under which the error is treated as such.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:44:32.075422+00:00",
+  "document_id": "draft-ietf-quic-tls-12",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "9b4357c72fd0eb8b1057bf64f9815903b4b6b9b3c7eacfd810a16b20e2c52e7c",
+  "lineage_ids": "lineage:e8e19a29112e0839d50e53cc",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 115,
+    "load_duration": 4852100,
+    "prompt_eval_count": 537,
+    "total_duration": 4734280300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear mapping between TLS errors and QUIC connection errors. It specifies that a TLS alert sent or received after handshake completion must be treated as a specific QUIC connection error type. There is no ambiguity in the mapping or in the conditions under which the error is treated as such.\"\n}",
+  "record_id": "eb148d216871ef4f098284d90ab4c8ce60c2ffeaf6ce1e8481aeaee60d8dae92",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "4.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 4.75
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "It is RECOMMENDED",
+    "interpretation_a": "An endpoint MAY choose to continue operating even after reaching a state where key updates are not possible, as long as it doesn't exceed integrity limits.",
+    "interpretation_b": "An endpoint SHOULD close the connection as soon as it anticipates reaching a state where key updates are not possible, even if it hasn't reached that state yet.",
+    "is_ambiguous": "yes",
+    "justification": "The use of \"RECOMMENDED\" creates ambiguity. While it suggests a best practice, it doesn't definitively require immediate closure. This allows for two reasonable interpretations regarding when the endpoint should act on the recommendation: before reaching the limit or only when key updates become impossible.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:48:39.129204+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "2b8d88f5d3212d10ce5975add40e9d948ece0da71502cc6f1290cdc151da83a7",
+  "lineage_ids": "lineage:73cb70adb5fe4d3a6b575237",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 172,
+    "load_duration": 4152400,
+    "prompt_eval_count": 620,
+    "total_duration": 6543653500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"It is RECOMMENDED\", \"interpretation_a\": \"An endpoint MAY choose to continue operating even after reaching a state where key updates are not possible, as long as it doesn't exceed integrity limits.\", \"interpretation_b\": \"An endpoint SHOULD close the connection as soon as it anticipates reaching a state where key updates are not possible, even if it hasn't reached that state yet.\", \"missing_information\": \"\", \"justification\": \"The use of \\\"RECOMMENDED\\\" creates ambiguity. While it suggests a best practice, it doesn't definitively require immediate closure. This allows for two reasonable interpretations regarding when the endpoint should act on the recommendation: before reaching the limit or only when key updates become impossible.\"}",
+  "record_id": "cfd96c51530442b5997c699a249d648bf16478ff8d741b2732c0b6cec665ac8d",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.547
+}

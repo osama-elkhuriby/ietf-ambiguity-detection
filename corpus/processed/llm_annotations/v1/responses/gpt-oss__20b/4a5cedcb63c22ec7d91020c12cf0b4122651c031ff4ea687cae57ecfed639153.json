@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Servers MUST NOT use the H3_REQUEST_REJECTED error code for requests which were partially or fully processed.",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause relies on the term \"processed\" without providing a definition in the supplied context, creating an incomplete constraint that could lead to materially different implementation behaviours.",
+    "missing_information": "definition of \"processed\" (i.e., what constitutes a request being partially or fully processed)."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T09:21:15.408962+00:00",
+  "document_id": "draft-ietf-quic-http-29",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "231940cb2a8526d797646fbd355e4e5e1eea8f06793ac02a4dcdd3ba646dda58",
+  "lineage_ids": "lineage:93da56fac7ab3134eafd6eef",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 4477,
+    "load_duration": 4083700,
+    "prompt_eval_count": 604,
+    "total_duration": 38643385200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"Servers MUST NOT use the H3_REQUEST_REJECTED error code for requests which were partially or fully processed.\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"definition of \\\"processed\\\" (i.e., what constitutes a request being partially or fully processed).\",\n  \"justification\": \"The clause relies on the term \\\"processed\\\" without providing a definition in the supplied context, creating an incomplete constraint that could lead to materially different implementation behaviours.\"\n}",
+  "record_id": "4a5cedcb63c22ec7d91020c12cf0b4122651c031ff4ea687cae57ecfed639153",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "4.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 38.656
+}

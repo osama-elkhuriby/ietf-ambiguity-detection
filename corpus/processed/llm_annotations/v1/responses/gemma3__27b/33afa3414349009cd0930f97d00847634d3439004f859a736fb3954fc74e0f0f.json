@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "low acknowledgment delay",
+    "interpretation_a": "A 'low acknowledgment delay' could be a fixed threshold (e.g., less than 5ms), or it could be relative to the current smoothed_rtt or other connection parameters. Without a defined threshold or method for determining 'low', implementations could reasonably differ in when they re-establish min_rtt.",
+    "interpretation_b": "The phrase 'low acknowledgment delay' is subjective. One implementation might consider 1ms 'low', while another might require 10ms. This difference in interpretation would lead to different min_rtt values and potentially different congestion control behavior.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'low' is not defined, creating a concrete missing constraint. Different implementations could reasonably interpret 'low' differently, leading to different behaviors.",
+    "missing_information": "A definition of 'low acknowledgment delay' is needed. Is it an absolute value, a percentage of smoothed_rtt, or something else?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:18:38.306541+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "c7aabe886538a7b995ea0eb645b353a35010000ae26fc5bc57bbad073c0f2fc1",
+  "lineage_ids": "lineage:9d885e67e51650652320b4a1",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 228,
+    "load_duration": 4347500,
+    "prompt_eval_count": 625,
+    "total_duration": 8555668500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"low acknowledgment delay\", \"interpretation_a\": \"A 'low acknowledgment delay' could be a fixed threshold (e.g., less than 5ms), or it could be relative to the current smoothed_rtt or other connection parameters. Without a defined threshold or method for determining 'low', implementations could reasonably differ in when they re-establish min_rtt.\", \"interpretation_b\": \"The phrase 'low acknowledgment delay' is subjective. One implementation might consider 1ms 'low', while another might require 10ms. This difference in interpretation would lead to different min_rtt values and potentially different congestion control behavior.\", \"missing_information\": \"A definition of 'low acknowledgment delay' is needed. Is it an absolute value, a percentage of smoothed_rtt, or something else?\",\"justification\": \"The term 'low' is not defined, creating a concrete missing constraint. Different implementations could reasonably interpret 'low' differently, leading to different behaviors.\"}",
+  "record_id": "33afa3414349009cd0930f97d00847634d3439004f859a736fb3954fc74e0f0f",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.563
+}

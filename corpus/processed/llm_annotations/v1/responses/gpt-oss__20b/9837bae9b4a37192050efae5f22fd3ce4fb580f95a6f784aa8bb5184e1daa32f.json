@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "I-1",
+    "evidence_span": "Even if validation fails, an endpoint MAY revalidate ECN on the same path at any later time in the connection.",
+    "interpretation_a": "The endpoint must disable ECN permanently after validation fails and cannot revalidate it later.",
+    "interpretation_b": "The endpoint may revalidate ECN on the same path at any later time, meaning it can re-enable ECN after disabling it.",
+    "is_ambiguous": "yes",
+    "justification": "The target clause conflicts with the preceding clause that requires disabling ECN if validation fails, creating a direct inconsistency.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T17:17:24.722272+00:00",
+  "document_id": "draft-ietf-quic-transport-30",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "2807e7f93bd0f97a00dca7a9e1ca0379c23144a0929021b7603df5765b118213",
+  "lineage_ids": "lineage:39722e4bf601fb16390054ba",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1063,
+    "load_duration": 4410100,
+    "prompt_eval_count": 575,
+    "total_duration": 9218836000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"I-1\",\n  \"evidence_span\": \"Even if validation fails, an endpoint MAY revalidate ECN on the same path at any later time in the connection.\",\n  \"interpretation_a\": \"The endpoint must disable ECN permanently after validation fails and cannot revalidate it later.\",\n  \"interpretation_b\": \"The endpoint may revalidate ECN on the same path at any later time, meaning it can re-enable ECN after disabling it.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause conflicts with the preceding clause that requires disabling ECN if validation fails, creating a direct inconsistency.\"\n}",
+  "record_id": "9837bae9b4a37192050efae5f22fd3ce4fb580f95a6f784aa8bb5184e1daa32f",
+  "revision": "30",
+  "schema_version": 1,
+  "section_ids": "13.4.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.219
+}

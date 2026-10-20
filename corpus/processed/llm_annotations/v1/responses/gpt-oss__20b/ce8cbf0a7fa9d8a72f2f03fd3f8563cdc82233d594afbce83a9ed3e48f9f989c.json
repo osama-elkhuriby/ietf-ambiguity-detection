@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "When received options are passed up to TCP from the IP layer, TCP implementations MUST ignore options that it does not understand (MUST-50).",
+    "interpretation_a": "TCP removes the unknown option from the TCP header before further processing.",
+    "interpretation_b": "TCP leaves the unknown option in the TCP header unchanged, simply ignoring it for processing purposes.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether the option should be discarded or retained, leading to two materially different implementation behaviours.",
+    "missing_information": "Whether the unknown option should be removed from the TCP header or left unchanged."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T20:29:26.466078+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-25",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "758efc6aa5177ba2cd5af3ce6d2044e705012906682c1f0bbdcddbf3b6cdd7c3",
+  "lineage_ids": "lineage:b87d8321c4fd43d3d6e150ce",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 449,
+    "load_duration": 7095000,
+    "prompt_eval_count": 785,
+    "total_duration": 4066401700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"When received options are passed up to TCP from the IP layer, TCP implementations MUST ignore options that it does not understand (MUST-50).\",\n  \"interpretation_a\": \"TCP removes the unknown option from the TCP header before further processing.\",\n  \"interpretation_b\": \"TCP leaves the unknown option in the TCP header unchanged, simply ignoring it for processing purposes.\",\n  \"missing_information\": \"Whether the unknown option should be removed from the TCP header or left unchanged.\",\n  \"justification\": \"The clause does not specify whether the option should be discarded or retained, leading to two materially different implementation behaviours.\"\n}",
+  "record_id": "ce8cbf0a7fa9d8a72f2f03fd3f8563cdc82233d594afbce83a9ed3e48f9f989c",
+  "revision": "25",
+  "schema_version": 1,
+  "section_ids": "3.9.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 18.36
+}

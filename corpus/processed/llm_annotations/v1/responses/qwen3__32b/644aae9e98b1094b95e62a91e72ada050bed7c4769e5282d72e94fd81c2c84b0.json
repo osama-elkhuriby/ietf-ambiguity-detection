@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause 'A server MUST NOT explicitly set this value to 1.' is clear and unambiguous. It directly prohibits servers from setting the value to 1, and the surrounding context reinforces this by stating that any value other than 0 or 1 is a protocol error and that if the value is included, it must be 0. There is no room for multiple interpretations or missing constraints that would affect implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T01:47:27.281375+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "e51fa36fa3f9f7fc45ab323b42ec29b048e53f30f873f298ae2dfc8cadf6158f",
+  "lineage_ids": "lineage:c07e2584078437773701f77b",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 142,
+    "load_duration": 8536300,
+    "prompt_eval_count": 536,
+    "total_duration": 5877784200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause 'A server MUST NOT explicitly set this value to 1.' is clear and unambiguous. It directly prohibits servers from setting the value to 1, and the surrounding context reinforces this by stating that any value other than 0 or 1 is a protocol error and that if the value is included, it must be 0. There is no room for multiple interpretations or missing constraints that would affect implementation behavior.\"\n}",
+  "record_id": "644aae9e98b1094b95e62a91e72ada050bed7c4769e5282d72e94fd81c2c84b0",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.875
+}

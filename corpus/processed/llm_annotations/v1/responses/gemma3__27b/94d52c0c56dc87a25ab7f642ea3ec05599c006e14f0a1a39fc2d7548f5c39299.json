@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "was permitted",
+    "interpretation_a": "The limit is the initial limit negotiated during connection establishment.",
+    "interpretation_b": "The limit is the current, potentially adjusted, limit based on dynamic stream limits negotiated during the connection.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'was permitted' is vague. It's unclear whether the limit being checked is the initial limit negotiated at connection setup or a dynamically adjusted limit that might have been negotiated later. This difference in interpretation could lead to different implementations and thus a connection error when it shouldn't occur, or vice versa.",
+    "missing_information": "The meaning of 'was permitted' is unclear. Does it refer to the initial stream limit negotiated during connection establishment, or the current, potentially adjusted, limit based on dynamic stream limits negotiated during the connection?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:45:44.755527+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "eb21fbe284081492077f7650e66189b1915d430d35e34be794cde67974b4fc6d",
+  "lineage_ids": "lineage:12f8492ea55c9a89f432f233",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 190,
+    "load_duration": 4040800,
+    "prompt_eval_count": 592,
+    "total_duration": 7194395200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"was permitted\", \"interpretation_a\": \"The limit is the initial limit negotiated during connection establishment.\", \"interpretation_b\": \"The limit is the current, potentially adjusted, limit based on dynamic stream limits negotiated during the connection.\", \"missing_information\": \"The meaning of 'was permitted' is unclear. Does it refer to the initial stream limit negotiated during connection establishment, or the current, potentially adjusted, limit based on dynamic stream limits negotiated during the connection?\", \"justification\": \"The phrase 'was permitted' is vague. It's unclear whether the limit being checked is the initial limit negotiated at connection setup or a dynamically adjusted limit that might have been negotiated later. This difference in interpretation could lead to different implementations and thus a connection error when it shouldn't occur, or vice versa.\"}",
+  "record_id": "94d52c0c56dc87a25ab7f642ea3ec05599c006e14f0a1a39fc2d7548f5c39299",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "19.11",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.203
+}

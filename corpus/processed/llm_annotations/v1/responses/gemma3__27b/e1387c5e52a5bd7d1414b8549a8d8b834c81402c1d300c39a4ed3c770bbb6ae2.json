@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "after removing both packet and header protection",
+    "interpretation_a": "The packet must be fully decrypted (both packet and header protection removed) before checking the bits.",
+    "interpretation_b": "The packet must have header protection removed, and then packet protection removed, with the bits checked after each step. If the bits are non-zero after header protection removal, it's an error. If not, packet protection is removed and the bits are checked again.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'after removing both packet and header protection' is open to interpretation regarding the order of removal. Does it mean 'after all protection is removed' or 'after each protection layer is removed sequentially'?",
+    "missing_information": "The order of protection removal is not specified, and the interpretation affects when the check for non-zero bits occurs. A clear statement of the order is needed."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:10:21.495563+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "085960edad6fbdedf41b2c844650edab4c3e2c4ba127123638e4cffdd309ebb5",
+  "lineage_ids": "lineage:91b96c9ed4dbeecf74c0516b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 207,
+    "load_duration": 4620600,
+    "prompt_eval_count": 595,
+    "total_duration": 7762704300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"after removing both packet and header protection\", \"interpretation_a\": \"The packet must be fully decrypted (both packet and header protection removed) before checking the bits.\", \"interpretation_b\": \"The packet must have header protection removed, and then packet protection removed, with the bits checked after each step. If the bits are non-zero after header protection removal, it's an error. If not, packet protection is removed and the bits are checked again.\", \"missing_information\": \"The order of protection removal is not specified, and the interpretation affects when the check for non-zero bits occurs. A clear statement of the order is needed.\", \"justification\": \"The phrase 'after removing both packet and header protection' is open to interpretation regarding the order of removal. Does it mean 'after all protection is removed' or 'after each protection layer is removed sequentially'?\"}",
+  "record_id": "e1387c5e52a5bd7d1414b8549a8d8b834c81402c1d300c39a4ed3c770bbb6ae2",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "17.3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.766
+}

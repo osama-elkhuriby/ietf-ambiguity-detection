@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "processed by the HPACK decoder",
+    "interpretation_a": "The HPACK decoder is a single, shared instance across all header blocks received. Processing happens serially.",
+    "interpretation_b": "Each header block may be processed by a separate HPACK decoder instance, potentially in parallel, but the *order* of processing is still sequential.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'processed by the HPACK decoder' does not specify whether a single decoder instance is used for all header blocks, or if multiple instances are allowed. This affects implementation choices regarding state management and potential parallelism.",
+    "missing_information": "It is unclear whether a single HPACK decoder instance is expected, or if multiple instances can be used. The phrase 'in sequence' applies to the order of blocks, but not necessarily to the processing mechanism."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:11:52.887069+00:00",
+  "document_id": "draft-ietf-quic-http-04",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "37674a0f940802c7c8b528d108de68dd0d6c427e949cacf01fea3cb799446b79",
+  "lineage_ids": "lineage:304e39d60c6eee1039af7daf",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 194,
+    "load_duration": 11552600,
+    "prompt_eval_count": 589,
+    "total_duration": 7431907600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"processed by the HPACK decoder\", \"interpretation_a\": \"The HPACK decoder is a single, shared instance across all header blocks received. Processing happens serially.\", \"interpretation_b\": \"Each header block may be processed by a separate HPACK decoder instance, potentially in parallel, but the *order* of processing is still sequential.\", \"missing_information\": \"It is unclear whether a single HPACK decoder instance is expected, or if multiple instances can be used. The phrase 'in sequence' applies to the order of blocks, but not necessarily to the processing mechanism.\", \"justification\": \"The phrase 'processed by the HPACK decoder' does not specify whether a single decoder instance is used for all header blocks, or if multiple instances are allowed. This affects implementation choices regarding state management and potential parallelism.\"}",
+  "record_id": "de71ef5d56bdeca2a08ee0234bb369d61b72d88d4c9795c77bac82c66f2be744",
+  "revision": "04",
+  "schema_version": 1,
+  "section_ids": "5.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.453
+}

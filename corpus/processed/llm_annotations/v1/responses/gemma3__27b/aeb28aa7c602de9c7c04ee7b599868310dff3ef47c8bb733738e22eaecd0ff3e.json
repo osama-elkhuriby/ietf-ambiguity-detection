@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "TLS handshake messages",
+    "interpretation_a": "The server can only use 0-RTT keys for the initial handshake messages (ClientHello, ServerHello, etc.). Any application data or other TLS records must not be protected by 0-RTT keys.",
+    "interpretation_b": "The server can use 0-RTT keys for any messages that are *part of* the TLS handshake, even if those messages contain application data embedded within them (e.g., early data).",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'TLS handshake messages' is not fully defined. It is unclear whether it refers only to the standard handshake messages or if it includes any messages that are considered part of the handshake, even if they contain application data. This lack of precision creates ambiguity in implementation.",
+    "missing_information": "The definition of 'TLS handshake messages' is not precise. Does it include only the core handshake messages, or can it encompass handshake messages that carry application data?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:44:55.437895+00:00",
+  "document_id": "draft-ietf-quic-tls-00",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "fc32ae504aefa90d4fab038782b15c37d5b6e1d2fe5f560b39fd12a718464078",
+  "lineage_ids": "lineage:0319c4e03d7d26efb4ec8e44",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 224,
+    "load_duration": 3664700,
+    "prompt_eval_count": 569,
+    "total_duration": 8325583400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"TLS handshake messages\", \"interpretation_a\": \"The server can only use 0-RTT keys for the initial handshake messages (ClientHello, ServerHello, etc.). Any application data or other TLS records must not be protected by 0-RTT keys.\", \"interpretation_b\": \"The server can use 0-RTT keys for any messages that are *part of* the TLS handshake, even if those messages contain application data embedded within them (e.g., early data).\", \"missing_information\": \"The definition of 'TLS handshake messages' is not precise. Does it include only the core handshake messages, or can it encompass handshake messages that carry application data?\",\"justification\": \"The phrase 'TLS handshake messages' is not fully defined. It is unclear whether it refers only to the standard handshake messages or if it includes any messages that are considered part of the handshake, even if they contain application data. This lack of precision creates ambiguity in implementation.\"}",
+  "record_id": "aeb28aa7c602de9c7c04ee7b599868310dff3ef47c8bb733738e22eaecd0ff3e",
+  "revision": "00",
+  "schema_version": 1,
+  "section_ids": "5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.328
+}

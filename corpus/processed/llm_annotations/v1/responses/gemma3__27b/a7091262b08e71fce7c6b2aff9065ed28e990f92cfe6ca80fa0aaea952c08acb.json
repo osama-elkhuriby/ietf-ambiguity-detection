@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "malformed",
+    "interpretation_a": "An RR is malformed if it violates any part of the RFC specification for the RRTYPE, even minor or non-critical violations.",
+    "interpretation_b": "An RR is malformed only if it violates a critical part of the RFC specification, such as a length field being too large or a required field being missing.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'malformed' is subjective. The clause does not define what constitutes a 'malformed' RR. This allows for different interpretations of how strictly the RRSet must conform to the RFC specification.",
+    "missing_information": "The definition of 'malformed' is not provided. Without a clear definition, it's unclear what level of deviation from the specification constitutes a malformed RR, and thus triggers the MUST reject behavior."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:10:10.363662+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "701fb5c2f8fdf2dcb5b1accffb57f64f8ad4ff79e9e61129b5dd7883f67aa68b",
+  "lineage_ids": "lineage:642d669f7104219557982ba9",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 196,
+    "load_duration": 4293700,
+    "prompt_eval_count": 555,
+    "total_duration": 7351524100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"malformed\", \"interpretation_a\": \"An RR is malformed if it violates any part of the RFC specification for the RRTYPE, even minor or non-critical violations.\", \"interpretation_b\": \"An RR is malformed only if it violates a critical part of the RFC specification, such as a length field being too large or a required field being missing.\", \"missing_information\": \"The definition of 'malformed' is not provided. Without a clear definition, it's unclear what level of deviation from the specification constitutes a malformed RR, and thus triggers the MUST reject behavior.\", \"justification\": \"The term 'malformed' is subjective. The clause does not define what constitutes a 'malformed' RR. This allows for different interpretations of how strictly the RRSet must conform to the RFC specification.\"}",
+  "record_id": "a7091262b08e71fce7c6b2aff9065ed28e990f92cfe6ca80fa0aaea952c08acb",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.359
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "All subsequent packets sent by the server MUST have the version flag off.",
+    "interpretation_a": "All subsequent packets after the server sends a Version Negotiation packet must have the version flag off.",
+    "interpretation_b": "All subsequent packets after the server decides to use a particular version must have the version flag off.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify the point of reference for 'subsequent', leaving it unclear whether it applies after a Version Negotiation packet or after the server selects a protocol version, which leads to materially different implementation behaviours.",
+    "missing_information": "the reference point for the term 'subsequent'"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T18:02:11.886939+00:00",
+  "document_id": "draft-ietf-quic-transport-00",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "7ab38f69b9ff44ccbbc7be526fcc8b76b3bfe92ff29cef836f10fff80ecadf34",
+  "lineage_ids": "lineage:03cbc44991d8d1867d739964",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2433,
+    "load_duration": 5354400,
+    "prompt_eval_count": 584,
+    "total_duration": 20813830800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"All subsequent packets sent by the server MUST have the version flag off.\",\n  \"interpretation_a\": \"All subsequent packets after the server sends a Version Negotiation packet must have the version flag off.\",\n  \"interpretation_b\": \"All subsequent packets after the server decides to use a particular version must have the version flag off.\",\n  \"missing_information\": \"the reference point for the term 'subsequent'\",\n  \"justification\": \"The clause does not specify the point of reference for 'subsequent', leaving it unclear whether it applies after a Version Negotiation packet or after the server selects a protocol version, which leads to materially different implementation behaviours.\"\n}",
+  "record_id": "b89e67570221972321b618ec85b76ef15fadcf5decaa105d9b46e0ed240a4e9f",
+  "revision": "00",
+  "schema_version": 1,
+  "section_ids": "5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 20.813
+}

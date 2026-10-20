@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless it has already completed address validation",
+    "interpretation_a": "The server always attempts to validate the token because it has not yet completed address validation for the client in the current connection.",
+    "interpretation_b": "The server may skip validation if it has already validated the client's address in a previous connection, treating the token as redundant.",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a clear definition of when address validation is considered completed, leading to two materially different implementation behaviours.",
+    "missing_information": "Definition of 'address validation' and the precise moment it is considered completed for the purpose of this clause."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T17:30:42.402561+00:00",
+  "document_id": "draft-ietf-quic-transport-18",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "a0c97c79f268e397d47aec88c918965bbad157186996f36e5711c81bb7e2ae81",
+  "lineage_ids": "lineage:3ec727e7800244fe3b4a19a6",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 5029,
+    "load_duration": 4818500,
+    "prompt_eval_count": 598,
+    "total_duration": 43461199400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"unless it has already completed address validation\",\n  \"interpretation_a\": \"The server always attempts to validate the token because it has not yet completed address validation for the client in the current connection.\",\n  \"interpretation_b\": \"The server may skip validation if it has already validated the client's address in a previous connection, treating the token as redundant.\",\n  \"missing_information\": \"Definition of 'address validation' and the precise moment it is considered completed for the purpose of this clause.\",\n  \"justification\": \"The clause lacks a clear definition of when address validation is considered completed, leading to two materially different implementation behaviours.\"\n}",
+  "record_id": "a2f184d93af950fb12c37347c319074e5a65758a93864dfaa3eb34160b4665ac",
+  "revision": "18",
+  "schema_version": 1,
+  "section_ids": "8.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 43.453
+}

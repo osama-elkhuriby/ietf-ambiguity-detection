@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "The server SHOULD also initiate path validation of the client using its preferred address and the address from which it received the client probe.",
+    "interpretation_a": "The server sends a PATH_CHALLENGE from its preferred address to the client’s address, expecting a PATH_RESPONSE from the client’s address.",
+    "interpretation_b": "The server sends a PATH_CHALLENGE from the client’s address to its own preferred address, expecting a PATH_RESPONSE from its own preferred address.",
+    "is_ambiguous": "yes",
+    "justification": "The target clause lacks a concrete constraint on the direction of the path validation frames, allowing two materially different implementation behaviours.",
+    "missing_information": "The clause does not specify which address is used as the source or destination for the PATH_CHALLENGE and PATH_RESPONSE frames, leaving the implementation choice open to interpretation."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T18:34:13.211489+00:00",
+  "document_id": "draft-ietf-quic-transport-17",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "96afd47f921cf7fc97f276bd08f58b5e2aeef3b597154a9822d3277297a01fe0",
+  "lineage_ids": "lineage:5f89cd79c77d77697d83f93e",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1737,
+    "load_duration": 4427000,
+    "prompt_eval_count": 615,
+    "total_duration": 14990303400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"The server SHOULD also initiate path validation of the client using its preferred address and the address from which it received the client probe.\",\n  \"interpretation_a\": \"The server sends a PATH_CHALLENGE from its preferred address to the client’s address, expecting a PATH_RESPONSE from the client’s address.\",\n  \"interpretation_b\": \"The server sends a PATH_CHALLENGE from the client’s address to its own preferred address, expecting a PATH_RESPONSE from its own preferred address.\",\n  \"missing_information\": \"The clause does not specify which address is used as the source or destination for the PATH_CHALLENGE and PATH_RESPONSE frames, leaving the implementation choice open to interpretation.\",\n  \"justification\": \"The target clause lacks a concrete constraint on the direction of the path validation frames, allowing two materially different implementation behaviours.\"\n}",
+  "record_id": "d396b2ef701bbeabcc49c7cc0f59c0d00f732e836d0c5787086e6c6305dca3b5",
+  "revision": "17",
+  "schema_version": 1,
+  "section_ids": "9.6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 15.0
+}

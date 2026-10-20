@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD be set to non-zero values",
+    "interpretation_a": "Implementations *should* set all applicable transport parameters to non-zero values, but may deviate.",
+    "interpretation_b": "Implementations *should* set at least one applicable transport parameter to a non-zero value, but may leave others at zero.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' combined with the lack of specificity regarding 'applicable subset' creates ambiguity. It's unclear if all parameters in the subset must be non-zero, or if only one or some are sufficient to satisfy the requirement.",
+    "missing_information": "The clause does not specify whether *all* applicable parameters must be non-zero, or just *some* of them. This affects implementation choices regarding which parameters to configure for 0-RTT."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:37:05.308504+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "d0b1decee760804fa7b9d67221bacdd2b5fd6cb47974b73a986138f2e460f0c8",
+  "lineage_ids": "lineage:b5d1dff1353ceff07258059d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 197,
+    "load_duration": 4086800,
+    "prompt_eval_count": 618,
+    "total_duration": 7435820800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD be set to non-zero values\", \"interpretation_a\": \"Implementations *should* set all applicable transport parameters to non-zero values, but may deviate.\", \"interpretation_b\": \"Implementations *should* set at least one applicable transport parameter to a non-zero value, but may leave others at zero.\", \"missing_information\": \"The clause does not specify whether *all* applicable parameters must be non-zero, or just *some* of them. This affects implementation choices regarding which parameters to configure for 0-RTT.\", \"justification\": \"The use of 'SHOULD' combined with the lack of specificity regarding 'applicable subset' creates ambiguity. It's unclear if all parameters in the subset must be non-zero, or if only one or some are sufficient to satisfy the requirement.\"}",
+  "record_id": "7eee96859df1674371b59e3e066f1d6bd0011a999b05c08f4d23cd72d2b8c42f",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.438
+}

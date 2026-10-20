@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "An endpoint MUST NOT send more than one ACK-frame-only packet in response to receiving an ACK-eliciting packet",
+    "interpretation_a": "An endpoint can send at most one ACK-frame-only packet per ACK-eliciting packet, regardless of how many ACK-eliciting packets are received in close succession.",
+    "interpretation_b": "An endpoint can send at most one ACK-frame-only packet *per instance* of receiving an ACK-eliciting packet. If multiple ACK-eliciting packets are received before an ACK-frame-only packet is sent, multiple ACK-frame-only packets could be sent.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'in response to receiving' is ambiguous. It could mean 'in response to each instance of receiving' or 'in response to the most recent instance of receiving'. The difference affects the implementation when multiple ACK-eliciting packets are received before an ACK-frame-only packet is sent.",
+    "missing_information": "The clause does not specify whether the restriction applies to each individual ACK-eliciting packet received, or to a window of ACK-eliciting packets. This affects how an endpoint handles multiple ACK-eliciting packets received before sending an ACK-frame-only packet."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:55:55.503104+00:00",
+  "document_id": "draft-ietf-quic-transport-23",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "21c2dad1b0ba9672cc539cdcc116c0abd33bb1d9b98033cb75c64f0a414e55c8",
+  "lineage_ids": "lineage:4d2b213ca0d3c31527954509",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 282,
+    "load_duration": 4235800,
+    "prompt_eval_count": 619,
+    "total_duration": 10457752600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"An endpoint MUST NOT send more than one ACK-frame-only packet in response to receiving an ACK-eliciting packet\", \"interpretation_a\": \"An endpoint can send at most one ACK-frame-only packet per ACK-eliciting packet, regardless of how many ACK-eliciting packets are received in close succession.\", \"interpretation_b\": \"An endpoint can send at most one ACK-frame-only packet *per instance* of receiving an ACK-eliciting packet. If multiple ACK-eliciting packets are received before an ACK-frame-only packet is sent, multiple ACK-frame-only packets could be sent.\", \"missing_information\": \"The clause does not specify whether the restriction applies to each individual ACK-eliciting packet received, or to a window of ACK-eliciting packets. This affects how an endpoint handles multiple ACK-eliciting packets received before sending an ACK-frame-only packet.\", \"justification\": \"The phrase 'in response to receiving' is ambiguous. It could mean 'in response to each instance of receiving' or 'in response to the most recent instance of receiving'. The difference affects the implementation when multiple ACK-eliciting packets are received before an ACK-frame-only packet is sent.\"}",
+  "record_id": "03a2e396c60b1afd6f960c87284bf20c0873c662c4aa0810e0dd46896b86359d",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "13.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.454
+}

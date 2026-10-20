@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD NOT attempt connection",
+    "interpretation_a": "Clients may attempt connection, even if no compatible protocol suites are present, but it is discouraged.",
+    "interpretation_b": "Clients must not attempt connection if no compatible protocol suites are present.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD NOT' introduces ambiguity. It could be interpreted as a strong recommendation against attempting connection (effectively a 'MUST NOT'), or as a weaker suggestion that clients can still attempt connection but it's not ideal. This affects implementation because a strict implementation would refuse to connect, while a more lenient one would still try.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:02:32.567981+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-00",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "2a152491376ebe3fcdccadca0a3d19a86d1a02c1bf3176ed5c7b9221c756ae80",
+  "lineage_ids": "lineage:fa67900cf188a33d89473ed5",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 157,
+    "load_duration": 4570400,
+    "prompt_eval_count": 642,
+    "total_duration": 6018199200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD NOT attempt connection\", \"interpretation_a\": \"Clients may attempt connection, even if no compatible protocol suites are present, but it is discouraged.\", \"interpretation_b\": \"Clients must not attempt connection if no compatible protocol suites are present.\", \"missing_information\": \"\", \"justification\": \"The use of 'SHOULD NOT' introduces ambiguity. It could be interpreted as a strong recommendation against attempting connection (effectively a 'MUST NOT'), or as a weaker suggestion that clients can still attempt connection but it's not ideal. This affects implementation because a strict implementation would refuse to connect, while a more lenient one would still try.\"}",
+  "record_id": "4ffc596e8827827c2c55a50a5d577ff626e629668a83176f76d074c7a02fea91",
+  "revision": "00",
+  "schema_version": 1,
+  "section_ids": "6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.015
+}

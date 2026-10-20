@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "cannot be supported",
+    "interpretation_a": "The server can reject 0-RTT data if it cannot support *any* of the implied transport parameter values.",
+    "interpretation_b": "The server can reject 0-RTT data if it cannot support *all* of the implied transport parameter values.",
+    "is_ambiguous": "yes",
+    "justification": "The word 'cannot' is ambiguous. Does it mean 'none of' or 'not all of'? This affects how a server must evaluate the implied values and whether it rejects the 0-RTT data.",
+    "missing_information": "The clause does not specify whether the server must support all implied values or any of them. This affects implementation because a server might be able to support some, but not all, of the implied values."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:13:44.316806+00:00",
+  "document_id": "draft-ietf-quic-transport-30",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "294bd93bfdb09d5da29ec195915ddb4d5f0ac1a6423756d84c0ace55bfe42c0f",
+  "lineage_ids": "lineage:07b0ee4a4866f5dc033c3769",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 184,
+    "load_duration": 5726100,
+    "prompt_eval_count": 620,
+    "total_duration": 6991308000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"cannot be supported\", \"interpretation_a\": \"The server can reject 0-RTT data if it cannot support *any* of the implied transport parameter values.\", \"interpretation_b\": \"The server can reject 0-RTT data if it cannot support *all* of the implied transport parameter values.\", \"missing_information\": \"The clause does not specify whether the server must support all implied values or any of them. This affects implementation because a server might be able to support some, but not all, of the implied values.\", \"justification\": \"The word 'cannot' is ambiguous. Does it mean 'none of' or 'not all of'? This affects how a server must evaluate the implied values and whether it rejects the 0-RTT data.\"}",
+  "record_id": "393f94db4f603f8998ad3e2f52fa3da24a78927bd8395d9917d7da2b64f694a1",
+  "revision": "30",
+  "schema_version": 1,
+  "section_ids": "7.4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.984
+}

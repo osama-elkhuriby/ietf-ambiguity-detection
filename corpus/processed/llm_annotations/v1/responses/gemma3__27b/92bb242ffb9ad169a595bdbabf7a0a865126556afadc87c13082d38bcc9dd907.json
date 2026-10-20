@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST use only one",
+    "interpretation_a": "The client selects the *first* Retry packet received and discards all others.",
+    "interpretation_b": "The client selects the *last* Retry packet received and discards all others.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states that clients MUST use only one Retry packet, but it doesn't specify *which* one. This creates ambiguity as to whether the client should prioritize the first received, the last received, or some other criteria. Without a clear selection mechanism, implementations could diverge.",
+    "missing_information": "The draft does not specify which Retry packet the client should select when multiple are received. This affects implementation because different implementations could choose different packets, leading to interoperability issues."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:42:55.155315+00:00",
+  "document_id": "draft-ietf-quic-tls-12",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "6a611bbda00938d862aaa0ca27c680c36e532d8007030671000ec3aa40253dc4",
+  "lineage_ids": "lineage:732cff82d99990320477abb9",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 179,
+    "load_duration": "",
+    "prompt_eval_count": 543,
+    "total_duration": 6765065100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST use only one\", \"interpretation_a\": \"The client selects the *first* Retry packet received and discards all others.\", \"interpretation_b\": \"The client selects the *last* Retry packet received and discards all others.\", \"missing_information\": \"The draft does not specify which Retry packet the client should select when multiple are received. This affects implementation because different implementations could choose different packets, leading to interoperability issues.\", \"justification\": \"The clause states that clients MUST use only one Retry packet, but it doesn't specify *which* one. This creates ambiguity as to whether the client should prioritize the first received, the last received, or some other criteria. Without a clear selection mechanism, implementations could diverge.\"}",
+  "record_id": "92bb242ffb9ad169a595bdbabf7a0a865126556afadc87c13082d38bcc9dd907",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "7.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.766
+}

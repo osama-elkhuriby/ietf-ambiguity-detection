@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST only resume if the new SNI value is valid",
+    "interpretation_a": "The client is required to validate the new SNI against the server certificate, and resume only if the validation succeeds.",
+    "interpretation_b": "The client is required to validate the new SNI, but the validation criteria are not defined. It could be a simple check for format, or a full DNS lookup and certificate verification.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states the SNI value must be 'valid', but does not define what 'valid' means. This could range from a simple format check to a full DNS resolution and certificate verification, leading to different implementations.",
+    "missing_information": "The definition of 'valid' is missing. What constitutes a valid SNI is not specified, leaving room for different implementations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:33:06.874799+00:00",
+  "document_id": "draft-ietf-tls-tls13-24",
+  "family_id": "draft-ietf-tls-tls13",
+  "input_fingerprint": "b7a9ee387b0167ffaf76ecaa76112b3b0ca49597eba4eb20bcc952f60eba5b7f",
+  "lineage_ids": "lineage:d685e3861f3be38e84bf4eb5",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 192,
+    "load_duration": 8052600,
+    "prompt_eval_count": 580,
+    "total_duration": 7418524200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST only resume if the new SNI value is valid\", \"interpretation_a\": \"The client is required to validate the new SNI against the server certificate, and resume only if the validation succeeds.\", \"interpretation_b\": \"The client is required to validate the new SNI, but the validation criteria are not defined. It could be a simple check for format, or a full DNS lookup and certificate verification.\", \"missing_information\": \"The definition of 'valid' is missing. What constitutes a valid SNI is not specified, leaving room for different implementations.\",\"justification\": \"The clause states the SNI value must be 'valid', but does not define what 'valid' means. This could range from a simple format check to a full DNS resolution and certificate verification, leading to different implementations.\"}",
+  "record_id": "2284fce571b6f37b2ccc2d1c2916d2dfcd7e8cc6667fbe6a8ca1c36d3a76a9af",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "4.6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.438
+}

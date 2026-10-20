@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD NOT",
+    "interpretation_a": "Servers are discouraged from using PING frames, but may do so in specific circumstances if they have a good reason.",
+    "interpretation_b": "Servers are strictly prohibited from using PING frames under any circumstances.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD NOT' is ambiguous. While it indicates a preference against using PING frames, it doesn't explicitly prohibit it. This allows for different interpretations of whether servers are allowed to use PING frames in certain scenarios, leading to potentially inconsistent implementations.",
+    "missing_information": "The strength of 'SHOULD NOT' is unclear. Is it a strong recommendation, or a near-prohibition? The lack of a clear definition of acceptable exceptions creates ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:05:47.642999+00:00",
+  "document_id": "draft-ietf-quic-http-17",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "262ac5a9ca0ed7300da1d4de8b93cf110c78789cad59666c071c04d7aceb8819",
+  "lineage_ids": "lineage:5ebd8b9a11df96f6b6555290",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 183,
+    "load_duration": 9739000,
+    "prompt_eval_count": 579,
+    "total_duration": 7078316200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD NOT\", \"interpretation_a\": \"Servers are discouraged from using PING frames, but may do so in specific circumstances if they have a good reason.\", \"interpretation_b\": \"Servers are strictly prohibited from using PING frames under any circumstances.\", \"missing_information\": \"The strength of 'SHOULD NOT' is unclear. Is it a strong recommendation, or a near-prohibition? The lack of a clear definition of acceptable exceptions creates ambiguity.\", \"justification\": \"The use of 'SHOULD NOT' is ambiguous. While it indicates a preference against using PING frames, it doesn't explicitly prohibit it. This allows for different interpretations of whether servers are allowed to use PING frames in certain scenarios, leading to potentially inconsistent implementations.\"}",
+  "record_id": "c08cf48f23ce6dd9c4740be1a47445d105d9444fa74e8f14acaaf09a1a038813",
+  "revision": "17",
+  "schema_version": 1,
+  "section_ids": "6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.078
+}

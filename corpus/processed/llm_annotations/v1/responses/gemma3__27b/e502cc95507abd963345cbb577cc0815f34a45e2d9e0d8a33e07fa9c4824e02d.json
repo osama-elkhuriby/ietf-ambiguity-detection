@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "If the initial_version is different from the version of QUIC that is in use",
+    "interpretation_a": "The server checks if it *would have* sent a version negotiation packet for the received `initial_version` even if it's currently using a different QUIC version. This implies a hypothetical scenario.",
+    "interpretation_b": "The server checks if it *should have* sent a version negotiation packet based on its current configuration and the received `initial_version`. This implies a current-state check.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'would have sent' is ambiguous. It's unclear whether the server is supposed to simulate a past event or evaluate its current state. This affects how the server validates the `initial_version`.",
+    "missing_information": "The meaning of 'would have sent' is unclear. Does it refer to a hypothetical scenario of receiving a packet with that version, or a check against the server's current configuration?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:11:28.498617+00:00",
+  "document_id": "draft-ietf-quic-transport-09",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "7bcc62d5981942d315fb926e2be731a0961816a7ea75c48f195a3c92f8fff7df",
+  "lineage_ids": "lineage:67bebda51dd07a80af7e44ad",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 225,
+    "load_duration": 5129100,
+    "prompt_eval_count": 625,
+    "total_duration": 8451454100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"If the initial_version is different from the version of QUIC that is in use\", \"interpretation_a\": \"The server checks if it *would have* sent a version negotiation packet for the received `initial_version` even if it's currently using a different QUIC version. This implies a hypothetical scenario.\", \"interpretation_b\": \"The server checks if it *should have* sent a version negotiation packet based on its current configuration and the received `initial_version`. This implies a current-state check.\", \"missing_information\": \"The meaning of 'would have sent' is unclear. Does it refer to a hypothetical scenario of receiving a packet with that version, or a check against the server's current configuration?\",\"justification\": \"The phrase 'would have sent' is ambiguous. It's unclear whether the server is supposed to simulate a past event or evaluate its current state. This affects how the server validates the `initial_version`.\"}",
+  "record_id": "e502cc95507abd963345cbb577cc0815f34a45e2d9e0d8a33e07fa9c4824e02d",
+  "revision": "09",
+  "schema_version": 1,
+  "section_ids": "7.4.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.469
+}

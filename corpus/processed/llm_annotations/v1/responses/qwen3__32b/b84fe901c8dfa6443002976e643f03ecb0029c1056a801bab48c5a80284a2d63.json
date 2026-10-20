@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause provides a clear constraint: the Source Connection ID in the Retry packet must not be equal to the Destination Connection ID from the client's packet. There is no ambiguity in the wording or in the requirement, as it directly specifies a condition that must be avoided. The clause is unambiguous and does not allow for multiple materially different interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:35:51.701871+00:00",
+  "document_id": "draft-ietf-quic-transport-28",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "daaca58fd5d99d89616e5c3fa8ec824914d6bfd11ae78e9696ec8f144ac86270",
+  "lineage_ids": "lineage:ee7a7a1e26cd70e2e863b78b",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 125,
+    "load_duration": 4233200,
+    "prompt_eval_count": 541,
+    "total_duration": 5130645400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause provides a clear constraint: the Source Connection ID in the Retry packet must not be equal to the Destination Connection ID from the client's packet. There is no ambiguity in the wording or in the requirement, as it directly specifies a condition that must be avoided. The clause is unambiguous and does not allow for multiple materially different interpretations.\"\n}",
+  "record_id": "b84fe901c8dfa6443002976e643f03ecb0029c1056a801bab48c5a80284a2d63",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "17.2.5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.125
+}

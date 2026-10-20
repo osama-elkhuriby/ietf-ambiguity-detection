@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "clients SHOULD process only the first occurrence",
+    "interpretation_a": "A client might choose to process the first occurrence and ignore subsequent ones, even if they are valid and supported.",
+    "interpretation_b": "A client might choose to log an error or warning upon encountering a second occurrence, but still process the first one.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' introduces discretion, and the lack of a clear definition of 'process' creates ambiguity about the expected behaviour when multiple 'quic' parameters are present. While the first part of the sentence is a MUST, the second part is only a SHOULD, allowing for different interpretations.",
+    "missing_information": "The clause does not specify what 'process' means in the context of multiple occurrences. Does 'process' mean 'accept and use', 'parse and validate', or something else? Without this clarification, implementations could differ on how they handle the second occurrence, even after ignoring it."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:01:16.806686+00:00",
+  "document_id": "draft-ietf-quic-http-23",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "c59eecb9641fae8f292e98575b7b589d5a2cd54b6f586f9e2f8656f5bdc89f0a",
+  "lineage_ids": "lineage:da28b02d19c81161a2bc7fb9",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 221,
+    "load_duration": 13495300,
+    "prompt_eval_count": 578,
+    "total_duration": 8486701600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"clients SHOULD process only the first occurrence\", \"interpretation_a\": \"A client might choose to process the first occurrence and ignore subsequent ones, even if they are valid and supported.\", \"interpretation_b\": \"A client might choose to log an error or warning upon encountering a second occurrence, but still process the first one.\", \"missing_information\": \"The clause does not specify what 'process' means in the context of multiple occurrences. Does 'process' mean 'accept and use', 'parse and validate', or something else? Without this clarification, implementations could differ on how they handle the second occurrence, even after ignoring it.\",\"justification\": \"The use of 'SHOULD' introduces discretion, and the lack of a clear definition of 'process' creates ambiguity about the expected behaviour when multiple 'quic' parameters are present. While the first part of the sentence is a MUST, the second part is only a SHOULD, allowing for different interpretations.\"}",
+  "record_id": "a48720e050d9c6d72946f48da38930640103732c5f6052ababa0a9fc6ed80592",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "3.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.5
+}

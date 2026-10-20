@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "A server that does not support any kind of range request for the target resource MAY send",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The target clause is incomplete, lacking the object of the MAY send action, which creates an under‑specification that could lead to different implementation behaviours.",
+    "missing_information": "The clause does not specify what the server may send; it is incomplete without the header name/value pair (e.g., Accept-Ranges: none)."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T08:14:11.923207+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "a0ed5d9ad255612270f750dc668f4559364c2f989b635b9afdc1d17878bc569d",
+  "lineage_ids": "lineage:b5d04cba09cd8930b79f20b9",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 4385,
+    "load_duration": 4568200,
+    "prompt_eval_count": 575,
+    "total_duration": 37888317300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"A server that does not support any kind of range request for the target resource MAY send\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The clause does not specify what the server may send; it is incomplete without the header name/value pair (e.g., Accept-Ranges: none).\",\n  \"justification\": \"The target clause is incomplete, lacking the object of the MAY send action, which creates an under‑specification that could lead to different implementation behaviours.\"\n}",
+  "record_id": "dfd8ade911d9969830dcc0f91a8369ab6ba66ef8d6dce1420eab75af1265c142",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "14.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 37.891
+}

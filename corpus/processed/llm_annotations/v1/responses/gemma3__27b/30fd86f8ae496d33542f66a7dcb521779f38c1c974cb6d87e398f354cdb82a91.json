@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "The server SHOULD abort sending the resource",
+    "interpretation_a": "The server is required to make a best-effort attempt to stop sending the resource, but may not be able to if the resource is already substantially in transit.",
+    "interpretation_b": "The server is required to immediately cease sending the resource, even if this results in incomplete data transmission or other disruption.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' combined with the lack of a precise definition of 'abort' creates ambiguity. A reasonable implementation could interpret 'abort' as an immediate stop, while another could interpret it as a best-effort attempt, leading to different behaviors.",
+    "missing_information": "The clause does not specify what constitutes 'aborting' the resource transmission. Does it require immediate cessation, or merely a best-effort attempt to stop? This affects implementation of stream termination and potential data loss."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:45:18.619544+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "73b6a4643479816f5ba3795d89d76ee44335e8ec1bda3a350121257871874364",
+  "lineage_ids": "lineage:e126e04bc6801fad1cd0aa8d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 209,
+    "load_duration": 20065100,
+    "prompt_eval_count": 617,
+    "total_duration": 8033059000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"The server SHOULD abort sending the resource\", \"interpretation_a\": \"The server is required to make a best-effort attempt to stop sending the resource, but may not be able to if the resource is already substantially in transit.\", \"interpretation_b\": \"The server is required to immediately cease sending the resource, even if this results in incomplete data transmission or other disruption.\", \"missing_information\": \"The clause does not specify what constitutes 'aborting' the resource transmission. Does it require immediate cessation, or merely a best-effort attempt to stop? This affects implementation of stream termination and potential data loss.\", \"justification\": \"The use of 'SHOULD' combined with the lack of a precise definition of 'abort' creates ambiguity. A reasonable implementation could interpret 'abort' as an immediate stop, while another could interpret it as a best-effort attempt, leading to different behaviors.\"}",
+  "record_id": "30fd86f8ae496d33542f66a7dcb521779f38c1c974cb6d87e398f354cdb82a91",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.031
+}

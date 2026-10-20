@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "data limits",
+    "interpretation_a": "The 'data limits' could refer to the maximum packet size allowed by the peer, preventing fragmentation.",
+    "interpretation_b": "The 'data limits' could refer to the flow control window size, preventing sending more data than the receiver can buffer.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'data limits' is not defined within the provided context. This leaves room for multiple interpretations regarding what constitutes being 'within the data limits', leading to different implementation choices.",
+    "missing_information": "The definition of 'data limits' is not provided within this excerpt. It is unclear whether this refers to packet size limits, flow control limits, or some other constraint."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:27:42.014664+00:00",
+  "document_id": "draft-ietf-quic-transport-16",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "f5518e70bc2625daf2ed59ca4ceb8d8855db2e03672456041493518b4d530681",
+  "lineage_ids": "lineage:06ec900440b62d9b07f99280",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 169,
+    "load_duration": 4949700,
+    "prompt_eval_count": 584,
+    "total_duration": 6453601600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"data limits\", \"interpretation_a\": \"The 'data limits' could refer to the maximum packet size allowed by the peer, preventing fragmentation.\", \"interpretation_b\": \"The 'data limits' could refer to the flow control window size, preventing sending more data than the receiver can buffer.\", \"missing_information\": \"The definition of 'data limits' is not provided within this excerpt. It is unclear whether this refers to packet size limits, flow control limits, or some other constraint.\", \"justification\": \"The phrase 'data limits' is not defined within the provided context. This leaves room for multiple interpretations regarding what constitutes being 'within the data limits', leading to different implementation choices.\"}",
+  "record_id": "602f19b53d688774de3d5f16b253a264f8ed60a57a2b02d42776aa396de5c722",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.453
+}

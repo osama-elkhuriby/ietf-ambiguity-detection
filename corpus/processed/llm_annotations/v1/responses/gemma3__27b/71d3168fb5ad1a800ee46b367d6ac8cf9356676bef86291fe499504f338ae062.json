@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "actively opens a TCP connection",
+    "interpretation_a": "The application initiates the connection (e.g., using the connect() system call).",
+    "interpretation_b": "The application responds to an incoming connection request (e.g., using accept()) and then initiates further communication.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'actively opens' is vague. It's unclear whether it applies only to initiating a connection or also to responding to an incoming connection request and then sending data. This affects how the source route precedence rule is applied.",
+    "missing_information": "The meaning of 'actively opens' is not clearly defined. Does it refer only to initiating a connection, or also to responding to an incoming connection request and then sending data?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:23:26.158300+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-10",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "ccf67a82c777da95137611f86335afc2c37baa14082d08c66e86c8c6ef2924b2",
+  "lineage_ids": "lineage:f9ea23fa8322926752310aa9",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 178,
+    "load_duration": 8586300,
+    "prompt_eval_count": 604,
+    "total_duration": 6934939800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"actively opens a TCP connection\", \"interpretation_a\": \"The application initiates the connection (e.g., using the connect() system call).\", \"interpretation_b\": \"The application responds to an incoming connection request (e.g., using accept()) and then initiates further communication.\", \"missing_information\": \"The meaning of 'actively opens' is not clearly defined. Does it refer only to initiating a connection, or also to responding to an incoming connection request and then sending data?\",\"justification\": \"The phrase 'actively opens' is vague. It's unclear whether it applies only to initiating a connection or also to responding to an incoming connection request and then sending data. This affects how the source route precedence rule is applied.\"}",
+  "record_id": "71d3168fb5ad1a800ee46b367d6ac8cf9356676bef86291fe499504f338ae062",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "3.9.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.938
+}

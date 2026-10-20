@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "other",
+    "evidence_span": "SHOULD repeatedly acknowledge",
+    "interpretation_a": "The receiver should prioritize acknowledging newer packets, even if it means resending acknowledgements for those packets.",
+    "interpretation_b": "The receiver should acknowledge newer packets more frequently than older packets, but doesn't necessarily need to *repeatedly* acknowledge them if a single acknowledgement suffices.",
+    "is_ambiguous": "yes",
+    "justification": "The word \"repeatedly\" is vague. Does it mean acknowledging every new packet, or simply acknowledging them more often than older packets? Both interpretations are reasonable.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:59:01.362071+00:00",
+  "document_id": "draft-ietf-quic-transport-27",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "e4be4341e57c4546bb3427563e5ad0b5ee6753cd67803c0178a7362ec80a2ff0",
+  "lineage_ids": "lineage:0f8a6db96681a97729cf2c06",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 138,
+    "load_duration": 5811700,
+    "prompt_eval_count": 552,
+    "total_duration": 5287830600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"other\", \"evidence_span\": \"SHOULD repeatedly acknowledge\", \"interpretation_a\": \"The receiver should prioritize acknowledging newer packets, even if it means resending acknowledgements for those packets.\", \"interpretation_b\": \"The receiver should acknowledge newer packets more frequently than older packets, but doesn't necessarily need to *repeatedly* acknowledge them if a single acknowledgement suffices.\", \"missing_information\": \"\", \"justification\": \"The word \\\"repeatedly\\\" is vague. Does it mean acknowledging every new packet, or simply acknowledging them more often than older packets? Both interpretations are reasonable.\"}",
+  "record_id": "11394fcf98be5a76620760e2c68f6fb9d9d147c0fd994bb56bcaf21716237477",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "13.2.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.297
+}

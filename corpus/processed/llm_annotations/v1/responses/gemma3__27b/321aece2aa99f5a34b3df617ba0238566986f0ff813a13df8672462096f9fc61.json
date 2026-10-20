@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD NOT exceed 1/8 RTT",
+    "interpretation_a": "The receiver must stop sending immediate ACKs for in-order packets after 1/8 RTT, even if no out-of-order packets have arrived.",
+    "interpretation_b": "The receiver must stop sending immediate ACKs for in-order packets after 1/8 RTT *if* out-of-order packets have not arrived, but may continue if they have.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"unless more out-of-order packets arrive\" modifies \"SHOULD NOT exceed 1/8 RTT\" but it is unclear if the limit is conditional on the arrival of out-of-order packets, or if the limit is always in effect unless out-of-order packets *prevent* it.",
+    "missing_information": "The clause does not clearly state whether the 1/8 RTT limit applies regardless of whether out-of-order packets arrive, or only when they do not. This affects the duration of sending immediate ACKs for in-order packets."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:18:14.366932+00:00",
+  "document_id": "draft-ietf-quic-recovery-22",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "627f49f67f0f46de4df7bee9b29f9d39137e67460b053b2e23a58afdb7134eaa",
+  "lineage_ids": "lineage:c0388a2b44fbd7fee6d14906",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 251,
+    "load_duration": 4268200,
+    "prompt_eval_count": 592,
+    "total_duration": 9349268400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD NOT exceed 1/8 RTT\", \"interpretation_a\": \"The receiver must stop sending immediate ACKs for in-order packets after 1/8 RTT, even if no out-of-order packets have arrived.\", \"interpretation_b\": \"The receiver must stop sending immediate ACKs for in-order packets after 1/8 RTT *if* out-of-order packets have not arrived, but may continue if they have.\", \"missing_information\": \"The clause does not clearly state whether the 1/8 RTT limit applies regardless of whether out-of-order packets arrive, or only when they do not. This affects the duration of sending immediate ACKs for in-order packets.\", \"justification\": \"The phrase \\\"unless more out-of-order packets arrive\\\" modifies \\\"SHOULD NOT exceed 1/8 RTT\\\" but it is unclear if the limit is conditional on the arrival of out-of-order packets, or if the limit is always in effect unless out-of-order packets *prevent* it.\"}",
+  "record_id": "321aece2aa99f5a34b3df617ba0238566986f0ff813a13df8672462096f9fc61",
+  "revision": "22",
+  "schema_version": 1,
+  "section_ids": "4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.359
+}

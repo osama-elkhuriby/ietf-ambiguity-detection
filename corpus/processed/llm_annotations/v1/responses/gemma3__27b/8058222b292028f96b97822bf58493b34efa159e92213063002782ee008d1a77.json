@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY specify additional constraints",
+    "interpretation_a": "The registry creation process can *optionally* include additional constraints, meaning some registries will have them and some won't.",
+    "interpretation_b": "The registry creation process *must* specify whether or not additional constraints are present, but the constraints themselves are optional.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' combined with 'specify additional constraints' is ambiguous. Does it mean that the creation process *may* include additional constraints, or that it *may* specify whether additional constraints exist (even if they are none)? This affects how a registry creator would implement the process.",
+    "missing_information": "It is unclear whether the 'additional constraints' are optional, or the specification of their presence/absence is optional. The meaning of 'specify' is also unclear - does it mean 'include' or 'indicate the existence of'?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:37:48.080708+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "5d35d468478f5327085142221917f6ec8d31393e778029b1d86a104964d8c288",
+  "lineage_ids": "lineage:5d314bff2d468250fb989f2d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 210,
+    "load_duration": 5121100,
+    "prompt_eval_count": 582,
+    "total_duration": 7909098500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY specify additional constraints\", \"interpretation_a\": \"The registry creation process can *optionally* include additional constraints, meaning some registries will have them and some won't.\", \"interpretation_b\": \"The registry creation process *must* specify whether or not additional constraints are present, but the constraints themselves are optional.\", \"missing_information\": \"It is unclear whether the 'additional constraints' are optional, or the specification of their presence/absence is optional. The meaning of 'specify' is also unclear - does it mean 'include' or 'indicate the existence of'?\",\"justification\": \"The use of 'MAY' combined with 'specify additional constraints' is ambiguous. Does it mean that the creation process *may* include additional constraints, or that it *may* specify whether additional constraints exist (even if they are none)? This affects how a registry creator would implement the process.\"}",
+  "record_id": "8058222b292028f96b97822bf58493b34efa159e92213063002782ee008d1a77",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "22.1.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.937
+}

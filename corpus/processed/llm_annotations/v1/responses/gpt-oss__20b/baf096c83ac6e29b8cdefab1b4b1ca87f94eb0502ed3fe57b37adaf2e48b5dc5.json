@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that packets protected with 1‑RTT keys may be stored and later decrypted and used after the TLS handshake completes. The use of MAY indicates optionality, not ambiguity, and the timing of decryption is clearly tied to the completion of the handshake that generates the 1‑RTT keys. No two materially different interpretations or missing constraints are evident.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T13:05:05.585554+00:00",
+  "document_id": "draft-ietf-quic-tls-20",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "bf00e5ac8000e697dc45f97b74e75ea547f55f72636e09093958691bb1ecd2d1",
+  "lineage_ids": "lineage:8bbcd960f2c7c2da5b045935",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2707,
+    "load_duration": 4454400,
+    "prompt_eval_count": 587,
+    "total_duration": 23315778100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that packets protected with 1‑RTT keys may be stored and later decrypted and used after the TLS handshake completes. The use of MAY indicates optionality, not ambiguity, and the timing of decryption is clearly tied to the completion of the handshake that generates the 1‑RTT keys. No two materially different interpretations or missing constraints are evident.\"\n}",
+  "record_id": "baf096c83ac6e29b8cdefab1b4b1ca87f94eb0502ed3fe57b37adaf2e48b5dc5",
+  "revision": "20",
+  "schema_version": 1,
+  "section_ids": "5.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 23.328
+}

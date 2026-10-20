@@ -1,0 +1,37 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "are OPTIONAL for publishing and using SVCB and HTTPS RRs",
+    "interpretation_a": "DNSSEC signing and validation are not required, and implementations may choose to ignore them.",
+    "interpretation_b": "DNSSEC signing and validation are recommended, but not enforced, and implementations should support them if available.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'are OPTIONAL' is incomplete. It doesn't specify whether DNSSEC is optional for the server publishing the records, the client consuming them, or both. This leads to two reasonable interpretations about the level of DNSSEC support required in implementations.",
+    "missing_information": "The clause does not specify whether clients *should* validate DNSSEC signatures if present, or whether servers *should* sign responses with DNSSEC. This affects implementation choices regarding DNSSEC support."
+  },
+  "attempts": 3,
+  "created_at": "2026-10-07T23:59:10.013154+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-08",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "96b86ed6610ea25917c43fc5d87f245fe15f87967c3db64ed0ef083ced8474c4",
+  "lineage_ids": "lineage:6fadf368858e837638724b5f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 192,
+    "load_duration": 5866300,
+    "prompt_eval_count": 803,
+    "total_duration": 7263706100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"are OPTIONAL for publishing and using SVCB and HTTPS RRs\", \"interpretation_a\": \"DNSSEC signing and validation are not required, and implementations may choose to ignore them.\", \"interpretation_b\": \"DNSSEC signing and validation are recommended, but not enforced, and implementations should support them if available.\", \"missing_information\": \"The clause does not specify whether clients *should* validate DNSSEC signatures if present, or whether servers *should* sign responses with DNSSEC. This affects implementation choices regarding DNSSEC support.\",\"justification\": \"The phrase 'are OPTIONAL' is incomplete. It doesn't specify whether DNSSEC is optional for the server publishing the records, the client consuming them, or both. This leads to two reasonable interpretations about the level of DNSSEC support required in implementations.\"}",
+  "record_id": "1c290f17ecda0f7a1945745c0c37341fff47bc9c8e52fea4272ef3cf35c75891",
+  "revision": "08",
+  "schema_version": 1,
+  "section_ids": "13",
+  "status": "invalid",
+  "validation_errors": [
+    "evidence_span is not an exact target-clause substring"
+  ],
+  "wall_seconds": 27.5
+}

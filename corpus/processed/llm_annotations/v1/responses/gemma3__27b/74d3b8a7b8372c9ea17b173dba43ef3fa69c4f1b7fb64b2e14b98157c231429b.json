@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "TCP MUST ask the IP layer to select a local IP address",
+    "interpretation_a": "The TCP stack immediately requests an IP address upon connection initiation, even if one is already available or preferred.",
+    "interpretation_b": "The TCP stack only requests an IP address if it determines that no suitable local IP address is currently known or configured, potentially deferring the request until a later stage.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'ask the IP layer to select' is incomplete. It doesn't specify *when* the TCP stack should ask. Does it ask every time, or only when it doesn't have a suitable address? This missing condition creates ambiguity in implementation.",
+    "missing_information": "The clause does not specify the conditions under which the TCP stack should request an IP address. It's unclear if the request is unconditional or contingent on the availability of a suitable local IP address."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:23:46.867412+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-14",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "519eaf3f27b8c89631997d29a59dd1cae106ff3d3f5d92bffab70c764037ec6e",
+  "lineage_ids": "lineage:ce7444b9d9e26c2d5c75be74",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 211,
+    "load_duration": 5678100,
+    "prompt_eval_count": 623,
+    "total_duration": 8114788400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"TCP MUST ask the IP layer to select a local IP address\", \"interpretation_a\": \"The TCP stack immediately requests an IP address upon connection initiation, even if one is already available or preferred.\", \"interpretation_b\": \"The TCP stack only requests an IP address if it determines that no suitable local IP address is currently known or configured, potentially deferring the request until a later stage.\", \"missing_information\": \"The clause does not specify the conditions under which the TCP stack should request an IP address. It's unclear if the request is unconditional or contingent on the availability of a suitable local IP address.\", \"justification\": \"The phrase 'ask the IP layer to select' is incomplete. It doesn't specify *when* the TCP stack should ask. Does it ask every time, or only when it doesn't have a suitable address? This missing condition creates ambiguity in implementation.\"}",
+  "record_id": "74d3b8a7b8372c9ea17b173dba43ef3fa69c4f1b7fb64b2e14b98157c231429b",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "3.9.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.125
+}

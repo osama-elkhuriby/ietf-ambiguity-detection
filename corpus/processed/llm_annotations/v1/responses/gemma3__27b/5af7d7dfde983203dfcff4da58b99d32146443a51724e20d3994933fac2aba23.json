@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "stream larger than this limit",
+    "interpretation_a": "The limit refers to the stream ID (a 62-bit value).",
+    "interpretation_b": "The limit refers to the number of concurrent streams (a 60-bit value).",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'stream larger than this limit' is ambiguous because 'this limit' could refer to either the maximum stream ID or the maximum number of streams. The previous clause mentions a limit of 2^62-1 for stream IDs, while the context implies a limit of 2^60 for the number of streams. Without clarification, implementations could reasonably interpret 'this limit' in either way, leading to different error handling.",
+    "missing_information": "It is unclear whether 'this limit' refers to the maximum stream ID or the maximum number of streams. Both are mentioned in the surrounding text and could be reasonable interpretations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:26:38.557737+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "a50cf4c5463c34a46e2ead47a6e15df1e5cebd39b81beecdf8e224e0ee40cf50",
+  "lineage_ids": "lineage:b4406ffa10b76777df03ccb0",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 215,
+    "load_duration": 4262400,
+    "prompt_eval_count": 598,
+    "total_duration": 8100315000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"stream larger than this limit\", \"interpretation_a\": \"The limit refers to the stream ID (a 62-bit value).\", \"interpretation_b\": \"The limit refers to the number of concurrent streams (a 60-bit value).\", \"missing_information\": \"It is unclear whether 'this limit' refers to the maximum stream ID or the maximum number of streams. Both are mentioned in the surrounding text and could be reasonable interpretations.\",\"justification\": \"The phrase 'stream larger than this limit' is ambiguous because 'this limit' could refer to either the maximum stream ID or the maximum number of streams. The previous clause mentions a limit of 2^62-1 for stream IDs, while the context implies a limit of 2^60 for the number of streams. Without clarification, implementations could reasonably interpret 'this limit' in either way, leading to different error handling.\"}",
+  "record_id": "5af7d7dfde983203dfcff4da58b99d32146443a51724e20d3994933fac2aba23",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "19.11",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.094
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Sending keys MUST be updated before sending an acknowledgement",
+    "interpretation_a": "The keys must be updated *immediately* before sending the acknowledgement, as a single atomic operation.",
+    "interpretation_b": "The keys can be updated at any point *prior* to sending the acknowledgement, allowing for other processing to occur in between.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'before sending' does not specify how close in time the key update must be to the sending of the acknowledgement. This allows for multiple reasonable interpretations regarding the timing of the key update.",
+    "missing_information": "The degree of temporal coupling between key update and acknowledgement is not specified. Is it an immediate, atomic operation, or can other actions occur between the two?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:38:44.119691+00:00",
+  "document_id": "draft-ietf-quic-tls-33",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "9d642ce9cd2fd77708bf00eb7f76476708e38e1aa83b970c015b9b87af3e3299",
+  "lineage_ids": "lineage:807ba53997db000c88b1cf6c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 176,
+    "load_duration": 3540800,
+    "prompt_eval_count": 606,
+    "total_duration": 6950910200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Sending keys MUST be updated before sending an acknowledgement\", \"interpretation_a\": \"The keys must be updated *immediately* before sending the acknowledgement, as a single atomic operation.\", \"interpretation_b\": \"The keys can be updated at any point *prior* to sending the acknowledgement, allowing for other processing to occur in between.\", \"missing_information\": \"The degree of temporal coupling between key update and acknowledgement is not specified. Is it an immediate, atomic operation, or can other actions occur between the two?\", \"justification\": \"The phrase 'before sending' does not specify how close in time the key update must be to the sending of the acknowledgement. This allows for multiple reasonable interpretations regarding the timing of the key update.\"}",
+  "record_id": "539a1d68933458a622e8abc453abb0badd86aa2fb43aed6b12cd30d67094b16c",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.954
+}

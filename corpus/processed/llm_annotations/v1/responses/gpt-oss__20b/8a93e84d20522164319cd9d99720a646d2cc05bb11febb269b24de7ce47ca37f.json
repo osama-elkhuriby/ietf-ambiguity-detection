@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "indicate that a stream has not been processed",
+    "interpretation_a": "The server may use a REFUSED_STREAM frame to signal that the stream was not processed.",
+    "interpretation_b": "The server may use a RST_STREAM frame (with any error code) to signal that the stream was not processed.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify which frame(s) constitute \"indicating\" that a stream has not been processed, leaving two reasonable implementation choices.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T04:32:26.430588+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "b4dd61dedecb0984960385a369fe50ea4d285eb98953a2255f60f34d213f0263",
+  "lineage_ids": "lineage:92000cdc2c7e98d69490ae9f",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 282,
+    "load_duration": 5310800,
+    "prompt_eval_count": 780,
+    "total_duration": 2636669800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-1\",\n  \"evidence_span\": \"indicate that a stream has not been processed\",\n  \"interpretation_a\": \"The server may use a REFUSED_STREAM frame to signal that the stream was not processed.\",\n  \"interpretation_b\": \"The server may use a RST_STREAM frame (with any error code) to signal that the stream was not processed.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify which frame(s) constitute \\\"indicating\\\" that a stream has not been processed, leaving two reasonable implementation choices.\"\n}",
+  "record_id": "8a93e84d20522164319cd9d99720a646d2cc05bb11febb269b24de7ce47ca37f",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.562
+}

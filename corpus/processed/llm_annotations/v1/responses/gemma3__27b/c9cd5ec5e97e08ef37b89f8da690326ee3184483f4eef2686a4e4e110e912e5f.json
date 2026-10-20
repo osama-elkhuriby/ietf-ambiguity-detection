@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST be preceded by",
+    "interpretation_a": "A CONTINUATION frame must immediately follow a HEADERS, PUSH_PROMISE or CONTINUATION frame without the END_HEADERS flag set, with no intervening frames of any other type.",
+    "interpretation_b": "A CONTINUATION frame must be preceded by *at least* a HEADERS, PUSH_PROMISE or CONTINUATION frame without the END_HEADERS flag set; other frames may exist between the preceding frame and the CONTINUATION frame.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'MUST be preceded by' does not specify whether the preceding frame must be *immediately* before the CONTINUATION frame, or if other frames are allowed in between. This creates two reasonable interpretations.",
+    "missing_information": "The phrase 'preceded by' is incomplete. Does it mean 'immediately preceded by' or 'preceded by at least'?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:48:02.017361+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "ed0e39d5ff2b73819a39269086d7b36f1d507809dbd5b6043d39c9110d625182",
+  "lineage_ids": "lineage:304ece09414e27b0818dae1f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 210,
+    "load_duration": 21267900,
+    "prompt_eval_count": 593,
+    "total_duration": 8120319300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST be preceded by\", \"interpretation_a\": \"A CONTINUATION frame must immediately follow a HEADERS, PUSH_PROMISE or CONTINUATION frame without the END_HEADERS flag set, with no intervening frames of any other type.\", \"interpretation_b\": \"A CONTINUATION frame must be preceded by *at least* a HEADERS, PUSH_PROMISE or CONTINUATION frame without the END_HEADERS flag set; other frames may exist between the preceding frame and the CONTINUATION frame.\", \"missing_information\": \"The phrase 'preceded by' is incomplete. Does it mean 'immediately preceded by' or 'preceded by at least'?\",\"justification\": \"The phrase 'MUST be preceded by' does not specify whether the preceding frame must be *immediately* before the CONTINUATION frame, or if other frames are allowed in between. This creates two reasonable interpretations.\"}",
+  "record_id": "c9cd5ec5e97e08ef37b89f8da690326ee3184483f4eef2686a4e4e110e912e5f",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.10",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.125
+}

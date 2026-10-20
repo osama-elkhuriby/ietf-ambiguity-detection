@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY choose to only send a preferred address",
+    "interpretation_a": "The server is permitted to send a preferred address for only one address family, and must send an all-zero address for the other.",
+    "interpretation_b": "The server is permitted to send a preferred address for only one address family, but it is also permitted to send a preferred address for both address families.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' allows for two interpretations. Does the server *have* to only send a preferred address for one family, or is it simply *allowed* to do so? The clause does not clearly state whether sending preferred addresses for both families is prohibited when using this mechanism.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:13:22.717814+00:00",
+  "document_id": "draft-ietf-quic-transport-33",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "40f477b109ce63b9ffe22f7cbda4a1add5ec660c4073b1e3944bd06097300402",
+  "lineage_ids": "lineage:2c5c30af92bee4517ff7306e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 175,
+    "load_duration": 4244400,
+    "prompt_eval_count": 570,
+    "total_duration": 6632551300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY choose to only send a preferred address\", \"interpretation_a\": \"The server is permitted to send a preferred address for only one address family, and must send an all-zero address for the other.\", \"interpretation_b\": \"The server is permitted to send a preferred address for only one address family, but it is also permitted to send a preferred address for both address families.\", \"missing_information\": \"\", \"justification\": \"The use of 'MAY' allows for two interpretations. Does the server *have* to only send a preferred address for one family, or is it simply *allowed* to do so? The clause does not clearly state whether sending preferred addresses for both families is prohibited when using this mechanism.\"}",
+  "record_id": "380a52f195a0535d28ed8a64dad9067fd525152fb2ade725587bd91c73b55650",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "18.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.641
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY initiate a connection as if the SVCB query returned NODATA",
+    "interpretation_a": "The client can start a connection to the address, potentially establishing TLS before the SVCB response arrives.",
+    "interpretation_b": "The client can start a connection to the address, but must delay TLS negotiation until the SVCB response arrives, effectively only establishing the TCP connection.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'initiate a connection' is vague. It's unclear if it encompasses only TCP connection establishment or also includes TLS negotiation. If it includes TLS, then information in the ClientHello could be altered by the SVCB response. If it only includes TCP, then no information subject to SVCB alteration is transmitted.",
+    "missing_information": "The clause does not specify what 'initiate a connection' entails. Does it include TLS negotiation, or only TCP connection establishment? This affects whether information that 'could be altered by the SVCB response' is transmitted before the response arrives."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:14:15.908062+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "9fbeaf3ea5ea36101558935f84d3473294d7dce6a698753506f788455006f3e2",
+  "lineage_ids": "lineage:3e58a38ea6ded856b4a4e0cc",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 227,
+    "load_duration": 4043300,
+    "prompt_eval_count": 581,
+    "total_duration": 8481101300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY initiate a connection as if the SVCB query returned NODATA\", \"interpretation_a\": \"The client can start a connection to the address, potentially establishing TLS before the SVCB response arrives.\", \"interpretation_b\": \"The client can start a connection to the address, but must delay TLS negotiation until the SVCB response arrives, effectively only establishing the TCP connection.\", \"missing_information\": \"The clause does not specify what 'initiate a connection' entails. Does it include TLS negotiation, or only TCP connection establishment? This affects whether information that 'could be altered by the SVCB response' is transmitted before the response arrives.\",\"justification\": \"The phrase 'initiate a connection' is vague. It's unclear if it encompasses only TCP connection establishment or also includes TLS negotiation. If it includes TLS, then information in the ClientHello could be altered by the SVCB response. If it only includes TCP, then no information subject to SVCB alteration is transmitted.\"}",
+  "record_id": "f5882811a9b28c459adac6af3228325ecaa8be3a10872e6c24e57b660e9f8086",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.484
+}

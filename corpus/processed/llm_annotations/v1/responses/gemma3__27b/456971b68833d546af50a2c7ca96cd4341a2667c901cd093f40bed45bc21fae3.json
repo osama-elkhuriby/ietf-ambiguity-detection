@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "any previous connection",
+    "interpretation_a": "The client can use a token from *literally* any prior connection, even if that connection was established years ago and the server's configuration or security policies have changed significantly.",
+    "interpretation_b": "The client should use a token from a relatively recent previous connection, where the server's configuration and security policies are likely to be similar to the current connection.  The meaning of 'previous' implies a reasonable timeframe.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'any previous connection' is too broad. Without a constraint on how far back a 'previous connection' can be, there's no guidance on whether a token from a very old connection is still valid and safe to use. This affects implementation because a client could choose to cache tokens indefinitely, or only for a limited time.",
+    "missing_information": "The definition of 'previous' is missing. A time limit or other constraint on the age of the token would resolve the ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:18:49.382708+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "aeaba4ad8f1f9a08a6c9489f2498a3b886b04bf9e0b2d385d6b363f1aa892e34",
+  "lineage_ids": "lineage:bd993e8c6fc296adf27aa7fe",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 229,
+    "load_duration": 4009100,
+    "prompt_eval_count": 597,
+    "total_duration": 8528504400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"any previous connection\", \"interpretation_a\": \"The client can use a token from *literally* any prior connection, even if that connection was established years ago and the server's configuration or security policies have changed significantly.\", \"interpretation_b\": \"The client should use a token from a relatively recent previous connection, where the server's configuration and security policies are likely to be similar to the current connection.  The meaning of 'previous' implies a reasonable timeframe.\", \"missing_information\": \"The definition of 'previous' is missing. A time limit or other constraint on the age of the token would resolve the ambiguity.\", \"justification\": \"The phrase 'any previous connection' is too broad. Without a constraint on how far back a 'previous connection' can be, there's no guidance on whether a token from a very old connection is still valid and safe to use. This affects implementation because a client could choose to cache tokens indefinitely, or only for a limited time.\"}",
+  "record_id": "456971b68833d546af50a2c7ca96cd4341a2667c901cd093f40bed45bc21fae3",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "8.1.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.531
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "only one range was found to be satisfiable or only one range remained after coalescing",
+    "interpretation_a": "The server can return a single-part multipart response if *either* only one range is satisfiable *or* only one range remains after coalescing. This implies that coalescing happens before checking for satisfiability.",
+    "interpretation_b": "The server can return a single-part multipart response if only one range is satisfiable, *and* only one range remains after coalescing. This implies that coalescing happens after checking for satisfiability, and both conditions must be met.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'or' is ambiguous because it's unclear whether both conditions ('only one range was found to be satisfiable' and 'only one range remained after coalescing') must be true for the server to send a single-part response, or if either condition is sufficient.",
+    "missing_information": "The order of operations between range satisfiability checking and range coalescing is not specified, leading to different interpretations of when a single-part multipart response is permissible."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:09:06.058038+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "0061fd009b5e01738f8b84ea92bc3e8cb5742df553e7c7ee648c40b5aa285b20",
+  "lineage_ids": "lineage:545c57f403a1d8eed9b3f1b7",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 250,
+    "load_duration": 4549100,
+    "prompt_eval_count": 606,
+    "total_duration": 9533189100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"only one range was found to be satisfiable or only one range remained after coalescing\", \"interpretation_a\": \"The server can return a single-part multipart response if *either* only one range is satisfiable *or* only one range remains after coalescing. This implies that coalescing happens before checking for satisfiability.\", \"interpretation_b\": \"The server can return a single-part multipart response if only one range is satisfiable, *and* only one range remains after coalescing. This implies that coalescing happens after checking for satisfiability, and both conditions must be met.\", \"missing_information\": \"The order of operations between range satisfiability checking and range coalescing is not specified, leading to different interpretations of when a single-part multipart response is permissible.\", \"justification\": \"The use of 'or' is ambiguous because it's unclear whether both conditions ('only one range was found to be satisfiable' and 'only one range remained after coalescing') must be true for the server to send a single-part response, or if either condition is sufficient.\"}",
+  "record_id": "5cf9dfacbbd98cdcfb1cea31e0a7167bb22ad4f71e7b42d940e4346a1f0f1dac",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "15.3.7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.547
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "exchange transport parameters",
+    "interpretation_a": "The crypto handshake could exchange transport parameters via a dedicated extension within the handshake itself.",
+    "interpretation_b": "The crypto handshake could delegate the exchange of transport parameters to a separate, subsequent transport-layer negotiation process.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"exchange transport parameters\" is underspecified. It doesn't clarify whether this exchange happens *within* the crypto handshake or *after* via a separate transport-layer negotiation. Both are reasonable interpretations.",
+    "missing_information": "The clause does not specify *how* the exchange occurs, leaving open the possibility of different implementations. Is it part of the handshake, or a separate negotiation?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:40:17.701896+00:00",
+  "document_id": "draft-ietf-quic-transport-00",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "7ecf92bb4893e95f2d4e31291fbbb6b173baae097f307f7ab54244b89361f687",
+  "lineage_ids": "lineage:317c22836b0839fb6edfad05",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 169,
+    "load_duration": 4071500,
+    "prompt_eval_count": 574,
+    "total_duration": 6447509000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"exchange transport parameters\", \"interpretation_a\": \"The crypto handshake could exchange transport parameters via a dedicated extension within the handshake itself.\", \"interpretation_b\": \"The crypto handshake could delegate the exchange of transport parameters to a separate, subsequent transport-layer negotiation process.\", \"missing_information\": \"The clause does not specify *how* the exchange occurs, leaving open the possibility of different implementations. Is it part of the handshake, or a separate negotiation?\", \"justification\": \"The phrase \\\"exchange transport parameters\\\" is underspecified. It doesn't clarify whether this exchange happens *within* the crypto handshake or *after* via a separate transport-layer negotiation. Both are reasonable interpretations.\"}",
+  "record_id": "860c9b9fcbc57e4b886f9cfa301ca7f3bae77c3d656220f973d77d56f6457861",
+  "revision": "00",
+  "schema_version": 1,
+  "section_ids": "5.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.453
+}

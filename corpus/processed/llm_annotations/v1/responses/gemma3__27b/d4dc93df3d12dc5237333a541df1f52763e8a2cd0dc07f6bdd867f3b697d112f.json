@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "SHOULD signal the existence of that error",
+    "interpretation_a": "The endpoint MUST signal the error, but the method of signaling is unspecified.",
+    "interpretation_b": "The endpoint MAY signal the error, and if it does, the method of signaling is unspecified.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' creates ambiguity. It could be interpreted as a strong recommendation approaching a requirement (MUST), or as a weaker suggestion (MAY). Without further clarification, implementations could differ on whether they signal errors at all.",
+    "missing_information": "The method by which the error is signaled is not defined. This leaves open the question of how the peer is notified, and whether notification is mandatory or optional."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:05:56.700668+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "cf4a903eff6a02a8a4ac377102417474e628616577182c795613e17aff8b1ee8",
+  "lineage_ids": "lineage:f4d2588d6f689a3267613639",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 173,
+    "load_duration": 4488200,
+    "prompt_eval_count": 544,
+    "total_duration": 6553608000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"SHOULD signal the existence of that error\", \"interpretation_a\": \"The endpoint MUST signal the error, but the method of signaling is unspecified.\", \"interpretation_b\": \"The endpoint MAY signal the error, and if it does, the method of signaling is unspecified.\", \"missing_information\": \"The method by which the error is signaled is not defined. This leaves open the question of how the peer is notified, and whether notification is mandatory or optional.\",\"justification\": \"The use of 'SHOULD' creates ambiguity. It could be interpreted as a strong recommendation approaching a requirement (MUST), or as a weaker suggestion (MAY). Without further clarification, implementations could differ on whether they signal errors at all.\"}",
+  "record_id": "d4dc93df3d12dc5237333a541df1f52763e8a2cd0dc07f6bdd867f3b697d112f",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "11",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.563
+}

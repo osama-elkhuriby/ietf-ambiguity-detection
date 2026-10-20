@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "a limited number",
+    "interpretation_a": "The server MAY buffer 1-2 packets.",
+    "interpretation_b": "The server MAY buffer 100 packets.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'a limited number' is vague and does not specify an upper bound. This allows for materially different implementations, as one server might buffer a small number of packets (e.g., 2), while another might buffer a much larger number (e.g., 100).",
+    "missing_information": "The maximum number of 0-RTT packets that can be buffered is not defined."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:32:24.967725+00:00",
+  "document_id": "draft-ietf-quic-transport-20",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "cb9adc79d26964f97b5bc6cc7da873360525db317dc0e1338f4832b1ab392d4d",
+  "lineage_ids": "lineage:df7955da2632e8c1a6d42f39",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 153,
+    "load_duration": 5240500,
+    "prompt_eval_count": 597,
+    "total_duration": 5881787300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"a limited number\", \"interpretation_a\": \"The server MAY buffer 1-2 packets.\", \"interpretation_b\": \"The server MAY buffer 100 packets.\", \"missing_information\": \"The maximum number of 0-RTT packets that can be buffered is not defined.\", \"justification\": \"The phrase 'a limited number' is vague and does not specify an upper bound. This allows for materially different implementations, as one server might buffer a small number of packets (e.g., 2), while another might buffer a much larger number (e.g., 100).\"}",
+  "record_id": "7229653373d92384a4655beed3f732af223ee6198d6db5d345f3e5b70c2640ad",
+  "revision": "20",
+  "schema_version": 1,
+  "section_ids": "5.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.906
+}

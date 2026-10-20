@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "the client MAY try again",
+    "interpretation_a": "The client may retry at any time after the indicated time, as the MAY is permissive.",
+    "interpretation_b": "The client should only retry after the indicated time, but is not required to, as the MAY is advisory.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' after 'Retry-After' is ambiguous. It could mean the client is permitted to retry at any time after the specified time, or that the client is only advised to retry, but not required to. This affects implementation because a client could be designed to always retry after the time, or to only retry if it chooses to.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:17:36.398267+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "a20cc615ca99d53eb8dc82eda54551c6989865df220437a5bae4eba4916316fa",
+  "lineage_ids": "lineage:84ab0c1330a106ad0609880f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 169,
+    "load_duration": 23474400,
+    "prompt_eval_count": 572,
+    "total_duration": 6593171500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"the client MAY try again\", \"interpretation_a\": \"The client may retry at any time after the indicated time, as the MAY is permissive.\", \"interpretation_b\": \"The client should only retry after the indicated time, but is not required to, as the MAY is advisory.\", \"missing_information\": \"\", \"justification\": \"The use of 'MAY' after 'Retry-After' is ambiguous. It could mean the client is permitted to retry at any time after the specified time, or that the client is only advised to retry, but not required to. This affects implementation because a client could be designed to always retry after the time, or to only retry if it chooses to.\"}",
+  "record_id": "8f245a7a4172d765c447b0c9b3e9ce8b51e8ffbebebfcc4806714952382bd80e",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "15.5.14",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.594
+}

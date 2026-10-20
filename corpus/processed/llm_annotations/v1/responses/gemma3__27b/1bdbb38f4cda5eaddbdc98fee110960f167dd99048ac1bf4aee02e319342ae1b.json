@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "until it receives a non-probing packet from the client at its preferred address and until the server has validated the new path.",
+    "interpretation_a": "The server continues sending from the original address until *both* conditions are met: receiving a non-probing packet at the preferred address *and* path validation.",
+    "interpretation_b": "The server continues sending from the original address until *either* condition is met: receiving a non-probing packet at the preferred address *or* path validation. The wording 'and' could be read as an inclusive or, especially given the context of time-sensitive network migration.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'and' following 'until' creates ambiguity. It's unclear whether both conditions must be met before switching, or if either condition is sufficient.",
+    "missing_information": "The logical relationship between the two conditions following 'until' is not explicitly defined. Is it a logical AND or an inclusive OR?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:02:12.043581+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "9bcd5eb8e8b6e74d587c1bae467e6a473203c666c6f88e8fbad5c3ffe9b49d47",
+  "lineage_ids": "lineage:6be10f1c68653632bc033660",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 226,
+    "load_duration": 3602200,
+    "prompt_eval_count": 617,
+    "total_duration": 8763681500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"until it receives a non-probing packet from the client at its preferred address and until the server has validated the new path.\", \"interpretation_a\": \"The server continues sending from the original address until *both* conditions are met: receiving a non-probing packet at the preferred address *and* path validation.\", \"interpretation_b\": \"The server continues sending from the original address until *either* condition is met: receiving a non-probing packet at the preferred address *or* path validation. The wording 'and' could be read as an inclusive or, especially given the context of time-sensitive network migration.\", \"missing_information\": \"The logical relationship between the two conditions following 'until' is not explicitly defined. Is it a logical AND or an inclusive OR?\",\"justification\": \"The use of 'and' following 'until' creates ambiguity. It's unclear whether both conditions must be met before switching, or if either condition is sufficient.\"}",
+  "record_id": "1bdbb38f4cda5eaddbdc98fee110960f167dd99048ac1bf4aee02e319342ae1b",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9.6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.766
+}

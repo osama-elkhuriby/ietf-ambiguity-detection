@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "as close as possible",
+    "interpretation_a": "The Last-Modified value should be obtained immediately before generating the Date field, minimizing any time difference.",
+    "interpretation_b": "The Last-Modified value could be obtained within a reasonable window before generating the Date field, allowing for some processing delay. The definition of 'reasonable' is not specified.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'as close as possible' is vague and allows for multiple interpretations regarding the acceptable time difference between obtaining the Last-Modified value and generating the Date field. This impacts implementation as different implementations may have different tolerances for what constitutes 'close'.",
+    "missing_information": "The specification lacks a definition of 'as close as possible'. A time delta (e.g., milliseconds, seconds) would remove ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:20:07.669252+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "edbdd618f1b9d7a638c96cafe61b6e6bf4208c642f04bf176a217f972740ca01",
+  "lineage_ids": "lineage:468922b7641c2e92d8b0b0c8",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 187,
+    "load_duration": 8420200,
+    "prompt_eval_count": 592,
+    "total_duration": 7264307300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"as close as possible\", \"interpretation_a\": \"The Last-Modified value should be obtained immediately before generating the Date field, minimizing any time difference.\", \"interpretation_b\": \"The Last-Modified value could be obtained within a reasonable window before generating the Date field, allowing for some processing delay. The definition of 'reasonable' is not specified.\", \"missing_information\": \"The specification lacks a definition of 'as close as possible'. A time delta (e.g., milliseconds, seconds) would remove ambiguity.\",\"justification\": \"The phrase 'as close as possible' is vague and allows for multiple interpretations regarding the acceptable time difference between obtaining the Last-Modified value and generating the Date field. This impacts implementation as different implementations may have different tolerances for what constitutes 'close'.\"}",
+  "record_id": "9cc688274cca7f17f15a0a6c79843d38a78371a025896bca9923efa3f3655187",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "8.8.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.281
+}

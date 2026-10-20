@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "patterns known to be problematic",
+    "interpretation_a": "Endpoints retire connection IDs that match a predefined list of problematic patterns.",
+    "interpretation_b": "Endpoints retire connection IDs that match any pattern they consider problematic.",
+    "is_ambiguous": "yes",
+    "justification": "The clause references 'patterns known to be problematic' without defining them, creating an incomplete constraint that could lead to materially different implementation behaviours.",
+    "missing_information": "definition of 'patterns known to be problematic'."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T17:45:32.894112+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "31d0924709d4abbd72dd85fd44bf367008fa4743b31c932a6c05e13082144c5c",
+  "lineage_ids": "lineage:2a4064747161d707445f873c",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 5200,
+    "load_duration": 5255600,
+    "prompt_eval_count": 606,
+    "total_duration": 44884555600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"patterns known to be problematic\",\n  \"interpretation_a\": \"Endpoints retire connection IDs that match a predefined list of problematic patterns.\",\n  \"interpretation_b\": \"Endpoints retire connection IDs that match any pattern they consider problematic.\",\n  \"missing_information\": \"definition of 'patterns known to be problematic'.\",\n  \"justification\": \"The clause references 'patterns known to be problematic' without defining them, creating an incomplete constraint that could lead to materially different implementation behaviours.\"\n}",
+  "record_id": "acec8b5a5d8e5883615de2b6503551dbe734e4757883f855a859a0d459f878be",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "21.5.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 44.906
+}

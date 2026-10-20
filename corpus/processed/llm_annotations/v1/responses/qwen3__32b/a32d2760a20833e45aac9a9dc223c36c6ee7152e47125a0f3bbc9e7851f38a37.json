@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause provides a clear and unambiguous instruction: once the client receives the server's chosen connection ID, it must use it for all subsequent Client Cleartext and 1-RTT packets, but not for 0-RTT packets. The clause specifies the exact conditions under which the connection ID must be used and explicitly excludes 0-RTT packets. There is no language that allows for multiple reasonable interpretations or missing constraints that would affect implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:30:31.032128+00:00",
+  "document_id": "draft-ietf-quic-transport-07",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "35ca8e50417897a84fd3d1cc5399a5e040ad796748e52219b6539d886b9a4f65",
+  "lineage_ids": "lineage:786f3a810f25bde540c6f314",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 150,
+    "load_duration": 4626500,
+    "prompt_eval_count": 614,
+    "total_duration": 6166496900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause provides a clear and unambiguous instruction: once the client receives the server's chosen connection ID, it must use it for all subsequent Client Cleartext and 1-RTT packets, but not for 0-RTT packets. The clause specifies the exact conditions under which the connection ID must be used and explicitly excludes 0-RTT packets. There is no language that allows for multiple reasonable interpretations or missing constraints that would affect implementation behavior.\"\n}",
+  "record_id": "a32d2760a20833e45aac9a9dc223c36c6ee7152e47125a0f3bbc9e7851f38a37",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "5.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.172
+}

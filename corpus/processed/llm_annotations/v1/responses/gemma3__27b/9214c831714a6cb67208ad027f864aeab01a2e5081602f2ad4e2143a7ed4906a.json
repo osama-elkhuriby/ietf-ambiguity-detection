@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "even if there are no packets in flight",
+    "interpretation_a": "The probe timer is set even if no handshake packets are currently in transit, meaning the client proactively initiates probing even in a completely idle state regarding handshake packets.",
+    "interpretation_b": "The probe timer is set only if no handshake packets are in flight *at the moment of checking*, but if packets were recently sent and might still be in transit, the timer is not set. The phrase implies a current state check.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'even if there are no packets in flight' is ambiguous because it's unclear whether it refers to the immediate state (no packets currently in transit) or a broader condition (no packets have been sent recently). This affects when the probe timer is set.",
+    "missing_information": "The meaning of 'packets in flight' is not fully defined. Does it refer to packets currently being transmitted, or packets that have been sent but not yet acknowledged?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:24:45.473874+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "8096630b102c59a099426370dc67ca2efe7dfdb0fa3844a0affc9d0eb603704e",
+  "lineage_ids": "lineage:afedce2281f5a23c8eda6183",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 226,
+    "load_duration": 4504300,
+    "prompt_eval_count": 670,
+    "total_duration": 8548440600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"even if there are no packets in flight\", \"interpretation_a\": \"The probe timer is set even if no handshake packets are currently in transit, meaning the client proactively initiates probing even in a completely idle state regarding handshake packets.\", \"interpretation_b\": \"The probe timer is set only if no handshake packets are in flight *at the moment of checking*, but if packets were recently sent and might still be in transit, the timer is not set. The phrase implies a current state check.\", \"missing_information\": \"The meaning of 'packets in flight' is not fully defined. Does it refer to packets currently being transmitted, or packets that have been sent but not yet acknowledged?\", \"justification\": \"The phrase 'even if there are no packets in flight' is ambiguous because it's unclear whether it refers to the immediate state (no packets currently in transit) or a broader condition (no packets have been sent recently). This affects when the probe timer is set.\"}",
+  "record_id": "9214c831714a6cb67208ad027f864aeab01a2e5081602f2ad4e2143a7ed4906a",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.2.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.547
+}

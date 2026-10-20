@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "An extension to QUIC that wishes to use a new type of frame MUST first ensure that a peer is able to understand the frame.",
+    "interpretation_a": "The extension must provide a transport parameter or similar mechanism to advertise the new frame type to the peer before any such frames are sent.",
+    "interpretation_b": "The extension must rely on a handshake or negotiation phase to confirm that the peer supports the new frame type before sending any such frames.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify how the peer’s ability to understand the frame is verified, leaving the implementation behavior under‑specified.",
+    "missing_information": ""
+  },
+  "attempts": 3,
+  "created_at": "2026-10-08T15:24:09.197291+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "589010b2e6b6be82e742d4bfdf1a987cc08d9070b8eb7905d2cb805f5d2def7e",
+  "lineage_ids": "lineage:fe778b8823ebb90761abaa62",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 383,
+    "load_duration": 5326800,
+    "prompt_eval_count": 747,
+    "total_duration": 3490148700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"An extension to QUIC that wishes to use a new type of frame MUST first ensure that a peer is able to understand the frame.\",\n  \"interpretation_a\": \"The extension must provide a transport parameter or similar mechanism to advertise the new frame type to the peer before any such frames are sent.\",\n  \"interpretation_b\": \"The extension must rely on a handshake or negotiation phase to confirm that the peer supports the new frame type before sending any such frames.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify how the peer’s ability to understand the frame is verified, leaving the implementation behavior under‑specified.\"\n}",
+  "record_id": "45109fe34485c3bcfebccc890ecbfa89f97504f7fbcc3ac9555413830d0c4b27",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "19.21",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 77.578
+}

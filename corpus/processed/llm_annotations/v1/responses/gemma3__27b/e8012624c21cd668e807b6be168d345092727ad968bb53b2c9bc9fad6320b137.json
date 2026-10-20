@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD discard",
+    "interpretation_a": "The endpoint is encouraged to discard the keys, but may choose not to.",
+    "interpretation_b": "The endpoint is expected to discard the keys, but it is not a hard requirement.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' introduces ambiguity. While it indicates a recommendation, it doesn't definitively state whether discarding the keys is mandatory or optional. This affects implementation as some implementations might prioritize security and always discard, while others might retain them for a period.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:51:42.930867+00:00",
+  "document_id": "draft-ietf-quic-tls-24",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "47b73b75dc40b7f8e3b54d4334c69fcff42e84737db5500298dc3709e5805571",
+  "lineage_ids": "lineage:488e1ba84ff0b17e88487644",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 140,
+    "load_duration": 5902100,
+    "prompt_eval_count": 576,
+    "total_duration": 5400109800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD discard\", \"interpretation_a\": \"The endpoint is encouraged to discard the keys, but may choose not to.\", \"interpretation_b\": \"The endpoint is expected to discard the keys, but it is not a hard requirement.\", \"missing_information\": \"\", \"justification\": \"The use of 'SHOULD' introduces ambiguity. While it indicates a recommendation, it doesn't definitively state whether discarding the keys is mandatory or optional. This affects implementation as some implementations might prioritize security and always discard, while others might retain them for a period.\"}",
+  "record_id": "e8012624c21cd668e807b6be168d345092727ad968bb53b2c9bc9fad6320b137",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "4.10.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.39
+}

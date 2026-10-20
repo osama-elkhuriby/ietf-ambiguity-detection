@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "integer values of N",
+    "interpretation_a": "N may be any integer, including negative, so codes below 0x21 would also be prohibited by the formula.",
+    "interpretation_b": "N is intended to be a non‑negative integer, so only codes from 0x21 upward are prohibited by the formula.",
+    "is_ambiguous": "yes",
+    "justification": "The clause specifies a formula 0x1f * N + 0x21 for integer values of N but does not constrain N to be non‑negative. This omission allows two materially different interpretations: one allowing negative N (prohibiting codes below 0x21) and one restricting N to non‑negative values (prohibiting only codes from 0x21 upward).",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T09:14:07.502988+00:00",
+  "document_id": "draft-ietf-quic-http-24",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "cfa11d4fdec2c0f7c193b552418252c691f1e1430f5fe16b1e71b24fb0ebc145",
+  "lineage_ids": "lineage:8d6341b43bcc5b4d162b2909",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 526,
+    "load_duration": 4034100,
+    "prompt_eval_count": 806,
+    "total_duration": 4714542700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"integer values of N\",\n  \"interpretation_a\": \"N may be any integer, including negative, so codes below 0x21 would also be prohibited by the formula.\",\n  \"interpretation_b\": \"N is intended to be a non‑negative integer, so only codes from 0x21 upward are prohibited by the formula.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause specifies a formula 0x1f * N + 0x21 for integer values of N but does not constrain N to be non‑negative. This omission allows two materially different interpretations: one allowing negative N (prohibiting codes below 0x21) and one restricting N to non‑negative values (prohibiting only codes from 0x21 upward).\"\n}",
+  "record_id": "3eebacec4aab06041d2cf761e5b25a0e68ae27218a4df67f25cc1102343a2dfa",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "11.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 25.594
+}

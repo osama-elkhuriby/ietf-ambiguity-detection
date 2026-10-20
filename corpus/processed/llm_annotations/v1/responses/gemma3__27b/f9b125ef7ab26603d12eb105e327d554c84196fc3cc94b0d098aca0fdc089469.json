@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY omit the connection ID",
+    "interpretation_a": "An endpoint *can* omit the connection ID in short header packets, but is not required to.",
+    "interpretation_b": "An endpoint *must* omit the connection ID in short header packets, but has the option to include it.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' creates ambiguity. It is unclear whether omitting the connection ID is optional or mandatory when the parameter is advertised. A missing constraint on the strength of 'MAY' affects implementation behaviour.",
+    "missing_information": "The strength of 'MAY' is not defined. Is it a weak recommendation, or a permission to do something that would otherwise be disallowed?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:18:38.411846+00:00",
+  "document_id": "draft-ietf-quic-transport-10",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "a78c5a85083a87b91b541765cd58bd19ebfc89310e1be6f11ba29c2d183bef2c",
+  "lineage_ids": "lineage:5b37aac62ba98794037bf71a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 169,
+    "load_duration": 4102300,
+    "prompt_eval_count": 614,
+    "total_duration": 6469409200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY omit the connection ID\", \"interpretation_a\": \"An endpoint *can* omit the connection ID in short header packets, but is not required to.\", \"interpretation_b\": \"An endpoint *must* omit the connection ID in short header packets, but has the option to include it.\", \"missing_information\": \"The strength of 'MAY' is not defined. Is it a weak recommendation, or a permission to do something that would otherwise be disallowed?\", \"justification\": \"The use of 'MAY' creates ambiguity. It is unclear whether omitting the connection ID is optional or mandatory when the parameter is advertised. A missing constraint on the strength of 'MAY' affects implementation behaviour.\"}",
+  "record_id": "f9b125ef7ab26603d12eb105e327d554c84196fc3cc94b0d098aca0fdc089469",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "7.4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.484
+}

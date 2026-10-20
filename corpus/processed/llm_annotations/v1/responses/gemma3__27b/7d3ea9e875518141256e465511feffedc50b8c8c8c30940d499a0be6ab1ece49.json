@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "the same fields in the same order",
+    "interpretation_a": "The order of fields within the request is significant and must be preserved across multiple request streams sharing the same Push ID.",
+    "interpretation_b": "The order of fields within the request is irrelevant, only the presence of the same fields with identical values is required.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'the same fields in the same order' is incomplete. It doesn't specify *how* the order is determined (e.g., lexicographically by field name, by a pre-defined sequence, etc.). This allows for different implementations to interpret the ordering requirement differently.",
+    "missing_information": "The specification does not define how field order is determined or if it is significant. Without this, implementations could reasonably differ on whether to enforce field order or not."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:55:14.526202+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "41eb57127169af170f6b9b5c21fcee000df030fd46a5e82ec94a0606a0258c2f",
+  "lineage_ids": "lineage:8c30cf1f962d3ca38669607d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 195,
+    "load_duration": 8442900,
+    "prompt_eval_count": 584,
+    "total_duration": 7573777500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"the same fields in the same order\", \"interpretation_a\": \"The order of fields within the request is significant and must be preserved across multiple request streams sharing the same Push ID.\", \"interpretation_b\": \"The order of fields within the request is irrelevant, only the presence of the same fields with identical values is required.\", \"missing_information\": \"The specification does not define how field order is determined or if it is significant. Without this, implementations could reasonably differ on whether to enforce field order or not.\",\"justification\": \"The phrase 'the same fields in the same order' is incomplete. It doesn't specify *how* the order is determined (e.g., lexicographically by field name, by a pre-defined sequence, etc.). This allows for different implementations to interpret the ordering requirement differently.\"}",
+  "record_id": "7d3ea9e875518141256e465511feffedc50b8c8c8c30940d499a0be6ab1ece49",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.562
+}

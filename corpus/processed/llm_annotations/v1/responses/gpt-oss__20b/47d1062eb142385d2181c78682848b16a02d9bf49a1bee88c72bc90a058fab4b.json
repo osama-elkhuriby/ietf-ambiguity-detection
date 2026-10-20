@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Maximum reordering in packet number space before FACK style loss detection considers a packet lost.",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether a packet that is exactly at the threshold of reordering is considered lost, leaving an incomplete constraint that could lead to materially different implementations.",
+    "missing_information": "Whether the threshold is inclusive or exclusive when determining if a packet is considered lost."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T11:18:44.264867+00:00",
+  "document_id": "draft-ietf-quic-recovery-14",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "1301b57e317fcc10783cab5e8580bd170e8ac50361bd475aa0d84a20c11d0799",
+  "lineage_ids": "lineage:1d08f749ebae8466106ff476",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 5100,
+    "load_duration": 6257600,
+    "prompt_eval_count": 605,
+    "total_duration": 44137346800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"Maximum reordering in packet number space before FACK style loss detection considers a packet lost.\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"Whether the threshold is inclusive or exclusive when determining if a packet is considered lost.\",\n  \"justification\": \"The clause does not specify whether a packet that is exactly at the threshold of reordering is considered lost, leaving an incomplete constraint that could lead to materially different implementations.\"\n}",
+  "record_id": "47d1062eb142385d2181c78682848b16a02d9bf49a1bee88c72bc90a058fab4b",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "4.5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 44.125
+}

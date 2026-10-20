@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY be used",
+    "interpretation_a": "Clients are permitted, but not required, to send requests using TLS early data.",
+    "interpretation_b": "Servers are permitted, but not required, to accept requests sent using TLS early data.",
+    "is_ambiguous": "yes",
+    "justification": "The 'MAY' keyword is ambiguous because it's unclear who is being granted the permission. Does the client MAY send, or the server MAY accept?",
+    "missing_information": "The clause does not specify whether the 'MAY' applies to the client sending requests or the server accepting them. This affects implementation because a client might implement early data sending even if the server does not support it, or vice versa."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:44:47.020468+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "d6b7a4584992b17035c5bdd04e5d85c2f982985a13715c0d524090185566ff5a",
+  "lineage_ids": "lineage:29f90df1cb13c7286ebb7250",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 165,
+    "load_duration": 20042300,
+    "prompt_eval_count": 586,
+    "total_duration": 6504534000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY be used\", \"interpretation_a\": \"Clients are permitted, but not required, to send requests using TLS early data.\", \"interpretation_b\": \"Servers are permitted, but not required, to accept requests sent using TLS early data.\", \"missing_information\": \"The clause does not specify whether the 'MAY' applies to the client sending requests or the server accepting them. This affects implementation because a client might implement early data sending even if the server does not support it, or vice versa.\",\"justification\": \"The 'MAY' keyword is ambiguous because it's unclear who is being granted the permission. Does the client MAY send, or the server MAY accept?\"}",
+  "record_id": "b52e61f7a18795de47570046451761d24cf643808742f400ff681de0b4a5f1ff",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "9.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.5
+}

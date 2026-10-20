@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless it is not feasible to generate one",
+    "interpretation_a": "The server does not send an entity-tag if generating one requires significant computational resources or time, even if it could technically be done.",
+    "interpretation_b": "The server does not send an entity-tag if it lacks the necessary information or mechanisms to generate one, such as when the resource is dynamically generated without a stable representation.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'feasible' is subjective and lacks a concrete definition. Different implementations might have different thresholds for what constitutes 'not feasible', leading to inconsistent behavior. One implementation might consider generating an entity-tag computationally expensive and therefore 'not feasible', while another might consider the same computation acceptable.",
+    "missing_information": "The definition of 'feasible' is not provided.  What level of effort or resource consumption constitutes 'not feasible' is undefined, leading to different implementations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:18:46.845495+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-14",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "cd988b9bd125b8990e7258fc0889805c9b8878795b161a783308420d1f54933f",
+  "lineage_ids": "lineage:ceb787852dd16c90516310f5",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 210,
+    "load_duration": 20135600,
+    "prompt_eval_count": 595,
+    "total_duration": 8140983100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless it is not feasible to generate one\", \"interpretation_a\": \"The server does not send an entity-tag if generating one requires significant computational resources or time, even if it could technically be done.\", \"interpretation_b\": \"The server does not send an entity-tag if it lacks the necessary information or mechanisms to generate one, such as when the resource is dynamically generated without a stable representation.\", \"missing_information\": \"The definition of 'feasible' is not provided.  What level of effort or resource consumption constitutes 'not feasible' is undefined, leading to different implementations.\", \"justification\": \"The term 'feasible' is subjective and lacks a concrete definition. Different implementations might have different thresholds for what constitutes 'not feasible', leading to inconsistent behavior. One implementation might consider generating an entity-tag computationally expensive and therefore 'not feasible', while another might consider the same computation acceptable.\"}",
+  "record_id": "98890953a2ce149fb4bd382f0493f5d2a6582698756ecb4181f8af8551127928",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "8.8.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.14
+}

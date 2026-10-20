@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "stream 1",
+    "interpretation_a": "Stream 1 is the only stream allowed for data exchange without packet protection.",
+    "interpretation_b": "Stream 1 is a designated stream for initial control information, and other streams *could* be used for data with packet protection, but not without.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states data exchange is prohibited on streams other than stream 1 *without* packet protection. It does not state that data exchange is prohibited on other streams *with* packet protection. Thus, it is unclear whether the restriction applies only to unprotected data, or to all data on streams other than stream 1.",
+    "missing_information": "The definition of 'stream 1' is not provided in this excerpt. Is it a dedicated control stream, or simply the first stream created? This affects whether the restriction is absolute or conditional on stream purpose."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:51:13.601150+00:00",
+  "document_id": "draft-ietf-quic-tls-02",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "2c2f35b135ae34bcc59e730d5dbd85ccb57d1556f4b121610ebc0b75fb3d07e4",
+  "lineage_ids": "lineage:f2d32afe87f5ebdec331748d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 206,
+    "load_duration": 5081300,
+    "prompt_eval_count": 548,
+    "total_duration": 7716585000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"stream 1\", \"interpretation_a\": \"Stream 1 is the only stream allowed for data exchange without packet protection.\", \"interpretation_b\": \"Stream 1 is a designated stream for initial control information, and other streams *could* be used for data with packet protection, but not without.\", \"missing_information\": \"The definition of 'stream 1' is not provided in this excerpt. Is it a dedicated control stream, or simply the first stream created? This affects whether the restriction is absolute or conditional on stream purpose.\",\"justification\": \"The clause states data exchange is prohibited on streams other than stream 1 *without* packet protection. It does not state that data exchange is prohibited on other streams *with* packet protection. Thus, it is unclear whether the restriction applies only to unprotected data, or to all data on streams other than stream 1.\"}",
+  "record_id": "e55b40318d0238e8c1fe9cd6b06c6f516fa125adff4f13e8b690fcc8cc9bf0aa",
+  "revision": "02",
+  "schema_version": 1,
+  "section_ids": "8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.718
+}

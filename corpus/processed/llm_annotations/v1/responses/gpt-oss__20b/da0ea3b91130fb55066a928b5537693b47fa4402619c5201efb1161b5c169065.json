@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "local network",
+    "interpretation_a": "Interpretation 1: 'local network' refers to the network segment the client is currently connected to (e.g., LAN or Wi‑Fi).",
+    "interpretation_b": "Interpretation 2: 'local network' refers to the network that the client uses for DNS resolution, which could be any network interface or DNS server reachable by the client.",
+    "is_ambiguous": "yes",
+    "justification": "The clause requires clients to partition or flush the DNS cache per 'local network', but without a definition of that term, implementations could interpret it as the physical LAN, the current IP subnet, or the DNS‑resolution network, leading to materially different behaviours.",
+    "missing_information": "The term 'local network' is undefined in the supplied text, leaving its scope ambiguous."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T03:30:05.120125+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "af6a0f5e5d3f2f734e7164e99df426b67c2d41f5f888e068b14c0bcbdd7e4667",
+  "lineage_ids": "lineage:d7625c1e1037235c26fe9f9c",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3829,
+    "load_duration": 5144400,
+    "prompt_eval_count": 613,
+    "total_duration": 32966206100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-1\",\n  \"evidence_span\": \"local network\",\n  \"interpretation_a\": \"Interpretation 1: 'local network' refers to the network segment the client is currently connected to (e.g., LAN or Wi‑Fi).\",\n  \"interpretation_b\": \"Interpretation 2: 'local network' refers to the network that the client uses for DNS resolution, which could be any network interface or DNS server reachable by the client.\",\n  \"missing_information\": \"The term 'local network' is undefined in the supplied text, leaving its scope ambiguous.\",\n  \"justification\": \"The clause requires clients to partition or flush the DNS cache per 'local network', but without a definition of that term, implementations could interpret it as the physical LAN, the current IP subnet, or the DNS‑resolution network, leading to materially different behaviours.\"\n}",
+  "record_id": "da0ea3b91130fb55066a928b5537693b47fa4402619c5201efb1161b5c169065",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "12",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 32.969
+}

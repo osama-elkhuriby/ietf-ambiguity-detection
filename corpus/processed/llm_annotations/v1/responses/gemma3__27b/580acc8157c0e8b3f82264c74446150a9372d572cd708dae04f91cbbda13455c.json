@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "at least one in every 16 network paths, or for one in every 16 connection IDs.",
+    "interpretation_a": "Endpoints must disable the spin bit for a minimum of one out of sixteen network paths, potentially disabling it for more.",
+    "interpretation_b": "Endpoints must disable the spin bit for a minimum of one out of sixteen connection IDs, potentially disabling it for more.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'or' creates ambiguity. Does the requirement mean that an endpoint must disable the spin bit for at least one network path *or* at least one connection ID, or must it disable it for at least one of each? The lack of clarity affects implementation because it determines the minimum number of spin bit disablings.",
+    "missing_information": "It is unclear whether the 'at least one' applies to both conditions (network paths *and* connection IDs) or if either condition satisfies the requirement. The phrase 'or' is ambiguous in this context."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:25:07.547330+00:00",
+  "document_id": "draft-ietf-quic-transport-33",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "be080cce52cbeaa2f334751369b0e90367873cb99c2d3870982a93c0270190df",
+  "lineage_ids": "lineage:e9fc333ad4af5aece7c16ec7",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 228,
+    "load_duration": 3294100,
+    "prompt_eval_count": 607,
+    "total_duration": 8573074100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"at least one in every 16 network paths, or for one in every 16 connection IDs.\", \"interpretation_a\": \"Endpoints must disable the spin bit for a minimum of one out of sixteen network paths, potentially disabling it for more.\", \"interpretation_b\": \"Endpoints must disable the spin bit for a minimum of one out of sixteen connection IDs, potentially disabling it for more.\", \"missing_information\": \"It is unclear whether the 'at least one' applies to both conditions (network paths *and* connection IDs) or if either condition satisfies the requirement. The phrase 'or' is ambiguous in this context.\",\"justification\": \"The use of 'or' creates ambiguity. Does the requirement mean that an endpoint must disable the spin bit for at least one network path *or* at least one connection ID, or must it disable it for at least one of each? The lack of clarity affects implementation because it determines the minimum number of spin bit disablings.\"}",
+  "record_id": "580acc8157c0e8b3f82264c74446150a9372d572cd708dae04f91cbbda13455c",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "17.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.562
+}

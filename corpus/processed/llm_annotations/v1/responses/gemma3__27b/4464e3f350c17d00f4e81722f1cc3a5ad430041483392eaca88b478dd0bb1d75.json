@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "H3_VERSION_FALLBACK",
+    "interpretation_a": "The error code HTTP_1_1_REQUIRED (0xd) indicates that the server requires the client to fall back to HTTP/1.1. H3_VERSION_FALLBACK suggests this is specifically related to an HTTP/3 to HTTP/1.1 fallback.",
+    "interpretation_b": "The error code HTTP_1_1_REQUIRED (0xd) indicates that the server requires the client to fall back to HTTP/1.1, and H3_VERSION_FALLBACK is simply a label or identifier for this error code within the context of HTTP error codes, without necessarily implying a specific fallback scenario.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'H3_VERSION_FALLBACK' is undefined. It could refer to a specific condition that triggers the HTTP/1.1 fallback, or it could be a simple label. Without further definition, there are two reasonable interpretations.",
+    "missing_information": "The meaning of 'H3_VERSION_FALLBACK' is not defined within the provided text. It is unclear whether it is a specific condition triggering the fallback, or merely a tag for the error code."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:48:19.082108+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "5ed12e30f277f290466c8f5ac2a9c7f0f94987702b74420d75cf521479622d09",
+  "lineage_ids": "lineage:7de9296cb5177fdda6ff1bc6",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 271,
+    "load_duration": 20263000,
+    "prompt_eval_count": 581,
+    "total_duration": 10276492300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-1\", \"evidence_span\": \"H3_VERSION_FALLBACK\", \"interpretation_a\": \"The error code HTTP_1_1_REQUIRED (0xd) indicates that the server requires the client to fall back to HTTP/1.1. H3_VERSION_FALLBACK suggests this is specifically related to an HTTP/3 to HTTP/1.1 fallback.\", \"interpretation_b\": \"The error code HTTP_1_1_REQUIRED (0xd) indicates that the server requires the client to fall back to HTTP/1.1, and H3_VERSION_FALLBACK is simply a label or identifier for this error code within the context of HTTP error codes, without necessarily implying a specific fallback scenario.\",\"missing_information\": \"The meaning of 'H3_VERSION_FALLBACK' is not defined within the provided text. It is unclear whether it is a specific condition triggering the fallback, or merely a tag for the error code.\",\"justification\": \"The term 'H3_VERSION_FALLBACK' is undefined. It could refer to a specific condition that triggers the HTTP/1.1 fallback, or it could be a simple label. Without further definition, there are two reasonable interpretations.\"}",
+  "record_id": "4464e3f350c17d00f4e81722f1cc3a5ad430041483392eaca88b478dd0bb1d75",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "A.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.281
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless they are all under the same organizational control and the hosts have already been replaced by pseudonyms.",
+    "interpretation_a": "The sender can combine list members if they are all under the same organizational control *and* the hosts have been replaced by pseudonyms.",
+    "interpretation_b": "The sender can combine list members if they are all under the same organizational control, or the hosts have been replaced by pseudonyms. The 'and' could be read as an 'or' given the context of SHOULD NOT.",
+    "is_ambiguous": "yes",
+    "justification": "The conjunction 'and' is ambiguous in the context of a 'SHOULD NOT' statement. It's unclear if both conditions must be true to avoid violating the recommendation, or if satisfying either condition is sufficient.",
+    "missing_information": "It is unclear whether both conditions ('same organizational control' and 'hosts replaced by pseudonyms') must be met for combination to be allowed, or if either condition is sufficient."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:55:59.650864+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "1373f82eaaf60fe3977b8badcca692d96516dc62da9c846ff61febca8401d53c",
+  "lineage_ids": "lineage:d1954ecb44a1eb3e6e3687fb",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 222,
+    "load_duration": 21379100,
+    "prompt_eval_count": 573,
+    "total_duration": 8561368000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless they are all under the same organizational control and the hosts have already been replaced by pseudonyms.\", \"interpretation_a\": \"The sender can combine list members if they are all under the same organizational control *and* the hosts have been replaced by pseudonyms.\", \"interpretation_b\": \"The sender can combine list members if they are all under the same organizational control, or the hosts have been replaced by pseudonyms. The 'and' could be read as an 'or' given the context of SHOULD NOT.\", \"missing_information\": \"It is unclear whether both conditions ('same organizational control' and 'hosts replaced by pseudonyms') must be met for combination to be allowed, or if either condition is sufficient.\", \"justification\": \"The conjunction 'and' is ambiguous in the context of a 'SHOULD NOT' statement. It's unclear if both conditions must be true to avoid violating the recommendation, or if satisfying either condition is sufficient.\"}",
+  "record_id": "12160232408a42e2460b3aa280386f7383433eb847bee4768fc2bbad36d5fef5",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "7.6.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.563
+}

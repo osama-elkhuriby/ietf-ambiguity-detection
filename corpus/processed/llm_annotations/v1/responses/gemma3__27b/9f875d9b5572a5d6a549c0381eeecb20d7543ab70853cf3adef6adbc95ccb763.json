@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "To avoid creating an indefinite feedback loop, an endpoint MUST NOT send an ACK frame in response to a packet containing only ACK or PADDING frames, even if there are packet gaps which precede the received packet.",
+    "interpretation_a": "The receiver will not send an ACK for a packet containing only ACK/PADDING, even if there are gaps *before* it. This implies the gaps are not relevant to the ACK suppression.",
+    "interpretation_b": "The receiver will not send an ACK for a packet containing only ACK/PADDING if there are gaps *anywhere* before the received packet, including gaps that have already been acknowledged. The phrase 'precede the received packet' is ambiguous as to whether it means immediately before, or anywhere before.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'precede the received packet' is ambiguous. Does it mean immediately before, or anywhere before? This affects the implementation of the ACK suppression rule.",
+    "missing_information": "It is unclear if the 'packet gaps' refer to gaps that are immediately before the received packet, or any gaps that existed before the received packet. This affects how the receiver handles gaps and when it sends ACKs."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:49:30.028726+00:00",
+  "document_id": "draft-ietf-quic-transport-15",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "45f293a04d32ed36c43401eeea521dbd7a3df55d886d6d4190255619e9890618",
+  "lineage_ids": "lineage:3124045726bdd053ae8a493f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 266,
+    "load_duration": 4514700,
+    "prompt_eval_count": 635,
+    "total_duration": 9890811700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"To avoid creating an indefinite feedback loop, an endpoint MUST NOT send an ACK frame in response to a packet containing only ACK or PADDING frames, even if there are packet gaps which precede the received packet.\", \"interpretation_a\": \"The receiver will not send an ACK for a packet containing only ACK/PADDING, even if there are gaps *before* it. This implies the gaps are not relevant to the ACK suppression.\", \"interpretation_b\": \"The receiver will not send an ACK for a packet containing only ACK/PADDING if there are gaps *anywhere* before the received packet, including gaps that have already been acknowledged. The phrase 'precede the received packet' is ambiguous as to whether it means immediately before, or anywhere before.\", \"missing_information\": \"It is unclear if the 'packet gaps' refer to gaps that are immediately before the received packet, or any gaps that existed before the received packet. This affects how the receiver handles gaps and when it sends ACKs.\", \"justification\": \"The phrase 'precede the received packet' is ambiguous. Does it mean immediately before, or anywhere before? This affects the implementation of the ACK suppression rule.\"}",
+  "record_id": "9f875d9b5572a5d6a549c0381eeecb20d7543ab70853cf3adef6adbc95ccb763",
+  "revision": "15",
+  "schema_version": 1,
+  "section_ids": "8.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.891
+}

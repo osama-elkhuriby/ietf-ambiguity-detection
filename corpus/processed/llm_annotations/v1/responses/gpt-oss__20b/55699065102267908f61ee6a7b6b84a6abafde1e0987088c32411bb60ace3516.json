@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "in a timely manner",
+    "interpretation_a": "The phrase could be interpreted as requiring the peer to retire the connection IDs immediately upon receiving the NEW_CONNECTION_ID frame.",
+    "interpretation_b": "The phrase could be interpreted as allowing the peer to retire the connection IDs within a reasonable period of time, not necessarily immediately.",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a concrete time constraint, leading to materially different implementation behaviours regarding when the peer should retire the connection IDs and send the corresponding frames.",
+    "missing_information": "A precise definition of what constitutes a 'timely manner' for retiring connection IDs and sending RETIRE_CONNECTION_ID frames."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T15:48:21.864036+00:00",
+  "document_id": "draft-ietf-quic-transport-24",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "5c37c5eb512fe26648a26ef6b20d747ea772137ba1a3a44359f8219d678cabcc",
+  "lineage_ids": "lineage:706d675819af53babce13c8e",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 5348,
+    "load_duration": 5829200,
+    "prompt_eval_count": 573,
+    "total_duration": 46333898800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"in a timely manner\",\n  \"interpretation_a\": \"The phrase could be interpreted as requiring the peer to retire the connection IDs immediately upon receiving the NEW_CONNECTION_ID frame.\",\n  \"interpretation_b\": \"The phrase could be interpreted as allowing the peer to retire the connection IDs within a reasonable period of time, not necessarily immediately.\",\n  \"missing_information\": \"A precise definition of what constitutes a 'timely manner' for retiring connection IDs and sending RETIRE_CONNECTION_ID frames.\",\n  \"justification\": \"The clause lacks a concrete time constraint, leading to materially different implementation behaviours regarding when the peer should retire the connection IDs and send the corresponding frames.\"\n}",
+  "record_id": "55699065102267908f61ee6a7b6b84a6abafde1e0987088c32411bb60ace3516",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "19.15",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 46.328
+}

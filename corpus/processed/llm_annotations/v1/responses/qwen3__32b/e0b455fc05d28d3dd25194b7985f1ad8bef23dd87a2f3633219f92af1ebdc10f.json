@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause uses the word 'SHOULD', which grants discretion to the server in sending a GOAWAY frame. However, this is not considered ambiguity under the rules, as it does not lead to multiple materially different implementations. The clause provides a clear operational intent: to notify the remote peer about the connection closure and the state of processing. There is no conflicting or inconsistent information in the clause, and no missing constraint that would change implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:04:05.872558+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "c2784750f7b034589ffb4a69a8084197c8e559a29d2205579c18c6860181cc56",
+  "lineage_ids": "lineage:d39877f1e69a2beca9183355",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 146,
+    "load_duration": 10928000,
+    "prompt_eval_count": 609,
+    "total_duration": 6162021200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause uses the word 'SHOULD', which grants discretion to the server in sending a GOAWAY frame. However, this is not considered ambiguity under the rules, as it does not lead to multiple materially different implementations. The clause provides a clear operational intent: to notify the remote peer about the connection closure and the state of processing. There is no conflicting or inconsistent information in the clause, and no missing constraint that would change implementation behavior.\"\n}",
+  "record_id": "e0b455fc05d28d3dd25194b7985f1ad8bef23dd87a2f3633219f92af1ebdc10f",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.172
+}

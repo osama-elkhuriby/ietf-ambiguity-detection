@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "MUST be treated as malformed ([malformed])",
+    "interpretation_a": "The implementation MUST reject the request/response entirely, terminating the connection or returning an error.",
+    "interpretation_b": "The implementation MAY attempt to salvage the request/response by ignoring the invalid field name, logging the error, or taking other corrective action without necessarily terminating the connection.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'malformed' is not defined within the provided context. This allows for multiple interpretations of how an implementation should handle a request or response containing invalid field names. Without a clear definition of 'malformed', it's ambiguous whether the implementation must terminate the connection or can handle the error in a more lenient way.",
+    "missing_information": "The definition of '[malformed]' is not provided in this excerpt, and the severity of 'malformed' is not specified. Does 'malformed' always require connection termination, or can it be a recoverable error?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:13:55.460889+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "30435e8836faef14966b68bee11c334a9bf1026710bac1d84c50174ba5357168",
+  "lineage_ids": "lineage:3708c46636ef026cd5e68336",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 221,
+    "load_duration": 19087700,
+    "prompt_eval_count": 593,
+    "total_duration": 8511215400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-1\", \"evidence_span\": \"MUST be treated as malformed ([malformed])\", \"interpretation_a\": \"The implementation MUST reject the request/response entirely, terminating the connection or returning an error.\", \"interpretation_b\": \"The implementation MAY attempt to salvage the request/response by ignoring the invalid field name, logging the error, or taking other corrective action without necessarily terminating the connection.\",\"missing_information\": \"The definition of '[malformed]' is not provided in this excerpt, and the severity of 'malformed' is not specified. Does 'malformed' always require connection termination, or can it be a recoverable error?\",\"justification\": \"The term 'malformed' is not defined within the provided context. This allows for multiple interpretations of how an implementation should handle a request or response containing invalid field names. Without a clear definition of 'malformed', it's ambiguous whether the implementation must terminate the connection or can handle the error in a more lenient way.\"}",
+  "record_id": "eec02ac6c50a3ad9dfbbb2d9d40ad9afcbf4f5d610e048ad5218134102175971",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "10.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.516
+}

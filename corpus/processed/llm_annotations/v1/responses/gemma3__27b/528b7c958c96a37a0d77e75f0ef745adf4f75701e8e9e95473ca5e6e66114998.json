@@ -1,0 +1,37 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "\"SHOULD\"",
+    "interpretation_a": "Implementations MAY treat \"x-gzip\" the same as \"gzip\", but are not required to.",
+    "interpretation_b": "Implementations ought to treat \"x-gzip\" the same as \"gzip\", with a degree of flexibility allowed.",
+    "is_ambiguous": "yes",
+    "justification": "The use of \"SHOULD\" introduces ambiguity. While it indicates a recommendation, the degree to which implementations are expected to follow it is not clearly defined. This allows for materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 3,
+  "created_at": "2026-10-07T04:06:50.333629+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "3ba5282a65a8513032f8f8644b82411c14ae6d870d80cf0bb0a5ca8ff91216f4",
+  "lineage_ids": "lineage:7dbf71b9dfcbeaa1bf8623cf",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 137,
+    "load_duration": 8075600,
+    "prompt_eval_count": 746,
+    "total_duration": 5431271400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"\\\"SHOULD\\\"\", \"interpretation_a\": \"Implementations MAY treat \\\"x-gzip\\\" the same as \\\"gzip\\\", but are not required to.\", \"interpretation_b\": \"Implementations ought to treat \\\"x-gzip\\\" the same as \\\"gzip\\\", with a degree of flexibility allowed.\", \"missing_information\": \"\", \"justification\": \"The use of \\\"SHOULD\\\" introduces ambiguity. While it indicates a recommendation, the degree to which implementations are expected to follow it is not clearly defined. This allows for materially different implementation behaviours.\"}",
+  "record_id": "528b7c958c96a37a0d77e75f0ef745adf4f75701e8e9e95473ca5e6e66114998",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "8.4.1.3",
+  "status": "invalid",
+  "validation_errors": [
+    "evidence_span is not an exact target-clause substring"
+  ],
+  "wall_seconds": 22.312
+}

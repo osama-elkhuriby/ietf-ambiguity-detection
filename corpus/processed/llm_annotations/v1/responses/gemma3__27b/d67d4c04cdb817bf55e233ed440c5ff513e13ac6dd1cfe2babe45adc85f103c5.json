@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD include",
+    "interpretation_a": "The receiver MUST include all expected delays, even if small.",
+    "interpretation_b": "The receiver MAY include expected delays, but is not required to do so if they are negligible.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' creates ambiguity. While it indicates a recommendation, it doesn't definitively state whether the receiver *must* include the delays or merely *may* include them. This affects implementation, as some receivers might choose to omit small delays, while others might always include them.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:06:45.525009+00:00",
+  "document_id": "draft-ietf-quic-transport-24",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "0583b81b2fded6e7faac43c8b66b7a0c604804fbc0d0172aba12c016651c599c",
+  "lineage_ids": "lineage:e7436f9939ace958ebe42e91",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 146,
+    "load_duration": 4379200,
+    "prompt_eval_count": 602,
+    "total_duration": 5635938000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD include\", \"interpretation_a\": \"The receiver MUST include all expected delays, even if small.\", \"interpretation_b\": \"The receiver MAY include expected delays, but is not required to do so if they are negligible.\", \"missing_information\": \"\", \"justification\": \"The use of 'SHOULD' creates ambiguity. While it indicates a recommendation, it doesn't definitively state whether the receiver *must* include the delays or merely *may* include them. This affects implementation, as some receivers might choose to omit small delays, while others might always include them.\"}",
+  "record_id": "d67d4c04cdb817bf55e233ed440c5ff513e13ac6dd1cfe2babe45adc85f103c5",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "18.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.64
+}

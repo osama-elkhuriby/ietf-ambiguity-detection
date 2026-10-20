@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY attempt",
+    "interpretation_a": "The recipient is permitted to attempt recovery, but is not required to.",
+    "interpretation_b": "The recipient is permitted to attempt recovery, and should do so if possible, but is not required to.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' is ambiguous. It could mean 'is permitted to not attempt recovery' or 'is permitted to attempt recovery, but there is no guidance on when it should'. A missing constraint on *when* recovery should be attempted creates ambiguity.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:27:53.012470+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "6c2ffed5c0ab223a75e1ff0751ad24d93de26127552365e2477649d129d3fca1",
+  "lineage_ids": "lineage:e2647afec89cc7be62b2100a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 141,
+    "load_duration": 21684900,
+    "prompt_eval_count": 601,
+    "total_duration": 5655314500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY attempt\", \"interpretation_a\": \"The recipient is permitted to attempt recovery, but is not required to.\", \"interpretation_b\": \"The recipient is permitted to attempt recovery, and should do so if possible, but is not required to.\", \"missing_information\": \"\", \"justification\": \"The use of 'MAY' is ambiguous. It could mean 'is permitted to not attempt recovery' or 'is permitted to attempt recovery, but there is no guidance on when it should'. A missing constraint on *when* recovery should be attempted creates ambiguity.\"}",
+  "record_id": "cadde424fcf91479d76cd2e0ceb022951fb00c23e74a14324c7a220faf07801a",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "2.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.656
+}

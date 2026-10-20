@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY send another GOAWAY frame",
+    "interpretation_a": "The server is permitted, but not required, to send another GOAWAY frame.",
+    "interpretation_b": "The server is permitted to send multiple GOAWAY frames, each with an updated Stream ID, until the connection is fully shut down.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'another' is ambiguous. It could mean 'a single additional' or 'one more of potentially many'. Without a limit on the number of GOAWAY frames the server MAY send, implementations could differ on how they handle repeated GOAWAY frames.",
+    "missing_information": "The draft does not specify how many times the server MAY send another GOAWAY frame. It is unclear if the server can send multiple GOAWAY frames, or if the 'another' refers to a single additional frame."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:48:08.798333+00:00",
+  "document_id": "draft-ietf-quic-http-24",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "7495c7db4c7f5733e7b6322f9c32f91857f06707bf5b46d4b535a258e3a4560a",
+  "lineage_ids": "lineage:cb1b0cf239ee49f53fb95556",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 203,
+    "load_duration": 12429400,
+    "prompt_eval_count": 573,
+    "total_duration": 7798952000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY send another GOAWAY frame\", \"interpretation_a\": \"The server is permitted, but not required, to send another GOAWAY frame.\", \"interpretation_b\": \"The server is permitted to send multiple GOAWAY frames, each with an updated Stream ID, until the connection is fully shut down.\", \"missing_information\": \"The draft does not specify how many times the server MAY send another GOAWAY frame. It is unclear if the server can send multiple GOAWAY frames, or if the 'another' refers to a single additional frame.\", \"justification\": \"The use of 'another' is ambiguous. It could mean 'a single additional' or 'one more of potentially many'. Without a limit on the number of GOAWAY frames the server MAY send, implementations could differ on how they handle repeated GOAWAY frames.\"}",
+  "record_id": "4446d00fa48c5f40f1767bfe65cd90e60984d82cb131fc2c09147208b44e750e",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.812
+}

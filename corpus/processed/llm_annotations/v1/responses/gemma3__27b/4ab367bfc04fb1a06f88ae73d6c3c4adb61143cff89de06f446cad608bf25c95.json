@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD NOT impose a separate source address verification mechanism",
+    "interpretation_a": "The crypto protocol must not include *any* mechanism for verifying the source address, relying entirely on QUIC's built-in verification.",
+    "interpretation_b": "The crypto protocol may include source address verification, but it should be designed to complement, not duplicate, QUIC's existing mechanism. It could, for example, add additional checks or constraints on top of QUIC's verification.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'separate source address verification mechanism' is open to interpretation. Does it mean *any* additional verification, or only a completely independent mechanism? The use of 'SHOULD NOT' rather than 'MUST NOT' further weakens the constraint.",
+    "missing_information": "The degree to which the crypto protocol is permitted to augment QUIC's source address verification is not specified. The strength of 'SHOULD NOT' is also unclear; is it a strong recommendation or a near-prohibition?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:21:01.817825+00:00",
+  "document_id": "draft-ietf-quic-transport-00",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "1933723a5b50e9948e72e9eb061655cb8ade4f51a412e3e34af7a239de63955a",
+  "lineage_ids": "lineage:24af43221cde895736ccdfbd",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 232,
+    "load_duration": 2506000,
+    "prompt_eval_count": 640,
+    "total_duration": 8677104100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD NOT impose a separate source address verification mechanism\", \"interpretation_a\": \"The crypto protocol must not include *any* mechanism for verifying the source address, relying entirely on QUIC's built-in verification.\", \"interpretation_b\": \"The crypto protocol may include source address verification, but it should be designed to complement, not duplicate, QUIC's existing mechanism. It could, for example, add additional checks or constraints on top of QUIC's verification.\", \"missing_information\": \"The degree to which the crypto protocol is permitted to augment QUIC's source address verification is not specified. The strength of 'SHOULD NOT' is also unclear; is it a strong recommendation or a near-prohibition?\",\"justification\": \"The phrase 'separate source address verification mechanism' is open to interpretation. Does it mean *any* additional verification, or only a completely independent mechanism? The use of 'SHOULD NOT' rather than 'MUST NOT' further weakens the constraint.\"}",
+  "record_id": "4ab367bfc04fb1a06f88ae73d6c3c4adb61143cff89de06f446cad608bf25c95",
+  "revision": "00",
+  "schema_version": 1,
+  "section_ids": "5.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.671
+}

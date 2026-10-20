@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "I-1",
+    "evidence_span": "MUST trust protected acks for unprotected packets",
+    "interpretation_a": "The receiver should accept protected acknowledgements as valid even if they relate to unprotected packets, potentially allowing handshake completion despite potential tampering.",
+    "interpretation_b": "The receiver should ignore protected acknowledgements related to unprotected packets, effectively treating them as invalid and potentially leading to handshake failure.",
+    "is_ambiguous": "yes",
+    "justification": "The clause directly contradicts the previous clause. The previous clause states that the receiver MUST close the connection if it receives an unprotected packet that acks protected packets. This clause states the receiver MUST trust protected acks for unprotected packets, which implies it should *not* close the connection. This is a direct inconsistency.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:21:07.092974+00:00",
+  "document_id": "draft-ietf-quic-recovery-12",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "9a121191deddfb0d25bfa3dfdd5a2cd443b18fe2c4eb4d9ab9e59b7722e50335",
+  "lineage_ids": "lineage:ba5c977a5be0cb598542594c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 173,
+    "load_duration": 4174700,
+    "prompt_eval_count": 573,
+    "total_duration": 6566516400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"I-1\", \"evidence_span\": \"MUST trust protected acks for unprotected packets\", \"interpretation_a\": \"The receiver should accept protected acknowledgements as valid even if they relate to unprotected packets, potentially allowing handshake completion despite potential tampering.\", \"interpretation_b\": \"The receiver should ignore protected acknowledgements related to unprotected packets, effectively treating them as invalid and potentially leading to handshake failure.\",\"missing_information\": \"\", \"justification\": \"The clause directly contradicts the previous clause. The previous clause states that the receiver MUST close the connection if it receives an unprotected packet that acks protected packets. This clause states the receiver MUST trust protected acks for unprotected packets, which implies it should *not* close the connection. This is a direct inconsistency.\"}",
+  "record_id": "639015cc7b1c9bfcaf6a1083a8d2c39509b4a0f19f824a0e2be27646afef1f30",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "3.5.9.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.563
+}

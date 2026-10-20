@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST define a protocol mapping",
+    "interpretation_a": "Each protocol scheme *must* have a published, standardized protocol mapping document that details how SvcFieldValues are used.",
+    "interpretation_b": "Each protocol scheme *must* include within its own specification how SvcFieldValues are used.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'define a protocol mapping' is incomplete. It doesn't specify *where* this mapping is defined. Is it a separate document? Is it part of the protocol specification itself? Both are reasonable interpretations, and the lack of clarity creates an implementation gap.",
+    "missing_information": "It is unclear whether the protocol mapping must be a separate document, or part of the protocol's specification. This affects how implementations discover the mapping."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:08:00.929840+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-00",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "3af105341b6927b417166866b9c262c4b2f8fd2c2b92ac4270fad4fcecdc27c3",
+  "lineage_ids": "lineage:ea45ad1703581a05419c7b86",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 185,
+    "load_duration": 4499200,
+    "prompt_eval_count": 598,
+    "total_duration": 7057760400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST define a protocol mapping\", \"interpretation_a\": \"Each protocol scheme *must* have a published, standardized protocol mapping document that details how SvcFieldValues are used.\", \"interpretation_b\": \"Each protocol scheme *must* include within its own specification how SvcFieldValues are used.\", \"missing_information\": \"It is unclear whether the protocol mapping must be a separate document, or part of the protocol's specification. This affects how implementations discover the mapping.\", \"justification\": \"The phrase 'define a protocol mapping' is incomplete. It doesn't specify *where* this mapping is defined. Is it a separate document? Is it part of the protocol specification itself? Both are reasonable interpretations, and the lack of clarity creates an implementation gap.\"}",
+  "record_id": "9271283ad2ddcdde0d751b36993710d47a6d93b83f063c6670c17e23282f9835",
+  "revision": "00",
+  "schema_version": 1,
+  "section_ids": "2.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.063
+}

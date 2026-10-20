@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD consider \"x-compress\" to be equivalent to \"compress\".",
+    "interpretation_a": "\"x-compress\" and \"compress\" are treated identically in all aspects of HTTP processing (header fields, content negotiation, etc.).",
+    "interpretation_b": "\"x-compress\" and \"compress\" are treated identically only for content coding, but other aspects of HTTP processing may differ.",
+    "is_ambiguous": "yes",
+    "justification": "The word \"equivalent\" is underspecified. The clause does not state *how* \"x-compress\" should be considered equivalent to \"compress\". This allows for materially different implementations. For example, an implementation could treat them as identical for all HTTP processing, or only for content coding.",
+    "missing_information": "The scope of 'equivalent' is not defined. Does it apply to all HTTP processing, or only content coding? The lack of a precise definition allows for different implementations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:03:45.866778+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "3402ed04580a299168e334e176a7b62583e2cb79ba0699b92aebc8c3331e6f90",
+  "lineage_ids": "lineage:a2bfc3510487d744b4828db4",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 213,
+    "load_duration": 20688700,
+    "prompt_eval_count": 567,
+    "total_duration": 8238716700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD consider \\\"x-compress\\\" to be equivalent to \\\"compress\\\".\", \"interpretation_a\": \"\\\"x-compress\\\" and \\\"compress\\\" are treated identically in all aspects of HTTP processing (header fields, content negotiation, etc.).\", \"interpretation_b\": \"\\\"x-compress\\\" and \\\"compress\\\" are treated identically only for content coding, but other aspects of HTTP processing may differ.\", \"missing_information\": \"The scope of 'equivalent' is not defined. Does it apply to all HTTP processing, or only content coding? The lack of a precise definition allows for different implementations.\", \"justification\": \"The word \\\"equivalent\\\" is underspecified. The clause does not state *how* \\\"x-compress\\\" should be considered equivalent to \\\"compress\\\". This allows for materially different implementations. For example, an implementation could treat them as identical for all HTTP processing, or only for content coding.\"}",
+  "record_id": "4120e40dd84e612c394b80dedddb6de6dc9fb35cf654305db7f94801515f6287",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "8.4.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.25
+}

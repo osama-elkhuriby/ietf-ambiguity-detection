@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "it MUST use it for all subsequent Client Cleartext ([packet-client-cleartext]) and 1-RTT ([packet-protected]) packets but not for 0-RTT packets ([packet-protected])",
+    "interpretation_a": "The client uses the server-chosen connection ID for all Client Cleartext and 1-RTT packets *after* receiving the server's connection ID, and continues to use its originally chosen connection ID for 0-RTT packets.",
+    "interpretation_b": "The client uses the server-chosen connection ID for all Client Cleartext and 1-RTT packets *from the moment* it receives the server's connection ID, and does not send any 0-RTT packets at all.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'but not for 0-RTT packets' could be interpreted in two ways. Does it mean that 0-RTT packets are simply excluded from using the server-chosen connection ID, or that no 0-RTT packets are sent at all after the server's ID is received? The timing of the restriction is not clearly defined.",
+    "missing_information": "It is unclear whether the restriction on 0-RTT packets applies only to packets sent *after* the server's connection ID is received, or if it means no 0-RTT packets are sent once the server's ID is known."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:50:35.988842+00:00",
+  "document_id": "draft-ietf-quic-transport-07",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "35ca8e50417897a84fd3d1cc5399a5e040ad796748e52219b6539d886b9a4f65",
+  "lineage_ids": "lineage:786f3a810f25bde540c6f314",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 310,
+    "load_duration": 3506700,
+    "prompt_eval_count": 650,
+    "total_duration": 11502850700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"it MUST use it for all subsequent Client Cleartext ([packet-client-cleartext]) and 1-RTT ([packet-protected]) packets but not for 0-RTT packets ([packet-protected])\", \"interpretation_a\": \"The client uses the server-chosen connection ID for all Client Cleartext and 1-RTT packets *after* receiving the server's connection ID, and continues to use its originally chosen connection ID for 0-RTT packets.\", \"interpretation_b\": \"The client uses the server-chosen connection ID for all Client Cleartext and 1-RTT packets *from the moment* it receives the server's connection ID, and does not send any 0-RTT packets at all.\", \"missing_information\": \"It is unclear whether the restriction on 0-RTT packets applies only to packets sent *after* the server's connection ID is received, or if it means no 0-RTT packets are sent once the server's ID is known.\", \"justification\": \"The phrase 'but not for 0-RTT packets' could be interpreted in two ways. Does it mean that 0-RTT packets are simply excluded from using the server-chosen connection ID, or that no 0-RTT packets are sent at all after the server's ID is received? The timing of the restriction is not clearly defined.\"}",
+  "record_id": "a32d2760a20833e45aac9a9dc223c36c6ee7152e47125a0f3bbc9e7851f38a37",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "5.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.516
+}

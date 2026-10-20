@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "another mechanism",
+    "interpretation_a": "Endpoints may interpret \"another mechanism\" as any protocol‑level negotiation other than ALPN, so ALPN is not required when any other negotiation is used.",
+    "interpretation_b": "Endpoints may interpret \"another mechanism\" as a specific, pre‑defined mechanism, requiring ALPN even when other mechanisms are employed.",
+    "is_ambiguous": "yes",
+    "justification": "The clause contains the undefined term \"another mechanism\". Without a definition, implementers can reasonably interpret it in at least two materially different ways, leading to divergent behavior. The missing definition is the concrete constraint that would resolve the ambiguity.",
+    "missing_information": "A definition of the term \"another mechanism\" that specifies which mechanisms, if any, exempt endpoints from using ALPN."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T13:17:06.884357+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "fc8e6e63f5051c894f3846497587f01ec27cc0d86e31c8bcc6dd7199b623a1d5",
+  "lineage_ids": "lineage:f194502a31cf499da81e54ea",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 370,
+    "load_duration": 4029300,
+    "prompt_eval_count": 810,
+    "total_duration": 3392392700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-1\",\n  \"evidence_span\": \"another mechanism\",\n  \"interpretation_a\": \"Endpoints may interpret \\\"another mechanism\\\" as any protocol‑level negotiation other than ALPN, so ALPN is not required when any other negotiation is used.\",\n  \"interpretation_b\": \"Endpoints may interpret \\\"another mechanism\\\" as a specific, pre‑defined mechanism, requiring ALPN even when other mechanisms are employed.\",\n  \"missing_information\": \"A definition of the term \\\"another mechanism\\\" that specifies which mechanisms, if any, exempt endpoints from using ALPN.\",\n  \"justification\": \"The clause contains the undefined term \\\"another mechanism\\\". Without a definition, implementers can reasonably interpret it in at least two materially different ways, leading to divergent behavior. The missing definition is the concrete constraint that would resolve the ambiguity.\"\n}",
+  "record_id": "d2579967ead26982a84c873f90a19d0bf3af938c752e51c3164ca4b7bce03fec",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "8.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 70.25
+}

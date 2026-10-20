@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Any value other than 0 or 1",
+    "interpretation_a": "Values like -1, 2, or 100 are considered connection errors.",
+    "interpretation_b": "Floating point numbers or strings are considered connection errors.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states that any value *other than* 0 or 1 results in an error. However, it does not define the *type* of value expected for the setting. This leaves open the possibility of non-integer values (e.g., floating-point numbers, strings) being passed, and whether those are also considered errors. Without knowing the expected data type, there are multiple reasonable interpretations of what constitutes a valid or invalid value.",
+    "missing_information": "The clause does not specify the data type of the setting. If the setting is an integer, the interpretations are different. If the setting accepts other data types, the clause is ambiguous."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:41:09.875447+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "4b2394bf0c521d9b2a994efc9425bf78eadf2e93f95aea737baba3291a1ce0a4",
+  "lineage_ids": "lineage:3f1c803d76561fbda27de474",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 218,
+    "load_duration": 9737400,
+    "prompt_eval_count": 565,
+    "total_duration": 8313857200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Any value other than 0 or 1\", \"interpretation_a\": \"Values like -1, 2, or 100 are considered connection errors.\", \"interpretation_b\": \"Floating point numbers or strings are considered connection errors.\", \"missing_information\": \"The clause does not specify the data type of the setting. If the setting is an integer, the interpretations are different. If the setting accepts other data types, the clause is ambiguous.\", \"justification\": \"The clause states that any value *other than* 0 or 1 results in an error. However, it does not define the *type* of value expected for the setting. This leaves open the possibility of non-integer values (e.g., floating-point numbers, strings) being passed, and whether those are also considered errors. Without knowing the expected data type, there are multiple reasonable interpretations of what constitutes a valid or invalid value.\"}",
+  "record_id": "8fb76074ac829dfae5255f1950370cb1c5d956ab8921fdc8ca14711728f0b3b0",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.312
+}

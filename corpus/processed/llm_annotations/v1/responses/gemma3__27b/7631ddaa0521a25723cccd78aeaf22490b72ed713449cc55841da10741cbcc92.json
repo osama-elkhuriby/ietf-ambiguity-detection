@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD NOT issue updates of the Retire Prior To field before receiving RETIRE_CONNECTION_ID frames that retire all connection IDs indicated by the previous Retire Prior To value.",
+    "interpretation_a": "An endpoint can send a new Retire Prior To value as soon as it *believes* all previous connection IDs have been retired, even if it hasn't actually received all the RETIRE_CONNECTION_ID frames. This relies on the endpoint's internal tracking.",
+    "interpretation_b": "An endpoint must wait until it has *definitely* received all RETIRE_CONNECTION_ID frames corresponding to the previous Retire Prior To value before sending a new one. This requires strict ordering and acknowledgement of frames.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD NOT' allows for some flexibility, but the core of the sentence hinges on what 'receiving' means. Does it require complete, guaranteed reception, or is a reasonable belief sufficient? This difference in interpretation leads to different implementation choices.",
+    "missing_information": "The document does not specify what happens if an endpoint sends a new Retire Prior To value before receiving all the corresponding RETIRE_CONNECTION_ID frames. Does it cause an error? Is the new value ignored? This missing constraint affects implementation."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:34:08.933615+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "675ef2c8f97ef70ee9ae183cdb4496f87f9cc947c9ae04d386d66ab7f00a4575",
+  "lineage_ids": "lineage:b22c486ca06bf8c3eded236f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 283,
+    "load_duration": 4006400,
+    "prompt_eval_count": 591,
+    "total_duration": 10475361300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD NOT issue updates of the Retire Prior To field before receiving RETIRE_CONNECTION_ID frames that retire all connection IDs indicated by the previous Retire Prior To value.\", \"interpretation_a\": \"An endpoint can send a new Retire Prior To value as soon as it *believes* all previous connection IDs have been retired, even if it hasn't actually received all the RETIRE_CONNECTION_ID frames. This relies on the endpoint's internal tracking.\", \"interpretation_b\": \"An endpoint must wait until it has *definitely* received all RETIRE_CONNECTION_ID frames corresponding to the previous Retire Prior To value before sending a new one. This requires strict ordering and acknowledgement of frames.\", \"missing_information\": \"The document does not specify what happens if an endpoint sends a new Retire Prior To value before receiving all the corresponding RETIRE_CONNECTION_ID frames. Does it cause an error? Is the new value ignored? This missing constraint affects implementation.\", \"justification\": \"The use of 'SHOULD NOT' allows for some flexibility, but the core of the sentence hinges on what 'receiving' means. Does it require complete, guaranteed reception, or is a reasonable belief sufficient? This difference in interpretation leads to different implementation choices.\"}",
+  "record_id": "7631ddaa0521a25723cccd78aeaf22490b72ed713449cc55841da10741cbcc92",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "5.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.485
+}

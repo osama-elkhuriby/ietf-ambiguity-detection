@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that all application data in STREAM frames must be retransmitted unless the same endpoint that is retransmitting has already sent a RST_STREAM for that stream. The context makes clear that the endpoint refers to the retransmitting endpoint, and there is no missing constraint that would allow multiple reasonable interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T17:39:43.219908+00:00",
+  "document_id": "draft-ietf-quic-transport-06",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "00bf85554cb8ed3bb2f56d92f1f57ab25dfbb73a5cdb9adef90636dde7fd2b91",
+  "lineage_ids": "lineage:2ac972991da55c335ce518fa",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 682,
+    "load_duration": 6569600,
+    "prompt_eval_count": 600,
+    "total_duration": 6041554600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that all application data in STREAM frames must be retransmitted unless the same endpoint that is retransmitting has already sent a RST_STREAM for that stream. The context makes clear that the endpoint refers to the retransmitting endpoint, and there is no missing constraint that would allow multiple reasonable interpretations.\"\n}",
+  "record_id": "a83fb2469b7c18f5ba17ec3ee16cd8a2937fc20045e6946bb3c141aea957e875",
+  "revision": "06",
+  "schema_version": 1,
+  "section_ids": "9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.047
+}

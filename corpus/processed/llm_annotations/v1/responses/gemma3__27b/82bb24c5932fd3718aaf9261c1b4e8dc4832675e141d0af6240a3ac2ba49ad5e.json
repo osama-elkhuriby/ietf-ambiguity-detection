@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "no less than 3 PTO",
+    "interpretation_a": "The endpoint can discard the connection ID exactly 3 PTO after receiving the ACK. (3 PTO is inclusive)",
+    "interpretation_b": "The endpoint can discard the connection ID after a minimum of 3 PTO, meaning any time greater than 3 PTO is acceptable. (3 PTO is exclusive)",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"no less than 3 PTO\" is ambiguous. It could mean \"exactly 3 PTO\" or \"3 PTO or more\". This affects when the endpoint is allowed to discard the connection ID, which is a concrete implementation detail.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:38:22.499628+00:00",
+  "document_id": "draft-ietf-quic-transport-27",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "03dcfc39ea3de4ceb4128cb2bdcb6a49b302828ed691efa444638d2919972c5d",
+  "lineage_ids": "lineage:17d308976339d9bb334937fb",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 161,
+    "load_duration": 5815900,
+    "prompt_eval_count": 621,
+    "total_duration": 6177515300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"no less than 3 PTO\", \"interpretation_a\": \"The endpoint can discard the connection ID exactly 3 PTO after receiving the ACK. (3 PTO is inclusive)\", \"interpretation_b\": \"The endpoint can discard the connection ID after a minimum of 3 PTO, meaning any time greater than 3 PTO is acceptable. (3 PTO is exclusive)\", \"missing_information\": \"\", \"justification\": \"The phrase \\\"no less than 3 PTO\\\" is ambiguous. It could mean \\\"exactly 3 PTO\\\" or \\\"3 PTO or more\\\". This affects when the endpoint is allowed to discard the connection ID, which is a concrete implementation detail.\"}",
+  "record_id": "82bb24c5932fd3718aaf9261c1b4e8dc4832675e141d0af6240a3ac2ba49ad5e",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "5.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.203
+}

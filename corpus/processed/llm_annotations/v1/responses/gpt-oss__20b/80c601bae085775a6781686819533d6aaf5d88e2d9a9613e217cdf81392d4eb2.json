@@ -1,0 +1,37 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Clients SHOULD NOT open more than one HTTP/3 connection to a given host and port pair, where the host is derived from a URI, a selected alternative service ([ALTSVC]), or a configured proxy.",
+    "interpretation_a": "The clause does not specify whether multiple connections with different TLS or transport configurations are allowed, leading to two reasonable interpretations: a strict single-connection rule or a permissive rule allowing multiple connections with different configurations.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a constraint on whether multiple connections with different TLS or transport configurations are permissible, which creates an incomplete constraint affecting implementation behaviour.",
+    "missing_information": ""
+  },
+  "attempts": 3,
+  "created_at": "2026-10-08T09:42:45.661666+00:00",
+  "document_id": "draft-ietf-quic-http-33",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "99743979fc4009e724f90e4dd282ecdba2b9f33345eb23bdb09d63403c3bf623",
+  "lineage_ids": "lineage:6ced3af70e0a021a1c0f0c9b",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 5289,
+    "load_duration": 4018300,
+    "prompt_eval_count": 649,
+    "total_duration": 45986206800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"Clients SHOULD NOT open more than one HTTP/3 connection to a given host and port pair, where the host is derived from a URI, a selected alternative service ([ALTSVC]), or a configured proxy.\",\n  \"interpretation_a\": \"The clause does not specify whether multiple connections with different TLS or transport configurations are allowed, leading to two reasonable interpretations: a strict single-connection rule or a permissive rule allowing multiple connections with different configurations.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause lacks a constraint on whether multiple connections with different TLS or transport configurations are permissible, which creates an incomplete constraint affecting implementation behaviour.\"\n}",
+  "record_id": "80c601bae085775a6781686819533d6aaf5d88e2d9a9613e217cdf81392d4eb2",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "3.3",
+  "status": "invalid",
+  "validation_errors": [
+    "yes requires two distinct interpretations or missing information"
+  ],
+  "wall_seconds": 183.36
+}

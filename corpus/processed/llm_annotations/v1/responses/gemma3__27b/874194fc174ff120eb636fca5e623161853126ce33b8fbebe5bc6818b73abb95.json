@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY ignore or reject",
+    "interpretation_a": "The server is permitted to ignore the Range header field entirely, effectively treating the request as if no range was specified.",
+    "interpretation_b": "The server is permitted to reject the request with an error response (e.g., 416 Range Not Satisfiable) indicating that the range request is invalid.",
+    "is_ambiguous": "yes",
+    "justification": "The use of \"MAY ignore or reject\" provides two distinct behaviours. It is unclear whether ignoring the header is equivalent to rejecting the request, or if both actions are permissible. A missing constraint would clarify whether ignoring the header implies a successful response with the full content, or a rejection.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:15:34.118341+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "6ef93c42dd713a6510a1ae3865e57290f7bc43db3ea5d8f01f6927082cf95c82",
+  "lineage_ids": "lineage:0cf56a32254e05afd90f8c6b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 170,
+    "load_duration": 9631200,
+    "prompt_eval_count": 613,
+    "total_duration": 6624055300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY ignore or reject\", \"interpretation_a\": \"The server is permitted to ignore the Range header field entirely, effectively treating the request as if no range was specified.\", \"interpretation_b\": \"The server is permitted to reject the request with an error response (e.g., 416 Range Not Satisfiable) indicating that the range request is invalid.\", \"missing_information\": \"\", \"justification\": \"The use of \\\"MAY ignore or reject\\\" provides two distinct behaviours. It is unclear whether ignoring the header is equivalent to rejecting the request, or if both actions are permissible. A missing constraint would clarify whether ignoring the header implies a successful response with the full content, or a rejection.\"}",
+  "record_id": "874194fc174ff120eb636fca5e623161853126ce33b8fbebe5bc6818b73abb95",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "14.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.64
+}

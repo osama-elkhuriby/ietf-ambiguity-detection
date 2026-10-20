@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "PTO SHOULD be scheduled for min(RTO, PTO)",
+    "interpretation_a": "If RTO is earlier than the current PTO, reschedule PTO to be RTO. This implies PTO is updated to the earlier of the two values.",
+    "interpretation_b": "If RTO is earlier than the current PTO, do not reschedule PTO. The existing PTO remains in effect, even if RTO is earlier. The 'min' function simply selects the smaller value, but doesn't mandate rescheduling.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'PTO SHOULD be scheduled for min(RTO, PTO)' is ambiguous because it's unclear whether the 'min' function is meant to determine the value PTO *should* be set to, or simply to select the smaller value between RTO and the existing PTO without necessarily triggering a reschedule. The use of 'SHOULD' further weakens the requirement, allowing for implementations that don't reschedule PTO even if RTO is earlier.",
+    "missing_information": "It is unclear whether the 'min' function is intended to *select* the value to use for PTO, or to *set* PTO to that value. The use of 'SHOULD' adds to the ambiguity, as it doesn't strictly require rescheduling."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:29:04.074422+00:00",
+  "document_id": "draft-ietf-quic-recovery-13",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "af2f8fd67cbf2744b5167284e4c66b9d1d86e1360712b1d7e54cb5d5a51dd24c",
+  "lineage_ids": "lineage:188a3dea1c6d2f812a685d4a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 284,
+    "load_duration": 4519200,
+    "prompt_eval_count": 584,
+    "total_duration": 10540645800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"PTO SHOULD be scheduled for min(RTO, PTO)\", \"interpretation_a\": \"If RTO is earlier than the current PTO, reschedule PTO to be RTO. This implies PTO is updated to the earlier of the two values.\", \"interpretation_b\": \"If RTO is earlier than the current PTO, do not reschedule PTO. The existing PTO remains in effect, even if RTO is earlier. The 'min' function simply selects the smaller value, but doesn't mandate rescheduling.\", \"missing_information\": \"It is unclear whether the 'min' function is intended to *select* the value to use for PTO, or to *set* PTO to that value. The use of 'SHOULD' adds to the ambiguity, as it doesn't strictly require rescheduling.\", \"justification\": \"The phrase 'PTO SHOULD be scheduled for min(RTO, PTO)' is ambiguous because it's unclear whether the 'min' function is meant to determine the value PTO *should* be set to, or simply to select the smaller value between RTO and the existing PTO without necessarily triggering a reschedule. The use of 'SHOULD' further weakens the requirement, allowing for implementations that don't reschedule PTO even if RTO is earlier.\"}",
+  "record_id": "bf414f750afbe9d422f3f041e9e9c81c223fd56936b810379ccde1e064964b9c",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "3.3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.547
+}

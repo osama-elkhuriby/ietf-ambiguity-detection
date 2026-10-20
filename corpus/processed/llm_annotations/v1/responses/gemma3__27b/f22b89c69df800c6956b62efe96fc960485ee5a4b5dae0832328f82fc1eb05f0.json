@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "generate ACK frames",
+    "interpretation_a": "The endpoint must generate ACK frames *even if* the original message was lost and never received, as a proactive measure.",
+    "interpretation_b": "The endpoint must generate ACK frames *only if* the original message was received, to acknowledge its receipt.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states that an endpoint MUST generate ACK frames, but does not specify under what conditions. It's unclear if ACKs are generated proactively or only in response to received messages. This impacts implementation of loss detection and recovery.",
+    "missing_information": "It is unclear whether ACK frames are required regardless of whether the message was received, or only in response to a received message. This affects implementation of loss detection and recovery."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:52:39.579256+00:00",
+  "document_id": "draft-ietf-quic-tls-07",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "d30cbc1566fa822324aa4834b6d95de8af033a5834d9f3d32ca95c598fdafd99",
+  "lineage_ids": "lineage:fd01cdd41b970dd5bf582aa1",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 181,
+    "load_duration": 4037100,
+    "prompt_eval_count": 579,
+    "total_duration": 6847601600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"generate ACK frames\", \"interpretation_a\": \"The endpoint must generate ACK frames *even if* the original message was lost and never received, as a proactive measure.\", \"interpretation_b\": \"The endpoint must generate ACK frames *only if* the original message was received, to acknowledge its receipt.\", \"missing_information\": \"It is unclear whether ACK frames are required regardless of whether the message was received, or only in response to a received message. This affects implementation of loss detection and recovery.\", \"justification\": \"The clause states that an endpoint MUST generate ACK frames, but does not specify under what conditions. It's unclear if ACKs are generated proactively or only in response to received messages. This impacts implementation of loss detection and recovery.\"}",
+  "record_id": "f22b89c69df800c6956b62efe96fc960485ee5a4b5dae0832328f82fc1eb05f0",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.844
+}

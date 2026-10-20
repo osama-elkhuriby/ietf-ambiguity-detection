@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY continue to use the current connection ID",
+    "interpretation_a": "The endpoint is permitted to continue using the existing connection ID with the new remote address, but is not required to do so.",
+    "interpretation_b": "The endpoint is required to continue using the existing connection ID with the new remote address, but has discretion over *how* it does so.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' is ambiguous. It could mean the endpoint is permitted to continue using the connection ID, or that it is required to do so. This affects implementation because an endpoint could be incorrectly penalized for not continuing to use the connection ID if 'MAY' implies a requirement.",
+    "missing_information": "The clause does not specify whether 'MAY' indicates permission or obligation. This affects implementation because an endpoint could be incorrectly penalized for not continuing to use the connection ID if 'MAY' implies a requirement."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:22:19.712332+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "2bc022efa92df319b3d5c7c4be2f5abefc502f45b341c2ba23498c4034661340",
+  "lineage_ids": "lineage:18df4cf47f5ed3d466232bce",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 212,
+    "load_duration": 4173300,
+    "prompt_eval_count": 611,
+    "total_duration": 7980967500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY continue to use the current connection ID\", \"interpretation_a\": \"The endpoint is permitted to continue using the existing connection ID with the new remote address, but is not required to do so.\", \"interpretation_b\": \"The endpoint is required to continue using the existing connection ID with the new remote address, but has discretion over *how* it does so.\", \"missing_information\": \"The clause does not specify whether 'MAY' indicates permission or obligation. This affects implementation because an endpoint could be incorrectly penalized for not continuing to use the connection ID if 'MAY' implies a requirement.\", \"justification\": \"The use of 'MAY' is ambiguous. It could mean the endpoint is permitted to continue using the connection ID, or that it is required to do so. This affects implementation because an endpoint could be incorrectly penalized for not continuing to use the connection ID if 'MAY' implies a requirement.\"}",
+  "record_id": "4d0e87990c8655c6574850ec50ee5e14428d8b3bc44d5b3fb99bdfadea792930",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.984
+}

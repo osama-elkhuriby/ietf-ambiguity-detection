@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "these or other constraints",
+    "interpretation_a": "The constraints could be QUIC-level constraints (e.g. packet loss, congestion) or HTTP-level constraints (e.g. header size limits, invalid state).",
+    "interpretation_b": "The constraints could be limited to those explicitly related to the 0-RTT data, or could include any constraint that leads to connection closure.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'these or other constraints' is vague. It's unclear whether 'these' refers to constraints mentioned earlier in the document, or to a specific set of constraints related to 0-RTT. The 'other' constraints are also undefined, creating ambiguity about what conditions would trigger the retry.",
+    "missing_information": "The document does not define what 'these or other constraints' refers to, leaving open the possibility of different implementations interpreting the scope of constraints that trigger the retry behavior."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:59:33.378949+00:00",
+  "document_id": "draft-ietf-quic-http-02",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "f72e81e072ad2c11fecdb85efbf16314bee3eea717a20dea67739bfc8030313b",
+  "lineage_ids": "lineage:148f7175def66dc310894773",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 216,
+    "load_duration": 20822600,
+    "prompt_eval_count": 593,
+    "total_duration": 8293014100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"these or other constraints\", \"interpretation_a\": \"The constraints could be QUIC-level constraints (e.g. packet loss, congestion) or HTTP-level constraints (e.g. header size limits, invalid state).\", \"interpretation_b\": \"The constraints could be limited to those explicitly related to the 0-RTT data, or could include any constraint that leads to connection closure.\", \"missing_information\": \"The document does not define what 'these or other constraints' refers to, leaving open the possibility of different implementations interpreting the scope of constraints that trigger the retry behavior.\", \"justification\": \"The phrase 'these or other constraints' is vague. It's unclear whether 'these' refers to constraints mentioned earlier in the document, or to a specific set of constraints related to 0-RTT. The 'other' constraints are also undefined, creating ambiguity about what conditions would trigger the retry.\"}",
+  "record_id": "9689d70c50d5ed8204b6914343a7c898aaace4c4ab717ece97d2703dc6b9115c",
+  "revision": "02",
+  "schema_version": 1,
+  "section_ids": "5.2.3.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.297
+}

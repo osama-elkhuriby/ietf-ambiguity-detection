@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "SHOULD send a PING or other ack-eliciting frame",
+    "interpretation_a": "The sender is encouraged to send a PING frame when no application data is available, to keep the connection alive.",
+    "interpretation_b": "The sender is encouraged to send *any* frame that will elicit an acknowledgement when no application data is available, and a PING frame is just one example of such a frame. Other ack-eliciting frames could be used instead.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'or' introduces ambiguity. Does 'other' refer to any frame that elicits an ACK, or are there specific requirements for what constitutes a valid 'other' frame? Without further clarification, implementations could diverge on what frames are acceptable, leading to interoperability problems.",
+    "missing_information": "The definition of 'other ack-eliciting frame' is not provided, and it is unclear what types of frames qualify. This impacts implementation because different implementations might consider different frames as valid 'other ack-eliciting frames', leading to interoperability issues."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:16:37.047592+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "d8d7068c4b3fe990ee56b7cc068cbcb43182687f1eea81ac2c9384e769a6115b",
+  "lineage_ids": "lineage:f7fbeb9508560a9b2555ce1d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 244,
+    "load_duration": 3964400,
+    "prompt_eval_count": 609,
+    "total_duration": 9131453600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"SHOULD send a PING or other ack-eliciting frame\", \"interpretation_a\": \"The sender is encouraged to send a PING frame when no application data is available, to keep the connection alive.\", \"interpretation_b\": \"The sender is encouraged to send *any* frame that will elicit an acknowledgement when no application data is available, and a PING frame is just one example of such a frame. Other ack-eliciting frames could be used instead.\", \"missing_information\": \"The definition of 'other ack-eliciting frame' is not provided, and it is unclear what types of frames qualify. This impacts implementation because different implementations might consider different frames as valid 'other ack-eliciting frames', leading to interoperability issues.\", \"justification\": \"The use of 'or' introduces ambiguity. Does 'other' refer to any frame that elicits an ACK, or are there specific requirements for what constitutes a valid 'other' frame? Without further clarification, implementations could diverge on what frames are acceptable, leading to interoperability problems.\"}",
+  "record_id": "10cea2fbeb5428d581aeffdef4594e2da6493c6ac9614e5fe4b3fdaedc8471ed",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.2.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.125
+}

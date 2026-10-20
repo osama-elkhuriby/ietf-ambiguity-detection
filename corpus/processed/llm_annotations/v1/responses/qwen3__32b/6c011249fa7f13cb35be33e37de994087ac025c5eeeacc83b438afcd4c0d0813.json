@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD prioritize information for smaller-SvcPriority records",
+    "interpretation_a": "Recursive resolvers should give priority to including RRSets for records with smaller SvcPriority values, possibly to ensure that the most important or preferred records are included in the response.",
+    "interpretation_b": "Recursive resolvers should prioritize including RRSets for records with smaller SvcPriority values, but the exact meaning of 'prioritize' is unclear—does it mean including them first, ensuring they are included at all, or something else?",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'SHOULD prioritize information for smaller-SvcPriority records' is ambiguous because it does not define what 'prioritize' means in this context or how 'smaller-SvcPriority' should be interpreted when omitting RRSets. This could lead to different implementations handling the prioritization differently, affecting the behavior of recursive resolvers.",
+    "missing_information": "The term 'prioritize' is not defined in the clause, and the criteria for what constitutes 'smaller-SvcPriority' in the context of omitting RRSets are not fully specified. This lack of definition could lead to different implementations handling the prioritization differently."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:07:45.087838+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "369f45a7b0e4f7729dcd3ebbe607251f8fa6cc76699fc32d71796c27e3cbd655",
+  "lineage_ids": "lineage:2ef431e7ff10a8646fe2fe56",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 277,
+    "load_duration": 4347100,
+    "prompt_eval_count": 579,
+    "total_duration": 11328312800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"SHOULD prioritize information for smaller-SvcPriority records\",\n  \"interpretation_a\": \"Recursive resolvers should give priority to including RRSets for records with smaller SvcPriority values, possibly to ensure that the most important or preferred records are included in the response.\",\n  \"interpretation_b\": \"Recursive resolvers should prioritize including RRSets for records with smaller SvcPriority values, but the exact meaning of 'prioritize' is unclear—does it mean including them first, ensuring they are included at all, or something else?\",\n  \"missing_information\": \"The term 'prioritize' is not defined in the clause, and the criteria for what constitutes 'smaller-SvcPriority' in the context of omitting RRSets are not fully specified. This lack of definition could lead to different implementations handling the prioritization differently.\",\n  \"justification\": \"The phrase 'SHOULD prioritize information for smaller-SvcPriority records' is ambiguous because it does not define what 'prioritize' means in this context or how 'smaller-SvcPriority' should be interpreted when omitting RRSets. This could lead to different implementations handling the prioritization differently, affecting the behavior of recursive resolvers.\"\n}",
+  "record_id": "6c011249fa7f13cb35be33e37de994087ac025c5eeeacc83b438afcd4c0d0813",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.328
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST be empty",
+    "interpretation_a": "The presentation and wire format values are completely absent; no data is provided for these fields.",
+    "interpretation_b": "The presentation and wire format values are present, but contain zero length strings (e.g., \"\").",
+    "is_ambiguous": "yes",
+    "justification": "The term 'empty' is not precisely defined. It could mean that the fields are not present in the data structure at all, or that they are present but contain no data (e.g., zero-length strings). Both interpretations are reasonable and would lead to different implementations.",
+    "missing_information": "The definition of 'empty' is not precise. Does 'empty' mean absent, or zero-length?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:09:59.240008+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "aea4ca1e172f0fb02200e23b6d7dc4c155b73dc1df7da27073e065a12c40d4b3",
+  "lineage_ids": "lineage:22954e82a088e6beeb83bc9b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 175,
+    "load_duration": 3997000,
+    "prompt_eval_count": 593,
+    "total_duration": 6609566400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST be empty\", \"interpretation_a\": \"The presentation and wire format values are completely absent; no data is provided for these fields.\", \"interpretation_b\": \"The presentation and wire format values are present, but contain zero length strings (e.g., \\\"\\\").\", \"missing_information\": \"The definition of 'empty' is not precise. Does 'empty' mean absent, or zero-length?\", \"justification\": \"The term 'empty' is not precisely defined. It could mean that the fields are not present in the data structure at all, or that they are present but contain no data (e.g., zero-length strings). Both interpretations are reasonable and would lead to different implementations.\"}",
+  "record_id": "a25152a8c92f400280b35914952e182089b36ebc484ae9f73699b9c982fb891e",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "7.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.609
+}

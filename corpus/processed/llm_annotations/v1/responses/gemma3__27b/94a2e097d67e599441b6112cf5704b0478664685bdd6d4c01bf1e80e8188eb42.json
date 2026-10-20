@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless it references Stream ID 0",
+    "interpretation_a": "A PRIORITY frame not referencing a request is an error unless it references Stream ID 0, meaning any other Stream ID is still an error.",
+    "interpretation_b": "A PRIORITY frame not referencing a request is an error unless it references Stream ID 0, meaning Stream ID 0 is a valid, but unusual, case where no request is associated.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'unless it references Stream ID 0' creates ambiguity. It's unclear if referencing Stream ID 0 is a permitted exception to the rule that a PRIORITY frame must reference a request, or if it's simply stating that referencing Stream ID 0 is also an error. This impacts how an implementation would handle a PRIORITY frame with Stream ID 0 when no request is present.",
+    "missing_information": "It is unclear whether Stream ID 0 is a valid target for a PRIORITY frame when no request exists. The specification does not define the valid range of Stream IDs for PRIORITY frames in this context."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:59:01.502378+00:00",
+  "document_id": "draft-ietf-quic-http-08",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "9ab9070235e3c7d1fc365789471a6af19cac7675fdad26f95e877a3e5dfb5429",
+  "lineage_ids": "lineage:1b904dc9c711503757a20954",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 249,
+    "load_duration": 5405100,
+    "prompt_eval_count": 615,
+    "total_duration": 9509956800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless it references Stream ID 0\", \"interpretation_a\": \"A PRIORITY frame not referencing a request is an error unless it references Stream ID 0, meaning any other Stream ID is still an error.\", \"interpretation_b\": \"A PRIORITY frame not referencing a request is an error unless it references Stream ID 0, meaning Stream ID 0 is a valid, but unusual, case where no request is associated.\", \"missing_information\": \"It is unclear whether Stream ID 0 is a valid target for a PRIORITY frame when no request exists. The specification does not define the valid range of Stream IDs for PRIORITY frames in this context.\", \"justification\": \"The phrase 'unless it references Stream ID 0' creates ambiguity. It's unclear if referencing Stream ID 0 is a permitted exception to the rule that a PRIORITY frame must reference a request, or if it's simply stating that referencing Stream ID 0 is also an error. This impacts how an implementation would handle a PRIORITY frame with Stream ID 0 when no request is present.\"}",
+  "record_id": "94a2e097d67e599441b6112cf5704b0478664685bdd6d4c01bf1e80e8188eb42",
+  "revision": "08",
+  "schema_version": 1,
+  "section_ids": "5.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.531
+}

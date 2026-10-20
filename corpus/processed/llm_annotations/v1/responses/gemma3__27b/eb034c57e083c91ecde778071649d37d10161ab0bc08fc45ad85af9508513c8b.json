@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "it SHOULD check the identity",
+    "interpretation_a": "The server is encouraged to verify the client's identity using the previously described method, but is not required to do so.",
+    "interpretation_b": "The server is strongly encouraged to verify the client's identity using the previously described method, and deviation from this is discouraged.",
+    "is_ambiguous": "yes",
+    "justification": "The word 'SHOULD' is known to be ambiguous, and without a clear definition of its strength within this document, implementations could reasonably differ on whether or not to perform the identity check.",
+    "missing_information": "The strength of 'SHOULD' is not defined within this document, and different readers may interpret it as either a weak recommendation or a strong encouragement. This affects implementation decisions regarding identity verification."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:34:32.421147+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-10",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "c7367becfc2530cefe6324721c3a342e5ed2bf2e157d3dc3dd5b44962080ef20",
+  "lineage_ids": "lineage:98b7a6def816e08a9f66ffa5",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 183,
+    "load_duration": 26201100,
+    "prompt_eval_count": 579,
+    "total_duration": 7150056700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"it SHOULD check the identity\", \"interpretation_a\": \"The server is encouraged to verify the client's identity using the previously described method, but is not required to do so.\", \"interpretation_b\": \"The server is strongly encouraged to verify the client's identity using the previously described method, and deviation from this is discouraged.\", \"missing_information\": \"The strength of 'SHOULD' is not defined within this document, and different readers may interpret it as either a weak recommendation or a strong encouragement. This affects implementation decisions regarding identity verification.\",\"justification\": \"The word 'SHOULD' is known to be ambiguous, and without a clear definition of its strength within this document, implementations could reasonably differ on whether or not to perform the identity check.\"}",
+  "record_id": "eb034c57e083c91ecde778071649d37d10161ab0bc08fc45ad85af9508513c8b",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "6.4.3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.156
+}

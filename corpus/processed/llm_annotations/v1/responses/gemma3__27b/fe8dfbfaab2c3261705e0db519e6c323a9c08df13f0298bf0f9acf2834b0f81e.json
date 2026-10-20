@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "does not depend on the remainder of the request being correct",
+    "interpretation_a": "The server can send a response if it has enough information to construct a valid response, even if some parts of the request are missing or invalid. It assumes the missing parts won't affect the response.",
+    "interpretation_b": "The server can send a response only if the missing parts of the request are demonstrably irrelevant to the response. This requires the server to *parse* enough of the request to determine irrelevance, which is a stronger condition than simply not *depending* on the remainder.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'does not depend on' is vague. It's unclear whether the server needs to parse the request to determine if the missing parts are irrelevant, or if it can simply assume they won't affect the response. This difference in interpretation affects implementation because it dictates the amount of request parsing required before sending a response.",
+    "missing_information": "The degree to which the server must validate the request before sending a response is not specified. Does 'does not depend' mean the server doesn't need to parse any further, or that it has parsed enough to determine irrelevance?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:53:02.575969+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "a9c18332ec9627772f4bdad7589b10f51874b8ac8865649b859931e6c403eabc",
+  "lineage_ids": "lineage:0ded039d3a1c3fe4c78a9ddf",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 271,
+    "load_duration": 4538500,
+    "prompt_eval_count": 578,
+    "total_duration": 10291148700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"does not depend on the remainder of the request being correct\", \"interpretation_a\": \"The server can send a response if it has enough information to construct a valid response, even if some parts of the request are missing or invalid. It assumes the missing parts won't affect the response.\", \"interpretation_b\": \"The server can send a response only if the missing parts of the request are demonstrably irrelevant to the response. This requires the server to *parse* enough of the request to determine irrelevance, which is a stronger condition than simply not *depending* on the remainder.\", \"missing_information\": \"The degree to which the server must validate the request before sending a response is not specified. Does 'does not depend' mean the server doesn't need to parse any further, or that it has parsed enough to determine irrelevance?\",\"justification\": \"The phrase 'does not depend on' is vague. It's unclear whether the server needs to parse the request to determine if the missing parts are irrelevant, or if it can simply assume they won't affect the response. This difference in interpretation affects implementation because it dictates the amount of request parsing required before sending a response.\"}",
+  "record_id": "fe8dfbfaab2c3261705e0db519e6c323a9c08df13f0298bf0f9acf2834b0f81e",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.312
+}

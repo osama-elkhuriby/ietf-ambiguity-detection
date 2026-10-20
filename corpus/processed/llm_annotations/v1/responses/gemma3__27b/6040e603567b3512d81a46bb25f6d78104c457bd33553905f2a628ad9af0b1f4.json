@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "does not contain exactly one variable-length integer",
+    "interpretation_a": "The clause could be interpreted as requiring the server to treat the frame as an error if the payload contains zero variable-length integers.",
+    "interpretation_b": "The clause could be interpreted as requiring the server to treat the frame as an error if the payload contains more than one variable-length integer.",
+    "is_ambiguous": "yes",
+    "justification": "The phrasing 'does not contain exactly one' is incomplete. It doesn't cover the case of zero integers, creating a missing constraint.",
+    "missing_information": "The clause does not specify what happens if the payload contains zero variable-length integers. It only states what happens if it 'does not contain exactly one'. This leaves open the possibility of an invalid payload with zero or multiple integers being treated differently than one with exactly one."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:52:28.700561+00:00",
+  "document_id": "draft-ietf-quic-http-08",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "fc784a92403df3d4355871370817a4b073ea32cfb5ab8c653209d122630d6fa0",
+  "lineage_ids": "lineage:4e5635402839f5e02aa364ef",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 197,
+    "load_duration": 8355400,
+    "prompt_eval_count": 580,
+    "total_duration": 7568138400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"does not contain exactly one variable-length integer\", \"interpretation_a\": \"The clause could be interpreted as requiring the server to treat the frame as an error if the payload contains zero variable-length integers.\", \"interpretation_b\": \"The clause could be interpreted as requiring the server to treat the frame as an error if the payload contains more than one variable-length integer.\", \"missing_information\": \"The clause does not specify what happens if the payload contains zero variable-length integers. It only states what happens if it 'does not contain exactly one'. This leaves open the possibility of an invalid payload with zero or multiple integers being treated differently than one with exactly one.\",\"justification\": \"The phrasing 'does not contain exactly one' is incomplete. It doesn't cover the case of zero integers, creating a missing constraint.\"}",
+  "record_id": "6040e603567b3512d81a46bb25f6d78104c457bd33553905f2a628ad9af0b1f4",
+  "revision": "08",
+  "schema_version": 1,
+  "section_ids": "5.2.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.578
+}

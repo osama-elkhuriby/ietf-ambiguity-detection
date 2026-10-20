@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause provides a clear condition for resetting congestion control and RTT estimator for a new path: it must be done immediately upon confirming the peer's ownership of the new address, unless the only change is the port number. The clause is unambiguous in its requirements and conditions, with no conflicting or undefined terms that would allow for multiple materially different interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:02:23.009648+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "2f4cd11698418ba1c6a8e6c107eea31ff4491b12cff72f4e1c34220fe67ad08a",
+  "lineage_ids": "lineage:1ac150cc7e0617766af18677",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 127,
+    "load_duration": 4040500,
+    "prompt_eval_count": 604,
+    "total_duration": 5248506200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause provides a clear condition for resetting congestion control and RTT estimator for a new path: it must be done immediately upon confirming the peer's ownership of the new address, unless the only change is the port number. The clause is unambiguous in its requirements and conditions, with no conflicting or undefined terms that would allow for multiple materially different interpretations.\"\n}",
+  "record_id": "3ab974bb7c53b155a1aeb44c9faf837a108995e9bad811dc455a2e67e98a6103",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.25
+}

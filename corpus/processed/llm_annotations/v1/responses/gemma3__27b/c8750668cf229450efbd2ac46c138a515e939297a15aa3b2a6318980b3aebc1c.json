@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "further packets",
+    "interpretation_a": "The endpoint must not send *any* further packets after sending a closing frame, even if those packets contain information necessary for graceful shutdown.",
+    "interpretation_b": "The endpoint must not send packets that would *only* contribute to an endless exchange of closing frames, but may send other packets (e.g., those containing application data or acknowledgements) even after sending a closing frame.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'further packets' is not sufficiently constrained. It's unclear whether it prohibits *all* subsequent packets or only those that could lead to an infinite loop of closing frames. This affects implementation because an endpoint might choose to send additional packets for application-level cleanup or acknowledgements, even after sending a closing frame, if it interprets 'further packets' narrowly.",
+    "missing_information": "The definition of 'further packets' is incomplete. Does it refer to all packets, or only those that would contribute to an endless exchange of closing frames?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:01:48.113807+00:00",
+  "document_id": "draft-ietf-quic-transport-16",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "1c9fd5f4c3c4f3b70ce2835b23717f065136b3eb033f726705497d598ebf3afb",
+  "lineage_ids": "lineage:2f36de0902c4f53dd06ab9ed",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 233,
+    "load_duration": 4850600,
+    "prompt_eval_count": 589,
+    "total_duration": 8943556300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"further packets\", \"interpretation_a\": \"The endpoint must not send *any* further packets after sending a closing frame, even if those packets contain information necessary for graceful shutdown.\", \"interpretation_b\": \"The endpoint must not send packets that would *only* contribute to an endless exchange of closing frames, but may send other packets (e.g., those containing application data or acknowledgements) even after sending a closing frame.\", \"missing_information\": \"The definition of 'further packets' is incomplete. Does it refer to all packets, or only those that would contribute to an endless exchange of closing frames?\",\"justification\": \"The phrase 'further packets' is not sufficiently constrained. It's unclear whether it prohibits *all* subsequent packets or only those that could lead to an infinite loop of closing frames. This affects implementation because an endpoint might choose to send additional packets for application-level cleanup or acknowledgements, even after sending a closing frame, if it interprets 'further packets' narrowly.\"}",
+  "record_id": "c8750668cf229450efbd2ac46c138a515e939297a15aa3b2a6318980b3aebc1c",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "10.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.937
+}

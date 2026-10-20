@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear directive: endpoints must treat the receipt of a TLS KeyUpdate message as a connection error of type 0x10a, equivalent to a fatal TLS alert of unexpected_message. There is no ambiguity in the required behavior, as the clause explicitly defines the consequence of receiving such a message. The reference to [tls-errors] is normative and does not introduce ambiguity in this context.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:35:05.692308+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "c8d1d69b0d00070bad9997b5b74976e001eb492d488b22e0a62bd0177f3d8416",
+  "lineage_ids": "lineage:c0605d6995b5a2f35c4ee165",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 138,
+    "load_duration": 4997600,
+    "prompt_eval_count": 553,
+    "total_duration": 5671352900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear directive: endpoints must treat the receipt of a TLS KeyUpdate message as a connection error of type 0x10a, equivalent to a fatal TLS alert of unexpected_message. There is no ambiguity in the required behavior, as the clause explicitly defines the consequence of receiving such a message. The reference to [tls-errors] is normative and does not introduce ambiguity in this context.\"\n}",
+  "record_id": "624f9c0d90f0918c3db9b704650919d031d36a44ecd3c6cd8af2aa9d709c2cb6",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.687
+}

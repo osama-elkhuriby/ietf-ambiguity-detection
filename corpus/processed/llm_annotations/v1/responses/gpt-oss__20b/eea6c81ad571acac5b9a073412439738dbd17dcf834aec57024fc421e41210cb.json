@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "if this is known",
+    "interpretation_a": "The clause does not specify what \"this\" refers to; it could be the server's highest supported major version, the client's highest conformant version, or the major version constraint.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"if this is known\" is ambiguous because it is unclear whether it refers to the server's highest supported major version, the client's highest conformant version, or some other condition. This missing constraint can lead to different implementation behaviours.",
+    "missing_information": "Clarification of what \"this\" refers to is needed to determine the required request version when the server's capabilities are unknown or partially known."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T08:30:10.148909+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "47e6a570824fa9a4a2665f46c9be43d967bf156207a0be501156074b30626f93",
+  "lineage_ids": "lineage:e81f1595aba995d7a5a2ac47",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1365,
+    "load_duration": 5553900,
+    "prompt_eval_count": 627,
+    "total_duration": 11997122200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"if this is known\",\n  \"interpretation_a\": \"The clause does not specify what \\\"this\\\" refers to; it could be the server's highest supported major version, the client's highest conformant version, or the major version constraint.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"Clarification of what \\\"this\\\" refers to is needed to determine the required request version when the server's capabilities are unknown or partially known.\",\n  \"justification\": \"The phrase \\\"if this is known\\\" is ambiguous because it is unclear whether it refers to the server's highest supported major version, the client's highest conformant version, or some other condition. This missing constraint can lead to different implementation behaviours.\"\n}",
+  "record_id": "eea6c81ad571acac5b9a073412439738dbd17dcf834aec57024fc421e41210cb",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 80.0
+}

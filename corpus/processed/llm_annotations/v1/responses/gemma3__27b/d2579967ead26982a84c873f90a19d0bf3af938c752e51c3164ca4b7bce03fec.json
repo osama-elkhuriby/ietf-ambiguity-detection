@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Unless another mechanism is used",
+    "interpretation_a": "ALPN is required if no other mechanism exists. The definition of 'another mechanism' is open, potentially allowing for proprietary or out-of-band negotiation.",
+    "interpretation_b": "ALPN is always required, as any alternative mechanism would, by definition, already be 'in use' and thus exempt the connection from this requirement. This interpretation relies on a strict reading of the conditional.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'Unless another mechanism is used' introduces ambiguity. It's unclear what qualifies as 'another mechanism'. Does it need to be standardized? Can it be a proprietary solution? The lack of definition creates a potential for divergent implementations.",
+    "missing_information": "The definition of 'another mechanism' is not provided, and it is unclear what constitutes a valid alternative to ALPN. This missing constraint affects implementation because developers must decide what, if anything, qualifies as 'another mechanism'."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:49:15.656931+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "fc8e6e63f5051c894f3846497587f01ec27cc0d86e31c8bcc6dd7199b623a1d5",
+  "lineage_ids": "lineage:f194502a31cf499da81e54ea",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 223,
+    "load_duration": 4166800,
+    "prompt_eval_count": 605,
+    "total_duration": 8352647100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Unless another mechanism is used\", \"interpretation_a\": \"ALPN is required if no other mechanism exists. The definition of 'another mechanism' is open, potentially allowing for proprietary or out-of-band negotiation.\", \"interpretation_b\": \"ALPN is always required, as any alternative mechanism would, by definition, already be 'in use' and thus exempt the connection from this requirement. This interpretation relies on a strict reading of the conditional.\", \"missing_information\": \"The definition of 'another mechanism' is not provided, and it is unclear what constitutes a valid alternative to ALPN. This missing constraint affects implementation because developers must decide what, if anything, qualifies as 'another mechanism'.\", \"justification\": \"The phrase 'Unless another mechanism is used' introduces ambiguity. It's unclear what qualifies as 'another mechanism'. Does it need to be standardized? Can it be a proprietary solution? The lack of definition creates a potential for divergent implementations.\"}",
+  "record_id": "d2579967ead26982a84c873f90a19d0bf3af938c752e51c3164ca4b7bce03fec",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "8.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.36
+}

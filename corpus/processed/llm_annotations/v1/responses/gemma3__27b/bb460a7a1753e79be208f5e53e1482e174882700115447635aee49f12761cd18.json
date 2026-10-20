@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "incomplete 200 (OK) response if the combined response is a prefix of the representation",
+    "interpretation_a": "If the combined response is a prefix, the client *must* treat it as a 200 OK response, even if it's not the complete representation.",
+    "interpretation_b": "If the combined response is a prefix, the client *may* treat it as a 200 OK response, but could also treat it as a 206 Partial Content response.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'incomplete 200 (OK) response if...' can be read as a conditional requirement (if it's a prefix, then it *must* be treated as an incomplete 200) or as one option within the 'one of the following' list (it *may* be treated as an incomplete 200).",
+    "missing_information": "The clause does not explicitly state whether treating a prefix as a 200 OK is mandatory or optional. The use of 'incomplete 200 (OK) response' suggests it's a specific type of 200, but the 'MUST process as one of the following' structure implies a choice, not a condition."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:25:43.210133+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "800c58b31e0db14d4b2af6dc88ce9fb263df0e6d4855674efe84e3db36cae4bc",
+  "lineage_ids": "lineage:7117ddf21d9397a64011b79f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 285,
+    "load_duration": 11412400,
+    "prompt_eval_count": 644,
+    "total_duration": 10758139700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"incomplete 200 (OK) response if the combined response is a prefix of the representation\", \"interpretation_a\": \"If the combined response is a prefix, the client *must* treat it as a 200 OK response, even if it's not the complete representation.\", \"interpretation_b\": \"If the combined response is a prefix, the client *may* treat it as a 200 OK response, but could also treat it as a 206 Partial Content response.\", \"missing_information\": \"The clause does not explicitly state whether treating a prefix as a 200 OK is mandatory or optional. The use of 'incomplete 200 (OK) response' suggests it's a specific type of 200, but the 'MUST process as one of the following' structure implies a choice, not a condition.\", \"justification\": \"The phrase 'incomplete 200 (OK) response if...' can be read as a conditional requirement (if it's a prefix, then it *must* be treated as an incomplete 200) or as one option within the 'one of the following' list (it *may* be treated as an incomplete 200).\"}",
+  "record_id": "bb460a7a1753e79be208f5e53e1482e174882700115447635aee49f12761cd18",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "15.3.7.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.781
+}

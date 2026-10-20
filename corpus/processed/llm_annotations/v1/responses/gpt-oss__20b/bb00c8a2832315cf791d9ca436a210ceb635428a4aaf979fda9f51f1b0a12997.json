@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "by resolving the host identifier to an IP address",
+    "interpretation_a": "The client resolves the host identifier to a single IP address and establishes a QUIC connection to that address.",
+    "interpretation_b": "The client resolves the host identifier to multiple IP addresses and may attempt connections to each address.",
+    "is_ambiguous": "yes",
+    "justification": "The clause uses the singular phrase \"an IP address\" but does not specify whether multiple addresses are allowed, leading to two materially different implementation behaviours.",
+    "missing_information": "Whether the client must resolve to a single IP address or may resolve to multiple addresses."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T10:14:10.414587+00:00",
+  "document_id": "draft-ietf-quic-http-33",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "0d2d890dc483f23f1e3269b0368312aeec84ad7abc6bbb1681417e31c0ec7178",
+  "lineage_ids": "lineage:dfe01708d9db6139397283a0",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 4538,
+    "load_duration": 4447800,
+    "prompt_eval_count": 641,
+    "total_duration": 39139250500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"by resolving the host identifier to an IP address\",\n  \"interpretation_a\": \"The client resolves the host identifier to a single IP address and establishes a QUIC connection to that address.\",\n  \"interpretation_b\": \"The client resolves the host identifier to multiple IP addresses and may attempt connections to each address.\",\n  \"missing_information\": \"Whether the client must resolve to a single IP address or may resolve to multiple addresses.\",\n  \"justification\": \"The clause uses the singular phrase \\\"an IP address\\\" but does not specify whether multiple addresses are allowed, leading to two materially different implementation behaviours.\"\n}",
+  "record_id": "bb00c8a2832315cf791d9ca436a210ceb635428a4aaf979fda9f51f1b0a12997",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 39.14
+}

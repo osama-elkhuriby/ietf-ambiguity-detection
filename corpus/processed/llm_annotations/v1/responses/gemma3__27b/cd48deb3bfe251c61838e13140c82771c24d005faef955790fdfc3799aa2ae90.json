@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "those required in the subsections below",
+    "interpretation_a": "The server must include all header fields that would have been included in a 200 response, plus any additional header fields specified in the subsections that follow this clause.",
+    "interpretation_b": "The server must include all header fields that would have been included in a 200 response, and only those header fields specified in the subsections that follow this clause. Any header fields not specified in the subsections are omitted.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'those required in the subsections below' is incomplete. It's unclear whether the server MUST include all headers from a 200 response *plus* those in the subsections, or *only* those in the subsections. This creates two reasonable interpretations affecting implementation.",
+    "missing_information": "The subsections referenced are not provided, so it is unclear what additional header fields, if any, are required beyond those that would have been sent in a 200 response."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:28:31.153899+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-04",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "70fd2dd544e9bee7a99c7909241be680cd3f7411c856638126de917e378a1811",
+  "lineage_ids": "lineage:ddc96534b35b45e96750d101",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 229,
+    "load_duration": 12111800,
+    "prompt_eval_count": 667,
+    "total_duration": 8823163800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"those required in the subsections below\", \"interpretation_a\": \"The server must include all header fields that would have been included in a 200 response, plus any additional header fields specified in the subsections that follow this clause.\", \"interpretation_b\": \"The server must include all header fields that would have been included in a 200 response, and only those header fields specified in the subsections that follow this clause. Any header fields not specified in the subsections are omitted.\", \"missing_information\": \"The subsections referenced are not provided, so it is unclear what additional header fields, if any, are required beyond those that would have been sent in a 200 response.\",\"justification\": \"The phrase 'those required in the subsections below' is incomplete. It's unclear whether the server MUST include all headers from a 200 response *plus* those in the subsections, or *only* those in the subsections. This creates two reasonable interpretations affecting implementation.\"}",
+  "record_id": "cd48deb3bfe251c61838e13140c82771c24d005faef955790fdfc3799aa2ae90",
+  "revision": "04",
+  "schema_version": 1,
+  "section_ids": "9.3.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.843
+}

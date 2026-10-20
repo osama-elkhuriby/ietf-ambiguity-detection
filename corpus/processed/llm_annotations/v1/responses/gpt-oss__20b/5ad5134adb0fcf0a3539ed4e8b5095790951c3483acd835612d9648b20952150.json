@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously requires that the client must not use the server’s previous preferred_address when establishing a new connection, and instead should wait to observe the server’s new preferred_address value in the handshake. This leaves no materially different implementation interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T15:53:38.984941+00:00",
+  "document_id": "draft-ietf-quic-transport-19",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "b4a0176e6f90d907428c288e9c4589d4821bdd13dd17cafa76edcf942617b9f2",
+  "lineage_ids": "lineage:6d9f48d64343284afc9f176c",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 4674,
+    "load_duration": 5068000,
+    "prompt_eval_count": 628,
+    "total_duration": 40495674400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously requires that the client must not use the server’s previous preferred_address when establishing a new connection, and instead should wait to observe the server’s new preferred_address value in the handshake. This leaves no materially different implementation interpretations.\"\n}",
+  "record_id": "5ad5134adb0fcf0a3539ed4e8b5095790951c3483acd835612d9648b20952150",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "7.3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 40.5
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY accept",
+    "interpretation_a": "The TCP implementation is permitted to accept a new SYN from the remote TCP while in TIME-WAIT state.",
+    "interpretation_b": "The TCP implementation is not required to accept a new SYN from the remote TCP while in TIME-WAIT state; it may choose to reject it.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' introduces discretion, but the lack of further constraints on *when* the implementation chooses to accept or reject the SYN creates ambiguity. A concrete missing constraint would be a condition that *must* be met for the implementation to accept the SYN.",
+    "missing_information": "The conditions under which the implementation *would* accept a SYN are not specified, creating uncertainty about the intended behaviour. The clause only states it *may* accept, but doesn't define what triggers acceptance versus rejection."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:18:45.622881+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-14",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "39c6174c8f677ca4cbe0b243f6ffcdca3afc5adcfc7b2b5c1f4b55df6dae8687",
+  "lineage_ids": "lineage:7ae824ab85019200226fc872",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 202,
+    "load_duration": 20234900,
+    "prompt_eval_count": 609,
+    "total_duration": 7814218900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY accept\", \"interpretation_a\": \"The TCP implementation is permitted to accept a new SYN from the remote TCP while in TIME-WAIT state.\", \"interpretation_b\": \"The TCP implementation is not required to accept a new SYN from the remote TCP while in TIME-WAIT state; it may choose to reject it.\", \"missing_information\": \"The conditions under which the implementation *would* accept a SYN are not specified, creating uncertainty about the intended behaviour. The clause only states it *may* accept, but doesn't define what triggers acceptance versus rejection.\", \"justification\": \"The use of 'MAY' introduces discretion, but the lack of further constraints on *when* the implementation chooses to accept or reject the SYN creates ambiguity. A concrete missing constraint would be a condition that *must* be met for the implementation to accept the SYN.\"}",
+  "record_id": "198717ca0df5a043527757b66bfd3a284d670b3467e974cf163350e84430d17b",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "3.5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.813
+}

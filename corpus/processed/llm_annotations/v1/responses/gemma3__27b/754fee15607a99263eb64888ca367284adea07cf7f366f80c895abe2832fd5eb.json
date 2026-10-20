@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "I-1",
+    "evidence_span": "MUST NOT send a Version Negotiation packet in response to receiving a Version Negotiation packet.",
+    "interpretation_a": "If an endpoint receives a Version Negotiation packet, it is forbidden from *ever* sending one back, regardless of the circumstances.",
+    "interpretation_b": "If an endpoint receives a Version Negotiation packet, it is forbidden from sending one back *immediately* in response, but it may be permissible to send one later under different conditions (e.g., after establishing a connection).",
+    "is_ambiguous": "yes",
+    "justification": "The clause prohibits sending a Version Negotiation packet \"in response to receiving a Version Negotiation packet\". The meaning of \"in response\" is not defined. Does it mean *immediately* in response, or *ever* in response? Both interpretations are reasonable.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:33:24.612009+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "31131779761136ccd2b7bb695ee2074da97d61f4aa75ee578bc951a596b29364",
+  "lineage_ids": "lineage:599a272df5a3a6db7dd7c8ca",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 187,
+    "load_duration": 4076800,
+    "prompt_eval_count": 555,
+    "total_duration": 7054832700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"I-1\", \"evidence_span\": \"MUST NOT send a Version Negotiation packet in response to receiving a Version Negotiation packet.\", \"interpretation_a\": \"If an endpoint receives a Version Negotiation packet, it is forbidden from *ever* sending one back, regardless of the circumstances.\", \"interpretation_b\": \"If an endpoint receives a Version Negotiation packet, it is forbidden from sending one back *immediately* in response, but it may be permissible to send one later under different conditions (e.g., after establishing a connection).\", \"missing_information\": \"\", \"justification\": \"The clause prohibits sending a Version Negotiation packet \\\"in response to receiving a Version Negotiation packet\\\". The meaning of \\\"in response\\\" is not defined. Does it mean *immediately* in response, or *ever* in response? Both interpretations are reasonable.\"}",
+  "record_id": "754fee15607a99263eb64888ca367284adea07cf7f366f80c895abe2832fd5eb",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.047
+}

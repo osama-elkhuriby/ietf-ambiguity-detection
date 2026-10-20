@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "excessively delay acknowledgements",
+    "interpretation_a": "A delay of, say, 500ms is acceptable, even if a faster acknowledgement could have been sent.",
+    "interpretation_b": "A delay of, say, 200ms is considered excessive, and acknowledgements should be sent more promptly.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'excessively' is subjective and lacks a clear definition. This allows for materially different interpretations of how long an acknowledgement can be delayed before violating the MUST NOT clause.",
+    "missing_information": "The definition of 'excessively' is missing. A concrete time limit or a metric for determining excessiveness is needed to avoid different implementations having different thresholds."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:16:47.073185+00:00",
+  "document_id": "draft-ietf-quic-recovery-14",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "c12b512252dee3e2f49262a7a45e652e533f682c11382e6d241738ba10058fb7",
+  "lineage_ids": "lineage:5952c333872f975735994f0f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 173,
+    "load_duration": 4054500,
+    "prompt_eval_count": 564,
+    "total_duration": 6572772000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"excessively delay acknowledgements\", \"interpretation_a\": \"A delay of, say, 500ms is acceptable, even if a faster acknowledgement could have been sent.\", \"interpretation_b\": \"A delay of, say, 200ms is considered excessive, and acknowledgements should be sent more promptly.\", \"missing_information\": \"The definition of 'excessively' is missing. A concrete time limit or a metric for determining excessiveness is needed to avoid different implementations having different thresholds.\",\"justification\": \"The term 'excessively' is subjective and lacks a clear definition. This allows for materially different interpretations of how long an acknowledgement can be delayed before violating the MUST NOT clause.\"}",
+  "record_id": "11d8e0679ee5443986eda4514eab4cfd9e986dd157d25bc40162436e53874cbc",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "4.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.578
+}

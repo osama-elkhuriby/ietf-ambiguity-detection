@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT influence",
+    "interpretation_a": "The server's decision to send a Version Negotiation packet is entirely independent of the connection ID rules. The server might send the packet regardless of the connection ID.",
+    "interpretation_b": "The server's decision to send a Version Negotiation packet is not *directly* influenced by the connection ID rules, but the server may consider the connection ID rules as one factor among many when deciding whether to send the packet.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'influence' is not precise. It's unclear whether any consideration of connection ID rules constitutes 'influence' that is prohibited, or if only a direct and determining influence is prohibited.",
+    "missing_information": "The degree to which the connection ID rules can be considered in the server's decision is not specified. The phrase 'influence' is vague and does not define a threshold for what constitutes influence."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:06:54.211899+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "ecd64d821c345b9575b9a8af265bad8d5cd3d05deb523257fdfb3fd524037838",
+  "lineage_ids": "lineage:677aa63d55827d3f6b59425c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 210,
+    "load_duration": 5960600,
+    "prompt_eval_count": 574,
+    "total_duration": 7895791500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT influence\", \"interpretation_a\": \"The server's decision to send a Version Negotiation packet is entirely independent of the connection ID rules. The server might send the packet regardless of the connection ID.\", \"interpretation_b\": \"The server's decision to send a Version Negotiation packet is not *directly* influenced by the connection ID rules, but the server may consider the connection ID rules as one factor among many when deciding whether to send the packet.\", \"missing_information\": \"The degree to which the connection ID rules can be considered in the server's decision is not specified. The phrase 'influence' is vague and does not define a threshold for what constitutes influence.\",\"justification\": \"The term 'influence' is not precise. It's unclear whether any consideration of connection ID rules constitutes 'influence' that is prohibited, or if only a direct and determining influence is prohibited.\"}",
+  "record_id": "282d686d64e2a3bbde20f20aeb1b9b11f00f41e61b85f1bae7341481822a281e",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "17.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.907
+}

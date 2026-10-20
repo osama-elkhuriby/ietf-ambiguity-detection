@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "at least 100 requests",
+    "interpretation_a": "The server must allow a minimum of 100 concurrent requests, even if it means allocating resources beyond what is normally available.",
+    "interpretation_b": "The server should aim to allow 100 concurrent requests, but may reduce this number if resource constraints prevent it, as long as it doesn't *unnecessarily* limit parallelism.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'at least 100 requests' is incomplete. It doesn't specify whether the server *must* permit 100 requests, or if it's a target that can be lowered under certain conditions. The subjective term 'unnecessarily' further complicates the interpretation.",
+    "missing_information": "The meaning of 'at least' is not fully defined. Does it mean 'exactly 100' or '100 or more'? The phrase 'unnecessarily limit parallelism' is subjective and lacks a concrete threshold for determining what constitutes an unnecessary limitation."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:43:16.790693+00:00",
+  "document_id": "draft-ietf-quic-http-33",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "182400a633fe95fb9dee690b091d67e09c70b2e974eca779af5571d0277118d7",
+  "lineage_ids": "lineage:5c595dcfb2d787c82ef48b0e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 235,
+    "load_duration": 4605000,
+    "prompt_eval_count": 588,
+    "total_duration": 8981103900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"at least 100 requests\", \"interpretation_a\": \"The server must allow a minimum of 100 concurrent requests, even if it means allocating resources beyond what is normally available.\", \"interpretation_b\": \"The server should aim to allow 100 concurrent requests, but may reduce this number if resource constraints prevent it, as long as it doesn't *unnecessarily* limit parallelism.\", \"missing_information\": \"The meaning of 'at least' is not fully defined. Does it mean 'exactly 100' or '100 or more'? The phrase 'unnecessarily limit parallelism' is subjective and lacks a concrete threshold for determining what constitutes an unnecessary limitation.\",\"justification\": \"The phrase 'at least 100 requests' is incomplete. It doesn't specify whether the server *must* permit 100 requests, or if it's a target that can be lowered under certain conditions. The subjective term 'unnecessarily' further complicates the interpretation.\"}",
+  "record_id": "223050f09909577f6a638d3651abfde20aa03db4e406d7e850e66acd498cf75f",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.0
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear condition for when a server may or must not send a Content-Length header in a 304 (Not Modified) response. It specifies that the Content-Length must match the octet count of a 200 (OK) response to the same request if it is sent. There is no ambiguity in the language or missing constraints that would lead to multiple reasonable interpretations affecting implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:15:02.647344+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "06aa964a51f006f140c827975dd8f5bf01184d1694ce22f9369875e22c1fbdd4",
+  "lineage_ids": "lineage:8df7bea139f81b0364c65cce",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 139,
+    "load_duration": 7296900,
+    "prompt_eval_count": 644,
+    "total_duration": 5833938700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear condition for when a server may or must not send a Content-Length header in a 304 (Not Modified) response. It specifies that the Content-Length must match the octet count of a 200 (OK) response to the same request if it is sent. There is no ambiguity in the language or missing constraints that would lead to multiple reasonable interpretations affecting implementation behavior.\"\n}",
+  "record_id": "616ad6883682b4f9c08472ae80b3e71709ac27eda32d8e268be48ea7197e31ad",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "8.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.844
+}

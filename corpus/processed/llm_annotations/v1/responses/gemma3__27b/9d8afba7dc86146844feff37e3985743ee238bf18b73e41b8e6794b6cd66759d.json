@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT reject",
+    "interpretation_a": "An endpoint must allow the ClientHello even if it will ultimately fail to negotiate a connection using that cipher suite.",
+    "interpretation_b": "An endpoint must attempt to negotiate a connection using the offered cipher suite, even if it knows it cannot support it, potentially leading to wasted resources.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'reject' is not clearly defined. It could mean an immediate refusal of the connection attempt, or it could mean a failure to negotiate a connection after some processing. This difference in interpretation affects implementation because an endpoint might choose to immediately drop the connection or attempt to negotiate anyway.",
+    "missing_information": "The clause does not specify what 'reject' means. Does it mean to immediately drop the connection, or to proceed with the handshake and then fail during a later stage?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:43:46.428882+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "689cb225e2630e83764224a72c3ddb2d99ef87356b4fb01aa9f6807f41f78e4c",
+  "lineage_ids": "lineage:2518bc151a523cc160f9b7b5",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 197,
+    "load_duration": 4145900,
+    "prompt_eval_count": 588,
+    "total_duration": 7442599200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT reject\", \"interpretation_a\": \"An endpoint must allow the ClientHello even if it will ultimately fail to negotiate a connection using that cipher suite.\", \"interpretation_b\": \"An endpoint must attempt to negotiate a connection using the offered cipher suite, even if it knows it cannot support it, potentially leading to wasted resources.\", \"missing_information\": \"The clause does not specify what 'reject' means. Does it mean to immediately drop the connection, or to proceed with the handshake and then fail during a later stage?\",\"justification\": \"The term 'reject' is not clearly defined. It could mean an immediate refusal of the connection attempt, or it could mean a failure to negotiate a connection after some processing. This difference in interpretation affects implementation because an endpoint might choose to immediately drop the connection or attempt to negotiate anyway.\"}",
+  "record_id": "9d8afba7dc86146844feff37e3985743ee238bf18b73e41b8e6794b6cd66759d",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "5.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.453
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear normative statement using 'MAY', which allows the endpoint discretion to send a closing frame before entering the draining state. The conditions (using a CONNECTION_CLOSE frame and a NO_ERROR code if appropriate) are also clear. There is no ambiguity in the implementation behavior, as the clause does not permit multiple materially different interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:00:53.150834+00:00",
+  "document_id": "draft-ietf-quic-transport-16",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "624fbbf44603410ec404284cf9709b7bc02e23204687432af306289e82998952",
+  "lineage_ids": "lineage:285dfd70b46e6b7c92d5ab3e",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 125,
+    "load_duration": 4520900,
+    "prompt_eval_count": 545,
+    "total_duration": 5155086900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear normative statement using 'MAY', which allows the endpoint discretion to send a closing frame before entering the draining state. The conditions (using a CONNECTION_CLOSE frame and a NO_ERROR code if appropriate) are also clear. There is no ambiguity in the implementation behavior, as the clause does not permit multiple materially different interpretations.\"\n}",
+  "record_id": "359bfbee6d3464cbd597140e7b77f78c47b2a5011be65139018f81f0efaa2b1e",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "10.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.156
+}

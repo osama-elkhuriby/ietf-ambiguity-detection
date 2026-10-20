@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST generate a new Host field-value based on the received request-target",
+    "interpretation_a": "The proxy MUST construct a completely new Host header field value, potentially including port information, based solely on parsing the request-target.",
+    "interpretation_b": "The proxy MUST replace the existing Host header field value with the host portion of the request-target, potentially preserving any existing port information.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'based on the received request-target' is open to interpretation. Does it mean to extract only the host portion, or to reconstruct the entire Host field-value (including port) from the request-target? The lack of a specific constraint on port handling creates ambiguity.",
+    "missing_information": "It is unclear whether the 'new Host field-value' should include the port number from the request-target, or whether the proxy should use its own default port. This affects how the request is routed."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:01:17.205028+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-06",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "76718a2524a42a68e04671e056107f44586f9238af130b2487b5afea22cf822a",
+  "lineage_ids": "lineage:7920ead2cde14108337ce3bc",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 220,
+    "load_duration": 8694200,
+    "prompt_eval_count": 617,
+    "total_duration": 8488542300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST generate a new Host field-value based on the received request-target\", \"interpretation_a\": \"The proxy MUST construct a completely new Host header field value, potentially including port information, based solely on parsing the request-target.\", \"interpretation_b\": \"The proxy MUST replace the existing Host header field value with the host portion of the request-target, potentially preserving any existing port information.\", \"missing_information\": \"It is unclear whether the 'new Host field-value' should include the port number from the request-target, or whether the proxy should use its own default port. This affects how the request is routed.\", \"justification\": \"The phrase 'based on the received request-target' is open to interpretation. Does it mean to extract only the host portion, or to reconstruct the entire Host field-value (including port) from the request-target? The lack of a specific constraint on port handling creates ambiguity.\"}",
+  "record_id": "31043d9f18cbdf3ae405077849fc490f81a2b14c2d687ac716181536e0e90aad",
+  "revision": "06",
+  "schema_version": 1,
+  "section_ids": "5.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.5
+}

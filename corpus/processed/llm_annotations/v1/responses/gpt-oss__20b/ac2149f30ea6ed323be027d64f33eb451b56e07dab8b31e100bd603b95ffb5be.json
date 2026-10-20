@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "In order to avoid linkage, the packet number gap MUST be externally indistinguishable from random.",
+    "interpretation_a": "The packet number gap must be drawn from a uniform random distribution over the entire range of possible packet numbers, ensuring that each possible gap value is equally likely.",
+    "interpretation_b": "The packet number gap must be random enough that an external observer cannot link packets, but the exact statistical distribution or entropy requirement is not specified, allowing implementations to use any distribution that achieves indistinguishability.",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a concrete constraint on the distribution or entropy of the packet number gap, permitting multiple reasonable interpretations that could lead to materially different implementations.",
+    "missing_information": "A precise definition of 'random' and the statistical properties required for the packet number gap to be considered externally indistinguishable from random (e.g., uniformity, entropy threshold, or specific randomness tests)."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T17:41:55.882685+00:00",
+  "document_id": "draft-ietf-quic-transport-11",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "50555a0924905ec03b8ed5cdc28a6da293f5d3c8ae33822df4552ca57a013cc1",
+  "lineage_ids": "lineage:449b5380d186c73ef602b2d5",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 978,
+    "load_duration": 5674600,
+    "prompt_eval_count": 577,
+    "total_duration": 8613367000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"In order to avoid linkage, the packet number gap MUST be externally indistinguishable from random.\",\n  \"interpretation_a\": \"The packet number gap must be drawn from a uniform random distribution over the entire range of possible packet numbers, ensuring that each possible gap value is equally likely.\",\n  \"interpretation_b\": \"The packet number gap must be random enough that an external observer cannot link packets, but the exact statistical distribution or entropy requirement is not specified, allowing implementations to use any distribution that achieves indistinguishability.\",\n  \"missing_information\": \"A precise definition of 'random' and the statistical properties required for the packet number gap to be considered externally indistinguishable from random (e.g., uniformity, entropy threshold, or specific randomness tests).\",\n  \"justification\": \"The clause lacks a concrete constraint on the distribution or entropy of the packet number gap, permitting multiple reasonable interpretations that could lead to materially different implementations.\"\n}",
+  "record_id": "ac2149f30ea6ed323be027d64f33eb451b56e07dab8b31e100bd603b95ffb5be",
+  "revision": "11",
+  "schema_version": 1,
+  "section_ids": "6.8.5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.609
+}

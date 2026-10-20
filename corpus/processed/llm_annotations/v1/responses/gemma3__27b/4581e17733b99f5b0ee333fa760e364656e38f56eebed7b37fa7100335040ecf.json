@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY be used",
+    "interpretation_a": "The codes could be used in API return codes, but are not required to be.",
+    "interpretation_b": "The codes could be used in logs, but are not required to be.",
+    "is_ambiguous": "yes",
+    "justification": "The sentence structure allows 'MAY' to modify either 'API return codes and logs' as a single unit, or 'API return codes' and 'logs' separately. This creates two reasonable interpretations regarding whether using the codes in either context is optional.",
+    "missing_information": "It is unclear whether 'MAY' applies to both API return codes *and* logs, or to each separately. A clearer phrasing like 'MAY be used in API return codes and MAY be used in logs' would remove the ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:18:56.387268+00:00",
+  "document_id": "draft-ietf-quic-transport-06",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "aab5a68938008e9205ac058f2022129fc03857b8697ef24675988f5b81df2cb5",
+  "lineage_ids": "lineage:fd9c5e24bcc4e32d76218638",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 185,
+    "load_duration": 3969100,
+    "prompt_eval_count": 581,
+    "total_duration": 7002968200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY be used\", \"interpretation_a\": \"The codes could be used in API return codes, but are not required to be.\", \"interpretation_b\": \"The codes could be used in logs, but are not required to be.\", \"missing_information\": \"It is unclear whether 'MAY' applies to both API return codes *and* logs, or to each separately. A clearer phrasing like 'MAY be used in API return codes and MAY be used in logs' would remove the ambiguity.\", \"justification\": \"The sentence structure allows 'MAY' to modify either 'API return codes and logs' as a single unit, or 'API return codes' and 'logs' separately. This creates two reasonable interpretations regarding whether using the codes in either context is optional.\"}",
+  "record_id": "4581e17733b99f5b0ee333fa760e364656e38f56eebed7b37fa7100335040ecf",
+  "revision": "06",
+  "schema_version": 1,
+  "section_ids": "12.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.016
+}

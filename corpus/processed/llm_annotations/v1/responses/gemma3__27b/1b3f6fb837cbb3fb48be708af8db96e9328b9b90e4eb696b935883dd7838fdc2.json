@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT buffer data indefinitely",
+    "interpretation_a": "The TCP implementation must eventually discard any buffered data if it cannot be sent, even if the application hasn't signaled completion.",
+    "interpretation_b": "The TCP implementation must limit the amount of time it will buffer data, but may retry sending indefinitely as long as resources allow.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"indefinitely\" is not defined. It is unclear whether it means 'forever' or 'for an unbounded amount of time'. This affects how a TCP implementation would handle buffering and resource allocation.",
+    "missing_information": "The definition of 'indefinitely' is missing. A time limit, resource limit, or application signal could resolve the ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:18:58.159530+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-14",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "8e91ac55c414d39218565b585a53b9b2a54f80d573c8c6edbfca8ba35ff7dd9d",
+  "lineage_ids": "lineage:5bc0b49861bc749cec9e32e7",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 176,
+    "load_duration": 14149600,
+    "prompt_eval_count": 612,
+    "total_duration": 6904823200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT buffer data indefinitely\", \"interpretation_a\": \"The TCP implementation must eventually discard any buffered data if it cannot be sent, even if the application hasn't signaled completion.\", \"interpretation_b\": \"The TCP implementation must limit the amount of time it will buffer data, but may retry sending indefinitely as long as resources allow.\", \"missing_information\": \"The definition of 'indefinitely' is missing. A time limit, resource limit, or application signal could resolve the ambiguity.\", \"justification\": \"The phrase \\\"indefinitely\\\" is not defined. It is unclear whether it means 'forever' or 'for an unbounded amount of time'. This affects how a TCP implementation would handle buffering and resource allocation.\"}",
+  "record_id": "1b3f6fb837cbb3fb48be708af8db96e9328b9b90e4eb696b935883dd7838fdc2",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "3.9.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.906
+}

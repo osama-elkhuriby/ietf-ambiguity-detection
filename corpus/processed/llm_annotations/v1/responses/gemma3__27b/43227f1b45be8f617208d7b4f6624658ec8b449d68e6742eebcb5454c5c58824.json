@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "any length",
+    "interpretation_a": "A TCP implementation must support urgent data sequences of unlimited length, constrained only by available system resources.",
+    "interpretation_b": "A TCP implementation must support urgent data sequences up to the maximum segment size (MSS) or a reasonable upper bound, as any sequence exceeding that is likely an error or attack vector.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'any length' is unbounded. Without a defined upper limit, implementations could reasonably interpret this as either unlimited (subject to system resources) or limited to a practical maximum (e.g., MSS).",
+    "missing_information": "The clause does not define a maximum length for the 'any length' sequence of urgent data. This missing constraint affects implementation behavior as it leaves open the question of resource allocation and potential denial-of-service vulnerabilities."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:20:56.159646+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "7a9af47bd274c4c2ba542cdf208a3a286320a1d0acd9af0bf8036a7c0c063cb4",
+  "lineage_ids": "lineage:f921323eae369d4f0cb7800a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 195,
+    "load_duration": 17510000,
+    "prompt_eval_count": 587,
+    "total_duration": 7547157300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"any length\", \"interpretation_a\": \"A TCP implementation must support urgent data sequences of unlimited length, constrained only by available system resources.\", \"interpretation_b\": \"A TCP implementation must support urgent data sequences up to the maximum segment size (MSS) or a reasonable upper bound, as any sequence exceeding that is likely an error or attack vector.\", \"missing_information\": \"The clause does not define a maximum length for the 'any length' sequence of urgent data. This missing constraint affects implementation behavior as it leaves open the question of resource allocation and potential denial-of-service vulnerabilities.\", \"justification\": \"The phrase 'any length' is unbounded. Without a defined upper limit, implementations could reasonably interpret this as either unlimited (subject to system resources) or limited to a practical maximum (e.g., MSS).\"}",
+  "record_id": "43227f1b45be8f617208d7b4f6624658ec8b449d68e6742eebcb5454c5c58824",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.8.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.547
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "randomly selected codepoint",
+    "interpretation_a": "A cryptographically secure random number generator is used to select a codepoint.",
+    "interpretation_b": "A pseudo-random number generator is used to select a codepoint.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'randomly selected' does not specify the quality or method of randomness. A cryptographically secure random number generator (CSPRNG) is necessary for security-sensitive applications, while a simpler pseudo-random number generator (PRNG) might be sufficient for other uses. Without specifying the type of random number generator, there is ambiguity in the implementation.",
+    "missing_information": "The type of random number generator is not specified. This affects the security and predictability of the codepoint selection."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:12:36.405576+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "4a43a08377354b6bb81364a91f4725182f991a2ed52a6986c3c3803de14a68b6",
+  "lineage_ids": "lineage:fd9976d6c0cb30dfebd9798b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 184,
+    "load_duration": 4877500,
+    "prompt_eval_count": 560,
+    "total_duration": 6956880100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"randomly selected codepoint\", \"interpretation_a\": \"A cryptographically secure random number generator is used to select a codepoint.\", \"interpretation_b\": \"A pseudo-random number generator is used to select a codepoint.\", \"missing_information\": \"The type of random number generator is not specified. This affects the security and predictability of the codepoint selection.\",\"justification\": \"The term 'randomly selected' does not specify the quality or method of randomness. A cryptographically secure random number generator (CSPRNG) is necessary for security-sensitive applications, while a simpler pseudo-random number generator (PRNG) might be sufficient for other uses. Without specifying the type of random number generator, there is ambiguity in the implementation.\"}",
+  "record_id": "35fa39fc3526a5cac1efa7cf60cb54f279ac770946595ddc161a9568423609f6",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "22.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.953
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "reset the packet number to 0",
+    "interpretation_a": "The clause refers to the connection‑wide packet number, so the client must keep the same connection‑wide packet number across all 0‑RTT packets and cannot reset it to 0.",
+    "interpretation_b": "The clause refers to a stream‑specific packet number, so the client may reset the packet number for a particular stream to 0 when sending additional 0‑RTT packets.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether the packet number that must not be reset is the connection‑wide packet number or a stream‑specific packet number, leading to two materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T14:53:55.777137+00:00",
+  "document_id": "draft-ietf-quic-transport-17",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "8ab676d89df5f0409b903e547f7d28b5d01c025d925d1c9194922cfefdb45bbe",
+  "lineage_ids": "lineage:a2268298ebb17dfe6740fd38",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 472,
+    "load_duration": 4209300,
+    "prompt_eval_count": 743,
+    "total_duration": 4221626500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"reset the packet number to 0\",\n  \"interpretation_a\": \"The clause refers to the connection‑wide packet number, so the client must keep the same connection‑wide packet number across all 0‑RTT packets and cannot reset it to 0.\",\n  \"interpretation_b\": \"The clause refers to a stream‑specific packet number, so the client may reset the packet number for a particular stream to 0 when sending additional 0‑RTT packets.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify whether the packet number that must not be reset is the connection‑wide packet number or a stream‑specific packet number, leading to two materially different implementation behaviours.\"\n}",
+  "record_id": "349b269690929e2da6572669cb7145a212549c4fc6242578a5862aad1923ab76",
+  "revision": "17",
+  "schema_version": 1,
+  "section_ids": "6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 30.125
+}

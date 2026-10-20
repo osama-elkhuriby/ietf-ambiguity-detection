@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously requires that a receiver must accept any packet that contains a frame that is considered outdated, with the example of a MAX_DATA frame carrying a smaller maximum data than a previously received one. The term \"outdated frame\" is clarified by the example, and no additional constraints or definitions are needed to interpret the requirement.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T18:42:24.352933+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "8614b1e329a1b351cae63928401fd01095dba2d888fdd2c6525c4c995f7c6ff3",
+  "lineage_ids": "lineage:526ec5ae2bfe891e9c0ebf31",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3555,
+    "load_duration": 6887200,
+    "prompt_eval_count": 598,
+    "total_duration": 30631050500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously requires that a receiver must accept any packet that contains a frame that is considered outdated, with the example of a MAX_DATA frame carrying a smaller maximum data than a previously received one. The term \\\"outdated frame\\\" is clarified by the example, and no additional constraints or definitions are needed to interpret the requirement.\"\n}",
+  "record_id": "d9e209ab6bb53acc45f00b69badb99f0f918edc88f5b7996a7eaa639a6ff899e",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "13.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 30.625
+}

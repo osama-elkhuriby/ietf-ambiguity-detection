@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "information that would allow it to be linked",
+    "interpretation_a": "The token must not contain any data that, even with external knowledge, could be used to associate it with the originating connection.",
+    "interpretation_b": "The token must not contain data that is *easily* linked to the originating connection, but some complex analysis might be able to do so.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'information that would allow it to be linked' is vague. It doesn't specify the degree of effort required to establish the link, nor does it define what 'information' encompasses. This allows for different interpretations of what constitutes a violation of the requirement.",
+    "missing_information": "The level of linkage that is prohibited is not defined. Does 'linked' mean trivially linked, or any linkage at all? What constitutes 'information' - is it limited to explicit fields, or does it include statistical properties?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:25:26.074196+00:00",
+  "document_id": "draft-ietf-quic-transport-24",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "f2ed0e54ffc656f586f7278a7fae35894e9d2a5bf4aa4a9c56ae1766d3a8bf25",
+  "lineage_ids": "lineage:0538927367d10c203d9d43c3",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 212,
+    "load_duration": 4527000,
+    "prompt_eval_count": 590,
+    "total_duration": 7976308100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"information that would allow it to be linked\", \"interpretation_a\": \"The token must not contain any data that, even with external knowledge, could be used to associate it with the originating connection.\", \"interpretation_b\": \"The token must not contain data that is *easily* linked to the originating connection, but some complex analysis might be able to do so.\", \"missing_information\": \"The level of linkage that is prohibited is not defined. Does 'linked' mean trivially linked, or any linkage at all? What constitutes 'information' - is it limited to explicit fields, or does it include statistical properties?\",\"justification\": \"The phrase 'information that would allow it to be linked' is vague. It doesn't specify the degree of effort required to establish the link, nor does it define what 'information' encompasses. This allows for different interpretations of what constitutes a violation of the requirement.\"}",
+  "record_id": "59199cc5c6dfbd56164b55bc00cfc9d2a5b3c03121f024680b3291a5412bbc88",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "8.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.968
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "SHOULD send an ACK frame immediately",
+    "interpretation_a": "The endpoint *must* send an ACK frame as soon as an out-of-order ack-eliciting packet is received, with no delay permitted.",
+    "interpretation_b": "The endpoint *may* send an ACK frame soon after receiving an out-of-order ack-eliciting packet, but is permitted to batch it with other ACKs or delay it slightly for efficiency.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' combined with 'immediately' creates ambiguity. 'Immediately' is not precisely defined, and 'SHOULD' allows for discretion. This allows for two reasonable interpretations of when the ACK frame must be sent.",
+    "missing_information": "The meaning of 'immediately' is not defined. Does it mean 'without any delay', or 'as soon as reasonably possible'?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:06:15.468254+00:00",
+  "document_id": "draft-ietf-quic-transport-29",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "143c504d3700e5bb67b4e8667b00b43f2b8f854c3e43965ec4ce363996a9af59",
+  "lineage_ids": "lineage:ebbe938c8eac6981f16ef718",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 205,
+    "load_duration": 4006400,
+    "prompt_eval_count": 588,
+    "total_duration": 7690054300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"SHOULD send an ACK frame immediately\", \"interpretation_a\": \"The endpoint *must* send an ACK frame as soon as an out-of-order ack-eliciting packet is received, with no delay permitted.\", \"interpretation_b\": \"The endpoint *may* send an ACK frame soon after receiving an out-of-order ack-eliciting packet, but is permitted to batch it with other ACKs or delay it slightly for efficiency.\", \"missing_information\": \"The meaning of 'immediately' is not defined. Does it mean 'without any delay', or 'as soon as reasonably possible'?\",\"justification\": \"The use of 'SHOULD' combined with 'immediately' creates ambiguity. 'Immediately' is not precisely defined, and 'SHOULD' allows for discretion. This allows for two reasonable interpretations of when the ACK frame must be sent.\"}",
+  "record_id": "d5819b3b3f8848aa01bddf5d11614cf17385542747f056ef903b48cb91f6d84a",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "13.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.703
+}

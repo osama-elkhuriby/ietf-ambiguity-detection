@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "A connection MAY be accepted without address validation - or with only limited validation - but a server SHOULD limit the data it sends toward an unvalidated address.",
+    "interpretation_a": "The clause allows a server to accept a connection that has not undergone any address validation or that has undergone only limited validation, but it does not specify whether an address that has received limited validation is considered 'unvalidated' for the purpose of limiting data. Consequently, implementations could either treat such addresses as validated and send unrestricted data, or treat them as unvalidated and limit data.",
+    "interpretation_b": "Alternatively, the clause could be interpreted to mean that only addresses that have received no validation at all are considered unvalidated, and that addresses with limited validation are treated as validated for data transmission purposes.",
+    "is_ambiguous": "yes",
+    "justification": "The lack of a clear definition for 'unvalidated address' relative to limited validation creates an incomplete constraint that affects implementation behaviour.",
+    "missing_information": "The clause does not define whether an address that has undergone limited validation is considered validated or unvalidated for the purpose of limiting data. This missing constraint leads to materially different implementation behaviours."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T19:17:02.836331+00:00",
+  "document_id": "draft-ietf-quic-transport-15",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "50bd68b9583b5a6d680b9f1006b413b3769db0f6fcea1e9f53b9ec187e08a90a",
+  "lineage_ids": "lineage:72d9acec67fb63542be4d10c",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1905,
+    "load_duration": 6746400,
+    "prompt_eval_count": 593,
+    "total_duration": 16458664000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"A connection MAY be accepted without address validation - or with only limited validation - but a server SHOULD limit the data it sends toward an unvalidated address.\",\n  \"interpretation_a\": \"The clause allows a server to accept a connection that has not undergone any address validation or that has undergone only limited validation, but it does not specify whether an address that has received limited validation is considered 'unvalidated' for the purpose of limiting data. Consequently, implementations could either treat such addresses as validated and send unrestricted data, or treat them as unvalidated and limit data.\",\n  \"interpretation_b\": \"Alternatively, the clause could be interpreted to mean that only addresses that have received no validation at all are considered unvalidated, and that addresses with limited validation are treated as validated for data transmission purposes.\",\n  \"missing_information\": \"The clause does not define whether an address that has undergone limited validation is considered validated or unvalidated for the purpose of limiting data. This missing constraint leads to materially different implementation behaviours.\",\n  \"justification\": \"The lack of a clear definition for 'unvalidated address' relative to limited validation creates an incomplete constraint that affects implementation behaviour.\"\n}",
+  "record_id": "f49debc9ff2177ed80d1351526f699b457790d2e7e9f75f8eb8a11862d858d01",
+  "revision": "15",
+  "schema_version": 1,
+  "section_ids": "6.9.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 16.468
+}

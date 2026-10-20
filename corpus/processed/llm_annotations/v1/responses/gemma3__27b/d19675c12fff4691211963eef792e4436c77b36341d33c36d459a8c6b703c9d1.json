@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "illegal stream identifier",
+    "interpretation_a": "A stream identifier is illegal if it is outside the allowed range for stream IDs.",
+    "interpretation_b": "A stream identifier is illegal if it violates some other constraint, such as being a reserved value or being associated with a closed stream.",
+    "is_ambiguous": "yes",
+    "justification": "The term \"illegal stream identifier\" is not defined in the provided context. Without a clear definition, implementations could reasonably differ on what constitutes an illegal identifier, leading to inconsistent behavior.",
+    "missing_information": "The definition of what constitutes an \"illegal stream identifier\" is not provided within the supplied text. This missing definition creates ambiguity as to what conditions trigger the PROTOCOL_ERROR."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:48:39.200810+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "293c05d4e0347e21638efdd32313a51839298d36a77913be59ea55195c8c9688",
+  "lineage_ids": "lineage:b7cc35bd62c962a0d16aa91d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 169,
+    "load_duration": 10348000,
+    "prompt_eval_count": 605,
+    "total_duration": 6615363000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"illegal stream identifier\", \"interpretation_a\": \"A stream identifier is illegal if it is outside the allowed range for stream IDs.\", \"interpretation_b\": \"A stream identifier is illegal if it violates some other constraint, such as being a reserved value or being associated with a closed stream.\", \"missing_information\": \"The definition of what constitutes an \\\"illegal stream identifier\\\" is not provided within the supplied text. This missing definition creates ambiguity as to what conditions trigger the PROTOCOL_ERROR.\", \"justification\": \"The term \\\"illegal stream identifier\\\" is not defined in the provided context. Without a clear definition, implementations could reasonably differ on what constitutes an illegal identifier, leading to inconsistent behavior.\"}",
+  "record_id": "d19675c12fff4691211963eef792e4436c77b36341d33c36d459a8c6b703c9d1",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.625
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that any CANCEL_PUSH frame received on a stream that is not the control stream must be treated as a connection error of type HTTP_FRAME_UNEXPECTED. The term \"control stream\" is defined elsewhere in the document, and the normative requirement is clear and complete.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T10:38:21.577606+00:00",
+  "document_id": "draft-ietf-quic-http-23",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "792f640661d90642c22699b8a425ee7063b52d10c1fd751ae0f470b41bcac086",
+  "lineage_ids": "lineage:71cce831c6366281a5c4e05d",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 384,
+    "load_duration": 4086300,
+    "prompt_eval_count": 659,
+    "total_duration": 3461664400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that any CANCEL_PUSH frame received on a stream that is not the control stream must be treated as a connection error of type HTTP_FRAME_UNEXPECTED. The term \\\"control stream\\\" is defined elsewhere in the document, and the normative requirement is clear and complete.\"\n}",
+  "record_id": "eab1e7b96c97721f8e20e61a1cf5220dc2c4a915b517b540c6f315b453940e8f",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "7.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 3.469
+}

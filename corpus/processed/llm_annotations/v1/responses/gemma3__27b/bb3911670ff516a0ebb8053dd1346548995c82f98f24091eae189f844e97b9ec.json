@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST send only one header block",
+    "interpretation_a": "Only one header block is allowed in the trailers section, even if it's empty.",
+    "interpretation_b": "Only one non-empty header block is allowed in the trailers section; an empty header block is permissible.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'one header block' is open to interpretation. Does it mean 'at least one non-empty header block', or 'exactly one header block, which may be empty'? The difference affects implementation, as a receiver might need to handle the case of an empty trailer block differently.",
+    "missing_information": "The clause does not specify whether an empty header block is considered 'one header block'. This affects how receivers handle zero-length trailer blocks."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:05:18.225463+00:00",
+  "document_id": "draft-ietf-quic-http-16",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "66d29a4868d9ea58d26ff75eccdb574a9baeb70532e755e87d5e619005096d21",
+  "lineage_ids": "lineage:d16c94e2112a73ad2b04fb67",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 184,
+    "load_duration": 9135100,
+    "prompt_eval_count": 586,
+    "total_duration": 7092537900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST send only one header block\", \"interpretation_a\": \"Only one header block is allowed in the trailers section, even if it's empty.\", \"interpretation_b\": \"Only one non-empty header block is allowed in the trailers section; an empty header block is permissible.\", \"missing_information\": \"The clause does not specify whether an empty header block is considered 'one header block'. This affects how receivers handle zero-length trailer blocks.\", \"justification\": \"The phrase 'one header block' is open to interpretation. Does it mean 'at least one non-empty header block', or 'exactly one header block, which may be empty'? The difference affects implementation, as a receiver might need to handle the case of an empty trailer block differently.\"}",
+  "record_id": "bb3911670ff516a0ebb8053dd1346548995c82f98f24091eae189f844e97b9ec",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.109
+}

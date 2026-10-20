@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "The sender’s maximum payload size",
+    "interpretation_a": "This refers to the maximum size of the QUIC payload within a datagram, excluding UDP/IP headers.",
+    "interpretation_b": "This refers to the maximum size of data the sender is willing to transmit in a single round-trip, which could be spread across multiple datagrams.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'payload size' is open to interpretation. It could refer to the maximum size of data within a single datagram, or the maximum amount of data the sender will transmit in a single round-trip time (RTT). Without further clarification, implementations could reasonably differ on how to interpret and enforce this limit.",
+    "missing_information": "It is unclear whether 'payload size' refers to the size of data within a single datagram or the total data sent in a round trip."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:24:00.038410+00:00",
+  "document_id": "draft-ietf-quic-recovery-14",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "dc30fbb7ecf3ddbd93942cde2dc4828bee8beb726d30fd1d0c1fc6ba4666a5a3",
+  "lineage_ids": "lineage:626d6230e58fece197295a2c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 204,
+    "load_duration": 6001400,
+    "prompt_eval_count": 560,
+    "total_duration": 7638111100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"The sender’s maximum payload size\", \"interpretation_a\": \"This refers to the maximum size of the QUIC payload within a datagram, excluding UDP/IP headers.\", \"interpretation_b\": \"This refers to the maximum size of data the sender is willing to transmit in a single round-trip, which could be spread across multiple datagrams.\",\"missing_information\": \"It is unclear whether 'payload size' refers to the size of data within a single datagram or the total data sent in a round trip.\",\"justification\": \"The phrase 'payload size' is open to interpretation. It could refer to the maximum size of data within a single datagram, or the maximum amount of data the sender will transmit in a single round-trip time (RTT). Without further clarification, implementations could reasonably differ on how to interpret and enforce this limit.\"}",
+  "record_id": "8da380877efb7e7d9622e04087535fb077e87f499a33255952c30b499620d9e0",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "5.8.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.625
+}

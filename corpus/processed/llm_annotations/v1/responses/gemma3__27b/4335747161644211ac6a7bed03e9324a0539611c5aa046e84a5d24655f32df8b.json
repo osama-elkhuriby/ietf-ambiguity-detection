@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "protected by 0-RTT or 1-RTT keys",
+    "interpretation_a": "The restriction applies to any packet protected by either 0-RTT or 1-RTT keys, meaning if *any* packet in the stream was protected by either, the ACK frame must be protected.",
+    "interpretation_b": "The restriction applies only to packets *exclusively* protected by 0-RTT or 1-RTT keys, allowing an ACK frame to be unprotected if a packet was protected by a later, full session key.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'protected by 0-RTT or 1-RTT keys' is incomplete. It doesn't specify whether the restriction applies to packets that were *ever* protected by those keys, or only to packets that are *currently* protected. This leads to two reasonable interpretations of the requirement.",
+    "missing_information": "It is unclear whether the protection requirement applies to any packet that *was* protected by 0-RTT/1-RTT, or only to packets *currently* protected by those keys."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:37:33.170790+00:00",
+  "document_id": "draft-ietf-quic-tls-06",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "7ecc2126bb0467d282396ed02427d960472da7ac0732929a6ee6da5860366a6d",
+  "lineage_ids": "lineage:121f62aac9509f7d6648e3e6",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 248,
+    "load_duration": 4824000,
+    "prompt_eval_count": 603,
+    "total_duration": 9217160900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"protected by 0-RTT or 1-RTT keys\", \"interpretation_a\": \"The restriction applies to any packet protected by either 0-RTT or 1-RTT keys, meaning if *any* packet in the stream was protected by either, the ACK frame must be protected.\", \"interpretation_b\": \"The restriction applies only to packets *exclusively* protected by 0-RTT or 1-RTT keys, allowing an ACK frame to be unprotected if a packet was protected by a later, full session key.\", \"missing_information\": \"It is unclear whether the protection requirement applies to any packet that *was* protected by 0-RTT/1-RTT, or only to packets *currently* protected by those keys.\", \"justification\": \"The phrase 'protected by 0-RTT or 1-RTT keys' is incomplete. It doesn't specify whether the restriction applies to packets that were *ever* protected by those keys, or only to packets that are *currently* protected. This leads to two reasonable interpretations of the requirement.\"}",
+  "record_id": "4335747161644211ac6a7bed03e9324a0539611c5aa046e84a5d24655f32df8b",
+  "revision": "06",
+  "schema_version": 1,
+  "section_ids": "9.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.218
+}

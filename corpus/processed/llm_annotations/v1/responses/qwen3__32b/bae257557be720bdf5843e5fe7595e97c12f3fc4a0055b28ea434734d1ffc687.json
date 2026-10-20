@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "Clients receiving a pushed response MUST validate that either the server is authoritative (see [authority]) or the proxy that provided the pushed response is configured for the corresponding request.",
+    "interpretation_a": "The client must verify that the server is the legitimate source of the pushed resource (e.g., by checking the server's certificate or domain authority).",
+    "interpretation_b": "The client must verify that the proxy, which is acting on behalf of the server, is properly configured to push the resource for the corresponding request, regardless of the server's authority.",
+    "is_ambiguous": "yes",
+    "justification": "The clause introduces terms ('authoritative', 'configured for the corresponding request') that are not clearly defined in the text or referenced documents. This allows for multiple interpretations of what validation is required, which could lead to different implementation behaviors.",
+    "missing_information": "The term 'authoritative' is not clearly defined in the context of HTTP/2 push, and the reference [authority] is not provided. Additionally, the phrase 'configured for the corresponding request' lacks a concrete definition, leading to multiple possible interpretations of what validation is required."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T01:55:27.473811+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "f412c5b5bd9038db8a7f32365ef3e80c3b8a01bb3de1cf2488f7a3b7a895f6b5",
+  "lineage_ids": "lineage:ff470fa5abfeec7e0dee8530",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 259,
+    "load_duration": 22444400,
+    "prompt_eval_count": 571,
+    "total_duration": 10765696900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-1\",\n  \"evidence_span\": \"Clients receiving a pushed response MUST validate that either the server is authoritative (see [authority]) or the proxy that provided the pushed response is configured for the corresponding request.\",\n  \"interpretation_a\": \"The client must verify that the server is the legitimate source of the pushed resource (e.g., by checking the server's certificate or domain authority).\",\n  \"interpretation_b\": \"The client must verify that the proxy, which is acting on behalf of the server, is properly configured to push the resource for the corresponding request, regardless of the server's authority.\",\n  \"missing_information\": \"The term 'authoritative' is not clearly defined in the context of HTTP/2 push, and the reference [authority] is not provided. Additionally, the phrase 'configured for the corresponding request' lacks a concrete definition, leading to multiple possible interpretations of what validation is required.\",\n  \"justification\": \"The clause introduces terms ('authoritative', 'configured for the corresponding request') that are not clearly defined in the text or referenced documents. This allows for multiple interpretations of what validation is required, which could lead to different implementation behaviors.\"\n}",
+  "record_id": "bae257557be720bdf5843e5fe7595e97c12f3fc4a0055b28ea434734d1ffc687",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.765
+}

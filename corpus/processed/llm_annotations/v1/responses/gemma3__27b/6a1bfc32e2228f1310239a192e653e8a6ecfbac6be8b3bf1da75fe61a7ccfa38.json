@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "including streams in terminal states",
+    "interpretation_a": "Streams in terminal states are still counted towards the maximum data limit, even though no further data will be sent on them.",
+    "interpretation_b": "Streams in terminal states are *not* counted towards the maximum data limit, as they are no longer active.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'including streams in terminal states' introduces ambiguity. It's unclear whether data from streams that have already finished transmitting (terminal states) should still be considered when calculating the maximum data limit. This affects how the receiver calculates its advertised value and how the sender determines the amount of data it can send.",
+    "missing_information": "It is unclear whether streams in terminal states contribute to the total data size for flow control purposes. A clarification is needed to specify whether the receiver's advertised maximum data value should account for data already sent on streams that have reached a terminal state."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:30:13.793649+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "4969efc2f40f25753cec0eb3c888a2535924b41465d49c2ca01ab021fe689553",
+  "lineage_ids": "lineage:ab034fb10d0a268c862c884b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 215,
+    "load_duration": 4330300,
+    "prompt_eval_count": 576,
+    "total_duration": 8063016400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"including streams in terminal states\", \"interpretation_a\": \"Streams in terminal states are still counted towards the maximum data limit, even though no further data will be sent on them.\", \"interpretation_b\": \"Streams in terminal states are *not* counted towards the maximum data limit, as they are no longer active.\", \"missing_information\": \"It is unclear whether streams in terminal states contribute to the total data size for flow control purposes. A clarification is needed to specify whether the receiver's advertised maximum data value should account for data already sent on streams that have reached a terminal state.\", \"justification\": \"The phrase 'including streams in terminal states' introduces ambiguity. It's unclear whether data from streams that have already finished transmitting (terminal states) should still be considered when calculating the maximum data limit. This affects how the receiver calculates its advertised value and how the sender determines the amount of data it can send.\"}",
+  "record_id": "6a1bfc32e2228f1310239a192e653e8a6ecfbac6be8b3bf1da75fe61a7ccfa38",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "19.9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.062
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY change the request method from POST to GET",
+    "interpretation_a": "A user agent is permitted to change a POST request to a GET request after receiving a 301 redirect.",
+    "interpretation_b": "A user agent is not required to change a POST request to a GET request after receiving a 301 redirect; it can maintain the original method.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' introduces discretion, but the lack of any qualifying conditions creates ambiguity. A compliant implementation could either always change POST to GET, never change POST to GET, or change it based on some unspecified criteria.",
+    "missing_information": "The clause does not specify *under what conditions* a user agent might change the method. Is it based on content type, server hints, or some other factor? Without this, implementations could diverge."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:06:28.034339+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-09",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "c80340edc8a698ff7b59d2eade0f343a53ef01a568965734616b6b2439f55ae9",
+  "lineage_ids": "lineage:c8ec63f005fda7ae4f67b67c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 200,
+    "load_duration": 12669400,
+    "prompt_eval_count": 582,
+    "total_duration": 7738180500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY change the request method from POST to GET\", \"interpretation_a\": \"A user agent is permitted to change a POST request to a GET request after receiving a 301 redirect.\", \"interpretation_b\": \"A user agent is not required to change a POST request to a GET request after receiving a 301 redirect; it can maintain the original method.\", \"missing_information\": \"The clause does not specify *under what conditions* a user agent might change the method. Is it based on content type, server hints, or some other factor? Without this, implementations could diverge.\",\"justification\": \"The use of 'MAY' introduces discretion, but the lack of any qualifying conditions creates ambiguity. A compliant implementation could either always change POST to GET, never change POST to GET, or change it based on some unspecified criteria.\"}",
+  "record_id": "51c47cbae90c9a61e8dcdd62ea387cb98edec19d4bc138bef1372c7d8291c2db",
+  "revision": "09",
+  "schema_version": 1,
+  "section_ids": "10.4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.75
+}

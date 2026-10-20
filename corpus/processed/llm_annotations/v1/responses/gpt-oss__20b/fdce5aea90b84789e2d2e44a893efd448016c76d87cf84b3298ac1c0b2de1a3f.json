@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "other contextual information",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause requires servers to use 'other contextual information' when no priority signals are present, but does not define what constitutes such contextual information, leaving the implementation behavior under-specified.",
+    "missing_information": "The clause does not define what constitutes 'other contextual information', leaving the implementation behavior under-specified.  This missing definition allows multiple reasonable interpretations of how a server might determine priority in the absence of priority signals.  For example, a server could use request arrival time, request size, or a static priority table, but the standard does not constrain which contextual information to use.  Consequently, implementations may differ in their priority decisions, leading to ambiguous behavior.  The lack of a concrete constraint on 'other contextual information' is the missing element that creates the ambiguity.  }"
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T05:18:03.309596+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "217d64299f8adc0101c16e437edb78f7c859f42ca0d9a3e9a927ddcb4ef0bcd7",
+  "lineage_ids": "lineage:3b04904a725514b6a05f1d63",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 897,
+    "load_duration": 5115300,
+    "prompt_eval_count": 717,
+    "total_duration": 8216080000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"other contextual information\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The clause does not define what constitutes 'other contextual information', leaving the implementation behavior under-specified.  This missing definition allows multiple reasonable interpretations of how a server might determine priority in the absence of priority signals.  For example, a server could use request arrival time, request size, or a static priority table, but the standard does not constrain which contextual information to use.  Consequently, implementations may differ in their priority decisions, leading to ambiguous behavior.  The lack of a concrete constraint on 'other contextual information' is the missing element that creates the ambiguity.  }\",\n  \"justification\": \"The clause requires servers to use 'other contextual information' when no priority signals are present, but does not define what constitutes such contextual information, leaving the implementation behavior under-specified.\"\n}",
+  "record_id": "fdce5aea90b84789e2d2e44a893efd448016c76d87cf84b3298ac1c0b2de1a3f",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "5.3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 16.344
+}

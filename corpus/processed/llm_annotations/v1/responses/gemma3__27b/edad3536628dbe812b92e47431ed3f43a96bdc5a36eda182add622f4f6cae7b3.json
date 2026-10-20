@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "If both peers set a value that indicates willingness to use the extension",
+    "interpretation_a": "Both peers must explicitly set a non-zero value for a setting to indicate willingness.",
+    "interpretation_b": "Both peers setting *any* value (even zero) for a setting indicates willingness, as long as they both set it.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'a value' is ambiguous. It's unclear whether setting a value to zero counts as indicating willingness. This impacts implementation because a parser might enable the extension if it sees any value set, or only if it sees a non-zero value.",
+    "missing_information": "The meaning of 'a value' is not defined. Does a zero value indicate willingness, or is a non-zero value required? This affects how the setting is interpreted and whether the extension is enabled."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:13:39.503333+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "e6b7565e412b4c4c55b01db3966abcdfd7a4941d193e2e233d66ca3db005cfeb",
+  "lineage_ids": "lineage:db8bb12b5bd5e95673af595f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 200,
+    "load_duration": 4585600,
+    "prompt_eval_count": 591,
+    "total_duration": 7677455300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"If both peers set a value that indicates willingness to use the extension\", \"interpretation_a\": \"Both peers must explicitly set a non-zero value for a setting to indicate willingness.\", \"interpretation_b\": \"Both peers setting *any* value (even zero) for a setting indicates willingness, as long as they both set it.\", \"missing_information\": \"The meaning of 'a value' is not defined. Does a zero value indicate willingness, or is a non-zero value required? This affects how the setting is interpreted and whether the extension is enabled.\", \"justification\": \"The phrase 'a value' is ambiguous. It's unclear whether setting a value to zero counts as indicating willingness. This impacts implementation because a parser might enable the extension if it sees any value set, or only if it sees a non-zero value.\"}",
+  "record_id": "edad3536628dbe812b92e47431ed3f43a96bdc5a36eda182add622f4f6cae7b3",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.703
+}

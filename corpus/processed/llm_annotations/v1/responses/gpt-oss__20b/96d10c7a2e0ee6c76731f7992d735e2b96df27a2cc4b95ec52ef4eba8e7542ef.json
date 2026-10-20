@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "take precedence over HTTPS RRs",
+    "interpretation_a": "The mapping could override the HTTPS RR for that service, effectively replacing it.",
+    "interpretation_b": "The mapping could simply be considered before the HTTPS RR in the selection algorithm, without replacing it.",
+    "is_ambiguous": "yes",
+    "justification": "The clause allows mappings to \"take precedence\" but does not specify the exact semantics, leading to materially different implementation behaviours.",
+    "missing_information": "A precise definition of what \"take precedence\" entails in this context (e.g., override vs. ordering)."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T03:08:41.668940+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-07",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "6c0efb03bc50ef2b643ff28e8dc0478731627311766887f061ff8992cceb5265",
+  "lineage_ids": "lineage:04b5abdf690d9cffe1b394b4",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1065,
+    "load_duration": 6573300,
+    "prompt_eval_count": 550,
+    "total_duration": 9355343400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"take precedence over HTTPS RRs\",\n  \"interpretation_a\": \"The mapping could override the HTTPS RR for that service, effectively replacing it.\",\n  \"interpretation_b\": \"The mapping could simply be considered before the HTTPS RR in the selection algorithm, without replacing it.\",\n  \"missing_information\": \"A precise definition of what \\\"take precedence\\\" entails in this context (e.g., override vs. ordering).\",\n  \"justification\": \"The clause allows mappings to \\\"take precedence\\\" but does not specify the exact semantics, leading to materially different implementation behaviours.\"\n}",
+  "record_id": "96d10c7a2e0ee6c76731f7992d735e2b96df27a2cc4b95ec52ef4eba8e7542ef",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.344
+}

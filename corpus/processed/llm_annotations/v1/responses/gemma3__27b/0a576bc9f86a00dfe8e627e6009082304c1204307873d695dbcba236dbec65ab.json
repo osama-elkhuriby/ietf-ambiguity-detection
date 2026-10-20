@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "The next frame on the same stream after a HEADERS frame without the EHB flag set MUST be another HEADERS frame.",
+    "interpretation_a": "Immediately after the first HEADERS frame, another HEADERS frame must be received. No other frame type is allowed in between.",
+    "interpretation_b": "After the first HEADERS frame without the EHB flag, at least one more HEADERS frame must eventually be received on the same stream, but other frame types may interleave before the second HEADERS frame arrives.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'next' is ambiguous. It could mean 'immediately following' or 'eventually following'. Without clarification, implementations could differ on whether they allow intervening frames.",
+    "missing_information": "The clause does not specify whether the subsequent HEADERS frame must be *immediately* after the first, or if other frames are permitted in between. This affects how strictly the receiver must validate frame sequences."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:39:46.820495+00:00",
+  "document_id": "draft-ietf-quic-http-07",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "9decd89efe7c0f5fab53ad9f17ccdd05b9bbf82fe911952eae8eee14b4a47cdd",
+  "lineage_ids": "lineage:64c3be4a55b3322a433c361d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 220,
+    "load_duration": 5351400,
+    "prompt_eval_count": 585,
+    "total_duration": 8444310400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"The next frame on the same stream after a HEADERS frame without the EHB flag set MUST be another HEADERS frame.\", \"interpretation_a\": \"Immediately after the first HEADERS frame, another HEADERS frame must be received. No other frame type is allowed in between.\", \"interpretation_b\": \"After the first HEADERS frame without the EHB flag, at least one more HEADERS frame must eventually be received on the same stream, but other frame types may interleave before the second HEADERS frame arrives.\", \"missing_information\": \"The clause does not specify whether the subsequent HEADERS frame must be *immediately* after the first, or if other frames are permitted in between. This affects how strictly the receiver must validate frame sequences.\", \"justification\": \"The use of 'next' is ambiguous. It could mean 'immediately following' or 'eventually following'. Without clarification, implementations could differ on whether they allow intervening frames.\"}",
+  "record_id": "0a576bc9f86a00dfe8e627e6009082304c1204307873d695dbcba236dbec65ab",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "5.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.469
+}

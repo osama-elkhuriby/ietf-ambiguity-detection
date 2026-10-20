@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "during the lifetime of a connection",
+    "interpretation_a": "Count all failed authentication packets from the very beginning of the connection, even before the first key exchange.",
+    "interpretation_b": "Start counting failed authentication packets only after the first key exchange has completed and a key is established.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'during the lifetime of a connection' is open to interpretation. Does 'lifetime' begin with the initial handshake, or only after a key is established? This affects when the limit is reached and the connection is closed.",
+    "missing_information": "It is unclear whether the counting of failed authentication packets begins at the very start of the connection establishment process, or only after a key has been established. This affects how the AEAD limit is reached."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:35:44.861022+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "24e6dcfca8ba169b9bd9b4824eb20c3da6fc30bc2442490f65d5fe1d80ad51be",
+  "lineage_ids": "lineage:7ff13e05308b0aa8c124729a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 184,
+    "load_duration": 4609300,
+    "prompt_eval_count": 629,
+    "total_duration": 7034755100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"during the lifetime of a connection\", \"interpretation_a\": \"Count all failed authentication packets from the very beginning of the connection, even before the first key exchange.\", \"interpretation_b\": \"Start counting failed authentication packets only after the first key exchange has completed and a key is established.\", \"missing_information\": \"It is unclear whether the counting of failed authentication packets begins at the very start of the connection establishment process, or only after a key has been established. This affects how the AEAD limit is reached.\", \"justification\": \"The phrase 'during the lifetime of a connection' is open to interpretation. Does 'lifetime' begin with the initial handshake, or only after a key is established? This affects when the limit is reached and the connection is closed.\"}",
+  "record_id": "29c0bfb97c067cdfad2aec946e928629af8e5f31ce257a05fa5c7cbec4f5a3b5",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.047
+}

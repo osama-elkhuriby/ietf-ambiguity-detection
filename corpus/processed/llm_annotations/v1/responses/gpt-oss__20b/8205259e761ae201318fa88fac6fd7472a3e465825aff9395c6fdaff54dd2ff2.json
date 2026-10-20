@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "over a long period",
+    "interpretation_a": "The server should avoid reusing a Push ID for any duration longer than a few minutes (e.g., 5 minutes).",
+    "interpretation_b": "The server should avoid reusing a Push ID for any duration longer than a few hours or days (e.g., 24 hours).",
+    "is_ambiguous": "yes",
+    "justification": "The clause uses the undefined term \"long period\" without specifying a duration or criteria, creating an incomplete constraint that allows materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T09:42:55.250432+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "d2d10ccef95cfe63ee1cd9ae970283927fa5bdd45138ac182bea2d84cc370b30",
+  "lineage_ids": "lineage:49cc2d373c7c2fabb8e4f4c0",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 343,
+    "load_duration": 4509800,
+    "prompt_eval_count": 694,
+    "total_duration": 3107411100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"over a long period\",\n  \"interpretation_a\": \"The server should avoid reusing a Push ID for any duration longer than a few minutes (e.g., 5 minutes).\",\n  \"interpretation_b\": \"The server should avoid reusing a Push ID for any duration longer than a few hours or days (e.g., 24 hours).\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause uses the undefined term \\\"long period\\\" without specifying a duration or criteria, creating an incomplete constraint that allows materially different implementation behaviours.\"\n}",
+  "record_id": "8205259e761ae201318fa88fac6fd7472a3e465825aff9395c6fdaff54dd2ff2",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.2.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.594
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear constraint: if the sender sets PACKET_NUMBER_SIZE to 11, it must not have more than 2^46 packets in flight. There is no ambiguity in the wording or in the constraint. The condition and the requirement are unambiguous and do not allow for multiple materially different interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:54:59.744297+00:00",
+  "document_id": "draft-ietf-quic-transport-00",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "603103226038f5b7546d1de4d23ac8684970b61af2c47b210bcdbe768ef0dcdb",
+  "lineage_ids": "lineage:a47f08c707245295d4e5d429",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 120,
+    "load_duration": 4273400,
+    "prompt_eval_count": 538,
+    "total_duration": 4918791200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear constraint: if the sender sets PACKET_NUMBER_SIZE to 11, it must not have more than 2^46 packets in flight. There is no ambiguity in the wording or in the constraint. The condition and the requirement are unambiguous and do not allow for multiple materially different interpretations.\"\n}",
+  "record_id": "24c04c7ca9257ea13d76cb55b2ff1900b8601359bc2e62ae0f688748329f1107",
+  "revision": "00",
+  "schema_version": 1,
+  "section_ids": "4.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 4.922
+}

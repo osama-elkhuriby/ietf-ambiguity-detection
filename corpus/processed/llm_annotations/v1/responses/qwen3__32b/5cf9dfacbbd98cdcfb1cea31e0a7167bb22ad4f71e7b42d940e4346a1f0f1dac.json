@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear condition under which a server may generate a multipart/byteranges response with a single body part. It specifies two scenarios: (1) when multiple ranges were requested but only one is satisfiable, and (2) when ranges are coalesced into one. These conditions are unambiguous and do not allow for materially different interpretations that would affect implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:14:10.411759+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "0061fd009b5e01738f8b84ea92bc3e8cb5742df553e7c7ee648c40b5aa285b20",
+  "lineage_ids": "lineage:545c57f403a1d8eed9b3f1b7",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 132,
+    "load_duration": 20887300,
+    "prompt_eval_count": 571,
+    "total_duration": 5552804200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear condition under which a server may generate a multipart/byteranges response with a single body part. It specifies two scenarios: (1) when multiple ranges were requested but only one is satisfiable, and (2) when ranges are coalesced into one. These conditions are unambiguous and do not allow for materially different interpretations that would affect implementation behavior.\"\n}",
+  "record_id": "5cf9dfacbbd98cdcfb1cea31e0a7167bb22ad4f71e7b42d940e4346a1f0f1dac",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "15.3.7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.547
+}

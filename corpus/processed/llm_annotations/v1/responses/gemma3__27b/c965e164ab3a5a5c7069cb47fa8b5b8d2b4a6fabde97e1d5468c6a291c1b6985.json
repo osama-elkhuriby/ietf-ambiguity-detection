@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD send a STREAM_DATA_BLOCKED or DATA_BLOCKED frame",
+    "interpretation_a": "The sender is encouraged, but not required, to send the frame.",
+    "interpretation_b": "The sender is expected to send the frame, but failure to do so is not an error.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' creates ambiguity. It is unclear whether sending the frame is merely encouraged or expected. A concrete constraint specifying the conditions under which the frame *must* be sent would resolve the ambiguity.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:01:53.770215+00:00",
+  "document_id": "draft-ietf-quic-transport-30",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "0705201a764123cbdda05deecebc232b67935bc03c3db9d03c3a1915f9d3dd1c",
+  "lineage_ids": "lineage:2a84f9d90ddbf72e723b83f8",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 144,
+    "load_duration": 6343000,
+    "prompt_eval_count": 665,
+    "total_duration": 5652759900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD send a STREAM_DATA_BLOCKED or DATA_BLOCKED frame\", \"interpretation_a\": \"The sender is encouraged, but not required, to send the frame.\", \"interpretation_b\": \"The sender is expected to send the frame, but failure to do so is not an error.\", \"missing_information\": \"\", \"justification\": \"The use of 'SHOULD' creates ambiguity. It is unclear whether sending the frame is merely encouraged or expected. A concrete constraint specifying the conditions under which the frame *must* be sent would resolve the ambiguity.\"}",
+  "record_id": "c965e164ab3a5a5c7069cb47fa8b5b8d2b4a6fabde97e1d5468c6a291c1b6985",
+  "revision": "30",
+  "schema_version": 1,
+  "section_ids": "4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.656
+}

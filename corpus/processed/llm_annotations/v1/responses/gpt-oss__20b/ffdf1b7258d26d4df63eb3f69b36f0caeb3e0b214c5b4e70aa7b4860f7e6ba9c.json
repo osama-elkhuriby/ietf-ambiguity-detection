@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "remove or replace",
+    "interpretation_a": "Intermediaries should remove the field(s).",
+    "interpretation_b": "Intermediaries should replace the field(s).",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"remove or replace\" permits two reasonable, materially different behaviours (removal vs replacement) without specifying when each should be applied, constituting an incomplete constraint that prevents a unique operational interpretation.",
+    "missing_information": "The clause does not specify the criteria for choosing removal versus replacement, leaving the implementer uncertain which action to take for a given field whose semantics require removal before forwarding. This missing constraint allows two materially different implementation behaviours.  "
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T08:39:53.376367+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "6e396c68ce67bd994a6cce0249d67ab3135707f198ff27d91a69fb8484ed8052",
+  "lineage_ids": "lineage:fc22edc068a6da90c2601fdc",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2549,
+    "load_duration": 6151600,
+    "prompt_eval_count": 644,
+    "total_duration": 22305835300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"remove or replace\",\n  \"interpretation_a\": \"Intermediaries should remove the field(s).\",\n  \"interpretation_b\": \"Intermediaries should replace the field(s).\",\n  \"missing_information\": \"The clause does not specify the criteria for choosing removal versus replacement, leaving the implementer uncertain which action to take for a given field whose semantics require removal before forwarding. This missing constraint allows two materially different implementation behaviours.  \",\n  \"justification\": \"The phrase \\\"remove or replace\\\" permits two reasonable, materially different behaviours (removal vs replacement) without specifying when each should be applied, constituting an incomplete constraint that prevents a unique operational interpretation.\"\n}",
+  "record_id": "ffdf1b7258d26d4df63eb3f69b36f0caeb3e0b214c5b4e70aa7b4860f7e6ba9c",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "7.6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 22.297
+}

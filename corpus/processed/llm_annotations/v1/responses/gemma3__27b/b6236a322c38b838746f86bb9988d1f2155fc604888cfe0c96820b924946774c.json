@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless an alternative mechanism to indicate the target host is used",
+    "interpretation_a": "If any alternative mechanism exists, the client is not required to send the SNI extension.",
+    "interpretation_b": "The client must always send the SNI extension unless the alternative mechanism is explicitly configured and enabled, or the server explicitly signals it is not needed.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'alternative mechanism' is not defined. This leaves open the question of what qualifies as an alternative, and whether the client is required to use it if it exists, or if it must meet certain criteria to be considered valid.",
+    "missing_information": "The definition of 'alternative mechanism' is not provided. It is unclear if any mechanism that achieves the same result as SNI qualifies, or if there are specific requirements for what constitutes a valid alternative."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:44:54.648716+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "25099a11b809e366ab996e766f11594711c1bf819850c6d956426a34712180b7",
+  "lineage_ids": "lineage:151f7022ccfa545c575fef29",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 197,
+    "load_duration": 13725700,
+    "prompt_eval_count": 583,
+    "total_duration": 7614843600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless an alternative mechanism to indicate the target host is used\", \"interpretation_a\": \"If any alternative mechanism exists, the client is not required to send the SNI extension.\", \"interpretation_b\": \"The client must always send the SNI extension unless the alternative mechanism is explicitly configured and enabled, or the server explicitly signals it is not needed.\", \"missing_information\": \"The definition of 'alternative mechanism' is not provided. It is unclear if any mechanism that achieves the same result as SNI qualifies, or if there are specific requirements for what constitutes a valid alternative.\",\"justification\": \"The phrase 'alternative mechanism' is not defined. This leaves open the question of what qualifies as an alternative, and whether the client is required to use it if it exists, or if it must meet certain criteria to be considered valid.\"}",
+  "record_id": "b6236a322c38b838746f86bb9988d1f2155fc604888cfe0c96820b924946774c",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "9.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.64
+}

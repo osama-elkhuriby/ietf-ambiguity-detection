@@ -1,0 +1,89 @@
+{
+  "best_epoch": 8,
+  "checkpoint_hashes": {
+    "config.json": "9cf8366176c672d6d05fea47519954d0c2e1566d55ba76cf8961518e9daabb54",
+    "model.safetensors": "9c9ac4274ae453c934ea4059def2a36af0383c81dc4660347e59708599775e49",
+    "tokenizer.json": "e9ddd853a4a31023721c993458663f2019e3154a05dacf0d2b3c217e53d9bdc8",
+    "tokenizer_config.json": "7c32643ba4f187cbf781701a511726ffff31ae3649f7eef5cd01e80675f901ea"
+  },
+  "checkpoint_selection_partition": "inner_grouped_family",
+  "checkpoint_selection_target": "hard_consensus_label_pr_auc",
+  "config_path": "experiments/transformer/configs/deberta_clause_only.yaml",
+  "config_sha256": "14e67e4a1493d2871b0cb06721c50da5e3de536130126ad1f373c8510204760f",
+  "context_removals": {
+    "fitting": {
+      "next_removed": 8,
+      "previous_removed": 15
+    },
+    "inner_selection": {
+      "next_removed": 3,
+      "previous_removed": 9
+    },
+    "outer_validation": {
+      "next_removed": 3,
+      "previous_removed": 1
+    }
+  },
+  "device": "cuda",
+  "excluded_exact_duplicate_record_ids": [
+    "443c0b10a0b80e708f147cda8239fb07623ce09e2ea9c49f68f99ea7712e9144",
+    "70bf428691a4fd8930d34316289785810ec9a5834eae23ee8ae2b277295e2179",
+    "9d1766ebe9525071c183c3e2587288346328bc439c3ee9b893bfcaff7afdd75c",
+    "9d9ada8466d016ec8f832f55ca58ff352fc805213e33e1ef1b37453243408bbc"
+  ],
+  "excluded_inner_duplicate_record_ids": [
+    "01b6fc53a6bc86dcffec49870f3a8ad192cbafadbab2cb671abc0421cc20c236",
+    "0a1d4eecc85021a655e571aae1eae81b849b33a960ca19eae65b18383e28b370",
+    "121d7d5ef4fa8b3b831bdfcfe281a833975d05fba0f7e91c8f52197f06874946",
+    "761696bc73ce91ee0248f383efdf1da86235a352ea8d49967ba445bd522719ec",
+    "85fdb6853110eb3e245705dda5aaa2f439947b754c3924e179feee27638d6ddb",
+    "8be7d7e0216c8406e64ddbfe739da89980b8bd19bd427792edc2ad0787a7e676",
+    "95cd7708ab59179c34ab20874c7d50a2544dac348f0770f47cf3ed8089ce7ec1",
+    "a7d7462b4436e2f5687961403b6dfb1cf3b985a4ef55e752e4cf988b69bab8a1",
+    "c32bc9e04c23f87c3f5e4384728720a169089aabfe62fe4bec69d31aeee13101",
+    "d5987359e22be12d2997f9c7bd04fb9632ebcb9c342242670a6a25c0e825403f",
+    "e6bacc408b8f6098215313350835e9d129f91d9847fc33603a4e33a862f21adf",
+    "ee2a19b6a8b0087d8900a8c291db2fb84c5c37a748a5d2339e953c1bfd1c9e44"
+  ],
+  "factorial_artifact_hashes": {
+    "context_policy.csv": "aaea7332a9c880ae6ae0ce2a361d5de96a45014b7de2781c6edda5c59fc75bb0",
+    "soft_targets.csv": "caa662efcbf50b2c241fa21ea78fb384d121a03f35f8391a476a0a287f7c4baa"
+  },
+  "fold": 1,
+  "fold_assignment_sha256": "c04dc8424ed96486f8521ef57d17e4b503d2c3f41bb116edeeb9535073dd7884",
+  "full_encoder_fine_tuned": true,
+  "git_commit": "231b51fdd7341c7f39bc204ac0c0b0b6a2965a6e",
+  "gpu": "NVIDIA RTX 5000 Ada Generation",
+  "held_out_families": [
+    "draft-ietf-quic-transport"
+  ],
+  "inner_selection_assignment_sha256": "7db817c91e962a6a921942e14bc2d41737bd1060a111a8c7fb798bb929054616",
+  "inner_selection_family": "draft-ietf-quic-http",
+  "inner_selection_positive_labels": 47,
+  "inner_selection_rows": 339,
+  "inner_selection_scored_rows": 327,
+  "input_variant": "local_context",
+  "model_license": "MIT",
+  "model_parameter_dtype": "torch.float32",
+  "model_repository": "microsoft/deberta-v3-small",
+  "model_revision": "a36c739020e01763fe789b4b85e2df55d6180012",
+  "outer_fold_evaluations_after_selection": 1,
+  "outer_fold_evaluations_during_training": 0,
+  "peak_gpu_memory_allocated_mb": 3680.0205078125,
+  "peak_gpu_memory_reserved_mb": 4510.0,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "precision": "fp32",
+  "process_id": 16388,
+  "python": "3.12.14",
+  "schema_version": 1,
+  "scored_validation_rows": 819,
+  "seed": 1729,
+  "target_regime": "soft",
+  "torch": "2.13.0+cu132",
+  "total_runtime_seconds": 112.2954863999912,
+  "train_split_sha256": "4b0ee17308e26fdc8a2a362e7df1099fa7f55de79a9754ba64d50cb56f5542c4",
+  "training_rows": 1091,
+  "training_runtime_seconds": 108.22366930000135,
+  "transformers": "5.19.0",
+  "validation_rows": 823
+}

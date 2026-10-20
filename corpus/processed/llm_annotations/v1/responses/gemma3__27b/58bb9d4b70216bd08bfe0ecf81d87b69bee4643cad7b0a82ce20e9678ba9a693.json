@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "SHOULD generate a representation",
+    "interpretation_a": "The server is required to generate *some* representation, even if it's a minimal or generic one.",
+    "interpretation_b": "The server is not required to generate a representation at all; it's simply good practice to do so if possible.",
+    "is_ambiguous": "yes",
+    "justification": "The use of SHOULD allows for a wide range of implementations. It's unclear whether the server *must* generate a representation, or if it's merely encouraged to do so. This impacts implementation, as some servers might choose to omit the representation entirely.",
+    "missing_information": "The degree of effort required to fulfill the SHOULD is not defined. Is a minimal representation sufficient, or is a detailed explanation expected?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:08:15.434379+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "bf6997842c113960673efdca87ff20d9e76356e800d0282dd052f7bf156dfdb4",
+  "lineage_ids": "lineage:b1c67a6741c549fba3d35607",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 181,
+    "load_duration": 19655900,
+    "prompt_eval_count": 584,
+    "total_duration": 7074830200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"SHOULD generate a representation\", \"interpretation_a\": \"The server is required to generate *some* representation, even if it's a minimal or generic one.\", \"interpretation_b\": \"The server is not required to generate a representation at all; it's simply good practice to do so if possible.\", \"missing_information\": \"The degree of effort required to fulfill the SHOULD is not defined. Is a minimal representation sufficient, or is a detailed explanation expected?\",\"justification\": \"The use of SHOULD allows for a wide range of implementations. It's unclear whether the server *must* generate a representation, or if it's merely encouraged to do so. This impacts implementation, as some servers might choose to omit the representation entirely.\"}",
+  "record_id": "58bb9d4b70216bd08bfe0ecf81d87b69bee4643cad7b0a82ce20e9678ba9a693",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "15.6.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.078
+}

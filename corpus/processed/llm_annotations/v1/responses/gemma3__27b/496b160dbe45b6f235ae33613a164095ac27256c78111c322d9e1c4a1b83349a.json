@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY exceed",
+    "interpretation_a": "Endpoints are permitted, but not required, to exceed flow control limits on stream 0 before the handshake completes.",
+    "interpretation_b": "Endpoints are permitted to exceed flow control limits on stream 0 before the handshake completes, but there is no defined limit to how much they can exceed it.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' introduces discretion, but the extent of that discretion is not constrained. The clause does not specify *how much* endpoints may exceed the limits, leading to different implementations.",
+    "missing_information": "The degree to which endpoints MAY exceed the flow control limits is not specified. Is there a maximum amount of exceeding allowed, or is it unbounded?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:20:30.903775+00:00",
+  "document_id": "draft-ietf-quic-transport-12",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "27fddb71a8d9aefaee3df7bbec21add2382e5e88cffffc716c2bbaaed9565893",
+  "lineage_ids": "lineage:8bb36ace8ca3c78ff1b513c9",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 176,
+    "load_duration": 5143600,
+    "prompt_eval_count": 576,
+    "total_duration": 6698573700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY exceed\", \"interpretation_a\": \"Endpoints are permitted, but not required, to exceed flow control limits on stream 0 before the handshake completes.\", \"interpretation_b\": \"Endpoints are permitted to exceed flow control limits on stream 0 before the handshake completes, but there is no defined limit to how much they can exceed it.\", \"missing_information\": \"The degree to which endpoints MAY exceed the flow control limits is not specified. Is there a maximum amount of exceeding allowed, or is it unbounded?\", \"justification\": \"The use of 'MAY' introduces discretion, but the extent of that discretion is not constrained. The clause does not specify *how much* endpoints may exceed the limits, leading to different implementations.\"}",
+  "record_id": "496b160dbe45b6f235ae33613a164095ac27256c78111c322d9e1c4a1b83349a",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "10.1.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.703
+}

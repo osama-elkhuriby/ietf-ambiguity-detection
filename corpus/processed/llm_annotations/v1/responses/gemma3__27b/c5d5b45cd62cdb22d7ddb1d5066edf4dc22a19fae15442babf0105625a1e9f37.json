@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "smallest allowed maximum packet size",
+    "interpretation_a": "The smallest allowed maximum packet size could refer to the minimum MTU supported by any hop along the path, or the minimum MTU supported by the destination network.",
+    "interpretation_b": "The smallest allowed maximum packet size could refer to the minimum MTU supported by the sending interface, or a configured minimum MTU value.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'smallest allowed maximum packet size' is not defined within the provided context. This lack of definition allows for multiple interpretations of what constitutes this size, leading to different implementations.",
+    "missing_information": "The definition of 'smallest allowed maximum packet size' is missing. Is this a network-wide minimum, a link-layer minimum, or a locally configured minimum?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:00:58.248773+00:00",
+  "document_id": "draft-ietf-quic-transport-31",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "2d233440304d33221c4df113d09ea0be5dac2578f5571998885cba46815883e3",
+  "lineage_ids": "lineage:11bba13f5dfe5c15fbe0a6a1",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 185,
+    "load_duration": 4764600,
+    "prompt_eval_count": 607,
+    "total_duration": 7016108100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"smallest allowed maximum packet size\", \"interpretation_a\": \"The smallest allowed maximum packet size could refer to the minimum MTU supported by any hop along the path, or the minimum MTU supported by the destination network.\", \"interpretation_b\": \"The smallest allowed maximum packet size could refer to the minimum MTU supported by the sending interface, or a configured minimum MTU value.\", \"missing_information\": \"The definition of 'smallest allowed maximum packet size' is missing. Is this a network-wide minimum, a link-layer minimum, or a locally configured minimum?\",\"justification\": \"The phrase 'smallest allowed maximum packet size' is not defined within the provided context. This lack of definition allows for multiple interpretations of what constitutes this size, leading to different implementations.\"}",
+  "record_id": "c5d5b45cd62cdb22d7ddb1d5066edf4dc22a19fae15442babf0105625a1e9f37",
+  "revision": "31",
+  "schema_version": 1,
+  "section_ids": "14.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.032
+}

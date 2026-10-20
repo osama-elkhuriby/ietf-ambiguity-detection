@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "However, if the real host is considered to be sensitive information, a sender MAY replace it with",
+    "interpretation_a": "The sender may replace the host with a pseudonym if they *believe* the host is sensitive.",
+    "interpretation_b": "The sender may replace the host with a pseudonym only if the host *is actually* sensitive, according to some external definition of 'sensitive'.",
+    "is_ambiguous": "yes",
+    "justification": "The clause uses 'considered to be sensitive information' without defining what constitutes 'sensitive'. This allows for subjective interpretation of when the MAY applies, leading to different implementations.",
+    "missing_information": "The definition of 'sensitive information' is not provided, leading to different interpretations of when the MAY applies."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:02:00.259924+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-01",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "d0bdc028def042754434d05770dec3406f2df112c28056fcad8267d1e36c9e37",
+  "lineage_ids": "lineage:f6dc496638c9f94a7cc3199a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 173,
+    "load_duration": 9004500,
+    "prompt_eval_count": 560,
+    "total_duration": 6746015300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"However, if the real host is considered to be sensitive information, a sender MAY replace it with\", \"interpretation_a\": \"The sender may replace the host with a pseudonym if they *believe* the host is sensitive.\", \"interpretation_b\": \"The sender may replace the host with a pseudonym only if the host *is actually* sensitive, according to some external definition of 'sensitive'.\", \"missing_information\": \"The definition of 'sensitive information' is not provided, leading to different interpretations of when the MAY applies.\",\"justification\": \"The clause uses 'considered to be sensitive information' without defining what constitutes 'sensitive'. This allows for subjective interpretation of when the MAY applies, leading to different implementations.\"}",
+  "record_id": "35b2527c46a7923cce43ec731058f9f2d14c0d380127ce762cc04115f6681917",
+  "revision": "01",
+  "schema_version": 1,
+  "section_ids": "5.6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.75
+}

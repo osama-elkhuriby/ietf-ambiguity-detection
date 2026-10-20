@@ -1,0 +1,54 @@
+{
+  "artifact_hashes": {
+    "context_policy.csv": "aaea7332a9c880ae6ae0ce2a361d5de96a45014b7de2781c6edda5c59fc75bb0",
+    "soft_targets.csv": "caa662efcbf50b2c241fa21ea78fb384d121a03f35f8391a476a0a287f7c4baa"
+  },
+  "context_removals": {
+    "fold_1": {
+      "exact": 32,
+      "near": 7,
+      "next": 14,
+      "previous": 25
+    },
+    "fold_2": {
+      "exact": 5,
+      "near": 0,
+      "next": 4,
+      "previous": 1
+    },
+    "fold_3": {
+      "exact": 23,
+      "near": 7,
+      "next": 9,
+      "previous": 21
+    },
+    "fold_4": {
+      "exact": 31,
+      "near": 7,
+      "next": 14,
+      "previous": 24
+    },
+    "fold_5": {
+      "exact": 32,
+      "near": 7,
+      "next": 14,
+      "previous": 25
+    }
+  },
+  "context_similarity": "normalized_word_trigram_jaccard",
+  "context_similarity_threshold": 0.85,
+  "minimum_valid_votes": 2,
+  "rows": 2253,
+  "schema_version": 1,
+  "scope": "development_train_only",
+  "soft_target_denominator": "valid_votes_only",
+  "soft_target_rows_excluded": 0,
+  "soft_target_rows_included": 2253,
+  "source_hashes": {
+    "consensus.csv": "753547cf6548a8e20608e3b358c4a6ef043280c0125d4a4213da6e632588d1b9",
+    "experiment_plan.md": "fd7e89528e6ad2243c3857c08aad4b3710797c9d35b4ef55879276cd4c72c141",
+    "folds_v1.json": "c04dc8424ed96486f8521ef57d17e4b503d2c3f41bb116edeeb9535073dd7884",
+    "inner_selection_v1.json": "7db817c91e962a6a921942e14bc2d41737bd1060a111a8c7fb798bb929054616",
+    "train.csv": "4b0ee17308e26fdc8a2a362e7df1099fa7f55de79a9754ba64d50cb56f5542c4"
+  }
+}

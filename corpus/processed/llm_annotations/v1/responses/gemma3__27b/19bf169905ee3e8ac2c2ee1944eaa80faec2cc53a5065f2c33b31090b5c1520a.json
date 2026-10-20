@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY send a RESET_STREAM",
+    "interpretation_a": "The endpoint is permitted, but not required, to send a RESET_STREAM as the first frame mentioning a stream.",
+    "interpretation_b": "The endpoint is permitted to send a RESET_STREAM as the first frame mentioning a stream, and it is a recommended practice.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' is ambiguous because it doesn't specify if there's any benefit or recommendation to sending a RESET_STREAM as the first frame. This impacts whether an implementation would choose to do so or not.",
+    "missing_information": "The specification does not clarify whether the use of MAY implies a recommendation or simply permission. This affects implementation choices regarding whether to prioritize early stream reset."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:01:34.312564+00:00",
+  "document_id": "draft-ietf-quic-transport-24",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "822ed6eed268a309119009f652419c72eaf6f6b49b2edf8f1563a56410d7b1ee",
+  "lineage_ids": "lineage:3ccde53ccd7fdee16d37f662",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 182,
+    "load_duration": 4085700,
+    "prompt_eval_count": 606,
+    "total_duration": 6863855500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY send a RESET_STREAM\", \"interpretation_a\": \"The endpoint is permitted, but not required, to send a RESET_STREAM as the first frame mentioning a stream.\", \"interpretation_b\": \"The endpoint is permitted to send a RESET_STREAM as the first frame mentioning a stream, and it is a recommended practice.\", \"missing_information\": \"The specification does not clarify whether the use of MAY implies a recommendation or simply permission. This affects implementation choices regarding whether to prioritize early stream reset.\", \"justification\": \"The use of 'MAY' is ambiguous because it doesn't specify if there's any benefit or recommendation to sending a RESET_STREAM as the first frame. This impacts whether an implementation would choose to do so or not.\"}",
+  "record_id": "19bf169905ee3e8ac2c2ee1944eaa80faec2cc53a5065f2c33b31090b5c1520a",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.859
+}

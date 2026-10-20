@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "previous zero-value header block",
+    "interpretation_a": "The constraint means that the endpoint must wait until it has received an ACK for the header block that *originally* had a Sequence counter of zero.",
+    "interpretation_b": "The constraint means that the endpoint must wait until it has received an ACK for the *most recent* header block that had a Sequence counter of zero, even if that block was retransmitted.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'previous zero-value header block' is incomplete. It is unclear whether 'previous' refers to the original block sent with sequence number zero, or the most recent block sent with sequence number zero. This affects the timing of the sequence counter wrap and thus implementation.",
+    "missing_information": "The definition of 'confirmed received' is not provided. Does it mean the first ACK, or any ACK? Is there a timeout?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:43:07.789136+00:00",
+  "document_id": "draft-ietf-quic-http-04",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "139f7440dc57a9386616b2d7f36f12a5ae2a1e38f19ebef3de9011b4b059cf61",
+  "lineage_ids": "lineage:591a2419693959072c61e9d9",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 207,
+    "load_duration": 7894200,
+    "prompt_eval_count": 574,
+    "total_duration": 7969761800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"previous zero-value header block\", \"interpretation_a\": \"The constraint means that the endpoint must wait until it has received an ACK for the header block that *originally* had a Sequence counter of zero.\", \"interpretation_b\": \"The constraint means that the endpoint must wait until it has received an ACK for the *most recent* header block that had a Sequence counter of zero, even if that block was retransmitted.\", \"missing_information\": \"The definition of 'confirmed received' is not provided. Does it mean the first ACK, or any ACK? Is there a timeout?\",\"justification\": \"The phrase 'previous zero-value header block' is incomplete. It is unclear whether 'previous' refers to the original block sent with sequence number zero, or the most recent block sent with sequence number zero. This affects the timing of the sequence counter wrap and thus implementation.\"}",
+  "record_id": "21838c3819c48df5de6616949870acbb015b4776a727dd4675f3fe92ed95bb55",
+  "revision": "04",
+  "schema_version": 1,
+  "section_ids": "5.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.984
+}

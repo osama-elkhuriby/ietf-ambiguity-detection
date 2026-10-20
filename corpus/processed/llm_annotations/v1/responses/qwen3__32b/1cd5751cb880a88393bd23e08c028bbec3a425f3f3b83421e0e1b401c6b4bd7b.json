@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear condition under which an endpoint MAY treat a received NEW_CONNECTION_ID frame as a connection error of type PROTOCOL_VIOLATION. The language is precise in specifying the scenarios (repeating a connection ID with a different Stateless Reset Token or sequence number, or using a sequence number for different connection IDs). The use of 'MAY' indicates optional behavior, but the condition itself is unambiguous and does not allow for multiple materially different interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:52:41.974697+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "5a40cf8ed59f4fe5047df42c38dc09bf929321f2a67d99560e5554a49b7f6da3",
+  "lineage_ids": "lineage:1ab2666f6221eb7d74fcc7be",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 149,
+    "load_duration": 5650500,
+    "prompt_eval_count": 588,
+    "total_duration": 6158962500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear condition under which an endpoint MAY treat a received NEW_CONNECTION_ID frame as a connection error of type PROTOCOL_VIOLATION. The language is precise in specifying the scenarios (repeating a connection ID with a different Stateless Reset Token or sequence number, or using a sequence number for different connection IDs). The use of 'MAY' indicates optional behavior, but the condition itself is unambiguous and does not allow for multiple materially different interpretations.\"\n}",
+  "record_id": "1cd5751cb880a88393bd23e08c028bbec3a425f3f3b83421e0e1b401c6b4bd7b",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "19.15",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.156
+}

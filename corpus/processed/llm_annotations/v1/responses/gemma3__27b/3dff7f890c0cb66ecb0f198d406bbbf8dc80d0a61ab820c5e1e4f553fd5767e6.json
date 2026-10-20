@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "connection IDs",
+    "interpretation_a": "Connection IDs should be generated in a way that prevents external observers from linking them together based on any internal data within the ID itself. This could mean using purely random or pseudorandom values.",
+    "interpretation_b": "Connection IDs should not reveal any information about the connection's state or history that could be used to correlate them with other IDs. This could mean rotating IDs frequently or using a complex encoding scheme.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states that connection IDs 'MUST NOT contain any information' that allows correlation. However, it doesn't define what constitutes 'information' in this context. This leaves room for different interpretations of what data within the connection ID is considered sensitive and could be used for correlation. The lack of a clear definition of 'information' creates ambiguity.",
+    "missing_information": "The definition of 'information' and 'external observer' is not precise. What constitutes 'information' that could be used for correlation is open to interpretation. Also, the scope of 'external observer' is not defined – is it a passive network observer, an active attacker, or something else?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:15:15.908248+00:00",
+  "document_id": "draft-ietf-quic-transport-22",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "8a377b3c0d90c937d3c399049f921c870120305da71721837bc67af931b51022",
+  "lineage_ids": "lineage:fa7a8d320c2bf77318e9db13",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 259,
+    "load_duration": 4125100,
+    "prompt_eval_count": 598,
+    "total_duration": 9632798800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"connection IDs\", \"interpretation_a\": \"Connection IDs should be generated in a way that prevents external observers from linking them together based on any internal data within the ID itself. This could mean using purely random or pseudorandom values.\", \"interpretation_b\": \"Connection IDs should not reveal any information about the connection's state or history that could be used to correlate them with other IDs. This could mean rotating IDs frequently or using a complex encoding scheme.\", \"missing_information\": \"The definition of 'information' and 'external observer' is not precise. What constitutes 'information' that could be used for correlation is open to interpretation. Also, the scope of 'external observer' is not defined – is it a passive network observer, an active attacker, or something else?\",\"justification\": \"The clause states that connection IDs 'MUST NOT contain any information' that allows correlation. However, it doesn't define what constitutes 'information' in this context. This leaves room for different interpretations of what data within the connection ID is considered sensitive and could be used for correlation. The lack of a clear definition of 'information' creates ambiguity.\"}",
+  "record_id": "3dff7f890c0cb66ecb0f198d406bbbf8dc80d0a61ab820c5e1e4f553fd5767e6",
+  "revision": "22",
+  "schema_version": 1,
+  "section_ids": "5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.64
+}

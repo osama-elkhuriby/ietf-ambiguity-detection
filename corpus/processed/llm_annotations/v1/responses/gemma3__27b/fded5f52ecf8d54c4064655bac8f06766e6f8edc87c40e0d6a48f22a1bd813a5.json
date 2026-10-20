@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "remove it",
+    "interpretation_a": "The recipient might remove the whitespace by simply deleting it.",
+    "interpretation_b": "The recipient might replace the whitespace with a different character or sequence of characters (e.g., a single space).",
+    "is_ambiguous": "yes",
+    "justification": "The term 'remove' is underspecified. It could mean deletion, replacement, or other forms of modification. Without a precise definition of 'remove', different implementations could handle bad whitespace in materially different ways.",
+    "missing_information": "The clause does not specify *how* the recipient should remove the whitespace. This leaves room for different implementations that could affect interoperability."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:38:27.126084+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "7d770af70f7de2469918098b910a71c850a9f0168ff2326f96c180fde5c29d0e",
+  "lineage_ids": "lineage:41f62dcad266ebb8d1d3cca8",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 159,
+    "load_duration": 10604500,
+    "prompt_eval_count": 541,
+    "total_duration": 6250556300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"remove it\", \"interpretation_a\": \"The recipient might remove the whitespace by simply deleting it.\", \"interpretation_b\": \"The recipient might replace the whitespace with a different character or sequence of characters (e.g., a single space).\", \"missing_information\": \"The clause does not specify *how* the recipient should remove the whitespace. This leaves room for different implementations that could affect interoperability.\", \"justification\": \"The term 'remove' is underspecified. It could mean deletion, replacement, or other forms of modification. Without a precise definition of 'remove', different implementations could handle bad whitespace in materially different ways.\"}",
+  "record_id": "fded5f52ecf8d54c4064655bac8f06766e6f8edc87c40e0d6a48f22a1bd813a5",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "5.6.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.25
+}

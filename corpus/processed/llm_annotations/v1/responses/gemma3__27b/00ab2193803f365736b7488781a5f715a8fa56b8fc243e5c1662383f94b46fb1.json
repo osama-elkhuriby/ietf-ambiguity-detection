@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "validates that the original_connection_id transport parameter is present and correct; otherwise, it validates that the transport parameter is absent",
+    "interpretation_a": "The client checks for the presence of the parameter and, if present, verifies its value against the expected value from the initial packet.",
+    "interpretation_b": "The client checks for the absence of the parameter if it didn't send an initial packet with a Connection ID, or if the Retry packet is unexpected. The clause doesn't specify *how* the client determines 'correctness' of the parameter's value, leaving room for differing implementations.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'correct' is underspecified. Without a definition of what constitutes a 'correct' value, different implementations could interpret this requirement in different ways, leading to interoperability issues.",
+    "missing_information": "The clause does not define what constitutes a 'correct' value for the original_connection_id parameter. It's unclear if the client should perform any specific checks beyond its presence and whether any specific format or range is expected."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:54:31.397534+00:00",
+  "document_id": "draft-ietf-quic-transport-17",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "ff30ede1940a196d0a640f1859670114d9fbfbba8d1786774af830a437c8106c",
+  "lineage_ids": "lineage:941bb93bd01a50fda2865973",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 249,
+    "load_duration": 4472900,
+    "prompt_eval_count": 629,
+    "total_duration": 9286734800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"validates that the original_connection_id transport parameter is present and correct; otherwise, it validates that the transport parameter is absent\", \"interpretation_a\": \"The client checks for the presence of the parameter and, if present, verifies its value against the expected value from the initial packet.\", \"interpretation_b\": \"The client checks for the absence of the parameter if it didn't send an initial packet with a Connection ID, or if the Retry packet is unexpected. The clause doesn't specify *how* the client determines 'correctness' of the parameter's value, leaving room for differing implementations.\", \"missing_information\": \"The clause does not define what constitutes a 'correct' value for the original_connection_id parameter. It's unclear if the client should perform any specific checks beyond its presence and whether any specific format or range is expected.\", \"justification\": \"The phrase 'correct' is underspecified. Without a definition of what constitutes a 'correct' value, different implementations could interpret this requirement in different ways, leading to interoperability issues.\"}",
+  "record_id": "00ab2193803f365736b7488781a5f715a8fa56b8fc243e5c1662383f94b46fb1",
+  "revision": "17",
+  "schema_version": 1,
+  "section_ids": "17.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.297
+}

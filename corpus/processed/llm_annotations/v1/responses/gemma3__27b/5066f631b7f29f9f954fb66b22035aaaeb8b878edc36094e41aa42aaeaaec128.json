@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "SHOULD send PUSH_PROMISE",
+    "interpretation_a": "The server is encouraged to send PUSH_PROMISE frames before any referencing frames, but it is permissible to send them concurrently or even after some referencing frames if doing so doesn't cause issues.",
+    "interpretation_b": "The server is expected to reliably send PUSH_PROMISE frames before *any* referencing frames, with deviations only allowed in exceptional circumstances. The 'SHOULD' is strong guidance, approaching a requirement.",
+    "is_ambiguous": "yes",
+    "justification": "The word 'SHOULD' is open to interpretation. It could mean a weak recommendation, or a strong one. Without further clarification, it's unclear how strictly the server needs to adhere to sending PUSH_PROMISE frames before referencing frames.",
+    "missing_information": "The strength of 'SHOULD' is not defined. Is it a weak recommendation, or a strong one? The degree to which concurrent or later sending is acceptable is not specified."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:33:42.412975+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "c24ec7e77c354f8ff9ed20e497f500779b12223b6e06d12a4be836627007619c",
+  "lineage_ids": "lineage:f05e3918268ce6d690582afd",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 232,
+    "load_duration": 17478500,
+    "prompt_eval_count": 617,
+    "total_duration": 8888864100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"SHOULD send PUSH_PROMISE\", \"interpretation_a\": \"The server is encouraged to send PUSH_PROMISE frames before any referencing frames, but it is permissible to send them concurrently or even after some referencing frames if doing so doesn't cause issues.\", \"interpretation_b\": \"The server is expected to reliably send PUSH_PROMISE frames before *any* referencing frames, with deviations only allowed in exceptional circumstances. The 'SHOULD' is strong guidance, approaching a requirement.\", \"missing_information\": \"The strength of 'SHOULD' is not defined. Is it a weak recommendation, or a strong one? The degree to which concurrent or later sending is acceptable is not specified.\", \"justification\": \"The word 'SHOULD' is open to interpretation. It could mean a weak recommendation, or a strong one. Without further clarification, it's unclear how strictly the server needs to adhere to sending PUSH_PROMISE frames before referencing frames.\"}",
+  "record_id": "5066f631b7f29f9f954fb66b22035aaaeb8b878edc36094e41aa42aaeaaec128",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.891
+}

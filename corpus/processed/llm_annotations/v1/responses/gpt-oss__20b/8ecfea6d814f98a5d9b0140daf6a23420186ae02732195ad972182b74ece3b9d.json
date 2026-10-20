@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless the original frame is determined to be lost",
+    "interpretation_a": "The clause is ambiguous because it does not specify how a sender determines that the original frame is lost, leading to different possible implementations.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a concrete constraint on how loss is determined, allowing multiple reasonable interpretations of when a sender may send multiple BLOCKED or STREAM_BLOCKED frames.",
+    "missing_information": "definition of 'determined to be lost' (criteria for loss detection)."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T17:01:18.025694+00:00",
+  "document_id": "draft-ietf-quic-transport-16",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "808d558c6680f80f3d2680dab87853cd123f5ab9ed6cb02a31e83c1f67ff9c63",
+  "lineage_ids": "lineage:90ba3a9ffc331505542674e2",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3050,
+    "load_duration": 4621300,
+    "prompt_eval_count": 589,
+    "total_duration": 26280415200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"unless the original frame is determined to be lost\",\n  \"interpretation_a\": \"The clause is ambiguous because it does not specify how a sender determines that the original frame is lost, leading to different possible implementations.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"definition of 'determined to be lost' (criteria for loss detection).\",\n  \"justification\": \"The clause lacks a concrete constraint on how loss is determined, allowing multiple reasonable interpretations of when a sender may send multiple BLOCKED or STREAM_BLOCKED frames.\"\n}",
+  "record_id": "8ecfea6d814f98a5d9b0140daf6a23420186ae02732195ad972182b74ece3b9d",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 26.281
+}

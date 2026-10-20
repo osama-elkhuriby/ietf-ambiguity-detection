@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHALL add/has added",
+    "interpretation_a": "IANA is required to add the registry if it does not already exist.",
+    "interpretation_b": "IANA has already added the registry, and this clause is simply stating a fact.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"SHALL add/has added\" is ambiguous. It is unclear whether IANA is *required* to add the registry, or whether the registry *has been* added. This affects implementation because a reader might incorrectly assume the registry exists when it does not, or vice versa.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:48:40.914661+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "08c522d741d16b93d252a2dd887103023b3372c3fc251beaea0efb90bd2bb836",
+  "lineage_ids": "lineage:542f4f431e058b3ed94a8e3d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 145,
+    "load_duration": "",
+    "prompt_eval_count": 556,
+    "total_duration": 5557292600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHALL add/has added\", \"interpretation_a\": \"IANA is required to add the registry if it does not already exist.\", \"interpretation_b\": \"IANA has already added the registry, and this clause is simply stating a fact.\", \"missing_information\": \"\", \"justification\": \"The phrase \\\"SHALL add/has added\\\" is ambiguous. It is unclear whether IANA is *required* to add the registry, or whether the registry *has been* added. This affects implementation because a reader might incorrectly assume the registry exists when it does not, or vice versa.\"}",
+  "record_id": "9e42486a711ca1bc9e8aba661caa305dac7ad620db49682f29aec8e22b5e6bd2",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "22.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.563
+}

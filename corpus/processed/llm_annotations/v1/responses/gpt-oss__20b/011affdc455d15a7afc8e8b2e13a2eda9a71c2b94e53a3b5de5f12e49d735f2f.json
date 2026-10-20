@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "An endpoint that wishes to communicate a fatal connection error MUST use a CONNECTION_CLOSE frame if it has sufficient state to do so.",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause requires the use of a CONNECTION_CLOSE frame only if the endpoint has sufficient state, but the term \"sufficient state\" is not defined in the supplied text, creating an incomplete constraint that could lead to materially different implementation behaviours.",
+    "missing_information": "definition of sufficient state"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T13:40:36.101119+00:00",
+  "document_id": "draft-ietf-quic-transport-30",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "25afc9aa4fed2743b012f64f8089ba062bfb57064cd17024a7bba6f13db66224",
+  "lineage_ids": "lineage:2b0be6b2420e71fdc8524b21",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2522,
+    "load_duration": 4720500,
+    "prompt_eval_count": 569,
+    "total_duration": 21873308800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"An endpoint that wishes to communicate a fatal connection error MUST use a CONNECTION_CLOSE frame if it has sufficient state to do so.\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"definition of sufficient state\",\n  \"justification\": \"The clause requires the use of a CONNECTION_CLOSE frame only if the endpoint has sufficient state, but the term \\\"sufficient state\\\" is not defined in the supplied text, creating an incomplete constraint that could lead to materially different implementation behaviours.\"\n}",
+  "record_id": "011affdc455d15a7afc8e8b2e13a2eda9a71c2b94e53a3b5de5f12e49d735f2f",
+  "revision": "30",
+  "schema_version": 1,
+  "section_ids": "10.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 21.875
+}

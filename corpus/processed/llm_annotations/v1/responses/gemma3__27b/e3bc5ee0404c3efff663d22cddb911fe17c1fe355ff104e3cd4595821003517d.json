@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless the variance cannot be crossed or the origin server has been deliberately configured to prevent cache transparency.",
+    "interpretation_a": "The origin server does *not* send a Vary header if the variance cannot be crossed, meaning the differing representations are not cacheable due to inherent limitations (e.g., a time-sensitive value).",
+    "interpretation_b": "The origin server does *not* send a Vary header if it is *configured* to prevent cache transparency, meaning the administrator has explicitly disabled Vary header generation even if the variance *could* be crossed.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'cannot be crossed' is vague. It's unclear whether it refers to a technical limitation preventing caching of different representations, or an administrative decision to disable caching regardless of technical feasibility. This impacts implementation, as a server might incorrectly omit the Vary header based on a configuration choice when a technical limitation doesn't exist.",
+    "missing_information": "The meaning of 'cannot be crossed' is not defined. Does it refer to technical limitations, or administrative configuration? This affects whether the condition is inherent to the data or a deliberate choice."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:33:10.186498+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-07",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "203c53bc67d3a2589304fb002b4597f56f04b5f9bafc3ad97cdd32d7c5f253d6",
+  "lineage_ids": "lineage:7696074ea7b7c38bd6486b3b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 258,
+    "load_duration": 19734000,
+    "prompt_eval_count": 645,
+    "total_duration": 9976941400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless the variance cannot be crossed or the origin server has been deliberately configured to prevent cache transparency.\", \"interpretation_a\": \"The origin server does *not* send a Vary header if the variance cannot be crossed, meaning the differing representations are not cacheable due to inherent limitations (e.g., a time-sensitive value).\", \"interpretation_b\": \"The origin server does *not* send a Vary header if it is *configured* to prevent cache transparency, meaning the administrator has explicitly disabled Vary header generation even if the variance *could* be crossed.\", \"missing_information\": \"The meaning of 'cannot be crossed' is not defined. Does it refer to technical limitations, or administrative configuration? This affects whether the condition is inherent to the data or a deliberate choice.\", \"justification\": \"The phrase 'cannot be crossed' is vague. It's unclear whether it refers to a technical limitation preventing caching of different representations, or an administrative decision to disable caching regardless of technical feasibility. This impacts implementation, as a server might incorrectly omit the Vary header based on a configuration choice when a technical limitation doesn't exist.\"}",
+  "record_id": "e3bc5ee0404c3efff663d22cddb911fe17c1fe355ff104e3cd4595821003517d",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "10.1.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.969
+}

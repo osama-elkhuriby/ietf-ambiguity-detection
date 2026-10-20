@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "packet number space",
+    "interpretation_a": "A 'packet number space' refers to the entire range of possible packet numbers.",
+    "interpretation_b": "A 'packet number space' refers to a specific, limited range of packet numbers used for a particular stream or connection.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'packet number space' is not defined within the provided context. It is unclear whether it refers to the entire range of possible packet numbers or a smaller, specific range. This ambiguity affects when truncation is permitted, impacting implementation.",
+    "missing_information": "The definition of 'packet number space' is not provided in this excerpt, and its meaning is crucial to understanding when full packet numbers are required."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:29:08.402926+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "d8f30292ad9f90606d5fa03d5ddd4146a20effdce027bc3640cf0b3e1daa04a9",
+  "lineage_ids": "lineage:5496deb4add28e033a0e9624",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 172,
+    "load_duration": 5359400,
+    "prompt_eval_count": 605,
+    "total_duration": 6525201900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"packet number space\", \"interpretation_a\": \"A 'packet number space' refers to the entire range of possible packet numbers.\", \"interpretation_b\": \"A 'packet number space' refers to a specific, limited range of packet numbers used for a particular stream or connection.\", \"missing_information\": \"The definition of 'packet number space' is not provided in this excerpt, and its meaning is crucial to understanding when full packet numbers are required.\", \"justification\": \"The phrase 'packet number space' is not defined within the provided context. It is unclear whether it refers to the entire range of possible packet numbers or a smaller, specific range. This ambiguity affects when truncation is permitted, impacting implementation.\"}",
+  "record_id": "668699377fea064aa5d40249508d041a0f4dc42b04e7d0c63703d8c1e2feed6f",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "17.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.532
+}

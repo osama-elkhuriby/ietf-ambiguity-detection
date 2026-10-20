@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "each RR SHALL be returned under its own owner name",
+    "interpretation_a": "Each RR refers to the original SVCB record and its associated data, returned with its original owner name.",
+    "interpretation_b": "Each RR refers to *all* RRs in the chain of CNAME/SVCB records, each returned with its respective owner name, potentially creating a longer response than expected.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'each RR' is incomplete without specifying which records are being referred to. It could mean only the final SVCB record, or all records involved in the CNAME/SVCB chain. This leads to two different interpretations of how the records should be returned, affecting implementation.",
+    "missing_information": "It is unclear whether 'each RR' refers only to the final SVCB record or to all records in the CNAME/SVCB chain. A clarification on the scope of 'each RR' is needed to avoid ambiguity in implementation."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:02:48.049334+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "242c30fe9ee587384e4e617f9b50898f20fa56b8f24dac1c07708d0e3bb9c35b",
+  "lineage_ids": "lineage:ad39beae93b5a83d1b830342",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 224,
+    "load_duration": 5402500,
+    "prompt_eval_count": 604,
+    "total_duration": 8363390400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"each RR SHALL be returned under its own owner name\", \"interpretation_a\": \"Each RR refers to the original SVCB record and its associated data, returned with its original owner name.\", \"interpretation_b\": \"Each RR refers to *all* RRs in the chain of CNAME/SVCB records, each returned with its respective owner name, potentially creating a longer response than expected.\", \"missing_information\": \"It is unclear whether 'each RR' refers only to the final SVCB record or to all records in the CNAME/SVCB chain. A clarification on the scope of 'each RR' is needed to avoid ambiguity in implementation.\", \"justification\": \"The phrase 'each RR' is incomplete without specifying which records are being referred to. It could mean only the final SVCB record, or all records involved in the CNAME/SVCB chain. This leads to two different interpretations of how the records should be returned, affecting implementation.\"}",
+  "record_id": "50046a1edac4e29441d603731c4800eee77308cea7fed87a33e4df1bd1beb439",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.36
+}

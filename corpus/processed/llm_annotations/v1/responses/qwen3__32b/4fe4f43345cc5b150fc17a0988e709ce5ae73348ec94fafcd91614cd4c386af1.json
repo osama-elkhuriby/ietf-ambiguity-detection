@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause provides a clear and unambiguous directive: field values containing CR or NUL characters are invalid and dangerous. Recipients are explicitly required to either reject the message or replace those characters with SP before further processing or forwarding. There is no room for multiple materially different interpretations, and the language is precise in defining the required behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:12:03.729219+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-17",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "455ac00f3614a2c9fe8da85415a4df17c7742f00f740035ee9077d7ac6731217",
+  "lineage_ids": "lineage:52deb7b1827ffa0c61981177",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 123,
+    "load_duration": 14928400,
+    "prompt_eval_count": 588,
+    "total_duration": 5202471300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause provides a clear and unambiguous directive: field values containing CR or NUL characters are invalid and dangerous. Recipients are explicitly required to either reject the message or replace those characters with SP before further processing or forwarding. There is no room for multiple materially different interpretations, and the language is precise in defining the required behavior.\"\n}",
+  "record_id": "4fe4f43345cc5b150fc17a0988e709ce5ae73348ec94fafcd91614cd4c386af1",
+  "revision": "17",
+  "schema_version": 1,
+  "section_ids": "5.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.203
+}

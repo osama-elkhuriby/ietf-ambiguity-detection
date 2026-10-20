@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "type=0x16 or 0x17",
+    "interpretation_a": "Send a STREAMS_BLOCKED frame of type 0x16 for all blocked streams, regardless of whether they are bidirectional or unidirectional.",
+    "interpretation_b": "Send a STREAMS_BLOCKED frame of type 0x17 for all blocked streams, regardless of whether they are bidirectional or unidirectional.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify which frame type to use for bidirectional versus unidirectional streams, leaving the implementation choice ambiguous.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T15:40:16.422412+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "979d930d09efa5e42ce70739d0360970e0521307ac48dfcdc0bc2c6f7ec71165",
+  "lineage_ids": "lineage:a6f127b310698873b30495e4",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 495,
+    "load_duration": 5589700,
+    "prompt_eval_count": 758,
+    "total_duration": 4410565700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"type=0x16 or 0x17\",\n  \"interpretation_a\": \"Send a STREAMS_BLOCKED frame of type 0x16 for all blocked streams, regardless of whether they are bidirectional or unidirectional.\",\n  \"interpretation_b\": \"Send a STREAMS_BLOCKED frame of type 0x17 for all blocked streams, regardless of whether they are bidirectional or unidirectional.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify which frame type to use for bidirectional versus unidirectional streams, leaving the implementation choice ambiguous.\"\n}",
+  "record_id": "505aa26ada1a245d9a3c504ce3eb7ef5cf2ef338170f63eea0c66f84b5357476",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "19.14",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 18.25
+}

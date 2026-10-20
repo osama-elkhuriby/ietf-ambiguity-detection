@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "or 2*RMSS bytes of new data",
+    "interpretation_a": "The clause could be interpreted as requiring ACKs for either every second full-sized segment or every 2*RMSS bytes of new data, or as requiring ACKs for both conditions.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether the ACK should be generated for both conditions or for either condition, leading to materially different implementation behaviours.",
+    "missing_information": "Clarification on whether the 'or' is inclusive or exclusive, and whether the ACK should be generated for both conditions or either one alone is needed to resolve the ambiguity."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T20:04:14.494437+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "d3e5d09eb0b5685a5f7b2fe3eeee05a5a95097a2d4b49869051a3227d07c4a18",
+  "lineage_ids": "lineage:9e931167f57dbdfd36b37293",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1910,
+    "load_duration": 4007100,
+    "prompt_eval_count": 688,
+    "total_duration": 16648182100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"or 2*RMSS bytes of new data\",\n  \"interpretation_a\": \"The clause could be interpreted as requiring ACKs for either every second full-sized segment or every 2*RMSS bytes of new data, or as requiring ACKs for both conditions.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"Clarification on whether the 'or' is inclusive or exclusive, and whether the ACK should be generated for both conditions or either one alone is needed to resolve the ambiguity.\",\n  \"justification\": \"The clause does not specify whether the ACK should be generated for both conditions or for either condition, leading to materially different implementation behaviours.\"\n}",
+  "record_id": "6433c9e35586536a85dc69735264d066f9795172fed22cc7125aa11e6f897660",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.8.6.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 84.062
+}

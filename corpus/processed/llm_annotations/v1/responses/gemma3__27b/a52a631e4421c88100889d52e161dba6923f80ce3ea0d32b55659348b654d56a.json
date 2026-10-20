@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "multiple tickets",
+    "interpretation_a": "The server can send any number of tickets, even a very large number, in quick succession.",
+    "interpretation_b": "The server can send a reasonable number of tickets, perhaps limited by some unspecified constraint like a maximum number per connection or a rate limit.",
+    "is_ambiguous": "yes",
+    "justification": "The term \"multiple\" is vague. While it implies more than one, it doesn't define an upper bound. This allows for interpretations ranging from a few tickets to an excessive number, potentially impacting performance or security.",
+    "missing_information": "The clause does not specify any limits on the number of tickets a server can send, leading to ambiguity about reasonable implementation behavior. A missing constraint on the maximum number of tickets or a rate limit would resolve this."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:35:57.066045+00:00",
+  "document_id": "draft-ietf-tls-tls13-18",
+  "family_id": "draft-ietf-tls-tls13",
+  "input_fingerprint": "7663c0d85b57af3ac8af43fce595dc7337957f4a982f7702fb93d9e65da8f699",
+  "lineage_ids": "lineage:57b652d845f9236ad76f1af5",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 187,
+    "load_duration": 10352000,
+    "prompt_eval_count": 598,
+    "total_duration": 7245178400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"multiple tickets\", \"interpretation_a\": \"The server can send any number of tickets, even a very large number, in quick succession.\", \"interpretation_b\": \"The server can send a reasonable number of tickets, perhaps limited by some unspecified constraint like a maximum number per connection or a rate limit.\", \"missing_information\": \"The clause does not specify any limits on the number of tickets a server can send, leading to ambiguity about reasonable implementation behavior. A missing constraint on the maximum number of tickets or a rate limit would resolve this.\", \"justification\": \"The term \\\"multiple\\\" is vague. While it implies more than one, it doesn't define an upper bound. This allows for interpretations ranging from a few tickets to an excessive number, potentially impacting performance or security.\"}",
+  "record_id": "a52a631e4421c88100889d52e161dba6923f80ce3ea0d32b55659348b654d56a",
+  "revision": "18",
+  "schema_version": 1,
+  "section_ids": "4.5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.266
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "causes any flow-control window to exceed the maximum size",
+    "interpretation_a": "The condition applies to *each* flow-control window (stream and connection). If *any* window exceeds the maximum, it's an error.",
+    "interpretation_b": "The condition applies to the *sum* of all flow-control windows. If the combined size exceeds the maximum, it's an error.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"any flow-control window\" is ambiguous. It could refer to each individual stream and connection flow-control window, or to the total combined size of all windows. These interpretations lead to different implementations.",
+    "missing_information": "It is unclear whether the 'any' refers to each individual window or the aggregate of all windows. A clarification on whether the check is per-stream, per-connection, or aggregate would resolve the ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:46:33.123753+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "8de5562de7cc6cfa1e6d5e13cf24f5419a5730c9e7d8c54a614dab9f7495b8a3",
+  "lineage_ids": "lineage:864ac361eeb345b60883a080",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 209,
+    "load_duration": 8577600,
+    "prompt_eval_count": 567,
+    "total_duration": 8057275200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"causes any flow-control window to exceed the maximum size\", \"interpretation_a\": \"The condition applies to *each* flow-control window (stream and connection). If *any* window exceeds the maximum, it's an error.\", \"interpretation_b\": \"The condition applies to the *sum* of all flow-control windows. If the combined size exceeds the maximum, it's an error.\", \"missing_information\": \"It is unclear whether the 'any' refers to each individual window or the aggregate of all windows. A clarification on whether the check is per-stream, per-connection, or aggregate would resolve the ambiguity.\", \"justification\": \"The phrase \\\"any flow-control window\\\" is ambiguous. It could refer to each individual stream and connection flow-control window, or to the total combined size of all windows. These interpretations lead to different implementations.\"}",
+  "record_id": "c04613e68c11a43e37351f70cf7d24f31bccf37e8042064d8591bfac5062b423",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.9.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.078
+}

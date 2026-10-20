@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "from the same remote address",
+    "interpretation_a": "The PATH_RESPONSE must originate from the IP address used for the PATH_CHALLENGE.",
+    "interpretation_b": "The PATH_RESPONSE must originate from the same UDP port used for the PATH_CHALLENGE.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'remote address' is not precisely defined within the provided context. It could refer to the IP address, the UDP port, or a combination of both. This ambiguity leads to different possible implementations for path validation.",
+    "missing_information": "It is unclear whether 'remote address' refers to the IP address, the UDP port, or the combination of both. This affects how the implementation validates the response."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:59:16.302676+00:00",
+  "document_id": "draft-ietf-quic-transport-17",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "2cc87c14e4f09688275b4cfc84922789b46e8171e7bcc481492761a14e095364",
+  "lineage_ids": "lineage:c77b8617fa3ddfad1cfc6d00",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 173,
+    "load_duration": 4088600,
+    "prompt_eval_count": 622,
+    "total_duration": 6556865900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"from the same remote address\", \"interpretation_a\": \"The PATH_RESPONSE must originate from the IP address used for the PATH_CHALLENGE.\", \"interpretation_b\": \"The PATH_RESPONSE must originate from the same UDP port used for the PATH_CHALLENGE.\", \"missing_information\": \"It is unclear whether 'remote address' refers to the IP address, the UDP port, or the combination of both. This affects how the implementation validates the response.\",\"justification\": \"The term 'remote address' is not precisely defined within the provided context. It could refer to the IP address, the UDP port, or a combination of both. This ambiguity leads to different possible implementations for path validation.\"}",
+  "record_id": "11edea6c62c46eaf05a3d9d7ec01bcaf306057bd083c568b8e9dddd4656917d5",
+  "revision": "17",
+  "schema_version": 1,
+  "section_ids": "8.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.562
+}

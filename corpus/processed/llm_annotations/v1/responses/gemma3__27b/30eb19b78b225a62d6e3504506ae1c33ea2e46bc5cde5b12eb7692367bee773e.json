@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY ignore the cancellation",
+    "interpretation_a": "The client is permitted to continue using the response data even after receiving a cancellation signal.",
+    "interpretation_b": "The client is permitted to discard the response data upon receiving a cancellation signal.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' creates ambiguity because it doesn't specify whether ignoring the cancellation is the preferred behavior or simply an allowed one. This impacts how a client would implement the cancellation handling.",
+    "missing_information": "The conditions under which the client *should* ignore the cancellation are not specified. A missing constraint on whether the client is expected to ignore the cancellation, or whether it is merely permitted to do so, affects implementation."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:45:10.579970+00:00",
+  "document_id": "draft-ietf-quic-http-29",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "db3e96b443df2885b5f9383edb4f1568c953cd21e874a73a765ded1b6f9518de",
+  "lineage_ids": "lineage:ceed2bcf3913d4b49207c1cc",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 171,
+    "load_duration": 10705600,
+    "prompt_eval_count": 586,
+    "total_duration": 6661168500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY ignore the cancellation\", \"interpretation_a\": \"The client is permitted to continue using the response data even after receiving a cancellation signal.\", \"interpretation_b\": \"The client is permitted to discard the response data upon receiving a cancellation signal.\", \"missing_information\": \"The conditions under which the client *should* ignore the cancellation are not specified. A missing constraint on whether the client is expected to ignore the cancellation, or whether it is merely permitted to do so, affects implementation.\", \"justification\": \"The use of 'MAY' creates ambiguity because it doesn't specify whether ignoring the cancellation is the preferred behavior or simply an allowed one. This impacts how a client would implement the cancellation handling.\"}",
+  "record_id": "30eb19b78b225a62d6e3504506ae1c33ea2e46bc5cde5b12eb7692367bee773e",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "4.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.687
+}

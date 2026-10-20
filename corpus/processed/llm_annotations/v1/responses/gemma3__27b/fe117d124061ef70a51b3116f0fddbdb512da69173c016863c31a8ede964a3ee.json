@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "the TCP MAY aggregate the data internally without sending it",
+    "interpretation_a": "The TCP implementation can buffer multiple SEND calls without PUSH and send them as a single segment, potentially delaying delivery.",
+    "interpretation_b": "The TCP implementation can buffer multiple SEND calls without PUSH, but must eventually send the data, even if it means sending multiple segments.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' allows for two reasonable interpretations regarding the buffering of data. It's unclear whether the TCP stack is permitted to indefinitely delay sending data, or if there's an implicit requirement to eventually transmit it, even if it means sending multiple segments.",
+    "missing_information": "The clause does not specify a time limit or size limit for the aggregation of data. This leaves open the question of how long data can be buffered and how much data can be aggregated before transmission is required."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:31:33.256114+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-14",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "cd7ee09037e242e4fb8e197cf807a144f257775390e88ab51ae448d7e4b23b5a",
+  "lineage_ids": "lineage:46c3154d977547da581adb9f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 207,
+    "load_duration": 20134800,
+    "prompt_eval_count": 618,
+    "total_duration": 7992616900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"the TCP MAY aggregate the data internally without sending it\", \"interpretation_a\": \"The TCP implementation can buffer multiple SEND calls without PUSH and send them as a single segment, potentially delaying delivery.\", \"interpretation_b\": \"The TCP implementation can buffer multiple SEND calls without PUSH, but must eventually send the data, even if it means sending multiple segments.\", \"missing_information\": \"The clause does not specify a time limit or size limit for the aggregation of data. This leaves open the question of how long data can be buffered and how much data can be aggregated before transmission is required.\",\"justification\": \"The use of 'MAY' allows for two reasonable interpretations regarding the buffering of data. It's unclear whether the TCP stack is permitted to indefinitely delay sending data, or if there's an implicit requirement to eventually transmit it, even if it means sending multiple segments.\"}",
+  "record_id": "fe117d124061ef70a51b3116f0fddbdb512da69173c016863c31a8ede964a3ee",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "3.9.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.0
+}

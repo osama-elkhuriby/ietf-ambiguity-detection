@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "FRAME_ENCODING_ERROR or FLOW_CONTROL_ERROR",
+    "interpretation_a": "The clause permits the implementer to choose either FRAME_ENCODING_ERROR or FLOW_CONTROL_ERROR for a frame that exceeds the limit.",
+    "interpretation_b": "The clause could be read as requiring that both error types be considered, or that the specific error type depends on additional context not provided in the clause.",
+    "is_ambiguous": "yes",
+    "justification": "Because the clause does not specify which error type to use, it leaves the implementation choice open, creating an incomplete constraint that allows multiple reasonable behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T18:12:12.910956+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "01210c43608313ab0cb18a1ee2a80a8ab7aa0f68db02675c6594144dc7828840",
+  "lineage_ids": "lineage:6233455c7bb154f44f72d051",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 287,
+    "load_duration": 5029900,
+    "prompt_eval_count": 728,
+    "total_duration": 2640421600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"FRAME_ENCODING_ERROR or FLOW_CONTROL_ERROR\",\n  \"interpretation_a\": \"The clause permits the implementer to choose either FRAME_ENCODING_ERROR or FLOW_CONTROL_ERROR for a frame that exceeds the limit.\",\n  \"interpretation_b\": \"The clause could be read as requiring that both error types be considered, or that the specific error type depends on additional context not provided in the clause.\",\n  \"missing_information\": \"\",\n  \"justification\": \"Because the clause does not specify which error type to use, it leaves the implementation choice open, creating an incomplete constraint that allows multiple reasonable behaviours.\"\n}",
+  "record_id": "c2c387d1aeca66692023b9541c60454c50ea606523fb4f4b51d8d4e7c7f94ac8",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "19.8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.25
+}

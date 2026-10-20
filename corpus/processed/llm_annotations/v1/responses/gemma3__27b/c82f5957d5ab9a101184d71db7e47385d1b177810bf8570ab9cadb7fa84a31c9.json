@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "SHOULD parse for userinfo and treat its presence as an error",
+    "interpretation_a": "The recipient is encouraged to parse for userinfo and, if found, treat it as an error, but may choose to ignore it.",
+    "interpretation_b": "The recipient is strongly encouraged to parse for userinfo and *must* treat its presence as an error, though the specification does not explicitly state this.",
+    "is_ambiguous": "yes",
+    "justification": "The use of \"SHOULD\" creates ambiguity. While it indicates a strong recommendation, it doesn't definitively mandate error handling. A recipient could technically parse for userinfo but proceed without treating it as an error, which undermines the stated security rationale.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:27:26.126149+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "8512286b3baa84bed537bc2bdc308dfb9540f5120965f750eca4f2d0aa1cd9d0",
+  "lineage_ids": "lineage:ea5ef01582bdb3c4a02df8d2",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 172,
+    "load_duration": 9362100,
+    "prompt_eval_count": 613,
+    "total_duration": 6751821900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"SHOULD parse for userinfo and treat its presence as an error\", \"interpretation_a\": \"The recipient is encouraged to parse for userinfo and, if found, treat it as an error, but may choose to ignore it.\", \"interpretation_b\": \"The recipient is strongly encouraged to parse for userinfo and *must* treat its presence as an error, though the specification does not explicitly state this.\", \"missing_information\": \"\", \"justification\": \"The use of \\\"SHOULD\\\" creates ambiguity. While it indicates a strong recommendation, it doesn't definitively mandate error handling. A recipient could technically parse for userinfo but proceed without treating it as an error, which undermines the stated security rationale.\"}",
+  "record_id": "c82f5957d5ab9a101184d71db7e47385d1b177810bf8570ab9cadb7fa84a31c9",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "4.2.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.766
+}

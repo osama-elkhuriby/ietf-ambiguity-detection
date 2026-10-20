@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "every PATH_CHALLENGE",
+    "interpretation_a": "The endpoint must use different unpredictable data for *each* PATH_CHALLENGE frame sent, even if sent in quick succession.",
+    "interpretation_b": "The endpoint must use unpredictable data in the PATH_CHALLENGE frame, but may reuse the same data across multiple PATH_CHALLENGE frames as long as it's unpredictable. The clause does not specify a granularity of uniqueness.",
+    "is_ambiguous": "yes",
+    "justification": "The word 'every' can be interpreted in two ways: 1) each individual frame must have unique unpredictable data, or 2) the data used in the frame must be unpredictable, but can be reused across frames. The lack of a time constraint or a requirement for uniqueness creates ambiguity.",
+    "missing_information": "The clause does not specify whether the unpredictability requirement applies to each individual frame, or only that the data used is unpredictable in general. This affects implementation of the association mechanism."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:12:44.883698+00:00",
+  "document_id": "draft-ietf-quic-transport-24",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "3eaffd1905d826a9de4608f27f2d771b0bf0af7ad7ec25ba326188b0d7d54953",
+  "lineage_ids": "lineage:3c6ca0aee83d32657a4da2b9",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 226,
+    "load_duration": 4730900,
+    "prompt_eval_count": 580,
+    "total_duration": 8462232200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"every PATH_CHALLENGE\", \"interpretation_a\": \"The endpoint must use different unpredictable data for *each* PATH_CHALLENGE frame sent, even if sent in quick succession.\", \"interpretation_b\": \"The endpoint must use unpredictable data in the PATH_CHALLENGE frame, but may reuse the same data across multiple PATH_CHALLENGE frames as long as it's unpredictable. The clause does not specify a granularity of uniqueness.\", \"missing_information\": \"The clause does not specify whether the unpredictability requirement applies to each individual frame, or only that the data used is unpredictable in general. This affects implementation of the association mechanism.\", \"justification\": \"The word 'every' can be interpreted in two ways: 1) each individual frame must have unique unpredictable data, or 2) the data used in the frame must be unpredictable, but can be reused across frames. The lack of a time constraint or a requirement for uniqueness creates ambiguity.\"}",
+  "record_id": "363aa9a33e754f2ae70f6f9e2882157b0c46cd710d6d6f40677ee48749602ee8",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "8.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.485
+}

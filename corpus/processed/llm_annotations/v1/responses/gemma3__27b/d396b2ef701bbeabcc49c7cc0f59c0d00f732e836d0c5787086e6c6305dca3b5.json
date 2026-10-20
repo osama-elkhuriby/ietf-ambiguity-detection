@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD also initiate path validation",
+    "interpretation_a": "The server is encouraged to initiate path validation, but it is not required.",
+    "interpretation_b": "The server is expected to initiate path validation, and a failure to do so would be a protocol error.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' creates ambiguity. While 'SHOULD' is generally understood as a recommendation, the strength of that recommendation is not defined here. This could lead to interoperability issues if some implementations treat it as optional and others as required.",
+    "missing_information": "The degree of obligation associated with 'SHOULD' is not clarified. Is it a strong recommendation, or a near-requirement?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:05:10.869837+00:00",
+  "document_id": "draft-ietf-quic-transport-17",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "96afd47f921cf7fc97f276bd08f58b5e2aeef3b597154a9822d3277297a01fe0",
+  "lineage_ids": "lineage:5f89cd79c77d77697d83f93e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 171,
+    "load_duration": 3545200,
+    "prompt_eval_count": 603,
+    "total_duration": 6535841500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD also initiate path validation\", \"interpretation_a\": \"The server is encouraged to initiate path validation, but it is not required.\", \"interpretation_b\": \"The server is expected to initiate path validation, and a failure to do so would be a protocol error.\", \"missing_information\": \"The degree of obligation associated with 'SHOULD' is not clarified. Is it a strong recommendation, or a near-requirement?\",\"justification\": \"The use of 'SHOULD' creates ambiguity. While 'SHOULD' is generally understood as a recommendation, the strength of that recommendation is not defined here. This could lead to interoperability issues if some implementations treat it as optional and others as required.\"}",
+  "record_id": "d396b2ef701bbeabcc49c7cc0f59c0d00f732e836d0c5787086e6c6305dca3b5",
+  "revision": "17",
+  "schema_version": 1,
+  "section_ids": "9.6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.531
+}

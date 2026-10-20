@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "min_rtt MUST be set to the lesser of min_rtt and latest_rtt",
+    "interpretation_a": "If latest_rtt is less than min_rtt, min_rtt remains unchanged.",
+    "interpretation_b": "If latest_rtt is less than min_rtt, min_rtt is updated to latest_rtt.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'lesser of' is ambiguous. It could mean the smaller value (strictly less than) or the minimum value (less than or equal to). This difference affects the behavior when `latest_rtt` is equal to `min_rtt`.",
+    "missing_information": "The meaning of 'lesser' is not explicitly defined. Does it mean strictly less than, or less than or equal to? This affects how min_rtt is updated when latest_rtt equals min_rtt."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:17:38.806314+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "1b009a51b2819b0c5da640166ec7ae76ba9f0d603835e36a4d62ef0292357542",
+  "lineage_ids": "lineage:d7c2396469bdae72b5f772b5",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 217,
+    "load_duration": 3797500,
+    "prompt_eval_count": 611,
+    "total_duration": 8133356900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"min_rtt MUST be set to the lesser of min_rtt and latest_rtt\", \"interpretation_a\": \"If latest_rtt is less than min_rtt, min_rtt remains unchanged.\", \"interpretation_b\": \"If latest_rtt is less than min_rtt, min_rtt is updated to latest_rtt.\", \"missing_information\": \"The meaning of 'lesser' is not explicitly defined. Does it mean strictly less than, or less than or equal to? This affects how min_rtt is updated when latest_rtt equals min_rtt.\",\"justification\": \"The phrase 'lesser of' is ambiguous. It could mean the smaller value (strictly less than) or the minimum value (less than or equal to). This difference affects the behavior when `latest_rtt` is equal to `min_rtt`.\"}",
+  "record_id": "2089cfc55e04ec7905ef3cf0871cb789afd428f40f325caea5718f06f543cdfd",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.141
+}

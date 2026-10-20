@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "pseudo-header fields, which have a name that starts with a single colon",
+    "interpretation_a": "Pseudo-header fields may contain colons only at the start of the name.",
+    "interpretation_b": "Pseudo-header fields may contain colons anywhere in the name.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether pseudo-header fields are allowed to contain additional colons beyond the required leading colon, leading to two materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T05:20:09.338751+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "10fa3ac3e969bb48bcf8db3a07bbc9ef86e1840ebd4ccc969cbd3d2737bb6dad",
+  "lineage_ids": "lineage:f00aa9a1c792aa6a84e9eb47",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1381,
+    "load_duration": 4320300,
+    "prompt_eval_count": 644,
+    "total_duration": 11873761800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"pseudo-header fields, which have a name that starts with a single colon\",\n  \"interpretation_a\": \"Pseudo-header fields may contain colons only at the start of the name.\",\n  \"interpretation_b\": \"Pseudo-header fields may contain colons anywhere in the name.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify whether pseudo-header fields are allowed to contain additional colons beyond the required leading colon, leading to two materially different implementation behaviours.\"\n}",
+  "record_id": "ffc21557e875be0bdea05bdc5c3f724c92eb8221897be32f5290030df15df733",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.875
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "larger than the client has provided",
+    "interpretation_a": "The Push ID must be strictly less than the value in MAX_PUSH_ID. A Push ID equal to the MAX_PUSH_ID is invalid.",
+    "interpretation_b": "The Push ID can be equal to the value in MAX_PUSH_ID, but not greater. The MAX_PUSH_ID acts as an upper bound, inclusive.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'larger than' is ambiguous. It could mean strictly greater than, or greater than or equal to. The difference affects implementation of the upper bound check.",
+    "missing_information": "The clause does not specify whether the Push ID can be equal to the MAX_PUSH_ID. This affects how implementations handle the boundary condition."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:42:17.467506+00:00",
+  "document_id": "draft-ietf-quic-http-16",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "cb3ff36bcc2b4fb65c97ad2efbf0abf013551a889678a5301f2997fc480882b6",
+  "lineage_ids": "lineage:59970c44ba683852ce7b0f73",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 186,
+    "load_duration": 5288100,
+    "prompt_eval_count": 593,
+    "total_duration": 7110110300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"larger than the client has provided\", \"interpretation_a\": \"The Push ID must be strictly less than the value in MAX_PUSH_ID. A Push ID equal to the MAX_PUSH_ID is invalid.\", \"interpretation_b\": \"The Push ID can be equal to the value in MAX_PUSH_ID, but not greater. The MAX_PUSH_ID acts as an upper bound, inclusive.\", \"missing_information\": \"The clause does not specify whether the Push ID can be equal to the MAX_PUSH_ID. This affects how implementations handle the boundary condition.\",\"justification\": \"The use of 'larger than' is ambiguous. It could mean strictly greater than, or greater than or equal to. The difference affects implementation of the upper bound check.\"}",
+  "record_id": "1b9a2c47c7f76a9a602c990e6cf5062f60618a0b6367a3beef3c2d67a41d32c3",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "4.2.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.141
+}

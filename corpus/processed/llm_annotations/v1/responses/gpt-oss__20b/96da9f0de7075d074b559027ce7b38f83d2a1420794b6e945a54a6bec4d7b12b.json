@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "a packet containing containing a CONNECTION_CLOSE frame",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a constraint on which packet to retransmit, leading to materially different implementation behaviours.",
+    "missing_information": "The clause does not specify whether the retransmitted packet should be the original packet that contained the CONNECTION_CLOSE frame or a new packet containing a CONNECTION_CLOSE frame."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T17:15:00.952281+00:00",
+  "document_id": "draft-ietf-quic-transport-18",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "cfbdd2528c39033df9f8b01dbeb756324ad27a99c4254cd1e4ec5f8ac579c1ac",
+  "lineage_ids": "lineage:ce24b6c9e34889ef009941c4",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 930,
+    "load_duration": 4540700,
+    "prompt_eval_count": 743,
+    "total_duration": 8113851700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"a packet containing containing a CONNECTION_CLOSE frame\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The clause does not specify whether the retransmitted packet should be the original packet that contained the CONNECTION_CLOSE frame or a new packet containing a CONNECTION_CLOSE frame.\",\n  \"justification\": \"The clause lacks a constraint on which packet to retransmit, leading to materially different implementation behaviours.\"\n}",
+  "record_id": "96da9f0de7075d074b559027ce7b38f83d2a1420794b6e945a54a6bec4d7b12b",
+  "revision": "18",
+  "schema_version": 1,
+  "section_ids": "11.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 48.297
+}

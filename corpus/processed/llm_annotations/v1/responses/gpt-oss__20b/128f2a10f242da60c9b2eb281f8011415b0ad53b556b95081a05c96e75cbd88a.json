@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "short period of time",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause permits a sender to wait for a 'short period of time' but does not define what constitutes 'short', leading to an incomplete constraint that could result in significantly different implementations.",
+    "missing_information": "definition of 'short period of time' to specify the duration range considered short enough to bundle frames without excessive delay or resource waste. The clause does not provide a concrete constraint, allowing materially different implementation behaviours (e.g., milliseconds vs. seconds)."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T14:03:00.202150+00:00",
+  "document_id": "draft-ietf-quic-transport-28",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "c4ceff88b8a00bfc7f657b797482fe3cbdda7ea0da825410836ec857f0cc6726",
+  "lineage_ids": "lineage:86214783f877469535552d44",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1203,
+    "load_duration": 6230700,
+    "prompt_eval_count": 601,
+    "total_duration": 10773214900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"short period of time\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"definition of 'short period of time' to specify the duration range considered short enough to bundle frames without excessive delay or resource waste. The clause does not provide a concrete constraint, allowing materially different implementation behaviours (e.g., milliseconds vs. seconds).\",\n  \"justification\": \"The clause permits a sender to wait for a 'short period of time' but does not define what constitutes 'short', leading to an incomplete constraint that could result in significantly different implementations.\"\n}",
+  "record_id": "128f2a10f242da60c9b2eb281f8011415b0ad53b556b95081a05c96e75cbd88a",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "13",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.766
+}

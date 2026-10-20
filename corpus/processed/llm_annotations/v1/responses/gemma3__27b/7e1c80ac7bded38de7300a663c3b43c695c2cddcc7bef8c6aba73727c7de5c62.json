@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY attempt access",
+    "interpretation_a": "The client is permitted, but not required, to attempt access. It might choose to use a different method.",
+    "interpretation_b": "The client is expected to attempt access unless there is a specific reason not to, but it is not strictly required.",
+    "is_ambiguous": "yes",
+    "justification": "The use of \"MAY\" creates ambiguity regarding the expected behaviour. Does \"MAY\" indicate optional behaviour, or a weak recommendation? Without further clarification, implementations could reasonably differ on whether they attempt access by default.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:14:41.101574+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "59eb11940875960aa85758306aa5e01f7d45488af5efe4d2a99d451aa0d4feae",
+  "lineage_ids": "lineage:ebdee627ca939ba9876484dc",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 142,
+    "load_duration": 10909600,
+    "prompt_eval_count": 660,
+    "total_duration": 5682627600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY attempt access\", \"interpretation_a\": \"The client is permitted, but not required, to attempt access. It might choose to use a different method.\", \"interpretation_b\": \"The client is expected to attempt access unless there is a specific reason not to, but it is not strictly required.\", \"missing_information\": \"\", \"justification\": \"The use of \\\"MAY\\\" creates ambiguity regarding the expected behaviour. Does \\\"MAY\\\" indicate optional behaviour, or a weak recommendation? Without further clarification, implementations could reasonably differ on whether they attempt access by default.\"}",
+  "record_id": "7e1c80ac7bded38de7300a663c3b43c695c2cddcc7bef8c6aba73727c7de5c62",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "4.3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.687
+}

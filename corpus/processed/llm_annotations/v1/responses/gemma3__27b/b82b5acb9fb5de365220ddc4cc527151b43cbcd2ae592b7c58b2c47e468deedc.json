@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD only be sent",
+    "interpretation_a": "An endpoint MAY send STOP_SENDING for a receive stream that has not been reset.",
+    "interpretation_b": "An endpoint SHOULD NOT send STOP_SENDING for a receive stream that has not been reset, but it is permissible.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' creates ambiguity. It is unclear whether sending STOP_SENDING for a reset stream is simply discouraged, or disallowed. This impacts implementation choices.",
+    "missing_information": "The strength of 'SHOULD' is not defined. Is it a strong recommendation, or a weak one? This affects whether implementations are expected to adhere to the constraint."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:56:51.466746+00:00",
+  "document_id": "draft-ietf-quic-transport-17",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "1fee5a25c3b6d2e2cc16f63cd83655229506962ee825f2f03c8601c6643c62a4",
+  "lineage_ids": "lineage:baa977574a6d104e140e3de7",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 168,
+    "load_duration": 3913200,
+    "prompt_eval_count": 599,
+    "total_duration": 6413197900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD only be sent\", \"interpretation_a\": \"An endpoint MAY send STOP_SENDING for a receive stream that has not been reset.\", \"interpretation_b\": \"An endpoint SHOULD NOT send STOP_SENDING for a receive stream that has not been reset, but it is permissible.\", \"missing_information\": \"The strength of 'SHOULD' is not defined. Is it a strong recommendation, or a weak one? This affects whether implementations are expected to adhere to the constraint.\",\"justification\": \"The use of 'SHOULD' creates ambiguity. It is unclear whether sending STOP_SENDING for a reset stream is simply discouraged, or disallowed. This impacts implementation choices.\"}",
+  "record_id": "b82b5acb9fb5de365220ddc4cc527151b43cbcd2ae592b7c58b2c47e468deedc",
+  "revision": "17",
+  "schema_version": 1,
+  "section_ids": "3.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.421
+}

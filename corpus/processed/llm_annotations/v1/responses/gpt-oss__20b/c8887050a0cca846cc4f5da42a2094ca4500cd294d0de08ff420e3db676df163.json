@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "reasonable buffer size",
+    "interpretation_a": "The clause does not define what constitutes a reasonable buffer size, so implementations may choose different limits.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The target clause contains an undefined term 'reasonable buffer size', which is a concrete missing constraint that can lead to materially different implementation behaviours.",
+    "missing_information": "Definition of 'reasonable buffer size'."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T07:57:28.944889+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "0085831f104e3bb25efcbf3f900d343bf841897f5172dbc033cadfe1cc44cddf",
+  "lineage_ids": "lineage:96b98bd33404453664ea5d8d",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1339,
+    "load_duration": 3153900,
+    "prompt_eval_count": 588,
+    "total_duration": 11627587200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"reasonable buffer size\",\n  \"interpretation_a\": \"The clause does not define what constitutes a reasonable buffer size, so implementations may choose different limits.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"Definition of 'reasonable buffer size'.\",\n  \"justification\": \"The target clause contains an undefined term 'reasonable buffer size', which is a concrete missing constraint that can lead to materially different implementation behaviours.\"\n}",
+  "record_id": "c8887050a0cca846cc4f5da42a2094ca4500cd294d0de08ff420e3db676df163",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.641
+}

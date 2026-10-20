@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "SHOULD detect and intervene",
+    "interpretation_a": "The client is required to attempt to detect redirection loops, but is not required to intervene (e.g. it may log the loop and continue following redirections).",
+    "interpretation_b": "The client is required to both detect redirection loops and to stop following them (e.g. by returning an error to the user).",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' allows for two reasonable interpretations: detection without intervention, or detection *with* intervention. The clause does not specify what 'intervene' means, leaving room for different implementations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:54:10.608237+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "b677f3327a6e0b72a7e1cac05b0568aa054d2b60d5de1ee352f5f67cfe973e60",
+  "lineage_ids": "lineage:061d5873e658b411e6a6f2a0",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 161,
+    "load_duration": 7903200,
+    "prompt_eval_count": 616,
+    "total_duration": 6410295800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"SHOULD detect and intervene\", \"interpretation_a\": \"The client is required to attempt to detect redirection loops, but is not required to intervene (e.g. it may log the loop and continue following redirections).\", \"interpretation_b\": \"The client is required to both detect redirection loops and to stop following them (e.g. by returning an error to the user).\", \"missing_information\": \"\", \"justification\": \"The use of 'SHOULD' allows for two reasonable interpretations: detection without intervention, or detection *with* intervention. The clause does not specify what 'intervene' means, leaving room for different implementations.\"}",
+  "record_id": "072e85bd614468a6bb86c5bb7caf4820f44d57edaabb2930d27b278806b02962",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "15.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.421
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "It MAY either be a database lookup key or a self-encrypted and self-authenticated value.",
+    "interpretation_a": "The ticket could be implemented as a simple key used to look up session data in a server-side database.",
+    "interpretation_b": "The ticket could be implemented as a self-contained, encrypted, and authenticated value that includes all necessary session data.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'opaque label' is not defined, and the clause allows two materially different implementations: one relying on server-side storage and another being self-contained. The lack of a concrete definition for 'opaque label' and the optional nature of the two alternatives introduces ambiguity in how the ticket should be constructed and processed.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:21:44.398376+00:00",
+  "document_id": "draft-ietf-tls-tls13-22",
+  "family_id": "draft-ietf-tls-tls13",
+  "input_fingerprint": "e03921614bcd7ab270e31bdef2c146bcf5c88d21dabe81e8b86955b7abd3ab5f",
+  "lineage_ids": "lineage:2802d6bb5a228b7d3e5d1408",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 182,
+    "load_duration": 27700600,
+    "prompt_eval_count": 521,
+    "total_duration": 7576650000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-1\",\n  \"evidence_span\": \"It MAY either be a database lookup key or a self-encrypted and self-authenticated value.\",\n  \"interpretation_a\": \"The ticket could be implemented as a simple key used to look up session data in a server-side database.\",\n  \"interpretation_b\": \"The ticket could be implemented as a self-contained, encrypted, and authenticated value that includes all necessary session data.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The term 'opaque label' is not defined, and the clause allows two materially different implementations: one relying on server-side storage and another being self-contained. The lack of a concrete definition for 'opaque label' and the optional nature of the two alternatives introduces ambiguity in how the ticket should be constructed and processed.\"\n}",
+  "record_id": "37f9f06f42aec088399aa008bfab9e901392063bfdcbf06d74cf00f4665f6b42",
+  "revision": "22",
+  "schema_version": 1,
+  "section_ids": "4.6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.578
+}

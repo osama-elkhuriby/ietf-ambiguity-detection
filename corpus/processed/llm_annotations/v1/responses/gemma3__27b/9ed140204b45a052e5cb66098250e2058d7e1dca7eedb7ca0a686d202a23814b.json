@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Stateless Reset Token is still usable",
+    "interpretation_a": "The token is usable according to some internal state of the endpoint, even if the connection ID is retired.",
+    "interpretation_b": "The token is usable according to external signals or a time limit, independent of the endpoint's internal connection state.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'still usable' is not defined. It's unclear whether usability is determined by the endpoint's internal state (e.g., a timer) or by external factors. This affects how long a retired connection ID is considered valid in the context of the token.",
+    "missing_information": "The criteria for determining when a 'Stateless Reset Token is still usable' are not defined. This missing constraint affects how long packets with retired connection IDs are attributed to the same connection, impacting security."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:49:12.147978+00:00",
+  "document_id": "draft-ietf-quic-transport-23",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "b6b93d1c4bf71263df377dcf2ff4916c3fa5b7c3127b2a45a0cb73e52e437c91",
+  "lineage_ids": "lineage:a24a86409857146d2ca2c642",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 199,
+    "load_duration": 4078600,
+    "prompt_eval_count": 637,
+    "total_duration": 7547610700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Stateless Reset Token is still usable\", \"interpretation_a\": \"The token is usable according to some internal state of the endpoint, even if the connection ID is retired.\", \"interpretation_b\": \"The token is usable according to external signals or a time limit, independent of the endpoint's internal connection state.\", \"missing_information\": \"The criteria for determining when a 'Stateless Reset Token is still usable' are not defined. This missing constraint affects how long packets with retired connection IDs are attributed to the same connection, impacting security.\",\"justification\": \"The phrase 'still usable' is not defined. It's unclear whether usability is determined by the endpoint's internal state (e.g., a timer) or by external factors. This affects how long a retired connection ID is considered valid in the context of the token.\"}",
+  "record_id": "9ed140204b45a052e5cb66098250e2058d7e1dca7eedb7ca0a686d202a23814b",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "10.4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.547
+}

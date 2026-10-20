@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "until it has 1-RTT keys and it has received a packet from the server which is not a Version Negotiation packet",
+    "interpretation_a": "The client switches to short headers *after* receiving a non-Version Negotiation packet, even if 1-RTT keys haven't been established.",
+    "interpretation_b": "The client switches to short headers *only after* both 1-RTT keys are established *and* a non-Version Negotiation packet is received.",
+    "is_ambiguous": "yes",
+    "justification": "The conjunction 'and' creates ambiguity. It's unclear whether both conditions (1-RTT keys *and* receiving a non-Version Negotiation packet) must be true for the client to switch to short headers, or if either condition is sufficient.",
+    "missing_information": "The relationship between establishing 1-RTT keys and receiving a non-Version Negotiation packet is not clearly defined. Does the client need both conditions to be met before switching to short headers, or is either sufficient?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:47:59.250921+00:00",
+  "document_id": "draft-ietf-quic-transport-18",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "ceb5eefa801ed1fbff3691c235ca64f50506904360e82434d7a69a81a0b0dc2b",
+  "lineage_ids": "lineage:762b1689e94ef3c1dc6d1a9c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 228,
+    "load_duration": 4290500,
+    "prompt_eval_count": 596,
+    "total_duration": 8525674200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"until it has 1-RTT keys and it has received a packet from the server which is not a Version Negotiation packet\", \"interpretation_a\": \"The client switches to short headers *after* receiving a non-Version Negotiation packet, even if 1-RTT keys haven't been established.\", \"interpretation_b\": \"The client switches to short headers *only after* both 1-RTT keys are established *and* a non-Version Negotiation packet is received.\", \"missing_information\": \"The relationship between establishing 1-RTT keys and receiving a non-Version Negotiation packet is not clearly defined. Does the client need both conditions to be met before switching to short headers, or is either sufficient?\",\"justification\": \"The conjunction 'and' creates ambiguity. It's unclear whether both conditions (1-RTT keys *and* receiving a non-Version Negotiation packet) must be true for the client to switch to short headers, or if either condition is sufficient.\"}",
+  "record_id": "9bf7d2cfc7037bc1fce63bddeac2a5a62152b0c2fe19f6b5005d058c3a294815",
+  "revision": "18",
+  "schema_version": 1,
+  "section_ids": "6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.531
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "identical to the Destination Connection ID field of its Initial packet",
+    "interpretation_a": "The client discards the Retry packet if the Source Connection ID in the Retry packet is the same as the Destination Connection ID in the *very first* Initial packet it sent.",
+    "interpretation_b": "The client discards the Retry packet if the Source Connection ID in the Retry packet is the same as the Destination Connection ID in the *most recent* Initial packet it sent. (This is plausible if multiple Initial packets were sent before a Retry was needed.)",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'its Initial packet' is ambiguous. It could refer to the first Initial packet ever sent, or the most recent one. This affects the condition for discarding the Retry packet.",
+    "missing_information": "It is unclear whether 'its Initial packet' refers to the very first Initial packet sent by the client, or the most recent Initial packet. This affects when the client discards the Retry packet."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:12:56.029042+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "67a80e7ccd5693523c60d8dda3a8f9f16f3a563a620caa7c82cddf5a09478eb5",
+  "lineage_ids": "lineage:1ba68914b7cd0774aa740efc",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 227,
+    "load_duration": 4900600,
+    "prompt_eval_count": 591,
+    "total_duration": 8514099600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"identical to the Destination Connection ID field of its Initial packet\", \"interpretation_a\": \"The client discards the Retry packet if the Source Connection ID in the Retry packet is the same as the Destination Connection ID in the *very first* Initial packet it sent.\", \"interpretation_b\": \"The client discards the Retry packet if the Source Connection ID in the Retry packet is the same as the Destination Connection ID in the *most recent* Initial packet it sent. (This is plausible if multiple Initial packets were sent before a Retry was needed.)\", \"missing_information\": \"It is unclear whether 'its Initial packet' refers to the very first Initial packet sent by the client, or the most recent Initial packet. This affects when the client discards the Retry packet.\", \"justification\": \"The phrase 'its Initial packet' is ambiguous. It could refer to the first Initial packet ever sent, or the most recent one. This affects the condition for discarding the Retry packet.\"}",
+  "record_id": "e97923e50caea5b50e5a87eead40b4904fe598dec426f742d3df4496260a781a",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "17.2.5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.515
+}

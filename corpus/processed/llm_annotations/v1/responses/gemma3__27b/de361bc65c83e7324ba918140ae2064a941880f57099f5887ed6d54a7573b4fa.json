@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "idempotent",
+    "interpretation_a": "An operation is idempotent if it can be repeated multiple times without changing the result beyond the initial application. This could mean any operation that has no side effects, or one where repeating it has the same effect as applying it once.",
+    "interpretation_b": "Idempotent could also refer to operations that are safe to retry, even if they have side effects, as long as the client can detect and handle duplicate requests. This is a weaker form of idempotency, but still valid in some contexts.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'idempotent' is used without a clear definition. While the general meaning is known, its specific application to data being protected by 0-RTT keys is open to interpretation. This could lead to different implementations of what data is considered safe to send with 0-RTT keys.",
+    "missing_information": "The definition of 'idempotent' is not provided within the document, and its meaning can vary depending on the context. A precise definition is needed to ensure consistent implementation."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:50:15.805455+00:00",
+  "document_id": "draft-ietf-quic-tls-32",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "e06169b624fff2b8bfa8bf5c4b5296ff0b02a613e30c1fb215952ae5200bec60",
+  "lineage_ids": "lineage:b3e48d96141ebc539a21030a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 245,
+    "load_duration": 5046400,
+    "prompt_eval_count": 589,
+    "total_duration": 9119452000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-1\", \"evidence_span\": \"idempotent\", \"interpretation_a\": \"An operation is idempotent if it can be repeated multiple times without changing the result beyond the initial application. This could mean any operation that has no side effects, or one where repeating it has the same effect as applying it once.\", \"interpretation_b\": \"Idempotent could also refer to operations that are safe to retry, even if they have side effects, as long as the client can detect and handle duplicate requests. This is a weaker form of idempotency, but still valid in some contexts.\", \"missing_information\": \"The definition of 'idempotent' is not provided within the document, and its meaning can vary depending on the context. A precise definition is needed to ensure consistent implementation.\", \"justification\": \"The term 'idempotent' is used without a clear definition. While the general meaning is known, its specific application to data being protected by 0-RTT keys is open to interpretation. This could lead to different implementations of what data is considered safe to send with 0-RTT keys.\"}",
+  "record_id": "de361bc65c83e7324ba918140ae2064a941880f57099f5887ed6d54a7573b4fa",
+  "revision": "32",
+  "schema_version": 1,
+  "section_ids": "5.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.109
+}

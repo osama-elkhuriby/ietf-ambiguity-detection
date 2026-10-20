@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "no greater than the number of packets newly acknowledged",
+    "interpretation_a": "The increase in ECT(0) and ECT(1) counters can be equal to the number of packets newly acknowledged that were sent with the corresponding codepoint.",
+    "interpretation_b": "The increase in ECT(0) and ECT(1) counters must be strictly less than the number of packets newly acknowledged that were sent with the corresponding codepoint.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"no greater than\" is ambiguous. It allows for equality, but does not explicitly state whether equality is permitted or not. This creates two reasonable interpretations regarding the maximum allowed increase in counters.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:50:49.454345+00:00",
+  "document_id": "draft-ietf-quic-transport-13",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "f15e40d006b0c6a5be768ce8570219bc12e5c298b54feb378298d4290209c1b6",
+  "lineage_ids": "lineage:44327d9495dd71f307ff5edb",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 168,
+    "load_duration": 3753700,
+    "prompt_eval_count": 614,
+    "total_duration": 6410578900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"no greater than the number of packets newly acknowledged\", \"interpretation_a\": \"The increase in ECT(0) and ECT(1) counters can be equal to the number of packets newly acknowledged that were sent with the corresponding codepoint.\", \"interpretation_b\": \"The increase in ECT(0) and ECT(1) counters must be strictly less than the number of packets newly acknowledged that were sent with the corresponding codepoint.\", \"missing_information\": \"\", \"justification\": \"The phrase \\\"no greater than\\\" is ambiguous. It allows for equality, but does not explicitly state whether equality is permitted or not. This creates two reasonable interpretations regarding the maximum allowed increase in counters.\"}",
+  "record_id": "a41ca695c208d6c8db8edc6387b459fe78b2438183fa854e95dc500eb0ee7899",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "6.8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.406
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "CONTINUATION frames that might follow",
+    "interpretation_a": "The constraint applies only to CONTINUATION frames that *actually* follow the HEADERS frame, meaning if no CONTINUATION frames are sent, any other frame is allowed.",
+    "interpretation_b": "The constraint applies to *all* potential CONTINUATION frames, even if they are never sent, meaning no other frame is allowed until the possibility of a CONTINUATION frame is exhausted.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"that might follow\" is ambiguous. It's unclear if the restriction applies only to continuation frames that are actually sent, or to the *potential* for continuation frames to be sent. This affects the timing of when other frames are permitted.",
+    "missing_information": "It is unclear whether the constraint applies only to frames that are actually sent as continuation frames, or to the possibility of continuation frames being sent."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:41:47.103019+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "d3375c5e028284b794e47e5e2cc9bf5a54a8d154c71419a8fe1c660fbcbba4f5",
+  "lineage_ids": "lineage:ac6a15f07cdb9f9cf8b90d59",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 207,
+    "load_duration": 5058600,
+    "prompt_eval_count": 588,
+    "total_duration": 7986855200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"CONTINUATION frames that might follow\", \"interpretation_a\": \"The constraint applies only to CONTINUATION frames that *actually* follow the HEADERS frame, meaning if no CONTINUATION frames are sent, any other frame is allowed.\", \"interpretation_b\": \"The constraint applies to *all* potential CONTINUATION frames, even if they are never sent, meaning no other frame is allowed until the possibility of a CONTINUATION frame is exhausted.\", \"missing_information\": \"It is unclear whether the constraint applies only to frames that are actually sent as continuation frames, or to the possibility of continuation frames being sent.\", \"justification\": \"The phrase \\\"that might follow\\\" is ambiguous. It's unclear if the restriction applies only to continuation frames that are actually sent, or to the *potential* for continuation frames to be sent. This affects the timing of when other frames are permitted.\"}",
+  "record_id": "9266a225f62d5bcf9fd67110997906fdee8eb2e89bf25dd8637414732b2f6a55",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.015
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "There are certain operations which an application MUST be able to perform when interacting with QUIC streams.",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a concrete constraint on the set of operations, allowing multiple reasonable but materially different implementation behaviours.",
+    "missing_information": "The clause does not specify which operations are required, leaving the implementation open to different interpretations of the set of operations that must be supported by an application when interacting with QUIC streams. This missing constraint prevents a unique operational interpretation."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T16:58:30.722128+00:00",
+  "document_id": "draft-ietf-quic-transport-28",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "e574fac9150d1c9c301b6a163e3c2a6e91c6fcf0d247a9df92f80a41f3f357a7",
+  "lineage_ids": "lineage:e36a8300ac303435bdbcae7b",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2885,
+    "load_duration": 5558200,
+    "prompt_eval_count": 575,
+    "total_duration": 25091442100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"There are certain operations which an application MUST be able to perform when interacting with QUIC streams.\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The clause does not specify which operations are required, leaving the implementation open to different interpretations of the set of operations that must be supported by an application when interacting with QUIC streams. This missing constraint prevents a unique operational interpretation.\",\n  \"justification\": \"The clause lacks a concrete constraint on the set of operations, allowing multiple reasonable but materially different implementation behaviours.\"\n}",
+  "record_id": "8c7035f6c6b8f73775cc38869bff13ecf45ba29845c28764ed7a608e1e0779ba",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "2.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 25.11
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY continue to process streams that exceed flow-control limits",
+    "interpretation_a": "The receiver can continue processing data on streams that are already exceeding the new, reduced flow-control limit. This implies that the receiver doesn't immediately halt processing upon receiving the SETTINGS frame.",
+    "interpretation_b": "The receiver can *choose* to continue processing streams exceeding the new limit, but is not required to. It could still halt processing, even after receiving the SETTINGS frame. The 'MAY' grants discretion.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' combined with the phrase 'exceed flow-control limits' creates ambiguity. Does 'MAY' mean the receiver is permitted to *continue* processing data that was *already* exceeding the limit, or is it permitted to *allow* streams to exceed the *new* limit? The lack of clarity on what 'process' means further complicates the interpretation.",
+    "missing_information": "It is unclear whether 'process' refers to accepting the data, buffering it, or some other action. A precise definition of 'process' is needed to remove ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:47:17.730152+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "7197ef382b81735dd812d083ae2376308347a06c4ce77ead2a6949c6187eace2",
+  "lineage_ids": "lineage:ca4525cb2f95b3cbd0a8c6e3",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 256,
+    "load_duration": 21476200,
+    "prompt_eval_count": 602,
+    "total_duration": 9740744600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY continue to process streams that exceed flow-control limits\", \"interpretation_a\": \"The receiver can continue processing data on streams that are already exceeding the new, reduced flow-control limit. This implies that the receiver doesn't immediately halt processing upon receiving the SETTINGS frame.\", \"interpretation_b\": \"The receiver can *choose* to continue processing streams exceeding the new limit, but is not required to. It could still halt processing, even after receiving the SETTINGS frame. The 'MAY' grants discretion.\", \"missing_information\": \"It is unclear whether 'process' refers to accepting the data, buffering it, or some other action. A precise definition of 'process' is needed to remove ambiguity.\", \"justification\": \"The use of 'MAY' combined with the phrase 'exceed flow-control limits' creates ambiguity. Does 'MAY' mean the receiver is permitted to *continue* processing data that was *already* exceeding the limit, or is it permitted to *allow* streams to exceed the *new* limit? The lack of clarity on what 'process' means further complicates the interpretation.\"}",
+  "record_id": "c7bdcd19a5e51709bd1540e8efeb202d1c489e777ccd78b9d788cd96b08fd880",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.9.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.75
+}

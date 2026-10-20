@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "SHOULD send a maximum-sized segment whenever possible",
+    "interpretation_a": "The implementation always attempts to send the largest possible segment, even if the application hasn't provided enough data to fill it.",
+    "interpretation_b": "The implementation prioritizes sending maximum-sized segments, but will send smaller segments if that's all the application provides at a given time.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'whenever possible' is vague. It's unclear if the implementation is *required* to buffer data to create a maximum-sized segment, or if it only sends maximum-sized segments when the application provides enough data to fill one. This leads to two reasonable interpretations of how the implementation should behave.",
+    "missing_information": "The clause does not specify whether the 'maximum-sized segment' refers to the maximum segment size (MSS) or the maximum size allowed by the receive window. It also doesn't clarify if the implementation should buffer data to achieve a maximum-sized segment, or simply send what it has."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:17:19.306140+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "90abfd16590b93f8e5447ce7b1da91e2a24d7eee319be1d91a27ef00fc61e345",
+  "lineage_ids": "lineage:208f0e36e237b80f2b0aa350",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 238,
+    "load_duration": 15041500,
+    "prompt_eval_count": 609,
+    "total_duration": 9047739500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"SHOULD send a maximum-sized segment whenever possible\", \"interpretation_a\": \"The implementation always attempts to send the largest possible segment, even if the application hasn't provided enough data to fill it.\", \"interpretation_b\": \"The implementation prioritizes sending maximum-sized segments, but will send smaller segments if that's all the application provides at a given time.\", \"missing_information\": \"The clause does not specify whether the 'maximum-sized segment' refers to the maximum segment size (MSS) or the maximum size allowed by the receive window. It also doesn't clarify if the implementation should buffer data to achieve a maximum-sized segment, or simply send what it has.\", \"justification\": \"The use of 'whenever possible' is vague. It's unclear if the implementation is *required* to buffer data to create a maximum-sized segment, or if it only sends maximum-sized segments when the application provides enough data to fill one. This leads to two reasonable interpretations of how the implementation should behave.\"}",
+  "record_id": "0a5c16084fdfa046f13ad9d17a5c6657cf04a2f68d2bb361dbbe76586fdb4da6",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.9.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.062
+}

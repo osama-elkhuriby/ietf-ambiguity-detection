@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "does not match",
+    "interpretation_a": "The PATH_RESPONSE frame's content must be an exact byte-for-byte match to the corresponding PATH_CHALLENGE frame.",
+    "interpretation_b": "The PATH_RESPONSE frame's content only needs to be semantically equivalent to the PATH_CHALLENGE frame, allowing for minor differences in encoding or representation.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'match' is not precisely defined. Without a clear definition of what constitutes a 'match' between the frame contents, there are multiple reasonable interpretations of how strictly the PATH_RESPONSE must align with the PATH_CHALLENGE.",
+    "missing_information": "The definition of 'match' is incomplete. Does 'match' imply a strict byte-for-byte comparison, or a semantic equivalence?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:53:21.555077+00:00",
+  "document_id": "draft-ietf-quic-transport-13",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "1f7653a6c835cf5b55e8cb364f26d38139acfba71fe566173764de3a03fdfcc9",
+  "lineage_ids": "lineage:0361aaa1ecb34a8d50f4083a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 192,
+    "load_duration": 4574200,
+    "prompt_eval_count": 576,
+    "total_duration": 7254380700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"does not match\", \"interpretation_a\": \"The PATH_RESPONSE frame's content must be an exact byte-for-byte match to the corresponding PATH_CHALLENGE frame.\", \"interpretation_b\": \"The PATH_RESPONSE frame's content only needs to be semantically equivalent to the PATH_CHALLENGE frame, allowing for minor differences in encoding or representation.\", \"missing_information\": \"The definition of 'match' is incomplete. Does 'match' imply a strict byte-for-byte comparison, or a semantic equivalence?\",\"justification\": \"The term 'match' is not precisely defined. Without a clear definition of what constitutes a 'match' between the frame contents, there are multiple reasonable interpretations of how strictly the PATH_RESPONSE must align with the PATH_CHALLENGE.\"}",
+  "record_id": "ac39f2cb11ce10ecb372b32f485a43cdee20c10c8aec34b8fff0d082a18ac64c",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "7.18",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.265
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "I-1",
+    "evidence_span": "An endpoint SHOULD copy the error code from the STOP_SENDING frame to the RESET_STREAM frame it sends, but can use any application error code.",
+    "interpretation_a": "The endpoint copies the exact error code from the STOP_SENDING frame into the RESET_STREAM frame.",
+    "interpretation_b": "The endpoint ignores the STOP_SENDING error code and may use any application error code it chooses for the RESET_STREAM frame.",
+    "is_ambiguous": "yes",
+    "justification": "The clause simultaneously requires copying the STOP_SENDING error code and permits using any application error code, yielding two materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T14:52:19.592719+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "1a778cad205355b918632692da6aecde356b9b8c11688e5961b3c54afc815c63",
+  "lineage_ids": "lineage:c9ba8fac6dce91888c1de5fa",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 366,
+    "load_duration": 5724800,
+    "prompt_eval_count": 761,
+    "total_duration": 3301220900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"I-1\",\n  \"evidence_span\": \"An endpoint SHOULD copy the error code from the STOP_SENDING frame to the RESET_STREAM frame it sends, but can use any application error code.\",\n  \"interpretation_a\": \"The endpoint copies the exact error code from the STOP_SENDING frame into the RESET_STREAM frame.\",\n  \"interpretation_b\": \"The endpoint ignores the STOP_SENDING error code and may use any application error code it chooses for the RESET_STREAM frame.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause simultaneously requires copying the STOP_SENDING error code and permits using any application error code, yielding two materially different implementation behaviours.\"\n}",
+  "record_id": "32bed62255ec1360a258e3118e0e139b70cf3933441c8bd6d12d9bd85adade42",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "3.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 12.094
+}

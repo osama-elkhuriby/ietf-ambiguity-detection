@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "because the server could include the connection ID as part of its token validation logic",
+    "interpretation_a": "The server *may* include the connection ID in token validation, meaning the client must not change it to avoid potential issues. However, if the server doesn't use the connection ID, the client's restriction is unnecessary.",
+    "interpretation_b": "The server *will* include the connection ID in token validation, making the restriction on the client mandatory regardless of server behavior.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'could include' introduces uncertainty. If the server *could* but doesn't, the restriction is pointless. If the server *will* include it, the restriction is essential. The lack of a definitive statement creates ambiguity.",
+    "missing_information": "It is unclear whether the server's inclusion of the connection ID in token validation is optional or mandatory. This affects the strength of the 'MUST NOT' requirement."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:16:00.073813+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "60c4e3483c55537db066e796bf518c91ed60d98dc8c4ba9d3e719ca5831e6479",
+  "lineage_ids": "lineage:8ef317bd1200e65f0ebd209a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 220,
+    "load_duration": 4185100,
+    "prompt_eval_count": 578,
+    "total_duration": 8236621700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"because the server could include the connection ID as part of its token validation logic\", \"interpretation_a\": \"The server *may* include the connection ID in token validation, meaning the client must not change it to avoid potential issues. However, if the server doesn't use the connection ID, the client's restriction is unnecessary.\", \"interpretation_b\": \"The server *will* include the connection ID in token validation, making the restriction on the client mandatory regardless of server behavior.\", \"missing_information\": \"It is unclear whether the server's inclusion of the connection ID in token validation is optional or mandatory. This affects the strength of the 'MUST NOT' requirement.\", \"justification\": \"The phrase 'could include' introduces uncertainty. If the server *could* but doesn't, the restriction is pointless. If the server *will* include it, the restriction is essential. The lack of a definitive statement creates ambiguity.\"}",
+  "record_id": "f2c15296c10a64f133eea7729318b207c9bea09a809542cab483333237b7ea81",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "17.2.5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.234
+}

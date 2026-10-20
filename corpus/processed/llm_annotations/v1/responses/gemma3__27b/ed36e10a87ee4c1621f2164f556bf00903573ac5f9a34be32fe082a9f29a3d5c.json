@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD name a set of expected \"protocol-version\" tokens",
+    "interpretation_a": "The registration must name *all* expected protocol-version tokens.",
+    "interpretation_b": "The registration must name *at least one* expected protocol-version token, but not necessarily all.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' allows for some discretion, but the phrase 'a set of expected' is incomplete. Does it mean all expected tokens, or just some? This impacts how an implementer handles unknown or unexpected tokens.",
+    "missing_information": "The clause does not specify whether the set of expected tokens must be exhaustive or not. This affects implementation because a receiver must decide how many tokens to expect."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:35:32.977911+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "1d70b2f4c12ccd0ec8bbfe964e1b55b37215ea0e3d9954e341c31a60d524f9b9",
+  "lineage_ids": "lineage:8bf384a266d38a32fa96ec18",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 177,
+    "load_duration": 12793300,
+    "prompt_eval_count": 552,
+    "total_duration": 6903349100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD name a set of expected \\\"protocol-version\\\" tokens\", \"interpretation_a\": \"The registration must name *all* expected protocol-version tokens.\", \"interpretation_b\": \"The registration must name *at least one* expected protocol-version token, but not necessarily all.\", \"missing_information\": \"The clause does not specify whether the set of expected tokens must be exhaustive or not. This affects implementation because a receiver must decide how many tokens to expect.\", \"justification\": \"The use of 'SHOULD' allows for some discretion, but the phrase 'a set of expected' is incomplete. Does it mean all expected tokens, or just some? This impacts how an implementer handles unknown or unexpected tokens.\"}",
+  "record_id": "ed36e10a87ee4c1621f2164f556bf00903573ac5f9a34be32fe082a9f29a3d5c",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "16.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.906
+}

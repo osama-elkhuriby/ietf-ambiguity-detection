@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "immediately emit",
+    "interpretation_a": "The SETTINGS frame with the ACK flag must be emitted without any delay after processing is complete.",
+    "interpretation_b": "The SETTINGS frame with the ACK flag must be emitted as soon as practically possible after processing is complete, allowing for some minimal delay due to scheduling or other system overhead.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'immediately' is open to interpretation. A strict reading would require emission in the same execution context as the processing, while a more lenient reading would allow for some delay. This difference could affect implementation and interoperability.",
+    "missing_information": "The definition of 'immediately' is missing. Does it mean 'without any delay' or 'as soon as reasonably possible'?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:43:23.265916+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "e6d99cdd752141cce042f5048f6502471fbe1fcaa58057b49236f6d52d9e367d",
+  "lineage_ids": "lineage:50c82c4a7b4375e74e3f8e4e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 178,
+    "load_duration": 8707600,
+    "prompt_eval_count": 575,
+    "total_duration": 6966440500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"immediately emit\", \"interpretation_a\": \"The SETTINGS frame with the ACK flag must be emitted without any delay after processing is complete.\", \"interpretation_b\": \"The SETTINGS frame with the ACK flag must be emitted as soon as practically possible after processing is complete, allowing for some minimal delay due to scheduling or other system overhead.\", \"missing_information\": \"The definition of 'immediately' is missing. Does it mean 'without any delay' or 'as soon as reasonably possible'?\",\"justification\": \"The term 'immediately' is open to interpretation. A strict reading would require emission in the same execution context as the processing, while a more lenient reading would allow for some delay. This difference could affect implementation and interoperability.\"}",
+  "record_id": "a29fe9e5a335d2a71c81b54928d6a7131cd0bfa3251855dd6000ccab4ceed86b",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.5.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.969
+}

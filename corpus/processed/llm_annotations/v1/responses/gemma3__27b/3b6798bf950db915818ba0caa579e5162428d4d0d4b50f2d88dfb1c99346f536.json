@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "If a block is missing, all subsequent HPACK frames MUST be held until it arrives",
+    "interpretation_a": "Subsequent HPACK frames are held indefinitely, even if the missing block will never arrive, leading to connection stall.",
+    "interpretation_b": "Subsequent HPACK frames are held for a reasonable timeout period; if the missing block does not arrive within that timeout, the connection is terminated (implicitly or explicitly).",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'until it arrives' is unbounded. Without a timeout or other termination condition, a missing block could cause indefinite blocking of subsequent frames. Two reasonable interpretations exist regarding how long to hold frames, and the lack of a timeout is a concrete missing constraint.",
+    "missing_information": "The clause does not specify a timeout or maximum hold duration for the missing block. This missing constraint affects implementation behavior as different implementations may choose different hold durations, or lack thereof."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:46:31.676985+00:00",
+  "document_id": "draft-ietf-quic-http-04",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "9eff89c9ab9333a2c0b1859b630c58987370efb4867ba4df10cee03350cb8bac",
+  "lineage_ids": "lineage:2ef8cd433d669649215e57ce",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 214,
+    "load_duration": 9454200,
+    "prompt_eval_count": 600,
+    "total_duration": 8225158900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"If a block is missing, all subsequent HPACK frames MUST be held until it arrives\", \"interpretation_a\": \"Subsequent HPACK frames are held indefinitely, even if the missing block will never arrive, leading to connection stall.\", \"interpretation_b\": \"Subsequent HPACK frames are held for a reasonable timeout period; if the missing block does not arrive within that timeout, the connection is terminated (implicitly or explicitly).\", \"missing_information\": \"The clause does not specify a timeout or maximum hold duration for the missing block. This missing constraint affects implementation behavior as different implementations may choose different hold durations, or lack thereof.\", \"justification\": \"The phrase 'until it arrives' is unbounded. Without a timeout or other termination condition, a missing block could cause indefinite blocking of subsequent frames. Two reasonable interpretations exist regarding how long to hold frames, and the lack of a timeout is a concrete missing constraint.\"}",
+  "record_id": "3b6798bf950db915818ba0caa579e5162428d4d0d4b50f2d88dfb1c99346f536",
+  "revision": "04",
+  "schema_version": 1,
+  "section_ids": "5.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.235
+}

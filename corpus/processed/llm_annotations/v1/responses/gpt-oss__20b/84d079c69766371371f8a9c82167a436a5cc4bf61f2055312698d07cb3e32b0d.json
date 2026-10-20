@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "A client might skip connection IDs, but it MUST ensure that it applies the associated packet number gaps for connection IDs that it skips in addition to the packet number gap associated with the connection ID that it does use.",
+    "interpretation_a": "The client applies the packet number gaps for skipped connection IDs by adding them to the cumulative packet number gap before processing the packet with the used connection ID.",
+    "interpretation_b": "The client applies the packet number gaps for skipped connection IDs after processing the packet with the used connection ID, treating each gap as a separate adjustment.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify the order or method for applying the packet number gaps for skipped connection IDs, leaving the implementation mechanism unspecified.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T16:42:59.761769+00:00",
+  "document_id": "draft-ietf-quic-transport-10",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "3f8724dc536f0d41babddba22c9c05154a366c8a59d41547c5477d7b21ea05f4",
+  "lineage_ids": "lineage:e7a78302c74afb1465294a61",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 407,
+    "load_duration": 5536500,
+    "prompt_eval_count": 761,
+    "total_duration": 3698694700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"A client might skip connection IDs, but it MUST ensure that it applies the associated packet number gaps for connection IDs that it skips in addition to the packet number gap associated with the connection ID that it does use.\",\n  \"interpretation_a\": \"The client applies the packet number gaps for skipped connection IDs by adding them to the cumulative packet number gap before processing the packet with the used connection ID.\",\n  \"interpretation_b\": \"The client applies the packet number gaps for skipped connection IDs after processing the packet with the used connection ID, treating each gap as a separate adjustment.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify the order or method for applying the packet number gaps for skipped connection IDs, leaving the implementation mechanism unspecified.\"\n}",
+  "record_id": "84d079c69766371371f8a9c82167a436a5cc4bf61f2055312698d07cb3e32b0d",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "7.7.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 19.453
+}

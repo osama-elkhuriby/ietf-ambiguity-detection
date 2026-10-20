@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "individually process each QUIC packet and separately acknowledge them",
+    "interpretation_a": "The receiver must process each packet in the coalesced datagram as if it were a separate UDP datagram, even if processing one packet fails. Acknowledgements must be sent for each packet regardless of processing success.",
+    "interpretation_b": "The receiver must process each packet in the coalesced datagram as if it were a separate UDP datagram, but if processing of a packet fails, the receiver is not required to acknowledge it. Acknowledgements are only sent for successfully processed packets.",
+    "is_ambiguous": "yes",
+    "justification": "The requirement to 'separately acknowledge them' is unclear in the context of processing failure. Does the receiver still need to acknowledge a packet that it couldn't process?",
+    "missing_information": "The clause does not specify whether acknowledgement is contingent on successful processing of the packet. This missing constraint leads to different implementation behaviours."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:14:42.135305+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "f16bfc77fa7d537172cee644c56e79a41dc7326accd7907cebbfbfccf6a24895",
+  "lineage_ids": "lineage:f5481064a274d983a88b5037",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 214,
+    "load_duration": 4123900,
+    "prompt_eval_count": 604,
+    "total_duration": 8002645600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"individually process each QUIC packet and separately acknowledge them\", \"interpretation_a\": \"The receiver must process each packet in the coalesced datagram as if it were a separate UDP datagram, even if processing one packet fails. Acknowledgements must be sent for each packet regardless of processing success.\", \"interpretation_b\": \"The receiver must process each packet in the coalesced datagram as if it were a separate UDP datagram, but if processing of a packet fails, the receiver is not required to acknowledge it. Acknowledgements are only sent for successfully processed packets.\", \"missing_information\": \"The clause does not specify whether acknowledgement is contingent on successful processing of the packet. This missing constraint leads to different implementation behaviours.\", \"justification\": \"The requirement to 'separately acknowledge them' is unclear in the context of processing failure. Does the receiver still need to acknowledge a packet that it couldn't process?\"}",
+  "record_id": "3c5032b5883833adf5851fd6906c4df21e26f3c57eb54666470fd1358dc1da94",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "12.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.016
+}

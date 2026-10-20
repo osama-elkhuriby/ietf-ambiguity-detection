@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "ignore any flow control offset that does not move the window forward",
+    "interpretation_a": "Offsets are considered to 'move the window forward' only if they increase the available window size. Any offset that doesn't increase the window size is ignored.",
+    "interpretation_b": "Offsets are considered to 'move the window forward' if they are non-decreasing. Any offset that is less than or equal to the previous offset is ignored.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'move the window forward' is open to interpretation. It could mean strictly increasing the window size, or simply not decreasing it. This affects how out-of-order flow control frames are handled.",
+    "missing_information": "The definition of 'move the window forward' is not precise. Does it require a strict increase in window size, or simply a non-decreasing offset?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:52:53.779315+00:00",
+  "document_id": "draft-ietf-quic-transport-13",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "43d74b8908cccd5916f084ab0a5d3eded17f7db86d1030b36ac67f8f60e2bf85",
+  "lineage_ids": "lineage:7e0e80dd052be5ae5f7b2b41",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 201,
+    "load_duration": 2638800,
+    "prompt_eval_count": 602,
+    "total_duration": 7596739000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"ignore any flow control offset that does not move the window forward\", \"interpretation_a\": \"Offsets are considered to 'move the window forward' only if they increase the available window size. Any offset that doesn't increase the window size is ignored.\", \"interpretation_b\": \"Offsets are considered to 'move the window forward' if they are non-decreasing. Any offset that is less than or equal to the previous offset is ignored.\", \"missing_information\": \"The definition of 'move the window forward' is not precise. Does it require a strict increase in window size, or simply a non-decreasing offset?\",\"justification\": \"The phrase 'move the window forward' is open to interpretation. It could mean strictly increasing the window size, or simply not decreasing it. This affects how out-of-order flow control frames are handled.\"}",
+  "record_id": "aa5613f0164995702b6d6c7b4e4ee1be0ec8349404656bd66aff5f533aae0150",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "10",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.594
+}

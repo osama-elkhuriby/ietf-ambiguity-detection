@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "current length",
+    "interpretation_a": "The server could interpret 'current length' as the length of the selected representation at the time of the request.",
+    "interpretation_b": "The server could interpret 'current length' as the length of the selected representation at the time of the response.",
+    "is_ambiguous": "yes",
+    "justification": "The clause specifies that the Content-Range header should include the current length of the selected representation, but does not define when 'current' is measured. This missing constraint allows two materially different implementation behaviours: using the length at request time or at response time.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T07:59:10.747037+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "d24eace608a4cbea6755d25551e23bb1acacd38d607919054e13de9771e1c8c5",
+  "lineage_ids": "lineage:a7b678e5705f773fe0d7754f",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3158,
+    "load_duration": 4507600,
+    "prompt_eval_count": 582,
+    "total_duration": 27137685400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"current length\",\n  \"interpretation_a\": \"The server could interpret 'current length' as the length of the selected representation at the time of the request.\",\n  \"interpretation_b\": \"The server could interpret 'current length' as the length of the selected representation at the time of the response.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause specifies that the Content-Range header should include the current length of the selected representation, but does not define when 'current' is measured. This missing constraint allows two materially different implementation behaviours: using the length at request time or at response time.\"\n}",
+  "record_id": "cc9f2724cc35e5172585054711ff7f3a7294582333f3f9ec171caf0898d855c2",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "15.5.17",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 27.141
+}

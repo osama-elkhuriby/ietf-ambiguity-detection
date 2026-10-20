@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously requires that a client generate a new initial packet number after receiving a Version Negotiation or Server Stateless Retry packet. The subsequent clause clarifies that this new packet number is randomized for the first transmission attempt, leaving no materially different implementation interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T18:52:56.553986+00:00",
+  "document_id": "draft-ietf-quic-transport-05",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "5086a6f4930f8aa40e2a6c72c8fa535e05d78872654ce31117bcdebab581342a",
+  "lineage_ids": "lineage:6bf7e6586801cc81ecb67be5",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 674,
+    "load_duration": 4599900,
+    "prompt_eval_count": 606,
+    "total_duration": 5968517100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously requires that a client generate a new initial packet number after receiving a Version Negotiation or Server Stateless Retry packet. The subsequent clause clarifies that this new packet number is randomized for the first transmission attempt, leaving no materially different implementation interpretations.\"\n}",
+  "record_id": "e3c53d88b49742ca38834c5d1e206292495c7cb09cc1cce54b48bfe7446c8fb2",
+  "revision": "05",
+  "schema_version": 1,
+  "section_ids": "5.7.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.969
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless it paces the sending of packets",
+    "interpretation_a": "The clause could be interpreted as the exception applying to any pacing of packets, meaning that if the sender paces any packets after becoming idle, it does not need to reset its congestion window.",
+    "interpretation_b": "Alternatively, the clause could be interpreted as the exception applying only to pacing of packets in excess of the initial congestion window, meaning that if the sender paces only up to the initial congestion window it still must reset.",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a clear constraint on the scope of pacing, resulting in two materially different implementation behaviours.",
+    "missing_information": "The definition of 'paces the sending of packets' in this context and whether it applies to all pacing or only to pacing beyond the initial congestion window is not specified, leading to under‑specification across the provisions."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T11:10:51.857802+00:00",
+  "document_id": "draft-ietf-quic-recovery-19",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "837134525eb2e52d4cf4c19b9fae359b59c46223caadfebcd7bb2f4f41a5c801",
+  "lineage_ids": "lineage:336c53c230bdf4958b5f16aa",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1344,
+    "load_duration": 5175300,
+    "prompt_eval_count": 632,
+    "total_duration": 11956059900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"unless it paces the sending of packets\",\n  \"interpretation_a\": \"The clause could be interpreted as the exception applying to any pacing of packets, meaning that if the sender paces any packets after becoming idle, it does not need to reset its congestion window.\",\n  \"interpretation_b\": \"Alternatively, the clause could be interpreted as the exception applying only to pacing of packets in excess of the initial congestion window, meaning that if the sender paces only up to the initial congestion window it still must reset.\",\n  \"missing_information\": \"The definition of 'paces the sending of packets' in this context and whether it applies to all pacing or only to pacing beyond the initial congestion window is not specified, leading to under‑specification across the provisions.\",\n  \"justification\": \"The clause lacks a clear constraint on the scope of pacing, resulting in two materially different implementation behaviours.\"\n}",
+  "record_id": "328351bb7f328defe83be48a55105dbdea4ff3746f0c2e47ecca2a3d766e8ac9",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "7.9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 79.843
+}

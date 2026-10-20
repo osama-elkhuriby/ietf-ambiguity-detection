@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Consequently, if a keep-alive mechanism is implemented it MUST NOT interpret failure to respond to any specific probe as a dead connection.",
+    "interpretation_a": "The connection must never be considered dead based on any probe failure, even if multiple failures occur.",
+    "interpretation_b": "The connection may be considered dead after multiple probe failures, but not after a single failure.",
+    "is_ambiguous": "yes",
+    "justification": "The clause permits two materially different implementation behaviours regarding when a connection can be deemed dead, due to an incomplete constraint on the number of failures.",
+    "missing_information": "The clause does not specify how many probe failures are required to consider a connection dead, leaving the threshold ambiguous."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T19:45:48.228413+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-10",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "82c606cd3a5952a9e461f7cd3dee1474c96cb9ce08d6e65419cc64a7e4b60316",
+  "lineage_ids": "lineage:ecacfe8d804d5b0f2e4d49d7",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1380,
+    "load_duration": 4768800,
+    "prompt_eval_count": 612,
+    "total_duration": 12043057400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"Consequently, if a keep-alive mechanism is implemented it MUST NOT interpret failure to respond to any specific probe as a dead connection.\",\n  \"interpretation_a\": \"The connection must never be considered dead based on any probe failure, even if multiple failures occur.\",\n  \"interpretation_b\": \"The connection may be considered dead after multiple probe failures, but not after a single failure.\",\n  \"missing_information\": \"The clause does not specify how many probe failures are required to consider a connection dead, leaving the threshold ambiguous.\",\n  \"justification\": \"The clause permits two materially different implementation behaviours regarding when a connection can be deemed dead, due to an incomplete constraint on the number of failures.\"\n}",
+  "record_id": "137e779a5e600dfacc5536a4e519e9af9cbd7f0ebe8c97054a47ad55e1c5d7c6",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "3.8.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 12.031
+}

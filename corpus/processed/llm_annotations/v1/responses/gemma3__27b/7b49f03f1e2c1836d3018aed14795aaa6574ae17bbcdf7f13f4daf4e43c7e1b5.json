@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "either use the same connection ID length for all connections or encode the length of the connection ID",
+    "interpretation_a": "All connections use a fixed, pre-defined connection ID length. This simplifies processing but limits flexibility.",
+    "interpretation_b": "The connection ID length is included within the connection ID itself, allowing for variable-length connection IDs without maintaining state. This adds complexity but allows for more flexible connection ID schemes.",
+    "is_ambiguous": "yes",
+    "justification": "The 'or' clause presents two distinct implementation paths. The lack of detail on how to 'encode the length' creates ambiguity as to what constitutes a valid encoding.",
+    "missing_information": "The clause does not specify *how* the length is encoded if the first option is not chosen. Without this, implementations could choose incompatible encoding schemes."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:35:35.102277+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "c791f64c7e1c53261343af7985ceebdb12e2805972db60520c2c248525ad7a04",
+  "lineage_ids": "lineage:013ac45d96d7c5686b17c6f2",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 188,
+    "load_duration": 4290000,
+    "prompt_eval_count": 591,
+    "total_duration": 7138694900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"either use the same connection ID length for all connections or encode the length of the connection ID\", \"interpretation_a\": \"All connections use a fixed, pre-defined connection ID length. This simplifies processing but limits flexibility.\", \"interpretation_b\": \"The connection ID length is included within the connection ID itself, allowing for variable-length connection IDs without maintaining state. This adds complexity but allows for more flexible connection ID schemes.\", \"missing_information\": \"The clause does not specify *how* the length is encoded if the first option is not chosen. Without this, implementations could choose incompatible encoding schemes.\",\"justification\": \"The 'or' clause presents two distinct implementation paths. The lack of detail on how to 'encode the length' creates ambiguity as to what constitutes a valid encoding.\"}",
+  "record_id": "7b49f03f1e2c1836d3018aed14795aaa6574ae17bbcdf7f13f4daf4e43c7e1b5",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "10.3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.141
+}

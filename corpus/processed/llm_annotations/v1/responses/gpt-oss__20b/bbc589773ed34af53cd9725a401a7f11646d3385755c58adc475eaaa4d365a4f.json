@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Implementations of draft versions of the protocol MUST add the string “-“ and the corresponding draft number to the identifier.",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The missing constraint about the placement of the hyphen relative to the draft number creates an under‑specified requirement that can lead to different implementation behaviours.",
+    "missing_information": "The clause does not specify whether the hyphen should precede or follow the draft number, nor whether the draft number should be formatted as a two‑digit string or otherwise. This omission allows multiple reasonable implementations."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T10:14:34.939673+00:00",
+  "document_id": "draft-ietf-quic-http-24",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "62b549abf3d08ca501144cb891de349a36ad1e2d6683330d680f6ee45382a3d7",
+  "lineage_ids": "lineage:e3bfa3e1d44ff5813bbe0f7d",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 443,
+    "load_duration": 4023800,
+    "prompt_eval_count": 738,
+    "total_duration": 3987699000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"Implementations of draft versions of the protocol MUST add the string “-“ and the corresponding draft number to the identifier.\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The clause does not specify whether the hyphen should precede or follow the draft number, nor whether the draft number should be formatted as a two‑digit string or otherwise. This omission allows multiple reasonable implementations.\",\n  \"justification\": \"The missing constraint about the placement of the hyphen relative to the draft number creates an under‑specified requirement that can lead to different implementation behaviours.\"\n}",
+  "record_id": "bbc589773ed34af53cd9725a401a7f11646d3385755c58adc475eaaa4d365a4f",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 21.235
+}

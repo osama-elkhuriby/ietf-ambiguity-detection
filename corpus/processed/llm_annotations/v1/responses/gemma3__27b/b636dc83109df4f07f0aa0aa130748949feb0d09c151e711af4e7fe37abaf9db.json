@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY send ack-eliciting frames",
+    "interpretation_a": "An endpoint is permitted, but not required, to send ack-eliciting frames after the handshake.",
+    "interpretation_b": "An endpoint is permitted to send ack-eliciting frames, but it is also permitted to *not* send them, even if there is no other reason to delay.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' allows for both sending and not sending ack-eliciting frames. However, the lack of a constraint on *when* to send them (or not) creates ambiguity. An implementation could choose to never send them, even immediately after the handshake, which is a valid interpretation of 'MAY', but could have security implications if handshake keys are not discarded promptly.",
+    "missing_information": "The clause does not specify a time limit or condition under which the endpoint *must* send ack-eliciting frames if it chooses to do so. This leaves open the possibility of indefinite delay, which could affect key derivation and security."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:45:47.633102+00:00",
+  "document_id": "draft-ietf-quic-tls-24",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "8cb4967cfcb52c3851dd08e03c13fcda41a21a6e924712b733bd3077da625676",
+  "lineage_ids": "lineage:7e0c119c9c38abe12af1decd",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 238,
+    "load_duration": 4343700,
+    "prompt_eval_count": 578,
+    "total_duration": 8893641700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY send ack-eliciting frames\", \"interpretation_a\": \"An endpoint is permitted, but not required, to send ack-eliciting frames after the handshake.\", \"interpretation_b\": \"An endpoint is permitted to send ack-eliciting frames, but it is also permitted to *not* send them, even if there is no other reason to delay.\", \"missing_information\": \"The clause does not specify a time limit or condition under which the endpoint *must* send ack-eliciting frames if it chooses to do so. This leaves open the possibility of indefinite delay, which could affect key derivation and security.\", \"justification\": \"The use of 'MAY' allows for both sending and not sending ack-eliciting frames. However, the lack of a constraint on *when* to send them (or not) creates ambiguity. An implementation could choose to never send them, even immediately after the handshake, which is a valid interpretation of 'MAY', but could have security implications if handshake keys are not discarded promptly.\"}",
+  "record_id": "b636dc83109df4f07f0aa0aa130748949feb0d09c151e711af4e7fe37abaf9db",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "4.10.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.906
+}

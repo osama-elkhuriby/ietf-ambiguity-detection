@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "This frame MUST be sent in a packet that is sent to the new address.",
+    "interpretation_a": "The PATH_CHALLENGE frame must be encapsulated within a QUIC packet and sent to the new address.",
+    "interpretation_b": "The PATH_CHALLENGE frame's payload must be sent as data within a packet sent to the new address, but the frame itself may be sent via a different mechanism.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states the frame 'MUST be sent in a packet' to the new address. This could mean the entire QUIC frame (header + payload) must be encapsulated in a packet, or it could mean only the payload of the frame must be sent as data within a packet. Without further clarification, there are two reasonable interpretations.",
+    "missing_information": "It is unclear whether the entire QUIC frame must be sent in a packet to the new address, or just the payload of the frame."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:03:19.699102+00:00",
+  "document_id": "draft-ietf-quic-transport-10",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "d6849d868b008c3f7fe8f4388f41b2178364bbe76141f2e3b9b944c3614ed74e",
+  "lineage_ids": "lineage:508fdb6d37d8a832db30a407",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 221,
+    "load_duration": 3887700,
+    "prompt_eval_count": 574,
+    "total_duration": 8271086900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"This frame MUST be sent in a packet that is sent to the new address.\", \"interpretation_a\": \"The PATH_CHALLENGE frame must be encapsulated within a QUIC packet and sent to the new address.\", \"interpretation_b\": \"The PATH_CHALLENGE frame's payload must be sent as data within a packet sent to the new address, but the frame itself may be sent via a different mechanism.\", \"missing_information\": \"It is unclear whether the entire QUIC frame must be sent in a packet to the new address, or just the payload of the frame.\", \"justification\": \"The clause states the frame 'MUST be sent in a packet' to the new address. This could mean the entire QUIC frame (header + payload) must be encapsulated in a packet, or it could mean only the payload of the frame must be sent as data within a packet. Without further clarification, there are two reasonable interpretations.\"}",
+  "record_id": "ccfb5709c6c815eac034c1a03b6ff213eb89c509304d83e5246b3fdee0e47979",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "7.7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.281
+}

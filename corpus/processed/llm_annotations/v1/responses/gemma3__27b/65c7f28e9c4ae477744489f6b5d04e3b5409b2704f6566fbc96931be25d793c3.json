@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "TargetName that is below a DNAME",
+    "interpretation_a": "A TargetName is 'below' a DNAME if the TargetName's fully qualified domain name (FQDN) has a longer path from the root than the DNAME's FQDN. For example, `sub.example.com` is 'below' `example.com`.",
+    "interpretation_b": "A TargetName is 'below' a DNAME if the TargetName record appears lexicographically later in the zone file than the DNAME record. This is a positional interpretation.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'below' is vague. It's unclear whether it refers to the DNS name hierarchy (depth in the tree) or the order in which records appear in the zone file. Both interpretations are reasonable and would lead to different implementation choices.",
+    "missing_information": "The meaning of 'below' is not defined. It could refer to DNS name hierarchy or zone file order."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:04:45.756630+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "148a635e2164dd57e944ad4a6f79ff3e2d402de6d292eed144749e740d0228c5",
+  "lineage_ids": "lineage:bcac532dd8177a8ccb214341",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 229,
+    "load_duration": 4159000,
+    "prompt_eval_count": 729,
+    "total_duration": 8698936800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"TargetName that is below a DNAME\", \"interpretation_a\": \"A TargetName is 'below' a DNAME if the TargetName's fully qualified domain name (FQDN) has a longer path from the root than the DNAME's FQDN. For example, `sub.example.com` is 'below' `example.com`.\", \"interpretation_b\": \"A TargetName is 'below' a DNAME if the TargetName record appears lexicographically later in the zone file than the DNAME record. This is a positional interpretation.\", \"missing_information\": \"The meaning of 'below' is not defined. It could refer to DNS name hierarchy or zone file order.\", \"justification\": \"The term 'below' is vague. It's unclear whether it refers to the DNS name hierarchy (depth in the tree) or the order in which records appear in the zone file. Both interpretations are reasonable and would lead to different implementation choices.\"}",
+  "record_id": "65c7f28e9c4ae477744489f6b5d04e3b5409b2704f6566fbc96931be25d793c3",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "10.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.703
+}

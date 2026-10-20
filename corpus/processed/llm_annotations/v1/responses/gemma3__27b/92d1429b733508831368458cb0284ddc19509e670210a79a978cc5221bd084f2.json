@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "sufficient state",
+    "interpretation_a": "The server has enough information about the connection to construct a valid CONNECTION_CLOSE frame, including any necessary context or identifiers.",
+    "interpretation_b": "The server has *any* state related to the connection, even if it's minimal and doesn't fully populate the CONNECTION_CLOSE frame, but still prefers to use it if possible.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'sufficient state' is vague. Does it mean having all the necessary information to construct a complete and valid CONNECTION_CLOSE frame, or simply having *some* state related to the connection? The lack of a clear definition creates ambiguity in implementation.",
+    "missing_information": "The definition of 'sufficient state' is not provided. It's unclear what level of state is required for the server to be able to send a CONNECTION_CLOSE frame. This affects implementation because a server might incorrectly decide it doesn't have 'sufficient state' when it actually does, or vice versa."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:45:04.381961+00:00",
+  "document_id": "draft-ietf-quic-transport-06",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "d9e55c3454d636b79427ce9d57fff5cc26e494dbe5209b58afbab602477f08c8",
+  "lineage_ids": "lineage:2e09b6187028ff5a8ccdd14c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 231,
+    "load_duration": "",
+    "prompt_eval_count": 584,
+    "total_duration": 8633544700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"sufficient state\", \"interpretation_a\": \"The server has enough information about the connection to construct a valid CONNECTION_CLOSE frame, including any necessary context or identifiers.\", \"interpretation_b\": \"The server has *any* state related to the connection, even if it's minimal and doesn't fully populate the CONNECTION_CLOSE frame, but still prefers to use it if possible.\", \"missing_information\": \"The definition of 'sufficient state' is not provided. It's unclear what level of state is required for the server to be able to send a CONNECTION_CLOSE frame. This affects implementation because a server might incorrectly decide it doesn't have 'sufficient state' when it actually does, or vice versa.\", \"justification\": \"The phrase 'sufficient state' is vague. Does it mean having all the necessary information to construct a complete and valid CONNECTION_CLOSE frame, or simply having *some* state related to the connection? The lack of a clear definition creates ambiguity in implementation.\"}",
+  "record_id": "92d1429b733508831368458cb0284ddc19509e670210a79a978cc5221bd084f2",
+  "revision": "06",
+  "schema_version": 1,
+  "section_ids": "7.7.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.64
+}

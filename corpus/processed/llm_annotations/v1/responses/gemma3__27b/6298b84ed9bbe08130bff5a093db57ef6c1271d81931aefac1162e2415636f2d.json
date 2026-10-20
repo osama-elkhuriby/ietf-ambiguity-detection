@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY implement a \"half-duplex\" TCP close sequence",
+    "interpretation_a": "The host is permitted to implement a close sequence that prevents reading after CLOSE is called, but it is not required.",
+    "interpretation_b": "The host is required to implement a close sequence that prevents reading after CLOSE is called, but the implementation details are unspecified.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' is ambiguous. It could mean the host is allowed to implement the half-duplex behavior, or that it is expected to implement it, but the details are left to the implementer. This creates two reasonable interpretations regarding whether the behavior is optional or required.",
+    "missing_information": "The meaning of 'MAY' is unclear. Does it indicate permission to implement, or a requirement to implement with unspecified details?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:22:41.647535+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-10",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "f10a46e189109e893818516e6c832f906a0372dcf276aaca31195ab7fb759288",
+  "lineage_ids": "lineage:50cc1a64db6ed4d8259dcd5c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 195,
+    "load_duration": 9286200,
+    "prompt_eval_count": 642,
+    "total_duration": 7568386300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY implement a \\\"half-duplex\\\" TCP close sequence\", \"interpretation_a\": \"The host is permitted to implement a close sequence that prevents reading after CLOSE is called, but it is not required.\", \"interpretation_b\": \"The host is required to implement a close sequence that prevents reading after CLOSE is called, but the implementation details are unspecified.\", \"missing_information\": \"The meaning of 'MAY' is unclear. Does it indicate permission to implement, or a requirement to implement with unspecified details?\", \"justification\": \"The use of 'MAY' is ambiguous. It could mean the host is allowed to implement the half-duplex behavior, or that it is expected to implement it, but the details are left to the implementer. This creates two reasonable interpretations regarding whether the behavior is optional or required.\"}",
+  "record_id": "6298b84ed9bbe08130bff5a093db57ef6c1271d81931aefac1162e2415636f2d",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "3.5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.578
+}

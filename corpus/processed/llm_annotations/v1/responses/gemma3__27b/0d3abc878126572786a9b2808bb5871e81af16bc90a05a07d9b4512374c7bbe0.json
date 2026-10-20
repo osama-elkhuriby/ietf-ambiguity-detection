@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "remove any header or trailer field(s) from the message with the same name as the connection-option",
+    "interpretation_a": "An intermediary MUST remove *all* header/trailer fields with the same name as a connection-option, even if those fields are not directly related to the connection option being processed.",
+    "interpretation_b": "An intermediary MUST remove only those header/trailer fields with the same name as a connection-option that are directly related to the connection option being processed. The scope of 'related' is undefined.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'with the same name' is ambiguous. It's unclear whether the removal applies to all fields sharing the same token or only those semantically linked to the connection option. This creates two reasonable interpretations regarding the scope of removal.",
+    "missing_information": "The clause does not define what constitutes a header/trailer field being 'with the same name as the connection-option'. Does this mean any field with the same token, or only fields that are semantically related to the connection option?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:55:25.835906+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "95a2580f5e43761389d38c6e5caff45660b92a6e08e5ec2a032e2dc2d387b465",
+  "lineage_ids": "lineage:0d7284d515b81a4d31098003",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 243,
+    "load_duration": 17011000,
+    "prompt_eval_count": 685,
+    "total_duration": 9415524300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"remove any header or trailer field(s) from the message with the same name as the connection-option\", \"interpretation_a\": \"An intermediary MUST remove *all* header/trailer fields with the same name as a connection-option, even if those fields are not directly related to the connection option being processed.\", \"interpretation_b\": \"An intermediary MUST remove only those header/trailer fields with the same name as a connection-option that are directly related to the connection option being processed. The scope of 'related' is undefined.\", \"missing_information\": \"The clause does not define what constitutes a header/trailer field being 'with the same name as the connection-option'. Does this mean any field with the same token, or only fields that are semantically related to the connection option?\",\"justification\": \"The phrase 'with the same name' is ambiguous. It's unclear whether the removal applies to all fields sharing the same token or only those semantically linked to the connection option. This creates two reasonable interpretations regarding the scope of removal.\"}",
+  "record_id": "0d3abc878126572786a9b2808bb5871e81af16bc90a05a07d9b4512374c7bbe0",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "7.6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.422
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD NOT send multiple BLOCKED or STREAM_BLOCKED frames",
+    "interpretation_a": "The sender may send multiple BLOCKED/STREAM_BLOCKED frames if it believes the original was lost, but it's not required.",
+    "interpretation_b": "The sender must not send multiple BLOCKED/STREAM_BLOCKED frames unless it *knows* the original was lost (e.g., via retransmission timeout or duplicate ACK).",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'determined' is vague. It's unclear what level of certainty is required before a sender can send another BLOCKED frame. This impacts how a sender implements loss detection and retransmission.",
+    "missing_information": "The definition of 'determined to be lost' is not precise. Does 'determined' require definitive proof, or is a reasonable belief sufficient? The difference affects implementation of loss detection and retransmission logic."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:43:36.464941+00:00",
+  "document_id": "draft-ietf-quic-transport-16",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "808d558c6680f80f3d2680dab87853cd123f5ab9ed6cb02a31e83c1f67ff9c63",
+  "lineage_ids": "lineage:90ba3a9ffc331505542674e2",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 213,
+    "load_duration": 4006500,
+    "prompt_eval_count": 580,
+    "total_duration": 8000612700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD NOT send multiple BLOCKED or STREAM_BLOCKED frames\", \"interpretation_a\": \"The sender may send multiple BLOCKED/STREAM_BLOCKED frames if it believes the original was lost, but it's not required.\", \"interpretation_b\": \"The sender must not send multiple BLOCKED/STREAM_BLOCKED frames unless it *knows* the original was lost (e.g., via retransmission timeout or duplicate ACK).\", \"missing_information\": \"The definition of 'determined to be lost' is not precise. Does 'determined' require definitive proof, or is a reasonable belief sufficient? The difference affects implementation of loss detection and retransmission logic.\", \"justification\": \"The use of 'determined' is vague. It's unclear what level of certainty is required before a sender can send another BLOCKED frame. This impacts how a sender implements loss detection and retransmission.\"}",
+  "record_id": "8ecfea6d814f98a5d9b0140daf6a23420186ae02732195ad972182b74ece3b9d",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.0
+}

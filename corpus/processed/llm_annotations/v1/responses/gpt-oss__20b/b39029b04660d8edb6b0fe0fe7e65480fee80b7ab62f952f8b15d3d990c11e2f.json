@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "some number of PATH_CHALLENGE frames",
+    "interpretation_a": "The endpoint abandons path validation after sending a fixed, implementation‑defined number of PATH_CHALLENGE frames (e.g., 3 frames).",
+    "interpretation_b": "The endpoint abandons path validation after sending any number of PATH_CHALLENGE frames, i.e., as soon as it has sent at least one frame.",
+    "is_ambiguous": "yes",
+    "justification": "The clause specifies \"some number of PATH_CHALLENGE frames\" without defining what that number is, allowing at least two materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T17:54:48.493495+00:00",
+  "document_id": "draft-ietf-quic-transport-15",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "7ec9dd6bc8d235ea197084ddfce0df546eec8cfdaba05cec12cab79decb15275",
+  "lineage_ids": "lineage:cf5266d14f1a21a2f9715aee",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 439,
+    "load_duration": 4032900,
+    "prompt_eval_count": 724,
+    "total_duration": 3988254800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"some number of PATH_CHALLENGE frames\",\n  \"interpretation_a\": \"The endpoint abandons path validation after sending a fixed, implementation‑defined number of PATH_CHALLENGE frames (e.g., 3 frames).\",\n  \"interpretation_b\": \"The endpoint abandons path validation after sending any number of PATH_CHALLENGE frames, i.e., as soon as it has sent at least one frame.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause specifies \\\"some number of PATH_CHALLENGE frames\\\" without defining what that number is, allowing at least two materially different implementation behaviours.\"\n}",
+  "record_id": "b39029b04660d8edb6b0fe0fe7e65480fee80b7ab62f952f8b15d3d990c11e2f",
+  "revision": "15",
+  "schema_version": 1,
+  "section_ids": "6.10.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 19.437
+}

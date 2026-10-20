@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "SHOULD supply a new connection ID",
+    "interpretation_a": "The endpoint is encouraged, but not required, to proactively send a new connection ID whenever the peer signals retirement of an existing one.",
+    "interpretation_b": "The endpoint is encouraged, but not required, to send a new connection ID only if it hasn't already sent one recently, or if some other condition is met (not specified).",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' grants discretion, but the scope of that discretion is not bounded. The clause doesn't specify *when* the endpoint should supply a new ID beyond the peer retiring one, leading to multiple reasonable interpretations of the intended behaviour.",
+    "missing_information": "The trigger for supplying a new connection ID is not fully defined. Is it triggered *only* by peer retirement, or are there other conditions under which a new ID should be sent? The meaning of 'supply' is also unclear - does it mean sending a NEW_CONNECTION_ID frame, or simply having a new ID available?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:56:47.325785+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "8f317c812babdf344a7e1ee5f797901e6c543ed04dea77b1d286206facdd053d",
+  "lineage_ids": "lineage:b1d7f6b5abf061d17148a1c4",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 242,
+    "load_duration": 2011000,
+    "prompt_eval_count": 625,
+    "total_duration": 9038639700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"SHOULD supply a new connection ID\", \"interpretation_a\": \"The endpoint is encouraged, but not required, to proactively send a new connection ID whenever the peer signals retirement of an existing one.\", \"interpretation_b\": \"The endpoint is encouraged, but not required, to send a new connection ID only if it hasn't already sent one recently, or if some other condition is met (not specified).\", \"missing_information\": \"The trigger for supplying a new connection ID is not fully defined. Is it triggered *only* by peer retirement, or are there other conditions under which a new ID should be sent? The meaning of 'supply' is also unclear - does it mean sending a NEW_CONNECTION_ID frame, or simply having a new ID available?\",\"justification\": \"The use of 'SHOULD' grants discretion, but the scope of that discretion is not bounded. The clause doesn't specify *when* the endpoint should supply a new ID beyond the peer retiring one, leading to multiple reasonable interpretations of the intended behaviour.\"}",
+  "record_id": "0827b0260a387fed16f466f0416622c3b4f9c5d400d571fe0d9263670493110c",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "5.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.047
+}

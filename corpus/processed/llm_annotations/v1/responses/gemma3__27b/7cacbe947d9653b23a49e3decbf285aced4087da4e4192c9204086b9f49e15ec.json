@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "excessive connection IDs",
+    "interpretation_a": "An endpoint might define 'excessive' as a fixed number of connection IDs received within a time window. For example, if an endpoint receives more than 100 connection IDs in 1 second, it may discard them.",
+    "interpretation_b": "An endpoint might define 'excessive' as a percentage of its available storage capacity. For example, if the endpoint's storage is 80% full, any further connection IDs received may be discarded.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'excessive' is not defined, creating ambiguity about when an endpoint is permitted to discard connection IDs. This affects implementation because different endpoints could have different thresholds for what constitutes 'excessive', leading to inconsistent behavior.",
+    "missing_information": "The definition of 'excessive' is not provided, leaving room for different implementations to interpret the threshold for discarding connection IDs."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:35:59.379731+00:00",
+  "document_id": "draft-ietf-quic-transport-20",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "7edfc637e7963083a73ea26084847923b4bbf2dbcbf959f8bf5e100fbdb70e06",
+  "lineage_ids": "lineage:cfcf4992cf738107a336bda4",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 214,
+    "load_duration": 5284800,
+    "prompt_eval_count": 563,
+    "total_duration": 8018446600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"excessive connection IDs\", \"interpretation_a\": \"An endpoint might define 'excessive' as a fixed number of connection IDs received within a time window. For example, if an endpoint receives more than 100 connection IDs in 1 second, it may discard them.\", \"interpretation_b\": \"An endpoint might define 'excessive' as a percentage of its available storage capacity. For example, if the endpoint's storage is 80% full, any further connection IDs received may be discarded.\", \"missing_information\": \"The definition of 'excessive' is not provided, leaving room for different implementations to interpret the threshold for discarding connection IDs.\",\"justification\": \"The term 'excessive' is not defined, creating ambiguity about when an endpoint is permitted to discard connection IDs. This affects implementation because different endpoints could have different thresholds for what constitutes 'excessive', leading to inconsistent behavior.\"}",
+  "record_id": "7cacbe947d9653b23a49e3decbf285aced4087da4e4192c9204086b9f49e15ec",
+  "revision": "20",
+  "schema_version": 1,
+  "section_ids": "5.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.015
+}

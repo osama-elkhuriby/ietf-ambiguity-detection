@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "* ICMP error message arrived (see [icmp]) (MUST-TBD)",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause contains a MUST‑TBD marker, indicating that the behavior is not yet defined. This incomplete constraint means that implementations could reasonably choose different actions, leading to materially different behaviors. The missing normative requirement is a concrete missing constraint that prevents a unique operational interpretation.",
+    "missing_information": "The clause does not specify the required behavior when an ICMP error message arrives, leaving the implementation behavior undefined. The normative requirement is marked as MUST‑TBD, indicating an incomplete constraint. This omission prevents a unique operational interpretation.  "
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T19:50:49.058575+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-11",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "e1af9e12c76feeb27afec3122d2c6dae227d7221b2cd533a41349dbd486ab510",
+  "lineage_ids": "lineage:f956d0919ac186d80a7d9b3b",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 950,
+    "load_duration": 502700,
+    "prompt_eval_count": 569,
+    "total_duration": 8618775800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"* ICMP error message arrived (see [icmp]) (MUST-TBD)\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The clause does not specify the required behavior when an ICMP error message arrives, leaving the implementation behavior undefined. The normative requirement is marked as MUST‑TBD, indicating an incomplete constraint. This omission prevents a unique operational interpretation.  \",\n  \"justification\": \"The clause contains a MUST‑TBD marker, indicating that the behavior is not yet defined. This incomplete constraint means that implementations could reasonably choose different actions, leading to materially different behaviors. The missing normative requirement is a concrete missing constraint that prevents a unique operational interpretation.\"\n}",
+  "record_id": "384ee12ea2628d7acaea714ad91c50b23d559131a92cb9734d705a096a9adb85",
+  "revision": "11",
+  "schema_version": 1,
+  "section_ids": "3.9.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.609
+}

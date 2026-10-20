@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "acted on",
+    "interpretation_a": "The client has completed the version negotiation process and has established a connection using a negotiated version.",
+    "interpretation_b": "The client has simply processed the Version Negotiation packet, perhaps extracting information, but has not yet established a connection or completed negotiation.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'acted on' is vague. It's unclear whether 'acted on' implies a complete negotiation and connection establishment, or simply that the client has processed the packet. This difference affects when the client should ignore subsequent Version Negotiation packets.",
+    "missing_information": "The meaning of 'acted on' is not clearly defined. Does it mean the negotiation is complete and a connection is established, or merely that the packet has been processed?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:19:28.720074+00:00",
+  "document_id": "draft-ietf-quic-transport-18",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "4257a7b9759d91caa46536ee22fff2826d2a1ca7785e6b975108fc121f13622f",
+  "lineage_ids": "lineage:ed40e5d6369b7bb78c17b49c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 181,
+    "load_duration": 5551600,
+    "prompt_eval_count": 579,
+    "total_duration": 6865434800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"acted on\", \"interpretation_a\": \"The client has completed the version negotiation process and has established a connection using a negotiated version.\", \"interpretation_b\": \"The client has simply processed the Version Negotiation packet, perhaps extracting information, but has not yet established a connection or completed negotiation.\", \"missing_information\": \"The meaning of 'acted on' is not clearly defined. Does it mean the negotiation is complete and a connection is established, or merely that the packet has been processed?\", \"justification\": \"The phrase 'acted on' is vague. It's unclear whether 'acted on' implies a complete negotiation and connection establishment, or simply that the client has processed the packet. This difference affects when the client should ignore subsequent Version Negotiation packets.\"}",
+  "record_id": "46beb1fa2703764d441b8e67b3006d1ce1ad2f32edf88aeb486c49c181eb7a46",
+  "revision": "18",
+  "schema_version": 1,
+  "section_ids": "6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.875
+}

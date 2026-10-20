@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "queued segments",
+    "interpretation_a": "The TCP implementation must process all segments that are currently in the queue before sending *any* ACKs, even if those ACKs could acknowledge segments that are not in the queue.",
+    "interpretation_b": "The TCP implementation must process all segments that are currently in the queue before sending ACKs *for those queued segments*, but it may send ACKs for other segments that are not in the queue at any time.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'queued segments' is not precisely defined. It's unclear whether the requirement applies to *all* queued segments, or only those segments that are part of the series being processed. This leads to two reasonable interpretations of when ACKs can be sent.",
+    "missing_information": "The scope of 'queued segments' is not clearly defined. Does it refer to all segments currently buffered, or only those related to a specific sequence number space?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:17:27.673254+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-09",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "74c065b5a64da1ac2b0b030d1f9afef51ac98a003a7b75dcc3f4a733bec92842",
+  "lineage_ids": "lineage:eae673ed2b5281ee12a9c456",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 218,
+    "load_duration": 19578500,
+    "prompt_eval_count": 568,
+    "total_duration": 8360144500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"queued segments\", \"interpretation_a\": \"The TCP implementation must process all segments that are currently in the queue before sending *any* ACKs, even if those ACKs could acknowledge segments that are not in the queue.\", \"interpretation_b\": \"The TCP implementation must process all segments that are currently in the queue before sending ACKs *for those queued segments*, but it may send ACKs for other segments that are not in the queue at any time.\", \"missing_information\": \"The scope of 'queued segments' is not clearly defined. Does it refer to all segments currently buffered, or only those related to a specific sequence number space?\", \"justification\": \"The phrase 'queued segments' is not precisely defined. It's unclear whether the requirement applies to *all* queued segments, or only those segments that are part of the series being processed. This leads to two reasonable interpretations of when ACKs can be sent.\"}",
+  "record_id": "0ab500574731131dd6224a14f9cb1850d732d3573afe0a24cdea1bd7791377b2",
+  "revision": "09",
+  "schema_version": 1,
+  "section_ids": "3.10",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.375
+}

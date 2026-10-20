@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "has to assume that the remote peer does not want to receive any more packets",
+    "interpretation_a": "The endpoint must stop sending *all* packets, including those that might be valid on the new path, interpreting the failed validation as a complete rejection of communication.",
+    "interpretation_b": "The endpoint must stop sending packets *to the old address*, but may continue sending packets to the new, validated address if other conditions are met (e.g., if the timer expires).",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'any more packets' is incomplete. It's unclear whether the endpoint should cease all communication or only communication to the old address. This affects implementation because an endpoint could either completely shut down transmission or continue sending to the new address if it's still reachable.",
+    "missing_information": "The clause does not specify the scope of 'any more packets'. Does it refer to all packets, or only packets destined for the previously used address?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:25:48.477009+00:00",
+  "document_id": "draft-ietf-quic-transport-09",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "2a8670e35948569c89ac2be085e450cc0903e20f9de3d00342fe8aa39d7f03ad",
+  "lineage_ids": "lineage:340791cc6698dd84c42b7389",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 223,
+    "load_duration": 4047900,
+    "prompt_eval_count": 631,
+    "total_duration": 8401464400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"has to assume that the remote peer does not want to receive any more packets\", \"interpretation_a\": \"The endpoint must stop sending *all* packets, including those that might be valid on the new path, interpreting the failed validation as a complete rejection of communication.\", \"interpretation_b\": \"The endpoint must stop sending packets *to the old address*, but may continue sending packets to the new, validated address if other conditions are met (e.g., if the timer expires).\", \"missing_information\": \"The clause does not specify the scope of 'any more packets'. Does it refer to all packets, or only packets destined for the previously used address?\",\"justification\": \"The phrase 'any more packets' is incomplete. It's unclear whether the endpoint should cease all communication or only communication to the old address. This affects implementation because an endpoint could either completely shut down transmission or continue sending to the new address if it's still reachable.\"}",
+  "record_id": "598694964cd09498303973a755aff2a0c49c6da49be10521a2eaa97ac4b0732f",
+  "revision": "09",
+  "schema_version": 1,
+  "section_ids": "7.7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.407
+}

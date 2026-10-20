@@ -1,0 +1,37 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "increase the reordering threshold in packets or time",
+    "interpretation_a": "It is unclear whether the reordering threshold refers to a packet count or a time duration.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether the reordering threshold is measured in packets or time, leading to different implementation choices.",
+    "missing_information": ""
+  },
+  "attempts": 3,
+  "created_at": "2026-10-08T11:08:31.281227+00:00",
+  "document_id": "draft-ietf-quic-recovery-27",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "080df5fcc0db776c4a9d7980d6869e55c70c7662b2534e1f298786bbf6fa4f68",
+  "lineage_ids": "lineage:76777b0431b7c20c2a179708",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 4561,
+    "load_duration": 5351100,
+    "prompt_eval_count": 615,
+    "total_duration": 39380166200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"increase the reordering threshold in packets or time\", \"interpretation_a\": \"It is unclear whether the reordering threshold refers to a packet count or a time duration.\", \"interpretation_b\": \"\", \"missing_information\": \"\", \"justification\": \"The clause does not specify whether the reordering threshold is measured in packets or time, leading to different implementation choices.\"}",
+  "record_id": "24818361bc91a587c474218ae81461c71ce77f5384c42f845c59c92ff53d08d0",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "5.1",
+  "status": "invalid",
+  "validation_errors": [
+    "yes requires two distinct interpretations or missing information"
+  ],
+  "wall_seconds": 177.39
+}

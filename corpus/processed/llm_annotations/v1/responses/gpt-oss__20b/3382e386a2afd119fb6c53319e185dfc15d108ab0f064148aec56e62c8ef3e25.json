@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that if a MAX_STREAM_DATA frame is received for a stream that the local endpoint has not yet created, it must be treated as a STREAM_STATE_ERROR. The terms are defined elsewhere and the intended meaning is clear, with no alternative reasonable interpretations or missing constraints.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T14:52:45.403934+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "45472056d4ff2db26e97c71a09bbebc56b58a920b45ca686e21f62d4fb2bbedd",
+  "lineage_ids": "lineage:0dbdbeaf1309e1912803a8fd",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 460,
+    "load_duration": 4876800,
+    "prompt_eval_count": 601,
+    "total_duration": 4093793100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that if a MAX_STREAM_DATA frame is received for a stream that the local endpoint has not yet created, it must be treated as a STREAM_STATE_ERROR. The terms are defined elsewhere and the intended meaning is clear, with no alternative reasonable interpretations or missing constraints.\"\n}",
+  "record_id": "3382e386a2afd119fb6c53319e185dfc15d108ab0f064148aec56e62c8ef3e25",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "19.10",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 4.093
+}

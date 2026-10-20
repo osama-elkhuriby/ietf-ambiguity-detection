@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY change the request method from POST to GET",
+    "interpretation_a": "A user agent is permitted to change a POST request to a GET request after receiving a 301 redirect.",
+    "interpretation_b": "A user agent is not required to change a POST request to a GET request after receiving a 301 redirect; it can preserve the original method.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' introduces discretion, but without further constraints, it's unclear whether the user agent is expected to change the method in any circumstance, or if it's purely optional.",
+    "missing_information": "The clause does not specify under what conditions, if any, a user agent *should* change the method. It only states that it *may* do so, leaving open the possibility of either behavior."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:37:53.909756+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "96a245754498d5d6f123a1e3ef7e3d13dcc3e1dc00697539a28d0f157f228121",
+  "lineage_ids": "lineage:427c5aa60b6d6fd57511eae8",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 196,
+    "load_duration": 14946400,
+    "prompt_eval_count": 582,
+    "total_duration": 7623621400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY change the request method from POST to GET\", \"interpretation_a\": \"A user agent is permitted to change a POST request to a GET request after receiving a 301 redirect.\", \"interpretation_b\": \"A user agent is not required to change a POST request to a GET request after receiving a 301 redirect; it can preserve the original method.\", \"missing_information\": \"The clause does not specify under what conditions, if any, a user agent *should* change the method. It only states that it *may* do so, leaving open the possibility of either behavior.\",\"justification\": \"The use of 'MAY' introduces discretion, but without further constraints, it's unclear whether the user agent is expected to change the method in any circumstance, or if it's purely optional.\"}",
+  "record_id": "f85e3036b188c78e3745eee410dac165c3345cfc09a7fb2b3963c4831797c2e5",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "15.4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.641
+}

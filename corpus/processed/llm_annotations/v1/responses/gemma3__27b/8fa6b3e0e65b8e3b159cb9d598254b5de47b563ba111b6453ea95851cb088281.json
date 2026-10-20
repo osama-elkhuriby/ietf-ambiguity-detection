@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "kTimeReorderingFraction (RECOMMENDED 1/8)",
+    "interpretation_a": "The maximum reordering time is 1/8 of an RTT.",
+    "interpretation_b": "The maximum reordering time is 1/8 of *some* RTT, but the specific RTT is not defined (e.g., smoothed RTT, min RTT).",
+    "is_ambiguous": "yes",
+    "justification": "The clause states a fraction of an RTT, but does not specify *which* RTT to use. Different RTT measurements will result in different reordering time thresholds.",
+    "missing_information": "The RTT used to calculate the reordering time is not specified. This affects the actual time duration allowed for reordering before loss detection."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:24:20.762482+00:00",
+  "document_id": "draft-ietf-quic-recovery-14",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "0e1de68d50378d068ae870a241501f439d60417be3b6699e8373e3589d00dc9f",
+  "lineage_ids": "lineage:5e5656a92e109acee0c12d9a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 182,
+    "load_duration": 5347000,
+    "prompt_eval_count": 576,
+    "total_duration": 6870137800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"kTimeReorderingFraction (RECOMMENDED 1/8)\", \"interpretation_a\": \"The maximum reordering time is 1/8 of an RTT.\", \"interpretation_b\": \"The maximum reordering time is 1/8 of *some* RTT, but the specific RTT is not defined (e.g., smoothed RTT, min RTT).\", \"missing_information\": \"The RTT used to calculate the reordering time is not specified. This affects the actual time duration allowed for reordering before loss detection.\", \"justification\": \"The clause states a fraction of an RTT, but does not specify *which* RTT to use. Different RTT measurements will result in different reordering time thresholds.\"}",
+  "record_id": "8fa6b3e0e65b8e3b159cb9d598254b5de47b563ba111b6453ea95851cb088281",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "4.5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.891
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST send subsequent packets to the new peer address and MUST initiate path validation",
+    "interpretation_a": "Send subsequent packets immediately after migration while concurrently initiating path validation.",
+    "interpretation_b": "Wait until path validation completes before sending subsequent packets.",
+    "is_ambiguous": "yes",
+    "justification": "The clause requires both actions but does not specify the order, allowing implementations to either send packets before or after path validation completes. This missing constraint results in an ambiguous interpretation.",
+    "missing_information": "Whether path validation must complete before sending subsequent packets is not specified in the clause, creating an incomplete constraint on the order of operations. This omission allows two materially different implementation behaviours. No additional context is required to identify the ambiguity.  "
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T16:23:54.865203+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "eaf0493f9b5db23a06d3a157c4881205f0708f41e4abf0fa1c6cca79b0420487",
+  "lineage_ids": "lineage:2ddbf6894bd7ef69b33ab347",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2537,
+    "load_duration": 6985000,
+    "prompt_eval_count": 613,
+    "total_duration": 22294853900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"MUST send subsequent packets to the new peer address and MUST initiate path validation\",\n  \"interpretation_a\": \"Send subsequent packets immediately after migration while concurrently initiating path validation.\",\n  \"interpretation_b\": \"Wait until path validation completes before sending subsequent packets.\",\n  \"missing_information\": \"Whether path validation must complete before sending subsequent packets is not specified in the clause, creating an incomplete constraint on the order of operations. This omission allows two materially different implementation behaviours. No additional context is required to identify the ambiguity.  \",\n  \"justification\": \"The clause requires both actions but does not specify the order, allowing implementations to either send packets before or after path validation completes. This missing constraint results in an ambiguous interpretation.\"\n}",
+  "record_id": "762882395997bab3c0eded5de4065fefff0c9f9cb84b5fdb4a74379e2a16a8e7",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 22.297
+}

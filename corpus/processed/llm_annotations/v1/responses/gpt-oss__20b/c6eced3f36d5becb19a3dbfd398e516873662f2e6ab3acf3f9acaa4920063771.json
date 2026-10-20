@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "state necessary to send a frame on the connection",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause uses the phrase \"state necessary to send a frame on the connection\" without defining it.  This omission creates an incomplete constraint that could lead to materially different implementation behaviours, satisfying the criteria for ambiguity.",
+    "missing_information": "definition of the phrase 'state necessary to send a frame' is not provided in the supplied text, leaving the exact scope of the restriction unclear. This missing constraint could lead to different implementation behaviours depending on how the phrase is interpreted.  The clause does not specify whether the endpoint must be able to send any frame, a specific type of frame, or whether the state refers to a particular connection state machine.  Without that definition, the clause is under‑specified.  The missing definition is a concrete constraint that changes implementation behaviour.  Therefore the clause is ambiguous.  (The evidence span is the exact substring from the target clause.)  "
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T18:20:10.649164+00:00",
+  "document_id": "draft-ietf-quic-transport-04",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "c72403b80d08f1e73cd48b4b7d8d28e4892d1b7f31534e0db4aed73638959724",
+  "lineage_ids": "lineage:bd54c89a593bf12bfcbc62f6",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2288,
+    "load_duration": 5543900,
+    "prompt_eval_count": 562,
+    "total_duration": 20130128200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"state necessary to send a frame on the connection\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"definition of the phrase 'state necessary to send a frame' is not provided in the supplied text, leaving the exact scope of the restriction unclear. This missing constraint could lead to different implementation behaviours depending on how the phrase is interpreted.  The clause does not specify whether the endpoint must be able to send any frame, a specific type of frame, or whether the state refers to a particular connection state machine.  Without that definition, the clause is under‑specified.  The missing definition is a concrete constraint that changes implementation behaviour.  Therefore the clause is ambiguous.  (The evidence span is the exact substring from the target clause.)  \",\n  \"justification\": \"The clause uses the phrase \\\"state necessary to send a frame on the connection\\\" without defining it.  This omission creates an incomplete constraint that could lead to materially different implementation behaviours, satisfying the criteria for ambiguity.\"\n}",
+  "record_id": "c6eced3f36d5becb19a3dbfd398e516873662f2e6ab3acf3f9acaa4920063771",
+  "revision": "04",
+  "schema_version": 1,
+  "section_ids": "12",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 20.141
+}

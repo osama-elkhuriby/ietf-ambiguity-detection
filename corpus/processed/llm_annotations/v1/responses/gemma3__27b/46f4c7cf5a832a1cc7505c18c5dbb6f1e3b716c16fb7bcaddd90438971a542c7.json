@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST define a mechanism",
+    "interpretation_a": "Implementations MUST include a specific, pre-defined mechanism to prevent version downgrade attacks.",
+    "interpretation_b": "Implementations MUST define *some* mechanism, but are free to choose the specific approach, as long as it addresses version downgrade attacks.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states a requirement to 'define a mechanism' but does not specify *how* robust that mechanism must be, or what constitutes sufficient robustness. This allows for materially different implementations that could be considered compliant but offer varying levels of protection.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:19:34.398548+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "5d113e91391e042e735a7c163649e43a2e9e1e93ea465b62f858f7694b397453",
+  "lineage_ids": "lineage:e4a431c51b63437497e414be",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 148,
+    "load_duration": 4828500,
+    "prompt_eval_count": 550,
+    "total_duration": 5659447400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST define a mechanism\", \"interpretation_a\": \"Implementations MUST include a specific, pre-defined mechanism to prevent version downgrade attacks.\", \"interpretation_b\": \"Implementations MUST define *some* mechanism, but are free to choose the specific approach, as long as it addresses version downgrade attacks.\", \"missing_information\": \"\", \"justification\": \"The clause states a requirement to 'define a mechanism' but does not specify *how* robust that mechanism must be, or what constitutes sufficient robustness. This allows for materially different implementations that could be considered compliant but offer varying levels of protection.\"}",
+  "record_id": "46f4c7cf5a832a1cc7505c18c5dbb6f1e3b716c16fb7bcaddd90438971a542c7",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "21.12",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.672
+}

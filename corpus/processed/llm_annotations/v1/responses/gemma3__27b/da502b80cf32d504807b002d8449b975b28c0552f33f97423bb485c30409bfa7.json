@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "sensitive data",
+    "interpretation_a": "The clause could be interpreted as prohibiting any data that *could potentially* be considered sensitive, even if the risk of disclosure is low.",
+    "interpretation_b": "Alternatively, it could be interpreted as prohibiting only data that is *clearly and obviously* sensitive, with a high risk of disclosure. The definition of 'sensitive data' is not provided.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'sensitive data' is not defined within the document, leaving room for interpretation. What constitutes 'sensitive data' is subjective and could vary depending on the context and implementation. This lack of a concrete definition creates ambiguity.",
+    "missing_information": "A definition of 'sensitive data' is needed to clarify the scope of this requirement."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:30:50.728850+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "c4a7e79f6657aafcc46bc24a4269097202d73b06efc28cc3e9599a32c718073d",
+  "lineage_ids": "lineage:539a2628e541405647c185e6",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 181,
+    "load_duration": 12356200,
+    "prompt_eval_count": 597,
+    "total_duration": 7398257200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"sensitive data\", \"interpretation_a\": \"The clause could be interpreted as prohibiting any data that *could potentially* be considered sensitive, even if the risk of disclosure is low.\", \"interpretation_b\": \"Alternatively, it could be interpreted as prohibiting only data that is *clearly and obviously* sensitive, with a high risk of disclosure. The definition of 'sensitive data' is not provided.\", \"missing_information\": \"A definition of 'sensitive data' is needed to clarify the scope of this requirement.\", \"justification\": \"The term 'sensitive data' is not defined within the document, leaving room for interpretation. What constitutes 'sensitive data' is subjective and could vary depending on the context and implementation. This lack of a concrete definition creates ambiguity.\"}",
+  "record_id": "da502b80cf32d504807b002d8449b975b28c0552f33f97423bb485c30409bfa7",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "9.3.8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.422
+}

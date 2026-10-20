@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY send MAX_STREAM_DATA or STOP_SENDING",
+    "interpretation_a": "An endpoint is permitted to send either MAX_STREAM_DATA or STOP_SENDING, but not necessarily both.",
+    "interpretation_b": "An endpoint is permitted to send both MAX_STREAM_DATA and STOP_SENDING, or neither.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' with a disjunction ('or') creates ambiguity. It's unclear if the endpoint can choose to send either one, or both, or neither. Without further clarification, implementations could reasonably differ.",
+    "missing_information": "It is unclear whether the MAY applies to each of MAX_STREAM_DATA and STOP_SENDING individually, or to the combination of them. A missing constraint would clarify whether sending one or both is permitted."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:01:29.668189+00:00",
+  "document_id": "draft-ietf-quic-transport-10",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "c623109ad588718d6f8645666ab5390bb7988ff2de23353f5a0e9d30e78f43e3",
+  "lineage_ids": "lineage:3de887dfe8e83cf6f4f4b7b7",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 196,
+    "load_duration": 1518800,
+    "prompt_eval_count": 566,
+    "total_duration": 7386864800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY send MAX_STREAM_DATA or STOP_SENDING\", \"interpretation_a\": \"An endpoint is permitted to send either MAX_STREAM_DATA or STOP_SENDING, but not necessarily both.\", \"interpretation_b\": \"An endpoint is permitted to send both MAX_STREAM_DATA and STOP_SENDING, or neither.\", \"missing_information\": \"It is unclear whether the MAY applies to each of MAX_STREAM_DATA and STOP_SENDING individually, or to the combination of them. A missing constraint would clarify whether sending one or both is permitted.\", \"justification\": \"The use of 'MAY' with a disjunction ('or') creates ambiguity. It's unclear if the endpoint can choose to send either one, or both, or neither. Without further clarification, implementations could reasonably differ.\"}",
+  "record_id": "c714981f85d525a75aff994219936ea662753e61902112246d3d0c6a9183e0c5",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "10.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.391
+}

@@ -1,0 +1,113 @@
+{
+  "accuracy_warning": "Accuracy is secondary because labels are strongly imbalanced.",
+  "all_no_accuracy_baseline": 0.9411764705882353,
+  "classification_contract": "the model's generated yes/no label",
+  "development_train_sha256": "3e03bd2b1c90530a51a1804c6104c402e4560f1e9dc5a7ef06c96eb50865be18",
+  "dns_opened": false,
+  "evaluation_mode": "qwen3_32b_zero_and_few_shot_no_parameter_updates",
+  "human_annotation_involved": true,
+  "independent_human_verification": false,
+  "model": {
+    "digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+    "name": "qwen3:32b",
+    "parameter_size": "32.8B",
+    "provider": "ollama",
+    "quantization": "Q4_K_M"
+  },
+  "pooled_metrics": [
+    {
+      "accuracy": 0.3776844070961718,
+      "balanced_accuracy": 0.5987103174603174,
+      "condition": "zero_shot",
+      "f1": 0.1383322559793148,
+      "f2": 0.2779220779220779,
+      "fn": 19,
+      "fp": 1314,
+      "mean_fold_pr_auc": 0.18690865194350947,
+      "pooled_pr_auc": 0.15132332450027605,
+      "positives": 126,
+      "precision": 0.0752990851513019,
+      "prevalence": 0.058823529411764705,
+      "recall": 0.8492063492063492,
+      "rows": 2142,
+      "shots": 0,
+      "tn": 702,
+      "tp": 107
+    },
+    {
+      "accuracy": 0.5312791783380019,
+      "balanced_accuracy": 0.654265873015873,
+      "condition": "4_shot",
+      "f1": 0.16611295681063123,
+      "f2": 0.31605562579013907,
+      "fn": 26,
+      "fp": 978,
+      "mean_fold_pr_auc": 0.19803112569141995,
+      "pooled_pr_auc": 0.17715787134976602,
+      "positives": 126,
+      "precision": 0.09276437847866419,
+      "prevalence": 0.058823529411764705,
+      "recall": 0.7936507936507936,
+      "rows": 2142,
+      "shots": 4,
+      "tn": 1038,
+      "tp": 100
+    },
+    {
+      "accuracy": 0.5662931839402428,
+      "balanced_accuracy": 0.6654265873015873,
+      "condition": "8_shot",
+      "f1": 0.17422222222222222,
+      "f2": 0.3260146373918829,
+      "fn": 28,
+      "fp": 901,
+      "mean_fold_pr_auc": 0.20715102540602248,
+      "pooled_pr_auc": 0.19597216751538438,
+      "positives": 126,
+      "precision": 0.0980980980980981,
+      "prevalence": 0.058823529411764705,
+      "recall": 0.7777777777777778,
+      "rows": 2142,
+      "shots": 8,
+      "tn": 1115,
+      "tp": 98
+    }
+  ],
+  "primary_metric": "mean fold PR-AUC",
+  "schema_version": 1,
+  "score_contract": "P(yes)/(P(yes)+P(no)) from Ollama native top-token logprobs",
+  "selection": {
+    "comparisons": [
+      {
+        "condition": "zero_shot",
+        "gap_from_top": 0.020242373462513008,
+        "mean_fold_pr_auc": 0.18690865194350947,
+        "paired_fold_standard_error": 0.01753785020194824,
+        "shots": 0,
+        "within_one_standard_error": false
+      },
+      {
+        "condition": "4_shot",
+        "gap_from_top": 0.00911989971460253,
+        "mean_fold_pr_auc": 0.19803112569141995,
+        "paired_fold_standard_error": 0.010537984412125827,
+        "shots": 4,
+        "within_one_standard_error": true
+      },
+      {
+        "condition": "8_shot",
+        "gap_from_top": 0.0,
+        "mean_fold_pr_auc": 0.20715102540602248,
+        "paired_fold_standard_error": 0.0,
+        "shots": 8,
+        "within_one_standard_error": true
+      }
+    ],
+    "rule": "highest mean fold PR-AUC; prefer fewer demonstrations among conditions within one paired-fold standard error of the top",
+    "selected_condition": "4_shot",
+    "selected_shots": 4,
+    "top_shots": 8
+  },
+  "source_annotation_sha256": "c20959acc2db8345c90ee06a71357aaac161b178b240495e516e4710405b2712",
+  "tcp_opened": false
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "either endpoint",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether both endpoints may send a CONNECTION_CLOSE frame in the same Handshake packet, leaving a concrete missing constraint that could lead to materially different implementation behaviours.",
+    "missing_information": "Whether both endpoints can send CONNECTION_CLOSE frames concurrently in a Handshake packet."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T12:23:06.292531+00:00",
+  "document_id": "draft-ietf-quic-tls-12",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "b9b44fa996811af2af1ad3c3ec9cfa137dde71f6051ce9c3b8930e0db65a30c5",
+  "lineage_ids": "lineage:5c21bc36ed1c7275dc754b23",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2323,
+    "load_duration": 4035700,
+    "prompt_eval_count": 551,
+    "total_duration": 20039521400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"either endpoint\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"Whether both endpoints can send CONNECTION_CLOSE frames concurrently in a Handshake packet.\",\n  \"justification\": \"The clause does not specify whether both endpoints may send a CONNECTION_CLOSE frame in the same Handshake packet, leaving a concrete missing constraint that could lead to materially different implementation behaviours.\"\n}",
+  "record_id": "27edbc10b46b0280a9a5c7be2ee5faf9f22f835308511a0cbccc0d303bc0b2dd",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "8.1.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 20.047
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY carry new data if available or unacknowledged data",
+    "interpretation_a": "The RTO packet *may* include new data, even if there's unacknowledged data already buffered.",
+    "interpretation_b": "The RTO packet *may* include unacknowledged data, even if new data is also available.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'or' creates ambiguity. It's unclear if the packet can carry both new and unacknowledged data, or only one or the other. This affects implementation choices regarding packet construction during recovery.",
+    "missing_information": "It is unclear whether the 'or' is inclusive or exclusive. Does 'MAY' apply to both conditions independently, or does it mean the packet can carry *either* new data *or* unacknowledged data, but not both?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:32:06.382451+00:00",
+  "document_id": "draft-ietf-quic-recovery-13",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "2c7683d58c129d3f5a202150130f5c75fab472fcf6f21b5968f285b82c23bc3f",
+  "lineage_ids": "lineage:d377fb155a96394512def7a0",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 198,
+    "load_duration": 2508600,
+    "prompt_eval_count": 600,
+    "total_duration": 7482744900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY carry new data if available or unacknowledged data\", \"interpretation_a\": \"The RTO packet *may* include new data, even if there's unacknowledged data already buffered.\", \"interpretation_b\": \"The RTO packet *may* include unacknowledged data, even if new data is also available.\", \"missing_information\": \"It is unclear whether the 'or' is inclusive or exclusive. Does 'MAY' apply to both conditions independently, or does it mean the packet can carry *either* new data *or* unacknowledged data, but not both?\",\"justification\": \"The use of 'or' creates ambiguity. It's unclear if the packet can carry both new and unacknowledged data, or only one or the other. This affects implementation choices regarding packet construction during recovery.\"}",
+  "record_id": "e5ef2004c0cb461f38a8a95275feaf246837ad06250f542c3137816dcb0bd777",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "3.3.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.484
+}

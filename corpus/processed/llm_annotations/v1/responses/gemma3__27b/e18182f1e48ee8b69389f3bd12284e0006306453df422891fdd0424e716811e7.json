@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "valid choice",
+    "interpretation_a": "The promised stream identifier must be the next available stream ID according to the rules in [StreamIdentifiers].",
+    "interpretation_b": "The promised stream identifier can be any valid, but not necessarily the very next, stream ID according to the rules in [StreamIdentifiers], as long as it's a permissible choice.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'valid choice' is vague. It doesn't specify whether the promised stream ID must be the *next* available stream ID, or simply *a* valid stream ID that could be used next. This allows for multiple reasonable implementations.",
+    "missing_information": "The phrase 'valid choice' is not sufficiently constrained. Does it mean the *only* valid choice, or one of several valid choices? The definition of 'new stream identifier' in [StreamIdentifiers] is needed to clarify this."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:50:19.934209+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "64d0942caf0217831943e7b06caad5df7298e288ffe7abea955c687f2208bf1e",
+  "lineage_ids": "lineage:6c464f31af632f1a8658ad62",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 209,
+    "load_duration": 20050200,
+    "prompt_eval_count": 587,
+    "total_duration": 8083899000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"valid choice\", \"interpretation_a\": \"The promised stream identifier must be the next available stream ID according to the rules in [StreamIdentifiers].\", \"interpretation_b\": \"The promised stream identifier can be any valid, but not necessarily the very next, stream ID according to the rules in [StreamIdentifiers], as long as it's a permissible choice.\", \"missing_information\": \"The phrase 'valid choice' is not sufficiently constrained. Does it mean the *only* valid choice, or one of several valid choices? The definition of 'new stream identifier' in [StreamIdentifiers] is needed to clarify this.\", \"justification\": \"The term 'valid choice' is vague. It doesn't specify whether the promised stream ID must be the *next* available stream ID, or simply *a* valid stream ID that could be used next. This allows for multiple reasonable implementations.\"}",
+  "record_id": "e18182f1e48ee8b69389f3bd12284e0006306453df422891fdd0424e716811e7",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.094
+}

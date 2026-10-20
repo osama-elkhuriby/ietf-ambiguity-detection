@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "An endpoint MAY skip validation of a peer address if that address has been seen recently.",
+    "interpretation_a": "The endpoint can skip validation if the peer address was recently used in any communication, regardless of whether it was validated in the past.",
+    "interpretation_b": "The endpoint can skip validation only if the peer address was recently validated in a prior connection or session.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'has been seen recently' is not defined in the clause, leaving the time window or conditions for 'recently' unspecified. This missing constraint could lead to different implementations applying different thresholds for when an address is considered 'recently seen', which affects whether validation is skipped and how secure and performant the system is.",
+    "missing_information": "The clause does not define what 'recently' means or under what conditions an address is considered 'seen recently'. This missing constraint could lead to different implementations applying different thresholds for 'recently', affecting how address validation is skipped and potentially impacting security and performance."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:55:22.769431+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "af150e45c4a5f39bbc6243c5c2868c24c135e66592d591e160dbb734775bc4e8",
+  "lineage_ids": "lineage:9afe7aeb9e75d774f5c34e0d",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 239,
+    "load_duration": 4349600,
+    "prompt_eval_count": 570,
+    "total_duration": 9770647400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"An endpoint MAY skip validation of a peer address if that address has been seen recently.\",\n  \"interpretation_a\": \"The endpoint can skip validation if the peer address was recently used in any communication, regardless of whether it was validated in the past.\",\n  \"interpretation_b\": \"The endpoint can skip validation only if the peer address was recently validated in a prior connection or session.\",\n  \"missing_information\": \"The clause does not define what 'recently' means or under what conditions an address is considered 'seen recently'. This missing constraint could lead to different implementations applying different thresholds for 'recently', affecting how address validation is skipped and potentially impacting security and performance.\",\n  \"justification\": \"The phrase 'has been seen recently' is not defined in the clause, leaving the time window or conditions for 'recently' unspecified. This missing constraint could lead to different implementations applying different thresholds for when an address is considered 'recently seen', which affects whether validation is skipped and how secure and performant the system is.\"\n}",
+  "record_id": "ff63f21e06e61862b47dab1f5ed3c9454fbbbfa623c97910901c26ff4a6e28c6",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.781
+}

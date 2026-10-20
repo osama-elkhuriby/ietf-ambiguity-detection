@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "the same verification process it would do before sending a request",
+    "interpretation_a": "The client performs the full connection validation process as if it were initiating a new request, including certificate verification and any other pre-request checks.",
+    "interpretation_b": "The client performs a lighter-weight check, perhaps only verifying that the origin is in a trusted list or that the connection is still alive, without repeating the full validation process.",
+    "is_ambiguous": "yes",
+    "justification": "The target clause refers to 'the same verification process' without defining what that process entails. This allows for different interpretations of the level of verification required, creating ambiguity.",
+    "missing_information": "The phrase 'the same verification process' is incomplete. It does not specify *which* verification process, leaving room for different implementations. Is it the full process, or a subset?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:14:44.678120+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "d546a931b865c5b4b2741fc46786da6b54808ecdb27aa35155549f9e74277d49",
+  "lineage_ids": "lineage:059971b24dabb590b14f2640",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 196,
+    "load_duration": 8863100,
+    "prompt_eval_count": 593,
+    "total_duration": 7562410000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"the same verification process it would do before sending a request\", \"interpretation_a\": \"The client performs the full connection validation process as if it were initiating a new request, including certificate verification and any other pre-request checks.\", \"interpretation_b\": \"The client performs a lighter-weight check, perhaps only verifying that the origin is in a trusted list or that the connection is still alive, without repeating the full validation process.\", \"missing_information\": \"The phrase 'the same verification process' is incomplete. It does not specify *which* verification process, leaving room for different implementations. Is it the full process, or a subset?\",\"justification\": \"The target clause refers to 'the same verification process' without defining what that process entails. This allows for different interpretations of the level of verification required, creating ambiguity.\"}",
+  "record_id": "f21e9963b7fcff8a1e3cbff374c334c43371d92a19c36806b212b38f0c47a806",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.578
+}

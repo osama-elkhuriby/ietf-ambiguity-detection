@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "retain knowledge of the request",
+    "interpretation_a": "The client must store the entire original request message in memory for the duration of response processing.",
+    "interpretation_b": "The client must retain sufficient information about the request (e.g., method, URI, headers) to correctly interpret the response, without necessarily storing the entire request message.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"retain knowledge of the request\" is incomplete. It does not specify *what* knowledge must be retained. This allows for materially different implementations: a client could store the entire request, or only relevant parts of it.",
+    "missing_information": "The degree of 'knowledge' that must be retained is not specified. Does it require full preservation of the request message, or just key attributes?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:12:05.754314+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "99f7d9b7999f2f02ca36f45b7e24e75a2cd6064a957751c0030b17ee4d71c90a",
+  "lineage_ids": "lineage:5bd7228b66af54d4bbbcb2aa",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 184,
+    "load_duration": 9511000,
+    "prompt_eval_count": 619,
+    "total_duration": 7160346000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"retain knowledge of the request\", \"interpretation_a\": \"The client must store the entire original request message in memory for the duration of response processing.\", \"interpretation_b\": \"The client must retain sufficient information about the request (e.g., method, URI, headers) to correctly interpret the response, without necessarily storing the entire request message.\", \"missing_information\": \"The degree of 'knowledge' that must be retained is not specified. Does it require full preservation of the request message, or just key attributes?\",\"justification\": \"The phrase \\\"retain knowledge of the request\\\" is incomplete. It does not specify *what* knowledge must be retained. This allows for materially different implementations: a client could store the entire request, or only relevant parts of it.\"}",
+  "record_id": "6dbc09bd4b2866cae3952f921099aa0845d50a7f8ddeb088d1d43f3ffbb96bdd",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.156
+}

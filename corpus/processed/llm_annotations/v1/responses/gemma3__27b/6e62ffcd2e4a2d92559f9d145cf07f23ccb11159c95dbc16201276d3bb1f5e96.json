@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "the host is a literal IP address",
+    "interpretation_a": "If the host is a IPv4-mapped IPv6 address (e.g., ::ffff:192.0.2.1), it is treated as a literal IP address and results in an IP-ID.",
+    "interpretation_b": "If the host is a IPv4-mapped IPv6 address, it is treated as a name and results in a DNS-ID.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not define what constitutes a 'literal IP address'. This leaves open the question of how IPv4-mapped IPv6 addresses should be handled, leading to different implementations.",
+    "missing_information": "The definition of 'literal IP address' is incomplete. It does not specify whether IPv4-mapped IPv6 addresses are considered literal IP addresses or names."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:12:17.043083+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "ba76787f61f027e73172a59ed39865f5d335895f1070edb44e2ee8c5e59045f9",
+  "lineage_ids": "lineage:f5be8dda87e7aef825c20b8f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 200,
+    "load_duration": 8747200,
+    "prompt_eval_count": 607,
+    "total_duration": 7699925500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"the host is a literal IP address\", \"interpretation_a\": \"If the host is a IPv4-mapped IPv6 address (e.g., ::ffff:192.0.2.1), it is treated as a literal IP address and results in an IP-ID.\", \"interpretation_b\": \"If the host is a IPv4-mapped IPv6 address, it is treated as a name and results in a DNS-ID.\", \"missing_information\": \"The definition of 'literal IP address' is incomplete. It does not specify whether IPv4-mapped IPv6 addresses are considered literal IP addresses or names.\", \"justification\": \"The clause does not define what constitutes a 'literal IP address'. This leaves open the question of how IPv4-mapped IPv6 addresses should be handled, leading to different implementations.\"}",
+  "record_id": "6e62ffcd2e4a2d92559f9d145cf07f23ccb11159c95dbc16201276d3bb1f5e96",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "4.3.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.703
+}

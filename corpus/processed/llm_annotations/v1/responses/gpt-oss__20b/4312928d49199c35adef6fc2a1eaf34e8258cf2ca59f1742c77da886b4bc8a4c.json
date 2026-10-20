@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "I-2",
+    "evidence_span": "Within a SVCB RRSet, all RRs SHOULD have the same Mode.",
+    "interpretation_a": "The clause is taken to mean that every RR in an SVCB RRSet must use the same Mode, so an RRSet cannot contain both AliasMode and ServiceMode records.",
+    "interpretation_b": "The clause is interpreted as a recommendation that RRs should share the same Mode, but the following clause allows an RRSet to contain both AliasMode and ServiceMode records, effectively overriding the recommendation.",
+    "is_ambiguous": "yes",
+    "justification": "The target clause conflicts with the next clause, which explicitly permits an RRSet to contain records in both AliasMode and ServiceMode. This indirect inconsistency creates two materially different implementation interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T02:37:32.466406+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "30c2b84583c66607d3c35b1eadcdda463ede2acc9f0624949d3164c71166b3bb",
+  "lineage_ids": "lineage:93001be8ee4a0478c52bfae7",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 432,
+    "load_duration": 7412200,
+    "prompt_eval_count": 717,
+    "total_duration": 3867971600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"I-2\",\n  \"evidence_span\": \"Within a SVCB RRSet, all RRs SHOULD have the same Mode.\",\n  \"interpretation_a\": \"The clause is taken to mean that every RR in an SVCB RRSet must use the same Mode, so an RRSet cannot contain both AliasMode and ServiceMode records.\",\n  \"interpretation_b\": \"The clause is interpreted as a recommendation that RRs should share the same Mode, but the following clause allows an RRSet to contain both AliasMode and ServiceMode records, effectively overriding the recommendation.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause conflicts with the next clause, which explicitly permits an RRSet to contain records in both AliasMode and ServiceMode. This indirect inconsistency creates two materially different implementation interpretations.\"\n}",
+  "record_id": "4312928d49199c35adef6fc2a1eaf34e8258cf2ca59f1742c77da886b4bc8a4c",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "2.4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 20.437
+}

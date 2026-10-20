@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "resends all packets",
+    "interpretation_a": "The client resends *all* packets received from the server, including the Version Negotiation packet itself.",
+    "interpretation_b": "The client resends only the packets it intended to send to the server, but which were not yet acknowledged, using the newly negotiated version.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'resends all packets' is open to interpretation. Does it mean resending the Version Negotiation packet itself, or only the client's application data packets? The lack of clarity creates ambiguity in implementation.",
+    "missing_information": "It is unclear whether 'all packets' refers to all packets ever sent/received, or only those in transit."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:56:35.957039+00:00",
+  "document_id": "draft-ietf-quic-transport-01",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "9b5177b2da758fbe6aff5906679697c59de4d859d8ab8c6ba575664ee3d3294c",
+  "lineage_ids": "lineage:7fe40edec2d6c7f74f7c9d63",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 171,
+    "load_duration": 5062900,
+    "prompt_eval_count": 577,
+    "total_duration": 6527572000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"resends all packets\", \"interpretation_a\": \"The client resends *all* packets received from the server, including the Version Negotiation packet itself.\", \"interpretation_b\": \"The client resends only the packets it intended to send to the server, but which were not yet acknowledged, using the newly negotiated version.\", \"missing_information\": \"It is unclear whether 'all packets' refers to all packets ever sent/received, or only those in transit.\", \"justification\": \"The phrase 'resends all packets' is open to interpretation. Does it mean resending the Version Negotiation packet itself, or only the client's application data packets? The lack of clarity creates ambiguity in implementation.\"}",
+  "record_id": "b76233fd9241dfde7fbbf66afd492b4692ca86485d9179087a5566a60d24c416",
+  "revision": "01",
+  "schema_version": 1,
+  "section_ids": "6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.516
+}

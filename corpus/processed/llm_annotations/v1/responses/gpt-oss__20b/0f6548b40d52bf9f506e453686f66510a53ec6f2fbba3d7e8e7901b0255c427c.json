@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "ensure that their connection attempts are consistent with both the Alt-Svc parameters and any received HTTPS SvcParams.",
+    "interpretation_a": "The client must satisfy all constraints from both the Alt‑Svc parameters and the HTTPS SvcParams simultaneously; if any constraint conflicts, the client must either fail the connection or arbitrarily choose one set of constraints.",
+    "interpretation_b": "The client must satisfy each set of parameters individually, but if a conflict arises, the client may prioritize one set over the other or select the most restrictive set, effectively allowing a choice between the two.",
+    "is_ambiguous": "yes",
+    "justification": "The clause requires consistency with both sets of parameters but provides no guidance on conflict resolution, leaving the implementation behavior under‑specified.",
+    "missing_information": "The clause does not specify how to resolve conflicts between Alt‑Svc parameters and HTTPS SvcParams, nor does it define what constitutes 'consistency' when the two sets of parameters are incompatible."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:26:14.900376+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "f4761524909115c6ac2e547553fcd287d4d254ea2f1b4b294e312b01974606f5",
+  "lineage_ids": "lineage:eedea74da6f41b058ec2ce70",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1405,
+    "load_duration": 5586600,
+    "prompt_eval_count": 614,
+    "total_duration": 12149899400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"ensure that their connection attempts are consistent with both the Alt-Svc parameters and any received HTTPS SvcParams.\",\n  \"interpretation_a\": \"The client must satisfy all constraints from both the Alt‑Svc parameters and the HTTPS SvcParams simultaneously; if any constraint conflicts, the client must either fail the connection or arbitrarily choose one set of constraints.\",\n  \"interpretation_b\": \"The client must satisfy each set of parameters individually, but if a conflict arises, the client may prioritize one set over the other or select the most restrictive set, effectively allowing a choice between the two.\",\n  \"missing_information\": \"The clause does not specify how to resolve conflicts between Alt‑Svc parameters and HTTPS SvcParams, nor does it define what constitutes 'consistency' when the two sets of parameters are incompatible.\",\n  \"justification\": \"The clause requires consistency with both sets of parameters but provides no guidance on conflict resolution, leaving the implementation behavior under‑specified.\"\n}",
+  "record_id": "0f6548b40d52bf9f506e453686f66510a53ec6f2fbba3d7e8e7901b0255c427c",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "9.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 12.156
+}

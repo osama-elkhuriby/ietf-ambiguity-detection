@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "description of the stream type, including the layout semantics of the stream contents",
+    "interpretation_a": "The description must include both the stream type (e.g., Client, Server) *and* the layout semantics of the stream contents.",
+    "interpretation_b": "The description must include either the stream type *or* the layout semantics of the stream contents; the use of 'including' does not necessarily imply both are required.",
+    "is_ambiguous": "yes",
+    "justification": "The word 'including' is ambiguous. It could mean 'and' (both stream type and layout semantics are required) or 'such as' (stream type is an example, and layout semantics are also relevant, but not necessarily both are required).",
+    "missing_information": "It is unclear whether 'including' is used in the inclusive or exclusive sense. A clearer phrasing would be 'and the layout semantics' to indicate both are required."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:58:09.891563+00:00",
+  "document_id": "draft-ietf-quic-http-29",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "9cf80c5c9f31ca653d186f4e905c3ddfa2029effa0fdebd3943731bac1f1a61f",
+  "lineage_ids": "lineage:d2360ceca0a1d002f8b34b72",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 211,
+    "load_duration": 8953600,
+    "prompt_eval_count": 557,
+    "total_duration": 8067989100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"description of the stream type, including the layout semantics of the stream contents\", \"interpretation_a\": \"The description must include both the stream type (e.g., Client, Server) *and* the layout semantics of the stream contents.\", \"interpretation_b\": \"The description must include either the stream type *or* the layout semantics of the stream contents; the use of 'including' does not necessarily imply both are required.\", \"missing_information\": \"It is unclear whether 'including' is used in the inclusive or exclusive sense. A clearer phrasing would be 'and the layout semantics' to indicate both are required.\", \"justification\": \"The word 'including' is ambiguous. It could mean 'and' (both stream type and layout semantics are required) or 'such as' (stream type is an example, and layout semantics are also relevant, but not necessarily both are required).\"}",
+  "record_id": "8e6b2729915249151e2c9a6694c70ebfcd958b7e7bd0bb271b2b10a53f8ae48f",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "11.2.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.063
+}

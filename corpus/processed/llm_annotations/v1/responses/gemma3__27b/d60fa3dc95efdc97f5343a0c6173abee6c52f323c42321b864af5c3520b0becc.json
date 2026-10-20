@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "without leaking information about the value of the token",
+    "interpretation_a": "The comparison must be done in a way that prevents any information about the token's value from being revealed, such as using constant-time comparison.",
+    "interpretation_b": "The comparison must not reveal the token's value through any means, but the method of preventing leakage is not specified. This could include techniques beyond constant-time comparison, such as masking or encryption.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'without leaking information' is underspecified. It's reasonable to interpret it as requiring a specific technique (constant-time comparison) or a broader requirement to prevent any information leakage, allowing for multiple implementation approaches.",
+    "missing_information": "The clause does not specify *how* to prevent information leakage. While the next clause gives an example, it doesn't make that example a requirement. A concrete constraint on the comparison method is missing."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:06:39.886673+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "6e6a6b5b659d8c70de10aee5d6fcbb63733d2900ec5c182f6cd61d032547f557",
+  "lineage_ids": "lineage:92a7a169b7d239f8a7b2e680",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 219,
+    "load_duration": 4059000,
+    "prompt_eval_count": 591,
+    "total_duration": 8208770600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"without leaking information about the value of the token\", \"interpretation_a\": \"The comparison must be done in a way that prevents any information about the token's value from being revealed, such as using constant-time comparison.\", \"interpretation_b\": \"The comparison must not reveal the token's value through any means, but the method of preventing leakage is not specified. This could include techniques beyond constant-time comparison, such as masking or encryption.\", \"missing_information\": \"The clause does not specify *how* to prevent information leakage. While the next clause gives an example, it doesn't make that example a requirement. A concrete constraint on the comparison method is missing.\", \"justification\": \"The phrase 'without leaking information' is underspecified. It's reasonable to interpret it as requiring a specific technique (constant-time comparison) or a broader requirement to prevent any information leakage, allowing for multiple implementation approaches.\"}",
+  "record_id": "d60fa3dc95efdc97f5343a0c6173abee6c52f323c42321b864af5c3520b0becc",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "10.3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.203
+}

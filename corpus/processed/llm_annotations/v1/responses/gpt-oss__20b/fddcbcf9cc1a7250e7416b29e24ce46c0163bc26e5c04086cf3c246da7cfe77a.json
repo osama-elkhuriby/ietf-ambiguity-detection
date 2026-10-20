@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "If the packet number for sending reaches 2^62 - 1, the sender MUST close the connection without sending a CONNECTION_CLOSE frame or any further packets; an endpoint MAY send a Stateless Reset ([stateless-reset]) in response to further packets that it receives.",
+    "interpretation_a": "The packet with number 2^62 - 1 is sent, after which the sender closes the connection and sends no further packets.",
+    "interpretation_b": "The sender must close the connection before sending the packet with number 2^62 - 1, so that packet is never transmitted.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not explicitly state whether the packet number 2^62 - 1 is allowed to be sent, creating an incomplete constraint that affects implementation.",
+    "missing_information": "Whether the packet with number 2^62 - 1 can be transmitted or must be avoided before closing the connection is not specified, leading to two materially different implementation behaviours."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T19:37:20.358462+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "1a384b565e317111c9eebfd248d35b7f8dce26307306ca0699fa5f44b21a3d6d",
+  "lineage_ids": "lineage:c433f9eab113d10a31d70973",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 7437,
+    "load_duration": 4407300,
+    "prompt_eval_count": 624,
+    "total_duration": 64706339200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"If the packet number for sending reaches 2^62 - 1, the sender MUST close the connection without sending a CONNECTION_CLOSE frame or any further packets; an endpoint MAY send a Stateless Reset ([stateless-reset]) in response to further packets that it receives.\",\n  \"interpretation_a\": \"The packet with number 2^62 - 1 is sent, after which the sender closes the connection and sends no further packets.\",\n  \"interpretation_b\": \"The sender must close the connection before sending the packet with number 2^62 - 1, so that packet is never transmitted.\",\n  \"missing_information\": \"Whether the packet with number 2^62 - 1 can be transmitted or must be avoided before closing the connection is not specified, leading to two materially different implementation behaviours.\",\n  \"justification\": \"The clause does not explicitly state whether the packet number 2^62 - 1 is allowed to be sent, creating an incomplete constraint that affects implementation.\"\n}",
+  "record_id": "fddcbcf9cc1a7250e7416b29e24ce46c0163bc26e5c04086cf3c246da7cfe77a",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "12.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 64.703
+}

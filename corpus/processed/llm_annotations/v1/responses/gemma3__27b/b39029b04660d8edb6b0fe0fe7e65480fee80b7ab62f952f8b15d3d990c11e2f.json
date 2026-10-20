@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "some number",
+    "interpretation_a": "The endpoint abandons after sending 1 PATH_CHALLENGE frame.",
+    "interpretation_b": "The endpoint abandons after sending 100 PATH_CHALLENGE frames.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'some number' and 'some time' introduces ambiguity. A reasonable implementation could choose a very small number/time, while another could choose a much larger one, leading to different behaviours.",
+    "missing_information": "The number of PATH_CHALLENGE frames is not defined. Similarly, 'some time' is not defined."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:55:42.373296+00:00",
+  "document_id": "draft-ietf-quic-transport-15",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "7ec9dd6bc8d235ea197084ddfce0df546eec8cfdaba05cec12cab79decb15275",
+  "lineage_ids": "lineage:cf5266d14f1a21a2f9715aee",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 150,
+    "load_duration": 3977900,
+    "prompt_eval_count": 558,
+    "total_duration": 5755759300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"some number\", \"interpretation_a\": \"The endpoint abandons after sending 1 PATH_CHALLENGE frame.\", \"interpretation_b\": \"The endpoint abandons after sending 100 PATH_CHALLENGE frames.\", \"missing_information\": \"The number of PATH_CHALLENGE frames is not defined. Similarly, 'some time' is not defined.\",\"justification\": \"The use of 'some number' and 'some time' introduces ambiguity. A reasonable implementation could choose a very small number/time, while another could choose a much larger one, leading to different behaviours.\"}",
+  "record_id": "b39029b04660d8edb6b0fe0fe7e65480fee80b7ab62f952f8b15d3d990c11e2f",
+  "revision": "15",
+  "schema_version": 1,
+  "section_ids": "6.10.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.75
+}

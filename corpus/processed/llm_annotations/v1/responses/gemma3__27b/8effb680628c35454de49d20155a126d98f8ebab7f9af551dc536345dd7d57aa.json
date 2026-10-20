@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "an appropriate pseudonym",
+    "interpretation_a": "The intermediary could replace the host with a generic identifier like 'firewall'.",
+    "interpretation_b": "The intermediary could replace the host with a unique, but obfuscated, identifier that still allows some level of tracking or correlation.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'appropriate pseudonym' is subjective and lacks a concrete definition. Different implementations could reasonably interpret this phrase in different ways, leading to materially different behaviours. The level of obfuscation or information retained in the pseudonym is not specified.",
+    "missing_information": "The definition of 'appropriate pseudonym' is missing. What constitutes an appropriate pseudonym is not defined, leaving room for different implementations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:17:29.799501+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "297b037090d85e5dab6ef2134dbe05ef1b5ee4e3c7320f0563acc098683cbcc5",
+  "lineage_ids": "lineage:97c7846b7ee0151def7a2985",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 168,
+    "load_duration": 20406700,
+    "prompt_eval_count": 595,
+    "total_duration": 6597077700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"an appropriate pseudonym\", \"interpretation_a\": \"The intermediary could replace the host with a generic identifier like 'firewall'.\", \"interpretation_b\": \"The intermediary could replace the host with a unique, but obfuscated, identifier that still allows some level of tracking or correlation.\", \"missing_information\": \"The definition of 'appropriate pseudonym' is missing. What constitutes an appropriate pseudonym is not defined, leaving room for different implementations.\", \"justification\": \"The phrase 'appropriate pseudonym' is subjective and lacks a concrete definition. Different implementations could reasonably interpret this phrase in different ways, leading to materially different behaviours. The level of obfuscation or information retained in the pseudonym is not specified.\"}",
+  "record_id": "8effb680628c35454de49d20155a126d98f8ebab7f9af551dc536345dd7d57aa",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "7.6.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.609
+}

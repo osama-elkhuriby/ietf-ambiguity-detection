@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "discarded and an ACK sent back",
+    "interpretation_a": "Discarding the segment and sending an ACK implies a reset of some internal state related to the offending segment, potentially impacting retransmission timers or sequence number expectations.",
+    "interpretation_b": "Discarding the segment and sending an ACK could simply mean dropping the packet without any further action beyond the ACK, leaving the sender to potentially retransmit and handle the lack of progress.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'discarded and an ACK sent back' is incomplete. It doesn't specify the *type* of ACK to be sent. A standard ACK might indicate the receiver is still alive and expects further data, while a RST segment signals a complete refusal of the connection. This missing detail creates ambiguity in how implementations should handle invalid ACK values.",
+    "missing_information": "The specification does not detail *how* the ACK is sent back. Is it a standard ACK, a reset (RST) segment, or some other form of acknowledgement? The lack of specificity impacts implementation choices regarding error handling and recovery."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:19:41.132840+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "1153c19e01f084dd0b5757e8669427e8d4856ef3c4383380be4d7f9cdbce6c92",
+  "lineage_ids": "lineage:f7f140688918716a2af52201",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 245,
+    "load_duration": 20509600,
+    "prompt_eval_count": 640,
+    "total_duration": 9388016200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"discarded and an ACK sent back\", \"interpretation_a\": \"Discarding the segment and sending an ACK implies a reset of some internal state related to the offending segment, potentially impacting retransmission timers or sequence number expectations.\", \"interpretation_b\": \"Discarding the segment and sending an ACK could simply mean dropping the packet without any further action beyond the ACK, leaving the sender to potentially retransmit and handle the lack of progress.\", \"missing_information\": \"The specification does not detail *how* the ACK is sent back. Is it a standard ACK, a reset (RST) segment, or some other form of acknowledgement? The lack of specificity impacts implementation choices regarding error handling and recovery.\", \"justification\": \"The phrase 'discarded and an ACK sent back' is incomplete. It doesn't specify the *type* of ACK to be sent. A standard ACK might indicate the receiver is still alive and expects further data, while a RST segment signals a complete refusal of the connection. This missing detail creates ambiguity in how implementations should handle invalid ACK values.\"}",
+  "record_id": "2c38df6aa1feb740d4c67974de4047b880a4995bf3d1b3d23ebc41e9d64e9408",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.10.7.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.39
+}

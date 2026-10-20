@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY discard 0-RTT keys",
+    "interpretation_a": "The server is permitted to discard 0-RTT keys immediately upon receiving *any* 1-RTT packet, even if it hasn't fully processed it or validated its contents.",
+    "interpretation_b": "The server is permitted to discard 0-RTT keys only after it has successfully processed a 1-RTT packet and determined that a secure connection has been established, thus rendering the 0-RTT keys unnecessary.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' grants discretion, but the lack of further constraints on *when* the server can discard the keys creates ambiguity. The server could discard them prematurely, potentially leading to issues if a 0-RTT packet arrives later (as noted in the next clause).",
+    "missing_information": "The clause does not specify the conditions under which the server is allowed to discard the 0-RTT keys. Does 'receive' mean simply receiving the packet at the network layer, or fully processing and validating it?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:42:31.361142+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "2bb251df05faaf7643f4b7e9cf0b0f578af22ed99f505034e099512efbc7e7d7",
+  "lineage_ids": "lineage:e0a750932030973641d8383e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 238,
+    "load_duration": 4797000,
+    "prompt_eval_count": 592,
+    "total_duration": 8878056300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY discard 0-RTT keys\", \"interpretation_a\": \"The server is permitted to discard 0-RTT keys immediately upon receiving *any* 1-RTT packet, even if it hasn't fully processed it or validated its contents.\", \"interpretation_b\": \"The server is permitted to discard 0-RTT keys only after it has successfully processed a 1-RTT packet and determined that a secure connection has been established, thus rendering the 0-RTT keys unnecessary.\", \"missing_information\": \"The clause does not specify the conditions under which the server is allowed to discard the 0-RTT keys. Does 'receive' mean simply receiving the packet at the network layer, or fully processing and validating it?\",\"justification\": \"The use of 'MAY' grants discretion, but the lack of further constraints on *when* the server can discard the keys creates ambiguity. The server could discard them prematurely, potentially leading to issues if a 0-RTT packet arrives later (as noted in the next clause).\"}",
+  "record_id": "8e1d79fe1c08f4cde1ed5c47689e3ad75a45e21e501a4824abc2ca1d142aa055",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.9.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.875
+}

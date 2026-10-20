@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause is clear and unambiguous. It explicitly states that a client must not process incoming 1-RTT protected packets before the TLS handshake is complete, regardless of whether it has 1-RTT secrets. There is no room for multiple interpretations, and the constraint is complete and specific.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:36:16.937567+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "7568d8058607f4c09a2af14ad14eec11842ff45b6315ad493c3d19ce68f4370b",
+  "lineage_ids": "lineage:52ab52b1b6b2ecd2f0826ab3",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 116,
+    "load_duration": 6650800,
+    "prompt_eval_count": 527,
+    "total_duration": 4758973900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause is clear and unambiguous. It explicitly states that a client must not process incoming 1-RTT protected packets before the TLS handshake is complete, regardless of whether it has 1-RTT secrets. There is no room for multiple interpretations, and the constraint is complete and specific.\"\n}",
+  "record_id": "812a71013dd58ea6aa8d117dfec95944d8a553104a59334003a18adde9ed0520",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "5.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 4.765
+}

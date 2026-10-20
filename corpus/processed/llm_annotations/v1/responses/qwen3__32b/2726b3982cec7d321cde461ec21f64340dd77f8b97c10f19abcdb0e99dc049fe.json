@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause uses the word 'MAY', which grants the endpoint discretion to send a STOP_SENDING frame under the specified conditions. While this allows for flexibility, it does not introduce ambiguity in the implementation behavior because the condition for sending the frame (no longer interested in data) and the allowed states (\"open\" or \"half-closed (local)\") are clearly defined. There is no conflicting or missing constraint that would lead to materially different interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:55:53.553736+00:00",
+  "document_id": "draft-ietf-quic-transport-06",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "53a15af31cb28b592189cf6c5732888fb20dc05f74c3a06f55d5adb1c178e851",
+  "lineage_ids": "lineage:c8a6e06d8b3e2e9f3125b097",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 147,
+    "load_duration": 4034500,
+    "prompt_eval_count": 551,
+    "total_duration": 6026087200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause uses the word 'MAY', which grants the endpoint discretion to send a STOP_SENDING frame under the specified conditions. While this allows for flexibility, it does not introduce ambiguity in the implementation behavior because the condition for sending the frame (no longer interested in data) and the allowed states (\\\"open\\\" or \\\"half-closed (local)\\\") are clearly defined. There is no conflicting or missing constraint that would lead to materially different interpretations.\"\n}",
+  "record_id": "2726b3982cec7d321cde461ec21f64340dd77f8b97c10f19abcdb0e99dc049fe",
+  "revision": "06",
+  "schema_version": 1,
+  "section_ids": "10.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.031
+}

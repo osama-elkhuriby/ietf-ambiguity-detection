@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST be retransmitted",
+    "interpretation_a": "Any MAX_STREAM_DATA frame, regardless of its content, must be retransmitted if it was the most recent one sent.",
+    "interpretation_b": "Only MAX_STREAM_DATA frames that contained actual data (i.e., were not zero-length) must be retransmitted if they were the most recent one sent. A zero-length frame might signal the end of a stream and not require retransmission.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states that 'The most recent MAX_STREAM_DATA frame...MUST be retransmitted.' It doesn't clarify if this applies to all MAX_STREAM_DATA frames, including those with zero length, or only those carrying data. This missing constraint leads to two reasonable interpretations.",
+    "missing_information": "The clause does not specify whether a zero-length MAX_STREAM_DATA frame also needs to be retransmitted. This affects implementation because a receiver might handle zero-length frames differently."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:19:52.365531+00:00",
+  "document_id": "draft-ietf-quic-transport-07",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "c5395905a743f05c997802944dad2e0acd2967055adc04ab59c56767e2f1daf2",
+  "lineage_ids": "lineage:d5942716790fe4967bb09f72",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 231,
+    "load_duration": 4025100,
+    "prompt_eval_count": 575,
+    "total_duration": 8637301300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST be retransmitted\", \"interpretation_a\": \"Any MAX_STREAM_DATA frame, regardless of its content, must be retransmitted if it was the most recent one sent.\", \"interpretation_b\": \"Only MAX_STREAM_DATA frames that contained actual data (i.e., were not zero-length) must be retransmitted if they were the most recent one sent. A zero-length frame might signal the end of a stream and not require retransmission.\", \"missing_information\": \"The clause does not specify whether a zero-length MAX_STREAM_DATA frame also needs to be retransmitted. This affects implementation because a receiver might handle zero-length frames differently.\", \"justification\": \"The clause states that 'The most recent MAX_STREAM_DATA frame...MUST be retransmitted.' It doesn't clarify if this applies to all MAX_STREAM_DATA frames, including those with zero length, or only those carrying data. This missing constraint leads to two reasonable interpretations.\"}",
+  "record_id": "fb01dfb8b53de6f7e4e5651e886f8496ff8aab561acb3575cb48356340b85477",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.641
+}

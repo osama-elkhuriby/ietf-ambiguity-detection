@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause provides a clear and specific requirement for TCP implementations to inform the application layer asynchronously under two distinct and well-defined conditions: (1) when an Urgent pointer is received and there was no prior urgent data, or (2) when the Urgent pointer advances in the data stream. These conditions are unambiguous and do not allow for multiple materially different interpretations. There is no missing constraint or undefined term that would lead to conflicting implementation behaviors.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:17:31.504445+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "4fce8c1a12702df59fb605f168846b272fea1cb0e71916ef90b660c11a9cee06",
+  "lineage_ids": "lineage:78926f253129f70fd069f6e0",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 146,
+    "load_duration": 8557600,
+    "prompt_eval_count": 602,
+    "total_duration": 6128091200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause provides a clear and specific requirement for TCP implementations to inform the application layer asynchronously under two distinct and well-defined conditions: (1) when an Urgent pointer is received and there was no prior urgent data, or (2) when the Urgent pointer advances in the data stream. These conditions are unambiguous and do not allow for multiple materially different interpretations. There is no missing constraint or undefined term that would lead to conflicting implementation behaviors.\"\n}",
+  "record_id": "cdecf1ac0f4a6a22bb938da70456ee64c24b32cab81bedc8044d3c1bb6e5688d",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.8.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.157
+}

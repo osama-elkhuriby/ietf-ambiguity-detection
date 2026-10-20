@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "safe field value contexts",
+    "interpretation_a": "A recipient might interpret 'safe field value contexts' narrowly, only allowing CTL characters within fields explicitly designed for opaque data (e.g., a Content-Disposition attachment).",
+    "interpretation_b": "A recipient might interpret 'safe field value contexts' broadly, allowing CTL characters in any field where their presence doesn't immediately cause parsing errors or security vulnerabilities, even if the field isn't explicitly for opaque data.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'safe field value contexts' is not defined, leaving room for different interpretations of where CTL characters are allowed. This incomplete constraint affects implementation behavior.",
+    "missing_information": "The definition of 'safe field value contexts' is missing. Without it, implementations could reasonably differ on where CTL characters are permitted, leading to interoperability issues."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:11:07.402711+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-17",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "567ad226056f1d9ecc56c635759d9c9e8c0438e03492f68d9e4c89d017916a21",
+  "lineage_ids": "lineage:66561dcdf85b2b846abf2b46",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 198,
+    "load_duration": 20644900,
+    "prompt_eval_count": 625,
+    "total_duration": 7679796300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"safe field value contexts\", \"interpretation_a\": \"A recipient might interpret 'safe field value contexts' narrowly, only allowing CTL characters within fields explicitly designed for opaque data (e.g., a Content-Disposition attachment).\", \"interpretation_b\": \"A recipient might interpret 'safe field value contexts' broadly, allowing CTL characters in any field where their presence doesn't immediately cause parsing errors or security vulnerabilities, even if the field isn't explicitly for opaque data.\", \"missing_information\": \"The definition of 'safe field value contexts' is missing. Without it, implementations could reasonably differ on where CTL characters are permitted, leading to interoperability issues.\",\"justification\": \"The phrase 'safe field value contexts' is not defined, leaving room for different interpretations of where CTL characters are allowed. This incomplete constraint affects implementation behavior.\"}",
+  "record_id": "66b0d3fb46b8a516cfee18c085c2f934fcd78d7737f09bc74a893b1be95aa6cb",
+  "revision": "17",
+  "schema_version": 1,
+  "section_ids": "5.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.688
+}

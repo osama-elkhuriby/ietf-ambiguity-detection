@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless it fully reverts these changes",
+    "interpretation_a": "The clause does not define what constitutes 'fully reverts these changes', allowing different implementations to interpret the requirement differently.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The lack of a concrete constraint on what 'fully reverts these changes' means creates an under‑specification that can lead to materially different implementation behaviours.",
+    "missing_information": "definition of 'fully reverts these changes' to clarify the scope of reversion required before a connection error can be avoided.  "
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T18:44:27.343595+00:00",
+  "document_id": "draft-ietf-quic-transport-33",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "80072d66e0e5efafa337209973d22842f69c6a6a19e25a9e61c85a4cb4082de5",
+  "lineage_ids": "lineage:d94172580769b1e31c2fc1d3",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1965,
+    "load_duration": 5308600,
+    "prompt_eval_count": 573,
+    "total_duration": 17150322100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"unless it fully reverts these changes\",\n  \"interpretation_a\": \"The clause does not define what constitutes 'fully reverts these changes', allowing different implementations to interpret the requirement differently.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"definition of 'fully reverts these changes' to clarify the scope of reversion required before a connection error can be avoided.  \",\n  \"justification\": \"The lack of a concrete constraint on what 'fully reverts these changes' means creates an under‑specification that can lead to materially different implementation behaviours.\"\n}",
+  "record_id": "dbfc1b9240d45b6a3e48d31a71e2213b0b5949d22fd1cd2fadde5e09e01832b7",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 17.157
+}

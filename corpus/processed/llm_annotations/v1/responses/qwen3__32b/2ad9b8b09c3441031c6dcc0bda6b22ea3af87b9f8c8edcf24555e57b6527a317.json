@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear condition under which an endpoint may temporarily exceed the peer's connection ID limit, provided that the excess is retired via the Retire Prior To field in the NEW_CONNECTION_ID frame. The language is precise and does not allow for multiple materially different interpretations. There is no missing constraint that would affect implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:56:53.780867+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "582e1da6bc6b35e9e34b9772353a66e784757eec744cce064bd957385998ec5f",
+  "lineage_ids": "lineage:49726d79c78c4d1b68dde722",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 121,
+    "load_duration": 3537700,
+    "prompt_eval_count": 559,
+    "total_duration": 4994118800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear condition under which an endpoint may temporarily exceed the peer's connection ID limit, provided that the excess is retired via the Retire Prior To field in the NEW_CONNECTION_ID frame. The language is precise and does not allow for multiple materially different interpretations. There is no missing constraint that would affect implementation behavior.\"\n}",
+  "record_id": "2ad9b8b09c3441031c6dcc0bda6b22ea3af87b9f8c8edcf24555e57b6527a317",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "5.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.0
+}

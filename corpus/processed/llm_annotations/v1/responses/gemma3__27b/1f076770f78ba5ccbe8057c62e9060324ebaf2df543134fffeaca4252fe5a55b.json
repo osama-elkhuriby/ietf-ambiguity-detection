@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY treat",
+    "interpretation_a": "The recipient is permitted to process trailer fields as key/value pairs, but is not required to do so; they could ignore them.",
+    "interpretation_b": "The recipient is permitted to *choose* to process trailer fields as key/value pairs, but if they do, they *must* do so in that manner.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' is ambiguous. It could mean the recipient is allowed to ignore trailer fields entirely, or it could mean the recipient is allowed to choose *how* to process them, but if they process them, they must do so as key/value pairs.",
+    "missing_information": "The degree of freedom granted by 'MAY' is not clarified. Does 'MAY' mean 'is permitted to ignore', or 'is permitted to choose an implementation'?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:57:56.572709+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "d1cce38dbbdb733ab447c4c1bc7ffab9227d3fb415d4c0e7bc3694276519c889",
+  "lineage_ids": "lineage:10b9aebe2f6b5b09674e24c4",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 203,
+    "load_duration": 12830000,
+    "prompt_eval_count": 606,
+    "total_duration": 7852252900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY treat\", \"interpretation_a\": \"The recipient is permitted to process trailer fields as key/value pairs, but is not required to do so; they could ignore them.\", \"interpretation_b\": \"The recipient is permitted to *choose* to process trailer fields as key/value pairs, but if they do, they *must* do so in that manner.\", \"missing_information\": \"The degree of freedom granted by 'MAY' is not clarified. Does 'MAY' mean 'is permitted to ignore', or 'is permitted to choose an implementation'?\",\"justification\": \"The use of 'MAY' is ambiguous. It could mean the recipient is allowed to ignore trailer fields entirely, or it could mean the recipient is allowed to choose *how* to process them, but if they process them, they must do so as key/value pairs.\"}",
+  "record_id": "1f076770f78ba5ccbe8057c62e9060324ebaf2df543134fffeaca4252fe5a55b",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "6.5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.86
+}

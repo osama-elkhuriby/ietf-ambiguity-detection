@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD always acknowledge the most recently received packets",
+    "interpretation_a": "The ACK frame must acknowledge the absolute latest sequence numbers received, even if those packets are out of order.",
+    "interpretation_b": "The ACK frame should acknowledge the latest *in-order* received packets, prioritizing sequential delivery.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'most recently received packets' is open to interpretation. It's unclear whether 'most recently' refers to the highest sequence number received, regardless of order, or the highest sequence number received *in order*. This impacts how ACK frames are constructed and how loss is detected, creating two reasonable implementation behaviours.",
+    "missing_information": "The definition of 'most recently received packets' is incomplete. Does it refer to the highest sequence number received regardless of order, or the highest sequence number received *in order*? This affects how ACK frames handle out-of-order delivery and loss detection."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:23:15.996519+00:00",
+  "document_id": "draft-ietf-quic-recovery-14",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "9f6c480aee3849aabccbbe5e1cfdfcc82a41ae2de3a4ccbc478ec11761a3f9ce",
+  "lineage_ids": "lineage:53aa0c3d40d8ae2e7cab254e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 217,
+    "load_duration": 5839500,
+    "prompt_eval_count": 611,
+    "total_duration": 8179324800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD always acknowledge the most recently received packets\", \"interpretation_a\": \"The ACK frame must acknowledge the absolute latest sequence numbers received, even if those packets are out of order.\", \"interpretation_b\": \"The ACK frame should acknowledge the latest *in-order* received packets, prioritizing sequential delivery.\", \"missing_information\": \"The definition of 'most recently received packets' is incomplete. Does it refer to the highest sequence number received regardless of order, or the highest sequence number received *in order*? This affects how ACK frames handle out-of-order delivery and loss detection.\", \"justification\": \"The phrase 'most recently received packets' is open to interpretation. It's unclear whether 'most recently' refers to the highest sequence number received, regardless of order, or the highest sequence number received *in order*. This impacts how ACK frames are constructed and how loss is detected, creating two reasonable implementation behaviours.\"}",
+  "record_id": "853a6c3da0c1deb70611c0c787fcce304ac31c24398ee635dfdc09908429cfb5",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "4.4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.187
+}

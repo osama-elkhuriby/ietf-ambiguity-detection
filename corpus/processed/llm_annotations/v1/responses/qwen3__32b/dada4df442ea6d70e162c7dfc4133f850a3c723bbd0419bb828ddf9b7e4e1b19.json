@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear directive: a connection may use the delay between sending a PATH_CHALLENGE and receiving a PATH_RESPONSE to set the initial RTT for a new path, but it should not be considered an RTT sample. The use of 'MAY' and 'SHOULD NOT' does not introduce ambiguity in implementation behavior, as it allows optional behavior while explicitly prohibiting a specific action. There is no missing constraint or undefined term that would lead to materially different interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:28:03.126793+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "16eb6a6321108da90d26a270444da992a9acc60a659b15b1edc9977008468d9d",
+  "lineage_ids": "lineage:c7a1df9f861ebda5a8104e6f",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 152,
+    "load_duration": 6016700,
+    "prompt_eval_count": 609,
+    "total_duration": 6265273400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear directive: a connection may use the delay between sending a PATH_CHALLENGE and receiving a PATH_RESPONSE to set the initial RTT for a new path, but it should not be considered an RTT sample. The use of 'MAY' and 'SHOULD NOT' does not introduce ambiguity in implementation behavior, as it allows optional behavior while explicitly prohibiting a specific action. There is no missing constraint or undefined term that would lead to materially different interpretations.\"\n}",
+  "record_id": "dada4df442ea6d70e162c7dfc4133f850a3c723bbd0419bb828ddf9b7e4e1b19",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.266
+}

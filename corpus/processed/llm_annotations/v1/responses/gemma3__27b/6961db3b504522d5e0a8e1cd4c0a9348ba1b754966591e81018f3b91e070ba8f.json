@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY treat non-zero padding as a connection error",
+    "interpretation_a": "The receiver can choose to treat non-zero padding as an error, but is not required to.",
+    "interpretation_b": "The receiver can choose to ignore non-zero padding without treating it as an error.",
+    "is_ambiguous": "yes",
+    "justification": "The MAY keyword allows for two reasonable interpretations: either the receiver can treat non-zero padding as an error, or it can ignore it. There is no constraint on *how* the receiver makes this choice, or what conditions would cause it to choose one behavior over the other. This creates ambiguity in implementation.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:36:39.844634+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-03",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "b320d9e2e0e47b42912bc4a99bf759c36b86b2606fd6bc6debc29f93bdbd5275",
+  "lineage_ids": "lineage:1a48e50c712552f9b354f076",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 161,
+    "load_duration": 19803500,
+    "prompt_eval_count": 553,
+    "total_duration": 6308684700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY treat non-zero padding as a connection error\", \"interpretation_a\": \"The receiver can choose to treat non-zero padding as an error, but is not required to.\", \"interpretation_b\": \"The receiver can choose to ignore non-zero padding without treating it as an error.\", \"missing_information\": \"\", \"justification\": \"The MAY keyword allows for two reasonable interpretations: either the receiver can treat non-zero padding as an error, or it can ignore it. There is no constraint on *how* the receiver makes this choice, or what conditions would cause it to choose one behavior over the other. This creates ambiguity in implementation.\"}",
+  "record_id": "6961db3b504522d5e0a8e1cd4c0a9348ba1b754966591e81018f3b91e070ba8f",
+  "revision": "03",
+  "schema_version": 1,
+  "section_ids": "6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.313
+}

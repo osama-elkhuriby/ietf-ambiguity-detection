@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless the client supports TLS Server Name Indication (SNI)",
+    "interpretation_a": "If a client does *not* support SNI, it must not use the HTTPS RR.",
+    "interpretation_b": "If a client *does* support SNI, it may use the HTTPS RR, but is not required to.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states a negative constraint ('MUST NOT') contingent on SNI support. However, it also adds a second condition ('and indicates the origin name...'). It's unclear whether both conditions must be met for the 'MUST NOT' to apply, or if SNI support alone is sufficient to trigger the negative constraint.",
+    "missing_information": "The clause does not specify what happens if the client supports SNI but does *not* indicate the origin name in the TLS ClientHello. Does the requirement to indicate the origin name create a separate condition, or is it part of the SNI support requirement?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:05:45.671227+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "f82c4b0869ec13d7565183ecd635239d1d47678ef32a4c61a530d5355e4fdc58",
+  "lineage_ids": "lineage:474ce16bd60086bcc5120122",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 223,
+    "load_duration": 3009300,
+    "prompt_eval_count": 568,
+    "total_duration": 8359949400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless the client supports TLS Server Name Indication (SNI)\", \"interpretation_a\": \"If a client does *not* support SNI, it must not use the HTTPS RR.\", \"interpretation_b\": \"If a client *does* support SNI, it may use the HTTPS RR, but is not required to.\", \"missing_information\": \"The clause does not specify what happens if the client supports SNI but does *not* indicate the origin name in the TLS ClientHello. Does the requirement to indicate the origin name create a separate condition, or is it part of the SNI support requirement?\",\"justification\": \"The clause states a negative constraint ('MUST NOT') contingent on SNI support. However, it also adds a second condition ('and indicates the origin name...'). It's unclear whether both conditions must be met for the 'MUST NOT' to apply, or if SNI support alone is sufficient to trigger the negative constraint.\"}",
+  "record_id": "6c54adc8f23529ac523a325eacc383138e385a272d4573eda3cd1001a202322b",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "9.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.36
+}

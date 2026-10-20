@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause provides a clear and specific instruction: endpoints must close the connection with a defined TLS alert (no_application_protocol) and QUIC error code (0x178) if an application protocol is not negotiated. The language is unambiguous, and there is no room for multiple interpretations that would lead to materially different implementations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:33:52.629986+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "312a034c29b04c7a06cf645dd0a100c59152796e30acd30a61628ff929305112",
+  "lineage_ids": "lineage:7e497cfd3f63fe5da92a6459",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 123,
+    "load_duration": 6277700,
+    "prompt_eval_count": 586,
+    "total_duration": 5097927700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause provides a clear and specific instruction: endpoints must close the connection with a defined TLS alert (no_application_protocol) and QUIC error code (0x178) if an application protocol is not negotiated. The language is unambiguous, and there is no room for multiple interpretations that would lead to materially different implementations.\"\n}",
+  "record_id": "519be12ea44c6784fc04fb9fee0e46c3030488f7b1675c35e14a6007ddf96117",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "8.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.094
+}

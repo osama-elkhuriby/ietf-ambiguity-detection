@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "an endpoint MUST generate a connection error",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify which endpoint (sender or receiver) must generate the connection error, leaving a concrete missing constraint that could lead to different implementation behaviours.",
+    "missing_information": "Which endpoint must generate the connection error?"
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T14:07:17.158613+00:00",
+  "document_id": "draft-ietf-quic-transport-04",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "35cb7bb87370cd87d79c66eb8a52584c12ab3d5b5954db2292c02c3371f98905",
+  "lineage_ids": "lineage:f4c174ac59227d50da713c5f",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 655,
+    "load_duration": 6202100,
+    "prompt_eval_count": 708,
+    "total_duration": 5740537000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"an endpoint MUST generate a connection error\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"Which endpoint must generate the connection error?\",\n  \"justification\": \"The clause does not specify which endpoint (sender or receiver) must generate the connection error, leaving a concrete missing constraint that could lead to different implementation behaviours.\"\n}",
+  "record_id": "173f0572db7a9010a396b71d3ef63bf37f67a39aa2660b5daae73d2649269fac",
+  "revision": "04",
+  "schema_version": 1,
+  "section_ids": "12.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 15.297
+}

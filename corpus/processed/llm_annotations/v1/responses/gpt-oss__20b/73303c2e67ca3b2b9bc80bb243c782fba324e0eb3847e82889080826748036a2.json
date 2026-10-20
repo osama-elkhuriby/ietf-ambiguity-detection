@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "- Removing the \"early_data\" extension (Section 4.2.10) if one was present.",
+    "interpretation_a": "The client removes the early_data extension from the ClientHello it sends to the server.",
+    "interpretation_b": "The client removes the early_data extension from the ClientHello it receives (e.g., a HelloRetryRequest) before processing it.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify which message the removal applies to, allowing two materially different implementation behaviours.",
+    "missing_information": "Clarification is needed on whether the removal applies to the ClientHello being sent or the ClientHello being received."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T20:56:37.277631+00:00",
+  "document_id": "draft-ietf-tls-tls13-28",
+  "family_id": "draft-ietf-tls-tls13",
+  "input_fingerprint": "d45898985d7093526b876d27157728c18e697d2e417f60d72c645df7f1beb890",
+  "lineage_ids": "lineage:6dbad0af24f55a7795ac9cb0",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 675,
+    "load_duration": 4536600,
+    "prompt_eval_count": 721,
+    "total_duration": 5997653300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"- Removing the \\\"early_data\\\" extension (Section 4.2.10) if one was present.\",\n  \"interpretation_a\": \"The client removes the early_data extension from the ClientHello it sends to the server.\",\n  \"interpretation_b\": \"The client removes the early_data extension from the ClientHello it receives (e.g., a HelloRetryRequest) before processing it.\",\n  \"missing_information\": \"Clarification is needed on whether the removal applies to the ClientHello being sent or the ClientHello being received.\",\n  \"justification\": \"The clause does not specify which message the removal applies to, allowing two materially different implementation behaviours.\"\n}",
+  "record_id": "73303c2e67ca3b2b9bc80bb243c782fba324e0eb3847e82889080826748036a2",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "4.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 69.516
+}

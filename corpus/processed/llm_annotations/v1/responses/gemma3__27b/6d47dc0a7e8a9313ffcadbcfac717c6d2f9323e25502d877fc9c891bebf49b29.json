@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "clients SHOULD discard any cached values",
+    "interpretation_a": "Clients must discard *all* cached values related to HTTP settings.",
+    "interpretation_b": "Clients must discard only those cached values that were obtained *after* the last received SETTINGS frame (or, if none was received, all).",
+    "is_ambiguous": "yes",
+    "justification": "The term 'any cached values' is insufficiently constrained. It's unclear whether the discard applies to all cached HTTP settings or only those received after a specific point in time. This leads to two reasonable implementation behaviours.",
+    "missing_information": "The scope of 'cached values' is not defined. Does it include all HTTP settings, or only those received via SETTINGS frames? The phrase 'any' is broad and allows for multiple interpretations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:54:15.087796+00:00",
+  "document_id": "draft-ietf-quic-http-10",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "ca0584decbdc5a5434796c01b03248675f506d220d1e3c5158681ea7ee004239",
+  "lineage_ids": "lineage:613f674a021794eb385f53b2",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 185,
+    "load_duration": 10824700,
+    "prompt_eval_count": 563,
+    "total_duration": 7134763700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"clients SHOULD discard any cached values\", \"interpretation_a\": \"Clients must discard *all* cached values related to HTTP settings.\", \"interpretation_b\": \"Clients must discard only those cached values that were obtained *after* the last received SETTINGS frame (or, if none was received, all).\", \"missing_information\": \"The scope of 'cached values' is not defined. Does it include all HTTP settings, or only those received via SETTINGS frames? The phrase 'any' is broad and allows for multiple interpretations.\", \"justification\": \"The term 'any cached values' is insufficiently constrained. It's unclear whether the discard applies to all cached HTTP settings or only those received after a specific point in time. This leads to two reasonable implementation behaviours.\"}",
+  "record_id": "6d47dc0a7e8a9313ffcadbcfac717c6d2f9323e25502d877fc9c891bebf49b29",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "4.2.5.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.125
+}

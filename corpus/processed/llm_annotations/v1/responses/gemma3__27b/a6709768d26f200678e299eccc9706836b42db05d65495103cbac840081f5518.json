@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "SHOULD send ack-eliciting packets from other packet number spaces with in-flight data",
+    "interpretation_a": "The sender may choose to send ack-eliciting packets from *all* other packet number spaces with in-flight data.",
+    "interpretation_b": "The sender may choose to send ack-eliciting packets from *some* other packet number spaces with in-flight data, prioritizing those it deems most likely to elicit an ACK.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' combined with 'other packet number spaces' creates ambiguity. It's unclear whether the sender is expected to attempt sending from all other spaces, or if it has discretion to choose which spaces to send from. This affects implementation because a strict implementation might attempt to send from all spaces, while a more lenient one might only send from a subset.",
+    "missing_information": "The degree of discretion granted by 'SHOULD' is not clear. Does it imply a recommendation to send from all other spaces, or merely a permission to send from some?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:26:38.010290+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "898e007de08ae1f1f3382f9af0a5372344361abb42e26a3129c24c69978418ce",
+  "lineage_ids": "lineage:67030c33308de8720917afd2",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 241,
+    "load_duration": 2506400,
+    "prompt_eval_count": 615,
+    "total_duration": 9028359900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"SHOULD send ack-eliciting packets from other packet number spaces with in-flight data\", \"interpretation_a\": \"The sender may choose to send ack-eliciting packets from *all* other packet number spaces with in-flight data.\", \"interpretation_b\": \"The sender may choose to send ack-eliciting packets from *some* other packet number spaces with in-flight data, prioritizing those it deems most likely to elicit an ACK.\", \"missing_information\": \"The degree of discretion granted by 'SHOULD' is not clear. Does it imply a recommendation to send from all other spaces, or merely a permission to send from some?\",\"justification\": \"The use of 'SHOULD' combined with 'other packet number spaces' creates ambiguity. It's unclear whether the sender is expected to attempt sending from all other spaces, or if it has discretion to choose which spaces to send from. This affects implementation because a strict implementation might attempt to send from all spaces, while a more lenient one might only send from a subset.\"}",
+  "record_id": "a6709768d26f200678e299eccc9706836b42db05d65495103cbac840081f5518",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.2.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.031
+}

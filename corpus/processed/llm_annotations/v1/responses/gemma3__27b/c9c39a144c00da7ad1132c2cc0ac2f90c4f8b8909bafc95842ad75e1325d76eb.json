@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD first send a GOAWAY",
+    "interpretation_a": "The endpoint *must* send a GOAWAY frame before closing the TCP connection, but there is some leeway in *when* it sends it (e.g., it could delay slightly).",
+    "interpretation_b": "The endpoint *may* send a GOAWAY frame before closing the TCP connection, but is not required to do so. It is simply a recommendation.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' is ambiguous. It could mean 'must' with some flexibility, or simply 'may'. This affects whether implementations are required to send the GOAWAY frame before closing the connection.",
+    "missing_information": "The strength of 'SHOULD' is not clarified. Is it a strong recommendation approaching a requirement, or a weak suggestion?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:47:53.890697+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "1d5b36cb6b271ac552e1a3a3469e1baae349687d482f8adc801ff079fc84a760",
+  "lineage_ids": "lineage:36b26b2f2968aecbc811ad7d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 199,
+    "load_duration": 10238700,
+    "prompt_eval_count": 584,
+    "total_duration": 7664489200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD first send a GOAWAY\", \"interpretation_a\": \"The endpoint *must* send a GOAWAY frame before closing the TCP connection, but there is some leeway in *when* it sends it (e.g., it could delay slightly).\", \"interpretation_b\": \"The endpoint *may* send a GOAWAY frame before closing the TCP connection, but is not required to do so. It is simply a recommendation.\", \"missing_information\": \"The strength of 'SHOULD' is not clarified. Is it a strong recommendation approaching a requirement, or a weak suggestion?\", \"justification\": \"The use of 'SHOULD' is ambiguous. It could mean 'must' with some flexibility, or simply 'may'. This affects whether implementations are required to send the GOAWAY frame before closing the connection.\"}",
+  "record_id": "c9c39a144c00da7ad1132c2cc0ac2f90c4f8b8909bafc95842ad75e1325d76eb",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "9.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.688
+}

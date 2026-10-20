@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously specifies that a client must discard a Retry packet if the Original Destination Connection ID field in the Retry does not match the Destination Connection ID of the most recent Initial packet the client sent. The antecedent and consequent are clearly defined, and no alternative reasonable implementation behaviors or missing constraints are evident.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T18:03:18.377828+00:00",
+  "document_id": "draft-ietf-quic-transport-14",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "613313c4e0e2421e13c57008f48c49f8e9c3db79148ef5212bac00e3e5d24a94",
+  "lineage_ids": "lineage:d108af8e179ff0ee19d516df",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1337,
+    "load_duration": 917100,
+    "prompt_eval_count": 590,
+    "total_duration": 11540453700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously specifies that a client must discard a Retry packet if the Original Destination Connection ID field in the Retry does not match the Destination Connection ID of the most recent Initial packet the client sent. The antecedent and consequent are clearly defined, and no alternative reasonable implementation behaviors or missing constraints are evident.\"\n}",
+  "record_id": "bb0ac0d51d1b5f21281dd453cc25ffcaf1f596df9d14ff911270f2c4f606507a",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "4.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.531
+}

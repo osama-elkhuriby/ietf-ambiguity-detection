@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "Implementations SHOULD use caution",
+    "interpretation_a": "Implementations may choose to ignore all data in Initial packets if they are unsure of its authenticity.",
+    "interpretation_b": "Implementations may process data in Initial packets, but must perform additional validation to ensure its integrity before use.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' combined with the vague term 'caution' allows for a wide range of implementations. One implementation might choose to completely ignore unauthenticated data, while another might attempt to validate it, leading to different behaviours.",
+    "missing_information": "The degree of caution required is not specified. What constitutes 'caution' is open to interpretation, and the clause does not define what additional validation, if any, is necessary."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:44:03.472285+00:00",
+  "document_id": "draft-ietf-quic-tls-29",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "91dfbb6e3f58b458e36e84bcff909a80c055d1b723bec601b1e74f955325bcf6",
+  "lineage_ids": "lineage:e8c7f800b3c5516998b13873",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 179,
+    "load_duration": 4056500,
+    "prompt_eval_count": 585,
+    "total_duration": 6796211000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"Implementations SHOULD use caution\", \"interpretation_a\": \"Implementations may choose to ignore all data in Initial packets if they are unsure of its authenticity.\", \"interpretation_b\": \"Implementations may process data in Initial packets, but must perform additional validation to ensure its integrity before use.\", \"missing_information\": \"The degree of caution required is not specified. What constitutes 'caution' is open to interpretation, and the clause does not define what additional validation, if any, is necessary.\",\"justification\": \"The use of 'SHOULD' combined with the vague term 'caution' allows for a wide range of implementations. One implementation might choose to completely ignore unauthenticated data, while another might attempt to validate it, leading to different behaviours.\"}",
+  "record_id": "a3b15405e25add0ba3a846940975d8058167f5178dbf0d420ecae88eb06bccdd",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.797
+}

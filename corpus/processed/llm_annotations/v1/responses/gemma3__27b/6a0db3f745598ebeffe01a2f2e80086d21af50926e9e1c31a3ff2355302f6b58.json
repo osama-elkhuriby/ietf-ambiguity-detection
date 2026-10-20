@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "client-initiated, bidirectional stream",
+    "interpretation_a": "The PRIORITY frame must refer to a stream that was initiated by the client and is bidirectional (both client and server can send data).",
+    "interpretation_b": "The PRIORITY frame must be *for* a client-initiated, bidirectional stream, but the frame itself may be sent by either the client or the server. The clause does not specify who sends the frame.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states the frame \"MUST identify a client-initiated, bidirectional stream.\" This could mean the frame *is* a client-initiated bidirectional stream, or that the frame *refers to* a client-initiated bidirectional stream. Without clarification, implementations could differ on whether a server-sent PRIORITY frame is valid.",
+    "missing_information": "The clause does not specify whether the PRIORITY frame itself must be sent by the client, or whether it can be sent by either endpoint. This affects implementation because the server might incorrectly process a PRIORITY frame sent by itself."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:54:03.791482+00:00",
+  "document_id": "draft-ietf-quic-http-12",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "38b027f8ad7f03377be862cf6cb9304fafdcef87d140618bbd0c905daddc867b",
+  "lineage_ids": "lineage:31ded01579c27dd57fc1df79",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 239,
+    "load_duration": 19879000,
+    "prompt_eval_count": 594,
+    "total_duration": 9127660000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"client-initiated, bidirectional stream\", \"interpretation_a\": \"The PRIORITY frame must refer to a stream that was initiated by the client and is bidirectional (both client and server can send data).\", \"interpretation_b\": \"The PRIORITY frame must be *for* a client-initiated, bidirectional stream, but the frame itself may be sent by either the client or the server. The clause does not specify who sends the frame.\", \"missing_information\": \"The clause does not specify whether the PRIORITY frame itself must be sent by the client, or whether it can be sent by either endpoint. This affects implementation because the server might incorrectly process a PRIORITY frame sent by itself.\", \"justification\": \"The clause states the frame \\\"MUST identify a client-initiated, bidirectional stream.\\\" This could mean the frame *is* a client-initiated bidirectional stream, or that the frame *refers to* a client-initiated bidirectional stream. Without clarification, implementations could differ on whether a server-sent PRIORITY frame is valid.\"}",
+  "record_id": "6a0db3f745598ebeffe01a2f2e80086d21af50926e9e1c31a3ff2355302f6b58",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "4.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.141
+}

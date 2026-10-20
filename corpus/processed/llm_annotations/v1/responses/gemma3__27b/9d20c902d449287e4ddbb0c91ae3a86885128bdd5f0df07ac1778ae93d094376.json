@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD process the message as if it were in the highest minor version within that major version to which the recipient is conformant",
+    "interpretation_a": "The recipient downgrades the message to the highest minor version it *fully* supports, meaning all features of that minor version are implemented.",
+    "interpretation_b": "The recipient downgrades the message to the highest minor version it *partially* supports, meaning it may implement only a subset of the features of that minor version, and processes the message accordingly. The clause does not specify full conformance is required.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' allows for non-conformance, but the clause doesn't define what level of conformance is required for the downgrade to occur. A recipient might only partially implement a minor version, leading to different processing behaviours.",
+    "missing_information": "The definition of 'conformant' is not provided. Does 'conformant' mean full implementation of the minor version's features, or partial implementation?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:20:16.666680+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-14",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "8583ccfa9b6df434acf3d679fbc1bc678e340f4c373356a798271bd8a49b366f",
+  "lineage_ids": "lineage:a51cae4ff1fb6966364a6b57",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 234,
+    "load_duration": 8482600,
+    "prompt_eval_count": 645,
+    "total_duration": 8995564200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD process the message as if it were in the highest minor version within that major version to which the recipient is conformant\", \"interpretation_a\": \"The recipient downgrades the message to the highest minor version it *fully* supports, meaning all features of that minor version are implemented.\", \"interpretation_b\": \"The recipient downgrades the message to the highest minor version it *partially* supports, meaning it may implement only a subset of the features of that minor version, and processes the message accordingly. The clause does not specify full conformance is required.\", \"missing_information\": \"The definition of 'conformant' is not provided. Does 'conformant' mean full implementation of the minor version's features, or partial implementation?\", \"justification\": \"The use of 'SHOULD' allows for non-conformance, but the clause doesn't define what level of conformance is required for the downgrade to occur. A recipient might only partially implement a minor version, leading to different processing behaviours.\"}",
+  "record_id": "9d20c902d449287e4ddbb0c91ae3a86885128bdd5f0df07ac1778ae93d094376",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.985
+}

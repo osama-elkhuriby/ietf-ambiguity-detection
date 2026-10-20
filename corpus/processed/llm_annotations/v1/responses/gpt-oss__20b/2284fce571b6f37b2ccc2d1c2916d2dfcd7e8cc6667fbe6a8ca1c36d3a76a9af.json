@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Clients MUST only resume if the new SNI value is valid for the server certificate presented in the original session, and SHOULD only resume",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The target clause ends abruptly after \"SHOULD only resume\", indicating a missing constraint that would determine when the client should resume. This incomplete specification creates a concrete ambiguity in implementation.",
+    "missing_information": "The clause is incomplete; it does not specify the condition under which the client SHOULD only resume after the MUST condition, leaving the implementation behavior undefined."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T20:49:14.430080+00:00",
+  "document_id": "draft-ietf-tls-tls13-24",
+  "family_id": "draft-ietf-tls-tls13",
+  "input_fingerprint": "b7a9ee387b0167ffaf76ecaa76112b3b0ca49597eba4eb20bcc952f60eba5b7f",
+  "lineage_ids": "lineage:d685e3861f3be38e84bf4eb5",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 421,
+    "load_duration": 4620800,
+    "prompt_eval_count": 592,
+    "total_duration": 3803317500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"Clients MUST only resume if the new SNI value is valid for the server certificate presented in the original session, and SHOULD only resume\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The clause is incomplete; it does not specify the condition under which the client SHOULD only resume after the MUST condition, leaving the implementation behavior undefined.\",\n  \"justification\": \"The target clause ends abruptly after \\\"SHOULD only resume\\\", indicating a missing constraint that would determine when the client should resume. This incomplete specification creates a concrete ambiguity in implementation.\"\n}",
+  "record_id": "2284fce571b6f37b2ccc2d1c2916d2dfcd7e8cc6667fbe6a8ca1c36d3a76a9af",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "4.6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 3.797
+}

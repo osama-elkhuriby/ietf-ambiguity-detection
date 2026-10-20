@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST list them as the lowest priority",
+    "interpretation_a": "The client lists the algorithms at the very end of the SignatureSchemeList, after all other algorithms.",
+    "interpretation_b": "The client lists the algorithms at a low priority, but not necessarily immediately after all other algorithms; some other algorithms could still be listed after these.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'lowest priority' is vague. It doesn't specify *how* low the priority must be. It could mean the very last entries in the list, or simply a low position relative to others. This affects how an implementer orders the SignatureSchemeList.",
+    "missing_information": "The definition of 'lowest priority' is not precise. Does it mean 'last in the list' or simply 'low in the ordering'?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:34:25.747097+00:00",
+  "document_id": "draft-ietf-tls-tls13-26",
+  "family_id": "draft-ietf-tls-tls13",
+  "input_fingerprint": "eb95555ce917afa18418b5b1fdd20943b4c11917a5175458ccc1cad641fac378",
+  "lineage_ids": "lineage:c5ddd0a6b6347d76d1cacad6",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 192,
+    "load_duration": 10497000,
+    "prompt_eval_count": 587,
+    "total_duration": 7422771900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST list them as the lowest priority\", \"interpretation_a\": \"The client lists the algorithms at the very end of the SignatureSchemeList, after all other algorithms.\", \"interpretation_b\": \"The client lists the algorithms at a low priority, but not necessarily immediately after all other algorithms; some other algorithms could still be listed after these.\", \"missing_information\": \"The definition of 'lowest priority' is not precise. Does it mean 'last in the list' or simply 'low in the ordering'?\",\"justification\": \"The phrase 'lowest priority' is vague. It doesn't specify *how* low the priority must be. It could mean the very last entries in the list, or simply a low position relative to others. This affects how an implementer orders the SignatureSchemeList.\"}",
+  "record_id": "661531b6bf389fa4ac56cb638d089212c2613c46907f9d435fb44ce904780895",
+  "revision": "26",
+  "schema_version": 1,
+  "section_ids": "4.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.438
+}

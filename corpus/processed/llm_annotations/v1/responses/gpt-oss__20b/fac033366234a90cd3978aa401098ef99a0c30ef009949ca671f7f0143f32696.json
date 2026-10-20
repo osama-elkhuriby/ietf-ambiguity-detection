@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause specifies a clear rule: when data from a new encryption level is provided to TLS, any unconsumed data from a previous encryption level must trigger a PROTOCOL_VIOLATION error. The wording does not allow for two materially different implementation behaviours, nor does it omit a concrete constraint that would change the operational interpretation.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T13:33:51.128156+00:00",
+  "document_id": "draft-ietf-quic-tls-30",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "65bf74e397319fd959f08496eb7b9ed4469b17409d8a3412ba73ea43a60a73cb",
+  "lineage_ids": "lineage:17d28136c2f96508a9ae644f",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3906,
+    "load_duration": 4893300,
+    "prompt_eval_count": 623,
+    "total_duration": 33805317600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause specifies a clear rule: when data from a new encryption level is provided to TLS, any unconsumed data from a previous encryption level must trigger a PROTOCOL_VIOLATION error. The wording does not allow for two materially different implementation behaviours, nor does it omit a concrete constraint that would change the operational interpretation.\"\n}",
+  "record_id": "fac033366234a90cd3978aa401098ef99a0c30ef009949ca671f7f0143f32696",
+  "revision": "30",
+  "schema_version": 1,
+  "section_ids": "4.1.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 33.813
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD fall back",
+    "interpretation_a": "Clients are encouraged, but not required, to fall back to the HTTPS RR client connection procedure if the Alt-Svc connection fails.",
+    "interpretation_b": "Clients are expected to fall back to the HTTPS RR client connection procedure if the Alt-Svc connection fails, but there is some leeway for not doing so.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' creates ambiguity. While it indicates a recommended action, it doesn't definitively require it. This leaves room for different implementations to handle Alt-Svc failures in varying ways, potentially leading to interoperability issues. A missing constraint would be a clear definition of when fallback is mandatory.",
+    "missing_information": "The strength of 'SHOULD' is not defined. Is there a defined failure mode or condition under which falling back is not appropriate?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:12:54.668726+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-05",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "d2122d3959b6dc164c0643d29803ae463b0680833e5cc51257e8039bb3ce41af",
+  "lineage_ids": "lineage:702387dfe0a4ad2c4dac3df9",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 205,
+    "load_duration": 3613800,
+    "prompt_eval_count": 615,
+    "total_duration": 7723624600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD fall back\", \"interpretation_a\": \"Clients are encouraged, but not required, to fall back to the HTTPS RR client connection procedure if the Alt-Svc connection fails.\", \"interpretation_b\": \"Clients are expected to fall back to the HTTPS RR client connection procedure if the Alt-Svc connection fails, but there is some leeway for not doing so.\", \"missing_information\": \"The strength of 'SHOULD' is not defined. Is there a defined failure mode or condition under which falling back is not appropriate?\",\"justification\": \"The use of 'SHOULD' creates ambiguity. While it indicates a recommended action, it doesn't definitively require it. This leaves room for different implementations to handle Alt-Svc failures in varying ways, potentially leading to interoperability issues. A missing constraint would be a clear definition of when fallback is mandatory.\"}",
+  "record_id": "dcd7c2b5310b88e7785ed608882b9e4e59aeb3fcadfff2de88f7c2141f0b7511",
+  "revision": "05",
+  "schema_version": 1,
+  "section_ids": "8.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.719
+}

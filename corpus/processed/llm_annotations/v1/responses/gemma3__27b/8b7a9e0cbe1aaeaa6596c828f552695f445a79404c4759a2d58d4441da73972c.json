@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "newly acknowledged in this ACK frame",
+    "interpretation_a": "The count increase must be >= the number of *newly* acknowledged packets with that ECT codepoint. This implies only packets acknowledged in *this* frame are considered.",
+    "interpretation_b": "The count increase must be >= the total number of packets with that ECT codepoint that have *ever* been acknowledged, but are being re-acknowledged in this frame. This could include packets acknowledged in previous frames.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'newly acknowledged' is open to interpretation. Does it mean packets acknowledged for the first time in this frame, or packets that were previously acknowledged but are being re-acknowledged? This affects how the increase in counts is calculated.",
+    "missing_information": "It is unclear whether 'newly acknowledged' refers to packets acknowledged for the first time in this frame, or packets that were previously acknowledged but are being re-acknowledged in this frame."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:42:35.175521+00:00",
+  "document_id": "draft-ietf-quic-transport-29",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "d6e818622814314ba52cad0fc2e8aaecc3ebb9afe094af3218ce963cd3f95bb3",
+  "lineage_ids": "lineage:bc529797aed6bc15ed67fa7c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 227,
+    "load_duration": 4912000,
+    "prompt_eval_count": 612,
+    "total_duration": 8519939800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"newly acknowledged in this ACK frame\", \"interpretation_a\": \"The count increase must be >= the number of *newly* acknowledged packets with that ECT codepoint. This implies only packets acknowledged in *this* frame are considered.\", \"interpretation_b\": \"The count increase must be >= the total number of packets with that ECT codepoint that have *ever* been acknowledged, but are being re-acknowledged in this frame. This could include packets acknowledged in previous frames.\", \"missing_information\": \"It is unclear whether 'newly acknowledged' refers to packets acknowledged for the first time in this frame, or packets that were previously acknowledged but are being re-acknowledged in this frame.\", \"justification\": \"The phrase 'newly acknowledged' is open to interpretation. Does it mean packets acknowledged for the first time in this frame, or packets that were previously acknowledged but are being re-acknowledged? This affects how the increase in counts is calculated.\"}",
+  "record_id": "8b7a9e0cbe1aaeaa6596c828f552695f445a79404c4759a2d58d4441da73972c",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "13.4.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.515
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that after an endpoint has sent a packet with a particular key phase, it must not send any packet with a key phase that is older than that one. The terms ‘given key phase’ and ‘older key phase’ refer to the same key phase ordering implied by the protocol’s key phase definition, and no alternative interpretation is materially different or requires additional constraints.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T12:56:21.725200+00:00",
+  "document_id": "draft-ietf-quic-tls-23",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "73cdca9f529ffc871e92f6fccd500dcd5b549f455ee2ff841a68c3d328df4989",
+  "lineage_ids": "lineage:edd096844c75397a07ef95e1",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1214,
+    "load_duration": 4513900,
+    "prompt_eval_count": 605,
+    "total_duration": 10484334400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that after an endpoint has sent a packet with a particular key phase, it must not send any packet with a key phase that is older than that one. The terms ‘given key phase’ and ‘older key phase’ refer to the same key phase ordering implied by the protocol’s key phase definition, and no alternative interpretation is materially different or requires additional constraints.\"\n}",
+  "record_id": "9be00329c240c2ac48b1fa652a72c359aab2470cf2df003e543edbb27b732df3",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.484
+}

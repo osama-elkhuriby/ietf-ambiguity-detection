@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "however it is recognized that these protections are imperfect",
+    "interpretation_a": "Implementations MUST use the TLS13 replay protections, but are aware they may not fully prevent all replay attacks, and may need to add additional protections.",
+    "interpretation_b": "Implementations MUST use the TLS13 replay protections, but are permitted to deviate from them if they deem the imperfections unacceptable, potentially leading to interoperability issues.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'however it is recognized that these protections are imperfect' introduces uncertainty about the strength of the MUST requirement. Does 'imperfect' mean 'not foolproof, but still required' or 'imperfect to the point that deviation is permissible'?",
+    "missing_information": "The degree to which implementations are permitted to deviate from the TLS13 replay protections is not specified. A concrete constraint on acceptable deviations is missing."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:45:28.221332+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "8143e90fffd54c321a99d9fc840bf90b8df0a318a863b92d2b5af2af54525f0c",
+  "lineage_ids": "lineage:d29a3db5611c7f38bf68cfeb",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 204,
+    "load_duration": 3960100,
+    "prompt_eval_count": 567,
+    "total_duration": 7636686200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"however it is recognized that these protections are imperfect\", \"interpretation_a\": \"Implementations MUST use the TLS13 replay protections, but are aware they may not fully prevent all replay attacks, and may need to add additional protections.\", \"interpretation_b\": \"Implementations MUST use the TLS13 replay protections, but are permitted to deviate from them if they deem the imperfections unacceptable, potentially leading to interoperability issues.\", \"missing_information\": \"The degree to which implementations are permitted to deviate from the TLS13 replay protections is not specified. A concrete constraint on acceptable deviations is missing.\", \"justification\": \"The phrase 'however it is recognized that these protections are imperfect' introduces uncertainty about the strength of the MUST requirement. Does 'imperfect' mean 'not foolproof, but still required' or 'imperfect to the point that deviation is permissible'?\"}",
+  "record_id": "b5e65f8df5beee882db2361a5d8b6bd7321c0bfd5dcfb4f07573e25689a10714",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.64
+}

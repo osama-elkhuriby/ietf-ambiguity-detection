@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "but cannot be unprotected successfully",
+    "interpretation_a": "A packet is considered 'unprotected successfully' if the decryption process completes without errors, even if the resulting data is invalid or doesn't conform to expected formats.",
+    "interpretation_b": "A packet is considered 'unprotected successfully' only if the decryption process completes without errors *and* the resulting data is valid and conforms to expected formats.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'cannot be unprotected successfully' lacks a precise definition. It's unclear whether merely failing to decrypt (due to incorrect keys, etc.) constitutes failure, or whether a failed decryption *and* invalid decrypted data are both required for a packet to be discarded.",
+    "missing_information": "The definition of 'unprotected successfully' is incomplete. Does successful decryption alone suffice, or must the decrypted data also be valid?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:49:07.301934+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "1dec86104c0aa3ffd2f45b0a0250294383a9ac9f512442f340baf13d2f7b08c7",
+  "lineage_ids": "lineage:ee169034fb4352672e1d0c05",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 202,
+    "load_duration": 4031800,
+    "prompt_eval_count": 616,
+    "total_duration": 7610577900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"but cannot be unprotected successfully\", \"interpretation_a\": \"A packet is considered 'unprotected successfully' if the decryption process completes without errors, even if the resulting data is invalid or doesn't conform to expected formats.\", \"interpretation_b\": \"A packet is considered 'unprotected successfully' only if the decryption process completes without errors *and* the resulting data is valid and conforms to expected formats.\", \"missing_information\": \"The definition of 'unprotected successfully' is incomplete. Does successful decryption alone suffice, or must the decrypted data also be valid?\", \"justification\": \"The phrase 'cannot be unprotected successfully' lacks a precise definition. It's unclear whether merely failing to decrypt (due to incorrect keys, etc.) constitutes failure, or whether a failed decryption *and* invalid decrypted data are both required for a packet to be discarded.\"}",
+  "record_id": "d10dfe403c033ec159deebce420635e9d48832cc1b893b01b7be00d9b9d50ec6",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "5.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.609
+}

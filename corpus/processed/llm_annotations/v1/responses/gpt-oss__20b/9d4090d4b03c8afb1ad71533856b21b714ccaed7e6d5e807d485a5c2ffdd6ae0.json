@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "the timer",
+    "interpretation_a": "Set the RTO timer for twice the newly computed smoothed RTT.",
+    "interpretation_b": "Set the TLP timer for twice the newly computed smoothed RTT.",
+    "is_ambiguous": "yes",
+    "justification": "The clause refers to \"the timer\" without specifying which timer (RTO, TLP, or another) should be set, creating an incomplete constraint that could lead to materially different implementation behaviours.",
+    "missing_information": "Which timer is being referred to by \"the timer\"?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T11:40:39.036291+00:00",
+  "document_id": "draft-ietf-quic-recovery-15",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "71ace7cb72c0cb1879ed6ccdb97b7b8cc616b95bf3b209eecbfb70d5ccc7fd80",
+  "lineage_ids": "lineage:ce811ed23da1c259f12b8eaa",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1244,
+    "load_duration": 5384400,
+    "prompt_eval_count": 585,
+    "total_duration": 10997557900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"the timer\",\n  \"interpretation_a\": \"Set the RTO timer for twice the newly computed smoothed RTT.\",\n  \"interpretation_b\": \"Set the TLP timer for twice the newly computed smoothed RTT.\",\n  \"missing_information\": \"Which timer is being referred to by \\\"the timer\\\"?\",\n  \"justification\": \"The clause refers to \\\"the timer\\\" without specifying which timer (RTO, TLP, or another) should be set, creating an incomplete constraint that could lead to materially different implementation behaviours.\"\n}",
+  "record_id": "9d4090d4b03c8afb1ad71533856b21b714ccaed7e6d5e807d485a5c2ffdd6ae0",
+  "revision": "15",
+  "schema_version": 1,
+  "section_ids": "4.3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.0
+}

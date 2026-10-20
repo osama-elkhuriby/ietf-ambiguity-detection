@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST be left unset (0x0) when sending",
+    "interpretation_a": "The flag MUST be explicitly set to 0x0 when constructing a frame.",
+    "interpretation_b": "The flag MUST not be set to any value other than 0x0 when constructing a frame, but the sender is not required to explicitly set it to 0x0; it may simply not be set.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'be left unset' is open to interpretation. Does it require an explicit setting to 0x0, or simply that the bit not be set to 1? Both are reasonable interpretations that affect implementation.",
+    "missing_information": "It is unclear whether the requirement to 'be left unset' implies an explicit setting to 0x0, or merely an absence of any other value."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:27:23.795954+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-06",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "f6a3c90172427ed063cb48a250f376f2ca448e29638b85911911714817d549e4",
+  "lineage_ids": "lineage:cd7b910142a7682156f487d2",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 198,
+    "load_duration": 20822000,
+    "prompt_eval_count": 563,
+    "total_duration": 7702434600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST be left unset (0x0) when sending\", \"interpretation_a\": \"The flag MUST be explicitly set to 0x0 when constructing a frame.\", \"interpretation_b\": \"The flag MUST not be set to any value other than 0x0 when constructing a frame, but the sender is not required to explicitly set it to 0x0; it may simply not be set.\", \"missing_information\": \"It is unclear whether the requirement to 'be left unset' implies an explicit setting to 0x0, or merely an absence of any other value.\", \"justification\": \"The phrase 'be left unset' is open to interpretation. Does it require an explicit setting to 0x0, or simply that the bit not be set to 1? Both are reasonable interpretations that affect implementation.\"}",
+  "record_id": "0670c637a5e52521852b4407c1634d0bba792c9f45d006eed5e195dd579d205a",
+  "revision": "06",
+  "schema_version": 1,
+  "section_ids": "4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.719
+}

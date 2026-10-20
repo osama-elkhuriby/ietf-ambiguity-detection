@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "within a single QUIC packet",
+    "interpretation_a": "Frames are limited to the maximum packet size, regardless of fragmentation or reassembly.",
+    "interpretation_b": "Frames are limited to the maximum packet size *before* any packet fragmentation or reassembly occurs at the link layer.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'single QUIC packet' is not clearly defined. It is unclear whether it refers to the QUIC packet as constructed by the protocol, or the underlying network packet. This affects whether fragmentation and reassembly at the network layer are considered when determining if a frame spans a packet boundary.",
+    "missing_information": "The definition of 'single QUIC packet' is needed. Does this refer to the packet as constructed by QUIC, or the underlying network packet? If the latter, fragmentation and reassembly at the network layer could affect whether a frame spans a packet boundary."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:54:02.986857+00:00",
+  "document_id": "draft-ietf-quic-transport-19",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "bb6db77b7845856318adbf28955d833ace5a8e2f7afbcf3534854b047f016981",
+  "lineage_ids": "lineage:52d6de97e54adb6d1905b635",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 209,
+    "load_duration": "",
+    "prompt_eval_count": 569,
+    "total_duration": 7828423100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"within a single QUIC packet\", \"interpretation_a\": \"Frames are limited to the maximum packet size, regardless of fragmentation or reassembly.\", \"interpretation_b\": \"Frames are limited to the maximum packet size *before* any packet fragmentation or reassembly occurs at the link layer.\", \"missing_information\": \"The definition of 'single QUIC packet' is needed. Does this refer to the packet as constructed by QUIC, or the underlying network packet? If the latter, fragmentation and reassembly at the network layer could affect whether a frame spans a packet boundary.\", \"justification\": \"The phrase 'single QUIC packet' is not clearly defined. It is unclear whether it refers to the QUIC packet as constructed by the protocol, or the underlying network packet. This affects whether fragmentation and reassembly at the network layer are considered when determining if a frame spans a packet boundary.\"}",
+  "record_id": "ad3923294fcf8ce199c431e4b78a23a60ee9028d81685874a73a3a25d4a7c8f4",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "12.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.828
+}

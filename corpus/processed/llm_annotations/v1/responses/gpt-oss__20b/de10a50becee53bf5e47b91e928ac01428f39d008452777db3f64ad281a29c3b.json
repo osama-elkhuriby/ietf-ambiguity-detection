@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "self-consistent",
+    "interpretation_a": "The clause requires that redundant length encodings be verified to be self‑consistent, but the term \"self‑consistent\" is not defined in the supplied text.  This could be interpreted as requiring the redundant length fields to match each other, or it could be interpreted as requiring each length field to match the actual payload length.  The lack of a precise definition allows two materially different implementation behaviours.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause contains an incomplete constraint: it mandates verification of self‑consistency without specifying what constitutes self‑consistency.  This missing definition creates a potential for materially different implementations.",
+    "missing_information": "Definition of \"self-consistent\" from the referenced [frame-parsing] document is required to resolve the ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T10:36:30.407305+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "a9935725eee2ad5d0a0fac9e062f4a68d29e83996cd59314c7876ec984b95150",
+  "lineage_ids": "lineage:30994f1bded1d2aba3ec408c",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2259,
+    "load_duration": 5318900,
+    "prompt_eval_count": 623,
+    "total_duration": 19521464500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"self-consistent\",\n  \"interpretation_a\": \"The clause requires that redundant length encodings be verified to be self‑consistent, but the term \\\"self‑consistent\\\" is not defined in the supplied text.  This could be interpreted as requiring the redundant length fields to match each other, or it could be interpreted as requiring each length field to match the actual payload length.  The lack of a precise definition allows two materially different implementation behaviours.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"Definition of \\\"self-consistent\\\" from the referenced [frame-parsing] document is required to resolve the ambiguity.\",\n  \"justification\": \"The clause contains an incomplete constraint: it mandates verification of self‑consistency without specifying what constitutes self‑consistency.  This missing definition creates a potential for materially different implementations.\"\n}",
+  "record_id": "de10a50becee53bf5e47b91e928ac01428f39d008452777db3f64ad281a29c3b",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 19.516
+}

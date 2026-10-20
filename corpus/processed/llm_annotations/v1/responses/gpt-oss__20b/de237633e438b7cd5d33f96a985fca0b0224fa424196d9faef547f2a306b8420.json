@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "combine an ordered subsequence of Via header field list members into a single member",
+    "interpretation_a": "The intermediary may concatenate the received-by values of the combined entries into a comma‑separated list within the single Via member.",
+    "interpretation_b": "The intermediary may select only the first received-by value of the combined entries and omit the others in the resulting single Via member.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify how the entries are combined into a single member, leaving the resulting header field member’s content (e.g., received-by values) unspecified, which allows at least two materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T08:12:39.600193+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "b6c4f24649616316b7f9bb3d23aea7a046fd336e99ca8882832ae0696179a88d",
+  "lineage_ids": "lineage:b6396cb29dd1573ae15b39d8",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 478,
+    "load_duration": 4055900,
+    "prompt_eval_count": 727,
+    "total_duration": 4245330300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"combine an ordered subsequence of Via header field list members into a single member\",\n  \"interpretation_a\": \"The intermediary may concatenate the received-by values of the combined entries into a comma‑separated list within the single Via member.\",\n  \"interpretation_b\": \"The intermediary may select only the first received-by value of the combined entries and omit the others in the resulting single Via member.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify how the entries are combined into a single member, leaving the resulting header field member’s content (e.g., received-by values) unspecified, which allows at least two materially different implementation behaviours.\"\n}",
+  "record_id": "de237633e438b7cd5d33f96a985fca0b0224fa424196d9faef547f2a306b8420",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "7.6.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 14.89
+}

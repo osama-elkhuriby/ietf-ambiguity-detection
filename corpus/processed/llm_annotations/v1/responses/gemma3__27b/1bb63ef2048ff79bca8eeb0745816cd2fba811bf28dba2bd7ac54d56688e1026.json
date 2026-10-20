@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY attempt",
+    "interpretation_a": "The client is permitted to try establishing a QUIC connection, but is not required to do so; it can continue using HTTP/1.1 or HTTP/2.",
+    "interpretation_b": "The client *should* attempt to establish a QUIC connection, but is not strictly required to; it's a strong recommendation.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' is ambiguous. While technically allowing for either behavior, it doesn't specify the degree to which a client *should* attempt the QUIC connection. This impacts whether implementations prioritize QUIC or fall back to older protocols.",
+    "missing_information": "The strength of 'MAY' is unclear. Is it a permissive 'MAY' (allowed but not encouraged) or a weak 'SHOULD' (recommended but not required)? This affects implementation decisions regarding prioritization of QUIC connections."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:42:25.597643+00:00",
+  "document_id": "draft-ietf-quic-http-29",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "6742540f63acfaabb8543a604a2b3c43e6889aeff42f2ec7a8dfb43890e3fbc0",
+  "lineage_ids": "lineage:80c2f1b04346653d4c1966bf",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 212,
+    "load_duration": 24756400,
+    "prompt_eval_count": 572,
+    "total_duration": 8128084800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY attempt\", \"interpretation_a\": \"The client is permitted to try establishing a QUIC connection, but is not required to do so; it can continue using HTTP/1.1 or HTTP/2.\", \"interpretation_b\": \"The client *should* attempt to establish a QUIC connection, but is not strictly required to; it's a strong recommendation.\", \"missing_information\": \"The strength of 'MAY' is unclear. Is it a permissive 'MAY' (allowed but not encouraged) or a weak 'SHOULD' (recommended but not required)? This affects implementation decisions regarding prioritization of QUIC connections.\", \"justification\": \"The use of 'MAY' is ambiguous. While technically allowing for either behavior, it doesn't specify the degree to which a client *should* attempt the QUIC connection. This impacts whether implementations prioritize QUIC or fall back to older protocols.\"}",
+  "record_id": "1bb63ef2048ff79bca8eeb0745816cd2fba811bf28dba2bd7ac54d56688e1026",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "3.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.125
+}

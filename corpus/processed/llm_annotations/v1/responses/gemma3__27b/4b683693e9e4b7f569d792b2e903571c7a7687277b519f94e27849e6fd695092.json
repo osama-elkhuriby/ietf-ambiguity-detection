@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "every packet it sends",
+    "interpretation_a": "The client increments the packet number for *all* packets, including those retransmitted or resend.",
+    "interpretation_b": "The client increments the packet number only for *new* packets, and retransmissions/resends retain their original packet number.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'every packet it sends' is open to interpretation. Does it include retransmissions and resends? If so, the packet number must be incremented even for duplicate packets. If not, the packet number can remain the same for retransmissions, potentially causing issues with packet ordering or loss detection.",
+    "missing_information": "The specification does not clarify whether the packet number increment applies to all packets sent, or only to new packets. This distinction affects how retransmissions and resends are handled, and thus impacts implementation."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:21:39.438895+00:00",
+  "document_id": "draft-ietf-quic-transport-14",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "6dbaf8235adc18f1970fc304247d7e4663964fe5e96687ef42c3591199fd0d26",
+  "lineage_ids": "lineage:a358801b6381a13f5c53e34d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 206,
+    "load_duration": 5194800,
+    "prompt_eval_count": 575,
+    "total_duration": 7751150700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"every packet it sends\", \"interpretation_a\": \"The client increments the packet number for *all* packets, including those retransmitted or resend.\", \"interpretation_b\": \"The client increments the packet number only for *new* packets, and retransmissions/resends retain their original packet number.\", \"missing_information\": \"The specification does not clarify whether the packet number increment applies to all packets sent, or only to new packets. This distinction affects how retransmissions and resends are handled, and thus impacts implementation.\", \"justification\": \"The phrase 'every packet it sends' is open to interpretation. Does it include retransmissions and resends? If so, the packet number must be incremented even for duplicate packets. If not, the packet number can remain the same for retransmissions, potentially causing issues with packet ordering or loss detection.\"}",
+  "record_id": "4b683693e9e4b7f569d792b2e903571c7a7687277b519f94e27849e6fd695092",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "6.3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.781
+}

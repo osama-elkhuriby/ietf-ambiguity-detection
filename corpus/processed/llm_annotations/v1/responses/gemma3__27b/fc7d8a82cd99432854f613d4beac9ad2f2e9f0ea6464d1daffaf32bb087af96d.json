@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY be used",
+    "interpretation_a": "An endpoint can choose to use a zero-length connection ID if it determines it's not needed for routing, even if it *could* be used.",
+    "interpretation_b": "An endpoint is permitted to use a zero-length connection ID only when routing *absolutely* does not require a connection ID, and the address/port tuple is always sufficient.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' combined with the lack of a clear definition of 'needed for routing' creates ambiguity. Different implementations could reasonably interpret this clause differently, leading to interoperability issues.",
+    "missing_information": "The criteria for determining when a connection ID is 'needed for routing' is not defined. This leaves room for different implementations to interpret whether routing is sufficiently handled by the address/port tuple."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:20:22.493826+00:00",
+  "document_id": "draft-ietf-quic-transport-23",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "06aeae16d6e82f32e73d2ea955fe97d1676e6923dc6d91a8fd0e718f6144b0f7",
+  "lineage_ids": "lineage:4d58f3b066ced05320a64fbc",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 199,
+    "load_duration": 3850600,
+    "prompt_eval_count": 623,
+    "total_duration": 7525497800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY be used\", \"interpretation_a\": \"An endpoint can choose to use a zero-length connection ID if it determines it's not needed for routing, even if it *could* be used.\", \"interpretation_b\": \"An endpoint is permitted to use a zero-length connection ID only when routing *absolutely* does not require a connection ID, and the address/port tuple is always sufficient.\", \"missing_information\": \"The criteria for determining when a connection ID is 'needed for routing' is not defined. This leaves room for different implementations to interpret whether routing is sufficiently handled by the address/port tuple.\", \"justification\": \"The use of 'MAY' combined with the lack of a clear definition of 'needed for routing' creates ambiguity. Different implementations could reasonably interpret this clause differently, leading to interoperability issues.\"}",
+  "record_id": "fc7d8a82cd99432854f613d4beac9ad2f2e9f0ea6464d1daffaf32bb087af96d",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.531
+}

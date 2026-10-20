@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "implementaions MUST attempt to enforce a maximum ack delay",
+    "interpretation_a": "The maximum ack delay is defined elsewhere (e.g., in a later clause or external document), so implementations must enforce that specified value.",
+    "interpretation_b": "The maximum ack delay is unspecified in this clause, so implementations may choose any value they deem appropriate, leading to different operational behaviours.",
+    "is_ambiguous": "yes",
+    "justification": "The clause requires implementations to enforce a maximum ack delay but does not specify the value, leaving the constraint incomplete and allowing materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T11:41:12.194310+00:00",
+  "document_id": "draft-ietf-quic-recovery-14",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "ee0930e5b6e21d3417a197de0070850f1ee56abd3d4388849bc59aa7342bcc1f",
+  "lineage_ids": "lineage:497033287b78182f32176234",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 819,
+    "load_duration": 4786500,
+    "prompt_eval_count": 592,
+    "total_duration": 7119780900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"implementaions MUST attempt to enforce a maximum ack delay\",\n  \"interpretation_a\": \"The maximum ack delay is defined elsewhere (e.g., in a later clause or external document), so implementations must enforce that specified value.\",\n  \"interpretation_b\": \"The maximum ack delay is unspecified in this clause, so implementations may choose any value they deem appropriate, leading to different operational behaviours.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause requires implementations to enforce a maximum ack delay but does not specify the value, leaving the constraint incomplete and allowing materially different implementation behaviours.\"\n}",
+  "record_id": "a4829de3929136d7042fc44b381901f26f60bf0aa67ddeb29fbd0ffa0b8b8424",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "4.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.125
+}

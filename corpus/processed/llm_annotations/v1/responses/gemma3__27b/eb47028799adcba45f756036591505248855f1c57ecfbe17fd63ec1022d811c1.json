@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "additional bytes-in-flight",
+    "interpretation_a": "The sender increases its congestion window or similar byte-in-flight tracking mechanism by the size of the TLP, even though no actual data was lost or acknowledged.",
+    "interpretation_b": "The sender only considers the TLP for byte-in-flight tracking if the TLP itself is lost, as it represents unacknowledged data. If acknowledged, it does not affect byte-in-flight.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'additional bytes-in-flight' is incomplete. It doesn't specify *when* these bytes are added to the count. This creates ambiguity about how the sender's congestion control should behave.",
+    "missing_information": "The document does not specify *when* the TLP bytes are counted as bytes-in-flight. Is it upon sending, upon acknowledgement, or only upon loss?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:32:17.602352+00:00",
+  "document_id": "draft-ietf-quic-recovery-16",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "beb17e6d73872251e4c35d0d5b5e1100aa202d33403887abb3fe9e2157aa3ee7",
+  "lineage_ids": "lineage:22dbe726b42f104d78d1393a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 211,
+    "load_duration": 4388200,
+    "prompt_eval_count": 565,
+    "total_duration": 7923760300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"additional bytes-in-flight\", \"interpretation_a\": \"The sender increases its congestion window or similar byte-in-flight tracking mechanism by the size of the TLP, even though no actual data was lost or acknowledged.\", \"interpretation_b\": \"The sender only considers the TLP for byte-in-flight tracking if the TLP itself is lost, as it represents unacknowledged data. If acknowledged, it does not affect byte-in-flight.\", \"missing_information\": \"The document does not specify *when* the TLP bytes are counted as bytes-in-flight. Is it upon sending, upon acknowledgement, or only upon loss?\",\"justification\": \"The phrase 'additional bytes-in-flight' is incomplete. It doesn't specify *when* these bytes are added to the count. This creates ambiguity about how the sender's congestion control should behave.\"}",
+  "record_id": "eb47028799adcba45f756036591505248855f1c57ecfbe17fd63ec1022d811c1",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "5.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.922
+}

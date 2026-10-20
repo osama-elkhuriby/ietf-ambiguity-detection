@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "it MUST ensure that it applies the associated packet number gaps for connection IDs that it skips",
+    "interpretation_a": "The client must track and apply packet number gaps for *all* skipped connection IDs, even those it never actually uses for sending packets. This implies maintaining a history of potential connection IDs and their associated gaps.",
+    "interpretation_b": "The client only needs to apply the packet number gaps for skipped connection IDs if those skipped IDs were *previously* used for sending packets, and the gaps need to be accounted for in the current connection's packet number space. This is a more limited scope of tracking.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'it applies the associated packet number gaps for connection IDs that it skips' is incomplete. It doesn't specify *when* or *how* these gaps are applied. Does the client need to track gaps for all skipped IDs, or only those previously used? This missing constraint leads to different implementation behaviours.",
+    "missing_information": "It is unclear whether the client needs to maintain packet number gap information for connection IDs it has skipped but never used, or only for those it previously used."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:39:41.419926+00:00",
+  "document_id": "draft-ietf-quic-transport-10",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "3f8724dc536f0d41babddba22c9c05154a366c8a59d41547c5477d7b21ea05f4",
+  "lineage_ids": "lineage:e7a78302c74afb1465294a61",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 260,
+    "load_duration": 4226200,
+    "prompt_eval_count": 591,
+    "total_duration": 9684762000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"it MUST ensure that it applies the associated packet number gaps for connection IDs that it skips\", \"interpretation_a\": \"The client must track and apply packet number gaps for *all* skipped connection IDs, even those it never actually uses for sending packets. This implies maintaining a history of potential connection IDs and their associated gaps.\", \"interpretation_b\": \"The client only needs to apply the packet number gaps for skipped connection IDs if those skipped IDs were *previously* used for sending packets, and the gaps need to be accounted for in the current connection's packet number space. This is a more limited scope of tracking.\", \"missing_information\": \"It is unclear whether the client needs to maintain packet number gap information for connection IDs it has skipped but never used, or only for those it previously used.\", \"justification\": \"The phrase 'it applies the associated packet number gaps for connection IDs that it skips' is incomplete. It doesn't specify *when* or *how* these gaps are applied. Does the client need to track gaps for all skipped IDs, or only those previously used? This missing constraint leads to different implementation behaviours.\"}",
+  "record_id": "84d079c69766371371f8a9c82167a436a5cc4bf61f2055312698d07cb3e32b0d",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "7.7.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.687
+}

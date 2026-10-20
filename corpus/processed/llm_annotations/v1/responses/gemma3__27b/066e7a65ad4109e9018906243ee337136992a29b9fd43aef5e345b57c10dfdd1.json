@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "lists the client’s chosen version",
+    "interpretation_a": "The client ignores the packet if the version listed is the same as the version the client *sent* in a previous packet.",
+    "interpretation_b": "The client ignores the packet if the version listed is the version the client *wants to use* (which may not have been previously communicated).",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'chosen version' is not clearly defined. It could refer to the version the client initially proposed, or the version the client ultimately wants to use. This difference affects whether the client should ignore the packet.",
+    "missing_information": "It is unclear whether 'chosen version' refers to the version the client proposed or the version the client desires."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:56:24.212338+00:00",
+  "document_id": "draft-ietf-quic-transport-05",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "21864023618934e4b7639483b2962b1c3bbceeb9b0a92dec5dd0f695b96f336c",
+  "lineage_ids": "lineage:5187412ef746ed9904ec9e19",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 180,
+    "load_duration": 4619000,
+    "prompt_eval_count": 553,
+    "total_duration": 6769273800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"lists the client’s chosen version\", \"interpretation_a\": \"The client ignores the packet if the version listed is the same as the version the client *sent* in a previous packet.\", \"interpretation_b\": \"The client ignores the packet if the version listed is the version the client *wants to use* (which may not have been previously communicated).\", \"missing_information\": \"It is unclear whether 'chosen version' refers to the version the client proposed or the version the client desires.\", \"justification\": \"The phrase 'chosen version' is not clearly defined. It could refer to the version the client initially proposed, or the version the client ultimately wants to use. This difference affects whether the client should ignore the packet.\"}",
+  "record_id": "066e7a65ad4109e9018906243ee337136992a29b9fd43aef5e345b57c10dfdd1",
+  "revision": "05",
+  "schema_version": 1,
+  "section_ids": "7.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.766
+}

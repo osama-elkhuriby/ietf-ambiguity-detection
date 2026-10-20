@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear condition under which endpoints should not allow connections or migration to a loopback address. The conditions are specific and unambiguous: if the same service was previously available at a different interface or if the address was provided by a service at a non-loopback address. There is no ambiguity in the language or missing constraints that would lead to multiple reasonable interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:23:12.360963+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "8cfa5044341c6707a1e01869caa69cf6c6c2c522da7dd09afea6a5dc342c1291",
+  "lineage_ids": "lineage:8a6512024611735431004782",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 130,
+    "load_duration": 4609400,
+    "prompt_eval_count": 545,
+    "total_duration": 5362814700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear condition under which endpoints should not allow connections or migration to a loopback address. The conditions are specific and unambiguous: if the same service was previously available at a different interface or if the address was provided by a service at a non-loopback address. There is no ambiguity in the language or missing constraints that would lead to multiple reasonable interpretations.\"\n}",
+  "record_id": "87eb2282e39c3bccbc75fb8262d50668f130be9bbb5cfef9b5fe1851aea0061c",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "21.5.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.359
+}

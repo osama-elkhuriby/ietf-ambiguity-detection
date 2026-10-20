@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that if a zero-length connection ID is not being used, the active_connection_id_limit parameter must be at least 2. The following clause clarifies that the parameter must not be sent when a zero-length connection ID is used, resolving any potential ambiguity. No missing constraints or undefined terms are present.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T16:51:50.363737+00:00",
+  "document_id": "draft-ietf-quic-transport-27",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "cf5b50ee11088d0969c87bb482206cc5c78abbef838e0d2572cf65ff8c6d868d",
+  "lineage_ids": "lineage:fb073c79b752a79a4361fd29",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1339,
+    "load_duration": 5580100,
+    "prompt_eval_count": 612,
+    "total_duration": 11681335400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that if a zero-length connection ID is not being used, the active_connection_id_limit parameter must be at least 2. The following clause clarifies that the parameter must not be sent when a zero-length connection ID is used, resolving any potential ambiguity. No missing constraints or undefined terms are present.\"\n}",
+  "record_id": "87a2576c3cf2f564bf3e988361f762e1ba62ca150b88d047bedba154c87de7ca",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "18.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.672
+}

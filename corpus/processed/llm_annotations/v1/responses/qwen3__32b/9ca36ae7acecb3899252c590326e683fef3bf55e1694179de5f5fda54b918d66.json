@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear and unambiguous requirement: upon receiving a RST_STREAM frame and not having sent a FIN or RST_STREAM, the endpoint must immediately respond with a RST_STREAM frame and must not send any more data on the stream. There is no ambiguity in the required behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:28:31.990852+00:00",
+  "document_id": "draft-ietf-quic-transport-04",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "d4947418d464cd70154d45b463ef5e5c799cfb7e02e3b8b466f581ccf52fc665",
+  "lineage_ids": "lineage:c12fc5d1ac1786259d244254",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 115,
+    "load_duration": 4893500,
+    "prompt_eval_count": 569,
+    "total_duration": 4757530300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear and unambiguous requirement: upon receiving a RST_STREAM frame and not having sent a FIN or RST_STREAM, the endpoint must immediately respond with a RST_STREAM frame and must not send any more data on the stream. There is no ambiguity in the required behavior.\"\n}",
+  "record_id": "9ca36ae7acecb3899252c590326e683fef3bf55e1694179de5f5fda54b918d66",
+  "revision": "04",
+  "schema_version": 1,
+  "section_ids": "10.2.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 4.765
+}

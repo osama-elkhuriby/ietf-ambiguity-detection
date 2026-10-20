@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY choose",
+    "interpretation_a": "An endpoint could choose to *always* avoid sending datagrams to certain ports or matching patterns, regardless of other factors.",
+    "interpretation_b": "An endpoint could choose to *sometimes* avoid sending datagrams, based on internal heuristics or other conditions not specified here.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' allows for a wide range of implementations. It is unclear whether endpoints are expected to implement this avoidance mechanism, or if it is merely an optional optimization. The lack of specific criteria for when to avoid sending datagrams creates ambiguity.",
+    "missing_information": "The scope of 'choose' is not defined. Does 'choose' mean 'are permitted to' or 'should consider'? The conditions under which an endpoint would 'choose' to avoid sending datagrams are not specified, leading to different implementations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:03:12.171167+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "5ece1067a6df368b8892f695204779695ff10aee3acce0f5e8d316934bc5bfc7",
+  "lineage_ids": "lineage:5b9f5de095849256dbf7eb0e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 207,
+    "load_duration": 4240400,
+    "prompt_eval_count": 590,
+    "total_duration": 7776329700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY choose\", \"interpretation_a\": \"An endpoint could choose to *always* avoid sending datagrams to certain ports or matching patterns, regardless of other factors.\", \"interpretation_b\": \"An endpoint could choose to *sometimes* avoid sending datagrams, based on internal heuristics or other conditions not specified here.\", \"missing_information\": \"The scope of 'choose' is not defined. Does 'choose' mean 'are permitted to' or 'should consider'? The conditions under which an endpoint would 'choose' to avoid sending datagrams are not specified, leading to different implementations.\", \"justification\": \"The use of 'MAY' allows for a wide range of implementations. It is unclear whether endpoints are expected to implement this avoidance mechanism, or if it is merely an optional optimization. The lack of specific criteria for when to avoid sending datagrams creates ambiguity.\"}",
+  "record_id": "1ec214ef6f39931a01415111f17d1cd1535b640b0b014b0fc68280a5244589c9",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "21.5.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.781
+}

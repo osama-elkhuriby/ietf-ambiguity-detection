@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause states a clear timing requirement: an endpoint SHOULD set the alarm such that a packet is marked as lost no earlier than 1.25 × max(SRTT, latest_RTT) since it was sent. The wording does not allow two materially different interpretations, nor does it omit a constraint that would change implementation behavior. The only missing context is the definition of SRTT and latest_RTT, but that does not create ambiguity in the clause itself. Therefore the clause is not ambiguous.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T11:01:59.911234+00:00",
+  "document_id": "draft-ietf-quic-recovery-13",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "cf1a84088a117092a4550d962b70d90665d780ba53eb7ea48b7cf50ef3021b47",
+  "lineage_ids": "lineage:d74fbec960194a12a82b9331",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 235,
+    "load_duration": 4539800,
+    "prompt_eval_count": 6229,
+    "total_duration": 3052463200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\":\"no\",\"ambiguity_subtype\":\"none\",\"evidence_span\":\"\",\"interpretation_a\":\"\",\"interpretation_b\":\"\",\"missing_information\":\"\",\"justification\":\"The clause states a clear timing requirement: an endpoint SHOULD set the alarm such that a packet is marked as lost no earlier than 1.25 × max(SRTT, latest_RTT) since it was sent. The wording does not allow two materially different interpretations, nor does it omit a constraint that would change implementation behavior. The only missing context is the definition of SRTT and latest_RTT, but that does not create ambiguity in the clause itself. Therefore the clause is not ambiguous.\"}",
+  "record_id": "1abdeafc39b0ca790c1a0009a88f4cdf5b787d537d892372bbf8487eed526a9a",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "3.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 71.718
+}

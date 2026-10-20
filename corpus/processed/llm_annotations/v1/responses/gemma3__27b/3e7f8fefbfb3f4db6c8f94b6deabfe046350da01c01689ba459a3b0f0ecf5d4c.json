@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "If an endpoint does not expand its buffer",
+    "interpretation_a": "The endpoint is required to close the connection *immediately* upon buffer exhaustion without attempting any further processing.",
+    "interpretation_b": "The endpoint is required to close the connection *eventually* after buffer exhaustion, potentially after some minimal processing or attempt to signal the error.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'does not expand its buffer' does not specify *when* the endpoint is required to close the connection. It could be immediately upon detecting the buffer overflow, or after some brief period of attempting to handle the overflow. This difference in timing could affect implementation and error handling.",
+    "missing_information": "The timing of the connection closure is not specified. Does 'MUST close' imply immediate action, or is there a permissible delay?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:15:44.271813+00:00",
+  "document_id": "draft-ietf-quic-transport-24",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "b33d4ce1f60f40272e17aac907f4274a233f119a7cca2a59dc1cff90317d1e20",
+  "lineage_ids": "lineage:c24e698cfca668fc11679cb9",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 191,
+    "load_duration": 5153400,
+    "prompt_eval_count": 633,
+    "total_duration": 7231319100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"If an endpoint does not expand its buffer\", \"interpretation_a\": \"The endpoint is required to close the connection *immediately* upon buffer exhaustion without attempting any further processing.\", \"interpretation_b\": \"The endpoint is required to close the connection *eventually* after buffer exhaustion, potentially after some minimal processing or attempt to signal the error.\", \"missing_information\": \"The timing of the connection closure is not specified. Does 'MUST close' imply immediate action, or is there a permissible delay?\",\"justification\": \"The phrase 'does not expand its buffer' does not specify *when* the endpoint is required to close the connection. It could be immediately upon detecting the buffer overflow, or after some brief period of attempting to handle the overflow. This difference in timing could affect implementation and error handling.\"}",
+  "record_id": "3e7f8fefbfb3f4db6c8f94b6deabfe046350da01c01689ba459a3b0f0ecf5d4c",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "7.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.235
+}

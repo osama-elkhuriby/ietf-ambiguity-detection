@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "0-RTT data will only be discarded by any server that sends a HelloRetryRequest",
+    "interpretation_a": "A server *must* discard 0-RTT data if it sends a HelloRetryRequest, but a client is only *recommended* to stop sending it. This implies the server might not discard it, even after sending the request.",
+    "interpretation_b": "Both the client *should* stop sending 0-RTT data, and the server *will* discard it if it sends a HelloRetryRequest. The 'will' is implied by the 'should' and the server's action.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'should' for the client and 'will' (implied) for the server creates ambiguity about the server's actual behavior. Does the server *have* to discard the data, or is it merely expected to?",
+    "missing_information": "It is unclear whether the server is obligated to discard the 0-RTT data, or if the client's ceasing transmission is sufficient to prevent processing of that data."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:36:25.516190+00:00",
+  "document_id": "draft-ietf-quic-tls-12",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "59ae21f31b35a581088ff77998f2c3f34a44882f774821f110e4ff71ac95797e",
+  "lineage_ids": "lineage:5913ead06b803681e439dafe",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 247,
+    "load_duration": 4230700,
+    "prompt_eval_count": 592,
+    "total_duration": 9282110200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"0-RTT data will only be discarded by any server that sends a HelloRetryRequest\", \"interpretation_a\": \"A server *must* discard 0-RTT data if it sends a HelloRetryRequest, but a client is only *recommended* to stop sending it. This implies the server might not discard it, even after sending the request.\", \"interpretation_b\": \"Both the client *should* stop sending 0-RTT data, and the server *will* discard it if it sends a HelloRetryRequest. The 'will' is implied by the 'should' and the server's action.\", \"missing_information\": \"It is unclear whether the server is obligated to discard the 0-RTT data, or if the client's ceasing transmission is sufficient to prevent processing of that data.\",\"justification\": \"The use of 'should' for the client and 'will' (implied) for the server creates ambiguity about the server's actual behavior. Does the server *have* to discard the data, or is it merely expected to?\"}",
+  "record_id": "394568295abf1d866a5517bd4813a68305f6d4614fe3c06b097255be442009c4",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "6.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.297
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY be included",
+    "interpretation_a": "Data or controls queued for transmission *might* be included in the initial SYN segment.",
+    "interpretation_b": "Data or controls queued for transmission *could* be included in a subsequent segment after the SYN is sent, but before the connection is established.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' combined with the lack of specification of *when* the data/controls are included creates ambiguity. It's unclear if the queued data is part of the initial SYN segment or a later segment before connection establishment.",
+    "missing_information": "It is unclear whether the queued data/controls are included in the SYN segment itself, or in a later segment before the connection is fully established. This affects implementation choices regarding buffering and transmission scheduling."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:22:26.640651+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "d113c91a84b4f75b28d0d72bfbaa2e5bd4dc81bc08546f8dae850ccc85c17d46",
+  "lineage_ids": "lineage:02c998bbce7458fa950236e1",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 188,
+    "load_duration": 4764600,
+    "prompt_eval_count": 570,
+    "total_duration": 7481513400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY be included\", \"interpretation_a\": \"Data or controls queued for transmission *might* be included in the initial SYN segment.\", \"interpretation_b\": \"Data or controls queued for transmission *could* be included in a subsequent segment after the SYN is sent, but before the connection is established.\", \"missing_information\": \"It is unclear whether the queued data/controls are included in the SYN segment itself, or in a later segment before the connection is fully established. This affects implementation choices regarding buffering and transmission scheduling.\", \"justification\": \"The use of 'MAY' combined with the lack of specification of *when* the data/controls are included creates ambiguity. It's unclear if the queued data is part of the initial SYN segment or a later segment before connection establishment.\"}",
+  "record_id": "5b7804f66e04d2a4fd8e89938b84de02705cffcb220f732b2efd91a7890cb06f",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.10.7.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.5
+}

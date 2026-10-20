@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "sensitive data",
+    "interpretation_a": "\"sensitive data\" refers to personally identifying information such as names, addresses, or social security numbers.",
+    "interpretation_b": "\"sensitive data\" refers to any information that could compromise security if disclosed, such as cryptographic keys, authentication tokens, or internal configuration details.",
+    "is_ambiguous": "yes",
+    "justification": "The term \"sensitive data\" is not defined in the supplied text, allowing multiple materially different interpretations of what data is considered sensitive.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T08:08:32.145928+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "c4a7e79f6657aafcc46bc24a4269097202d73b06efc28cc3e9599a32c718073d",
+  "lineage_ids": "lineage:539a2628e541405647c185e6",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 306,
+    "load_duration": 4035800,
+    "prompt_eval_count": 726,
+    "total_duration": 2770008200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-1\",\n  \"evidence_span\": \"sensitive data\",\n  \"interpretation_a\": \"\\\"sensitive data\\\" refers to personally identifying information such as names, addresses, or social security numbers.\",\n  \"interpretation_b\": \"\\\"sensitive data\\\" refers to any information that could compromise security if disclosed, such as cryptographic keys, authentication tokens, or internal configuration details.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The term \\\"sensitive data\\\" is not defined in the supplied text, allowing multiple materially different interpretations of what data is considered sensitive.\"\n}",
+  "record_id": "da502b80cf32d504807b002d8449b975b28c0552f33f97423bb485c30409bfa7",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "9.3.8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.14
+}

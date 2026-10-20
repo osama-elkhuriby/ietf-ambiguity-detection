@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Since a PATH_CHALLENGE might be sent from a spoofed address, an endpoint MAY limit the rate at which it sends PATH_RESPONSE frames and MAY silently discard PATH_CHALLENGE frames that would cause it to respond at a higher rate.",
+    "interpretation_a": "Discard any PATH_CHALLENGE frames that would cause the endpoint to exceed a predefined threshold of PATH_RESPONSE frames per second.",
+    "interpretation_b": "Discard any PATH_CHALLENGE frames that would cause the endpoint to send PATH_RESPONSE frames at a rate higher than its current sending rate.",
+    "is_ambiguous": "yes",
+    "justification": "The lack of a concrete definition for \"higher rate\" allows at least two materially different implementation choices, making the clause ambiguous.",
+    "missing_information": "The clause does not define what constitutes a \"higher rate\" or the threshold against which it should be measured, leaving the implementation behavior under-specified."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T16:56:59.942459+00:00",
+  "document_id": "draft-ietf-quic-transport-15",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "e6f00837bd3300e2c6b9d6041679cd0dc2a93d961cceb855840ddcb1ed5ee77e",
+  "lineage_ids": "lineage:93624d999562a4d67b89fd95",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2209,
+    "load_duration": 5849100,
+    "prompt_eval_count": 670,
+    "total_duration": 19103652500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"Since a PATH_CHALLENGE might be sent from a spoofed address, an endpoint MAY limit the rate at which it sends PATH_RESPONSE frames and MAY silently discard PATH_CHALLENGE frames that would cause it to respond at a higher rate.\",\n  \"interpretation_a\": \"Discard any PATH_CHALLENGE frames that would cause the endpoint to exceed a predefined threshold of PATH_RESPONSE frames per second.\",\n  \"interpretation_b\": \"Discard any PATH_CHALLENGE frames that would cause the endpoint to send PATH_RESPONSE frames at a rate higher than its current sending rate.\",\n  \"missing_information\": \"The clause does not define what constitutes a \\\"higher rate\\\" or the threshold against which it should be measured, leaving the implementation behavior under-specified.\",\n  \"justification\": \"The lack of a concrete definition for \\\"higher rate\\\" allows at least two materially different implementation choices, making the clause ambiguous.\"\n}",
+  "record_id": "8aeaf8b66d1ccea1eee394a87df0af977b97461cf70193cb0a18a54daf8eb75e",
+  "revision": "15",
+  "schema_version": 1,
+  "section_ids": "6.10.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 19.093
+}

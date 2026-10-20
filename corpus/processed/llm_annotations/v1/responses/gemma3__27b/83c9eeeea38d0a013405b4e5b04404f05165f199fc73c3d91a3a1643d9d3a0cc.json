@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless it is certain",
+    "interpretation_a": "The receiver must discard the packet if it *cannot definitively prove* it hasn't seen the packet number before.",
+    "interpretation_b": "The receiver must discard the packet if it *lacks absolute confidence* it hasn't seen the packet number before, even if a reasonable investigation would likely confirm it hasn't.",
+    "is_ambiguous": "yes",
+    "justification": "The word 'certain' is vague. It doesn't specify the threshold of confidence required to *not* discard the packet. This allows for different implementations to have different levels of strictness in their duplicate detection, leading to interoperability issues.",
+    "missing_information": "The level of 'certainty' is not defined. Does 'certain' require absolute proof, or is a high degree of confidence sufficient? This affects implementation of the check."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:39:06.881844+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "6919076e7c66cce1b81790a50f26a68f44d4c57748082224106fbae973aebf12",
+  "lineage_ids": "lineage:5fd9350b51fa4db9b7ea030c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 200,
+    "load_duration": 5969200,
+    "prompt_eval_count": 620,
+    "total_duration": 7543893800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless it is certain\", \"interpretation_a\": \"The receiver must discard the packet if it *cannot definitively prove* it hasn't seen the packet number before.\", \"interpretation_b\": \"The receiver must discard the packet if it *lacks absolute confidence* it hasn't seen the packet number before, even if a reasonable investigation would likely confirm it hasn't.\", \"missing_information\": \"The level of 'certainty' is not defined. Does 'certain' require absolute proof, or is a high degree of confidence sufficient? This affects implementation of the check.\", \"justification\": \"The word 'certain' is vague. It doesn't specify the threshold of confidence required to *not* discard the packet. This allows for different implementations to have different levels of strictness in their duplicate detection, leading to interoperability issues.\"}",
+  "record_id": "83c9eeeea38d0a013405b4e5b04404f05165f199fc73c3d91a3a1643d9d3a0cc",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "12.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.547
+}

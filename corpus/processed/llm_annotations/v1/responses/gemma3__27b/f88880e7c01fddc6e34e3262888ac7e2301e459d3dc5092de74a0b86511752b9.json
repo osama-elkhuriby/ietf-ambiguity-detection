@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "SHOULD be set to a non-zero value",
+    "interpretation_a": "Servers are encouraged, but not required, to set the value to a non-zero value. A server could legitimately set it to zero.",
+    "interpretation_b": "Servers are expected to set the value to a non-zero value, and deviating from this is a protocol error. The use of SHOULD implies a strong recommendation, bordering on a requirement.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' is ambiguous. While it indicates a recommendation, it doesn't explicitly state whether failing to follow it is a protocol error. This leads to two reasonable interpretations of server behavior.",
+    "missing_information": "The strength of 'SHOULD' is not clarified. Is non-compliance a protocol error, or merely discouraged?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:15:29.772829+00:00",
+  "document_id": "draft-ietf-quic-http-22",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "0fab573939ee7c6edab52cdd98c49eefd02542556d6407128cb6ca9e02e77b77",
+  "lineage_ids": "lineage:a82642719d9563ad4ea08815",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 193,
+    "load_duration": 9004200,
+    "prompt_eval_count": 557,
+    "total_duration": 7437590800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"SHOULD be set to a non-zero value\", \"interpretation_a\": \"Servers are encouraged, but not required, to set the value to a non-zero value. A server could legitimately set it to zero.\", \"interpretation_b\": \"Servers are expected to set the value to a non-zero value, and deviating from this is a protocol error. The use of SHOULD implies a strong recommendation, bordering on a requirement.\", \"missing_information\": \"The strength of 'SHOULD' is not clarified. Is non-compliance a protocol error, or merely discouraged?\",\"justification\": \"The use of 'SHOULD' is ambiguous. While it indicates a recommendation, it doesn't explicitly state whether failing to follow it is a protocol error. This leads to two reasonable interpretations of server behavior.\"}",
+  "record_id": "f88880e7c01fddc6e34e3262888ac7e2301e459d3dc5092de74a0b86511752b9",
+  "revision": "22",
+  "schema_version": 1,
+  "section_ids": "7.2.5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.453
+}

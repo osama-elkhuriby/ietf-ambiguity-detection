@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause is clear and unambiguous. It specifies a concrete condition (receiving a push stream with fewer than 4 octets) and a required response (treat it as a connection error of type HTTP_MALFORMED_PUSH). There is no room for multiple interpretations, and no missing constraint that would affect implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:59:59.120211+00:00",
+  "document_id": "draft-ietf-quic-http-07",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "885ec0566405a7814c02d27a4b042b4c05e817c09dcf4099cf3728903d0bdeba",
+  "lineage_ids": "lineage:14efc2adc960032ca5dced8b",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 122,
+    "load_duration": 15995500,
+    "prompt_eval_count": 525,
+    "total_duration": 5089775100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause is clear and unambiguous. It specifies a concrete condition (receiving a push stream with fewer than 4 octets) and a required response (treat it as a connection error of type HTTP_MALFORMED_PUSH). There is no room for multiple interpretations, and no missing constraint that would affect implementation behavior.\"\n}",
+  "record_id": "c53030810c48e35539f9ff383d31188d4cfbe81f68f7dedddf64d00f6856d7c9",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "4.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.094
+}

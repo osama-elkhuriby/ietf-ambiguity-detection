@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "If either control stream is closed",
+    "interpretation_a": "Closing *either* the client-initiated control stream *or* the server-initiated control stream triggers the connection error.",
+    "interpretation_b": "Closing *both* the client-initiated control stream *and* the server-initiated control stream triggers the connection error. Closing only one does not.",
+    "is_ambiguous": "yes",
+    "justification": "The word 'either' is ambiguous in this context. It could mean that closing any one of the control streams triggers the error, or that closing both streams triggers the error. Without clarification, implementations could reasonably interpret this differently.",
+    "missing_information": "It is unclear whether 'either' means 'one or the other' or 'both'."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:04:38.862879+00:00",
+  "document_id": "draft-ietf-quic-http-23",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "da2520041c526058651d9e75ef5eb20b0cf47ce1f77dc173f6d5664024681aa2",
+  "lineage_ids": "lineage:bdee469196ccefe2fee9f827",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 176,
+    "load_duration": 4086200,
+    "prompt_eval_count": 575,
+    "total_duration": 6812284500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"If either control stream is closed\", \"interpretation_a\": \"Closing *either* the client-initiated control stream *or* the server-initiated control stream triggers the connection error.\", \"interpretation_b\": \"Closing *both* the client-initiated control stream *and* the server-initiated control stream triggers the connection error. Closing only one does not.\", \"missing_information\": \"It is unclear whether 'either' means 'one or the other' or 'both'.\", \"justification\": \"The word 'either' is ambiguous in this context. It could mean that closing any one of the control streams triggers the error, or that closing both streams triggers the error. Without clarification, implementations could reasonably interpret this differently.\"}",
+  "record_id": "b9002feae050229ffb0d4b5cb1d2105bfe28b1c2367bc01a8e1db5ec8803ca13",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "6.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.828
+}

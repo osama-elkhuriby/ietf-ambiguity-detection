@@ -1,0 +1,123 @@
+{
+  "alignment_root": "corpus/processed/alignments",
+  "binary_rows": 2546,
+  "context_resolution_counts": {
+    "both": 2129,
+    "next_only": 100,
+    "previous_only": 315,
+    "target_only": 2
+  },
+  "created_at": "2026-10-10T13:10:32.785078+00:00",
+  "dataset_columns": [
+    "record_id",
+    "family_id",
+    "document_id",
+    "revision",
+    "clause_ids",
+    "section_ids",
+    "lineage_ids",
+    "split",
+    "previous_clause",
+    "target_clause",
+    "next_clause",
+    "section_heading",
+    "context_source_ids",
+    "context_resolution_status",
+    "alignment_source_path",
+    "source_hashes",
+    "label",
+    "label_tier",
+    "sample_weight",
+    "ambiguity_subtype"
+  ],
+  "dataset_sha256": "eab910cac24d628d820aca1b1f798f67a974d250b52302c38d81483776a9e66a",
+  "duplicate_allowlist": null,
+  "excluded_uncertain_rows": 0,
+  "git_commit": "0eb748efbfaff532f97893c6bd47b0f9e7e8935f",
+  "input_contract": {
+    "forbidden_model_fields": [
+      "family_id",
+      "label",
+      "label_tier",
+      "sample_weight",
+      "ambiguity_subtype",
+      "source_hashes",
+      "split"
+    ],
+    "future_revision_evidence": false,
+    "model_text_fields": [
+      "previous_clause",
+      "target_clause",
+      "next_clause"
+    ]
+  },
+  "leakage_audit_counts": {
+    "exact_cross_split_duplicates": 13,
+    "near_cross_split_duplicates": 3,
+    "target_as_cross_split_context": 23,
+    "unreviewed_exact_cross_split_duplicates": 13
+  },
+  "leakage_audit_sha256": "001c4ee7f0740373fa6bd5e59992b3f0ebb35757e0f055648b9ac4a74bb00960",
+  "near_duplicate_threshold": 0.85,
+  "schema_version": 1,
+  "source_path": "corpus/processed/llm_annotations/v1/training_dataset.csv",
+  "source_rows": 2546,
+  "source_sha256": "35cb2cacc9d6b4ec1d5b9f810becf165f56f7b633bab67eb0c87a3773f132614",
+  "split_assignments_sha256": "115e4745db4ae404af87c3d86d8d121aaee113daa2993c7a3a7e64f0ee305568",
+  "split_summary": {
+    "test": {
+      "families": [
+        "draft-ietf-httpbis-http2bis"
+      ],
+      "labels": {
+        "0": 227,
+        "1": 35
+      },
+      "rows": 262,
+      "tiers": {
+        "HIGH": 101,
+        "MEDIUM": 161
+      }
+    },
+    "train": {
+      "families": [
+        "draft-ietf-6man-rfc2460bis",
+        "draft-ietf-dnsop-svcb-https",
+        "draft-ietf-httpbis-cache-header",
+        "draft-ietf-httpbis-semantics",
+        "draft-ietf-quic-http",
+        "draft-ietf-quic-recovery",
+        "draft-ietf-quic-tls",
+        "draft-ietf-quic-transport",
+        "draft-ietf-tls-tls13"
+      ],
+      "labels": {
+        "0": 1751,
+        "1": 394
+      },
+      "rows": 2145,
+      "tiers": {
+        "HIGH": 648,
+        "MEDIUM": 1497
+      }
+    },
+    "validation": {
+      "families": [
+        "draft-ietf-tcpm-rfc793bis"
+      ],
+      "labels": {
+        "0": 113,
+        "1": 26
+      },
+      "rows": 139,
+      "tiers": {
+        "HIGH": 37,
+        "MEDIUM": 102
+      }
+    }
+  },
+  "training_block_reasons": [
+    "unreviewed exact target-text duplicates cross split"
+  ],
+  "training_blocked": true
+}

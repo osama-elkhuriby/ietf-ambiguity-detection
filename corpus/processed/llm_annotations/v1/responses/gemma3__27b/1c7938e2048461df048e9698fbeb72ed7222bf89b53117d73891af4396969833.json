@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST treat the request or response as malformed",
+    "interpretation_a": "The endpoint immediately terminates processing of the request/response upon detecting pseudo-headers in trailers.",
+    "interpretation_b": "The endpoint logs an error, potentially continues processing to extract other valid data, and then signals an error condition to the application layer.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"treat as malformed\" is underspecified. It doesn't define the required action upon detecting the error condition. Two reasonable interpretations exist regarding the level of immediate action required.",
+    "missing_information": "The clause does not specify *how* the endpoint should treat the malformed message. Does it terminate processing immediately, or attempt to recover/log and then signal an error?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:29:25.328033+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "b4cda5e18eb6411c7a84c2d6a04388bc8beb0fd438a9f7c2298721976e42bb3f",
+  "lineage_ids": "lineage:e914d75514dcd25756b03fa2",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 179,
+    "load_duration": 9079300,
+    "prompt_eval_count": 589,
+    "total_duration": 6991013000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST treat the request or response as malformed\", \"interpretation_a\": \"The endpoint immediately terminates processing of the request/response upon detecting pseudo-headers in trailers.\", \"interpretation_b\": \"The endpoint logs an error, potentially continues processing to extract other valid data, and then signals an error condition to the application layer.\", \"missing_information\": \"The clause does not specify *how* the endpoint should treat the malformed message. Does it terminate processing immediately, or attempt to recover/log and then signal an error?\",\"justification\": \"The phrase \\\"treat as malformed\\\" is underspecified. It doesn't define the required action upon detecting the error condition. Two reasonable interpretations exist regarding the level of immediate action required.\"}",
+  "record_id": "1c7938e2048461df048e9698fbeb72ed7222bf89b53117d73891af4396969833",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.016
+}

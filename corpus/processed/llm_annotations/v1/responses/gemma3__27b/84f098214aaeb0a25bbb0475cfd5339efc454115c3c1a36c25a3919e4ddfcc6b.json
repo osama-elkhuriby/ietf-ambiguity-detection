@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD abort",
+    "interpretation_a": "The server is encouraged to abort the response stream, but is not required to do so.",
+    "interpretation_b": "The server is expected to abort the response stream, and deviation from this expectation should be documented.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' creates ambiguity. While it indicates a recommendation, it doesn't clearly define whether the server *must* abort the stream under certain conditions or if it's merely a best practice. A missing constraint would be a clear statement of whether aborting is mandatory or optional.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:56:39.048765+00:00",
+  "document_id": "draft-ietf-quic-http-23",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "c00337a7e4408c6dc5dd0af13e32dd346bc2f2ef72a3408bee0a731863b0d26c",
+  "lineage_ids": "lineage:49b51ea8f2e0d09a2e1afd1b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 153,
+    "load_duration": 9291500,
+    "prompt_eval_count": 604,
+    "total_duration": 6014692100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD abort\", \"interpretation_a\": \"The server is encouraged to abort the response stream, but is not required to do so.\", \"interpretation_b\": \"The server is expected to abort the response stream, and deviation from this expectation should be documented.\", \"missing_information\": \"\", \"justification\": \"The use of 'SHOULD' creates ambiguity. While it indicates a recommendation, it doesn't clearly define whether the server *must* abort the stream under certain conditions or if it's merely a best practice. A missing constraint would be a clear statement of whether aborting is mandatory or optional.\"}",
+  "record_id": "84f098214aaeb0a25bbb0475cfd5339efc454115c3c1a36c25a3919e4ddfcc6b",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "4.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.047
+}

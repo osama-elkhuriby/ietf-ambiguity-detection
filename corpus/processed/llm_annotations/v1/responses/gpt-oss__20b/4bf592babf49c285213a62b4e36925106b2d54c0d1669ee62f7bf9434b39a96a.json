@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "remembered value of those parameters",
+    "interpretation_a": "The server must not set values smaller than the value it remembered from the client's previous connection.",
+    "interpretation_b": "The server must not set values smaller than the value it remembered from the client's 0‑RTT data.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"remembered value of those parameters\" is ambiguous because it does not identify the source of the remembered value, allowing two materially different implementation behaviours.",
+    "missing_information": "The clause does not specify which remembered value (previous connection or 0‑RTT data) is intended, leading to an incomplete constraint on implementation behaviour."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T15:37:03.562493+00:00",
+  "document_id": "draft-ietf-quic-transport-05",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "0390fda3aa942def69bcb28095018b0909ad0584463983c163933cb58465f865",
+  "lineage_ids": "lineage:18e915ba006807b8f488e80a",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1420,
+    "load_duration": 4006900,
+    "prompt_eval_count": 621,
+    "total_duration": 12329822100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"remembered value of those parameters\",\n  \"interpretation_a\": \"The server must not set values smaller than the value it remembered from the client's previous connection.\",\n  \"interpretation_b\": \"The server must not set values smaller than the value it remembered from the client's 0‑RTT data.\",\n  \"missing_information\": \"The clause does not specify which remembered value (previous connection or 0‑RTT data) is intended, leading to an incomplete constraint on implementation behaviour.\",\n  \"justification\": \"The phrase \\\"remembered value of those parameters\\\" is ambiguous because it does not identify the source of the remembered value, allowing two materially different implementation behaviours.\"\n}",
+  "record_id": "4bf592babf49c285213a62b4e36925106b2d54c0d1669ee62f7bf9434b39a96a",
+  "revision": "05",
+  "schema_version": 1,
+  "section_ids": "7.3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 12.328
+}

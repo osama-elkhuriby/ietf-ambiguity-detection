@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "when the transport is not QUIC",
+    "interpretation_a": "The condition 'when the transport is not QUIC' refers to the initial handshake phase, meaning if the first packet doesn't indicate QUIC.",
+    "interpretation_b": "The condition 'when the transport is not QUIC' refers to any packet received after the connection establishment, meaning if any packet doesn't conform to QUIC's structure.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'when the transport is not QUIC' is open to interpretation. It's unclear whether this applies only to the initial handshake or to all packets exchanged. This affects when the fatal alert should be sent.",
+    "missing_information": "The definition of 'transport is not QUIC' is needed. Is it a condition on the initial handshake, or on all subsequent packets?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:52:11.022942+00:00",
+  "document_id": "draft-ietf-quic-tls-19",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "c9dfba1c3d5a73ee069c90a442cc15c905dfc9fab571596dee3bc85a8039f194",
+  "lineage_ids": "lineage:7871d127daf767a606fc1903",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 197,
+    "load_duration": 4011700,
+    "prompt_eval_count": 565,
+    "total_duration": 7413628700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"when the transport is not QUIC\", \"interpretation_a\": \"The condition 'when the transport is not QUIC' refers to the initial handshake phase, meaning if the first packet doesn't indicate QUIC.\", \"interpretation_b\": \"The condition 'when the transport is not QUIC' refers to any packet received after the connection establishment, meaning if any packet doesn't conform to QUIC's structure.\", \"missing_information\": \"The definition of 'transport is not QUIC' is needed. Is it a condition on the initial handshake, or on all subsequent packets?\",\"justification\": \"The phrase 'when the transport is not QUIC' is open to interpretation. It's unclear whether this applies only to the initial handshake or to all packets exchanged. This affects when the fatal alert should be sent.\"}",
+  "record_id": "ece0daf8a9ff38c3cd4b0c6012ca150e81780f7c3e404e49648e0a78cfd4819f",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "8.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.406
+}

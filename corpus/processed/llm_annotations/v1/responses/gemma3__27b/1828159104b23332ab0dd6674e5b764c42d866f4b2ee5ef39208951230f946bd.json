@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "packet number for any packet number space",
+    "interpretation_a": "The client must not reset the packet number for *all* packet number spaces. This implies multiple packet number spaces exist and are all subject to this restriction.",
+    "interpretation_b": "The client must not reset the packet number for *each* packet number space. This implies multiple packet number spaces exist, and the restriction applies individually to each space.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'any packet number space' is ambiguous because it's unclear if it refers to all spaces collectively or each space individually. This affects how a client would implement the restriction on resetting packet numbers.",
+    "missing_information": "The document does not explicitly define what constitutes a 'packet number space'. Without this definition, it's unclear whether the restriction applies globally to all spaces or individually to each one."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:00:53.734155+00:00",
+  "document_id": "draft-ietf-quic-transport-29",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "194cc95c1a0df55ca26087aa8904b2a047d8c926de6903442bbbcb3c21c77bb0",
+  "lineage_ids": "lineage:8358bd2ac8d65bfb7fa58082",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 200,
+    "load_duration": 2506000,
+    "prompt_eval_count": 598,
+    "total_duration": 7556959000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"packet number for any packet number space\", \"interpretation_a\": \"The client must not reset the packet number for *all* packet number spaces. This implies multiple packet number spaces exist and are all subject to this restriction.\", \"interpretation_b\": \"The client must not reset the packet number for *each* packet number space. This implies multiple packet number spaces exist, and the restriction applies individually to each space.\", \"missing_information\": \"The document does not explicitly define what constitutes a 'packet number space'. Without this definition, it's unclear whether the restriction applies globally to all spaces or individually to each one.\",\"justification\": \"The phrase 'any packet number space' is ambiguous because it's unclear if it refers to all spaces collectively or each space individually. This affects how a client would implement the restriction on resetting packet numbers.\"}",
+  "record_id": "1828159104b23332ab0dd6674e5b764c42d866f4b2ee5ef39208951230f946bd",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "17.2.5.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.547
+}

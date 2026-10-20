@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "prior to the completion of the cryptographic handshake",
+    "interpretation_a": "Stream 0 must be prioritized until the very last step of the handshake is completed, including any retransmissions or final messages.",
+    "interpretation_b": "Stream 0 must be prioritized from the beginning of the handshake until the initial handshake messages are exchanged, but prioritization can cease before all handshake steps are fully completed.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'completion of the cryptographic handshake' is not precisely defined. This allows for different interpretations of when the prioritization requirement ends, affecting implementation.",
+    "missing_information": "The precise moment that defines 'completion of the cryptographic handshake' is not defined. Does it include retransmissions of handshake messages? Does it include any post-handshake signaling?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:52:12.162032+00:00",
+  "document_id": "draft-ietf-quic-transport-12",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "c8cce3cf96e140cbab25f0bc30118e6a12a8bd136c46ce4ccf7f271057c54061",
+  "lineage_ids": "lineage:f446bf5c5192e733214aba78",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 183,
+    "load_duration": 3529100,
+    "prompt_eval_count": 575,
+    "total_duration": 6930550900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"prior to the completion of the cryptographic handshake\", \"interpretation_a\": \"Stream 0 must be prioritized until the very last step of the handshake is completed, including any retransmissions or final messages.\", \"interpretation_b\": \"Stream 0 must be prioritized from the beginning of the handshake until the initial handshake messages are exchanged, but prioritization can cease before all handshake steps are fully completed.\", \"missing_information\": \"The precise moment that defines 'completion of the cryptographic handshake' is not defined. Does it include retransmissions of handshake messages? Does it include any post-handshake signaling?\",\"justification\": \"The phrase 'completion of the cryptographic handshake' is not precisely defined. This allows for different interpretations of when the prioritization requirement ends, affecting implementation.\"}",
+  "record_id": "a7f7e3c0524c4d0802c3eb1b1e7074712c116eefa34770ae5892cf4f69611a58",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "9.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.938
+}

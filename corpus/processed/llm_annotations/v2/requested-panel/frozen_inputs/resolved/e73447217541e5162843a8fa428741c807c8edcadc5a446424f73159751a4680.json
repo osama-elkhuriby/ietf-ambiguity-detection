@@ -1,0 +1,229 @@
+{
+  "context_builder_version": "same-revision-context-v2.0.0",
+  "context_char_limit": 24000,
+  "context_chars": 1122,
+  "coverage_claim": "bounded_same_document_same_revision_context_only",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "items": [
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-07:6.5.3:b0260",
+      "clause_id": "draft-ietf-httpbis-http2bis-07:6.5.3:b0260:c01",
+      "content": "If the sender of a SETTINGS frame does not receive an acknowledgment within a reasonable amount of time, it MAY issue a connection error of type SETTINGS_TIMEOUT.",
+      "content_sha256": "7b7dc1a063550d65f2478277beb395f8303e80ca0635851719d6754ec687075e",
+      "document_id": "draft-ietf-httpbis-http2bis-07",
+      "kind": "target",
+      "retrieval_reason": "frozen_target_clause",
+      "revision": "07",
+      "section_heading": "Settings Synchronization",
+      "section_id": "6.5.3",
+      "source_sha256": "baf4b6a43b09ae707e84711034d52a2394909928863af5e5b7cd17403ae28881",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[6]/section[5]/section[3]/t[3]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-07:6.5.3:b0259",
+      "clause_id": "draft-ietf-httpbis-http2bis-07:6.5.3:b0259:c04",
+      "content": "Upon receiving a SETTINGS frame with the ACK flag set, the sender of the altered settings can rely on the values from the oldest unacknowledged SETTINGS frame having been applied.",
+      "content_sha256": "c20890672942c5f56ec8280ff3e0dfc44aea07d46f2d69d5088b9b92d13006a1",
+      "document_id": "draft-ietf-httpbis-http2bis-07",
+      "kind": "previous",
+      "retrieval_reason": "local_previous_clause",
+      "revision": "07",
+      "section_heading": "Settings Synchronization",
+      "section_id": "6.5.3",
+      "source_sha256": "baf4b6a43b09ae707e84711034d52a2394909928863af5e5b7cd17403ae28881",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[6]/section[5]/section[3]/t[2]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-07:6.5.3:b0260",
+      "clause_id": "draft-ietf-httpbis-http2bis-07:6.5.3:b0260:c02",
+      "content": "In setting a timeout, some allowance needs to be made for processing delays at the peer; a timeout that is solely based on the round trip time between endpoints might result in spurious errors.",
+      "content_sha256": "7757747d495c2450c0eeb3daf0a4543d6dc45d08e82175efc1673045abc6112d",
+      "document_id": "draft-ietf-httpbis-http2bis-07",
+      "kind": "next",
+      "retrieval_reason": "local_next_clause",
+      "revision": "07",
+      "section_heading": "Settings Synchronization",
+      "section_id": "6.5.3",
+      "source_sha256": "baf4b6a43b09ae707e84711034d52a2394909928863af5e5b7cd17403ae28881",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[6]/section[5]/section[3]/t[3]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-07:2.2:b0027",
+      "clause_id": "draft-ietf-httpbis-http2bis-07:2.2:b0027:c01",
+      "content": "client:: The endpoint that initiates an HTTP/2 connection.",
+      "content_sha256": "3f7218174293f7fe4cf1ec44876aeef8d0b340fec30a295a7c376f3e4a7ab76a",
+      "document_id": "draft-ietf-httpbis-http2bis-07",
+      "kind": "definition",
+      "retrieval_reason": "same_revision_definition_candidate",
+      "revision": "07",
+      "section_heading": "Conventions and Terminology",
+      "section_id": "2.2",
+      "source_sha256": "baf4b6a43b09ae707e84711034d52a2394909928863af5e5b7cd17403ae28881",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[2]/section[2]/dl/dd[1]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-07:2.2:b0027",
+      "clause_id": "draft-ietf-httpbis-http2bis-07:2.2:b0027:c02",
+      "content": "Clients send HTTP requests and receive HTTP responses.",
+      "content_sha256": "4e6ce99db4c88e011ce733cd19ee417448001e79ca4e1c6a21dc50cc7ca6d5a3",
+      "document_id": "draft-ietf-httpbis-http2bis-07",
+      "kind": "definition",
+      "retrieval_reason": "same_revision_definition_candidate",
+      "revision": "07",
+      "section_heading": "Conventions and Terminology",
+      "section_id": "2.2",
+      "source_sha256": "baf4b6a43b09ae707e84711034d52a2394909928863af5e5b7cd17403ae28881",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[2]/section[2]/dl/dd[1]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-07:2.2:b0028",
+      "clause_id": "draft-ietf-httpbis-http2bis-07:2.2:b0028:c01",
+      "content": "connection:: A transport-layer connection between two endpoints.",
+      "content_sha256": "f1bdfc31ad87c641359a81f1105d7d18b98bbe9e90ba19ac01d40430c2312f1b",
+      "document_id": "draft-ietf-httpbis-http2bis-07",
+      "kind": "definition",
+      "retrieval_reason": "same_revision_definition_candidate",
+      "revision": "07",
+      "section_heading": "Conventions and Terminology",
+      "section_id": "2.2",
+      "source_sha256": "baf4b6a43b09ae707e84711034d52a2394909928863af5e5b7cd17403ae28881",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[2]/section[2]/dl/dd[2]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-07:2.2:b0029",
+      "clause_id": "draft-ietf-httpbis-http2bis-07:2.2:b0029:c01",
+      "content": "connection error:: An error that affects the entire HTTP/2 connection.",
+      "content_sha256": "fc2431d9df819d4f83d8e1f332627609b7ca57197a17a12a6062c03b27ee52f0",
+      "document_id": "draft-ietf-httpbis-http2bis-07",
+      "kind": "definition",
+      "retrieval_reason": "same_revision_definition_candidate",
+      "revision": "07",
+      "section_heading": "Conventions and Terminology",
+      "section_id": "2.2",
+      "source_sha256": "baf4b6a43b09ae707e84711034d52a2394909928863af5e5b7cd17403ae28881",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[2]/section[2]/dl/dd[3]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-07:2.2:b0030",
+      "clause_id": "draft-ietf-httpbis-http2bis-07:2.2:b0030:c01",
+      "content": "endpoint:: Either the client or server of the connection.",
+      "content_sha256": "cc89d4a62d9c519bd2500ca232eafc0818253cf36d90173bd1a3cd7d48d3331d",
+      "document_id": "draft-ietf-httpbis-http2bis-07",
+      "kind": "definition",
+      "retrieval_reason": "same_revision_definition_candidate",
+      "revision": "07",
+      "section_heading": "Conventions and Terminology",
+      "section_id": "2.2",
+      "source_sha256": "baf4b6a43b09ae707e84711034d52a2394909928863af5e5b7cd17403ae28881",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[2]/section[2]/dl/dd[4]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-07:2.2:b0031",
+      "clause_id": "draft-ietf-httpbis-http2bis-07:2.2:b0031:c01",
+      "content": "frame:: The smallest unit of communication within an HTTP/2 connection, consisting of a header and a variable-length sequence of octets structured according to the frame type.",
+      "content_sha256": "00c17dce97c9c4567c24317484854b5b331773d296dde67b2f193377fd2107ae",
+      "document_id": "draft-ietf-httpbis-http2bis-07",
+      "kind": "definition",
+      "retrieval_reason": "same_revision_definition_candidate",
+      "revision": "07",
+      "section_heading": "Conventions and Terminology",
+      "section_id": "2.2",
+      "source_sha256": "baf4b6a43b09ae707e84711034d52a2394909928863af5e5b7cd17403ae28881",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[2]/section[2]/dl/dd[5]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-07:2.2:b0035",
+      "clause_id": "draft-ietf-httpbis-http2bis-07:2.2:b0035:c01",
+      "content": "server:: The endpoint that accepts an HTTP/2 connection.",
+      "content_sha256": "bfef31252d7d2dff539be9b015475ca4cacb671e2a73788588dde0b713f6a370",
+      "document_id": "draft-ietf-httpbis-http2bis-07",
+      "kind": "definition",
+      "retrieval_reason": "same_revision_definition_candidate",
+      "revision": "07",
+      "section_heading": "Conventions and Terminology",
+      "section_id": "2.2",
+      "source_sha256": "baf4b6a43b09ae707e84711034d52a2394909928863af5e5b7cd17403ae28881",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[2]/section[2]/dl/dd[9]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-07:2.2:b0035",
+      "clause_id": "draft-ietf-httpbis-http2bis-07:2.2:b0035:c02",
+      "content": "Servers receive HTTP requests and send HTTP responses.",
+      "content_sha256": "02983fcd15e8b953e44f57eb8696b9a3a54438cb11b097fd0dc9c783c2425711",
+      "document_id": "draft-ietf-httpbis-http2bis-07",
+      "kind": "definition",
+      "retrieval_reason": "same_revision_definition_candidate",
+      "revision": "07",
+      "section_heading": "Conventions and Terminology",
+      "section_id": "2.2",
+      "source_sha256": "baf4b6a43b09ae707e84711034d52a2394909928863af5e5b7cd17403ae28881",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[2]/section[2]/dl/dd[9]"
+      }
+    }
+  ],
+  "omitted": [],
+  "record_id": "e73447217541e5162843a8fa428741c807c8edcadc5a446424f73159751a4680",
+  "retrieval": [
+    {
+      "reason": "external_reference_not_resolved_without_exact_permitted_version",
+      "reference": "ConnectionErrorHandler",
+      "status": "unavailable_source"
+    },
+    {
+      "reason": "external_reference_not_resolved_without_exact_permitted_version",
+      "reference": "SETTINGS_TIMEOUT",
+      "status": "unavailable_source"
+    }
+  ],
+  "revision": "07",
+  "section_heading": "Settings Synchronization",
+  "section_id": "6.5.3",
+  "source_artifact": "D:/RFC/ietf-ambiguity-detection/corpus/processed/alignments/draft-ietf-httpbis-http2bis/lexical-first-classifier-v1/inputs/draft-ietf-httpbis-http2bis-07.json",
+  "source_sha256": "baf4b6a43b09ae707e84711034d52a2394909928863af5e5b7cd17403ae28881",
+  "target_clause": "If the sender of a SETTINGS frame does not receive an acknowledgment within a reasonable amount of time, it MAY issue a connection error of type SETTINGS_TIMEOUT.",
+  "variant": "resolved"
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "none of the available representations",
+    "interpretation_a": "If there are *no* representations available, the server should not apply any content-coding.",
+    "interpretation_b": "If there are representations, but *none* of them have an acceptable content-coding, the server should not apply any content-coding.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'none of the available representations' is ambiguous because it doesn't specify what happens when there are no available representations at all. It's unclear whether the 'SHOULD' applies even in that scenario.",
+    "missing_information": "The clause does not define what 'available representations' means in the case where no representations are available. Does the server still need to construct a response, or is it permissible to return an error?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:35:43.753709+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-03",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "4cfa02935a0ce0093c16dc05257bbac984709645813112026361fb37f6d66131",
+  "lineage_ids": "lineage:0d1aad49d5940f17e1f69e07",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 187,
+    "load_duration": 15783300,
+    "prompt_eval_count": 608,
+    "total_duration": 7252216200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"none of the available representations\", \"interpretation_a\": \"If there are *no* representations available, the server should not apply any content-coding.\", \"interpretation_b\": \"If there are representations, but *none* of them have an acceptable content-coding, the server should not apply any content-coding.\", \"missing_information\": \"The clause does not define what 'available representations' means in the case where no representations are available. Does the server still need to construct a response, or is it permissible to return an error?\",\"justification\": \"The phrase 'none of the available representations' is ambiguous because it doesn't specify what happens when there are no available representations at all. It's unclear whether the 'SHOULD' applies even in that scenario.\"}",
+  "record_id": "ed9039c0ea31393334ec4ff73459d3ab1a63951d625c4d4cc3e54b66a2a32c5f",
+  "revision": "03",
+  "schema_version": 1,
+  "section_ids": "8.4.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.25
+}

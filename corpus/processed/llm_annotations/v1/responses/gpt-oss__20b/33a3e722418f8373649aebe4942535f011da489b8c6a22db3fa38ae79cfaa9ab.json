@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "need to be valid for longer",
+    "interpretation_a": "Tokens are valid for a fixed short period, e.g., 5 minutes.",
+    "interpretation_b": "Tokens are valid indefinitely until revoked.",
+    "is_ambiguous": "yes",
+    "justification": "Because the clause states tokens need to be valid for longer but does not define what \"longer\" means, implementations may choose different durations.",
+    "missing_information": "The clause does not specify the exact validity period, leaving it open to interpretation."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T14:53:06.781647+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "3733f29d8faeb7c42621f96ce0ea555ee80313f3aed634a51d21283ad2eea9c0",
+  "lineage_ids": "lineage:1fb9007aac6886a3aff12c8d",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 314,
+    "load_duration": 5744300,
+    "prompt_eval_count": 725,
+    "total_duration": 2867364900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"need to be valid for longer\",\n  \"interpretation_a\": \"Tokens are valid for a fixed short period, e.g., 5 minutes.\",\n  \"interpretation_b\": \"Tokens are valid indefinitely until revoked.\",\n  \"missing_information\": \"The clause does not specify the exact validity period, leaving it open to interpretation.\",\n  \"justification\": \"Because the clause states tokens need to be valid for longer but does not define what \\\"longer\\\" means, implementations may choose different durations.\"\n}",
+  "record_id": "33a3e722418f8373649aebe4942535f011da489b8c6a22db3fa38ae79cfaa9ab",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "8.1.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 21.359
+}

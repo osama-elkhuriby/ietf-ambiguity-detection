@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Implementations MUST NOT exchange data on any stream other than stream 1 without packet protection.",
+    "interpretation_a": "Data exchanges on streams other than stream 1 are prohibited unless packet protection is used.",
+    "interpretation_b": "Data exchanges on streams other than stream 1 are prohibited entirely, regardless of packet protection.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether the prohibition applies only to unprotected exchanges on streams other than stream 1 or to all exchanges on those streams, leaving an incomplete constraint that can lead to different implementation behaviours.",
+    "missing_information": "Whether packet protection is required for all streams other than stream 1."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T13:22:41.516837+00:00",
+  "document_id": "draft-ietf-quic-tls-02",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "2c2f35b135ae34bcc59e730d5dbd85ccb57d1556f4b121610ebc0b75fb3d07e4",
+  "lineage_ids": "lineage:f2d32afe87f5ebdec331748d",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 483,
+    "load_duration": 6213900,
+    "prompt_eval_count": 708,
+    "total_duration": 4362762700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"Implementations MUST NOT exchange data on any stream other than stream 1 without packet protection.\",\n  \"interpretation_a\": \"Data exchanges on streams other than stream 1 are prohibited unless packet protection is used.\",\n  \"interpretation_b\": \"Data exchanges on streams other than stream 1 are prohibited entirely, regardless of packet protection.\",\n  \"missing_information\": \"Whether packet protection is required for all streams other than stream 1.\",\n  \"justification\": \"The clause does not specify whether the prohibition applies only to unprotected exchanges on streams other than stream 1 or to all exchanges on those streams, leaving an incomplete constraint that can lead to different implementation behaviours.\"\n}",
+  "record_id": "e55b40318d0238e8c1fe9cd6b06c6f516fa125adff4f13e8b690fcc8cc9bf0aa",
+  "revision": "02",
+  "schema_version": 1,
+  "section_ids": "8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 16.078
+}

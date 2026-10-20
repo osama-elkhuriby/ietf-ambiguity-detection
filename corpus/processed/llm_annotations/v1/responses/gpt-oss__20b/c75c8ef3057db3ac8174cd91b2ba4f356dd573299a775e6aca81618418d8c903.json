@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "no MAX_PUSH_ID frame has been sent",
+    "interpretation_a": "The client must treat receipt of a push stream as an error when the client has not sent a MAX_PUSH_ID frame.",
+    "interpretation_b": "The client must treat receipt of a push stream as an error when the server has not sent a MAX_PUSH_ID frame.",
+    "is_ambiguous": "yes",
+    "justification": "The clause’s phrase \"no MAX_PUSH_ID frame has been sent\" is ambiguous because it does not specify which party’s frame is being referred to, creating two materially different interpretations that affect how a client should handle push streams.",
+    "missing_information": "Which side's MAX_PUSH_ID frame is referenced in the clause? The clause does not specify whether it refers to the client’s or the server’s MAX_PUSH_ID frame, leading to an incomplete constraint on implementation behaviour."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T10:20:24.922842+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "f73681e1c997afbbf0076f5b4191c1bd69d8ba09507194d593efe4f17b719e20",
+  "lineage_ids": "lineage:b9f1c990007f6849691a36a9",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 5059,
+    "load_duration": 4080300,
+    "prompt_eval_count": 609,
+    "total_duration": 43740309100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"no MAX_PUSH_ID frame has been sent\",\n  \"interpretation_a\": \"The client must treat receipt of a push stream as an error when the client has not sent a MAX_PUSH_ID frame.\",\n  \"interpretation_b\": \"The client must treat receipt of a push stream as an error when the server has not sent a MAX_PUSH_ID frame.\",\n  \"missing_information\": \"Which side's MAX_PUSH_ID frame is referenced in the clause? The clause does not specify whether it refers to the client’s or the server’s MAX_PUSH_ID frame, leading to an incomplete constraint on implementation behaviour.\",\n  \"justification\": \"The clause’s phrase \\\"no MAX_PUSH_ID frame has been sent\\\" is ambiguous because it does not specify which party’s frame is being referred to, creating two materially different interpretations that affect how a client should handle push streams.\"\n}",
+  "record_id": "c75c8ef3057db3ac8174cd91b2ba4f356dd573299a775e6aca81618418d8c903",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 43.734
+}

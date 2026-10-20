@@ -1,0 +1,30 @@
+{
+  "artifacts": {
+    "family_prevalence.csv": "3c426041f1de326be3024733016b7e5263a46fc5aca0367cc7bf642e69450cdb",
+    "fold_prevalence.csv": "785d73e2321f1b5286a4d7032e483ecd8fd3211283d8e0ed90dd69a204c3278d",
+    "fold_results.csv": "45ab19441f7d99b60478ce2c55eb9ba30f534968b27ffdf6fbc4f3ddbacfd816",
+    "pooled_metrics.json": "30be597d66f5ab4b470352cd9c04ecb28a40c48f342da64e0f35e06f80b76ef2",
+    "pooled_predictions_class.csv": "118152c98cc36530cb93dab52c61fb966879935a2130e50b04ba2e9b21e107b8",
+    "pooled_predictions_combined.csv": "c0bf0acb40a051349d6f4051539ed3840ceae19ece9e25844655088a47d31dc9",
+    "pooled_predictions_confidence.csv": "e56d6a6ce31befc992e7fe489179b5e9d25318ac9e219513d933e3d60bb23833",
+    "pooled_predictions_unweighted.csv": "f6c1956eb689f436b3b4c68d72559e4075fab5d700c6513abd369cc29d4b5d42"
+  },
+  "bootstrap": {
+    "confidence_level": 0.95,
+    "method": "ordinary paired row resampling, percentile interval",
+    "repetitions": 2000,
+    "seed": 314159
+  },
+  "config_sha256": "83ea49e6543d38feea77bc5827e484a1d7939970c7bba190cebf51f2d0cd4a8a",
+  "development_train_sha256": "4b0ee17308e26fdc8a2a362e7df1099fa7f55de79a9754ba64d50cb56f5542c4",
+  "experiment": "tfidf-logreg-grouped-cv-v1",
+  "fold_assignment_sha256": "c04dc8424ed96486f8521ef57d17e4b503d2c3f41bb116edeeb9535073dd7884",
+  "git_commit": "0eb748efbfaff532f97893c6bd47b0f9e7e8935f",
+  "schema_version": 1,
+  "weight_strategies": [
+    "unweighted",
+    "class",
+    "confidence",
+    "combined"
+  ]
+}

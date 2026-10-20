@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY discard all other connection state",
+    "interpretation_a": "The endpoint is permitted, but not required, to discard all connection state after selecting a connection ID and QUIC version.",
+    "interpretation_b": "The endpoint is required to discard all connection state after selecting a connection ID and QUIC version, but has discretion *how* to discard it.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' creates ambiguity. It could be interpreted as permissive (the endpoint *can* discard state) or as a weaker form of requirement (the endpoint *should* discard state, but has some leeway in how it does so). Without further clarification, implementations could reasonably differ on whether discarding state is optional or mandatory.",
+    "missing_information": "The strength of 'MAY' is unclear. Does it permit optional discarding, or mandate discarding with implementation choice?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:13:10.942883+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "553c9968c84558f5ebb3ee7b3d2de57980f99fa041239bb015fa4911cf9716f6",
+  "lineage_ids": "lineage:d64b320d13966be42a9c1628",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 200,
+    "load_duration": 5294400,
+    "prompt_eval_count": 582,
+    "total_duration": 7570847000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY discard all other connection state\", \"interpretation_a\": \"The endpoint is permitted, but not required, to discard all connection state after selecting a connection ID and QUIC version.\", \"interpretation_b\": \"The endpoint is required to discard all connection state after selecting a connection ID and QUIC version, but has discretion *how* to discard it.\", \"missing_information\": \"The strength of 'MAY' is unclear. Does it permit optional discarding, or mandate discarding with implementation choice?\",\"justification\": \"The use of 'MAY' creates ambiguity. It could be interpreted as permissive (the endpoint *can* discard state) or as a weaker form of requirement (the endpoint *should* discard state, but has some leeway in how it does so). Without further clarification, implementations could reasonably differ on whether discarding state is optional or mandatory.\"}",
+  "record_id": "ea11e5ecacf92cf5d2128b79a1a4c4822e98895d70ce0071ecbf530db31827bb",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "10.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.578
+}

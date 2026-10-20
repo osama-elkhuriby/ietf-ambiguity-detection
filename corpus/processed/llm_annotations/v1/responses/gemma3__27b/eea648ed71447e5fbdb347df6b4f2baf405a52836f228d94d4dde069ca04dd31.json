@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY contain multiple frames",
+    "interpretation_a": "Implementations can choose to send only one frame per QUIC packet, even if the packet has sufficient capacity for more.",
+    "interpretation_b": "Implementations can send multiple frames per QUIC packet, up to the packet's capacity.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' allows for implementations to either send a single frame or multiple frames. Without a maximum limit, implementations could potentially create very large packets, or very small packets. This constitutes an incomplete constraint.",
+    "missing_information": "The clause does not specify any limit on the number of frames that MAY be sent. A missing constraint on the maximum number of frames could affect implementation."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:14:19.122690+00:00",
+  "document_id": "draft-ietf-quic-transport-19",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "47244c71c272921cc1216b7446ddbe42bd4cfdc09db83c3177bb3cf18956547e",
+  "lineage_ids": "lineage:002b6dad3a6a05a502a7ec04",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 173,
+    "load_duration": 5161600,
+    "prompt_eval_count": 823,
+    "total_duration": 6737695600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY contain multiple frames\", \"interpretation_a\": \"Implementations can choose to send only one frame per QUIC packet, even if the packet has sufficient capacity for more.\", \"interpretation_b\": \"Implementations can send multiple frames per QUIC packet, up to the packet's capacity.\", \"missing_information\": \"The clause does not specify any limit on the number of frames that MAY be sent. A missing constraint on the maximum number of frames could affect implementation.\", \"justification\": \"The use of 'MAY' allows for implementations to either send a single frame or multiple frames. Without a maximum limit, implementations could potentially create very large packets, or very small packets. This constitutes an incomplete constraint.\"}",
+  "record_id": "eea648ed71447e5fbdb347df6b4f2baf405a52836f228d94d4dde069ca04dd31",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "12.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.75
+}

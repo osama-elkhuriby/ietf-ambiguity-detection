@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously specifies that the server must respond with a 412 status code or, if it has verified that a state change is being requested and the final state is already reflected, a 2xx status code. The condition applies only to the 2xx case, and the subsequent clause clarifies the duplicate request scenario. No missing constraint or conflicting interpretation is evident.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T08:26:25.861075+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-10",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "c3ca7de88ab4155b49876f90269973bc9c9a272f865b4ff8dd972da0cbc9336a",
+  "lineage_ids": "lineage:199347ed08d5522e1e06f718",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1933,
+    "load_duration": 6343200,
+    "prompt_eval_count": 738,
+    "total_duration": 16814320200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"no\",\"ambiguity_subtype\":\"none\",\"evidence_span\":\"\",\"interpretation_a\":\"\",\"interpretation_b\":\"\",\"missing_information\":\"\",\"justification\":\"The clause unambiguously specifies that the server must respond with a 412 status code or, if it has verified that a state change is being requested and the final state is already reflected, a 2xx status code. The condition applies only to the 2xx case, and the subsequent clause clarifies the duplicate request scenario. No missing constraint or conflicting interpretation is evident.\"}",
+  "record_id": "ecee8f5c9b390c86cc6cc216ec2d63d2f7e4388dcda835f1dbbc3958a50d3bf3",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "9.2.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 83.75
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause is unambiguous: it clearly states that if the server has not yet started sending the push, it can avoid opening a push stream upon receiving a CANCEL_PUSH frame, and if the push stream has already been opened, the server should abruptly terminate it. No two materially different interpretations or missing constraints are evident from the supplied text.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T08:52:33.263242+00:00",
+  "document_id": "draft-ietf-quic-http-23",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "0b774b2f62a565fe7f5b58e1c32c622beeddb2adc5840d5a08651d4c81fafca9",
+  "lineage_ids": "lineage:393ff8f5503c29c10f88cb78",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1903,
+    "load_duration": 4541600,
+    "prompt_eval_count": 646,
+    "total_duration": 16595524600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"no\",\"ambiguity_subtype\":\"none\",\"evidence_span\":\"\",\"interpretation_a\":\"\", \"interpretation_b\":\"\", \"missing_information\":\"\",\"justification\":\"The clause is unambiguous: it clearly states that if the server has not yet started sending the push, it can avoid opening a push stream upon receiving a CANCEL_PUSH frame, and if the push stream has already been opened, the server should abruptly terminate it. No two materially different interpretations or missing constraints are evident from the supplied text.\"}",
+  "record_id": "1a0f628a1722699a69ee6c3c354eea7a231331347fe685bfdfdd486624bf3e11",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "7.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 84.312
+}

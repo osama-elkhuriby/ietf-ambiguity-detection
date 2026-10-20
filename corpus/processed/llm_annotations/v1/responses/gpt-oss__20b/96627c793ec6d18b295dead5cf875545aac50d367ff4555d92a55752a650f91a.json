@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "nearly all connections",
+    "interpretation_a": "Implementers might interpret 'nearly all' as a threshold of 90% of connections, continuing to serve expired records until that percentage is reached.",
+    "interpretation_b": "Alternatively, they might interpret 'nearly all' as a stricter threshold, such as 99% or even 100%, delaying the removal of expired records until almost every connection has migrated.",
+    "is_ambiguous": "yes",
+    "justification": "The lack of a concrete threshold for 'nearly all connections' creates an incomplete constraint that can result in divergent implementations.",
+    "missing_information": "The clause does not define a specific percentage or metric for 'nearly all', leaving the threshold open to interpretation and potentially leading to materially different operational behaviours."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T03:08:25.146969+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "eb5cb1027c33e79b27c1c3c958a503d522c7d24886c3e366177f1e25e53588b6",
+  "lineage_ids": "lineage:78640ff144e9406ca56a5ba4",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1134,
+    "load_duration": 1507200,
+    "prompt_eval_count": 585,
+    "total_duration": 9893438400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"nearly all connections\",\n  \"interpretation_a\": \"Implementers might interpret 'nearly all' as a threshold of 90% of connections, continuing to serve expired records until that percentage is reached.\",\n  \"interpretation_b\": \"Alternatively, they might interpret 'nearly all' as a stricter threshold, such as 99% or even 100%, delaying the removal of expired records until almost every connection has migrated.\",\n  \"missing_information\": \"The clause does not define a specific percentage or metric for 'nearly all', leaving the threshold open to interpretation and potentially leading to materially different operational behaviours.\",\n  \"justification\": \"The lack of a concrete threshold for 'nearly all connections' creates an incomplete constraint that can result in divergent implementations.\"\n}",
+  "record_id": "96627c793ec6d18b295dead5cf875545aac50d367ff4555d92a55752a650f91a",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "9.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.89
+}

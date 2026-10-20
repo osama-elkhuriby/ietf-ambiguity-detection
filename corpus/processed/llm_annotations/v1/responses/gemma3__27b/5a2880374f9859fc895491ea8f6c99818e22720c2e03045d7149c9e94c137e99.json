@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "((SND.UNA - MAX.SND.WND) =< SEG.ACK =< SND.NXT)",
+    "interpretation_a": "The ACK value must be greater than or equal to SND.UNA - MAX.SND.WND, and less than or equal to SND.NXT.",
+    "interpretation_b": "The ACK value must be greater than or equal to the result of the subtraction SND.UNA - MAX.SND.WND, and less than or equal to SND.NXT. The order of operations is not explicitly defined, which could lead to different interpretations of the range.",
+    "is_ambiguous": "yes",
+    "justification": "The expression `(SND.UNA - MAX.SND.WND)` lacks parentheses to clarify the order of operations. It could be interpreted as `(SND.UNA - MAX.SND.WND)` or `SND.UNA - (MAX.SND.WND)`. While the latter is the standard interpretation, the former is plausible, and would result in a different range check. This is a concrete missing constraint affecting implementation behavior.",
+    "missing_information": "The order of operations for the expression `(SND.UNA - MAX.SND.WND)` is not specified.  Without this, implementations could interpret it differently, leading to different acceptable ACK ranges."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:22:19.139349+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "a299bafa1a9b073996aabd091268fa9bb38611726a4eeaf4c4f1f571a808c25d",
+  "lineage_ids": "lineage:fc6bbfdbb3d452c0d752c4b9",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 306,
+    "load_duration": 9054000,
+    "prompt_eval_count": 633,
+    "total_duration": 11540935400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"((SND.UNA - MAX.SND.WND) =< SEG.ACK =< SND.NXT)\", \"interpretation_a\": \"The ACK value must be greater than or equal to SND.UNA - MAX.SND.WND, and less than or equal to SND.NXT.\", \"interpretation_b\": \"The ACK value must be greater than or equal to the result of the subtraction SND.UNA - MAX.SND.WND, and less than or equal to SND.NXT. The order of operations is not explicitly defined, which could lead to different interpretations of the range.\", \"missing_information\": \"The order of operations for the expression `(SND.UNA - MAX.SND.WND)` is not specified.  Without this, implementations could interpret it differently, leading to different acceptable ACK ranges.\", \"justification\": \"The expression `(SND.UNA - MAX.SND.WND)` lacks parentheses to clarify the order of operations. It could be interpreted as `(SND.UNA - MAX.SND.WND)` or `SND.UNA - (MAX.SND.WND)`. While the latter is the standard interpretation, the former is plausible, and would result in a different range check. This is a concrete missing constraint affecting implementation behavior.\"}",
+  "record_id": "5a2880374f9859fc895491ea8f6c99818e22720c2e03045d7149c9e94c137e99",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.10.7.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.547
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD NOT be marked as lost",
+    "interpretation_a": "The sender must not mark any unacknowledged packets as lost when a TLP alarm fires.",
+    "interpretation_b": "The sender is discouraged from marking unacknowledged packets as lost when a TLP alarm fires, but it is permissible under certain circumstances.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD NOT' creates ambiguity. It's unclear whether marking packets as lost is strictly prohibited or merely discouraged. This affects implementation choices regarding loss detection and recovery.",
+    "missing_information": "The strength of 'SHOULD NOT' is unclear. Is it a strong recommendation, or is there room for deviation based on implementation details?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:29:45.248350+00:00",
+  "document_id": "draft-ietf-quic-recovery-13",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "4d2348f40e2bc1fb26799840c99262a22d398e8851ec9a59f923b6caa10dbf1a",
+  "lineage_ids": "lineage:97fe834ea6d34ab3d5820217",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 171,
+    "load_duration": 4242100,
+    "prompt_eval_count": 597,
+    "total_duration": 6544220300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD NOT be marked as lost\", \"interpretation_a\": \"The sender must not mark any unacknowledged packets as lost when a TLP alarm fires.\", \"interpretation_b\": \"The sender is discouraged from marking unacknowledged packets as lost when a TLP alarm fires, but it is permissible under certain circumstances.\", \"missing_information\": \"The strength of 'SHOULD NOT' is unclear. Is it a strong recommendation, or is there room for deviation based on implementation details?\", \"justification\": \"The use of 'SHOULD NOT' creates ambiguity. It's unclear whether marking packets as lost is strictly prohibited or merely discouraged. This affects implementation choices regarding loss detection and recovery.\"}",
+  "record_id": "c4e57d0abd014314b02554beec5c5619ac86742f7df82b4d07d0eafc890b1435",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "3.3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.547
+}

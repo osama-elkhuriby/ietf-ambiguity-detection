@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "comparable to the maximum expected packet reordering",
+    "interpretation_a": "The tracking time should be equal to the maximum expected packet reordering, e.g., 1 RTT.",
+    "interpretation_b": "The tracking time should be at least as long as the maximum expected packet reordering, e.g., 1 RTT or longer.",
+    "is_ambiguous": "yes",
+    "justification": "The clause allows two materially different implementation behaviours: treating 'comparable to' as 'equal to' or as 'at least as long as', due to the lack of a concrete constraint.",
+    "missing_information": "Definition of 'maximum expected packet reordering' and precise duration calculation method are not provided in the clause itself, leading to multiple reasonable interpretations of the tracking duration."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T11:36:19.528476+00:00",
+  "document_id": "draft-ietf-quic-recovery-20",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "ec6ecdec489f8256afeafeb2febfec474a9ae492f953ebe7de17d243db35883f",
+  "lineage_ids": "lineage:8601ead3680b48330e6178b8",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1492,
+    "load_duration": 6203300,
+    "prompt_eval_count": 631,
+    "total_duration": 13204129000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"comparable to the maximum expected packet reordering\",\n  \"interpretation_a\": \"The tracking time should be equal to the maximum expected packet reordering, e.g., 1 RTT.\",\n  \"interpretation_b\": \"The tracking time should be at least as long as the maximum expected packet reordering, e.g., 1 RTT or longer.\",\n  \"missing_information\": \"Definition of 'maximum expected packet reordering' and precise duration calculation method are not provided in the clause itself, leading to multiple reasonable interpretations of the tracking duration.\",\n  \"justification\": \"The clause allows two materially different implementation behaviours: treating 'comparable to' as 'equal to' or as 'at least as long as', due to the lack of a concrete constraint.\"\n}",
+  "record_id": "90c805d4d97dda4030c3ae39d468248547ee009b9a5b48df539d8e6dcb78d08a",
+  "revision": "20",
+  "schema_version": 1,
+  "section_ids": "A.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 81.141
+}

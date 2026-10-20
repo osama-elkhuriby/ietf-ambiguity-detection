@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "SHOULD override",
+    "interpretation_a": "The new source route is preferred and replaces the old one.",
+    "interpretation_b": "The new source route is considered, but the old one is retained unless there's a specific reason to switch.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' introduces ambiguity. It's unclear whether a new source route *must* override the old one, or if the implementation has discretion to retain the previous route. This affects how a TCP stack handles potentially conflicting source routing information.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:18:51.252072+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-10",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "9ed31015f9c4448971bcbc06bbe31226ff7291ec825bb539544d33c4611b839b",
+  "lineage_ids": "lineage:7659d193ee6b80135ed868fd",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 142,
+    "load_duration": 6555800,
+    "prompt_eval_count": 577,
+    "total_duration": 5622938300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"SHOULD override\", \"interpretation_a\": \"The new source route is preferred and replaces the old one.\", \"interpretation_b\": \"The new source route is considered, but the old one is retained unless there's a specific reason to switch.\", \"missing_information\": \"\", \"justification\": \"The use of 'SHOULD' introduces ambiguity. It's unclear whether a new source route *must* override the old one, or if the implementation has discretion to retain the previous route. This affects how a TCP stack handles potentially conflicting source routing information.\"}",
+  "record_id": "19daaa66b073887f0dc82515bb274635eb5f79e538f909cd2f2486e4619403fd",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "3.9.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.64
+}

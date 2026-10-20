@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear directive to servers regarding the handling of multiple ranges in a Range header. It allows servers to coalesce ranges that overlap or are separated by a gap smaller than the overhead of sending multiple parts. The use of 'MAY' indicates optional behavior and does not introduce ambiguity in implementation. There is no missing constraint or undefined term that would lead to multiple materially different interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:04:42.364885+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-03",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "aab2750ee7f42643599a7b2382df8d426642a0169fdb3dcd77187c3a7a0ba2ec",
+  "lineage_ids": "lineage:5c8c4e5acfedb7fbeb5dd231",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 134,
+    "load_duration": 14618000,
+    "prompt_eval_count": 541,
+    "total_duration": 5579324800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear directive to servers regarding the handling of multiple ranges in a Range header. It allows servers to coalesce ranges that overlap or are separated by a gap smaller than the overhead of sending multiple parts. The use of 'MAY' indicates optional behavior and does not introduce ambiguity in implementation. There is no missing constraint or undefined term that would lead to multiple materially different interpretations.\"\n}",
+  "record_id": "175629d4ad3dd13641669185863db337a94cf850642507360b354dd786cbdafd",
+  "revision": "03",
+  "schema_version": 1,
+  "section_ids": "9.3.7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.594
+}

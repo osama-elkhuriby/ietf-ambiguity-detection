@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "prior to forwarding the request",
+    "interpretation_a": "The intermediary checks and updates the Max-Forwards value *before* it begins the process of forwarding the request, potentially halting forwarding if the updated value is zero.",
+    "interpretation_b": "The intermediary checks and updates the Max-Forwards value *immediately before* actually sending the request on to the next hop, potentially sending a request with a Max-Forwards value of zero.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'prior to' is vague. It doesn't specify *when* before forwarding the check and update must occur. This allows for two reasonable interpretations regarding the timing of the operation, which affects implementation.",
+    "missing_information": "The timing of the check and update relative to the forwarding process is not clearly defined. Does 'prior to' mean 'at any time before' or 'immediately before'?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:05:18.492969+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "868a0db499c87953b9660c0daf673e5dbac7acdf2e37329439996cd74b0da9c1",
+  "lineage_ids": "lineage:bb601eb1bbc35777ec1443a1",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 207,
+    "load_duration": 19019300,
+    "prompt_eval_count": 592,
+    "total_duration": 7982029400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"prior to forwarding the request\", \"interpretation_a\": \"The intermediary checks and updates the Max-Forwards value *before* it begins the process of forwarding the request, potentially halting forwarding if the updated value is zero.\", \"interpretation_b\": \"The intermediary checks and updates the Max-Forwards value *immediately before* actually sending the request on to the next hop, potentially sending a request with a Max-Forwards value of zero.\", \"missing_information\": \"The timing of the check and update relative to the forwarding process is not clearly defined. Does 'prior to' mean 'at any time before' or 'immediately before'?\",\"justification\": \"The phrase 'prior to' is vague. It doesn't specify *when* before forwarding the check and update must occur. This allows for two reasonable interpretations regarding the timing of the operation, which affects implementation.\"}",
+  "record_id": "4c5caa0423997a8006f48236524f579c1ed1611f8cc92c9cb5a3293bceb1a0d2",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "7.6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.984
+}

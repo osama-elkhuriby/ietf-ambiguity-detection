@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that if an endpoint receives a RST_STREAM frame for a stream that it only sends on, it must terminate the connection with PROTOCOL_VIOLATION. The term \"send-only stream\" is defined in the QUIC specification as a stream that the endpoint only sends data on, so there is no alternative interpretation or missing constraint that would lead to different implementation behaviors.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T14:41:48.262805+00:00",
+  "document_id": "draft-ietf-quic-transport-16",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "cfa1975beb25cfc4dbc3065846fcff9494f59387feb41237c2450f2e4681cf7c",
+  "lineage_ids": "lineage:fdc96c975268ac59f79380a8",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1452,
+    "load_duration": 5040600,
+    "prompt_eval_count": 574,
+    "total_duration": 12628147000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that if an endpoint receives a RST_STREAM frame for a stream that it only sends on, it must terminate the connection with PROTOCOL_VIOLATION. The term \\\"send-only stream\\\" is defined in the QUIC specification as a stream that the endpoint only sends data on, so there is no alternative interpretation or missing constraint that would lead to different implementation behaviors.\"\n}",
+  "record_id": "2d9d8610e798604f2d39db363fb0ea858e1f3de478de5bcb06e4bcded986c4cd",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "19.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 12.64
+}

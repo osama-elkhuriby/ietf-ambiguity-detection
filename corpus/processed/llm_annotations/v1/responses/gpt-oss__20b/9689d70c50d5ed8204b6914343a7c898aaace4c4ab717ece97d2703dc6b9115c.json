@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "If the connection is closed because these or other constraints were violated during the 0-RTT flight (e.g. with HTTP_HPACK_DECOMPRESSION_FAILED), clients MAY establish a new connection and retry any 0-RTT requests using the settings sent by",
+    "interpretation_a": "The settings were sent by the server, so the client should retry using the server’s settings.",
+    "interpretation_b": "The settings were sent by the client, so the client should retry using its own settings.",
+    "is_ambiguous": "yes",
+    "justification": "The missing reference to the entity that sent the settings creates an incomplete constraint that allows two reasonable, materially different implementation behaviours.",
+    "missing_information": "The clause does not specify whether the settings were sent by the server or the client, which materially affects the retry behavior."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T09:56:24.219365+00:00",
+  "document_id": "draft-ietf-quic-http-02",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "f72e81e072ad2c11fecdb85efbf16314bee3eea717a20dea67739bfc8030313b",
+  "lineage_ids": "lineage:148f7175def66dc310894773",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 358,
+    "load_duration": 6057200,
+    "prompt_eval_count": 7631,
+    "total_duration": 4351662200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\":\"yes\",\"ambiguity_subtype\":\"U-2\",\"evidence_span\":\"If the connection is closed because these or other constraints were violated during the 0-RTT flight (e.g. with HTTP_HPACK_DECOMPRESSION_FAILED), clients MAY establish a new connection and retry any 0-RTT requests using the settings sent by\",\"interpretation_a\":\"The settings were sent by the server, so the client should retry using the server’s settings.\",\"interpretation_b\":\"The settings were sent by the client, so the client should retry using its own settings.\",\"missing_information\":\"The clause does not specify whether the settings were sent by the server or the client, which materially affects the retry behavior.\",\"justification\":\"The missing reference to the entity that sent the settings creates an incomplete constraint that allows two reasonable, materially different implementation behaviours.\"}",
+  "record_id": "9689d70c50d5ed8204b6914343a7c898aaace4c4ab717ece97d2703dc6b9115c",
+  "revision": "02",
+  "schema_version": 1,
+  "section_ids": "5.2.3.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 72.938
+}

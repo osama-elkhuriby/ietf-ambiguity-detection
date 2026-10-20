@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SVCB records may contain IP addresses (in ipv*hint SvcParams), or direct users to a subnet-specific TargetName",
+    "interpretation_a": "If the SVCB record contains IP addresses, the ECS option should be included in the query.",
+    "interpretation_b": "If the SVCB record directs to a TargetName, the ECS option should be included in the query.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states that resolvers *should* include ECS in SVCB queries 'as in A/AAAA queries'. However, SVCB records can either directly contain IP addresses or redirect to a TargetName. The clause doesn't explicitly state whether the ECS option should be included in both scenarios, creating ambiguity about when it's required.",
+    "missing_information": "It is unclear whether the ECS option should be included in *both* cases, or only when IP addresses are present. The sentence structure suggests it applies to both, but the 'or' could imply an either/or situation. A clearer phrasing would specify whether ECS is required for both types of SVCB records."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:59:25.544972+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "7cd8cebe17d6f24e60b894c048de09c23f90cb59ad7db661fd5b9c1255bd3448",
+  "lineage_ids": "lineage:8ba5c0d8296ec6c4c6bcce26",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 249,
+    "load_duration": 3013300,
+    "prompt_eval_count": 631,
+    "total_duration": 9275805700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SVCB records may contain IP addresses (in ipv*hint SvcParams), or direct users to a subnet-specific TargetName\", \"interpretation_a\": \"If the SVCB record contains IP addresses, the ECS option should be included in the query.\", \"interpretation_b\": \"If the SVCB record directs to a TargetName, the ECS option should be included in the query.\", \"missing_information\": \"It is unclear whether the ECS option should be included in *both* cases, or only when IP addresses are present. The sentence structure suggests it applies to both, but the 'or' could imply an either/or situation. A clearer phrasing would specify whether ECS is required for both types of SVCB records.\", \"justification\": \"The clause states that resolvers *should* include ECS in SVCB queries 'as in A/AAAA queries'. However, SVCB records can either directly contain IP addresses or redirect to a TargetName. The clause doesn't explicitly state whether the ECS option should be included in both scenarios, creating ambiguity about when it's required.\"}",
+  "record_id": "20c0aca6bd4a0c2d7b6408717e9cd6f818f84ca11df3ef510b425cef47bb8432",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "4.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.282
+}

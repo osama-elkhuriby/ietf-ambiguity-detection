@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "locally-initiated stream that has not yet been created",
+    "interpretation_a": "The clause could be interpreted as requiring termination when a STREAM frame is received for a stream that the local endpoint has initiated but has not yet created (i.e., the stream has not been created by the remote endpoint).",
+    "interpretation_b": "Alternatively, it could be interpreted as requiring termination when a STREAM frame is received for a stream that has not yet been created by either side but is locally initiated.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"locally-initiated stream that has not yet been created\" permits two materially different implementation behaviours, making the clause ambiguous.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T16:16:54.167759+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "72e0706aedd6122f24fce0e87895a548fc568aa9246eb829e17376a514359fc7",
+  "lineage_ids": "lineage:52e8740a6027ae29b3d1c25a",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2165,
+    "load_duration": 8533500,
+    "prompt_eval_count": 619,
+    "total_duration": 18842543400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"locally-initiated stream that has not yet been created\",\n  \"interpretation_a\": \"The clause could be interpreted as requiring termination when a STREAM frame is received for a stream that the local endpoint has initiated but has not yet created (i.e., the stream has not been created by the remote endpoint).\",\n  \"interpretation_b\": \"Alternatively, it could be interpreted as requiring termination when a STREAM frame is received for a stream that has not yet been created by either side but is locally initiated.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The phrase \\\"locally-initiated stream that has not yet been created\\\" permits two materially different implementation behaviours, making the clause ambiguous.\"\n}",
+  "record_id": "7068ea2546cf5a31d0463ce308c7fdb0f0dacb1427747721373e7661ed71f811",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "19.8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 86.844
+}

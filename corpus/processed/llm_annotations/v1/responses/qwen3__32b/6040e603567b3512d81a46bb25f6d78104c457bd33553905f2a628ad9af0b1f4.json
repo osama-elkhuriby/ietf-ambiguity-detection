@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause is clear and unambiguous. It specifies a precise condition (the CANCEL_PUSH frame payload not containing exactly one variable-length integer) and a required response (treat it as a connection error of type HTTP_MALFORMED_CANCEL_PUSH). There is no room for multiple interpretations or missing constraints that would affect implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:49:25.579987+00:00",
+  "document_id": "draft-ietf-quic-http-08",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "fc784a92403df3d4355871370817a4b073ea32cfb5ab8c653209d122630d6fa0",
+  "lineage_ids": "lineage:4e5635402839f5e02aa364ef",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 123,
+    "load_duration": 19707300,
+    "prompt_eval_count": 533,
+    "total_duration": 5147513600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause is clear and unambiguous. It specifies a precise condition (the CANCEL_PUSH frame payload not containing exactly one variable-length integer) and a required response (treat it as a connection error of type HTTP_MALFORMED_CANCEL_PUSH). There is no room for multiple interpretations or missing constraints that would affect implementation behavior.\"\n}",
+  "record_id": "6040e603567b3512d81a46bb25f6d78104c457bd33553905f2a628ad9af0b1f4",
+  "revision": "08",
+  "schema_version": 1,
+  "section_ids": "5.2.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.156
+}

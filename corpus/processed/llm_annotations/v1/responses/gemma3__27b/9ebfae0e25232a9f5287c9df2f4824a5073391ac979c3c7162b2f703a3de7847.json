@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "as appropriate for their implementation",
+    "interpretation_a": "Endpoints can choose connection IDs based on any criteria they deem suitable, potentially leading to a wide range of connection ID generation strategies.",
+    "interpretation_b": "Endpoints might select connection IDs based on specific performance or security considerations, but the phrase doesn't define *how* they should be appropriate, leaving room for differing implementations.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'as appropriate for their implementation' is vague and doesn't provide concrete guidance on how connection IDs should be selected. This allows for multiple reasonable interpretations of what constitutes an 'appropriate' connection ID, potentially leading to different implementations.",
+    "missing_information": "The criteria for what constitutes 'appropriate' selection of connection IDs is not defined. This lack of constraint could lead to interoperability issues if different implementations have conflicting notions of appropriateness."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:49:01.660682+00:00",
+  "document_id": "draft-ietf-quic-transport-14",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "f0ea1b93c8c489b64f24c76694176fb0c8e22d8ead542b72359f8b1cb2383211",
+  "lineage_ids": "lineage:d320ac421b226ed101c03f3e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 199,
+    "load_duration": 5094200,
+    "prompt_eval_count": 580,
+    "total_duration": 7477261400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"as appropriate for their implementation\", \"interpretation_a\": \"Endpoints can choose connection IDs based on any criteria they deem suitable, potentially leading to a wide range of connection ID generation strategies.\", \"interpretation_b\": \"Endpoints might select connection IDs based on specific performance or security considerations, but the phrase doesn't define *how* they should be appropriate, leaving room for differing implementations.\", \"missing_information\": \"The criteria for what constitutes 'appropriate' selection of connection IDs is not defined. This lack of constraint could lead to interoperability issues if different implementations have conflicting notions of appropriateness.\",\"justification\": \"The phrase 'as appropriate for their implementation' is vague and doesn't provide concrete guidance on how connection IDs should be selected. This allows for multiple reasonable interpretations of what constitutes an 'appropriate' connection ID, potentially leading to different implementations.\"}",
+  "record_id": "9ebfae0e25232a9f5287c9df2f4824a5073391ac979c3c7162b2f703a3de7847",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.5
+}

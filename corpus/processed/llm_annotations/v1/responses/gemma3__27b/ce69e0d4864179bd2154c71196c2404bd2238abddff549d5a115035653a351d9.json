@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST be sent in their entirety",
+    "interpretation_a": "The entire payload body must be buffered in memory by the client before any HTTP/2 frames are sent.",
+    "interpretation_b": "The client can stream the payload body as it becomes available, but must not send any HTTP/2 frames until the last byte of the payload body has been sent.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"in their entirety\" is open to interpretation. Does it mean the client must buffer the entire payload before sending *any* HTTP/2 frames, or simply that the payload transmission must be complete before sending frames? Both are reasonable interpretations.",
+    "missing_information": "It is unclear whether the 'entirety' refers to buffering the entire payload or simply completing transmission of the payload."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:48:24.334803+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-00",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "b9aeb308f112b4460af52960cee234ef26a9cbee9a8e8a702fbbeec856853b38",
+  "lineage_ids": "lineage:1646895467cea9974e457f35",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 185,
+    "load_duration": 11772700,
+    "prompt_eval_count": 612,
+    "total_duration": 7231407200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST be sent in their entirety\", \"interpretation_a\": \"The entire payload body must be buffered in memory by the client before any HTTP/2 frames are sent.\", \"interpretation_b\": \"The client can stream the payload body as it becomes available, but must not send any HTTP/2 frames until the last byte of the payload body has been sent.\", \"missing_information\": \"It is unclear whether the 'entirety' refers to buffering the entire payload or simply completing transmission of the payload.\",\"justification\": \"The phrase \\\"in their entirety\\\" is open to interpretation. Does it mean the client must buffer the entire payload before sending *any* HTTP/2 frames, or simply that the payload transmission must be complete before sending frames? Both are reasonable interpretations.\"}",
+  "record_id": "ce69e0d4864179bd2154c71196c2404bd2238abddff549d5a115035653a351d9",
+  "revision": "00",
+  "schema_version": 1,
+  "section_ids": "3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.234
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "single request",
+    "interpretation_a": "The client can only send one complete HTTP request (including headers and body) on a given QUIC stream during the entire connection.",
+    "interpretation_b": "The client can only send one HTTP request at a time on a given QUIC stream; it can send subsequent requests on the same stream after completing the previous one.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'request' is not clearly defined. It could refer to the entire request-response exchange, or just the initial request message. This leads to two reasonable interpretations of the clause.",
+    "missing_information": "The definition of 'request' is not precise. Does it refer to a complete request-response cycle, or simply the initial sending of the request headers?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:01:00.430917+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "326ec27567200cc2f0595f6cd3bc26540199151c92a6004b0bb8bf5c7d6b79ef",
+  "lineage_ids": "lineage:d48bbdc37d439d9806c90c72",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 182,
+    "load_duration": 4877900,
+    "prompt_eval_count": 579,
+    "total_duration": 7026103700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"single request\", \"interpretation_a\": \"The client can only send one complete HTTP request (including headers and body) on a given QUIC stream during the entire connection.\", \"interpretation_b\": \"The client can only send one HTTP request at a time on a given QUIC stream; it can send subsequent requests on the same stream after completing the previous one.\", \"missing_information\": \"The definition of 'request' is not precise. Does it refer to a complete request-response cycle, or simply the initial sending of the request headers?\",\"justification\": \"The term 'request' is not clearly defined. It could refer to the entire request-response exchange, or just the initial request message. This leads to two reasonable interpretations of the clause.\"}",
+  "record_id": "a34b88bf135b17f2dd6ae65b4c1579509d98d19d95e63f566f2b0a9b047122e0",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.047
+}

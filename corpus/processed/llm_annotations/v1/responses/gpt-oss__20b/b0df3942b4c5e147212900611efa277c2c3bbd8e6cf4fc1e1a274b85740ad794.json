@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously specifies that the receiver must close the connection with an error of type OPTIMISTIC_ACK when it receives an unprotected packet that acknowledges protected packets. The wording does not allow for multiple materially different implementation behaviours, nor does it omit a concrete constraint that would change the operational interpretation.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T11:45:50.848596+00:00",
+  "document_id": "draft-ietf-quic-recovery-12",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "644d7bca93fb6e26ae45c0d9767b0a03ce1a1b94a80cd95d888f9d3d5b3e35e7",
+  "lineage_ids": "lineage:4c8db21684e129d732596aa8",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2875,
+    "load_duration": 5975300,
+    "prompt_eval_count": 596,
+    "total_duration": 24998059600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously specifies that the receiver must close the connection with an error of type OPTIMISTIC_ACK when it receives an unprotected packet that acknowledges protected packets. The wording does not allow for multiple materially different implementation behaviours, nor does it omit a concrete constraint that would change the operational interpretation.\"\n}",
+  "record_id": "b0df3942b4c5e147212900611efa277c2c3bbd8e6cf4fc1e1a274b85740ad794",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "3.5.9.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 93.219
+}

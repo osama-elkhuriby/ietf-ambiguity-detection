@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "large enough packet number encoding",
+    "interpretation_a": "The clause does not specify the exact size or algorithm for the packet number encoding, leaving the implementation to decide what constitutes 'large enough'.",
+    "interpretation_b": "The clause could be interpreted as requiring the packet number encoding to be large enough to recover the packet number even if the packet arrives after any number of subsequent packets, implying a fixed maximum packet number range, rather than a dynamic range based on unacknowledged packets.",
+    "is_ambiguous": "yes",
+    "justification": "The target clause uses the phrase 'large enough packet number encoding' without defining a concrete threshold or method, which permits multiple reasonable but materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T19:34:43.064861+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "4836ff0406fb9b609028f476410ee829c8044120588c303350d3c3412c3bd55b",
+  "lineage_ids": "lineage:24d8ad8bc2476d5b15c5469b",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 553,
+    "load_duration": 5539800,
+    "prompt_eval_count": 782,
+    "total_duration": 4934059300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"large enough packet number encoding\",\n  \"interpretation_a\": \"The clause does not specify the exact size or algorithm for the packet number encoding, leaving the implementation to decide what constitutes 'large enough'.\",\n  \"interpretation_b\": \"The clause could be interpreted as requiring the packet number encoding to be large enough to recover the packet number even if the packet arrives after any number of subsequent packets, implying a fixed maximum packet number range, rather than a dynamic range based on unacknowledged packets.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause uses the phrase 'large enough packet number encoding' without defining a concrete threshold or method, which permits multiple reasonable but materially different implementation behaviours.\"\n}",
+  "record_id": "fca95190ff6cc015ab6fd33db88804c5dea69d2febbf2ea15f46d614964b8f82",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "17.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 19.813
+}

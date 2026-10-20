@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause provides a clear exception to the general rule for the \":path\" pseudo-header field in the case of an OPTIONS request for an \"http\" or \"https\" URI without a path component. It explicitly states that such requests MUST include a \":path\" field with a value of '*'. The reference to Section 3.2.4 of [HTTP11] supports this requirement and does not introduce ambiguity. There is no conflicting or unclear language that would allow for multiple reasonable interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:40:12.861892+00:00",
+  "document_id": "draft-ietf-quic-http-33",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "1a709d394d5e9699338ee368e8a8abf63b570cd1286999e86b37f6846c9390d6",
+  "lineage_ids": "lineage:1c5f6268ba5f72b0f1407e36",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 158,
+    "load_duration": 14088500,
+    "prompt_eval_count": 619,
+    "total_duration": 6609656200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause provides a clear exception to the general rule for the \\\":path\\\" pseudo-header field in the case of an OPTIONS request for an \\\"http\\\" or \\\"https\\\" URI without a path component. It explicitly states that such requests MUST include a \\\":path\\\" field with a value of '*'. The reference to Section 3.2.4 of [HTTP11] supports this requirement and does not introduce ambiguity. There is no conflicting or unclear language that would allow for multiple reasonable interpretations.\"\n}",
+  "record_id": "11c2d6989aaf865bdc7152eb323c69f36800200e435250c37b2fa13a82f8fefc",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "4.1.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.61
+}

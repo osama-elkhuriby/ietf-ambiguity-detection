@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY ignore",
+    "interpretation_a": "The recipient is permitted to ignore the Max-Forwards header field if it receives it with any request method other than those for which it is intended (e.g., GET, POST).",
+    "interpretation_b": "The recipient is permitted to ignore the Max-Forwards header field regardless of the request method used.",
+    "is_ambiguous": "yes",
+    "justification": "The word \"ignore\" is not fully defined. Does it mean to discard the header field entirely, or to treat it as if it were not present? The lack of a precise definition of \"ignore\" creates ambiguity in implementation.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:26:02.921140+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "e019b89136d54e372d6b5fd9b505d1afc88ef62476482a761e9aa7b7c0b02c38",
+  "lineage_ids": "lineage:0660797f0f3875c58fd61d59",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 159,
+    "load_duration": 19050300,
+    "prompt_eval_count": 594,
+    "total_duration": 6254943400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY ignore\", \"interpretation_a\": \"The recipient is permitted to ignore the Max-Forwards header field if it receives it with any request method other than those for which it is intended (e.g., GET, POST).\", \"interpretation_b\": \"The recipient is permitted to ignore the Max-Forwards header field regardless of the request method used.\", \"missing_information\": \"\", \"justification\": \"The word \\\"ignore\\\" is not fully defined. Does it mean to discard the header field entirely, or to treat it as if it were not present? The lack of a precise definition of \\\"ignore\\\" creates ambiguity in implementation.\"}",
+  "record_id": "bef848d76dc46189fc1a94982a4f06a689e23d8fab0aed12ba380a7fccd482c1",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "7.6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.266
+}

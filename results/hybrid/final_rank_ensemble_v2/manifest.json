@@ -1,0 +1,46 @@
+{
+  "cohort_audit": {
+    "compatible_rows": 2097,
+    "label_mismatch_rows_excluded": 28,
+    "ml_rows": 2406,
+    "shared_item_rows": 2125,
+    "v4_rows": 2142,
+    "v4_rows_missing_from_ml": 17
+  },
+  "component_models": [
+    "V4 Qwen/MiniLM semantic ensemble",
+    "DeBERTa-v3-base",
+    "class-balanced LogisticRegression, engineered features + TF-IDF"
+  ],
+  "created_at_utc": "2026-10-20T05:33:33.925938+00:00",
+  "experiment": "final_rank_ensemble_v2",
+  "families": [
+    "draft-ietf-6man-rfc2460bis",
+    "draft-ietf-httpbis-cache-header",
+    "draft-ietf-httpbis-http2bis",
+    "draft-ietf-httpbis-semantics",
+    "draft-ietf-quic-http",
+    "draft-ietf-quic-recovery",
+    "draft-ietf-quic-tls",
+    "draft-ietf-quic-transport",
+    "draft-ietf-tls-tls13"
+  ],
+  "folds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "inputs": {
+    "ml_oof_predictions_sha256": "78c411b82f404ce514193e4ad227253d8797121b21b9e7711d2f3d7dd6182d3e",
+    "transformer_oof_predictions_sha256": "766b3b13cefcff7e8a49b305c0dea82e74fd7deddfa656a3cfdf269534b2d7ff",
+    "v4_oof_predictions_sha256": "a4f984e91e6f316793f700a815f4a7e55b926730c1fc421a6f01442ac773c9fb"
+  },
+  "interpretation": "Exploratory development OOF comparison only. The component models and V4 design were evaluated during adaptive development. The ML component was trained using an earlier annotation artifact; rows missing from that artifact or with conflicting labels were excluded. This is not independent confirmation or a sealed-test result.",
+  "method": "equal-weight mean of within-cohort percentile ranks",
+  "positives": 116,
+  "rows": 2097,
+  "threshold_tuning": false,
+  "weight_tuning": false
+}

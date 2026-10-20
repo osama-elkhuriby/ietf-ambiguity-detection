@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "TargetName MAY be the owner of a CNAME record",
+    "interpretation_a": "The TargetName in the SVCB record can point to a CNAME record, and the client/resolver should follow that CNAME to find the actual service.",
+    "interpretation_b": "The TargetName in the SVCB record can *be* the name of a CNAME record itself (i.e., the TargetName is a CNAME), but the client/resolver does *not* necessarily follow it. It's simply stating that the TargetName could be a CNAME.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'TargetName MAY be the owner of a CNAME record' is underspecified. It doesn't state whether the client/resolver is expected to follow the CNAME, leading to two reasonable interpretations.",
+    "missing_information": "It is unclear whether the TargetName field is expected to resolve to a canonical name, or if it can directly be a CNAME. A missing constraint on whether to follow the CNAME or not affects implementation."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:07:28.969622+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-04",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "7ebd6e1ce8703419c380263ec2c94b503a872c3e01b7aa453aac3891594bde56",
+  "lineage_ids": "lineage:e00e5117ad4d88e01e77616c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 243,
+    "load_duration": 3534600,
+    "prompt_eval_count": 578,
+    "total_duration": 9088138500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"TargetName MAY be the owner of a CNAME record\", \"interpretation_a\": \"The TargetName in the SVCB record can point to a CNAME record, and the client/resolver should follow that CNAME to find the actual service.\", \"interpretation_b\": \"The TargetName in the SVCB record can *be* the name of a CNAME record itself (i.e., the TargetName is a CNAME), but the client/resolver does *not* necessarily follow it. It's simply stating that the TargetName could be a CNAME.\", \"missing_information\": \"It is unclear whether the TargetName field is expected to resolve to a canonical name, or if it can directly be a CNAME. A missing constraint on whether to follow the CNAME or not affects implementation.\", \"justification\": \"The phrase 'TargetName MAY be the owner of a CNAME record' is underspecified. It doesn't state whether the client/resolver is expected to follow the CNAME, leading to two reasonable interpretations.\"}",
+  "record_id": "837b31e17873f475383b6ae59989757f98872cbee54316cc9c8c2451846fc9b2",
+  "revision": "04",
+  "schema_version": 1,
+  "section_ids": "2.4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.094
+}

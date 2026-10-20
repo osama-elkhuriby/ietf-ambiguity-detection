@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "exact same packet",
+    "interpretation_a": "echo the received packet",
+    "interpretation_b": "re‑send the originally sent close packet",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify which packet is meant by \"exact same packet\", leaving two materially different implementation options: echoing the received packet or re‑sending the originally sent close packet.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T14:54:12.277642+00:00",
+  "document_id": "draft-ietf-quic-transport-07",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "2440562197f941762460472677e0cc11eff5ac596b519b991ce9a351e2eda83e",
+  "lineage_ids": "lineage:140b04a3ed0c22818ed9ca77",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 298,
+    "load_duration": 5536800,
+    "prompt_eval_count": 720,
+    "total_duration": 2771017900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-1\",\n  \"evidence_span\": \"exact same packet\",\n  \"interpretation_a\": \"echo the received packet\",\n  \"interpretation_b\": \"re‑send the originally sent close packet\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify which packet is meant by \\\"exact same packet\\\", leaving two materially different implementation options: echoing the received packet or re‑sending the originally sent close packet.\"\n}",
+  "record_id": "34b76f77d31362c55b5c282c972725438a05a43a03a6cdc6b1a1244c2fc8c482",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "7.8.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 16.5
+}

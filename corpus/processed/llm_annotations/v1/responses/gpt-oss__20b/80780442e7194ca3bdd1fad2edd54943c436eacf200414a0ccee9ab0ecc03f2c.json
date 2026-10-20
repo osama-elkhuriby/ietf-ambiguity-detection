@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously requires that when a key update cannot be performed or integrity limits are reached, the endpoint must cease using the connection for protected traffic and may only send stateless resets in response to received packets. The wording does not allow for multiple materially different implementation behaviours, nor does it omit a concrete constraint that would change the operational interpretation.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T12:49:30.148973+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "13bfaa244fddba9fa9f54e1b028c77e94d2bf713f308d9fb38d3f230661181ff",
+  "lineage_ids": "lineage:5c6fa9dba23af08b4e8e2a58",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2482,
+    "load_duration": 4544500,
+    "prompt_eval_count": 609,
+    "total_duration": 21370414500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously requires that when a key update cannot be performed or integrity limits are reached, the endpoint must cease using the connection for protected traffic and may only send stateless resets in response to received packets. The wording does not allow for multiple materially different implementation behaviours, nor does it omit a concrete constraint that would change the operational interpretation.\"\n}",
+  "record_id": "80780442e7194ca3bdd1fad2edd54943c436eacf200414a0ccee9ab0ecc03f2c",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 21.375
+}

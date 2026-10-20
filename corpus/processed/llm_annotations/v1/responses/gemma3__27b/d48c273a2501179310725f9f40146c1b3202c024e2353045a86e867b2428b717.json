@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "The same Stateless Reset Token",
+    "interpretation_a": "The same token value MUST NOT be used across different connection IDs, even if those connection IDs are not related to a reset.",
+    "interpretation_b": "The same token value MUST NOT be used across different connection IDs *specifically* in the context of a reset operation, preventing replay attacks. It's possible a different token could be used for non-reset connections.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states \"The same Stateless Reset Token MUST NOT be used for multiple connection IDs.\" Without further clarification, it's unclear if this restriction applies to *all* connection IDs, or only those involved in a reset operation. This leads to two reasonable interpretations regarding the scope of the restriction.",
+    "missing_information": "The scope of 'The same Stateless Reset Token' is unclear. Does it refer to any use of that token value, or only within the context of connection resets? The phrase 'multiple connection IDs' is also vague; does it mean any connection IDs, or only those associated with the same key?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:05:44.290947+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "6a47faee9458776dc5cccdb1210bcf21ed36c58ea0ea1585b32683e2c0812b6d",
+  "lineage_ids": "lineage:4adb5821a6c3d91025d7075a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 244,
+    "load_duration": 2742900,
+    "prompt_eval_count": 590,
+    "total_duration": 9108056600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"The same Stateless Reset Token\", \"interpretation_a\": \"The same token value MUST NOT be used across different connection IDs, even if those connection IDs are not related to a reset.\", \"interpretation_b\": \"The same token value MUST NOT be used across different connection IDs *specifically* in the context of a reset operation, preventing replay attacks. It's possible a different token could be used for non-reset connections.\", \"missing_information\": \"The scope of 'The same Stateless Reset Token' is unclear. Does it refer to any use of that token value, or only within the context of connection resets? The phrase 'multiple connection IDs' is also vague; does it mean any connection IDs, or only those associated with the same key?\",\"justification\": \"The clause states \\\"The same Stateless Reset Token MUST NOT be used for multiple connection IDs.\\\" Without further clarification, it's unclear if this restriction applies to *all* connection IDs, or only those involved in a reset operation. This leads to two reasonable interpretations regarding the scope of the restriction.\"}",
+  "record_id": "d48c273a2501179310725f9f40146c1b3202c024e2353045a86e867b2428b717",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "10.3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.109
+}

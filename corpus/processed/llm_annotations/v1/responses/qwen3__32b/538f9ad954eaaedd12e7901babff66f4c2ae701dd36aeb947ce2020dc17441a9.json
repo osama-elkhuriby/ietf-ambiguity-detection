@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause is clear in its requirement that clients must not discard responses due to receiving a RST_STREAM with error code NO_ERROR after a complete response. It also allows clients to discard responses for other reasons, which is unambiguous. There is no ambiguity in the implementation behavior it prescribes.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T01:45:36.055486+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "b3314e04d013ea361fb606109157cb7dd97ce19b206e6e2dade0e30e46fd962d",
+  "lineage_ids": "lineage:3d8ba57c4c08aa96c0f8d3d0",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 114,
+    "load_duration": 9605100,
+    "prompt_eval_count": 553,
+    "total_duration": 4796451300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause is clear in its requirement that clients must not discard responses due to receiving a RST_STREAM with error code NO_ERROR after a complete response. It also allows clients to discard responses for other reasons, which is unambiguous. There is no ambiguity in the implementation behavior it prescribes.\"\n}",
+  "record_id": "538f9ad954eaaedd12e7901babff66f4c2ae701dd36aeb947ce2020dc17441a9",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 4.812
+}

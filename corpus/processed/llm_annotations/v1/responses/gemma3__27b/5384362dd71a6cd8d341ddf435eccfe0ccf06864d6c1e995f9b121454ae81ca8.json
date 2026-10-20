@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "conflicting header field values",
+    "interpretation_a": "Header fields are considered conflicting if they have different values for the same named field. For example, Content-Type: application/json and Content-Type: text/plain.",
+    "interpretation_b": "Header fields are considered conflicting if they violate HTTP semantic rules, even if the names and values are identical. For example, setting both Transfer-Encoding: chunked and Content-Length.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'conflicting' is not defined, leading to multiple reasonable interpretations of what constitutes a conflict in header field values. This impacts how a client would determine if a PUSH_PROMISE is malformed.",
+    "missing_information": "The definition of 'conflicting' is not provided. It is unclear whether conflicting refers to simple value differences or semantic violations of HTTP header rules."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:50:21.146301+00:00",
+  "document_id": "draft-ietf-quic-http-08",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "25204ea66ec03d34db3668ce1423678db7748681b5fa485c1ca66d7595e7bbae",
+  "lineage_ids": "lineage:9e3c55e7ab7b65f33c948663",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 203,
+    "load_duration": 9024800,
+    "prompt_eval_count": 581,
+    "total_duration": 7839366400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"conflicting header field values\", \"interpretation_a\": \"Header fields are considered conflicting if they have different values for the same named field. For example, Content-Type: application/json and Content-Type: text/plain.\", \"interpretation_b\": \"Header fields are considered conflicting if they violate HTTP semantic rules, even if the names and values are identical. For example, setting both Transfer-Encoding: chunked and Content-Length.\", \"missing_information\": \"The definition of 'conflicting' is not provided. It is unclear whether conflicting refers to simple value differences or semantic violations of HTTP header rules.\", \"justification\": \"The term 'conflicting' is not defined, leading to multiple reasonable interpretations of what constitutes a conflict in header field values. This impacts how a client would determine if a PUSH_PROMISE is malformed.\"}",
+  "record_id": "5384362dd71a6cd8d341ddf435eccfe0ccf06864d6c1e995f9b121454ae81ca8",
+  "revision": "08",
+  "schema_version": 1,
+  "section_ids": "5.2.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.859
+}

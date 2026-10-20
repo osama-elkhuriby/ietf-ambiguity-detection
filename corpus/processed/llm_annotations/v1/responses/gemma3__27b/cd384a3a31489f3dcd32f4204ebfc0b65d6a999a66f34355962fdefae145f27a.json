@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "All HTTP data MUST be sent as TLS",
+    "interpretation_a": "All data associated with the HTTP request and response, including headers and body, must be encrypted using TLS.",
+    "interpretation_b": "Only the HTTP body must be sent as TLS, while headers may be sent in the clear.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'HTTP data' is not precisely defined. It could reasonably refer to the entire HTTP message or just the data portion (body). This leads to two different interpretations of the requirement.",
+    "missing_information": "It is unclear whether 'HTTP data' refers to the entire HTTP message (headers and body) or just the body. A clarification is needed to specify which parts of the HTTP message are required to be sent over TLS."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:28:22.304483+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-09",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "74ec40796d27a5603e10805e766b8609f4de04e70f44ee3392a07b50ee5893c2",
+  "lineage_ids": "lineage:95f23171996b06cd16782162",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 182,
+    "load_duration": 11709700,
+    "prompt_eval_count": 535,
+    "total_duration": 7043333400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"All HTTP data MUST be sent as TLS\", \"interpretation_a\": \"All data associated with the HTTP request and response, including headers and body, must be encrypted using TLS.\", \"interpretation_b\": \"Only the HTTP body must be sent as TLS, while headers may be sent in the clear.\", \"missing_information\": \"It is unclear whether 'HTTP data' refers to the entire HTTP message (headers and body) or just the body. A clarification is needed to specify which parts of the HTTP message are required to be sent over TLS.\",\"justification\": \"The phrase 'HTTP data' is not precisely defined. It could reasonably refer to the entire HTTP message or just the data portion (body). This leads to two different interpretations of the requirement.\"}",
+  "record_id": "cd384a3a31489f3dcd32f4204ebfc0b65d6a999a66f34355962fdefae145f27a",
+  "revision": "09",
+  "schema_version": 1,
+  "section_ids": "6.4.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.047
+}

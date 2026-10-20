@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY intentionally skip packet numbers",
+    "interpretation_a": "The sender is permitted to skip packet numbers to enhance security, but is not required to do so.",
+    "interpretation_b": "The sender is required to skip packet numbers to enhance security, but the degree of skipping is discretionary.",
+    "is_ambiguous": "yes",
+    "justification": "The use of \"MAY\" allows for both optional and required behavior. Without further constraints on *how* or *when* packet numbers are skipped, implementations could differ significantly in their approach to entropy introduction, potentially leading to interoperability issues or reduced security effectiveness.",
+    "missing_information": "The degree to which packet numbers can be skipped is not defined. A missing constraint on the frequency or pattern of skipped packet numbers could lead to different implementations and potentially impact connection reliability or performance."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:13:56.955531+00:00",
+  "document_id": "draft-ietf-quic-transport-01",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "a7f0573012c4352cc9ee0df1448f9aee3bd85960fae1afd3a91ef5b1ba89c8c1",
+  "lineage_ids": "lineage:91a1ff581e5585e9f38d0c96",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 188,
+    "load_duration": 5319900,
+    "prompt_eval_count": 570,
+    "total_duration": 7095735000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY intentionally skip packet numbers\", \"interpretation_a\": \"The sender is permitted to skip packet numbers to enhance security, but is not required to do so.\", \"interpretation_b\": \"The sender is required to skip packet numbers to enhance security, but the degree of skipping is discretionary.\", \"missing_information\": \"The degree to which packet numbers can be skipped is not defined. A missing constraint on the frequency or pattern of skipped packet numbers could lead to different implementations and potentially impact connection reliability or performance.\", \"justification\": \"The use of \\\"MAY\\\" allows for both optional and required behavior. Without further constraints on *how* or *when* packet numbers are skipped, implementations could differ significantly in their approach to entropy introduction, potentially leading to interoperability issues or reduced security effectiveness.\"}",
+  "record_id": "3a0abacdc4f4ae65eace20432506f498cb1a3d0025c647f423dfaa9f3671fc32",
+  "revision": "01",
+  "schema_version": 1,
+  "section_ids": "7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.109
+}

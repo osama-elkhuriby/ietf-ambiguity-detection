@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST be able to perform",
+    "interpretation_a": "An application MUST be able to perform these operations if it chooses to use QUIC streams, but there is no requirement for the QUIC implementation to actively facilitate or support those operations.",
+    "interpretation_b": "The QUIC implementation MUST provide mechanisms to enable an application to perform these operations, actively supporting and facilitating their use.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"MUST be able to\" is vague. It doesn't specify whether the ability is a passive characteristic of the application or an active capability provided by the QUIC implementation. This leads to two reasonable interpretations regarding the level of support required from the QUIC stack.",
+    "missing_information": "The clause does not specify *how* the application must be able to perform these operations. Is it sufficient for the application to be theoretically capable, or must the QUIC implementation provide the necessary interfaces and support?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:42:43.132688+00:00",
+  "document_id": "draft-ietf-quic-transport-28",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "e574fac9150d1c9c301b6a163e3c2a6e91c6fcf0d247a9df92f80a41f3f357a7",
+  "lineage_ids": "lineage:e36a8300ac303435bdbcae7b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 213,
+    "load_duration": 4989200,
+    "prompt_eval_count": 563,
+    "total_duration": 7955260500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST be able to perform\", \"interpretation_a\": \"An application MUST be able to perform these operations if it chooses to use QUIC streams, but there is no requirement for the QUIC implementation to actively facilitate or support those operations.\", \"interpretation_b\": \"The QUIC implementation MUST provide mechanisms to enable an application to perform these operations, actively supporting and facilitating their use.\", \"missing_information\": \"The clause does not specify *how* the application must be able to perform these operations. Is it sufficient for the application to be theoretically capable, or must the QUIC implementation provide the necessary interfaces and support?\",\"justification\": \"The phrase \\\"MUST be able to\\\" is vague. It doesn't specify whether the ability is a passive characteristic of the application or an active capability provided by the QUIC implementation. This leads to two reasonable interpretations regarding the level of support required from the QUIC stack.\"}",
+  "record_id": "8c7035f6c6b8f73775cc38869bff13ecf45ba29845c28764ed7a608e1e0779ba",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "2.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.953
+}

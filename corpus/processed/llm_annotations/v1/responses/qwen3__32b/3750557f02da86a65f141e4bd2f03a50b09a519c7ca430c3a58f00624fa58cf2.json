@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear condition for server behavior when a client-initiated stream terminates without a complete HTTP message. The language 'SHOULD abort its response stream with the error code H3_REQUEST_INCOMPLETE' allows for discretion but does not permit materially different interpretations of the required behavior. The condition and consequence are unambiguous.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:44:28.421096+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "b556d93ee58276fb05b910f6a122b67ac36690ebd5b7f2bf4b137d06b347ef3a",
+  "lineage_ids": "lineage:a55bdb75e807dd00c09da245",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 120,
+    "load_duration": 9282700,
+    "prompt_eval_count": 591,
+    "total_duration": 5066047500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear condition for server behavior when a client-initiated stream terminates without a complete HTTP message. The language 'SHOULD abort its response stream with the error code H3_REQUEST_INCOMPLETE' allows for discretion but does not permit materially different interpretations of the required behavior. The condition and consequence are unambiguous.\"\n}",
+  "record_id": "3750557f02da86a65f141e4bd2f03a50b09a519c7ca430c3a58f00624fa58cf2",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.078
+}

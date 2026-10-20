@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST only make use of Alt-Svc when operating in SVCB-optional mode",
+    "interpretation_a": "Clients MUST use Alt-Svc only if a specific SVCB-optional mode is explicitly enabled or configured.",
+    "interpretation_b": "Clients MUST use Alt-Svc unless a specific SVCB-optional mode is explicitly disabled or configured.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'when operating in SVCB-optional mode' is incomplete. It doesn't specify whether this mode is an enabled or disabled state. This leads to two reasonable interpretations of when Alt-Svc should be used.",
+    "missing_information": "The definition of 'SVCB-optional mode' is not provided in the target clause, and the reference [ech-client-behavior] is not supplied. Without knowing how 'SVCB-optional mode' is determined, it is unclear whether the client should use Alt-Svc by default and disable it in this mode, or vice versa."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:00:25.062786+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-05",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "f4afa155963b53361b281c91bbc676cfeca50565a1f8129be0609d6b1fe77c84",
+  "lineage_ids": "lineage:e95f797f0b7d1f08631a8dbe",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 229,
+    "load_duration": 4161000,
+    "prompt_eval_count": 611,
+    "total_duration": 8568676500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST only make use of Alt-Svc when operating in SVCB-optional mode\", \"interpretation_a\": \"Clients MUST use Alt-Svc only if a specific SVCB-optional mode is explicitly enabled or configured.\", \"interpretation_b\": \"Clients MUST use Alt-Svc unless a specific SVCB-optional mode is explicitly disabled or configured.\", \"missing_information\": \"The definition of 'SVCB-optional mode' is not provided in the target clause, and the reference [ech-client-behavior] is not supplied. Without knowing how 'SVCB-optional mode' is determined, it is unclear whether the client should use Alt-Svc by default and disable it in this mode, or vice versa.\", \"justification\": \"The phrase 'when operating in SVCB-optional mode' is incomplete. It doesn't specify whether this mode is an enabled or disabled state. This leads to two reasonable interpretations of when Alt-Svc should be used.\"}",
+  "record_id": "305ed752680517cee51087db98e302ce717a7b57c3a1840a63631830afcffc9a",
+  "revision": "05",
+  "schema_version": 1,
+  "section_ids": "8.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.562
+}

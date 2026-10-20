@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD terminate the connection",
+    "interpretation_a": "Clients are encouraged, but not required, to terminate the connection upon encountering a bad certificate error.",
+    "interpretation_b": "Clients are strongly recommended to terminate the connection upon encountering a bad certificate error, approaching a requirement.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' creates ambiguity. While not a hard requirement, 'SHOULD' can imply a strong recommendation. Without further clarification, it's unclear how strongly clients are expected to adhere to terminating the connection. This impacts implementation choices regarding error handling and security posture.",
+    "missing_information": "The strength of 'SHOULD' is not defined, and the difference between 'terminate the connection' and 'not terminate the connection' is material."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:00:34.521601+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-10",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "0e313c1ddfa9185b393b48263db33fcf74cfda7c9aeedec039226fe4f04148c9",
+  "lineage_ids": "lineage:d81f31e2685b0a4fe7f4c0e4",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 183,
+    "load_duration": 9264000,
+    "prompt_eval_count": 564,
+    "total_duration": 7085277900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD terminate the connection\", \"interpretation_a\": \"Clients are encouraged, but not required, to terminate the connection upon encountering a bad certificate error.\", \"interpretation_b\": \"Clients are strongly recommended to terminate the connection upon encountering a bad certificate error, approaching a requirement.\", \"missing_information\": \"The strength of 'SHOULD' is not defined, and the difference between 'terminate the connection' and 'not terminate the connection' is material.\", \"justification\": \"The use of 'SHOULD' creates ambiguity. While not a hard requirement, 'SHOULD' can imply a strong recommendation. Without further clarification, it's unclear how strongly clients are expected to adhere to terminating the connection. This impacts implementation choices regarding error handling and security posture.\"}",
+  "record_id": "2c3bb14ed99c83352d5f62a5ad4da24a4886c906ba2a3e73697b09a02e727bec",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "6.4.3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.11
+}

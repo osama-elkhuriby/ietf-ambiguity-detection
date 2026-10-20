@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless separate compression dictionaries are used for each source of data",
+    "interpretation_a": "If confidential and attacker-controlled data are mixed, compression is allowed *if* separate compression dictionaries are used.",
+    "interpretation_b": "If confidential and attacker-controlled data are mixed, compression is *never* allowed, even with separate compression dictionaries.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'separate compression dictionaries' is not sufficiently defined. It's unclear whether simply using different compression levels or algorithms within a single dictionary would be considered 'separate', or if truly isolated dictionaries are required. This lack of precision allows for materially different implementations.",
+    "missing_information": "The clause does not define what constitutes 'separate compression dictionaries'. Does this mean completely isolated dictionaries, or dictionaries that are keyed/seeded differently? Without this definition, implementations could reasonably differ on whether a given compression setup satisfies the requirement."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:32:30.805958+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "1f2e44546b401964fb828991a02236f81b5232b55fa4c86fad6d573e8c0df6b2",
+  "lineage_ids": "lineage:82f79151a48ac30d44759258",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 206,
+    "load_duration": 13896600,
+    "prompt_eval_count": 591,
+    "total_duration": 7935288900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless separate compression dictionaries are used for each source of data\", \"interpretation_a\": \"If confidential and attacker-controlled data are mixed, compression is allowed *if* separate compression dictionaries are used.\", \"interpretation_b\": \"If confidential and attacker-controlled data are mixed, compression is *never* allowed, even with separate compression dictionaries.\", \"missing_information\": \"The clause does not define what constitutes 'separate compression dictionaries'. Does this mean completely isolated dictionaries, or dictionaries that are keyed/seeded differently? Without this definition, implementations could reasonably differ on whether a given compression setup satisfies the requirement.\",\"justification\": \"The phrase 'separate compression dictionaries' is not sufficiently defined. It's unclear whether simply using different compression levels or algorithms within a single dictionary would be considered 'separate', or if truly isolated dictionaries are required. This lack of precision allows for materially different implementations.\"}",
+  "record_id": "407735f6483aa7d227bbe60e476e4044cc32f8859bca790c83c1b5dfc4dc1dac",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "10.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.954
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "but are often handled poorly by servers, so clients SHOULD NOT close a stream for sending while they still expect to receive data from the target of the CONNECT.",
+    "interpretation_a": "Clients should avoid closing the send stream if they anticipate receiving data, even if the proxy has signaled the end of its transmission.",
+    "interpretation_b": "Clients may close the send stream if they no longer expect data, despite the proxy potentially handling half-closed connections poorly. The 'SHOULD NOT' is a weak recommendation, allowing for this behavior.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'often handled poorly' is vague and doesn't define a threshold for when closing the stream is unacceptable. It's unclear whether 'SHOULD NOT' is a strong recommendation or merely a suggestion, leading to different implementation choices.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:47:20.235291+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "9d3fc987162234013e9bae4082ab93041e19511b96be4b4577651c0773dc5b04",
+  "lineage_ids": "lineage:bdb0e0d16e043444a3f1ec5c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 196,
+    "load_duration": 10234100,
+    "prompt_eval_count": 632,
+    "total_duration": 7536927100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"but are often handled poorly by servers, so clients SHOULD NOT close a stream for sending while they still expect to receive data from the target of the CONNECT.\", \"interpretation_a\": \"Clients should avoid closing the send stream if they anticipate receiving data, even if the proxy has signaled the end of its transmission.\", \"interpretation_b\": \"Clients may close the send stream if they no longer expect data, despite the proxy potentially handling half-closed connections poorly. The 'SHOULD NOT' is a weak recommendation, allowing for this behavior.\", \"missing_information\": \"\", \"justification\": \"The phrase 'often handled poorly' is vague and doesn't define a threshold for when closing the stream is unacceptable. It's unclear whether 'SHOULD NOT' is a strong recommendation or merely a suggestion, leading to different implementation choices.\"}",
+  "record_id": "3ed3603f0212404e4d2fc56c7765f13032bc8d236dbfeea99047afe5d262df44",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.547
+}

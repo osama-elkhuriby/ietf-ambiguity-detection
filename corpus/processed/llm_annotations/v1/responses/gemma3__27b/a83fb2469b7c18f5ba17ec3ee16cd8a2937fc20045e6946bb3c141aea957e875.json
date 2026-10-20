@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless the endpoint has sent a RST_STREAM for that stream.",
+    "interpretation_a": "If a RST_STREAM is received, no further data for that stream is retransmitted. If a RST_STREAM is *not* received, all data *must* be retransmitted, even if the receiver has implicitly discarded it.",
+    "interpretation_b": "If a RST_STREAM is received, no further data for that stream is retransmitted. If a RST_STREAM is *not* received, the sender may choose to retransmit data, but is not *required* to do so. The 'MUST' applies to the retransmission of data *if* a retransmission is triggered by loss, not to all data in the stream.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states that data 'MUST' be retransmitted 'unless' a RST_STREAM is sent. The scope of the 'MUST' is ambiguous. Does it mean all data in the stream must be retransmitted if a RST_STREAM hasn't been sent, or only data that is currently being retransmitted due to packet loss?",
+    "missing_information": "It is unclear whether the 'MUST' applies to all data in the stream, or only to data that is being retransmitted due to loss. The phrasing could be interpreted in either way."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:52:23.113232+00:00",
+  "document_id": "draft-ietf-quic-transport-06",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "00bf85554cb8ed3bb2f56d92f1f57ab25dfbb73a5cdb9adef90636dde7fd2b91",
+  "lineage_ids": "lineage:2ac972991da55c335ce518fa",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 296,
+    "load_duration": 4470400,
+    "prompt_eval_count": 589,
+    "total_duration": 10943818600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless the endpoint has sent a RST_STREAM for that stream.\", \"interpretation_a\": \"If a RST_STREAM is received, no further data for that stream is retransmitted. If a RST_STREAM is *not* received, all data *must* be retransmitted, even if the receiver has implicitly discarded it.\", \"interpretation_b\": \"If a RST_STREAM is received, no further data for that stream is retransmitted. If a RST_STREAM is *not* received, the sender may choose to retransmit data, but is not *required* to do so. The 'MUST' applies to the retransmission of data *if* a retransmission is triggered by loss, not to all data in the stream.\", \"missing_information\": \"It is unclear whether the 'MUST' applies to all data in the stream, or only to data that is being retransmitted due to loss. The phrasing could be interpreted in either way.\", \"justification\": \"The clause states that data 'MUST' be retransmitted 'unless' a RST_STREAM is sent. The scope of the 'MUST' is ambiguous. Does it mean all data in the stream must be retransmitted if a RST_STREAM hasn't been sent, or only data that is currently being retransmitted due to packet loss?\"}",
+  "record_id": "a83fb2469b7c18f5ba17ec3ee16cd8a2937fc20045e6946bb3c141aea957e875",
+  "revision": "06",
+  "schema_version": 1,
+  "section_ids": "9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.953
+}

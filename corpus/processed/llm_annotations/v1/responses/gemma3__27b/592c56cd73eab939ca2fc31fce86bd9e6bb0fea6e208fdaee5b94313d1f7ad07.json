@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "A server MAY use a different short header type, indicating a different packet number length",
+    "interpretation_a": "The server is permitted to change the packet number length in the short header, potentially increasing it.",
+    "interpretation_b": "The server is permitted to change the short header type *without* changing the packet number length, simply using a different type for the same length.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'indicating a different packet number length' is ambiguous. It can be read as 'necessarily indicating' or 'potentially indicating'. Without further clarification, it's unclear if a different short header type *always* means a different packet number length, or if it's optional.",
+    "missing_information": "The clause does not specify whether changing the short header type *requires* a change in packet number length. This missing constraint allows for two different implementations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:25:33.782556+00:00",
+  "document_id": "draft-ietf-quic-transport-11",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "a25e72cd4d43c39321ceb4bf919a106dcbbb4015be07adcc260f606637de8557",
+  "lineage_ids": "lineage:7668d1f9f10c26b3bd65105c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 204,
+    "load_duration": 6062000,
+    "prompt_eval_count": 596,
+    "total_duration": 7706769900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"A server MAY use a different short header type, indicating a different packet number length\", \"interpretation_a\": \"The server is permitted to change the packet number length in the short header, potentially increasing it.\", \"interpretation_b\": \"The server is permitted to change the short header type *without* changing the packet number length, simply using a different type for the same length.\", \"missing_information\": \"The clause does not specify whether changing the short header type *requires* a change in packet number length. This missing constraint allows for two different implementations.\",\"justification\": \"The phrase 'indicating a different packet number length' is ambiguous. It can be read as 'necessarily indicating' or 'potentially indicating'. Without further clarification, it's unclear if a different short header type *always* means a different packet number length, or if it's optional.\"}",
+  "record_id": "592c56cd73eab939ca2fc31fce86bd9e6bb0fea6e208fdaee5b94313d1f7ad07",
+  "revision": "11",
+  "schema_version": 1,
+  "section_ids": "6.9.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.719
+}

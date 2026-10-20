@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "encoded size",
+    "interpretation_a": "The packet number and its encoded size must be protected from side-channel attacks, meaning the size of the encoded packet number itself must not leak information.",
+    "interpretation_b": "The packet payload and packet number must be protected from side-channel attacks, and the size of the entire packet (including payload and number) must not leak information.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'encoded size' is ambiguous. Does it refer to the size of the encoding of the packet number, or the size of the entire packet? Both interpretations are reasonable and lead to different implementation choices.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:33:59.500168+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "e9d4fdfc6591fd874e222fd55e5a4af20eea9ab24541c2e193ff3f57228f6df4",
+  "lineage_ids": "lineage:ef3ac68f37ef6720c659d0b3",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 159,
+    "load_duration": 5373900,
+    "prompt_eval_count": 644,
+    "total_duration": 6117764700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"encoded size\", \"interpretation_a\": \"The packet number and its encoded size must be protected from side-channel attacks, meaning the size of the encoded packet number itself must not leak information.\", \"interpretation_b\": \"The packet payload and packet number must be protected from side-channel attacks, and the size of the entire packet (including payload and number) must not leak information.\", \"missing_information\": \"\", \"justification\": \"The phrase 'encoded size' is ambiguous. Does it refer to the size of the encoding of the packet number, or the size of the entire packet? Both interpretations are reasonable and lead to different implementation choices.\"}",
+  "record_id": "08d177a60d8e231c56d7f7bc03298c5efec1cdf4f82dea39da1728a14ae217de",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.125
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously specifies that when a decompressed field section contains multiple cookie field lines, they must be concatenated using the delimiter 0x3b, 0x20 before being passed into any context other than HTTP/2 or HTTP/3 (e.g., HTTP/1.1 or a generic HTTP server). The wording leaves no room for multiple reasonable interpretations or missing constraints.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T09:36:46.135455+00:00",
+  "document_id": "draft-ietf-quic-http-33",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "3bc70f4a7186f0a5be68ab75eb294883a21f02781a03ab3c6177a2cf32382e4a",
+  "lineage_ids": "lineage:e2033c0de949fce7881e567b",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1950,
+    "load_duration": 7200200,
+    "prompt_eval_count": 672,
+    "total_duration": 16942174200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"no\",\"ambiguity_subtype\":\"none\",\"evidence_span\":\"\",\"interpretation_a\":\"\",\"interpretation_b\":\"\",\"missing_information\":\"\",\"justification\":\"The clause unambiguously specifies that when a decompressed field section contains multiple cookie field lines, they must be concatenated using the delimiter 0x3b, 0x20 before being passed into any context other than HTTP/2 or HTTP/3 (e.g., HTTP/1.1 or a generic HTTP server). The wording leaves no room for multiple reasonable interpretations or missing constraints.\"}",
+  "record_id": "751cc4d2bde64420a1ce6191fa6d51095f244a9560b5c6c52d52c9d1cb54ad50",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "4.1.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 84.422
+}

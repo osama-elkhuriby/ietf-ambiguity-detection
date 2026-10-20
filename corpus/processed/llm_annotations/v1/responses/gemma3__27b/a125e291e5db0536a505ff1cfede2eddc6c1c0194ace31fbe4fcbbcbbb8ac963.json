@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD fire immediately",
+    "interpretation_a": "The timer is treated as having already expired and any associated actions are taken without delay.",
+    "interpretation_b": "The timer is reset to fire at the current time, effectively cancelling any remaining duration. This is a different behaviour than immediate firing.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'fire immediately' is open to interpretation. It could mean execute the timer's callback function right away, or it could mean reset the timer to the present time. Both interpretations are reasonable and would lead to different implementation behaviours.",
+    "missing_information": "The document does not define what 'fire immediately' means in the context of a timer. Does it mean execute the timer's callback function right away, or does it mean reset the timer to the present time?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:26:14.284145+00:00",
+  "document_id": "draft-ietf-quic-recovery-27",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "07ccee10047e9ed2816d18e4a45cdf011a69bb95fa5ea0a9a4b8c1290802f732",
+  "lineage_ids": "lineage:96d62fa14c1f73c5e56809ef",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 190,
+    "load_duration": 4127300,
+    "prompt_eval_count": 549,
+    "total_duration": 7176581000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD fire immediately\", \"interpretation_a\": \"The timer is treated as having already expired and any associated actions are taken without delay.\", \"interpretation_b\": \"The timer is reset to fire at the current time, effectively cancelling any remaining duration. This is a different behaviour than immediate firing.\", \"missing_information\": \"The document does not define what 'fire immediately' means in the context of a timer. Does it mean execute the timer's callback function right away, or does it mean reset the timer to the present time?\",\"justification\": \"The term 'fire immediately' is open to interpretation. It could mean execute the timer's callback function right away, or it could mean reset the timer to the present time. Both interpretations are reasonable and would lead to different implementation behaviours.\"}",
+  "record_id": "a125e291e5db0536a505ff1cfede2eddc6c1c0194ace31fbe4fcbbcbbb8ac963",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "A.8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.171
+}

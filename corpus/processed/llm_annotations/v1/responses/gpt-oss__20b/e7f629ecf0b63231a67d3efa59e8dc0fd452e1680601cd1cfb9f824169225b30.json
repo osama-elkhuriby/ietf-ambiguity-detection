@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Tokens sent in NEW_TOKEN frames MUST include information that allows the server to verify that the client IP address has not changed from when the token was issued.",
+    "interpretation_a": "The token could contain the client IP address itself, allowing the server to compare it directly.",
+    "interpretation_b": "The token could contain a cryptographic hash or other binding of the client IP address, requiring the server to recompute or verify the hash.",
+    "is_ambiguous": "yes",
+    "justification": "The lack of a concrete constraint on the form of the information creates an incomplete specification that permits multiple reasonable implementation choices.",
+    "missing_information": "The clause does not specify the exact form of the information that must be included in the token to allow verification of the client IP address, leaving the implementation choice open to either of the above interpretations or others, which leads to materially different behaviours."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T18:58:45.639771+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "7a5bf1b8a1acbc0c1cf05f9ed1c8a0364dd64b7c3cff4176b1cf4f1dad1df75f",
+  "lineage_ids": "lineage:d8ce1619c0b2844967ac65a8",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2061,
+    "load_duration": 4592000,
+    "prompt_eval_count": 604,
+    "total_duration": 18076992000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"Tokens sent in NEW_TOKEN frames MUST include information that allows the server to verify that the client IP address has not changed from when the token was issued.\",\n  \"interpretation_a\": \"The token could contain the client IP address itself, allowing the server to compare it directly.\",\n  \"interpretation_b\": \"The token could contain a cryptographic hash or other binding of the client IP address, requiring the server to recompute or verify the hash.\",\n  \"missing_information\": \"The clause does not specify the exact form of the information that must be included in the token to allow verification of the client IP address, leaving the implementation choice open to either of the above interpretations or others, which leads to materially different behaviours.\",\n  \"justification\": \"The lack of a concrete constraint on the form of the information creates an incomplete specification that permits multiple reasonable implementation choices.\"\n}",
+  "record_id": "e7f629ecf0b63231a67d3efa59e8dc0fd452e1680601cd1cfb9f824169225b30",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "8.1.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 18.078
+}

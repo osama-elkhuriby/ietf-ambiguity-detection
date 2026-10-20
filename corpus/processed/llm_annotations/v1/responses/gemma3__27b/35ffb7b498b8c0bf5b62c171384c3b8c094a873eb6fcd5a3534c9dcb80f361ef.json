@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "If the client is authenticated",
+    "interpretation_a": "The server MUST verify the client's identity using a supported authentication method (e.g., certificate verification, pre-shared key). If verification fails, the condition is not met.",
+    "interpretation_b": "The server MAY choose to trust any client claiming to be authenticated, without performing any verification. The condition is met as long as the client *claims* to be authenticated.",
+    "is_ambiguous": "yes",
+    "justification": "The clause uses 'authenticated' without defining what constitutes authentication. This allows for interpretations where the server does not actually verify the client's identity, leading to different implementations.",
+    "missing_information": "The definition of 'authenticated' is not provided. It is unclear whether authentication requires successful verification of the client's identity by the server, or merely a claim of authentication by the client."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:33:22.928193+00:00",
+  "document_id": "draft-ietf-tls-tls13-26",
+  "family_id": "draft-ietf-tls-tls13",
+  "input_fingerprint": "96ed770c001c61050885183c989747433bec59769c1e9570a364758474aa4843",
+  "lineage_ids": "lineage:0b4f87edee15756650da0ba1",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 200,
+    "load_duration": 8609500,
+    "prompt_eval_count": 568,
+    "total_duration": 7707843000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"If the client is authenticated\", \"interpretation_a\": \"The server MUST verify the client's identity using a supported authentication method (e.g., certificate verification, pre-shared key). If verification fails, the condition is not met.\", \"interpretation_b\": \"The server MAY choose to trust any client claiming to be authenticated, without performing any verification. The condition is met as long as the client *claims* to be authenticated.\", \"missing_information\": \"The definition of 'authenticated' is not provided. It is unclear whether authentication requires successful verification of the client's identity by the server, or merely a claim of authentication by the client.\",\"justification\": \"The clause uses 'authenticated' without defining what constitutes authentication. This allows for interpretations where the server does not actually verify the client's identity, leading to different implementations.\"}",
+  "record_id": "35ffb7b498b8c0bf5b62c171384c3b8c094a873eb6fcd5a3534c9dcb80f361ef",
+  "revision": "26",
+  "schema_version": 1,
+  "section_ids": "E.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.718
+}

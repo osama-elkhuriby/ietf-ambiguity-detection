@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "the length of the padding is the length of the frame payload",
+    "interpretation_a": "If the padding is *exactly* the same length as the frame payload, it's a PROTOCOL_ERROR.",
+    "interpretation_b": "If the padding is *equal to or greater than* the frame payload length, it's a PROTOCOL_ERROR.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'the length of the padding is the length of the frame payload' is ambiguous. It could mean 'equal to' or 'greater than or equal to'. The specification uses 'or greater' in the next sentence, but that doesn't resolve the ambiguity in the target clause. This difference in interpretation affects error handling.",
+    "missing_information": "The clause does not specify whether 'the length of the padding' refers to an exact match or 'equal to or greater than' the frame payload length. This affects how implementations handle padding that is precisely the same length as the payload."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:45:31.101138+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "8429198734358e787c28d5057608471102ee9cded1cf21a83a1d77333a29b9a0",
+  "lineage_ids": "lineage:397a98fc23b960e1b8301f8f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 228,
+    "load_duration": 9049000,
+    "prompt_eval_count": 587,
+    "total_duration": 8716041000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"the length of the padding is the length of the frame payload\", \"interpretation_a\": \"If the padding is *exactly* the same length as the frame payload, it's a PROTOCOL_ERROR.\", \"interpretation_b\": \"If the padding is *equal to or greater than* the frame payload length, it's a PROTOCOL_ERROR.\", \"missing_information\": \"The clause does not specify whether 'the length of the padding' refers to an exact match or 'equal to or greater than' the frame payload length. This affects how implementations handle padding that is precisely the same length as the payload.\", \"justification\": \"The phrase 'the length of the padding is the length of the frame payload' is ambiguous. It could mean 'equal to' or 'greater than or equal to'. The specification uses 'or greater' in the next sentence, but that doesn't resolve the ambiguity in the target clause. This difference in interpretation affects error handling.\"}",
+  "record_id": "b8d451c3ff36e60ee903235538b0d832fd58b0ad23b213b959cfb72786c6372f",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.719
+}

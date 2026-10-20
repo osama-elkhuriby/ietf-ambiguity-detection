@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "bearing the offset of the last byte sent on this stream as the final offset.",
+    "interpretation_a": "The clause requires sending a RST_STREAM with the final offset set to the offset of the last byte sent by the endpoint, but it does not specify what offset to use if no bytes have been sent.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a concrete constraint for the case where the endpoint has not sent any data, which can lead to materially different implementation behaviors.",
+    "missing_information": "The clause does not specify what offset to use if no bytes have been sent on the stream, leaving the implementation behavior undefined in that case."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T16:09:14.616009+00:00",
+  "document_id": "draft-ietf-quic-transport-04",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "bdf5cc6b5d3d827b72b7f45c947f5e1b4459b48ebe72b60f6f6c1450bca69cce",
+  "lineage_ids": "lineage:cd1521c60a79b1d99d141235",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3554,
+    "load_duration": 7587100,
+    "prompt_eval_count": 599,
+    "total_duration": 30775845000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"bearing the offset of the last byte sent on this stream as the final offset.\",\n  \"interpretation_a\": \"The clause requires sending a RST_STREAM with the final offset set to the offset of the last byte sent by the endpoint, but it does not specify what offset to use if no bytes have been sent.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The clause does not specify what offset to use if no bytes have been sent on the stream, leaving the implementation behavior undefined in that case.\",\n  \"justification\": \"The clause lacks a concrete constraint for the case where the endpoint has not sent any data, which can lead to materially different implementation behaviors.\"\n}",
+  "record_id": "6a1853ddee7d9ea1577f02899ef7ba3f5a442d5830e04afde74d9bceda851e0e",
+  "revision": "04",
+  "schema_version": 1,
+  "section_ids": "11.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 30.782
+}

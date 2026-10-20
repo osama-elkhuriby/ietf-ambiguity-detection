@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that clients always convert http URLs to https before performing an HTTPS RR query, and therefore domain owners must not publish HTTPS RRs with a prefix of \"_http\". No alternative reasonable interpretations or missing constraints are evident.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T03:40:09.543131+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "4b27a5f05318c0d40cebea8405d9604ef94ee210d0494dfeb509b22107875138",
+  "lineage_ids": "lineage:08500cc9f0c7e09a7b3d0d9b",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 4807,
+    "load_duration": 4035700,
+    "prompt_eval_count": 602,
+    "total_duration": 41548110200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that clients always convert http URLs to https before performing an HTTPS RR query, and therefore domain owners must not publish HTTPS RRs with a prefix of \\\"_http\\\". No alternative reasonable interpretations or missing constraints are evident.\"\n}",
+  "record_id": "fe1b9af6f5c65f71ce5101b7c09cacb4a0c131c33e9b4f14db80a6b86be74af3",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "9.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 41.547
+}

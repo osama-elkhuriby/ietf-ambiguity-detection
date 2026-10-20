@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause is clear and unambiguous. It specifies a concrete action (terminate the connection with error PROTOCOL_VIOLATION) that must be taken when a specific condition is met (receiving a MAX_STREAM_DATA frame for a receive-only stream). There is no room for multiple interpretations or missing constraints that would affect implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:38:06.482447+00:00",
+  "document_id": "draft-ietf-quic-transport-17",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "f9a233ce5739edee0f5a4f237c8b49ddc195a99faaf2e8d3e0706c6c2764e653",
+  "lineage_ids": "lineage:e8f04af38fb38d3af12539ff",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 122,
+    "load_duration": 5570700,
+    "prompt_eval_count": 568,
+    "total_duration": 5028207200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause is clear and unambiguous. It specifies a concrete action (terminate the connection with error PROTOCOL_VIOLATION) that must be taken when a specific condition is met (receiving a MAX_STREAM_DATA frame for a receive-only stream). There is no room for multiple interpretations or missing constraints that would affect implementation behavior.\"\n}",
+  "record_id": "c160dfd1acd6fa53e7c11ca04136066da03422ab563dc1a45150b08e74ab2c2b",
+  "revision": "17",
+  "schema_version": 1,
+  "section_ids": "19.10",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.031
+}

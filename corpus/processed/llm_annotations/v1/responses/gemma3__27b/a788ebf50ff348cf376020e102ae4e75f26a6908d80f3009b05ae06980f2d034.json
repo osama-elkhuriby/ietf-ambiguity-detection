@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "If a server would have accepted the version included in the initial_version",
+    "interpretation_a": "The server would have processed a packet using the initial_version without error.",
+    "interpretation_b": "The server would have responded to a packet with the initial_version with a valid response, even if it preferred a different version.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'accepted' is not defined, leading to multiple reasonable interpretations of what constitutes acceptance. This impacts whether the server terminates the connection.",
+    "missing_information": "The criteria for 'accepted' are not defined. Does 'accepted' mean 'processed without error', 'responded to without error', or something else? This affects whether a server terminates the connection."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:51:55.723805+00:00",
+  "document_id": "draft-ietf-quic-transport-07",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "d123903f499d72565295730979e02062f0b6b0f9b4abb91f793b140684e34390",
+  "lineage_ids": "lineage:1cf1377c67c3773975ec5436",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 176,
+    "load_duration": 4468100,
+    "prompt_eval_count": 619,
+    "total_duration": 6974923200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"If a server would have accepted the version included in the initial_version\", \"interpretation_a\": \"The server would have processed a packet using the initial_version without error.\", \"interpretation_b\": \"The server would have responded to a packet with the initial_version with a valid response, even if it preferred a different version.\", \"missing_information\": \"The criteria for 'accepted' are not defined. Does 'accepted' mean 'processed without error', 'responded to without error', or something else? This affects whether a server terminates the connection.\", \"justification\": \"The term 'accepted' is not defined, leading to multiple reasonable interpretations of what constitutes acceptance. This impacts whether the server terminates the connection.\"}",
+  "record_id": "a788ebf50ff348cf376020e102ae4e75f26a6908d80f3009b05ae06980f2d034",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "7.4.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.984
+}

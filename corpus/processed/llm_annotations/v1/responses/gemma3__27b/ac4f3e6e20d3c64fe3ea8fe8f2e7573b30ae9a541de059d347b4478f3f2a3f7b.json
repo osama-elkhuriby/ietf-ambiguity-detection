@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "when it has run out of flow control credit",
+    "interpretation_a": "The sender has exhausted all available flow control credit for all streams.",
+    "interpretation_b": "The sender has exhausted all available flow control credit for a specific stream.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'flow control credit' is not explicitly defined in terms of scope (total or per-stream). Both interpretations are reasonable, leading to different blocking behavior.",
+    "missing_information": "It is unclear whether 'flow control credit' refers to the total credit available across all streams or the credit available for a specific stream. This affects when the BLOCKED/STREAM_BLOCKED frame is sent."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:53:27.851949+00:00",
+  "document_id": "draft-ietf-quic-transport-07",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "a30c2f15ee1ba891da03061e890f18ab8a032428a64328b4a2548d09b79fb6e0",
+  "lineage_ids": "lineage:304ded062098fdf80671c50a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 164,
+    "load_duration": 4847100,
+    "prompt_eval_count": 578,
+    "total_duration": 6295278600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"when it has run out of flow control credit\", \"interpretation_a\": \"The sender has exhausted all available flow control credit for all streams.\", \"interpretation_b\": \"The sender has exhausted all available flow control credit for a specific stream.\", \"missing_information\": \"It is unclear whether 'flow control credit' refers to the total credit available across all streams or the credit available for a specific stream. This affects when the BLOCKED/STREAM_BLOCKED frame is sent.\", \"justification\": \"The phrase 'flow control credit' is not explicitly defined in terms of scope (total or per-stream). Both interpretations are reasonable, leading to different blocking behavior.\"}",
+  "record_id": "ac4f3e6e20d3c64fe3ea8fe8f2e7573b30ae9a541de059d347b4478f3f2a3f7b",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "11.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.297
+}

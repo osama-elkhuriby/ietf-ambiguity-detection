@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "imposing restrictions on the minimum transfer speed a connection is allowed to have",
+    "interpretation_a": "A server could interpret this as requiring a minimum *data* transfer speed, discarding connections that don't send data at a sufficient rate.",
+    "interpretation_b": "A server could interpret this as requiring a minimum *packet* transfer speed, discarding connections that don't send packets at a sufficient rate, even if those packets contain only ACKs or other control information.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'minimum transfer speed' is underspecified. It is unclear whether 'transfer speed' refers to data transfer or packet transfer, leading to different implementation choices.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:33:38.871199+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "4060c8f05821bcfb1e0181973db1f2bb1286fd0ff924108d83f486424e36621f",
+  "lineage_ids": "lineage:ef823fb9e0275b9530b260a6",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 169,
+    "load_duration": 5111000,
+    "prompt_eval_count": 612,
+    "total_duration": 6448789200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"imposing restrictions on the minimum transfer speed a connection is allowed to have\", \"interpretation_a\": \"A server could interpret this as requiring a minimum *data* transfer speed, discarding connections that don't send data at a sufficient rate.\", \"interpretation_b\": \"A server could interpret this as requiring a minimum *packet* transfer speed, discarding connections that don't send packets at a sufficient rate, even if those packets contain only ACKs or other control information.\", \"missing_information\": \"\", \"justification\": \"The phrase 'minimum transfer speed' is underspecified. It is unclear whether 'transfer speed' refers to data transfer or packet transfer, leading to different implementation choices.\"}",
+  "record_id": "75728dc63d965410b36d9170a0ccd2873adaad3580265616faeb72eca8a7c206",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "21.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.453
+}

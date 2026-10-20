@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST have occurred",
+    "interpretation_a": "All stream state transitions triggered by the frame are fully completed before the packet is acknowledged.",
+    "interpretation_b": "Stream state transitions triggered by the frame have *begun* but may not be fully completed before the packet is acknowledged.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'MUST have occurred' is vague. It doesn't specify whether the stream state transitions need to be fully completed or merely initiated before the packet can be acknowledged. This allows for different implementations regarding the timing of state transitions relative to packet acknowledgment.",
+    "missing_information": "The degree of completion required for 'occurred' is not defined. Does 'occurred' mean 'begun', 'completed', or something in between?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:55:04.432431+00:00",
+  "document_id": "draft-ietf-quic-transport-14",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "0ee30451eacfa7db752e47b0430b8515a3d216288b1cc9f329910185a01e6ad0",
+  "lineage_ids": "lineage:61aa631e00c1ac80988c8633",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 180,
+    "load_duration": 4315000,
+    "prompt_eval_count": 581,
+    "total_duration": 7105659100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST have occurred\", \"interpretation_a\": \"All stream state transitions triggered by the frame are fully completed before the packet is acknowledged.\", \"interpretation_b\": \"Stream state transitions triggered by the frame have *begun* but may not be fully completed before the packet is acknowledged.\", \"missing_information\": \"The degree of completion required for 'occurred' is not defined. Does 'occurred' mean 'begun', 'completed', or something in between?\", \"justification\": \"The phrase 'MUST have occurred' is vague. It doesn't specify whether the stream state transitions need to be fully completed or merely initiated before the packet can be acknowledged. This allows for different implementations regarding the timing of state transitions relative to packet acknowledgment.\"}",
+  "record_id": "b0f3ea9e0c18dc2c72b6247830c94330cef1035e9bb508d1a5eb579334305e03",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "8.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.109
+}

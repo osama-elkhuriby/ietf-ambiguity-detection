@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-4",
+    "evidence_span": "since an acknowledgement is received for the NEW_CONNECTION_ID frame requesting that retirement",
+    "interpretation_a": "The clause could be read as requiring the 3‑PTO interval to start after the acknowledgement of a NEW_CONNECTION_ID frame that requests retirement, which is impossible because NEW_CONNECTION_ID frames do not request retirement.",
+    "interpretation_b": "Alternatively, the clause likely intends to refer to the acknowledgement of a RETIRE_CONNECTION_ID frame that requests retirement, in which case the 3‑PTO interval starts after that acknowledgement.",
+    "is_ambiguous": "yes",
+    "justification": "The target clause contains a concrete missing normative reference that leads to two materially different interpretations of when the 3‑PTO interval should begin, making the clause ambiguous.",
+    "missing_information": "The clause incorrectly references the NEW_CONNECTION_ID frame; it should reference the RETIRE_CONNECTION_ID frame to avoid ambiguity and provide a clear implementation constraint."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T16:38:56.693738+00:00",
+  "document_id": "draft-ietf-quic-transport-27",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "03dcfc39ea3de4ceb4128cb2bdcb6a49b302828ed691efa444638d2919972c5d",
+  "lineage_ids": "lineage:17d308976339d9bb334937fb",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2106,
+    "load_duration": "",
+    "prompt_eval_count": 632,
+    "total_duration": 18276204800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-4\",\n  \"evidence_span\": \"since an acknowledgement is received for the NEW_CONNECTION_ID frame requesting that retirement\",\n  \"interpretation_a\": \"The clause could be read as requiring the 3‑PTO interval to start after the acknowledgement of a NEW_CONNECTION_ID frame that requests retirement, which is impossible because NEW_CONNECTION_ID frames do not request retirement.\",\n  \"interpretation_b\": \"Alternatively, the clause likely intends to refer to the acknowledgement of a RETIRE_CONNECTION_ID frame that requests retirement, in which case the 3‑PTO interval starts after that acknowledgement.\",\n  \"missing_information\": \"The clause incorrectly references the NEW_CONNECTION_ID frame; it should reference the RETIRE_CONNECTION_ID frame to avoid ambiguity and provide a clear implementation constraint.\",\n  \"justification\": \"The target clause contains a concrete missing normative reference that leads to two materially different interpretations of when the 3‑PTO interval should begin, making the clause ambiguous.\"\n}",
+  "record_id": "82bb24c5932fd3718aaf9261c1b4e8dc4832675e141d0af6240a3ac2ba49ad5e",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "5.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 18.281
+}

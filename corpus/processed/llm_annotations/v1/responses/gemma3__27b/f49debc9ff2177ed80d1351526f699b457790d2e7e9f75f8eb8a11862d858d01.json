@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY be accepted without address validation - or with only limited validation",
+    "interpretation_a": "The server can choose to skip address validation entirely.",
+    "interpretation_b": "The server can perform a partial or reduced level of address validation.",
+    "is_ambiguous": "yes",
+    "justification": "The clause allows for both no validation and limited validation, but does not define what constitutes 'limited validation'. This creates ambiguity in implementation, as different servers could interpret 'limited' in different ways, leading to varying levels of security.",
+    "missing_information": "The degree of 'limited validation' is not defined, leaving open how much checking is required before the connection is considered partially validated."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:16:44.062915+00:00",
+  "document_id": "draft-ietf-quic-transport-15",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "50bd68b9583b5a6d680b9f1006b413b3769db0f6fcea1e9f53b9ec187e08a90a",
+  "lineage_ids": "lineage:72d9acec67fb63542be4d10c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 159,
+    "load_duration": 4071200,
+    "prompt_eval_count": 580,
+    "total_duration": 6110828400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY be accepted without address validation - or with only limited validation\", \"interpretation_a\": \"The server can choose to skip address validation entirely.\", \"interpretation_b\": \"The server can perform a partial or reduced level of address validation.\", \"missing_information\": \"The degree of 'limited validation' is not defined, leaving open how much checking is required before the connection is considered partially validated.\",\"justification\": \"The clause allows for both no validation and limited validation, but does not define what constitutes 'limited validation'. This creates ambiguity in implementation, as different servers could interpret 'limited' in different ways, leading to varying levels of security.\"}",
+  "record_id": "f49debc9ff2177ed80d1351526f699b457790d2e7e9f75f8eb8a11862d858d01",
+  "revision": "15",
+  "schema_version": 1,
+  "section_ids": "6.9.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.11
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST be equal to the length of the digest output",
+    "interpretation_a": "The salt length must match the digest output length in bytes.",
+    "interpretation_b": "The salt length must match the digest output length in bits.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'length' is not explicitly defined in terms of units (bytes or bits). Both interpretations are reasonable, and the choice impacts implementation.",
+    "missing_information": "It is unclear whether 'length' refers to bytes or bits. This affects the actual salt size implemented."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:37:07.299564+00:00",
+  "document_id": "draft-ietf-tls-tls13-15",
+  "family_id": "draft-ietf-tls-tls13",
+  "input_fingerprint": "514eec20079c54323e3a4d7e14d939a5643a5e2a0a27443d0be5ed2e608467e4",
+  "lineage_ids": "lineage:dcaf77ebc7e0a51f5ede1551",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 137,
+    "load_duration": 8975500,
+    "prompt_eval_count": 584,
+    "total_duration": 5425386400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST be equal to the length of the digest output\", \"interpretation_a\": \"The salt length must match the digest output length in bytes.\", \"interpretation_b\": \"The salt length must match the digest output length in bits.\", \"missing_information\": \"It is unclear whether 'length' refers to bytes or bits. This affects the actual salt size implemented.\", \"justification\": \"The term 'length' is not explicitly defined in terms of units (bytes or bits). Both interpretations are reasonable, and the choice impacts implementation.\"}",
+  "record_id": "e5cc42b1a3bf923d595cdc1f480c05433b019a09904cdadac5f822a94806058a",
+  "revision": "15",
+  "schema_version": 1,
+  "section_ids": "4.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.437
+}

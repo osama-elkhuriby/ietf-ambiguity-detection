@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that when a packet is lost, the sender should only resend frames that require retransmission, and the subsequent clause clarifies that all application data in STREAM frames must be retransmitted. No alternative reasonable interpretations or missing constraints are evident.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T19:09:38.314804+00:00",
+  "document_id": "draft-ietf-quic-transport-00",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "7c11a3490dc45f1ecd899eda6d3ecf4181951fbd2eb11911463395ffb0d8a8ef",
+  "lineage_ids": "lineage:470fc52e42987d912aea085a",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1597,
+    "load_duration": 3380300,
+    "prompt_eval_count": 572,
+    "total_duration": 13846986600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that when a packet is lost, the sender should only resend frames that require retransmission, and the subsequent clause clarifies that all application data in STREAM frames must be retransmitted. No alternative reasonable interpretations or missing constraints are evident.\"\n}",
+  "record_id": "eea8a66271f215a75482c7b51d92d02b040975bf9e535785472a2b9aaffa7cf8",
+  "revision": "00",
+  "schema_version": 1,
+  "section_ids": "7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 13.86
+}

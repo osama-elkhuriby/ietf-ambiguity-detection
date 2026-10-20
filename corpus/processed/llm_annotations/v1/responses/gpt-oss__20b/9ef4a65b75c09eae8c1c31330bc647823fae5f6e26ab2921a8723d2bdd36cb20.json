@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "The receiver SHOULD exclude already acknowledged packets from future ACK frames whenever these packets would unnecessarily contribute to the ACK frame size.",
+    "interpretation_a": "The receiver must exclude all already acknowledged packets from future ACK frames.",
+    "interpretation_b": "The receiver must exclude only those already acknowledged packets that would unnecessarily increase the ACK frame size.",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a concrete constraint on \"unnecessarily contribute,\" allowing materially different implementation behaviours.",
+    "missing_information": "A definition or concrete rule for what constitutes \"unnecessarily contribute\" to the ACK frame size is missing, preventing a unique operational interpretation of the clause."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T17:28:03.388360+00:00",
+  "document_id": "draft-ietf-quic-transport-27",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "890dfee09d5b370ed8324f7a20d692f9b4d16e15f55c7036b1e372ea29492e05",
+  "lineage_ids": "lineage:9ae7e0f15908dc87954b18dc",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1510,
+    "load_duration": 4258800,
+    "prompt_eval_count": 684,
+    "total_duration": 13168108800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"The receiver SHOULD exclude already acknowledged packets from future ACK frames whenever these packets would unnecessarily contribute to the ACK frame size.\",\n  \"interpretation_a\": \"The receiver must exclude all already acknowledged packets from future ACK frames.\",\n  \"interpretation_b\": \"The receiver must exclude only those already acknowledged packets that would unnecessarily increase the ACK frame size.\",\n  \"missing_information\": \"A definition or concrete rule for what constitutes \\\"unnecessarily contribute\\\" to the ACK frame size is missing, preventing a unique operational interpretation of the clause.\",\n  \"justification\": \"The clause lacks a concrete constraint on \\\"unnecessarily contribute,\\\" allowing materially different implementation behaviours.\"\n}",
+  "record_id": "9ef4a65b75c09eae8c1c31330bc647823fae5f6e26ab2921a8723d2bdd36cb20",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "13.2.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 13.172
+}

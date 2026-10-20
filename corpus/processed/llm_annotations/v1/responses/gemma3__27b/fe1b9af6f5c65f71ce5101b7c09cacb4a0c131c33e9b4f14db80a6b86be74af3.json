@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT publish HTTPS RRs with a prefix of \"_http\"",
+    "interpretation_a": "Domain owners should not publish HTTPS RRs with the prefix '_http' under any circumstances.",
+    "interpretation_b": "Domain owners should not publish HTTPS RRs with the prefix '_http' unless there is a specific, valid reason to do so (e.g., for testing or compatibility with legacy systems).",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MUST NOT' is strong, but the lack of further qualification creates ambiguity. It's unclear if the prohibition is absolute or if exceptions are permitted under certain conditions.",
+    "missing_information": "The clause does not define what constitutes a 'valid reason' to publish HTTPS RRs with the prefix '_http', leaving room for interpretation and potentially inconsistent implementations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:14:44.251275+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "4b27a5f05318c0d40cebea8405d9604ef94ee210d0494dfeb509b22107875138",
+  "lineage_ids": "lineage:08500cc9f0c7e09a7b3d0d9b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 191,
+    "load_duration": 2707900,
+    "prompt_eval_count": 588,
+    "total_duration": 7225973400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT publish HTTPS RRs with a prefix of \\\"_http\\\"\", \"interpretation_a\": \"Domain owners should not publish HTTPS RRs with the prefix '_http' under any circumstances.\", \"interpretation_b\": \"Domain owners should not publish HTTPS RRs with the prefix '_http' unless there is a specific, valid reason to do so (e.g., for testing or compatibility with legacy systems).\", \"missing_information\": \"The clause does not define what constitutes a 'valid reason' to publish HTTPS RRs with the prefix '_http', leaving room for interpretation and potentially inconsistent implementations.\",\"justification\": \"The use of 'MUST NOT' is strong, but the lack of further qualification creates ambiguity. It's unclear if the prohibition is absolute or if exceptions are permitted under certain conditions.\"}",
+  "record_id": "fe1b9af6f5c65f71ce5101b7c09cacb4a0c131c33e9b4f14db80a6b86be74af3",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "9.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.235
+}

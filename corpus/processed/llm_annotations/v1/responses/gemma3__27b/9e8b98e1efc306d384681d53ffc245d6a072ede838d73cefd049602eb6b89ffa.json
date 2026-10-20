@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "I-1",
+    "evidence_span": "lists the QUIC version selected by the client",
+    "interpretation_a": "The client discards the packet if it *also* indicates the client's chosen version, implying the client already made a selection.",
+    "interpretation_b": "The client discards the packet if it lists *any* QUIC version that happens to be the client's selected version, even if the packet is otherwise valid.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"lists the QUIC version selected by the client\" is open to interpretation. Does it mean the packet *indicates* the client's selection, or does it mean the packet *only* lists the client's selection? The two interpretations lead to different behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:48:47.696550+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "65bef4828c00dd335296d0119bd8ee40a682b053ff287a99a5777cb6bb97b2e7",
+  "lineage_ids": "lineage:c67c835f0b70a7b5ca5b77ec",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 179,
+    "load_duration": 4090600,
+    "prompt_eval_count": 573,
+    "total_duration": 6778159200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"I-1\", \"evidence_span\": \"lists the QUIC version selected by the client\", \"interpretation_a\": \"The client discards the packet if it *also* indicates the client's chosen version, implying the client already made a selection.\", \"interpretation_b\": \"The client discards the packet if it lists *any* QUIC version that happens to be the client's selected version, even if the packet is otherwise valid.\",\"missing_information\": \"\", \"justification\": \"The phrase \\\"lists the QUIC version selected by the client\\\" is open to interpretation. Does it mean the packet *indicates* the client's selection, or does it mean the packet *only* lists the client's selection? The two interpretations lead to different behaviours.\"}",
+  "record_id": "9e8b98e1efc306d384681d53ffc245d6a072ede838d73cefd049602eb6b89ffa",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.781
+}

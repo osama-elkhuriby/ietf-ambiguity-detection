@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "sufficient number",
+    "interpretation_a": "The endpoint should verify the peer has at least one unused connection ID.",
+    "interpretation_b": "The endpoint should verify the peer has a large, but unspecified, number of unused connection IDs, enough to handle expected connection migrations or retries.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'sufficient number' is vague. It doesn't specify a minimum quantity or a method for determining sufficiency. This allows for materially different implementations – one might check for just one available ID, while another might require a much larger reserve.",
+    "missing_information": "The definition of 'sufficient' is missing. A concrete minimum number, or a relationship to expected connection state, is needed to remove ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:10:41.772566+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "4f2ae7594db37f6ca9217c3cde55bb81968692a683526406f03eda477e9fd5ef",
+  "lineage_ids": "lineage:096b2b8c53bc3807f6b4a3e3",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 175,
+    "load_duration": 5151800,
+    "prompt_eval_count": 571,
+    "total_duration": 6664535700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"sufficient number\", \"interpretation_a\": \"The endpoint should verify the peer has at least one unused connection ID.\", \"interpretation_b\": \"The endpoint should verify the peer has a large, but unspecified, number of unused connection IDs, enough to handle expected connection migrations or retries.\", \"missing_information\": \"The definition of 'sufficient' is missing. A concrete minimum number, or a relationship to expected connection state, is needed to remove ambiguity.\", \"justification\": \"The term 'sufficient number' is vague. It doesn't specify a minimum quantity or a method for determining sufficiency. This allows for materially different implementations – one might check for just one available ID, while another might require a much larger reserve.\"}",
+  "record_id": "31d8eeb20d4688491746f00d067c53d9861fd529bf43e63209faea766dd12e0b",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "5.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.672
+}

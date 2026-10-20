@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear and specific condition for when an endpoint must send a RETIRE_CONNECTION_ID frame. It states that if a NEW_CONNECTION_ID frame is received with a sequence number smaller than the Retire Prior To field of a previously received frame, the endpoint must immediately send a RETIRE_CONNECTION_ID frame. There is no ambiguity in the condition or the required action.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:49:41.864151+00:00",
+  "document_id": "draft-ietf-quic-transport-27",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "a7bcc7d9dba82ac5dc44115fe763364db86d34cba876a768314574669dd9bda2",
+  "lineage_ids": "lineage:13ff756e5492ce88f76fcf8b",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 130,
+    "load_duration": 5048000,
+    "prompt_eval_count": 569,
+    "total_duration": 5358571200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear and specific condition for when an endpoint must send a RETIRE_CONNECTION_ID frame. It states that if a NEW_CONNECTION_ID frame is received with a sequence number smaller than the Retire Prior To field of a previously received frame, the endpoint must immediately send a RETIRE_CONNECTION_ID frame. There is no ambiguity in the condition or the required action.\"\n}",
+  "record_id": "0f6ac1de53918b03c5a898ff126416791dc15c2a92949766685babd730956a94",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "19.15",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.375
+}

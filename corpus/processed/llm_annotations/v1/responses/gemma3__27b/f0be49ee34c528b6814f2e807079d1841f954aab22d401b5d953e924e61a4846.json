@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "kMaxTLPs (RECOMMENDED 2)",
+    "interpretation_a": "The maximum number of tail loss probes is 2.",
+    "interpretation_b": "The RECOMMENDED value for the maximum number of tail loss probes is 2, but implementations MAY use a different value.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states \"kMaxTLPs (RECOMMENDED 2)\". The parenthetical 'RECOMMENDED 2' could mean that the maximum number of tail loss probes *is* 2, or that 2 is simply the recommended value. Without further clarification, implementations could reasonably interpret this in either way.",
+    "missing_information": "It is unclear whether the '2' is a hard limit or a recommended value. The use of 'RECOMMENDED' without further clarification creates ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:32:34.121342+00:00",
+  "document_id": "draft-ietf-quic-recovery-14",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "3886d611ce83e8b5a0b683b88c6bcae7ec86b314fbb3a5015ed833909535747a",
+  "lineage_ids": "lineage:47bdf04033340da78bd9240c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 190,
+    "load_duration": 5968700,
+    "prompt_eval_count": 580,
+    "total_duration": 7157203500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"kMaxTLPs (RECOMMENDED 2)\", \"interpretation_a\": \"The maximum number of tail loss probes is 2.\", \"interpretation_b\": \"The RECOMMENDED value for the maximum number of tail loss probes is 2, but implementations MAY use a different value.\", \"missing_information\": \"It is unclear whether the '2' is a hard limit or a recommended value. The use of 'RECOMMENDED' without further clarification creates ambiguity.\", \"justification\": \"The clause states \\\"kMaxTLPs (RECOMMENDED 2)\\\". The parenthetical 'RECOMMENDED 2' could mean that the maximum number of tail loss probes *is* 2, or that 2 is simply the recommended value. Without further clarification, implementations could reasonably interpret this in either way.\"}",
+  "record_id": "f0be49ee34c528b6814f2e807079d1841f954aab22d401b5d953e924e61a4846",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "4.5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.157
+}

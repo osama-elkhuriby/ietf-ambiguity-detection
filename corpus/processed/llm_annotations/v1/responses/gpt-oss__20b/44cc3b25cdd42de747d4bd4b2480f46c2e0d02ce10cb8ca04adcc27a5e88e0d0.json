@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "All other values MUST be ignored when processing a packet that contains an unsupported version.",
+    "interpretation_a": "The implementation should ignore all fields except the Version field, i.e., it must still read the Version field but discard all other packet contents.",
+    "interpretation_b": "The implementation should ignore the entire packet, including the Version field, treating it as if it were not present.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether the Version field itself is to be retained or discarded, leaving two materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T15:22:44.259451+00:00",
+  "document_id": "draft-ietf-quic-transport-01",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "20904f274502399c111c02bf5201e593810d2248db179c2b7db1e13836bc9ea2",
+  "lineage_ids": "lineage:0ddca2ba65d19a4b13e4fdac",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 394,
+    "load_duration": 4039200,
+    "prompt_eval_count": 695,
+    "total_duration": 3529107100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"All other values MUST be ignored when processing a packet that contains an unsupported version.\",\n  \"interpretation_a\": \"The implementation should ignore all fields except the Version field, i.e., it must still read the Version field but discard all other packet contents.\",\n  \"interpretation_b\": \"The implementation should ignore the entire packet, including the Version field, treating it as if it were not present.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify whether the Version field itself is to be retained or discarded, leaving two materially different implementation behaviours.\"\n}",
+  "record_id": "44cc3b25cdd42de747d4bd4b2480f46c2e0d02ce10cb8ca04adcc27a5e88e0d0",
+  "revision": "01",
+  "schema_version": 1,
+  "section_ids": "5.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.141
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "stream identifier field is 0x0",
+    "interpretation_a": "The recipient MUST respond with a connection error if a CONTINUATION frame with a stream ID of 0 is received, regardless of any other conditions.",
+    "interpretation_b": "The recipient MUST respond with a connection error ONLY if a CONTINUATION frame with a stream ID of 0 is received AND it violates other rules (e.g., is not preceded by a valid frame).",
+    "is_ambiguous": "yes",
+    "justification": "The clause states a mandatory response to a specific stream ID. However, without knowing the full set of valid conditions for CONTINUATION frames, it's unclear if this is an absolute requirement or conditional on other factors. This creates a potential for differing implementations.",
+    "missing_information": "It is unclear whether the condition 'stream identifier field is 0x0' is sufficient to trigger the error, or if it's a condition within a larger set of requirements. The context of other rules governing CONTINUATION frames is needed."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:42:14.469343+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "cbbc5fa037fead804b092df4a536b852599f7eef81686de75ead4a224ccd4a17",
+  "lineage_ids": "lineage:39518c10a15323e5b7eeab30",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 232,
+    "load_duration": 14987000,
+    "prompt_eval_count": 582,
+    "total_duration": 8847917800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"stream identifier field is 0x0\", \"interpretation_a\": \"The recipient MUST respond with a connection error if a CONTINUATION frame with a stream ID of 0 is received, regardless of any other conditions.\", \"interpretation_b\": \"The recipient MUST respond with a connection error ONLY if a CONTINUATION frame with a stream ID of 0 is received AND it violates other rules (e.g., is not preceded by a valid frame).\", \"missing_information\": \"It is unclear whether the condition 'stream identifier field is 0x0' is sufficient to trigger the error, or if it's a condition within a larger set of requirements. The context of other rules governing CONTINUATION frames is needed.\", \"justification\": \"The clause states a mandatory response to a specific stream ID. However, without knowing the full set of valid conditions for CONTINUATION frames, it's unclear if this is an absolute requirement or conditional on other factors. This creates a potential for differing implementations.\"}",
+  "record_id": "95bcb8fa02b3f98bbcc2c4565d1967f9effd2220219a70bfbc61fe94bd4bb225",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.10",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.86
+}

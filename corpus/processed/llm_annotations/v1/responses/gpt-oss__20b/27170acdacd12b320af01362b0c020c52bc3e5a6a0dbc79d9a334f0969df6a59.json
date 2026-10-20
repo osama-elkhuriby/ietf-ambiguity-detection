@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that a sender must not send a STREAM or STREAM_DATA_BLOCKED frame for a stream that is in the \"Reset Sent\" state or in any terminal state. The phrase \"that is, after sending a RESET_STREAM frame\" clarifies that the \"Reset Sent\" state occurs after sending a RESET_STREAM frame, and does not alter the prohibition for terminal states. No missing constraint or dual interpretation is present.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T14:30:17.026538+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "4d9f78b562f4b21ac197f71a2cef2584cd4c00c13597afd72135f2b911732615",
+  "lineage_ids": "lineage:f3e80ace182b6cdae9d0bcc2",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 7308,
+    "load_duration": 6065400,
+    "prompt_eval_count": 611,
+    "total_duration": 63373708300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that a sender must not send a STREAM or STREAM_DATA_BLOCKED frame for a stream that is in the \\\"Reset Sent\\\" state or in any terminal state. The phrase \\\"that is, after sending a RESET_STREAM frame\\\" clarifies that the \\\"Reset Sent\\\" state occurs after sending a RESET_STREAM frame, and does not alter the prohibition for terminal states. No missing constraint or dual interpretation is present.\"\n}",
+  "record_id": "27170acdacd12b320af01362b0c020c52bc3e5a6a0dbc79d9a334f0969df6a59",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "3.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 63.375
+}

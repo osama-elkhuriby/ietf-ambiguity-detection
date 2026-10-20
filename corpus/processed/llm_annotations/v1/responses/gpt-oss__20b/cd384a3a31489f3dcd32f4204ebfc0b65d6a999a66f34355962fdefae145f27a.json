@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "All HTTP data MUST be sent as TLS",
+    "interpretation_a": "All HTTP data must be sent over TLS (i.e., encrypted and transmitted via the TLS protocol).",
+    "interpretation_b": "All HTTP data must be sent as TLS application data records (i.e., encapsulated in TLS records of type application data).",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not explicitly state that the data must be sent as TLS application data, leaving room for interpretation that it could refer to any TLS transmission, which is an incomplete constraint affecting implementation.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T08:00:43.883870+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-09",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "74ec40796d27a5603e10805e766b8609f4de04e70f44ee3392a07b50ee5893c2",
+  "lineage_ids": "lineage:95f23171996b06cd16782162",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2293,
+    "load_duration": 6764000,
+    "prompt_eval_count": 579,
+    "total_duration": 19924152900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"All HTTP data MUST be sent as TLS\",\n  \"interpretation_a\": \"All HTTP data must be sent over TLS (i.e., encrypted and transmitted via the TLS protocol).\",\n  \"interpretation_b\": \"All HTTP data must be sent as TLS application data records (i.e., encapsulated in TLS records of type application data).\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not explicitly state that the data must be sent as TLS application data, leaving room for interpretation that it could refer to any TLS transmission, which is an incomplete constraint affecting implementation.\"\n}",
+  "record_id": "cd384a3a31489f3dcd32f4204ebfc0b65d6a999a66f34355962fdefae145f27a",
+  "revision": "09",
+  "schema_version": 1,
+  "section_ids": "6.4.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 88.141
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "explicitly designated as being compatible",
+    "interpretation_a": "The ALPN label must be one from a pre-defined, documented list of compatible labels.",
+    "interpretation_b": "The server can unilaterally designate any ALPN label as compatible, and the client must accept it if the server does so.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'explicitly designated as being compatible' is incomplete. It doesn't specify *by whom* the designation is made. This leads to two reasonable interpretations: a standardized list of compatible labels, or server-defined compatibility. A missing constraint on the designation process creates ambiguity.",
+    "missing_information": "The document does not define *who* designates the compatible labels, or *how* that designation is communicated to the client. Without this, it's unclear if there's a standardized list or if it's server-defined."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:43:02.931185+00:00",
+  "document_id": "draft-ietf-quic-tls-10",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "22b563b901aa98d9882195fd25c790ad9950eb3cd5b8e26ac49107c28bb7da9e",
+  "lineage_ids": "lineage:b14d7b017edcc63dc0e65b49",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 207,
+    "load_duration": 4316200,
+    "prompt_eval_count": 595,
+    "total_duration": 7774641100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"explicitly designated as being compatible\", \"interpretation_a\": \"The ALPN label must be one from a pre-defined, documented list of compatible labels.\", \"interpretation_b\": \"The server can unilaterally designate any ALPN label as compatible, and the client must accept it if the server does so.\", \"missing_information\": \"The document does not define *who* designates the compatible labels, or *how* that designation is communicated to the client. Without this, it's unclear if there's a standardized list or if it's server-defined.\", \"justification\": \"The phrase 'explicitly designated as being compatible' is incomplete. It doesn't specify *by whom* the designation is made. This leads to two reasonable interpretations: a standardized list of compatible labels, or server-defined compatibility. A missing constraint on the designation process creates ambiguity.\"}",
+  "record_id": "933dfc1d4bc3cd6852d28b854f48bd27953d1b85e2ba2873ad24e750f33e9a3a",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "9.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.781
+}

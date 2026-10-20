@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously specifies that an endpoint that receives a closing frame may send a single packet containing a CONNECTION_CLOSE frame before entering the draining state, using a NO_ERROR code if appropriate. The wording does not allow for materially different implementation behaviours or lacks a concrete missing constraint.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T14:54:52.100109+00:00",
+  "document_id": "draft-ietf-quic-transport-16",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "624fbbf44603410ec404284cf9709b7bc02e23204687432af306289e82998952",
+  "lineage_ids": "lineage:285dfd70b46e6b7c92d5ab3e",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2563,
+    "load_duration": 4487700,
+    "prompt_eval_count": 593,
+    "total_duration": 22171323400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously specifies that an endpoint that receives a closing frame may send a single packet containing a CONNECTION_CLOSE frame before entering the draining state, using a NO_ERROR code if appropriate. The wording does not allow for materially different implementation behaviours or lacks a concrete missing constraint.\"\n}",
+  "record_id": "359bfbee6d3464cbd597140e7b77f78c47b2a5011be65139018f81f0efaa2b1e",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "10.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 22.188
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear and unambiguous condition for handling a SETTINGS frame with the ACK flag set and a non-zero length field. It explicitly states that such a frame must be treated as a connection error of type FRAME_SIZE_ERROR. There is no room for multiple interpretations, and all necessary constraints are provided.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:00:30.330060+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "84e3a0bd0c0f3aade628a20f00f8256eb91f2b025893cfc7942137344e4f8fe5",
+  "lineage_ids": "lineage:dd4923663689e41ceff9c9fd",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 117,
+    "load_duration": 12425100,
+    "prompt_eval_count": 536,
+    "total_duration": 4886772900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear and unambiguous condition for handling a SETTINGS frame with the ACK flag set and a non-zero length field. It explicitly states that such a frame must be treated as a connection error of type FRAME_SIZE_ERROR. There is no room for multiple interpretations, and all necessary constraints are provided.\"\n}",
+  "record_id": "ecb77943892ef9fb3df63932baff1b3b7f47bac3c588d38416eb6c273a1d7922",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 4.891
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear requirement for endpoints to either limit transmission of CONNECTION_CLOSE frames to validated addresses or drop packets if the response would be more than three times larger than the received packet. There is no ambiguity in the language, as it specifies two concrete actions that must be taken to avoid amplification attacks. The wording does not allow for multiple materially different interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:12:32.756222+00:00",
+  "document_id": "draft-ietf-quic-transport-29",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "8e7a77f888d46f9063b63d33b09c331b33297b14802b5a5fa795375b7d8ce563",
+  "lineage_ids": "lineage:328b399f89735a40b80d9cb0",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 128,
+    "load_duration": 4006300,
+    "prompt_eval_count": 542,
+    "total_duration": 5263855100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear requirement for endpoints to either limit transmission of CONNECTION_CLOSE frames to validated addresses or drop packets if the response would be more than three times larger than the received packet. There is no ambiguity in the language, as it specifies two concrete actions that must be taken to avoid amplification attacks. The wording does not allow for multiple materially different interpretations.\"\n}",
+  "record_id": "606bd4ddfbd49b8a8e93e88652f685f6595a44522155c2ceeb31a36060dcac63",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "10.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.266
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that a server may send zero or more interim responses before the final HEADERS frame. The phrase \"any number\" is standardly interpreted to include zero, and the clause explicitly requires the interim responses to precede the final HEADERS frame. No alternative reasonable interpretation or missing constraint is evident.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T05:03:51.453384+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "d73541b1a31acf184bfaac7b00d34b533b12e09370090dba44c40f8d2d710450",
+  "lineage_ids": "lineage:c3f2293ca82ca87e4dff45d0",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1435,
+    "load_duration": 4074100,
+    "prompt_eval_count": 633,
+    "total_duration": 12454622100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that a server may send zero or more interim responses before the final HEADERS frame. The phrase \\\"any number\\\" is standardly interpreted to include zero, and the clause explicitly requires the interim responses to precede the final HEADERS frame. No alternative reasonable interpretation or missing constraint is evident.\"\n}",
+  "record_id": "d5ed26414822055c925126d678daf68816a149841aab374a5497399b97601428",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 12.469
+}

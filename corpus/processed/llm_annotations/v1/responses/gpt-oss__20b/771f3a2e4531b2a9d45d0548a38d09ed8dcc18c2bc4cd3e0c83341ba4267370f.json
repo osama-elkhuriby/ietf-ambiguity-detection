@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "To avoid this problem causing TLS handshake failures, deployments of HTTP/2 that use TLS 1.2 MUST support TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 [TLS-ECDHE] with the P-256 elliptic curve [RFC8422].",
+    "interpretation_a": "The clause requires deployments to support the cipher suite, but does not specify whether this applies to client, server, or both roles.",
+    "interpretation_b": "The clause could be interpreted as requiring support as a client, as a server, or as both.",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a clear constraint on the deployment role, leading to materially different implementation behaviours.",
+    "missing_information": "The role (client or server) for which support is required."
+  },
+  "attempts": 3,
+  "created_at": "2026-10-08T04:25:41.750056+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "2e8f9e6850ebe4476be3509ac0206540931d042ba7a499422b5683a51bb7dfc9",
+  "lineage_ids": "lineage:bcc65d176b914e0b4b228a48",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 384,
+    "load_duration": 4509700,
+    "prompt_eval_count": 836,
+    "total_duration": 3679291200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\":\"yes\",\"ambiguity_subtype\":\"U-2\",\"evidence_span\":\"To avoid this problem causing TLS handshake failures, deployments of HTTP/2 that use TLS 1.2 MUST support TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 [TLS-ECDHE] with the P-256 elliptic curve [RFC8422].\",\"interpretation_a\":\"The clause requires deployments to support the cipher suite, but does not specify whether this applies to client, server, or both roles.\",\"interpretation_b\":\"The clause could be interpreted as requiring support as a client, as a server, or as both.\",\"missing_information\":\"The role (client or server) for which support is required.\",\"justification\":\"The clause lacks a clear constraint on the deployment role, leading to materially different implementation behaviours.\"}",
+  "record_id": "771f3a2e4531b2a9d45d0548a38d09ed8dcc18c2bc4cd3e0c83341ba4267370f",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "9.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 95.797
+}

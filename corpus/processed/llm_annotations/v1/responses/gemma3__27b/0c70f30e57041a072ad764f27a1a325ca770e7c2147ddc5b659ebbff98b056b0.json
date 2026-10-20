@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Leading zero octets are permitted, but implementations SHOULD use only as many bytes as are needed to represent the value.",
+    "interpretation_a": "An implementation could choose to always use the maximum number of bytes allowed for the integer type, even if leading zero octets could be omitted, as the use of 'SHOULD' does not mandate minimal byte usage.",
+    "interpretation_b": "An implementation could choose to minimize the number of bytes used, omitting leading zero octets whenever possible, adhering to the spirit of the 'SHOULD' recommendation.",
+    "is_ambiguous": "yes",
+    "justification": "The 'SHOULD' statement doesn't create a hard requirement. The phrase 'as many bytes as are needed' is vague. It's unclear if 'needed' refers to the absolute minimum or a reasonable minimum. The combination of 'permitted' and 'SHOULD' creates ambiguity about how many leading zero octets are acceptable.",
+    "missing_information": "The document does not define a clear upper bound on the number of leading zero octets that are 'permitted'. Without a limit, an implementation could technically include many leading zero octets, even if it's inefficient, and still be compliant with the 'permitted' language."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:40:13.687750+00:00",
+  "document_id": "draft-ietf-quic-http-07",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "6734f6e4ae419d51ed1e7d2b510b6a0e96363a54dc92b0abc2ff06a7257fef18",
+  "lineage_ids": "lineage:6138de4d396df62c88276b3e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 272,
+    "load_duration": 15923700,
+    "prompt_eval_count": 565,
+    "total_duration": 10335563400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Leading zero octets are permitted, but implementations SHOULD use only as many bytes as are needed to represent the value.\", \"interpretation_a\": \"An implementation could choose to always use the maximum number of bytes allowed for the integer type, even if leading zero octets could be omitted, as the use of 'SHOULD' does not mandate minimal byte usage.\", \"interpretation_b\": \"An implementation could choose to minimize the number of bytes used, omitting leading zero octets whenever possible, adhering to the spirit of the 'SHOULD' recommendation.\", \"missing_information\": \"The document does not define a clear upper bound on the number of leading zero octets that are 'permitted'. Without a limit, an implementation could technically include many leading zero octets, even if it's inefficient, and still be compliant with the 'permitted' language.\",\"justification\": \"The 'SHOULD' statement doesn't create a hard requirement. The phrase 'as many bytes as are needed' is vague. It's unclear if 'needed' refers to the absolute minimum or a reasonable minimum. The combination of 'permitted' and 'SHOULD' creates ambiguity about how many leading zero octets are acceptable.\"}",
+  "record_id": "0c70f30e57041a072ad764f27a1a325ca770e7c2147ddc5b659ebbff98b056b0",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "5.2.5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.343
+}

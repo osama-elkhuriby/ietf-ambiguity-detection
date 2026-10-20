@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously specifies that if a STOP_SENDING frame is received for a stream that the local endpoint has not yet created, it must be treated as a connection error of type STREAM_STATE_ERROR. The terms used are defined elsewhere in the document, and there is no alternative reasonable interpretation or missing constraint that would affect implementation.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T19:13:15.976127+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "2f33d1efca039f81cbaf3607433078b114aa4f3d6db6fe6e456926a308709344",
+  "lineage_ids": "lineage:520ca36dde1bd95ba19029d1",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 455,
+    "load_duration": 4639200,
+    "prompt_eval_count": 604,
+    "total_duration": 4052674300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously specifies that if a STOP_SENDING frame is received for a stream that the local endpoint has not yet created, it must be treated as a connection error of type STREAM_STATE_ERROR. The terms used are defined elsewhere in the document, and there is no alternative reasonable interpretation or missing constraint that would affect implementation.\"\n}",
+  "record_id": "f0a7168072cedc5c8a953b578df5200119c6babb0dccbd218d471ae5e95d4255",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "19.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 4.062
+}

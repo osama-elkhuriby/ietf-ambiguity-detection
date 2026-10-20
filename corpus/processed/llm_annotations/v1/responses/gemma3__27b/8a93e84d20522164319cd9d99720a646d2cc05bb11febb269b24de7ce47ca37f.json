@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless it can guarantee that fact",
+    "interpretation_a": "The server must not indicate a stream has not been processed if there is *any* possibility it might have been processed, even if that possibility is remote.",
+    "interpretation_b": "The server must not indicate a stream has not been processed unless it has definitive proof (e.g., logs, internal state) that the stream was never processed.",
+    "is_ambiguous": "yes",
+    "justification": "The word 'guarantee' is not precisely defined. This allows for different interpretations of what level of assurance is required before a server can claim a stream hasn't been processed. This affects implementation because a server might implement a very strict logging/tracking system to meet a high 'guarantee' standard, while another might use a more relaxed approach.",
+    "missing_information": "The level of certainty required for 'guarantee' is not defined. Does 'guarantee' mean 'with practical certainty', 'with absolute certainty', or some other threshold?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:40:30.483932+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "b4dd61dedecb0984960385a369fe50ea4d285eb98953a2255f60f34d213f0263",
+  "lineage_ids": "lineage:92000cdc2c7e98d69490ae9f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 227,
+    "load_duration": 12594100,
+    "prompt_eval_count": 607,
+    "total_duration": 8716474400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless it can guarantee that fact\", \"interpretation_a\": \"The server must not indicate a stream has not been processed if there is *any* possibility it might have been processed, even if that possibility is remote.\", \"interpretation_b\": \"The server must not indicate a stream has not been processed unless it has definitive proof (e.g., logs, internal state) that the stream was never processed.\", \"missing_information\": \"The level of certainty required for 'guarantee' is not defined. Does 'guarantee' mean 'with practical certainty', 'with absolute certainty', or some other threshold?\",\"justification\": \"The word 'guarantee' is not precisely defined. This allows for different interpretations of what level of assurance is required before a server can claim a stream hasn't been processed. This affects implementation because a server might implement a very strict logging/tracking system to meet a high 'guarantee' standard, while another might use a more relaxed approach.\"}",
+  "record_id": "8a93e84d20522164319cd9d99720a646d2cc05bb11febb269b24de7ce47ca37f",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.718
+}

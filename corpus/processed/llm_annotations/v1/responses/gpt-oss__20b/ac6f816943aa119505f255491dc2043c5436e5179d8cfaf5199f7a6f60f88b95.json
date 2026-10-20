@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "in the transport parameter",
+    "interpretation_a": "The server includes the value in the original_connection_id transport parameter.",
+    "interpretation_b": "The server includes the value in some other transport parameter.",
+    "is_ambiguous": "yes",
+    "justification": "The clause specifies that the server must include the value of the Original Destination Connection ID field of the Retry packet in the transport parameter, but it does not identify which transport parameter. This missing constraint allows for multiple reasonable implementation choices.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T17:44:36.976195+00:00",
+  "document_id": "draft-ietf-quic-transport-24",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "f4ba70484f6bb5eb209e4d6c3e0e401ca5b807629a98fd9ef5c0d9c61349b71a",
+  "lineage_ids": "lineage:7b25b4f8432cb5916406e905",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 653,
+    "load_duration": 7497300,
+    "prompt_eval_count": 784,
+    "total_duration": 5772469800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"in the transport parameter\",\n  \"interpretation_a\": \"The server includes the value in the original_connection_id transport parameter.\",\n  \"interpretation_b\": \"The server includes the value in some other transport parameter.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause specifies that the server must include the value of the Original Destination Connection ID field of the Retry packet in the transport parameter, but it does not identify which transport parameter. This missing constraint allows for multiple reasonable implementation choices.\"\n}",
+  "record_id": "ac6f816943aa119505f255491dc2043c5436e5179d8cfaf5199f7a6f60f88b95",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "17.2.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 27.578
+}

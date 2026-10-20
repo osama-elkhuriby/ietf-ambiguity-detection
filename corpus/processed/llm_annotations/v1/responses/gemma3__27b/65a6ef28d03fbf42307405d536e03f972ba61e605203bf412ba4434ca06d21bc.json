@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "between 0 and 2^31-1",
+    "interpretation_a": "The packet number can be any integer from 1 to 2147483647 inclusive.",
+    "interpretation_b": "The packet number can be any integer from 0 to 2147483647 inclusive.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'between 0 and 2^31-1' is ambiguous. In common usage, 'between' excludes the endpoints, while 'inclusive' includes them. Without further clarification, both interpretations are reasonable.",
+    "missing_information": "It is unclear whether 0 is an acceptable initial packet number. The phrase 'between 0 and 2^31-1' is inclusive of both endpoints, but the context of packet numbers suggests 0 might be invalid."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:29:01.870999+00:00",
+  "document_id": "draft-ietf-quic-transport-07",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "b1a8a055279e98578acaf80a83e33f0aac9426aac2a432f15ed0251669f64178",
+  "lineage_ids": "lineage:eaa5bae72e05ee011fab47bb",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 204,
+    "load_duration": 4298200,
+    "prompt_eval_count": 552,
+    "total_duration": 7639982800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"between 0 and 2^31-1\", \"interpretation_a\": \"The packet number can be any integer from 1 to 2147483647 inclusive.\", \"interpretation_b\": \"The packet number can be any integer from 0 to 2147483647 inclusive.\", \"missing_information\": \"It is unclear whether 0 is an acceptable initial packet number. The phrase 'between 0 and 2^31-1' is inclusive of both endpoints, but the context of packet numbers suggests 0 might be invalid.\", \"justification\": \"The phrase 'between 0 and 2^31-1' is ambiguous. In common usage, 'between' excludes the endpoints, while 'inclusive' includes them. Without further clarification, both interpretations are reasonable.\"}",
+  "record_id": "65a6ef28d03fbf42307405d536e03f972ba61e605203bf412ba4434ca06d21bc",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "5.7.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.64
+}

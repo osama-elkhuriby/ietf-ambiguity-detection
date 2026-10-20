@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "If this key is not present",
+    "interpretation_a": "If the 'port' SvcParamKey is absent from a DNS response, the client must use the port number associated with the authority endpoint (the DNS server itself) as defined in the DNS query.",
+    "interpretation_b": "If the 'port' SvcParamKey is absent from a DNS response, the client must use the standard port for the service (e.g., 443 for HTTPS) even if different from the authority endpoint's port.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'authority endpoint’s port number' is not fully defined. It's unclear whether it refers to the port the client used to *query* the DNS server, or a default port associated with the DNS server's *service*. This ambiguity affects how clients will determine the port to use when the 'port' key is missing.",
+    "missing_information": "The document does not define what constitutes the 'authority endpoint’s port number' in all cases. Is it the port the client used to query the DNS server, or a default port associated with the DNS server's service? This missing constraint leads to different implementations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:57:45.486539+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-04",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "6bc098654173b3adc45aefff2313678fe396163a1e359ccf6c548a61d5f583b3",
+  "lineage_ids": "lineage:50f16d6f10ca2861bd7c34e9",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 273,
+    "load_duration": 8147600,
+    "prompt_eval_count": 580,
+    "total_duration": 10085854800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"If this key is not present\", \"interpretation_a\": \"If the 'port' SvcParamKey is absent from a DNS response, the client must use the port number associated with the authority endpoint (the DNS server itself) as defined in the DNS query.\", \"interpretation_b\": \"If the 'port' SvcParamKey is absent from a DNS response, the client must use the standard port for the service (e.g., 443 for HTTPS) even if different from the authority endpoint's port.\", \"missing_information\": \"The document does not define what constitutes the 'authority endpoint’s port number' in all cases. Is it the port the client used to query the DNS server, or a default port associated with the DNS server's service? This missing constraint leads to different implementations.\", \"justification\": \"The phrase 'authority endpoint’s port number' is not fully defined. It's unclear whether it refers to the port the client used to *query* the DNS server, or a default port associated with the DNS server's *service*. This ambiguity affects how clients will determine the port to use when the 'port' key is missing.\"}",
+  "record_id": "056f15a79b01e920cfbaadc3ed1dcbd3ea9413981727df218aa27374d14fd57a",
+  "revision": "04",
+  "schema_version": 1,
+  "section_ids": "6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.078
+}

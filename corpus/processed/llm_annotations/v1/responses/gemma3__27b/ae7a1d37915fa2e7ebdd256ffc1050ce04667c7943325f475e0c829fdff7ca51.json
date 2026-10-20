@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD pick one at random",
+    "interpretation_a": "Clients or resolvers are required to pick one at random, and must implement a random number generator for this purpose.",
+    "interpretation_b": "Clients or resolvers are permitted to pick one at random, but may also use other methods to select a record.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' allows for multiple interpretations. It's unclear whether the random selection is mandatory or optional. This affects implementation choices.",
+    "missing_information": "The strength of the SHOULD is not clear. Is it a requirement, or merely a suggestion? The lack of a clear constraint on the selection method introduces ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:10:35.385612+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "986dc4011bc92a104f1bfe37f054cd4960d8c6d6adfa4d814b88134b3adf3464",
+  "lineage_ids": "lineage:6cea781d965227ab2078f93d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 165,
+    "load_duration": 4666000,
+    "prompt_eval_count": 585,
+    "total_duration": 6311536800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD pick one at random\", \"interpretation_a\": \"Clients or resolvers are required to pick one at random, and must implement a random number generator for this purpose.\", \"interpretation_b\": \"Clients or resolvers are permitted to pick one at random, but may also use other methods to select a record.\", \"missing_information\": \"The strength of the SHOULD is not clear. Is it a requirement, or merely a suggestion? The lack of a clear constraint on the selection method introduces ambiguity.\", \"justification\": \"The use of 'SHOULD' allows for multiple interpretations. It's unclear whether the random selection is mandatory or optional. This affects implementation choices.\"}",
+  "record_id": "ae7a1d37915fa2e7ebdd256ffc1050ce04667c7943325f475e0c829fdff7ca51",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "2.4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.313
+}

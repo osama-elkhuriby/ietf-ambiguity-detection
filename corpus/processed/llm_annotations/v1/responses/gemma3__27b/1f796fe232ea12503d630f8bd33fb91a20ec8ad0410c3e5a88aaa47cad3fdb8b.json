@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST also be forward-secure protected",
+    "interpretation_a": "All ACKs for packets protected by a forward-secure key must *themselves* be protected by a forward-secure key.",
+    "interpretation_b": "The *connection* must be configured to use forward-secure protection for ACKs, but not necessarily every single ACK packet. The connection could use a different mechanism to ensure ACKs are valid.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'forward-secure protected' could refer to individual ACK packets being encrypted with a forward-secure key, or to the connection as a whole being configured to use forward-secure ACKs. Without further clarification, implementations could reasonably choose either approach.",
+    "missing_information": "It is unclear whether the requirement applies to each individual ACK packet, or to the overall connection's ACK protection mechanism."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:03:19.712466+00:00",
+  "document_id": "draft-ietf-quic-transport-16",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "6e84102ea3dd93deee08ca1ae7195cd1bc4698a02bff9f421b74d8f0b63bcf33",
+  "lineage_ids": "lineage:e951d6cc0a289b0bdf98ecbd",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 200,
+    "load_duration": 4620700,
+    "prompt_eval_count": 593,
+    "total_duration": 7536955800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST also be forward-secure protected\", \"interpretation_a\": \"All ACKs for packets protected by a forward-secure key must *themselves* be protected by a forward-secure key.\", \"interpretation_b\": \"The *connection* must be configured to use forward-secure protection for ACKs, but not necessarily every single ACK packet. The connection could use a different mechanism to ensure ACKs are valid.\", \"missing_information\": \"It is unclear whether the requirement applies to each individual ACK packet, or to the overall connection's ACK protection mechanism.\", \"justification\": \"The phrase 'forward-secure protected' could refer to individual ACK packets being encrypted with a forward-secure key, or to the connection as a whole being configured to use forward-secure ACKs. Without further clarification, implementations could reasonably choose either approach.\"}",
+  "record_id": "1f796fe232ea12503d630f8bd33fb91a20ec8ad0410c3e5a88aaa47cad3fdb8b",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "21.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.532
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY terminate the procedure early",
+    "interpretation_a": "The resolver is permitted to stop processing and return a partial response.",
+    "interpretation_b": "The resolver is permitted to continue processing but choose to return a partial response.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'terminate the procedure early' is vague. Does it mean to halt all further processing, or to continue processing but choose to return a partial result? Both interpretations are reasonable and would lead to different implementations.",
+    "missing_information": "It is unclear whether 'terminate the procedure early' means to stop all further processing of the request, or to continue processing but simply choose to return a partial result. This affects how the resolver handles remaining RRSets and dependencies."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:57:52.089746+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "3afeab0b9b9ac597e27789ae023bb0f144aa70cf67f47fdd25e6de6f087bab18",
+  "lineage_ids": "lineage:2a415c9ea59740bb836d0aa4",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 174,
+    "load_duration": 5220600,
+    "prompt_eval_count": 588,
+    "total_duration": 6600651300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY terminate the procedure early\", \"interpretation_a\": \"The resolver is permitted to stop processing and return a partial response.\", \"interpretation_b\": \"The resolver is permitted to continue processing but choose to return a partial response.\", \"missing_information\": \"It is unclear whether 'terminate the procedure early' means to stop all further processing of the request, or to continue processing but simply choose to return a partial result. This affects how the resolver handles remaining RRSets and dependencies.\",\"justification\": \"The phrase 'terminate the procedure early' is vague. Does it mean to halt all further processing, or to continue processing but choose to return a partial result? Both interpretations are reasonable and would lead to different implementations.\"}",
+  "record_id": "08418af0a75626dff0f911358bdea5a6964d24d7b175cf36b052bbb01c493b42",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.61
+}

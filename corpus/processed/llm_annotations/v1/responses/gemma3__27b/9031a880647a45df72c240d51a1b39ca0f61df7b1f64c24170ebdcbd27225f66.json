@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "has not been previously used by the peer",
+    "interpretation_a": "The peer has never used *any* connection ID before, implying a first-time connection.",
+    "interpretation_b": "The peer has not used this *specific* connection ID before, allowing for reuse of other connection IDs in prior connections.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'has not been previously used by the peer' is incomplete. It's unclear whether it refers to any connection ID the peer has ever used, or only the specific connection ID being considered. This affects how an endpoint determines whether to generate a new connection ID.",
+    "missing_information": "The scope of 'previously used' is not defined. Does it refer to any connection ID ever seen from the peer, or only the specific connection ID in question?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:44:17.056440+00:00",
+  "document_id": "draft-ietf-quic-transport-27",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "97efb6f0036090afcb4ade470a0328996c25cb829edc2044e2553a1498a746a2",
+  "lineage_ids": "lineage:9f88730426945a33b4b8ab38",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 191,
+    "load_duration": 5650100,
+    "prompt_eval_count": 622,
+    "total_duration": 7229076000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"has not been previously used by the peer\", \"interpretation_a\": \"The peer has never used *any* connection ID before, implying a first-time connection.\", \"interpretation_b\": \"The peer has not used this *specific* connection ID before, allowing for reuse of other connection IDs in prior connections.\", \"missing_information\": \"The scope of 'previously used' is not defined. Does it refer to any connection ID ever seen from the peer, or only the specific connection ID in question?\",\"justification\": \"The phrase 'has not been previously used by the peer' is incomplete. It's unclear whether it refers to any connection ID the peer has ever used, or only the specific connection ID being considered. This affects how an endpoint determines whether to generate a new connection ID.\"}",
+  "record_id": "9031a880647a45df72c240d51a1b39ca0f61df7b1f64c24170ebdcbd27225f66",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "9.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.219
+}

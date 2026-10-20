@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause provides clear and specific requirements for an endpoint when its peer has selected a zero-length connection ID. It mandates that the endpoint must continue to use a zero-length connection ID for the lifetime of the connection and must not send packets from any other local address. These requirements are unambiguous and do not allow for multiple materially different interpretations. There is no missing constraint or undefined term that would lead to ambiguity in implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:46:23.879962+00:00",
+  "document_id": "draft-ietf-quic-transport-23",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "e5db6b4f77701bbc0547a4466af694d5b4a3e5b1d71489ada57422ad10e25cf7",
+  "lineage_ids": "lineage:f1805dcc6346cc5527c629a8",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 141,
+    "load_duration": 4369200,
+    "prompt_eval_count": 574,
+    "total_duration": 5793570100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause provides clear and specific requirements for an endpoint when its peer has selected a zero-length connection ID. It mandates that the endpoint must continue to use a zero-length connection ID for the lifetime of the connection and must not send packets from any other local address. These requirements are unambiguous and do not allow for multiple materially different interpretations. There is no missing constraint or undefined term that would lead to ambiguity in implementation behavior.\"\n}",
+  "record_id": "e1b61e2918fb86290af1adbd2d7984eb1082c190af77f769484cebba66c38fa1",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.796
+}

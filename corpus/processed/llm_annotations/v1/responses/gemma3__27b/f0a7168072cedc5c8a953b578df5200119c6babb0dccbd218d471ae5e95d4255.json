@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "has not yet been created",
+    "interpretation_a": "The stream has not been locally initiated at all (i.e. no Stream ID has been assigned).",
+    "interpretation_b": "The stream has been locally initiated (Stream ID assigned) but the initial handshake to establish the stream has not completed.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'has not yet been created' is open to interpretation. It's unclear whether it refers to the assignment of a Stream ID or the completion of the stream establishment handshake. This affects how an implementation would determine if the condition is met and thus whether to trigger a connection error.",
+    "missing_information": "The definition of 'created' in the context of a locally-initiated stream is not clear. Does 'created' mean the stream ID has been assigned, or does it require further handshake completion?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:15:09.215953+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "2f33d1efca039f81cbaf3607433078b114aa4f3d6db6fe6e456926a308709344",
+  "lineage_ids": "lineage:520ca36dde1bd95ba19029d1",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 199,
+    "load_duration": 3593300,
+    "prompt_eval_count": 603,
+    "total_duration": 7512237700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"has not yet been created\", \"interpretation_a\": \"The stream has not been locally initiated at all (i.e. no Stream ID has been assigned).\", \"interpretation_b\": \"The stream has been locally initiated (Stream ID assigned) but the initial handshake to establish the stream has not completed.\", \"missing_information\": \"The definition of 'created' in the context of a locally-initiated stream is not clear. Does 'created' mean the stream ID has been assigned, or does it require further handshake completion?\",\"justification\": \"The phrase 'has not yet been created' is open to interpretation. It's unclear whether it refers to the assignment of a Stream ID or the completion of the stream establishment handshake. This affects how an implementation would determine if the condition is met and thus whether to trigger a connection error.\"}",
+  "record_id": "f0a7168072cedc5c8a953b578df5200119c6babb0dccbd218d471ae5e95d4255",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "19.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.516
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that a client SHOULD include the Last-Modified header in non-subrange cache validation requests (i.e., If-Modified-Since) when the origin server has provided only a Last-Modified value (and no entity-tag). The terms used are clear and the context (previous and next clauses) clarifies the meaning of 'non-subrange' and 'only a Last-Modified value'. No alternative materially different implementation behaviours or missing constraints are evident.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T05:30:37.380182+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-14",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "16d5d6a4232b5f1b6ec19556d9c6af0ac4aacf86251831c5d0388b39261f4044",
+  "lineage_ids": "lineage:82bf9e7216ef5b8173f7fe54",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1003,
+    "load_duration": 4009200,
+    "prompt_eval_count": 646,
+    "total_duration": 8783118900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that a client SHOULD include the Last-Modified header in non-subrange cache validation requests (i.e., If-Modified-Since) when the origin server has provided only a Last-Modified value (and no entity-tag). The terms used are clear and the context (previous and next clauses) clarifies the meaning of 'non-subrange' and 'only a Last-Modified value'. No alternative materially different implementation behaviours or missing constraints are evident.\"\n}",
+  "record_id": "19b738561817b77cad4e42743b382124407e227216cd5f5b107624eb89c127ba",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "8.8.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.781
+}

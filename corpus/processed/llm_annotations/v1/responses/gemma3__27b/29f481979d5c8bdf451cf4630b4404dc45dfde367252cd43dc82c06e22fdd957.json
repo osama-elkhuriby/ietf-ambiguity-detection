@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "undefined or invalid",
+    "interpretation_a": "A pseudo-header field is considered invalid if its value does not conform to the defined syntax for that field.",
+    "interpretation_b": "A pseudo-header field is considered undefined if it is not a currently specified pseudo-header field, even if a value is provided. The specification does not define what constitutes a valid value for a pseudo-header field, leaving room for differing interpretations of 'invalid'.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states that endpoints must treat requests/responses with 'undefined or invalid' pseudo-header fields as malformed. However, the definition of 'invalid' is not provided. This allows for different implementations to interpret what constitutes an invalid pseudo-header field, leading to potential interoperability issues.",
+    "missing_information": "The specification needs to define what constitutes a valid pseudo-header field value to remove ambiguity around 'invalid'."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:30:42.109566+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "348498532c51df501d1dc4bd2bcc63e2d739b6269eccd29d55c3bd4f944b3b66",
+  "lineage_ids": "lineage:1027dfbeb58fe936e6a71cdc",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 211,
+    "load_duration": 10323600,
+    "prompt_eval_count": 559,
+    "total_duration": 8145173800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"undefined or invalid\", \"interpretation_a\": \"A pseudo-header field is considered invalid if its value does not conform to the defined syntax for that field.\", \"interpretation_b\": \"A pseudo-header field is considered undefined if it is not a currently specified pseudo-header field, even if a value is provided. The specification does not define what constitutes a valid value for a pseudo-header field, leaving room for differing interpretations of 'invalid'.\", \"missing_information\": \"The specification needs to define what constitutes a valid pseudo-header field value to remove ambiguity around 'invalid'.\",\"justification\": \"The clause states that endpoints must treat requests/responses with 'undefined or invalid' pseudo-header fields as malformed. However, the definition of 'invalid' is not provided. This allows for different implementations to interpret what constitutes an invalid pseudo-header field, leading to potential interoperability issues.\"}",
+  "record_id": "29f481979d5c8bdf451cf4630b4404dc45dfde367252cd43dc82c06e22fdd957",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.156
+}

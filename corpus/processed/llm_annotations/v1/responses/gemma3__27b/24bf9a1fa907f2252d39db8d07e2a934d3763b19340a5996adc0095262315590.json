@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY limit the number of keys",
+    "interpretation_a": "Endpoints are permitted to retain up to two keys for removing packet protection and one for protecting packets, but may choose to retain fewer.",
+    "interpretation_b": "Endpoints are required to retain at least two keys for removing packet protection and one for protecting packets, but may retain more.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' creates ambiguity as to whether the stated limits are maximums or minimums. The clause does not explicitly state whether endpoints *must* retain at least the specified number of keys, or if they are simply *allowed* to limit themselves to that number.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:35:13.160854+00:00",
+  "document_id": "draft-ietf-quic-tls-23",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "6f1509819dac2e351f7970c17526e0aed18ee6f26a8d9bcc6f4a636b726efe42",
+  "lineage_ids": "lineage:036e07780a276ca9fabad3b7",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 164,
+    "load_duration": 5923800,
+    "prompt_eval_count": 585,
+    "total_duration": 6269550400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY limit the number of keys\", \"interpretation_a\": \"Endpoints are permitted to retain up to two keys for removing packet protection and one for protecting packets, but may choose to retain fewer.\", \"interpretation_b\": \"Endpoints are required to retain at least two keys for removing packet protection and one for protecting packets, but may retain more.\", \"missing_information\": \"\", \"justification\": \"The use of 'MAY' creates ambiguity as to whether the stated limits are maximums or minimums. The clause does not explicitly state whether endpoints *must* retain at least the specified number of keys, or if they are simply *allowed* to limit themselves to that number.\"}",
+  "record_id": "24bf9a1fa907f2252d39db8d07e2a934d3763b19340a5996adc0095262315590",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.265
+}

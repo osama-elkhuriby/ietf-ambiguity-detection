@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "\"absolute-path\" and \"query\"",
+    "interpretation_a": "The proxy must not modify any part of the absolute path or query string.",
+    "interpretation_b": "The proxy must not modify the absolute path and query string *as a whole*, but may modify individual components within them.",
+    "is_ambiguous": "yes",
+    "justification": "The clause prohibits modification of \"absolute-path\" and \"query\" but does not define what constitutes a 'modification'. This allows for interpretations where changing a single parameter in the query string is considered a modification, or where only replacing the entire string is considered a modification. This lack of precision creates ambiguity in implementation.",
+    "missing_information": "The definition of 'modify' is not precise. Does 'modify' include changing individual parameters within the query string, or only replacing the entire query string? Similarly, does it include changing individual segments within the absolute path?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:58:45.318575+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-03",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "88c0f0aa29ce65cd1300f5856bd0b87b63e2fb80115308844be8059621dfc07f",
+  "lineage_ids": "lineage:66d064e8ab7d0acecacf9b49",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 205,
+    "load_duration": 9042800,
+    "prompt_eval_count": 602,
+    "total_duration": 7850392600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"\\\"absolute-path\\\" and \\\"query\\\"\", \"interpretation_a\": \"The proxy must not modify any part of the absolute path or query string.\", \"interpretation_b\": \"The proxy must not modify the absolute path and query string *as a whole*, but may modify individual components within them.\", \"missing_information\": \"The definition of 'modify' is not precise. Does 'modify' include changing individual parameters within the query string, or only replacing the entire query string? Similarly, does it include changing individual segments within the absolute path?\",\"justification\": \"The clause prohibits modification of \\\"absolute-path\\\" and \\\"query\\\" but does not define what constitutes a 'modification'. This allows for interpretations where changing a single parameter in the query string is considered a modification, or where only replacing the entire string is considered a modification. This lack of precision creates ambiguity in implementation.\"}",
+  "record_id": "24048d5961ed20f3fd6536d36b97b7f0f00530465f7e46923f01659ef33641e6",
+  "revision": "03",
+  "schema_version": 1,
+  "section_ids": "5.5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.86
+}

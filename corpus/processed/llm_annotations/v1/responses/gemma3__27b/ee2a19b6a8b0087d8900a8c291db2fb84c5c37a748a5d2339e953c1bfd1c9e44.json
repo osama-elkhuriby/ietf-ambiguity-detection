@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY send an HTTP response",
+    "interpretation_a": "The server is permitted to send a response before closing/resetting the stream, but is not required to.",
+    "interpretation_b": "The server is permitted to send *any* HTTP response, even if it's not related to the malformed request, before closing/resetting the stream.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' allows for two interpretations. The server could send a response *related* to the malformed request, or it could send an arbitrary response. Without further clarification, this is ambiguous.",
+    "missing_information": "It is unclear whether the response must be related to the malformed request, or if any valid HTTP response is permissible. A constraint on the content or purpose of the response is missing."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:13:46.942890+00:00",
+  "document_id": "draft-ietf-quic-http-29",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "69f00e8c1fd948fe83485e20ca14c604d1c0ea89e427b783e76b2882c7b616c9",
+  "lineage_ids": "lineage:833256b6e034899b54aad74b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 192,
+    "load_duration": 5002800,
+    "prompt_eval_count": 568,
+    "total_duration": 7418570200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY send an HTTP response\", \"interpretation_a\": \"The server is permitted to send a response before closing/resetting the stream, but is not required to.\", \"interpretation_b\": \"The server is permitted to send *any* HTTP response, even if it's not related to the malformed request, before closing/resetting the stream.\", \"missing_information\": \"It is unclear whether the response must be related to the malformed request, or if any valid HTTP response is permissible. A constraint on the content or purpose of the response is missing.\", \"justification\": \"The use of 'MAY' allows for two interpretations. The server could send a response *related* to the malformed request, or it could send an arbitrary response. Without further clarification, this is ambiguous.\"}",
+  "record_id": "ee2a19b6a8b0087d8900a8c291db2fb84c5c37a748a5d2339e953c1bfd1c9e44",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "4.1.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.437
+}

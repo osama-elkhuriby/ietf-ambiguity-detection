@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "even if there are packet gaps which precede the received packet",
+    "interpretation_a": "The restriction applies regardless of whether there are packet gaps. An endpoint must not send a non-ack-eliciting packet in response to another non-ack-eliciting packet, even if gaps exist.",
+    "interpretation_b": "The restriction only applies if there are no packet gaps. If packet gaps exist, the endpoint *may* send a non-ack-eliciting packet. The clause is awkwardly worded and the 'even if' could be read as a condition for the restriction, rather than reinforcing it.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'even if there are packet gaps which precede the received packet' is ambiguous. It's unclear whether the restriction applies *despite* the packet gaps, or only when there are no packet gaps. This affects how an endpoint would handle non-ack-eliciting packets when gaps are present.",
+    "missing_information": "It is unclear whether the 'even if' clause is intended to reinforce the restriction or to create an exception. A clearer phrasing would resolve this."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:12:57.275493+00:00",
+  "document_id": "draft-ietf-quic-transport-29",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "fad444a29feb43f2b85a89769284768a0d91fbe8e5cf2199373e8b337370a071",
+  "lineage_ids": "lineage:3e6b372adf981b922e03e63b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 252,
+    "load_duration": 6024800,
+    "prompt_eval_count": 601,
+    "total_duration": 9386576700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"even if there are packet gaps which precede the received packet\", \"interpretation_a\": \"The restriction applies regardless of whether there are packet gaps. An endpoint must not send a non-ack-eliciting packet in response to another non-ack-eliciting packet, even if gaps exist.\", \"interpretation_b\": \"The restriction only applies if there are no packet gaps. If packet gaps exist, the endpoint *may* send a non-ack-eliciting packet. The clause is awkwardly worded and the 'even if' could be read as a condition for the restriction, rather than reinforcing it.\", \"missing_information\": \"It is unclear whether the 'even if' clause is intended to reinforce the restriction or to create an exception. A clearer phrasing would resolve this.\", \"justification\": \"The phrase 'even if there are packet gaps which precede the received packet' is ambiguous. It's unclear whether the restriction applies *despite* the packet gaps, or only when there are no packet gaps. This affects how an endpoint would handle non-ack-eliciting packets when gaps are present.\"}",
+  "record_id": "369e771bf20ca86d35a6de98c7e4d0b7f28763d12700dbb78b68569aa769c0ec",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "13.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.39
+}

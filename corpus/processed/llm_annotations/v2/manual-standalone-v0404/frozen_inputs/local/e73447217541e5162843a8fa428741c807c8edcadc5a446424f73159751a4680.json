@@ -1,0 +1,74 @@
+{
+  "context_builder_version": "same-revision-context-v2.0.0",
+  "context_char_limit": 24000,
+  "context_chars": 534,
+  "coverage_claim": "bounded_same_document_same_revision_context_only",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "items": [
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-07:6.5.3:b0260",
+      "clause_id": "draft-ietf-httpbis-http2bis-07:6.5.3:b0260:c01",
+      "content": "If the sender of a SETTINGS frame does not receive an acknowledgment within a reasonable amount of time, it MAY issue a connection error of type SETTINGS_TIMEOUT.",
+      "content_sha256": "7b7dc1a063550d65f2478277beb395f8303e80ca0635851719d6754ec687075e",
+      "document_id": "draft-ietf-httpbis-http2bis-07",
+      "kind": "target",
+      "retrieval_reason": "frozen_target_clause",
+      "revision": "07",
+      "section_heading": "Settings Synchronization",
+      "section_id": "6.5.3",
+      "source_sha256": "baf4b6a43b09ae707e84711034d52a2394909928863af5e5b7cd17403ae28881",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[6]/section[5]/section[3]/t[3]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-07:6.5.3:b0259",
+      "clause_id": "draft-ietf-httpbis-http2bis-07:6.5.3:b0259:c04",
+      "content": "Upon receiving a SETTINGS frame with the ACK flag set, the sender of the altered settings can rely on the values from the oldest unacknowledged SETTINGS frame having been applied.",
+      "content_sha256": "c20890672942c5f56ec8280ff3e0dfc44aea07d46f2d69d5088b9b92d13006a1",
+      "document_id": "draft-ietf-httpbis-http2bis-07",
+      "kind": "previous",
+      "retrieval_reason": "local_previous_clause",
+      "revision": "07",
+      "section_heading": "Settings Synchronization",
+      "section_id": "6.5.3",
+      "source_sha256": "baf4b6a43b09ae707e84711034d52a2394909928863af5e5b7cd17403ae28881",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[6]/section[5]/section[3]/t[2]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-07:6.5.3:b0260",
+      "clause_id": "draft-ietf-httpbis-http2bis-07:6.5.3:b0260:c02",
+      "content": "In setting a timeout, some allowance needs to be made for processing delays at the peer; a timeout that is solely based on the round trip time between endpoints might result in spurious errors.",
+      "content_sha256": "7757747d495c2450c0eeb3daf0a4543d6dc45d08e82175efc1673045abc6112d",
+      "document_id": "draft-ietf-httpbis-http2bis-07",
+      "kind": "next",
+      "retrieval_reason": "local_next_clause",
+      "revision": "07",
+      "section_heading": "Settings Synchronization",
+      "section_id": "6.5.3",
+      "source_sha256": "baf4b6a43b09ae707e84711034d52a2394909928863af5e5b7cd17403ae28881",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[6]/section[5]/section[3]/t[3]"
+      }
+    }
+  ],
+  "omitted": [],
+  "record_id": "e73447217541e5162843a8fa428741c807c8edcadc5a446424f73159751a4680",
+  "retrieval": [],
+  "revision": "07",
+  "section_heading": "Settings Synchronization",
+  "section_id": "6.5.3",
+  "source_artifact": "D:/RFC/ietf-ambiguity-detection/corpus/processed/alignments/draft-ietf-httpbis-http2bis/lexical-first-classifier-v1/inputs/draft-ietf-httpbis-http2bis-07.json",
+  "source_sha256": "baf4b6a43b09ae707e84711034d52a2394909928863af5e5b7cd17403ae28881",
+  "target_clause": "If the sender of a SETTINGS frame does not receive an acknowledgment within a reasonable amount of time, it MAY issue a connection error of type SETTINGS_TIMEOUT.",
+  "variant": "local"
+}

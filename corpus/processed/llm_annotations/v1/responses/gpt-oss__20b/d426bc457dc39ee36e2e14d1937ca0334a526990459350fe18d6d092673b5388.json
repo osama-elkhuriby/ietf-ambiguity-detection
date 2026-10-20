@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "needlessly fine-grained detail",
+    "interpretation_a": "The clause does not define what constitutes 'needlessly fine-grained detail', so a user agent could interpret it as any detail beyond a minimal set (e.g., version numbers, build identifiers) or as any detail that is not strictly required for server processing.",
+    "interpretation_b": "Alternatively, it could be interpreted as any detail that could be omitted without affecting the semantics of the request, leading to different implementations that either include or exclude such details.",
+    "is_ambiguous": "yes",
+    "justification": "The undefined term 'needlessly fine-grained detail' allows materially different reasonable interpretations, making the clause ambiguous.",
+    "missing_information": "A precise definition of 'needlessly fine-grained detail' is missing, preventing a unique operational interpretation of the clause."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T08:05:25.452351+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-12",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "5ecf5792316cf6984d069df2c427fe1ec0115e4c38a5e2897b712a815034a6e4",
+  "lineage_ids": "lineage:bf859d051a1908c8754fa186",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1277,
+    "load_duration": 4508000,
+    "prompt_eval_count": 600,
+    "total_duration": 11107472800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-1\",\n  \"evidence_span\": \"needlessly fine-grained detail\",\n  \"interpretation_a\": \"The clause does not define what constitutes 'needlessly fine-grained detail', so a user agent could interpret it as any detail beyond a minimal set (e.g., version numbers, build identifiers) or as any detail that is not strictly required for server processing.\",\n  \"interpretation_b\": \"Alternatively, it could be interpreted as any detail that could be omitted without affecting the semantics of the request, leading to different implementations that either include or exclude such details.\",\n  \"missing_information\": \"A precise definition of 'needlessly fine-grained detail' is missing, preventing a unique operational interpretation of the clause.\",\n  \"justification\": \"The undefined term 'needlessly fine-grained detail' allows materially different reasonable interpretations, making the clause ambiguous.\"\n}",
+  "record_id": "d426bc457dc39ee36e2e14d1937ca0334a526990459350fe18d6d092673b5388",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "9.1.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.109
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that a connection ID used in a connection reset by revealing the Stateless Reset Token must not be reused for new connections at any node that shares the same static key. The context clarifies that the static key is shared among instances, and the next clause confirms that the token is tied to a single connection ID. No missing constraints or multiple reasonable interpretations are evident.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T17:47:55.627087+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "a6275bf5b3bdec593d87df3968c9e4351380f5c0eca8e95465c3203e6fecdf4c",
+  "lineage_ids": "lineage:9be2d748775da2c2344d6a20",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 4612,
+    "load_duration": 4242400,
+    "prompt_eval_count": 622,
+    "total_duration": 39931609500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that a connection ID used in a connection reset by revealing the Stateless Reset Token must not be reused for new connections at any node that shares the same static key. The context clarifies that the static key is shared among instances, and the next clause confirms that the token is tied to a single connection ID. No missing constraints or multiple reasonable interpretations are evident.\"\n}",
+  "record_id": "ae2d3b9d4fcf57e5d23f20a39ffb063d3b39573fcd9a7190b4d15e8d9a4795ba",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "10.3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 39.938
+}

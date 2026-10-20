@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST describe how the protocol uses 0-RTT and the measures that are employed",
+    "interpretation_a": "The application protocol must provide a detailed technical description of how 0-RTT is used, including specific algorithms or mechanisms for replay protection.",
+    "interpretation_b": "The application protocol only needs to state, at a high level, that it uses 0-RTT and has some unspecified measures to prevent replay attacks; the details of those measures are not required to be documented.",
+    "is_ambiguous": "yes",
+    "justification": "The clause uses 'describe' and 'measures' without defining the required granularity or specificity. This allows for materially different implementations – one providing detailed documentation and another providing only a general statement.",
+    "missing_information": "The level of detail required in the description of 0-RTT usage and replay protection measures is not specified. The word 'describe' is vague and does not indicate whether a high-level overview or a detailed technical specification is expected."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:47:32.292758+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "7a080fb1e7c0b74fe662ec479a208c7d49ac191fe05860d9ac21f382af5927fc",
+  "lineage_ids": "lineage:19f73868411d5bd734d59a31",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 222,
+    "load_duration": 2510300,
+    "prompt_eval_count": 582,
+    "total_duration": 8317475700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST describe how the protocol uses 0-RTT and the measures that are employed\", \"interpretation_a\": \"The application protocol must provide a detailed technical description of how 0-RTT is used, including specific algorithms or mechanisms for replay protection.\", \"interpretation_b\": \"The application protocol only needs to state, at a high level, that it uses 0-RTT and has some unspecified measures to prevent replay attacks; the details of those measures are not required to be documented.\", \"missing_information\": \"The level of detail required in the description of 0-RTT usage and replay protection measures is not specified. The word 'describe' is vague and does not indicate whether a high-level overview or a detailed technical specification is expected.\", \"justification\": \"The clause uses 'describe' and 'measures' without defining the required granularity or specificity. This allows for materially different implementations – one providing detailed documentation and another providing only a general statement.\"}",
+  "record_id": "c1735dda35d918de12f5291ad39bd363b7f1331a77bfe1c44a2487e81c7b383a",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.328
+}

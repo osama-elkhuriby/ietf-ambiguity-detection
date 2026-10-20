@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "or it returns an error",
+    "interpretation_a": "If a passive OPEN call fails to create a new connection record, it *must* return an error to the application.",
+    "interpretation_b": "If a passive OPEN call fails to create a new connection record, the TCP implementation *may* handle the failure internally without necessarily returning an error to the application (e.g., logging the error).",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'or it returns an error' is underspecified. It doesn't define the mechanism for error reporting, leaving room for different implementations to handle failures in different ways, some of which might not be visible to the application.",
+    "missing_information": "The clause does not specify *how* the error is returned. Is it a return code from the OPEN call, a flag set in a data structure, or some other mechanism? Without this information, it's unclear if a failure to create a record *always* results in a visible error to the application."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:17:36.516162+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-10",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "0285a456e4dc1cbc5b0c097cf871bc0e01dc1d67875981e97fe8261a48aede58",
+  "lineage_ids": "lineage:6e5205bf20c015698fae18a1",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 233,
+    "load_duration": 4563100,
+    "prompt_eval_count": 610,
+    "total_duration": 8818858500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"or it returns an error\", \"interpretation_a\": \"If a passive OPEN call fails to create a new connection record, it *must* return an error to the application.\", \"interpretation_b\": \"If a passive OPEN call fails to create a new connection record, the TCP implementation *may* handle the failure internally without necessarily returning an error to the application (e.g., logging the error).\", \"missing_information\": \"The clause does not specify *how* the error is returned. Is it a return code from the OPEN call, a flag set in a data structure, or some other mechanism? Without this information, it's unclear if a failure to create a record *always* results in a visible error to the application.\",\"justification\": \"The phrase 'or it returns an error' is underspecified. It doesn't define the mechanism for error reporting, leaving room for different implementations to handle failures in different ways, some of which might not be visible to the application.\"}",
+  "record_id": "0bbbac18d9ebd34a75cbd7ec3821138183dc295115a2db01fcbd2d5ef256280e",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "3.9.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.844
+}

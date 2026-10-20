@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST verify that its peer can receive and respond to packets at that new address",
+    "interpretation_a": "The clause does not specify the method or procedure for verification, allowing implementers to choose any means (e.g., sending a probe packet, performing a handshake, or using other evidence).",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The absence of a defined verification method constitutes an incomplete constraint that prevents a unique operational interpretation.",
+    "missing_information": "The clause lacks a concrete specification of how the endpoint should verify that the peer can receive and respond to packets at the new address, which could lead to materially different implementation behaviours."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T14:27:30.453825+00:00",
+  "document_id": "draft-ietf-quic-transport-10",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "897d51cbe67fe22fd8f92abebb79e38b1f253602c7e37d29d6a8f876d25615de",
+  "lineage_ids": "lineage:793bca8be2e9c279d80ce64d",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1690,
+    "load_duration": 4553600,
+    "prompt_eval_count": 613,
+    "total_duration": 14682623000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"MUST verify that its peer can receive and respond to packets at that new address\",\n  \"interpretation_a\": \"The clause does not specify the method or procedure for verification, allowing implementers to choose any means (e.g., sending a probe packet, performing a handshake, or using other evidence).\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The clause lacks a concrete specification of how the endpoint should verify that the peer can receive and respond to packets at the new address, which could lead to materially different implementation behaviours.\",\n  \"justification\": \"The absence of a defined verification method constitutes an incomplete constraint that prevents a unique operational interpretation.\"\n}",
+  "record_id": "269c65e8756c0558926b4c92f0fcdec0f99bf96231270fd6ab4e5c71b72bb6ce",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "7.7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 14.672
+}

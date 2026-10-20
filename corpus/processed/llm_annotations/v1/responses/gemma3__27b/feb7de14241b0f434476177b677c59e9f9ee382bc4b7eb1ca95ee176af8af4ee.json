@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "If the END_HEADERS Flag is not set, this frame MUST be followed by another CONTINUATION frame.",
+    "interpretation_a": "A CONTINUATION frame *immediately* follows the current frame.",
+    "interpretation_b": "A CONTINUATION frame follows the current frame *eventually*, potentially after other frames on the same stream or even other streams (as long as it's before the stream is closed).",
+    "is_ambiguous": "yes",
+    "justification": "The clause states a CONTINUATION frame 'MUST' follow, but doesn't specify *when*. This allows for interpretations where the following frame is immediate, or delayed, creating ambiguity in implementation.",
+    "missing_information": "The time constraint on the following CONTINUATION frame is not specified. Is it immediate, or can other frames interleave?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:53:09.767532+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-03",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "811d68a193bbb7a0086385ffbc0be12005c5ed3ddd3b60e1bb7a755a19c1bdcf",
+  "lineage_ids": "lineage:4b08635fd7cfe522d895e24e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 185,
+    "load_duration": 10793400,
+    "prompt_eval_count": 587,
+    "total_duration": 7184618000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"If the END_HEADERS Flag is not set, this frame MUST be followed by another CONTINUATION frame.\", \"interpretation_a\": \"A CONTINUATION frame *immediately* follows the current frame.\", \"interpretation_b\": \"A CONTINUATION frame follows the current frame *eventually*, potentially after other frames on the same stream or even other streams (as long as it's before the stream is closed).\", \"missing_information\": \"The time constraint on the following CONTINUATION frame is not specified. Is it immediate, or can other frames interleave?\",\"justification\": \"The clause states a CONTINUATION frame 'MUST' follow, but doesn't specify *when*. This allows for interpretations where the following frame is immediate, or delayed, creating ambiguity in implementation.\"}",
+  "record_id": "feb7de14241b0f434476177b677c59e9f9ee382bc4b7eb1ca95ee176af8af4ee",
+  "revision": "03",
+  "schema_version": 1,
+  "section_ids": "6.10",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.188
+}

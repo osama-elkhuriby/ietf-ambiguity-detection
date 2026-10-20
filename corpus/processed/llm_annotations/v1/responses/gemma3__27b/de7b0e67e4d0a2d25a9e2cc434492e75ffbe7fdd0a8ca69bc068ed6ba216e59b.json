@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "current understanding",
+    "interpretation_a": "The HTTP implementation uses the settings it *received* from the peer, even if those settings are outdated or incomplete.",
+    "interpretation_b": "The HTTP implementation uses its *best guess* of the peer's settings, potentially extrapolating or filling in missing values based on prior interactions or defaults.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'current understanding' is vague. It's unclear whether it refers to the last received settings or an internal model of the peer's configuration. This difference in interpretation could lead to different implementations and potential interoperability issues.",
+    "missing_information": "The meaning of 'current understanding' is not defined. Does it refer to the last received settings, or an internal model of the peer's configuration?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:12:00.051558+00:00",
+  "document_id": "draft-ietf-quic-http-29",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "47f9fc6ec7fbf86e69b6d15f106c6edccfb897262ed93319ffa4d8ea78c047d6",
+  "lineage_ids": "lineage:04d6c4ec741ce9313b049168",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 186,
+    "load_duration": 6061400,
+    "prompt_eval_count": 543,
+    "total_duration": 7156086000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"current understanding\", \"interpretation_a\": \"The HTTP implementation uses the settings it *received* from the peer, even if those settings are outdated or incomplete.\", \"interpretation_b\": \"The HTTP implementation uses its *best guess* of the peer's settings, potentially extrapolating or filling in missing values based on prior interactions or defaults.\", \"missing_information\": \"The meaning of 'current understanding' is not defined. Does it refer to the last received settings, or an internal model of the peer's configuration?\",\"justification\": \"The phrase 'current understanding' is vague. It's unclear whether it refers to the last received settings or an internal model of the peer's configuration. This difference in interpretation could lead to different implementations and potential interoperability issues.\"}",
+  "record_id": "de7b0e67e4d0a2d25a9e2cc434492e75ffbe7fdd0a8ca69bc068ed6ba216e59b",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "7.2.4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.157
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD limit the number of Push IDs it issues at a time.",
+    "interpretation_a": "The clause could be interpreted as the client limiting the number of Push IDs it receives from the server, or as the client limiting the number of Push IDs it issues (which is not a valid operation in HTTP/3), or as the client limiting the number of PUSH_PROMISE frames it sends. Each of these interpretations leads to materially different implementation behaviours.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a clear constraint on what is to be limited and how, resulting in an incomplete specification that can be interpreted in multiple ways.",
+    "missing_information": "The clause does not specify whether the client should limit the number of Push IDs it receives or issues, nor does it provide a numeric limit or a method for determining the limit, leaving the implementation open to different interpretations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T10:19:32.376226+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "ddb85285c2d820fcc1fe57c0d199616cc6092429f3eb7e9282086628d6449054",
+  "lineage_ids": "lineage:3ed19de2fd5e58e12be936c2",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2103,
+    "load_duration": 4830400,
+    "prompt_eval_count": 566,
+    "total_duration": 18182480400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"SHOULD limit the number of Push IDs it issues at a time.\",\n  \"interpretation_a\": \"The clause could be interpreted as the client limiting the number of Push IDs it receives from the server, or as the client limiting the number of Push IDs it issues (which is not a valid operation in HTTP/3), or as the client limiting the number of PUSH_PROMISE frames it sends. Each of these interpretations leads to materially different implementation behaviours.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The clause does not specify whether the client should limit the number of Push IDs it receives or issues, nor does it provide a numeric limit or a method for determining the limit, leaving the implementation open to different interpretations.\",\n  \"justification\": \"The clause lacks a clear constraint on what is to be limited and how, resulting in an incomplete specification that can be interpreted in multiple ways.\"\n}",
+  "record_id": "c5f5d2a4dc78118fdbc79ae095be7f117e8b79deb1950cce60c481dade1cdb2c",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "10.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 18.187
+}

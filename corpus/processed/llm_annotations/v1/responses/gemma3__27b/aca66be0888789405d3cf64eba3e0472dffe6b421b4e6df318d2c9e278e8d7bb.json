@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "previous connection's final smoothed RTT value",
+    "interpretation_a": "The final smoothed RTT value is taken directly from the previous connection's state, without any modification or scaling.",
+    "interpretation_b": "The final smoothed RTT value is used as a *basis* for the resumed connection's initial RTT, but may be adjusted (e.g., rounded, capped, or scaled) before being applied.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'as the resumed connection's initial RTT' is open to interpretation. Does it mean the value is *equal* to the previous RTT, or merely *based on* it? Without further clarification, implementations could reasonably differ in how they apply the previous RTT value.",
+    "missing_information": "The clause does not specify whether the 'final smoothed RTT value' is used directly, or if it is subject to any further processing or adjustment before being used as the resumed connection's initial RTT. This missing constraint affects implementation behaviour."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:27:11.105387+00:00",
+  "document_id": "draft-ietf-quic-recovery-27",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "a14c0d4607bebe65d4ec9048b7bb5455b99fd4d9faef42aeb680daba1a42af1b",
+  "lineage_ids": "lineage:6e0b627f61dba771033f2f59",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 236,
+    "load_duration": 4096000,
+    "prompt_eval_count": 600,
+    "total_duration": 8779602900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"previous connection's final smoothed RTT value\", \"interpretation_a\": \"The final smoothed RTT value is taken directly from the previous connection's state, without any modification or scaling.\", \"interpretation_b\": \"The final smoothed RTT value is used as a *basis* for the resumed connection's initial RTT, but may be adjusted (e.g., rounded, capped, or scaled) before being applied.\", \"missing_information\": \"The clause does not specify whether the 'final smoothed RTT value' is used directly, or if it is subject to any further processing or adjustment before being used as the resumed connection's initial RTT. This missing constraint affects implementation behaviour.\", \"justification\": \"The phrase 'as the resumed connection's initial RTT' is open to interpretation. Does it mean the value is *equal* to the previous RTT, or merely *based on* it? Without further clarification, implementations could reasonably differ in how they apply the previous RTT value.\"}",
+  "record_id": "aca66be0888789405d3cf64eba3e0472dffe6b421b4e6df318d2c9e278e8d7bb",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "5.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.782
+}

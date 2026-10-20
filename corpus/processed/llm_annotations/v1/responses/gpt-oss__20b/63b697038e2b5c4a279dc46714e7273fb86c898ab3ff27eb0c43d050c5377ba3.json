@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously requires an intermediary to remove connection‑specific header fields when converting an HTTP/1.x message to HTTP/2; failure to do so results in the transformed message being treated as malformed by other HTTP/2 endpoints. The pronoun “their” refers to the messages being sent by the intermediary, and the clause does not leave any implementation‑relevant constraint unspecified.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T04:16:47.400081+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "0919923cd0bd98f272735e3a468266cb977f42d9fcc48db8eaa680a1e32c4e60",
+  "lineage_ids": "lineage:91e255f071aadb698ecc8475",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1068,
+    "load_duration": 5091600,
+    "prompt_eval_count": 658,
+    "total_duration": 9486135200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"no\",\"ambiguity_subtype\": \"none\",\"evidence_span\": \"\",\"interpretation_a\": \"\",\"interpretation_b\": \"\",\"missing_information\": \"\",\"justification\": \"The clause unambiguously requires an intermediary to remove connection‑specific header fields when converting an HTTP/1.x message to HTTP/2; failure to do so results in the transformed message being treated as malformed by other HTTP/2 endpoints. The pronoun “their” refers to the messages being sent by the intermediary, and the clause does not leave any implementation‑relevant constraint unspecified.\"}",
+  "record_id": "63b697038e2b5c4a279dc46714e7273fb86c898ab3ff27eb0c43d050c5377ba3",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 77.157
+}

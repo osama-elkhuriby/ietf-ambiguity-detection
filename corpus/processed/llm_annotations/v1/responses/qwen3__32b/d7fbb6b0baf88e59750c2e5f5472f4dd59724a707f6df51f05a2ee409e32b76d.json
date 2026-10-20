@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause is clear in specifying that a client must only change the Destination Connection ID in response to the first packet of each type (Retry or Initial) from the server, and that the server must base its value on the Initial packet. There is no ambiguity in the behavior expected from the client or server, and the constraints are well-defined.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:44:02.387954+00:00",
+  "document_id": "draft-ietf-quic-transport-27",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "ddf270c937238facd5ff20dcecbb8d56d310dc3da3e5c45a6172c6dc07741aed",
+  "lineage_ids": "lineage:33c706cd35962efbb7301c54",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 124,
+    "load_duration": 5037200,
+    "prompt_eval_count": 569,
+    "total_duration": 5106818600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause is clear in specifying that a client must only change the Destination Connection ID in response to the first packet of each type (Retry or Initial) from the server, and that the server must base its value on the Initial packet. There is no ambiguity in the behavior expected from the client or server, and the constraints are well-defined.\"\n}",
+  "record_id": "d7fbb6b0baf88e59750c2e5f5472f4dd59724a707f6df51f05a2ee409e32b76d",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.109
+}

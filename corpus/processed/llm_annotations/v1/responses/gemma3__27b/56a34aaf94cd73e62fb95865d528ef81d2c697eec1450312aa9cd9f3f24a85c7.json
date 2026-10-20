@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "has SVCB, AAAA, or A records",
+    "interpretation_a": "The domain MUST have at least one of these record types at the time the SVCB record is evaluated.",
+    "interpretation_b": "The domain MUST have had at least one of these record types at some point in the past, even if it doesn't currently.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'has' is ambiguous. It could mean 'currently has' or 'has ever had'. This affects implementation because a resolver might cache information about the existence of these records, or it might need to re-query to confirm their current existence.",
+    "missing_information": "The clause does not specify *when* the domain must have the specified records. Is it a current requirement, or a historical one?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:03:31.950869+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-00",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "f177f030e72a47304932790487f4f0a851c3d6a58b4b267874691f1c7465a478",
+  "lineage_ids": "lineage:709e1b5829e9f516929dd178",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 188,
+    "load_duration": 4292200,
+    "prompt_eval_count": 578,
+    "total_duration": 7084528700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"has SVCB, AAAA, or A records\", \"interpretation_a\": \"The domain MUST have at least one of these record types at the time the SVCB record is evaluated.\", \"interpretation_b\": \"The domain MUST have had at least one of these record types at some point in the past, even if it doesn't currently.\", \"missing_information\": \"The clause does not specify *when* the domain must have the specified records. Is it a current requirement, or a historical one?\",\"justification\": \"The phrase 'has' is ambiguous. It could mean 'currently has' or 'has ever had'. This affects implementation because a resolver might cache information about the existence of these records, or it might need to re-query to confirm their current existence.\"}",
+  "record_id": "56a34aaf94cd73e62fb95865d528ef81d2c697eec1450312aa9cd9f3f24a85c7",
+  "revision": "00",
+  "schema_version": 1,
+  "section_ids": "2.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.094
+}

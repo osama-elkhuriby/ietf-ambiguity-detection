@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that a server must not include a Content-Range header in the outer HTTP header of a multipart/byteranges response, and that the header will appear in each part instead. The following clause further clarifies that each part must contain a Content-Range header. No alternative reasonable interpretations or missing constraints are evident.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T05:40:14.790668+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "e3a42a3a90a7260d4c8de657c613a3d2ef8a0f831d86dd85d6064cc360b3dc10",
+  "lineage_ids": "lineage:7c3de3ba1346d2ae5be0e0e2",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 617,
+    "load_duration": 2505700,
+    "prompt_eval_count": 652,
+    "total_duration": 5441774200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"no\",\"ambiguity_subtype\":\"none\",\"evidence_span\":\"\",\"interpretation_a\":\"\",\"interpretation_b\":\"\",\"missing_information\":\"\",\"justification\":\"The clause unambiguously states that a server must not include a Content-Range header in the outer HTTP header of a multipart/byteranges response, and that the header will appear in each part instead. The following clause further clarifies that each part must contain a Content-Range header. No alternative reasonable interpretations or missing constraints are evident.\"}",
+  "record_id": "2692b15f66733bfb749085e47b5c7e9c50c110aa6ecfb0a58b00338925f4c694",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "15.3.7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.438
+}

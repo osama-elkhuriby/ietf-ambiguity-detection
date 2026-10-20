@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "retain such characters for the sake of robustness if they only appear within safe field value contexts (e.g., opaque data)",
+    "interpretation_a": "Recipients may retain CTL characters if they are within a context that is explicitly defined as 'safe' (e.g., opaque data), implying that the sender and receiver have a shared understanding of what constitutes a 'safe' context.",
+    "interpretation_b": "The term 'safe field value contexts' is not defined, leaving it ambiguous which contexts qualify. This could lead to different implementations making different decisions about which CTL characters to retain or reject.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'safe field value contexts' is undefined in the clause, and the example 'opaque data' is not itself a definition. This lack of a concrete definition allows for multiple interpretations of what constitutes a 'safe' context, leading to different implementation behaviors.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:15:58.940202+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-17",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "567ad226056f1d9ecc56c635759d9c9e8c0438e03492f68d9e4c89d017916a21",
+  "lineage_ids": "lineage:66561dcdf85b2b846abf2b46",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 218,
+    "load_duration": 13666000,
+    "prompt_eval_count": 588,
+    "total_duration": 9105622900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-1\",\n  \"evidence_span\": \"retain such characters for the sake of robustness if they only appear within safe field value contexts (e.g., opaque data)\",\n  \"interpretation_a\": \"Recipients may retain CTL characters if they are within a context that is explicitly defined as 'safe' (e.g., opaque data), implying that the sender and receiver have a shared understanding of what constitutes a 'safe' context.\",\n  \"interpretation_b\": \"The term 'safe field value contexts' is not defined, leaving it ambiguous which contexts qualify. This could lead to different implementations making different decisions about which CTL characters to retain or reject.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The phrase 'safe field value contexts' is undefined in the clause, and the example 'opaque data' is not itself a definition. This lack of a concrete definition allows for multiple interpretations of what constitutes a 'safe' context, leading to different implementation behaviors.\"\n}",
+  "record_id": "66b0d3fb46b8a516cfee18c085c2f934fcd78d7737f09bc74a893b1be95aa6cb",
+  "revision": "17",
+  "schema_version": 1,
+  "section_ids": "5.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.109
+}

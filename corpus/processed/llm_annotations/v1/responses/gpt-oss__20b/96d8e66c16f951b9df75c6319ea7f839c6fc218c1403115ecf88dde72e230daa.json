@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously requires that a peer must not initiate a stream with a stream ID higher than the maximum stream ID value it has received from the peer. The phrase “greatest maximum stream ID” refers to the highest value among the MAX_STREAM_ID frames that increased the limit, and there is no alternative interpretation that materially changes implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T17:14:12.649503+00:00",
+  "document_id": "draft-ietf-quic-transport-16",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "68ae9b2a6ef88540bd1fe8cc6cd904ba8a451accdb95fe0153586212c1aa197e",
+  "lineage_ids": "lineage:b1a7abf876e6b90beda365aa",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 7278,
+    "load_duration": 4691900,
+    "prompt_eval_count": 610,
+    "total_duration": 63177709800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously requires that a peer must not initiate a stream with a stream ID higher than the maximum stream ID value it has received from the peer. The phrase “greatest maximum stream ID” refers to the highest value among the MAX_STREAM_ID frames that increased the limit, and there is no alternative interpretation that materially changes implementation behavior.\"\n}",
+  "record_id": "96d8e66c16f951b9df75c6319ea7f839c6fc218c1403115ecf88dde72e230daa",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "19.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 63.187
+}

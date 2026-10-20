@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides clear conditions under which an endpoint may supply a new connection ID. The use of 'MAY' indicates optional behavior, and the condition (providing fewer connection IDs than the peer's active_connection_id_limit and receiving a packet with a previously unused connection ID) is unambiguous. There is no ambiguity in the implementation behavior described.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:58:26.837325+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "be5309a79b023d539b381c2a4df0aab7cae976ff12115d22e086f1a5105ff765",
+  "lineage_ids": "lineage:3fc5e936e340d7bcb4bdaf94",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 126,
+    "load_duration": 7132000,
+    "prompt_eval_count": 557,
+    "total_duration": 5204438500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides clear conditions under which an endpoint may supply a new connection ID. The use of 'MAY' indicates optional behavior, and the condition (providing fewer connection IDs than the peer's active_connection_id_limit and receiving a packet with a previously unused connection ID) is unambiguous. There is no ambiguity in the implementation behavior described.\"\n}",
+  "record_id": "2f99aaaae3a6faef644dac68bbd2e5f90046224a430d5407ca4812c7dc8fba8e",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "5.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.203
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "enough time",
+    "interpretation_a": "The phrase 'enough time' could be interpreted as a short duration, such as a few RTTs, allowing for quick detection of address validation failures. This would prioritize connection termination and resource cleanup.",
+    "interpretation_b": "Alternatively, 'enough time' could be interpreted as a longer duration, potentially spanning several minutes or even hours, to account for transient network issues or temporary unavailability of the remote endpoint. This would prioritize maintaining the connection for as long as reasonably possible.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'enough time' is vague and lacks a concrete definition. Different implementations could reasonably interpret this phrase differently, leading to variations in how long an endpoint waits before terminating a connection after address validation fails. This constitutes an incomplete constraint affecting implementation behavior.",
+    "missing_information": "The document does not specify a concrete duration for 'enough time', leaving it open to interpretation and potentially leading to inconsistent implementations. A specific timeout value or a method for calculating it would resolve this ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:07:58.977472+00:00",
+  "document_id": "draft-ietf-quic-transport-09",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "1e2b9cdac76fcf0bd52fe718ef809a4136a43b1639ec642c3166fb2b4a573249",
+  "lineage_ids": "lineage:aad319d8ecf30cacb325f254",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 233,
+    "load_duration": 3508000,
+    "prompt_eval_count": 619,
+    "total_duration": 8733609000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"enough time\", \"interpretation_a\": \"The phrase 'enough time' could be interpreted as a short duration, such as a few RTTs, allowing for quick detection of address validation failures. This would prioritize connection termination and resource cleanup.\", \"interpretation_b\": \"Alternatively, 'enough time' could be interpreted as a longer duration, potentially spanning several minutes or even hours, to account for transient network issues or temporary unavailability of the remote endpoint. This would prioritize maintaining the connection for as long as reasonably possible.\", \"missing_information\": \"The document does not specify a concrete duration for 'enough time', leaving it open to interpretation and potentially leading to inconsistent implementations. A specific timeout value or a method for calculating it would resolve this ambiguity.\",\"justification\": \"The phrase 'enough time' is vague and lacks a concrete definition. Different implementations could reasonably interpret this phrase differently, leading to variations in how long an endpoint waits before terminating a connection after address validation fails. This constitutes an incomplete constraint affecting implementation behavior.\"}",
+  "record_id": "d8341ac1acfb6fbef07c6b91446a9e07c24f4fa16dab0305da422960687816c5",
+  "revision": "09",
+  "schema_version": 1,
+  "section_ids": "7.7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.734
+}

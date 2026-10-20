@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "prior to sending the Finished message and until the record layer starts using encryption keys",
+    "interpretation_a": "Application data cannot be sent before the Finished message *or* before the record layer is using encryption keys.",
+    "interpretation_b": "Application data cannot be sent before the Finished message *and* before the record layer is using encryption keys. (i.e. both conditions must be met)",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'and' vs 'or' significantly alters the allowed timing of application data transmission. The clause does not explicitly state whether both conditions must be met, or if either condition prevents transmission.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:32:02.247913+00:00",
+  "document_id": "draft-ietf-tls-tls13-24",
+  "family_id": "draft-ietf-tls-tls13",
+  "input_fingerprint": "026c7798fac78922c407d0752ad3f1c08e3d7f514d7f0530d2acb16353a076e7",
+  "lineage_ids": "lineage:500d697062eafc0fea8344b8",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 160,
+    "load_duration": 9006700,
+    "prompt_eval_count": 601,
+    "total_duration": 6286410100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"prior to sending the Finished message and until the record layer starts using encryption keys\", \"interpretation_a\": \"Application data cannot be sent before the Finished message *or* before the record layer is using encryption keys.\", \"interpretation_b\": \"Application data cannot be sent before the Finished message *and* before the record layer is using encryption keys. (i.e. both conditions must be met)\", \"missing_information\": \"\", \"justification\": \"The use of 'and' vs 'or' significantly alters the allowed timing of application data transmission. The clause does not explicitly state whether both conditions must be met, or if either condition prevents transmission.\"}",
+  "record_id": "04033a65b9aaeeeca8239c6c9f5e3e0d77f967b13bb269dda0e74e6dc3e9eca2",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.297
+}

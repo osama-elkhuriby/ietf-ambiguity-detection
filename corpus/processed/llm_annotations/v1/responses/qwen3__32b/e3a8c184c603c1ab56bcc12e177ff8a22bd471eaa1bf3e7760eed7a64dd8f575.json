@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear directive on when an endpoint should acknowledge packets containing cryptographic handshake messages. It specifies that such acknowledgments should be included in the next unprotected packet unless the endpoint can acknowledge them in later packets protected by 1-RTT keys. The use of 'SHOULD' allows for discretion but does not introduce ambiguity in the operational behavior. There is no conflicting or missing constraint that would lead to multiple materially different implementations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:46:49.733640+00:00",
+  "document_id": "draft-ietf-quic-transport-12",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "848fd180e68cec803806b430d74fb43ecec104e9a3eaa3bd14133474cac22435",
+  "lineage_ids": "lineage:6b7ab5b46791197f0af1045d",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 142,
+    "load_duration": "",
+    "prompt_eval_count": 558,
+    "total_duration": 5861540100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear directive on when an endpoint should acknowledge packets containing cryptographic handshake messages. It specifies that such acknowledgments should be included in the next unprotected packet unless the endpoint can acknowledge them in later packets protected by 1-RTT keys. The use of 'SHOULD' allows for discretion but does not introduce ambiguity in the operational behavior. There is no conflicting or missing constraint that would lead to multiple materially different implementations.\"\n}",
+  "record_id": "e3a8c184c603c1ab56bcc12e177ff8a22bd471eaa1bf3e7760eed7a64dd8f575",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "7.15.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.875
+}

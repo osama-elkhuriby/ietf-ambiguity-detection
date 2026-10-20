@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY appear in any packet number space",
+    "interpretation_a": "CONNECTION_CLOSE frames of type 0x1c can be sent in either the initial or application data packet number space.",
+    "interpretation_b": "CONNECTION_CLOSE frames of type 0x1c can be sent in any of the available packet number spaces, including potentially future ones not yet defined.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'any packet number space' is not bounded. While the next clause clarifies the behavior for application error CONNECTION_CLOSE frames, this clause does not limit the 0x1c frames to existing spaces. This creates ambiguity about whether implementations should support sending these frames in future, undefined packet number spaces.",
+    "missing_information": "The definition of 'any packet number space' is incomplete. It is unclear if it refers only to currently defined spaces (initial, application data) or if it allows for future packet number spaces."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:03:04.375765+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "e4169b05b81c09d8464c9aa73d368c0c5c29ecda243c73e956fa1e0ce762c873",
+  "lineage_ids": "lineage:e3190fb697715f7defcfd007",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 217,
+    "load_duration": 3645400,
+    "prompt_eval_count": 580,
+    "total_duration": 8112208000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY appear in any packet number space\", \"interpretation_a\": \"CONNECTION_CLOSE frames of type 0x1c can be sent in either the initial or application data packet number space.\", \"interpretation_b\": \"CONNECTION_CLOSE frames of type 0x1c can be sent in any of the available packet number spaces, including potentially future ones not yet defined.\", \"missing_information\": \"The definition of 'any packet number space' is incomplete. It is unclear if it refers only to currently defined spaces (initial, application data) or if it allows for future packet number spaces.\", \"justification\": \"The phrase 'any packet number space' is not bounded. While the next clause clarifies the behavior for application error CONNECTION_CLOSE frames, this clause does not limit the 0x1c frames to existing spaces. This creates ambiguity about whether implementations should support sending these frames in future, undefined packet number spaces.\"}",
+  "record_id": "1e3f0e2324270969d0af799e3d1d9556f57c27419c8676d77c3b2059c4a1f547",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "12.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.109
+}

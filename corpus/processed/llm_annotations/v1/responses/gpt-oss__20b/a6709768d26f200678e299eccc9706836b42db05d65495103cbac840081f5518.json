@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "coalescing packets if possible",
+    "interpretation_a": "The clause means that the sender should coalesce all packets it sends in response to the PTO, including both the data in the packet number space for which the timer expired and the ack‑eliciting packets from other packet number spaces.",
+    "interpretation_b": "The clause means that the sender should coalesce only the ack‑eliciting packets that are sent from other packet number spaces, while the data in the packet number space for which the timer expired may be sent separately.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"coalescing packets if possible\" is not explicitly linked to a specific set of packets, allowing two reasonable implementation choices.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T11:41:32.785709+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "898e007de08ae1f1f3382f9af0a5372344361abb42e26a3129c24c69978418ce",
+  "lineage_ids": "lineage:67030c33308de8720917afd2",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 543,
+    "load_duration": 6517200,
+    "prompt_eval_count": 743,
+    "total_duration": 4824435000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"coalescing packets if possible\",\n  \"interpretation_a\": \"The clause means that the sender should coalesce all packets it sends in response to the PTO, including both the data in the packet number space for which the timer expired and the ack‑eliciting packets from other packet number spaces.\",\n  \"interpretation_b\": \"The clause means that the sender should coalesce only the ack‑eliciting packets that are sent from other packet number spaces, while the data in the packet number space for which the timer expired may be sent separately.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The phrase \\\"coalescing packets if possible\\\" is not explicitly linked to a specific set of packets, allowing two reasonable implementation choices.\"\n}",
+  "record_id": "a6709768d26f200678e299eccc9706836b42db05d65495103cbac840081f5518",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.2.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 20.594
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear condition and requirement: if the \":scheme\" pseudo-header field identifies a scheme with a mandatory authority component (e.g., \"http\" or \"https\"), then the request must include either an \":authority\" pseudo-header field or a \"Host\" header field. There is no ambiguity in the condition or the required action. The language is precise and does not allow for multiple materially different interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:46:45.063859+00:00",
+  "document_id": "draft-ietf-quic-http-29",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "82e7152e4b7519c7ecd07fbad37c1c1e664fae26f8a14edd42d4460683d18261",
+  "lineage_ids": "lineage:0f21a1b02e88e6f5cb0e1b57",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 142,
+    "load_duration": 9531100,
+    "prompt_eval_count": 578,
+    "total_duration": 5925470400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear condition and requirement: if the \\\":scheme\\\" pseudo-header field identifies a scheme with a mandatory authority component (e.g., \\\"http\\\" or \\\"https\\\"), then the request must include either an \\\":authority\\\" pseudo-header field or a \\\"Host\\\" header field. There is no ambiguity in the condition or the required action. The language is precise and does not allow for multiple materially different interpretations.\"\n}",
+  "record_id": "47ecab5da21678c26952adfd9c89259df195286c79cd8afd44c1c0fd938cfd75",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "4.1.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.922
+}

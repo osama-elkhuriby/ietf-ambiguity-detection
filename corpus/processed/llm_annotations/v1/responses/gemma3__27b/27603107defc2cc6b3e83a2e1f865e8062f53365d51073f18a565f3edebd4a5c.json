@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "An endpoint MUST treat any of the following as a connection error of type PROTOCOL_VIOLATION:",
+    "interpretation_a": "Any condition listed in the subsequent clauses will *always* result in a PROTOCOL_VIOLATION error.",
+    "interpretation_b": "An endpoint *may* treat the following conditions as a PROTOCOL_VIOLATION error, but is not required to do so. Other error types are also permitted.",
+    "is_ambiguous": "yes",
+    "justification": "The clause is a conditional statement that is not fully formed. It states that certain conditions will cause an error, but does not list the conditions. This creates ambiguity as to what triggers the error.",
+    "missing_information": "The target clause is incomplete. It introduces a list of conditions, but does not specify what those conditions *are*. Without knowing the conditions, it's impossible to determine if the 'MUST treat' applies universally or conditionally."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:06:25.572731+00:00",
+  "document_id": "draft-ietf-quic-transport-28",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "0cc173feb06fccddd01e40995fb91eb6236d76a801a0ecff1fece70e78e41b22",
+  "lineage_ids": "lineage:228dbef177ab89820c4f2fb5",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 212,
+    "load_duration": 4445700,
+    "prompt_eval_count": 585,
+    "total_duration": 7968412500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"An endpoint MUST treat any of the following as a connection error of type PROTOCOL_VIOLATION:\", \"interpretation_a\": \"Any condition listed in the subsequent clauses will *always* result in a PROTOCOL_VIOLATION error.\", \"interpretation_b\": \"An endpoint *may* treat the following conditions as a PROTOCOL_VIOLATION error, but is not required to do so. Other error types are also permitted.\", \"missing_information\": \"The target clause is incomplete. It introduces a list of conditions, but does not specify what those conditions *are*. Without knowing the conditions, it's impossible to determine if the 'MUST treat' applies universally or conditionally.\",\"justification\": \"The clause is a conditional statement that is not fully formed. It states that certain conditions will cause an error, but does not list the conditions. This creates ambiguity as to what triggers the error.\"}",
+  "record_id": "27603107defc2cc6b3e83a2e1f865e8062f53365d51073f18a565f3edebd4a5c",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "7.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.969
+}

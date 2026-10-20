@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "for detecting the PMTU, setting the PMTU appropriately, and storing the result of previous PMTU determinations",
+    "interpretation_a": "The actions apply to both Packetization Layer PMTU Discovery and PMTU Discovery.",
+    "interpretation_b": "The actions apply only to PMTU Discovery, not to Packetization Layer PMTU Discovery.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether the prepositional phrase applies to both methods or only to the second, creating a concrete missing constraint that could lead to materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T17:37:22.277141+00:00",
+  "document_id": "draft-ietf-quic-transport-06",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "fe7ec65e942b2f8d7148ab262ec7b2b31b78e8e31789ed030f4fd296e0b8c9a0",
+  "lineage_ids": "lineage:34575fcb483e0c870580f5ce",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2637,
+    "load_duration": 4451800,
+    "prompt_eval_count": 622,
+    "total_duration": 22659989100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"for detecting the PMTU, setting the PMTU appropriately, and storing the result of previous PMTU determinations\",\n  \"interpretation_a\": \"The actions apply to both Packetization Layer PMTU Discovery and PMTU Discovery.\",\n  \"interpretation_b\": \"The actions apply only to PMTU Discovery, not to Packetization Layer PMTU Discovery.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify whether the prepositional phrase applies to both methods or only to the second, creating a concrete missing constraint that could lead to materially different implementation behaviours.\"\n}",
+  "record_id": "a778c36b6db6adf75fc4203b2a47980c2ad7cca2e0d7e87a7b15191ea25d1ece",
+  "revision": "06",
+  "schema_version": 1,
+  "section_ids": "9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 22.657
+}

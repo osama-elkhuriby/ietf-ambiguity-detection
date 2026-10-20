@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY alter the interpretation",
+    "interpretation_a": "Implementations may choose to interpret SvcParamKeys differently based on the protocol mapping, allowing for flexibility in how parameters are handled.",
+    "interpretation_b": "Implementations may choose to ignore the protocol mapping and interpret SvcParamKeys according to a default or pre-existing standard, effectively making the alteration optional.",
+    "is_ambiguous": "yes",
+    "justification": "The use of \"MAY\" introduces ambiguity. While the clause states that interpretation *may* be altered, it doesn't define the limits of that alteration. This allows for implementations to significantly diverge in how they handle SvcParamKeys, creating a lack of interoperability if the alteration is substantial.",
+    "missing_information": "The degree to which the interpretation can be altered is not specified. A missing constraint on the scope of permissible interpretation changes allows for materially different implementations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:07:12.990886+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "054158bfa8cfff4d555cedee39e83f747bcd239968436a53a8f66a95c84bb0ef",
+  "lineage_ids": "lineage:fc67412a00914fd4dd1699bf",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 203,
+    "load_duration": 4149700,
+    "prompt_eval_count": 548,
+    "total_duration": 7600607000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY alter the interpretation\", \"interpretation_a\": \"Implementations may choose to interpret SvcParamKeys differently based on the protocol mapping, allowing for flexibility in how parameters are handled.\", \"interpretation_b\": \"Implementations may choose to ignore the protocol mapping and interpret SvcParamKeys according to a default or pre-existing standard, effectively making the alteration optional.\", \"missing_information\": \"The degree to which the interpretation can be altered is not specified. A missing constraint on the scope of permissible interpretation changes allows for materially different implementations.\", \"justification\": \"The use of \\\"MAY\\\" introduces ambiguity. While the clause states that interpretation *may* be altered, it doesn't define the limits of that alteration. This allows for implementations to significantly diverge in how they handle SvcParamKeys, creating a lack of interoperability if the alteration is substantial.\"}",
+  "record_id": "823b08a8c7ddbf62f9d7da8b1d7334dfde0ebc4e1f5eb14d75ef8582166a0c27",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.594
+}

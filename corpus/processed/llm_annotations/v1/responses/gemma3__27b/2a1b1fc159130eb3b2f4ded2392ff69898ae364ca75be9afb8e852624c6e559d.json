@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "any alt-authorities",
+    "interpretation_a": "The origin must publish an \"ech\" SvcParam for *all* alt-authorities it publishes.",
+    "interpretation_b": "The origin must publish an \"ech\" SvcParam for *at least one* alt-authority it publishes.",
+    "is_ambiguous": "yes",
+    "justification": "The word \"any\" is ambiguous. It could mean 'all' or 'at least one'. This affects the implementation because a server could choose to only publish the ech parameter for a subset of its alt-authorities, which would be a valid interpretation of \"any\" meaning \"at least one\", but might not be what is intended.",
+    "missing_information": "The meaning of \"any\" is unclear. Does it mean all, or at least one? This affects whether implementations need to check all alt-authorities or can stop after finding one."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:59:57.975983+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-08",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "ac7ae95c06345dda572ceb05755394a49c1c5f74dfd728a413556feabc2949a0",
+  "lineage_ids": "lineage:2487b888865241f9221a72c5",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 209,
+    "load_duration": 5001700,
+    "prompt_eval_count": 575,
+    "total_duration": 7846600400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"any alt-authorities\", \"interpretation_a\": \"The origin must publish an \\\"ech\\\" SvcParam for *all* alt-authorities it publishes.\", \"interpretation_b\": \"The origin must publish an \\\"ech\\\" SvcParam for *at least one* alt-authority it publishes.\", \"missing_information\": \"The meaning of \\\"any\\\" is unclear. Does it mean all, or at least one? This affects whether implementations need to check all alt-authorities or can stop after finding one.\",\"justification\": \"The word \\\"any\\\" is ambiguous. It could mean 'all' or 'at least one'. This affects the implementation because a server could choose to only publish the ech parameter for a subset of its alt-authorities, which would be a valid interpretation of \\\"any\\\" meaning \\\"at least one\\\", but might not be what is intended.\"}",
+  "record_id": "2a1b1fc159130eb3b2f4ded2392ff69898ae364ca75be9afb8e852624c6e559d",
+  "revision": "08",
+  "schema_version": 1,
+  "section_ids": "9.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.859
+}

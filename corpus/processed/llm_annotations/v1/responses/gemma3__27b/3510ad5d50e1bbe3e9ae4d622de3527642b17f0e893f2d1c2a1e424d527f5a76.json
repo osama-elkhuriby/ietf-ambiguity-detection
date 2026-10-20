@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY either reject the message as invalid or replace that invalid field value with a single instance of the decimal value",
+    "interpretation_a": "The recipient can choose to reject the message if it encounters a comma-separated list of identical decimal values in the Content-Length header.",
+    "interpretation_b": "The recipient can choose to replace the comma-separated list of identical decimal values with a single instance of that value, effectively correcting the invalid header.",
+    "is_ambiguous": "yes",
+    "justification": "The use of \"MAY\" introduces a choice for the recipient. While seemingly benign, it creates ambiguity in how a compliant implementation *must* handle this specific invalid input. There is no further constraint on which behaviour is preferred or under what conditions each behaviour should be selected.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:01:44.512724+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "94b26799ecb6cdf80a4220e1041bd878e2ba48e1ce491087fe1635f8ea33ee4f",
+  "lineage_ids": "lineage:8e2eb5071c832aa4d32f4034",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 183,
+    "load_duration": 13833900,
+    "prompt_eval_count": 646,
+    "total_duration": 7210996900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY either reject the message as invalid or replace that invalid field value with a single instance of the decimal value\", \"interpretation_a\": \"The recipient can choose to reject the message if it encounters a comma-separated list of identical decimal values in the Content-Length header.\", \"interpretation_b\": \"The recipient can choose to replace the comma-separated list of identical decimal values with a single instance of that value, effectively correcting the invalid header.\", \"missing_information\": \"\", \"justification\": \"The use of \\\"MAY\\\" introduces a choice for the recipient. While seemingly benign, it creates ambiguity in how a compliant implementation *must* handle this specific invalid input. There is no further constraint on which behaviour is preferred or under what conditions each behaviour should be selected.\"}",
+  "record_id": "3510ad5d50e1bbe3e9ae4d622de3527642b17f0e893f2d1c2a1e424d527f5a76",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "8.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.219
+}

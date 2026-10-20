@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "scheme-specific requirements",
+    "interpretation_a": "The origin server could interpret 'scheme-specific requirements' narrowly, only checking for requirements explicitly defined in the HTTP/1.1 specification or relevant RFCs.",
+    "interpretation_b": "The origin server could interpret 'scheme-specific requirements' broadly, including any requirements imposed by the application or other protocols used in conjunction with HTTP.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'scheme-specific requirements' is not defined within the provided context. This lack of definition allows for multiple interpretations of what constitutes a requirement, leading to different implementation behaviours. A narrow interpretation would limit the checks performed by the origin server, while a broad interpretation could require more extensive validation.",
+    "missing_information": "The definition of 'scheme-specific requirements' is not provided within the excerpt, and its scope is crucial for determining the level of validation the origin server must perform."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:18:02.990542+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "b252ae8e1806a8bb9cd0d7d896e414c819012413a5433f103055ec14422aaee1",
+  "lineage_ids": "lineage:80372c1eda6d903c75da01cd",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 209,
+    "load_duration": 8804900,
+    "prompt_eval_count": 600,
+    "total_duration": 8044281100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"scheme-specific requirements\", \"interpretation_a\": \"The origin server could interpret 'scheme-specific requirements' narrowly, only checking for requirements explicitly defined in the HTTP/1.1 specification or relevant RFCs.\", \"interpretation_b\": \"The origin server could interpret 'scheme-specific requirements' broadly, including any requirements imposed by the application or other protocols used in conjunction with HTTP.\", \"missing_information\": \"The definition of 'scheme-specific requirements' is not provided within the excerpt, and its scope is crucial for determining the level of validation the origin server must perform.\",\"justification\": \"The phrase 'scheme-specific requirements' is not defined within the provided context. This lack of definition allows for multiple interpretations of what constitutes a requirement, leading to different implementation behaviours. A narrow interpretation would limit the checks performed by the origin server, while a broad interpretation could require more extensive validation.\"}",
+  "record_id": "92355871ae3ed5bffb10c836d58ac5d1b757d3f8716966f8b8bef5e78d898ba5",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "7.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.063
+}

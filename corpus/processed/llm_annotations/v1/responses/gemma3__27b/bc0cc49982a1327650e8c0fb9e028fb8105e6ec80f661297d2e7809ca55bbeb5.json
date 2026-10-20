@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "when a connection ID is retired by its peer or when the endpoint receives a packet with a previously unused connection ID",
+    "interpretation_a": "The endpoint issues a new connection ID *only* when *both* conditions are met: its peer retires a connection ID *and* it receives a packet with a previously unused connection ID.",
+    "interpretation_b": "The endpoint issues a new connection ID if *either* its peer retires a connection ID *or* it receives a packet with a previously unused connection ID.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'or' is ambiguous. It could mean that either condition triggers the issuance of a new connection ID, or that both conditions must be true.",
+    "missing_information": "The logical relationship between the two conditions is not specified. Is it an AND or an OR?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:58:21.623714+00:00",
+  "document_id": "draft-ietf-quic-transport-20",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "d557c60b4513a2809fccde590346db52f2f1c84348afd4d56f4ce96cf4f7083f",
+  "lineage_ids": "lineage:92564fb31ba28965e21a0e81",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 194,
+    "load_duration": 4003500,
+    "prompt_eval_count": 604,
+    "total_duration": 7376487000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"when a connection ID is retired by its peer or when the endpoint receives a packet with a previously unused connection ID\", \"interpretation_a\": \"The endpoint issues a new connection ID *only* when *both* conditions are met: its peer retires a connection ID *and* it receives a packet with a previously unused connection ID.\", \"interpretation_b\": \"The endpoint issues a new connection ID if *either* its peer retires a connection ID *or* it receives a packet with a previously unused connection ID.\", \"missing_information\": \"The logical relationship between the two conditions is not specified. Is it an AND or an OR?\",\"justification\": \"The use of 'or' is ambiguous. It could mean that either condition triggers the issuance of a new connection ID, or that both conditions must be true.\"}",
+  "record_id": "bc0cc49982a1327650e8c0fb9e028fb8105e6ec80f661297d2e7809ca55bbeb5",
+  "revision": "20",
+  "schema_version": 1,
+  "section_ids": "5.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.375
+}

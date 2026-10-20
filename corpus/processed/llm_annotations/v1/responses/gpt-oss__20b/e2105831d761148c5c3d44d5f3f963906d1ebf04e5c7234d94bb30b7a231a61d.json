@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "immediately upon receipt of a second packet but the delay SHOULD NOT exceed the maximum ack delay.",
+    "interpretation_a": "The acknowledgement must be sent immediately, with no delay whatsoever.",
+    "interpretation_b": "The acknowledgement may be delayed up to the maximum ack delay, allowing a non‑zero delay.",
+    "is_ambiguous": "yes",
+    "justification": "The clause permits either an immediate send or a delayed send up to the maximum ack delay, but does not specify which behaviour is required, leaving an incomplete constraint that can lead to materially different implementations.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T12:10:47.113994+00:00",
+  "document_id": "draft-ietf-quic-recovery-18",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "3409b6fb072225341d72ed492ca07bf33f6310235aa6f335fab8f91b654ee773",
+  "lineage_ids": "lineage:b94f58fcb4de1c3c757e645b",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 286,
+    "load_duration": 4673700,
+    "prompt_eval_count": 743,
+    "total_duration": 2675772200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"immediately upon receipt of a second packet but the delay SHOULD NOT exceed the maximum ack delay.\",\n  \"interpretation_a\": \"The acknowledgement must be sent immediately, with no delay whatsoever.\",\n  \"interpretation_b\": \"The acknowledgement may be delayed up to the maximum ack delay, allowing a non‑zero delay.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause permits either an immediate send or a delayed send up to the maximum ack delay, but does not specify which behaviour is required, leaving an incomplete constraint that can lead to materially different implementations.\"\n}",
+  "record_id": "e2105831d761148c5c3d44d5f3f963906d1ebf04e5c7234d94bb30b7a231a61d",
+  "revision": "18",
+  "schema_version": 1,
+  "section_ids": "4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 12.407
+}

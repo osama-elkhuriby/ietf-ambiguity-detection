@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause provides a clear condition for when a server's 0-RTT behavior must be treated as a connection error. It specifies that sending incompatible settings after accepting 0-RTT is an error of type H3_SETTINGS_ERROR. The language is precise and does not allow for multiple materially different interpretations. There is no missing constraint that would affect implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:41:47.168349+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "3374e958f4b52478bd5b80ca558fb5597ecc2a9fa4209b3bc51d813e3c4c7ed8",
+  "lineage_ids": "lineage:72994fe8f4c434cf00c879c3",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 130,
+    "load_duration": 5037000,
+    "prompt_eval_count": 582,
+    "total_duration": 5452342800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause provides a clear condition for when a server's 0-RTT behavior must be treated as a connection error. It specifies that sending incompatible settings after accepting 0-RTT is an error of type H3_SETTINGS_ERROR. The language is precise and does not allow for multiple materially different interpretations. There is no missing constraint that would affect implementation behavior.\"\n}",
+  "record_id": "1eaaa939b40624ada010975bb1051bb5c73c2d37bf0b62800df83a84d1f544f4",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.2.4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.469
+}

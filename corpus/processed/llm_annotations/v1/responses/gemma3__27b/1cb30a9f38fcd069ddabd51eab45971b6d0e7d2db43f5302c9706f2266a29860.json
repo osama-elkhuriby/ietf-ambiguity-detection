@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "However, a caller MUST NOT set is_retransmittable to true if an ack is not expected.",
+    "interpretation_a": "The caller knows with certainty that no ACK will ever be received for this packet, and therefore MUST NOT mark it as retransmittable.",
+    "interpretation_b": "The caller anticipates that an ACK *might* not be received (e.g., due to network conditions), and if that happens, MUST NOT mark the packet as retransmittable. This allows for a conditional setting of is_retransmittable based on runtime observation.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'an ack is not expected' is open to interpretation. It could mean the sender has a strong reason to believe an ACK will not arrive (e.g., packet is intentionally not requesting an ACK), or it could mean the sender simply hasn't received an ACK *yet*. The MUST NOT clause hinges on this distinction, creating ambiguity in implementation.",
+    "missing_information": "The meaning of 'not expected' is unclear. Does it mean 'known with certainty not to be received' or 'not currently anticipated to be received'?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:17:11.112258+00:00",
+  "document_id": "draft-ietf-quic-recovery-05",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "50a9fdfc682a87753e6211603366c38bad49bf69cb2f56292087a0e5a1f482e5",
+  "lineage_ids": "lineage:bce4d17bd593a1c736f2de61",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 262,
+    "load_duration": 4056400,
+    "prompt_eval_count": 583,
+    "total_duration": 9737169800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"However, a caller MUST NOT set is_retransmittable to true if an ack is not expected.\", \"interpretation_a\": \"The caller knows with certainty that no ACK will ever be received for this packet, and therefore MUST NOT mark it as retransmittable.\", \"interpretation_b\": \"The caller anticipates that an ACK *might* not be received (e.g., due to network conditions), and if that happens, MUST NOT mark the packet as retransmittable. This allows for a conditional setting of is_retransmittable based on runtime observation.\", \"missing_information\": \"The meaning of 'not expected' is unclear. Does it mean 'known with certainty not to be received' or 'not currently anticipated to be received'?\",\"justification\": \"The phrase 'an ack is not expected' is open to interpretation. It could mean the sender has a strong reason to believe an ACK will not arrive (e.g., packet is intentionally not requesting an ACK), or it could mean the sender simply hasn't received an ACK *yet*. The MUST NOT clause hinges on this distinction, creating ambiguity in implementation.\"}",
+  "record_id": "1cb30a9f38fcd069ddabd51eab45971b6d0e7d2db43f5302c9706f2266a29860",
+  "revision": "05",
+  "schema_version": 1,
+  "section_ids": "3.2.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.765
+}

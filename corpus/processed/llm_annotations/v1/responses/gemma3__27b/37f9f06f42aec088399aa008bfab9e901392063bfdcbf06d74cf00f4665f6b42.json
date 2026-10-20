@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "It MAY either be a database lookup key or a self-encrypted and self-authenticated value.",
+    "interpretation_a": "The ticket is used as a key to retrieve session information from a database.",
+    "interpretation_b": "The ticket contains all necessary session information, encrypted and authenticated, and does not rely on a database.",
+    "is_ambiguous": "yes",
+    "justification": "The 'MAY' allows for either a database lookup or self-contained encryption. Without further constraints, an implementation must support both, and there's no indication of how a receiver determines which method was used.",
+    "missing_information": "The clause does not specify how to determine which method is used, or if there are constraints on when each method should be used. This affects implementation because a receiver must be able to handle both possibilities, and a sender must indicate which method is being used."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:33:34.067263+00:00",
+  "document_id": "draft-ietf-tls-tls13-22",
+  "family_id": "draft-ietf-tls-tls13",
+  "input_fingerprint": "e03921614bcd7ab270e31bdef2c146bcf5c88d21dabe81e8b86955b7abd3ab5f",
+  "lineage_ids": "lineage:2802d6bb5a228b7d3e5d1408",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 199,
+    "load_duration": 12370000,
+    "prompt_eval_count": 557,
+    "total_duration": 7642154500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"It MAY either be a database lookup key or a self-encrypted and self-authenticated value.\", \"interpretation_a\": \"The ticket is used as a key to retrieve session information from a database.\", \"interpretation_b\": \"The ticket contains all necessary session information, encrypted and authenticated, and does not rely on a database.\", \"missing_information\": \"The clause does not specify how to determine which method is used, or if there are constraints on when each method should be used. This affects implementation because a receiver must be able to handle both possibilities, and a sender must indicate which method is being used.\", \"justification\": \"The 'MAY' allows for either a database lookup or self-contained encryption. Without further constraints, an implementation must support both, and there's no indication of how a receiver determines which method was used.\"}",
+  "record_id": "37f9f06f42aec088399aa008bfab9e901392063bfdcbf06d74cf00f4665f6b42",
+  "revision": "22",
+  "schema_version": 1,
+  "section_ids": "4.6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.641
+}

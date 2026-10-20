@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "clients SHOULD discard any cached values",
+    "interpretation_a": "Clients must discard *all* cached values related to HTTP settings.",
+    "interpretation_b": "Clients must discard only those cached values that were obtained *after* the connection was established, but before the SETTINGS frame was received. Values obtained from prior connections are unaffected.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'any cached values' is insufficiently precise. It's unclear whether the discard applies to all cached settings, or only those relevant to the current connection attempt. This affects implementation because a client might choose to retain settings from prior successful connections, or always start with defaults.",
+    "missing_information": "The scope of 'cached values' is not defined. Does it include values from previous connections, or only those from the current, failed connection?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:48:00.981387+00:00",
+  "document_id": "draft-ietf-quic-http-05",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "4a8b9a1fa6da20afce95ba3b311599a42ebf61c5c274e491e59ce31d8a643633",
+  "lineage_ids": "lineage:d5b0f556734ca002f1ddbee4",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 191,
+    "load_duration": 19934300,
+    "prompt_eval_count": 563,
+    "total_duration": 7370686200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"clients SHOULD discard any cached values\", \"interpretation_a\": \"Clients must discard *all* cached values related to HTTP settings.\", \"interpretation_b\": \"Clients must discard only those cached values that were obtained *after* the connection was established, but before the SETTINGS frame was received. Values obtained from prior connections are unaffected.\", \"missing_information\": \"The scope of 'cached values' is not defined. Does it include values from previous connections, or only those from the current, failed connection?\",\"justification\": \"The phrase 'any cached values' is insufficiently precise. It's unclear whether the discard applies to all cached settings, or only those relevant to the current connection attempt. This affects implementation because a client might choose to retain settings from prior successful connections, or always start with defaults.\"}",
+  "record_id": "43f97efa13f9d8dfcf460e1eea18d5f38a64fac9e8637f6836d82e42852308b5",
+  "revision": "05",
+  "schema_version": 1,
+  "section_ids": "5.2.5.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.375
+}

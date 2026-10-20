@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "at least 100 requests SHOULD be permitted at a time.",
+    "interpretation_a": "The server should allow at least 100 concurrent requests per connection.",
+    "interpretation_b": "The server should allow at least 100 concurrent requests overall across all connections.",
+    "is_ambiguous": "yes",
+    "justification": "The clause permits two reasonable, materially different interpretations regarding the scope of the 100‑request limit, and the lack of a constraint on that scope is a concrete missing constraint that affects implementation behaviour.",
+    "missing_information": "The clause does not specify whether the 100‑request limit applies per connection or overall, leading to materially different implementation behaviours.  The missing constraint prevents a unique operational interpretation.  (U‑2)."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T08:57:05.138182+00:00",
+  "document_id": "draft-ietf-quic-http-33",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "182400a633fe95fb9dee690b091d67e09c70b2e974eca779af5571d0277118d7",
+  "lineage_ids": "lineage:5c595dcfb2d787c82ef48b0e",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3164,
+    "load_duration": 4706800,
+    "prompt_eval_count": 599,
+    "total_duration": 27572229600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"at least 100 requests SHOULD be permitted at a time.\",\n  \"interpretation_a\": \"The server should allow at least 100 concurrent requests per connection.\",\n  \"interpretation_b\": \"The server should allow at least 100 concurrent requests overall across all connections.\",\n  \"missing_information\": \"The clause does not specify whether the 100‑request limit applies per connection or overall, leading to materially different implementation behaviours.  The missing constraint prevents a unique operational interpretation.  (U‑2).\",\n  \"justification\": \"The clause permits two reasonable, materially different interpretations regarding the scope of the 100‑request limit, and the lack of a constraint on that scope is a concrete missing constraint that affects implementation behaviour.\"\n}",
+  "record_id": "223050f09909577f6a638d3651abfde20aa03db4e406d7e850e66acd498cf75f",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 27.563
+}

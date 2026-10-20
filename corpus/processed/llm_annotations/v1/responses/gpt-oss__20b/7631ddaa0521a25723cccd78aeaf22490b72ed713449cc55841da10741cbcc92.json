@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously requires that an endpoint must not update the Retire Prior To field until it has received all RETIRE_CONNECTION_ID frames that retire every connection ID listed in the previous Retire Prior To value. The wording does not allow for multiple materially different interpretations or lacks a necessary constraint.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T16:24:45.818823+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "675ef2c8f97ef70ee9ae183cdb4496f87f9cc947c9ae04d386d66ab7f00a4575",
+  "lineage_ids": "lineage:b22c486ca06bf8c3eded236f",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 5212,
+    "load_duration": 725300,
+    "prompt_eval_count": 600,
+    "total_duration": 45027826000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously requires that an endpoint must not update the Retire Prior To field until it has received all RETIRE_CONNECTION_ID frames that retire every connection ID listed in the previous Retire Prior To value. The wording does not allow for multiple materially different interpretations or lacks a necessary constraint.\"\n}",
+  "record_id": "7631ddaa0521a25723cccd78aeaf22490b72ed713449cc55841da10741cbcc92",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "5.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 45.015
+}

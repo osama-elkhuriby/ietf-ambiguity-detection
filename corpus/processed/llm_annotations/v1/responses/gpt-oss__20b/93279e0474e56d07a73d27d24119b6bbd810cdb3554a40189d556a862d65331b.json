@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Even if the client receives a different connection ID in the Handshake packet, it MUST continue to use the same Destination Connection ID for 0-RTT packets, see [connection-id].",
+    "interpretation_a": "The client must keep using the Destination Connection ID that it used for 0‑RTT packets before receiving the Handshake packet, regardless of any new ID in the Handshake packet.",
+    "interpretation_b": "The client must keep using the Destination Connection ID that appears in the Handshake packet, even if that ID differs from the one it used for 0‑RTT packets prior to receiving the Handshake packet.",
+    "is_ambiguous": "yes",
+    "justification": "The clause allows two materially different implementation behaviours: continuing to use the pre‑Handshake 0‑RTT ID or switching to the ID supplied in the Handshake packet.  This lack of a concrete constraint makes the clause ambiguous.",
+    "missing_information": "The clause does not specify which Destination Connection ID is meant by \"the same Destination Connection ID\"; a definition or clarification is needed to resolve the ambiguity.  "
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T17:09:44.864319+00:00",
+  "document_id": "draft-ietf-quic-transport-12",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "ef0716d270b24119235d74489e6ffc8a43e4a2a7472c79173ff8fe8f7cd8a2c9",
+  "lineage_ids": "lineage:02859294154ea9d0ff5a6276",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1201,
+    "load_duration": 4956500,
+    "prompt_eval_count": 602,
+    "total_duration": 10578918400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"Even if the client receives a different connection ID in the Handshake packet, it MUST continue to use the same Destination Connection ID for 0-RTT packets, see [connection-id].\",\n  \"interpretation_a\": \"The client must keep using the Destination Connection ID that it used for 0‑RTT packets before receiving the Handshake packet, regardless of any new ID in the Handshake packet.\",\n  \"interpretation_b\": \"The client must keep using the Destination Connection ID that appears in the Handshake packet, even if that ID differs from the one it used for 0‑RTT packets prior to receiving the Handshake packet.\",\n  \"missing_information\": \"The clause does not specify which Destination Connection ID is meant by \\\"the same Destination Connection ID\\\"; a definition or clarification is needed to resolve the ambiguity.  \",\n  \"justification\": \"The clause allows two materially different implementation behaviours: continuing to use the pre‑Handshake 0‑RTT ID or switching to the ID supplied in the Handshake packet.  This lack of a concrete constraint makes the clause ambiguous.\"\n}",
+  "record_id": "93279e0474e56d07a73d27d24119b6bbd810cdb3554a40189d556a862d65331b",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "4.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.578
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY define its own SVCB mapping",
+    "interpretation_a": "An HTTP-based protocol can define a completely new way to map to SVCB records, independent of HTTPS RR mechanisms.",
+    "interpretation_b": "An HTTP-based protocol can *augment* the existing SVCB mapping defined by HTTPS RRs, adding additional criteria or information.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'own SVCB mapping' is insufficiently constrained. It doesn't specify whether this new mapping replaces the existing HTTPS RR mapping, supplements it, or operates in some other way. This lack of clarity creates ambiguity in implementation.",
+    "missing_information": "It is unclear whether the 'own SVCB mapping' is intended to be a replacement for, or an addition to, the existing HTTPS RR-based mapping. A constraint clarifying whether the mapping is exclusive or additive is needed."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:13:51.358327+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-07",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "3958d76322752caac6e88ceb25d690f80333a27c7307e11952124353aae12a11",
+  "lineage_ids": "lineage:c203c7f8889ee2b813bae19c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 202,
+    "load_duration": 4004500,
+    "prompt_eval_count": 577,
+    "total_duration": 7614687400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY define its own SVCB mapping\", \"interpretation_a\": \"An HTTP-based protocol can define a completely new way to map to SVCB records, independent of HTTPS RR mechanisms.\", \"interpretation_b\": \"An HTTP-based protocol can *augment* the existing SVCB mapping defined by HTTPS RRs, adding additional criteria or information.\", \"missing_information\": \"It is unclear whether the 'own SVCB mapping' is intended to be a replacement for, or an addition to, the existing HTTPS RR-based mapping. A constraint clarifying whether the mapping is exclusive or additive is needed.\", \"justification\": \"The phrase 'own SVCB mapping' is insufficiently constrained. It doesn't specify whether this new mapping replaces the existing HTTPS RR mapping, supplements it, or operates in some other way. This lack of clarity creates ambiguity in implementation.\"}",
+  "record_id": "f1598929c535b1c610b381c7de761947af99fd27d0f6260676f0807b1b575dd1",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.61
+}

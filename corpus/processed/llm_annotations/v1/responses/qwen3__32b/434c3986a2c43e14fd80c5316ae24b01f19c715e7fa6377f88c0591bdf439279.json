@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause provides a clear directive: if an implementation chooses to reject a request with a QUIC error code, it must trigger a QUIC RST_STREAM on the data stream only. The language is unambiguous in specifying that the RST_STREAM must be applied to the data stream and not to any other stream. There is no room for multiple materially different interpretations, and no missing constraint is identified that would affect implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:45:51.169925+00:00",
+  "document_id": "draft-ietf-quic-http-04",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "7efc3387a5d3837fb532822ccf42e7f83b28dbfe4195a8ba10a808bdee711ca5",
+  "lineage_ids": "lineage:19c080662be9cc5b824bffe8",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 142,
+    "load_duration": 4709300,
+    "prompt_eval_count": 555,
+    "total_duration": 5934543400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause provides a clear directive: if an implementation chooses to reject a request with a QUIC error code, it must trigger a QUIC RST_STREAM on the data stream only. The language is unambiguous in specifying that the RST_STREAM must be applied to the data stream and not to any other stream. There is no room for multiple materially different interpretations, and no missing constraint is identified that would affect implementation behavior.\"\n}",
+  "record_id": "434c3986a2c43e14fd80c5316ae24b01f19c715e7fa6377f88c0591bdf439279",
+  "revision": "04",
+  "schema_version": 1,
+  "section_ids": "4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.953
+}

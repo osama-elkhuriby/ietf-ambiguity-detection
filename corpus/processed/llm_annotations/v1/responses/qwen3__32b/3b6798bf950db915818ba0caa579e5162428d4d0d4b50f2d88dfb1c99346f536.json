@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause is clear in its requirement: if a header block is missing, subsequent HPACK frames must be held until the missing block arrives, or the connection must be terminated. There is no ambiguity in the language or in the required behavior. The wording does not allow for multiple materially different interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:44:41.843301+00:00",
+  "document_id": "draft-ietf-quic-http-04",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "9eff89c9ab9333a2c0b1859b630c58987370efb4867ba4df10cee03350cb8bac",
+  "lineage_ids": "lineage:2ef8cd433d669649215e57ce",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 115,
+    "load_duration": 11985800,
+    "prompt_eval_count": 560,
+    "total_duration": 4830509900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause is clear in its requirement: if a header block is missing, subsequent HPACK frames must be held until the missing block arrives, or the connection must be terminated. There is no ambiguity in the language or in the required behavior. The wording does not allow for multiple materially different interpretations.\"\n}",
+  "record_id": "3b6798bf950db915818ba0caa579e5162428d4d0d4b50f2d88dfb1c99346f536",
+  "revision": "04",
+  "schema_version": 1,
+  "section_ids": "5.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 4.844
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "either an \":authority\" pseudo-header field or a \"Host\" header field",
+    "interpretation_a": "The request can include only the \":authority\" pseudo-header field, and not the \"Host\" header field.",
+    "interpretation_b": "The request can include only the \"Host\" header field, and not the \":authority\" pseudo-header field.",
+    "is_ambiguous": "yes",
+    "justification": "The use of \"either...or\" does not explicitly state whether both fields can be present. A missing constraint on whether both fields can be present creates ambiguity.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:49:07.276443+00:00",
+  "document_id": "draft-ietf-quic-http-29",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "82e7152e4b7519c7ecd07fbad37c1c1e664fae26f8a14edd42d4460683d18261",
+  "lineage_ids": "lineage:0f21a1b02e88e6f5cb0e1b57",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 149,
+    "load_duration": 4761700,
+    "prompt_eval_count": 618,
+    "total_duration": 5872575400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"either an \\\":authority\\\" pseudo-header field or a \\\"Host\\\" header field\", \"interpretation_a\": \"The request can include only the \\\":authority\\\" pseudo-header field, and not the \\\"Host\\\" header field.\", \"interpretation_b\": \"The request can include only the \\\"Host\\\" header field, and not the \\\":authority\\\" pseudo-header field.\", \"missing_information\": \"\", \"justification\": \"The use of \\\"either...or\\\" does not explicitly state whether both fields can be present. A missing constraint on whether both fields can be present creates ambiguity.\"}",
+  "record_id": "47ecab5da21678c26952adfd9c89259df195286c79cd8afd44c1c0fd938cfd75",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "4.1.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.891
+}

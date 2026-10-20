@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless such an extension has been negotiated",
+    "interpretation_a": "If no extension is negotiated, any server-initiated bidirectional stream *always* results in a connection error.",
+    "interpretation_b": "If an extension is negotiated, server-initiated bidirectional streams may be allowed, but the specifics of *how* they are allowed are not defined in this clause. The extension must define the conditions under which a server-initiated stream is acceptable.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'unless such an extension has been negotiated' introduces ambiguity. It doesn't define *how* negotiation happens, or what constitutes successful negotiation. Without this information, it's unclear when the error condition applies.",
+    "missing_information": "The clause does not specify how the extension negotiation occurs, or what constitutes a 'negotiated' extension. It is unclear what mechanism confirms that an extension allowing server-initiated streams is active."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:11:19.442106+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "375017c59617804af2aeed41ebf8360644db83597f13bbb30df6dcd1ba7967c3",
+  "lineage_ids": "lineage:3c0a289e1bf6f068f1c5e20b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 212,
+    "load_duration": 9908100,
+    "prompt_eval_count": 568,
+    "total_duration": 8501932200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless such an extension has been negotiated\", \"interpretation_a\": \"If no extension is negotiated, any server-initiated bidirectional stream *always* results in a connection error.\", \"interpretation_b\": \"If an extension is negotiated, server-initiated bidirectional streams may be allowed, but the specifics of *how* they are allowed are not defined in this clause. The extension must define the conditions under which a server-initiated stream is acceptable.\", \"missing_information\": \"The clause does not specify how the extension negotiation occurs, or what constitutes a 'negotiated' extension. It is unclear what mechanism confirms that an extension allowing server-initiated streams is active.\", \"justification\": \"The phrase 'unless such an extension has been negotiated' introduces ambiguity. It doesn't define *how* negotiation happens, or what constitutes successful negotiation. Without this information, it's unclear when the error condition applies.\"}",
+  "record_id": "dd03c926daa7d7236a1b0f735f018107bc765b6033369212c37b95079650d347",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.515
+}

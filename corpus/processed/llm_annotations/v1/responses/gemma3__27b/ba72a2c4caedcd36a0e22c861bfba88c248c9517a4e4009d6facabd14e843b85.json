@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "can be defined without negotiation",
+    "interpretation_a": "New error codes can be defined at any time, even during an ongoing connection, and implementations must be prepared to handle them as if they were H3_NO_ERROR if they are unexpected or unknown.",
+    "interpretation_b": "New error codes are defined through a separate, out-of-band mechanism (like a standards track RFC) and implementations are expected to update their code to recognize them, but until they do, unknown codes are treated as H3_NO_ERROR.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'can be defined without negotiation' is incomplete. It doesn't specify *how* they are defined without negotiation. This leads to two reasonable interpretations: (1) error codes can be added dynamically during a connection, or (2) the definition process itself doesn't require a handshake. The lack of clarity affects how implementations should handle the addition of new error codes.",
+    "missing_information": "The scope of 'without negotiation' is unclear. Does it mean error codes can be added dynamically during a connection, or that the definition process itself doesn't require a handshake?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:05:05.781587+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "ec6e6fc4dbb88c61531fe4dd62b916c1b1f3adf87a14c460ef06005f0937f84a",
+  "lineage_ids": "lineage:e318c09e3808621b91e859c7",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 262,
+    "load_duration": 10156600,
+    "prompt_eval_count": 587,
+    "total_duration": 10390603300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"can be defined without negotiation\", \"interpretation_a\": \"New error codes can be defined at any time, even during an ongoing connection, and implementations must be prepared to handle them as if they were H3_NO_ERROR if they are unexpected or unknown.\", \"interpretation_b\": \"New error codes are defined through a separate, out-of-band mechanism (like a standards track RFC) and implementations are expected to update their code to recognize them, but until they do, unknown codes are treated as H3_NO_ERROR.\", \"missing_information\": \"The scope of 'without negotiation' is unclear. Does it mean error codes can be added dynamically during a connection, or that the definition process itself doesn't require a handshake?\",\"justification\": \"The phrase 'can be defined without negotiation' is incomplete. It doesn't specify *how* they are defined without negotiation. This leads to two reasonable interpretations: (1) error codes can be added dynamically during a connection, or (2) the definition process itself doesn't require a handshake. The lack of clarity affects how implementations should handle the addition of new error codes.\"}",
+  "record_id": "ba72a2c4caedcd36a0e22c861bfba88c248c9517a4e4009d6facabd14e843b85",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.391
+}

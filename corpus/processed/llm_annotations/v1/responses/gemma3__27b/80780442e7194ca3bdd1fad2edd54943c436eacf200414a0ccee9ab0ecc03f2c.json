@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "If a key update is not possible or integrity limits are reached",
+    "interpretation_a": "The endpoint stops using the connection if *either* a key update is not possible *or* integrity limits are reached.",
+    "interpretation_b": "The endpoint stops using the connection only if *both* a key update is not possible *and* integrity limits are reached. The 'or' could be read as an inclusive or, or an exclusive or.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'or' is ambiguous. It is unclear whether the endpoint must stop using the connection if either condition is met, or if both conditions must be met.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:41:19.667020+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "13bfaa244fddba9fa9f54e1b028c77e94d2bf713f308d9fb38d3f230661181ff",
+  "lineage_ids": "lineage:5c6fa9dba23af08b4e8e2a58",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 164,
+    "load_duration": 3768900,
+    "prompt_eval_count": 598,
+    "total_duration": 6256985900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"If a key update is not possible or integrity limits are reached\", \"interpretation_a\": \"The endpoint stops using the connection if *either* a key update is not possible *or* integrity limits are reached.\", \"interpretation_b\": \"The endpoint stops using the connection only if *both* a key update is not possible *and* integrity limits are reached. The 'or' could be read as an inclusive or, or an exclusive or.\", \"missing_information\": \"\", \"justification\": \"The use of 'or' is ambiguous. It is unclear whether the endpoint must stop using the connection if either condition is met, or if both conditions must be met.\"}",
+  "record_id": "80780442e7194ca3bdd1fad2edd54943c436eacf200414a0ccee9ab0ecc03f2c",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.265
+}

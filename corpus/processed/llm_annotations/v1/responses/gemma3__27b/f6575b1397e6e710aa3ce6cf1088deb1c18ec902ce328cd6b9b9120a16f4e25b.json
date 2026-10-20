@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY be removed",
+    "interpretation_a": "Implementations can choose to remove BWS, but are not required to.",
+    "interpretation_b": "Implementations must remove BWS before processing or forwarding.",
+    "is_ambiguous": "yes",
+    "justification": "The word 'MAY' is ambiguous. It could mean that implementations are permitted to remove BWS, or that they are required to remove it unless there is a specific reason not to. This difference in interpretation could lead to interoperability issues.",
+    "missing_information": "The use of 'MAY' is ambiguous. Does it mean 'permitted but not required' or 'required unless explicitly prevented'? A clear statement of intent is needed."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:37:36.117023+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "8deb570bd61fc6eba509b9e088aeaa6cc8828617ee95d99b298cde15fe085a14",
+  "lineage_ids": "lineage:3fbbc8519a8b311b8d94721b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 163,
+    "load_duration": 29900300,
+    "prompt_eval_count": 585,
+    "total_duration": 6420375800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY be removed\", \"interpretation_a\": \"Implementations can choose to remove BWS, but are not required to.\", \"interpretation_b\": \"Implementations must remove BWS before processing or forwarding.\", \"missing_information\": \"The use of 'MAY' is ambiguous. Does it mean 'permitted but not required' or 'required unless explicitly prevented'? A clear statement of intent is needed.\", \"justification\": \"The word 'MAY' is ambiguous. It could mean that implementations are permitted to remove BWS, or that they are required to remove it unless there is a specific reason not to. This difference in interpretation could lead to interoperability issues.\"}",
+  "record_id": "f6575b1397e6e710aa3ce6cf1088deb1c18ec902ce328cd6b9b9120a16f4e25b",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "5.6.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.422
+}

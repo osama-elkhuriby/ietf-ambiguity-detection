@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY choose between them",
+    "interpretation_a": "The client is permitted to choose any AAAA or A record, potentially leading to inconsistent connection behavior across clients.",
+    "interpretation_b": "The client is permitted to implement a specific algorithm like Happy Eyeballs to choose between AAAA and A records, providing a degree of consistency.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' combined with the broad phrase 'choose between them' allows for multiple reasonable implementations. Without further specification, clients could implement different selection strategies, leading to inconsistent behavior.",
+    "missing_information": "The clause does not specify *how* the client MAY choose, leaving room for different implementations. A missing constraint would be a requirement to use a specific algorithm or criteria for selection."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:07:19.879743+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "735465e7fd1ec71996ce130499bb9e74fe9af9acaff472521767c1aafe90adf9",
+  "lineage_ids": "lineage:d8c6b57c9259643fc571cca6",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 181,
+    "load_duration": 2005800,
+    "prompt_eval_count": 595,
+    "total_duration": 6886220000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY choose between them\", \"interpretation_a\": \"The client is permitted to choose any AAAA or A record, potentially leading to inconsistent connection behavior across clients.\", \"interpretation_b\": \"The client is permitted to implement a specific algorithm like Happy Eyeballs to choose between AAAA and A records, providing a degree of consistency.\", \"missing_information\": \"The clause does not specify *how* the client MAY choose, leaving room for different implementations. A missing constraint would be a requirement to use a specific algorithm or criteria for selection.\",\"justification\": \"The use of 'MAY' combined with the broad phrase 'choose between them' allows for multiple reasonable implementations. Without further specification, clients could implement different selection strategies, leading to inconsistent behavior.\"}",
+  "record_id": "833a1dc24d368acfb8c74151a445bf101edc929f7d459e654a4281e8e9d38ba2",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.891
+}

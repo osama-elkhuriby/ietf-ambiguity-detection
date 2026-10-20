@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Once the CONNECT method has completed, only DATA frames are permitted to be sent on the stream. Extension frames MAY be used if specifically permitted by the definition of the extension.",
+    "interpretation_a": "Only DATA frames are allowed on the stream after CONNECT completes; no extension frames may be sent.",
+    "interpretation_b": "Only DATA frames are allowed unless an extension explicitly permits its frames to be sent after CONNECT completes.",
+    "is_ambiguous": "yes",
+    "justification": "The clause contains a contradictory statement: the first sentence restricts frames to DATA only, while the second sentence allows extension frames under certain conditions. This creates two materially different implementation behaviours that are not resolved by the text.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T09:49:26.785083+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "a7e2beeaec4f2631433d9550cebdcde934514d86bc6782e56d73fe4e67b6e59c",
+  "lineage_ids": "lineage:f627f13c5d40becb7d0e7d14",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1975,
+    "load_duration": 4946800,
+    "prompt_eval_count": 610,
+    "total_duration": 17494813600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"Once the CONNECT method has completed, only DATA frames are permitted to be sent on the stream. Extension frames MAY be used if specifically permitted by the definition of the extension.\",\n  \"interpretation_a\": \"Only DATA frames are allowed on the stream after CONNECT completes; no extension frames may be sent.\",\n  \"interpretation_b\": \"Only DATA frames are allowed unless an extension explicitly permits its frames to be sent after CONNECT completes.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause contains a contradictory statement: the first sentence restricts frames to DATA only, while the second sentence allows extension frames under certain conditions. This creates two materially different implementation behaviours that are not resolved by the text.\"\n}",
+  "record_id": "8f3a353b3ff88be655fa4baf4e59dd6806841d4d2a674470c2f30f091d5168bf",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 17.5
+}

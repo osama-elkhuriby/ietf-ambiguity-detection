@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously specifies that on the first RTT sample, min_rtt is set to that sample’s value, and on all subsequent samples, min_rtt is set to the lesser of its current value and the latest RTT sample. No alternative reasonable interpretations or missing constraints are evident.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T11:05:19.353547+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "1b009a51b2819b0c5da640166ec7ae76ba9f0d603835e36a4d62ef0292357542",
+  "lineage_ids": "lineage:d7c2396469bdae72b5f772b5",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 987,
+    "load_duration": 6494600,
+    "prompt_eval_count": 613,
+    "total_duration": 8602715500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously specifies that on the first RTT sample, min_rtt is set to that sample’s value, and on all subsequent samples, min_rtt is set to the lesser of its current value and the latest RTT sample. No alternative reasonable interpretations or missing constraints are evident.\"\n}",
+  "record_id": "2089cfc55e04ec7905ef3cf0871cb789afd428f40f325caea5718f06f543cdfd",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.609
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY be omitted",
+    "interpretation_a": "The client can always skip the hostname check if it has external identity information.",
+    "interpretation_b": "The client can skip the hostname check only under specific circumstances where the external identity information is reliable and sufficient, but may still perform the check otherwise.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' without further qualification creates ambiguity. Does 'MAY' mean the client *can* always omit the check if it has external information, or does it mean the client *can* omit the check *if* certain conditions are met? The lack of a clear condition makes the implementation behaviour uncertain.",
+    "missing_information": "The conditions under which the hostname check 'MAY' be omitted are not fully defined. It's unclear if 'MAY' implies a conditional allowance or a general permission."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:28:03.924769+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-10",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "8e9748a6fa51bd0dd5a106c758df7861fe0ac2156c9427fdff92d97db3291a9b",
+  "lineage_ids": "lineage:79bb91be33c654b1b0d4ff1f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 198,
+    "load_duration": 9169800,
+    "prompt_eval_count": 604,
+    "total_duration": 7733457100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY be omitted\", \"interpretation_a\": \"The client can always skip the hostname check if it has external identity information.\", \"interpretation_b\": \"The client can skip the hostname check only under specific circumstances where the external identity information is reliable and sufficient, but may still perform the check otherwise.\", \"missing_information\": \"The conditions under which the hostname check 'MAY' be omitted are not fully defined. It's unclear if 'MAY' implies a conditional allowance or a general permission.\", \"justification\": \"The use of 'MAY' without further qualification creates ambiguity. Does 'MAY' mean the client *can* always omit the check if it has external information, or does it mean the client *can* omit the check *if* certain conditions are met? The lack of a clear condition makes the implementation behaviour uncertain.\"}",
+  "record_id": "cbf176ac901201d26f5cf4506ec5c9104ae03678c4dbcbfacac9761e38db80dd",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "6.4.3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.735
+}

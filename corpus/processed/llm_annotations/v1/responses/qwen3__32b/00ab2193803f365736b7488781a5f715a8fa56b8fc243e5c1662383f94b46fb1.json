@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides clear conditions for the client to validate the presence and correctness of the original_connection_id transport parameter based on whether a Retry packet was received and processed. The consequences of failed validation are explicitly defined as a connection error of type TRANSPORT_PARAMETER_ERROR. There is no ambiguity in the language or missing constraints that would lead to multiple reasonable interpretations affecting implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:46:33.397244+00:00",
+  "document_id": "draft-ietf-quic-transport-17",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "ff30ede1940a196d0a640f1859670114d9fbfbba8d1786774af830a437c8106c",
+  "lineage_ids": "lineage:941bb93bd01a50fda2865973",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 128,
+    "load_duration": 4756200,
+    "prompt_eval_count": 588,
+    "total_duration": 5301527000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides clear conditions for the client to validate the presence and correctness of the original_connection_id transport parameter based on whether a Retry packet was received and processed. The consequences of failed validation are explicitly defined as a connection error of type TRANSPORT_PARAMETER_ERROR. There is no ambiguity in the language or missing constraints that would lead to multiple reasonable interpretations affecting implementation behavior.\"\n}",
+  "record_id": "00ab2193803f365736b7488781a5f715a8fa56b8fc243e5c1662383f94b46fb1",
+  "revision": "17",
+  "schema_version": 1,
+  "section_ids": "17.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.313
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "authority over",
+    "interpretation_a": "The tenant has ownership or explicit permission to serve the resource.",
+    "interpretation_b": "The tenant has the right to control the content of the resource, even if they don't own it (e.g., a proxy with caching rights).",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'authority over' is vague. Does it mean ownership, permission to serve, or the right to control the content? Without a clear definition, implementations could reasonably differ on how to determine if a tenant is authorized to push a resource.",
+    "missing_information": "The definition of 'authority over' is not provided. It's unclear whether it refers to ownership, permission, or control, which affects how a server would implement the check."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:45:38.308276+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "effe3db6431984b4b159f62688e9f10086b9e0ae3d7f7d5b203cff4e14e99676",
+  "lineage_ids": "lineage:1d5ccac77b5a24f7deb5220a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 184,
+    "load_duration": 11880400,
+    "prompt_eval_count": 594,
+    "total_duration": 7189793200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"authority over\", \"interpretation_a\": \"The tenant has ownership or explicit permission to serve the resource.\", \"interpretation_b\": \"The tenant has the right to control the content of the resource, even if they don't own it (e.g., a proxy with caching rights).\", \"missing_information\": \"The definition of 'authority over' is not provided. It's unclear whether it refers to ownership, permission, or control, which affects how a server would implement the check.\",\"justification\": \"The phrase 'authority over' is vague. Does it mean ownership, permission to serve, or the right to control the content? Without a clear definition, implementations could reasonably differ on how to determine if a tenant is authorized to push a resource.\"}",
+  "record_id": "b98268b28c788eff680a356dc3378dafa3e0a25738f26a64929ffd77071ab3fe",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "10.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.219
+}

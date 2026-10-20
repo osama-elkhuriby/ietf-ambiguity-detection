@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY terminate these streams cleanly, or MAY abruptly terminate them.",
+    "interpretation_a": "An implementation could choose to always terminate these streams cleanly, regardless of the stream's content or state.",
+    "interpretation_b": "An implementation could choose to always terminate these streams abruptly, regardless of the stream's content or state.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' twice allows for two distinct implementation strategies: always clean termination, or always abrupt termination. There is no constraint forcing a conditional choice.",
+    "missing_information": "The clause does not specify any conditions under which an implementation *should* choose one behavior over the other, leading to two reasonable implementations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:04:32.022124+00:00",
+  "document_id": "draft-ietf-quic-http-29",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "68b3664d6e8725688a030086cb8c338d28e99c44e88f8ebc08c6e0db456e5dcf",
+  "lineage_ids": "lineage:62e656e658ab013395fe4f32",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 164,
+    "load_duration": 21559900,
+    "prompt_eval_count": 569,
+    "total_duration": 6442759500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY terminate these streams cleanly, or MAY abruptly terminate them.\", \"interpretation_a\": \"An implementation could choose to always terminate these streams cleanly, regardless of the stream's content or state.\", \"interpretation_b\": \"An implementation could choose to always terminate these streams abruptly, regardless of the stream's content or state.\", \"missing_information\": \"The clause does not specify any conditions under which an implementation *should* choose one behavior over the other, leading to two reasonable implementations.\",\"justification\": \"The use of 'MAY' twice allows for two distinct implementation strategies: always clean termination, or always abrupt termination. There is no constraint forcing a conditional choice.\"}",
+  "record_id": "b8d841e3e034775d226dde5ab5119a70125f82c402bd8256aefeabe111e09d28",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "6.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.437
+}

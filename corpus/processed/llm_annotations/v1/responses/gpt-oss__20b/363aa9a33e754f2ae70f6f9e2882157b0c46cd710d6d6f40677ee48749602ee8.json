@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "unpredictable data",
+    "interpretation_a": "The data must be a fixed‑length random byte string, e.g., 8 bytes.",
+    "interpretation_b": "The data must be a cryptographically secure random number of variable length.",
+    "is_ambiguous": "yes",
+    "justification": "The clause uses the undefined term \"unpredictable data\" without specifying length or generation method, allowing multiple reasonable interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T14:55:54.276574+00:00",
+  "document_id": "draft-ietf-quic-transport-24",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "3eaffd1905d826a9de4608f27f2d771b0bf0af7ad7ec25ba326188b0d7d54953",
+  "lineage_ids": "lineage:3c6ca0aee83d32657a4da2b9",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 739,
+    "load_duration": "",
+    "prompt_eval_count": 711,
+    "total_duration": 6463397700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-1\",\n  \"evidence_span\": \"unpredictable data\",\n  \"interpretation_a\": \"The data must be a fixed‑length random byte string, e.g., 8 bytes.\",\n  \"interpretation_b\": \"The data must be a cryptographically secure random number of variable length.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause uses the undefined term \\\"unpredictable data\\\" without specifying length or generation method, allowing multiple reasonable interpretations.\"\n}",
+  "record_id": "363aa9a33e754f2ae70f6f9e2882157b0c46cd710d6d6f40677ee48749602ee8",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "8.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 15.64
+}

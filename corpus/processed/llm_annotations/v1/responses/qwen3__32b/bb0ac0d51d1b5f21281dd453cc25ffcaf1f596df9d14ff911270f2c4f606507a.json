@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear condition for clients to discard a packet: when the Original Destination Connection ID field does not match the Destination Connection ID from the most recent Initial packet sent by the server. The language is unambiguous and does not allow for multiple materially different interpretations. There is no missing constraint that would affect implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:36:37.405951+00:00",
+  "document_id": "draft-ietf-quic-transport-14",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "613313c4e0e2421e13c57008f48c49f8e9c3db79148ef5212bac00e3e5d24a94",
+  "lineage_ids": "lineage:d108af8e179ff0ee19d516df",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 120,
+    "load_duration": 4513600,
+    "prompt_eval_count": 541,
+    "total_duration": 4941312300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear condition for clients to discard a packet: when the Original Destination Connection ID field does not match the Destination Connection ID from the most recent Initial packet sent by the server. The language is unambiguous and does not allow for multiple materially different interpretations. There is no missing constraint that would affect implementation behavior.\"\n}",
+  "record_id": "bb0ac0d51d1b5f21281dd453cc25ffcaf1f596df9d14ff911270f2c4f606507a",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "4.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 4.938
+}

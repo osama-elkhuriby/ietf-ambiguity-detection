@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "at least once",
+    "interpretation_a": "An ack-eliciting packet must receive an ACK frame at some point, even if it arrives very late.",
+    "interpretation_b": "An ack-eliciting packet must receive an ACK frame within a reasonable timeframe, as defined by max_ack_delay.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'at least once' is ambiguous because it doesn't specify a timeframe. While the following sentence clarifies the requirement for ack-eliciting packets in relation to `max_ack_delay`, it doesn't extend that clarification to *all* packets. This creates a potential for different implementations regarding how long an endpoint should attempt to acknowledge any given packet.",
+    "missing_information": "The phrase 'at least once' is vague. Does it mean 'eventually' or 'within a specific timeframe'? The second sentence clarifies the intent for ack-eliciting packets, but the first sentence applies to *every* packet. It's unclear if the same 'max_ack_delay' contract applies to all packets, or if 'at least once' has a different meaning for non-ack-eliciting packets."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:09:04.569024+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "4f74f79dd2b0f24f5ddb84426ed8e5290929c889d9154a894e8d2a59b99e1ade",
+  "lineage_ids": "lineage:7101f0d77e52f97ef20dc8a3",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 265,
+    "load_duration": 5216500,
+    "prompt_eval_count": 617,
+    "total_duration": 9842882200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"at least once\", \"interpretation_a\": \"An ack-eliciting packet must receive an ACK frame at some point, even if it arrives very late.\", \"interpretation_b\": \"An ack-eliciting packet must receive an ACK frame within a reasonable timeframe, as defined by max_ack_delay.\", \"missing_information\": \"The phrase 'at least once' is vague. Does it mean 'eventually' or 'within a specific timeframe'? The second sentence clarifies the intent for ack-eliciting packets, but the first sentence applies to *every* packet. It's unclear if the same 'max_ack_delay' contract applies to all packets, or if 'at least once' has a different meaning for non-ack-eliciting packets.\", \"justification\": \"The phrase 'at least once' is ambiguous because it doesn't specify a timeframe. While the following sentence clarifies the requirement for ack-eliciting packets in relation to `max_ack_delay`, it doesn't extend that clarification to *all* packets. This creates a potential for different implementations regarding how long an endpoint should attempt to acknowledge any given packet.\"}",
+  "record_id": "2f6790234f0e34670c073fc22398406030a2bb3410d3696a2a87566ff21a3b1c",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "13.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.875
+}

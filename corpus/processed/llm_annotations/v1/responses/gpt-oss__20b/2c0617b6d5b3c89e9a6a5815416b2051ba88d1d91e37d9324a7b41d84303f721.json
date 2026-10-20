@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "once per RTT",
+    "interpretation_a": "The clause could be interpreted as requiring the endpoint to send exactly one PING frame per RTT.",
+    "interpretation_b": "The clause could be interpreted as allowing the endpoint to send at most one PING frame per RTT.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'once per RTT' does not specify whether it means exactly once or at most once per RTT, creating a concrete missing constraint that permits two materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T14:38:48.269553+00:00",
+  "document_id": "draft-ietf-quic-transport-10",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "b976189e5441fb5213e48ff7a22e16220dd63d66a728774ecad9254cc38ffd65",
+  "lineage_ids": "lineage:d33ef43e59549723e6a0302e",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2553,
+    "load_duration": 4181500,
+    "prompt_eval_count": 588,
+    "total_duration": 22082493000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"once per RTT\",\n  \"interpretation_a\": \"The clause could be interpreted as requiring the endpoint to send exactly one PING frame per RTT.\",\n  \"interpretation_b\": \"The clause could be interpreted as allowing the endpoint to send at most one PING frame per RTT.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The phrase 'once per RTT' does not specify whether it means exactly once or at most once per RTT, creating a concrete missing constraint that permits two materially different implementation behaviours.\"\n}",
+  "record_id": "2c0617b6d5b3c89e9a6a5815416b2051ba88d1d91e37d9324a7b41d84303f721",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "8.15.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 22.078
+}

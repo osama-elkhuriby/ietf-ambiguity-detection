@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "server’s previous preferred_address",
+    "interpretation_a": "The server's preferred_address from a prior connection is never to be used, even as a hint or fallback.",
+    "interpretation_b": "The server's preferred_address from a prior connection is not to be used *immediately* when establishing a new connection, but might be used later in the same connection after the handshake completes.",
+    "is_ambiguous": "yes",
+    "justification": "The clause prohibits using the 'server’s previous preferred_address', but does not specify whether this prohibition is limited to the initial connection establishment, or extends to the entire connection lifecycle. This creates two reasonable interpretations regarding when the server's previous preferred_address can be used.",
+    "missing_information": "It is unclear whether the prohibition applies only to the initial connection establishment, or to the entire lifespan of a connection. The phrase 'establishing a new connection' is ambiguous as to scope."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:26:30.456156+00:00",
+  "document_id": "draft-ietf-quic-transport-19",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "b4a0176e6f90d907428c288e9c4589d4821bdd13dd17cafa76edcf942617b9f2",
+  "lineage_ids": "lineage:6d9f48d64343284afc9f176c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 216,
+    "load_duration": 4218200,
+    "prompt_eval_count": 633,
+    "total_duration": 8153761200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"server’s previous preferred_address\", \"interpretation_a\": \"The server's preferred_address from a prior connection is never to be used, even as a hint or fallback.\", \"interpretation_b\": \"The server's preferred_address from a prior connection is not to be used *immediately* when establishing a new connection, but might be used later in the same connection after the handshake completes.\", \"missing_information\": \"It is unclear whether the prohibition applies only to the initial connection establishment, or to the entire lifespan of a connection. The phrase 'establishing a new connection' is ambiguous as to scope.\", \"justification\": \"The clause prohibits using the 'server’s previous preferred_address', but does not specify whether this prohibition is limited to the initial connection establishment, or extends to the entire connection lifecycle. This creates two reasonable interpretations regarding when the server's previous preferred_address can be used.\"}",
+  "record_id": "5ad5134adb0fcf0a3539ed4e8b5095790951c3483acd835612d9648b20952150",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "7.3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.156
+}

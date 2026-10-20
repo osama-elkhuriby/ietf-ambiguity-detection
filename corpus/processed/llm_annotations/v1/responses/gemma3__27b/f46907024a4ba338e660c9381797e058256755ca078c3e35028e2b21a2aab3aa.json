@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST accept all three HTTP-date formats",
+    "interpretation_a": "The recipient must be able to parse all three formats without error, even if it doesn't *use* the parsed values.",
+    "interpretation_b": "The recipient must successfully parse all three formats and be able to use the resulting date/time values in subsequent processing.",
+    "is_ambiguous": "yes",
+    "justification": "The verb 'accept' is vague. Does it only require parsing without error, or does it require the recipient to be able to *use* the parsed date/time value? Both interpretations are reasonable, and the lack of a clarifying constraint makes the requirement ambiguous.",
+    "missing_information": "It is unclear whether 'accept' means 'parse without error' or 'parse and be able to use the resulting value'. A missing constraint on whether successful parsing implies successful use creates ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:37:29.692083+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "051078d8bc6db29a10ed7e6f6921f1e39eaedd332bb20eae2070f46a0d028d41",
+  "lineage_ids": "lineage:8d50a399a7251ab176348158",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 201,
+    "load_duration": 14095200,
+    "prompt_eval_count": 624,
+    "total_duration": 7807256100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST accept all three HTTP-date formats\", \"interpretation_a\": \"The recipient must be able to parse all three formats without error, even if it doesn't *use* the parsed values.\", \"interpretation_b\": \"The recipient must successfully parse all three formats and be able to use the resulting date/time values in subsequent processing.\", \"missing_information\": \"It is unclear whether 'accept' means 'parse without error' or 'parse and be able to use the resulting value'. A missing constraint on whether successful parsing implies successful use creates ambiguity.\", \"justification\": \"The verb 'accept' is vague. Does it only require parsing without error, or does it require the recipient to be able to *use* the parsed date/time value? Both interpretations are reasonable, and the lack of a clarifying constraint makes the requirement ambiguous.\"}",
+  "record_id": "f46907024a4ba338e660c9381797e058256755ca078c3e35028e2b21a2aab3aa",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "5.6.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.828
+}

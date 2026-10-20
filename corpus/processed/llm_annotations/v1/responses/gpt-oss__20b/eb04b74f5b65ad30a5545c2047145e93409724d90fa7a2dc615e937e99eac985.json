@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Endpoints MAY choose to reduce the risk of request forgery by not including values from NEW_TOKEN frames in Initial packets or by only sending probing frames in packets prior to completing address validation.",
+    "interpretation_a": "Endpoints may implement either of the two methods, but not both.",
+    "interpretation_b": "Endpoints may implement either of the two methods, or both.",
+    "is_ambiguous": "yes",
+    "justification": "The clause uses \"or\" without specifying whether the two options are mutually exclusive or can be combined, creating an incomplete constraint that allows materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T19:06:25.540550+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "5f62c20dd7b7c76c454c017d7d8f2ba478a7721eb2b46d714e18b2a8f461f7c8",
+  "lineage_ids": "lineage:253973087d8f301d0c01bce4",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1171,
+    "load_duration": 6405800,
+    "prompt_eval_count": 614,
+    "total_duration": 10168867900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"Endpoints MAY choose to reduce the risk of request forgery by not including values from NEW_TOKEN frames in Initial packets or by only sending probing frames in packets prior to completing address validation.\",\n  \"interpretation_a\": \"Endpoints may implement either of the two methods, but not both.\",\n  \"interpretation_b\": \"Endpoints may implement either of the two methods, or both.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause uses \\\"or\\\" without specifying whether the two options are mutually exclusive or can be combined, creating an incomplete constraint that allows materially different implementation behaviours.\"\n}",
+  "record_id": "eb04b74f5b65ad30a5545c2047145e93409724d90fa7a2dc615e937e99eac985",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "21.5.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.172
+}

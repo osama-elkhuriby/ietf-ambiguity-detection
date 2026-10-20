@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT generate more than three digits after the decimal point.",
+    "interpretation_a": "The qvalue can have up to three digits after the decimal point, e.g., 1.123. Any more digits will cause the value to be rejected.",
+    "interpretation_b": "The qvalue can have at most three digits after the decimal point, but it is permissible to have fewer, e.g., 1, 1.1, 1.12. The restriction only applies to the maximum number of digits.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"more than three\" is ambiguous. It could be interpreted as strictly limiting the number of digits to three, or as simply disallowing any value with four or more digits after the decimal point. This affects how an implementation would handle values like 1.1234.",
+    "missing_information": "It is unclear whether the restriction applies to the total number of digits after the decimal point or only to the maximum allowed. The phrase 'more than three' could mean 'greater than three' or 'exceeding three'."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:33:48.468812+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "b1272f9836d158c27c75605d6b4cb4d3f2bf5d10b1902ca4a0f8b5d4a441750e",
+  "lineage_ids": "lineage:341c7afc7266c9f54f03c723",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 254,
+    "load_duration": 17515300,
+    "prompt_eval_count": 597,
+    "total_duration": 9734163200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT generate more than three digits after the decimal point.\", \"interpretation_a\": \"The qvalue can have up to three digits after the decimal point, e.g., 1.123. Any more digits will cause the value to be rejected.\", \"interpretation_b\": \"The qvalue can have at most three digits after the decimal point, but it is permissible to have fewer, e.g., 1, 1.1, 1.12. The restriction only applies to the maximum number of digits.\", \"missing_information\": \"It is unclear whether the restriction applies to the total number of digits after the decimal point or only to the maximum allowed. The phrase 'more than three' could mean 'greater than three' or 'exceeding three'.\", \"justification\": \"The phrase \\\"more than three\\\" is ambiguous. It could be interpreted as strictly limiting the number of digits to three, or as simply disallowing any value with four or more digits after the decimal point. This affects how an implementation would handle values like 1.1234.\"}",
+  "record_id": "e874534fc300574e6bd05922eaf2f958246ee64d0f95bea54d8e3dd640d4c80c",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "12.4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.734
+}

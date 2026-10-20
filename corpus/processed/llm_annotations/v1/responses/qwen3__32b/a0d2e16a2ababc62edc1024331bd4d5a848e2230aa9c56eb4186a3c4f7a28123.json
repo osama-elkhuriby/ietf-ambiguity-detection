@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause uses 'MAY', which grants the endpoint discretion to send the STREAM_BLOCKED frame under the specified condition. This discretionary language does not introduce ambiguity in implementation behavior, as it does not require a specific action. The condition (exceeding the maximum stream ID) is clear, and the reference to [frame-max-stream-id] is normative and presumably defined elsewhere. There is no missing constraint that would lead to materially different interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:30:01.226287+00:00",
+  "document_id": "draft-ietf-quic-transport-05",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "7ddd10b7cb64c1eb3209bbe67531ff687365e87471d69c192e26a9ff3fb0f357",
+  "lineage_ids": "lineage:49b7a656f0c86d14d37f8940",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 145,
+    "load_duration": 4869400,
+    "prompt_eval_count": 551,
+    "total_duration": 5945079500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause uses 'MAY', which grants the endpoint discretion to send the STREAM_BLOCKED frame under the specified condition. This discretionary language does not introduce ambiguity in implementation behavior, as it does not require a specific action. The condition (exceeding the maximum stream ID) is clear, and the reference to [frame-max-stream-id] is normative and presumably defined elsewhere. There is no missing constraint that would lead to materially different interpretations.\"\n}",
+  "record_id": "a0d2e16a2ababc62edc1024331bd4d5a848e2230aa9c56eb4186a3c4f7a28123",
+  "revision": "05",
+  "schema_version": 1,
+  "section_ids": "8.9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.953
+}

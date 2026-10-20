@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD exclude any request fields that are likely to contain sensitive data",
+    "interpretation_a": "The recipient might exclude fields like Authorization or Cookie, as these commonly contain sensitive data.",
+    "interpretation_b": "The recipient might exclude fields based on a more nuanced assessment of sensitivity, considering the specific context of the request and the data within the fields. For example, a field containing a non-sensitive session ID might be included, while a field containing a potentially sensitive but obfuscated value might be excluded.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'likely to contain sensitive data' is subjective and open to interpretation. Different implementations could reasonably disagree on which fields fall into this category, leading to inconsistent behavior. The clause does not provide enough detail to uniquely determine which fields should be excluded.",
+    "missing_information": "The definition of 'likely to contain sensitive data' is not provided. A clear definition or list of fields considered sensitive would remove the ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:59:24.338651+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-13",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "66b1f67d1ec23d4031413c2d41c3a3f8b4e74408e5b3d189db4ca9252b2d63e3",
+  "lineage_ids": "lineage:da5bddfa507e82948af51a70",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 220,
+    "load_duration": 9083700,
+    "prompt_eval_count": 599,
+    "total_duration": 8410602600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD exclude any request fields that are likely to contain sensitive data\", \"interpretation_a\": \"The recipient might exclude fields like Authorization or Cookie, as these commonly contain sensitive data.\", \"interpretation_b\": \"The recipient might exclude fields based on a more nuanced assessment of sensitivity, considering the specific context of the request and the data within the fields. For example, a field containing a non-sensitive session ID might be included, while a field containing a potentially sensitive but obfuscated value might be excluded.\", \"missing_information\": \"The definition of 'likely to contain sensitive data' is not provided. A clear definition or list of fields considered sensitive would remove the ambiguity.\", \"justification\": \"The term 'likely to contain sensitive data' is subjective and open to interpretation. Different implementations could reasonably disagree on which fields fall into this category, leading to inconsistent behavior. The clause does not provide enough detail to uniquely determine which fields should be excluded.\"}",
+  "record_id": "277a83c4c2f36342b6f0763f8aff7655dacee1f50be1ed5b10303e4d01950acf",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "9.3.8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.406
+}

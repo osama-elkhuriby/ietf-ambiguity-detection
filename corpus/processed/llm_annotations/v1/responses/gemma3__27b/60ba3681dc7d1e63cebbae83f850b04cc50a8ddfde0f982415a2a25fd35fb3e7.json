@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "at least 1200 bytes",
+    "interpretation_a": "The UDP payload of each datagram containing an Initial packet must be exactly 1200 bytes or greater.",
+    "interpretation_b": "The total size of the UDP payload across all datagrams containing Initial packets must be at least 1200 bytes, allowing for smaller individual datagrams as long as the sum is sufficient.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"at least 1200 bytes\" could refer to the size of a single UDP datagram's payload, or the cumulative size of the payload across multiple datagrams. This affects how padding is applied and how the server interprets the initial packets.",
+    "missing_information": "It is unclear whether the 1200-byte minimum applies to each individual datagram or the cumulative payload size across multiple datagrams."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:28:13.578918+00:00",
+  "document_id": "draft-ietf-quic-transport-30",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "66c2f6372c4f2ebc9a3ad72325139dbc3b2664ebabf1e91fbb0ac145fc5ca096",
+  "lineage_ids": "lineage:0490fab6c663738d24a32ea0",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 210,
+    "load_duration": 5037000,
+    "prompt_eval_count": 590,
+    "total_duration": 7861689900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"at least 1200 bytes\", \"interpretation_a\": \"The UDP payload of each datagram containing an Initial packet must be exactly 1200 bytes or greater.\", \"interpretation_b\": \"The total size of the UDP payload across all datagrams containing Initial packets must be at least 1200 bytes, allowing for smaller individual datagrams as long as the sum is sufficient.\", \"missing_information\": \"It is unclear whether the 1200-byte minimum applies to each individual datagram or the cumulative payload size across multiple datagrams.\", \"justification\": \"The phrase \\\"at least 1200 bytes\\\" could refer to the size of a single UDP datagram's payload, or the cumulative size of the payload across multiple datagrams. This affects how padding is applied and how the server interprets the initial packets.\"}",
+  "record_id": "60ba3681dc7d1e63cebbae83f850b04cc50a8ddfde0f982415a2a25fd35fb3e7",
+  "revision": "30",
+  "schema_version": 1,
+  "section_ids": "8.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.859
+}

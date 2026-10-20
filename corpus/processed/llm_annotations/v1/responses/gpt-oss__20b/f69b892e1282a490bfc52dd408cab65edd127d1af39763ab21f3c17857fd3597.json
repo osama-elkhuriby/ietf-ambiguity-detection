@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless a Retry or NEW_TOKEN frame replaces the token with a newer one",
+    "interpretation_a": "The client must not include any token in the Initial packet if a newer token is available via a Retry or NEW_TOKEN frame.",
+    "interpretation_b": "The client must include the newer token provided by the Retry or NEW_TOKEN frame in the Initial packet.",
+    "is_ambiguous": "yes",
+    "justification": "The target clause lacks a clear constraint on the use of a newer token, leading to two materially different implementation behaviours.",
+    "missing_information": "The clause does not specify whether the client should include the newer token or omit the token entirely when a newer token is available via a Retry or NEW_TOKEN frame."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T19:21:16.950139+00:00",
+  "document_id": "draft-ietf-quic-transport-20",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "e82895c66011562362bcc7dd363852d0f3dd1eb60d3a7db4ff7a3b5c3b3a217f",
+  "lineage_ids": "lineage:1ad765457dd80ab1eaf7dce4",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1107,
+    "load_duration": 5777200,
+    "prompt_eval_count": 584,
+    "total_duration": 9665318500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"unless a Retry or NEW_TOKEN frame replaces the token with a newer one\",\n  \"interpretation_a\": \"The client must not include any token in the Initial packet if a newer token is available via a Retry or NEW_TOKEN frame.\",\n  \"interpretation_b\": \"The client must include the newer token provided by the Retry or NEW_TOKEN frame in the Initial packet.\",\n  \"missing_information\": \"The clause does not specify whether the client should include the newer token or omit the token entirely when a newer token is available via a Retry or NEW_TOKEN frame.\",\n  \"justification\": \"The target clause lacks a clear constraint on the use of a newer token, leading to two materially different implementation behaviours.\"\n}",
+  "record_id": "f69b892e1282a490bfc52dd408cab65edd127d1af39763ab21f3c17857fd3597",
+  "revision": "20",
+  "schema_version": 1,
+  "section_ids": "8.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.672
+}

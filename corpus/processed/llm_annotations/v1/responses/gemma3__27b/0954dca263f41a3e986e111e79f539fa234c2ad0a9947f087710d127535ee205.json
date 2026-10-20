@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY generate, and a recipient MUST be able to parse",
+    "interpretation_a": "The sender is permitted to use any of the line break formats, and the recipient is required to support all of them.",
+    "interpretation_b": "The sender is permitted to use any of the line break formats, but the recipient only needs to support at least one of them.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' for the sender and 'MUST' for the recipient, combined with the list of line break formats, doesn't clearly define the recipient's obligation. Does 'MUST be able to parse' mean all formats, or any format?",
+    "missing_information": "It is unclear whether the recipient MUST support all three line break formats (CRLF, CR, LF) or just one or more. The conjunction of MAY and MUST creates ambiguity about the recipient's parsing requirements."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:54:42.286417+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-14",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "c69a674c20a63493c56fcdf3e1c01e1e90ea4763ebfc2a2bd90018f26f8e8c40",
+  "lineage_ids": "lineage:dff01d93509c68ed85c8d628",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 210,
+    "load_duration": 10394800,
+    "prompt_eval_count": 605,
+    "total_duration": 8076328300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY generate, and a recipient MUST be able to parse\", \"interpretation_a\": \"The sender is permitted to use any of the line break formats, and the recipient is required to support all of them.\", \"interpretation_b\": \"The sender is permitted to use any of the line break formats, but the recipient only needs to support at least one of them.\", \"missing_information\": \"It is unclear whether the recipient MUST support all three line break formats (CRLF, CR, LF) or just one or more. The conjunction of MAY and MUST creates ambiguity about the recipient's parsing requirements.\", \"justification\": \"The use of 'MAY' for the sender and 'MUST' for the recipient, combined with the list of line break formats, doesn't clearly define the recipient's obligation. Does 'MUST be able to parse' mean all formats, or any format?\"}",
+  "record_id": "0954dca263f41a3e986e111e79f539fa234c2ad0a9947f087710d127535ee205",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "8.3.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.093
+}

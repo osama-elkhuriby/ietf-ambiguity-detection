@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Implementations MUST support all of the parameters",
+    "interpretation_a": "Implementations must support all parameters defined in this specification, even if they do not use them.",
+    "interpretation_b": "Implementations must support all parameters defined in this specification, and must be able to process and act upon values received for those parameters.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'support' is underspecified. It could mean simply acknowledging the parameter's existence, or it could mean actively processing and acting upon values received for that parameter. Without clarification, implementations could reasonably differ in their behaviour.",
+    "missing_information": "It is unclear whether 'support' means simply acknowledging the parameter or actively processing its value. A missing constraint on whether implementations must *use* the supported parameters creates ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:46:46.499547+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-01",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "de4ce2da27edd5ee7e942b04e4811041126587bd41ae4226ef32cafb34c1996c",
+  "lineage_ids": "lineage:1d9b925ccdd6b59175429984",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 187,
+    "load_duration": 21928900,
+    "prompt_eval_count": 570,
+    "total_duration": 7192108000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Implementations MUST support all of the parameters\", \"interpretation_a\": \"Implementations must support all parameters defined in this specification, even if they do not use them.\", \"interpretation_b\": \"Implementations must support all parameters defined in this specification, and must be able to process and act upon values received for those parameters.\", \"missing_information\": \"It is unclear whether 'support' means simply acknowledging the parameter or actively processing its value. A missing constraint on whether implementations must *use* the supported parameters creates ambiguity.\", \"justification\": \"The term 'support' is underspecified. It could mean simply acknowledging the parameter's existence, or it could mean actively processing and acting upon values received for that parameter. Without clarification, implementations could reasonably differ in their behaviour.\"}",
+  "record_id": "c2a1d9445f203946bded631d12b8932931dc0fe2e1052d879d60453dc5c6923f",
+  "revision": "01",
+  "schema_version": 1,
+  "section_ids": "6.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.203
+}

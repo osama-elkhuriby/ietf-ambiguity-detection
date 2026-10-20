@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT generate pseudo-header fields other than those defined in this document",
+    "interpretation_a": "Endpoints are forbidden from creating any pseudo-header fields not explicitly listed in this document, even if they are logically consistent with existing ones.",
+    "interpretation_b": "Endpoints can create pseudo-header fields as long as they do not conflict with the ones defined in this document, but are not formally standardized.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'other than those defined' is incomplete. It doesn't specify what constitutes a definition. Is merely listing a name sufficient, or must there be a complete specification of its semantics? This lack of precision allows for different interpretations of what is permissible.",
+    "missing_information": "The clause does not define what constitutes a conflict. Does a name collision constitute a conflict? Does a semantic overlap? Without this, implementations may differ on whether a new pseudo-header is permissible."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:37:50.719302+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "3f0b7eda2279fd72bb84cf1a311c857ddf73b562ba1b3ff30bdc2a1136b41e6e",
+  "lineage_ids": "lineage:83735718ef54abbb03eb5601",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 213,
+    "load_duration": 8735500,
+    "prompt_eval_count": 556,
+    "total_duration": 8188553700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT generate pseudo-header fields other than those defined in this document\", \"interpretation_a\": \"Endpoints are forbidden from creating any pseudo-header fields not explicitly listed in this document, even if they are logically consistent with existing ones.\", \"interpretation_b\": \"Endpoints can create pseudo-header fields as long as they do not conflict with the ones defined in this document, but are not formally standardized.\", \"missing_information\": \"The clause does not define what constitutes a conflict. Does a name collision constitute a conflict? Does a semantic overlap? Without this, implementations may differ on whether a new pseudo-header is permissible.\", \"justification\": \"The phrase 'other than those defined' is incomplete. It doesn't specify what constitutes a definition. Is merely listing a name sufficient, or must there be a complete specification of its semantics? This lack of precision allows for different interpretations of what is permissible.\"}",
+  "record_id": "78a1187f8e67cee6070d74a042d7ca8c1810e72f0eca82d9013ea68b68b88393",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.188
+}

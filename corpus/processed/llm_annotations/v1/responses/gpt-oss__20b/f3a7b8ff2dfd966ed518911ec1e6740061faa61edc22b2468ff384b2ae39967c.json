@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "The client MUST use the server's new values in the handshake instead; if the server does not provide new values, the default value is used.",
+    "interpretation_a": "It is unclear whether 'new values' refers to all transport parameters or only those that were not remembered, and which default values to use if the server does not provide new values.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The target clause lacks a concrete constraint on the set of parameters and the default values, making the implementation behavior ambiguous.",
+    "missing_information": "The clause does not specify which transport parameters are considered new values or which default values to use when the server does not provide them, leaving the implementation behavior under‑specified."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T19:16:05.402734+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "0aa50c780634f75976ad1add2c1776b6b861616789b2b917bb59637b778ea063",
+  "lineage_ids": "lineage:1ccc1f35e0a8ce85839f8aad",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1047,
+    "load_duration": 5789600,
+    "prompt_eval_count": 632,
+    "total_duration": 9182181400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"The client MUST use the server's new values in the handshake instead; if the server does not provide new values, the default value is used.\",\n  \"interpretation_a\": \"It is unclear whether 'new values' refers to all transport parameters or only those that were not remembered, and which default values to use if the server does not provide new values.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The clause does not specify which transport parameters are considered new values or which default values to use when the server does not provide them, leaving the implementation behavior under‑specified.\",\n  \"justification\": \"The target clause lacks a concrete constraint on the set of parameters and the default values, making the implementation behavior ambiguous.\"\n}",
+  "record_id": "f3a7b8ff2dfd966ed518911ec1e6740061faa61edc22b2468ff384b2ae39967c",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.188
+}

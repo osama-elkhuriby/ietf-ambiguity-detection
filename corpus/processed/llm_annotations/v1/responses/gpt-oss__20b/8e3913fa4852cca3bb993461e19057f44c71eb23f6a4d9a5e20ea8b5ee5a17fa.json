@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "if it was sent a threshold amount of time in the past",
+    "interpretation_a": "Threshold could be measured from the time the later packet was acknowledged.",
+    "interpretation_b": "Threshold could be measured from the current time.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether the threshold is measured from the acknowledgment time or from the current time, creating an incomplete constraint that affects implementation.",
+    "missing_information": ""
+  },
+  "attempts": 3,
+  "created_at": "2026-10-08T11:34:34.416843+00:00",
+  "document_id": "draft-ietf-quic-recovery-24",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "d9f1ec1f5ead05b15bb2b17b7f1e76f55a49f5fa5ea0be21a357e62e6a96a700",
+  "lineage_ids": "lineage:5bca418b60b532b5b28c9968",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1314,
+    "load_duration": 5646800,
+    "prompt_eval_count": 610,
+    "total_duration": 11803936800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"if it was sent a threshold amount of time in the past\",\n  \"interpretation_a\": \"Threshold could be measured from the time the later packet was acknowledged.\",\n  \"interpretation_b\": \"Threshold could be measured from the current time.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify whether the threshold is measured from the acknowledgment time or from the current time, creating an incomplete constraint that affects implementation.\"\n}",
+  "record_id": "8e3913fa4852cca3bb993461e19057f44c71eb23f6a4d9a5e20ea8b5ee5a17fa",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "5.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 149.75
+}

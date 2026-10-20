@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD be acknowledged immediately",
+    "interpretation_a": "The receiver MUST acknowledge ECN-marked packets as soon as they are received, before processing any other packets.",
+    "interpretation_b": "The receiver SHOULD acknowledge ECN-marked packets promptly, but is permitted to batch acknowledgements with other packets if doing so doesn't significantly delay the peer's response to congestion.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'immediately' is vague. It doesn't specify whether the acknowledgement must happen before any other packet processing, or if it can be combined with other acknowledgements. This allows for different implementations that satisfy the 'SHOULD' requirement but have different behaviours.",
+    "missing_information": "The degree of immediacy is not defined. Does 'immediately' mean before any other processing, or simply without undue delay? A time constraint or a relative ordering with respect to other packet processing would resolve the ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:27:02.323981+00:00",
+  "document_id": "draft-ietf-quic-recovery-22",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "9d02944f0dd6660c9ae41386dcd58c5dd6057031996224e2c52d79c2445c7f8e",
+  "lineage_ids": "lineage:2b7cc3959baaa06e673f3e51",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 214,
+    "load_duration": 2591700,
+    "prompt_eval_count": 584,
+    "total_duration": 8029630500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD be acknowledged immediately\", \"interpretation_a\": \"The receiver MUST acknowledge ECN-marked packets as soon as they are received, before processing any other packets.\", \"interpretation_b\": \"The receiver SHOULD acknowledge ECN-marked packets promptly, but is permitted to batch acknowledgements with other packets if doing so doesn't significantly delay the peer's response to congestion.\", \"missing_information\": \"The degree of immediacy is not defined. Does 'immediately' mean before any other processing, or simply without undue delay? A time constraint or a relative ordering with respect to other packet processing would resolve the ambiguity.\", \"justification\": \"The term 'immediately' is vague. It doesn't specify whether the acknowledgement must happen before any other packet processing, or if it can be combined with other acknowledgements. This allows for different implementations that satisfy the 'SHOULD' requirement but have different behaviours.\"}",
+  "record_id": "ac7c215ebb828b233c150316a61c679826b5df2df370ed6e911ff75bb5887ada",
+  "revision": "22",
+  "schema_version": 1,
+  "section_ids": "4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.031
+}

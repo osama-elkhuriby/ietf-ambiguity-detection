@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "any other type of frame",
+    "interpretation_a": "Any frame not explicitly defined as a HEADERS frame is considered an error.",
+    "interpretation_b": "Any frame that is not a continuation of the current HEADERS frame sequence is considered an error. This could include RST_STREAM, PUSH_PROMISE, etc.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'any other type of frame' is insufficiently constrained. It's unclear whether it refers to any frame that isn't a HEADERS frame at all, or any frame that isn't a continuation of the current HEADERS frame sequence. This impacts how a receiver handles different frame types following a HEADERS frame.",
+    "missing_information": "The definition of 'other type of frame' is not precise. Does it include continuation frames for the HEADERS frame, or only entirely different frame types?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:03:59.468006+00:00",
+  "document_id": "draft-ietf-quic-http-07",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "dfb8b8df492f1f558c2bf0df83fa9b76f3a686a7fa5d303c7ea9931a4093f5dc",
+  "lineage_ids": "lineage:883a0e47d56db6579484046e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 205,
+    "load_duration": 24828500,
+    "prompt_eval_count": 592,
+    "total_duration": 7889233000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"any other type of frame\", \"interpretation_a\": \"Any frame not explicitly defined as a HEADERS frame is considered an error.\", \"interpretation_b\": \"Any frame that is not a continuation of the current HEADERS frame sequence is considered an error. This could include RST_STREAM, PUSH_PROMISE, etc.\", \"missing_information\": \"The definition of 'other type of frame' is not precise. Does it include continuation frames for the HEADERS frame, or only entirely different frame types?\", \"justification\": \"The phrase 'any other type of frame' is insufficiently constrained. It's unclear whether it refers to any frame that isn't a HEADERS frame at all, or any frame that isn't a continuation of the current HEADERS frame sequence. This impacts how a receiver handles different frame types following a HEADERS frame.\"}",
+  "record_id": "b69d35f75bc86516bbe45ad9e890918fed42b1610ae2d62a9dcf725a0e864d02",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "5.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.89
+}

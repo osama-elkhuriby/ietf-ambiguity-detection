@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "prior to performing the method",
+    "interpretation_a": "The server must evaluate the If-Unmodified-Since condition before any authentication or authorization checks, i.e., before the request is processed by the method’s handler.",
+    "interpretation_b": "The server must evaluate the If-Unmodified-Since condition only after authentication and authorization have succeeded, but before the method actually modifies or returns the representation.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states \"prior to performing the method\" without specifying whether this refers to the entire request processing pipeline or just the method’s action on the representation. This omission allows two materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T06:01:32.114092+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "45d84da73f134e6ca472b4f4124c16b1bfd1cc94e2ef36cbfa3a464a8a7ca33e",
+  "lineage_ids": "lineage:1709d97807bd51fac1ca2ec6",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 327,
+    "load_duration": 5781700,
+    "prompt_eval_count": 808,
+    "total_duration": 3045341400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"prior to performing the method\",\n  \"interpretation_a\": \"The server must evaluate the If-Unmodified-Since condition before any authentication or authorization checks, i.e., before the request is processed by the method’s handler.\",\n  \"interpretation_b\": \"The server must evaluate the If-Unmodified-Since condition only after authentication and authorization have succeeded, but before the method actually modifies or returns the representation.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause states \\\"prior to performing the method\\\" without specifying whether this refers to the entire request processing pipeline or just the method’s action on the representation. This omission allows two materially different implementation behaviours.\"\n}",
+  "record_id": "39b05bed5bfb9a619a85c8ff53a411ba7bf579bc5fd0223804ea46788c8d2562",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "13.1.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 67.297
+}

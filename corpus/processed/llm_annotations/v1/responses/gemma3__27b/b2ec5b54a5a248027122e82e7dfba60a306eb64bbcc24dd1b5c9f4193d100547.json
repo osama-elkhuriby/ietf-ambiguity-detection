@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD double the handshake timeout",
+    "interpretation_a": "The sender may increase the timeout by a factor of two, or may choose not to.",
+    "interpretation_b": "The sender is expected to increase the timeout by a factor of two, but is not strictly required to do so.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' introduces ambiguity. While it indicates a recommendation, it doesn't definitively state whether the timeout *must* be doubled. A reasonable implementation could choose to ignore the recommendation, leading to different timeout behaviors.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:27:26.770999+00:00",
+  "document_id": "draft-ietf-quic-recovery-15",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "54a862f9c535a387393ae84c4fb28702b374c887415552896674401ac158aead",
+  "lineage_ids": "lineage:83aa151fdb0d0c55aa8c9e29",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 146,
+    "load_duration": 5562600,
+    "prompt_eval_count": 602,
+    "total_duration": 5639271900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD double the handshake timeout\", \"interpretation_a\": \"The sender may increase the timeout by a factor of two, or may choose not to.\", \"interpretation_b\": \"The sender is expected to increase the timeout by a factor of two, but is not strictly required to do so.\", \"missing_information\": \"\", \"justification\": \"The use of 'SHOULD' introduces ambiguity. While it indicates a recommendation, it doesn't definitively state whether the timeout *must* be doubled. A reasonable implementation could choose to ignore the recommendation, leading to different timeout behaviors.\"}",
+  "record_id": "b2ec5b54a5a248027122e82e7dfba60a306eb64bbcc24dd1b5c9f4193d100547",
+  "revision": "15",
+  "schema_version": 1,
+  "section_ids": "4.3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.641
+}

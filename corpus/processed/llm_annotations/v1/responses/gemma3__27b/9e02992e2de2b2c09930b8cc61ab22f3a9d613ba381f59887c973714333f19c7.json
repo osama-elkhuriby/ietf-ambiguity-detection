@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "partial response",
+    "interpretation_a": "A response is considered 'partial' if any part of it is missing, even if the client has received the majority of the data.",
+    "interpretation_b": "A response is considered 'partial' only if the client has not received all headers, or if the body is incomplete based on a Content-Length or Transfer-Encoding header.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'partial response' is not defined. This leads to ambiguity as to what constitutes a 'partial response'. Is it any incomplete data, or only a specific level of incompleteness (e.g., missing headers)? Without a clear definition, implementations could reasonably differ on when to discard the response.",
+    "missing_information": "The definition of 'partial response' is not provided, leading to different interpretations of when the 'SHOULD NOT be used' constraint applies."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:00:11.522741+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "b5de16197fcfd11aa322bbad2c40509ef72d40661a60551a370703e5b49a62a5",
+  "lineage_ids": "lineage:87e0e6ca0f337f3e79fda4d0",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 206,
+    "load_duration": 5031300,
+    "prompt_eval_count": 617,
+    "total_duration": 7980447000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"partial response\", \"interpretation_a\": \"A response is considered 'partial' if any part of it is missing, even if the client has received the majority of the data.\", \"interpretation_b\": \"A response is considered 'partial' only if the client has not received all headers, or if the body is incomplete based on a Content-Length or Transfer-Encoding header.\", \"missing_information\": \"The definition of 'partial response' is not provided, leading to different interpretations of when the 'SHOULD NOT be used' constraint applies.\", \"justification\": \"The term 'partial response' is not defined. This leads to ambiguity as to what constitutes a 'partial response'. Is it any incomplete data, or only a specific level of incompleteness (e.g., missing headers)? Without a clear definition, implementations could reasonably differ on when to discard the response.\"}",
+  "record_id": "9e02992e2de2b2c09930b8cc61ab22f3a9d613ba381f59887c973714333f19c7",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.985
+}

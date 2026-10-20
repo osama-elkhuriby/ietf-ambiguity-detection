@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "either be identical across different QUIC versions, or be unambiguously different",
+    "interpretation_a": "Version fields can be identical across QUIC versions, as long as there is no confusion about their interpretation.",
+    "interpretation_b": "Version fields must be unambiguously different across QUIC versions to avoid confusion.",
+    "is_ambiguous": "yes",
+    "justification": "The 'either/or' construction allows for two distinct interpretations. The lack of a definition for 'unambiguously different' creates an incomplete constraint.",
+    "missing_information": "The clause does not define what constitutes 'unambiguously different'. Without a clear definition, implementations could reasonably differ on what level of difference is sufficient to avoid confusion, leading to interoperability issues."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:10:09.884877+00:00",
+  "document_id": "draft-ietf-quic-transport-18",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "b62b2017b847edc20dacb23763a176ce20dbcafeef1c97a719a86ae8ca571ffd",
+  "lineage_ids": "lineage:a6372af3031375c6c4f09f0f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 169,
+    "load_duration": 4655800,
+    "prompt_eval_count": 581,
+    "total_duration": 6440174700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"either be identical across different QUIC versions, or be unambiguously different\", \"interpretation_a\": \"Version fields can be identical across QUIC versions, as long as there is no confusion about their interpretation.\", \"interpretation_b\": \"Version fields must be unambiguously different across QUIC versions to avoid confusion.\", \"missing_information\": \"The clause does not define what constitutes 'unambiguously different'. Without a clear definition, implementations could reasonably differ on what level of difference is sufficient to avoid confusion, leading to interoperability issues.\",\"justification\": \"The 'either/or' construction allows for two distinct interpretations. The lack of a definition for 'unambiguously different' creates an incomplete constraint.\"}",
+  "record_id": "317dd3dd965af6693300239803db0fb0d8f0be84de5c1397a065ec6584d5e7e2",
+  "revision": "18",
+  "schema_version": 1,
+  "section_ids": "7.3.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.438
+}

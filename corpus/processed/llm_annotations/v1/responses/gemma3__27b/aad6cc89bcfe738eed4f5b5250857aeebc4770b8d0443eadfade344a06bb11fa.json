@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "either make them consistent",
+    "interpretation_a": "The server can modify the *representation* to match the resource, or modify the *resource* to match the representation.",
+    "interpretation_b": "The server can modify the representation *and* the resource to achieve consistency.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"either make them consistent\" is ambiguous because it doesn't clearly state whether both the representation and the resource must be modified if consistency is achieved through changes to both. The use of 'either...or' suggests a choice between two actions, but it's plausible that both actions could be taken to achieve consistency.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:23:24.853625+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "dbc555d644692cb83c90861418286108f5f220ba86835fdcf7889a7baead8a12",
+  "lineage_ids": "lineage:b6263b5b1e49b24b577e2bc9",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 161,
+    "load_duration": 7166200,
+    "prompt_eval_count": 633,
+    "total_duration": 6310171300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"either make them consistent\", \"interpretation_a\": \"The server can modify the *representation* to match the resource, or modify the *resource* to match the representation.\", \"interpretation_b\": \"The server can modify the representation *and* the resource to achieve consistency.\", \"missing_information\": \"\", \"justification\": \"The phrase \\\"either make them consistent\\\" is ambiguous because it doesn't clearly state whether both the representation and the resource must be modified if consistency is achieved through changes to both. The use of 'either...or' suggests a choice between two actions, but it's plausible that both actions could be taken to achieve consistency.\"}",
+  "record_id": "aad6cc89bcfe738eed4f5b5250857aeebc4770b8d0443eadfade344a06bb11fa",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "9.3.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.328
+}

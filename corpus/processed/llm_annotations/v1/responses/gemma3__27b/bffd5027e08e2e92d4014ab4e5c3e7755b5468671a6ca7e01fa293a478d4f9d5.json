@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "always sent in cleartext packets",
+    "interpretation_a": "TLS handshake messages are sent in packets that are not encrypted, even if encryption is otherwise available.",
+    "interpretation_b": "TLS handshake messages are sent in packets that do not use any obfuscation or other non-encryption techniques to hide their content, but may still be encrypted.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'cleartext' is ambiguous. It could mean 'not encrypted' or 'not obfuscated'. The requirement states that TLS handshake messages 'always sent in cleartext packets', but does not define what 'cleartext' means in this context. This allows for two reasonable interpretations.",
+    "missing_information": "The definition of 'cleartext' is not provided. Does 'cleartext' mean 'not encrypted at all', or 'not obfuscated but potentially encrypted'?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:47:10.335751+00:00",
+  "document_id": "draft-ietf-quic-tls-05",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "7cfe36b1740cac11dd250dd7ef6b45f6f066a31d353aa11d6161fe6321c45392",
+  "lineage_ids": "lineage:04a477613efb59f59a5d48dc",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 199,
+    "load_duration": 4312000,
+    "prompt_eval_count": 568,
+    "total_duration": 7450330300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"always sent in cleartext packets\", \"interpretation_a\": \"TLS handshake messages are sent in packets that are not encrypted, even if encryption is otherwise available.\", \"interpretation_b\": \"TLS handshake messages are sent in packets that do not use any obfuscation or other non-encryption techniques to hide their content, but may still be encrypted.\", \"missing_information\": \"The definition of 'cleartext' is not provided. Does 'cleartext' mean 'not encrypted at all', or 'not obfuscated but potentially encrypted'?\",\"justification\": \"The term 'cleartext' is ambiguous. It could mean 'not encrypted' or 'not obfuscated'. The requirement states that TLS handshake messages 'always sent in cleartext packets', but does not define what 'cleartext' means in this context. This allows for two reasonable interpretations.\"}",
+  "record_id": "bffd5027e08e2e92d4014ab4e5c3e7755b5468671a6ca7e01fa293a478d4f9d5",
+  "revision": "05",
+  "schema_version": 1,
+  "section_ids": "4.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.453
+}

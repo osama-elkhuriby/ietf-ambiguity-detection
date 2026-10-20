@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "a client MAY use one of these version numbers with the expectation that the server will initiate version negotiation",
+    "interpretation_a": "The client should abort the connection if the server does not initiate version negotiation.",
+    "interpretation_b": "The client may continue using the reserved version number even if the server does not initiate negotiation.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify what the client should do if the server fails to initiate negotiation, allowing for multiple reasonable implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T14:11:54.390242+00:00",
+  "document_id": "draft-ietf-quic-transport-24",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "5deb5cf9fd01da1aa3b67bc1a4ea162720ad32b9887cc0eb18c1a0f4d1faecbe",
+  "lineage_ids": "lineage:248ed3d281af9d3134935ed6",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 419,
+    "load_duration": 5435700,
+    "prompt_eval_count": 760,
+    "total_duration": 3787494200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"a client MAY use one of these version numbers with the expectation that the server will initiate version negotiation\",\n  \"interpretation_a\": \"The client should abort the connection if the server does not initiate version negotiation.\",\n  \"interpretation_b\": \"The client may continue using the reserved version number even if the server does not initiate negotiation.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify what the client should do if the server fails to initiate negotiation, allowing for multiple reasonable implementation behaviours.\"\n}",
+  "record_id": "1b9f58b314dcb0eae9d83abad4b90edaabbd2dcbcc51bde9b8398bc5a5ea9cce",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "15",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 20.953
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "handshake is confirmed",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause requires the endpoint not to set the PTO timer for the application data packet number space until the handshake is confirmed, but the term \"handshake is confirmed\" is not defined in the supplied text, creating an incomplete constraint that could lead to materially different implementation behaviours.",
+    "missing_information": "definition of handshake confirmation (when the handshake is considered confirmed)."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T11:55:43.893330+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "49b7a0be000b096a02b77288981774e692f416cacf8a9eded93555878d84a953",
+  "lineage_ids": "lineage:98110c6169db59c36d6110d7",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3363,
+    "load_duration": 4557300,
+    "prompt_eval_count": 616,
+    "total_duration": 29204883800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"handshake is confirmed\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"definition of handshake confirmation (when the handshake is considered confirmed).\",\n  \"justification\": \"The clause requires the endpoint not to set the PTO timer for the application data packet number space until the handshake is confirmed, but the term \\\"handshake is confirmed\\\" is not defined in the supplied text, creating an incomplete constraint that could lead to materially different implementation behaviours.\"\n}",
+  "record_id": "c13feb58caa441fe781f38e3a335df0acd9f1279ea42334c5b5ba0e6036b7c49",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 29.203
+}

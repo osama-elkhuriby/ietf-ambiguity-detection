@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "invalid sequence of frames",
+    "interpretation_a": "Any deviation from the expected frame order constitutes an invalid sequence, triggering a connection error.",
+    "interpretation_b": "Only sequences that demonstrably disrupt HTTP message parsing or introduce security vulnerabilities are considered invalid, allowing for some flexibility in frame ordering.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'invalid sequence of frames' is open to interpretation. Without a more precise definition, different implementations might handle frame ordering variations differently, leading to interoperability issues.",
+    "missing_information": "The definition of 'invalid sequence of frames' is not sufficiently precise. It's unclear whether any deviation from the expected order is considered invalid, or if only those deviations that cause parsing errors or security issues trigger the connection error."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:51:36.469068+00:00",
+  "document_id": "draft-ietf-quic-http-23",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "5c29dd88737098ef18a77bb130a24fa9bd5cdd5c2737e8c254451201364eaf10",
+  "lineage_ids": "lineage:40ee8d661c0c49be677b9fab",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 179,
+    "load_duration": 20491000,
+    "prompt_eval_count": 588,
+    "total_duration": 6922138300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"invalid sequence of frames\", \"interpretation_a\": \"Any deviation from the expected frame order constitutes an invalid sequence, triggering a connection error.\", \"interpretation_b\": \"Only sequences that demonstrably disrupt HTTP message parsing or introduce security vulnerabilities are considered invalid, allowing for some flexibility in frame ordering.\", \"missing_information\": \"The definition of 'invalid sequence of frames' is not sufficiently precise. It's unclear whether any deviation from the expected order is considered invalid, or if only those deviations that cause parsing errors or security issues trigger the connection error.\", \"justification\": \"The phrase 'invalid sequence of frames' is open to interpretation. Without a more precise definition, different implementations might handle frame ordering variations differently, leading to interoperability issues.\"}",
+  "record_id": "5b3c74d21cff3af995cfa6ef1e19a1a00bdf5dfed0d06a06097fe7788c0409ef",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.921
+}

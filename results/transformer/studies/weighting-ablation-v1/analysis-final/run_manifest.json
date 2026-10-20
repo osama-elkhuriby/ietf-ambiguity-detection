@@ -1,0 +1,35 @@
+{
+  "analysis_runtime_seconds": 81.48992429999635,
+  "artifacts": {
+    "contrasts.json": "062a2777e0cde81ae3ba518124a77d592e4ee7768590de2a522f2f3c168e12ae",
+    "selection.json": "01d7bfa68805c7cdcc3ac170c525f52a3c5975928012193292cd2bbe57dd72cd",
+    "tfidf_strategy_summary.csv": "07ee7c54465d03b4459b82d84be35d3bc30d3db0552fb70a443cd8d848a6038e",
+    "transformer_cells.csv": "57bf1321599f77bb746858b5d71884c4f7780c7468b25afe69db41083a23c40f",
+    "transformer_ensemble_oof_predictions.csv": "6ef2759d4da1b8e8127b608c55795c729be466aa95f6ce6e0c33e03252ebe7a5",
+    "transformer_strategy_summary.csv": "d0ed78d4a3ce7a107718d43b943155e355533d8cecf643029015c627f6fac62f"
+  },
+  "bootstrap_repetitions": 2000,
+  "dns_opened": false,
+  "experiment": "weighting-ablation-v1-analysis",
+  "folds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "learning_rate": 1e-05,
+  "run_id": "9786a5d1-10d2-45b9-9817-727f432cfcf2",
+  "schema_version": 1,
+  "seeds": [
+    1729,
+    2718,
+    31415
+  ],
+  "strategies": [
+    "unweighted",
+    "class",
+    "confidence",
+    "combined"
+  ]
+}

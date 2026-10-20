@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "other",
+    "evidence_span": "MAY treat this as a connection error",
+    "interpretation_a": "The peer is permitted to treat the frame as an error, but may also choose to ignore it and continue normal operation.",
+    "interpretation_b": "The peer is required to treat the frame as an error, but the specification uses 'MAY' to indicate a degree of flexibility in how that error is handled (e.g., logging vs. immediate connection termination).",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' creates ambiguity. It is unclear whether the peer is permitted to treat the frame as an error or is required to do so, only with some flexibility in the error handling. Both interpretations are reasonable given the wording.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:56:06.160733+00:00",
+  "document_id": "draft-ietf-quic-transport-29",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "10959efc141fbebcc67bbe4288f19cf27300af0c332406896584ea8738148e6d",
+  "lineage_ids": "lineage:fa44a1441b2f397dfc150f18",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 173,
+    "load_duration": 3967000,
+    "prompt_eval_count": 587,
+    "total_duration": 6630599900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"other\", \"evidence_span\": \"MAY treat this as a connection error\", \"interpretation_a\": \"The peer is permitted to treat the frame as an error, but may also choose to ignore it and continue normal operation.\", \"interpretation_b\": \"The peer is required to treat the frame as an error, but the specification uses 'MAY' to indicate a degree of flexibility in how that error is handled (e.g., logging vs. immediate connection termination).\", \"missing_information\": \"\", \"justification\": \"The use of 'MAY' creates ambiguity. It is unclear whether the peer is permitted to treat the frame as an error or is required to do so, only with some flexibility in the error handling. Both interpretations are reasonable given the wording.\"}",
+  "record_id": "b5645bac553b8301a31404c62386b7639093e6f251ba8ad9b0318183250ee96f",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "19.16",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.625
+}

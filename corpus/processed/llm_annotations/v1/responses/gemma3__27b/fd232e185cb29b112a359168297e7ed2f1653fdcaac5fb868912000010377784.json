@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "at most one maximum datagram size",
+    "interpretation_a": "The congestion window can increase by up to the maximum datagram size, regardless of the current window size.",
+    "interpretation_b": "The congestion window can increase by up to the maximum datagram size, but only if the current window size allows for an increase of that magnitude.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'for each congestion window that is acknowledged' is ambiguous. Does it mean for each ACK that acknowledges a congestion window, or for each RTT where a congestion window is acknowledged? This affects how frequently the window can increase.",
+    "missing_information": "It is unclear whether the increase is limited to one maximum datagram size *per acknowledgement* or *per round trip time*. The phrase 'for each congestion window that is acknowledged' could be interpreted in either way, leading to different implementations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:33:24.931738+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "3408c09326a55b3e852861053882e06f85f9ca2ccb672b82313a1ea96d488f76",
+  "lineage_ids": "lineage:0860936d4ee9756c463156b7",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 204,
+    "load_duration": 5055300,
+    "prompt_eval_count": 612,
+    "total_duration": 7710038100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"at most one maximum datagram size\", \"interpretation_a\": \"The congestion window can increase by up to the maximum datagram size, regardless of the current window size.\", \"interpretation_b\": \"The congestion window can increase by up to the maximum datagram size, but only if the current window size allows for an increase of that magnitude.\", \"missing_information\": \"It is unclear whether the increase is limited to one maximum datagram size *per acknowledgement* or *per round trip time*. The phrase 'for each congestion window that is acknowledged' could be interpreted in either way, leading to different implementations.\",\"justification\": \"The phrase 'for each congestion window that is acknowledged' is ambiguous. Does it mean for each ACK that acknowledges a congestion window, or for each RTT where a congestion window is acknowledged? This affects how frequently the window can increase.\"}",
+  "record_id": "fd232e185cb29b112a359168297e7ed2f1653fdcaac5fb868912000010377784",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.3.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.719
+}

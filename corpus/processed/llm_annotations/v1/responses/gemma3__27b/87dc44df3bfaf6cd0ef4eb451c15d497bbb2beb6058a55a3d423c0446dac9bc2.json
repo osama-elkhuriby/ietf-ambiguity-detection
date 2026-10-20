@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "If the packet can be decrypted and authenticated using the updated key and IV",
+    "interpretation_a": "The packet *must* be successfully decrypted and authenticated to trigger key update.",
+    "interpretation_b": "The packet *may* be successfully decrypted and authenticated, and key update is contingent on other factors not specified here.",
+    "is_ambiguous": "yes",
+    "justification": "The conditional 'If' statement doesn't explicitly state whether successful decryption/authentication is a hard requirement for key update. It could be interpreted as a necessary condition, or simply a condition under which the key update *can* occur. This creates ambiguity in implementation.",
+    "missing_information": "It is unclear whether successful decryption/authentication is a necessary and sufficient condition for key update, or merely a permissive one. The clause reads as if success is required, but the 'then' clause could apply to a successful attempt even if other conditions aren't met."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:41:50.525626+00:00",
+  "document_id": "draft-ietf-quic-tls-23",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "2cd84e6d1bc2b9f301102ad4c1a7c774f27e7512451600dbfc56bf6ce4f707b5",
+  "lineage_ids": "lineage:96e5e905b00a2a1823201647",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 211,
+    "load_duration": 4677100,
+    "prompt_eval_count": 582,
+    "total_duration": 7937482900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"If the packet can be decrypted and authenticated using the updated key and IV\", \"interpretation_a\": \"The packet *must* be successfully decrypted and authenticated to trigger key update.\", \"interpretation_b\": \"The packet *may* be successfully decrypted and authenticated, and key update is contingent on other factors not specified here.\", \"missing_information\": \"It is unclear whether successful decryption/authentication is a necessary and sufficient condition for key update, or merely a permissive one. The clause reads as if success is required, but the 'then' clause could apply to a successful attempt even if other conditions aren't met.\",\"justification\": \"The conditional 'If' statement doesn't explicitly state whether successful decryption/authentication is a hard requirement for key update. It could be interpreted as a necessary condition, or simply a condition under which the key update *can* occur. This creates ambiguity in implementation.\"}",
+  "record_id": "87dc44df3bfaf6cd0ef4eb451c15d497bbb2beb6058a55a3d423c0446dac9bc2",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.938
+}

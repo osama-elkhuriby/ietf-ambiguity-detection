@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless it maintains state sufficient to prevent looping",
+    "interpretation_a": "The clause could be read as requiring every Stateless Reset to be smaller than the triggering packet, except when the endpoint has some loop‑prevention state. However, the clause does not specify what that state is or how it is maintained, so implementations may differ on whether the size requirement can be waived.",
+    "interpretation_b": "Alternatively, the clause might be interpreted as the endpoint must always send smaller resets, and the 'unless' clause is merely a note that if loop‑prevention state exists, the size check is redundant. The lack of a precise definition of the state leads to two materially different implementation behaviours.",
+    "is_ambiguous": "yes",
+    "justification": "The clause contains an incomplete constraint—'state sufficient to prevent looping'—which is not defined, creating ambiguity in whether the size requirement can be waived.",
+    "missing_information": "The definition of 'state sufficient to prevent looping' is not provided in the supplied text, leaving the condition under‑specified for implementation purposes."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T16:19:26.864508+00:00",
+  "document_id": "draft-ietf-quic-transport-29",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "d55811a4a9f1a65279bdb710b6b2f698fd0135be89cb959e257e33aa4d561274",
+  "lineage_ids": "lineage:37ea24db7b2d02b0c1311b41",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2012,
+    "load_duration": 6537600,
+    "prompt_eval_count": 600,
+    "total_duration": 17448219300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"unless it maintains state sufficient to prevent looping\",\n  \"interpretation_a\": \"The clause could be read as requiring every Stateless Reset to be smaller than the triggering packet, except when the endpoint has some loop‑prevention state. However, the clause does not specify what that state is or how it is maintained, so implementations may differ on whether the size requirement can be waived.\",\n  \"interpretation_b\": \"Alternatively, the clause might be interpreted as the endpoint must always send smaller resets, and the 'unless' clause is merely a note that if loop‑prevention state exists, the size check is redundant. The lack of a precise definition of the state leads to two materially different implementation behaviours.\",\n  \"missing_information\": \"The definition of 'state sufficient to prevent looping' is not provided in the supplied text, leaving the condition under‑specified for implementation purposes.\",\n  \"justification\": \"The clause contains an incomplete constraint—'state sufficient to prevent looping'—which is not defined, creating ambiguity in whether the size requirement can be waived.\"\n}",
+  "record_id": "734bedbeb701e558b0c496a40d46a7901baa82bd5731597b023611ea206f380b",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "10.4.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 17.469
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "request target",
+    "interpretation_a": "The request target is strictly the host:port string, and nothing else.",
+    "interpretation_b": "The request target *includes* the host:port string, but may be followed by a path or other components as defined in RFC3986. The clause only specifies what *must* be present, not what *cannot* be present.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'consists of only' is strong, but doesn't explicitly forbid additional characters. RFC3986 allows for a path after the authority component. Without clarification, implementations could reasonably differ on whether to allow or disallow a path.",
+    "missing_information": "The clause does not explicitly state whether additional characters are permitted after the host:port string in the request target. RFC3986 defines the structure of an authority component, which can include a path. The clause needs to clarify if the request target is limited to *only* the authority component, or if it can include further path information."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:15:23.259645+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-14",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "3454222f2bc0080d9fb758192f9085ea9d7a5fa55f461b9a790cbb301a0ee3e2",
+  "lineage_ids": "lineage:0577ac50a0b29ac6be12ab1b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 240,
+    "load_duration": 8111400,
+    "prompt_eval_count": 579,
+    "total_duration": 9077421900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"request target\", \"interpretation_a\": \"The request target is strictly the host:port string, and nothing else.\", \"interpretation_b\": \"The request target *includes* the host:port string, but may be followed by a path or other components as defined in RFC3986. The clause only specifies what *must* be present, not what *cannot* be present.\", \"missing_information\": \"The clause does not explicitly state whether additional characters are permitted after the host:port string in the request target. RFC3986 defines the structure of an authority component, which can include a path. The clause needs to clarify if the request target is limited to *only* the authority component, or if it can include further path information.\", \"justification\": \"The phrase 'consists of only' is strong, but doesn't explicitly forbid additional characters. RFC3986 allows for a path after the authority component. Without clarification, implementations could reasonably differ on whether to allow or disallow a path.\"}",
+  "record_id": "868b1ee24b7d942db383bbac17eb4a1ee18237914bffac3d5a5e065428224ad7",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "9.3.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.094
+}

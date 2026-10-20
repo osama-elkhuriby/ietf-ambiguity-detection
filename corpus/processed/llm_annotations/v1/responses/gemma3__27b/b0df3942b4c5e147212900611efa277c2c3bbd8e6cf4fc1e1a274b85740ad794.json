@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "acks protected packets",
+    "interpretation_a": "The receiver MUST close the connection if it receives an unprotected packet that acknowledges packets that *have* been encrypted/protected.",
+    "interpretation_b": "The receiver MUST close the connection if it receives an unprotected packet that acknowledges packets that *should have* been encrypted/protected, but weren't.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'acks protected packets' is ambiguous. It could mean packets that are currently protected, or packets that were expected to be protected but were not. This difference affects whether the receiver should close the connection.",
+    "missing_information": "It is unclear whether 'protected packets' refers to packets that are currently protected, or packets that were expected to be protected but were not."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:27:17.910184+00:00",
+  "document_id": "draft-ietf-quic-recovery-12",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "644d7bca93fb6e26ae45c0d9767b0a03ce1a1b94a80cd95d888f9d3d5b3e35e7",
+  "lineage_ids": "lineage:4c8db21684e129d732596aa8",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 180,
+    "load_duration": 4048700,
+    "prompt_eval_count": 553,
+    "total_duration": 6802726500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"acks protected packets\", \"interpretation_a\": \"The receiver MUST close the connection if it receives an unprotected packet that acknowledges packets that *have* been encrypted/protected.\", \"interpretation_b\": \"The receiver MUST close the connection if it receives an unprotected packet that acknowledges packets that *should have* been encrypted/protected, but weren't.\", \"missing_information\": \"It is unclear whether 'protected packets' refers to packets that are currently protected, or packets that were expected to be protected but were not.\", \"justification\": \"The phrase 'acks protected packets' is ambiguous. It could mean packets that are currently protected, or packets that were expected to be protected but were not. This difference affects whether the receiver should close the connection.\"}",
+  "record_id": "b0df3942b4c5e147212900611efa277c2c3bbd8e6cf4fc1e1a274b85740ad794",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "3.5.9.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.796
+}

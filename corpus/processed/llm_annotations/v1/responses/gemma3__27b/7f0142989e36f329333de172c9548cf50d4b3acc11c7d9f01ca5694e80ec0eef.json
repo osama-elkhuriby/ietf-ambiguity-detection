@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD continue to do so",
+    "interpretation_a": "The endpoint should continue to cancel requests/pushes as they arrive, even after the initial GOAWAY-triggered cancellation.",
+    "interpretation_b": "The endpoint should continue to *attempt* to cancel requests/pushes as they arrive, but may not be required to if, for example, the stream has already completed or been cancelled by other means.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'continue to do so' is vague. 'Do so' refers back to 'explicitly cancel...requests or pushes'. It's unclear if the endpoint must continue attempting cancellation even if the requests/pushes are no longer active, or if it can skip cancellation if the stream is already closed.",
+    "missing_information": "It is unclear whether 'continue to do so' refers to continuing the *action* of cancellation, or continuing to *attempt* the action of cancellation. A missing constraint would clarify whether cancellation attempts on already-completed streams are required."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:55:45.061184+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "ae5b16ef0406bea10ca8d5cb836ac18baf7257a1e4b889f39350c6e4b6f9c163",
+  "lineage_ids": "lineage:ef766a87ba5a44cace1c7bb8",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 235,
+    "load_duration": 21770800,
+    "prompt_eval_count": 602,
+    "total_duration": 8984196700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD continue to do so\", \"interpretation_a\": \"The endpoint should continue to cancel requests/pushes as they arrive, even after the initial GOAWAY-triggered cancellation.\", \"interpretation_b\": \"The endpoint should continue to *attempt* to cancel requests/pushes as they arrive, but may not be required to if, for example, the stream has already completed or been cancelled by other means.\", \"missing_information\": \"It is unclear whether 'continue to do so' refers to continuing the *action* of cancellation, or continuing to *attempt* the action of cancellation. A missing constraint would clarify whether cancellation attempts on already-completed streams are required.\", \"justification\": \"The phrase 'continue to do so' is vague. 'Do so' refers back to 'explicitly cancel...requests or pushes'. It's unclear if the endpoint must continue attempting cancellation even if the requests/pushes are no longer active, or if it can skip cancellation if the stream is already closed.\"}",
+  "record_id": "7f0142989e36f329333de172c9548cf50d4b3acc11c7d9f01ca5694e80ec0eef",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.0
+}

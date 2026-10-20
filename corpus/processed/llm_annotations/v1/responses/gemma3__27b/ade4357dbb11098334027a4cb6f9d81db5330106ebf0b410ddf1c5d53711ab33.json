@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "client’s privacy intent",
+    "interpretation_a": "The client's privacy intent could be a general policy against any data leakage through DNS, requiring SVCB to be disabled.",
+    "interpretation_b": "The client's privacy intent could be more specific, such as preventing DNS queries that reveal sensitive information about the user's browsing habits, allowing SVCB if it doesn't violate that specific intent.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'client’s privacy intent' is underspecified. It's unclear what level of privacy is expected, and whether any DNS query that could potentially reveal information is a violation, or only those that reveal specific sensitive information. This affects whether SVCB support should be disabled.",
+    "missing_information": "The definition of 'client’s privacy intent' is not provided, and its scope is unclear. This lack of definition allows for different interpretations of when SVCB queries would violate it, leading to different implementations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:10:29.072379+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-00",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "0bf341b824fd85613191057258f4c889d4b2b3cfba8c2a562e6ab621b2f9791b",
+  "lineage_ids": "lineage:8b32328126cdf69f31d99d68",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 223,
+    "load_duration": 3506000,
+    "prompt_eval_count": 616,
+    "total_duration": 8377683100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"client’s privacy intent\", \"interpretation_a\": \"The client's privacy intent could be a general policy against any data leakage through DNS, requiring SVCB to be disabled.\", \"interpretation_b\": \"The client's privacy intent could be more specific, such as preventing DNS queries that reveal sensitive information about the user's browsing habits, allowing SVCB if it doesn't violate that specific intent.\", \"missing_information\": \"The definition of 'client’s privacy intent' is not provided, and its scope is unclear. This lack of definition allows for different interpretations of when SVCB queries would violate it, leading to different implementations.\",\"justification\": \"The phrase 'client’s privacy intent' is underspecified. It's unclear what level of privacy is expected, and whether any DNS query that could potentially reveal information is a violation, or only those that reveal specific sensitive information. This affects whether SVCB support should be disabled.\"}",
+  "record_id": "ade4357dbb11098334027a4cb6f9d81db5330106ebf0b410ddf1c5d53711ab33",
+  "revision": "00",
+  "schema_version": 1,
+  "section_ids": "3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.375
+}

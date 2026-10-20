@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "successfully unprotected a packet",
+    "interpretation_a": "The endpoint must retain old keys until it has *fully* decrypted and verified a packet using the new keys, meaning all cryptographic operations are complete and successful.",
+    "interpretation_b": "The endpoint must retain old keys until it has *started* decrypting a packet using the new keys, even if the decryption or verification process is incomplete or fails.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'successfully unprotected' is vague. It's unclear whether it requires complete and successful decryption/verification, or just the start of the process. This affects how long old keys must be retained.",
+    "missing_information": "The definition of 'successfully unprotected' is not precise. Does it require full decryption and verification, or merely the initiation of the process?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:44:32.804191+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "f81ff9f75b622089392982a8e332a41ae69c8d24bb359c7cb96d69fe7242690e",
+  "lineage_ids": "lineage:2939a92989830059b6e3e4d8",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 188,
+    "load_duration": 3820100,
+    "prompt_eval_count": 564,
+    "total_duration": 7086377500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"successfully unprotected a packet\", \"interpretation_a\": \"The endpoint must retain old keys until it has *fully* decrypted and verified a packet using the new keys, meaning all cryptographic operations are complete and successful.\", \"interpretation_b\": \"The endpoint must retain old keys until it has *started* decrypting a packet using the new keys, even if the decryption or verification process is incomplete or fails.\", \"missing_information\": \"The definition of 'successfully unprotected' is not precise. Does it require full decryption and verification, or merely the initiation of the process?\",\"justification\": \"The phrase 'successfully unprotected' is vague. It's unclear whether it requires complete and successful decryption/verification, or just the start of the process. This affects how long old keys must be retained.\"}",
+  "record_id": "acfe7a80bca29045cb2858f76225a78f6d24ca51f18c6b46d4531692b5996426",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.094
+}

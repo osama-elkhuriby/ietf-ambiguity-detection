@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause is unambiguous. It clearly states that CONNECTION_CLOSE frames signaling errors at the QUIC layer (type 0x1c) may appear in any packet number space. The use of 'MAY' indicates permissibility, not ambiguity, and the condition is clearly defined by the frame type and its allowed packet number space. There is no conflicting or missing constraint that would lead to multiple reasonable interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:53:11.354098+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "e4169b05b81c09d8464c9aa73d368c0c5c29ecda243c73e956fa1e0ce762c873",
+  "lineage_ids": "lineage:e3190fb697715f7defcfd007",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 139,
+    "load_duration": 3760800,
+    "prompt_eval_count": 544,
+    "total_duration": 5705924100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause is unambiguous. It clearly states that CONNECTION_CLOSE frames signaling errors at the QUIC layer (type 0x1c) may appear in any packet number space. The use of 'MAY' indicates permissibility, not ambiguity, and the condition is clearly defined by the frame type and its allowed packet number space. There is no conflicting or missing constraint that would lead to multiple reasonable interpretations.\"\n}",
+  "record_id": "1e3f0e2324270969d0af799e3d1d9556f57c27419c8676d77c3b2059c4a1f547",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "12.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.703
+}

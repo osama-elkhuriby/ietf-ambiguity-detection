@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "when no MAX_PUSH_ID frame has been sent",
+    "interpretation_a": "If a MAX_PUSH_ID frame has *never* been sent during the connection's lifetime, any push stream is an error.",
+    "interpretation_b": "If a MAX_PUSH_ID frame has not been sent *recently* (e.g., since the connection started or after a reset), any push stream is an error.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'no MAX_PUSH_ID frame has been sent' is open to interpretation. It's unclear whether this refers to the entire connection lifetime or a more recent period. This affects how a client determines if a push stream is an error.",
+    "missing_information": "The temporal scope of 'has been sent' is not defined. Is it a lifetime check, or a check relative to some recent event?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:07:33.726014+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "f73681e1c997afbbf0076f5b4191c1bd69d8ba09507194d593efe4f17b719e20",
+  "lineage_ids": "lineage:b9f1c990007f6849691a36a9",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 206,
+    "load_duration": 19408100,
+    "prompt_eval_count": 604,
+    "total_duration": 7966616900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"when no MAX_PUSH_ID frame has been sent\", \"interpretation_a\": \"If a MAX_PUSH_ID frame has *never* been sent during the connection's lifetime, any push stream is an error.\", \"interpretation_b\": \"If a MAX_PUSH_ID frame has not been sent *recently* (e.g., since the connection started or after a reset), any push stream is an error.\", \"missing_information\": \"The temporal scope of 'has been sent' is not defined. Is it a lifetime check, or a check relative to some recent event?\",\"justification\": \"The phrase 'no MAX_PUSH_ID frame has been sent' is open to interpretation. It's unclear whether this refers to the entire connection lifetime or a more recent period. This affects how a client determines if a push stream is an error.\"}",
+  "record_id": "c75c8ef3057db3ac8174cd91b2ba4f356dd573299a775e6aca81618418d8c903",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.969
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "except when a server has requested closure of the request stream with this error code",
+    "interpretation_a": "The client can only send HTTP_REQUEST_REJECTED if the server *actively* signaled closure using that error code on the stream. Any other rejection must be HTTP_REQUEST_CANCELLED.",
+    "interpretation_b": "The client can send HTTP_REQUEST_REJECTED in any situation where the server has *at any point* requested closure of the request stream, even if the server didn't use HTTP_REQUEST_REJECTED to do so. The server could have used a different error code to request closure, and the client is still permitted to respond with HTTP_REQUEST_REJECTED.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'requested closure of the request stream with this error code' is ambiguous. 'This error code' could refer to the server requesting closure *using* HTTP_REQUEST_REJECTED, or simply requesting closure in any way.",
+    "missing_information": "It is unclear whether the server's request for closure must be signaled *with* the HTTP_REQUEST_REJECTED error code, or merely *any* request for closure."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:50:08.563540+00:00",
+  "document_id": "draft-ietf-quic-http-23",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "e9439691022f3c979cb5b243f855c67e0a7b3eaeba861733de23b304b969c207",
+  "lineage_ids": "lineage:33765fbbdae547632cefe8c5",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 272,
+    "load_duration": 9055500,
+    "prompt_eval_count": 606,
+    "total_duration": 10306840600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"except when a server has requested closure of the request stream with this error code\", \"interpretation_a\": \"The client can only send HTTP_REQUEST_REJECTED if the server *actively* signaled closure using that error code on the stream. Any other rejection must be HTTP_REQUEST_CANCELLED.\", \"interpretation_b\": \"The client can send HTTP_REQUEST_REJECTED in any situation where the server has *at any point* requested closure of the request stream, even if the server didn't use HTTP_REQUEST_REJECTED to do so. The server could have used a different error code to request closure, and the client is still permitted to respond with HTTP_REQUEST_REJECTED.\", \"missing_information\": \"It is unclear whether the server's request for closure must be signaled *with* the HTTP_REQUEST_REJECTED error code, or merely *any* request for closure.\", \"justification\": \"The phrase 'requested closure of the request stream with this error code' is ambiguous. 'This error code' could refer to the server requesting closure *using* HTTP_REQUEST_REJECTED, or simply requesting closure in any way.\"}",
+  "record_id": "5343eec3bb7cee218d1d5bd2f7a8d6c3893f43fb5ebd4360369c518cfadd3465",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "4.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.313
+}

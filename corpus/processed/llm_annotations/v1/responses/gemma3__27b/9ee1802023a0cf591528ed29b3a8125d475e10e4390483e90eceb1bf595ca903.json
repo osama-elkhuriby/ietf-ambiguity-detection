@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause uses SHOULD NOT, which is not a strict requirement. It expresses a preference, not a constraint that would lead to multiple implementations. The condition is clear: if the client has *already received* the push stream, it should not send the cancel. There is no ambiguity.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:00:22.065199+00:00",
+  "document_id": "draft-ietf-quic-http-29",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "a6a624a2c3270409688297f624bf948a6ec1a33dcfc43d7f69d8df931bbde3d7",
+  "lineage_ids": "lineage:38c41d669ed7950aaf2d1b2c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 106,
+    "load_duration": 9089100,
+    "prompt_eval_count": 575,
+    "total_duration": 4433480000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"no\", \"ambiguity_subtype\": \"none\", \"evidence_span\": \"\", \"interpretation_a\": \"\", \"interpretation_b\": \"\", \"missing_information\": \"\", \"justification\": \"The clause uses SHOULD NOT, which is not a strict requirement. It expresses a preference, not a constraint that would lead to multiple implementations. The condition is clear: if the client has *already received* the push stream, it should not send the cancel. There is no ambiguity.\"}",
+  "record_id": "9ee1802023a0cf591528ed29b3a8125d475e10e4390483e90eceb1bf595ca903",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "7.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 4.438
+}

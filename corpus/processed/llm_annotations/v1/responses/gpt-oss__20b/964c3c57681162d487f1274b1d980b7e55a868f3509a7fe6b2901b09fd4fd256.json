@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless the usage is especially sensitive to having a longer encoding",
+    "interpretation_a": "The clause does not define what constitutes 'especially sensitive', so an implementer might interpret it as any usage that cares about encoding length, or only as an extreme sensitivity case.",
+    "interpretation_b": "Thus, two materially different implementation behaviours are possible: one that always uses codepoints ≥ 2^14, and another that avoids them unless the application explicitly requires minimal encoding length.",
+    "is_ambiguous": "yes",
+    "justification": "The absence of a concrete definition for 'especially sensitive' creates an incomplete constraint that allows for divergent, reasonable interpretations.",
+    "missing_information": "A definition or guideline for what qualifies as 'especially sensitive' is missing, preventing a unique operational interpretation of the clause."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T17:11:31.518727+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "779b8971ca56f80040aa8b4d68f7c40decbf3163decfb8515a8a90b43059d955",
+  "lineage_ids": "lineage:3f81d75e1e31c42bab4349bf",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2193,
+    "load_duration": 5186900,
+    "prompt_eval_count": 620,
+    "total_duration": 18943495100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"unless the usage is especially sensitive to having a longer encoding\",\n  \"interpretation_a\": \"The clause does not define what constitutes 'especially sensitive', so an implementer might interpret it as any usage that cares about encoding length, or only as an extreme sensitivity case.\",\n  \"interpretation_b\": \"Thus, two materially different implementation behaviours are possible: one that always uses codepoints ≥ 2^14, and another that avoids them unless the application explicitly requires minimal encoding length.\",\n  \"missing_information\": \"A definition or guideline for what qualifies as 'especially sensitive' is missing, preventing a unique operational interpretation of the clause.\",\n  \"justification\": \"The absence of a concrete definition for 'especially sensitive' creates an incomplete constraint that allows for divergent, reasonable interpretations.\"\n}",
+  "record_id": "964c3c57681162d487f1274b1d980b7e55a868f3509a7fe6b2901b09fd4fd256",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "22.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 18.969
+}

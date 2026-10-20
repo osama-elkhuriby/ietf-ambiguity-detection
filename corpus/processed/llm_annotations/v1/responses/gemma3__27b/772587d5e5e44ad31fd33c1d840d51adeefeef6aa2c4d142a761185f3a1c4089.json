@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY respond to this condition with a connection error, or by dropping packets",
+    "interpretation_a": "An endpoint could choose to respond to the condition by sending a connection error to the peer.",
+    "interpretation_b": "An endpoint could choose to respond to the condition by silently dropping packets from the peer.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' allows for either behavior, and there is no further constraint to determine which behavior is appropriate. This creates ambiguity in how implementations will handle the 'condition' described in the previous clause.",
+    "missing_information": "The draft does not specify under what conditions each response (connection error vs. packet drop) should be chosen. This leaves open the possibility of inconsistent behavior between implementations, as the same 'condition' could lead to different outcomes."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:34:26.025261+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "78ca4c69e935214066c6f491cd143540ac7f91fcc9baf35db7e7895b2cc5bfb8",
+  "lineage_ids": "lineage:ae85753e3f65baa83d99e1c2",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 189,
+    "load_duration": 4788600,
+    "prompt_eval_count": 560,
+    "total_duration": 7128254600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY respond to this condition with a connection error, or by dropping packets\", \"interpretation_a\": \"An endpoint could choose to respond to the condition by sending a connection error to the peer.\", \"interpretation_b\": \"An endpoint could choose to respond to the condition by silently dropping packets from the peer.\", \"missing_information\": \"The draft does not specify under what conditions each response (connection error vs. packet drop) should be chosen. This leaves open the possibility of inconsistent behavior between implementations, as the same 'condition' could lead to different outcomes.\", \"justification\": \"The use of 'MAY' allows for either behavior, and there is no further constraint to determine which behavior is appropriate. This creates ambiguity in how implementations will handle the 'condition' described in the previous clause.\"}",
+  "record_id": "772587d5e5e44ad31fd33c1d840d51adeefeef6aa2c4d142a761185f3a1c4089",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "21.9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.157
+}

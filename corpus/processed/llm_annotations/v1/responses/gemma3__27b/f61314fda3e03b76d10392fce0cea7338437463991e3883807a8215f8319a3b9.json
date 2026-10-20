@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "they MUST NOT be empty",
+    "interpretation_a": "The fields must contain at least one character.",
+    "interpretation_b": "The fields must contain a non-null value, which could be an empty string in some data representations.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'empty' is not defined. It is reasonable to interpret 'empty' as zero length, or as a null or empty string. This affects how implementations validate the fields.",
+    "missing_information": "The definition of 'empty' is not specified. Does 'empty' mean zero length, or a null/empty string value?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:15:10.990967+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "ea500e97ef50472b5664144887725d12f6722f3869b10c3bb1c7d10268022dd6",
+  "lineage_ids": "lineage:5636973aff1d23fab90041f7",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 151,
+    "load_duration": 8521000,
+    "prompt_eval_count": 589,
+    "total_duration": 5966145800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"they MUST NOT be empty\", \"interpretation_a\": \"The fields must contain at least one character.\", \"interpretation_b\": \"The fields must contain a non-null value, which could be an empty string in some data representations.\", \"missing_information\": \"The definition of 'empty' is not specified. Does 'empty' mean zero length, or a null/empty string value?\", \"justification\": \"The term 'empty' is not defined. It is reasonable to interpret 'empty' as zero length, or as a null or empty string. This affects how implementations validate the fields.\"}",
+  "record_id": "f61314fda3e03b76d10392fce0cea7338437463991e3883807a8215f8319a3b9",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.1.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.969
+}

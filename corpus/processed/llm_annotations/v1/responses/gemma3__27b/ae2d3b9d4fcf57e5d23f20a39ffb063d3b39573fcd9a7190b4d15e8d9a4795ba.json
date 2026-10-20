@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT be reused",
+    "interpretation_a": "The connection ID cannot be reused by the same node that performed the reset.",
+    "interpretation_b": "Any node sharing the static key cannot reuse the connection ID, even if it did not perform the reset.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states that the connection ID 'MUST NOT be reused', but does not specify *who* is prohibited from reusing it. This allows for two reasonable interpretations: the node that performed the reset, or any node sharing the static key.",
+    "missing_information": "It is unclear whether the restriction applies only to the node that initiated the reset, or to all nodes sharing the static key."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:54:20.136041+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "a6275bf5b3bdec593d87df3968c9e4351380f5c0eca8e95465c3203e6fecdf4c",
+  "lineage_ids": "lineage:9be2d748775da2c2344d6a20",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 166,
+    "load_duration": 4072300,
+    "prompt_eval_count": 610,
+    "total_duration": 6364601400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT be reused\", \"interpretation_a\": \"The connection ID cannot be reused by the same node that performed the reset.\", \"interpretation_b\": \"Any node sharing the static key cannot reuse the connection ID, even if it did not perform the reset.\", \"missing_information\": \"It is unclear whether the restriction applies only to the node that initiated the reset, or to all nodes sharing the static key.\", \"justification\": \"The clause states that the connection ID 'MUST NOT be reused', but does not specify *who* is prohibited from reusing it. This allows for two reasonable interpretations: the node that performed the reset, or any node sharing the static key.\"}",
+  "record_id": "ae2d3b9d4fcf57e5d23f20a39ffb063d3b39573fcd9a7190b4d15e8d9a4795ba",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "10.3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.359
+}

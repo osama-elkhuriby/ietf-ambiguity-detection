@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously requires that an intermediary create a Host header field when one is missing, copying the value from the :authority pseudo-header field. The condition refers to the absence of the Host header, and the source of the value is explicitly specified. No other reasonable, materially different implementation behaviours are permitted, and the clause does not leave any concrete constraint unspecified that would lead to multiple interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T10:49:59.978062+00:00",
+  "document_id": "draft-ietf-quic-http-27",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "56e8da9330121530d895e78300a42c6976668a67b6f58dfda6da7ce58bce6dce",
+  "lineage_ids": "lineage:5af2c3136b858510e8aeeb2c",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1655,
+    "load_duration": 4743300,
+    "prompt_eval_count": 645,
+    "total_duration": 14271314900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously requires that an intermediary create a Host header field when one is missing, copying the value from the :authority pseudo-header field. The condition refers to the absence of the Host header, and the source of the value is explicitly specified. No other reasonable, materially different implementation behaviours are permitted, and the clause does not leave any concrete constraint unspecified that would lead to multiple interpretations.\"\n}",
+  "record_id": "fbe94ad0bb7429fabbbec26dfb8ca31fbe13a8322a4e20aeb78fa6977093d96a",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "4.1.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 14.265
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Therefore, the receiver SHOULD repeatedly acknowledge newly received packets in preference to packets received in the past.",
+    "interpretation_a": "The receiver acknowledges each newly received packet immediately, ignoring any older packets that have not yet been acknowledged.",
+    "interpretation_b": "The receiver acknowledges newly received packets only after a certain threshold or delay, still preferring them over older packets but not necessarily acknowledging them immediately.",
+    "is_ambiguous": "yes",
+    "justification": "The lack of explicit constraints on the acknowledgment strategy allows for materially different implementation behaviours.",
+    "missing_information": "The clause does not define the frequency or conditions under which 'repeatedly' and 'in preference' should be applied, leaving the implementation behaviour under-specified."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T14:01:01.190414+00:00",
+  "document_id": "draft-ietf-quic-transport-27",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "e4be4341e57c4546bb3427563e5ad0b5ee6753cd67803c0178a7362ec80a2ff0",
+  "lineage_ids": "lineage:0f8a6db96681a97729cf2c06",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 494,
+    "load_duration": 6724300,
+    "prompt_eval_count": 713,
+    "total_duration": 4523472100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"Therefore, the receiver SHOULD repeatedly acknowledge newly received packets in preference to packets received in the past.\",\n  \"interpretation_a\": \"The receiver acknowledges each newly received packet immediately, ignoring any older packets that have not yet been acknowledged.\",\n  \"interpretation_b\": \"The receiver acknowledges newly received packets only after a certain threshold or delay, still preferring them over older packets but not necessarily acknowledging them immediately.\",\n  \"missing_information\": \"The clause does not define the frequency or conditions under which 'repeatedly' and 'in preference' should be applied, leaving the implementation behaviour under-specified.\",\n  \"justification\": \"The lack of explicit constraints on the acknowledgment strategy allows for materially different implementation behaviours.\"\n}",
+  "record_id": "11394fcf98be5a76620760e2c68f6fb9d9d147c0fd994bb56bcaf21716237477",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "13.2.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 20.485
+}

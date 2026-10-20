@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY be sent",
+    "interpretation_a": "An implementation could choose to *always* send a single packet when entering recovery, regardless of how much data is in flight.",
+    "interpretation_b": "An implementation could choose to *never* send a single packet when entering recovery, even if the condition is met.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' creates ambiguity because it doesn't clearly define whether the action is optional or permissible. This allows for different implementations to interpret the clause in different ways, leading to potential interoperability issues.",
+    "missing_information": "The document does not specify whether the 'MAY' is intended to allow implementations to choose whether or not to send the packet, or whether it is simply stating that sending a packet is permissible under certain conditions. Without clarification, implementations could diverge on whether to send the packet or not."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:29:11.764772+00:00",
+  "document_id": "draft-ietf-quic-recovery-29",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "61651b2b534e11ecab758fb9e2954c54a70f07e288d3ab6ad5dc9034eb73c612",
+  "lineage_ids": "lineage:354337a61f1525444cefe045",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 203,
+    "load_duration": 3505600,
+    "prompt_eval_count": 587,
+    "total_duration": 7687629600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY be sent\", \"interpretation_a\": \"An implementation could choose to *always* send a single packet when entering recovery, regardless of how much data is in flight.\", \"interpretation_b\": \"An implementation could choose to *never* send a single packet when entering recovery, even if the condition is met.\", \"missing_information\": \"The document does not specify whether the 'MAY' is intended to allow implementations to choose whether or not to send the packet, or whether it is simply stating that sending a packet is permissible under certain conditions. Without clarification, implementations could diverge on whether to send the packet or not.\", \"justification\": \"The use of 'MAY' creates ambiguity because it doesn't clearly define whether the action is optional or permissible. This allows for different implementations to interpret the clause in different ways, leading to potential interoperability issues.\"}",
+  "record_id": "c01e5cb8e236c7d97e8992fe1d85ace0404784eccc72aa67ddddd86b3170e1c0",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "7.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.688
+}

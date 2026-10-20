@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "MAY use PMTU Discovery ([RFC1191], [RFC1981])",
+    "interpretation_a": "An endpoint might choose to implement RFC1191/RFC1981 PMTU discovery, but is not required to.",
+    "interpretation_b": "An endpoint might choose *not* to implement RFC1191/RFC1981 PMTU discovery, relying solely on Packetization Layer PMTU Discovery.",
+    "is_ambiguous": "yes",
+    "justification": "The sentence structure allows for two interpretations of the scope of the 'MAY'. It could mean that endpoints MAY use *either* Packetization Layer PMTU Discovery or RFC1191/RFC1981 PMTU Discovery, or it could mean that endpoints SHOULD use Packetization Layer PMTU Discovery, and MAY *also* use RFC1191/RFC1981 PMTU Discovery. This impacts implementation choices.",
+    "missing_information": "It is unclear whether the 'MAY' applies to both Packetization Layer PMTU Discovery and RFC1191/RFC1981 PMTU Discovery, or only to the latter. This affects whether endpoints are expected to always use the first method, or if they can choose to use neither."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:51:48.744424+00:00",
+  "document_id": "draft-ietf-quic-transport-06",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "fe7ec65e942b2f8d7148ab262ec7b2b31b78e8e31789ed030f4fd296e0b8c9a0",
+  "lineage_ids": "lineage:34575fcb483e0c870580f5ce",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 282,
+    "load_duration": 4484600,
+    "prompt_eval_count": 617,
+    "total_duration": 10447246500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"MAY use PMTU Discovery ([RFC1191], [RFC1981])\", \"interpretation_a\": \"An endpoint might choose to implement RFC1191/RFC1981 PMTU discovery, but is not required to.\", \"interpretation_b\": \"An endpoint might choose *not* to implement RFC1191/RFC1981 PMTU discovery, relying solely on Packetization Layer PMTU Discovery.\", \"missing_information\": \"It is unclear whether the 'MAY' applies to both Packetization Layer PMTU Discovery and RFC1191/RFC1981 PMTU Discovery, or only to the latter. This affects whether endpoints are expected to always use the first method, or if they can choose to use neither.\", \"justification\": \"The sentence structure allows for two interpretations of the scope of the 'MAY'. It could mean that endpoints MAY use *either* Packetization Layer PMTU Discovery or RFC1191/RFC1981 PMTU Discovery, or it could mean that endpoints SHOULD use Packetization Layer PMTU Discovery, and MAY *also* use RFC1191/RFC1981 PMTU Discovery. This impacts implementation choices.\"}",
+  "record_id": "a778c36b6db6adf75fc4203b2a47980c2ad7cca2e0d7e87a7b15191ea25d1ece",
+  "revision": "06",
+  "schema_version": 1,
+  "section_ids": "9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.453
+}

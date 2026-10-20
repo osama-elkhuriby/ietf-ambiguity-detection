@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "The packet with the highest packet number MUST be used to determine which path to use.",
+    "interpretation_a": "The clause refers to the highest packet number among all packets received on the connection, regardless of source address, and the path used for subsequent packets is the one associated with that packet's source address.",
+    "interpretation_b": "The clause refers to the highest packet number among packets received from a particular source address, and the path used for subsequent packets is the one associated with that source address, ignoring packets from other addresses.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether the highest packet number should be considered globally across all source addresses or per source address, leading to materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T18:31:06.225033+00:00",
+  "document_id": "draft-ietf-quic-transport-10",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "20743ea7938b1121b97abc4297fb5d538dd173611b99e33388b0b2c2e9053456",
+  "lineage_ids": "lineage:db4c7fd7bfdfaa2638e4acd0",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 607,
+    "load_duration": 6810000,
+    "prompt_eval_count": 731,
+    "total_duration": 5356726100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"The packet with the highest packet number MUST be used to determine which path to use.\",\n  \"interpretation_a\": \"The clause refers to the highest packet number among all packets received on the connection, regardless of source address, and the path used for subsequent packets is the one associated with that packet's source address.\",\n  \"interpretation_b\": \"The clause refers to the highest packet number among packets received from a particular source address, and the path used for subsequent packets is the one associated with that source address, ignoring packets from other addresses.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify whether the highest packet number should be considered globally across all source addresses or per source address, leading to materially different implementation behaviours.\"\n}",
+  "record_id": "d16b42830d9ce6c43079d0e284e77fd794eb75904fcd53e759588ac978c64f19",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "7.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 20.172
+}

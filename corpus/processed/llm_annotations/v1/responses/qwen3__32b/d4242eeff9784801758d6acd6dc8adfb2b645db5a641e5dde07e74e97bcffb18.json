@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Endpoints MAY treat negotiation of key sizes smaller than the lower limits as a connection error of type INADEQUATE_SECURITY.",
+    "interpretation_a": "Endpoints are allowed to treat key sizes below the lower limits as a connection error, but are not required to do so. This means that some endpoints might accept such key sizes while others might reject them.",
+    "interpretation_b": "The specification does not define what the 'lower limits' are, nor does it specify which key sizes are considered 'smaller than the lower limits'. This lack of definition leads to different implementations potentially enforcing different thresholds for what constitutes an 'INADEQUATE_SECURITY' error.",
+    "is_ambiguous": "yes",
+    "justification": "The target clause introduces a conditional behavior based on 'key sizes smaller than the lower limits' but does not define what those 'lower limits' are. This missing constraint leads to different implementations potentially enforcing different thresholds, which changes operational behavior.",
+    "missing_information": "The specification does not define the 'lower limits' for key sizes, nor does it provide a normative reference for determining what constitutes an acceptable key size for triggering an 'INADEQUATE_SECURITY' error."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T01:58:04.091363+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "dff5ba89e1dbe7527525b50b0e448fcd483ec897e3f53f2f817620538b832549",
+  "lineage_ids": "lineage:ed2e80036d69a5cdfa860afa",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 266,
+    "load_duration": 12752400,
+    "prompt_eval_count": 517,
+    "total_duration": 10965932200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"Endpoints MAY treat negotiation of key sizes smaller than the lower limits as a connection error of type INADEQUATE_SECURITY.\",\n  \"interpretation_a\": \"Endpoints are allowed to treat key sizes below the lower limits as a connection error, but are not required to do so. This means that some endpoints might accept such key sizes while others might reject them.\",\n  \"interpretation_b\": \"The specification does not define what the 'lower limits' are, nor does it specify which key sizes are considered 'smaller than the lower limits'. This lack of definition leads to different implementations potentially enforcing different thresholds for what constitutes an 'INADEQUATE_SECURITY' error.\",\n  \"missing_information\": \"The specification does not define the 'lower limits' for key sizes, nor does it provide a normative reference for determining what constitutes an acceptable key size for triggering an 'INADEQUATE_SECURITY' error.\",\n  \"justification\": \"The target clause introduces a conditional behavior based on 'key sizes smaller than the lower limits' but does not define what those 'lower limits' are. This missing constraint leads to different implementations potentially enforcing different thresholds, which changes operational behavior.\"\n}",
+  "record_id": "d4242eeff9784801758d6acd6dc8adfb2b645db5a641e5dde07e74e97bcffb18",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "9.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.0
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless there is no data available to send",
+    "interpretation_a": "If there is *any* data buffered for transmission, a probe packet MUST be sent, even if it's a small amount.",
+    "interpretation_b": "A probe packet MUST be sent only if there is a *sufficient* amount of data to construct a full-sized ack-eliciting packet. If only a small fragment exists, it may not be sent.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'no data available to send' is underspecified. It's unclear whether 'no data' refers to any buffered data, or data sufficient to create a packet. This affects whether a probe is sent when only a small amount of data is buffered.",
+    "missing_information": "The definition of 'data available to send' is incomplete. Does 'available' mean any data is buffered, or a sufficient amount to construct a packet?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:23:52.398585+00:00",
+  "document_id": "draft-ietf-quic-recovery-29",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "2e2f9e0e510c47d72a39137ce9f46e40294c3782a162df416cb3aea1d3c01b54",
+  "lineage_ids": "lineage:936015f4b567a3639335bb68",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 214,
+    "load_duration": 4338500,
+    "prompt_eval_count": 590,
+    "total_duration": 8042796000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless there is no data available to send\", \"interpretation_a\": \"If there is *any* data buffered for transmission, a probe packet MUST be sent, even if it's a small amount.\", \"interpretation_b\": \"A probe packet MUST be sent only if there is a *sufficient* amount of data to construct a full-sized ack-eliciting packet. If only a small fragment exists, it may not be sent.\", \"missing_information\": \"The definition of 'data available to send' is incomplete. Does 'available' mean any data is buffered, or a sufficient amount to construct a packet?\",\"justification\": \"The phrase 'no data available to send' is underspecified. It's unclear whether 'no data' refers to any buffered data, or data sufficient to create a packet. This affects whether a probe is sent when only a small amount of data is buffered.\"}",
+  "record_id": "8b1e419ac470ff56420177a27575e895d9ed66a594839c116a46c31c0d7186d2",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "6.2.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.046
+}

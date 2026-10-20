@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Any further changes to the Destination Connection ID are only permitted if the values are taken from any received NEW_CONNECTION_ID frames",
+    "interpretation_a": "The Destination Connection ID can *only* be changed via NEW_CONNECTION_ID frames.",
+    "interpretation_b": "The Destination Connection ID can be changed via NEW_CONNECTION_ID frames, but other mechanisms might also be permitted, as long as they use values from NEW_CONNECTION_ID frames.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'only if' can be read in two ways: exclusively or permissively. The clause does not explicitly state that NEW_CONNECTION_ID frames are the *only* way to change the Destination Connection ID, but the wording suggests it. This creates a missing constraint that affects implementation.",
+    "missing_information": "It is unclear whether NEW_CONNECTION_ID frames are the *exclusive* mechanism for changing the Destination Connection ID, or merely a permitted one. The phrase 'only if' is ambiguous in this context."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:35:09.002396+00:00",
+  "document_id": "draft-ietf-quic-transport-29",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "97513a38df7222e76bfde91fa2ffe231e107a357a8e6fea410f8757286c14de9",
+  "lineage_ids": "lineage:d0b9264bb11ddf6ad7c9a066",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 232,
+    "load_duration": 4022800,
+    "prompt_eval_count": 593,
+    "total_duration": 8679937100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Any further changes to the Destination Connection ID are only permitted if the values are taken from any received NEW_CONNECTION_ID frames\", \"interpretation_a\": \"The Destination Connection ID can *only* be changed via NEW_CONNECTION_ID frames.\", \"interpretation_b\": \"The Destination Connection ID can be changed via NEW_CONNECTION_ID frames, but other mechanisms might also be permitted, as long as they use values from NEW_CONNECTION_ID frames.\", \"missing_information\": \"It is unclear whether NEW_CONNECTION_ID frames are the *exclusive* mechanism for changing the Destination Connection ID, or merely a permitted one. The phrase 'only if' is ambiguous in this context.\",\"justification\": \"The phrase 'only if' can be read in two ways: exclusively or permissively. The clause does not explicitly state that NEW_CONNECTION_ID frames are the *only* way to change the Destination Connection ID, but the wording suggests it. This creates a missing constraint that affects implementation.\"}",
+  "record_id": "7a10e558ba096bda49f30b5c1ab10005f69351ef72752e1731f2e97d60ec8a02",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.672
+}

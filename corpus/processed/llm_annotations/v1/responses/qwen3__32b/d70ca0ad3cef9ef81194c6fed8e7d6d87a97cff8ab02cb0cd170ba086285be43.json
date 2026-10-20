@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "An endpoint MAY treat activity that is suspicious as a connection error of type ENHANCE_YOUR_CALM.",
+    "interpretation_a": "An endpoint may choose to treat any suspicious activity as a connection error, regardless of the specific nature or intent of the activity, as long as it is deemed suspicious by the endpoint's criteria.",
+    "interpretation_b": "An endpoint may treat only specific types of suspicious activity (e.g., excessive requests, resource exhaustion attempts) as a connection error, based on predefined or dynamic thresholds.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'suspicious' is not defined in the clause, and its interpretation can vary significantly between implementations. This lack of definition allows for materially different behaviors in determining what constitutes suspicious activity.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T01:58:32.095876+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "aa177b788b844bb4f293eb19ddc73b244ace7cd4a68ae9ffa78bf146cdef3dcd",
+  "lineage_ids": "lineage:b58e4cf1a69b6fa73b9ba061",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 190,
+    "load_duration": 22362800,
+    "prompt_eval_count": 515,
+    "total_duration": 7827067000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-1\",\n  \"evidence_span\": \"An endpoint MAY treat activity that is suspicious as a connection error of type ENHANCE_YOUR_CALM.\",\n  \"interpretation_a\": \"An endpoint may choose to treat any suspicious activity as a connection error, regardless of the specific nature or intent of the activity, as long as it is deemed suspicious by the endpoint's criteria.\",\n  \"interpretation_b\": \"An endpoint may treat only specific types of suspicious activity (e.g., excessive requests, resource exhaustion attempts) as a connection error, based on predefined or dynamic thresholds.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The term 'suspicious' is not defined in the clause, and its interpretation can vary significantly between implementations. This lack of definition allows for materially different behaviors in determining what constitutes suspicious activity.\"\n}",
+  "record_id": "d70ca0ad3cef9ef81194c6fed8e7d6d87a97cff8ab02cb0cd170ba086285be43",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "10.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.828
+}

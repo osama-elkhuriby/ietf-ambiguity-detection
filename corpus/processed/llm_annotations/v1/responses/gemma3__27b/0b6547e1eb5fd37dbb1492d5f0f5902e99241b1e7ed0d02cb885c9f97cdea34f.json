@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "using any method",
+    "interpretation_a": "Implementations can use *any* normalization method they choose, even proprietary ones, as long as equivalent URIs are treated as the same resource.",
+    "interpretation_b": "Implementations *should* use a standard normalization method (like the one in Section 6.2 of [URI]), but are permitted to use others. The phrase 'using any method' implies a broad range of acceptable methods, but doesn't explicitly require adherence to a standard.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'using any method' is underspecified. It doesn't state whether implementations must adhere to a standard normalization method or if they can use any arbitrary method. This creates ambiguity in how URIs are normalized and compared, potentially leading to interoperability issues.",
+    "missing_information": "It is unclear whether 'any method' implies that implementations are free to choose any normalization algorithm, or if there is an expectation of interoperability through a common standard. A constraint on the normalization method would resolve the ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:54:59.497728+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "310ff5cc85cb3b6afe48ecf2fca1e3c2d4d2d92a51f37d83d27a9da28b67694f",
+  "lineage_ids": "lineage:ae14ad9faa91a8798bfdf337",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 240,
+    "load_duration": 14030400,
+    "prompt_eval_count": 627,
+    "total_duration": 9217780800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"using any method\", \"interpretation_a\": \"Implementations can use *any* normalization method they choose, even proprietary ones, as long as equivalent URIs are treated as the same resource.\", \"interpretation_b\": \"Implementations *should* use a standard normalization method (like the one in Section 6.2 of [URI]), but are permitted to use others. The phrase 'using any method' implies a broad range of acceptable methods, but doesn't explicitly require adherence to a standard.\", \"missing_information\": \"It is unclear whether 'any method' implies that implementations are free to choose any normalization algorithm, or if there is an expectation of interoperability through a common standard. A constraint on the normalization method would resolve the ambiguity.\", \"justification\": \"The phrase 'using any method' is underspecified. It doesn't state whether implementations must adhere to a standard normalization method or if they can use any arbitrary method. This creates ambiguity in how URIs are normalized and compared, potentially leading to interoperability issues.\"}",
+  "record_id": "0b6547e1eb5fd37dbb1492d5f0f5902e99241b1e7ed0d02cb885c9f97cdea34f",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "4.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.234
+}

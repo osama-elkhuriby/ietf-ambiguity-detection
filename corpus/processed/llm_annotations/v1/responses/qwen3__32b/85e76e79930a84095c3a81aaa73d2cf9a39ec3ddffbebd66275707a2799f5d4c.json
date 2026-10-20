@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause provides a clear constraint on server behavior: servers must not send more than three datagrams (including Initial and Handshake packets) without receiving a packet from a verified source address. The wording is specific and does not allow for multiple materially different interpretations. The clause is unambiguous in its requirement.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:22:08.444697+00:00",
+  "document_id": "draft-ietf-quic-transport-14",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "7c98f17bfeb147898b7d8d0b5633f47d30b61d285cae57a3b89ef2164e1d1b00",
+  "lineage_ids": "lineage:546dc2b6bd84fa8c420ab9ce",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 117,
+    "load_duration": 8745100,
+    "prompt_eval_count": 545,
+    "total_duration": 4830187200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause provides a clear constraint on server behavior: servers must not send more than three datagrams (including Initial and Handshake packets) without receiving a packet from a verified source address. The wording is specific and does not allow for multiple materially different interpretations. The clause is unambiguous in its requirement.\"\n}",
+  "record_id": "85e76e79930a84095c3a81aaa73d2cf9a39ec3ddffbebd66275707a2799f5d4c",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "4.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 4.829
+}

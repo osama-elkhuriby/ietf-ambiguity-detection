@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "appropriate privacy properties",
+    "interpretation_a": "The separate SVCB resolution procedure could involve techniques like DNS over HTTPS (DoH) or DNS over TLS (DoT) to encrypt the queries and protect the destinations from eavesdropping.",
+    "interpretation_b": "The separate SVCB resolution procedure could involve using a different DNS resolver known to respect user privacy, or employing techniques like query name minimization to reduce the information disclosed.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'appropriate privacy properties' is subjective and lacks specific requirements. Different implementations could interpret this in various ways, leading to materially different privacy protections. This constitutes an incomplete constraint affecting implementation behaviour.",
+    "missing_information": "The phrase 'appropriate privacy properties' lacks a concrete definition. What constitutes 'appropriate' is not specified, leaving room for different implementations to prioritize different privacy measures or levels of protection."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:08:56.743846+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "bfc4c099b04f266b4a80db253efbcd261d7639f1c2cfe9126bb42e3489767e6d",
+  "lineage_ids": "lineage:be80290cfdc96c3842afa772",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 200,
+    "load_duration": 4469100,
+    "prompt_eval_count": 679,
+    "total_duration": 7652033500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"appropriate privacy properties\", \"interpretation_a\": \"The separate SVCB resolution procedure could involve techniques like DNS over HTTPS (DoH) or DNS over TLS (DoT) to encrypt the queries and protect the destinations from eavesdropping.\", \"interpretation_b\": \"The separate SVCB resolution procedure could involve using a different DNS resolver known to respect user privacy, or employing techniques like query name minimization to reduce the information disclosed.\", \"missing_information\": \"The phrase 'appropriate privacy properties' lacks a concrete definition. What constitutes 'appropriate' is not specified, leaving room for different implementations to prioritize different privacy measures or levels of protection.\", \"justification\": \"The term 'appropriate privacy properties' is subjective and lacks specific requirements. Different implementations could interpret this in various ways, leading to materially different privacy protections. This constitutes an incomplete constraint affecting implementation behaviour.\"}",
+  "record_id": "97d764eb14af14350a9012fe0d6522ca432d70aac2952e3a4790339831af4426",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.64
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD be discarded",
+    "interpretation_a": "An endpoint is required to discard keys when the condition is met, but non-compliance is not an error.",
+    "interpretation_b": "An endpoint is not required to discard keys when the condition is met, and may choose to retain them.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' introduces ambiguity. It is unclear whether failing to discard the keys is permissible, or whether it is a recommendation with no enforcement mechanism. This affects implementation because an implementer must decide whether to enforce the key discard or not.",
+    "missing_information": "The document does not specify the consequences of not discarding the keys. Is it a SHOULD NOT, or is there no consequence?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:49:28.233227+00:00",
+  "document_id": "draft-ietf-quic-tls-05",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "e7193426b2c77b56d7921b7a5c5f952b0828f82a6c81d41ce1c31eab2d29161a",
+  "lineage_ids": "lineage:c5403b338256c3e83565d4bf",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 176,
+    "load_duration": 4075200,
+    "prompt_eval_count": 577,
+    "total_duration": 6686701100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD be discarded\", \"interpretation_a\": \"An endpoint is required to discard keys when the condition is met, but non-compliance is not an error.\", \"interpretation_b\": \"An endpoint is not required to discard keys when the condition is met, and may choose to retain them.\", \"missing_information\": \"The document does not specify the consequences of not discarding the keys. Is it a SHOULD NOT, or is there no consequence?\", \"justification\": \"The use of 'SHOULD' introduces ambiguity. It is unclear whether failing to discard the keys is permissible, or whether it is a recommendation with no enforcement mechanism. This affects implementation because an implementer must decide whether to enforce the key discard or not.\"}",
+  "record_id": "d57f1ca3246d46887c0dd292cbcbc0ddd5538160fc8bb5a9cb47d34b56f7c76b",
+  "revision": "05",
+  "schema_version": 1,
+  "section_ids": "7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.688
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD ignore these hints",
+    "interpretation_a": "The client is required to completely disregard the hints and only use locally available A/AAAA records.",
+    "interpretation_b": "The client is encouraged, but not required, to prioritize locally available A/AAAA records over the hints, potentially using the hints as a fallback if the local records are unavailable or stale.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' combined with 'ignore' leaves room for interpretation. It's unclear whether the hints must be entirely discarded if local records exist, or if they can be considered as a secondary option.",
+    "missing_information": "The degree to which the hints are ignored is not specified. Does 'ignore' mean 'completely disregard' or 'deprioritize'?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:04:01.011640+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-00",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "59ccff1d1124bf6899eda7406d061d8b93b85df5f5c21734b185abe70d1a47d4",
+  "lineage_ids": "lineage:b68b24af9b16f031e94d01c1",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 185,
+    "load_duration": 4357100,
+    "prompt_eval_count": 604,
+    "total_duration": 7006387900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD ignore these hints\", \"interpretation_a\": \"The client is required to completely disregard the hints and only use locally available A/AAAA records.\", \"interpretation_b\": \"The client is encouraged, but not required, to prioritize locally available A/AAAA records over the hints, potentially using the hints as a fallback if the local records are unavailable or stale.\", \"missing_information\": \"The degree to which the hints are ignored is not specified. Does 'ignore' mean 'completely disregard' or 'deprioritize'?\",\"justification\": \"The use of 'SHOULD' combined with 'ignore' leaves room for interpretation. It's unclear whether the hints must be entirely discarded if local records exist, or if they can be considered as a secondary option.\"}",
+  "record_id": "5b302531f56372fe826c044a4a95624d981ef51cb00dd191740ac2f76d1bb06f",
+  "revision": "00",
+  "schema_version": 1,
+  "section_ids": "6.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.015
+}

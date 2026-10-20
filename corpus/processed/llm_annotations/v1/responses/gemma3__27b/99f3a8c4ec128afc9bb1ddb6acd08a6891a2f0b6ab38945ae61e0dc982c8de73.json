@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "largest maximum stream data that it has sent",
+    "interpretation_a": "The endpoint remembers the largest value it *advertised* as the maximum stream data, and compares received data against that.",
+    "interpretation_b": "The endpoint remembers the largest value it *actually sent* in a MAX_STREAM_DATA frame, and compares received data against that.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'largest maximum stream data that it has sent' is ambiguous. 'Sent' could refer to the advertised maximum, or the last value actually transmitted in a MAX_STREAM_DATA frame. These are different values, and the clause does not specify which one is used for the comparison, leading to different implementations.",
+    "missing_information": "It is unclear whether the 'largest maximum stream data' refers to the advertised limit or the last sent value. This affects how the endpoint determines the threshold for the FLOW_CONTROL_ERROR."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:47:26.074415+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "87f1cd1c05451bda5a4db7b071b2660dc5aa87f18c7260a8bf958618ab32b145",
+  "lineage_ids": "lineage:eab6c68abe7b0686a7541c72",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 214,
+    "load_duration": 4121000,
+    "prompt_eval_count": 585,
+    "total_duration": 8046522300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"largest maximum stream data that it has sent\", \"interpretation_a\": \"The endpoint remembers the largest value it *advertised* as the maximum stream data, and compares received data against that.\", \"interpretation_b\": \"The endpoint remembers the largest value it *actually sent* in a MAX_STREAM_DATA frame, and compares received data against that.\", \"missing_information\": \"It is unclear whether the 'largest maximum stream data' refers to the advertised limit or the last sent value. This affects how the endpoint determines the threshold for the FLOW_CONTROL_ERROR.\", \"justification\": \"The phrase 'largest maximum stream data that it has sent' is ambiguous. 'Sent' could refer to the advertised maximum, or the last value actually transmitted in a MAX_STREAM_DATA frame. These are different values, and the clause does not specify which one is used for the comparison, leading to different implementations.\"}",
+  "record_id": "99f3a8c4ec128afc9bb1ddb6acd08a6891a2f0b6ab38945ae61e0dc982c8de73",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "19.10",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.047
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "causes its advertised concurrent stream limit to be exceeded",
+    "interpretation_a": "The limit is a hard cap. Any frame that would push the stream count over the limit triggers an error.",
+    "interpretation_b": "The limit is a suggestion. The endpoint *may* choose to accept the frame and process it, even if it exceeds the advertised limit, but *must* error if it does not.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'causes its advertised concurrent stream limit to be exceeded' doesn't specify whether exceeding the limit is a mandatory error condition or if the endpoint has discretion. The specification does not state whether the endpoint *must* treat the frame as an error if the limit is exceeded, or if it *may* choose to handle it differently (and error if it doesn't).",
+    "missing_information": "It is unclear whether exceeding the limit is an absolute condition that *requires* an error, or a condition where the endpoint has a choice and must error if it chooses not to comply."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:37:11.532883+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "fd3558268fb5c6b0ad2b90cee4b7412ee32289155229740dccd8667846ed8058",
+  "lineage_ids": "lineage:740f500f91c8ff7aa7198829",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 235,
+    "load_duration": 25718600,
+    "prompt_eval_count": 583,
+    "total_duration": 9036914900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"causes its advertised concurrent stream limit to be exceeded\", \"interpretation_a\": \"The limit is a hard cap. Any frame that would push the stream count over the limit triggers an error.\", \"interpretation_b\": \"The limit is a suggestion. The endpoint *may* choose to accept the frame and process it, even if it exceeds the advertised limit, but *must* error if it does not.\", \"missing_information\": \"It is unclear whether exceeding the limit is an absolute condition that *requires* an error, or a condition where the endpoint has a choice and must error if it chooses not to comply.\", \"justification\": \"The phrase 'causes its advertised concurrent stream limit to be exceeded' doesn't specify whether exceeding the limit is a mandatory error condition or if the endpoint has discretion. The specification does not state whether the endpoint *must* treat the frame as an error if the limit is exceeded, or if it *may* choose to handle it differently (and error if it doesn't).\"}",
+  "record_id": "6e37b19e71b761f90c21507dfdbeaf7a7bad73732cabcdd37f1c6e418711310a",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "5.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.031
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST be designed to minimize the chances of linkability",
+    "interpretation_a": "The flow label generation algorithm should use a cryptographically secure pseudorandom function to make it computationally infeasible to link flow labels.",
+    "interpretation_b": "The flow label generation algorithm should use a simple pseudorandom function, or a rotating sequence, to make it difficult but not impossible to link flow labels.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'minimize the chances' is subjective and does not provide a concrete constraint. Different implementations could interpret this differently, leading to varying degrees of protection against linkability. Without a clear definition of 'minimize', it's impossible to determine if an implementation meets the requirement.",
+    "missing_information": "The degree to which 'minimize the chances' must be achieved is not specified. A quantitative metric or a specific algorithm is needed to define the required level of minimization."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:32:58.523798+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "60d19e0e88b03fbfc921a3075745779e3daf3cc53cf3b885accfcb17397af1ef",
+  "lineage_ids": "lineage:b92e52f1bfab2d28334f7f28",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 207,
+    "load_duration": 4043600,
+    "prompt_eval_count": 613,
+    "total_duration": 7797507200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST be designed to minimize the chances of linkability\", \"interpretation_a\": \"The flow label generation algorithm should use a cryptographically secure pseudorandom function to make it computationally infeasible to link flow labels.\", \"interpretation_b\": \"The flow label generation algorithm should use a simple pseudorandom function, or a rotating sequence, to make it difficult but not impossible to link flow labels.\", \"missing_information\": \"The degree to which 'minimize the chances' must be achieved is not specified. A quantitative metric or a specific algorithm is needed to define the required level of minimization.\",\"justification\": \"The phrase 'minimize the chances' is subjective and does not provide a concrete constraint. Different implementations could interpret this differently, leading to varying degrees of protection against linkability. Without a clear definition of 'minimize', it's impossible to determine if an implementation meets the requirement.\"}",
+  "record_id": "73ea776b862e08a5863fdbbc10d499c3990f4ec0fc5de23a23e664a3102d9185",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.797
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD be the most restrictive possible value.",
+    "interpretation_a": "Implementations *should* configure the setting to the lowest permissible value, maximizing security or minimizing resource usage.",
+    "interpretation_b": "Implementations *should* configure the setting to the lowest value that still allows the functionality to operate, balancing security/resource usage with usability.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'most restrictive' is subjective and lacks a concrete definition within the provided context. This allows for multiple reasonable interpretations of what value should be chosen, leading to potentially inconsistent implementations.",
+    "missing_information": "The document does not define what 'most restrictive' means in the context of the setting. It's unclear whether 'most restrictive' refers to security, resource usage, or some other metric. Without this definition, implementations could reasonably choose different values based on their interpretation of 'most restrictive'."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:14:56.027460+00:00",
+  "document_id": "draft-ietf-quic-http-24",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "196f44b64f6ad25f43682627fe930c21cd5420cc9a7242b771c6d7c040ce0a69",
+  "lineage_ids": "lineage:eef2c0bc1736baebb7d649ec",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 205,
+    "load_duration": 9739700,
+    "prompt_eval_count": 540,
+    "total_duration": 7818833000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD be the most restrictive possible value.\", \"interpretation_a\": \"Implementations *should* configure the setting to the lowest permissible value, maximizing security or minimizing resource usage.\", \"interpretation_b\": \"Implementations *should* configure the setting to the lowest value that still allows the functionality to operate, balancing security/resource usage with usability.\", \"missing_information\": \"The document does not define what 'most restrictive' means in the context of the setting. It's unclear whether 'most restrictive' refers to security, resource usage, or some other metric. Without this definition, implementations could reasonably choose different values based on their interpretation of 'most restrictive'.\", \"justification\": \"The term 'most restrictive' is subjective and lacks a concrete definition within the provided context. This allows for multiple reasonable interpretations of what value should be chosen, leading to potentially inconsistent implementations.\"}",
+  "record_id": "f31ccbb9c81071b41b9fe4a6755c5cde71ac8b522b7f694cc8b71974763b42fb",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "11.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.828
+}

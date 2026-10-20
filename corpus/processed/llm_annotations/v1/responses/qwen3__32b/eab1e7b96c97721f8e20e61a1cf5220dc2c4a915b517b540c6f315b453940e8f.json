@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause is clear and unambiguous. It explicitly states that receiving a CANCEL_PUSH frame on a stream other than the control stream must be treated as a connection error of type HTTP_FRAME_UNEXPECTED. There is no room for multiple interpretations, and all necessary constraints are provided.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:04:57.484865+00:00",
+  "document_id": "draft-ietf-quic-http-23",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "792f640661d90642c22699b8a425ee7063b52d10c1fd751ae0f470b41bcac086",
+  "lineage_ids": "lineage:71cce831c6366281a5c4e05d",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 111,
+    "load_duration": 20901700,
+    "prompt_eval_count": 611,
+    "total_duration": 4715041900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause is clear and unambiguous. It explicitly states that receiving a CANCEL_PUSH frame on a stream other than the control stream must be treated as a connection error of type HTTP_FRAME_UNEXPECTED. There is no room for multiple interpretations, and all necessary constraints are provided.\"\n}",
+  "record_id": "eab1e7b96c97721f8e20e61a1cf5220dc2c4a915b517b540c6f315b453940e8f",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "7.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 4.719
+}

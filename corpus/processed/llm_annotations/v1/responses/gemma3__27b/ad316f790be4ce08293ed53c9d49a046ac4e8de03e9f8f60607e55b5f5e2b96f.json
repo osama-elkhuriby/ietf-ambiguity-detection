@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "validate the address",
+    "interpretation_a": "The client must perform a full, comprehensive validation of the address, checking for things like reachability, ownership, and potential security risks.",
+    "interpretation_b": "The client must perform a minimal validation, such as a basic syntax check, to ensure the address is in a valid format.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'validate' is underspecified. It doesn't define *how* the address should be validated, leaving room for different interpretations of the required effort and checks.",
+    "missing_information": "The level of validation required is not specified. What constitutes 'validation' is undefined, leading to different implementations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:53:55.157340+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "92d79e2adb4d15f30170b6dd83ca3c497a86a298161bb052c25b03c58e38861f",
+  "lineage_ids": "lineage:72f14553e38d8ce781011d57",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 165,
+    "load_duration": 4448700,
+    "prompt_eval_count": 559,
+    "total_duration": 6299807600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"validate the address\", \"interpretation_a\": \"The client must perform a full, comprehensive validation of the address, checking for things like reachability, ownership, and potential security risks.\", \"interpretation_b\": \"The client must perform a minimal validation, such as a basic syntax check, to ensure the address is in a valid format.\", \"missing_information\": \"The level of validation required is not specified. What constitutes 'validation' is undefined, leading to different implementations.\",\"justification\": \"The term 'validate' is underspecified. It doesn't define *how* the address should be validated, leaving room for different interpretations of the required effort and checks.\"}",
+  "record_id": "ad316f790be4ce08293ed53c9d49a046ac4e8de03e9f8f60607e55b5f5e2b96f",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9.6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.297
+}

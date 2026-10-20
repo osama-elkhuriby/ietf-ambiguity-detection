@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "might identify a Push ID that has not yet been mentioned by a PUSH_PROMISE frame",
+    "interpretation_a": "The server/client is allowed to ignore CANCEL_PUSH frames for unpromised Push IDs.",
+    "interpretation_b": "The server/client is required to treat CANCEL_PUSH frames for unpromised Push IDs as a connection error, even though the clause states it *might* identify an unpromised ID.",
+    "is_ambiguous": "yes",
+    "justification": "The word 'might' introduces ambiguity. It's unclear whether receiving a CANCEL_PUSH for an unpromised ID is a permissible state, or if it always triggers the connection error. The clause could be read as allowing implementations to handle unpromised CANCEL_PUSH frames differently, or as simply stating that such a scenario is possible before the error is triggered.",
+    "missing_information": "The use of 'might' is unclear. Is it permissible to receive a CANCEL_PUSH for an unpromised ID and *not* treat it as an error, or is the 'might' simply acknowledging a possible reordering scenario where the error condition is still triggered?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:55:04.007076+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "f47ec57c83070604951f13bd7837bafbec1d2fc284a52267550367c5b4d3bf9c",
+  "lineage_ids": "lineage:9dbbb968916259cc1742460d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 257,
+    "load_duration": 12756500,
+    "prompt_eval_count": 634,
+    "total_duration": 9873672700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"might identify a Push ID that has not yet been mentioned by a PUSH_PROMISE frame\", \"interpretation_a\": \"The server/client is allowed to ignore CANCEL_PUSH frames for unpromised Push IDs.\", \"interpretation_b\": \"The server/client is required to treat CANCEL_PUSH frames for unpromised Push IDs as a connection error, even though the clause states it *might* identify an unpromised ID.\", \"missing_information\": \"The use of 'might' is unclear. Is it permissible to receive a CANCEL_PUSH for an unpromised ID and *not* treat it as an error, or is the 'might' simply acknowledging a possible reordering scenario where the error condition is still triggered?\",\"justification\": \"The word 'might' introduces ambiguity. It's unclear whether receiving a CANCEL_PUSH for an unpromised ID is a permissible state, or if it always triggers the connection error. The clause could be read as allowing implementations to handle unpromised CANCEL_PUSH frames differently, or as simply stating that such a scenario is possible before the error is triggered.\"}",
+  "record_id": "76ff841cf7be84e90ff8893a5940b583ac378bbf5104921462c41dd9db7019e5",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.875
+}

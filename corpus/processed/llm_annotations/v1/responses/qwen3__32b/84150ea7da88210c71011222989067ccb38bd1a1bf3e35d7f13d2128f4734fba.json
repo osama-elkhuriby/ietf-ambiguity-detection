@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause is clear and unambiguous. It specifies that an endpoint must accept packets with a newly issued connection ID for the duration of the connection or until the peer invalidates it via a RETIRE_CONNECTION_ID frame. There is no ambiguity in the language, and the normative reference to the RETIRE_CONNECTION_ID frame provides a clear mechanism for invalidation. No alternative interpretations or missing constraints are evident.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:21:29.168097+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "c1402a5662e97fcd2032142d7788a35fd5762965d62229532eecfb2baebc6cc0",
+  "lineage_ids": "lineage:471991432305159e825eca83",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 136,
+    "load_duration": 4356700,
+    "prompt_eval_count": 586,
+    "total_duration": 5633627000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause is clear and unambiguous. It specifies that an endpoint must accept packets with a newly issued connection ID for the duration of the connection or until the peer invalidates it via a RETIRE_CONNECTION_ID frame. There is no ambiguity in the language, and the normative reference to the RETIRE_CONNECTION_ID frame provides a clear mechanism for invalidation. No alternative interpretations or missing constraints are evident.\"\n}",
+  "record_id": "84150ea7da88210c71011222989067ccb38bd1a1bf3e35d7f13d2128f4734fba",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "5.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.641
+}

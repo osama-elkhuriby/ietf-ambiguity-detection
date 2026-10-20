@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "every connection",
+    "interpretation_a": "The key must be unique for each TCP/QUIC connection established between the same two endpoints, even if the connection is quickly re-established.",
+    "interpretation_b": "The key must be unique for each logical connection, even if the underlying transport reuses the same socket or connection identifier. This could imply a per-application-layer-connection key.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'connection' is not defined, and could reasonably refer to different levels of abstraction. This leads to two plausible interpretations of the requirement.",
+    "missing_information": "The definition of 'connection' is not precise. Does it refer to a TCP/QUIC connection, a QUIC connection ID, or an application-layer connection?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:10:56.478760+00:00",
+  "document_id": "draft-ietf-quic-transport-00",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "fe3253e6dacfa316e497fcac9d864e26a54f3203e4c1dd7d49f0325e3d4a2867",
+  "lineage_ids": "lineage:7b87868bc22bf330b0732730",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 183,
+    "load_duration": 4958400,
+    "prompt_eval_count": 577,
+    "total_duration": 6925795300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"every connection\", \"interpretation_a\": \"The key must be unique for each TCP/QUIC connection established between the same two endpoints, even if the connection is quickly re-established.\", \"interpretation_b\": \"The key must be unique for each logical connection, even if the underlying transport reuses the same socket or connection identifier. This could imply a per-application-layer-connection key.\", \"missing_information\": \"The definition of 'connection' is not precise. Does it refer to a TCP/QUIC connection, a QUIC connection ID, or an application-layer connection?\",\"justification\": \"The term 'connection' is not defined, and could reasonably refer to different levels of abstraction. This leads to two plausible interpretations of the requirement.\"}",
+  "record_id": "32073d10e096dc150c15db3a9fe9c14be945e63e8dbedf28aef7b154ffa0d309",
+  "revision": "00",
+  "schema_version": 1,
+  "section_ids": "5.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.937
+}

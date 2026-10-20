@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD include information that allows the server to verify",
+    "interpretation_a": "The token MUST contain explicit IP address and port information for verification.",
+    "interpretation_b": "The token MAY contain other information that, combined with other packet data, allows the server to verify the IP address and port. The server could, for example, correlate the token with a previously seen connection from the same IP address and port.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'allows' and 'information' is vague. It doesn't specify what kind of information or how it should be used for verification. This allows for multiple implementations that satisfy the SHOULD statement but differ in their approach to address validation.",
+    "missing_information": "The clause does not specify *how* the information should be included, or what level of detail is required. It is unclear whether the token itself must contain the IP address and port, or if the server can derive this information from other sources."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:45:37.559413+00:00",
+  "document_id": "draft-ietf-quic-transport-28",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "f5cc1c5c639231fe08202b23b001b968b35ae0e405c7eca653ae358e16b1443d",
+  "lineage_ids": "lineage:17bbf8908a1acb43aa3a6954",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 222,
+    "load_duration": 4507600,
+    "prompt_eval_count": 594,
+    "total_duration": 8334174700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD include information that allows the server to verify\", \"interpretation_a\": \"The token MUST contain explicit IP address and port information for verification.\", \"interpretation_b\": \"The token MAY contain other information that, combined with other packet data, allows the server to verify the IP address and port. The server could, for example, correlate the token with a previously seen connection from the same IP address and port.\", \"missing_information\": \"The clause does not specify *how* the information should be included, or what level of detail is required. It is unclear whether the token itself must contain the IP address and port, or if the server can derive this information from other sources.\",\"justification\": \"The use of 'allows' and 'information' is vague. It doesn't specify what kind of information or how it should be used for verification. This allows for multiple implementations that satisfy the SHOULD statement but differ in their approach to address validation.\"}",
+  "record_id": "94b307e108254e1aacfcd7d987d9e6a8c4de9d97e7361722afdd9e1018604113",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "8.1.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.328
+}

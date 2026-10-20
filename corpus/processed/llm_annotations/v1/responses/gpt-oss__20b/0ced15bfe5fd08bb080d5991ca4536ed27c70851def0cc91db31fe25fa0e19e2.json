@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "needlessly fine-grained detail",
+    "interpretation_a": "The clause could be interpreted to mean that any detail beyond the product name (e.g., version numbers, build identifiers, or internal module names) is considered 'needlessly fine-grained' and should be omitted.",
+    "interpretation_b": "Alternatively, the clause could be interpreted to allow detailed versioning and subproduct information as long as it does not reveal internal implementation specifics, treating 'needlessly fine-grained detail' as only those details that expose internal architecture or security-sensitive information.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'needlessly fine-grained detail' is undefined, leading to two materially different reasonable interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T05:24:35.670259+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-12",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "3bebb91dffdeeb319a3e00bf7a875462cd4bf0582f83a7848cd34b8a365c511c",
+  "lineage_ids": "lineage:77a7f16c2b821a75984cdde9",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 383,
+    "load_duration": 6163500,
+    "prompt_eval_count": 739,
+    "total_duration": 3485143700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-1\",\n  \"evidence_span\": \"needlessly fine-grained detail\",\n  \"interpretation_a\": \"The clause could be interpreted to mean that any detail beyond the product name (e.g., version numbers, build identifiers, or internal module names) is considered 'needlessly fine-grained' and should be omitted.\",\n  \"interpretation_b\": \"Alternatively, the clause could be interpreted to allow detailed versioning and subproduct information as long as it does not reveal internal implementation specifics, treating 'needlessly fine-grained detail' as only those details that expose internal architecture or security-sensitive information.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The term 'needlessly fine-grained detail' is undefined, leading to two materially different reasonable interpretations.\"\n}",
+  "record_id": "0ced15bfe5fd08bb080d5991ca4536ed27c70851def0cc91db31fe25fa0e19e2",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "9.2.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 15.75
+}

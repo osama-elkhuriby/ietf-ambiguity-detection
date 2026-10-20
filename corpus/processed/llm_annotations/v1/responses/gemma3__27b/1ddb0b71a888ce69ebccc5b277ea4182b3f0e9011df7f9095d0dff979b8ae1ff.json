@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "a period of time determined by the authentication scheme, parameters, and/or user preferences",
+    "interpretation_a": "The timeout is determined solely by the authentication scheme, with parameters and user preferences being irrelevant.",
+    "interpretation_b": "The timeout is determined by a combination of the authentication scheme, its parameters, and user preferences, potentially allowing the user to override the scheme's default.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'and/or' allows for multiple interpretations of how the timeout is calculated. It's unclear if all three factors (scheme, parameters, preferences) must be considered, or if any one of them can determine the timeout.",
+    "missing_information": "The clause does not specify how the timeout is determined when there is a conflict between the authentication scheme, parameters, and user preferences. Is there a precedence order? Is it a weighted average? This lack of specificity creates ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:57:44.429905+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-07",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "49528ce207088ac46eaadaf316a5a1798d9342f987d54f1a4258b064784ffa68",
+  "lineage_ids": "lineage:758630fe205bae435e8f9ace",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 211,
+    "load_duration": 9377500,
+    "prompt_eval_count": 583,
+    "total_duration": 8163735700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"a period of time determined by the authentication scheme, parameters, and/or user preferences\", \"interpretation_a\": \"The timeout is determined solely by the authentication scheme, with parameters and user preferences being irrelevant.\", \"interpretation_b\": \"The timeout is determined by a combination of the authentication scheme, its parameters, and user preferences, potentially allowing the user to override the scheme's default.\", \"missing_information\": \"The clause does not specify how the timeout is determined when there is a conflict between the authentication scheme, parameters, and user preferences. Is there a precedence order? Is it a weighted average? This lack of specificity creates ambiguity.\",\"justification\": \"The phrase 'and/or' allows for multiple interpretations of how the timeout is calculated. It's unclear if all three factors (scheme, parameters, preferences) must be considered, or if any one of them can determine the timeout.\"}",
+  "record_id": "1ddb0b71a888ce69ebccc5b277ea4182b3f0e9011df7f9095d0dff979b8ae1ff",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.172
+}

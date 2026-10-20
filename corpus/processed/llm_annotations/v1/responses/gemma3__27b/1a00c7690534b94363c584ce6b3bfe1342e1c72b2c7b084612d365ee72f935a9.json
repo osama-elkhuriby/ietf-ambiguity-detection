@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "after receiving the HEADERS frame that opens a request or after receiving a final (non-informational) status code",
+    "interpretation_a": "The clause applies to requests *and* responses, meaning a HEADERS frame without END_STREAM after a request's initial HEADERS or a final response status is an error.",
+    "interpretation_b": "The clause applies only to requests. A HEADERS frame without END_STREAM after a request's initial HEADERS or a final response status is an error, but the response side is not covered.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'after receiving the HEADERS frame that opens a request or after receiving a final (non-informational) status code' is ambiguous. It's unclear if both conditions apply to both requests and responses, or if the 'final status code' part only applies to responses. This creates two reasonable interpretations regarding the scope of the rule.",
+    "missing_information": "It is unclear if the condition applies to both requests and responses, or only to requests. The phrasing could be interpreted either way."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:29:02.523424+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "a15005a25b88dae36ecd4c9390a4e39de4bd5d3fef3955851a5f8e6cca49c152",
+  "lineage_ids": "lineage:c24de963e52ac905fb7fbd18",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 248,
+    "load_duration": 10185800,
+    "prompt_eval_count": 591,
+    "total_duration": 9497966100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"after receiving the HEADERS frame that opens a request or after receiving a final (non-informational) status code\", \"interpretation_a\": \"The clause applies to requests *and* responses, meaning a HEADERS frame without END_STREAM after a request's initial HEADERS or a final response status is an error.\", \"interpretation_b\": \"The clause applies only to requests. A HEADERS frame without END_STREAM after a request's initial HEADERS or a final response status is an error, but the response side is not covered.\", \"missing_information\": \"It is unclear if the condition applies to both requests and responses, or only to requests. The phrasing could be interpreted either way.\", \"justification\": \"The phrase 'after receiving the HEADERS frame that opens a request or after receiving a final (non-informational) status code' is ambiguous. It's unclear if both conditions apply to both requests and responses, or if the 'final status code' part only applies to responses. This creates two reasonable interpretations regarding the scope of the rule.\"}",
+  "record_id": "1a00c7690534b94363c584ce6b3bfe1342e1c72b2c7b084612d365ee72f935a9",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.515
+}

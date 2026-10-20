@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "partial credentials (e.g., when the authentication scheme requires more than one round trip)",
+    "interpretation_a": "The server can respond with 401 immediately upon detecting partial credentials, even if the authentication scheme is still in progress.",
+    "interpretation_b": "The server must wait until the authentication scheme is fully completed before responding with 401, even if partial credentials are received during an intermediate step.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'partial credentials' is not clearly defined in the context of a multi-round authentication scheme. It's unclear whether the server should immediately reject partial credentials or wait for the complete exchange before determining validity.",
+    "missing_information": "The clause does not specify *when* partial credentials are considered invalid enough to warrant a 401 response during a multi-round authentication scheme. A concrete constraint on timing or completion status is missing."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:26:21.623308+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-14",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "26bee2f2b51831beceb69c25133f3c3c62cc7f74710f65e2cfd1be9341ea7af9",
+  "lineage_ids": "lineage:fb2b0bb77d94a1acc4872bc4",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 208,
+    "load_duration": 8348000,
+    "prompt_eval_count": 671,
+    "total_duration": 8129454800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"partial credentials (e.g., when the authentication scheme requires more than one round trip)\", \"interpretation_a\": \"The server can respond with 401 immediately upon detecting partial credentials, even if the authentication scheme is still in progress.\", \"interpretation_b\": \"The server must wait until the authentication scheme is fully completed before responding with 401, even if partial credentials are received during an intermediate step.\", \"missing_information\": \"The clause does not specify *when* partial credentials are considered invalid enough to warrant a 401 response during a multi-round authentication scheme. A concrete constraint on timing or completion status is missing.\",\"justification\": \"The phrase 'partial credentials' is not clearly defined in the context of a multi-round authentication scheme. It's unclear whether the server should immediately reject partial credentials or wait for the complete exchange before determining validity.\"}",
+  "record_id": "c29a5a5fe70daea5ef745f17b54a91db91e52293fa4970cc3ccf25f10ae48253",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "11.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.141
+}

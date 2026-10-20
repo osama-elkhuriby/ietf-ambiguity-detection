@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "suitable for use by any stub resolvers",
+    "interpretation_a": "The authoritative server must omit records if *even one* stub resolver setting SOURCE PREFIX-LENGTH to zero cannot use them.",
+    "interpretation_b": "The authoritative server must omit records only if *no* stub resolver setting SOURCE PREFIX-LENGTH to zero can use them.",
+    "is_ambiguous": "yes",
+    "justification": "The clause uses the term 'suitable' without defining it. This allows for two interpretations: that the record must be suitable for *all* stub resolvers with SOURCE PREFIX-LENGTH zero, or only for *at least one*. This difference in interpretation affects how authoritative servers should filter records.",
+    "missing_information": "The meaning of 'suitable' is not defined. Does it require all stub resolvers to be able to use the record, or just that at least one can?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:10:48.595809+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "33188de3c8a0bf8d39776a8cbeae540dde3e9b40155213eebb542e51647acec1",
+  "lineage_ids": "lineage:b1f0b0d5b0a58e4f11d83523",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 196,
+    "load_duration": 4484100,
+    "prompt_eval_count": 605,
+    "total_duration": 7419367800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"suitable for use by any stub resolvers\", \"interpretation_a\": \"The authoritative server must omit records if *even one* stub resolver setting SOURCE PREFIX-LENGTH to zero cannot use them.\", \"interpretation_b\": \"The authoritative server must omit records only if *no* stub resolver setting SOURCE PREFIX-LENGTH to zero can use them.\", \"missing_information\": \"The meaning of 'suitable' is not defined. Does it require all stub resolvers to be able to use the record, or just that at least one can?\",\"justification\": \"The clause uses the term 'suitable' without defining it. This allows for two interpretations: that the record must be suitable for *all* stub resolvers with SOURCE PREFIX-LENGTH zero, or only for *at least one*. This difference in interpretation affects how authoritative servers should filter records.\"}",
+  "record_id": "b1811629581e8ec68a8db63b0dd626b0d40394385bfeb47221d2dd3f7131a8b5",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "4.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.422
+}

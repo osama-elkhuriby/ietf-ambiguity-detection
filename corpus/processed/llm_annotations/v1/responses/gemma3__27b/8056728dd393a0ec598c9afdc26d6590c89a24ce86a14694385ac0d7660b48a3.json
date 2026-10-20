@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "loop back to step 2",
+    "interpretation_a": "The client unconditionally loops back to step 2 after receiving an AliasMode record, potentially creating an infinite loop if the AliasMode record always points to another AliasMode record.",
+    "interpretation_b": "The client loops back to step 2 only if certain conditions are met (e.g., the chain length is within limits, loop detection heuristics pass), preventing an infinite loop.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'subject to chain length limits and loop detection heuristics' introduces a constraint, but the clause doesn't specify *how* those limits and heuristics are determined. This allows for materially different implementations, as one client might be more aggressive in following AliasMode records than another.",
+    "missing_information": "The clause does not explicitly define the conditions under which the loop back to step 2 is allowed, leaving room for different implementations regarding chain length limits and loop detection heuristics."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:07:05.387742+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-02",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "ef940fba794483bf9ecda89c6a6138371e88bfa5bb4bae509d2566d3d0274dc7",
+  "lineage_ids": "lineage:f01002ed37eba05efff71ec0",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 219,
+    "load_duration": 4394700,
+    "prompt_eval_count": 628,
+    "total_duration": 8229530700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"loop back to step 2\", \"interpretation_a\": \"The client unconditionally loops back to step 2 after receiving an AliasMode record, potentially creating an infinite loop if the AliasMode record always points to another AliasMode record.\", \"interpretation_b\": \"The client loops back to step 2 only if certain conditions are met (e.g., the chain length is within limits, loop detection heuristics pass), preventing an infinite loop.\", \"missing_information\": \"The clause does not explicitly define the conditions under which the loop back to step 2 is allowed, leaving room for different implementations regarding chain length limits and loop detection heuristics.\", \"justification\": \"The phrase 'subject to chain length limits and loop detection heuristics' introduces a constraint, but the clause doesn't specify *how* those limits and heuristics are determined. This allows for materially different implementations, as one client might be more aggressive in following AliasMode records than another.\"}",
+  "record_id": "8056728dd393a0ec598c9afdc26d6590c89a24ce86a14694385ac0d7660b48a3",
+  "revision": "02",
+  "schema_version": 1,
+  "section_ids": "3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.234
+}

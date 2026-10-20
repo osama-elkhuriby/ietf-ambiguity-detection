@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY continue sending ACK frames immediately on each subsequently received packet, but the endpoint SHOULD return to acknowledging every other packet within a period of 1/8 x RTT",
+    "interpretation_a": "The endpoint can send ACK frames for every packet, but must switch to acknowledging every other packet within 1/8 RTT if it doesn't receive more out-of-order packets.",
+    "interpretation_b": "The endpoint can send ACK frames for every packet, but is only *required* to switch to acknowledging every other packet within 1/8 RTT if it *does* receive more out-of-order packets. It may continue sending ACK frames for every packet indefinitely.",
+    "is_ambiguous": "yes",
+    "justification": "The conditional phrasing 'unless more ack-eliciting packets are received out of order' applies to the 'SHOULD return' clause, but it's unclear whether it also applies to the 'MAY continue' clause. Does the 'MAY continue' have an implicit time limit, or is it only constrained by the 'SHOULD return'?",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:01:50.798104+00:00",
+  "document_id": "draft-ietf-quic-transport-27",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "03c76d84de427323f1dbd92084f20adbe14edbe5e31360634108e243b2c2622d",
+  "lineage_ids": "lineage:35cda599a18bb7573f4a0600",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 248,
+    "load_duration": 3725700,
+    "prompt_eval_count": 622,
+    "total_duration": 9280482300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY continue sending ACK frames immediately on each subsequently received packet, but the endpoint SHOULD return to acknowledging every other packet within a period of 1/8 x RTT\", \"interpretation_a\": \"The endpoint can send ACK frames for every packet, but must switch to acknowledging every other packet within 1/8 RTT if it doesn't receive more out-of-order packets.\", \"interpretation_b\": \"The endpoint can send ACK frames for every packet, but is only *required* to switch to acknowledging every other packet within 1/8 RTT if it *does* receive more out-of-order packets. It may continue sending ACK frames for every packet indefinitely.\", \"missing_information\": \"\",\"justification\": \"The conditional phrasing 'unless more ack-eliciting packets are received out of order' applies to the 'SHOULD return' clause, but it's unclear whether it also applies to the 'MAY continue' clause. Does the 'MAY continue' have an implicit time limit, or is it only constrained by the 'SHOULD return'?\"}",
+  "record_id": "1b776c2a54aaf994fac6e42f613b2c91603b817ff699519023c2b1f82e811c15",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "13.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.281
+}

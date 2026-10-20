@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "add its own domain to the host name",
+    "interpretation_a": "The proxy appends its own domain to the host name, e.g., \"example\" becomes \"example.proxy.com\".",
+    "interpretation_b": "The proxy prepends its own domain to the host name, e.g., \"example\" becomes \"proxy.com.example\".",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether the proxy’s domain should be appended or prepended to the host name, allowing two materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T06:55:47.571432+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-07",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "adf5ebf71685ffb06b52ddeb08b067d14b394959ebad6de5e85aed8dc5af114f",
+  "lineage_ids": "lineage:941a768747f8fc31eed8abc9",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 4412,
+    "load_duration": 3144300,
+    "prompt_eval_count": 597,
+    "total_duration": 38166595600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"add its own domain to the host name\",\n  \"interpretation_a\": \"The proxy appends its own domain to the host name, e.g., \\\"example\\\" becomes \\\"example.proxy.com\\\".\",\n  \"interpretation_b\": \"The proxy prepends its own domain to the host name, e.g., \\\"example\\\" becomes \\\"proxy.com.example\\\".\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify whether the proxy’s domain should be appended or prepended to the host name, allowing two materially different implementation behaviours.\"\n}",
+  "record_id": "74f6098b2d5f88f7d17514f079b0e3513e4154e5448ddbb86d952e1563bac253",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "5.7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 38.172
+}

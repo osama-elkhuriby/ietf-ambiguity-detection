@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "if no values are stored",
+    "interpretation_a": "If no values are stored, the client MUST use default values. This implies a defined set of default values exists and is consistently applied.",
+    "interpretation_b": "If no values are stored, the client MUST NOT attempt 0-RTT. The phrase could be read as a conditional requirement where compliance is only required *if* values are stored, and no action is mandated if they aren't.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'or default values, if no values are stored' creates ambiguity. It's unclear whether the 'MUST comply' extends to the case where no stored settings exist, or if that condition simply defines when default values are used. This impacts whether a client can proceed with 0-RTT when it has no prior settings information.",
+    "missing_information": "The document does not define what 'default values' are, nor does it explicitly state whether 0-RTT is permissible if no settings are stored. This missing constraint affects implementation because a client could either use defaults or refuse to initiate 0-RTT if no settings are available."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:51:20.445537+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "d4729951226ddf6f0e797a70373cfeba882c8a65b26c28729f6d8a95607ec9fa",
+  "lineage_ids": "lineage:b69f6dee53b5b28896c992d5",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 257,
+    "load_duration": 19357500,
+    "prompt_eval_count": 627,
+    "total_duration": 9739299600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"if no values are stored\", \"interpretation_a\": \"If no values are stored, the client MUST use default values. This implies a defined set of default values exists and is consistently applied.\", \"interpretation_b\": \"If no values are stored, the client MUST NOT attempt 0-RTT. The phrase could be read as a conditional requirement where compliance is only required *if* values are stored, and no action is mandated if they aren't.\", \"missing_information\": \"The document does not define what 'default values' are, nor does it explicitly state whether 0-RTT is permissible if no settings are stored. This missing constraint affects implementation because a client could either use defaults or refuse to initiate 0-RTT if no settings are available.\", \"justification\": \"The phrase 'or default values, if no values are stored' creates ambiguity. It's unclear whether the 'MUST comply' extends to the case where no stored settings exist, or if that condition simply defines when default values are used. This impacts whether a client can proceed with 0-RTT when it has no prior settings information.\"}",
+  "record_id": "59db61eeccbc47eb9104e71603bb7f2b262880241fcef93b7167410b22fdfa21",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.2.4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.75
+}

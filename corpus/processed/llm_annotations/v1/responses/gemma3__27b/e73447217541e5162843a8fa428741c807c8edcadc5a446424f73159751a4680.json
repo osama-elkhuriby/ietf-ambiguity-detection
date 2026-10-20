@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "reasonable amount of time",
+    "interpretation_a": "A 'reasonable amount of time' could be a fixed duration (e.g., 10 seconds) regardless of network conditions.",
+    "interpretation_b": "A 'reasonable amount of time' could be a multiple of the estimated round trip time (RTT) between the endpoints, adapting to network latency.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'reasonable amount of time' is subjective and lacks a concrete definition. This allows for different implementations to interpret it differently, potentially leading to connection errors in scenarios where one endpoint has a shorter timeout than the other.",
+    "missing_information": "The document does not define what constitutes a 'reasonable amount of time', leaving room for different implementations and potentially leading to interoperability issues. A concrete value or a method for calculating the timeout is needed."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:50:49.995433+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "e40ad3cc9145a90a7ddf9dd957ee23c5cf074b7d0633e78f860a89ede7e25dc0",
+  "lineage_ids": "lineage:d2b584a076a36cb60e190072",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 196,
+    "load_duration": 10884800,
+    "prompt_eval_count": 617,
+    "total_duration": 7603085900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"reasonable amount of time\", \"interpretation_a\": \"A 'reasonable amount of time' could be a fixed duration (e.g., 10 seconds) regardless of network conditions.\", \"interpretation_b\": \"A 'reasonable amount of time' could be a multiple of the estimated round trip time (RTT) between the endpoints, adapting to network latency.\", \"missing_information\": \"The document does not define what constitutes a 'reasonable amount of time', leaving room for different implementations and potentially leading to interoperability issues. A concrete value or a method for calculating the timeout is needed.\",\"justification\": \"The phrase 'reasonable amount of time' is subjective and lacks a concrete definition. This allows for different implementations to interpret it differently, potentially leading to connection errors in scenarios where one endpoint has a shorter timeout than the other.\"}",
+  "record_id": "e73447217541e5162843a8fa428741c807c8edcadc5a446424f73159751a4680",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.5.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.609
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "supply control information for or about the current connection",
+    "interpretation_a": "A field is considered to supply control information if it directly affects how the connection is maintained (e.g., keep-alive).",
+    "interpretation_b": "A field is considered to supply control information if it affects any aspect of the connection, including data transfer or request processing, even if it doesn't directly maintain it.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'control information for or about the current connection' is vague. Different implementations could reasonably interpret the scope of 'control information' differently, leading to inconsistent behavior regarding which fields need to be listed in the Connection header.",
+    "missing_information": "The definition of 'control information' is not precise. It's unclear what level of impact a field must have on the connection to be considered 'control information' requiring inclusion in the Connection header."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:21:28.754308+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "6e8f0142c046663d60c2aef73e9ebcb82c8810f0184a20fd1b5bb8a9871a3b9f",
+  "lineage_ids": "lineage:48b9fd9c762c52daca9a2254",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 207,
+    "load_duration": 19703100,
+    "prompt_eval_count": 584,
+    "total_duration": 8013863300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"supply control information for or about the current connection\", \"interpretation_a\": \"A field is considered to supply control information if it directly affects how the connection is maintained (e.g., keep-alive).\", \"interpretation_b\": \"A field is considered to supply control information if it affects any aspect of the connection, including data transfer or request processing, even if it doesn't directly maintain it.\", \"missing_information\": \"The definition of 'control information' is not precise. It's unclear what level of impact a field must have on the connection to be considered 'control information' requiring inclusion in the Connection header.\",\"justification\": \"The phrase 'control information for or about the current connection' is vague. Different implementations could reasonably interpret the scope of 'control information' differently, leading to inconsistent behavior regarding which fields need to be listed in the Connection header.\"}",
+  "record_id": "a4e242207755e49b946d2b51fec11c2c479a34fafb39467b661a6090c87c69e5",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "7.6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.015
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "handle an illegal option length",
+    "interpretation_a": "Implementations must actively attempt to process the option despite the illegal length, potentially leading to undefined behavior or crashes.",
+    "interpretation_b": "Implementations must reject the option and reset the connection, as suggested, but are not strictly required to do so.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states implementations \"MUST be prepared to handle\" an illegal option length, but the suggested procedure is to reset the connection. This creates ambiguity as to whether handling the illegal length *requires* attempting to process it, or if resetting the connection *is* the required handling. The lack of a clear constraint on what 'prepared to handle' means allows for materially different implementations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:29:13.955237+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-18",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "e706b080d3e975a4ca76e12fe801ca9787bb81f8d1b64f92f5537a9544af315a",
+  "lineage_ids": "lineage:6da83b065e4a42c2df538c38",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 178,
+    "load_duration": 11698400,
+    "prompt_eval_count": 597,
+    "total_duration": 6896279500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"handle an illegal option length\", \"interpretation_a\": \"Implementations must actively attempt to process the option despite the illegal length, potentially leading to undefined behavior or crashes.\", \"interpretation_b\": \"Implementations must reject the option and reset the connection, as suggested, but are not strictly required to do so.\", \"missing_information\": \"\", \"justification\": \"The clause states implementations \\\"MUST be prepared to handle\\\" an illegal option length, but the suggested procedure is to reset the connection. This creates ambiguity as to whether handling the illegal length *requires* attempting to process it, or if resetting the connection *is* the required handling. The lack of a clear constraint on what 'prepared to handle' means allows for materially different implementations.\"}",
+  "record_id": "d243e0a0b4235beed0ef2a23ea6847d7ebde0bb291325fae329bc59c717f7e8e",
+  "revision": "18",
+  "schema_version": 1,
+  "section_ids": "3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.891
+}

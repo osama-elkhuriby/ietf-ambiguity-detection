@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "earliest timeout",
+    "interpretation_a": "The timer is set to the packet number space that will timeout soonest, based on current RTT measurements.",
+    "interpretation_b": "The timer is set to the packet number space that *has* the earliest timeout value at the moment the decision is made, regardless of future RTT changes.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'earliest timeout' is open to interpretation. It could mean the packet number space with the lowest current timeout value, or the one predicted to timeout soonest based on RTT measurements. This affects how the timer is set and thus implementation behaviour.",
+    "missing_information": "The meaning of 'earliest timeout' is not fully defined. Does it refer to the current earliest timeout, or the packet number space that will timeout soonest based on predicted RTTs?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:30:58.533070+00:00",
+  "document_id": "draft-ietf-quic-recovery-29",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "3e494a7a621d1f2306eba7054a1fedb321e20e743309310d379381041de1cbe1",
+  "lineage_ids": "lineage:debcb9c5ff93d11879fa9051",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 200,
+    "load_duration": 4080800,
+    "prompt_eval_count": 599,
+    "total_duration": 7559251700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"earliest timeout\", \"interpretation_a\": \"The timer is set to the packet number space that will timeout soonest, based on current RTT measurements.\", \"interpretation_b\": \"The timer is set to the packet number space that *has* the earliest timeout value at the moment the decision is made, regardless of future RTT changes.\", \"missing_information\": \"The meaning of 'earliest timeout' is not fully defined. Does it refer to the current earliest timeout, or the packet number space that will timeout soonest based on predicted RTTs?\",\"justification\": \"The phrase 'earliest timeout' is open to interpretation. It could mean the packet number space with the lowest current timeout value, or the one predicted to timeout soonest based on RTT measurements. This affects how the timer is set and thus implementation behaviour.\"}",
+  "record_id": "da621801af79e24e65df2248e6619cb6ac33873b7267666b049552a99f8efd19",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "6.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.562
+}

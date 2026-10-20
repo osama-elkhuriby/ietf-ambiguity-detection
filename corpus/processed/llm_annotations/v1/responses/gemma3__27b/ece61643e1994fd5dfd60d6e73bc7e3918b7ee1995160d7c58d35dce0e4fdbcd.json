@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "Urgent pointer advance",
+    "interpretation_a": "The urgent pointer is advanced by the amount of data acknowledged.",
+    "interpretation_b": "The urgent pointer is advanced by the amount of new data sent.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'Urgent pointer advance' is undefined in the provided context. It's unclear *what* causes the urgent pointer to advance. Is it related to acknowledged data, new data, or something else entirely? The missing definition of '[urgent]' creates ambiguity.",
+    "missing_information": "The reference '[urgent]' is not defined within this document excerpt, and its definition is crucial to understanding how the urgent pointer is advanced. Without knowing what '[urgent]' refers to, it's unclear what triggers the advance or how it's calculated."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:30:42.802565+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-14",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "d05423e81959f9b4ce305b61d1696f5ddc1393ec80a462a965c2c0035e0b1dbb",
+  "lineage_ids": "lineage:adb7e09755be0049a3b7c26e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 186,
+    "load_duration": 4585500,
+    "prompt_eval_count": 559,
+    "total_duration": 7197976100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-1\", \"evidence_span\": \"Urgent pointer advance\", \"interpretation_a\": \"The urgent pointer is advanced by the amount of data acknowledged.\", \"interpretation_b\": \"The urgent pointer is advanced by the amount of new data sent.\", \"missing_information\": \"The reference '[urgent]' is not defined within this document excerpt, and its definition is crucial to understanding how the urgent pointer is advanced. Without knowing what '[urgent]' refers to, it's unclear what triggers the advance or how it's calculated.\",\"justification\": \"The phrase 'Urgent pointer advance' is undefined in the provided context. It's unclear *what* causes the urgent pointer to advance. Is it related to acknowledged data, new data, or something else entirely? The missing definition of '[urgent]' creates ambiguity.\"}",
+  "record_id": "ece61643e1994fd5dfd60d6e73bc7e3918b7ee1995160d7c58d35dce0e4fdbcd",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "3.9.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.218
+}

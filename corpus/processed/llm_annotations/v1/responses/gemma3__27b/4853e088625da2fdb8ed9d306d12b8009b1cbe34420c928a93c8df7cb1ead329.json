@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Since there is no predefined limit to the length of a payload",
+    "interpretation_a": "The payload can be arbitrarily large, requiring recipients to handle extremely large numbers in the byte-range parameters.",
+    "interpretation_b": "The payload has a practical limit (e.g., based on server configuration or network constraints), and recipients only need to handle numbers within that range.",
+    "is_ambiguous": "yes",
+    "justification": "The statement 'Since there is no predefined limit to the length of a payload' is ambiguous because it doesn't specify whether a *practical* limit exists. If a practical limit exists, the overflow protection requirements are lessened. Without knowing the upper bound on payload size, it's impossible to determine the appropriate level of overflow protection.",
+    "missing_information": "The document does not define a maximum payload size, leaving open the question of how large the decimal numerals in the byte-range parameters could be. This affects the necessary safeguards against integer overflow."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:04:50.700463+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-13",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "74fd00df13f0df14997436f18fb300e757d86f7a64f74e5d67b1ecc67182a311",
+  "lineage_ids": "lineage:882014f4b86b4ee96e7c5a2b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 221,
+    "load_duration": 5059900,
+    "prompt_eval_count": 568,
+    "total_duration": 8466475100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Since there is no predefined limit to the length of a payload\", \"interpretation_a\": \"The payload can be arbitrarily large, requiring recipients to handle extremely large numbers in the byte-range parameters.\", \"interpretation_b\": \"The payload has a practical limit (e.g., based on server configuration or network constraints), and recipients only need to handle numbers within that range.\", \"missing_information\": \"The document does not define a maximum payload size, leaving open the question of how large the decimal numerals in the byte-range parameters could be. This affects the necessary safeguards against integer overflow.\", \"justification\": \"The statement 'Since there is no predefined limit to the length of a payload' is ambiguous because it doesn't specify whether a *practical* limit exists. If a practical limit exists, the overflow protection requirements are lessened. Without knowing the upper bound on payload size, it's impossible to determine the appropriate level of overflow protection.\"}",
+  "record_id": "4853e088625da2fdb8ed9d306d12b8009b1cbe34420c928a93c8df7cb1ead329",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "14.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.485
+}

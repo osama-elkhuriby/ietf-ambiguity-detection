@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD NOT be accepted multiple times",
+    "interpretation_a": "The server may accept the same token more than once, but it is discouraged.",
+    "interpretation_b": "The server must reject the same token if it has already been accepted, even if a reasonable time has not elapsed.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD NOT' creates a weak constraint. It allows for implementations that accept the same token multiple times, which could lead to replay attacks or other security issues. A stronger statement like 'MUST NOT' would remove the ambiguity.",
+    "missing_information": "The clause does not define what constitutes 'multiple times'. Is it based on time, number of packets, or some other criteria? Without this, implementations could differ on when to reject a token."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:11:36.610523+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "3733f29d8faeb7c42621f96ce0ea555ee80313f3aed634a51d21283ad2eea9c0",
+  "lineage_ids": "lineage:1fb9007aac6886a3aff12c8d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 186,
+    "load_duration": 4572100,
+    "prompt_eval_count": 596,
+    "total_duration": 7058902500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD NOT be accepted multiple times\", \"interpretation_a\": \"The server may accept the same token more than once, but it is discouraged.\", \"interpretation_b\": \"The server must reject the same token if it has already been accepted, even if a reasonable time has not elapsed.\", \"missing_information\": \"The clause does not define what constitutes 'multiple times'. Is it based on time, number of packets, or some other criteria? Without this, implementations could differ on when to reject a token.\",\"justification\": \"The use of 'SHOULD NOT' creates a weak constraint. It allows for implementations that accept the same token multiple times, which could lead to replay attacks or other security issues. A stronger statement like 'MUST NOT' would remove the ambiguity.\"}",
+  "record_id": "33a3e722418f8373649aebe4942535f011da489b8c6a22db3fa38ae79cfaa9ab",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "8.1.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.062
+}

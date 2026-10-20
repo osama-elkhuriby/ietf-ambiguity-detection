@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "If packets sent prior to the largest acknowledged packet cannot yet be declared lost, then a timer SHOULD be set for the remaining time.",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause refers to 'remaining time' without specifying what it refers to. This incomplete constraint leads to multiple reasonable interpretations of how long the timer should run, making the clause ambiguous.",
+    "missing_information": "definition of 'remaining time' in the context of the loss detection timer calculation. The clause does not specify what constitutes the remaining time, leading to multiple reasonable implementation choices for the timer duration. This missing constraint prevents a unique operational interpretation. The ambiguity arises because the clause does not explicitly tie 'remaining time' to the previously defined time threshold expression or to any other metric, leaving the implementation open to interpretation. The lack of a concrete definition of 'remaining time' is a concrete missing constraint that changes implementation behaviour. The clause is therefore ambiguous. The missing information is the definition of 'remaining time'."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T11:28:27.463964+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "cc479faea4fc0fef45d1f3a228684ca89a23d82bad3e0423ac196eda0e260bca",
+  "lineage_ids": "lineage:dc29de84571468853a8684c7",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1331,
+    "load_duration": 4508100,
+    "prompt_eval_count": 584,
+    "total_duration": 12120276700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"If packets sent prior to the largest acknowledged packet cannot yet be declared lost, then a timer SHOULD be set for the remaining time.\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"definition of 'remaining time' in the context of the loss detection timer calculation. The clause does not specify what constitutes the remaining time, leading to multiple reasonable implementation choices for the timer duration. This missing constraint prevents a unique operational interpretation. The ambiguity arises because the clause does not explicitly tie 'remaining time' to the previously defined time threshold expression or to any other metric, leaving the implementation open to interpretation. The lack of a concrete definition of 'remaining time' is a concrete missing constraint that changes implementation behaviour. The clause is therefore ambiguous. The missing information is the definition of 'remaining time'.\",\n  \"justification\": \"The clause refers to 'remaining time' without specifying what it refers to. This incomplete constraint leads to multiple reasonable interpretations of how long the timer should run, making the clause ambiguous.\"\n}",
+  "record_id": "8295c7ecd8aa333c673485799a4fd562e3efbd8e323394ba09523cd9f1f16953",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 12.125
+}

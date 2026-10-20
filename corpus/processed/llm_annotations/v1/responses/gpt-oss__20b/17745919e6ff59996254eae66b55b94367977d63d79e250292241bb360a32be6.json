@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "if no processing was performed",
+    "interpretation_a": "no processing was performed refers to the server not having performed any application‑level processing of the request",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a precise definition of \"processing,\" leading to multiple reasonable interpretations of when the server may terminate the response with H3_REQUEST_REJECTED.",
+    "missing_information": "definition of what constitutes \"processing\" in this context to determine when the server may use H3_REQUEST_REJECTED."
+  },
+  "attempts": 3,
+  "created_at": "2026-10-08T08:50:51.204884+00:00",
+  "document_id": "draft-ietf-quic-http-29",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "3f46263a6bbb24f3445ade56bb7c468f9f12be9c1aa63aa406be372ba06ce2b5",
+  "lineage_ids": "lineage:cc9798b17f155dc6bde9b25d",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 938,
+    "load_duration": 4007300,
+    "prompt_eval_count": 650,
+    "total_duration": 8555594800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\",\"ambiguity_subtype\":\"U-2\",\"evidence_span\":\"if no processing was performed\",\"interpretation_a\":\"no processing was performed refers to the server not having performed any application‑level processing of the request\",\"interpretation_b\":\"\",\"missing_information\":\"definition of what constitutes \\\"processing\\\" in this context to determine when the server may use H3_REQUEST_REJECTED.\",\"justification\":\"The clause lacks a precise definition of \\\"processing,\\\" leading to multiple reasonable interpretations of when the server may terminate the response with H3_REQUEST_REJECTED.\"}",
+  "record_id": "17745919e6ff59996254eae66b55b94367977d63d79e250292241bb360a32be6",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "4.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 145.797
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "any segment",
+    "interpretation_a": "The implementation must be able to receive an option even if the segment is malformed or otherwise invalid, as long as it can parse the option itself.",
+    "interpretation_b": "The implementation must be able to receive an option only in well-formed, valid TCP segments.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'any segment' lacks a clear constraint on segment validity. Without it, a receiver might be forced to attempt to parse options from segments that are clearly invalid, potentially leading to crashes or other undefined behavior. Conversely, it could be interpreted to mean only valid segments.",
+    "missing_information": "The definition of 'any segment' is incomplete. Does it include segments that are syntactically invalid, or segments that fail checksum validation? A constraint on segment validity is needed."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:24:19.610399+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "e0b10b36a5a0511934666075e0954f60d9ab9b846938bda3e83801177ae4de74",
+  "lineage_ids": "lineage:e40e152ba460051a7ddc2793",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 195,
+    "load_duration": 8947100,
+    "prompt_eval_count": 573,
+    "total_duration": 7515096600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"any segment\", \"interpretation_a\": \"The implementation must be able to receive an option even if the segment is malformed or otherwise invalid, as long as it can parse the option itself.\", \"interpretation_b\": \"The implementation must be able to receive an option only in well-formed, valid TCP segments.\", \"missing_information\": \"The definition of 'any segment' is incomplete. Does it include segments that are syntactically invalid, or segments that fail checksum validation? A constraint on segment validity is needed.\", \"justification\": \"The phrase 'any segment' lacks a clear constraint on segment validity. Without it, a receiver might be forced to attempt to parse options from segments that are clearly invalid, potentially leading to crashes or other undefined behavior. Conversely, it could be interpreted to mean only valid segments.\"}",
+  "record_id": "84724a01b02c5a9731a94ae612219ebab68a2f04055a7d77775e614024083bec",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.516
+}

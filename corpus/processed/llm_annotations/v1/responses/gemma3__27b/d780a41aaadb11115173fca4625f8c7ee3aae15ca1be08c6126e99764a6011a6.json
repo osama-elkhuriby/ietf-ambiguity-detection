@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "if it is able to detect the condition",
+    "interpretation_a": "The client only checks for acknowledgement receipt if it has a specific mechanism to detect the condition (e.g., a timer or sequence number check). If it lacks such a mechanism, it does not treat the acknowledgement as an error.",
+    "interpretation_b": "The client *always* checks for acknowledgement receipt, but the phrase 'if it is able to detect the condition' is merely a statement of capability, not a condition for triggering the error handling. The client always treats the acknowledgement as an error if it receives it after 0-RTT rejection, regardless of its detection ability.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'if it is able to detect the condition' introduces ambiguity. It's unclear whether the client *must* be able to detect the condition to trigger the error handling, or if the error handling only applies *when* detection is possible. This affects implementation choices regarding detection mechanisms.",
+    "missing_information": "The criteria for 'able to detect the condition' are not defined. This leaves open the question of whether the client is required to implement a detection mechanism, or if the condition is simply a statement of what happens when a mechanism exists."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:49:48.951057+00:00",
+  "document_id": "draft-ietf-quic-tls-33",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "ab53a3cb5f953fff4e1b8038d1ca89efb84bfc8950696023cc0b31a402aa65ff",
+  "lineage_ids": "lineage:f669ad4da2bf6f49ba96068b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 278,
+    "load_duration": 4579300,
+    "prompt_eval_count": 604,
+    "total_duration": 10297676100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"if it is able to detect the condition\", \"interpretation_a\": \"The client only checks for acknowledgement receipt if it has a specific mechanism to detect the condition (e.g., a timer or sequence number check). If it lacks such a mechanism, it does not treat the acknowledgement as an error.\", \"interpretation_b\": \"The client *always* checks for acknowledgement receipt, but the phrase 'if it is able to detect the condition' is merely a statement of capability, not a condition for triggering the error handling. The client always treats the acknowledgement as an error if it receives it after 0-RTT rejection, regardless of its detection ability.\", \"missing_information\": \"The criteria for 'able to detect the condition' are not defined. This leaves open the question of whether the client is required to implement a detection mechanism, or if the condition is simply a statement of what happens when a mechanism exists.\", \"justification\": \"The phrase 'if it is able to detect the condition' introduces ambiguity. It's unclear whether the client *must* be able to detect the condition to trigger the error handling, or if the error handling only applies *when* detection is possible. This affects implementation choices regarding detection mechanisms.\"}",
+  "record_id": "d780a41aaadb11115173fca4625f8c7ee3aae15ca1be08c6126e99764a6011a6",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "4.6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.313
+}

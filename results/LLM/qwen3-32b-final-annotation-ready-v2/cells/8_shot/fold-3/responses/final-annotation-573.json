@@ -1,0 +1,244 @@
+{
+  "ambiguity_probability": 0.03495287030841935,
+  "attempts": [
+    {
+      "attempt": 1,
+      "status": "valid",
+      "wall_seconds": 0.13113310001790524
+    }
+  ],
+  "cache_key": "21cbec80bfd1ae0b4e8dc333b29b52b75c2e8d99b2dd76e959c709c165ae9ad0",
+  "code_hashes": {
+    "evaluator_v2": "5500dda61b73203ed1f95fb910d9820312fbfc7715d527a5f3d80cacb73faeb1",
+    "ollama_client": "5d235c4501443c60eaa6a928ddb3f18107709e6478f7a6d3cf17ab54a4239ddb",
+    "prompting": "2146a48b8a15c46203409d137107c0f69b2c62f852fef9c395289200a40bf38a",
+    "v1_shared_helpers": "571f408830592b44400a0feea50c0f7c98d168f486a6341d022db8e24290e538"
+  },
+  "created_at": "2026-10-19T07:45:48.684419+00:00",
+  "eval_count": 2,
+  "log_odds_yes_no": -3.3181763477623463,
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "no_logprob": -0.0355784110724926,
+  "output_text": "no",
+  "predicted_label": 0,
+  "prompt_eval_cached_count": 964,
+  "prompt_eval_count": 1034,
+  "record_id": "final-annotation-573",
+  "response": {
+    "created_at": "2026-10-19T07:45:48.6839179Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 2,
+    "eval_duration": 46550000,
+    "load_duration": 11886000,
+    "logprobs": [
+      {
+        "bytes": [
+          110,
+          111
+        ],
+        "logprob": -0.0355784110724926,
+        "token": "no",
+        "top_logprobs": [
+          {
+            "bytes": [
+              110,
+              111
+            ],
+            "logprob": -0.0355784110724926,
+            "token": "no"
+          },
+          {
+            "bytes": [
+              121,
+              101,
+              115
+            ],
+            "logprob": -3.353754758834839,
+            "token": "yes"
+          },
+          {
+            "bytes": [
+              9,
+              110,
+              111
+            ],
+            "logprob": -17.56098175048828,
+            "token": "\tno"
+          },
+          {
+            "bytes": [
+              32,
+              121,
+              101,
+              115
+            ],
+            "logprob": -18.799318313598633,
+            "token": " yes"
+          },
+          {
+            "bytes": [
+              89,
+              101,
+              115
+            ],
+            "logprob": -18.97789764404297,
+            "token": "Yes"
+          },
+          {
+            "bytes": [
+              46,
+              110,
+              111
+            ],
+            "logprob": -19.024656295776367,
+            "token": ".no"
+          },
+          {
+            "bytes": [
+              110,
+              111,
+              110,
+              101
+            ],
+            "logprob": -19.229557037353516,
+            "token": "none"
+          },
+          {
+            "bytes": [
+              40,
+              110,
+              111
+            ],
+            "logprob": -19.45381736755371,
+            "token": "(no"
+          },
+          {
+            "bytes": [
+              110,
+              111,
+              120
+            ],
+            "logprob": -19.782041549682617,
+            "token": "nox"
+          },
+          {
+            "bytes": [
+              95,
+              121,
+              101,
+              115
+            ],
+            "logprob": -19.95762062072754,
+            "token": "_yes"
+          },
+          {
+            "bytes": [
+              110,
+              111,
+              115
+            ],
+            "logprob": -20.007307052612305,
+            "token": "nos"
+          },
+          {
+            "bytes": [
+              78,
+              111
+            ],
+            "logprob": -20.121553421020508,
+            "token": "No"
+          },
+          {
+            "bytes": [
+              61,
+              110,
+              111
+            ],
+            "logprob": -20.212570190429688,
+            "token": "=no"
+          },
+          {
+            "bytes": [
+              61,
+              121,
+              101,
+              115
+            ],
+            "logprob": -20.35110092163086,
+            "token": "=yes"
+          },
+          {
+            "bytes": [
+              45,
+              110,
+              111
+            ],
+            "logprob": -20.557584762573242,
+            "token": "-no"
+          },
+          {
+            "bytes": [
+              110,
+              111,
+              111,
+              112
+            ],
+            "logprob": -20.634775161743164,
+            "token": "noop"
+          },
+          {
+            "bytes": [
+              89,
+              69,
+              83
+            ],
+            "logprob": -20.645254135131836,
+            "token": "YES"
+          },
+          {
+            "bytes": [
+              95,
+              110,
+              111
+            ],
+            "logprob": -20.744165420532227,
+            "token": "_no"
+          },
+          {
+            "bytes": [
+              110,
+              111,
+              99
+            ],
+            "logprob": -21.00373077392578,
+            "token": "noc"
+          },
+          {
+            "bytes": [
+              121,
+              101,
+              97,
+              104
+            ],
+            "logprob": -21.0712890625,
+            "token": "yeah"
+          }
+        ]
+      }
+    ],
+    "message": {
+      "content": "no",
+      "role": "assistant"
+    },
+    "model": "qwen3:32b",
+    "prompt_eval_cached_count": 964,
+    "prompt_eval_count": 1034,
+    "prompt_eval_duration": 63474000,
+    "total_duration": 129911600
+  },
+  "schema_version": 2,
+  "total_duration_ns": 129911600,
+  "yes_logprob": -3.353754758834839
+}

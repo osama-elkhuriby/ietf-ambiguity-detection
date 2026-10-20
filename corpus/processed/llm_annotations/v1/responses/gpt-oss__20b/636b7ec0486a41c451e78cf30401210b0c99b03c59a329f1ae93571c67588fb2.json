@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously requires that the TCP implementation check that the sequence number field of the received segment equals the current RCV.NXT value before performing the subsequent action. No alternative interpretation or missing constraint is evident.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T20:02:50.443878+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "8f2c83b43cfa0a4fb9589c47409b060d06915ec007158a1624d91291e3a6d6d7",
+  "lineage_ids": "lineage:dc91ca84715f3552684405ca",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 828,
+    "load_duration": 4777300,
+    "prompt_eval_count": 626,
+    "total_duration": 7322477600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously requires that the TCP implementation check that the sequence number field of the received segment equals the current RCV.NXT value before performing the subsequent action. No alternative interpretation or missing constraint is evident.\"\n}",
+  "record_id": "636b7ec0486a41c451e78cf30401210b0c99b03c59a329f1ae93571c67588fb2",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.10.7.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.313
+}

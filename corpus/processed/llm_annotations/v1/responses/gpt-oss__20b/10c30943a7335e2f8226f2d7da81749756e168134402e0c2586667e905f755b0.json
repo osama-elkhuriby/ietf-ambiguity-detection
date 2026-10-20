@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause is part of the client’s instructions to modify its own ClientHello in response to a HelloRetryRequest. The context makes it clear that the client must replace its own key_share extension’s list of shares with a single KeyShareEntry from the indicated group. No alternative reasonable interpretation exists, and no missing constraint prevents a unique operational interpretation.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T20:48:51.929716+00:00",
+  "document_id": "draft-ietf-tls-tls13-26",
+  "family_id": "draft-ietf-tls-tls13",
+  "input_fingerprint": "6badd54344e7b0b7f538b5ffd8d7ad79864d26185ee0a664ca40a62d40141e1f",
+  "lineage_ids": "lineage:d9d3c8ca06e1b02419151574",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1161,
+    "load_duration": 6262000,
+    "prompt_eval_count": 595,
+    "total_duration": 10091387400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause is part of the client’s instructions to modify its own ClientHello in response to a HelloRetryRequest. The context makes it clear that the client must replace its own key_share extension’s list of shares with a single KeyShareEntry from the indicated group. No alternative reasonable interpretation exists, and no missing constraint prevents a unique operational interpretation.\"\n}",
+  "record_id": "10c30943a7335e2f8226f2d7da81749756e168134402e0c2586667e905f755b0",
+  "revision": "26",
+  "schema_version": 1,
+  "section_ids": "4.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.094
+}

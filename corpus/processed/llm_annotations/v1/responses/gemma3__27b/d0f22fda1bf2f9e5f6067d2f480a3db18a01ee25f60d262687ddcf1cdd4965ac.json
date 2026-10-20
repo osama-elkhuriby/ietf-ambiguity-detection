@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY send up to two full-sized datagrams",
+    "interpretation_a": "The endpoint is permitted to send zero, one, or two full-sized datagrams.",
+    "interpretation_b": "The endpoint is permitted to send one or two full-sized datagrams, but sending zero is not allowed.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' is ambiguous. It is unclear whether sending zero probe packets is a valid option. This affects implementation because an endpoint could be designed to always send at least one probe packet, or to potentially send none.",
+    "missing_information": "The meaning of 'MAY' is not fully constrained. Does 'MAY' include the possibility of sending zero packets, or is at least one packet required?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:30:22.819845+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "665b74caf318e4aeb6e7a5cace3a1f1c87128a1eedef6990452b3c31d75b37b8",
+  "lineage_ids": "lineage:f8cebe19b31b3fac0504cb45",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 183,
+    "load_duration": 4131600,
+    "prompt_eval_count": 596,
+    "total_duration": 6954210000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY send up to two full-sized datagrams\", \"interpretation_a\": \"The endpoint is permitted to send zero, one, or two full-sized datagrams.\", \"interpretation_b\": \"The endpoint is permitted to send one or two full-sized datagrams, but sending zero is not allowed.\", \"missing_information\": \"The meaning of 'MAY' is not fully constrained. Does 'MAY' include the possibility of sending zero packets, or is at least one packet required?\", \"justification\": \"The use of 'MAY' is ambiguous. It is unclear whether sending zero probe packets is a valid option. This affects implementation because an endpoint could be designed to always send at least one probe packet, or to potentially send none.\"}",
+  "record_id": "d0f22fda1bf2f9e5f6067d2f480a3db18a01ee25f60d262687ddcf1cdd4965ac",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.2.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.953
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "SWS avoidance algorithm",
+    "interpretation_a": "A TCP implementation must include an algorithm that prevents the receiver from advertising a window size that is smaller than the actual receive buffer size.",
+    "interpretation_b": "A TCP implementation must include an algorithm that prevents the receiver from advertising a window size that is smaller than the maximum segment size.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'SWS avoidance algorithm' is used without definition. 'SWS' could refer to Selective Window Scaling, or to a different concept. The lack of a definition allows for multiple reasonable interpretations of what the algorithm is intended to do.",
+    "missing_information": "The definition of 'SWS avoidance algorithm' is not provided in this document excerpt. Without a definition, it is unclear what specific behaviour is required."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:25:52.306007+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-14",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "b63b6fa39d32c766f1640be5b4e7f594f0495fff6582f50e998a36fa08165f38",
+  "lineage_ids": "lineage:b6340e7fb2e5c4d5616f882f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 187,
+    "load_duration": 12036700,
+    "prompt_eval_count": 574,
+    "total_duration": 7249668500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-1\", \"evidence_span\": \"SWS avoidance algorithm\", \"interpretation_a\": \"A TCP implementation must include an algorithm that prevents the receiver from advertising a window size that is smaller than the actual receive buffer size.\", \"interpretation_b\": \"A TCP implementation must include an algorithm that prevents the receiver from advertising a window size that is smaller than the maximum segment size.\", \"missing_information\": \"The definition of 'SWS avoidance algorithm' is not provided in this document excerpt. Without a definition, it is unclear what specific behaviour is required.\", \"justification\": \"The term 'SWS avoidance algorithm' is used without definition. 'SWS' could refer to Selective Window Scaling, or to a different concept. The lack of a definition allows for multiple reasonable interpretations of what the algorithm is intended to do.\"}",
+  "record_id": "9babfa0b1d5d0a2ca41931ff35c469a152baa198ebad5206a37772ab74b86333",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "3.8.6.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.266
+}

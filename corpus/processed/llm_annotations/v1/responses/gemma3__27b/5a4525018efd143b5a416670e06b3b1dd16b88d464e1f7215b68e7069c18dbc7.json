@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "MAY be treated",
+    "interpretation_a": "An implementation is permitted to treat unknown/unsupported error codes as INTERNAL_ERROR.",
+    "interpretation_b": "An implementation is permitted to *not* treat unknown/unsupported error codes as INTERNAL_ERROR, and handle them in some other way (e.g., ignore them, log them, or return a different error).",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' grants implementations discretion. While the previous clause states unknown codes MUST NOT trigger special behavior, this clause allows implementations to *treat* them as INTERNAL_ERROR, but does not *require* it. This creates ambiguity as to whether the implementation is expected to handle them as INTERNAL_ERROR or not.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:34:46.203255+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "b508767af4b5d9c7736b25a67ad444a3a20d75cdee883dcda36547fe6f645a0a",
+  "lineage_ids": "lineage:61e78042fd2ba6a3ed2d2c01",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 182,
+    "load_duration": 9308800,
+    "prompt_eval_count": 534,
+    "total_duration": 7190084400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"MAY be treated\", \"interpretation_a\": \"An implementation is permitted to treat unknown/unsupported error codes as INTERNAL_ERROR.\", \"interpretation_b\": \"An implementation is permitted to *not* treat unknown/unsupported error codes as INTERNAL_ERROR, and handle them in some other way (e.g., ignore them, log them, or return a different error).\", \"missing_information\": \"\", \"justification\": \"The use of 'MAY' grants implementations discretion. While the previous clause states unknown codes MUST NOT trigger special behavior, this clause allows implementations to *treat* them as INTERNAL_ERROR, but does not *require* it. This creates ambiguity as to whether the implementation is expected to handle them as INTERNAL_ERROR or not.\"}",
+  "record_id": "5a4525018efd143b5a416670e06b3b1dd16b88d464e1f7215b68e7069c18dbc7",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.187
+}

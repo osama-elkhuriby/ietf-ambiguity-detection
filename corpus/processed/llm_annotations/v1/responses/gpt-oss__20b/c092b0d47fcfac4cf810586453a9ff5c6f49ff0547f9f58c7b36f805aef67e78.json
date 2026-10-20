@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "on average the spin bit is disabled for at least one eighth of network paths.",
+    "interpretation_a": "The average is taken over all network paths used by the connection, meaning that for each connection the random selection process ensures that at least 1/8 of the paths used by that connection have the spin bit disabled on average across all connections.",
+    "interpretation_b": "The average is taken over all network paths in the network, meaning that across all network paths in the network, the spin bit is disabled on average for at least 1/8 of them.",
+    "is_ambiguous": "yes",
+    "justification": "The target clause lacks a concrete constraint on what constitutes the averaging period or the set of network paths, leading to at least two materially different implementation behaviours.",
+    "missing_information": "The clause does not specify the averaging period or the set of network paths considered, leaving the scope of \"average\" and \"network paths\" undefined. This omission allows multiple reasonable implementation interpretations.  "
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T18:09:37.262052+00:00",
+  "document_id": "draft-ietf-quic-transport-24",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "85fdc15c433f02d20a6ea01c7fe7dfd37c7250a96b99d5ec639ce38074120079",
+  "lineage_ids": "lineage:57a54cae41c4b035b389ec3f",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1765,
+    "load_duration": 640500,
+    "prompt_eval_count": 595,
+    "total_duration": 15487475600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"on average the spin bit is disabled for at least one eighth of network paths.\",\n  \"interpretation_a\": \"The average is taken over all network paths used by the connection, meaning that for each connection the random selection process ensures that at least 1/8 of the paths used by that connection have the spin bit disabled on average across all connections.\",\n  \"interpretation_b\": \"The average is taken over all network paths in the network, meaning that across all network paths in the network, the spin bit is disabled on average for at least 1/8 of them.\",\n  \"missing_information\": \"The clause does not specify the averaging period or the set of network paths considered, leaving the scope of \\\"average\\\" and \\\"network paths\\\" undefined. This omission allows multiple reasonable implementation interpretations.  \",\n  \"justification\": \"The target clause lacks a concrete constraint on what constitutes the averaging period or the set of network paths, leading to at least two materially different implementation behaviours.\"\n}",
+  "record_id": "c092b0d47fcfac4cf810586453a9ff5c6f49ff0547f9f58c7b36f805aef67e78",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "17.3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 15.484
+}

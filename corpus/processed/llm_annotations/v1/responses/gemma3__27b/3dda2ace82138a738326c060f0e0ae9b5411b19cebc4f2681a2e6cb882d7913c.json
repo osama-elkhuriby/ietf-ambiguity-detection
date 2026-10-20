@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY initiate an immediate closure",
+    "interpretation_a": "The endpoint is permitted, but not required, to close the connection immediately after processing requests and pushes.",
+    "interpretation_b": "The endpoint is permitted, but not required, to *delay* closing the connection and allow it to become idle first.",
+    "is_ambiguous": "yes",
+    "justification": "The use of \"MAY\" creates a choice between immediate closure and allowing the connection to become idle. There is no constraint on *when* the endpoint must make this decision, or what factors should influence it. This allows for materially different implementations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:47:00.296362+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "704b4ef39c081d432bccf1a60ce661c88ef07d53fb4ca1926ca592a7a720468f",
+  "lineage_ids": "lineage:f4818fbd8edb9f96f76901ce",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 150,
+    "load_duration": 8985800,
+    "prompt_eval_count": 575,
+    "total_duration": 5924015800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY initiate an immediate closure\", \"interpretation_a\": \"The endpoint is permitted, but not required, to close the connection immediately after processing requests and pushes.\", \"interpretation_b\": \"The endpoint is permitted, but not required, to *delay* closing the connection and allow it to become idle first.\", \"missing_information\": \"\", \"justification\": \"The use of \\\"MAY\\\" creates a choice between immediate closure and allowing the connection to become idle. There is no constraint on *when* the endpoint must make this decision, or what factors should influence it. This allows for materially different implementations.\"}",
+  "record_id": "3dda2ace82138a738326c060f0e0ae9b5411b19cebc4f2681a2e6cb882d7913c",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.937
+}

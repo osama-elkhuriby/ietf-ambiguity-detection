@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY omit supported versions",
+    "interpretation_a": "The server can choose to list *all* supported versions, or a subset, based on its own criteria.",
+    "interpretation_b": "The server can choose to list *no* supported versions, effectively disabling QUIC on that Alt-Svc record.",
+    "is_ambiguous": "yes",
+    "justification": "The use of \"MAY\" allows for the possibility of listing no supported versions, which is a materially different implementation behavior than listing some or all. The clause does not explicitly prevent a server from omitting all supported versions, creating ambiguity about the minimum number of versions that must be listed.",
+    "missing_information": "It is unclear whether omitting supported versions is allowed to the extent of listing *no* supported versions. A constraint clarifying whether at least one supported version must be listed would resolve the ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:10:38.137956+00:00",
+  "document_id": "draft-ietf-quic-http-06",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "42e89b1d6fb79d407b061f05438deffae549469f22e80eb76e9f8669641727b5",
+  "lineage_ids": "lineage:f995210348ef8f0b28671eed",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 196,
+    "load_duration": 23542600,
+    "prompt_eval_count": 590,
+    "total_duration": 7619993700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY omit supported versions\", \"interpretation_a\": \"The server can choose to list *all* supported versions, or a subset, based on its own criteria.\", \"interpretation_b\": \"The server can choose to list *no* supported versions, effectively disabling QUIC on that Alt-Svc record.\", \"missing_information\": \"It is unclear whether omitting supported versions is allowed to the extent of listing *no* supported versions. A constraint clarifying whether at least one supported version must be listed would resolve the ambiguity.\", \"justification\": \"The use of \\\"MAY\\\" allows for the possibility of listing no supported versions, which is a materially different implementation behavior than listing some or all. The clause does not explicitly prevent a server from omitting all supported versions, creating ambiguity about the minimum number of versions that must be listed.\"}",
+  "record_id": "d928c23a431c79fe2bfeaf862de122ccd4bd7d2e3c340c76b7f749ae764e895a",
+  "revision": "06",
+  "schema_version": 1,
+  "section_ids": "2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.625
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT trigger any special behavior",
+    "interpretation_a": "An implementation could log the unknown error code but otherwise continue processing the request as if the error didn't occur.",
+    "interpretation_b": "An implementation could immediately terminate the connection upon receiving an unknown error code.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'special behavior' is not defined. Different implementations may have different thresholds for what constitutes 'special behavior', leading to inconsistent handling of unknown error codes.",
+    "missing_information": "The clause does not define what constitutes 'special behavior'. Without a definition, implementations could reasonably differ on what actions qualify as 'special behavior' and therefore whether they are permitted."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:28:20.379739+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "909d69886464998a3e279d4ca79f27fcb18876bb31f08df96d71bb2d54ead806",
+  "lineage_ids": "lineage:769694a90ac38dc076503676",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 163,
+    "load_duration": 8317200,
+    "prompt_eval_count": 563,
+    "total_duration": 6374832500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT trigger any special behavior\", \"interpretation_a\": \"An implementation could log the unknown error code but otherwise continue processing the request as if the error didn't occur.\", \"interpretation_b\": \"An implementation could immediately terminate the connection upon receiving an unknown error code.\", \"missing_information\": \"The clause does not define what constitutes 'special behavior'. Without a definition, implementations could reasonably differ on what actions qualify as 'special behavior' and therefore whether they are permitted.\", \"justification\": \"The phrase 'special behavior' is not defined. Different implementations may have different thresholds for what constitutes 'special behavior', leading to inconsistent handling of unknown error codes.\"}",
+  "record_id": "0d80dbea7f3dbebce6d0042d8fa73ad340b258ea4c3238023afd471627c76d9d",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.391
+}

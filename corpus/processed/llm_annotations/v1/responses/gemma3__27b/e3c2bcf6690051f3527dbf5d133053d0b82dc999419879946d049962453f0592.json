@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "I-1",
+    "evidence_span": "MUST still include support",
+    "interpretation_a": "Implementations must retain the code to *process* urgent pointers, even if they don't *use* them or allow applications to set the URG flag.",
+    "interpretation_b": "Implementations must retain the code to *accept* urgent pointers, and must not silently drop or ignore them, even if applications do not use them.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states that implementations \"MUST still include support\" but does not clarify *what* kind of support. Does this mean the ability to process urgent pointers, the ability to accept them, or both? The previous clause discourages use, so retaining the ability to process them without allowing use is a reasonable interpretation. However, retaining the ability to accept them is also reasonable, and potentially necessary for compatibility with legacy systems. Without further clarification, these are both valid interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:30:12.631602+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-10",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "1225680658aa31c9050c7bdc6d79fab07f205c0a0b027999914d56275be462e8",
+  "lineage_ids": "lineage:f58eaf2459513f9da4393c33",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 213,
+    "load_duration": 8508000,
+    "prompt_eval_count": 565,
+    "total_duration": 8105031100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"I-1\", \"evidence_span\": \"MUST still include support\", \"interpretation_a\": \"Implementations must retain the code to *process* urgent pointers, even if they don't *use* them or allow applications to set the URG flag.\", \"interpretation_b\": \"Implementations must retain the code to *accept* urgent pointers, and must not silently drop or ignore them, even if applications do not use them.\", \"missing_information\": \"\", \"justification\": \"The clause states that implementations \\\"MUST still include support\\\" but does not clarify *what* kind of support. Does this mean the ability to process urgent pointers, the ability to accept them, or both? The previous clause discourages use, so retaining the ability to process them without allowing use is a reasonable interpretation. However, retaining the ability to accept them is also reasonable, and potentially necessary for compatibility with legacy systems. Without further clarification, these are both valid interpretations.\"}",
+  "record_id": "e3c2bcf6690051f3527dbf5d133053d0b82dc999419879946d049962453f0592",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "3.8.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.094
+}

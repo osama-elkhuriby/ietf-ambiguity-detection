@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD limit the number of packets",
+    "interpretation_a": "An endpoint could limit the number of packets to, say, 10 per second.",
+    "interpretation_b": "An endpoint could limit the number of packets to, say, 1000 per second.",
+    "is_ambiguous": "yes",
+    "justification": "The word 'limit' is vague. It doesn't specify *how many* packets are allowed, leaving room for different interpretations of what constitutes a reasonable limit.",
+    "missing_information": "The clause does not specify a unit or threshold for the limit. Without a concrete constraint on the number of packets, implementations could reasonably differ significantly."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:19:21.850901+00:00",
+  "document_id": "draft-ietf-quic-transport-24",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "ab77af23bf02536cd6181f7295f331525cb5b6232aa915923cd9c73765cf042e",
+  "lineage_ids": "lineage:5584f0a243601001d177fd2f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 159,
+    "load_duration": 5235700,
+    "prompt_eval_count": 573,
+    "total_duration": 6092645300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD limit the number of packets\", \"interpretation_a\": \"An endpoint could limit the number of packets to, say, 10 per second.\", \"interpretation_b\": \"An endpoint could limit the number of packets to, say, 1000 per second.\", \"missing_information\": \"The clause does not specify a unit or threshold for the limit. Without a concrete constraint on the number of packets, implementations could reasonably differ significantly.\",\"justification\": \"The word 'limit' is vague. It doesn't specify *how many* packets are allowed, leaving room for different interpretations of what constitutes a reasonable limit.\"}",
+  "record_id": "469e0464f52df5ab1fcced8da160245968ac0c1d8cfffb825d3503ac541e5d79",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "10.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.094
+}

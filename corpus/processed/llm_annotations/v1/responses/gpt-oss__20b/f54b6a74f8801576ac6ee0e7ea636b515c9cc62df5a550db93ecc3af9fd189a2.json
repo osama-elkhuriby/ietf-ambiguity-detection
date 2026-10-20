@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "alternative means",
+    "interpretation_a": "Endpoints that can close the UDP socket may use an abbreviated draining period.",
+    "interpretation_b": "Endpoints that have other means to prevent late packets from creating state may also use an abbreviated draining period.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not define 'alternative means', leaving it open to interpretation whether only closing the UDP socket qualifies or other mechanisms also qualify, which materially changes implementation behaviour.",
+    "missing_information": "Definition of what constitutes 'alternative means' that ensures no QUIC state is created by late-arriving packets. This missing constraint leads to different implementation behaviours regarding when an abbreviated draining period can be used.  "
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T19:18:07.234208+00:00",
+  "document_id": "draft-ietf-quic-transport-20",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "fef473f8a860a197df648f020f25295c7c94602ed9fbd3540f6700292c439bcc",
+  "lineage_ids": "lineage:ccee1e5ce6c813b8d511be02",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1656,
+    "load_duration": 2055900,
+    "prompt_eval_count": 618,
+    "total_duration": 14385294100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"alternative means\",\n  \"interpretation_a\": \"Endpoints that can close the UDP socket may use an abbreviated draining period.\",\n  \"interpretation_b\": \"Endpoints that have other means to prevent late packets from creating state may also use an abbreviated draining period.\",\n  \"missing_information\": \"Definition of what constitutes 'alternative means' that ensures no QUIC state is created by late-arriving packets. This missing constraint leads to different implementation behaviours regarding when an abbreviated draining period can be used.  \",\n  \"justification\": \"The clause does not define 'alternative means', leaving it open to interpretation whether only closing the UDP socket qualifies or other mechanisms also qualify, which materially changes implementation behaviour.\"\n}",
+  "record_id": "f54b6a74f8801576ac6ee0e7ea636b515c9cc62df5a550db93ecc3af9fd189a2",
+  "revision": "20",
+  "schema_version": 1,
+  "section_ids": "10.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 14.391
+}

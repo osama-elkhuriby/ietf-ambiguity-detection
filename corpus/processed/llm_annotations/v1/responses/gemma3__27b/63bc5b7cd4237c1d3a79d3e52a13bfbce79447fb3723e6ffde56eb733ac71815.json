@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY choose to send field blocks that exceed this limit",
+    "interpretation_a": "An endpoint is permitted to send field blocks exceeding the limit, even if it knows the peer might reject them.",
+    "interpretation_b": "An endpoint is permitted to send field blocks exceeding the limit, but should only do so if it has a reasonable expectation the peer will accept them (e.g., based on prior negotiation or observed behavior).",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' is not sufficiently constrained. It is unclear whether an endpoint is permitted to send oversized field blocks even if it anticipates rejection, or if 'MAY' implies a degree of prudence.",
+    "missing_information": "The degree of freedom granted by 'MAY' is not constrained. Does 'MAY' imply permission to send regardless of likely rejection, or permission contingent on reasonable expectation of acceptance?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:36:06.149071+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-03",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "223fa5aeaacef714ae838f0ecc6cfa332b14e0afc485753d5236e9408f45d063",
+  "lineage_ids": "lineage:6585c233eefb18c6fe003e8f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 202,
+    "load_duration": 9939900,
+    "prompt_eval_count": 602,
+    "total_duration": 7934569300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY choose to send field blocks that exceed this limit\", \"interpretation_a\": \"An endpoint is permitted to send field blocks exceeding the limit, even if it knows the peer might reject them.\", \"interpretation_b\": \"An endpoint is permitted to send field blocks exceeding the limit, but should only do so if it has a reasonable expectation the peer will accept them (e.g., based on prior negotiation or observed behavior).\", \"missing_information\": \"The degree of freedom granted by 'MAY' is not constrained. Does 'MAY' imply permission to send regardless of likely rejection, or permission contingent on reasonable expectation of acceptance?\",\"justification\": \"The use of 'MAY' is not sufficiently constrained. It is unclear whether an endpoint is permitted to send oversized field blocks even if it anticipates rejection, or if 'MAY' implies a degree of prudence.\"}",
+  "record_id": "63bc5b7cd4237c1d3a79d3e52a13bfbce79447fb3723e6ffde56eb733ac71815",
+  "revision": "03",
+  "schema_version": 1,
+  "section_ids": "10.5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.937
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST use a new random Destination Connection ID",
+    "interpretation_a": "The client *always* generates a new random Destination Connection ID for each new connection attempt, even if the version negotiation succeeds immediately.",
+    "interpretation_b": "The client generates a new random Destination Connection ID only when the version negotiation fails and a new connection attempt is made with a different version.",
+    "is_ambiguous": "yes",
+    "justification": "The target clause states a new Connection ID 'MUST' be used for a 'new connection'. However, the context doesn't clearly define what constitutes a 'new connection'. Is it any connection attempt, or only those made after a failed version negotiation? Both interpretations are reasonable, leading to different implementations.",
+    "missing_information": "It is unclear whether a new Connection ID is required even on successful version negotiation. The phrase 'new connection' could refer to a re-attempt with the same version, or a connection established after version agreement."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:16:08.196702+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "f30e264a03c4c33e6ec30f75a680884d568890b88abfccdf6c373962eef874fc",
+  "lineage_ids": "lineage:4a372d72be80ca64a0a9ec33",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 217,
+    "load_duration": 4189000,
+    "prompt_eval_count": 565,
+    "total_duration": 8120596900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST use a new random Destination Connection ID\", \"interpretation_a\": \"The client *always* generates a new random Destination Connection ID for each new connection attempt, even if the version negotiation succeeds immediately.\", \"interpretation_b\": \"The client generates a new random Destination Connection ID only when the version negotiation fails and a new connection attempt is made with a different version.\", \"missing_information\": \"It is unclear whether a new Connection ID is required even on successful version negotiation. The phrase 'new connection' could refer to a re-attempt with the same version, or a connection established after version agreement.\", \"justification\": \"The target clause states a new Connection ID 'MUST' be used for a 'new connection'. However, the context doesn't clearly define what constitutes a 'new connection'. Is it any connection attempt, or only those made after a failed version negotiation? Both interpretations are reasonable, leading to different implementations.\"}",
+  "record_id": "f33c2abe0e5cbc9fd7b5391a360ae7084666c690ddb7ff8b52340ad472553b10",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.125
+}

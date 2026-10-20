@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD limit the number of Push IDs",
+    "interpretation_a": "The client limits the number of Push IDs to a small, fixed number (e.g., 10) regardless of available resources.",
+    "interpretation_b": "The client dynamically adjusts the number of Push IDs based on available resources (CPU, memory) and observed server behavior, potentially allowing a larger number when resources are plentiful.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' grants discretion, but the lack of any quantitative or qualitative guidance on the limit creates ambiguity. Different implementations could reasonably choose vastly different limits, leading to varying levels of DoS protection and resource consumption.",
+    "missing_information": "The clause does not specify *how* the client should limit the number of Push IDs. A concrete constraint on the limit itself (e.g., a maximum number, a function of available resources) is missing."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:07:09.341765+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "ddb85285c2d820fcc1fe57c0d199616cc6092429f3eb7e9282086628d6449054",
+  "lineage_ids": "lineage:3ed19de2fd5e58e12be936c2",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 211,
+    "load_duration": 20416300,
+    "prompt_eval_count": 560,
+    "total_duration": 8118177800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD limit the number of Push IDs\", \"interpretation_a\": \"The client limits the number of Push IDs to a small, fixed number (e.g., 10) regardless of available resources.\", \"interpretation_b\": \"The client dynamically adjusts the number of Push IDs based on available resources (CPU, memory) and observed server behavior, potentially allowing a larger number when resources are plentiful.\", \"missing_information\": \"The clause does not specify *how* the client should limit the number of Push IDs. A concrete constraint on the limit itself (e.g., a maximum number, a function of available resources) is missing.\", \"justification\": \"The use of 'SHOULD' grants discretion, but the lack of any quantitative or qualitative guidance on the limit creates ambiguity. Different implementations could reasonably choose vastly different limits, leading to varying levels of DoS protection and resource consumption.\"}",
+  "record_id": "c5f5d2a4dc78118fdbc79ae095be7f117e8b79deb1950cce60c481dade1cdb2c",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "10.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.11
+}

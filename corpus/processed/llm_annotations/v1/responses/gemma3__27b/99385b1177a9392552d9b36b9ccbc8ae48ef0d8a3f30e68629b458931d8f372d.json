@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD indicate whether it intends to close the connection (e.g., see Section 9.6 of [HTTP11]) or continue reading the request content",
+    "interpretation_a": "The server *must* indicate its intention, but the method of indication is unspecified.",
+    "interpretation_b": "The server *may* indicate its intention, and if it doesn't, that is acceptable.",
+    "is_ambiguous": "yes",
+    "justification": "The 'SHOULD' keyword allows for either mandatory or optional behavior. Without further clarification, it's unclear whether the server is required to indicate its intention or merely encouraged to do so. This affects implementation because a server could legitimately choose not to indicate its intention and still be considered compliant.",
+    "missing_information": "The document does not specify *how* the server should indicate its intention. Is a specific header field required? Is it sufficient to simply close the connection or continue reading? The use of 'SHOULD' creates ambiguity as to whether indication is mandatory or optional."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-07T04:19:06.122063+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "1e3dcb6dfc95faf60914f68ac8f8c33998154843e395a9b2e7954df6a9559b6b",
+  "lineage_ids": "lineage:486ebb698c743a23019bfa67",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 232,
+    "load_duration": 9938200,
+    "prompt_eval_count": 946,
+    "total_duration": 8845758400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD indicate whether it intends to close the connection (e.g., see Section 9.6 of [HTTP11]) or continue reading the request content\", \"interpretation_a\": \"The server *must* indicate its intention, but the method of indication is unspecified.\", \"interpretation_b\": \"The server *may* indicate its intention, and if it doesn't, that is acceptable.\", \"missing_information\": \"The document does not specify *how* the server should indicate its intention. Is a specific header field required? Is it sufficient to simply close the connection or continue reading? The use of 'SHOULD' creates ambiguity as to whether indication is mandatory or optional.\",\"justification\": \"The 'SHOULD' keyword allows for either mandatory or optional behavior. Without further clarification, it's unclear whether the server is required to indicate its intention or merely encouraged to do so. This affects implementation because a server could legitimately choose not to indicate its intention and still be considered compliant.\"}",
+  "record_id": "99385b1177a9392552d9b36b9ccbc8ae48ef0d8a3f30e68629b458931d8f372d",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "10.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 19.281
+}

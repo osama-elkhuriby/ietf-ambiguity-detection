@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY appear in packets of any encryption level except 0-RTT",
+    "interpretation_a": "CRYPTO and CONNECTION_CLOSE (error) frames can be sent in packets at encryption levels 1-RTT and above, but not 0-RTT.",
+    "interpretation_b": "CRYPTO and CONNECTION_CLOSE (error) frames can be sent in packets at encryption levels 1-RTT and above, and also potentially in some 0-RTT packets if a specific condition is met (not defined in the clause).",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' combined with the exception 'except 0-RTT' creates ambiguity. 'MAY' allows for optional behavior, but the exception doesn't clarify if 0-RTT is *always* excluded, or if there are specific scenarios where these frames might be permitted even in 0-RTT. This impacts implementation as developers must decide whether to completely block these frames in 0-RTT or allow for potential conditional transmission.",
+    "missing_information": "The clause does not explicitly state whether the exception 'except 0-RTT' is absolute or conditional. It's unclear if there are any circumstances under which these frames *could* be sent in 0-RTT packets."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:50:30.449905+00:00",
+  "document_id": "draft-ietf-quic-tls-27",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "45115db46bc99c9bb78e36aacc34a21094b533f381ea39cf74243a161c3cbfe2",
+  "lineage_ids": "lineage:66cad70c8eca6052b004a261",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 283,
+    "load_duration": 4650000,
+    "prompt_eval_count": 588,
+    "total_duration": 10485513500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY appear in packets of any encryption level except 0-RTT\", \"interpretation_a\": \"CRYPTO and CONNECTION_CLOSE (error) frames can be sent in packets at encryption levels 1-RTT and above, but not 0-RTT.\", \"interpretation_b\": \"CRYPTO and CONNECTION_CLOSE (error) frames can be sent in packets at encryption levels 1-RTT and above, and also potentially in some 0-RTT packets if a specific condition is met (not defined in the clause).\", \"missing_information\": \"The clause does not explicitly state whether the exception 'except 0-RTT' is absolute or conditional. It's unclear if there are any circumstances under which these frames *could* be sent in 0-RTT packets.\", \"justification\": \"The use of 'MAY' combined with the exception 'except 0-RTT' creates ambiguity. 'MAY' allows for optional behavior, but the exception doesn't clarify if 0-RTT is *always* excluded, or if there are specific scenarios where these frames might be permitted even in 0-RTT. This impacts implementation as developers must decide whether to completely block these frames in 0-RTT or allow for potential conditional transmission.\"}",
+  "record_id": "df861f8afb61bb96a604eb4cfee94a9387382c09d208046a52968b809f4c2efb",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.5
+}

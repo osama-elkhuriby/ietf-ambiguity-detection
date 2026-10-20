@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY change the request method from POST to GET",
+    "interpretation_a": "A user agent is permitted to change a POST request to a GET request after receiving a 302 response.",
+    "interpretation_b": "A user agent is not required to change a POST request to a GET request after receiving a 302 response; it can maintain the original method.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' introduces discretion, but the lack of further constraints on *when* to change the method creates ambiguity. A user agent could consistently change POST to GET, consistently preserve POST, or choose based on some internal logic, all while remaining compliant with the text.",
+    "missing_information": "The clause does not specify conditions under which the user agent *should* change the method, or whether it *must* preserve the original method if it doesn't change it. This leaves open the question of whether a compliant implementation could always preserve the method, or always change it, or choose based on some unspecified criteria."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:57:28.143430+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-14",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "afca5ea6c61b0c20c68598eda0054d8a5af05fe66c11174f3bb9fcb8382d96ad",
+  "lineage_ids": "lineage:89d3405bd355672ecefcf061",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 236,
+    "load_duration": 8857100,
+    "prompt_eval_count": 580,
+    "total_duration": 9530935600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY change the request method from POST to GET\", \"interpretation_a\": \"A user agent is permitted to change a POST request to a GET request after receiving a 302 response.\", \"interpretation_b\": \"A user agent is not required to change a POST request to a GET request after receiving a 302 response; it can maintain the original method.\", \"missing_information\": \"The clause does not specify conditions under which the user agent *should* change the method, or whether it *must* preserve the original method if it doesn't change it. This leaves open the question of whether a compliant implementation could always preserve the method, or always change it, or choose based on some unspecified criteria.\",\"justification\": \"The use of 'MAY' introduces discretion, but the lack of further constraints on *when* to change the method creates ambiguity. A user agent could consistently change POST to GET, consistently preserve POST, or choose based on some internal logic, all while remaining compliant with the text.\"}",
+  "record_id": "1cca9158d557eeebef0e767c2f894fdd80e1c1eabc6a72a6ad1b8f9913ecf1be",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "15.4.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.547
+}

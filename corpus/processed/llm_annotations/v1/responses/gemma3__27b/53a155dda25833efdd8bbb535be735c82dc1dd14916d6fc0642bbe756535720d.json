@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "highest-numbered stream",
+    "interpretation_a": "The highest-numbered stream *currently* open, even if it's not actively transmitting.",
+    "interpretation_b": "The highest-numbered stream that has *ever* had data sent or received, even if it's now closed.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'highest-numbered stream' is not precisely defined. Does it include streams that have been closed, or only those that are currently open? Both interpretations are reasonable, and the choice impacts the value of the Largest Stream ID.",
+    "missing_information": "It is unclear whether 'highest-numbered stream' refers to currently active streams or all streams ever created. This affects how the Largest Stream ID is calculated."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:23:57.603946+00:00",
+  "document_id": "draft-ietf-quic-transport-04",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "e43d739aa3ed31600fde25fbf3d0be0f34d1090aca5b6c3adc0c9a081d2203b0",
+  "lineage_ids": "lineage:9bbb6538a006135b6a65ee22",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 178,
+    "load_duration": 3976400,
+    "prompt_eval_count": 608,
+    "total_duration": 6778976500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"highest-numbered stream\", \"interpretation_a\": \"The highest-numbered stream *currently* open, even if it's not actively transmitting.\", \"interpretation_b\": \"The highest-numbered stream that has *ever* had data sent or received, even if it's now closed.\", \"missing_information\": \"It is unclear whether 'highest-numbered stream' refers to currently active streams or all streams ever created. This affects how the Largest Stream ID is calculated.\", \"justification\": \"The phrase 'highest-numbered stream' is not precisely defined. Does it include streams that have been closed, or only those that are currently open? Both interpretations are reasonable, and the choice impacts the value of the Largest Stream ID.\"}",
+  "record_id": "53a155dda25833efdd8bbb535be735c82dc1dd14916d6fc0642bbe756535720d",
+  "revision": "04",
+  "schema_version": 1,
+  "section_ids": "8.14",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.782
+}

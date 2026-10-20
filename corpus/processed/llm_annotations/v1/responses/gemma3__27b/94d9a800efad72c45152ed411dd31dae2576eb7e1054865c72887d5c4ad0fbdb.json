@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "prior to processing the request payload",
+    "interpretation_a": "The server evaluates preconditions *before* any part of the request payload is processed, and the 2xx/412 check determines if preconditions are even considered.",
+    "interpretation_b": "The server evaluates preconditions *concurrently* with initial payload processing, and the 2xx/412 check is performed during that processing. The phrase 'prior to' could mean 'before the start of' or 'before completion of'.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'prior to processing the request payload' is incomplete. Does it mean before *any* payload processing begins, or before *completion* of initial payload processing? The difference affects when the 2xx/412 check is performed relative to payload processing, and thus whether preconditions are evaluated at all.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:18:31.948013+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-13",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "258cba5c548f989483c6362f22c6c34d8d76c1968bc038c5568388054ae22ff8",
+  "lineage_ids": "lineage:1a4aa29f5ea9a34f641dc7c6",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 204,
+    "load_duration": 20034100,
+    "prompt_eval_count": 632,
+    "total_duration": 7884851300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"prior to processing the request payload\", \"interpretation_a\": \"The server evaluates preconditions *before* any part of the request payload is processed, and the 2xx/412 check determines if preconditions are even considered.\", \"interpretation_b\": \"The server evaluates preconditions *concurrently* with initial payload processing, and the 2xx/412 check is performed during that processing. The phrase 'prior to' could mean 'before the start of' or 'before completion of'.\", \"missing_information\": \"\", \"justification\": \"The phrase 'prior to processing the request payload' is incomplete. Does it mean before *any* payload processing begins, or before *completion* of initial payload processing? The difference affects when the 2xx/412 check is performed relative to payload processing, and thus whether preconditions are evaluated at all.\"}",
+  "record_id": "94d9a800efad72c45152ed411dd31dae2576eb7e1054865c72887d5c4ad0fbdb",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "13.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.891
+}

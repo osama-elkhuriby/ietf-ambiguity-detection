@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT generate additional whitespace",
+    "interpretation_a": "The sender cannot add any spaces beyond those defined in the grammar.",
+    "interpretation_b": "The sender can add spaces, but only if they are already defined as SP in the grammar.",
+    "is_ambiguous": "yes",
+    "justification": "The clause prohibits 'additional whitespace' but does not define what constitutes 'additional'. It's unclear if any whitespace not explicitly in the grammar is prohibited, or only whitespace beyond what's already allowed as SP.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:27:31.355610+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-09",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "ebfac8c663f66be760bb3625e34568805244c33ef7c5a603b5c6c80e4aaf35d0",
+  "lineage_ids": "lineage:40a40efdea5af947fd08f87b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 132,
+    "load_duration": 15074600,
+    "prompt_eval_count": 544,
+    "total_duration": 5222313600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT generate additional whitespace\", \"interpretation_a\": \"The sender cannot add any spaces beyond those defined in the grammar.\", \"interpretation_b\": \"The sender can add spaces, but only if they are already defined as SP in the grammar.\", \"missing_information\": \"\", \"justification\": \"The clause prohibits 'additional whitespace' but does not define what constitutes 'additional'. It's unclear if any whitespace not explicitly in the grammar is prohibited, or only whitespace beyond what's already allowed as SP.\"}",
+  "record_id": "c842e72f223ff85ec767f5500d500dae911fa09d9cfdfda0886eb9d3b03544bb",
+  "revision": "09",
+  "schema_version": 1,
+  "section_ids": "5.4.1.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.219
+}

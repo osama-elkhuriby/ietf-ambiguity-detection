@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "records SHOULD NOT include any SvcParams, and recipients MUST ignore any SvcParams that are present.",
+    "interpretation_a": "The clause prohibits *all* SvcParams in AliasMode records. Implementations must reject records containing any SvcParams.",
+    "interpretation_b": "The clause allows SvcParams to be present in AliasMode records, but implementations must ignore them. Records containing SvcParams are valid, but the parameters are not used.",
+    "is_ambiguous": "yes",
+    "justification": "The use of both \"SHOULD NOT include\" and \"MUST ignore\" creates ambiguity. Does the first part mean records *must* be rejected if they include SvcParams, or is the second part a fallback for records that happen to include them?",
+    "missing_information": "The clause does not clearly state whether records *containing* SvcParams are considered invalid or simply ignored. This affects how strictly an implementation must validate the records."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:11:13.062197+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-08",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "3d4b6b2650304cb5f16fb98ca8c8be15f9aeb7a1ae86ad27611e394a450a8548",
+  "lineage_ids": "lineage:5f230e35a330e3ce0422ef60",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 216,
+    "load_duration": 4191800,
+    "prompt_eval_count": 591,
+    "total_duration": 8103704100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"records SHOULD NOT include any SvcParams, and recipients MUST ignore any SvcParams that are present.\", \"interpretation_a\": \"The clause prohibits *all* SvcParams in AliasMode records. Implementations must reject records containing any SvcParams.\", \"interpretation_b\": \"The clause allows SvcParams to be present in AliasMode records, but implementations must ignore them. Records containing SvcParams are valid, but the parameters are not used.\", \"missing_information\": \"The clause does not clearly state whether records *containing* SvcParams are considered invalid or simply ignored. This affects how strictly an implementation must validate the records.\", \"justification\": \"The use of both \\\"SHOULD NOT include\\\" and \\\"MUST ignore\\\" creates ambiguity. Does the first part mean records *must* be rejected if they include SvcParams, or is the second part a fallback for records that happen to include them?\"}",
+  "record_id": "bb5b0742986408478844a604d8a76a36235c9a87bf86b1cfb55b913c83bb7cc5",
+  "revision": "08",
+  "schema_version": 1,
+  "section_ids": "2.4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.109
+}

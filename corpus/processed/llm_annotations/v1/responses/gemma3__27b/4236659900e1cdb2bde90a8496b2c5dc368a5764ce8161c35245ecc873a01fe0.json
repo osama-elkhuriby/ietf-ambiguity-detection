@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST carry an application error code",
+    "interpretation_a": "The application providing the data for the stream MUST define the error code.",
+    "interpretation_b": "The QUIC implementation MUST define a set of standard application error codes that are used in RST_STREAM frames.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'application error code' is incomplete. It does not specify *which* application defines the error code. This leaves open the possibility of multiple interpretations regarding the source and meaning of the error code.",
+    "missing_information": "It is unclear whether the 'application error code' is defined by the application using the stream, or by the QUIC implementation itself. This affects how the error code is generated and interpreted."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:16:49.714368+00:00",
+  "document_id": "draft-ietf-quic-transport-10",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "26d7d8c84d8b327fc4bd301bfd73fd254b9fe47edea719b13ab928877acc40b6",
+  "lineage_ids": "lineage:1ae26f3dcd55294af05b974a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 174,
+    "load_duration": 4951100,
+    "prompt_eval_count": 584,
+    "total_duration": 6628219500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST carry an application error code\", \"interpretation_a\": \"The application providing the data for the stream MUST define the error code.\", \"interpretation_b\": \"The QUIC implementation MUST define a set of standard application error codes that are used in RST_STREAM frames.\", \"missing_information\": \"It is unclear whether the 'application error code' is defined by the application using the stream, or by the QUIC implementation itself. This affects how the error code is generated and interpreted.\", \"justification\": \"The phrase 'application error code' is incomplete. It does not specify *which* application defines the error code. This leaves open the possibility of multiple interpretations regarding the source and meaning of the error code.\"}",
+  "record_id": "4236659900e1cdb2bde90a8496b2c5dc368a5764ce8161c35245ecc873a01fe0",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "12.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.641
+}

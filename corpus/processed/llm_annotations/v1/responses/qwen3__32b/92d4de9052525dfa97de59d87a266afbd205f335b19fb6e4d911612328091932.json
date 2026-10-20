@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear condition and consequence: if an endpoint receives a frame with a stream ID exceeding the limit it has sent, it must treat this as a connection error of type STREAM_LIMIT_ERROR. There is no ambiguity in the condition or the required action. The reference to [error-handling] is normative and does not introduce ambiguity here.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:26:12.481670+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "50b988921585dc8460fd4d4ed8d6136172d0856858d48717ec335888b5685d3d",
+  "lineage_ids": "lineage:e6ab7294691807d7480d4049",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 126,
+    "load_duration": 3609000,
+    "prompt_eval_count": 557,
+    "total_duration": 5199798000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear condition and consequence: if an endpoint receives a frame with a stream ID exceeding the limit it has sent, it must treat this as a connection error of type STREAM_LIMIT_ERROR. There is no ambiguity in the condition or the required action. The reference to [error-handling] is normative and does not introduce ambiguity here.\"\n}",
+  "record_id": "92d4de9052525dfa97de59d87a266afbd205f335b19fb6e4d911612328091932",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.188
+}

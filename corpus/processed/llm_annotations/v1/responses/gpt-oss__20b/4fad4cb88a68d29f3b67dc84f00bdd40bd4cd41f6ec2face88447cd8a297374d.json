@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "([value-list])",
+    "interpretation_a": "The clause references [value-list] and [presentation] which are not defined in the provided excerpt, making it unclear what syntax is allowed for the comma‑separated list and unknown‑key format.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause contains a concrete missing constraint (the definitions of [value-list] and [presentation]) that prevents a unique operational interpretation.",
+    "missing_information": "Definitions of [value-list] and [presentation] are required to determine the exact syntax and whether the comma‑separated list can contain whitespace or other separators."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:43:44.310680+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "c16ee6dd183a78121319c64a499fd05dde54c5eebcaeac9b593a2b88fd67129b",
+  "lineage_ids": "lineage:f75d25bd438378d62fcd47e7",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3468,
+    "load_duration": 6324700,
+    "prompt_eval_count": 605,
+    "total_duration": 30011139200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"([value-list])\",\n  \"interpretation_a\": \"The clause references [value-list] and [presentation] which are not defined in the provided excerpt, making it unclear what syntax is allowed for the comma‑separated list and unknown‑key format.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"Definitions of [value-list] and [presentation] are required to determine the exact syntax and whether the comma‑separated list can contain whitespace or other separators.\",\n  \"justification\": \"The clause contains a concrete missing constraint (the definitions of [value-list] and [presentation]) that prevents a unique operational interpretation.\"\n}",
+  "record_id": "4fad4cb88a68d29f3b67dc84f00bdd40bd4cd41f6ec2face88447cd8a297374d",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 30.016
+}

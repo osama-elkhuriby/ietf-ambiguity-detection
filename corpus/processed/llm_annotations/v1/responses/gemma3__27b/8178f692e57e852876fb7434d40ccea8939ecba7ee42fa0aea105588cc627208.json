@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT respond with the extension",
+    "interpretation_a": "The server is forbidden from sending *any* response that includes the extension, even if the failure is unrelated to the extension's content.",
+    "interpretation_b": "The server is forbidden from sending a response *containing* the extension, but may send other responses that do not include it.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"the extension\" is ambiguous. It's unclear whether the prohibition applies to *any* response including the extension, or only to responses where the extension itself is the primary content. This affects how the server handles failures and whether it can still communicate other information to the client.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:35:10.009262+00:00",
+  "document_id": "draft-ietf-tls-tls13-22",
+  "family_id": "draft-ietf-tls-tls13",
+  "input_fingerprint": "2773c888c08b3b88ce17ab11967bf6b54c26060591c9628fa7ce6f1dd2190814",
+  "lineage_ids": "lineage:2fa4a57fd5d3ec8f2444ce6a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 169,
+    "load_duration": 5118300,
+    "prompt_eval_count": 647,
+    "total_duration": 6626010500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT respond with the extension\", \"interpretation_a\": \"The server is forbidden from sending *any* response that includes the extension, even if the failure is unrelated to the extension's content.\", \"interpretation_b\": \"The server is forbidden from sending a response *containing* the extension, but may send other responses that do not include it.\", \"missing_information\": \"\", \"justification\": \"The phrase \\\"the extension\\\" is ambiguous. It's unclear whether the prohibition applies to *any* response including the extension, or only to responses where the extension itself is the primary content. This affects how the server handles failures and whether it can still communicate other information to the client.\"}",
+  "record_id": "8178f692e57e852876fb7434d40ccea8939ecba7ee42fa0aea105588cc627208",
+  "revision": "22",
+  "schema_version": 1,
+  "section_ids": "4.2.10",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.641
+}

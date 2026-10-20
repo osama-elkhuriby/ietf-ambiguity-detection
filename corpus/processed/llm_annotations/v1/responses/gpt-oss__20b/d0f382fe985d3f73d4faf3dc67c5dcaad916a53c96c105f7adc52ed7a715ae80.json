@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "appropriate congestion control action",
+    "interpretation_a": "The sender must apply the congestion control algorithm defined in QUIC-RECOVERY.",
+    "interpretation_b": "The sender may choose any congestion control action that reduces sending rate.",
+    "is_ambiguous": "yes",
+    "justification": "The clause uses the undefined term \"appropriate\" without specifying the constraints that determine what constitutes an appropriate congestion control action, leaving room for multiple reasonable interpretations.",
+    "missing_information": "definition of appropriate congestion control action"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T18:30:15.937002+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "de6767a3611c9649a71bd15ca87fdb44bd7c4c95bea8df30ba30ca31f82b36c1",
+  "lineage_ids": "lineage:aa84ac7a38aaab5ad6a27769",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1560,
+    "load_duration": 4448700,
+    "prompt_eval_count": 604,
+    "total_duration": 13437834800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"appropriate congestion control action\",\n  \"interpretation_a\": \"The sender must apply the congestion control algorithm defined in QUIC-RECOVERY.\",\n  \"interpretation_b\": \"The sender may choose any congestion control action that reduces sending rate.\",\n  \"missing_information\": \"definition of appropriate congestion control action\",\n  \"justification\": \"The clause uses the undefined term \\\"appropriate\\\" without specifying the constraints that determine what constitutes an appropriate congestion control action, leaving room for multiple reasonable interpretations.\"\n}",
+  "record_id": "d0f382fe985d3f73d4faf3dc67c5dcaad916a53c96c105f7adc52ed7a715ae80",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "13.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 13.437
+}

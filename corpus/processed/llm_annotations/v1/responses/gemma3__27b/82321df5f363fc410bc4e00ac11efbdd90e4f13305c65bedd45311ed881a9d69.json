@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST provide the following properties:",
+    "interpretation_a": "The cryptographic handshake must provide *all* of a defined set of properties (to be listed later).",
+    "interpretation_b": "The cryptographic handshake must provide *at least* one of a defined set of properties (to be listed later).",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MUST provide the following properties:' without specifying whether it's an exhaustive list or a minimum set of requirements creates ambiguity. 'All' and 'at least one' are both reasonable interpretations.",
+    "missing_information": "The clause does not specify whether 'following properties' are an exhaustive list or a minimum requirement. This affects implementation because a developer must decide if they need to implement all listed properties or just some of them."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:38:09.058458+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "b2b33cc987bb21151fa2f33d88aa6ca41c8cb64b78bbe43dfc141ebac8c65afe",
+  "lineage_ids": "lineage:8d688d38fb7de159527a3ca6",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 185,
+    "load_duration": 5084200,
+    "prompt_eval_count": 541,
+    "total_duration": 6990262300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST provide the following properties:\", \"interpretation_a\": \"The cryptographic handshake must provide *all* of a defined set of properties (to be listed later).\", \"interpretation_b\": \"The cryptographic handshake must provide *at least* one of a defined set of properties (to be listed later).\", \"missing_information\": \"The clause does not specify whether 'following properties' are an exhaustive list or a minimum requirement. This affects implementation because a developer must decide if they need to implement all listed properties or just some of them.\", \"justification\": \"The use of 'MUST provide the following properties:' without specifying whether it's an exhaustive list or a minimum set of requirements creates ambiguity. 'All' and 'at least one' are both reasonable interpretations.\"}",
+  "record_id": "82321df5f363fc410bc4e00ac11efbdd90e4f13305c65bedd45311ed881a9d69",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.016
+}

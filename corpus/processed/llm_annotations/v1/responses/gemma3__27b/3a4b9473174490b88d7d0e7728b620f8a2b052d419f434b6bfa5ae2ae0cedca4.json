@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY open multiple connections",
+    "interpretation_a": "The client is permitted to open any number of connections, limited only by resource constraints.",
+    "interpretation_b": "The client is permitted to open a small, reasonable number of connections, but excessive connections are discouraged.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' grants permission, but the subsequent 'SHOULD avoid' introduces a constraint without defining the threshold for what constitutes 'multiple' or what level of avoidance is expected. This creates ambiguity in implementation.",
+    "missing_information": "The draft does not define what constitutes 'multiple' connections or provide guidance on acceptable limits. The meaning of 'avoid' is also not clearly defined; is it a strong recommendation or a weak one?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:31:40.963498+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "edefd21cf2c6b7f6489cd4524e18bb2ba7b83681c2e8d228b692c0daf6323d2e",
+  "lineage_ids": "lineage:6692235dba5f781bc502bca2",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 177,
+    "load_duration": 8493100,
+    "prompt_eval_count": 614,
+    "total_duration": 6950072000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY open multiple connections\", \"interpretation_a\": \"The client is permitted to open any number of connections, limited only by resource constraints.\", \"interpretation_b\": \"The client is permitted to open a small, reasonable number of connections, but excessive connections are discouraged.\", \"missing_information\": \"The draft does not define what constitutes 'multiple' connections or provide guidance on acceptable limits. The meaning of 'avoid' is also not clearly defined; is it a strong recommendation or a weak one?\",\"justification\": \"The use of 'MAY' grants permission, but the subsequent 'SHOULD avoid' introduces a constraint without defining the threshold for what constitutes 'multiple' or what level of avoidance is expected. This creates ambiguity in implementation.\"}",
+  "record_id": "3a4b9473174490b88d7d0e7728b620f8a2b052d419f434b6bfa5ae2ae0cedca4",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "9.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.953
+}

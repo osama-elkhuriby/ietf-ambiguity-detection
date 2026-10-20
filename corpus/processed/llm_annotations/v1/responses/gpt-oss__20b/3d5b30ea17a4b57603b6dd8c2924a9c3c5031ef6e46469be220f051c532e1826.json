@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously specifies that if the last 16 bytes of a datagram match a Stateless Reset Token, the endpoint must enter the draining period and must not send any further packets on that connection. The wording does not allow for two materially different interpretations, nor does it omit a concrete constraint that would prevent a unique operational interpretation.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T15:10:53.437277+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "eeb84dfa61dc83448953686c2bdc866154ac60891cc9b8fb67a3f6eb8ff648de",
+  "lineage_ids": "lineage:5271d378b58ef4ce39136807",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1772,
+    "load_duration": 3558100,
+    "prompt_eval_count": 586,
+    "total_duration": 15375340900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"no\",\"ambiguity_subtype\":\"none\",\"evidence_span\":\"\",\"interpretation_a\":\"\",\"interpretation_b\":\"\",\"missing_information\":\"\",\"justification\":\"The clause unambiguously specifies that if the last 16 bytes of a datagram match a Stateless Reset Token, the endpoint must enter the draining period and must not send any further packets on that connection. The wording does not allow for two materially different interpretations, nor does it omit a concrete constraint that would prevent a unique operational interpretation.\"}",
+  "record_id": "3d5b30ea17a4b57603b6dd8c2924a9c3c5031ef6e46469be220f051c532e1826",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "10.3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 15.375
+}

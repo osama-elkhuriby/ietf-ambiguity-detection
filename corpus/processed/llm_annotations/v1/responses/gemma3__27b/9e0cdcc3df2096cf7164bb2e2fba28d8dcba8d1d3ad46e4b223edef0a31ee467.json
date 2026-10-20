@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD first send a GOAWAY frame",
+    "interpretation_a": "The endpoint *must* send a GOAWAY frame before closing the connection, but failure to do so is not an error.",
+    "interpretation_b": "The endpoint *may* send a GOAWAY frame before closing the connection, and may choose not to do so.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' creates ambiguity. It is unclear whether sending the GOAWAY frame is required, or merely recommended. A concrete constraint specifying whether the GOAWAY frame is mandatory or optional would resolve this.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:00:17.630514+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "ef34302d5631d8d8f96be126203e5e18a1ee55f04dea5652ca21789943cefafd",
+  "lineage_ids": "lineage:52a2bc2fcbe3ee4e85dbb1c8",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 156,
+    "load_duration": 9828000,
+    "prompt_eval_count": 643,
+    "total_duration": 6104215500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD first send a GOAWAY frame\", \"interpretation_a\": \"The endpoint *must* send a GOAWAY frame before closing the connection, but failure to do so is not an error.\", \"interpretation_b\": \"The endpoint *may* send a GOAWAY frame before closing the connection, and may choose not to do so.\", \"missing_information\": \"\", \"justification\": \"The use of 'SHOULD' creates ambiguity. It is unclear whether sending the GOAWAY frame is required, or merely recommended. A concrete constraint specifying whether the GOAWAY frame is mandatory or optional would resolve this.\"}",
+  "record_id": "9e0cdcc3df2096cf7164bb2e2fba28d8dcba8d1d3ad46e4b223edef0a31ee467",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "3.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.109
+}

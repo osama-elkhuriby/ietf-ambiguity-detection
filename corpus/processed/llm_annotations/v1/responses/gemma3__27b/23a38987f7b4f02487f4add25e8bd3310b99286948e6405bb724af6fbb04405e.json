@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY reject the entire SVCB RRSet",
+    "interpretation_a": "A client is permitted to reject the entire RRSet if any RR indicates \"no-default-alpn\".",
+    "interpretation_b": "A client is permitted to reject the entire RRSet *only* if *all* RRs indicate \"no-default-alpn\". The phrase \"if all of the compatible RRs indicate...\" is ambiguous as to whether it applies to all RRs or just those considered 'compatible'.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"if all of the compatible RRs indicate...\" is ambiguous. Does 'compatible' refer to all RRs in the RRSet, or only a subset? This affects whether a single RR with \"no-default-alpn\" triggers rejection, or all must have it.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:59:40.069037+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "ec22160316eafbf01ebfe1cc4e359adf5a6649f2abfa3b22c9329977c6d8a3ef",
+  "lineage_ids": "lineage:f8fedd94ac7adc1c959ad1c9",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 202,
+    "load_duration": 5307100,
+    "prompt_eval_count": 603,
+    "total_duration": 7596906900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY reject the entire SVCB RRSet\", \"interpretation_a\": \"A client is permitted to reject the entire RRSet if any RR indicates \\\"no-default-alpn\\\".\", \"interpretation_b\": \"A client is permitted to reject the entire RRSet *only* if *all* RRs indicate \\\"no-default-alpn\\\". The phrase \\\"if all of the compatible RRs indicate...\\\" is ambiguous as to whether it applies to all RRs or just those considered 'compatible'.\", \"missing_information\": \"\", \"justification\": \"The phrase \\\"if all of the compatible RRs indicate...\\\" is ambiguous. Does 'compatible' refer to all RRs in the RRSet, or only a subset? This affects whether a single RR with \\\"no-default-alpn\\\" triggers rejection, or all must have it.\"}",
+  "record_id": "23a38987f7b4f02487f4add25e8bd3310b99286948e6405bb724af6fbb04405e",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "7.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.593
+}

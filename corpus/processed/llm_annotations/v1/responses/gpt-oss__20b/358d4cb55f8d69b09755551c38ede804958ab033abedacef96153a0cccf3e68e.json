@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "I-1",
+    "evidence_span": "0x1f * N + 0x21 for non-negative integer values of N (that is, 0x21, 0x40, ..., through 0x3ffffffffffffffe)",
+    "interpretation_a": "The codes that must not be assigned are those computed by the formula 0x1f * N + 0x21, yielding 0x21, 0x3e, 0x5d, etc.",
+    "interpretation_b": "The codes that must not be assigned are those listed in the examples (0x21, 0x40, ..., 0x3ffffffffffffffe), implying the formula is incorrect or the examples are correct.",
+    "is_ambiguous": "yes",
+    "justification": "The clause contains a direct inconsistency between the stated formula and the provided examples, leading to two materially different interpretations of which codes must not be assigned by IANA.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T09:06:32.044518+00:00",
+  "document_id": "draft-ietf-quic-http-32",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "d234bbfe361674ab2c43d4c0cdbf45e4902b1661a40b42a5f36fc9310cf9b1f2",
+  "lineage_ids": "lineage:1e93ad6951e2f84ac0cc9eeb",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2001,
+    "load_duration": 4232100,
+    "prompt_eval_count": 657,
+    "total_duration": 17252495100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"I-1\",\n  \"evidence_span\": \"0x1f * N + 0x21 for non-negative integer values of N (that is, 0x21, 0x40, ..., through 0x3ffffffffffffffe)\",\n  \"interpretation_a\": \"The codes that must not be assigned are those computed by the formula 0x1f * N + 0x21, yielding 0x21, 0x3e, 0x5d, etc.\",\n  \"interpretation_b\": \"The codes that must not be assigned are those listed in the examples (0x21, 0x40, ..., 0x3ffffffffffffffe), implying the formula is incorrect or the examples are correct.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause contains a direct inconsistency between the stated formula and the provided examples, leading to two materially different interpretations of which codes must not be assigned by IANA.\"\n}",
+  "record_id": "358d4cb55f8d69b09755551c38ede804958ab033abedacef96153a0cccf3e68e",
+  "revision": "32",
+  "schema_version": 1,
+  "section_ids": "11.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 17.25
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "settings that are not compatible with the previously specified settings",
+    "interpretation_a": "Any change to a setting value that differs from the value previously sent by the client is considered incompatible, regardless of whether the change is allowed by the protocol.",
+    "interpretation_b": "Only changes that violate protocol rules (e.g., setting a reserved identifier or a value outside the allowed range) are considered incompatible; otherwise, a different value is acceptable.",
+    "is_ambiguous": "yes",
+    "justification": "The clause uses the undefined term \"not compatible\" without specifying what constitutes incompatibility, allowing at least two reasonable interpretations of the required behavior.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T08:55:03.712420+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "3374e958f4b52478bd5b80ca558fb5597ecc2a9fa4209b3bc51d813e3c4c7ed8",
+  "lineage_ids": "lineage:72994fe8f4c434cf00c879c3",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 391,
+    "load_duration": 5595000,
+    "prompt_eval_count": 754,
+    "total_duration": 3558356900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-1\",\n  \"evidence_span\": \"settings that are not compatible with the previously specified settings\",\n  \"interpretation_a\": \"Any change to a setting value that differs from the value previously sent by the client is considered incompatible, regardless of whether the change is allowed by the protocol.\",\n  \"interpretation_b\": \"Only changes that violate protocol rules (e.g., setting a reserved identifier or a value outside the allowed range) are considered incompatible; otherwise, a different value is acceptable.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause uses the undefined term \\\"not compatible\\\" without specifying what constitutes incompatibility, allowing at least two reasonable interpretations of the required behavior.\"\n}",
+  "record_id": "1eaaa939b40624ada010975bb1051bb5c73c2d37bf0b62800df83a84d1f544f4",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.2.4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 12.5
+}

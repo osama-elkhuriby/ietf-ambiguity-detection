@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "For clients, any packet that cannot be associated with an existing connection SHOULD be discarded if it is not buffered.",
+    "interpretation_a": "The clause does not specify what to do with buffered packets that cannot be associated with an existing connection.",
+    "interpretation_b": "The clause could be interpreted as implying that buffered packets should be retained or processed later, but this is not explicitly stated.",
+    "is_ambiguous": "yes",
+    "justification": "The clause provides a rule only for non-buffered packets, leaving the buffered case unspecified, which creates an incomplete constraint that could lead to multiple reasonable implementation behaviours.",
+    "missing_information": "What action should be taken for buffered packets that cannot be associated with an existing connection."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T15:35:15.570384+00:00",
+  "document_id": "draft-ietf-quic-transport-09",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "b630bda0902374dbbf07520be0070d6661cfd7c0d75a1b5c05d7d1ff19505d8a",
+  "lineage_ids": "lineage:bdbec4518219629c079d0e25",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3348,
+    "load_duration": 5774900,
+    "prompt_eval_count": 577,
+    "total_duration": 28812968300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"For clients, any packet that cannot be associated with an existing connection SHOULD be discarded if it is not buffered.\",\n  \"interpretation_a\": \"The clause does not specify what to do with buffered packets that cannot be associated with an existing connection.\",\n  \"interpretation_b\": \"The clause could be interpreted as implying that buffered packets should be retained or processed later, but this is not explicitly stated.\",\n  \"missing_information\": \"What action should be taken for buffered packets that cannot be associated with an existing connection.\",\n  \"justification\": \"The clause provides a rule only for non-buffered packets, leaving the buffered case unspecified, which creates an incomplete constraint that could lead to multiple reasonable implementation behaviours.\"\n}",
+  "record_id": "4aa4a8d12d4645277fbdbfbfef0f099a239bd3ee6529e46c837fdd81204631d1",
+  "revision": "09",
+  "schema_version": 1,
+  "section_ids": "7.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 28.812
+}

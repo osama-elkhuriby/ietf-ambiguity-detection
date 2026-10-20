@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously specifies that if a packet can be decrypted and authenticated using the updated key and IV, the endpoint must update its packet protection keys and must use those new keys for the next packet. The subsequent clause clarifies that no older key phase may be used thereafter. No alternative reasonable interpretations or missing constraints are evident.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T12:50:11.443797+00:00",
+  "document_id": "draft-ietf-quic-tls-23",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "2cd84e6d1bc2b9f301102ad4c1a7c774f27e7512451600dbfc56bf6ce4f707b5",
+  "lineage_ids": "lineage:96e5e905b00a2a1823201647",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1697,
+    "load_duration": 4863500,
+    "prompt_eval_count": 594,
+    "total_duration": 14657750700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously specifies that if a packet can be decrypted and authenticated using the updated key and IV, the endpoint must update its packet protection keys and must use those new keys for the next packet. The subsequent clause clarifies that no older key phase may be used thereafter. No alternative reasonable interpretations or missing constraints are evident.\"\n}",
+  "record_id": "87dc44df3bfaf6cd0ef4eb451c15d497bbb2beb6058a55a3d423c0446dac9bc2",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 14.656
+}

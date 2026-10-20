@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "kMinTLPTimeout (RECOMMENDED 10ms):: Minimum time in the future",
+    "interpretation_a": "The timer can be set to exactly 10ms in the future.",
+    "interpretation_b": "The timer can be set to any value greater than or equal to 10ms in the future.",
+    "is_ambiguous": "yes",
+    "justification": "The RECOMMENDED value could be interpreted as a minimum allowed value, or as a suggested default. The phrase 'Minimum time in the future' does not specify whether the timer can be set to a value less than 10ms, only that it cannot be set to a negative time. This creates two reasonable interpretations.",
+    "missing_information": "It is unclear whether the 10ms is a minimum *allowed* value or a recommended *default* value. The phrase 'may be set for' is also vague; it doesn't specify whether the timer *must* be set, or if it's only a suggestion."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:18:05.015864+00:00",
+  "document_id": "draft-ietf-quic-recovery-14",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "ee539ce5f8280b52dfa68a10312f1cacaf26829c56e602f30c9b571877e0c6d3",
+  "lineage_ids": "lineage:ce82001ecf72d293655639a9",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 231,
+    "load_duration": 3903800,
+    "prompt_eval_count": 579,
+    "total_duration": 8647985500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"kMinTLPTimeout (RECOMMENDED 10ms):: Minimum time in the future\", \"interpretation_a\": \"The timer can be set to exactly 10ms in the future.\", \"interpretation_b\": \"The timer can be set to any value greater than or equal to 10ms in the future.\", \"missing_information\": \"It is unclear whether the 10ms is a minimum *allowed* value or a recommended *default* value. The phrase 'may be set for' is also vague; it doesn't specify whether the timer *must* be set, or if it's only a suggestion.\", \"justification\": \"The RECOMMENDED value could be interpreted as a minimum allowed value, or as a suggested default. The phrase 'Minimum time in the future' does not specify whether the timer can be set to a value less than 10ms, only that it cannot be set to a negative time. This creates two reasonable interpretations.\"}",
+  "record_id": "310ea47bd2d81d6ffaa3f27d70bacd0048dcc2f7d4708631cabd45cb67b31354",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "4.5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.641
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY either discard or buffer",
+    "interpretation_a": "The receiver can choose to discard the failed packet and continue processing subsequent packets.",
+    "interpretation_b": "The receiver can choose to buffer the failed packet for potential later processing (e.g., after key recovery) and continue processing subsequent packets.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' grants discretion, but the lack of criteria for choosing between discarding and buffering creates two reasonable implementation paths with materially different resource usage.",
+    "missing_information": "The criteria for *when* the receiver would choose to discard versus buffer are not specified. This affects implementation because buffering requires memory allocation and management, while discarding does not. A missing constraint on the decision criteria creates ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:09:31.485452+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "26cb1ef142a720ce1fafa1d62d5cac4d8d1322f4c7832bd7f9ee3f6253d3af3d",
+  "lineage_ids": "lineage:85eee64c857191527ea8a24d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 175,
+    "load_duration": 3531200,
+    "prompt_eval_count": 632,
+    "total_duration": 6686245500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY either discard or buffer\", \"interpretation_a\": \"The receiver can choose to discard the failed packet and continue processing subsequent packets.\", \"interpretation_b\": \"The receiver can choose to buffer the failed packet for potential later processing (e.g., after key recovery) and continue processing subsequent packets.\", \"missing_information\": \"The criteria for *when* the receiver would choose to discard versus buffer are not specified. This affects implementation because buffering requires memory allocation and management, while discarding does not. A missing constraint on the decision criteria creates ambiguity.\",\"justification\": \"The use of 'MAY' grants discretion, but the lack of criteria for choosing between discarding and buffering creates two reasonable implementation paths with materially different resource usage.\"}",
+  "record_id": "2fce89f052d31aed673e124dfbeeed5f89f8bd4f08413f698475de132479333c",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "12.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.687
+}

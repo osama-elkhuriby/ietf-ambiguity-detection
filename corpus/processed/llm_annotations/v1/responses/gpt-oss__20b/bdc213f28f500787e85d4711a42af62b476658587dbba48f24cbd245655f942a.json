@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously specifies that a server must process ACK frames in unprotected packets until either the TLS handshake is reported as complete or it receives an ACK frame in a protected packet that acknowledges all of its handshake messages. No alternative reasonable interpretations or missing constraints are evident.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T13:07:18.312431+00:00",
+  "document_id": "draft-ietf-quic-tls-12",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "a3ba4a95df68b34736f5186802f5af815499fa5c903905fe9e5a0bf9ae178774",
+  "lineage_ids": "lineage:cda4f9340302e33c00c4057d",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 896,
+    "load_duration": 4009900,
+    "prompt_eval_count": 662,
+    "total_duration": 7946950600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"no\",\"ambiguity_subtype\":\"none\",\"evidence_span\":\"\",\"interpretation_a\":\"\",\"interpretation_b\":\"\",\"missing_information\":\"\",\"justification\":\"The clause unambiguously specifies that a server must process ACK frames in unprotected packets until either the TLS handshake is reported as complete or it receives an ACK frame in a protected packet that acknowledges all of its handshake messages. No alternative reasonable interpretations or missing constraints are evident.\"}",
+  "record_id": "bdc213f28f500787e85d4711a42af62b476658587dbba48f24cbd245655f942a",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "6.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 75.531
+}

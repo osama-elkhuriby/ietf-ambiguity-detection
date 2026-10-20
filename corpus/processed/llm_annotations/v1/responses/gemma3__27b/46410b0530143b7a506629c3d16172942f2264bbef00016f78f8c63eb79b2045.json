@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY be zero",
+    "interpretation_a": "The identifier can be zero if no requests were processed, meaning it's optional to set it to a non-zero value.",
+    "interpretation_b": "The identifier must be zero if no requests were processed, and setting it to a non-zero value in that case is an error.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' is ambiguous. It could mean that setting the identifier to zero is permissible when no requests were processed, or that zero *is* the value that *should* be used when no requests were processed. This affects implementation because a server might choose to always set it to zero, or it might choose to omit setting it, or it might choose to set it to a non-zero value if requests were processed.",
+    "missing_information": "It is unclear whether 'MAY' indicates permissibility or a default value. A constraint clarifying whether a zero value is the default or simply allowed would resolve the ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:48:31.094262+00:00",
+  "document_id": "draft-ietf-quic-http-27",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "91929593a56b04f36cb2bc85c69339e2aa45e6a898bd1f2360746c1a629e0454",
+  "lineage_ids": "lineage:02942c38acb885ef3f69f27f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 229,
+    "load_duration": 9379300,
+    "prompt_eval_count": 552,
+    "total_duration": 8722828300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY be zero\", \"interpretation_a\": \"The identifier can be zero if no requests were processed, meaning it's optional to set it to a non-zero value.\", \"interpretation_b\": \"The identifier must be zero if no requests were processed, and setting it to a non-zero value in that case is an error.\", \"missing_information\": \"It is unclear whether 'MAY' indicates permissibility or a default value. A constraint clarifying whether a zero value is the default or simply allowed would resolve the ambiguity.\",\"justification\": \"The use of 'MAY' is ambiguous. It could mean that setting the identifier to zero is permissible when no requests were processed, or that zero *is* the value that *should* be used when no requests were processed. This affects implementation because a server might choose to always set it to zero, or it might choose to omit setting it, or it might choose to set it to a non-zero value if requests were processed.\"}",
+  "record_id": "46410b0530143b7a506629c3d16172942f2264bbef00016f78f8c63eb79b2045",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.734
+}

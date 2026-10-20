@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "The optional \"local IP address\" parameter MUST be supported",
+    "interpretation_a": "Implementations must support a mechanism to *receive* a local IP address parameter from the application.",
+    "interpretation_b": "Implementations must *provide* a local IP address parameter to the application.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states that the parameter \"MUST be supported\", but does not specify whether the support means the TCP stack must accept the parameter from the application, or provide it to the application. Both interpretations are reasonable and materially different.",
+    "missing_information": "It is unclear whether the requirement is for the TCP stack to accept a local IP address from the application, or to provide one to the application. The direction of the parameter is not specified."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:28:21.561287+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-11",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "e27ebd5a458db87b04fa15b819770a1cc7bd5f3963e14831b56e94aa7d586506",
+  "lineage_ids": "lineage:2e43a220017aab0a1f5e899b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 181,
+    "load_duration": 8387700,
+    "prompt_eval_count": 588,
+    "total_duration": 7026759500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"The optional \\\"local IP address\\\" parameter MUST be supported\", \"interpretation_a\": \"Implementations must support a mechanism to *receive* a local IP address parameter from the application.\", \"interpretation_b\": \"Implementations must *provide* a local IP address parameter to the application.\", \"missing_information\": \"It is unclear whether the requirement is for the TCP stack to accept a local IP address from the application, or to provide one to the application. The direction of the parameter is not specified.\", \"justification\": \"The clause states that the parameter \\\"MUST be supported\\\", but does not specify whether the support means the TCP stack must accept the parameter from the application, or provide it to the application. Both interpretations are reasonable and materially different.\"}",
+  "record_id": "cd9fab0346e157bba65c0f15ad916a8994f06be793e58073e56f2508723c363c",
+  "revision": "11",
+  "schema_version": 1,
+  "section_ids": "3.9.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.031
+}

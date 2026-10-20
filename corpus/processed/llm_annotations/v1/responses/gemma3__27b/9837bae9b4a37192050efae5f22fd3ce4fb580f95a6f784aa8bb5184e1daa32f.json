@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "at any later time",
+    "interpretation_a": "Revalidation can occur immediately after the initial failure, even within the same round trip.",
+    "interpretation_b": "Revalidation can only occur after a significant delay, such as after a connection migration or a period of inactivity.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'at any later time' is open to interpretation. Does it mean immediately after failure, or only after a significant delay? Without a more precise definition, implementations could differ in when they attempt revalidation, affecting congestion control behavior.",
+    "missing_information": "The phrase 'at any later time' lacks a specific time constraint. A missing constraint on the timing of revalidation could lead to different implementations and potentially impact congestion control."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:47:15.271014+00:00",
+  "document_id": "draft-ietf-quic-transport-30",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "2807e7f93bd0f97a00dca7a9e1ca0379c23144a0929021b7603df5765b118213",
+  "lineage_ids": "lineage:39722e4bf601fb16390054ba",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 178,
+    "load_duration": 4314900,
+    "prompt_eval_count": 564,
+    "total_duration": 6738413100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"at any later time\", \"interpretation_a\": \"Revalidation can occur immediately after the initial failure, even within the same round trip.\", \"interpretation_b\": \"Revalidation can only occur after a significant delay, such as after a connection migration or a period of inactivity.\", \"missing_information\": \"The phrase 'at any later time' lacks a specific time constraint. A missing constraint on the timing of revalidation could lead to different implementations and potentially impact congestion control.\", \"justification\": \"The phrase 'at any later time' is open to interpretation. Does it mean immediately after failure, or only after a significant delay? Without a more precise definition, implementations could differ in when they attempt revalidation, affecting congestion control behavior.\"}",
+  "record_id": "9837bae9b4a37192050efae5f22fd3ce4fb580f95a6f784aa8bb5184e1daa32f",
+  "revision": "30",
+  "schema_version": 1,
+  "section_ids": "13.4.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.734
+}

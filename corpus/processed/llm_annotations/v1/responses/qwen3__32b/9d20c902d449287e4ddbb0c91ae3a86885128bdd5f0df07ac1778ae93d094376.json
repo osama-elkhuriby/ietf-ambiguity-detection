@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause provides a clear directive for handling HTTP messages with a higher minor version than what the recipient implements. It specifies that the recipient 'SHOULD process the message as if it were in the highest minor version within that major version to which the recipient is conformant.' This is not ambiguous because it does not allow for multiple materially different interpretations. The use of 'SHOULD' indicates a recommendation, not a requirement, but the behavior it describes is unambiguous in terms of implementation.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:23:18.885448+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-14",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "8583ccfa9b6df434acf3d679fbc1bc678e340f4c373356a798271bd8a49b366f",
+  "lineage_ids": "lineage:a51cae4ff1fb6966364a6b57",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 153,
+    "load_duration": 11543400,
+    "prompt_eval_count": 606,
+    "total_duration": 6404235200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause provides a clear directive for handling HTTP messages with a higher minor version than what the recipient implements. It specifies that the recipient 'SHOULD process the message as if it were in the highest minor version within that major version to which the recipient is conformant.' This is not ambiguous because it does not allow for multiple materially different interpretations. The use of 'SHOULD' indicates a recommendation, not a requirement, but the behavior it describes is unambiguous in terms of implementation.\"\n}",
+  "record_id": "9d20c902d449287e4ddbb0c91ae3a86885128bdd5f0df07ac1778ae93d094376",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.406
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "one or more alpn-ids",
+    "interpretation_a": "The list can contain a single alpn-id.",
+    "interpretation_b": "The list must contain more than one alpn-id.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"one or more\" is ambiguous because it doesn't explicitly state whether a list containing only one alpn-id is permissible. A strict reading could imply at least two, while a more lenient reading allows for a single entry. This impacts how an implementation validates the list.",
+    "missing_information": "The clause does not specify a minimum number of alpn-ids that must be present in the comma-separated list. This affects implementation because a parser must decide if a list with only one entry is valid."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:59:32.456389+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "3445708b698c416063df5f2ac74e2071be898e9a74cdec2976a024fd981ecd69",
+  "lineage_ids": "lineage:772eb1293098d4813e5ff126",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 183,
+    "load_duration": 5066800,
+    "prompt_eval_count": 609,
+    "total_duration": 6908701700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"one or more alpn-ids\", \"interpretation_a\": \"The list can contain a single alpn-id.\", \"interpretation_b\": \"The list must contain more than one alpn-id.\", \"missing_information\": \"The clause does not specify a minimum number of alpn-ids that must be present in the comma-separated list. This affects implementation because a parser must decide if a list with only one entry is valid.\", \"justification\": \"The phrase \\\"one or more\\\" is ambiguous because it doesn't explicitly state whether a list containing only one alpn-id is permissible. A strict reading could imply at least two, while a more lenient reading allows for a single entry. This impacts how an implementation validates the list.\"}",
+  "record_id": "22a9276c7681d94c5f165c68c4b7e46bdfdf04020acfd43a448b642c2b8ea442",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "7.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.906
+}

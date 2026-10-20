@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "could be active",
+    "interpretation_a": "The server must not generate a stateless reset if *any* endpoint using the same static key *currently* has connection state for the given connection ID.",
+    "interpretation_b": "The server must not generate a stateless reset if *any* endpoint using the same static key *ever* had connection state for the given connection ID, even if that state has since expired. This would cover cases where state is being re-established.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'could be active' is insufficiently constrained. It's unclear whether it refers to currently active connections or connections that were active in the past and might be re-established. This difference in interpretation affects how a server would determine whether to generate a stateless reset.",
+    "missing_information": "The duration of 'active' is not defined. Does 'could be active' refer to currently active state, or any past state that might be re-established?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:04:42.941359+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "d7fa570a273c95ba93e0f948e3eddd6dda18cfb1a9773d2059f1159a553aeb33",
+  "lineage_ids": "lineage:37647e0b6a199d2a88c90598",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 223,
+    "load_duration": 4545100,
+    "prompt_eval_count": 666,
+    "total_duration": 8426537000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"could be active\", \"interpretation_a\": \"The server must not generate a stateless reset if *any* endpoint using the same static key *currently* has connection state for the given connection ID.\", \"interpretation_b\": \"The server must not generate a stateless reset if *any* endpoint using the same static key *ever* had connection state for the given connection ID, even if that state has since expired. This would cover cases where state is being re-established.\", \"missing_information\": \"The duration of 'active' is not defined. Does 'could be active' refer to currently active state, or any past state that might be re-established?\", \"justification\": \"The phrase 'could be active' is insufficiently constrained. It's unclear whether it refers to currently active connections or connections that were active in the past and might be re-established. This difference in interpretation affects how a server would determine whether to generate a stateless reset.\"}",
+  "record_id": "d1d1b3332eba534aa1230bd6bdcb8215eef938452292bc4323b67ec2478f494e",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "21.11",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.422
+}

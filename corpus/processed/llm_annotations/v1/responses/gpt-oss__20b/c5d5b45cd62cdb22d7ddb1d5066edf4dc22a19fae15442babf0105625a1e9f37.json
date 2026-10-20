@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "the smallest allowed maximum packet size",
+    "interpretation_a": "The phrase could refer to the network’s path MTU, i.e., the smallest maximum packet size that the network path allows.",
+    "interpretation_b": "Alternatively, it could refer to the endpoint’s own maximum packet size, i.e., the smallest maximum packet size that the QUIC endpoint is permitted to send.",
+    "is_ambiguous": "yes",
+    "justification": "The target clause lacks a concrete constraint on which maximum packet size is meant, allowing two materially different implementation behaviours.",
+    "missing_information": "The clause does not specify which ‘smallest allowed maximum packet size’ is intended, leaving the implementation choice ambiguous."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T18:16:56.466837+00:00",
+  "document_id": "draft-ietf-quic-transport-31",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "2d233440304d33221c4df113d09ea0be5dac2578f5571998885cba46815883e3",
+  "lineage_ids": "lineage:11bba13f5dfe5c15fbe0a6a1",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1307,
+    "load_duration": 4505700,
+    "prompt_eval_count": 618,
+    "total_duration": 11423302500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"the smallest allowed maximum packet size\",\n  \"interpretation_a\": \"The phrase could refer to the network’s path MTU, i.e., the smallest maximum packet size that the network path allows.\",\n  \"interpretation_b\": \"Alternatively, it could refer to the endpoint’s own maximum packet size, i.e., the smallest maximum packet size that the QUIC endpoint is permitted to send.\",\n  \"missing_information\": \"The clause does not specify which ‘smallest allowed maximum packet size’ is intended, leaving the implementation choice ambiguous.\",\n  \"justification\": \"The target clause lacks a concrete constraint on which maximum packet size is meant, allowing two materially different implementation behaviours.\"\n}",
+  "record_id": "c5d5b45cd62cdb22d7ddb1d5066edf4dc22a19fae15442babf0105625a1e9f37",
+  "revision": "31",
+  "schema_version": 1,
+  "section_ids": "14.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.422
+}

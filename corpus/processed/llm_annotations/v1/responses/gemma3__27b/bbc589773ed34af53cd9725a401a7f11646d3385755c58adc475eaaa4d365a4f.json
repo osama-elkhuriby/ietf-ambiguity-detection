@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "draft versions of the protocol",
+    "interpretation_a": "The requirement applies to any implementation claiming to support a draft version of the QUIC protocol, even if it's a partial or experimental implementation.",
+    "interpretation_b": "The requirement applies only to complete, fully-featured implementations that are specifically designed to operate as a QUIC endpoint using a draft version.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'implementations of draft versions of the protocol' is vague. It's unclear whether this applies to all code that touches the draft protocol, or only complete implementations. This missing constraint affects implementation behavior.",
+    "missing_information": "The scope of 'implementations of draft versions of the protocol' is not clearly defined. Does it include testing tools, partial implementations, or only full QUIC endpoints?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:05:25.591300+00:00",
+  "document_id": "draft-ietf-quic-http-24",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "62b549abf3d08ca501144cb891de349a36ad1e2d6683330d680f6ee45382a3d7",
+  "lineage_ids": "lineage:e3bfa3e1d44ff5813bbe0f7d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 191,
+    "load_duration": 20187000,
+    "prompt_eval_count": 575,
+    "total_duration": 7356713300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"draft versions of the protocol\", \"interpretation_a\": \"The requirement applies to any implementation claiming to support a draft version of the QUIC protocol, even if it's a partial or experimental implementation.\", \"interpretation_b\": \"The requirement applies only to complete, fully-featured implementations that are specifically designed to operate as a QUIC endpoint using a draft version.\", \"missing_information\": \"The scope of 'implementations of draft versions of the protocol' is not clearly defined. Does it include testing tools, partial implementations, or only full QUIC endpoints?\", \"justification\": \"The phrase 'implementations of draft versions of the protocol' is vague. It's unclear whether this applies to all code that touches the draft protocol, or only complete implementations. This missing constraint affects implementation behavior.\"}",
+  "record_id": "bbc589773ed34af53cd9725a401a7f11646d3385755c58adc475eaaa4d365a4f",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.375
+}

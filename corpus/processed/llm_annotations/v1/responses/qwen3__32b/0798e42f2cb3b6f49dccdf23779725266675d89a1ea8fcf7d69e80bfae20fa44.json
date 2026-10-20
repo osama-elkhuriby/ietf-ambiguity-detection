@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "uncertain",
+    "justification": "The clause is ambiguous due to missing information about the full set of values that must be verified for consistency. This missing constraint could lead to different implementations verifying different sets of values, affecting interoperability.",
+    "missing_information": "The target clause refers to 'values' that must be verified for consistency but does not explicitly list what these values are. The next clause context provides a partial list ('TLS version number and cipher suite'), but it is unclear whether this list is exhaustive or if other values are also required. Without a complete list of values to verify, the implementation behavior is not uniquely defined."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:20:39.220228+00:00",
+  "document_id": "draft-ietf-tls-tls13-18",
+  "family_id": "draft-ietf-tls-tls13",
+  "input_fingerprint": "674cb15bf084635c8ef8b47a3c92c5199c7cca6ec9d8c06f1120edb011ac8af4",
+  "lineage_ids": "lineage:48e47287c44e06091db821f7",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 170,
+    "load_duration": 7533300,
+    "prompt_eval_count": 543,
+    "total_duration": 7071177600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"uncertain\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The target clause refers to 'values' that must be verified for consistency but does not explicitly list what these values are. The next clause context provides a partial list ('TLS version number and cipher suite'), but it is unclear whether this list is exhaustive or if other values are also required. Without a complete list of values to verify, the implementation behavior is not uniquely defined.\",\n  \"justification\": \"The clause is ambiguous due to missing information about the full set of values that must be verified for consistency. This missing constraint could lead to different implementations verifying different sets of values, affecting interoperability.\"\n}",
+  "record_id": "0798e42f2cb3b6f49dccdf23779725266675d89a1ea8fcf7d69e80bfae20fa44",
+  "revision": "18",
+  "schema_version": 1,
+  "section_ids": "4.2.8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.078
+}

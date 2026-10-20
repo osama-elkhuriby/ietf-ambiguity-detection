@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST generate any of the following header fields",
+    "interpretation_a": "The server must generate all of the listed header fields (Cache-Control, Content-Location, Date, ETag, Expires, and Vary).",
+    "interpretation_b": "The server must generate at least one of the listed header fields.",
+    "is_ambiguous": "yes",
+    "justification": "The clause \"MUST generate any of the following header fields\" is ambiguous: it could be interpreted as requiring all of the listed headers or merely at least one. This incomplete constraint leads to materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T06:13:26.483609+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "288d0efe0fb3699e7dd81a0b30428a053182f192ca70b303f944f7a0dad9413f",
+  "lineage_ids": "lineage:0348ad7c647037a5cf97c8d0",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 860,
+    "load_duration": 4034000,
+    "prompt_eval_count": 745,
+    "total_duration": 7597692500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\",\"ambiguity_subtype\":\"U-2\",\"evidence_span\":\"MUST generate any of the following header fields\",\"interpretation_a\":\"The server must generate all of the listed header fields (Cache-Control, Content-Location, Date, ETag, Expires, and Vary).\",\"interpretation_b\":\"The server must generate at least one of the listed header fields.\",\"missing_information\":\"\",\"justification\":\"The clause \\\"MUST generate any of the following header fields\\\" is ambiguous: it could be interpreted as requiring all of the listed headers or merely at least one. This incomplete constraint leads to materially different implementation behaviours.\"}",
+  "record_id": "48e0e1ea55e308a114903c88a51de556dab6eae59ac89a310e25fdfbf6037309",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "15.4.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 74.532
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "new server address",
+    "interpretation_a": "The term \"new server address\" refers to any address that differs from the current server address, so the client should discard packets from any such address.",
+    "interpretation_b": "The term \"new server address\" refers only to an address that has never been seen before, so the client may accept packets from a previously seen address that is not indicated by the preferred_address parameter.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not define \"new server address\", allowing two materially different reasonable interpretations of when packets should be discarded.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T16:19:49.420920+00:00",
+  "document_id": "draft-ietf-quic-transport-29",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "e765439fa4a06a86c1d0d99219779f94d54692f192cc5fd580fe9c5fe0a5a5dd",
+  "lineage_ids": "lineage:b8f83ec5d381b463384b5e4d",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 356,
+    "load_duration": 5010300,
+    "prompt_eval_count": 710,
+    "total_duration": 3227712000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-1\",\n  \"evidence_span\": \"new server address\",\n  \"interpretation_a\": \"The term \\\"new server address\\\" refers to any address that differs from the current server address, so the client should discard packets from any such address.\",\n  \"interpretation_b\": \"The term \\\"new server address\\\" refers only to an address that has never been seen before, so the client may accept packets from a previously seen address that is not indicated by the preferred_address parameter.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not define \\\"new server address\\\", allowing two materially different reasonable interpretations of when packets should be discarded.\"\n}",
+  "record_id": "73828f5939caf5ba73f83ca21290b0fbf61602f85a63c993fe82ad4a7fb40f2a",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "9.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 22.547
+}

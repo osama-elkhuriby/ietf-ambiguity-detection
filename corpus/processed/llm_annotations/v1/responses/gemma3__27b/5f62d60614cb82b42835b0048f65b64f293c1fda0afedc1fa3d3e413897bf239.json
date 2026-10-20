@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "either make them consistent",
+    "interpretation_a": "The server *must* attempt to reconcile the PUT representation with the existing resource, even if it requires significant modification of the resource.",
+    "interpretation_b": "The server *may* reject the PUT request with an error if reconciliation is deemed too complex or undesirable, without attempting any modification.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'either...or' with 'SHOULD' creates ambiguity. While 'SHOULD' indicates a recommendation, the 'either...or' construction implies a choice. It's unclear if the server is *required* to attempt consistency before responding with an error, or if it can choose to error immediately. This affects implementation because some servers might prioritize immediate error reporting, while others might always attempt reconciliation first.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:09:49.179029+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-13",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "8dacc9e462fe2bd6c28e518647cd88a5bddd494941c5835d4fdd06dff7b39347",
+  "lineage_ids": "lineage:8043dd33c63a743d792e2db2",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 193,
+    "load_duration": 4288100,
+    "prompt_eval_count": 621,
+    "total_duration": 7502673800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"either make them consistent\", \"interpretation_a\": \"The server *must* attempt to reconcile the PUT representation with the existing resource, even if it requires significant modification of the resource.\", \"interpretation_b\": \"The server *may* reject the PUT request with an error if reconciliation is deemed too complex or undesirable, without attempting any modification.\", \"missing_information\": \"\", \"justification\": \"The use of 'either...or' with 'SHOULD' creates ambiguity. While 'SHOULD' indicates a recommendation, the 'either...or' construction implies a choice. It's unclear if the server is *required* to attempt consistency before responding with an error, or if it can choose to error immediately. This affects implementation because some servers might prioritize immediate error reporting, while others might always attempt reconciliation first.\"}",
+  "record_id": "5f62d60614cb82b42835b0048f65b64f293c1fda0afedc1fa3d3e413897bf239",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "9.3.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.531
+}

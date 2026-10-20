@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "An intermediary MUST NOT forward a message to itself unless it is protected from an infinite request loop.",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause is ambiguous because it references a protection mechanism that is not defined, leading to incomplete constraints on implementation behaviour.",
+    "missing_information": "The clause does not define what constitutes being \"protected from an infinite request loop,\" leaving the implementation to determine the necessary protection mechanism, which could lead to materially different behaviours. The lack of a concrete constraint on protection is an incomplete constraint affecting implementation behaviour. The missing definition of \"protected\" is the source of ambiguity. The clause itself is the evidence. The interpretations are not provided because the ambiguity arises from the missing definition rather than multiple explicit interpretations. The missing information is the definition of \"protected\". The ambiguity subtype is U-2. The evidence span is the clause itself. The interpretations array is empty. The missing_information field is empty. The JSON object is returned. The final answer is the JSON object. The JSON object is: { ... }."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T08:14:46.791894+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "3e05fb2676e9f3f6446688d27194a4c8b357a75d5ffe1eef4aeffd6077950f7f",
+  "lineage_ids": "lineage:34e517aa4bfe1aebeec90e32",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 757,
+    "load_duration": 5129900,
+    "prompt_eval_count": 608,
+    "total_duration": 7066329900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"An intermediary MUST NOT forward a message to itself unless it is protected from an infinite request loop.\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The clause does not define what constitutes being \\\"protected from an infinite request loop,\\\" leaving the implementation to determine the necessary protection mechanism, which could lead to materially different behaviours. The lack of a concrete constraint on protection is an incomplete constraint affecting implementation behaviour. The missing definition of \\\"protected\\\" is the source of ambiguity. The clause itself is the evidence. The interpretations are not provided because the ambiguity arises from the missing definition rather than multiple explicit interpretations. The missing information is the definition of \\\"protected\\\". The ambiguity subtype is U-2. The evidence span is the clause itself. The interpretations array is empty. The missing_information field is empty. The JSON object is returned. The final answer is the JSON object. The JSON object is: { ... }.\",\n  \"justification\": \"The clause is ambiguous because it references a protection mechanism that is not defined, leading to incomplete constraints on implementation behaviour.\"\n}",
+  "record_id": "e01d5aff5225c3917f4d4be3faa50e982b00d84228847bb7a4932083d502fabc",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "7.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.078
+}

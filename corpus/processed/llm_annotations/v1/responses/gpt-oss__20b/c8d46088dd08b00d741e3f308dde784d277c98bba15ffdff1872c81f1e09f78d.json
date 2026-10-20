@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "limited number of occasions per each connection",
+    "interpretation_a": "The endpoint may send the packet at most once per connection.",
+    "interpretation_b": "The endpoint may send the packet up to a small fixed number (e.g., three) of times per connection.",
+    "is_ambiguous": "yes",
+    "justification": "The clause specifies a 'limited number of occasions' but does not define the limit, leaving the implementation open to different reasonable interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T11:58:04.221531+00:00",
+  "document_id": "draft-ietf-quic-recovery-33",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "c04039a17a6a0e1566858b6961896cc17ad384462048b7c95f20e8d3eb34cff9",
+  "lineage_ids": "lineage:ac59eacfacf5461db6356e59",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 847,
+    "load_duration": 5984000,
+    "prompt_eval_count": 640,
+    "total_duration": 7396031900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"limited number of occasions per each connection\",\n  \"interpretation_a\": \"The endpoint may send the packet at most once per connection.\",\n  \"interpretation_b\": \"The endpoint may send the packet up to a small fixed number (e.g., three) of times per connection.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause specifies a 'limited number of occasions' but does not define the limit, leaving the implementation open to different reasonable interpretations.\"\n}",
+  "record_id": "c8d46088dd08b00d741e3f308dde784d277c98bba15ffdff1872c81f1e09f78d",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "6.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.407
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "exceeds this window size",
+    "interpretation_a": "The receiver must be able to buffer data exceeding the *newly advertised* window size, allowing it to process the SETTINGS frame and then apply the reduced window.",
+    "interpretation_b": "The receiver must be able to buffer data exceeding the *original* window size, even after receiving the SETTINGS frame, implying the frame has no immediate effect on buffering limits.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'this window size' is ambiguous. It could refer to the window size before the SETTINGS frame is applied, or the window size after the frame is applied. This impacts the buffering requirements of the receiver.",
+    "missing_information": "It is unclear whether 'this window size' refers to the window size *before* or *after* the SETTINGS frame is processed. This affects how much data the receiver is obligated to buffer."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:45:46.504495+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "ac6ebab774bac5f5924c10e7d804ed02fc0c2eed38ec831132f0df2f1a0f9c9e",
+  "lineage_ids": "lineage:1f9042820b10e111942392d9",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 211,
+    "load_duration": 10949600,
+    "prompt_eval_count": 603,
+    "total_duration": 8178457300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"exceeds this window size\", \"interpretation_a\": \"The receiver must be able to buffer data exceeding the *newly advertised* window size, allowing it to process the SETTINGS frame and then apply the reduced window.\", \"interpretation_b\": \"The receiver must be able to buffer data exceeding the *original* window size, even after receiving the SETTINGS frame, implying the frame has no immediate effect on buffering limits.\", \"missing_information\": \"It is unclear whether 'this window size' refers to the window size *before* or *after* the SETTINGS frame is processed. This affects how much data the receiver is obligated to buffer.\", \"justification\": \"The phrase 'this window size' is ambiguous. It could refer to the window size before the SETTINGS frame is applied, or the window size after the frame is applied. This impacts the buffering requirements of the receiver.\"}",
+  "record_id": "b9899276816466d9fe1c554d8a354b6aa6e8048c1df68488bfa9effcfe574cae",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.9.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.187
+}

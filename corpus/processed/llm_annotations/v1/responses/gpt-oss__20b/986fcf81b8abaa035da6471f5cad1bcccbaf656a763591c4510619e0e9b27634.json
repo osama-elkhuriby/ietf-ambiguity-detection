@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "An endpoint MUST NOT send data on a stream at or beyond the final offset.",
+    "interpretation_a": "The endpoint must refrain from sending data at or beyond the final offset only when it has knowledge of that final offset.",
+    "interpretation_b": "The endpoint must refrain from sending data at or beyond the final offset regardless of whether it knows the final offset.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether the restriction applies only when the endpoint knows the final offset or always, leading to two materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T17:18:04.705844+00:00",
+  "document_id": "draft-ietf-quic-transport-17",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "65ee3c81682866cd34ffa95f08c729565edaae9c753cd27a07af4be0055fc72f",
+  "lineage_ids": "lineage:31e9098385e7a27bee29900c",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 715,
+    "load_duration": 5041100,
+    "prompt_eval_count": 825,
+    "total_duration": 6319794300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"An endpoint MUST NOT send data on a stream at or beyond the final offset.\",\n  \"interpretation_a\": \"The endpoint must refrain from sending data at or beyond the final offset only when it has knowledge of that final offset.\",\n  \"interpretation_b\": \"The endpoint must refrain from sending data at or beyond the final offset regardless of whether it knows the final offset.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify whether the restriction applies only when the endpoint knows the final offset or always, leading to two materially different implementation behaviours.\"\n}",
+  "record_id": "986fcf81b8abaa035da6471f5cad1bcccbaf656a763591c4510619e0e9b27634",
+  "revision": "17",
+  "schema_version": 1,
+  "section_ids": "4.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 39.984
+}

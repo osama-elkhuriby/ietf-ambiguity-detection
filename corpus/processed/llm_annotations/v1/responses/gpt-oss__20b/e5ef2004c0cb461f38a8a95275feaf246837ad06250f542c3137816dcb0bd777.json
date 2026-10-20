@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY carry new data if available or unacknowledged data",
+    "interpretation_a": "The packet may carry either new data or unacknowledged data, but not both.",
+    "interpretation_b": "The packet may carry both new data and unacknowledged data simultaneously.",
+    "is_ambiguous": "yes",
+    "justification": "The clause uses the conjunction ‘or’ without specifying exclusivity, leaving a concrete missing constraint that determines whether both types of data can be sent together.",
+    "missing_information": "Whether the packet may carry both new data and unacknowledged data at the same time."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T12:13:25.212207+00:00",
+  "document_id": "draft-ietf-quic-recovery-13",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "2c7683d58c129d3f5a202150130f5c75fab472fcf6f21b5968f285b82c23bc3f",
+  "lineage_ids": "lineage:d377fb155a96394512def7a0",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 463,
+    "load_duration": 4933200,
+    "prompt_eval_count": 753,
+    "total_duration": 4140106800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"MAY carry new data if available or unacknowledged data\",\n  \"interpretation_a\": \"The packet may carry either new data or unacknowledged data, but not both.\",\n  \"interpretation_b\": \"The packet may carry both new data and unacknowledged data simultaneously.\",\n  \"missing_information\": \"Whether the packet may carry both new data and unacknowledged data at the same time.\",\n  \"justification\": \"The clause uses the conjunction ‘or’ without specifying exclusivity, leaving a concrete missing constraint that determines whether both types of data can be sent together.\"\n}",
+  "record_id": "e5ef2004c0cb461f38a8a95275feaf246837ad06250f542c3137816dcb0bd777",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "3.3.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 14.984
+}

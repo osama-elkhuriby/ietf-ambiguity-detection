@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "stop processing further",
+    "interpretation_a": "Stop processing further segments *from the same connection*.",
+    "interpretation_b": "Stop processing further segments *from any connection*.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'stop processing further' is incomplete. It's unclear whether the processing stoppage applies only to segments from the connection that generated the unacceptable segment, or to all segments received by the TCP implementation. This missing constraint affects implementation behavior.",
+    "missing_information": "The scope of 'further' is not defined. Does it mean further segments from the same connection, or all segments?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:23:32.085815+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "d820b84cc6f0049630884ce4b7e1d26884b8721edba64db64c65898f25186e26",
+  "lineage_ids": "lineage:cd0bf5dcd4a0d481154aedc6",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 148,
+    "load_duration": 26496600,
+    "prompt_eval_count": 579,
+    "total_duration": 5924926700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"stop processing further\", \"interpretation_a\": \"Stop processing further segments *from the same connection*.\", \"interpretation_b\": \"Stop processing further segments *from any connection*.\", \"missing_information\": \"The scope of 'further' is not defined. Does it mean further segments from the same connection, or all segments?\",\"justification\": \"The phrase 'stop processing further' is incomplete. It's unclear whether the processing stoppage applies only to segments from the connection that generated the unacceptable segment, or to all segments received by the TCP implementation. This missing constraint affects implementation behavior.\"}",
+  "record_id": "72d3870d2ed974b11f1af53072d837969d6eb1791395a3d9693741e283f3bf80",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.10.7.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.937
+}

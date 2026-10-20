@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear directive for clients that support both Alt-Svc and HTTPS records. It specifies that when a connection is based on a cached Alt-Svc response, clients should retrieve HTTPS records for the Alt-Svc alt-authority and ensure consistency between the Alt-Svc parameters and the HTTPS SvcParams. The language is prescriptive and does not allow for multiple materially different interpretations. There is no missing constraint that would affect implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:02:13.151392+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "f4761524909115c6ac2e547553fcd287d4d254ea2f1b4b294e312b01974606f5",
+  "lineage_ids": "lineage:eedea74da6f41b058ec2ce70",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 145,
+    "load_duration": 7012300,
+    "prompt_eval_count": 565,
+    "total_duration": 5949086800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear directive for clients that support both Alt-Svc and HTTPS records. It specifies that when a connection is based on a cached Alt-Svc response, clients should retrieve HTTPS records for the Alt-Svc alt-authority and ensure consistency between the Alt-Svc parameters and the HTTPS SvcParams. The language is prescriptive and does not allow for multiple materially different interpretations. There is no missing constraint that would affect implementation behavior.\"\n}",
+  "record_id": "0f6548b40d52bf9f506e453686f66510a53ec6f2fbba3d7e8e7901b0255c427c",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "9.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.953
+}

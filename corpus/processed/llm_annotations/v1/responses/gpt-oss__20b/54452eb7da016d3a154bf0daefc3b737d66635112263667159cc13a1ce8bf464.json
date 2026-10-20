@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "minimum congestion window",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause requires the congestion window to be reduced to the minimum congestion window, but the target clause does not provide a definition or reference for what constitutes the minimum congestion window. This missing constraint creates an ambiguity in implementation.",
+    "missing_information": "definition of the minimum congestion window value (e.g., the exact packet count or bytes to which the congestion window must be reduced)."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T11:23:08.037805+00:00",
+  "document_id": "draft-ietf-quic-recovery-17",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "685c27570e48036d1ac3564bdaa0fd955c1418e3196f738fb7207b3bd82f0603",
+  "lineage_ids": "lineage:4473631454e6d11ef5b20667",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1786,
+    "load_duration": 4556200,
+    "prompt_eval_count": 606,
+    "total_duration": 15532470700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"minimum congestion window\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"definition of the minimum congestion window value (e.g., the exact packet count or bytes to which the congestion window must be reduced).\",\n  \"justification\": \"The clause requires the congestion window to be reduced to the minimum congestion window, but the target clause does not provide a definition or reference for what constitutes the minimum congestion window. This missing constraint creates an ambiguity in implementation.\"\n}",
+  "record_id": "54452eb7da016d3a154bf0daefc3b737d66635112263667159cc13a1ce8bf464",
+  "revision": "17",
+  "schema_version": 1,
+  "section_ids": "7.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 15.547
+}

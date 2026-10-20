@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "if this is known",
+    "interpretation_a": "The clause refers to the server’s highest supported version; the client should send its highest conformant version only if it knows the server’s highest supported version.",
+    "interpretation_b": "The clause refers to the client’s highest conformant version; the client should send that version only if it knows its own highest conformant version (trivial).",
+    "is_ambiguous": "yes",
+    "justification": "The lack of a clear reference for ‘this’ and the absence of a defined action when the condition is not met constitute an incomplete constraint that affects implementation.",
+    "missing_information": "The antecedent of ‘this’ is not defined, leaving the scope of the condition ambiguous. The clause also provides no guidance for the case where the condition is not satisfied, which can lead to different implementation behaviours."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T06:04:40.681300+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-05",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "90aef5ee8a1f57a07013325d7dd05b5c60decc5acc1adea3ada185b558747318",
+  "lineage_ids": "lineage:7d9bf1b4f10ecbe6292394b2",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 386,
+    "load_duration": 9019500,
+    "prompt_eval_count": 5727,
+    "total_duration": 4365668100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\":\"yes\",\"ambiguity_subtype\":\"U-2\",\"evidence_span\":\"if this is known\",\"interpretation_a\":\"The clause refers to the server’s highest supported version; the client should send its highest conformant version only if it knows the server’s highest supported version.\",\"interpretation_b\":\"The clause refers to the client’s highest conformant version; the client should send that version only if it knows its own highest conformant version (trivial).\",\"missing_information\":\"The antecedent of ‘this’ is not defined, leaving the scope of the condition ambiguous. The clause also provides no guidance for the case where the condition is not satisfied, which can lead to different implementation behaviours.\",\"justification\":\"The lack of a clear reference for ‘this’ and the absence of a defined action when the condition is not met constitute an incomplete constraint that affects implementation.\"}",
+  "record_id": "3c28e5bf3d4da5e02d967aefaa1819e10d17d55cc9c4588f365fc228ee89e6fc",
+  "revision": "05",
+  "schema_version": 1,
+  "section_ids": "3.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 72.641
+}

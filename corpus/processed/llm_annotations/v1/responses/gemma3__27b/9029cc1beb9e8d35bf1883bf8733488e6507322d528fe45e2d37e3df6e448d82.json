@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "valid Content-Type header field",
+    "interpretation_a": "The Content-Type header field must conform to a strict RFC specification, ensuring interoperability and correct parsing by any compliant receiver.",
+    "interpretation_b": "The Content-Type header field only needs to be syntactically valid (e.g., not contain invalid characters) and broadly indicate the media type, without necessarily adhering to all RFC requirements for a fully compliant Content-Type.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'valid' is not defined. A strict interpretation would require full RFC compliance, while a more lenient interpretation would only require syntactic correctness. This difference affects implementation because parsers would need to enforce different levels of validation.",
+    "missing_information": "The definition of 'valid' is not provided. Does 'valid' mean fully compliant with the relevant RFC for Content-Type, or merely syntactically correct?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:17:47.700359+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-13",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "5b8e58b253f34c0dbbd1ecc007522dd45fc1d59ebdd1219779e282e84bdbe047",
+  "lineage_ids": "lineage:0bcde47a082f60b7082f4bd6",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 207,
+    "load_duration": 9521000,
+    "prompt_eval_count": 576,
+    "total_duration": 7922319300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"valid Content-Type header field\", \"interpretation_a\": \"The Content-Type header field must conform to a strict RFC specification, ensuring interoperability and correct parsing by any compliant receiver.\", \"interpretation_b\": \"The Content-Type header field only needs to be syntactically valid (e.g., not contain invalid characters) and broadly indicate the media type, without necessarily adhering to all RFC requirements for a fully compliant Content-Type.\", \"missing_information\": \"The definition of 'valid' is not provided. Does 'valid' mean fully compliant with the relevant RFC for Content-Type, or merely syntactically correct?\",\"justification\": \"The term 'valid' is not defined. A strict interpretation would require full RFC compliance, while a more lenient interpretation would only require syntactic correctness. This difference affects implementation because parsers would need to enforce different levels of validation.\"}",
+  "record_id": "9029cc1beb9e8d35bf1883bf8733488e6507322d528fe45e2d37e3df6e448d82",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "9.3.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.938
+}

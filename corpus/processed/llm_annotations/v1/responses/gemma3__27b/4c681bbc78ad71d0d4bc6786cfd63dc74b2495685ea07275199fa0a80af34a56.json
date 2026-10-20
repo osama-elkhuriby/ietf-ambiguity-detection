@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "terminal state (“Data Recvd” or “Reset Recvd”)",
+    "interpretation_a": "The sender cannot send any of the listed frames when the stream is in either the 'Data Recvd' or 'Reset Recvd' state.",
+    "interpretation_b": "The sender cannot send any of the listed frames when the stream is in both the 'Data Recvd' and 'Reset Recvd' states simultaneously, which is unlikely.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'or' creates ambiguity. It is unclear whether the restriction applies to either state individually, or only when both states are true simultaneously. This affects implementation because a parser must decide how to interpret the condition.",
+    "missing_information": "It is unclear whether the 'or' is inclusive or exclusive. Does the restriction apply when the stream is in *either* of the listed states, or only when it is in *both*?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:22:11.730261+00:00",
+  "document_id": "draft-ietf-quic-transport-24",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "4cbeb0d983aed8b915c0bf7c5e834bc3b73a51e5fd05ba6ed696d8ab87c424ef",
+  "lineage_ids": "lineage:188b4b2b75d68161c5629f30",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 212,
+    "load_duration": 4257000,
+    "prompt_eval_count": 626,
+    "total_duration": 7977508300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"terminal state (“Data Recvd” or “Reset Recvd”)\", \"interpretation_a\": \"The sender cannot send any of the listed frames when the stream is in either the 'Data Recvd' or 'Reset Recvd' state.\", \"interpretation_b\": \"The sender cannot send any of the listed frames when the stream is in both the 'Data Recvd' and 'Reset Recvd' states simultaneously, which is unlikely.\", \"missing_information\": \"It is unclear whether the 'or' is inclusive or exclusive. Does the restriction apply when the stream is in *either* of the listed states, or only when it is in *both*?\",\"justification\": \"The use of 'or' creates ambiguity. It is unclear whether the restriction applies to either state individually, or only when both states are true simultaneously. This affects implementation because a parser must decide how to interpret the condition.\"}",
+  "record_id": "4c681bbc78ad71d0d4bc6786cfd63dc74b2495685ea07275199fa0a80af34a56",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "3.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.969
+}

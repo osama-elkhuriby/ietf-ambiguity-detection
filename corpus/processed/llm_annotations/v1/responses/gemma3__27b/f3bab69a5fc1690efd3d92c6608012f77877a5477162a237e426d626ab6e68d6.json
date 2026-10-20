@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST be sent to the address being validated",
+    "interpretation_a": "Packets MUST be sent to the address that is currently being validated, even if that address is known to be incorrect (e.g., during a spurious migration).",
+    "interpretation_b": "Packets MUST be sent to the address that is being validated only if it is the legitimate address, and not during a spurious migration where the legitimate address is known.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'the address being validated' is ambiguous in the context of a spurious migration. It's unclear whether retransmissions MUST still be sent to the incorrect address being validated, or only to the legitimate address.",
+    "missing_information": "The clause does not specify what happens if the address being validated is known to be incorrect, such as during a spurious migration. This missing constraint leads to different interpretations of how retransmissions of the PING frame should be handled."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:16:34.689319+00:00",
+  "document_id": "draft-ietf-quic-transport-09",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "a098a384f2d1849ee5bd3ca97b419df4799292f768766210573ba24a9f67743b",
+  "lineage_ids": "lineage:97a47850c1b8536b6de5c31a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 218,
+    "load_duration": 1505800,
+    "prompt_eval_count": 584,
+    "total_duration": 8197127400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST be sent to the address being validated\", \"interpretation_a\": \"Packets MUST be sent to the address that is currently being validated, even if that address is known to be incorrect (e.g., during a spurious migration).\", \"interpretation_b\": \"Packets MUST be sent to the address that is being validated only if it is the legitimate address, and not during a spurious migration where the legitimate address is known.\", \"missing_information\": \"The clause does not specify what happens if the address being validated is known to be incorrect, such as during a spurious migration. This missing constraint leads to different interpretations of how retransmissions of the PING frame should be handled.\", \"justification\": \"The phrase 'the address being validated' is ambiguous in the context of a spurious migration. It's unclear whether retransmissions MUST still be sent to the incorrect address being validated, or only to the legitimate address.\"}",
+  "record_id": "f3bab69a5fc1690efd3d92c6608012f77877a5477162a237e426d626ab6e68d6",
+  "revision": "09",
+  "schema_version": 1,
+  "section_ids": "7.8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.188
+}

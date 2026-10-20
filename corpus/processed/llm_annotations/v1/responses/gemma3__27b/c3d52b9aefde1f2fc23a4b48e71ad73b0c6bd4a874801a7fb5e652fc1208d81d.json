@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY be retried",
+    "interpretation_a": "The client is permitted to retry the requests, but is not required to.",
+    "interpretation_b": "The client is expected to retry the requests, but is not strictly required to.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' creates ambiguity regarding whether the client *should* retry the requests or simply *is allowed* to retry them. This affects implementation choices regarding client behavior after receiving a GOAWAY frame.",
+    "missing_information": "The strength of 'MAY' is unclear. Is it a hint, a permission, or an expectation?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:06:19.806978+00:00",
+  "document_id": "draft-ietf-quic-http-27",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "6caea60883b3dad23d4a00f93f99ccb0336b832e75e3404630aade371b0f934a",
+  "lineage_ids": "lineage:4b1e25c41d178d8c90cc8e0c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 151,
+    "load_duration": 15230100,
+    "prompt_eval_count": 568,
+    "total_duration": 5956747800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY be retried\", \"interpretation_a\": \"The client is permitted to retry the requests, but is not required to.\", \"interpretation_b\": \"The client is expected to retry the requests, but is not strictly required to.\", \"missing_information\": \"The strength of 'MAY' is unclear. Is it a hint, a permission, or an expectation?\",\"justification\": \"The use of 'MAY' creates ambiguity regarding whether the client *should* retry the requests or simply *is allowed* to retry them. This affects implementation choices regarding client behavior after receiving a GOAWAY frame.\"}",
+  "record_id": "c3d52b9aefde1f2fc23a4b48e71ad73b0c6bd4a874801a7fb5e652fc1208d81d",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.953
+}

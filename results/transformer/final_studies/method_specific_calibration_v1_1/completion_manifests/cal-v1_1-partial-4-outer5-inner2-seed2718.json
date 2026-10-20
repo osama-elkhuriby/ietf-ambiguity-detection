@@ -1,0 +1,60 @@
+{
+  "attempt_id": "cal-v1_1-partial-4-outer5-inner2-seed2718",
+  "cell_id": "partial_4/outer_5/inner_2/seed_2718",
+  "completed_at": "2026-10-19T01:45:11.171838+03:00",
+  "elapsed_seconds": 82.39099999994505,
+  "gpu_preflight": {
+    "active_compute_processes": [],
+    "free_memory_mib": 30773,
+    "minimum_free_memory_mib": 18000,
+    "name": "NVIDIA RTX 5000 Ada Generation"
+  },
+  "origin": "V1_1_NEW_GPU_EXECUTION",
+  "peak_gpu_memory_allocated_mb": 1714.87646484375,
+  "peak_gpu_memory_reserved_mb": 2222.0,
+  "protocol_sha256": "57c04d15cb3c586c52bc7f59eede3893339f3c67014fdf3e50ccfb95d8fcda4c",
+  "reused": false,
+  "run_manifest_sha256": "975ae1d16a285b0e6a9d3dfe24ec4b592e112487258b030c1316d0425ec0bf5c",
+  "semantic_validation": {
+    "audit_sha256": "aa52ebb3a27a63db6af6a19e2fe90cad9fe8becc7dc5be6abe4dffa12cca2bf3",
+    "context_sanitizations": [],
+    "custom_inner_split_sha256": "fa2735e79a9945d9faf40e0b89001d0d79970c1353dcd5ec2fd7fd36c1d87d04",
+    "fitting_exclusions": [],
+    "fitting_families": [
+      "draft-ietf-httpbis-http2bis",
+      "draft-ietf-quic-http",
+      "draft-ietf-quic-transport"
+    ],
+    "fitting_rows": 1346,
+    "leakage_audit_counts": {
+      "cross_fold_bcp14_skeleton_conflicts": 0,
+      "cross_fold_document_overlaps": 0,
+      "cross_fold_lineage_conflicts": 0,
+      "cross_fold_target_context_overlaps": 1,
+      "exact_target_duplicates_all": 1,
+      "exact_target_duplicates_cross_fold": 0,
+      "families_assigned_to_multiple_folds": 0,
+      "near_cross_fold_targets": 0,
+      "targets_with_bcp14_keyword": 1776
+    },
+    "legacy_fold_file": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\final_annotation_ready_pilot_v1\\manifests\\dataset_v1\\folds\\fold_2.json",
+    "legacy_fold_file_sha256": "9acfe6fc469086aa52f9ad4bf30be0d0d3808c7ded02f32a36c3215961e09870",
+    "peak_gpu_memory_allocated_mb": 1714.87646484375,
+    "peak_gpu_memory_reserved_mb": 2222.0,
+    "prediction_rows": 445,
+    "prediction_sha256": "fc7f6fd5bce4190fd56f6611e8593d0d260f4f8d73479532fa98419cdfd5bdfb",
+    "run_manifest_sha256": "975ae1d16a285b0e6a9d3dfe24ec4b592e112487258b030c1316d0425ec0bf5c",
+    "runtime_seconds": 75.60340889997315,
+    "scoring_families": [
+      "draft-ietf-6man-rfc2460bis",
+      "draft-ietf-httpbis-cache-header",
+      "draft-ietf-httpbis-semantics",
+      "draft-ietf-tls-tls13"
+    ],
+    "scoring_rows": 445
+  },
+  "spec_sha256": "898bdd2a996180d994ecf5d9bcf6af773aff15427ffbe36a5c96010308678ee7",
+  "started_at": "2026-10-19T01:43:48.407622+03:00",
+  "status": "COMPLETE",
+  "training_runtime_seconds": 75.60340889997315
+}

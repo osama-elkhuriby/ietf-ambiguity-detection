@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "modify the state or semantics",
+    "interpretation_a": "A stream type that changes the internal data structures used by QPACK is prohibited until support is confirmed.",
+    "interpretation_b": "A stream type that alters how QPACK interacts with other protocol layers is prohibited until support is confirmed.",
+    "is_ambiguous": "yes",
+    "justification": "The terms 'state' and 'semantics' are not clearly defined in the context of QPACK or other extensions. This allows for multiple interpretations of what constitutes a modification that would trigger the restriction. For example, does changing a configuration parameter count as modifying 'state'? Does altering the order of processing count as modifying 'semantics'?",
+    "missing_information": "The phrase 'modify the state or semantics' is vague. A precise definition of what constitutes a modification of 'state' or 'semantics' is needed to avoid differing interpretations of what stream types are prohibited."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:15:22.321782+00:00",
+  "document_id": "draft-ietf-quic-http-29",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "021eb853ee1cb22f48b0afd14984bb870876af2f14c6c10ea3cdccc6629077fb",
+  "lineage_ids": "lineage:9530bee7969f98f4bfeb27a6",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 204,
+    "load_duration": 6062400,
+    "prompt_eval_count": 571,
+    "total_duration": 7862249000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"modify the state or semantics\", \"interpretation_a\": \"A stream type that changes the internal data structures used by QPACK is prohibited until support is confirmed.\", \"interpretation_b\": \"A stream type that alters how QPACK interacts with other protocol layers is prohibited until support is confirmed.\", \"missing_information\": \"The phrase 'modify the state or semantics' is vague. A precise definition of what constitutes a modification of 'state' or 'semantics' is needed to avoid differing interpretations of what stream types are prohibited.\",\"justification\": \"The terms 'state' and 'semantics' are not clearly defined in the context of QPACK or other extensions. This allows for multiple interpretations of what constitutes a modification that would trigger the restriction. For example, does changing a configuration parameter count as modifying 'state'? Does altering the order of processing count as modifying 'semantics'?\"}",
+  "record_id": "f734ae6ae2b7d5edcbff66788fddc928fd1648c3bb427ef61acfc4acead71c40",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.875
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "delays that it does not control",
+    "interpretation_a": "An endpoint might interpret 'delays it does not control' as any delay originating outside of its direct process, including kernel-level queuing or network interface card (NIC) processing.",
+    "interpretation_b": "An endpoint might interpret 'delays it does not control' as only delays caused by external entities (e.g., network congestion, remote server processing), excluding delays within its own OS stack.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'delays that it does not control' is open to interpretation. It's unclear whether this refers to delays originating entirely outside the endpoint's process, or if it also includes delays introduced by the OS kernel or other internal components. This lack of precision could lead to different implementations of how the Ack Delay field is populated.",
+    "missing_information": "The definition of 'control' is not specified. Does 'control' include delays introduced by the operating system kernel, or only delays caused by external network factors?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:11:45.299592+00:00",
+  "document_id": "draft-ietf-quic-transport-29",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "9af8cb2d34cce48b861f92cd38b46eba69d9b006b8f23f0817e531173a93ac5a",
+  "lineage_ids": "lineage:64118806831cc64d92960d8c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 234,
+    "load_duration": 4398000,
+    "prompt_eval_count": 554,
+    "total_duration": 8686005200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"delays that it does not control\", \"interpretation_a\": \"An endpoint might interpret 'delays it does not control' as any delay originating outside of its direct process, including kernel-level queuing or network interface card (NIC) processing.\", \"interpretation_b\": \"An endpoint might interpret 'delays it does not control' as only delays caused by external entities (e.g., network congestion, remote server processing), excluding delays within its own OS stack.\", \"missing_information\": \"The definition of 'control' is not specified. Does 'control' include delays introduced by the operating system kernel, or only delays caused by external network factors?\",\"justification\": \"The phrase 'delays that it does not control' is open to interpretation. It's unclear whether this refers to delays originating entirely outside the endpoint's process, or if it also includes delays introduced by the OS kernel or other internal components. This lack of precision could lead to different implementations of how the Ack Delay field is populated.\"}",
+  "record_id": "3445444bac77f5152872054e6c7496342b1116073740529f51702938df1afdb8",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "13.2.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.688
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "other",
+    "evidence_span": "MAY treat",
+    "interpretation_a": "The server is permitted to treat receipt of these frames as an error, but is not required to do so; it could choose to ignore them.",
+    "interpretation_b": "The server is permitted to treat receipt of these frames as an error, and *should* do so, but is not strictly required; it has discretion but is expected to act in this way.",
+    "is_ambiguous": "yes",
+    "justification": "The use of \"MAY\" is ambiguous. While it indicates permission, it doesn't clarify whether the server is expected to treat these frames as errors or if it's purely optional. This leads to two reasonable interpretations regarding the server's expected behaviour.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:48:27.364913+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "b91237b90dd1752402e3f1565f6e51ee7174504301f997cacbd1d023c5b43f57",
+  "lineage_ids": "lineage:be075ca016c239a2f0947bae",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 172,
+    "load_duration": 3754400,
+    "prompt_eval_count": 585,
+    "total_duration": 6530517100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"other\", \"evidence_span\": \"MAY treat\", \"interpretation_a\": \"The server is permitted to treat receipt of these frames as an error, but is not required to do so; it could choose to ignore them.\", \"interpretation_b\": \"The server is permitted to treat receipt of these frames as an error, and *should* do so, but is not strictly required; it has discretion but is expected to act in this way.\", \"missing_information\": \"\", \"justification\": \"The use of \\\"MAY\\\" is ambiguous. While it indicates permission, it doesn't clarify whether the server is expected to treat these frames as errors or if it's purely optional. This leads to two reasonable interpretations regarding the server's expected behaviour.\"}",
+  "record_id": "9d9ada8466d016ec8f832f55ca58ff352fc805213e33e1ef1b37453243408bbc",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "12.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.532
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "until that direction enters a terminal state",
+    "interpretation_a": "A stream direction is considered 'terminal' when it has received a RST_STREAM frame, effectively ending the stream's life cycle.",
+    "interpretation_b": "A stream direction is considered 'terminal' only after a certain timeout period has elapsed since the last data was sent or received, allowing for potential retransmissions or delayed acknowledgements.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'terminal state' is not defined within the provided context. Without a clear definition, implementations could reasonably differ on when a stream direction is considered terminal, impacting the duration for which state must be maintained. This constitutes an incomplete constraint.",
+    "missing_information": "The definition of 'terminal state' is not provided, leaving room for different implementations to define when a stream direction is truly terminated. This affects how long state must be maintained."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:16:20.064337+00:00",
+  "document_id": "draft-ietf-quic-transport-16",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "9645b6389d797397d84fadfa739ea6176aa5a03b68de5375531d983a2322cfe7",
+  "lineage_ids": "lineage:f5a2f7f0cd25b227bfba15e9",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 207,
+    "load_duration": 4559400,
+    "prompt_eval_count": 561,
+    "total_duration": 7743875200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"until that direction enters a terminal state\", \"interpretation_a\": \"A stream direction is considered 'terminal' when it has received a RST_STREAM frame, effectively ending the stream's life cycle.\", \"interpretation_b\": \"A stream direction is considered 'terminal' only after a certain timeout period has elapsed since the last data was sent or received, allowing for potential retransmissions or delayed acknowledgements.\", \"missing_information\": \"The definition of 'terminal state' is not provided, leaving room for different implementations to define when a stream direction is truly terminated. This affects how long state must be maintained.\", \"justification\": \"The phrase 'terminal state' is not defined within the provided context. Without a clear definition, implementations could reasonably differ on when a stream direction is considered terminal, impacting the duration for which state must be maintained. This constitutes an incomplete constraint.\"}",
+  "record_id": "f3a7b83669ac8823444885e9c79905e64bc0ec598241474fdf4653ebf4047c39",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.735
+}

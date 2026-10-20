@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that a receiver must send one or more ACK frames containing the packet number of the received packet, and that an endpoint must not send an ACK frame in response to a packet containing only ACK or PADDING frames. The wording is clear and does not permit multiple materially different implementation behaviours or leave a concrete constraint unspecified.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T17:28:23.102226+00:00",
+  "document_id": "draft-ietf-quic-transport-15",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "45f293a04d32ed36c43401eeea521dbd7a3df55d886d6d4190255619e9890618",
+  "lineage_ids": "lineage:3124045726bdd053ae8a493f",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2295,
+    "load_duration": 5654200,
+    "prompt_eval_count": 648,
+    "total_duration": 19711069000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"no\", \"ambiguity_subtype\": \"none\", \"evidence_span\": \"\", \"interpretation_a\": \"\", \"interpretation_b\": \"\", \"missing_information\": \"\", \"justification\": \"The clause unambiguously states that a receiver must send one or more ACK frames containing the packet number of the received packet, and that an endpoint must not send an ACK frame in response to a packet containing only ACK or PADDING frames. The wording is clear and does not permit multiple materially different implementation behaviours or leave a concrete constraint unspecified.\"}",
+  "record_id": "9f875d9b5572a5d6a549c0381eeecb20d7543ab70853cf3adef6adbc95ccb763",
+  "revision": "15",
+  "schema_version": 1,
+  "section_ids": "8.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 19.703
+}

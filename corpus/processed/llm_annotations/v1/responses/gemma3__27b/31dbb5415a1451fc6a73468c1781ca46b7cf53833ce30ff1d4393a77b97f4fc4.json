@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "though there are alternatives",
+    "interpretation_a": "Implementations MAY choose to implement the RFC 5961 mitigation, but are free to use other unspecified methods to address the issue.",
+    "interpretation_b": "Implementations MAY choose to implement the RFC 5961 mitigation, but MUST also support other unspecified methods to address the issue.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"though there are alternatives\" introduces ambiguity about whether the RFC 5961 mitigation is the *only* acceptable solution, or merely *one* of several. The use of SHOULD allows for non-implementation, but the presence of alternatives complicates the interpretation of what is expected if the mitigation is not implemented.",
+    "missing_information": "The scope of 'alternatives' is not defined. Does 'alternatives' mean other methods that achieve the same goal, or methods that must be supported in addition to RFC 5961?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:19:53.096694+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-18",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "9f6ba2dd90936c755e2682e4e5eae38787a9647485ae9a3b1ed9f5afbcce9f88",
+  "lineage_ids": "lineage:2a9ebf6a1d0f1bcdebf3498e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 217,
+    "load_duration": 20013700,
+    "prompt_eval_count": 612,
+    "total_duration": 8356790300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"though there are alternatives\", \"interpretation_a\": \"Implementations MAY choose to implement the RFC 5961 mitigation, but are free to use other unspecified methods to address the issue.\", \"interpretation_b\": \"Implementations MAY choose to implement the RFC 5961 mitigation, but MUST also support other unspecified methods to address the issue.\", \"missing_information\": \"The scope of 'alternatives' is not defined. Does 'alternatives' mean other methods that achieve the same goal, or methods that must be supported in addition to RFC 5961?\",\"justification\": \"The phrase \\\"though there are alternatives\\\" introduces ambiguity about whether the RFC 5961 mitigation is the *only* acceptable solution, or merely *one* of several. The use of SHOULD allows for non-implementation, but the presence of alternatives complicates the interpretation of what is expected if the mitigation is not implemented.\"}",
+  "record_id": "31dbb5415a1451fc6a73468c1781ca46b7cf53833ce30ff1d4393a77b97f4fc4",
+  "revision": "18",
+  "schema_version": 1,
+  "section_ids": "3.9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.375
+}

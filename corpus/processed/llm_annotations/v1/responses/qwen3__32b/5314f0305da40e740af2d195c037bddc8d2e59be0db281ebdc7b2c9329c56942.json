@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause is clear in stating that a TCP implementation must ignore without error any TCP option it does not implement, provided the option has a length field. The condition 'assuming that the option has a length field' is a clear constraint, and the requirement to ignore non-implemented options is unambiguous. There is no room for multiple interpretations or missing constraints that would affect implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:12:13.737704+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "0189b117c98a802f2f4ded1ffd5fd409e757e8fd122dfbd8e9e1038c2e489736",
+  "lineage_ids": "lineage:1f45d825760d198b3344ce79",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 132,
+    "load_duration": 15454200,
+    "prompt_eval_count": 555,
+    "total_duration": 5563103000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause is clear in stating that a TCP implementation must ignore without error any TCP option it does not implement, provided the option has a length field. The condition 'assuming that the option has a length field' is a clear constraint, and the requirement to ignore non-implemented options is unambiguous. There is no room for multiple interpretations or missing constraints that would affect implementation behavior.\"\n}",
+  "record_id": "5314f0305da40e740af2d195c037bddc8d2e59be0db281ebdc7b2c9329c56942",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.562
+}

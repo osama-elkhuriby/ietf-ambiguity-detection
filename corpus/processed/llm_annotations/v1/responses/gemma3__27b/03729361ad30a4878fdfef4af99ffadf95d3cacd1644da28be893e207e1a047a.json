@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "one or more",
+    "interpretation_a": "The client must be able to parse a single 1xx response.",
+    "interpretation_b": "The client must be able to parse multiple 1xx responses.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'one or more' is not specific enough. It is unclear if the client must be able to handle any number of 1xx responses, or if there is a reasonable limit. This affects implementation because a client could choose to limit the number of 1xx responses it parses, potentially leading to errors if more than the limit are received.",
+    "missing_information": "The phrase 'one or more' is vague. It does not specify whether the client must be able to parse any number of 1xx responses, or if there is a limit. This affects implementation because a client could choose to limit the number of 1xx responses it parses, potentially leading to errors if more than the limit are received."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:53:51.629736+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "55fd452f29e07456314d18d1dc9a207512783d45149386bf77dbe8587d0ab13a",
+  "lineage_ids": "lineage:e5bee274cb8fba1be462409a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 223,
+    "load_duration": 13775700,
+    "prompt_eval_count": 574,
+    "total_duration": 8554378200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"one or more\", \"interpretation_a\": \"The client must be able to parse a single 1xx response.\", \"interpretation_b\": \"The client must be able to parse multiple 1xx responses.\", \"missing_information\": \"The phrase 'one or more' is vague. It does not specify whether the client must be able to parse any number of 1xx responses, or if there is a limit. This affects implementation because a client could choose to limit the number of 1xx responses it parses, potentially leading to errors if more than the limit are received.\", \"justification\": \"The phrase 'one or more' is not specific enough. It is unclear if the client must be able to handle any number of 1xx responses, or if there is a reasonable limit. This affects implementation because a client could choose to limit the number of 1xx responses it parses, potentially leading to errors if more than the limit are received.\"}",
+  "record_id": "03729361ad30a4878fdfef4af99ffadf95d3cacd1644da28be893e207e1a047a",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "15.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.562
+}

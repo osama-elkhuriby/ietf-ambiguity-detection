@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "servers SHOULD ignore any such packets",
+    "interpretation_a": "Servers are permitted to log or otherwise record the Handshake packets, but not process them.",
+    "interpretation_b": "Servers are permitted to silently discard the Handshake packets without any logging or recording.",
+    "is_ambiguous": "yes",
+    "justification": "The word 'ignore' is open to interpretation. It could mean simply discarding the packet, or it could mean discarding the packet while also logging information about it. The clause does not specify which behaviour is expected.",
+    "missing_information": "The degree to which 'ignore' permits logging or recording of the packets is not specified."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:58:56.072107+00:00",
+  "document_id": "draft-ietf-quic-transport-20",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "732b2e60cad143416fa2e8e960ef08ea958159df93411d01687906d29787a7c6",
+  "lineage_ids": "lineage:d6e743682ef4381a57e3bee9",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 153,
+    "load_duration": 501900,
+    "prompt_eval_count": 575,
+    "total_duration": 5879276400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"servers SHOULD ignore any such packets\", \"interpretation_a\": \"Servers are permitted to log or otherwise record the Handshake packets, but not process them.\", \"interpretation_b\": \"Servers are permitted to silently discard the Handshake packets without any logging or recording.\", \"missing_information\": \"The degree to which 'ignore' permits logging or recording of the packets is not specified.\", \"justification\": \"The word 'ignore' is open to interpretation. It could mean simply discarding the packet, or it could mean discarding the packet while also logging information about it. The clause does not specify which behaviour is expected.\"}",
+  "record_id": "10d7c799ffced4f94ec9193cbc6f5eb45924018f0995951f9e83c90a22f0c7c0",
+  "revision": "20",
+  "schema_version": 1,
+  "section_ids": "5.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.875
+}

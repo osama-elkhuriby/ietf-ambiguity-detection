@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD associate",
+    "interpretation_a": "The client is encouraged to associate the pushed content with the streams, but is not required to do so and may choose not to.",
+    "interpretation_b": "The client is expected to associate the pushed content with the streams, and failure to do so is a deviation from best practices, but not necessarily an error.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' introduces ambiguity. While it indicates a recommendation, it doesn't clearly define the consequences of not associating the content. Does non-association constitute an error, or simply a suboptimal implementation?",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:39:15.828851+00:00",
+  "document_id": "draft-ietf-quic-http-29",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "4c7d52de0cce4a70680fbeb360fc25a9a2787a0521face6bc470a0911d9e22b4",
+  "lineage_ids": "lineage:5d2a84b9fc587e86b6c9337e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 156,
+    "load_duration": 9294100,
+    "prompt_eval_count": 597,
+    "total_duration": 6088213700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD associate\", \"interpretation_a\": \"The client is encouraged to associate the pushed content with the streams, but is not required to do so and may choose not to.\", \"interpretation_b\": \"The client is expected to associate the pushed content with the streams, and failure to do so is a deviation from best practices, but not necessarily an error.\", \"missing_information\": \"\", \"justification\": \"The use of 'SHOULD' introduces ambiguity. While it indicates a recommendation, it doesn't clearly define the consequences of not associating the content. Does non-association constitute an error, or simply a suboptimal implementation?\"}",
+  "record_id": "077e08f21e3f1a3e9e14df837e3f1e1d3231e6a08ea33d4c6dd606b1030678f8",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "7.2.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.094
+}

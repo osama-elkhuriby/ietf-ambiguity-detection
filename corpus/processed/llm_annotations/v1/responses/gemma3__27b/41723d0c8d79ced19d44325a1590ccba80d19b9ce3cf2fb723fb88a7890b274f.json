@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless it is a CONNECT request ([connect])",
+    "interpretation_a": "CONNECT requests are exempt from the requirement to include the \":method\", \":scheme\", and \":path\" pseudo-header fields.",
+    "interpretation_b": "CONNECT requests are exempt from the requirement to include *exactly one* value for the \":method\", \":scheme\", and \":path\" pseudo-header fields, but may still need to include them with different constraints.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states an exemption for CONNECT requests, but doesn't specify *what* aspect of the requirement is waived. It could mean CONNECT requests don't need these headers at all, or that the 'exactly one' constraint doesn't apply, allowing zero, multiple, or a different type of value.",
+    "missing_information": "The definition of [connect] is needed to determine the exact implications of the exemption for CONNECT requests. Does it mean they can omit these headers entirely, or just that the 'exactly one' rule doesn't apply?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:47:43.434165+00:00",
+  "document_id": "draft-ietf-quic-http-27",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "e203b17f9cbe6310742003e85fbc42ac49e8efbfb2d68dcf5d9536610d26be1e",
+  "lineage_ids": "lineage:677c286d7e8dff563390d92b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 241,
+    "load_duration": 10955500,
+    "prompt_eval_count": 641,
+    "total_duration": 9183930000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless it is a CONNECT request ([connect])\", \"interpretation_a\": \"CONNECT requests are exempt from the requirement to include the \\\":method\\\", \\\":scheme\\\", and \\\":path\\\" pseudo-header fields.\", \"interpretation_b\": \"CONNECT requests are exempt from the requirement to include *exactly one* value for the \\\":method\\\", \\\":scheme\\\", and \\\":path\\\" pseudo-header fields, but may still need to include them with different constraints.\", \"missing_information\": \"The definition of [connect] is needed to determine the exact implications of the exemption for CONNECT requests. Does it mean they can omit these headers entirely, or just that the 'exactly one' rule doesn't apply?\",\"justification\": \"The clause states an exemption for CONNECT requests, but doesn't specify *what* aspect of the requirement is waived. It could mean CONNECT requests don't need these headers at all, or that the 'exactly one' constraint doesn't apply, allowing zero, multiple, or a different type of value.\"}",
+  "record_id": "41723d0c8d79ced19d44325a1590ccba80d19b9ce3cf2fb723fb88a7890b274f",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "4.1.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.188
+}

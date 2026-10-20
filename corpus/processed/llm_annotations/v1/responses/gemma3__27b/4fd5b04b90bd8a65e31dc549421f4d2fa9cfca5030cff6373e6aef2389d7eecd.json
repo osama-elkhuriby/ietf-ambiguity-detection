@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "too often",
+    "interpretation_a": "Refresh min_rtt no more than once per minute.",
+    "interpretation_b": "Refresh min_rtt no more than once per hour.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"too often\" is subjective and lacks a quantifiable limit. Different implementations could reasonably interpret this as different refresh rates, leading to inconsistent behavior. Without a defined threshold, it's unclear what constitutes an unacceptable refresh frequency.",
+    "missing_information": "The phrase 'too often' lacks a concrete time or event constraint. A specific interval or condition is needed to define acceptable refresh rates."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:19:59.685565+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "0e8f8f403c287e1d8b0af731383d9942c94921d76da4f9d61204614341db248f",
+  "lineage_ids": "lineage:7f53e344690ec24ea346994b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 152,
+    "load_duration": 4241000,
+    "prompt_eval_count": 574,
+    "total_duration": 5854700900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"too often\", \"interpretation_a\": \"Refresh min_rtt no more than once per minute.\", \"interpretation_b\": \"Refresh min_rtt no more than once per hour.\", \"missing_information\": \"The phrase 'too often' lacks a concrete time or event constraint. A specific interval or condition is needed to define acceptable refresh rates.\", \"justification\": \"The phrase \\\"too often\\\" is subjective and lacks a quantifiable limit. Different implementations could reasonably interpret this as different refresh rates, leading to inconsistent behavior. Without a defined threshold, it's unclear what constitutes an unacceptable refresh frequency.\"}",
+  "record_id": "4fd5b04b90bd8a65e31dc549421f4d2fa9cfca5030cff6373e6aef2389d7eecd",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.86
+}

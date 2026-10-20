@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides clear guidance on the retransmission of MAX_DATA frames. It specifies that the most recent MAX_DATA frame MUST be retransmitted, while previous unacknowledged ones SHOULD NOT be retransmitted. This is consistent with the prior clause about MAX_STREAM_DATA frames and does not allow for multiple materially different interpretations. The language is precise and does not introduce ambiguity.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:43:18.995731+00:00",
+  "document_id": "draft-ietf-quic-transport-09",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "6ad8407b162b1f9168720a828745dfb0114ba4e171f4d650d78b36be0bde42e4",
+  "lineage_ids": "lineage:0f9b480b397062ccd7cb3629",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 132,
+    "load_duration": 8018600,
+    "prompt_eval_count": 567,
+    "total_duration": 5428100000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides clear guidance on the retransmission of MAX_DATA frames. It specifies that the most recent MAX_DATA frame MUST be retransmitted, while previous unacknowledged ones SHOULD NOT be retransmitted. This is consistent with the prior clause about MAX_STREAM_DATA frames and does not allow for multiple materially different interpretations. The language is precise and does not introduce ambiguity.\"\n}",
+  "record_id": "d60bd148e3c409d4ebd8a4ba3ae74fbc6fb2f6041362f5374b2713b5c7eb5ad9",
+  "revision": "09",
+  "schema_version": 1,
+  "section_ids": "9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.422
+}

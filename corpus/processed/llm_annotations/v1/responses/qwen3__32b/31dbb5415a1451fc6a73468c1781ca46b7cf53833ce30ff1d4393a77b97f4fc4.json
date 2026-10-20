@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD be implemented, though there are alternatives",
+    "interpretation_a": "Implementers are required to consider alternatives to RFC 5961's mitigation and may choose a different method, as long as it provides equivalent or better security.",
+    "interpretation_b": "Implementers are expected to follow RFC 5961's mitigation as the primary recommendation, with alternatives only being considered in exceptional cases.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' and the mention of 'alternatives' without defining them or providing evaluation criteria creates an incomplete constraint. This allows for materially different implementation behaviors depending on how implementers interpret the acceptable alternatives.",
+    "missing_information": "The document does not specify what constitutes acceptable alternatives to RFC 5961's mitigation, nor does it provide criteria for evaluating them."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:10:25.942601+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-18",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "9f6ba2dd90936c755e2682e4e5eae38787a9647485ae9a3b1ed9f5afbcce9f88",
+  "lineage_ids": "lineage:2a9ebf6a1d0f1bcdebf3498e",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 201,
+    "load_duration": 13539300,
+    "prompt_eval_count": 576,
+    "total_duration": 8383619600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"SHOULD be implemented, though there are alternatives\",\n  \"interpretation_a\": \"Implementers are required to consider alternatives to RFC 5961's mitigation and may choose a different method, as long as it provides equivalent or better security.\",\n  \"interpretation_b\": \"Implementers are expected to follow RFC 5961's mitigation as the primary recommendation, with alternatives only being considered in exceptional cases.\",\n  \"missing_information\": \"The document does not specify what constitutes acceptable alternatives to RFC 5961's mitigation, nor does it provide criteria for evaluating them.\",\n  \"justification\": \"The use of 'SHOULD' and the mention of 'alternatives' without defining them or providing evaluation criteria creates an incomplete constraint. This allows for materially different implementation behaviors depending on how implementers interpret the acceptable alternatives.\"\n}",
+  "record_id": "31dbb5415a1451fc6a73468c1781ca46b7cf53833ce30ff1d4393a77b97f4fc4",
+  "revision": "18",
+  "schema_version": 1,
+  "section_ids": "3.9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.406
+}

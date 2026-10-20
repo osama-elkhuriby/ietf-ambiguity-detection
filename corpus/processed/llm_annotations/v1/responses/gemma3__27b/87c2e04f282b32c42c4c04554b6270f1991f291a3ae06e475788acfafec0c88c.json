@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "TargetName has the value “.”",
+    "interpretation_a": "If the TargetName field in the SVCB RR is explicitly set to \".\", the owner name of the record is used as the effective TargetName.",
+    "interpretation_b": "If the TargetName field is omitted or empty, and is *represented* as \".\" by some implementation, the owner name of the record is used as the effective TargetName. The clause does not specify how an empty or omitted TargetName is represented.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states a condition based on the value of `TargetName`. It doesn't specify what happens if `TargetName` is not explicitly set to \".\" but is empty or omitted. An implementation might represent an empty/omitted field as \".\", leading to ambiguity about whether the rule applies in those cases.",
+    "missing_information": "The clause does not define how an empty or omitted TargetName field is represented. It is unclear if the condition applies only to explicitly set \".\" values, or also to cases where the field is empty/omitted and represented as \".\" by some implementation."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:07:46.364486+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-04",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "27a4f0dbb003a693c7283ababb0f7934d66934fb72ea41f3377883602c7bc361",
+  "lineage_ids": "lineage:aa40937b09e31b51c252d910",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 263,
+    "load_duration": 4043000,
+    "prompt_eval_count": 566,
+    "total_duration": 9736104900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"TargetName has the value “.”\", \"interpretation_a\": \"If the TargetName field in the SVCB RR is explicitly set to \\\".\\\", the owner name of the record is used as the effective TargetName.\", \"interpretation_b\": \"If the TargetName field is omitted or empty, and is *represented* as \\\".\\\" by some implementation, the owner name of the record is used as the effective TargetName. The clause does not specify how an empty or omitted TargetName is represented.\", \"missing_information\": \"The clause does not define how an empty or omitted TargetName field is represented. It is unclear if the condition applies only to explicitly set \\\".\\\" values, or also to cases where the field is empty/omitted and represented as \\\".\\\" by some implementation.\", \"justification\": \"The clause states a condition based on the value of `TargetName`. It doesn't specify what happens if `TargetName` is not explicitly set to \\\".\\\" but is empty or omitted. An implementation might represent an empty/omitted field as \\\".\\\", leading to ambiguity about whether the rule applies in those cases.\"}",
+  "record_id": "87c2e04f282b32c42c4c04554b6270f1991f291a3ae06e475788acfafec0c88c",
+  "revision": "04",
+  "schema_version": 1,
+  "section_ids": "2.5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.734
+}

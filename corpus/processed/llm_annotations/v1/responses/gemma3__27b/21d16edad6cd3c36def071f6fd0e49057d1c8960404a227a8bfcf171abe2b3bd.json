@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "detects an error",
+    "interpretation_a": "The proxy detects *any* error, even transient ones, and immediately resets the connection.",
+    "interpretation_b": "The proxy detects a *severe* or *unrecoverable* error, and only then resets the connection. Transient errors are handled with retries or other mechanisms.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'error' is not defined, and the clause does not specify the type or severity of error that warrants a TCP reset. This allows for different implementations to interpret what constitutes an error, leading to potentially inconsistent behavior.",
+    "missing_information": "The clause does not define what constitutes an 'error' that triggers the RST. This leaves room for different implementations to interpret the severity of errors differently."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:29:44.121498+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "a5bff19393354e82264128a2b2e54e4077ceea3037e780a7abe640c32a2bb4f4",
+  "lineage_ids": "lineage:cabe372475840089f180d7b7",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 183,
+    "load_duration": 26746200,
+    "prompt_eval_count": 572,
+    "total_duration": 7141062100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"detects an error\", \"interpretation_a\": \"The proxy detects *any* error, even transient ones, and immediately resets the connection.\", \"interpretation_b\": \"The proxy detects a *severe* or *unrecoverable* error, and only then resets the connection. Transient errors are handled with retries or other mechanisms.\", \"missing_information\": \"The clause does not define what constitutes an 'error' that triggers the RST. This leaves room for different implementations to interpret the severity of errors differently.\", \"justification\": \"The term 'error' is not defined, and the clause does not specify the type or severity of error that warrants a TCP reset. This allows for different implementations to interpret what constitutes an error, leading to potentially inconsistent behavior.\"}",
+  "record_id": "21d16edad6cd3c36def071f6fd0e49057d1c8960404a227a8bfcf171abe2b3bd",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.141
+}

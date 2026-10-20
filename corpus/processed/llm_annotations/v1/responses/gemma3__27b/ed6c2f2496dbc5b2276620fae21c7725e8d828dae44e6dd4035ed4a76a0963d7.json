@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "other",
+    "evidence_span": "Implementations MAY experiment with absolute thresholds, thresholds from previous connections, adaptive thresholds, or including RTT variation.",
+    "interpretation_a": "Implementations can choose *one* of the listed methods (absolute, previous, adaptive, or RTT variation) and implement only that.",
+    "interpretation_b": "Implementations can choose *any combination* of the listed methods and implement them together, potentially blending their approaches.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'or' is ambiguous. It could mean an exclusive or (choose one) or an inclusive or (choose any combination).",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:32:26.961114+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "c959228f27cd0fe0db0fc7af7420edc92feef219086fbd2da3caa7600c90e4bd",
+  "lineage_ids": "lineage:12177434f3db194729b59085",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 149,
+    "load_duration": 3631900,
+    "prompt_eval_count": 565,
+    "total_duration": 5708011200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"other\", \"evidence_span\": \"Implementations MAY experiment with absolute thresholds, thresholds from previous connections, adaptive thresholds, or including RTT variation.\", \"interpretation_a\": \"Implementations can choose *one* of the listed methods (absolute, previous, adaptive, or RTT variation) and implement only that.\", \"interpretation_b\": \"Implementations can choose *any combination* of the listed methods and implement them together, potentially blending their approaches.\", \"missing_information\": \"\", \"justification\": \"The use of 'or' is ambiguous. It could mean an exclusive or (choose one) or an inclusive or (choose any combination).\"}",
+  "record_id": "ed6c2f2496dbc5b2276620fae21c7725e8d828dae44e6dd4035ed4a76a0963d7",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.703
+}

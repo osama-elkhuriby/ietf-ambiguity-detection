@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST be robust against window shrinking",
+    "interpretation_a": "Robust could mean simply not crashing or could mean taking specific actions such as refraining from sending new data or retransmitting old data.",
+    "interpretation_b": "Robust could also be interpreted as handling the negative usable window by adjusting internal state or by other unspecified means.",
+    "is_ambiguous": "yes",
+    "justification": "The clause requires the sender to be robust against window shrinking but does not define 'robust' or specify the required actions. Without that definition, implementations could differ in how they respond to a negative usable window, leading to materially different behaviours. The subsequent clause clarifies the intended behaviour, but the target clause itself remains under‑specified.",
+    "missing_information": "A precise definition of what constitutes 'robust' behaviour when the usable window becomes negative, or explicit operational steps that must be taken, is not provided in the clause itself. The following clause supplies some guidance, but the target clause alone is under‑specified for implementation purposes. This missing constraint leads to multiple reasonable, materially different implementation behaviours. Therefore the clause is ambiguous. (The ambiguity is due to an incomplete constraint affecting implementation behaviour.)"
+  },
+  "attempts": 3,
+  "created_at": "2026-10-08T20:20:07.236642+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "f2d7883729b0b1d5bc5dd30dad92aeedd68baa6eefa3c369df2502017dacb4a4",
+  "lineage_ids": "lineage:3e92cd7e53fd828590f55ebc",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 509,
+    "load_duration": 5199800,
+    "prompt_eval_count": 945,
+    "total_duration": 4608362900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"MUST be robust against window shrinking\",\n  \"interpretation_a\": \"Robust could mean simply not crashing or could mean taking specific actions such as refraining from sending new data or retransmitting old data.\",\n  \"interpretation_b\": \"Robust could also be interpreted as handling the negative usable window by adjusting internal state or by other unspecified means.\",\n  \"missing_information\": \"A precise definition of what constitutes 'robust' behaviour when the usable window becomes negative, or explicit operational steps that must be taken, is not provided in the clause itself. The following clause supplies some guidance, but the target clause alone is under‑specified for implementation purposes. This missing constraint leads to multiple reasonable, materially different implementation behaviours. Therefore the clause is ambiguous. (The ambiguity is due to an incomplete constraint affecting implementation behaviour.)\",\n  \"justification\": \"The clause requires the sender to be robust against window shrinking but does not define 'robust' or specify the required actions. Without that definition, implementations could differ in how they respond to a negative usable window, leading to materially different behaviours. The subsequent clause clarifies the intended behaviour, but the target clause itself remains under‑specified.\"\n}",
+  "record_id": "bfb59cc6826af7d92214a297e3b8a68294944cb1407f7c84a82e70b18711a37e",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.8.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 40.609
+}

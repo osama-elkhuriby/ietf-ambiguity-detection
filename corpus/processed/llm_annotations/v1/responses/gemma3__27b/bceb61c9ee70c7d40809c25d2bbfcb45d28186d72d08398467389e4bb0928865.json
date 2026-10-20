@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST be retransmitted",
+    "interpretation_a": "All frames, except those explicitly exempted, must be retransmitted if lost.",
+    "interpretation_b": "Only the *most recent* instance of each frame type (other than those explicitly exempted) must be retransmitted if lost; older instances can be discarded.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states \"All other frames MUST be retransmitted.\" Without further clarification, it is unclear whether this applies to all instances of a frame type, or only the most recent. If all instances must be retransmitted, the receiver needs to buffer all received frames until they are acknowledged. If only the most recent instance needs to be retransmitted, the receiver can discard older instances, reducing buffering requirements.",
+    "missing_information": "The clause does not specify whether all instances of a frame type must be retransmitted, or only the most recent. This affects buffering requirements and retransmission behaviour."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:58:32.779308+00:00",
+  "document_id": "draft-ietf-quic-transport-06",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "3128f4a631c1c6c06ff84705636adb8d0c6461ab9f24a6727dd884935d9b7a72",
+  "lineage_ids": "lineage:85f802bfb321d049d897f601",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 215,
+    "load_duration": 4124800,
+    "prompt_eval_count": 537,
+    "total_duration": 8059840600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST be retransmitted\", \"interpretation_a\": \"All frames, except those explicitly exempted, must be retransmitted if lost.\", \"interpretation_b\": \"Only the *most recent* instance of each frame type (other than those explicitly exempted) must be retransmitted if lost; older instances can be discarded.\", \"missing_information\": \"The clause does not specify whether all instances of a frame type must be retransmitted, or only the most recent. This affects buffering requirements and retransmission behaviour.\", \"justification\": \"The clause states \\\"All other frames MUST be retransmitted.\\\" Without further clarification, it is unclear whether this applies to all instances of a frame type, or only the most recent. If all instances must be retransmitted, the receiver needs to buffer all received frames until they are acknowledged. If only the most recent instance needs to be retransmitted, the receiver can discard older instances, reducing buffering requirements.\"}",
+  "record_id": "bceb61c9ee70c7d40809c25d2bbfcb45d28186d72d08398467389e4bb0928865",
+  "revision": "06",
+  "schema_version": 1,
+  "section_ids": "9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.063
+}

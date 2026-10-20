@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "0x3ffffffffffffffe",
+    "interpretation_a": "The upper bound 0x3ffffffffffffffe is a 64-bit integer, meaning all 64-bit values are disallowed.",
+    "interpretation_b": "The upper bound 0x3ffffffffffffffe is a 48-bit integer, meaning values beyond that are allowed, but the stated value is simply the largest representable value within 48 bits.",
+    "is_ambiguous": "yes",
+    "justification": "The value 0x3ffffffffffffffe could be interpreted as the maximum value for a 48-bit integer or a 64-bit integer. The specification does not explicitly state the intended bit width, leading to ambiguity in the range of disallowed setting codes.",
+    "missing_information": "It is unclear whether the upper bound is intended to be a 64-bit or 48-bit integer. This affects the range of disallowed setting codes."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:45:51.339762+00:00",
+  "document_id": "draft-ietf-quic-http-32",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "d234bbfe361674ab2c43d4c0cdbf45e4902b1661a40b42a5f36fc9310cf9b1f2",
+  "lineage_ids": "lineage:1e93ad6951e2f84ac0cc9eeb",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 225,
+    "load_duration": 14475400,
+    "prompt_eval_count": 668,
+    "total_duration": 8951618600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"0x3ffffffffffffffe\", \"interpretation_a\": \"The upper bound 0x3ffffffffffffffe is a 64-bit integer, meaning all 64-bit values are disallowed.\", \"interpretation_b\": \"The upper bound 0x3ffffffffffffffe is a 48-bit integer, meaning values beyond that are allowed, but the stated value is simply the largest representable value within 48 bits.\", \"missing_information\": \"It is unclear whether the upper bound is intended to be a 64-bit or 48-bit integer. This affects the range of disallowed setting codes.\", \"justification\": \"The value 0x3ffffffffffffffe could be interpreted as the maximum value for a 48-bit integer or a 64-bit integer. The specification does not explicitly state the intended bit width, leading to ambiguity in the range of disallowed setting codes.\"}",
+  "record_id": "358d4cb55f8d69b09755551c38ede804958ab033abedacef96153a0cccf3e68e",
+  "revision": "32",
+  "schema_version": 1,
+  "section_ids": "11.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.953
+}

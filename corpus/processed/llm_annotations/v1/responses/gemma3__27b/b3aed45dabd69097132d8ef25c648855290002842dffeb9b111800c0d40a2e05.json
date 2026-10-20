@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "0x3FFFFFFFFFFFFFFE",
+    "interpretation_a": "The upper bound is inclusive, meaning 0x3FFFFFFFFFFFFFFE is a valid value of N and therefore a disallowed frame type code.",
+    "interpretation_b": "The upper bound is exclusive, meaning 0x3FFFFFFFFFFFFFFE is *not* a valid value of N and therefore a disallowed frame type code. The largest valid value of N would be such that 0x1f * N + 0x21 is less than 0x3FFFFFFFFFFFFFFE.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states a range of values for N, and provides an upper bound. It is unclear whether the upper bound is inclusive or exclusive. This affects which frame type codes are disallowed.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:03:40.530920+00:00",
+  "document_id": "draft-ietf-quic-http-32",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "1e543142d41f2e01764f32e1fbd6288c68c32e2fbec0ec0e8fd673f38830d34c",
+  "lineage_ids": "lineage:d7d689615735f36b0a529d3d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 192,
+    "load_duration": 9333400,
+    "prompt_eval_count": 739,
+    "total_duration": 7608228900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"0x3FFFFFFFFFFFFFFE\", \"interpretation_a\": \"The upper bound is inclusive, meaning 0x3FFFFFFFFFFFFFFE is a valid value of N and therefore a disallowed frame type code.\", \"interpretation_b\": \"The upper bound is exclusive, meaning 0x3FFFFFFFFFFFFFFE is *not* a valid value of N and therefore a disallowed frame type code. The largest valid value of N would be such that 0x1f * N + 0x21 is less than 0x3FFFFFFFFFFFFFFE.\", \"missing_information\": \"\",\"justification\": \"The clause states a range of values for N, and provides an upper bound. It is unclear whether the upper bound is inclusive or exclusive. This affects which frame type codes are disallowed.\"}",
+  "record_id": "b3aed45dabd69097132d8ef25c648855290002842dffeb9b111800c0d40a2e05",
+  "revision": "32",
+  "schema_version": 1,
+  "section_ids": "11.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.61
+}

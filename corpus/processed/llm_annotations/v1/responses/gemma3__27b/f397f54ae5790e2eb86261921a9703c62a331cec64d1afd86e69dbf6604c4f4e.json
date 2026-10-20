@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "before sending more protected packets than the confidentiality limit",
+    "interpretation_a": "The key update must be *initiated* before the number of protected packets reaches the confidentiality limit, allowing some packets to be sent with the old key.",
+    "interpretation_b": "No protected packets may be sent using a key after the number of protected packets reaches the confidentiality limit; the key update must complete before any further packets are sent.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'before sending more protected packets than the confidentiality limit' is ambiguous. It's unclear whether the key update needs to be *completed* before exceeding the limit, or merely *initiated* before exceeding it. This affects how many packets can be sent with the old key.",
+    "missing_information": "The meaning of 'before' is unclear. Does it mean 'at or before', or 'strictly before'?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:52:57.677258+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "946030633bc276a66a7d5c6d775ad2b3686173ba2e10387ca7ea1dcfd7b20ca4",
+  "lineage_ids": "lineage:e29cf1605af451a02e590c9b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 203,
+    "load_duration": 4581300,
+    "prompt_eval_count": 592,
+    "total_duration": 7641706300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"before sending more protected packets than the confidentiality limit\", \"interpretation_a\": \"The key update must be *initiated* before the number of protected packets reaches the confidentiality limit, allowing some packets to be sent with the old key.\", \"interpretation_b\": \"No protected packets may be sent using a key after the number of protected packets reaches the confidentiality limit; the key update must complete before any further packets are sent.\", \"missing_information\": \"The meaning of 'before' is unclear. Does it mean 'at or before', or 'strictly before'?\",\"justification\": \"The phrase 'before sending more protected packets than the confidentiality limit' is ambiguous. It's unclear whether the key update needs to be *completed* before exceeding the limit, or merely *initiated* before exceeding it. This affects how many packets can be sent with the old key.\"}",
+  "record_id": "f397f54ae5790e2eb86261921a9703c62a331cec64d1afd86e69dbf6604c4f4e",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.656
+}

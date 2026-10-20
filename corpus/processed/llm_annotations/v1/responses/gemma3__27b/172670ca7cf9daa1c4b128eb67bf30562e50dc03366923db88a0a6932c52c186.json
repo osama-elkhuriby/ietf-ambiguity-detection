@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "header field name's definition",
+    "interpretation_a": "The definition of the header field name explicitly states whether it can be sent in trailers.",
+    "interpretation_b": "The definition of the header field name implies whether it can be sent in trailers, requiring interpretation to determine permissibility.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'permits the field to be sent in trailers' is open to interpretation. Does the definition need to *explicitly* allow trailers, or is it sufficient if the definition doesn't *prohibit* them? This difference affects implementation.",
+    "missing_information": "The document does not define what constitutes a definition 'permitting' a field to be sent in trailers. Does 'permitting' require an explicit statement, or is implication sufficient?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:56:33.706884+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "722ac0466a919c7d41d74111e98150ad3d1c7589c27bc6aa303d3c1c97205603",
+  "lineage_ids": "lineage:07ff85cd0342d51467c9b883",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 185,
+    "load_duration": 8904200,
+    "prompt_eval_count": 602,
+    "total_duration": 7236150000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-1\", \"evidence_span\": \"header field name's definition\", \"interpretation_a\": \"The definition of the header field name explicitly states whether it can be sent in trailers.\", \"interpretation_b\": \"The definition of the header field name implies whether it can be sent in trailers, requiring interpretation to determine permissibility.\", \"missing_information\": \"The document does not define what constitutes a definition 'permitting' a field to be sent in trailers. Does 'permitting' require an explicit statement, or is implication sufficient?\",\"justification\": \"The phrase 'permits the field to be sent in trailers' is open to interpretation. Does the definition need to *explicitly* allow trailers, or is it sufficient if the definition doesn't *prohibit* them? This difference affects implementation.\"}",
+  "record_id": "172670ca7cf9daa1c4b128eb67bf30562e50dc03366923db88a0a6932c52c186",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "6.5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.25
+}

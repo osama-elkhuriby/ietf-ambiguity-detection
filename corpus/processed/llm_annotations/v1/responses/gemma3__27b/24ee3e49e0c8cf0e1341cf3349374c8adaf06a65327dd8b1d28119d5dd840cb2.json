@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHALL add/has added",
+    "interpretation_a": "IANA is required to add the registry if it does not already exist.",
+    "interpretation_b": "IANA may have already added the registry, and this clause simply acknowledges that fact.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"SHALL add/has added\" is ambiguous. It's unclear whether this is a requirement to add the registry if it doesn't exist, or simply a statement that the registry has been or will be added. This affects implementation because a reader might incorrectly assume the registry is already present when it isn't.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:05:03.211502+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "134fe0160388c99bf03765a386dbc029f23f9029cb067417b3acac89773df58d",
+  "lineage_ids": "lineage:6a6476001775223de3d9c377",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 153,
+    "load_duration": 4053800,
+    "prompt_eval_count": 554,
+    "total_duration": 5839819100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHALL add/has added\", \"interpretation_a\": \"IANA is required to add the registry if it does not already exist.\", \"interpretation_b\": \"IANA may have already added the registry, and this clause simply acknowledges that fact.\", \"missing_information\": \"\", \"justification\": \"The phrase \\\"SHALL add/has added\\\" is ambiguous. It's unclear whether this is a requirement to add the registry if it doesn't exist, or simply a statement that the registry has been or will be added. This affects implementation because a reader might incorrectly assume the registry is already present when it isn't.\"}",
+  "record_id": "24ee3e49e0c8cf0e1341cf3349374c8adaf06a65327dd8b1d28119d5dd840cb2",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "22.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.844
+}

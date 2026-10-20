@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "adequately supported",
+    "interpretation_a": "The origin server has explicitly stated it can handle content in GET requests, and has defined what 'adequately supported' means (e.g., maximum size, accepted encoding).",
+    "interpretation_b": "The origin server has not explicitly stated it can handle content in GET requests, but the client believes it can based on prior successful interactions, and 'adequately supported' means 'not crashing or returning an error'.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'adequately supported' is subjective and lacks a concrete definition. This allows for different interpretations of what constitutes sufficient support, leading to potentially inconsistent implementations.",
+    "missing_information": "The definition of 'adequately supported' is not provided, leaving room for different interpretations of what level of support is required to satisfy the SHOULD NOT condition."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:28:47.910371+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "4872da79fd579b3e20e271409326ae5c0ed5a4e486ffd409543b1839c2bb1500",
+  "lineage_ids": "lineage:4849bb10096bd4cf0af08122",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 197,
+    "load_duration": 27397300,
+    "prompt_eval_count": 648,
+    "total_duration": 7690121100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"adequately supported\", \"interpretation_a\": \"The origin server has explicitly stated it can handle content in GET requests, and has defined what 'adequately supported' means (e.g., maximum size, accepted encoding).\", \"interpretation_b\": \"The origin server has not explicitly stated it can handle content in GET requests, but the client believes it can based on prior successful interactions, and 'adequately supported' means 'not crashing or returning an error'.\", \"missing_information\": \"The definition of 'adequately supported' is not provided, leaving room for different interpretations of what level of support is required to satisfy the SHOULD NOT condition.\",\"justification\": \"The phrase 'adequately supported' is subjective and lacks a concrete definition. This allows for different interpretations of what constitutes sufficient support, leading to potentially inconsistent implementations.\"}",
+  "record_id": "ceb60874192790263abd80636127850a8dc668d894503b976e35cda49b12e986",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "9.3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.703
+}

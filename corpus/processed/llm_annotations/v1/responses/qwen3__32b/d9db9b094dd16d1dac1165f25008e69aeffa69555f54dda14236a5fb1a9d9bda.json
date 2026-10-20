@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause provides a clear and unambiguous requirement for origin servers handling HTTP/1.1 (or later) requests with a 100-continue expectation. It specifies two possible responses based on whether the server can determine a final status code from the method, target URI, and header fields. The language is precise and does not allow for multiple materially different interpretations. There is no missing constraint that would affect implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:31:41.236937+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-13",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "bd97dfe6b22ade475f2aed2fb51a5b3db950cdd75e3ee7cbb727ff784ac74031",
+  "lineage_ids": "lineage:b96b2076f80ee202be3fdc02",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 142,
+    "load_duration": 5213000,
+    "prompt_eval_count": 639,
+    "total_duration": 5951475500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause provides a clear and unambiguous requirement for origin servers handling HTTP/1.1 (or later) requests with a 100-continue expectation. It specifies two possible responses based on whether the server can determine a final status code from the method, target URI, and header fields. The language is precise and does not allow for multiple materially different interpretations. There is no missing constraint that would affect implementation behavior.\"\n}",
+  "record_id": "d9db9b094dd16d1dac1165f25008e69aeffa69555f54dda14236a5fb1a9d9bda",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "10.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.984
+}

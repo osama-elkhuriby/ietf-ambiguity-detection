@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD NOT send more than one RST_STREAM frame",
+    "interpretation_a": "An endpoint is discouraged from sending multiple RST_STREAM frames, but it is permissible under some circumstances not explicitly prohibited.",
+    "interpretation_b": "An endpoint must not send multiple RST_STREAM frames except under very specific, defined conditions (which are not defined in this clause).",
+    "is_ambiguous": "yes",
+    "justification": "The clause uses 'SHOULD NOT', which is weaker than 'MUST NOT'. Without further clarification, it's unclear whether the prohibition is absolute or merely a strong recommendation. The next clause introduces an exception, but the scope of that exception isn't clear in relation to the 'SHOULD NOT' in the target clause.",
+    "missing_information": "The conditions under which sending more than one RST_STREAM frame is permissible are not specified in this clause. The strength of 'SHOULD NOT' is unclear without knowing the exceptional circumstances."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:28:45.287263+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "28f2a975077478fd640ca0e905493b1dedfc64e460f8da005a702a4b5211db1d",
+  "lineage_ids": "lineage:17813c77853d76f0f5958258",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 217,
+    "load_duration": 12355700,
+    "prompt_eval_count": 585,
+    "total_duration": 8318138200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD NOT send more than one RST_STREAM frame\", \"interpretation_a\": \"An endpoint is discouraged from sending multiple RST_STREAM frames, but it is permissible under some circumstances not explicitly prohibited.\", \"interpretation_b\": \"An endpoint must not send multiple RST_STREAM frames except under very specific, defined conditions (which are not defined in this clause).\", \"missing_information\": \"The conditions under which sending more than one RST_STREAM frame is permissible are not specified in this clause. The strength of 'SHOULD NOT' is unclear without knowing the exceptional circumstances.\", \"justification\": \"The clause uses 'SHOULD NOT', which is weaker than 'MUST NOT'. Without further clarification, it's unclear whether the prohibition is absolute or merely a strong recommendation. The next clause introduces an exception, but the scope of that exception isn't clear in relation to the 'SHOULD NOT' in the target clause.\"}",
+  "record_id": "158a0218bf19d791572c222be2ee89ca81e0a86b0b13670ebd87a1f4cdbbf150",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "5.4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.328
+}

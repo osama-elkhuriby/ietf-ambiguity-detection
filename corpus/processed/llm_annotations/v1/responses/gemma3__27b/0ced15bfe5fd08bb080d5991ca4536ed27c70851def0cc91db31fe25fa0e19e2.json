@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "needlessly fine-grained detail",
+    "interpretation_a": "A server field like 'MyCompany/1.2.3 (Ubuntu 22.04; x86_64)' is considered needlessly fine-grained because it reveals specific OS and architecture details.",
+    "interpretation_b": "A server field like 'MyCompany/1.2.3' is acceptable, even if the server internally uses a complex stack, because it doesn't expose unnecessary implementation details.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'needlessly fine-grained detail' is subjective. Different implementers could reasonably disagree on what constitutes 'needless' detail, leading to varying levels of information included in the Server field. The clause also states 'SHOULD limit the addition of subproducts by third parties' which is also subjective and open to interpretation.",
+    "missing_information": "The definition of 'needlessly fine-grained detail' is subjective and lacks a clear threshold. What level of detail is considered 'needless' is not specified, leading to different interpretations of what constitutes compliance."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:55:16.414489+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-12",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "3bebb91dffdeeb319a3e00bf7a875462cd4bf0582f83a7848cd34b8a365c511c",
+  "lineage_ids": "lineage:77a7f16c2b821a75984cdde9",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 247,
+    "load_duration": 20862600,
+    "prompt_eval_count": 585,
+    "total_duration": 9461845400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"needlessly fine-grained detail\", \"interpretation_a\": \"A server field like 'MyCompany/1.2.3 (Ubuntu 22.04; x86_64)' is considered needlessly fine-grained because it reveals specific OS and architecture details.\", \"interpretation_b\": \"A server field like 'MyCompany/1.2.3' is acceptable, even if the server internally uses a complex stack, because it doesn't expose unnecessary implementation details.\", \"missing_information\": \"The definition of 'needlessly fine-grained detail' is subjective and lacks a clear threshold. What level of detail is considered 'needless' is not specified, leading to different interpretations of what constitutes compliance.\",\"justification\": \"The phrase 'needlessly fine-grained detail' is subjective. Different implementers could reasonably disagree on what constitutes 'needless' detail, leading to varying levels of information included in the Server field. The clause also states 'SHOULD limit the addition of subproducts by third parties' which is also subjective and open to interpretation.\"}",
+  "record_id": "0ced15bfe5fd08bb080d5991ca4536ed27c70851def0cc91db31fe25fa0e19e2",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "9.2.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.468
+}

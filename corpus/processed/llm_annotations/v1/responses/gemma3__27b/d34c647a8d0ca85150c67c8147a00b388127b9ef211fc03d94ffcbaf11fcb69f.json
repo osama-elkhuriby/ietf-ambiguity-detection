@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "For self-consistency ([service-mode])",
+    "interpretation_a": "The requirement means that if a key is listed in the ServiceMode RR, it *must* also be present as a parameter in the SvcParams, ensuring data consistency between the two records.",
+    "interpretation_b": "The requirement means that the keys listed in the ServiceMode RR should be consistent with the keys present in the SvcParams, but doesn't necessarily mandate their presence; it's a recommendation for good practice.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'self-consistency' is vague. It's unclear whether it means the keys *must* be present in both records, or simply that the information represented by the keys should be logically consistent. Without a clear definition of 'self-consistency' in the referenced document, two reasonable interpretations are possible.",
+    "missing_information": "The definition of 'self-consistency' in the context of the [service-mode] document is needed to clarify whether it implies a strict requirement for key presence or merely a recommendation for logical alignment."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:12:15.403537+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "275ae010f85081bfb189b1629e1b803a5f2fd48d4c5cc5b947ad9e61c1028213",
+  "lineage_ids": "lineage:6d0976736c64b21da347ed66",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 246,
+    "load_duration": 4383700,
+    "prompt_eval_count": 564,
+    "total_duration": 9109746900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-1\", \"evidence_span\": \"For self-consistency ([service-mode])\", \"interpretation_a\": \"The requirement means that if a key is listed in the ServiceMode RR, it *must* also be present as a parameter in the SvcParams, ensuring data consistency between the two records.\", \"interpretation_b\": \"The requirement means that the keys listed in the ServiceMode RR should be consistent with the keys present in the SvcParams, but doesn't necessarily mandate their presence; it's a recommendation for good practice.\", \"missing_information\": \"The definition of 'self-consistency' in the context of the [service-mode] document is needed to clarify whether it implies a strict requirement for key presence or merely a recommendation for logical alignment.\",\"justification\": \"The phrase 'self-consistency' is vague. It's unclear whether it means the keys *must* be present in both records, or simply that the information represented by the keys should be logically consistent. Without a clear definition of 'self-consistency' in the referenced document, two reasonable interpretations are possible.\"}",
+  "record_id": "d34c647a8d0ca85150c67c8147a00b388127b9ef211fc03d94ffcbaf11fcb69f",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.109
+}

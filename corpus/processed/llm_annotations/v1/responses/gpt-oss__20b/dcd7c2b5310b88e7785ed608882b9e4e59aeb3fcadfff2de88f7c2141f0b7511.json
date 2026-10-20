@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "If Alt-Svc connection fails",
+    "interpretation_a": "The Alt‑Svc connection fails when the client cannot establish a TLS session to the advertised host/port (e.g., connection refused, timeout, or TLS handshake error).",
+    "interpretation_b": "The Alt‑Svc connection fails when the advertised host/port cannot be resolved or reached (e.g., DNS resolution failure, unreachable IP, or firewall blocking the port).",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not define what constitutes an \"Alt‑Svc connection failure\", leaving the trigger for fallback ambiguous.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T03:30:46.269325+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-05",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "d2122d3959b6dc164c0643d29803ae463b0680833e5cc51257e8039bb3ce41af",
+  "lineage_ids": "lineage:702387dfe0a4ad2c4dac3df9",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 542,
+    "load_duration": 5519900,
+    "prompt_eval_count": 743,
+    "total_duration": 4790122000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"If Alt-Svc connection fails\",\n  \"interpretation_a\": \"The Alt‑Svc connection fails when the client cannot establish a TLS session to the advertised host/port (e.g., connection refused, timeout, or TLS handshake error).\",\n  \"interpretation_b\": \"The Alt‑Svc connection fails when the advertised host/port cannot be resolved or reached (e.g., DNS resolution failure, unreachable IP, or firewall blocking the port).\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not define what constitutes an \\\"Alt‑Svc connection failure\\\", leaving the trigger for fallback ambiguous.\"\n}",
+  "record_id": "dcd7c2b5310b88e7785ed608882b9e4e59aeb3fcadfff2de88f7c2141f0b7511",
+  "revision": "05",
+  "schema_version": 1,
+  "section_ids": "8.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 17.984
+}

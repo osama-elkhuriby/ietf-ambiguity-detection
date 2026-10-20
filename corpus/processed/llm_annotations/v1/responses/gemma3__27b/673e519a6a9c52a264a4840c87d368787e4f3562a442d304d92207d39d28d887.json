@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST append the string “-“ and an experiment name",
+    "interpretation_a": "The experiment name can be any string, allowing for very descriptive or lengthy identifiers (e.g., \"h3-09-a-very-long-and-detailed-description-of-the-experiment\").",
+    "interpretation_b": "The experiment name should be concise and limited in length, perhaps to avoid excessively long identifiers (e.g., \"h3-09-shortname\"). The clause does not specify any length or format restrictions for the experiment name.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"an experiment name\" is not further defined. Without constraints on the experiment name, implementations could choose to use very long, complex names or short, simple names, leading to different identifiers for the same experiment.",
+    "missing_information": "The clause lacks constraints on the format, length, or content of the \"experiment name\". This missing constraint allows for materially different implementations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:53:48.183723+00:00",
+  "document_id": "draft-ietf-quic-http-24",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "41b01151aeecba64b36118092bb3b73ffc3a3b61d9ef5fdfa5d6f947415daa3d",
+  "lineage_ids": "lineage:d7ecd0f3af34016511dc79b0",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 230,
+    "load_duration": 8017300,
+    "prompt_eval_count": 614,
+    "total_duration": 8796714700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST append the string “-“ and an experiment name\", \"interpretation_a\": \"The experiment name can be any string, allowing for very descriptive or lengthy identifiers (e.g., \\\"h3-09-a-very-long-and-detailed-description-of-the-experiment\\\").\", \"interpretation_b\": \"The experiment name should be concise and limited in length, perhaps to avoid excessively long identifiers (e.g., \\\"h3-09-shortname\\\"). The clause does not specify any length or format restrictions for the experiment name.\", \"missing_information\": \"The clause lacks constraints on the format, length, or content of the \\\"experiment name\\\". This missing constraint allows for materially different implementations.\", \"justification\": \"The phrase \\\"an experiment name\\\" is not further defined. Without constraints on the experiment name, implementations could choose to use very long, complex names or short, simple names, leading to different identifiers for the same experiment.\"}",
+  "record_id": "673e519a6a9c52a264a4840c87d368787e4f3562a442d304d92207d39d28d887",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.797
+}

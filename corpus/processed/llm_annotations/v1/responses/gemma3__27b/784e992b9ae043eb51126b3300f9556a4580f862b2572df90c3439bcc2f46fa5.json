@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless application priorities indicate otherwise",
+    "interpretation_a": "Retransmit lost STREAM frames unless the application explicitly signals to *not* retransmit them.",
+    "interpretation_b": "Retransmit lost STREAM frames unless the application has established priorities that implicitly discourage retransmission (e.g., by prioritizing new data over retransmitted data).",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'application priorities indicate otherwise' is underspecified. It's unclear whether 'indicate otherwise' means an explicit signal from the application layer to suppress retransmission, or whether it refers to implicit prioritization schemes where the application prioritizes new data over retransmitted data. This affects how an implementation would determine when to retransmit lost frames.",
+    "missing_information": "The meaning of 'application priorities' is not defined. Does this refer to explicit signals from the application layer, or to implicit prioritization based on application-level data?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:34:45.996684+00:00",
+  "document_id": "draft-ietf-quic-transport-10",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "3c1191ed8254f98bc0787457f685174e911ef41447b33e5442579383192a509f",
+  "lineage_ids": "lineage:a13fa815040b121e197f22b4",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 210,
+    "load_duration": 4325700,
+    "prompt_eval_count": 585,
+    "total_duration": 7912155000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless application priorities indicate otherwise\", \"interpretation_a\": \"Retransmit lost STREAM frames unless the application explicitly signals to *not* retransmit them.\", \"interpretation_b\": \"Retransmit lost STREAM frames unless the application has established priorities that implicitly discourage retransmission (e.g., by prioritizing new data over retransmitted data).\", \"missing_information\": \"The meaning of 'application priorities' is not defined. Does this refer to explicit signals from the application layer, or to implicit prioritization based on application-level data?\",\"justification\": \"The phrase 'application priorities indicate otherwise' is underspecified. It's unclear whether 'indicate otherwise' means an explicit signal from the application layer to suppress retransmission, or whether it refers to implicit prioritization schemes where the application prioritizes new data over retransmitted data. This affects how an implementation would determine when to retransmit lost frames.\"}",
+  "record_id": "784e992b9ae043eb51126b3300f9556a4580f862b2572df90c3439bcc2f46fa5",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "10.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.922
+}

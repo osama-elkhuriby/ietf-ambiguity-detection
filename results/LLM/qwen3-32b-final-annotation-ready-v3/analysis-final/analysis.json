@@ -1,0 +1,144 @@
+{
+  "comparison": [
+    {
+      "balanced_accuracy": 0.6654265873015873,
+      "f1": 0.1742222222222222,
+      "pr_auc": 0.1959721675153843,
+      "precision": 0.0980980980980981,
+      "recall": 0.7777777777777778,
+      "series": "V1 best raw (8-shot)"
+    },
+    {
+      "balanced_accuracy": 0.5158730158730158,
+      "f1": 0.0808080808080808,
+      "pr_auc": 0.1034665031423884,
+      "precision": 0.1111111111111111,
+      "recall": 0.0634920634920634,
+      "series": "V2 best raw (24-shot)"
+    },
+    {
+      "balanced_accuracy": 0.6951884920634921,
+      "f1": 0.2646502835538752,
+      "pr_auc": 0.25544650400710217,
+      "precision": 0.17369727047146402,
+      "recall": 0.5555555555555556,
+      "series": "V3 nested hybrid raw"
+    },
+    {
+      "balanced_accuracy": 0.667906746031746,
+      "f1": 0.3028571428571429,
+      "pr_auc": 0.25544650400710217,
+      "precision": 0.23660714285714285,
+      "recall": 0.42063492063492064,
+      "series": "V3 nested hybrid F1 threshold"
+    }
+  ],
+  "created_at_utc": "2026-10-19T09:05:30.785764+00:00",
+  "dns_opened": false,
+  "experiment": "qwen3-32b-final-annotation-ready-hybrid-v3",
+  "interpretation": "Adaptive grouped-development evidence only; reserve TCP for later validation and keep DNS sealed until the complete method is frozen.",
+  "lexical_classifier_fitted": true,
+  "positives": 126,
+  "primary_metric": "pr_auc",
+  "qwen_parameter_updates": false,
+  "result_status": "adaptive_exploratory_not_final_test_evidence",
+  "rows": 2142,
+  "selected_hyperparameters_by_outer_fold": [
+    {
+      "fold": 1,
+      "selected_c": 0.3,
+      "selected_lexical_weight": 0.8
+    },
+    {
+      "fold": 2,
+      "selected_c": 1.0,
+      "selected_lexical_weight": 0.8
+    },
+    {
+      "fold": 3,
+      "selected_c": 0.1,
+      "selected_lexical_weight": 0.95
+    },
+    {
+      "fold": 4,
+      "selected_c": 0.1,
+      "selected_lexical_weight": 0.95
+    },
+    {
+      "fold": 5,
+      "selected_c": 0.1,
+      "selected_lexical_weight": 0.95
+    }
+  ],
+  "tcp_opened": false,
+  "v3_raw": {
+    "accuracy": 0.8183940242763772,
+    "balanced_accuracy": 0.6951884920634921,
+    "f1": 0.2646502835538752,
+    "f2": 0.38588754134509373,
+    "fn": 56,
+    "fp": 333,
+    "positives": 126,
+    "pr_auc": 0.25544650400710217,
+    "precision": 0.17369727047146402,
+    "prevalence": 0.058823529411764705,
+    "recall": 0.5555555555555556,
+    "rows": 2142,
+    "series": "v3_nested_hybrid_raw",
+    "tn": 1683,
+    "tp": 70
+  },
+  "v3_thresholded": {
+    "v3_nested_hybrid_balanced_accuracy_threshold": {
+      "accuracy": 0.7240896358543417,
+      "balanced_accuracy": 0.7120535714285714,
+      "f1": 0.22946544980443284,
+      "f2": 0.38427947598253276,
+      "fn": 38,
+      "fp": 553,
+      "positives": 126,
+      "pr_auc": 0.25544650400710217,
+      "precision": 0.1372854914196568,
+      "prevalence": 0.058823529411764705,
+      "recall": 0.6984126984126984,
+      "rows": 2142,
+      "series": "v3_nested_hybrid_balanced_accuracy_threshold",
+      "tn": 1463,
+      "tp": 88
+    },
+    "v3_nested_hybrid_f1_threshold": {
+      "accuracy": 0.8860877684407096,
+      "balanced_accuracy": 0.667906746031746,
+      "f1": 0.3028571428571429,
+      "f2": 0.364010989010989,
+      "fn": 73,
+      "fp": 171,
+      "positives": 126,
+      "pr_auc": 0.25544650400710217,
+      "precision": 0.23660714285714285,
+      "prevalence": 0.058823529411764705,
+      "recall": 0.42063492063492064,
+      "rows": 2142,
+      "series": "v3_nested_hybrid_f1_threshold",
+      "tn": 1845,
+      "tp": 53
+    },
+    "v3_nested_hybrid_f2_threshold": {
+      "accuracy": 0.7773109243697479,
+      "balanced_accuracy": 0.703125,
+      "f1": 0.24644549763033174,
+      "f2": 0.3857566765578635,
+      "fn": 48,
+      "fp": 429,
+      "positives": 126,
+      "pr_auc": 0.25544650400710217,
+      "precision": 0.15384615384615385,
+      "prevalence": 0.058823529411764705,
+      "recall": 0.6190476190476191,
+      "rows": 2142,
+      "series": "v3_nested_hybrid_f2_threshold",
+      "tn": 1587,
+      "tp": 78
+    }
+  }
+}

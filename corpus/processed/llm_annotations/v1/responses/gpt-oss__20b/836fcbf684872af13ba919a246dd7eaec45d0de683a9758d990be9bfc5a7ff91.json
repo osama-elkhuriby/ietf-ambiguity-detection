@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Servers MUST ensure that replay of tokens is prevented or limited.",
+    "interpretation_a": "Servers must prevent all replay of tokens.",
+    "interpretation_b": "Servers may limit replay of tokens to a certain number or time window.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify the extent or method of limiting replay, allowing materially different implementations such as complete prevention versus limited replays.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T16:40:25.561876+00:00",
+  "document_id": "draft-ietf-quic-transport-29",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "34e0a9812c8814be15f6fbd1f488786c26ddea044a41c256d579de06727a7907",
+  "lineage_ids": "lineage:081a52e6f60eba5febf67f4c",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 6360,
+    "load_duration": 5264100,
+    "prompt_eval_count": 575,
+    "total_duration": 55039706700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"Servers MUST ensure that replay of tokens is prevented or limited.\",\n  \"interpretation_a\": \"Servers must prevent all replay of tokens.\",\n  \"interpretation_b\": \"Servers may limit replay of tokens to a certain number or time window.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify the extent or method of limiting replay, allowing materially different implementations such as complete prevention versus limited replays.\"\n}",
+  "record_id": "836fcbf684872af13ba919a246dd7eaec45d0de683a9758d990be9bfc5a7ff91",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "8.1.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 55.032
+}

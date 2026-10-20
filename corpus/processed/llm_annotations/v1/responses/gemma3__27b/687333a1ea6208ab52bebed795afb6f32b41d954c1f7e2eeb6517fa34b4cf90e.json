@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST be difficult to guess",
+    "interpretation_a": "A token is 'difficult to guess' if it requires an impractically long time and/or resources to enumerate all possible tokens and find a valid one, even with knowledge of the address being validated.",
+    "interpretation_b": "A token is 'difficult to guess' if it appears random and does not reveal any information about the underlying address or other sensitive data, even if an attacker could enumerate all possible tokens.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'difficult to guess' is subjective and lacks a clear, measurable definition. Different implementations could reasonably interpret this requirement in different ways, leading to varying levels of security. For example, one implementation might focus on token length, while another might focus on entropy or randomness. Without a more precise definition, it's impossible to determine whether a given token meets the requirement.",
+    "missing_information": "The clause lacks a concrete definition of 'difficult to guess'. A quantitative metric (e.g., minimum token length, minimum entropy) or a specific attack scenario that the token should resist would remove the ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:29:31.121232+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "3b52d4bce62a679fc02b258a235a9f031965298c8c64c034d897ed10c87e9ca7",
+  "lineage_ids": "lineage:b366239c4f6deff9ffe16fb7",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 253,
+    "load_duration": 4304100,
+    "prompt_eval_count": 556,
+    "total_duration": 9398251600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST be difficult to guess\", \"interpretation_a\": \"A token is 'difficult to guess' if it requires an impractically long time and/or resources to enumerate all possible tokens and find a valid one, even with knowledge of the address being validated.\", \"interpretation_b\": \"A token is 'difficult to guess' if it appears random and does not reveal any information about the underlying address or other sensitive data, even if an attacker could enumerate all possible tokens.\", \"missing_information\": \"The clause lacks a concrete definition of 'difficult to guess'. A quantitative metric (e.g., minimum token length, minimum entropy) or a specific attack scenario that the token should resist would remove the ambiguity.\", \"justification\": \"The phrase 'difficult to guess' is subjective and lacks a clear, measurable definition. Different implementations could reasonably interpret this requirement in different ways, leading to varying levels of security. For example, one implementation might focus on token length, while another might focus on entropy or randomness. Without a more precise definition, it's impossible to determine whether a given token meets the requirement.\"}",
+  "record_id": "687333a1ea6208ab52bebed795afb6f32b41d954c1f7e2eeb6517fa34b4cf90e",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "8.1.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.39
+}

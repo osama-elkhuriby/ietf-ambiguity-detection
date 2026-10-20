@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD be no longer be transmitted",
+    "interpretation_a": "The sender *must not* transmit any further non-protected frames after packet protection is available.",
+    "interpretation_b": "The sender *should* stop transmitting non-protected frames, but may continue to do so if it chooses.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' creates ambiguity. It is unclear whether the statement is a strong recommendation or a weak suggestion. A strict requirement ('MUST') would remove the ambiguity.",
+    "missing_information": "The strength of 'SHOULD' is not clarified. Is it a strong recommendation approaching a requirement, or a weak suggestion?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:26:07.102154+00:00",
+  "document_id": "draft-ietf-quic-recovery-07",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "e5b3ac6ba976dbfbbd8d165fbae7758cd8e497470b22bfd1e9ede9b979134900",
+  "lineage_ids": "lineage:7d805c5bef42abb7b33d869d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 161,
+    "load_duration": 4497500,
+    "prompt_eval_count": 574,
+    "total_duration": 6141323100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD be no longer be transmitted\", \"interpretation_a\": \"The sender *must not* transmit any further non-protected frames after packet protection is available.\", \"interpretation_b\": \"The sender *should* stop transmitting non-protected frames, but may continue to do so if it chooses.\", \"missing_information\": \"The strength of 'SHOULD' is not clarified. Is it a strong recommendation approaching a requirement, or a weak suggestion?\", \"justification\": \"The use of 'SHOULD' creates ambiguity. It is unclear whether the statement is a strong recommendation or a weak suggestion. A strict requirement ('MUST') would remove the ambiguity.\"}",
+  "record_id": "9e5f9db1cb21f5fc7fec72f0360e15b86e398a26dd6228255e48f994dc994842",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "3.4.7.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.141
+}

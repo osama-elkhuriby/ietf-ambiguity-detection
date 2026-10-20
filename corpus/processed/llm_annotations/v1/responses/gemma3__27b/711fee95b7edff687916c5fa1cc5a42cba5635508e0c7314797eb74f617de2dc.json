@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "kMinimumWindow (RECOMMENDED 2 * kMaxDatagramSize)",
+    "interpretation_a": "The minimum congestion window should be set to exactly 2 times the maximum datagram size.",
+    "interpretation_b": "The minimum congestion window should be set to at least 2 times the maximum datagram size, but may be larger.",
+    "is_ambiguous": "yes",
+    "justification": "The RECOMMENDED keyword does not definitively state whether the value is a minimum, maximum, or suggested value. This allows for multiple reasonable implementations.",
+    "missing_information": "It is unclear whether the RECOMMENDED value is a hard minimum or simply a suggestion. The use of 'at least' or 'exactly' would resolve the ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:22:12.424226+00:00",
+  "document_id": "draft-ietf-quic-recovery-14",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "4f66a560c842ef2b042df6011c89ef8481f54213298c335cd7510a73e67d3031",
+  "lineage_ids": "lineage:a506c4a3cce23fd5482a7956",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 170,
+    "load_duration": 4843600,
+    "prompt_eval_count": 567,
+    "total_duration": 6479411000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"kMinimumWindow (RECOMMENDED 2 * kMaxDatagramSize)\", \"interpretation_a\": \"The minimum congestion window should be set to exactly 2 times the maximum datagram size.\", \"interpretation_b\": \"The minimum congestion window should be set to at least 2 times the maximum datagram size, but may be larger.\", \"missing_information\": \"It is unclear whether the RECOMMENDED value is a hard minimum or simply a suggestion. The use of 'at least' or 'exactly' would resolve the ambiguity.\", \"justification\": \"The RECOMMENDED keyword does not definitively state whether the value is a minimum, maximum, or suggested value. This allows for multiple reasonable implementations.\"}",
+  "record_id": "711fee95b7edff687916c5fa1cc5a42cba5635508e0c7314797eb74f617de2dc",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "5.8.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.469
+}

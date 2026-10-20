@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY be sent if there is no available space",
+    "interpretation_a": "The sender is permitted to send an empty DATA frame with the END_STREAM flag even when flow control windows are full.",
+    "interpretation_b": "The sender is not permitted to send an empty DATA frame with the END_STREAM flag when flow control windows are full, but the MAY indicates a possible exception.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' combined with the condition 'if there is no available space' creates ambiguity. It's unclear whether the sender is *allowed* to send the frame despite the lack of space, or if the condition simply describes a scenario where sending the frame is not prevented by flow control, but other constraints might still apply.",
+    "missing_information": "The meaning of 'MAY' in this context is unclear. Does it indicate permission, or a conditional allowance? A clearer statement of intent is needed."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:41:25.471499+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "fbbd58fc0043e4c73c7a86db4c43fb3bf7e72959023ce2e67feeb2ecdbb896d3",
+  "lineage_ids": "lineage:be90aba0374e2250fcf2381d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 216,
+    "load_duration": 20486700,
+    "prompt_eval_count": 598,
+    "total_duration": 8351795300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY be sent if there is no available space\", \"interpretation_a\": \"The sender is permitted to send an empty DATA frame with the END_STREAM flag even when flow control windows are full.\", \"interpretation_b\": \"The sender is not permitted to send an empty DATA frame with the END_STREAM flag when flow control windows are full, but the MAY indicates a possible exception.\", \"missing_information\": \"The meaning of 'MAY' in this context is unclear. Does it indicate permission, or a conditional allowance? A clearer statement of intent is needed.\", \"justification\": \"The use of 'MAY' combined with the condition 'if there is no available space' creates ambiguity. It's unclear whether the sender is *allowed* to send the frame despite the lack of space, or if the condition simply describes a scenario where sending the frame is not prevented by flow control, but other constraints might still apply.\"}",
+  "record_id": "9151ddbfe9123581e63e36378115ce14cdc37bb18ca27f153c666af50f1768e4",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.9.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.36
+}

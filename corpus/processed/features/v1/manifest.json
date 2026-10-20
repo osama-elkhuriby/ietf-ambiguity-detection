@@ -1,0 +1,131 @@
+{
+  "alignment_root": "D:\\RFC\\ietf-ambiguity-detection\\corpus\\processed\\alignments",
+  "binary_rows": 2546,
+  "combined_feature_count": 8371,
+  "context_resolved_rows": 2546,
+  "created_at": "2026-10-09T21:30:27.513415+00:00",
+  "engineered_feature_count": 62,
+  "excluded_uncertain_rows": 0,
+  "labels_location": "targets/<split>_labels.csv",
+  "leakage_controls": [
+    "only clause text and same-version context feed engineered features",
+    "labels, rationales, tiers, weights, IDs, and split names are excluded from matrices",
+    "TF-IDF vocabulary and IDF are fitted on train only",
+    "the engineered-feature scaler is fitted on train only",
+    "existing family-level split assignments are preserved",
+    "sample weights are exported separately from feature matrices"
+  ],
+  "library_versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scikit_learn": "1.9.1",
+    "scipy": "1.18.1"
+  },
+  "matrix_shapes": {
+    "test": {
+      "combined": [
+        262,
+        8371
+      ],
+      "engineered": [
+        262,
+        62
+      ],
+      "tfidf": [
+        262,
+        8309
+      ]
+    },
+    "train": {
+      "combined": [
+        2145,
+        8371
+      ],
+      "engineered": [
+        2145,
+        62
+      ],
+      "tfidf": [
+        2145,
+        8309
+      ]
+    },
+    "validation": {
+      "combined": [
+        139,
+        8371
+      ],
+      "engineered": [
+        139,
+        62
+      ],
+      "tfidf": [
+        139,
+        8309
+      ]
+    }
+  },
+  "metadata_location": "rows/<split>_rows.csv",
+  "numerical_scaler": {
+    "fit_split": "train",
+    "type": "StandardScaler"
+  },
+  "sample_weights_location": "weights/<split>_sample_weights.csv",
+  "schema_version": 1,
+  "source_path": "D:\\RFC\\ietf-ambiguity-detection\\corpus\\processed\\llm_annotations\\v1\\training_dataset.csv",
+  "source_preserved": true,
+  "source_rows": 2546,
+  "source_sha256": "35cb2cacc9d6b4ec1d5b9f810becf165f56f7b633bab67eb0c87a3773f132614",
+  "split_summary": {
+    "test": {
+      "families": [
+        "draft-ietf-httpbis-http2bis"
+      ],
+      "labels": {
+        "0": 227,
+        "1": 35
+      },
+      "rows": 262
+    },
+    "train": {
+      "families": [
+        "draft-ietf-6man-rfc2460bis",
+        "draft-ietf-dnsop-svcb-https",
+        "draft-ietf-httpbis-cache-header",
+        "draft-ietf-httpbis-semantics",
+        "draft-ietf-quic-http",
+        "draft-ietf-quic-recovery",
+        "draft-ietf-quic-tls",
+        "draft-ietf-quic-transport",
+        "draft-ietf-tls-tls13"
+      ],
+      "labels": {
+        "0": 1751,
+        "1": 394
+      },
+      "rows": 2145
+    },
+    "validation": {
+      "families": [
+        "draft-ietf-tcpm-rfc793bis"
+      ],
+      "labels": {
+        "0": 113,
+        "1": 26
+      },
+      "rows": 139
+    }
+  },
+  "syntax_status": "disabled",
+  "tfidf_config": {
+    "fit_split": "train",
+    "max_features": 20000,
+    "min_df": 2,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "sublinear_tf": true
+  },
+  "tfidf_feature_count": 8309
+}

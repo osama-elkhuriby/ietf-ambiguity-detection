@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause is clear and unambiguous. It specifies that receiving any frame type other than a HEADERS frame after a HEADERS frame without the EHB flag set must be treated as a stream error of type HTTP_INTERRUPTED_HEADERS. There is no room for multiple interpretations, and the constraint is complete for implementation.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:58:07.031199+00:00",
+  "document_id": "draft-ietf-quic-http-07",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "dfb8b8df492f1f558c2bf0df83fa9b76f3a686a7fa5d303c7ea9931a4093f5dc",
+  "lineage_ids": "lineage:883a0e47d56db6579484046e",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 118,
+    "load_duration": 27871400,
+    "prompt_eval_count": 552,
+    "total_duration": 4994534900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause is clear and unambiguous. It specifies that receiving any frame type other than a HEADERS frame after a HEADERS frame without the EHB flag set must be treated as a stream error of type HTTP_INTERRUPTED_HEADERS. There is no room for multiple interpretations, and the constraint is complete for implementation.\"\n}",
+  "record_id": "b69d35f75bc86516bbe45ad9e890918fed42b1610ae2d62a9dcf725a0e864d02",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "5.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.0
+}

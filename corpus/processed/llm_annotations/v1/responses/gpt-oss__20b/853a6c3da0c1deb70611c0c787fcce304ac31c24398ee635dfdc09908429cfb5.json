@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "ACK frames SHOULD always acknowledge the most recently received packets",
+    "interpretation_a": "ACK frames may need to acknowledge all packets up to the highest packet number, or only the most recent packet(s) received.",
+    "interpretation_b": "ACK frames may need to acknowledge only the most recent packet(s) received, without necessarily acknowledging earlier packets.",
+    "is_ambiguous": "yes",
+    "justification": "The clause uses the undefined term 'most recently received packets', which could be interpreted as the highest packet number received or as the most recent packet(s) received. This creates two materially different implementation behaviours.",
+    "missing_information": "Definition of 'most recently received packets' and the metric for 'out-of-order' packets."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T11:30:01.397018+00:00",
+  "document_id": "draft-ietf-quic-recovery-14",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "9f6c480aee3849aabccbbe5e1cfdfcc82a41ae2de3a4ccbc478ec11761a3f9ce",
+  "lineage_ids": "lineage:53aa0c3d40d8ae2e7cab254e",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3011,
+    "load_duration": 5781500,
+    "prompt_eval_count": 652,
+    "total_duration": 26077046300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\",\"ambiguity_subtype\":\"U-1\",\"evidence_span\":\"ACK frames SHOULD always acknowledge the most recently received packets\",\"interpretation_a\":\"ACK frames may need to acknowledge all packets up to the highest packet number, or only the most recent packet(s) received.\",\"interpretation_b\":\"ACK frames may need to acknowledge only the most recent packet(s) received, without necessarily acknowledging earlier packets.\",\"missing_information\":\"Definition of 'most recently received packets' and the metric for 'out-of-order' packets.\",\"justification\":\"The clause uses the undefined term 'most recently received packets', which could be interpreted as the highest packet number received or as the most recent packet(s) received. This creates two materially different implementation behaviours.\"}",
+  "record_id": "853a6c3da0c1deb70611c0c787fcce304ac31c24398ee635dfdc09908429cfb5",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "4.4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 93.922
+}

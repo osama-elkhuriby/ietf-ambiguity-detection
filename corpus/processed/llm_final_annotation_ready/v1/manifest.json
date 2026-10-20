@@ -1,0 +1,98 @@
+{
+  "artifacts": {
+    "development_manifest_sha256": "4ebfafc7ecb7346d2b691848c94f64b2fe9f3256458fdcd6015736c846cd52ad",
+    "development_train_sha256": "3e03bd2b1c90530a51a1804c6104c402e4560f1e9dc5a7ef06c96eb50865be18",
+    "fold_assignment_sha256": "7d72c43ea1ffc3ed940c01118777c05d13d28599a48581c46ecab249cce08938",
+    "reserved_tcp_manifest_sha256": "a6ad2307769b0154f9d58d2191558dde8f91aad14faca1678b1bbc2bb1f659ac",
+    "reserved_tcp_sha256": "4c8ff6f278cd6e43bf27e12407e54c2afcb9c9a48d3f59f0b702cc1a1881e510",
+    "sealed_dns_manifest_sha256": "e2b807770f5bcf78ef44e9fb61ae05a3f448c5f6d83ee47a5560cdad09af552c",
+    "sealed_dns_sha256": "c4aa214c19e90c85e9ac4b1c6c5851a5a954a273a050715efa6cad21c22cd6f7"
+  },
+  "cross_partition_audit": {
+    "all_clear": true,
+    "normalized_target_overlap": {
+      "train_vs_test": 0,
+      "train_vs_validation": 0,
+      "validation_vs_test": 0
+    }
+  },
+  "dataset_name": "final-annotation-ready-llm-in-context-v1",
+  "excluded_unresolved_item_ids": [
+    "2161"
+  ],
+  "excluded_unresolved_sha256": "fc49e9bb5abb805fcd9fdc0fd96f6738c7dc78ba515cde86fc0941eb37594298",
+  "in_context_policy": {
+    "dns_opened_by_evaluation": false,
+    "input_fields": [
+      "previous_clause",
+      "target_clause",
+      "next_clause"
+    ],
+    "parameter_updates": false,
+    "prohibited_input_fields": [
+      "label",
+      "label_tier",
+      "final_source",
+      "final_status",
+      "source_item_id",
+      "source_row_sha256",
+      "family_id",
+      "document_id",
+      "split"
+    ],
+    "tcp_opened_by_evaluation": false
+  },
+  "label_contract": {
+    "column": "final_label",
+    "human_annotation_involved": true,
+    "independent_human_verification": false,
+    "mapping": {
+      "No": 0,
+      "Yes": 1
+    },
+    "operational_reference_not_external_ground_truth": true,
+    "provenance": "human annotation supported by two AI models"
+  },
+  "partition_counts": {
+    "development_train": {
+      "families": [
+        "draft-ietf-6man-rfc2460bis",
+        "draft-ietf-httpbis-cache-header",
+        "draft-ietf-httpbis-http2bis",
+        "draft-ietf-httpbis-semantics",
+        "draft-ietf-quic-http",
+        "draft-ietf-quic-recovery",
+        "draft-ietf-quic-tls",
+        "draft-ietf-quic-transport",
+        "draft-ietf-tls-tls13"
+      ],
+      "negative_labels": 2016,
+      "positive_labels": 126,
+      "positive_prevalence": 0.058823529411764705,
+      "rows": 2142
+    },
+    "reserved_tcp_validation": {
+      "families": [
+        "draft-ietf-tcpm-rfc793bis"
+      ],
+      "negative_labels": 126,
+      "positive_labels": 5,
+      "positive_prevalence": 0.03816793893129771,
+      "rows": 131
+    },
+    "sealed_dns_test": {
+      "families": [
+        "draft-ietf-dnsop-svcb-https"
+      ],
+      "negative_labels": 134,
+      "positive_labels": 17,
+      "positive_prevalence": 0.11258278145695365,
+      "rows": 151
+    }
+  },
+  "resolved_rows": 2424,
+  "schema_version": 1,
+  "source_path": "results/annotation/final_annotation_ready.csv",
+  "source_rows": 2425,
+  "source_sha256": "c20959acc2db8345c90ee06a71357aaac161b178b240495e516e4710405b2712"
+}

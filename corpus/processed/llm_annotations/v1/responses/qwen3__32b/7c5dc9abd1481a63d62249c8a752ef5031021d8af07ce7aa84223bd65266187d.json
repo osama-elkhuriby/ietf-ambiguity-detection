@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause provides clear guidance on how to handle RTT calculation when an ACK frame is received. It specifies that the ack delay field should be subtracted from the RTT only if the result is larger than the Min RTT. There is no ambiguity in the language or missing constraint that would lead to multiple reasonable interpretations affecting implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:21:58.177364+00:00",
+  "document_id": "draft-ietf-quic-recovery-16",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "3d560068abe919a3e42d6683cc6aa0348a9f7420ef8a883a39897c3d8c73b464",
+  "lineage_ids": "lineage:f2f965827b3a75f596453192",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 124,
+    "load_duration": 6508600,
+    "prompt_eval_count": 578,
+    "total_duration": 5122291400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause provides clear guidance on how to handle RTT calculation when an ACK frame is received. It specifies that the ack delay field should be subtracted from the RTT only if the result is larger than the Min RTT. There is no ambiguity in the language or missing constraint that would lead to multiple reasonable interpretations affecting implementation behavior.\"\n}",
+  "record_id": "7c5dc9abd1481a63d62249c8a752ef5031021d8af07ce7aa84223bd65266187d",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.125
+}

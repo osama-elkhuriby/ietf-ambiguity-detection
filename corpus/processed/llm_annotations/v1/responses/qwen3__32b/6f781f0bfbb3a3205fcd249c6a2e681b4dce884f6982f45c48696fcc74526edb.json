@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear condition for when the stream state becomes \"half-closed (remote)\", namely when an endpoint receives all stream data and a FIN flag. It also explicitly states that the endpoint must not consider the state to have changed until all data has been sent or received. There is no ambiguity in the conditions or the required behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:15:30.098312+00:00",
+  "document_id": "draft-ietf-quic-transport-06",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "bba4c6335365ccc988b6804ce0131cc258033594760171c1e3a426a8be641b86",
+  "lineage_ids": "lineage:bb843cf8f74d70ad87e2d65a",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 125,
+    "load_duration": 4047900,
+    "prompt_eval_count": 570,
+    "total_duration": 5149912700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear condition for when the stream state becomes \\\"half-closed (remote)\\\", namely when an endpoint receives all stream data and a FIN flag. It also explicitly states that the endpoint must not consider the state to have changed until all data has been sent or received. There is no ambiguity in the conditions or the required behavior.\"\n}",
+  "record_id": "6f781f0bfbb3a3205fcd249c6a2e681b4dce884f6982f45c48696fcc74526edb",
+  "revision": "06",
+  "schema_version": 1,
+  "section_ids": "10.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.156
+}

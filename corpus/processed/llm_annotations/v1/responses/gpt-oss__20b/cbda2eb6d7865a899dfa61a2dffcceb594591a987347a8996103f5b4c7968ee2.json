@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless the endpoint has acted on a preferred_address transport parameter from the peer",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify what 'act on' means, leading to two reasonable implementation behaviours: one where merely processing the parameter suffices, and another where the endpoint must actually adopt the preferred address. This missing constraint makes the clause ambiguous.",
+    "missing_information": "definition of what constitutes 'acting on' a preferred_address transport parameter (e.g., processing vs. using the address)."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T18:25:42.167005+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "95fe2bd0dbcd9622f96f5b0eb13c6a2c3aaa5fed63d23a1153ec4a12ed0691ee",
+  "lineage_ids": "lineage:d22aba09c0f8e7d48b816218",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2768,
+    "load_duration": 4072600,
+    "prompt_eval_count": 643,
+    "total_duration": 24013433000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"unless the endpoint has acted on a preferred_address transport parameter from the peer\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"definition of what constitutes 'acting on' a preferred_address transport parameter (e.g., processing vs. using the address).\",\n  \"justification\": \"The clause does not specify what 'act on' means, leading to two reasonable implementation behaviours: one where merely processing the parameter suffices, and another where the endpoint must actually adopt the preferred address. This missing constraint makes the clause ambiguous.\"\n}",
+  "record_id": "cbda2eb6d7865a899dfa61a2dffcceb594591a987347a8996103f5b4c7968ee2",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 24.016
+}

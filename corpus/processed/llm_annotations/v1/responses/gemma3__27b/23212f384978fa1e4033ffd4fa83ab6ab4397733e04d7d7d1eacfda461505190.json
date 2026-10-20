@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST abandon validation of the original address",
+    "interpretation_a": "The client stops *all* further validation attempts on the original address immediately upon successful validation of the preferred address.",
+    "interpretation_b": "The client continues any validation already in progress for the original address, but does not initiate any *new* validation attempts. It simply prioritizes the preferred address going forward.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'abandon validation' is incomplete. It doesn't specify whether ongoing validation attempts should be terminated, or only future attempts should be avoided. This affects implementation because a client might have already initiated a validation process for the original address before the preferred address validation completes.",
+    "missing_information": "The granularity of 'abandon validation' is not specified. Does it mean halting all in-flight validation, or simply not starting new validation?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:04:15.714292+00:00",
+  "document_id": "draft-ietf-quic-transport-24",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "d1245e10093afa07ee571e418da3967be65e0294e487e12d757fdf3aabf5fdce",
+  "lineage_ids": "lineage:e8cd2bb1006783cffd5dd393",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 197,
+    "load_duration": 4211500,
+    "prompt_eval_count": 614,
+    "total_duration": 7431301900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST abandon validation of the original address\", \"interpretation_a\": \"The client stops *all* further validation attempts on the original address immediately upon successful validation of the preferred address.\", \"interpretation_b\": \"The client continues any validation already in progress for the original address, but does not initiate any *new* validation attempts. It simply prioritizes the preferred address going forward.\", \"missing_information\": \"The granularity of 'abandon validation' is not specified. Does it mean halting all in-flight validation, or simply not starting new validation?\",\"justification\": \"The phrase 'abandon validation' is incomplete. It doesn't specify whether ongoing validation attempts should be terminated, or only future attempts should be avoided. This affects implementation because a client might have already initiated a validation process for the original address before the preferred address validation completes.\"}",
+  "record_id": "23212f384978fa1e4033ffd4fa83ab6ab4397733e04d7d7d1eacfda461505190",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "9.6.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.438
+}

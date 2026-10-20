@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Until such an RFC exists",
+    "interpretation_a": "Implementations must not use the 'hq' identifier at any time before the RFC is published.",
+    "interpretation_b": "Implementations must not use the 'hq' identifier only while a draft version of the RFC is in development; once a draft is published, they may use it.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'Until such an RFC exists' is open to interpretation. It's unclear whether it refers to the publication of *any* RFC, or specifically the final, published RFC. This affects when implementations are permitted to use the identifier.",
+    "missing_information": "The duration of 'Until such an RFC exists' is not defined. Does it mean 'until the RFC is published', or 'until a draft version is published'?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:59:50.301469+00:00",
+  "document_id": "draft-ietf-quic-http-01",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "683d97e7f3d21ccb68bb6577dbe2c2bba2504a38140d4f791be0c12662729293",
+  "lineage_ids": "lineage:65cf322a9dbcf01581b87ac8",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 192,
+    "load_duration": 9531600,
+    "prompt_eval_count": 563,
+    "total_duration": 7377460200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Until such an RFC exists\", \"interpretation_a\": \"Implementations must not use the 'hq' identifier at any time before the RFC is published.\", \"interpretation_b\": \"Implementations must not use the 'hq' identifier only while a draft version of the RFC is in development; once a draft is published, they may use it.\", \"missing_information\": \"The duration of 'Until such an RFC exists' is not defined. Does it mean 'until the RFC is published', or 'until a draft version is published'?\",\"justification\": \"The phrase 'Until such an RFC exists' is open to interpretation. It's unclear whether it refers to the publication of *any* RFC, or specifically the final, published RFC. This affects when implementations are permitted to use the identifier.\"}",
+  "record_id": "9c74e1fd84fa5c2d1b745aa922bb848683974862f86a9551fe5d70bff63c4453",
+  "revision": "01",
+  "schema_version": 1,
+  "section_ids": "3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.375
+}

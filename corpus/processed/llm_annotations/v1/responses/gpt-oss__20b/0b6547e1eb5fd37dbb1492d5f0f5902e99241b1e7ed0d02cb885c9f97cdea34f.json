@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "using any method",
+    "interpretation_a": "The clause could be interpreted as allowing any normalization method, including those not defined in Section 6.2 of [URI].",
+    "interpretation_b": "Alternatively, it could be interpreted as allowing only the normalization methods defined in Section 6.2 of [URI].",
+    "is_ambiguous": "yes",
+    "justification": "The target clause’s phrase 'using any method' is incomplete, allowing two reasonable interpretations about the set of permissible normalization methods.",
+    "missing_information": "The clause does not specify which normalization methods are intended, leaving the scope of 'any method' undefined. This omission permits materially different implementation behaviours.  "
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T05:24:09.902858+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "310ff5cc85cb3b6afe48ecf2fca1e3c2d4d2d92a51f37d83d27a9da28b67694f",
+  "lineage_ids": "lineage:ae14ad9faa91a8798bfdf337",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1126,
+    "load_duration": 5143400,
+    "prompt_eval_count": 629,
+    "total_duration": 9882754000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"using any method\",\n  \"interpretation_a\": \"The clause could be interpreted as allowing any normalization method, including those not defined in Section 6.2 of [URI].\",\n  \"interpretation_b\": \"Alternatively, it could be interpreted as allowing only the normalization methods defined in Section 6.2 of [URI].\",\n  \"missing_information\": \"The clause does not specify which normalization methods are intended, leaving the scope of 'any method' undefined. This omission permits materially different implementation behaviours.  \",\n  \"justification\": \"The target clause’s phrase 'using any method' is incomplete, allowing two reasonable interpretations about the set of permissible normalization methods.\"\n}",
+  "record_id": "0b6547e1eb5fd37dbb1492d5f0f5902e99241b1e7ed0d02cb885c9f97cdea34f",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "4.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.875
+}

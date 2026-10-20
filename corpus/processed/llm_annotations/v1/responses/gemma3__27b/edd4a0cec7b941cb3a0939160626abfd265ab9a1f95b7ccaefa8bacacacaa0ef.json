@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD indicate any port number restrictions",
+    "interpretation_a": "Implementations MAY choose to ignore port number restrictions, allowing any port for the supported transports.",
+    "interpretation_b": "Implementations SHOULD enforce any port number restrictions specified in the SVCB mapping document, potentially rejecting connections on unsupported ports.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' creates ambiguity. While it indicates a recommendation, it doesn't definitively state whether implementations *must* enforce port number restrictions. This allows for two reasonable interpretations: one where restrictions are enforced, and one where they are ignored.",
+    "missing_information": "The strength of 'SHOULD' is not defined. It is unclear whether implementations are expected to *always* enforce port restrictions, or if there is room for discretion based on other factors."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:13:36.220566+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "fdcf21be616eaa0180181223f53925043b548d94ad133da427171f67d29ceaaa",
+  "lineage_ids": "lineage:17ca1866eb85c3283aea13d5",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 190,
+    "load_duration": 4777300,
+    "prompt_eval_count": 551,
+    "total_duration": 7156733000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD indicate any port number restrictions\", \"interpretation_a\": \"Implementations MAY choose to ignore port number restrictions, allowing any port for the supported transports.\", \"interpretation_b\": \"Implementations SHOULD enforce any port number restrictions specified in the SVCB mapping document, potentially rejecting connections on unsupported ports.\", \"missing_information\": \"The strength of 'SHOULD' is not defined. It is unclear whether implementations are expected to *always* enforce port restrictions, or if there is room for discretion based on other factors.\",\"justification\": \"The use of 'SHOULD' creates ambiguity. While it indicates a recommendation, it doesn't definitively state whether implementations *must* enforce port number restrictions. This allows for two reasonable interpretations: one where restrictions are enforced, and one where they are ignored.\"}",
+  "record_id": "edd4a0cec7b941cb3a0939160626abfd265ab9a1f95b7ccaefa8bacacacaa0ef",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "12",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.172
+}

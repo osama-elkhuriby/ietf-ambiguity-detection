@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD collapse successive bits",
+    "interpretation_a": "The transmitter is encouraged, but not required, to collapse successive bits, potentially sending smaller segments if it chooses not to.",
+    "interpretation_b": "The transmitter is expected to collapse successive bits whenever possible, maximizing segment size, but may have limited exceptions.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' allows for non-compliance, but the phrase 'to send the largest possible segment' implies an expectation of maximizing segment size through bit collapsing. The lack of specific conditions under which collapsing is *not* performed creates ambiguity.",
+    "missing_information": "The criteria for when the transmitter *wouldn't* collapse successive bits are not defined. What constitutes a valid reason to not collapse bits, and what constraints govern that decision, are missing."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:17:56.353693+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "296f61ee3fd877190708be62ae9980ebceb15c21ce9a6370037f0f8750b78dc9",
+  "lineage_ids": "lineage:845740d0c57ec35e846d8924",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 192,
+    "load_duration": 8788600,
+    "prompt_eval_count": 613,
+    "total_duration": 7432663600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD collapse successive bits\", \"interpretation_a\": \"The transmitter is encouraged, but not required, to collapse successive bits, potentially sending smaller segments if it chooses not to.\", \"interpretation_b\": \"The transmitter is expected to collapse successive bits whenever possible, maximizing segment size, but may have limited exceptions.\", \"missing_information\": \"The criteria for when the transmitter *wouldn't* collapse successive bits are not defined. What constitutes a valid reason to not collapse bits, and what constraints govern that decision, are missing.\",\"justification\": \"The use of 'SHOULD' allows for non-compliance, but the phrase 'to send the largest possible segment' implies an expectation of maximizing segment size through bit collapsing. The lack of specific conditions under which collapsing is *not* performed creates ambiguity.\"}",
+  "record_id": "10c790b207435bca63cb6d8104b75c8ed78a4462bcf21d7f26dc3019f92dc468",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.9.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.438
+}

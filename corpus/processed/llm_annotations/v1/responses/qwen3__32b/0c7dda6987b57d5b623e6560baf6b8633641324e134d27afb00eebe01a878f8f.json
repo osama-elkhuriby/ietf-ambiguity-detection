@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "must be less than or equal to: where MMS_R is the maximum size for a transport-layer message that can be received (and reassembled at the IP layer)",
+    "interpretation_a": "The MSS value must be less than or equal to MMS_R, which is defined as the maximum size for a transport-layer message that can be received and reassembled at the IP layer. This implies that the sender must use the receiver's MMS_R to determine the MSS.",
+    "interpretation_b": "The MSS value must be less than or equal to an unspecified value, and the definition of MMS_R is incomplete or missing. Without a clear definition of how MMS_R is calculated or obtained, implementations may differ in how they determine the MSS.",
+    "is_ambiguous": "yes",
+    "justification": "The target clause is ambiguous because it introduces MMS_R but does not fully define how it is calculated or obtained. This missing constraint could lead to different interpretations and implementations of the MSS value calculation.",
+    "missing_information": "The clause does not fully define how MMS_R is calculated or obtained, nor does it specify the exact relationship between MMS_R and the MSS value. This missing constraint could lead to different implementations behaving differently."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:08:35.683152+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "94ccaf8bfa513fb3d61abe9202c1902640a86f78346c405fed32e2eea86992d2",
+  "lineage_ids": "lineage:2c7705f5d10cf5a74516d698",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 281,
+    "load_duration": 8386900,
+    "prompt_eval_count": 587,
+    "total_duration": 11646660300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"must be less than or equal to: where MMS_R is the maximum size for a transport-layer message that can be received (and reassembled at the IP layer)\",\n  \"interpretation_a\": \"The MSS value must be less than or equal to MMS_R, which is defined as the maximum size for a transport-layer message that can be received and reassembled at the IP layer. This implies that the sender must use the receiver's MMS_R to determine the MSS.\",\n  \"interpretation_b\": \"The MSS value must be less than or equal to an unspecified value, and the definition of MMS_R is incomplete or missing. Without a clear definition of how MMS_R is calculated or obtained, implementations may differ in how they determine the MSS.\",\n  \"missing_information\": \"The clause does not fully define how MMS_R is calculated or obtained, nor does it specify the exact relationship between MMS_R and the MSS value. This missing constraint could lead to different implementations behaving differently.\",\n  \"justification\": \"The target clause is ambiguous because it introduces MMS_R but does not fully define how it is calculated or obtained. This missing constraint could lead to different interpretations and implementations of the MSS value calculation.\"\n}",
+  "record_id": "0c7dda6987b57d5b623e6560baf6b8633641324e134d27afb00eebe01a878f8f",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.7.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.656
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "length field value other than 0",
+    "interpretation_a": "Any non-zero value in the length field, even if it indicates a valid (but empty) payload, triggers a FRAME_SIZE_ERROR.",
+    "interpretation_b": "Only length field values that are demonstrably too large to represent a valid payload (e.g., negative, or exceeding a maximum allowed size) trigger a FRAME_SIZE_ERROR; a length of 1, indicating a single byte, is valid.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states \"length field value other than 0\", but doesn't specify what constitutes an invalid length. A length of 1, for example, is technically 'other than 0' but could represent a valid, albeit empty, payload. The absence of a maximum length constraint creates ambiguity.",
+    "missing_information": "The maximum allowed value for the length field is not defined in this excerpt. Without knowing the maximum, it's unclear whether any non-zero value is considered an error."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:51:33.774806+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "84e3a0bd0c0f3aade628a20f00f8256eb91f2b025893cfc7942137344e4f8fe5",
+  "lineage_ids": "lineage:dd4923663689e41ceff9c9fd",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 237,
+    "load_duration": 9181400,
+    "prompt_eval_count": 577,
+    "total_duration": 9011285600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"length field value other than 0\", \"interpretation_a\": \"Any non-zero value in the length field, even if it indicates a valid (but empty) payload, triggers a FRAME_SIZE_ERROR.\", \"interpretation_b\": \"Only length field values that are demonstrably too large to represent a valid payload (e.g., negative, or exceeding a maximum allowed size) trigger a FRAME_SIZE_ERROR; a length of 1, indicating a single byte, is valid.\", \"missing_information\": \"The maximum allowed value for the length field is not defined in this excerpt. Without knowing the maximum, it's unclear whether any non-zero value is considered an error.\", \"justification\": \"The clause states \\\"length field value other than 0\\\", but doesn't specify what constitutes an invalid length. A length of 1, for example, is technically 'other than 0' but could represent a valid, albeit empty, payload. The absence of a maximum length constraint creates ambiguity.\"}",
+  "record_id": "ecb77943892ef9fb3df63932baff1b3b7f47bac3c588d38416eb6c273a1d7922",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.016
+}

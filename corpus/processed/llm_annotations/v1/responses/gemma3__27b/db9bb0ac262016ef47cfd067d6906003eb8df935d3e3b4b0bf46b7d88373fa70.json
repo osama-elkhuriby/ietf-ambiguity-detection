@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "up to three times the PTO",
+    "interpretation_a": "The next set of receive packet protection keys can be deferred by a maximum of three times the PTO.",
+    "interpretation_b": "The next set of receive packet protection keys can be deferred by any amount of time up to, but not exceeding, three times the PTO.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'up to' is ambiguous. It could mean 'less than or equal to' or 'strictly less than'. This affects the maximum allowable deferral time and therefore implementation behaviour.",
+    "missing_information": "It is unclear whether 'up to' is inclusive or exclusive. Does 'up to three times the PTO' mean less than or equal to three times the PTO, or strictly less than three times the PTO?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:50:06.685401+00:00",
+  "document_id": "draft-ietf-quic-tls-33",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "27272c1900a37da5255c561ea12f1dbecb1893aa094ff90db0403a883ce21717",
+  "lineage_ids": "lineage:0d6b68f7d44c707548fec5c5",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 186,
+    "load_duration": 4090200,
+    "prompt_eval_count": 619,
+    "total_duration": 7477209100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"up to three times the PTO\", \"interpretation_a\": \"The next set of receive packet protection keys can be deferred by a maximum of three times the PTO.\", \"interpretation_b\": \"The next set of receive packet protection keys can be deferred by any amount of time up to, but not exceeding, three times the PTO.\", \"missing_information\": \"It is unclear whether 'up to' is inclusive or exclusive. Does 'up to three times the PTO' mean less than or equal to three times the PTO, or strictly less than three times the PTO?\",\"justification\": \"The phrase 'up to' is ambiguous. It could mean 'less than or equal to' or 'strictly less than'. This affects the maximum allowable deferral time and therefore implementation behaviour.\"}",
+  "record_id": "db9bb0ac262016ef47cfd067d6906003eb8df935d3e3b4b0bf46b7d88373fa70",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "6.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.484
+}

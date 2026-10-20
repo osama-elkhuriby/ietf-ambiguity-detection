@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless it references Stream ID 0",
+    "interpretation_a": "The clause could be interpreted as allowing a PRIORITY frame that references Stream ID 0 to be valid even if it does not reference a request ID.",
+    "interpretation_b": "The clause could be interpreted as allowing a PRIORITY frame that references a request ID of 0 to be valid.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether the exception applies to a PRIORITY frame that references a request ID of 0 or to a PRIORITY frame that references a stream ID of 0, leading to two materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 3,
+  "created_at": "2026-10-08T09:52:32.739857+00:00",
+  "document_id": "draft-ietf-quic-http-08",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "9ab9070235e3c7d1fc365789471a6af19cac7675fdad26f95e877a3e5dfb5429",
+  "lineage_ids": "lineage:1b904dc9c711503757a20954",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 406,
+    "load_duration": 5120400,
+    "prompt_eval_count": 812,
+    "total_duration": 3860123200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"unless it references Stream ID 0\",\n  \"interpretation_a\": \"The clause could be interpreted as allowing a PRIORITY frame that references Stream ID 0 to be valid even if it does not reference a request ID.\",\n  \"interpretation_b\": \"The clause could be interpreted as allowing a PRIORITY frame that references a request ID of 0 to be valid.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify whether the exception applies to a PRIORITY frame that references a request ID of 0 or to a PRIORITY frame that references a stream ID of 0, leading to two materially different implementation behaviours.\"\n}",
+  "record_id": "94a2e097d67e599441b6112cf5704b0478664685bdd6d4c01bf1e80e8188eb42",
+  "revision": "08",
+  "schema_version": 1,
+  "section_ids": "5.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 87.688
+}

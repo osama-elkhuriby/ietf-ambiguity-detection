@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST only be used once",
+    "interpretation_a": "The Push ID must be unique across all push stream headers sent by the same endpoint.",
+    "interpretation_b": "The Push ID must be unique within a single push stream header, but can be reused in subsequent headers.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states a Push ID \"MUST only be used once\", but does not specify the scope of this uniqueness. It could mean unique across all push stream headers, or only unique within a single header. This leads to two reasonable interpretations with different implementation consequences.",
+    "missing_information": "The scope of 'once' is not defined. Does it apply to all headers, or only within a single header?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:07:49.027913+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "b99f2329f662c361181d168141681a319e58b29aa862465933014d229b0069a7",
+  "lineage_ids": "lineage:c015d29f473921601ef7dec2",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 172,
+    "load_duration": 19237000,
+    "prompt_eval_count": 590,
+    "total_duration": 6725372500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST only be used once\", \"interpretation_a\": \"The Push ID must be unique across all push stream headers sent by the same endpoint.\", \"interpretation_b\": \"The Push ID must be unique within a single push stream header, but can be reused in subsequent headers.\", \"missing_information\": \"The scope of 'once' is not defined. Does it apply to all headers, or only within a single header?\", \"justification\": \"The clause states a Push ID \\\"MUST only be used once\\\", but does not specify the scope of this uniqueness. It could mean unique across all push stream headers, or only unique within a single header. This leads to two reasonable interpretations with different implementation consequences.\"}",
+  "record_id": "ca9eb9b6a432b4a6ad8769e34428288cbcab40be6d653a94b90a123bfb1b1266",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.719
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "I-1",
+    "evidence_span": "MUST not be equal",
+    "interpretation_a": "The server's Connection ID in the Retry packet must be different from the client's Connection ID in the Initial packet.",
+    "interpretation_b": "The server's Connection ID in the Retry packet must be different from the client's Connection ID in the Retry packet itself.",
+    "is_ambiguous": "yes",
+    "justification": "The clause refers to \"the packet sent by the client\" without specifying *which* packet. It could refer to the Initial packet (as clarified by the next clause) or the Retry packet itself. This creates two reasonable interpretations of what the server's Source Connection ID must not equal.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:56:57.727509+00:00",
+  "document_id": "draft-ietf-quic-transport-28",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "daaca58fd5d99d89616e5c3fa8ec824914d6bfd11ae78e9696ec8f144ac86270",
+  "lineage_ids": "lineage:ee7a7a1e26cd70e2e863b78b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 165,
+    "load_duration": 4087400,
+    "prompt_eval_count": 578,
+    "total_duration": 6248615100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"I-1\", \"evidence_span\": \"MUST not be equal\", \"interpretation_a\": \"The server's Connection ID in the Retry packet must be different from the client's Connection ID in the Initial packet.\", \"interpretation_b\": \"The server's Connection ID in the Retry packet must be different from the client's Connection ID in the Retry packet itself.\",\"missing_information\": \"\", \"justification\": \"The clause refers to \\\"the packet sent by the client\\\" without specifying *which* packet. It could refer to the Initial packet (as clarified by the next clause) or the Retry packet itself. This creates two reasonable interpretations of what the server's Source Connection ID must not equal.\"}",
+  "record_id": "b84fe901c8dfa6443002976e643f03ecb0029c1056a801bab48c5a80284a2d63",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "17.2.5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.266
+}

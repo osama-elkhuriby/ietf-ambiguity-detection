@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY use that information",
+    "interpretation_a": "Implementations may choose to ignore lost ACK-only packets and not adjust congestion control or ACK rate.",
+    "interpretation_b": "Implementations may choose to react to lost ACK-only packets by adjusting congestion control or ACK rate, though the details of how are not specified.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' introduces a choice, but the subsequent statement that the document does not describe a mechanism leaves the implementation details open to interpretation. This creates ambiguity as to what constitutes a valid implementation of the 'MAY' clause.",
+    "missing_information": "The document does not specify *how* implementations should adjust congestion control or the rate of ACK-only packets if they choose to do so, creating an incomplete constraint."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:20:37.887329+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "ce2d255091570ab743c05b3328a7850f38f08b0e0671ff19bd626825e947aad4",
+  "lineage_ids": "lineage:c90bd4fbdae3b58de8a7326a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 186,
+    "load_duration": 4061200,
+    "prompt_eval_count": 590,
+    "total_duration": 7064567600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY use that information\", \"interpretation_a\": \"Implementations may choose to ignore lost ACK-only packets and not adjust congestion control or ACK rate.\", \"interpretation_b\": \"Implementations may choose to react to lost ACK-only packets by adjusting congestion control or ACK rate, though the details of how are not specified.\", \"missing_information\": \"The document does not specify *how* implementations should adjust congestion control or the rate of ACK-only packets if they choose to do so, creating an incomplete constraint.\", \"justification\": \"The use of 'MAY' introduces a choice, but the subsequent statement that the document does not describe a mechanism leaves the implementation details open to interpretation. This creates ambiguity as to what constitutes a valid implementation of the 'MAY' clause.\"}",
+  "record_id": "5a5d87f654de12131c2e4c03b8164b567c7f192200a53c61f9f84b490877682a",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.063
+}

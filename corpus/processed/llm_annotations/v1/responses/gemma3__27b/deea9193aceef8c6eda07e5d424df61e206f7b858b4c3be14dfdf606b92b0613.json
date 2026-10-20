@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "shortest possible encoding",
+    "interpretation_a": "The encoding MUST be the absolute minimum number of bytes required to represent the frame type, even if that means different frame types have different encoding lengths.",
+    "interpretation_b": "All frame types MUST use a single-byte encoding, even if a shorter encoding is technically possible, prioritizing consistency over absolute minimum length.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'shortest possible encoding' is open to interpretation. It's unclear whether it means the minimum encoding length for each individual frame type or a globally enforced minimum length for all frame types. This affects how implementations would handle variable-length integer encoding.",
+    "missing_information": "The meaning of 'shortest possible encoding' is not fully defined. Does it refer to the minimum bytes for *each* frame type, or a global minimum encoding length for *all* frame types?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:09:40.390440+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "ee4e7075aabcd3236a42deb9e68c9041fbf0dc5c313a9baae34a817dccb4f499",
+  "lineage_ids": "lineage:99ccf6db72475f0c09bbc725",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 202,
+    "load_duration": 4197700,
+    "prompt_eval_count": 592,
+    "total_duration": 7621803200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"shortest possible encoding\", \"interpretation_a\": \"The encoding MUST be the absolute minimum number of bytes required to represent the frame type, even if that means different frame types have different encoding lengths.\", \"interpretation_b\": \"All frame types MUST use a single-byte encoding, even if a shorter encoding is technically possible, prioritizing consistency over absolute minimum length.\", \"missing_information\": \"The meaning of 'shortest possible encoding' is not fully defined. Does it refer to the minimum bytes for *each* frame type, or a global minimum encoding length for *all* frame types?\",\"justification\": \"The phrase 'shortest possible encoding' is open to interpretation. It's unclear whether it means the minimum encoding length for each individual frame type or a globally enforced minimum length for all frame types. This affects how implementations would handle variable-length integer encoding.\"}",
+  "record_id": "deea9193aceef8c6eda07e5d424df61e206f7b858b4c3be14dfdf606b92b0613",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "12.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.656
+}

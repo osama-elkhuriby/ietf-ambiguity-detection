@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "When possible",
+    "interpretation_a": "The server might choose to cancel the request if it deems it 'not possible' to send a response, even if it has begun processing. The definition of 'possible' is not defined.",
+    "interpretation_b": "The server must always attempt to send a response, even if processing is far along, unless there is a technical limitation preventing it. The definition of 'possible' is not defined.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'When possible' introduces ambiguity. It's unclear what conditions would render sending a response 'not possible', and thus when a server is permitted to cancel instead of responding. This affects implementation because different servers might interpret 'possible' differently, leading to inconsistent behavior.",
+    "missing_information": "The meaning of 'When possible' is not defined. What constitutes a situation where sending a response is 'not possible' is not specified, leaving room for differing implementations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:13:08.421799+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "5180f25623f15a40615db8a1bb86d99db51d4e92f9e0d64fb237959744763da1",
+  "lineage_ids": "lineage:6e361041d380828767724192",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 217,
+    "load_duration": 22433900,
+    "prompt_eval_count": 585,
+    "total_duration": 8358491100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"When possible\", \"interpretation_a\": \"The server might choose to cancel the request if it deems it 'not possible' to send a response, even if it has begun processing. The definition of 'possible' is not defined.\", \"interpretation_b\": \"The server must always attempt to send a response, even if processing is far along, unless there is a technical limitation preventing it. The definition of 'possible' is not defined.\", \"missing_information\": \"The meaning of 'When possible' is not defined. What constitutes a situation where sending a response is 'not possible' is not specified, leaving room for differing implementations.\",\"justification\": \"The phrase 'When possible' introduces ambiguity. It's unclear what conditions would render sending a response 'not possible', and thus when a server is permitted to cancel instead of responding. This affects implementation because different servers might interpret 'possible' differently, leading to inconsistent behavior.\"}",
+  "record_id": "e85cb674581ac11768c1ee61f7acf69ba4e96357c4f8e21c0cdc231358f384cb",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.375
+}

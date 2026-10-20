@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that a server may send a Content-Length header in a 304 response to a conditional GET, but only if the header value equals the number of octets that would have been sent in the body of a 200 response to the same request. The wording is clear and does not leave room for materially different implementation behaviours. No undefined terms or missing constraints are present.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T06:33:31.110667+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "06aa964a51f006f140c827975dd8f5bf01184d1694ce22f9369875e22c1fbdd4",
+  "lineage_ids": "lineage:8df7bea139f81b0364c65cce",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2945,
+    "load_duration": 4008800,
+    "prompt_eval_count": 686,
+    "total_duration": 25367952100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\":\"no\",\"ambiguity_subtype\":\"none\",\"evidence_span\":\"\",\"interpretation_a\":\"\",\"interpretation_b\":\"\",\"missing_information\":\"\", \"justification\":\"The clause unambiguously states that a server may send a Content-Length header in a 304 response to a conditional GET, but only if the header value equals the number of octets that would have been sent in the body of a 200 response to the same request. The wording is clear and does not leave room for materially different implementation behaviours. No undefined terms or missing constraints are present.\"}",
+  "record_id": "616ad6883682b4f9c08472ae80b3e71709ac27eda32d8e268be48ea7197e31ad",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "8.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 25.359
+}

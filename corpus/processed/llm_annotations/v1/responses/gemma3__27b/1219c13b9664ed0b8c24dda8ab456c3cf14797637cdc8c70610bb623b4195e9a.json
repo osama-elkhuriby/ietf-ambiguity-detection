@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "all frames contained in the packet have been processed",
+    "interpretation_a": "All frames must be fully processed, including any actions triggered by the frame (e.g., updating stream state, triggering application callbacks).",
+    "interpretation_b": "All frames must be minimally processed to validate their structure and basic contents, but further actions may be deferred.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'processed' is vague. It's unclear whether it requires complete handling of each frame or just basic validation. This affects implementation because a receiver might choose to defer some frame processing, or it might need to process everything immediately before acknowledging.",
+    "missing_information": "The level of processing required for a frame to be considered 'processed' is not defined. Does 'processed' mean fully handled, or merely validated?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:59:23.493060+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "9c97b769511379d2356e23d0fedf39f3135a51b4a96a2dd56a8b780de3267ced",
+  "lineage_ids": "lineage:65884ea532625cded2f5d04c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 190,
+    "load_duration": 4608900,
+    "prompt_eval_count": 566,
+    "total_duration": 7188043700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"all frames contained in the packet have been processed\", \"interpretation_a\": \"All frames must be fully processed, including any actions triggered by the frame (e.g., updating stream state, triggering application callbacks).\", \"interpretation_b\": \"All frames must be minimally processed to validate their structure and basic contents, but further actions may be deferred.\", \"missing_information\": \"The level of processing required for a frame to be considered 'processed' is not defined. Does 'processed' mean fully handled, or merely validated?\",\"justification\": \"The term 'processed' is vague. It's unclear whether it requires complete handling of each frame or just basic validation. This affects implementation because a receiver might choose to defer some frame processing, or it might need to process everything immediately before acknowledging.\"}",
+  "record_id": "1219c13b9664ed0b8c24dda8ab456c3cf14797637cdc8c70610bb623b4195e9a",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "13.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.188
+}

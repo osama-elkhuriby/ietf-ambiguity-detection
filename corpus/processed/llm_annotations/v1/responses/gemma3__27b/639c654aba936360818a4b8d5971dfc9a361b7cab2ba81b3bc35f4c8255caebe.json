@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Application protocols MUST either prohibit the use of extensions that carry application semantics in 0-RTT or provide replay mitigation strategies.",
+    "interpretation_a": "Application protocols can choose to disallow any extensions carrying application semantics in 0-RTT, effectively preventing replay attacks by limiting functionality.",
+    "interpretation_b": "Application protocols can allow extensions carrying application semantics in 0-RTT, but *must* implement a replay mitigation strategy to protect against attacks. The specific strategy is not defined, leaving room for varied implementations.",
+    "is_ambiguous": "yes",
+    "justification": "The clause presents an either/or condition, but the second option ('provide replay mitigation strategies') lacks a concrete definition of what constitutes a sufficient strategy. This allows for implementations that might claim to provide mitigation but are ineffective, leading to ambiguity.",
+    "missing_information": "The clause does not define what constitutes a sufficient 'replay mitigation strategy'. This lack of definition allows for implementations that may not adequately protect against replay attacks, creating ambiguity in whether a protocol meets the requirement."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:40:03.175734+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "091b354f33e3f003b63bd9b456f3238ee50f8f3eecbcb1376e03b67cc91e85a8",
+  "lineage_ids": "lineage:5e14f2b2ad72f871cf08f1eb",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 230,
+    "load_duration": 3575200,
+    "prompt_eval_count": 559,
+    "total_duration": 8552825700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Application protocols MUST either prohibit the use of extensions that carry application semantics in 0-RTT or provide replay mitigation strategies.\", \"interpretation_a\": \"Application protocols can choose to disallow any extensions carrying application semantics in 0-RTT, effectively preventing replay attacks by limiting functionality.\", \"interpretation_b\": \"Application protocols can allow extensions carrying application semantics in 0-RTT, but *must* implement a replay mitigation strategy to protect against attacks. The specific strategy is not defined, leaving room for varied implementations.\", \"missing_information\": \"The clause does not define what constitutes a sufficient 'replay mitigation strategy'. This lack of definition allows for implementations that may not adequately protect against replay attacks, creating ambiguity in whether a protocol meets the requirement.\",\"justification\": \"The clause presents an either/or condition, but the second option ('provide replay mitigation strategies') lacks a concrete definition of what constitutes a sufficient strategy. This allows for implementations that might claim to provide mitigation but are ineffective, leading to ambiguity.\"}",
+  "record_id": "639c654aba936360818a4b8d5971dfc9a361b7cab2ba81b3bc35f4c8255caebe",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.562
+}

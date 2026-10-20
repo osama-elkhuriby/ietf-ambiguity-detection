@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "To avoid this, endpoints MUST either limit transmission of CONNECTION_CLOSE frames to validated addresses or drop packets without response if the response would be more than three times larger than the received packet.",
+    "interpretation_a": "Endpoints could implement the first option (limit transmission to validated addresses) and ignore the second.",
+    "interpretation_b": "Endpoints could implement the second option (drop packets without response if the response would be more than three times larger) and ignore the first.",
+    "is_ambiguous": "yes",
+    "justification": "The clause contains an incomplete constraint: it requires endpoints to choose one of two options but does not state which one is mandatory.",
+    "missing_information": "The clause does not specify which of the two options must be implemented, leaving the choice ambiguous for implementers."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T16:02:44.932311+00:00",
+  "document_id": "draft-ietf-quic-transport-29",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "8e7a77f888d46f9063b63d33b09c331b33297b14802b5a5fa795375b7d8ce563",
+  "lineage_ids": "lineage:328b399f89735a40b80d9cb0",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1189,
+    "load_duration": 6332100,
+    "prompt_eval_count": 620,
+    "total_duration": 10575226500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"To avoid this, endpoints MUST either limit transmission of CONNECTION_CLOSE frames to validated addresses or drop packets without response if the response would be more than three times larger than the received packet.\",\n  \"interpretation_a\": \"Endpoints could implement the first option (limit transmission to validated addresses) and ignore the second.\",\n  \"interpretation_b\": \"Endpoints could implement the second option (drop packets without response if the response would be more than three times larger) and ignore the first.\",\n  \"missing_information\": \"The clause does not specify which of the two options must be implemented, leaving the choice ambiguous for implementers.\",\n  \"justification\": \"The clause contains an incomplete constraint: it requires endpoints to choose one of two options but does not state which one is mandatory.\"\n}",
+  "record_id": "606bd4ddfbd49b8a8e93e88652f685f6595a44522155c2ceeb31a36060dcac63",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "10.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 78.828
+}

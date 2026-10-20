@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear formula for calculating PTO. The use of `max` and `min` functions, while potentially resulting in different values based on input parameters, does not introduce ambiguity as these are well-defined mathematical operations. The variables `SRTT`, `MaxAckDelay`, and `kMinTLPTimeout` are assumed to be defined elsewhere, and their values will determine the final PTO value. There is no inherent ambiguity in the formula itself.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:29:27.880062+00:00",
+  "document_id": "draft-ietf-quic-recovery-16",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "3efb57bd7a87b8be28767041f24dcd81768b691242ba435c62696b1e0d9da8b2",
+  "lineage_ids": "lineage:890c7c7ab4dc09ea2af3fdfe",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 141,
+    "load_duration": 2617600,
+    "prompt_eval_count": 585,
+    "total_duration": 5504692000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"no\", \"ambiguity_subtype\": \"none\", \"evidence_span\": \"\", \"interpretation_a\": \"\", \"interpretation_b\": \"\", \"missing_information\": \"\", \"justification\": \"The clause provides a clear formula for calculating PTO. The use of `max` and `min` functions, while potentially resulting in different values based on input parameters, does not introduce ambiguity as these are well-defined mathematical operations. The variables `SRTT`, `MaxAckDelay`, and `kMinTLPTimeout` are assumed to be defined elsewhere, and their values will determine the final PTO value. There is no inherent ambiguity in the formula itself.\"}",
+  "record_id": "c3bbf58ef0f22b5e564a79fa1090b2dcb08b2aabe869629855536746d088d8c9",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "4.3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.5
+}

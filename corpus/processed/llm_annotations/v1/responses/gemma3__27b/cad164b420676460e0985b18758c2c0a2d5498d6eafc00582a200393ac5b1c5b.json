@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD be held for later processing",
+    "interpretation_a": "The receiver buffers segments arriving out of order for potential reassembly or delivery, even if they are beyond the current receive window.",
+    "interpretation_b": "The receiver may discard segments arriving out of order, but is encouraged to log or report this event for debugging purposes. The 'held' part is not a requirement to store the segment.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' allows for implementations that do not hold segments, which is a valid interpretation of the language. However, the phrase 'for later processing' implies some action will be taken, which is not guaranteed if the segment is discarded. The lack of a time limit or other constraint on 'later' creates ambiguity.",
+    "missing_information": "The duration for which segments 'SHOULD' be held is not specified. A timeout or other limiting factor is missing, which affects implementation."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:28:14.532689+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "8eb71b3dcfae444a7caa6133fe5fafb768edb4eb4511cebdd7b25decd4979187",
+  "lineage_ids": "lineage:9d6d30e4be9c364eeef91771",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 217,
+    "load_duration": 19490900,
+    "prompt_eval_count": 583,
+    "total_duration": 8365644000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD be held for later processing\", \"interpretation_a\": \"The receiver buffers segments arriving out of order for potential reassembly or delivery, even if they are beyond the current receive window.\", \"interpretation_b\": \"The receiver may discard segments arriving out of order, but is encouraged to log or report this event for debugging purposes. The 'held' part is not a requirement to store the segment.\", \"missing_information\": \"The duration for which segments 'SHOULD' be held is not specified. A timeout or other limiting factor is missing, which affects implementation.\", \"justification\": \"The use of 'SHOULD' allows for implementations that do not hold segments, which is a valid interpretation of the language. However, the phrase 'for later processing' implies some action will be taken, which is not guaranteed if the segment is discarded. The lack of a time limit or other constraint on 'later' creates ambiguity.\"}",
+  "record_id": "cad164b420676460e0985b18758c2c0a2d5498d6eafc00582a200393ac5b1c5b",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.10.7.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.375
+}

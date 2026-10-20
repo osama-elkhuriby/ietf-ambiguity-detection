@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT perform the requested method if a received If-None-Match condition evaluates to false",
+    "interpretation_a": "The server must not perform the method at all, effectively ignoring the request.",
+    "interpretation_b": "The server must not *complete* the method, but may begin processing it before determining the If-None-Match condition is false.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"perform the requested method\" is open to interpretation. Does it mean any processing at all, or only completing the method? Without clarification, implementations could differ on how much work they do before responding with a 412.",
+    "missing_information": "The clause does not specify whether the server is permitted to *begin* processing the request before evaluating the If-None-Match condition. This affects resource usage and potential side effects."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:26:43.308924+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-17",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "eba9bc36d90707d300626d8cb0abd32e57ae3156ba886893d673a4f480f28283",
+  "lineage_ids": "lineage:4c4cb8a8a4c528ec95eb0767",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 197,
+    "load_duration": 46796600,
+    "prompt_eval_count": 623,
+    "total_duration": 7992167000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT perform the requested method if a received If-None-Match condition evaluates to false\", \"interpretation_a\": \"The server must not perform the method at all, effectively ignoring the request.\", \"interpretation_b\": \"The server must not *complete* the method, but may begin processing it before determining the If-None-Match condition is false.\", \"missing_information\": \"The clause does not specify whether the server is permitted to *begin* processing the request before evaluating the If-None-Match condition. This affects resource usage and potential side effects.\", \"justification\": \"The phrase \\\"perform the requested method\\\" is open to interpretation. Does it mean any processing at all, or only completing the method? Without clarification, implementations could differ on how much work they do before responding with a 412.\"}",
+  "record_id": "c32e88b9d824d3555b625a96ce39f40a9dd5b62845394c62ea28f1805c68b094",
+  "revision": "17",
+  "schema_version": 1,
+  "section_ids": "13.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.985
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless the field name is listed in the Connection header field",
+    "interpretation_a": "A proxy MUST forward unrecognized header fields if the field name is *not* in the Connection header.",
+    "interpretation_b": "A proxy MUST forward unrecognized header fields unless the field name *is* in the Connection header.",
+    "is_ambiguous": "yes",
+    "justification": "The word 'listed' is ambiguous. It could mean that the field name is present in the Connection header field as a field to be closed, or it could mean that the field name is present in the Connection header field as a field to be forwarded. This ambiguity affects implementation because a proxy could either forward the field if it is not in the Connection header, or not forward the field if it is in the Connection header.",
+    "missing_information": "The phrasing 'unless the field name is listed in the Connection header field' is ambiguous. Does 'listed' mean 'present in the list of fields to close' or 'present in the list of fields to forward'? The meaning is not clear from the text."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:58:24.726076+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "1f0ec30fff18c3f6326fdcff1bd2a319932e98feae82901bb297fd969cc43c53",
+  "lineage_ids": "lineage:aea9742400e3dc3985977c5b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 240,
+    "load_duration": 12495400,
+    "prompt_eval_count": 592,
+    "total_duration": 9177729500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless the field name is listed in the Connection header field\", \"interpretation_a\": \"A proxy MUST forward unrecognized header fields if the field name is *not* in the Connection header.\", \"interpretation_b\": \"A proxy MUST forward unrecognized header fields unless the field name *is* in the Connection header.\", \"missing_information\": \"The phrasing 'unless the field name is listed in the Connection header field' is ambiguous. Does 'listed' mean 'present in the list of fields to close' or 'present in the list of fields to forward'? The meaning is not clear from the text.\",\"justification\": \"The word 'listed' is ambiguous. It could mean that the field name is present in the Connection header field as a field to be closed, or it could mean that the field name is present in the Connection header field as a field to be forwarded. This ambiguity affects implementation because a proxy could either forward the field if it is not in the Connection header, or not forward the field if it is in the Connection header.\"}",
+  "record_id": "22cc96e815fd91e64b37321e8436b70b0cf58f1c758509b69532caf55d9cf0ca",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.188
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "not newly acknowledged or not ack-eliciting",
+    "interpretation_a": "The clause requires that RTT samples are only taken for packets that are both newly acknowledged and ack‑eliciting; any packet that is not newly acknowledged or not ack‑eliciting must not be used to take an RTT sample.",
+    "interpretation_b": "The clause allows RTT samples to be taken for packets that are either newly acknowledged or ack‑eliciting; only packets that are neither newly acknowledged nor ack‑eliciting must not be used to take an RTT sample.",
+    "is_ambiguous": "yes",
+    "justification": "The double negative construction \"not newly acknowledged or not ack‑eliciting\" permits two materially different interpretations: one that restricts RTT sampling to packets that satisfy both conditions, and another that permits sampling for packets that satisfy either condition. This lack of a clear, unambiguous constraint makes the clause incomplete with respect to implementation behaviour.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T10:55:05.033078+00:00",
+  "document_id": "draft-ietf-quic-recovery-19",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "28cc5aca0b1f1eb1cb327134733e0e00661c7e6d96f58b4f9a644822df24fb18",
+  "lineage_ids": "lineage:e5bbcb27166c3bbfa5935d98",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3572,
+    "load_duration": 4371900,
+    "prompt_eval_count": 601,
+    "total_duration": 30749886500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"not newly acknowledged or not ack-eliciting\",\n  \"interpretation_a\": \"The clause requires that RTT samples are only taken for packets that are both newly acknowledged and ack‑eliciting; any packet that is not newly acknowledged or not ack‑eliciting must not be used to take an RTT sample.\",\n  \"interpretation_b\": \"The clause allows RTT samples to be taken for packets that are either newly acknowledged or ack‑eliciting; only packets that are neither newly acknowledged nor ack‑eliciting must not be used to take an RTT sample.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The double negative construction \\\"not newly acknowledged or not ack‑eliciting\\\" permits two materially different interpretations: one that restricts RTT sampling to packets that satisfy both conditions, and another that permits sampling for packets that satisfy either condition. This lack of a clear, unambiguous constraint makes the clause incomplete with respect to implementation behaviour.\"\n}",
+  "record_id": "051dcc120fd1c6849885279853ccb2ad4fe327b1eb73a274870ccd4849f04272",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 30.766
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "To handle cases where the receiver is only sending ACK frames, and hence will not receive acknowledgments for its packets, it MAY send a PING frame at most once per RTT to explicitly request acknowledgment.",
+    "interpretation_a": "RTT refers to the round‑trip time measured by the sender, so the receiver may send a PING at most once per the sender’s RTT.",
+    "interpretation_b": "RTT refers to the round‑trip time measured by the receiver, so the receiver may send a PING at most once per its own RTT.",
+    "is_ambiguous": "yes",
+    "justification": "The clause references RTT without defining it, creating an incomplete constraint that allows two materially different implementation behaviours.",
+    "missing_information": "Definition of RTT and how it is measured in this context (e.g., whether it is the sender’s or receiver’s RTT)."
+  },
+  "attempts": 3,
+  "created_at": "2026-10-08T15:26:29.578728+00:00",
+  "document_id": "draft-ietf-quic-transport-02",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "80bdd1f2c1498da29d1a723ce8a405987ff38a175b09fc9d5397a85085af7e26",
+  "lineage_ids": "lineage:5b35bcf17d6b78f39a8a06c3",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 597,
+    "load_duration": 7212000,
+    "prompt_eval_count": 4451,
+    "total_duration": 6168940800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"To handle cases where the receiver is only sending ACK frames, and hence will not receive acknowledgments for its packets, it MAY send a PING frame at most once per RTT to explicitly request acknowledgment.\",\n  \"interpretation_a\": \"RTT refers to the round‑trip time measured by the sender, so the receiver may send a PING at most once per the sender’s RTT.\",\n  \"interpretation_b\": \"RTT refers to the round‑trip time measured by the receiver, so the receiver may send a PING at most once per its own RTT.\",\n  \"missing_information\": \"Definition of RTT and how it is measured in this context (e.g., whether it is the sender’s or receiver’s RTT).\",\n  \"justification\": \"The clause references RTT without defining it, creating an incomplete constraint that allows two materially different implementation behaviours.\"\n}",
+  "record_id": "4531fa3f7ceea8e013ffc6feabd550c35d93c49effc17f016ed3592476cdd550",
+  "revision": "02",
+  "schema_version": 1,
+  "section_ids": "8.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 115.047
+}

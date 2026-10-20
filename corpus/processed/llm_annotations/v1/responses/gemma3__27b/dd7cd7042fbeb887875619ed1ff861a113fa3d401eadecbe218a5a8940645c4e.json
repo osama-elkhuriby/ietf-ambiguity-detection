@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "clients SHOULD attempt to use TCP-based versions of HTTP",
+    "interpretation_a": "Clients are encouraged, but not required, to fall back to TCP-based HTTP if QUIC fails.",
+    "interpretation_b": "Clients must attempt to use TCP-based HTTP if QUIC fails, but the attempt may be limited (e.g. only a single attempt).",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' is ambiguous. It could mean a strong recommendation, or a weaker one. Without further clarification, implementations could reasonably differ on how aggressively they attempt the TCP fallback.",
+    "missing_information": "The degree to which clients 'SHOULD' attempt TCP fallback is not specified. Is it a best-effort attempt, or a requirement to try until successful?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:11:31.125380+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "0a169b9f4a652d8942995b5541ac3a267190ad3d7cd721530f44afacd005c68b",
+  "lineage_ids": "lineage:6431922da110ad12fcfb3013",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 187,
+    "load_duration": 20014100,
+    "prompt_eval_count": 628,
+    "total_duration": 7284361100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"clients SHOULD attempt to use TCP-based versions of HTTP\", \"interpretation_a\": \"Clients are encouraged, but not required, to fall back to TCP-based HTTP if QUIC fails.\", \"interpretation_b\": \"Clients must attempt to use TCP-based HTTP if QUIC fails, but the attempt may be limited (e.g. only a single attempt).\", \"missing_information\": \"The degree to which clients 'SHOULD' attempt TCP fallback is not specified. Is it a best-effort attempt, or a requirement to try until successful?\", \"justification\": \"The use of 'SHOULD' is ambiguous. It could mean a strong recommendation, or a weaker one. Without further clarification, implementations could reasonably differ on how aggressively they attempt the TCP fallback.\"}",
+  "record_id": "dd7cd7042fbeb887875619ed1ff861a113fa3d401eadecbe218a5a8940645c4e",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.297
+}

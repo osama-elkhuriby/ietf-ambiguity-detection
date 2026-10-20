@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY repeat the request",
+    "interpretation_a": "The user agent is permitted, but not required, to repeat the request with new credentials.",
+    "interpretation_b": "The user agent is permitted to repeat the request, but the server may prevent it from doing so, even with new credentials.",
+    "is_ambiguous": "yes",
+    "justification": "The 'MAY' clause is ambiguous because it doesn't specify *who* has the discretion. Does the user agent 'MAY' repeat the request regardless of server policy, or is the server free to ignore repeated requests even if the user agent provides new credentials?",
+    "missing_information": "It is unclear whether the 'MAY' applies to the user agent's ability to *attempt* to repeat the request, or to the server's willingness to *accept* a repeated request. A missing constraint on server behavior could lead to different implementations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:22:59.141821+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "c8fe87c4d6983861d62d9aa7ad0c712295a73c4badd973544b94338115f51981",
+  "lineage_ids": "lineage:b29d4af3e9f4396352bfc72e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 205,
+    "load_duration": 8061600,
+    "prompt_eval_count": 641,
+    "total_duration": 7906064400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY repeat the request\", \"interpretation_a\": \"The user agent is permitted, but not required, to repeat the request with new credentials.\", \"interpretation_b\": \"The user agent is permitted to repeat the request, but the server may prevent it from doing so, even with new credentials.\", \"missing_information\": \"It is unclear whether the 'MAY' applies to the user agent's ability to *attempt* to repeat the request, or to the server's willingness to *accept* a repeated request. A missing constraint on server behavior could lead to different implementations.\", \"justification\": \"The 'MAY' clause is ambiguous because it doesn't specify *who* has the discretion. Does the user agent 'MAY' repeat the request regardless of server policy, or is the server free to ignore repeated requests even if the user agent provides new credentials?\"}",
+  "record_id": "a89d84392c092c26a975c75175fe938bcb7a74f91618267ed3481fff053516d5",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "15.5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.906
+}

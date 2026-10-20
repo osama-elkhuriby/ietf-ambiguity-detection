@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "invalid field value",
+    "interpretation_a": "A Host header field with an invalid top-level domain (e.g., `.invalid`) is considered invalid.",
+    "interpretation_b": "A Host header field with an IP address instead of a domain name is considered invalid.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'invalid field value' is not defined within the document, leaving room for multiple interpretations of what constitutes an invalid Host header field. This impacts implementation as different servers might reject different values.",
+    "missing_information": "The definition of 'invalid field value' is not provided. It is unclear whether the server should reject Host headers containing IP addresses, invalid TLDs, or other syntactically or semantically incorrect values."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:03:59.225082+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-10",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "4334406a700e60e7ad54b1d8bdfd68e33ef9e99a7e51402378f834a41dda73a7",
+  "lineage_ids": "lineage:cacf71ecd486fbe670d1af7e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 177,
+    "load_duration": 19884800,
+    "prompt_eval_count": 612,
+    "total_duration": 7094718800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"invalid field value\", \"interpretation_a\": \"A Host header field with an invalid top-level domain (e.g., `.invalid`) is considered invalid.\", \"interpretation_b\": \"A Host header field with an IP address instead of a domain name is considered invalid.\", \"missing_information\": \"The definition of 'invalid field value' is not provided. It is unclear whether the server should reject Host headers containing IP addresses, invalid TLDs, or other syntactically or semantically incorrect values.\", \"justification\": \"The phrase 'invalid field value' is not defined within the document, leaving room for multiple interpretations of what constitutes an invalid Host header field. This impacts implementation as different servers might reject different values.\"}",
+  "record_id": "42ed136a1ad2c8590b68cb53444df9caa20376f39f511756dd5b8b081f8e9bb4",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "6.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.11
+}

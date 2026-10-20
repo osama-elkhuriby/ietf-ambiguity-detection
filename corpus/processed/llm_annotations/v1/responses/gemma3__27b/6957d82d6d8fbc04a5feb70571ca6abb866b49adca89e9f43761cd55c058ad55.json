@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT place any more trust",
+    "interpretation_a": "Clients should treat the HTTPS RR as if it came from an untrusted source, equivalent to a 307 redirect over HTTP, meaning they should still verify the destination's certificate and other security aspects.",
+    "interpretation_b": "Clients should completely ignore the HTTPS RR if the initial connection was insecure, as the RR itself is untrusted, and rely solely on other mechanisms for secure communication.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'no more trust' is incomplete. It doesn't specify *what* trust is being limited. A client could reasonably interpret this as ignoring the HTTPS RR entirely, or as simply applying the same security checks as it would to a cleartext redirect. This difference in interpretation affects how a client handles the redirection.",
+    "missing_information": "The degree to which the 'trust' is limited is not defined. Does 'no more trust' mean 'treat as completely untrusted' or 'apply the same level of scrutiny as a cleartext redirect'?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:05:16.016893+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-08",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "d5fa98311769db413e5130e2ca088b233f799b595aa6812bfc5fe2a40cf79cfe",
+  "lineage_ids": "lineage:515192130da1242975050af2",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 240,
+    "load_duration": 4233300,
+    "prompt_eval_count": 604,
+    "total_duration": 8954450500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT place any more trust\", \"interpretation_a\": \"Clients should treat the HTTPS RR as if it came from an untrusted source, equivalent to a 307 redirect over HTTP, meaning they should still verify the destination's certificate and other security aspects.\", \"interpretation_b\": \"Clients should completely ignore the HTTPS RR if the initial connection was insecure, as the RR itself is untrusted, and rely solely on other mechanisms for secure communication.\", \"missing_information\": \"The degree to which the 'trust' is limited is not defined. Does 'no more trust' mean 'treat as completely untrusted' or 'apply the same level of scrutiny as a cleartext redirect'?\",\"justification\": \"The phrase 'no more trust' is incomplete. It doesn't specify *what* trust is being limited. A client could reasonably interpret this as ignoring the HTTPS RR entirely, or as simply applying the same security checks as it would to a cleartext redirect. This difference in interpretation affects how a client handles the redirection.\"}",
+  "record_id": "6957d82d6d8fbc04a5feb70571ca6abb866b49adca89e9f43761cd55c058ad55",
+  "revision": "08",
+  "schema_version": 1,
+  "section_ids": "9.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.953
+}

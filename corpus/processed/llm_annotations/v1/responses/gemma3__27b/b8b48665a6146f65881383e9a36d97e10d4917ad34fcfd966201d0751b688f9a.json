@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "congestion window SHOULD NOT be increased",
+    "interpretation_a": "The congestion window should not be increased at all, even if there are other factors that might justify an increase.",
+    "interpretation_b": "The congestion window should not be increased *solely* due to the under-utilization condition; other factors could still trigger an increase.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'in either slow start or congestion avoidance' modifies 'increased', but it's unclear if it restricts *how* it's increased or *when* it's increased. Both interpretations are reasonable.",
+    "missing_information": "It is unclear whether the 'SHOULD NOT' applies to all increases, or only those directly caused by the under-utilization condition. A more precise phrasing would clarify this."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:27:56.504084+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "aa84178b60820ba1148edcb95a21ebd84d6517f8ede4a1032f5286937744e8c1",
+  "lineage_ids": "lineage:aba5fda7ecd29321cf5212fb",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 188,
+    "load_duration": 4876500,
+    "prompt_eval_count": 570,
+    "total_duration": 7113939100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"congestion window SHOULD NOT be increased\", \"interpretation_a\": \"The congestion window should not be increased at all, even if there are other factors that might justify an increase.\", \"interpretation_b\": \"The congestion window should not be increased *solely* due to the under-utilization condition; other factors could still trigger an increase.\", \"missing_information\": \"It is unclear whether the 'SHOULD NOT' applies to all increases, or only those directly caused by the under-utilization condition. A more precise phrasing would clarify this.\",\"justification\": \"The phrase 'in either slow start or congestion avoidance' modifies 'increased', but it's unclear if it restricts *how* it's increased or *when* it's increased. Both interpretations are reasonable.\"}",
+  "record_id": "b8b48665a6146f65881383e9a36d97e10d4917ad34fcfd966201d0751b688f9a",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.14
+}

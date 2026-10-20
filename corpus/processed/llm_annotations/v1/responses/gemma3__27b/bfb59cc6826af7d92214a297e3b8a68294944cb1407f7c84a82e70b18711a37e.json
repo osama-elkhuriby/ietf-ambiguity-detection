@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "usable window",
+    "interpretation_a": "The 'usable window' is a strictly defined value calculated according to [SWSsender], and becoming negative has a specific meaning related to that calculation.",
+    "interpretation_b": "The 'usable window' is a general concept, and becoming negative simply means the receiver is advertising a window size smaller than the amount of unacknowledged data, requiring the sender to react in some way.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'usable window' relies on an external reference ([SWSsender]) for its definition. Without knowing what 'usable window' *is*, it's impossible to determine what it means for it to become negative, and therefore what 'robust against window shrinking' requires. This is an incomplete constraint.",
+    "missing_information": "The definition of 'usable window' in [SWSsender] is not provided, and the precise meaning of a negative value is not clear from this excerpt. Without that definition, it's unclear what 'robust against window shrinking' actually *means* in terms of implementation."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:27:24.203272+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "f2d7883729b0b1d5bc5dd30dad92aeedd68baa6eefa3c369df2502017dacb4a4",
+  "lineage_ids": "lineage:3e92cd7e53fd828590f55ebc",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 244,
+    "load_duration": 4048400,
+    "prompt_eval_count": 631,
+    "total_duration": 9288742200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"usable window\", \"interpretation_a\": \"The 'usable window' is a strictly defined value calculated according to [SWSsender], and becoming negative has a specific meaning related to that calculation.\", \"interpretation_b\": \"The 'usable window' is a general concept, and becoming negative simply means the receiver is advertising a window size smaller than the amount of unacknowledged data, requiring the sender to react in some way.\", \"missing_information\": \"The definition of 'usable window' in [SWSsender] is not provided, and the precise meaning of a negative value is not clear from this excerpt. Without that definition, it's unclear what 'robust against window shrinking' actually *means* in terms of implementation.\", \"justification\": \"The phrase 'usable window' relies on an external reference ([SWSsender]) for its definition. Without knowing what 'usable window' *is*, it's impossible to determine what it means for it to become negative, and therefore what 'robust against window shrinking' requires. This is an incomplete constraint.\"}",
+  "record_id": "bfb59cc6826af7d92214a297e3b8a68294944cb1407f7c84a82e70b18711a37e",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.8.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.313
+}

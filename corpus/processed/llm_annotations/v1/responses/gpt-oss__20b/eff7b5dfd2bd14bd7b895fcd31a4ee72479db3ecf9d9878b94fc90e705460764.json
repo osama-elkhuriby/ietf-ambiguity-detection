@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "begins sending non-probing packets to the client exclusively from its preferred IP address.",
+    "interpretation_a": "The server may still send probing packets from the old IP address.",
+    "interpretation_b": "The server must stop sending probing packets from the old IP address.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether probing packets may continue to be sent from the old IP address, leaving two materially different implementation possibilities.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T19:12:55.142066+00:00",
+  "document_id": "draft-ietf-quic-transport-33",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "c2b9c31047040f35633fc6b52ed524ab9a1b27dc64454f29655a57a7082cc45b",
+  "lineage_ids": "lineage:57123650ad177e3374702af6",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2889,
+    "load_duration": 7610400,
+    "prompt_eval_count": 659,
+    "total_duration": 25060642900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"begins sending non-probing packets to the client exclusively from its preferred IP address.\",\n  \"interpretation_a\": \"The server may still send probing packets from the old IP address.\",\n  \"interpretation_b\": \"The server must stop sending probing packets from the old IP address.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify whether probing packets may continue to be sent from the old IP address, leaving two materially different implementation possibilities.\"\n}",
+  "record_id": "eff7b5dfd2bd14bd7b895fcd31a4ee72479db3ecf9d9878b94fc90e705460764",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "9.6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 92.687
+}

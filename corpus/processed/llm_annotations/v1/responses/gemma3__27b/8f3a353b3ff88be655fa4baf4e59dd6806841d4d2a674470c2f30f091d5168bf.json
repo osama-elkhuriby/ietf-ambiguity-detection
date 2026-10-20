@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Extension frames MAY be used if specifically permitted by the definition of the extension.",
+    "interpretation_a": "Extension frames are allowed only if the extension's definition explicitly states they are permitted on a CONNECTed stream.",
+    "interpretation_b": "Extension frames are allowed unless the extension's definition explicitly prohibits them on a CONNECTed stream.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' combined with 'specifically permitted' creates ambiguity. 'Specifically permitted' could mean 'explicitly allowed' or 'not explicitly disallowed', leading to different implementation choices.",
+    "missing_information": "The clause does not specify whether 'specifically permitted' means explicitly allowed or not explicitly disallowed. This impacts how implementers interpret the condition for using extension frames."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:58:23.809998+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "a7e2beeaec4f2631433d9550cebdcde934514d86bc6782e56d73fe4e67b6e59c",
+  "lineage_ids": "lineage:f627f13c5d40becb7d0e7d14",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 177,
+    "load_duration": 19849500,
+    "prompt_eval_count": 600,
+    "total_duration": 6927187000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Extension frames MAY be used if specifically permitted by the definition of the extension.\", \"interpretation_a\": \"Extension frames are allowed only if the extension's definition explicitly states they are permitted on a CONNECTed stream.\", \"interpretation_b\": \"Extension frames are allowed unless the extension's definition explicitly prohibits them on a CONNECTed stream.\", \"missing_information\": \"The clause does not specify whether 'specifically permitted' means explicitly allowed or not explicitly disallowed. This impacts how implementers interpret the condition for using extension frames.\", \"justification\": \"The use of 'MAY' combined with 'specifically permitted' creates ambiguity. 'Specifically permitted' could mean 'explicitly allowed' or 'not explicitly disallowed', leading to different implementation choices.\"}",
+  "record_id": "8f3a353b3ff88be655fa4baf4e59dd6806841d4d2a674470c2f30f091d5168bf",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.938
+}

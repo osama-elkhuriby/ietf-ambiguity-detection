@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless the recipient understands the corresponding header field definition and that definition explicitly permits and defines how trailer field values can be safely merged",
+    "interpretation_a": "A recipient might understand the header field definition but the definition does not explicitly permit merging trailer fields, so the recipient must not merge them.",
+    "interpretation_b": "A recipient might understand the header field definition and the definition permits merging trailer fields, but does not define *how* to safely merge them, so the recipient must not merge them.",
+    "is_ambiguous": "yes",
+    "justification": "The clause requires both explicit permission *and* a definition of how to safely merge. It is unclear whether both are required for merging to occur. The clause could be interpreted as requiring both conditions to be met, or as requiring either condition to be absent to prevent merging.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:55:44.488535+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "d8d3cfc9eb02d99b1a9a54d33b5fb190cd0368617447b2d4d1f8f626d8d867b2",
+  "lineage_ids": "lineage:79835c9fb8e5cd3bb5d5e3ed",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 193,
+    "load_duration": 7511800,
+    "prompt_eval_count": 603,
+    "total_duration": 7490099000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless the recipient understands the corresponding header field definition and that definition explicitly permits and defines how trailer field values can be safely merged\", \"interpretation_a\": \"A recipient might understand the header field definition but the definition does not explicitly permit merging trailer fields, so the recipient must not merge them.\", \"interpretation_b\": \"A recipient might understand the header field definition and the definition permits merging trailer fields, but does not define *how* to safely merge them, so the recipient must not merge them.\", \"missing_information\": \"\", \"justification\": \"The clause requires both explicit permission *and* a definition of how to safely merge. It is unclear whether both are required for merging to occur. The clause could be interpreted as requiring both conditions to be met, or as requiring either condition to be absent to prevent merging.\"}",
+  "record_id": "0f9a12d83e9822d7a241023228c3d078c147aeb0221860c1f9999ae5da392316",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "6.5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.5
+}

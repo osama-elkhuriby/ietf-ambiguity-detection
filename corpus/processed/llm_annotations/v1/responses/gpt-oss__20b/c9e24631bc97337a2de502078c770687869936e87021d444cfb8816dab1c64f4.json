@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously specifies that if a client receives and processes a Retry packet, it must validate that the retry_source_connection_id transport parameter is present and correct; otherwise (i.e., if no Retry packet was received), it must validate that the transport parameter is absent. The term “correct” is defined elsewhere as matching the Source Connection ID field from the Retry packet, and the clause’s structure follows a standard if‑then‑else pattern. No missing constraints or alternative interpretations are evident.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T18:24:36.956155+00:00",
+  "document_id": "draft-ietf-quic-transport-30",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "620ecc55dbdc45666ff078cf6f31c2656cfce5a48f34f131fdcba84b73a75f0e",
+  "lineage_ids": "lineage:a610be06934239ccc5452141",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1903,
+    "load_duration": 4012500,
+    "prompt_eval_count": 650,
+    "total_duration": 16567380200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"no\",\"ambiguity_subtype\":\"none\",\"evidence_span\":\"\",\"interpretation_a\":\"\",\"interpretation_b\":\"\",\"missing_information\":\"\",\"justification\":\"The clause unambiguously specifies that if a client receives and processes a Retry packet, it must validate that the retry_source_connection_id transport parameter is present and correct; otherwise (i.e., if no Retry packet was received), it must validate that the transport parameter is absent. The term “correct” is defined elsewhere as matching the Source Connection ID field from the Retry packet, and the clause’s structure follows a standard if‑then‑else pattern. No missing constraints or alternative interpretations are evident.\"}",
+  "record_id": "c9e24631bc97337a2de502078c770687869936e87021d444cfb8816dab1c64f4",
+  "revision": "30",
+  "schema_version": 1,
+  "section_ids": "17.2.5.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 84.203
+}

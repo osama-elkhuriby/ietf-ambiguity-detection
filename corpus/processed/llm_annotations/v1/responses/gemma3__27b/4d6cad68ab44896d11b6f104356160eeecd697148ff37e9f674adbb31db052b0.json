@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "each RRSet in the Additional section",
+    "interpretation_a": "The DNSSEC records must accompany *every* RRSet in the Additional section, regardless of its origin or purpose.",
+    "interpretation_b": "The DNSSEC records must accompany RRSets in the Additional section only if those RRSets originated from a DNSSEC-signed zone, or are otherwise relevant to the DNSSEC validation process.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'each RRSet' is absolute, but it's reasonable to interpret that it applies only to RRSets that are part of a DNSSEC-validated chain. Without further clarification, it's ambiguous whether DNSSEC records are required for *all* RRSets in the Additional section, even those that are not related to DNSSEC.",
+    "missing_information": "The clause does not specify the conditions under which RRSets in the Additional section *require* DNSSEC records. It's unclear if all RRSets must have them, or only those that are part of a DNSSEC chain of trust."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:02:15.720970+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "45226f4a42627928dd553fbeea82a9dc5a31068db0fae3b1a2df4c9678d0583b",
+  "lineage_ids": "lineage:e27ad43290d58895994f433c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 238,
+    "load_duration": 4363600,
+    "prompt_eval_count": 675,
+    "total_duration": 8923253400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"each RRSet in the Additional section\", \"interpretation_a\": \"The DNSSEC records must accompany *every* RRSet in the Additional section, regardless of its origin or purpose.\", \"interpretation_b\": \"The DNSSEC records must accompany RRSets in the Additional section only if those RRSets originated from a DNSSEC-signed zone, or are otherwise relevant to the DNSSEC validation process.\", \"missing_information\": \"The clause does not specify the conditions under which RRSets in the Additional section *require* DNSSEC records. It's unclear if all RRSets must have them, or only those that are part of a DNSSEC chain of trust.\", \"justification\": \"The phrase 'each RRSet' is absolute, but it's reasonable to interpret that it applies only to RRSets that are part of a DNSSEC-validated chain. Without further clarification, it's ambiguous whether DNSSEC records are required for *all* RRSets in the Additional section, even those that are not related to DNSSEC.\"}",
+  "record_id": "4d6cad68ab44896d11b6f104356160eeecd697148ff37e9f674adbb31db052b0",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "4.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.922
+}

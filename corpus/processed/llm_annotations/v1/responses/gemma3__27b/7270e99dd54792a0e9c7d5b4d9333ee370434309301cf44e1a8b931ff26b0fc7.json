@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "number of packets",
+    "interpretation_a": "The clause requires limits on the *total* number of packets that can be authenticated across the lifetime of a connection.",
+    "interpretation_b": "The clause requires limits on the number of packets authenticated *per use of the AEAD function* (e.g., per encryption context).",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'number of packets' is used twice, and it's unclear if both refer to the same quantity (total packets) or different quantities (packets per AEAD use).",
+    "missing_information": "It is unclear whether the limits apply to the total number of packets authenticated over the connection's lifetime, or to each use of the AEAD function. This affects how the limits are calculated and enforced."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:40:46.178081+00:00",
+  "document_id": "draft-ietf-quic-tls-29",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "af5006a5a2cd3688b04fc9a2ea14b3824745733d00399e5f451e39fc3aa1f1fe",
+  "lineage_ids": "lineage:1aad20537faf3d6962c6e8e7",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 185,
+    "load_duration": 5242500,
+    "prompt_eval_count": 597,
+    "total_duration": 7018088100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"number of packets\", \"interpretation_a\": \"The clause requires limits on the *total* number of packets that can be authenticated across the lifetime of a connection.\", \"interpretation_b\": \"The clause requires limits on the number of packets authenticated *per use of the AEAD function* (e.g., per encryption context).\", \"missing_information\": \"It is unclear whether the limits apply to the total number of packets authenticated over the connection's lifetime, or to each use of the AEAD function. This affects how the limits are calculated and enforced.\",\"justification\": \"The phrase 'number of packets' is used twice, and it's unclear if both refer to the same quantity (total packets) or different quantities (packets per AEAD use).\"}",
+  "record_id": "7270e99dd54792a0e9c7d5b4d9333ee370434309301cf44e1a8b931ff26b0fc7",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "6.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.031
+}

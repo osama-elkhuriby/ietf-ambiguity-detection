@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "That is, limits MUST be specified for the number of packets that can be authenticated and for the number packets that can fail authentication.",
+    "interpretation_a": "The limits refer to the maximum number of packets that can be authenticated before a key update is required.",
+    "interpretation_b": "The limits refer to the maximum number of packets that can be authenticated in total over the lifetime of the connection.",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a concrete constraint on the scope of the limits, allowing multiple reasonable interpretations.",
+    "missing_information": "The clause does not specify the scope or context (e.g., per key, per session, per time period) for the limits, leaving implementation behavior under‑specified."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T12:47:59.008291+00:00",
+  "document_id": "draft-ietf-quic-tls-29",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "af5006a5a2cd3688b04fc9a2ea14b3824745733d00399e5f451e39fc3aa1f1fe",
+  "lineage_ids": "lineage:1aad20537faf3d6962c6e8e7",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1315,
+    "load_duration": 5229700,
+    "prompt_eval_count": 609,
+    "total_duration": 11428177200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"That is, limits MUST be specified for the number of packets that can be authenticated and for the number packets that can fail authentication.\",\n  \"interpretation_a\": \"The limits refer to the maximum number of packets that can be authenticated before a key update is required.\",\n  \"interpretation_b\": \"The limits refer to the maximum number of packets that can be authenticated in total over the lifetime of the connection.\",\n  \"missing_information\": \"The clause does not specify the scope or context (e.g., per key, per session, per time period) for the limits, leaving implementation behavior under‑specified.\",\n  \"justification\": \"The clause lacks a concrete constraint on the scope of the limits, allowing multiple reasonable interpretations.\"\n}",
+  "record_id": "7270e99dd54792a0e9c7d5b4d9333ee370434309301cf44e1a8b931ff26b0fc7",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "6.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.437
+}

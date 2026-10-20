@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY concurrently initiate path validation [migrate-validate] on the new path or it MAY choose to wait",
+    "interpretation_a": "The endpoint can proactively validate the new path immediately, even before receiving any data on it.",
+    "interpretation_b": "The endpoint can passively wait for the peer to send data to the new path before validating it.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' twice creates a choice for the endpoint, but doesn't provide any guidance on *how* to make that choice. This leads to two reasonable implementation behaviors: one where the endpoint always proactively validates, and another where it always waits for peer-initiated traffic. The lack of a constraint on this choice constitutes ambiguity.",
+    "missing_information": "The draft does not specify any criteria for *when* an endpoint should choose one approach over the other. This impacts implementation because different endpoints might prioritize proactive validation versus waiting, leading to varying connection migration behaviors and potentially increased latency or unnecessary validation attempts."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:36:47.126561+00:00",
+  "document_id": "draft-ietf-quic-transport-29",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "f65e99672fd28a3c0a3722791ba5e12c5d59af86e713408d7ad4674c11284f25",
+  "lineage_ids": "lineage:3dbbaf218f5693dd1b4fce43",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 227,
+    "load_duration": 3570900,
+    "prompt_eval_count": 581,
+    "total_duration": 8520429600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY concurrently initiate path validation [migrate-validate] on the new path or it MAY choose to wait\", \"interpretation_a\": \"The endpoint can proactively validate the new path immediately, even before receiving any data on it.\", \"interpretation_b\": \"The endpoint can passively wait for the peer to send data to the new path before validating it.\", \"missing_information\": \"The draft does not specify any criteria for *when* an endpoint should choose one approach over the other. This impacts implementation because different endpoints might prioritize proactive validation versus waiting, leading to varying connection migration behaviors and potentially increased latency or unnecessary validation attempts.\",\"justification\": \"The use of 'MAY' twice creates a choice for the endpoint, but doesn't provide any guidance on *how* to make that choice. This leads to two reasonable implementation behaviors: one where the endpoint always proactively validates, and another where it always waits for peer-initiated traffic. The lack of a constraint on this choice constitutes ambiguity.\"}",
+  "record_id": "7e61618fa077ccd127d8fa46a01260398a8d4867756577b7873aa622513c1115",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "9.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.515
+}

@@ -1,0 +1,74 @@
+{
+  "context_builder_version": "same-revision-context-v2.0.0",
+  "context_char_limit": 24000,
+  "context_chars": 541,
+  "coverage_claim": "bounded_same_document_same_revision_context_only",
+  "document_id": "draft-ietf-quic-tls-27",
+  "family_id": "draft-ietf-quic-tls",
+  "items": [
+    {
+      "block_id": "draft-ietf-quic-tls-27:4:b0046",
+      "clause_id": "draft-ietf-quic-tls-27:4:b0046:c02",
+      "content": "When multiple packets of different encryption levels need to be sent, endpoints SHOULD use coalesced packets to send them in the same UDP datagram.",
+      "content_sha256": "cf06b89f3a377e9fb739e72f10fb544de786d4047f19bf0d2d6200444766c2bc",
+      "document_id": "draft-ietf-quic-tls-27",
+      "kind": "target",
+      "retrieval_reason": "frozen_target_clause",
+      "revision": "27",
+      "section_heading": "Carrying TLS Messages",
+      "section_id": "4",
+      "source_sha256": "1045f0efabccb289ea4e61ffc825610349640210d26a8f225db80c58ed972a3b",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[4]/t[5]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-quic-tls-27:4:b0046",
+      "clause_id": "draft-ietf-quic-tls-27:4:b0046:c01",
+      "content": "Because packets could be reordered on the wire, QUIC uses the packet type to indicate which level a given packet was encrypted under, as shown in [packet-types-levels].",
+      "content_sha256": "951866867af145275b67628b773da9b71de931d26ef129ab4395cd7cfaf52279",
+      "document_id": "draft-ietf-quic-tls-27",
+      "kind": "previous",
+      "retrieval_reason": "local_previous_clause",
+      "revision": "27",
+      "section_heading": "Carrying TLS Messages",
+      "section_id": "4",
+      "source_sha256": "1045f0efabccb289ea4e61ffc825610349640210d26a8f225db80c58ed972a3b",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[4]/t[5]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-quic-tls-27:4:b0047",
+      "clause_id": "draft-ietf-quic-tls-27:4:b0047:c01",
+      "content": "Packet Type | Encryption Level | PN Space\nInitial | Initial secrets | Initial\n0-RTT Protected | 0-RTT | 0/1-RTT\nHandshake | Handshake | Handshake\nRetry | N/A | N/A\nVersion Negotiation | N/A | N/A\nShort Header | 1-RTT | 0/1-RTT",
+      "content_sha256": "b21c056901d528d43838c0e3092d0e0b5ac775ee893d64e3250e1d48ec41adb5",
+      "document_id": "draft-ietf-quic-tls-27",
+      "kind": "next",
+      "retrieval_reason": "local_next_clause",
+      "revision": "27",
+      "section_heading": "Carrying TLS Messages",
+      "section_id": "4",
+      "source_sha256": "1045f0efabccb289ea4e61ffc825610349640210d26a8f225db80c58ed972a3b",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[4]/table"
+      }
+    }
+  ],
+  "omitted": [],
+  "record_id": "3cedde7d29fa09107e91771a318f4b765ddccf625ec00ceabab5579c99151239",
+  "retrieval": [],
+  "revision": "27",
+  "section_heading": "Carrying TLS Messages",
+  "section_id": "4",
+  "source_artifact": "D:/RFC/ietf-ambiguity-detection/corpus/processed/alignments/draft-ietf-quic-tls/lexical-first-classifier-v1/inputs/draft-ietf-quic-tls-27.json",
+  "source_sha256": "1045f0efabccb289ea4e61ffc825610349640210d26a8f225db80c58ed972a3b",
+  "target_clause": "When multiple packets of different encryption levels need to be sent, endpoints SHOULD use coalesced packets to send them in the same UDP datagram.",
+  "variant": "local"
+}

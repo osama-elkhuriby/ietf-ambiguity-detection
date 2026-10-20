@@ -1,0 +1,74 @@
+{
+  "context_builder_version": "same-revision-context-v2.0.0",
+  "context_char_limit": 24000,
+  "context_chars": 575,
+  "coverage_claim": "bounded_same_document_same_revision_context_only",
+  "document_id": "draft-ietf-httpbis-semantics-07",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "items": [
+    {
+      "block_id": "draft-ietf-httpbis-semantics-07:9.4.5:b1070",
+      "clause_id": "draft-ietf-httpbis-semantics-07:9.4.5:b1070:c01",
+      "content": "The server generating a 304 response MUST generate any of the following header fields that would have been sent in a 200 (OK)",
+      "content_sha256": "e7071d258467deb78e3f1a535041a82e22d84a9b2b0c0cdf8940370f854c37be",
+      "document_id": "draft-ietf-httpbis-semantics-07",
+      "kind": "target",
+      "retrieval_reason": "frozen_target_clause",
+      "revision": "07",
+      "section_heading": "304 Not Modified",
+      "section_id": "9.4.5",
+      "source_sha256": "3fe5d6cf78fe2464ecdc7723df9398844e737dfdf0f56319c12f7fe595c21b1b",
+      "source_span": {
+        "line_end": 7332,
+        "line_start": 7331,
+        "xpath": null
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-semantics-07:9.4.5:b1069",
+      "clause_id": "draft-ietf-httpbis-semantics-07:9.4.5:b1069:c02",
+      "content": "In other words, there is no need for the server to transfer a representation of the target resource because the request indicates that the client, which made the request conditional, already has a valid representation; the server is therefore redirecting the client to make use of that stored representation as if it were the payload of a 200 (OK) response.",
+      "content_sha256": "e759557d3cc911d2a197f3ee176701308d4b3fdb678b27ea2459c16eee4fac4a",
+      "document_id": "draft-ietf-httpbis-semantics-07",
+      "kind": "previous",
+      "retrieval_reason": "local_previous_clause",
+      "revision": "07",
+      "section_heading": "304 Not Modified",
+      "section_id": "9.4.5",
+      "source_sha256": "3fe5d6cf78fe2464ecdc7723df9398844e737dfdf0f56319c12f7fe595c21b1b",
+      "source_span": {
+        "line_end": 7329,
+        "line_start": 7321,
+        "xpath": null
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-semantics-07:9.4.5:b1071",
+      "clause_id": "draft-ietf-httpbis-semantics-07:9.4.5:b1071:c01",
+      "content": "response to the same request: Cache-Control, Content-Location, Date, ETag, Expires, and Vary.",
+      "content_sha256": "c58dac18b5fd024a3f1c9dd65ff4ea476dcd29b36d9e80ca2978569ad1e5afd1",
+      "document_id": "draft-ietf-httpbis-semantics-07",
+      "kind": "next",
+      "retrieval_reason": "local_next_clause",
+      "revision": "07",
+      "section_heading": "304 Not Modified",
+      "section_id": "9.4.5",
+      "source_sha256": "3fe5d6cf78fe2464ecdc7723df9398844e737dfdf0f56319c12f7fe595c21b1b",
+      "source_span": {
+        "line_end": 7342,
+        "line_start": 7341,
+        "xpath": null
+      }
+    }
+  ],
+  "omitted": [],
+  "record_id": "7bc5762e4a03a1bcf8bd568a17b8a8fb73d73955c2d8046eabc3854f6c5a3df5",
+  "retrieval": [],
+  "revision": "07",
+  "section_heading": "304 Not Modified",
+  "section_id": "9.4.5",
+  "source_artifact": "D:/RFC/ietf-ambiguity-detection/corpus/processed/alignments/draft-ietf-httpbis-semantics/lexical-first-classifier-v1/inputs/draft-ietf-httpbis-semantics-07.json",
+  "source_sha256": "3fe5d6cf78fe2464ecdc7723df9398844e737dfdf0f56319c12f7fe595c21b1b",
+  "target_clause": "The server generating a 304 response MUST generate any of the following header fields that would have been sent in a 200 (OK)",
+  "variant": "resolved"
+}

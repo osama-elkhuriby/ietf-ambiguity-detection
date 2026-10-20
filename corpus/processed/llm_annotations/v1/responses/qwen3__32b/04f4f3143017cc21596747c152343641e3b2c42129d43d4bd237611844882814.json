@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause provides a clear and unambiguous instruction: when a TCP connection is opened passively and a packet with a completed IP Source Route option (containing a return route) is received, the implementation MUST save and use that return route for all segments on the connection. There is no ambiguity in the wording or in the required behavior. The use of 'MUST' indicates a mandatory action, and the condition under which it applies is clearly defined.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:07:54.124723+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "dfc31f4adf3e295656d57180439e9039ab2ddc112d7b30ece08369efb2f16104",
+  "lineage_ids": "lineage:487b94ad1858e33b4625e8f8",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 147,
+    "load_duration": 9286700,
+    "prompt_eval_count": 604,
+    "total_duration": 6169906300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause provides a clear and unambiguous instruction: when a TCP connection is opened passively and a packet with a completed IP Source Route option (containing a return route) is received, the implementation MUST save and use that return route for all segments on the connection. There is no ambiguity in the wording or in the required behavior. The use of 'MUST' indicates a mandatory action, and the condition under which it applies is clearly defined.\"\n}",
+  "record_id": "04f4f3143017cc21596747c152343641e3b2c42129d43d4bd237611844882814",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.9.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.188
+}

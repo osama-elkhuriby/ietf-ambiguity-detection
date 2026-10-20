@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "larger than it wishes to process",
+    "interpretation_a": "The server may set an arbitrary threshold based on its own resources; any header field line, field value, or set of fields exceeding that threshold triggers a 4xx response.",
+    "interpretation_b": "The server must treat any header field line, field value, or set of fields exceeding a fixed maximum length defined by the HTTP specification (e.g., 8192 bytes) as too large and respond with a 4xx status code.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'larger than it wishes to process' is under‑specified, allowing different interpretations of the size limit that triggers the 4xx response.  ",
+    "missing_information": "The clause does not specify a numeric limit or threshold for what constitutes 'larger than it wishes to process', leaving the server to decide how to interpret the size limit. This missing constraint leads to multiple reasonable implementation behaviours.  "
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T05:48:32.713501+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "a170f901e8128d9ad2e95e368f375f57d7a463f16afa362df1530f8a08e53cce",
+  "lineage_ids": "lineage:6df6c8318d8da8ebbea821f1",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3893,
+    "load_duration": 5211300,
+    "prompt_eval_count": 606,
+    "total_duration": 33713528600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"larger than it wishes to process\",\n  \"interpretation_a\": \"The server may set an arbitrary threshold based on its own resources; any header field line, field value, or set of fields exceeding that threshold triggers a 4xx response.\",\n  \"interpretation_b\": \"The server must treat any header field line, field value, or set of fields exceeding a fixed maximum length defined by the HTTP specification (e.g., 8192 bytes) as too large and respond with a 4xx status code.\",\n  \"missing_information\": \"The clause does not specify a numeric limit or threshold for what constitutes 'larger than it wishes to process', leaving the server to decide how to interpret the size limit. This missing constraint leads to multiple reasonable implementation behaviours.  \",\n  \"justification\": \"The phrase 'larger than it wishes to process' is under‑specified, allowing different interpretations of the size limit that triggers the 4xx response.  \"\n}",
+  "record_id": "2fc4c3a00167f8ffb61f130533516376600aaa6f434979461acab58cbda70814",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "5.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 33.719
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously specifies that any multiple Cookie header fields resulting from decompression must be concatenated into a single octet string using the two‑octet delimiter 0x3B, 0x20 (\"; \") before being passed to a non‑HTTP/2 context. The antecedent of \"these\" is clearly the separate header fields, and the order of concatenation is implied by the natural sequence of the header fields. No missing constraint or alternative interpretation is evident.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T04:17:17.700300+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-03",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "32ea7f14ca31c111c6fa70381b131e92cb89c78ca6624dbbac9cfc4bd0995ecf",
+  "lineage_ids": "lineage:3e3f15334bd21b5ff509d598",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1987,
+    "load_duration": 5541600,
+    "prompt_eval_count": 646,
+    "total_duration": 17057300000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously specifies that any multiple Cookie header fields resulting from decompression must be concatenated into a single octet string using the two‑octet delimiter 0x3B, 0x20 (\\\"; \\\") before being passed to a non‑HTTP/2 context. The antecedent of \\\"these\\\" is clearly the separate header fields, and the order of concatenation is implied by the natural sequence of the header fields. No missing constraint or alternative interpretation is evident.\"\n}",
+  "record_id": "6458b706452c6e486d22525e13eceb7c8f4b4f2995dfa621d85a1b7843216f8e",
+  "revision": "03",
+  "schema_version": 1,
+  "section_ids": "8.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 17.062
+}

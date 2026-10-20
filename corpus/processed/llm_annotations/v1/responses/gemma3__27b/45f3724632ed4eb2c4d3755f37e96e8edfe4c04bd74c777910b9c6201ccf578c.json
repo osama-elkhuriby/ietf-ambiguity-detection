@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "does not have a current representation",
+    "interpretation_a": "The resource literally does not exist at all (e.g., no file on disk, no database entry).",
+    "interpretation_b": "The resource exists, but has no associated content (e.g., an empty file, a database entry with null values).",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'does not have a current representation' is open to interpretation. Does it mean the resource doesn't exist at all, or that it exists but is empty? The specification doesn't clarify this, and the difference is material because it affects how the server responds.",
+    "missing_information": "The definition of 'current representation' is not precise enough to distinguish between a resource that does not exist and a resource that exists but has no content. This affects how an origin server determines the appropriate response code."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:04:29.433991+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-04",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "4bdd1c3bad80b331fd49ef256c95a36f2b6b8016caf4e277f171c2d02950a08d",
+  "lineage_ids": "lineage:8aceabc3ae09d0ee80caac28",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 206,
+    "load_duration": 20070800,
+    "prompt_eval_count": 630,
+    "total_duration": 7990463900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"does not have a current representation\", \"interpretation_a\": \"The resource literally does not exist at all (e.g., no file on disk, no database entry).\", \"interpretation_b\": \"The resource exists, but has no associated content (e.g., an empty file, a database entry with null values).\", \"missing_information\": \"The definition of 'current representation' is not precise enough to distinguish between a resource that does not exist and a resource that exists but has no content. This affects how an origin server determines the appropriate response code.\", \"justification\": \"The phrase 'does not have a current representation' is open to interpretation. Does it mean the resource doesn't exist at all, or that it exists but is empty? The specification doesn't clarify this, and the difference is material because it affects how the server responds.\"}",
+  "record_id": "45f3724632ed4eb2c4d3755f37e96e8edfe4c04bd74c777910b9c6201ccf578c",
+  "revision": "04",
+  "schema_version": 1,
+  "section_ids": "7.3.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.0
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "uncertain",
+    "justification": "The clause contains a reference to an external section that is not included, creating an incomplete constraint that could lead to different implementation behaviours. The rest of the clause is unambiguous.  }",
+    "missing_information": "The clause references Section 10.1 of [QUIC‑TRANSPORT] for clarification, which is not provided in the supplied context. Without that reference, it is unclear whether the SHOULD applies to all idle connections or only those approaching the timeout, and whether the new connection must be established immediately or can be delayed until the timeout expires. This missing context prevents a unique operational interpretation.  }"
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T10:00:28.657228+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "b49f048ea396b85e6752732dc5e5d31a99d9be709257146b7faaebd5c0d68f16",
+  "lineage_ids": "lineage:78adf670750c2d355411da59",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 361,
+    "load_duration": 6774200,
+    "prompt_eval_count": 769,
+    "total_duration": 3873873700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"uncertain\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The clause references Section 10.1 of [QUIC‑TRANSPORT] for clarification, which is not provided in the supplied context. Without that reference, it is unclear whether the SHOULD applies to all idle connections or only those approaching the timeout, and whether the new connection must be established immediately or can be delayed until the timeout expires. This missing context prevents a unique operational interpretation.  }\",\n  \"justification\": \"The clause contains a reference to an external section that is not included, creating an incomplete constraint that could lead to different implementation behaviours. The rest of the clause is unambiguous.  }\" }",
+  "record_id": "a634b1111d3e1669edb8e1f232f724479b5ba12a8c94011c8e17a418e5d8ecb0",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 71.234
+}

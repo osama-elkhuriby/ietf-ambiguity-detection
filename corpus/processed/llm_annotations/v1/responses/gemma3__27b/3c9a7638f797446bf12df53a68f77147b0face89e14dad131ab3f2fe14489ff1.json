@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT send any packets",
+    "interpretation_a": "The endpoint must not send *any* packets, including retransmissions of unacknowledged data.",
+    "interpretation_b": "The endpoint must not send *new* packets, but may continue to retransmit unacknowledged data to ensure reliable delivery before the connection fully closes.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"any packets\" is open to interpretation. Does it include retransmissions? If retransmissions are allowed, the endpoint can still send packets. If retransmissions are disallowed, the endpoint must stop sending all packets immediately upon entering the draining state. This difference in behavior is material.",
+    "missing_information": "The clause does not specify whether retransmissions are included in the prohibition of sending packets. This affects the reliability of the connection closure process."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:14:49.525041+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "33201ffed6162216e90378ee6145e8081e1732e7ff9db4e41c4d06ef7620542d",
+  "lineage_ids": "lineage:29d373fc4c22a93540e12eb6",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 196,
+    "load_duration": 4067300,
+    "prompt_eval_count": 573,
+    "total_duration": 7387812200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT send any packets\", \"interpretation_a\": \"The endpoint must not send *any* packets, including retransmissions of unacknowledged data.\", \"interpretation_b\": \"The endpoint must not send *new* packets, but may continue to retransmit unacknowledged data to ensure reliable delivery before the connection fully closes.\", \"missing_information\": \"The clause does not specify whether retransmissions are included in the prohibition of sending packets. This affects the reliability of the connection closure process.\", \"justification\": \"The phrase \\\"any packets\\\" is open to interpretation. Does it include retransmissions? If retransmissions are allowed, the endpoint can still send packets. If retransmissions are disallowed, the endpoint must stop sending all packets immediately upon entering the draining state. This difference in behavior is material.\"}",
+  "record_id": "3c9a7638f797446bf12df53a68f77147b0face89e14dad131ab3f2fe14489ff1",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "10.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.39
+}

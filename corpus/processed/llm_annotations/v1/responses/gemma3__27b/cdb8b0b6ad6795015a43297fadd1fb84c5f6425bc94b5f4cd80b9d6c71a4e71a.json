@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "should be protected",
+    "interpretation_a": "The server's identity MUST be encrypted in transit to prevent eavesdropping.",
+    "interpretation_b": "The server's identity SHOULD be validated to ensure it hasn't been tampered with, but encryption is not necessarily required.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'should' allows for multiple interpretations regarding the level of protection required. It's unclear whether 'protected' refers to confidentiality (encryption) or integrity (validation), or both. This impacts implementation choices.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:36:43.441421+00:00",
+  "document_id": "draft-ietf-tls-tls13-24",
+  "family_id": "draft-ietf-tls-tls13",
+  "input_fingerprint": "8d3787accb12c406c1669f9f917564c355e5f5fb3888a5a500a44510d0a93d02",
+  "lineage_ids": "lineage:434dab6f891b293969d20b05",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 140,
+    "load_duration": 8425400,
+    "prompt_eval_count": 530,
+    "total_duration": 5541936700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"should be protected\", \"interpretation_a\": \"The server's identity MUST be encrypted in transit to prevent eavesdropping.\", \"interpretation_b\": \"The server's identity SHOULD be validated to ensure it hasn't been tampered with, but encryption is not necessarily required.\", \"missing_information\": \"\", \"justification\": \"The use of 'should' allows for multiple interpretations regarding the level of protection required. It's unclear whether 'protected' refers to confidentiality (encryption) or integrity (validation), or both. This impacts implementation choices.\"}",
+  "record_id": "cdb8b0b6ad6795015a43297fadd1fb84c5f6425bc94b5f4cd80b9d6c71a4e71a",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "E.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.547
+}

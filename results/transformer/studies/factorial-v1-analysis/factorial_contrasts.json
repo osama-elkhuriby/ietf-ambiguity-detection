@@ -1,0 +1,109 @@
+[
+  {
+    "contrast": "soft_target_effect",
+    "first": "soft_target_only",
+    "mean_seed_averaged_fold_difference": -0.0007583443559515013,
+    "paired_row": {
+      "lower": -0.010002085515138233,
+      "method": "within-fold paired row bootstrap",
+      "point_difference": 0.012384768676016567,
+      "upper": 0.0336905110511816,
+      "valid_bootstraps": 2000
+    },
+    "per_fold_differences": [
+      0.015317307612981612,
+      0.006636797131275407,
+      -0.018124319321055515,
+      0.004806783824991223,
+      -0.012428291027950233
+    ],
+    "second": "hard_target_only",
+    "section_cluster": {
+      "lower": -0.01007503953839595,
+      "method": "within-fold section-cluster paired bootstrap",
+      "point_difference": 0.012384768676016567,
+      "upper": 0.03297006200909503,
+      "valid_bootstraps": 2000
+    },
+    "standard_error_paired_fold_differences": 0.006252399928541856
+  },
+  {
+    "contrast": "context_effect_hard",
+    "first": "hard_local_context",
+    "mean_seed_averaged_fold_difference": -0.0369794441753511,
+    "paired_row": {
+      "lower": -0.04213292401657716,
+      "method": "within-fold paired row bootstrap",
+      "point_difference": -0.009482539860234063,
+      "upper": 0.021376632694417433,
+      "valid_bootstraps": 2000
+    },
+    "per_fold_differences": [
+      -0.040484881381411375,
+      -0.06756988488339902,
+      0.005393252202383292,
+      -0.07150256128363058,
+      -0.010733145530697819
+    ],
+    "second": "hard_target_only",
+    "section_cluster": {
+      "lower": -0.04096385862701029,
+      "method": "within-fold section-cluster paired bootstrap",
+      "point_difference": -0.009482539860234063,
+      "upper": 0.02189606186013683,
+      "valid_bootstraps": 2000
+    },
+    "standard_error_paired_fold_differences": 0.015205627837176272
+  },
+  {
+    "contrast": "context_effect_soft",
+    "first": "soft_local_context",
+    "mean_seed_averaged_fold_difference": -0.02788915853054618,
+    "paired_row": {
+      "lower": -0.034012211512473495,
+      "method": "within-fold paired row bootstrap",
+      "point_difference": -0.009455904505144719,
+      "upper": 0.014518267673315882,
+      "valid_bootstraps": 2000
+    },
+    "per_fold_differences": [
+      -0.05211172202027192,
+      -0.03497669824122951,
+      0.018385251437127687,
+      -0.05575092274431398,
+      -0.014991701084043185
+    ],
+    "second": "soft_target_only",
+    "section_cluster": {
+      "lower": -0.03392485665288155,
+      "method": "within-fold section-cluster paired bootstrap",
+      "point_difference": -0.009455904505144719,
+      "upper": 0.01635684452445868,
+      "valid_bootstraps": 2000
+    },
+    "standard_error_paired_fold_differences": 0.013639848116288924
+  },
+  {
+    "contrast": "soft_by_context_interaction",
+    "mean_seed_averaged_fold_difference": 0.009090285644804918,
+    "paired_row": {
+      "lower": -0.029523859102239775,
+      "upper": 0.030881658242577967,
+      "valid_bootstraps": 2000
+    },
+    "per_fold_differences": [
+      -0.011626840638860547,
+      0.03259318664216951,
+      0.012991999234744395,
+      0.015751638539316604,
+      -0.004258555553345367
+    ],
+    "pooled_point_difference": 2.6635355089343893e-05,
+    "section_cluster": {
+      "lower": -0.029449591966168993,
+      "upper": 0.02863466827424865,
+      "valid_bootstraps": 2000
+    },
+    "standard_error_paired_fold_differences": 0.007808246376113639
+  }
+]

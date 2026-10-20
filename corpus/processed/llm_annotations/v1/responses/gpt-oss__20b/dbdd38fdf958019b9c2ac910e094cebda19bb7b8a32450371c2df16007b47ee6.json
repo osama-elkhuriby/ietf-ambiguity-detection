@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that clients must not send new requests after receiving GOAWAY, while allowing that requests already in transit may still be in flight. No alternative reasonable interpretation or missing constraint is evident.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T10:33:35.166330+00:00",
+  "document_id": "draft-ietf-quic-http-18",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "7b74ce0b59659bd46bf87864a2319d5b50372d4f6364624f76074fac2f3f16d3",
+  "lineage_ids": "lineage:71e6d89bf4a29e4103ce21ab",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 348,
+    "load_duration": 4618200,
+    "prompt_eval_count": 580,
+    "total_duration": 3168441300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that clients must not send new requests after receiving GOAWAY, while allowing that requests already in transit may still be in flight. No alternative reasonable interpretation or missing constraint is evident.\"\n}",
+  "record_id": "dbdd38fdf958019b9c2ac910e094cebda19bb7b8a32450371c2df16007b47ee6",
+  "revision": "18",
+  "schema_version": 1,
+  "section_ids": "6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 3.172
+}

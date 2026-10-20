@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "at least three times",
+    "interpretation_a": "The idle timeout must be greater than or equal to three times the PTO. For example, if PTO is 10ms, the idle timeout must be >= 30ms.",
+    "interpretation_b": "The idle timeout must be no more than three times the PTO. For example, if PTO is 10ms, the idle timeout must be <= 30ms.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"at least three times\" is ambiguous. It can be interpreted as a lower bound (greater than or equal to) or an upper bound (less than or equal to). A concrete missing constraint would be to specify whether it is a minimum or maximum value.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:17:52.731844+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "bec8bf50742474ddf1d0e81490ab34a1111fb832d69eb42b9a6972c411e1ca75",
+  "lineage_ids": "lineage:6c1ebac1f2e8a757ed5afd79",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 182,
+    "load_duration": 4747400,
+    "prompt_eval_count": 581,
+    "total_duration": 6896550700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"at least three times\", \"interpretation_a\": \"The idle timeout must be greater than or equal to three times the PTO. For example, if PTO is 10ms, the idle timeout must be >= 30ms.\", \"interpretation_b\": \"The idle timeout must be no more than three times the PTO. For example, if PTO is 10ms, the idle timeout must be <= 30ms.\", \"missing_information\": \"\", \"justification\": \"The phrase \\\"at least three times\\\" is ambiguous. It can be interpreted as a lower bound (greater than or equal to) or an upper bound (less than or equal to). A concrete missing constraint would be to specify whether it is a minimum or maximum value.\"}",
+  "record_id": "f7af297c4625cea9c5385e0f8bde19e48e953651f093cf4e52b19bb9cfd121b9",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "10.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.89
+}

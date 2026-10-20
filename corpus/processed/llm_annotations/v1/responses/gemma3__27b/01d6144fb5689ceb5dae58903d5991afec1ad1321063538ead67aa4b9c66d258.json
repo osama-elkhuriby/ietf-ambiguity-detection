@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "If the endpoint does not have Handshake keys, or it is not certain that the peer has Handshake keys",
+    "interpretation_a": "The endpoint sends CONNECTION_CLOSE frames if it *knows* it doesn't have Handshake keys.",
+    "interpretation_b": "The endpoint sends CONNECTION_CLOSE frames if it *suspects* the peer might not have Handshake keys, even if the endpoint itself has Handshake keys.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'or it is not certain that the peer has Handshake keys' is vague. It's unclear whether 'not certain' refers to the endpoint's own key state or the peer's. This leads to two reasonable interpretations of when the CONNECTION_CLOSE frame should be sent.",
+    "missing_information": "The meaning of 'not certain' is not defined. Does 'not certain' mean the endpoint has no keys, or that the endpoint is unsure if the peer has keys?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:55:09.147815+00:00",
+  "document_id": "draft-ietf-quic-transport-20",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "37f25d64e996c2a379a910a277ef25b056f9c929d9dd66e5fbc596f11b00c7c5",
+  "lineage_ids": "lineage:87d3af5acaa562f1d3c756e9",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 225,
+    "load_duration": 3878100,
+    "prompt_eval_count": 597,
+    "total_duration": 8412153100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"If the endpoint does not have Handshake keys, or it is not certain that the peer has Handshake keys\", \"interpretation_a\": \"The endpoint sends CONNECTION_CLOSE frames if it *knows* it doesn't have Handshake keys.\", \"interpretation_b\": \"The endpoint sends CONNECTION_CLOSE frames if it *suspects* the peer might not have Handshake keys, even if the endpoint itself has Handshake keys.\", \"missing_information\": \"The meaning of 'not certain' is not defined. Does 'not certain' mean the endpoint has no keys, or that the endpoint is unsure if the peer has keys?\", \"justification\": \"The phrase 'or it is not certain that the peer has Handshake keys' is vague. It's unclear whether 'not certain' refers to the endpoint's own key state or the peer's. This leads to two reasonable interpretations of when the CONNECTION_CLOSE frame should be sent.\"}",
+  "record_id": "01d6144fb5689ceb5dae58903d5991afec1ad1321063538ead67aa4b9c66d258",
+  "revision": "20",
+  "schema_version": 1,
+  "section_ids": "10.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.406
+}

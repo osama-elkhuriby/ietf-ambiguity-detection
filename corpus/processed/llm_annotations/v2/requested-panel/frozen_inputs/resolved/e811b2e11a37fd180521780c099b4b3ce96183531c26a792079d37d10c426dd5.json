@@ -1,0 +1,468 @@
+{
+  "context_builder_version": "same-revision-context-v2.0.0",
+  "context_char_limit": 24000,
+  "context_chars": 2757,
+  "coverage_claim": "bounded_same_document_same_revision_context_only",
+  "document_id": "draft-ietf-httpbis-http2bis-03",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "items": [
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-03:5.1:b0107",
+      "clause_id": "draft-ietf-httpbis-http2bis-03:5.1:b0107:c12",
+      "content": "Endpoints MAY use other signals to detect that a peer has received the frames that caused stream to become \"closed\" and treat receipt of any frame other than PRIORITY as a connection error of type PROTOCOL_ERROR.",
+      "content_sha256": "696b5750796c3357428697f03649a712e685932d40048a68836370cad6837d57",
+      "document_id": "draft-ietf-httpbis-http2bis-03",
+      "kind": "target",
+      "retrieval_reason": "frozen_target_clause",
+      "revision": "03",
+      "section_heading": "Stream States",
+      "section_id": "5.1",
+      "source_sha256": "a869e99e9399d9e158bdfdd551924bd7670ad9f9cc03e6a212e9b443bacad22c",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[5]/section[1]/dl/dd[7]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-03:5.1:b0107",
+      "clause_id": "draft-ietf-httpbis-http2bis-03:5.1:b0107:c11",
+      "content": "An endpoint can perform this minimal processing for all streams that are in the \"closed\" state.",
+      "content_sha256": "f211aafbb4e438e2a530d201b1a6e50710f039f43f3d0835609fc4aba01d88a6",
+      "document_id": "draft-ietf-httpbis-http2bis-03",
+      "kind": "previous",
+      "retrieval_reason": "local_previous_clause",
+      "revision": "03",
+      "section_heading": "Stream States",
+      "section_id": "5.1",
+      "source_sha256": "a869e99e9399d9e158bdfdd551924bd7670ad9f9cc03e6a212e9b443bacad22c",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[5]/section[1]/dl/dd[7]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-03:5.1:b0107",
+      "clause_id": "draft-ietf-httpbis-http2bis-03:5.1:b0107:c13",
+      "content": "Endpoints can use frames that indicate that the peer has received the closing signal to drive this.",
+      "content_sha256": "3727469c3cf0a9d86ce1af8f55eb54f3c1bd5973a2b699fe85358b7dd9167123",
+      "document_id": "draft-ietf-httpbis-http2bis-03",
+      "kind": "next",
+      "retrieval_reason": "local_next_clause",
+      "revision": "03",
+      "section_heading": "Stream States",
+      "section_id": "5.1",
+      "source_sha256": "a869e99e9399d9e158bdfdd551924bd7670ad9f9cc03e6a212e9b443bacad22c",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[5]/section[1]/dl/dd[7]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-03:5.1:b0107",
+      "clause_id": "draft-ietf-httpbis-http2bis-03:5.1:b0107:c01",
+      "content": "closed:: The \"closed\" state is the terminal state.",
+      "content_sha256": "2d543f7d3b81487ff54a898aa4a045b788dd1f3222ba88edc2631e946c68cf96",
+      "document_id": "draft-ietf-httpbis-http2bis-03",
+      "kind": "parent_structure",
+      "retrieval_reason": "same_parent_block",
+      "revision": "03",
+      "section_heading": "Stream States",
+      "section_id": "5.1",
+      "source_sha256": "a869e99e9399d9e158bdfdd551924bd7670ad9f9cc03e6a212e9b443bacad22c",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[5]/section[1]/dl/dd[7]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-03:5.1:b0107",
+      "clause_id": "draft-ietf-httpbis-http2bis-03:5.1:b0107:c02",
+      "content": "An stream enters the \"closed\" state after an endpoint both sends and receives a frame with an END_STREAM flag set.",
+      "content_sha256": "5528827bf5d9d6197f34f0807b40748bc1556c4634027e4ea6176f17c41c633a",
+      "document_id": "draft-ietf-httpbis-http2bis-03",
+      "kind": "parent_structure",
+      "retrieval_reason": "same_parent_block",
+      "revision": "03",
+      "section_heading": "Stream States",
+      "section_id": "5.1",
+      "source_sha256": "a869e99e9399d9e158bdfdd551924bd7670ad9f9cc03e6a212e9b443bacad22c",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[5]/section[1]/dl/dd[7]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-03:5.1:b0107",
+      "clause_id": "draft-ietf-httpbis-http2bis-03:5.1:b0107:c03",
+      "content": "A stream also enters the \"closed\" state after an endpoint either sends or receives a RST_STREAM frame.",
+      "content_sha256": "6766e452f61847f792fbbacdacc7bcd776ed2f146f3e25ccce52b304cd3599db",
+      "document_id": "draft-ietf-httpbis-http2bis-03",
+      "kind": "parent_structure",
+      "retrieval_reason": "same_parent_block",
+      "revision": "03",
+      "section_heading": "Stream States",
+      "section_id": "5.1",
+      "source_sha256": "a869e99e9399d9e158bdfdd551924bd7670ad9f9cc03e6a212e9b443bacad22c",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[5]/section[1]/dl/dd[7]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-03:5.1:b0107",
+      "clause_id": "draft-ietf-httpbis-http2bis-03:5.1:b0107:c04",
+      "content": "An endpoint MUST NOT send frames other than PRIORITY on a closed stream.",
+      "content_sha256": "c9bd35179fe755f49f644f2ba98b377c147432ee81d77af99e8dac433dbd93ed",
+      "document_id": "draft-ietf-httpbis-http2bis-03",
+      "kind": "parent_structure",
+      "retrieval_reason": "same_parent_block",
+      "revision": "03",
+      "section_heading": "Stream States",
+      "section_id": "5.1",
+      "source_sha256": "a869e99e9399d9e158bdfdd551924bd7670ad9f9cc03e6a212e9b443bacad22c",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[5]/section[1]/dl/dd[7]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-03:5.1:b0107",
+      "clause_id": "draft-ietf-httpbis-http2bis-03:5.1:b0107:c05",
+      "content": "An endpoint MAY treat receipt of any other type of frame on a \"closed\" stream as a connection error of type STREAM_CLOSED, except as noted below.",
+      "content_sha256": "828f9c9106fb9db30605de5f44b0433feeb0a8c67f0e46a86515563fb3d79498",
+      "document_id": "draft-ietf-httpbis-http2bis-03",
+      "kind": "parent_structure",
+      "retrieval_reason": "same_parent_block",
+      "revision": "03",
+      "section_heading": "Stream States",
+      "section_id": "5.1",
+      "source_sha256": "a869e99e9399d9e158bdfdd551924bd7670ad9f9cc03e6a212e9b443bacad22c",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[5]/section[1]/dl/dd[7]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-03:5.1:b0107",
+      "clause_id": "draft-ietf-httpbis-http2bis-03:5.1:b0107:c06",
+      "content": "An endpoint that sends a frame with the END_STREAM flag set or a RST_STREAM frame might receive a WINDOW_UPDATE or RST_STREAM frame from its peer in the time before the peer receives and processes the frame that closes the stream.",
+      "content_sha256": "7d1ed9c6077d06d4b149bb37174bcfe5876641b0820e6bb05509142d6a793148",
+      "document_id": "draft-ietf-httpbis-http2bis-03",
+      "kind": "parent_structure",
+      "retrieval_reason": "same_parent_block",
+      "revision": "03",
+      "section_heading": "Stream States",
+      "section_id": "5.1",
+      "source_sha256": "a869e99e9399d9e158bdfdd551924bd7670ad9f9cc03e6a212e9b443bacad22c",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[5]/section[1]/dl/dd[7]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-03:5.1:b0107",
+      "clause_id": "draft-ietf-httpbis-http2bis-03:5.1:b0107:c07",
+      "content": "An endpoint that sends a RST_STREAM frame on a stream that is in the \"open\" state could receive any type of frame.",
+      "content_sha256": "80a8dcac0e92a624bf7d929d775f6eda18f99db1e607bc400a2b220dbcdfbe12",
+      "document_id": "draft-ietf-httpbis-http2bis-03",
+      "kind": "parent_structure",
+      "retrieval_reason": "same_parent_block",
+      "revision": "03",
+      "section_heading": "Stream States",
+      "section_id": "5.1",
+      "source_sha256": "a869e99e9399d9e158bdfdd551924bd7670ad9f9cc03e6a212e9b443bacad22c",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[5]/section[1]/dl/dd[7]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-03:5.1:b0107",
+      "clause_id": "draft-ietf-httpbis-http2bis-03:5.1:b0107:c08",
+      "content": "The peer might have sent or enqueued for sending these frames before processing the RST_STREAM frame.",
+      "content_sha256": "10a311790034622510ad6c87a3fe1e36f3f3f2bf7e8d71b15231f74f77be9791",
+      "document_id": "draft-ietf-httpbis-http2bis-03",
+      "kind": "parent_structure",
+      "retrieval_reason": "same_parent_block",
+      "revision": "03",
+      "section_heading": "Stream States",
+      "section_id": "5.1",
+      "source_sha256": "a869e99e9399d9e158bdfdd551924bd7670ad9f9cc03e6a212e9b443bacad22c",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[5]/section[1]/dl/dd[7]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-03:5.1:b0107",
+      "clause_id": "draft-ietf-httpbis-http2bis-03:5.1:b0107:c09",
+      "content": "An endpoint MUST minimally process and then discard any frames it receives in this state.",
+      "content_sha256": "8cad3217223db61e4f42cb6ed6872befd39bf63d9478bdd5b7821b7a4d34c3c0",
+      "document_id": "draft-ietf-httpbis-http2bis-03",
+      "kind": "parent_structure",
+      "retrieval_reason": "same_parent_block",
+      "revision": "03",
+      "section_heading": "Stream States",
+      "section_id": "5.1",
+      "source_sha256": "a869e99e9399d9e158bdfdd551924bd7670ad9f9cc03e6a212e9b443bacad22c",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[5]/section[1]/dl/dd[7]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-03:5.1:b0107",
+      "clause_id": "draft-ietf-httpbis-http2bis-03:5.1:b0107:c10",
+      "content": "This means updating header compression state for HEADERS and PUSH_PROMISE frames; PUSH_PROMISE frames also cause the promised stream to become \"reserved\", even when the PUSH_PROMISE frame is received on a closed stream; and, the content of DATA frames counts toward the connection flow-control window.",
+      "content_sha256": "8922e78e93231de184aa861ac075414259e28e2a5196b6a91dd3a419eac2c1b8",
+      "document_id": "draft-ietf-httpbis-http2bis-03",
+      "kind": "parent_structure",
+      "retrieval_reason": "same_parent_block",
+      "revision": "03",
+      "section_heading": "Stream States",
+      "section_id": "5.1",
+      "source_sha256": "a869e99e9399d9e158bdfdd551924bd7670ad9f9cc03e6a212e9b443bacad22c",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[5]/section[1]/dl/dd[7]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-03:5.1:b0107",
+      "clause_id": "draft-ietf-httpbis-http2bis-03:5.1:b0107:c14",
+      "content": "Endpoints SHOULD NOT use timers for this purpose.",
+      "content_sha256": "1411560f7ab4bd40b432a3e8544d9360e4037d5c9aa0c0fa506786acbc8a89a3",
+      "document_id": "draft-ietf-httpbis-http2bis-03",
+      "kind": "parent_structure",
+      "retrieval_reason": "same_parent_block",
+      "revision": "03",
+      "section_heading": "Stream States",
+      "section_id": "5.1",
+      "source_sha256": "a869e99e9399d9e158bdfdd551924bd7670ad9f9cc03e6a212e9b443bacad22c",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[5]/section[1]/dl/dd[7]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-03:5.1:b0107",
+      "clause_id": "draft-ietf-httpbis-http2bis-03:5.1:b0107:c15",
+      "content": "For example, an endpoint that sends a SETTINGS frame after closing a stream can safely treat receipt of a DATA frame on that stream as an error after receiving an acknowledgement of the settings.",
+      "content_sha256": "3d291e009d0be968fe4aab5b9518d52361db9925ea4a82a8dfd8b0f72dccc8b6",
+      "document_id": "draft-ietf-httpbis-http2bis-03",
+      "kind": "parent_structure",
+      "retrieval_reason": "same_parent_block",
+      "revision": "03",
+      "section_heading": "Stream States",
+      "section_id": "5.1",
+      "source_sha256": "a869e99e9399d9e158bdfdd551924bd7670ad9f9cc03e6a212e9b443bacad22c",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[5]/section[1]/dl/dd[7]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-03:5.1:b0107",
+      "clause_id": "draft-ietf-httpbis-http2bis-03:5.1:b0107:c16",
+      "content": "Other things that might be used are PING frames, receiving data on streams that were created after closing the stream, or responses to requests created after closing the stream.",
+      "content_sha256": "7d72806daed5f1c5f64f054027d5a7eeff8425b5e408d74f9f4eb311d4eba88c",
+      "document_id": "draft-ietf-httpbis-http2bis-03",
+      "kind": "parent_structure",
+      "retrieval_reason": "same_parent_block",
+      "revision": "03",
+      "section_heading": "Stream States",
+      "section_id": "5.1",
+      "source_sha256": "a869e99e9399d9e158bdfdd551924bd7670ad9f9cc03e6a212e9b443bacad22c",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[5]/section[1]/dl/dd[7]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-03:2.2:b0026",
+      "clause_id": "draft-ietf-httpbis-http2bis-03:2.2:b0026:c01",
+      "content": "client:: The endpoint that initiates an HTTP/2 connection.",
+      "content_sha256": "3f7218174293f7fe4cf1ec44876aeef8d0b340fec30a295a7c376f3e4a7ab76a",
+      "document_id": "draft-ietf-httpbis-http2bis-03",
+      "kind": "definition",
+      "retrieval_reason": "same_revision_definition_candidate",
+      "revision": "03",
+      "section_heading": "Conventions and Terminology",
+      "section_id": "2.2",
+      "source_sha256": "a869e99e9399d9e158bdfdd551924bd7670ad9f9cc03e6a212e9b443bacad22c",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[2]/section[2]/dl/dd[1]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-03:2.2:b0027",
+      "clause_id": "draft-ietf-httpbis-http2bis-03:2.2:b0027:c01",
+      "content": "connection:: A transport-layer connection between two endpoints.",
+      "content_sha256": "f1bdfc31ad87c641359a81f1105d7d18b98bbe9e90ba19ac01d40430c2312f1b",
+      "document_id": "draft-ietf-httpbis-http2bis-03",
+      "kind": "definition",
+      "retrieval_reason": "same_revision_definition_candidate",
+      "revision": "03",
+      "section_heading": "Conventions and Terminology",
+      "section_id": "2.2",
+      "source_sha256": "a869e99e9399d9e158bdfdd551924bd7670ad9f9cc03e6a212e9b443bacad22c",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[2]/section[2]/dl/dd[2]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-03:2.2:b0028",
+      "clause_id": "draft-ietf-httpbis-http2bis-03:2.2:b0028:c01",
+      "content": "connection error:: An error that affects the entire HTTP/2 connection.",
+      "content_sha256": "fc2431d9df819d4f83d8e1f332627609b7ca57197a17a12a6062c03b27ee52f0",
+      "document_id": "draft-ietf-httpbis-http2bis-03",
+      "kind": "definition",
+      "retrieval_reason": "same_revision_definition_candidate",
+      "revision": "03",
+      "section_heading": "Conventions and Terminology",
+      "section_id": "2.2",
+      "source_sha256": "a869e99e9399d9e158bdfdd551924bd7670ad9f9cc03e6a212e9b443bacad22c",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[2]/section[2]/dl/dd[3]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-03:2.2:b0029",
+      "clause_id": "draft-ietf-httpbis-http2bis-03:2.2:b0029:c01",
+      "content": "endpoint:: Either the client or server of the connection.",
+      "content_sha256": "cc89d4a62d9c519bd2500ca232eafc0818253cf36d90173bd1a3cd7d48d3331d",
+      "document_id": "draft-ietf-httpbis-http2bis-03",
+      "kind": "definition",
+      "retrieval_reason": "same_revision_definition_candidate",
+      "revision": "03",
+      "section_heading": "Conventions and Terminology",
+      "section_id": "2.2",
+      "source_sha256": "a869e99e9399d9e158bdfdd551924bd7670ad9f9cc03e6a212e9b443bacad22c",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[2]/section[2]/dl/dd[4]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-03:2.2:b0030",
+      "clause_id": "draft-ietf-httpbis-http2bis-03:2.2:b0030:c01",
+      "content": "frame:: The smallest unit of communication within an HTTP/2 connection, consisting of a header and a variable-length sequence of octets structured according to the frame type.",
+      "content_sha256": "00c17dce97c9c4567c24317484854b5b331773d296dde67b2f193377fd2107ae",
+      "document_id": "draft-ietf-httpbis-http2bis-03",
+      "kind": "definition",
+      "retrieval_reason": "same_revision_definition_candidate",
+      "revision": "03",
+      "section_heading": "Conventions and Terminology",
+      "section_id": "2.2",
+      "source_sha256": "a869e99e9399d9e158bdfdd551924bd7670ad9f9cc03e6a212e9b443bacad22c",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[2]/section[2]/dl/dd[5]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-03:2.2:b0031",
+      "clause_id": "draft-ietf-httpbis-http2bis-03:2.2:b0031:c01",
+      "content": "peer:: An endpoint.",
+      "content_sha256": "32960b094067151f46f88e57a2a92fce9edefd9518272f02fc3f596a1750dd69",
+      "document_id": "draft-ietf-httpbis-http2bis-03",
+      "kind": "definition",
+      "retrieval_reason": "same_revision_definition_candidate",
+      "revision": "03",
+      "section_heading": "Conventions and Terminology",
+      "section_id": "2.2",
+      "source_sha256": "a869e99e9399d9e158bdfdd551924bd7670ad9f9cc03e6a212e9b443bacad22c",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[2]/section[2]/dl/dd[6]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-03:2.2:b0031",
+      "clause_id": "draft-ietf-httpbis-http2bis-03:2.2:b0031:c02",
+      "content": "When discussing a particular endpoint, \"peer\" refers to the endpoint that is remote to the primary subject of discussion.",
+      "content_sha256": "eddcf3f0a7314d18a4bb40425da84cc436c5af94af16936758eac5101fa8e87e",
+      "document_id": "draft-ietf-httpbis-http2bis-03",
+      "kind": "definition",
+      "retrieval_reason": "same_revision_definition_candidate",
+      "revision": "03",
+      "section_heading": "Conventions and Terminology",
+      "section_id": "2.2",
+      "source_sha256": "a869e99e9399d9e158bdfdd551924bd7670ad9f9cc03e6a212e9b443bacad22c",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[2]/section[2]/dl/dd[6]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-httpbis-http2bis-03:2.2:b0032",
+      "clause_id": "draft-ietf-httpbis-http2bis-03:2.2:b0032:c01",
+      "content": "receiver:: An endpoint that is receiving frames.",
+      "content_sha256": "a566dd6993e048f804d5a3fdc20c314870c4b06150d9850754cf888589f14da7",
+      "document_id": "draft-ietf-httpbis-http2bis-03",
+      "kind": "definition",
+      "retrieval_reason": "same_revision_definition_candidate",
+      "revision": "03",
+      "section_heading": "Conventions and Terminology",
+      "section_id": "2.2",
+      "source_sha256": "a869e99e9399d9e158bdfdd551924bd7670ad9f9cc03e6a212e9b443bacad22c",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[2]/section[2]/dl/dd[7]"
+      }
+    }
+  ],
+  "omitted": [],
+  "record_id": "e811b2e11a37fd180521780c099b4b3ce96183531c26a792079d37d10c426dd5",
+  "retrieval": [
+    {
+      "reason": "external_reference_not_resolved_without_exact_permitted_version",
+      "reference": "ConnectionErrorHandler",
+      "status": "unavailable_source"
+    },
+    {
+      "reason": "external_reference_not_resolved_without_exact_permitted_version",
+      "reference": "PRIORITY",
+      "status": "unavailable_source"
+    },
+    {
+      "reason": "external_reference_not_resolved_without_exact_permitted_version",
+      "reference": "PROTOCOL_ERROR",
+      "status": "unavailable_source"
+    }
+  ],
+  "revision": "03",
+  "section_heading": "Stream States",
+  "section_id": "5.1",
+  "source_artifact": "D:/RFC/ietf-ambiguity-detection/corpus/processed/alignments/draft-ietf-httpbis-http2bis/lexical-first-classifier-v1/inputs/draft-ietf-httpbis-http2bis-03.json",
+  "source_sha256": "a869e99e9399d9e158bdfdd551924bd7670ad9f9cc03e6a212e9b443bacad22c",
+  "target_clause": "Endpoints MAY use other signals to detect that a peer has received the frames that caused stream to become \"closed\" and treat receipt of any frame other than PRIORITY as a connection error of type PROTOCOL_ERROR.",
+  "variant": "resolved"
+}

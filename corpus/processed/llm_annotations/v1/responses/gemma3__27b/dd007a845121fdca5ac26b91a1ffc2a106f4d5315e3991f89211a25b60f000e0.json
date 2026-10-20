@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "0x1f * N + 0x21",
+    "interpretation_a": "The range of disallowed codes starts at 0x21 (N=0) and continues up to and including 0x3FFFFFFFFFFFFFFE. This implies a specific upper bound for N.",
+    "interpretation_b": "The range of disallowed codes starts at 0x21 (N=0) and continues indefinitely as long as N is an integer, potentially exceeding the maximum representable integer value and leading to an unbounded range. The phrase 'through' is ambiguous as to whether it indicates an upper limit or simply a continuation of the pattern.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'through 0x3FFFFFFFFFFFFFFE' could be interpreted as an explicit upper bound or as an example of the pattern continuing. Without a clear definition of the maximum value of N, the scope of the restriction is ambiguous.",
+    "missing_information": "The maximum permissible value of N is not explicitly defined, leading to uncertainty about the upper bound of the disallowed code range."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:11:10.922666+00:00",
+  "document_id": "draft-ietf-quic-http-27",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "79be6b37c5dbb67774fbe09078f4e2a71802ea18299bf1bb4a548c935e6ae6a9",
+  "lineage_ids": "lineage:ac3867b32846af9a23a24332",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 245,
+    "load_duration": 10371300,
+    "prompt_eval_count": 1036,
+    "total_duration": 9695301600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"0x1f * N + 0x21\", \"interpretation_a\": \"The range of disallowed codes starts at 0x21 (N=0) and continues up to and including 0x3FFFFFFFFFFFFFFE. This implies a specific upper bound for N.\", \"interpretation_b\": \"The range of disallowed codes starts at 0x21 (N=0) and continues indefinitely as long as N is an integer, potentially exceeding the maximum representable integer value and leading to an unbounded range. The phrase 'through' is ambiguous as to whether it indicates an upper limit or simply a continuation of the pattern.\", \"missing_information\": \"The maximum permissible value of N is not explicitly defined, leading to uncertainty about the upper bound of the disallowed code range.\", \"justification\": \"The phrase 'through 0x3FFFFFFFFFFFFFFE' could be interpreted as an explicit upper bound or as an example of the pattern continuing. Without a clear definition of the maximum value of N, the scope of the restriction is ambiguous.\"}",
+  "record_id": "dd007a845121fdca5ac26b91a1ffc2a106f4d5315e3991f89211a25b60f000e0",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "11.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.719
+}

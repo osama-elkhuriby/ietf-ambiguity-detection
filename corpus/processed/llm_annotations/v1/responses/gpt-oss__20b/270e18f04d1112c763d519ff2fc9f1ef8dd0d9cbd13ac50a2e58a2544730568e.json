@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously requires that any frame type field encoded with a longer variable‑length integer than the minimal representation for that value must be treated as a PROTOCOL_VIOLATION error. The preceding context defines the minimal encoding for the example value 7, and the rule applies generally to any frame type. No missing constraint or undefined term is present.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T14:29:10.797023+00:00",
+  "document_id": "draft-ietf-quic-transport-16",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "5fa74f94da73e633008022154053c661370f15bfe57dc67d1380968e2325a3dd",
+  "lineage_ids": "lineage:f3311a65af647d9e2dcf8891",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 822,
+    "load_duration": 4061700,
+    "prompt_eval_count": 599,
+    "total_duration": 7192366300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously requires that any frame type field encoded with a longer variable‑length integer than the minimal representation for that value must be treated as a PROTOCOL_VIOLATION error. The preceding context defines the minimal encoding for the example value 7, and the rule applies generally to any frame type. No missing constraint or undefined term is present.\"\n}",
+  "record_id": "270e18f04d1112c763d519ff2fc9f1ef8dd0d9cbd13ac50a2e58a2544730568e",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "12.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.188
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "If the client chooses to authenticate, it MUST send Certificate, CertificateVerify, and Finished.",
+    "interpretation_a": "It is unclear whether the client must send the messages in that order or can send them in any order.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause lists three messages that the client must send but does not specify the required order.  In TLS, the order of handshake messages is critical for correct operation.  Because the clause does not constrain the order, implementations could interpret it as allowing any order, leading to different behaviours.  This constitutes an incomplete constraint (U‑2).",
+    "missing_information": "The order in which the Certificate, CertificateVerify, and Finished messages must be sent is not specified in the clause, leading to potential implementation differences regarding message sequencing during post‑handshake authentication.  The clause does not explicitly state that the messages must be sent in the order listed, nor does it reference any normative requirement that imposes that order.  Consequently, implementations may differ on whether they send the messages in the order given or in any order, which can affect the handshake flow and interoperability.  This missing constraint constitutes an incomplete specification that can result in materially different implementation behaviours.  The next clause clarifies the order for the decline case, but the current clause does not provide a comparable clarification for the authentication case.  Therefore, the clause is under‑specified with respect to message ordering.  }"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T20:48:07.712503+00:00",
+  "document_id": "draft-ietf-tls-tls13-27",
+  "family_id": "draft-ietf-tls-tls13",
+  "input_fingerprint": "9eb34cf896874b1cfd8048299b3d6ce4d9309ffa6e5ad42ea8512b83998d9075",
+  "lineage_ids": "lineage:73628df44ed7717f20dcd2c4",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1637,
+    "load_duration": 5070600,
+    "prompt_eval_count": 571,
+    "total_duration": 14653422400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"If the client chooses to authenticate, it MUST send Certificate, CertificateVerify, and Finished.\",\n  \"interpretation_a\": \"It is unclear whether the client must send the messages in that order or can send them in any order.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The order in which the Certificate, CertificateVerify, and Finished messages must be sent is not specified in the clause, leading to potential implementation differences regarding message sequencing during post‑handshake authentication.  The clause does not explicitly state that the messages must be sent in the order listed, nor does it reference any normative requirement that imposes that order.  Consequently, implementations may differ on whether they send the messages in the order given or in any order, which can affect the handshake flow and interoperability.  This missing constraint constitutes an incomplete specification that can result in materially different implementation behaviours.  The next clause clarifies the order for the decline case, but the current clause does not provide a comparable clarification for the authentication case.  Therefore, the clause is under‑specified with respect to message ordering.  }\",\n\n  \"justification\": \"The clause lists three messages that the client must send but does not specify the required order.  In TLS, the order of handshake messages is critical for correct operation.  Because the clause does not constrain the order, implementations could interpret it as allowing any order, leading to different behaviours.  This constitutes an incomplete constraint (U‑2).\"\n}",
+  "record_id": "08b48db096bf2914507cd5dde1485cadf8d8ce0d0bc2ee0401f4aac9bfe62b0c",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "4.6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 14.64
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "every packet",
+    "interpretation_a": "The server must respond to *each and every* packet received with an unacceptable version, even if multiple packets with the same unacceptable version are received in quick succession.",
+    "interpretation_b": "The server must respond to at least one packet received with an unacceptable version, and may batch responses to multiple packets with the same unacceptable version.",
+    "is_ambiguous": "yes",
+    "justification": "The word \"every\" is ambiguous. It could mean 'each individual' or 'at least one'. Without further clarification, implementations could differ on whether they respond to each unacceptable packet immediately, or batch responses to reduce overhead.",
+    "missing_information": "The clause does not specify whether the response must be one-to-one with each unacceptable packet, or if responses can be batched. This affects implementation of rate limiting and packet processing."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:55:33.186367+00:00",
+  "document_id": "draft-ietf-quic-transport-02",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "91333746f78f01d82b45be3663ccf64019f11858fa69c659776719831d8fd0af",
+  "lineage_ids": "lineage:d9b460d3d5a358c598c85316",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 198,
+    "load_duration": 4068000,
+    "prompt_eval_count": 564,
+    "total_duration": 7410507400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"every packet\", \"interpretation_a\": \"The server must respond to *each and every* packet received with an unacceptable version, even if multiple packets with the same unacceptable version are received in quick succession.\", \"interpretation_b\": \"The server must respond to at least one packet received with an unacceptable version, and may batch responses to multiple packets with the same unacceptable version.\", \"missing_information\": \"The clause does not specify whether the response must be one-to-one with each unacceptable packet, or if responses can be batched. This affects implementation of rate limiting and packet processing.\", \"justification\": \"The word \\\"every\\\" is ambiguous. It could mean 'each individual' or 'at least one'. Without further clarification, implementations could differ on whether they respond to each unacceptable packet immediately, or batch responses to reduce overhead.\"}",
+  "record_id": "b21e521556cd8409e047f149b521baf18b448d8c18dfcc61524957fda236d789",
+  "revision": "02",
+  "schema_version": 1,
+  "section_ids": "7.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.406
+}

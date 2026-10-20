@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "All other frames",
+    "interpretation_a": "All frames not explicitly exempted earlier in the same bullet list must be retransmitted.",
+    "interpretation_b": "All frames in the current packet that are not part of the same stream must be retransmitted.",
+    "is_ambiguous": "yes",
+    "justification": "The clause uses the relative term 'other' without specifying the reference set, leading to two plausible interpretations about which frames must be retransmitted.",
+    "missing_information": "Need context to determine what 'other' refers to in the clause."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T18:04:59.296479+00:00",
+  "document_id": "draft-ietf-quic-transport-06",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "3128f4a631c1c6c06ff84705636adb8d0c6461ab9f24a6727dd884935d9b7a72",
+  "lineage_ids": "lineage:85f802bfb321d049d897f601",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 6113,
+    "load_duration": 5520900,
+    "prompt_eval_count": 548,
+    "total_duration": 53114854100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"All other frames\",\n  \"interpretation_a\": \"All frames not explicitly exempted earlier in the same bullet list must be retransmitted.\",\n  \"interpretation_b\": \"All frames in the current packet that are not part of the same stream must be retransmitted.\",\n  \"missing_information\": \"Need context to determine what 'other' refers to in the clause.\",\n  \"justification\": \"The clause uses the relative term 'other' without specifying the reference set, leading to two plausible interpretations about which frames must be retransmitted.\"\n}",
+  "record_id": "bceb61c9ee70c7d40809c25d2bbfcb45d28186d72d08398467389e4bb0928865",
+  "revision": "06",
+  "schema_version": 1,
+  "section_ids": "9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 53.141
+}

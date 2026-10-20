@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "at least 8 bytes in length",
+    "interpretation_a": "The Destination Connection ID must be exactly 8 bytes long.",
+    "interpretation_b": "The Destination Connection ID must be 8 bytes or longer, up to the maximum allowed length.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"at least 8 bytes in length\" is an incomplete constraint. It establishes a lower bound but does not specify an upper bound. This allows for multiple valid implementations: one that uses exactly 8 bytes, and another that uses more than 8 bytes (up to the maximum allowed length, which is not defined in the provided context).",
+    "missing_information": "The maximum allowed length for the Destination Connection ID is not specified, leaving open the question of how long it can be beyond the minimum of 8 bytes."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:44:47.166939+00:00",
+  "document_id": "draft-ietf-quic-transport-27",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "58bf43ff2ba5dffc6c3234e84ea3ad3364c312c7ae0ebeb811e34c7dd2a79328",
+  "lineage_ids": "lineage:f171d3103628c137e1902723",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 191,
+    "load_duration": 4059900,
+    "prompt_eval_count": 612,
+    "total_duration": 7233198900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"at least 8 bytes in length\", \"interpretation_a\": \"The Destination Connection ID must be exactly 8 bytes long.\", \"interpretation_b\": \"The Destination Connection ID must be 8 bytes or longer, up to the maximum allowed length.\", \"missing_information\": \"The maximum allowed length for the Destination Connection ID is not specified, leaving open the question of how long it can be beyond the minimum of 8 bytes.\",\"justification\": \"The phrase \\\"at least 8 bytes in length\\\" is an incomplete constraint. It establishes a lower bound but does not specify an upper bound. This allows for multiple valid implementations: one that uses exactly 8 bytes, and another that uses more than 8 bytes (up to the maximum allowed length, which is not defined in the provided context).\"}",
+  "record_id": "929050743f0d94f337d06ed79d252db8b2a8233c5a478296bfd7861ddbd60236",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.235
+}

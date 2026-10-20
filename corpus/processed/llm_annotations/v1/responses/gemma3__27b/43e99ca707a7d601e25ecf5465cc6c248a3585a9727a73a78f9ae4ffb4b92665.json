@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD be acknowledged at least once",
+    "interpretation_a": "Implementations MAY choose not to acknowledge some packets, as long as they don't violate the MUST requirement for ack-eliciting packets.",
+    "interpretation_b": "Implementations SHOULD attempt to acknowledge every packet, but failure to do so is not a protocol error, and the protocol can continue to function.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' creates uncertainty about whether non-acknowledgement of a packet is a protocol error. While ack-eliciting packets *must* be acknowledged, the 'SHOULD' for all packets leaves room for different interpretations of acceptable behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:17:44.253770+00:00",
+  "document_id": "draft-ietf-quic-transport-29",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "a0ac52cee70037c8d3a543e9fb6720010f6470fbbebe802e1d9af2b8d9fd7525",
+  "lineage_ids": "lineage:6370e965a8e12a528b2a89c6",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 167,
+    "load_duration": 2505600,
+    "prompt_eval_count": 595,
+    "total_duration": 6365346200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD be acknowledged at least once\", \"interpretation_a\": \"Implementations MAY choose not to acknowledge some packets, as long as they don't violate the MUST requirement for ack-eliciting packets.\", \"interpretation_b\": \"Implementations SHOULD attempt to acknowledge every packet, but failure to do so is not a protocol error, and the protocol can continue to function.\", \"missing_information\": \"\", \"justification\": \"The use of 'SHOULD' creates uncertainty about whether non-acknowledgement of a packet is a protocol error. While ack-eliciting packets *must* be acknowledged, the 'SHOULD' for all packets leaves room for different interpretations of acceptable behavior.\"}",
+  "record_id": "43e99ca707a7d601e25ecf5465cc6c248a3585a9727a73a78f9ae4ffb4b92665",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "13.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.359
+}

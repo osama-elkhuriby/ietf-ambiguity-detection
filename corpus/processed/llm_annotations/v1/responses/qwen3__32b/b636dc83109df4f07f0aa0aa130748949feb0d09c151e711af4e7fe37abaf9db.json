@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear directive about optional behavior (MAY) for endpoints that do not send data immediately after the handshake. It specifies that sending ack-eliciting frames like PING is permissible and explains the consequence (confirming the handshake). There is no language that allows for multiple materially different interpretations or missing constraints that would affect implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:39:47.953875+00:00",
+  "document_id": "draft-ietf-quic-tls-24",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "8cb4967cfcb52c3851dd08e03c13fcda41a21a6e924712b733bd3077da625676",
+  "lineage_ids": "lineage:7e0c119c9c38abe12af1decd",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 125,
+    "load_duration": 8325600,
+    "prompt_eval_count": 540,
+    "total_duration": 5150299400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear directive about optional behavior (MAY) for endpoints that do not send data immediately after the handshake. It specifies that sending ack-eliciting frames like PING is permissible and explains the consequence (confirming the handshake). There is no language that allows for multiple materially different interpretations or missing constraints that would affect implementation behavior.\"\n}",
+  "record_id": "b636dc83109df4f07f0aa0aa130748949feb0d09c151e711af4e7fe37abaf9db",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "4.10.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.156
+}

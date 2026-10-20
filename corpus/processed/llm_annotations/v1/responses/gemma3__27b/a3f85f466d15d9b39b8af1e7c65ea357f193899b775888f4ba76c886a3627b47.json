@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD be used",
+    "interpretation_a": "Implementations *should* use H3_NO_ERROR, but other error codes are permissible if there's a good reason.",
+    "interpretation_b": "Implementations *should* use H3_NO_ERROR as the preferred or default error code, but it's not strictly required.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' without further clarification creates ambiguity. It's unclear whether using a different error code constitutes a protocol error or simply a less-preferred implementation choice. A missing constraint on the strength of 'SHOULD' affects implementation behaviour.",
+    "missing_information": "The strength of 'SHOULD' is not defined. Is non-compliance with this 'SHOULD' a protocol error? Is there a defined fallback if H3_NO_ERROR is not used?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:01:08.306628+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "ad0832a2e8d1de6d4784c82d9012153051c07842e7a0c8fa9e1c972a6bf6c848",
+  "lineage_ids": "lineage:ac99f62b6cfd0a5caf35d489",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 203,
+    "load_duration": 18807300,
+    "prompt_eval_count": 598,
+    "total_duration": 7866563500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD be used\", \"interpretation_a\": \"Implementations *should* use H3_NO_ERROR, but other error codes are permissible if there's a good reason.\", \"interpretation_b\": \"Implementations *should* use H3_NO_ERROR as the preferred or default error code, but it's not strictly required.\", \"missing_information\": \"The strength of 'SHOULD' is not defined. Is non-compliance with this 'SHOULD' a protocol error? Is there a defined fallback if H3_NO_ERROR is not used?\",\"justification\": \"The use of 'SHOULD' without further clarification creates ambiguity. It's unclear whether using a different error code constitutes a protocol error or simply a less-preferred implementation choice. A missing constraint on the strength of 'SHOULD' affects implementation behaviour.\"}",
+  "record_id": "a3f85f466d15d9b39b8af1e7c65ea357f193899b775888f4ba76c886a3627b47",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.875
+}

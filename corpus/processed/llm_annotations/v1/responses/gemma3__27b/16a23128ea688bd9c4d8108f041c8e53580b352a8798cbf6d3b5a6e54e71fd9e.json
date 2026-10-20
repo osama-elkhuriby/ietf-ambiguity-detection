@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST be a String or Token",
+    "interpretation_a": "The cache identifier can be a string enclosed in quotes, or a token (a non-quoted string).",
+    "interpretation_b": "The cache identifier can be either a String (as defined in RFC 7230) or a Token (as defined in RFC 7230).",
+    "is_ambiguous": "yes",
+    "justification": "The clause states the identifier \"MUST be a String or Token\". Without the definitions of 'String' and 'Token' from RFC 7230, it's unclear if a quoted string is a valid Token, leading to two reasonable interpretations.",
+    "missing_information": "The definitions of 'String' and 'Token' are needed from RFC 7230 to clarify whether a quoted string is allowed as a Token."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:15:04.117020+00:00",
+  "document_id": "draft-ietf-httpbis-cache-header-10",
+  "family_id": "draft-ietf-httpbis-cache-header",
+  "input_fingerprint": "ae638edb42f50603b63fe98af22186b07435ec4e24d11d6bf5a0187ee3c2c3c4",
+  "lineage_ids": "lineage:f92a1e55eff77aee94763ff1",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 197,
+    "load_duration": 4557700,
+    "prompt_eval_count": 612,
+    "total_duration": 7649996500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST be a String or Token\", \"interpretation_a\": \"The cache identifier can be a string enclosed in quotes, or a token (a non-quoted string).\", \"interpretation_b\": \"The cache identifier can be either a String (as defined in RFC 7230) or a Token (as defined in RFC 7230).\", \"missing_information\": \"The definitions of 'String' and 'Token' are needed from RFC 7230 to clarify whether a quoted string is allowed as a Token.\", \"justification\": \"The clause states the identifier \\\"MUST be a String or Token\\\". Without the definitions of 'String' and 'Token' from RFC 7230, it's unclear if a quoted string is a valid Token, leading to two reasonable interpretations.\"}",
+  "record_id": "16a23128ea688bd9c4d8108f041c8e53580b352a8798cbf6d3b5a6e54e71fd9e",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.656
+}

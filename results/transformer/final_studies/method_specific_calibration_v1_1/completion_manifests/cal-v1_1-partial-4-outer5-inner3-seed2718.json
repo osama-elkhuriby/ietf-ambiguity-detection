@@ -1,0 +1,69 @@
+{
+  "attempt_id": "cal-v1_1-partial-4-outer5-inner3-seed2718",
+  "cell_id": "partial_4/outer_5/inner_3/seed_2718",
+  "completed_at": "2026-10-19T01:46:51.610607+03:00",
+  "elapsed_seconds": 98.5,
+  "gpu_preflight": {
+    "active_compute_processes": [],
+    "free_memory_mib": 30734,
+    "minimum_free_memory_mib": 18000,
+    "name": "NVIDIA RTX 5000 Ada Generation"
+  },
+  "origin": "V1_1_NEW_GPU_EXECUTION",
+  "peak_gpu_memory_allocated_mb": 1723.1259765625,
+  "peak_gpu_memory_reserved_mb": 2316.0,
+  "protocol_sha256": "57c04d15cb3c586c52bc7f59eede3893339f3c67014fdf3e50ccfb95d8fcda4c",
+  "reused": false,
+  "run_manifest_sha256": "a9ef9e975f79d462612f7d4a9938129121eeff94d3d73a4223f8f63cd2352572",
+  "semantic_validation": {
+    "audit_sha256": "99ad1662d5507b792a9f877538a7fdbda8e0c96b05d99b8ea8aab8b23cb6c7ef",
+    "context_sanitizations": [
+      {
+        "field": "previous_clause",
+        "reasons": [
+          "matches_fitting_target:70bf428691a4fd8930d34316289785810ec9a5834eae23ee8ae2b277295e2179"
+        ],
+        "record_id": "6e37b19e71b761f90c21507dfdbeaf7a7bad73732cabcdd37f1c6e418711310a",
+        "role": "evaluation"
+      }
+    ],
+    "custom_inner_split_sha256": "8b791d25712212f8b27d158d03c2b9c8a3250a6ea20370b4ec9bc0ab228e8a84",
+    "fitting_exclusions": [],
+    "fitting_families": [
+      "draft-ietf-6man-rfc2460bis",
+      "draft-ietf-httpbis-cache-header",
+      "draft-ietf-httpbis-semantics",
+      "draft-ietf-quic-transport",
+      "draft-ietf-tls-tls13"
+    ],
+    "fitting_rows": 1238,
+    "leakage_audit_counts": {
+      "cross_fold_bcp14_skeleton_conflicts": 0,
+      "cross_fold_document_overlaps": 0,
+      "cross_fold_lineage_conflicts": 0,
+      "cross_fold_target_context_overlaps": 1,
+      "exact_target_duplicates_all": 1,
+      "exact_target_duplicates_cross_fold": 0,
+      "families_assigned_to_multiple_folds": 0,
+      "near_cross_fold_targets": 0,
+      "targets_with_bcp14_keyword": 1776
+    },
+    "legacy_fold_file": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\final_annotation_ready_pilot_v1\\manifests\\dataset_v1\\folds\\fold_3.json",
+    "legacy_fold_file_sha256": "4ec2c3cf49a1923442f9812a75396bd5096c4df5771f2d0ae558a4ac80bfbf45",
+    "peak_gpu_memory_allocated_mb": 1723.1259765625,
+    "peak_gpu_memory_reserved_mb": 2316.0,
+    "prediction_rows": 553,
+    "prediction_sha256": "9bc8bdc3bdb708a18ecd2ef883c31dc05050beb626d195cc5a38617657d14bfc",
+    "run_manifest_sha256": "a9ef9e975f79d462612f7d4a9938129121eeff94d3d73a4223f8f63cd2352572",
+    "runtime_seconds": 91.0772178999614,
+    "scoring_families": [
+      "draft-ietf-httpbis-http2bis",
+      "draft-ietf-quic-http"
+    ],
+    "scoring_rows": 553
+  },
+  "spec_sha256": "95468dd3797dfd49d277f3fd48b348fba4b77f78d862e71ff762824781d7373a",
+  "started_at": "2026-10-19T01:45:12.679558+03:00",
+  "status": "COMPLETE",
+  "training_runtime_seconds": 91.0772178999614
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "incremented on each header block",
+    "interpretation_a": "Increment by one on each header block.",
+    "interpretation_b": "Increment by any positive integer on each header block.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states the value 'MUST' be incremented, but does not specify *by how much*. Incrementing by one is a reasonable interpretation, but incrementing by any positive integer is also reasonable and materially different.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:09:04.113409+00:00",
+  "document_id": "draft-ietf-quic-http-04",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "a6c4f02a615e9ae1e3ec3f10ce12ebf368d47152315e036fc69956d60818b9f0",
+  "lineage_ids": "lineage:8553bd966b5e23835e18d0f3",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 120,
+    "load_duration": 16070100,
+    "prompt_eval_count": 569,
+    "total_duration": 5585840400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"incremented on each header block\", \"interpretation_a\": \"Increment by one on each header block.\", \"interpretation_b\": \"Increment by any positive integer on each header block.\", \"missing_information\": \"\", \"justification\": \"The clause states the value 'MUST' be incremented, but does not specify *by how much*. Incrementing by one is a reasonable interpretation, but incrementing by any positive integer is also reasonable and materially different.\"}",
+  "record_id": "d1afb7fa870ebcdc0169571f821d1407c1bdb4b25556e3434f35db3286c06275",
+  "revision": "04",
+  "schema_version": 1,
+  "section_ids": "5.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.594
+}

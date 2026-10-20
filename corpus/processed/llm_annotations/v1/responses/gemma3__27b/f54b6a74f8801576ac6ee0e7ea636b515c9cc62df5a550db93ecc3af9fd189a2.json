@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "some alternative means",
+    "interpretation_a": "An endpoint has an alternative means if it can close the UDP socket, which is one example of ensuring late-arriving packets do not create QUIC state.",
+    "interpretation_b": "An endpoint has an alternative means if it uses any method, not necessarily closing the UDP socket, to ensure late-arriving packets do not create QUIC state. The example is illustrative, not exhaustive.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'some alternative means' is not clearly defined. It is unclear whether closing the UDP socket is the *only* acceptable alternative, or merely an example. This affects implementation because endpoints need to know what constitutes a valid 'alternative means' to justify using the abbreviated draining period.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:17:05.304462+00:00",
+  "document_id": "draft-ietf-quic-transport-20",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "fef473f8a860a197df648f020f25295c7c94602ed9fbd3540f6700292c439bcc",
+  "lineage_ids": "lineage:ccee1e5ce6c813b8d511be02",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 185,
+    "load_duration": 5102300,
+    "prompt_eval_count": 609,
+    "total_duration": 7006411800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"some alternative means\", \"interpretation_a\": \"An endpoint has an alternative means if it can close the UDP socket, which is one example of ensuring late-arriving packets do not create QUIC state.\", \"interpretation_b\": \"An endpoint has an alternative means if it uses any method, not necessarily closing the UDP socket, to ensure late-arriving packets do not create QUIC state. The example is illustrative, not exhaustive.\", \"missing_information\": \"\", \"justification\": \"The phrase 'some alternative means' is not clearly defined. It is unclear whether closing the UDP socket is the *only* acceptable alternative, or merely an example. This affects implementation because endpoints need to know what constitutes a valid 'alternative means' to justify using the abbreviated draining period.\"}",
+  "record_id": "f54b6a74f8801576ac6ee0e7ea636b515c9cc62df5a550db93ecc3af9fd189a2",
+  "revision": "20",
+  "schema_version": 1,
+  "section_ids": "10.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.016
+}

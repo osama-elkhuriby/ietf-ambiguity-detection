@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "but false positives will result in disrupting valid connections and requests",
+    "interpretation_a": "The endpoint may aggressively block potentially malicious activity, accepting some disruption of valid connections as a trade-off.",
+    "interpretation_b": "The endpoint may be very conservative in blocking activity, prioritizing the avoidance of disrupting valid connections even if it means allowing some potentially malicious activity.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'suspicious activity' is not defined, and the clause acknowledges that false positives are possible. Without further constraints, implementations could reasonably interpret this clause to prioritize either minimizing false positives (allowing more potentially malicious activity) or minimizing disruption of valid connections (blocking more activity, even if it's legitimate).",
+    "missing_information": "The clause does not specify a threshold or criteria for determining what constitutes 'suspicious activity' or how to balance the risk of false positives against the risk of malicious activity. This missing constraint affects implementation behavior because different endpoints could implement vastly different levels of sensitivity and aggressiveness in detecting and responding to suspicious activity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:43:43.460200+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "3a39e3916ae5f9b39af63d4f83133ff4c87873add994c250fe044bee69272138",
+  "lineage_ids": "lineage:f9ca2346e5a6668a97b0d363",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 234,
+    "load_duration": 9295700,
+    "prompt_eval_count": 567,
+    "total_duration": 8906870600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"but false positives will result in disrupting valid connections and requests\", \"interpretation_a\": \"The endpoint may aggressively block potentially malicious activity, accepting some disruption of valid connections as a trade-off.\", \"interpretation_b\": \"The endpoint may be very conservative in blocking activity, prioritizing the avoidance of disrupting valid connections even if it means allowing some potentially malicious activity.\", \"missing_information\": \"The clause does not specify a threshold or criteria for determining what constitutes 'suspicious activity' or how to balance the risk of false positives against the risk of malicious activity. This missing constraint affects implementation behavior because different endpoints could implement vastly different levels of sensitivity and aggressiveness in detecting and responding to suspicious activity.\", \"justification\": \"The phrase 'suspicious activity' is not defined, and the clause acknowledges that false positives are possible. Without further constraints, implementations could reasonably interpret this clause to prioritize either minimizing false positives (allowing more potentially malicious activity) or minimizing disruption of valid connections (blocking more activity, even if it's legitimate).\"}",
+  "record_id": "23f40a633d9311c2a1aad62bd7f7f622e226b24a6abd2c2038f840ae2ccc9782",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "10.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.906
+}

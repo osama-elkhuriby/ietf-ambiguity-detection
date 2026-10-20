@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause provides a clear directive for endpoints to pad packets to a specific length relative to the minimum connection ID length. The use of 'SHOULD' indicates a recommendation, not a strict requirement, but the operational meaning is unambiguous: endpoints must add padding to ensure indistinguishability of stateless resets. There is no ambiguity in the implementation behavior implied by this clause.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:37:55.530704+00:00",
+  "document_id": "draft-ietf-quic-transport-30",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "e80b75abccd11a86a91dccbf5a7068c5d73c5cebd26d174380160c018bc94013",
+  "lineage_ids": "lineage:ede11eb59c138b8b53009b53",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 131,
+    "load_duration": 4039100,
+    "prompt_eval_count": 572,
+    "total_duration": 5387884500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause provides a clear directive for endpoints to pad packets to a specific length relative to the minimum connection ID length. The use of 'SHOULD' indicates a recommendation, not a strict requirement, but the operational meaning is unambiguous: endpoints must add padding to ensure indistinguishability of stateless resets. There is no ambiguity in the implementation behavior implied by this clause.\"\n}",
+  "record_id": "c11c2a7f1c685aee0207175a3ee19db4ba7d683c2ce9ce56dbe6ecc075fc7edc",
+  "revision": "30",
+  "schema_version": 1,
+  "section_ids": "10.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.422
+}

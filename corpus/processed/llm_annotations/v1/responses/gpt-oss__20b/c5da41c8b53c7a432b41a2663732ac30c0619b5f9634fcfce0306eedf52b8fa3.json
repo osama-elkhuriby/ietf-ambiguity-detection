@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously specifies that when a stream is in the Recv or Size Known states, the transport should send a STOP_SENDING frame to the peer, which prompts the peer to close the stream in the opposite direction. The term \"opposite direction\" is clear in the context of bidirectional QUIC streams, and no missing constraint or alternative interpretation is evident.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T18:17:20.552610+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "c4ae03bb930af6761156b0656db23074e96d7fd0cc00b0e5dba90b20290fa292",
+  "lineage_ids": "lineage:bcbd87486cc197c86005e4cb",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2803,
+    "load_duration": 509300,
+    "prompt_eval_count": 622,
+    "total_duration": 24082691000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously specifies that when a stream is in the Recv or Size Known states, the transport should send a STOP_SENDING frame to the peer, which prompts the peer to close the stream in the opposite direction. The term \\\"opposite direction\\\" is clear in the context of bidirectional QUIC streams, and no missing constraint or alternative interpretation is evident.\"\n}",
+  "record_id": "c5da41c8b53c7a432b41a2663732ac30c0619b5f9634fcfce0306eedf52b8fa3",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "3.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 24.094
+}

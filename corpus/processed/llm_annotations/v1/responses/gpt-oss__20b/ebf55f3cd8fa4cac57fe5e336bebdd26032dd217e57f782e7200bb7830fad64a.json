@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously requires a server to send a CANCEL_PUSH frame when it determines that a promised response will not be fulfilled, regardless of whether a push stream has been opened. The subsequent clause clarifies the action if a stream has already been opened, leaving no materially different implementation interpretations or missing constraints.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T10:38:35.694324+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "0311ce98b79cb742bfeef5d40ab8f5404e5d151d3a79aba38aa85b8443bc2c9d",
+  "lineage_ids": "lineage:fb89100dd8b12a0dddbc9897",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1629,
+    "load_duration": 4637500,
+    "prompt_eval_count": 598,
+    "total_duration": 14105778200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously requires a server to send a CANCEL_PUSH frame when it determines that a promised response will not be fulfilled, regardless of whether a push stream has been opened. The subsequent clause clarifies the action if a stream has already been opened, leaving no materially different implementation interpretations or missing constraints.\"\n}",
+  "record_id": "ebf55f3cd8fa4cac57fe5e336bebdd26032dd217e57f782e7200bb7830fad64a",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 14.125
+}

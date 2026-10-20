@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "if possible",
+    "interpretation_a": "The DF bit will be set in all IPv4 packets.",
+    "interpretation_b": "The DF bit will be set in IPv4 packets when technically feasible, but may not be in all cases.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"if possible\" introduces ambiguity. It is unclear under what conditions setting the DF bit is not possible, and therefore whether implementations are required to attempt setting it, or only do so when convenient.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:19:55.389404+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "22e9b67115541de04784d536890da17c38ea8bd6476cb1e4e4914c79332f9286",
+  "lineage_ids": "lineage:1fd0fcacd3705c84b90c22fe",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 129,
+    "load_duration": 5682600,
+    "prompt_eval_count": 570,
+    "total_duration": 5017282000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"if possible\", \"interpretation_a\": \"The DF bit will be set in all IPv4 packets.\", \"interpretation_b\": \"The DF bit will be set in IPv4 packets when technically feasible, but may not be in all cases.\", \"missing_information\": \"\", \"justification\": \"The phrase \\\"if possible\\\" introduces ambiguity. It is unclear under what conditions setting the DF bit is not possible, and therefore whether implementations are required to attempt setting it, or only do so when convenient.\"}",
+  "record_id": "486a8b4dd3494d3e401c9186822eed3597caaa7ae97ea61aee131dc6aa2be0ef",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "14",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.032
+}

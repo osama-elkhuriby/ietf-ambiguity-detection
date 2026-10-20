@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD use a very short ack delay, such as 1ms",
+    "interpretation_a": "Implementations *should* aim for an ack delay of 1ms, but may deviate if necessary, potentially up to a reasonable upper bound.",
+    "interpretation_b": "Implementations *should* aim for an ack delay close to 1ms, and any deviation requires justification and should be minimal.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' combined with 'such as' introduces ambiguity. 'Such as' implies an example, but doesn't define the acceptable range. Is 1ms a target, a minimum, a maximum, or simply an illustration? Without further constraints, implementations could reasonably choose significantly different ack delays while still claiming to comply with the 'SHOULD' statement.",
+    "missing_information": "The meaning of 'very short' and the acceptable range around '1ms' are not defined. A concrete upper bound or tolerance is missing, which affects implementation."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:28:11.514288+00:00",
+  "document_id": "draft-ietf-quic-recovery-18",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "4ad59af12cc39b9c5946b815a7df93e52b2c2d41c7e290de429ec390cbb91092",
+  "lineage_ids": "lineage:74fa7f8acc78121357ddeb22",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 231,
+    "load_duration": 4051400,
+    "prompt_eval_count": 567,
+    "total_duration": 8604954800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD use a very short ack delay, such as 1ms\", \"interpretation_a\": \"Implementations *should* aim for an ack delay of 1ms, but may deviate if necessary, potentially up to a reasonable upper bound.\", \"interpretation_b\": \"Implementations *should* aim for an ack delay close to 1ms, and any deviation requires justification and should be minimal.\", \"missing_information\": \"The meaning of 'very short' and the acceptable range around '1ms' are not defined. A concrete upper bound or tolerance is missing, which affects implementation.\", \"justification\": \"The use of 'SHOULD' combined with 'such as' introduces ambiguity. 'Such as' implies an example, but doesn't define the acceptable range. Is 1ms a target, a minimum, a maximum, or simply an illustration? Without further constraints, implementations could reasonably choose significantly different ack delays while still claiming to comply with the 'SHOULD' statement.\"}",
+  "record_id": "bb1ddfe49b4f1642c6bc11b210c1509eb6278acfa38389d685fd45429a918dc6",
+  "revision": "18",
+  "schema_version": 1,
+  "section_ids": "4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.61
+}

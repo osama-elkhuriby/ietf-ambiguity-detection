@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "disable ECN",
+    "interpretation_a": "The endpoint must stop setting ECN codepoints on all subsequent packets it sends.",
+    "interpretation_b": "The endpoint must disable ECN usage for the entire connection, including any future retransmissions or new streams.",
+    "is_ambiguous": "yes",
+    "justification": "The target clause lacks a concrete constraint on the scope of ECN disabling, which can materially affect how an endpoint implements ECN handling after validation failure.",
+    "missing_information": "The clause does not specify whether 'disable ECN' applies only to subsequent packets or to the entire connection, leading to different implementation behaviours."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T15:39:58.174922+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "c6600b95388e1709119fb06f389df98e5c05a53826c4bcd4f41dabbba299cf62",
+  "lineage_ids": "lineage:8d2c1e642b45516deff858ba",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2629,
+    "load_duration": 4014600,
+    "prompt_eval_count": 581,
+    "total_duration": 22750269000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"disable ECN\",\n  \"interpretation_a\": \"The endpoint must stop setting ECN codepoints on all subsequent packets it sends.\",\n  \"interpretation_b\": \"The endpoint must disable ECN usage for the entire connection, including any future retransmissions or new streams.\",\n  \"missing_information\": \"The clause does not specify whether 'disable ECN' applies only to subsequent packets or to the entire connection, leading to different implementation behaviours.\",\n  \"justification\": \"The target clause lacks a concrete constraint on the scope of ECN disabling, which can materially affect how an endpoint implements ECN handling after validation failure.\"\n}",
+  "record_id": "4fad584cc52dee2121577b79b38e8aeadc058d3e85fea549c99aa6dc34c57675",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "13.4.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 22.75
+}

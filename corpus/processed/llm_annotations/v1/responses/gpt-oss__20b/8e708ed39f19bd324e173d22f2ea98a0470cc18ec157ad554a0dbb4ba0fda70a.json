@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "define limits on the use of the associated AEAD function that preserves margins for confidentiality and integrity",
+    "interpretation_a": "The clause requires that limits be defined, but does not specify what those limits are, leaving the exact limits open to interpretation.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause mandates limits but does not define them, creating an incomplete constraint that could lead to materially different implementations.",
+    "missing_information": "the specific limits (e.g., number of packets that can be authenticated and number that can fail authentication) are not defined in this clause. The clause does not provide the concrete values or criteria for the limits, making the implementation behavior ambiguous without further context. "
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T12:52:14.780385+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "a3157bc2e27456e993bf8b8416783e5d012cfdfa33f8d21585959ffeb79fbaf0",
+  "lineage_ids": "lineage:56887b1eb74eaa6957395c19",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 4474,
+    "load_duration": 5323500,
+    "prompt_eval_count": 596,
+    "total_duration": 38791067900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"define limits on the use of the associated AEAD function that preserves margins for confidentiality and integrity\",\n  \"interpretation_a\": \"The clause requires that limits be defined, but does not specify what those limits are, leaving the exact limits open to interpretation.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"the specific limits (e.g., number of packets that can be authenticated and number that can fail authentication) are not defined in this clause. The clause does not provide the concrete values or criteria for the limits, making the implementation behavior ambiguous without further context. \",\n  \"justification\": \"The clause mandates limits but does not define them, creating an incomplete constraint that could lead to materially different implementations.\"\n}",
+  "record_id": "8e708ed39f19bd324e173d22f2ea98a0470cc18ec157ad554a0dbb4ba0fda70a",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 38.812
+}

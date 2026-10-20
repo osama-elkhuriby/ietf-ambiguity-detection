@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "enough of the HTTP message",
+    "interpretation_a": "The server determines 'enough' based on a fixed, pre-defined minimum size or amount of data for an HTTP message.",
+    "interpretation_b": "The server determines 'enough' based on the content received, such as headers indicating the message length or the start of the body, allowing for variable-sized messages.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'enough of the HTTP message' is subjective and lacks a clear definition. Without a specific criterion for determining 'enough', different implementations might interpret it differently, leading to inconsistent behavior. For example, one implementation might require only the HTTP headers to be received, while another might require a certain portion of the body to be received before considering the message 'complete enough' to proceed.",
+    "missing_information": "The definition of 'enough' is not specified. A concrete constraint defining what constitutes 'enough of the HTTP message' is missing, leading to different implementations based on how they interpret this threshold."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:46:12.413200+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "b556d93ee58276fb05b910f6a122b67ac36690ebd5b7f2bf4b137d06b347ef3a",
+  "lineage_ids": "lineage:a55bdb75e807dd00c09da245",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 230,
+    "load_duration": 4799500,
+    "prompt_eval_count": 629,
+    "total_duration": 8808306800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"enough of the HTTP message\", \"interpretation_a\": \"The server determines 'enough' based on a fixed, pre-defined minimum size or amount of data for an HTTP message.\", \"interpretation_b\": \"The server determines 'enough' based on the content received, such as headers indicating the message length or the start of the body, allowing for variable-sized messages.\", \"missing_information\": \"The definition of 'enough' is not specified. A concrete constraint defining what constitutes 'enough of the HTTP message' is missing, leading to different implementations based on how they interpret this threshold.\",\"justification\": \"The phrase 'enough of the HTTP message' is subjective and lacks a clear definition. Without a specific criterion for determining 'enough', different implementations might interpret it differently, leading to inconsistent behavior. For example, one implementation might require only the HTTP headers to be received, while another might require a certain portion of the body to be received before considering the message 'complete enough' to proceed.\"}",
+  "record_id": "3750557f02da86a65f141e4bd2f03a50b09a519c7ca430c3a58f00624fa58cf2",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.844
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "in the order in which they were applied",
+    "interpretation_a": "The encodings are applied sequentially, one after the other, and the Content-Encoding header field lists them in that sequential order. For example, if 'gzip' was applied first, then 'deflate', the header would be 'Content-Encoding: gzip, deflate'.",
+    "interpretation_b": "The encodings are applied in a parallel or otherwise non-sequential manner, but the Content-Encoding header field lists them in the order the sender *decided* to list them, which may or may not correspond to the application order. The phrase 'in the order in which they were applied' is merely descriptive, not prescriptive.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'in the order in which they were applied' is open to interpretation. It could mean the literal order of application, or simply the order the sender chooses to represent that application.",
+    "missing_information": "It is unclear whether the encodings are necessarily applied sequentially, or if they could be applied in parallel. If parallel application is possible, the phrase 'in the order in which they were applied' is insufficient to uniquely determine the header field's content."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:59:02.624962+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "70dd6c8776d415b0bc9f853c56f5b56a77dd40336fec00759530616606eef998",
+  "lineage_ids": "lineage:a0a5f1e7f0f1d34a52888410",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 272,
+    "load_duration": 9584200,
+    "prompt_eval_count": 583,
+    "total_duration": 10297901800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"in the order in which they were applied\", \"interpretation_a\": \"The encodings are applied sequentially, one after the other, and the Content-Encoding header field lists them in that sequential order. For example, if 'gzip' was applied first, then 'deflate', the header would be 'Content-Encoding: gzip, deflate'.\", \"interpretation_b\": \"The encodings are applied in a parallel or otherwise non-sequential manner, but the Content-Encoding header field lists them in the order the sender *decided* to list them, which may or may not correspond to the application order. The phrase 'in the order in which they were applied' is merely descriptive, not prescriptive.\", \"missing_information\": \"It is unclear whether the encodings are necessarily applied sequentially, or if they could be applied in parallel. If parallel application is possible, the phrase 'in the order in which they were applied' is insufficient to uniquely determine the header field's content.\",\"justification\": \"The phrase 'in the order in which they were applied' is open to interpretation. It could mean the literal order of application, or simply the order the sender chooses to represent that application.\"}",
+  "record_id": "2524161029fc51459780d83194d5dc155106347f3ed74ea5f64c58358eca0d9d",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "8.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.312
+}

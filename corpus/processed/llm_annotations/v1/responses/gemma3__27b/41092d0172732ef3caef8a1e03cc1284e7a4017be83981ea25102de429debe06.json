@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "to at least the smallest allowed maximum datagram size of 1200 bytes",
+    "interpretation_a": "The client must pad or coalesce Initial packets until *every* UDP datagram carrying them is exactly 1200 bytes.",
+    "interpretation_b": "The client must pad or coalesce Initial packets until *each* UDP datagram carrying them is at least 1200 bytes, but may be larger.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'at least' allows for datagrams larger than 1200 bytes, while the context of setting a 'size' implies an exact value. This creates ambiguity in implementation.",
+    "missing_information": "It is unclear whether the 1200 bytes is a minimum or an exact size. The use of 'at least' suggests a minimum, but the phrasing could also be read as an exact requirement."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:16:37.631161+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "6c69e4ce78ad4bd31e2bb71db2713fb55acc6c3edd769f27b6fbe8357ec9dc63",
+  "lineage_ids": "lineage:44a08fd200d5338338a5cfef",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 209,
+    "load_duration": 4113400,
+    "prompt_eval_count": 585,
+    "total_duration": 7870206600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"to at least the smallest allowed maximum datagram size of 1200 bytes\", \"interpretation_a\": \"The client must pad or coalesce Initial packets until *every* UDP datagram carrying them is exactly 1200 bytes.\", \"interpretation_b\": \"The client must pad or coalesce Initial packets until *each* UDP datagram carrying them is at least 1200 bytes, but may be larger.\", \"missing_information\": \"It is unclear whether the 1200 bytes is a minimum or an exact size. The use of 'at least' suggests a minimum, but the phrasing could also be read as an exact requirement.\",\"justification\": \"The phrase 'at least' allows for datagrams larger than 1200 bytes, while the context of setting a 'size' implies an exact value. This creates ambiguity in implementation.\"}",
+  "record_id": "41092d0172732ef3caef8a1e03cc1284e7a4017be83981ea25102de429debe06",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "14.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.875
+}

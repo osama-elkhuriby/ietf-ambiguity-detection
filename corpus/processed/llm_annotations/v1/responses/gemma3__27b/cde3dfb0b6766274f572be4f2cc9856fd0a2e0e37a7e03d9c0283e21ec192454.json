@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST happen after removing packet protection",
+    "interpretation_a": "Duplicate suppression begins immediately after packet protection removal.",
+    "interpretation_b": "Duplicate suppression begins sometime after packet protection removal, allowing for other processing steps in between.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'after removing' is vague. It doesn't specify if the duplicate suppression must start *immediately* after protection removal, or if there's a permissible delay for other processing. This impacts how an implementation would sequence these operations.",
+    "missing_information": "The timing of 'after' is not defined. Does it mean 'immediately after' or 'at some point after'? This affects implementation of the duplicate suppression logic and its interaction with other packet processing steps."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:03:33.894689+00:00",
+  "document_id": "draft-ietf-quic-transport-32",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "babdec739445b6ce9bbeaf742700fc065850d8a6899111057f121435abcbf010",
+  "lineage_ids": "lineage:b792e534c848ef031a3cfdb2",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 175,
+    "load_duration": 4118000,
+    "prompt_eval_count": 585,
+    "total_duration": 6667596200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST happen after removing packet protection\", \"interpretation_a\": \"Duplicate suppression begins immediately after packet protection removal.\", \"interpretation_b\": \"Duplicate suppression begins sometime after packet protection removal, allowing for other processing steps in between.\", \"missing_information\": \"The timing of 'after' is not defined. Does it mean 'immediately after' or 'at some point after'? This affects implementation of the duplicate suppression logic and its interaction with other packet processing steps.\", \"justification\": \"The phrase 'after removing' is vague. It doesn't specify if the duplicate suppression must start *immediately* after protection removal, or if there's a permissible delay for other processing. This impacts how an implementation would sequence these operations.\"}",
+  "record_id": "cde3dfb0b6766274f572be4f2cc9856fd0a2e0e37a7e03d9c0283e21ec192454",
+  "revision": "32",
+  "schema_version": 1,
+  "section_ids": "12.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.672
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "most recent Initial packet",
+    "interpretation_a": "The 'most recent Initial packet' refers to the very first Initial packet sent by the client.",
+    "interpretation_b": "The 'most recent Initial packet' refers to the last Initial packet sent by the client, even if it was a retransmission or a response to a previous packet.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'most recent Initial packet' is open to interpretation. It's unclear whether it refers to the very first Initial packet sent by the client or the last one, even if it's a retransmission. This affects how the Destination Connection ID is checked and whether the packet is discarded.",
+    "missing_information": "The definition of 'most recent' is not precise. Does it refer to the first Initial packet, or the last one sent, regardless of whether it was a new transmission or a retransmission?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:57:48.154516+00:00",
+  "document_id": "draft-ietf-quic-transport-14",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "613313c4e0e2421e13c57008f48c49f8e9c3db79148ef5212bac00e3e5d24a94",
+  "lineage_ids": "lineage:d108af8e179ff0ee19d516df",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 207,
+    "load_duration": 4597400,
+    "prompt_eval_count": 578,
+    "total_duration": 7800170000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"most recent Initial packet\", \"interpretation_a\": \"The 'most recent Initial packet' refers to the very first Initial packet sent by the client.\", \"interpretation_b\": \"The 'most recent Initial packet' refers to the last Initial packet sent by the client, even if it was a retransmission or a response to a previous packet.\", \"missing_information\": \"The definition of 'most recent' is not precise. Does it refer to the first Initial packet, or the last one sent, regardless of whether it was a new transmission or a retransmission?\",\"justification\": \"The phrase 'most recent Initial packet' is open to interpretation. It's unclear whether it refers to the very first Initial packet sent by the client or the last one, even if it's a retransmission. This affects how the Destination Connection ID is checked and whether the packet is discarded.\"}",
+  "record_id": "bb0ac0d51d1b5f21281dd453cc25ffcaf1f596df9d14ff911270f2c4f606507a",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "4.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.797
+}

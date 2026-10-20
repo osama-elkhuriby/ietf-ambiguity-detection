@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "discard the packet or generate a connection error",
+    "interpretation_a": "The client can choose to discard the packet without any further action.",
+    "interpretation_b": "The client must generate a connection error, which involves logging, potential signaling, and resource cleanup.",
+    "is_ambiguous": "yes",
+    "justification": "The disjunction 'discard the packet or generate a connection error' provides two materially different implementation behaviours. The clause does not provide guidance on which behaviour is preferred or required, leading to ambiguity.",
+    "missing_information": "The clause does not specify whether discarding the packet is preferred or if generating a connection error is required in all cases. This affects implementation choices regarding error handling and logging."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:04:35.729717+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "76e25ec1f820679a05664c8710d8c7f66c12812ed89c0c5169754d114ea641d1",
+  "lineage_ids": "lineage:1dd60d8d1add4635f5ae6728",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 164,
+    "load_duration": 4045900,
+    "prompt_eval_count": 596,
+    "total_duration": 6273509500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"discard the packet or generate a connection error\", \"interpretation_a\": \"The client can choose to discard the packet without any further action.\", \"interpretation_b\": \"The client must generate a connection error, which involves logging, potential signaling, and resource cleanup.\", \"missing_information\": \"The clause does not specify whether discarding the packet is preferred or if generating a connection error is required in all cases. This affects implementation choices regarding error handling and logging.\", \"justification\": \"The disjunction 'discard the packet or generate a connection error' provides two materially different implementation behaviours. The clause does not provide guidance on which behaviour is preferred or required, leading to ambiguity.\"}",
+  "record_id": "23fb72e688af987953de1a64abc07b83b69ce6e9d64a88a55fce6e19007fcdd2",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "17.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.281
+}

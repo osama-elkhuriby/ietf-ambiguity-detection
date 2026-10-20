@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause uses 'MAY', which explicitly grants the client discretion to generate range requests regardless of whether the Accept-Ranges header field has been received. This is not ambiguous because it clearly allows for two possible behaviors (generating or not generating range requests) without requiring further constraints.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:21:39.257664+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-16",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "647b5a1b2fb9751d5ad06a41cb59ef48743b7dbb731cda3948c8d1a49d86b71f",
+  "lineage_ids": "lineage:9b6b4ce11f50bd60808e0cdc",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 112,
+    "load_duration": 13602400,
+    "prompt_eval_count": 507,
+    "total_duration": 4705903400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause uses 'MAY', which explicitly grants the client discretion to generate range requests regardless of whether the Accept-Ranges header field has been received. This is not ambiguous because it clearly allows for two possible behaviors (generating or not generating range requests) without requiring further constraints.\"\n}",
+  "record_id": "926301874bb1de80ec8f39d07e2862caa923f4f35e123d28d038dfce021e43e9",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "14.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 4.719
+}

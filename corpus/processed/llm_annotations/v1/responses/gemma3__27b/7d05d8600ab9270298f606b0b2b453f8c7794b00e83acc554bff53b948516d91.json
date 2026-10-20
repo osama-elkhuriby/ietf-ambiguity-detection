@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "limit the rate",
+    "interpretation_a": "The endpoint could implement a strict token bucket rate limiter, allowing only a fixed number of packets or bytes per unit of time.",
+    "interpretation_b": "The endpoint could implement a more adaptive rate limiter, adjusting the rate based on observed network conditions or other factors.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"limit the rate\" is underspecified. There are many ways to limit a rate, and the clause does not provide enough detail to ensure a unique implementation.",
+    "missing_information": "The clause does not specify *how* the rate should be limited. A specific algorithm or set of parameters is missing, which could lead to different implementations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:36:15.009074+00:00",
+  "document_id": "draft-ietf-quic-transport-32",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "3aa8fbfb0f65ac33483015242d8cd2be0808d16f4d119ce7a589c06ca6de0cf7",
+  "lineage_ids": "lineage:079c1c739c8791544a9df5bf",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 169,
+    "load_duration": 4336900,
+    "prompt_eval_count": 607,
+    "total_duration": 6474947400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"limit the rate\", \"interpretation_a\": \"The endpoint could implement a strict token bucket rate limiter, allowing only a fixed number of packets or bytes per unit of time.\", \"interpretation_b\": \"The endpoint could implement a more adaptive rate limiter, adjusting the rate based on observed network conditions or other factors.\", \"missing_information\": \"The clause does not specify *how* the rate should be limited. A specific algorithm or set of parameters is missing, which could lead to different implementations.\", \"justification\": \"The phrase \\\"limit the rate\\\" is underspecified. There are many ways to limit a rate, and the clause does not provide enough detail to ensure a unique implementation.\"}",
+  "record_id": "7d05d8600ab9270298f606b0b2b453f8c7794b00e83acc554bff53b948516d91",
+  "revision": "32",
+  "schema_version": 1,
+  "section_ids": "9.3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.484
+}

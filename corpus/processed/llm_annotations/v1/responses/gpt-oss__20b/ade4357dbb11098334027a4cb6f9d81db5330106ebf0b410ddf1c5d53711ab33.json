@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "disable SVCB support",
+    "interpretation_a": "The client should disable all SVCB support, meaning it will not use SVCB records for any queries.",
+    "interpretation_b": "The client should disable SVCB queries only when using the proxy, but may still use SVCB for other queries.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether 'disable SVCB support' refers to disabling the entire SVCB feature or only disabling SVCB queries when using the proxy, leading to two materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T03:16:44.826032+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-00",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "0bf341b824fd85613191057258f4c889d4b2b3cfba8c2a562e6ab621b2f9791b",
+  "lineage_ids": "lineage:8b32328126cdf69f31d99d68",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1164,
+    "load_duration": 4507700,
+    "prompt_eval_count": 626,
+    "total_duration": 10142255100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"disable SVCB support\",\n  \"interpretation_a\": \"The client should disable all SVCB support, meaning it will not use SVCB records for any queries.\",\n  \"interpretation_b\": \"The client should disable SVCB queries only when using the proxy, but may still use SVCB for other queries.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify whether 'disable SVCB support' refers to disabling the entire SVCB feature or only disabling SVCB queries when using the proxy, leading to two materially different implementation behaviours.\"\n}",
+  "record_id": "ade4357dbb11098334027a4cb6f9d81db5330106ebf0b410ddf1c5d53711ab33",
+  "revision": "00",
+  "schema_version": 1,
+  "section_ids": "3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.141
+}

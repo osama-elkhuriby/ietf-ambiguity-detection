@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously specifies that an endpoint may send a STOP_SENDING frame on a stream that is either open or half‑closed (local) to cause the remote endpoint to stop sending data on that stream. The phrase \"opposite direction\" refers to the direction of data flow relative to the endpoint sending the frame, which is clear from the context. No missing constraints or multiple reasonable interpretations are present.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T14:31:39.688219+00:00",
+  "document_id": "draft-ietf-quic-transport-06",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "53a15af31cb28b592189cf6c5732888fb20dc05f74c3a06f55d5adb1c178e851",
+  "lineage_ids": "lineage:c8a6e06d8b3e2e9f3125b097",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1688,
+    "load_duration": 5043500,
+    "prompt_eval_count": 630,
+    "total_duration": 14775849600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously specifies that an endpoint may send a STOP_SENDING frame on a stream that is either open or half‑closed (local) to cause the remote endpoint to stop sending data on that stream. The phrase \\\"opposite direction\\\" refers to the direction of data flow relative to the endpoint sending the frame, which is clear from the context. No missing constraints or multiple reasonable interpretations are present.\"\n}",
+  "record_id": "2726b3982cec7d321cde461ec21f64340dd77f8b97c10f19abcdb0e99dc049fe",
+  "revision": "06",
+  "schema_version": 1,
+  "section_ids": "10.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 82.656
+}

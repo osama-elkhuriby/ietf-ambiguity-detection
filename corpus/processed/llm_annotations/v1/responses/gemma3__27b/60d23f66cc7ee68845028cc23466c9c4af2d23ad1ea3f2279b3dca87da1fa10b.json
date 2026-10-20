@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "based on a predicted value of TargetName",
+    "interpretation_a": "The client predicts the TargetName based on prior knowledge or heuristics, and uses that prediction to issue A/AAAA queries. This prediction might be incorrect, leading to unnecessary queries.",
+    "interpretation_b": "The client extracts the TargetName directly from the SVCB record itself and uses that to issue A/AAAA queries. This avoids unnecessary queries but requires parsing the SVCB record before issuing the A/AAAA queries.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'based on a predicted value of TargetName' is incomplete. It doesn't specify *how* the prediction is made or *when* it's made relative to receiving the SVCB record. This leads to two reasonable interpretations with different performance implications.",
+    "missing_information": "The document does not specify *when* the TargetName is predicted. Is it before receiving the SVCB record, or derived from it? This impacts whether the A/AAAA queries are speculative or based on known information."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:04:16.862522+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "12d99783c0a534acbf7fd9c9a2339ebed851bc312471a4d8cf0aaaed861c098d",
+  "lineage_ids": "lineage:8c5f982615df8b077d950e6a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 236,
+    "load_duration": 4635800,
+    "prompt_eval_count": 610,
+    "total_duration": 8807716600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"based on a predicted value of TargetName\", \"interpretation_a\": \"The client predicts the TargetName based on prior knowledge or heuristics, and uses that prediction to issue A/AAAA queries. This prediction might be incorrect, leading to unnecessary queries.\", \"interpretation_b\": \"The client extracts the TargetName directly from the SVCB record itself and uses that to issue A/AAAA queries. This avoids unnecessary queries but requires parsing the SVCB record before issuing the A/AAAA queries.\", \"missing_information\": \"The document does not specify *when* the TargetName is predicted. Is it before receiving the SVCB record, or derived from it? This impacts whether the A/AAAA queries are speculative or based on known information.\", \"justification\": \"The phrase 'based on a predicted value of TargetName' is incomplete. It doesn't specify *how* the prediction is made or *when* it's made relative to receiving the SVCB record. This leads to two reasonable interpretations with different performance implications.\"}",
+  "record_id": "60d23f66cc7ee68845028cc23466c9c4af2d23ad1ea3f2279b3dca87da1fa10b",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.812
+}

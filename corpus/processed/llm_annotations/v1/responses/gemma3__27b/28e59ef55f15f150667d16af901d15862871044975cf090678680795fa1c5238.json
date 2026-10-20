@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "the first inbound proxy that was expecting to receive credentials",
+    "interpretation_a": "A proxy only consumes the header if it *actively* requested credentials via Proxy-Authenticate. If a proxy doesn't send Proxy-Authenticate, it must not consume the header, even if it's present.",
+    "interpretation_b": "Any inbound proxy can consume the header if it's the first one it encounters, regardless of whether it sent a Proxy-Authenticate request. The phrase 'expecting to receive credentials' could imply simply being in a position to receive them, not actively requesting them.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'expecting to receive credentials' is incomplete. It doesn't explicitly state whether the proxy must have *requested* credentials (via Proxy-Authenticate) to be considered 'expecting' them. This leads to two reasonable interpretations of how proxies should handle the header.",
+    "missing_information": "It is unclear whether 'expecting to receive credentials' implies an active request (via Proxy-Authenticate) or merely being in a position to receive credentials."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:59:44.227537+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-07",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "84c461fc5c9d2ac9ba2350708ea63cac4995ed0d0f78663fc11398c368ec6d81",
+  "lineage_ids": "lineage:839468f9b547bec6ddeeb2dd",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 246,
+    "load_duration": 4377300,
+    "prompt_eval_count": 596,
+    "total_duration": 9341159700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"the first inbound proxy that was expecting to receive credentials\", \"interpretation_a\": \"A proxy only consumes the header if it *actively* requested credentials via Proxy-Authenticate. If a proxy doesn't send Proxy-Authenticate, it must not consume the header, even if it's present.\", \"interpretation_b\": \"Any inbound proxy can consume the header if it's the first one it encounters, regardless of whether it sent a Proxy-Authenticate request. The phrase 'expecting to receive credentials' could imply simply being in a position to receive them, not actively requesting them.\", \"missing_information\": \"It is unclear whether 'expecting to receive credentials' implies an active request (via Proxy-Authenticate) or merely being in a position to receive credentials.\", \"justification\": \"The phrase 'expecting to receive credentials' is incomplete. It doesn't explicitly state whether the proxy must have *requested* credentials (via Proxy-Authenticate) to be considered 'expecting' them. This leads to two reasonable interpretations of how proxies should handle the header.\"}",
+  "record_id": "28e59ef55f15f150667d16af901d15862871044975cf090678680795fa1c5238",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.5.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.36
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Streams MUST be created or reserved in sequential order, but MAY be used in arbitrary order.",
+    "interpretation_a": "Streams must be created/reserved in ascending numerical order, but can be processed/sent out of order.",
+    "interpretation_b": "Streams can be created/reserved with gaps in the sequence, but must still be unique and can be used in any order.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states streams must be created/reserved sequentially, but may be *used* in arbitrary order. This creates ambiguity as to whether the sequential requirement applies to creation/reservation only, or also to usage. If sequential order only applies to creation/reservation, then gaps are allowed, but if it applies to usage as well, then gaps are not allowed. ",
+    "missing_information": "It is unclear whether 'sequential order' refers to the creation/reservation of StreamIDs or the order in which they are used for data transmission. The meaning of 'reserved' is also unclear; does reserving a StreamID count towards sequential order?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:57:21.705068+00:00",
+  "document_id": "draft-ietf-quic-transport-01",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "eaa3a4619ab218fe275c6da357c2c95a3e0eb9868caac7872b1a426d1f2fbc99",
+  "lineage_ids": "lineage:8c86e6a80c512ddfad98f2df",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 236,
+    "load_duration": 4129300,
+    "prompt_eval_count": 563,
+    "total_duration": 8787290400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Streams MUST be created or reserved in sequential order, but MAY be used in arbitrary order.\", \"interpretation_a\": \"Streams must be created/reserved in ascending numerical order, but can be processed/sent out of order.\", \"interpretation_b\": \"Streams can be created/reserved with gaps in the sequence, but must still be unique and can be used in any order.\", \"missing_information\": \"It is unclear whether 'sequential order' refers to the creation/reservation of StreamIDs or the order in which they are used for data transmission. The meaning of 'reserved' is also unclear; does reserving a StreamID count towards sequential order?\",\"justification\": \"The clause states streams must be created/reserved sequentially, but may be *used* in arbitrary order. This creates ambiguity as to whether the sequential requirement applies to creation/reservation only, or also to usage. If sequential order only applies to creation/reservation, then gaps are allowed, but if it applies to usage as well, then gaps are not allowed. \"}",
+  "record_id": "b98c2fccc9f10a47f82f249c8fd47e7adfc3f3e4fba8e97743fc646e7e2168a0",
+  "revision": "01",
+  "schema_version": 1,
+  "section_ids": "9.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.781
+}

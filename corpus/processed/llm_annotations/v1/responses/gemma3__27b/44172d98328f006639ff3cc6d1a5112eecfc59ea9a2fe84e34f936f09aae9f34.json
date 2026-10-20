@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST drop incoming packets under all other circumstances.",
+    "interpretation_a": "The server must discard any packet that doesn't meet the specific conditions outlined in the preceding clauses (e.g., valid handshake after response).",
+    "interpretation_b": "The server must discard any packet that isn't explicitly permitted by the specification, even if it doesn't violate any specific rule. This is a broader interpretation, potentially discarding valid but unaddressed packets.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'all other circumstances' is broad and lacks a clear boundary. It's not defined what constitutes 'other circumstances', leading to different interpretations of when a packet should be dropped.",
+    "missing_information": "The definition of 'other circumstances' is not precise. It's unclear if it refers only to conditions explicitly covered in the specification, or if it includes any condition not specifically allowed."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:17:52.022600+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "6d19ec5e4147774bf43583d7e3f31f11a2403f0b2f5bdb66b5de91f7f3aea1ef",
+  "lineage_ids": "lineage:9fde2c05fecf15659ff22e4a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 207,
+    "load_duration": 4282200,
+    "prompt_eval_count": 544,
+    "total_duration": 7767124100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST drop incoming packets under all other circumstances.\", \"interpretation_a\": \"The server must discard any packet that doesn't meet the specific conditions outlined in the preceding clauses (e.g., valid handshake after response).\", \"interpretation_b\": \"The server must discard any packet that isn't explicitly permitted by the specification, even if it doesn't violate any specific rule. This is a broader interpretation, potentially discarding valid but unaddressed packets.\", \"missing_information\": \"The definition of 'other circumstances' is not precise. It's unclear if it refers only to conditions explicitly covered in the specification, or if it includes any condition not specifically allowed.\", \"justification\": \"The phrase 'all other circumstances' is broad and lacks a clear boundary. It's not defined what constitutes 'other circumstances', leading to different interpretations of when a packet should be dropped.\"}",
+  "record_id": "44172d98328f006639ff3cc6d1a5112eecfc59ea9a2fe84e34f936f09aae9f34",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "5.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.766
+}

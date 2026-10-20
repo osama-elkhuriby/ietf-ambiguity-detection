@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "final byte offset",
+    "interpretation_a": "The 'final byte offset' refers to the last byte *included* in the stream before the RST_STREAM frame was sent. This means the offset points to the end of the last complete byte of data.",
+    "interpretation_b": "The 'final byte offset' refers to the byte *immediately following* the last byte included in the stream before the RST_STREAM frame was sent. This is a common convention for offsets, indicating the next byte to be written.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'final byte offset' is a common source of ambiguity in data transmission protocols. Without specifying whether the offset is inclusive (pointing to the last byte of data) or exclusive (pointing to the byte after the last byte of data), implementations could differ in how they interpret the value and adjust their flow control mechanisms. This is a concrete missing constraint that affects implementation behavior.",
+    "missing_information": "The document does not explicitly define whether 'final byte offset' is inclusive or exclusive. This affects how the receiver interprets the offset and adjusts its flow control."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:57:57.498602+00:00",
+  "document_id": "draft-ietf-quic-transport-15",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "4f50fe834a44d814ec8fa5257f14772a1d2ee83cc604ef2216c07201b747eddc",
+  "lineage_ids": "lineage:08f7876cf3646730cbebd53b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 250,
+    "load_duration": 4588700,
+    "prompt_eval_count": 617,
+    "total_duration": 9341472200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"final byte offset\", \"interpretation_a\": \"The 'final byte offset' refers to the last byte *included* in the stream before the RST_STREAM frame was sent. This means the offset points to the end of the last complete byte of data.\", \"interpretation_b\": \"The 'final byte offset' refers to the byte *immediately following* the last byte included in the stream before the RST_STREAM frame was sent. This is a common convention for offsets, indicating the next byte to be written.\", \"missing_information\": \"The document does not explicitly define whether 'final byte offset' is inclusive or exclusive. This affects how the receiver interprets the offset and adjusts its flow control.\", \"justification\": \"The phrase 'final byte offset' is a common source of ambiguity in data transmission protocols. Without specifying whether the offset is inclusive (pointing to the last byte of data) or exclusive (pointing to the byte after the last byte of data), implementations could differ in how they interpret the value and adjust their flow control mechanisms. This is a concrete missing constraint that affects implementation behavior.\"}",
+  "record_id": "bb33b68ce94f4d3e23327a54d8ea737823c809f4e56d5db4edd496ecbe3193d7",
+  "revision": "15",
+  "schema_version": 1,
+  "section_ids": "10.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.344
+}

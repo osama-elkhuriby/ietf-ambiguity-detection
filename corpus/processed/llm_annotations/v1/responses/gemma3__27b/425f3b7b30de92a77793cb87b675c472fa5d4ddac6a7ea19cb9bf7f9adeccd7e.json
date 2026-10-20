@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "advertising a smaller limit has no effect",
+    "interpretation_a": "If a receiver advertises a limit of 10, and then advertises 5, the limit remains 10.",
+    "interpretation_b": "If a receiver advertises a limit of 10, and then advertises 5, the second advertisement is silently dropped, and the limit remains 10. However, the receiver may choose to log or otherwise indicate that the second advertisement was invalid.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'has no effect' is open to interpretation. Does it mean the receiver must ignore the frame and continue operating as if it never received it, or simply that the limit is not changed? The latter allows for optional logging/indication of the invalid frame, while the former mandates silent dropping.",
+    "missing_information": "It is unclear whether the receiver is required to log or otherwise indicate that the second advertisement was invalid, or if it can simply ignore it without any indication."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:16:58.330472+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "4e75de950e8afcf4a63b3c0fed4bcd85a970b3b9e570f06954cf1160330ab33d",
+  "lineage_ids": "lineage:9d14eb8e66948e29c42ac9db",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 229,
+    "load_duration": 3508000,
+    "prompt_eval_count": 621,
+    "total_duration": 8613632900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"advertising a smaller limit has no effect\", \"interpretation_a\": \"If a receiver advertises a limit of 10, and then advertises 5, the limit remains 10.\", \"interpretation_b\": \"If a receiver advertises a limit of 10, and then advertises 5, the second advertisement is silently dropped, and the limit remains 10. However, the receiver may choose to log or otherwise indicate that the second advertisement was invalid.\", \"missing_information\": \"It is unclear whether the receiver is required to log or otherwise indicate that the second advertisement was invalid, or if it can simply ignore it without any indication.\", \"justification\": \"The phrase 'has no effect' is open to interpretation. Does it mean the receiver must ignore the frame and continue operating as if it never received it, or simply that the limit is not changed? The latter allows for optional logging/indication of the invalid frame, while the former mandates silent dropping.\"}",
+  "record_id": "425f3b7b30de92a77793cb87b675c472fa5d4ddac6a7ea19cb9bf7f9adeccd7e",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.609
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "limiting the window to the larger of 14720 bytes or twice the maximum datagram size",
+    "interpretation_a": "If max_datagram_size is 7360 bytes or less, the congestion window is limited to 14720 bytes. If max_datagram_size is greater than 7360 bytes, the congestion window is limited to 2 * max_datagram_size.",
+    "interpretation_b": "The congestion window is limited to the maximum of 14720 bytes and 2 * max_datagram_size, regardless of the value of max_datagram_size. The phrase 'the larger of' could be read as a single maximum value.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'the larger of 14720 bytes or twice the maximum datagram size' is open to interpretation. Does it mean the maximum of the two values, or does it imply a sequential application of the limits?",
+    "missing_information": "It is unclear whether the limit applies to both conditions simultaneously (the larger of the two results) or sequentially (first apply the 14720 byte limit, then the 2 * max_datagram_size limit). This affects the actual congestion window size."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:25:52.433329+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "754fddd97daedaf1e423950f742e96aef8aeef5026d7223f815b4476e8d914ea",
+  "lineage_ids": "lineage:880f11c5a1921da0097b0ad8",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 295,
+    "load_duration": 4734800,
+    "prompt_eval_count": 619,
+    "total_duration": 10999723100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"limiting the window to the larger of 14720 bytes or twice the maximum datagram size\", \"interpretation_a\": \"If max_datagram_size is 7360 bytes or less, the congestion window is limited to 14720 bytes. If max_datagram_size is greater than 7360 bytes, the congestion window is limited to 2 * max_datagram_size.\", \"interpretation_b\": \"The congestion window is limited to the maximum of 14720 bytes and 2 * max_datagram_size, regardless of the value of max_datagram_size. The phrase 'the larger of' could be read as a single maximum value.\", \"missing_information\": \"It is unclear whether the limit applies to both conditions simultaneously (the larger of the two results) or sequentially (first apply the 14720 byte limit, then the 2 * max_datagram_size limit). This affects the actual congestion window size.\", \"justification\": \"The phrase 'the larger of 14720 bytes or twice the maximum datagram size' is open to interpretation. Does it mean the maximum of the two values, or does it imply a sequential application of the limits?\"}",
+  "record_id": "9c928beac383b006be35bd8b95577b7a9591678eafe9867ef51197616233f84a",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.0
+}

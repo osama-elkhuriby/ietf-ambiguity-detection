@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides clear guidance on the behavior of the proxy and client in relation to the FIN bit and stream closure. It explains that the proxy closes the send stream to the client upon receiving a packet with the FIN bit set, and it advises clients not to close the sending stream if they still expect to receive data. The language is precise and does not allow for multiple materially different interpretations that would affect implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:45:30.125264+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "9d3fc987162234013e9bae4082ab93041e19511b96be4b4577651c0773dc5b04",
+  "lineage_ids": "lineage:bdb0e0d16e043444a3f1ec5c",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 138,
+    "load_duration": 4870600,
+    "prompt_eval_count": 594,
+    "total_duration": 5780599700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides clear guidance on the behavior of the proxy and client in relation to the FIN bit and stream closure. It explains that the proxy closes the send stream to the client upon receiving a packet with the FIN bit set, and it advises clients not to close the sending stream if they still expect to receive data. The language is precise and does not allow for multiple materially different interpretations that would affect implementation behavior.\"\n}",
+  "record_id": "3ed3603f0212404e4d2fc56c7765f13032bc8d236dbfeea99047afe5d262df44",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.797
+}

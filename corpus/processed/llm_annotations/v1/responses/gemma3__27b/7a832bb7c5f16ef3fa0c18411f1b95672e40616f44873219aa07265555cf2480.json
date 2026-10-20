@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "for which the server is not authoritative",
+    "interpretation_a": "The server is not authoritative for the *pushed resource*.",
+    "interpretation_b": "The server is not authoritative for the *initial request* that triggered the push.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'for which the server is not authoritative' is open to interpretation. Does it mean the server isn't authorized to serve the *pushed* resource, or that it isn't authorized to handle the original request that led to the push? Both are reasonable readings of the text, and the lack of clarity creates a potential implementation divergence.",
+    "missing_information": "It is unclear whether 'authoritative' refers to the pushed resource itself or the original request that prompted the push. This distinction affects how a client determines if the PUSH_PROMISE is valid."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:38:02.260708+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "4c224163fb0d7f4e4c87f236d6884fb7e5d4b3fc5bbe88ee42b7dd03be13c8d4",
+  "lineage_ids": "lineage:66e0f5d5272d767417eb83a2",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 201,
+    "load_duration": 10179300,
+    "prompt_eval_count": 583,
+    "total_duration": 7810570000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"for which the server is not authoritative\", \"interpretation_a\": \"The server is not authoritative for the *pushed resource*.\", \"interpretation_b\": \"The server is not authoritative for the *initial request* that triggered the push.\", \"missing_information\": \"It is unclear whether 'authoritative' refers to the pushed resource itself or the original request that prompted the push. This distinction affects how a client determines if the PUSH_PROMISE is valid.\", \"justification\": \"The phrase 'for which the server is not authoritative' is open to interpretation. Does it mean the server isn't authorized to serve the *pushed* resource, or that it isn't authorized to handle the original request that led to the push? Both are reasonable readings of the text, and the lack of clarity creates a potential implementation divergence.\"}",
+  "record_id": "7a832bb7c5f16ef3fa0c18411f1b95672e40616f44873219aa07265555cf2480",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.828
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "after sending some number of PATH_CHALLENGE frames or after some time has passed",
+    "interpretation_a": "An endpoint could interpret this as requiring a fixed number of PATH_CHALLENGE frames (e.g., 3) and a fixed timeout (e.g., 5 seconds) to abandon path validation.",
+    "interpretation_b": "An endpoint could interpret this as allowing dynamic or adaptive thresholds for the number of PATH_CHALLENGE frames and the timeout, based on network conditions or implementation preferences.",
+    "is_ambiguous": "yes",
+    "justification": "The lack of specific constraints on the number of PATH_CHALLENGE frames or the time threshold introduces ambiguity in implementation behavior, as different endpoints may use different thresholds.",
+    "missing_information": "The clause does not specify the exact number of PATH_CHALLENGE frames or the duration of the time threshold, which are necessary to determine when to abandon path validation."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:34:48.146868+00:00",
+  "document_id": "draft-ietf-quic-transport-15",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "7ec9dd6bc8d235ea197084ddfce0df546eec8cfdaba05cec12cab79decb15275",
+  "lineage_ids": "lineage:cf5266d14f1a21a2f9715aee",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 212,
+    "load_duration": 4037100,
+    "prompt_eval_count": 521,
+    "total_duration": 8683868700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"after sending some number of PATH_CHALLENGE frames or after some time has passed\",\n  \"interpretation_a\": \"An endpoint could interpret this as requiring a fixed number of PATH_CHALLENGE frames (e.g., 3) and a fixed timeout (e.g., 5 seconds) to abandon path validation.\",\n  \"interpretation_b\": \"An endpoint could interpret this as allowing dynamic or adaptive thresholds for the number of PATH_CHALLENGE frames and the timeout, based on network conditions or implementation preferences.\",\n  \"missing_information\": \"The clause does not specify the exact number of PATH_CHALLENGE frames or the duration of the time threshold, which are necessary to determine when to abandon path validation.\",\n  \"justification\": \"The lack of specific constraints on the number of PATH_CHALLENGE frames or the time threshold introduces ambiguity in implementation behavior, as different endpoints may use different thresholds.\"\n}",
+  "record_id": "b39029b04660d8edb6b0fe0fe7e65480fee80b7ab62f952f8b15d3d990c11e2f",
+  "revision": "15",
+  "schema_version": 1,
+  "section_ids": "6.10.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.688
+}

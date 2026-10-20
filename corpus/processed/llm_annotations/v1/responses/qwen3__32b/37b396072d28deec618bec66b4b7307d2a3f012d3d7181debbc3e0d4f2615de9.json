@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear and unambiguous requirement for an origin server's behavior when it receives an HTTP/1.1 (or later) request with a 100-continue expectation and a message body. It specifies two possible responses: either an immediate final status code if determinable from the request-line and headers, or an immediate 100 (Continue) response. The language is precise and does not allow for multiple materially different interpretations that would affect implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:09:11.020036+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-03",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "068b9ebb442fa2dea7098fe71961bc93367a102c3fb37c06778173c6f4d475fd",
+  "lineage_ids": "lineage:24d6bb9d5dc0834339a60b63",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 152,
+    "load_duration": 8355800,
+    "prompt_eval_count": 631,
+    "total_duration": 6351372500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear and unambiguous requirement for an origin server's behavior when it receives an HTTP/1.1 (or later) request with a 100-continue expectation and a message body. It specifies two possible responses: either an immediate final status code if determinable from the request-line and headers, or an immediate 100 (Continue) response. The language is precise and does not allow for multiple materially different interpretations that would affect implementation behavior.\"\n}",
+  "record_id": "37b396072d28deec618bec66b4b7307d2a3f012d3d7181debbc3e0d4f2615de9",
+  "revision": "03",
+  "schema_version": 1,
+  "section_ids": "8.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.359
+}

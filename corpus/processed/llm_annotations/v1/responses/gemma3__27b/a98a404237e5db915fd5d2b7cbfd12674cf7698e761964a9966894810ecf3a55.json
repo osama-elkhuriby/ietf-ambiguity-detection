@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Even though newer keys could be available",
+    "interpretation_a": "Retransmissions are always sent in cleartext, regardless of key availability.",
+    "interpretation_b": "Retransmissions are sent in cleartext *only* when newer keys are available; if no newer keys are available, they might be encrypted.",
+    "is_ambiguous": "yes",
+    "justification": "The conditional phrasing suggests that the availability of newer keys is a factor in the requirement to send retransmissions in cleartext. However, the 'MUST' statement is absolute and doesn't explicitly tie the cleartext requirement to the availability of newer keys. This creates ambiguity about whether cleartext transmission is *always* required, or only when newer keys exist.",
+    "missing_information": "The clause does not explicitly state whether retransmissions are *always* cleartext, or only when newer keys are available. The phrase 'Even though newer keys could be available' implies a conditional requirement, but the 'MUST' applies to all retransmissions."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:44:19.610803+00:00",
+  "document_id": "draft-ietf-quic-tls-07",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "1bf6d8547d065b4c81af754be59fd669e63dda8c827df3e3a9777816a9a0ad20",
+  "lineage_ids": "lineage:aa889f185e55f3a5a325f921",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 229,
+    "load_duration": 4254800,
+    "prompt_eval_count": 588,
+    "total_duration": 8559083500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Even though newer keys could be available\", \"interpretation_a\": \"Retransmissions are always sent in cleartext, regardless of key availability.\", \"interpretation_b\": \"Retransmissions are sent in cleartext *only* when newer keys are available; if no newer keys are available, they might be encrypted.\", \"missing_information\": \"The clause does not explicitly state whether retransmissions are *always* cleartext, or only when newer keys are available. The phrase 'Even though newer keys could be available' implies a conditional requirement, but the 'MUST' applies to all retransmissions.\", \"justification\": \"The conditional phrasing suggests that the availability of newer keys is a factor in the requirement to send retransmissions in cleartext. However, the 'MUST' statement is absolute and doesn't explicitly tie the cleartext requirement to the availability of newer keys. This creates ambiguity about whether cleartext transmission is *always* required, or only when newer keys exist.\"}",
+  "record_id": "a98a404237e5db915fd5d2b7cbfd12674cf7698e761964a9966894810ecf3a55",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.563
+}

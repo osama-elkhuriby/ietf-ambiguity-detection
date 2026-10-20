@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause provides a clear and unambiguous instruction: clients receiving a version 1 Retry Packet with a value larger than 20 bytes must drop the packet. There is no ambiguity in the action required (dropping the packet) or the condition (value larger than 20). The clause does not permit multiple reasonable interpretations or omit critical constraints that would affect implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:13:42.090618+00:00",
+  "document_id": "draft-ietf-quic-transport-24",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "f9cd4ca02940bc855066e959e719b76bfa74ad81d1545a9c11b51e1c76fd6b19",
+  "lineage_ids": "lineage:190ab415cc8daab5fc85b15f",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 132,
+    "load_duration": 6658500,
+    "prompt_eval_count": 542,
+    "total_duration": 5409428700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause provides a clear and unambiguous instruction: clients receiving a version 1 Retry Packet with a value larger than 20 bytes must drop the packet. There is no ambiguity in the action required (dropping the packet) or the condition (value larger than 20). The clause does not permit multiple reasonable interpretations or omit critical constraints that would affect implementation behavior.\"\n}",
+  "record_id": "67b0b4735cd6600c03f75d771347ab597c5164d6875bc433cac5534d54d23a37",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "17.2.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.406
+}

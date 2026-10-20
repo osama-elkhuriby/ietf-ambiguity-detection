@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause uses the word 'MAY', which grants the server discretion in its behavior. While this allows for flexibility, it does not introduce ambiguity in the sense of permitting materially different interpretations that would affect implementation. The behavior described is clear: the server may store and recover certain parameters and may reject 0-RTT if it selects smaller values. There is no conflicting or under-specified constraint that would lead to multiple reasonable but materially different implementations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:44:32.240125+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "2a2eb11b78d4c28f0b9998a370ad05c05b3201bba1b43bd2b18883fd92403e2c",
+  "lineage_ids": "lineage:2a2f9758aeb29e7185e67164",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 146,
+    "load_duration": 3540000,
+    "prompt_eval_count": 578,
+    "total_duration": 6008853300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause uses the word 'MAY', which grants the server discretion in its behavior. While this allows for flexibility, it does not introduce ambiguity in the sense of permitting materially different interpretations that would affect implementation. The behavior described is clear: the server may store and recover certain parameters and may reject 0-RTT if it selects smaller values. There is no conflicting or under-specified constraint that would lead to multiple reasonable but materially different implementations.\"\n}",
+  "record_id": "da473d82441e5761647998b6420795219a533c97c9286ee165c167759438e753",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.016
+}

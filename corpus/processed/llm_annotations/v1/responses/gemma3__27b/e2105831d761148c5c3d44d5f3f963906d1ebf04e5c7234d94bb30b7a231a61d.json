@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD be sent immediately upon receipt of a second packet but the delay SHOULD NOT exceed the maximum ack delay.",
+    "interpretation_a": "An ACK is sent as soon as the second packet arrives, but is still subject to the max_ack_delay. This implies a very short delay, potentially zero, but bounded by the parameter.",
+    "interpretation_b": "An ACK is sent within the max_ack_delay, and the 'immediately' refers to not delaying beyond that parameter. The ACK might be delayed slightly to batch with other events, but still within the limit.",
+    "is_ambiguous": "yes",
+    "justification": "The use of both 'SHOULD' and 'immediately' combined with a maximum delay creates ambiguity. It's unclear if 'immediately' modifies the 'SHOULD' (meaning send as soon as possible, up to the max delay) or if it's a separate condition (send immediately if possible, otherwise respect the max delay).",
+    "missing_information": "The relationship between 'immediately' and 'maximum ack delay' is not clearly defined. Does 'immediately' mean 'as soon as possible' or 'with no intentional delay beyond the arrival of the second packet'?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:31:33.308968+00:00",
+  "document_id": "draft-ietf-quic-recovery-18",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "3409b6fb072225341d72ed492ca07bf33f6310235aa6f335fab8f91b654ee773",
+  "lineage_ids": "lineage:b94f58fcb4de1c3c757e645b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 267,
+    "load_duration": 5220900,
+    "prompt_eval_count": 575,
+    "total_duration": 9917997200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD be sent immediately upon receipt of a second packet but the delay SHOULD NOT exceed the maximum ack delay.\", \"interpretation_a\": \"An ACK is sent as soon as the second packet arrives, but is still subject to the max_ack_delay. This implies a very short delay, potentially zero, but bounded by the parameter.\", \"interpretation_b\": \"An ACK is sent within the max_ack_delay, and the 'immediately' refers to not delaying beyond that parameter. The ACK might be delayed slightly to batch with other events, but still within the limit.\", \"missing_information\": \"The relationship between 'immediately' and 'maximum ack delay' is not clearly defined. Does 'immediately' mean 'as soon as possible' or 'with no intentional delay beyond the arrival of the second packet'?\",\"justification\": \"The use of both 'SHOULD' and 'immediately' combined with a maximum delay creates ambiguity. It's unclear if 'immediately' modifies the 'SHOULD' (meaning send as soon as possible, up to the max delay) or if it's a separate condition (send immediately if possible, otherwise respect the max delay).\"}",
+  "record_id": "e2105831d761148c5c3d44d5f3f963906d1ebf04e5c7234d94bb30b7a231a61d",
+  "revision": "18",
+  "schema_version": 1,
+  "section_ids": "4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.906
+}

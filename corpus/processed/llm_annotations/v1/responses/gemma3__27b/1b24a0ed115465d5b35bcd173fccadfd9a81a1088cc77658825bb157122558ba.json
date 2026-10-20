@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD limit the number",
+    "interpretation_a": "A client might limit to 10 streams.",
+    "interpretation_b": "A client might limit to 1000 streams.",
+    "is_ambiguous": "yes",
+    "justification": "The use of SHOULD indicates a recommendation, but the lack of a specific limit creates ambiguity. Different implementations could choose vastly different limits, impacting the effectiveness of the DoS protection and potentially leading to different user experiences.",
+    "missing_information": "The clause does not specify a maximum number of streams, or a method for determining a reasonable limit. This leaves open the possibility of implementations that are either too restrictive or too permissive, potentially leading to DoS vulnerabilities."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:29:08.959115+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "8c25c558a23140f4d3f9825a9ed3f0d7ed4eb86e7a657420341b8e618c24b426",
+  "lineage_ids": "lineage:fd58752b0ae949f7db7c5f9e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 164,
+    "load_duration": 8939800,
+    "prompt_eval_count": 584,
+    "total_duration": 6419527500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD limit the number\", \"interpretation_a\": \"A client might limit to 10 streams.\", \"interpretation_b\": \"A client might limit to 1000 streams.\", \"missing_information\": \"The clause does not specify a maximum number of streams, or a method for determining a reasonable limit. This leaves open the possibility of implementations that are either too restrictive or too permissive, potentially leading to DoS vulnerabilities.\", \"justification\": \"The use of SHOULD indicates a recommendation, but the lack of a specific limit creates ambiguity. Different implementations could choose vastly different limits, impacting the effectiveness of the DoS protection and potentially leading to different user experiences.\"}",
+  "record_id": "1b24a0ed115465d5b35bcd173fccadfd9a81a1088cc77658825bb157122558ba",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "10.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.438
+}

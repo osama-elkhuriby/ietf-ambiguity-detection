@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that the server should send the same header fields as a GET response, with the only exception that payload header fields (as defined in Section 5.5) may be omitted. The use of SHOULD indicates a recommendation, not a requirement, and the exception is clearly limited to payload header fields. No other header fields are implied to be omitted, and there is no missing constraint that would allow materially different implementations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T07:41:55.487934+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-12",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "659a1a288d126ea06764162c6111887928bb15ac906e9cf102550f59179f9057",
+  "lineage_ids": "lineage:6b949c059bdf149f0a83c92b",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 6858,
+    "load_duration": 4588900,
+    "prompt_eval_count": 637,
+    "total_duration": 59652001200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that the server should send the same header fields as a GET response, with the only exception that payload header fields (as defined in Section 5.5) may be omitted. The use of SHOULD indicates a recommendation, not a requirement, and the exception is clearly limited to payload header fields. No other header fields are implied to be omitted, and there is no missing constraint that would allow materially different implementations.\"\n}",
+  "record_id": "aee49bdd892ba821354444bf747e5b179c69dff65da01bc72355c9148a6c6d18",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "8.3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 59.656
+}

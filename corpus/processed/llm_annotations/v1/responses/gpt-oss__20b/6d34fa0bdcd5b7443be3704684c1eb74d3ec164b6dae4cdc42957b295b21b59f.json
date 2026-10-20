@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "This document does not specify an API, but any implementation of this version of QUIC MUST expose the ability to perform the operations described in this section on a QUIC connection.",
+    "interpretation_a": "The implementation must provide an API that allows an application to perform the operations described in this section.",
+    "interpretation_b": "The implementation must simply be capable of performing those operations, but does not need to expose a specific API.",
+    "is_ambiguous": "yes",
+    "justification": "The clause requires that implementations expose the ability to perform the operations, yet it explicitly states that the document does not specify an API. This creates an incomplete constraint on how the ability must be exposed, leading to two reasonable interpretations.",
+    "missing_information": "The document does not specify what API or interface must be exposed, leaving the exact mechanism unspecified."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T16:13:41.163515+00:00",
+  "document_id": "draft-ietf-quic-transport-29",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "23a33146700b1bb5901d4a0b4ea7707e27c3c9c6bdc48f3fb6e7ff84824454bb",
+  "lineage_ids": "lineage:304aaabfb8eb3f84549ab111",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 944,
+    "load_duration": 4626100,
+    "prompt_eval_count": 589,
+    "total_duration": 8257547400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"This document does not specify an API, but any implementation of this version of QUIC MUST expose the ability to perform the operations described in this section on a QUIC connection.\",\n  \"interpretation_a\": \"The implementation must provide an API that allows an application to perform the operations described in this section.\",\n  \"interpretation_b\": \"The implementation must simply be capable of performing those operations, but does not need to expose a specific API.\",\n  \"missing_information\": \"The document does not specify what API or interface must be exposed, leaving the exact mechanism unspecified.\",\n  \"justification\": \"The clause requires that implementations expose the ability to perform the operations, yet it explicitly states that the document does not specify an API. This creates an incomplete constraint on how the ability must be exposed, leading to two reasonable interpretations.\"\n}",
+  "record_id": "6d34fa0bdcd5b7443be3704684c1eb74d3ec164b6dae4cdc42957b295b21b59f",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "5.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.266
+}

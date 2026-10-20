@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless they contain a CONNECTION_CLOSE frame",
+    "interpretation_a": "The endpoint may only send packets that contain a CONNECTION_CLOSE frame, and no other frames are allowed in those packets.",
+    "interpretation_b": "The endpoint may send packets that contain a CONNECTION_CLOSE frame, but those packets may also include other frames.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether other frames may accompany the CONNECTION_CLOSE frame, leaving the implementation behaviour under‑specified.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T17:33:34.857259+00:00",
+  "document_id": "draft-ietf-quic-transport-27",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "9585282db2ae37fec58fffbcd6a33f651f3d44f9fcfc7995503b9c8806dc9ad2",
+  "lineage_ids": "lineage:269f7ea1af6671363669d723",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3217,
+    "load_duration": 6621700,
+    "prompt_eval_count": 592,
+    "total_duration": 27645647100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"unless they contain a CONNECTION_CLOSE frame\",\n  \"interpretation_a\": \"The endpoint may only send packets that contain a CONNECTION_CLOSE frame, and no other frames are allowed in those packets.\",\n  \"interpretation_b\": \"The endpoint may send packets that contain a CONNECTION_CLOSE frame, but those packets may also include other frames.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify whether other frames may accompany the CONNECTION_CLOSE frame, leaving the implementation behaviour under‑specified.\"\n}",
+  "record_id": "a568345525c33ea5054f2fd386b0b3d6433610361be902198ac4d3f800986928",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "10.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 27.64
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "highest currently-available encryption level",
+    "interpretation_a": "The 'highest currently-available encryption level' refers to the encryption level associated with the most recently negotiated key schedule.",
+    "interpretation_b": "The 'highest currently-available encryption level' refers to the encryption level associated with the key schedule that has the highest key material version number.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'highest currently-available encryption level' is not clearly defined. It is unclear whether 'highest' refers to the most recent negotiation or the key material version. This ambiguity could lead to different implementations.",
+    "missing_information": "The definition of 'currently-available' and how it relates to key schedules is missing. It is unclear whether 'highest' refers to the most recent negotiation or the key material version."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:50:46.157636+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "747d8c0bd04f3020c99c20094a258380e4f7ceeafd48138c3707e278351e726c",
+  "lineage_ids": "lineage:fcbc16c429aceb72750c7961",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 189,
+    "load_duration": 4378500,
+    "prompt_eval_count": 581,
+    "total_duration": 7144839300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"highest currently-available encryption level\", \"interpretation_a\": \"The 'highest currently-available encryption level' refers to the encryption level associated with the most recently negotiated key schedule.\", \"interpretation_b\": \"The 'highest currently-available encryption level' refers to the encryption level associated with the key schedule that has the highest key material version number.\", \"missing_information\": \"The definition of 'currently-available' and how it relates to key schedules is missing. It is unclear whether 'highest' refers to the most recent negotiation or the key material version.\", \"justification\": \"The phrase 'highest currently-available encryption level' is not clearly defined. It is unclear whether 'highest' refers to the most recent negotiation or the key material version. This ambiguity could lead to different implementations.\"}",
+  "record_id": "e0d78d500a745b980479254a17045aca6e13707138aa7a42de0ed13765614ad0",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.141
+}

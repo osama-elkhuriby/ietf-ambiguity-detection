@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear condition for constructing the :authority pseudo-header field in HTTP/2: it must be derived from the control data of the original request, unless the original request's target URI lacks authority information, in which case it must not be generated. The wording is precise and does not allow for multiple materially different interpretations. There is no missing constraint that would affect implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T01:53:04.312511+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "680499aaf5ce63a9f252a66bbecb1293edc5480d0bef0aed874cbe208eb6bd53",
+  "lineage_ids": "lineage:8fd0b4fd6f8807a423b29434",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 133,
+    "load_duration": 23463700,
+    "prompt_eval_count": 597,
+    "total_duration": 5577378000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear condition for constructing the :authority pseudo-header field in HTTP/2: it must be derived from the control data of the original request, unless the original request's target URI lacks authority information, in which case it must not be generated. The wording is precise and does not allow for multiple materially different interpretations. There is no missing constraint that would affect implementation behavior.\"\n}",
+  "record_id": "9c59aee999ab061cde75b7b703e2e9b50a71e3333296055b21fa6698f07c0d4f",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.594
+}

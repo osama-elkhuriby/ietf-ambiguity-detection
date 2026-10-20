@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "size constraints",
+    "interpretation_a": "The endpoint MUST NOT close the connection if it receives a datagram larger than the maximum allowed size.",
+    "interpretation_b": "The endpoint MUST NOT close the connection if it receives a datagram smaller than the minimum allowed size.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'size constraints' is used without definition. This leaves open the possibility of both upper and lower bounds on datagram size, leading to different interpretations of when an endpoint is permitted to discard a datagram without closing the connection.",
+    "missing_information": "The document does not define what 'size constraints' are. Without knowing the minimum and maximum allowed datagram sizes, it is unclear what constitutes a datagram that 'does not meet size constraints'."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:14:50.108512+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "d4bdf52960a4806d6c364266977320f75466d24d3502cf177c161039a2f982bc",
+  "lineage_ids": "lineage:64c77fe1cdacc991db9e98ed",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 181,
+    "load_duration": 5008000,
+    "prompt_eval_count": 569,
+    "total_duration": 6871271400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"size constraints\", \"interpretation_a\": \"The endpoint MUST NOT close the connection if it receives a datagram larger than the maximum allowed size.\", \"interpretation_b\": \"The endpoint MUST NOT close the connection if it receives a datagram smaller than the minimum allowed size.\", \"missing_information\": \"The document does not define what 'size constraints' are. Without knowing the minimum and maximum allowed datagram sizes, it is unclear what constitutes a datagram that 'does not meet size constraints'.\", \"justification\": \"The phrase 'size constraints' is used without definition. This leaves open the possibility of both upper and lower bounds on datagram size, leading to different interpretations of when an endpoint is permitted to discard a datagram without closing the connection.\"}",
+  "record_id": "ef92e430034daec5f8257bfe7135cd17ac41bb39e8842c79251105316481b466",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "14",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.859
+}

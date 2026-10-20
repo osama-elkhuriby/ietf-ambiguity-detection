@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY prefer",
+    "interpretation_a": "The client is permitted to use the existing connection C if it chooses, but is not required to do so.",
+    "interpretation_b": "The client is encouraged to use the existing connection C, but may choose not to.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' introduces ambiguity. It could mean 'permitted' or 'encouraged'. Without further clarification, implementations could reasonably differ on how strongly they prioritize using the existing connection.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:00:03.089478+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "ab5abc7c306a29c63b0a807d810462357672499c76b17502bbc70e72c3194bd1",
+  "lineage_ids": "lineage:5c0c49152ea199255d403d64",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 131,
+    "load_duration": 6095900,
+    "prompt_eval_count": 591,
+    "total_duration": 5111896400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY prefer\", \"interpretation_a\": \"The client is permitted to use the existing connection C if it chooses, but is not required to do so.\", \"interpretation_b\": \"The client is encouraged to use the existing connection C, but may choose not to.\", \"missing_information\": \"\", \"justification\": \"The use of 'MAY' introduces ambiguity. It could mean 'permitted' or 'encouraged'. Without further clarification, implementations could reasonably differ on how strongly they prioritize using the existing connection.\"}",
+  "record_id": "2b0c44488793b6b8419e2b8e8762012997721e7533687a6954c9a2c348122529",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.11
+}

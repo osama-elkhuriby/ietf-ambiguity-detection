@@ -1,0 +1,50 @@
+{
+  "dataset_dir": "corpus/processed/transformer_partitioned/v1/development",
+  "experiment_name": "deberta-v3-small-clause-only-v1",
+  "model": {
+    "license": "MIT",
+    "repository": "microsoft/deberta-v3-small",
+    "revision": "a36c739020e01763fe789b4b85e2df55d6180012"
+  },
+  "resolved": {
+    "fold": 5,
+    "learning_rate": 3e-05,
+    "requested_precision": "fp32",
+    "seed": 1729,
+    "smoke": false,
+    "weight_strategy": "unweighted"
+  },
+  "selection": {
+    "cross_validation": "grouped_training_families_only",
+    "fold_assignment": "experiments/transformer/configs/folds_v1.json",
+    "fold_assignment_sha256": "c04dc8424ed96486f8521ef57d17e4b503d2c3f41bb116edeeb9535073dd7884",
+    "fold_seed": 1729,
+    "inner_selection_assignment": "experiments/transformer/configs/inner_selection_v1.json",
+    "inner_selection_assignment_sha256": "7db817c91e962a6a921942e14bc2d41737bd1060a111a8c7fb798bb929054616",
+    "n_splits": 5,
+    "test_role": "sealed_final_evaluation",
+    "validation_role": "independent_calibration_and_routing_verification_only"
+  },
+  "tokenization": {
+    "max_length": 256,
+    "target_overflow": "deterministic_head_tail"
+  },
+  "training": {
+    "checkpoint_metric": "pr_auc",
+    "early_stopping_patience": 2,
+    "eval_batch_size": 16,
+    "learning_rates": [
+      1e-05,
+      2e-05,
+      3e-05
+    ],
+    "max_epochs": 10,
+    "max_grad_norm": 1.0,
+    "precision": "fp32",
+    "screening_seed": 1729,
+    "train_batch_size": 8,
+    "warmup_ratio": 0.1,
+    "weight_decay": 0.01
+  },
+  "variant": "target_only"
+}

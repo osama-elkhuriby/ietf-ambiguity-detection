@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "any outstanding data is declared lost",
+    "interpretation_a": "All outstanding data must be declared lost before a RESET_STREAM is sent.",
+    "interpretation_b": "Any single byte of outstanding data being declared lost triggers the RESET_STREAM.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'any outstanding data' is ambiguous. It is unclear whether 'any' means 'all' or 'at least one'. This affects the implementation because an endpoint might wait for all outstanding data to be lost before sending the RESET_STREAM, or it might send it as soon as even a single byte is declared lost.",
+    "missing_information": "The meaning of 'any' is unclear. Does it mean all, or at least one?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:35:51.359168+00:00",
+  "document_id": "draft-ietf-quic-transport-29",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "c534142cb0759368635489b9e0457004ccb5e172ee9567120ac373c819e8dddf",
+  "lineage_ids": "lineage:c1cc74122a7eaffffe71fab7",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 174,
+    "load_duration": 3645300,
+    "prompt_eval_count": 601,
+    "total_duration": 6668925800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"any outstanding data is declared lost\", \"interpretation_a\": \"All outstanding data must be declared lost before a RESET_STREAM is sent.\", \"interpretation_b\": \"Any single byte of outstanding data being declared lost triggers the RESET_STREAM.\", \"missing_information\": \"The meaning of 'any' is unclear. Does it mean all, or at least one?\", \"justification\": \"The phrase 'any outstanding data' is ambiguous. It is unclear whether 'any' means 'all' or 'at least one'. This affects the implementation because an endpoint might wait for all outstanding data to be lost before sending the RESET_STREAM, or it might send it as soon as even a single byte is declared lost.\"}",
+  "record_id": "7cacae2e9a47cdfcfbc8b8115f7a6419629051c04653561bf24ed42c769a2d04",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "3.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.672
+}

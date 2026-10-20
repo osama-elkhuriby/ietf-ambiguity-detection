@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Endpoints MAY respond to this condition with a connection error, or by dropping packets.",
+    "interpretation_a": "The clause allows an endpoint to send a connection error and also drop packets as part of the same response.",
+    "interpretation_b": "The clause allows an endpoint to either send a connection error or drop packets, but not both.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether the two actions can be combined or are mutually exclusive, leaving the implementation behaviour under‑specified.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T16:25:55.608719+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "78ca4c69e935214066c6f491cd143540ac7f91fcc9baf35db7e7895b2cc5bfb8",
+  "lineage_ids": "lineage:ae85753e3f65baa83d99e1c2",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 383,
+    "load_duration": 5081500,
+    "prompt_eval_count": 728,
+    "total_duration": 3517335100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"Endpoints MAY respond to this condition with a connection error, or by dropping packets.\",\n  \"interpretation_a\": \"The clause allows an endpoint to send a connection error and also drop packets as part of the same response.\",\n  \"interpretation_b\": \"The clause allows an endpoint to either send a connection error or drop packets, but not both.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify whether the two actions can be combined or are mutually exclusive, leaving the implementation behaviour under‑specified.\"\n}",
+  "record_id": "772587d5e5e44ad31fd33c1d840d51adeefeef6aa2c4d142a761185f3a1c4089",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "21.9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 19.891
+}

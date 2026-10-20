@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD be sent",
+    "interpretation_a": "An immediate ACK is recommended, but not required, for every out-of-order packet.",
+    "interpretation_b": "An immediate ACK is strongly recommended, approaching a requirement, for every out-of-order packet.",
+    "is_ambiguous": "yes",
+    "justification": "The word 'SHOULD' is inherently ambiguous. Without a defined scale for 'SHOULD', it's unclear whether implementations are expected to attempt immediate ACKs for every out-of-order packet, or whether they may choose not to.",
+    "missing_information": "The strength of 'SHOULD' is not defined. Is it a weak recommendation, or a strong one? This affects implementation decisions about whether to prioritize immediate ACKs for out-of-order packets."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:33:03.825266+00:00",
+  "document_id": "draft-ietf-quic-recovery-22",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "9324d55bb7d74eadcefea7a8eb706911b73d5df52b5d535aef5da260724b33ee",
+  "lineage_ids": "lineage:0f22d648803f5f413ccd78fa",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 185,
+    "load_duration": 4325300,
+    "prompt_eval_count": 602,
+    "total_duration": 7023600200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD be sent\", \"interpretation_a\": \"An immediate ACK is recommended, but not required, for every out-of-order packet.\", \"interpretation_b\": \"An immediate ACK is strongly recommended, approaching a requirement, for every out-of-order packet.\", \"missing_information\": \"The strength of 'SHOULD' is not defined. Is it a weak recommendation, or a strong one? This affects implementation decisions about whether to prioritize immediate ACKs for out-of-order packets.\",\"justification\": \"The word 'SHOULD' is inherently ambiguous. Without a defined scale for 'SHOULD', it's unclear whether implementations are expected to attempt immediate ACKs for every out-of-order packet, or whether they may choose not to.\"}",
+  "record_id": "f76906253b618feebabf91f5332c1a73f422a23d0c9b1433e0c33ffc905b573f",
+  "revision": "22",
+  "schema_version": 1,
+  "section_ids": "4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.016
+}

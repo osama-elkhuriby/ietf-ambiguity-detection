@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT buffer data indefinitely",
+    "interpretation_a": "The TCP peer must eventually discard any buffered data if no acknowledgement is received, even if it means losing data.",
+    "interpretation_b": "The TCP peer must limit the amount of time or data it buffers, but may retransmit or attempt to deliver the data later.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'indefinitely' lacks a concrete constraint. It is unclear whether 'indefinitely' means 'forever', 'until resources are exhausted', or 'until a specific timeout occurs'. This affects how an implementation would manage its buffer.",
+    "missing_information": "The definition of 'indefinitely' is missing. A time limit, a data size limit, or a condition based on network events would resolve the ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:19:28.174351+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "f91618360ccf538c1aa5b934383f3b4075fa409eceda55019a08c4a4f78c85e4",
+  "lineage_ids": "lineage:a878c31784da710fdbd0b069",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 186,
+    "load_duration": 9308400,
+    "prompt_eval_count": 613,
+    "total_duration": 7245148600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT buffer data indefinitely\", \"interpretation_a\": \"The TCP peer must eventually discard any buffered data if no acknowledgement is received, even if it means losing data.\", \"interpretation_b\": \"The TCP peer must limit the amount of time or data it buffers, but may retransmit or attempt to deliver the data later.\", \"missing_information\": \"The definition of 'indefinitely' is missing. A time limit, a data size limit, or a condition based on network events would resolve the ambiguity.\",\"justification\": \"The phrase 'indefinitely' lacks a concrete constraint. It is unclear whether 'indefinitely' means 'forever', 'until resources are exhausted', or 'until a specific timeout occurs'. This affects how an implementation would manage its buffer.\"}",
+  "record_id": "29bfd5979fc8654f2a9256c8ad2e4e4beae338d08993b284aee793b543ddf1ae",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.9.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.25
+}

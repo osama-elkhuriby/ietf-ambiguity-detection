@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "do not need to verify membership",
+    "interpretation_a": "Implementers are permitted to skip subgroup membership verification, potentially accepting invalid keys.",
+    "interpretation_b": "Implementers are required to perform some other validation that achieves the same security goal as subgroup membership verification, but not the standard check.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'do not need to verify' is permissive, but the security implications of skipping subgroup verification are significant. Without further clarification, it's ambiguous whether any alternative validation is required, leading to potentially insecure implementations.",
+    "missing_information": "It is unclear what alternative validation, if any, is expected in lieu of subgroup membership verification. The statement implies a choice, but doesn't define the scope of acceptable alternatives."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:36:11.895910+00:00",
+  "document_id": "draft-ietf-tls-tls13-21",
+  "family_id": "draft-ietf-tls-tls13",
+  "input_fingerprint": "2d0c9c720971ec03a357e903baa75b64ed669b4297878feb79e54cd701c90c1f",
+  "lineage_ids": "lineage:59f94506e65e1467dcc54dce",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 180,
+    "load_duration": 8571200,
+    "prompt_eval_count": 654,
+    "total_duration": 7048926000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"do not need to verify membership\", \"interpretation_a\": \"Implementers are permitted to skip subgroup membership verification, potentially accepting invalid keys.\", \"interpretation_b\": \"Implementers are required to perform some other validation that achieves the same security goal as subgroup membership verification, but not the standard check.\", \"missing_information\": \"It is unclear what alternative validation, if any, is expected in lieu of subgroup membership verification. The statement implies a choice, but doesn't define the scope of acceptable alternatives.\", \"justification\": \"The phrase 'do not need to verify' is permissive, but the security implications of skipping subgroup verification are significant. Without further clarification, it's ambiguous whether any alternative validation is required, leading to potentially insecure implementations.\"}",
+  "record_id": "ae113b4c607f5e89c39e5062ca4cb031340fc1617212f22760465738b8a927c1",
+  "revision": "21",
+  "schema_version": 1,
+  "section_ids": "4.2.7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.047
+}

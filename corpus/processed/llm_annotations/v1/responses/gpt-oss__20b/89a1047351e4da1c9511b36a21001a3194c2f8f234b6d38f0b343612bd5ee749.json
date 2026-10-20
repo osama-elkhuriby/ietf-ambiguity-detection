@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that a user agent should include a Content-Length header when no Transfer-Encoding header is present and the request method allows a body. The subsequent clause clarifies that the header should be sent even if the body is empty. No alternative reasonable interpretations or missing constraints are evident.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T07:06:07.890100+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-14",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "1e8724e67c19554d4df410405a4fb63f7abe051f618bcbbdf7df45653ec43541",
+  "lineage_ids": "lineage:aa96e8d6eb63683452ce70b6",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1415,
+    "load_duration": 4085100,
+    "prompt_eval_count": 599,
+    "total_duration": 12189088900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that a user agent should include a Content-Length header when no Transfer-Encoding header is present and the request method allows a body. The subsequent clause clarifies that the header should be sent even if the body is empty. No alternative reasonable interpretations or missing constraints are evident.\"\n}",
+  "record_id": "89a1047351e4da1c9511b36a21001a3194c2f8f234b6d38f0b343612bd5ee749",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "8.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 12.188
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "before the handshake is complete",
+    "interpretation_a": "The server can send data using 1-RTT keys up to, but not including, the moment the handshake is considered complete.",
+    "interpretation_b": "The server can send data using 1-RTT keys until some reasonable time after the handshake is considered complete, allowing for minor timing variations.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'before the handshake is complete' is open to interpretation. The exact moment the handshake is 'complete' is not defined, leading to potential differences in how implementations handle the timing of data transmission using 1-RTT keys.",
+    "missing_information": "The definition of 'handshake is complete' is not precise. Does it refer to the completion of the TLS handshake, or the QUIC handshake, or some other event? A precise definition is needed to avoid ambiguity in implementation."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:39:18.269749+00:00",
+  "document_id": "draft-ietf-quic-tls-29",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "f1c2aba77f8a7e8098040bb973a7e3cf681b5b0a6b9042a0588bfe78529d2d54",
+  "lineage_ids": "lineage:597c18278a4ed4ac453b7e9d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 205,
+    "load_duration": 4651800,
+    "prompt_eval_count": 578,
+    "total_duration": 7704457500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"before the handshake is complete\", \"interpretation_a\": \"The server can send data using 1-RTT keys up to, but not including, the moment the handshake is considered complete.\", \"interpretation_b\": \"The server can send data using 1-RTT keys until some reasonable time after the handshake is considered complete, allowing for minor timing variations.\", \"missing_information\": \"The definition of 'handshake is complete' is not precise. Does it refer to the completion of the TLS handshake, or the QUIC handshake, or some other event? A precise definition is needed to avoid ambiguity in implementation.\", \"justification\": \"The phrase 'before the handshake is complete' is open to interpretation. The exact moment the handshake is 'complete' is not defined, leading to potential differences in how implementations handle the timing of data transmission using 1-RTT keys.\"}",
+  "record_id": "5e529b480310a0c7fa9434864e0d5357ea1f617c3f16e648f367d2c43d9d8ff9",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "5.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.703
+}

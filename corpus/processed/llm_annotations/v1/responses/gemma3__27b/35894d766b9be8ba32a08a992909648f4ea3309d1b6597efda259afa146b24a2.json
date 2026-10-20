@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "excluding any userinfo subcomponent and its \"@\" delimiter",
+    "interpretation_a": "The Host header should be constructed by removing the userinfo part (e.g., username:password@) and the '@' symbol from the authority component of the target URI.",
+    "interpretation_b": "The Host header should be constructed by removing *only* the userinfo subcomponent, but retain the '@' symbol if it exists as part of the remaining authority component (e.g., if the authority component is 'user@example.com', the Host header would be 'user@example.com').",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'excluding any userinfo subcomponent and its \"@\" delimiter' is open to interpretation. Does 'excluding...and its \"@\" delimiter' mean to remove the delimiter *only* when it's directly associated with the userinfo, or to remove it regardless of context? The two interpretations lead to different Host header values in certain cases.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:01:53.507470+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-06",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "563e8fd5a7baa8f2280dbe31125860b6b6fa449cba5236527570a2ba4fe4ac3a",
+  "lineage_ids": "lineage:d78ab61022acba6793ebf0e3",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 235,
+    "load_duration": 10344900,
+    "prompt_eval_count": 603,
+    "total_duration": 8978760200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"excluding any userinfo subcomponent and its \\\"@\\\" delimiter\", \"interpretation_a\": \"The Host header should be constructed by removing the userinfo part (e.g., username:password@) and the '@' symbol from the authority component of the target URI.\", \"interpretation_b\": \"The Host header should be constructed by removing *only* the userinfo subcomponent, but retain the '@' symbol if it exists as part of the remaining authority component (e.g., if the authority component is 'user@example.com', the Host header would be 'user@example.com').\", \"missing_information\": \"\", \"justification\": \"The phrase 'excluding any userinfo subcomponent and its \\\"@\\\" delimiter' is open to interpretation. Does 'excluding...and its \\\"@\\\" delimiter' mean to remove the delimiter *only* when it's directly associated with the userinfo, or to remove it regardless of context? The two interpretations lead to different Host header values in certain cases.\"}",
+  "record_id": "35894d766b9be8ba32a08a992909648f4ea3309d1b6597efda259afa146b24a2",
+  "revision": "06",
+  "schema_version": 1,
+  "section_ids": "5.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.0
+}

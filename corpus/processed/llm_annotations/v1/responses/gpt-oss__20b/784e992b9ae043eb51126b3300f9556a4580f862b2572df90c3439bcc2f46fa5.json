@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless application priorities indicate otherwise",
+    "interpretation_a": "The application can set per‑stream priorities; if a lost frame belongs to a stream with lower priority than a new frame, the retransmission may be delayed until after the new data is sent, but the lost frame will still be retransmitted later.",
+    "interpretation_b": "The application can indicate that retransmission of lost frames should not occur before new data, and may also choose to omit retransmission entirely, allowing the lost data to be dropped.",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a concrete constraint on how application priorities influence retransmission order and whether retransmission is mandatory, leading to two materially different reasonable interpretations.",
+    "missing_information": "The clause does not define how application priorities are expressed, how they are compared to new data, or whether retransmission can be omitted, leaving the implementation behaviour under‑specified."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T16:26:28.697250+00:00",
+  "document_id": "draft-ietf-quic-transport-10",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "3c1191ed8254f98bc0787457f685174e911ef41447b33e5442579383192a509f",
+  "lineage_ids": "lineage:a13fa815040b121e197f22b4",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1237,
+    "load_duration": 5425700,
+    "prompt_eval_count": 597,
+    "total_duration": 10759789200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"unless application priorities indicate otherwise\",\n  \"interpretation_a\": \"The application can set per‑stream priorities; if a lost frame belongs to a stream with lower priority than a new frame, the retransmission may be delayed until after the new data is sent, but the lost frame will still be retransmitted later.\",\n  \"interpretation_b\": \"The application can indicate that retransmission of lost frames should not occur before new data, and may also choose to omit retransmission entirely, allowing the lost data to be dropped.\",\n  \"missing_information\": \"The clause does not define how application priorities are expressed, how they are compared to new data, or whether retransmission can be omitted, leaving the implementation behaviour under‑specified.\",\n  \"justification\": \"The clause lacks a concrete constraint on how application priorities influence retransmission order and whether retransmission is mandatory, leading to two materially different reasonable interpretations.\"\n}",
+  "record_id": "784e992b9ae043eb51126b3300f9556a4580f862b2572df90c3439bcc2f46fa5",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "10.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.766
+}

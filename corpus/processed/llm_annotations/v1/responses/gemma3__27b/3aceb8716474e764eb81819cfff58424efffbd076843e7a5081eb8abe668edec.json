@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "I-1",
+    "evidence_span": "MUST NOT appear",
+    "interpretation_a": "A pseudo-header field defined for requests is present in a response.",
+    "interpretation_b": "A pseudo-header field defined for responses is present in a request.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states what MUST NOT happen, but does not define what happens if a pseudo-header field appears in the wrong type of message. Does the message get rejected? Is the field ignored? This is a concrete missing constraint.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:31:53.235765+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "ca6f997dbbb33f556cc69736603a1cfce2f806096a289582d79f26ccd9afa2b5",
+  "lineage_ids": "lineage:ff83ca290e6a34dfc162e850",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 129,
+    "load_duration": 9952100,
+    "prompt_eval_count": 564,
+    "total_duration": 5102386300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"I-1\", \"evidence_span\": \"MUST NOT appear\", \"interpretation_a\": \"A pseudo-header field defined for requests is present in a response.\", \"interpretation_b\": \"A pseudo-header field defined for responses is present in a request.\",\"missing_information\": \"\", \"justification\": \"The clause states what MUST NOT happen, but does not define what happens if a pseudo-header field appears in the wrong type of message. Does the message get rejected? Is the field ignored? This is a concrete missing constraint.\"}",
+  "record_id": "3aceb8716474e764eb81819cfff58424efffbd076843e7a5081eb8abe668edec",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.125
+}

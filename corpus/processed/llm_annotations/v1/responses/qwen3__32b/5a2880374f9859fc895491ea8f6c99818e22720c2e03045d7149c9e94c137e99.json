@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause provides a clear and specific condition for determining the acceptability of an incoming segment's ACK value. The range '((SND.UNA - MAX.SND.WND) <= SEG.ACK <= SND.NXT)' is well-defined and unambiguous in terms of implementation. There is no ambiguity in the wording or constraints, and no missing information that would lead to multiple interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:12:23.664820+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "a299bafa1a9b073996aabd091268fa9bb38611726a4eeaf4c4f1f571a808c25d",
+  "lineage_ids": "lineage:fc6bbfdbb3d452c0d752c4b9",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 133,
+    "load_duration": 8405900,
+    "prompt_eval_count": 594,
+    "total_duration": 5593583200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause provides a clear and specific condition for determining the acceptability of an incoming segment's ACK value. The range '((SND.UNA - MAX.SND.WND) <= SEG.ACK <= SND.NXT)' is well-defined and unambiguous in terms of implementation. There is no ambiguity in the wording or constraints, and no missing information that would lead to multiple interpretations.\"\n}",
+  "record_id": "5a2880374f9859fc895491ea8f6c99818e22720c2e03045d7149c9e94c137e99",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.10.7.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.594
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "To avoid a deadlock, a sender SHOULD ensure that other frames are sent periodically in addition to PADDING frames to elicit acknowledgments from the receiver.",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The term \"periodically\" is not constrained, creating an incomplete constraint that could lead to materially different implementation behaviours.",
+    "missing_information": "The clause does not define the frequency or interval for the periodic sending of other frames, leaving the implementation to decide how often to send them."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T17:28:39.831962+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "3819bf9cf37481002361bb5d544524127478365001fd361906b9b5dc35b9b6bf",
+  "lineage_ids": "lineage:cb65718b29630a56c24f2359",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1072,
+    "load_duration": 3500300,
+    "prompt_eval_count": 580,
+    "total_duration": 9360887000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"To avoid a deadlock, a sender SHOULD ensure that other frames are sent periodically in addition to PADDING frames to elicit acknowledgments from the receiver.\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The clause does not define the frequency or interval for the periodic sending of other frames, leaving the implementation to decide how often to send them.\",\n  \"justification\": \"The term \\\"periodically\\\" is not constrained, creating an incomplete constraint that could lead to materially different implementation behaviours.\"\n}",
+  "record_id": "a02a18ee58bd1ede45cbc0dffaabaffa383d093c1e87657a53a92c034bf1f56c",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "13.2.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.36
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT be empty, unless the FIN bit is set.",
+    "interpretation_a": "A STREAM frame with the FIN bit set can have zero length Stream Data.",
+    "interpretation_b": "A STREAM frame with the FIN bit not set must have at least one byte of Stream Data.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states what is prohibited, but does not explicitly state what is allowed when the FIN bit is set. This creates ambiguity about whether zero-length Stream Data is permissible or required when FIN is set.",
+    "missing_information": "It is unclear if a STREAM frame with the FIN bit set *may* have zero length Stream Data, or if it *must* have zero length Stream Data. The wording allows both interpretations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:11:18.100542+00:00",
+  "document_id": "draft-ietf-quic-transport-10",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "9eee9f5f3f77e3834b5da7c5db9b6a2caf6cec2bd53456b020afc3b595b74b2c",
+  "lineage_ids": "lineage:9da7985fea9049141a4f63bf",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 178,
+    "load_duration": 3869400,
+    "prompt_eval_count": 570,
+    "total_duration": 6746500600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT be empty, unless the FIN bit is set.\", \"interpretation_a\": \"A STREAM frame with the FIN bit set can have zero length Stream Data.\", \"interpretation_b\": \"A STREAM frame with the FIN bit not set must have at least one byte of Stream Data.\", \"missing_information\": \"It is unclear if a STREAM frame with the FIN bit set *may* have zero length Stream Data, or if it *must* have zero length Stream Data. The wording allows both interpretations.\", \"justification\": \"The clause states what is prohibited, but does not explicitly state what is allowed when the FIN bit is set. This creates ambiguity about whether zero-length Stream Data is permissible or required when FIN is set.\"}",
+  "record_id": "33168a5571e80c8201e4c7889f14cbbbd8e5ccdfc0b6b2452c5ad2a86c2ce9ca",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "8.18",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.735
+}

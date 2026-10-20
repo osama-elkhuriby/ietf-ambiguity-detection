@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "does not have a fragment component",
+    "interpretation_a": "The Location value is a complete URI without a '#' and any following characters.",
+    "interpretation_b": "The Location value is a path component without a '#' and any following characters, assuming a base URI is implicitly defined elsewhere.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'does not have a fragment component' is open to interpretation. It's unclear whether it refers to the complete absence of a '#' character and subsequent fragment identifier, or simply the absence of a fragment identifier when the Location value is considered as a path relative to a base URI. This difference affects how the original fragment is inherited.",
+    "missing_information": "The specification does not explicitly define what constitutes a 'fragment component' in the context of the Location value. Is it only the '#' and everything after it, or does it also include any preceding path information that might be considered part of the fragment?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:14:49.314220+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-07",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "132cd65af859d72b55841b037fd199ce3779ecbb452a000940ffe62e97616700",
+  "lineage_ids": "lineage:a31d807194d9647517d210f2",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 214,
+    "load_duration": 12480000,
+    "prompt_eval_count": 641,
+    "total_duration": 8206887000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"does not have a fragment component\", \"interpretation_a\": \"The Location value is a complete URI without a '#' and any following characters.\", \"interpretation_b\": \"The Location value is a path component without a '#' and any following characters, assuming a base URI is implicitly defined elsewhere.\", \"missing_information\": \"The specification does not explicitly define what constitutes a 'fragment component' in the context of the Location value. Is it only the '#' and everything after it, or does it also include any preceding path information that might be considered part of the fragment?\",\"justification\": \"The phrase 'does not have a fragment component' is open to interpretation. It's unclear whether it refers to the complete absence of a '#' character and subsequent fragment identifier, or simply the absence of a fragment identifier when the Location value is considered as a path relative to a base URI. This difference affects how the original fragment is inherited.\"}",
+  "record_id": "8351d31afa47af558f9faf99c2ceeb5c99a87ca5cea68e860dca22409968927e",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "10.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.203
+}

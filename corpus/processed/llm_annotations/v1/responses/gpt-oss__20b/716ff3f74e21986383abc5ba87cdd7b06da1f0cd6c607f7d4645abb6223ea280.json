@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "I-1",
+    "evidence_span": "The endpoint MUST acknowledge packets containing only ACK or PADDING frames in the next ACK frame that it sends.",
+    "interpretation_a": "The endpoint does NOT send an ACK frame in response to a packet containing only ACK or PADDING frames, following the preceding clause.",
+    "interpretation_b": "The endpoint sends an ACK frame acknowledging such packets in the next ACK frame, following the target clause.",
+    "is_ambiguous": "yes",
+    "justification": "The target clause directly contradicts the preceding clause, which states that an endpoint MUST NOT send an ACK frame in response to a packet containing only ACK or PADDING frames. This inconsistency yields two materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T16:17:18.001358+00:00",
+  "document_id": "draft-ietf-quic-transport-15",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "1fdf49c76f155a2d611312aa015a3d3479674bf1211958cc4a838a2af9a9b109",
+  "lineage_ids": "lineage:8a293ce415ed9f2f3216b90d",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 375,
+    "load_duration": "",
+    "prompt_eval_count": 807,
+    "total_duration": 3369712600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"I-1\",\n  \"evidence_span\": \"The endpoint MUST acknowledge packets containing only ACK or PADDING frames in the next ACK frame that it sends.\",\n  \"interpretation_a\": \"The endpoint does NOT send an ACK frame in response to a packet containing only ACK or PADDING frames, following the preceding clause.\",\n  \"interpretation_b\": \"The endpoint sends an ACK frame acknowledging such packets in the next ACK frame, following the target clause.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause directly contradicts the preceding clause, which states that an endpoint MUST NOT send an ACK frame in response to a packet containing only ACK or PADDING frames. This inconsistency yields two materially different implementation behaviours.\"\n}",
+  "record_id": "716ff3f74e21986383abc5ba87cdd7b06da1f0cd6c607f7d4645abb6223ea280",
+  "revision": "15",
+  "schema_version": 1,
+  "section_ids": "8.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.641
+}

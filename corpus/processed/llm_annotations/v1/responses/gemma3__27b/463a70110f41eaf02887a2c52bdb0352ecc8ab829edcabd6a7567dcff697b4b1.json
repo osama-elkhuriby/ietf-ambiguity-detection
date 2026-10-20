@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "up to 4096 bits",
+    "interpretation_a": "Clients MUST accept DHE sizes of 2048, 2560, 3072, and 4096 bits.",
+    "interpretation_b": "Clients MUST accept DHE sizes up to, but not including, 4096 bits (e.g., 2048, 2560, 3072 bits).",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"up to 4096 bits\" can be interpreted in two ways: inclusive (allowing 4096 bits) or exclusive (allowing only sizes less than 4096 bits). This difference affects implementation, as a client might or might not accept a 4096-bit DHE key exchange.",
+    "missing_information": "It is unclear whether 'up to 4096 bits' is inclusive or exclusive. A clear statement of whether 4096 is permitted would resolve the ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:33:10.220207+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "0b8d5d901363c7fb798e75066f143cdb40e57baf37c07860184918f65c618454",
+  "lineage_ids": "lineage:44c30ac925351c3882d728ba",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 244,
+    "load_duration": 8957200,
+    "prompt_eval_count": 635,
+    "total_duration": 9287379400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"up to 4096 bits\", \"interpretation_a\": \"Clients MUST accept DHE sizes of 2048, 2560, 3072, and 4096 bits.\", \"interpretation_b\": \"Clients MUST accept DHE sizes up to, but not including, 4096 bits (e.g., 2048, 2560, 3072 bits).\", \"missing_information\": \"It is unclear whether 'up to 4096 bits' is inclusive or exclusive. A clear statement of whether 4096 is permitted would resolve the ambiguity.\", \"justification\": \"The phrase \\\"up to 4096 bits\\\" can be interpreted in two ways: inclusive (allowing 4096 bits) or exclusive (allowing only sizes less than 4096 bits). This difference affects implementation, as a client might or might not accept a 4096-bit DHE key exchange.\"}",
+  "record_id": "463a70110f41eaf02887a2c52bdb0352ecc8ab829edcabd6a7567dcff697b4b1",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "9.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.296
+}

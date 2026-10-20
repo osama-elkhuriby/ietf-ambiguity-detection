@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST observe the value advertised by its receiving peer",
+    "interpretation_a": "The endpoint must strictly limit its sends to the advertised maximum stream data.",
+    "interpretation_b": "The endpoint can send more than the advertised maximum stream data, but must be prepared to handle any consequences (e.g., packet loss, retransmission) from exceeding the limit.",
+    "is_ambiguous": "yes",
+    "justification": "The verb 'observe' is vague. It doesn't clearly state whether the endpoint *must* adhere to the advertised value or merely *take it into account*. This allows for two reasonable interpretations regarding the allowed sending behaviour.",
+    "missing_information": "The clause does not specify what 'observe' means in this context. Does it mean 'strictly adhere to' or 'be aware of and potentially exceed'?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:30:41.266369+00:00",
+  "document_id": "draft-ietf-quic-transport-06",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "52fb1d4225881aefc36d7bf609724c172e09e7376ff79bc2e9c9844b863a3479",
+  "lineage_ids": "lineage:e983b794c542e750664e2a0a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 188,
+    "load_duration": 3515100,
+    "prompt_eval_count": 577,
+    "total_duration": 7110221100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST observe the value advertised by its receiving peer\", \"interpretation_a\": \"The endpoint must strictly limit its sends to the advertised maximum stream data.\", \"interpretation_b\": \"The endpoint can send more than the advertised maximum stream data, but must be prepared to handle any consequences (e.g., packet loss, retransmission) from exceeding the limit.\", \"missing_information\": \"The clause does not specify what 'observe' means in this context. Does it mean 'strictly adhere to' or 'be aware of and potentially exceed'?\",\"justification\": \"The verb 'observe' is vague. It doesn't clearly state whether the endpoint *must* adhere to the advertised value or merely *take it into account*. This allows for two reasonable interpretations regarding the allowed sending behaviour.\"}",
+  "record_id": "6b60b76a1592bf47123992ffb8b525aa240447a321d28688687777eb07ddb5de",
+  "revision": "06",
+  "schema_version": 1,
+  "section_ids": "10.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.109
+}

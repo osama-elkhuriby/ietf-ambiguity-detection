@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD increase exponentially the interval between successive probes",
+    "interpretation_a": "The clause does not specify the exponential factor or a maximum interval, allowing different implementations to choose different back‑off rates.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a concrete specification of how the exponential increase should be calculated, which is a missing constraint that can lead to materially different implementation behaviours.",
+    "missing_information": "exponential factor, maximum interval, or other constraints on probe timing beyond the RTO reference.  The clause as written permits multiple reasonable, materially different implementations.  No further context is provided to resolve the ambiguity.  (If the missing constraints were supplied, the clause would be unambiguous.)"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T20:39:57.961466+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "f6f8cfc10da9bbee2551e13036fbb8ea4c71cbfc46271213b740b6226f0b9c48",
+  "lineage_ids": "lineage:45941c0f3f7fc61f714e714f",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1825,
+    "load_duration": 4550100,
+    "prompt_eval_count": 608,
+    "total_duration": 16128701300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"SHOULD increase exponentially the interval between successive probes\",\n  \"interpretation_a\": \"The clause does not specify the exponential factor or a maximum interval, allowing different implementations to choose different back‑off rates.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"exponential factor, maximum interval, or other constraints on probe timing beyond the RTO reference.  The clause as written permits multiple reasonable, materially different implementations.  No further context is provided to resolve the ambiguity.  (If the missing constraints were supplied, the clause would be unambiguous.)\",\n  \"justification\": \"The clause lacks a concrete specification of how the exponential increase should be calculated, which is a missing constraint that can lead to materially different implementation behaviours.\"\n}",
+  "record_id": "e8628ccf9741f812e96e57fee913b64a7cccfcbf5ad5311bf2f93e61875cfcab",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.8.6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 16.141
+}

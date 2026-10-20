@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Unless specified otherwise by the protocol mapping",
+    "interpretation_a": "If a protocol mapping *does* specify behavior for unrecognized SvcFieldValue parameters, clients must follow that behavior. Otherwise, they ignore them.",
+    "interpretation_b": "If a protocol mapping does *not* specify behavior for unrecognized SvcFieldValue parameters, clients must ignore them. If a protocol mapping specifies behavior, it is unclear whether the client *must* follow it or *may* follow it.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'Unless specified otherwise' creates ambiguity. It's unclear whether the protocol mapping has the power to *require* a client to process unrecognized parameters, or merely to *permit* it. The 'MUST ignore' clause only applies when the mapping is silent on the matter, but the effect of a non-silent mapping is not clearly defined.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:07:36.625477+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-00",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "26cb2199f55022aef1ddeda5d4cb019ca016c2600f305acdaba2ef69fa2243f0",
+  "lineage_ids": "lineage:07db663c6da6d016ed64c75d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 205,
+    "load_duration": 5597300,
+    "prompt_eval_count": 562,
+    "total_duration": 7655269800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Unless specified otherwise by the protocol mapping\", \"interpretation_a\": \"If a protocol mapping *does* specify behavior for unrecognized SvcFieldValue parameters, clients must follow that behavior. Otherwise, they ignore them.\", \"interpretation_b\": \"If a protocol mapping does *not* specify behavior for unrecognized SvcFieldValue parameters, clients must ignore them. If a protocol mapping specifies behavior, it is unclear whether the client *must* follow it or *may* follow it.\", \"missing_information\": \"\", \"justification\": \"The phrase 'Unless specified otherwise' creates ambiguity. It's unclear whether the protocol mapping has the power to *require* a client to process unrecognized parameters, or merely to *permit* it. The 'MUST ignore' clause only applies when the mapping is silent on the matter, but the effect of a non-silent mapping is not clearly defined.\"}",
+  "record_id": "83ea3eff967fc16e3897b017c09775dc2e6b7f98b6319121bfb4f9a6279b78a7",
+  "revision": "00",
+  "schema_version": 1,
+  "section_ids": "2.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.656
+}

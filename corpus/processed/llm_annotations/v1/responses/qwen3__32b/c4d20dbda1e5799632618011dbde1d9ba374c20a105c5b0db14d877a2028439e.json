@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause is clear in its intent: when a packet is sent as a probe during an RTO, unacknowledged packets should not be marked as lost. There is no ambiguity in the language or in the operational behavior it prescribes. The use of 'SHOULD NOT' provides guidance without allowing materially different interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:26:51.252749+00:00",
+  "document_id": "draft-ietf-quic-recovery-16",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "f25720fcd094c4081222c6168c9bca484c044ec8235e25df385098ff00e130ad",
+  "lineage_ids": "lineage:6a80669d924f02b2852ca241",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 121,
+    "load_duration": 4809800,
+    "prompt_eval_count": 551,
+    "total_duration": 4994706500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause is clear in its intent: when a packet is sent as a probe during an RTO, unacknowledged packets should not be marked as lost. There is no ambiguity in the language or in the operational behavior it prescribes. The use of 'SHOULD NOT' provides guidance without allowing materially different interpretations.\"\n}",
+  "record_id": "c4d20dbda1e5799632618011dbde1d9ba374c20a105c5b0db14d877a2028439e",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "4.3.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.0
+}

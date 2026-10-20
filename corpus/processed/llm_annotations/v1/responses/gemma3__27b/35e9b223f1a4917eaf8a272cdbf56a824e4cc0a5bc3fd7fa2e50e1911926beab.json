@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "attempt to send any outstanding data",
+    "interpretation_a": "The intermediary *must* make a best-effort attempt to send data, but failure to do so is not an error.",
+    "interpretation_b": "The intermediary *must* successfully send data, and any failure to do so constitutes an error requiring corrective action.",
+    "is_ambiguous": "yes",
+    "justification": "The word 'attempt' is vague. It doesn't specify whether the intermediary must *try* to send the data, or *succeed* in sending the data. This difference affects implementation, as one interpretation allows for failures while the other requires error handling.",
+    "missing_information": "The degree of effort required for the 'attempt' is not defined. Does 'attempt' mean best effort, or does it imply a requirement for successful delivery before proceeding?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:02:15.008165+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "fcb188d337e759b8aa58bb6126b0480ad9e694fae439a76268b8a413c173b4c9",
+  "lineage_ids": "lineage:c96df467adcf75dd6a514d29",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 192,
+    "load_duration": 9637400,
+    "prompt_eval_count": 591,
+    "total_duration": 7471853900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"attempt to send any outstanding data\", \"interpretation_a\": \"The intermediary *must* make a best-effort attempt to send data, but failure to do so is not an error.\", \"interpretation_b\": \"The intermediary *must* successfully send data, and any failure to do so constitutes an error requiring corrective action.\", \"missing_information\": \"The degree of effort required for the 'attempt' is not defined. Does 'attempt' mean best effort, or does it imply a requirement for successful delivery before proceeding?\",\"justification\": \"The word 'attempt' is vague. It doesn't specify whether the intermediary must *try* to send the data, or *succeed* in sending the data. This difference affects implementation, as one interpretation allows for failures while the other requires error handling.\"}",
+  "record_id": "35e9b223f1a4917eaf8a272cdbf56a824e4cc0a5bc3fd7fa2e50e1911926beab",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "9.3.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.484
+}

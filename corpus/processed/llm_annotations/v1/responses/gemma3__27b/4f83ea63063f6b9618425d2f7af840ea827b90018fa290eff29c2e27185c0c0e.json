@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY appear in any packet number space",
+    "interpretation_a": "ACK frames can be sent in either the application or crypto stream packet number space.",
+    "interpretation_b": "ACK frames can be sent in both packet number spaces simultaneously.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'any' with 'packet number space' is ambiguous. It could mean either of the packet number spaces, or both. This affects implementation because a QUIC stack needs to know if it can send ACK frames in both spaces concurrently.",
+    "missing_information": "It is unclear if 'any' means one or both packet number spaces. A constraint clarifying whether ACK frames can be sent in both spaces would resolve the ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:38:10.123990+00:00",
+  "document_id": "draft-ietf-quic-tls-29",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "c02c0aee74f2bf6a91ebb36835c28e29d6cec8043bd6175b33f82de56c2dc1dc",
+  "lineage_ids": "lineage:e5ea69b75c99e5abd78aa5b5",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 170,
+    "load_duration": 4217300,
+    "prompt_eval_count": 572,
+    "total_duration": 6502650400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY appear in any packet number space\", \"interpretation_a\": \"ACK frames can be sent in either the application or crypto stream packet number space.\", \"interpretation_b\": \"ACK frames can be sent in both packet number spaces simultaneously.\", \"missing_information\": \"It is unclear if 'any' means one or both packet number spaces. A constraint clarifying whether ACK frames can be sent in both spaces would resolve the ambiguity.\", \"justification\": \"The use of 'any' with 'packet number space' is ambiguous. It could mean either of the packet number spaces, or both. This affects implementation because a QUIC stack needs to know if it can send ACK frames in both spaces concurrently.\"}",
+  "record_id": "4f83ea63063f6b9618425d2f7af840ea827b90018fa290eff29c2e27185c0c0e",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.5
+}

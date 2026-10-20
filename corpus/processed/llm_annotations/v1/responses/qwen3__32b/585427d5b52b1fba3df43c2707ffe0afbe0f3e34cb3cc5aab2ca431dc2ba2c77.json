@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear conditional behavior for clients that do not support Encrypted ClientHello: they may skip the HTTPS RR query if a usable Alt-Svc value is available in the local cache. The language 'MAY skip' allows discretion but does not introduce ambiguity in implementation behavior. There is no missing constraint or conflicting interpretation that would lead to materially different outcomes.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:06:13.859815+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-05",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "71bce6c9d1d50a23d729a2a02d4afa0ad7cabc7342d166f5ea1c8562339c0368",
+  "lineage_ids": "lineage:ca3208940b5d1b9aa94f0464",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 129,
+    "load_duration": 3755100,
+    "prompt_eval_count": 534,
+    "total_duration": 5295337700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear conditional behavior for clients that do not support Encrypted ClientHello: they may skip the HTTPS RR query if a usable Alt-Svc value is available in the local cache. The language 'MAY skip' allows discretion but does not introduce ambiguity in implementation behavior. There is no missing constraint or conflicting interpretation that would lead to materially different outcomes.\"\n}",
+  "record_id": "585427d5b52b1fba3df43c2707ffe0afbe0f3e34cb3cc5aab2ca431dc2ba2c77",
+  "revision": "05",
+  "schema_version": 1,
+  "section_ids": "8.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.297
+}

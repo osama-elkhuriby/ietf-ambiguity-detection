@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Previously sent data MAY be sent if no new data can be sent.",
+    "interpretation_a": "The endpoint may retransmit any data that was previously sent, regardless of whether it has been acknowledged.",
+    "interpretation_b": "The endpoint may retransmit only data that was previously sent but not yet acknowledged.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify which previously sent data may be sent, leaving a missing constraint that allows materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T11:50:16.522525+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "4985055c1e3351cacf8e8e813b93030e71fd18d97c7eb4fb5a85c58ab91ceb58",
+  "lineage_ids": "lineage:d4b6ed2b465513e343eded90",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3938,
+    "load_duration": 6464000,
+    "prompt_eval_count": 579,
+    "total_duration": 33896577300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"Previously sent data MAY be sent if no new data can be sent.\",\n  \"interpretation_a\": \"The endpoint may retransmit any data that was previously sent, regardless of whether it has been acknowledged.\",\n  \"interpretation_b\": \"The endpoint may retransmit only data that was previously sent but not yet acknowledged.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify which previously sent data may be sent, leaving a missing constraint that allows materially different implementation behaviours.\"\n}",
+  "record_id": "bc80d9b315d61dc271d9c466f71ef8f477deb8d33ef8b485a5d2f40ceb3f3b9c",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.2.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 33.89
+}

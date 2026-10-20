@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Any message containing connection-specific header fields MUST be treated as malformed.",
+    "interpretation_a": "Any message with *any* connection-specific header field is malformed.",
+    "interpretation_b": "A message is malformed only if it contains connection-specific header fields *in a way that violates the rules for those fields* (e.g., invalid syntax, conflicting values).",
+    "is_ambiguous": "yes",
+    "justification": "The clause is absolute in stating that *any* message containing these headers is malformed. However, the headers themselves are not inherently invalid; they are valid when used correctly. The clause doesn't specify whether the mere presence of these headers is the problem, or if it's their use in an invalid context. This creates two reasonable interpretations.",
+    "missing_information": "The clause does not specify *how* the presence of connection-specific headers leads to a malformed message. It could be simply their presence, or it could be that their presence violates some other rule."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:31:17.458442+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "bc206ead0dfb586cd1ec8297726a97a2dfe19f2e5a4f340c5c57096de7eabc6d",
+  "lineage_ids": "lineage:02901961aa1c59fef0a31fc7",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 231,
+    "load_duration": 8238800,
+    "prompt_eval_count": 615,
+    "total_duration": 8912661500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Any message containing connection-specific header fields MUST be treated as malformed.\", \"interpretation_a\": \"Any message with *any* connection-specific header field is malformed.\", \"interpretation_b\": \"A message is malformed only if it contains connection-specific header fields *in a way that violates the rules for those fields* (e.g., invalid syntax, conflicting values).\", \"missing_information\": \"The clause does not specify *how* the presence of connection-specific headers leads to a malformed message. It could be simply their presence, or it could be that their presence violates some other rule.\", \"justification\": \"The clause is absolute in stating that *any* message containing these headers is malformed. However, the headers themselves are not inherently invalid; they are valid when used correctly. The clause doesn't specify whether the mere presence of these headers is the problem, or if it's their use in an invalid context. This creates two reasonable interpretations.\"}",
+  "record_id": "34df2f47af9cafb46e3f5542fce2dd65d8ceee1af250c4413cc3c3dfc3d24cd2",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.922
+}

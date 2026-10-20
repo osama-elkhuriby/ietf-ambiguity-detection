@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "limit that is specific to the AEAD",
+    "interpretation_a": "The limit is defined within the AEAD specification itself, and implementations must consult that specification to determine the exact threshold.",
+    "interpretation_b": "The limit is a configurable parameter, and implementations may allow administrators to set the threshold based on their security needs and network conditions.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'limit that is specific to the AEAD' is underspecified. It's unclear whether this limit is a fixed constant defined by the AEAD specification, a configurable parameter, or determined by some other means. This lack of clarity creates ambiguity in implementation, as different implementations could reasonably interpret this phrase in different ways.",
+    "missing_information": "The draft does not specify where the 'limit that is specific to the AEAD' is defined or how it is determined. Is it a fixed value within the AEAD specification, a configurable parameter, or something else?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:37:23.949597+00:00",
+  "document_id": "draft-ietf-quic-tls-29",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "e8de1d3752adb61f292c356ee4f880553d6c35a2c30adc7e0c7be2d05a1c349e",
+  "lineage_ids": "lineage:6598f0d001c260ea3c6e4c9e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 219,
+    "load_duration": 4288500,
+    "prompt_eval_count": 570,
+    "total_duration": 8200434400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"limit that is specific to the AEAD\", \"interpretation_a\": \"The limit is defined within the AEAD specification itself, and implementations must consult that specification to determine the exact threshold.\", \"interpretation_b\": \"The limit is a configurable parameter, and implementations may allow administrators to set the threshold based on their security needs and network conditions.\", \"missing_information\": \"The draft does not specify where the 'limit that is specific to the AEAD' is defined or how it is determined. Is it a fixed value within the AEAD specification, a configurable parameter, or something else?\",\"justification\": \"The phrase 'limit that is specific to the AEAD' is underspecified. It's unclear whether this limit is a fixed constant defined by the AEAD specification, a configurable parameter, or determined by some other means. This lack of clarity creates ambiguity in implementation, as different implementations could reasonably interpret this phrase in different ways.\"}",
+  "record_id": "428cec11e656a33e7b58a616f3d852c6ba4b41b1bc9888b9d402117ed9e1b0e9",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "6.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.219
+}

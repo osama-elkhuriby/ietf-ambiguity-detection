@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD repeat that request without a 100-continue expectation",
+    "interpretation_a": "The client must retry the request *immediately* without the Expect header.",
+    "interpretation_b": "The client may delay retrying the request, but eventually must retry without the Expect header.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' allows for discretion in *when* the request is repeated. While it's clear the Expect header should be removed, the timing of the retry is not constrained, leading to two reasonable interpretations.",
+    "missing_information": "The clause does not specify a time limit or any other constraint on when the client should repeat the request. This leaves open the possibility of indefinite delay, which could be undesirable."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:30:34.103113+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-14",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "fcf716b8d81771f5b5787e874bbfac373207a62075e145663f90893463943c52",
+  "lineage_ids": "lineage:9dd0748d736cbd561bcfb6fa",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 179,
+    "load_duration": 8300000,
+    "prompt_eval_count": 630,
+    "total_duration": 7482612500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD repeat that request without a 100-continue expectation\", \"interpretation_a\": \"The client must retry the request *immediately* without the Expect header.\", \"interpretation_b\": \"The client may delay retrying the request, but eventually must retry without the Expect header.\", \"missing_information\": \"The clause does not specify a time limit or any other constraint on when the client should repeat the request. This leaves open the possibility of indefinite delay, which could be undesirable.\",\"justification\": \"The use of 'SHOULD' allows for discretion in *when* the request is repeated. While it's clear the Expect header should be removed, the timing of the retry is not constrained, leading to two reasonable interpretations.\"}",
+  "record_id": "d9b479613df626b3dc6e1f6ea4e71c74491658b3a9ac1a7f452a3d6794e8aafc",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "10.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.485
+}

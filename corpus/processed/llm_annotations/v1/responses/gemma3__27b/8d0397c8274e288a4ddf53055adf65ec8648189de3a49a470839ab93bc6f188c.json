@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "if the field would have been sent in a 200 (OK) response to the same request",
+    "interpretation_a": "The server includes the header fields that *would* have been sent in a 200 response, even if those fields are semantically inappropriate or invalid for a 206 response (e.g., a Content-Length indicating the full resource size).",
+    "interpretation_b": "The server includes only those header fields that *would* have been valid and meaningful in a 200 response, filtering out any that are not applicable to a partial content response. This requires the server to perform a validation step.",
+    "is_ambiguous": "yes",
+    "justification": "The conditional phrase 'if the field would have been sent' is incomplete. It doesn't specify *how* the server should determine whether to include the field. Does it include the field regardless of its validity in a 206 context, or does it only include valid fields?",
+    "missing_information": "The document does not specify how to handle header fields that are valid in a 200 response but semantically incorrect or invalid in a 206 response. A constraint is needed to clarify whether the server should include all potentially present fields or only those that are meaningful in the context of a partial content response."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:17:05.600843+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-14",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "45862e01efbb8c8835043375bdc4f78cfda74f6b6757ce64371b49b1c51e9761",
+  "lineage_ids": "lineage:cfb64fdd965cc2ada7cad4ed",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 297,
+    "load_duration": 9364000,
+    "prompt_eval_count": 657,
+    "total_duration": 11202677100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"if the field would have been sent in a 200 (OK) response to the same request\", \"interpretation_a\": \"The server includes the header fields that *would* have been sent in a 200 response, even if those fields are semantically inappropriate or invalid for a 206 response (e.g., a Content-Length indicating the full resource size).\", \"interpretation_b\": \"The server includes only those header fields that *would* have been valid and meaningful in a 200 response, filtering out any that are not applicable to a partial content response. This requires the server to perform a validation step.\", \"missing_information\": \"The document does not specify how to handle header fields that are valid in a 200 response but semantically incorrect or invalid in a 206 response. A constraint is needed to clarify whether the server should include all potentially present fields or only those that are meaningful in the context of a partial content response.\", \"justification\": \"The conditional phrase 'if the field would have been sent' is incomplete. It doesn't specify *how* the server should determine whether to include the field. Does it include the field regardless of its validity in a 206 context, or does it only include valid fields?\"}",
+  "record_id": "8d0397c8274e288a4ddf53055adf65ec8648189de3a49a470839ab93bc6f188c",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "15.3.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.203
+}

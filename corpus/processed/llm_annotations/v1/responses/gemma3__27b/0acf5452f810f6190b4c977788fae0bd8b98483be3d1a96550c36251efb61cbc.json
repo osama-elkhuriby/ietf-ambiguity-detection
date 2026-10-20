@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "SHOULD treat a violation of remembered limits",
+    "interpretation_a": "The server is encouraged to treat the violation as a connection error, but may choose to handle it differently (e.g., logging, rate limiting).",
+    "interpretation_b": "The server is expected to treat the violation as a connection error, and deviation from this expectation should be rare and justified.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' creates ambiguity regarding the server's obligation to treat the violation as a connection error. While it indicates a recommended behavior, the strength of this recommendation is unclear, leading to different possible implementations.",
+    "missing_information": "The degree of obligation implied by 'SHOULD' is not clear. Is it a strong recommendation, or a weaker suggestion? This affects how a server is expected to behave upon encountering a violation."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:57:27.917974+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "4b0932ebc3f263667400bc2d17e085fdfdeabd2b694bf6acdcb1cc040dcda44d",
+  "lineage_ids": "lineage:e4adeb4dc1594fa9df6807db",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 200,
+    "load_duration": 5051300,
+    "prompt_eval_count": 572,
+    "total_duration": 7536473900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"SHOULD treat a violation of remembered limits\", \"interpretation_a\": \"The server is encouraged to treat the violation as a connection error, but may choose to handle it differently (e.g., logging, rate limiting).\", \"interpretation_b\": \"The server is expected to treat the violation as a connection error, and deviation from this expectation should be rare and justified.\", \"missing_information\": \"The degree of obligation implied by 'SHOULD' is not clear. Is it a strong recommendation, or a weaker suggestion? This affects how a server is expected to behave upon encountering a violation.\", \"justification\": \"The use of 'SHOULD' creates ambiguity regarding the server's obligation to treat the violation as a connection error. While it indicates a recommended behavior, the strength of this recommendation is unclear, leading to different possible implementations.\"}",
+  "record_id": "0acf5452f810f6190b4c977788fae0bd8b98483be3d1a96550c36251efb61cbc",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "17.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.531
+}

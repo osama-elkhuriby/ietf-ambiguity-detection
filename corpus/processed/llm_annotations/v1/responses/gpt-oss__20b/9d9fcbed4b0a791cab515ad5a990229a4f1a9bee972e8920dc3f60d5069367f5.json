@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "excessive volumes of any non-productive packets",
+    "interpretation_a": "Treat any volume above a fixed numeric threshold (e.g., 10% of total traffic) as excessive.",
+    "interpretation_b": "Treat any volume that exceeds a dynamic threshold based on recent traffic patterns (e.g., a sudden spike) as excessive.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not define what constitutes 'excessive volumes', leaving the threshold unspecified.",
+    "missing_information": "The clause does not specify the threshold or method for determining 'excessive volumes'."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T12:57:31.201026+00:00",
+  "document_id": "draft-ietf-quic-tls-22",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "167db86f5f10e477fbb3e492a53854c8084dc71fe77316c46a7ee1dc53241e4e",
+  "lineage_ids": "lineage:a5448f54dd2868612fdf2ad4",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 407,
+    "load_duration": 5053800,
+    "prompt_eval_count": 701,
+    "total_duration": 3808532900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"excessive volumes of any non-productive packets\",\n  \"interpretation_a\": \"Treat any volume above a fixed numeric threshold (e.g., 10% of total traffic) as excessive.\",\n  \"interpretation_b\": \"Treat any volume that exceeds a dynamic threshold based on recent traffic patterns (e.g., a sudden spike) as excessive.\",\n  \"missing_information\": \"The clause does not specify the threshold or method for determining 'excessive volumes'.\",\n  \"justification\": \"The clause does not define what constitutes 'excessive volumes', leaving the threshold unspecified.\"\n}",
+  "record_id": "9d9fcbed4b0a791cab515ad5a990229a4f1a9bee972e8920dc3f60d5069367f5",
+  "revision": "22",
+  "schema_version": 1,
+  "section_ids": "9.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 47.938
+}

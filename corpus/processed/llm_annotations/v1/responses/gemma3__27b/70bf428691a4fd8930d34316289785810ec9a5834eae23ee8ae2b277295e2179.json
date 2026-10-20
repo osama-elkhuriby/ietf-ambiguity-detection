@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT exceed the limit",
+    "interpretation_a": "The limit is the maximum stream ID the local endpoint has *sent*.",
+    "interpretation_b": "The limit is the maximum stream ID the peer endpoint has *sent*.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'the limit' is used without defining what it refers to. Both interpretations are reasonable given the context of stream IDs and communication between endpoints. A missing constraint on what 'the limit' represents creates ambiguity.",
+    "missing_information": "The definition of 'the limit' is not provided in this clause. It is unclear whether the limit refers to the maximum stream ID the local endpoint has sent, or the maximum stream ID the peer endpoint has sent. This affects how an endpoint determines whether a received stream ID is valid."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:31:58.221682+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "e6aab9fb0811157fa286b27def674f231f9d20c677e915e398ce19b00143ea80",
+  "lineage_ids": "lineage:3a0bf4e6605025eda70343f2",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 188,
+    "load_duration": 2506100,
+    "prompt_eval_count": 665,
+    "total_duration": 7184025000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT exceed the limit\", \"interpretation_a\": \"The limit is the maximum stream ID the local endpoint has *sent*.\", \"interpretation_b\": \"The limit is the maximum stream ID the peer endpoint has *sent*.\", \"missing_information\": \"The definition of 'the limit' is not provided in this clause. It is unclear whether the limit refers to the maximum stream ID the local endpoint has sent, or the maximum stream ID the peer endpoint has sent. This affects how an endpoint determines whether a received stream ID is valid.\", \"justification\": \"The phrase 'the limit' is used without defining what it refers to. Both interpretations are reasonable given the context of stream IDs and communication between endpoints. A missing constraint on what 'the limit' represents creates ambiguity.\"}",
+  "record_id": "70bf428691a4fd8930d34316289785810ec9a5834eae23ee8ae2b277295e2179",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.187
+}

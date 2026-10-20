@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Clients SHOULD NOT open more than one HTTP/2 connection to a given host and port pair",
+    "interpretation_a": "The clause could be interpreted as a restriction on concurrent connections only.",
+    "interpretation_b": "Alternatively, it could be interpreted as a restriction on the total number of connections a client may open over its lifetime.",
+    "is_ambiguous": "yes",
+    "justification": "The target clause lacks a concrete constraint on the time dimension of the restriction, allowing two reasonable interpretations. This satisfies the criteria for ambiguity (U‑2).",
+    "missing_information": "The clause does not specify whether the restriction applies to concurrent connections or to the total number of connections over time, leading to two materially different implementation behaviours. The next clause clarifies replacements, but the target clause alone is under‑specified regarding the time dimension of the restriction. This missing constraint prevents a unique operational interpretation.  "
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T05:14:01.664046+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "f45ca1f0bccddc7f4ba557e0e1484561279bc26a4f380edc88769660ab82f17c",
+  "lineage_ids": "lineage:eac29959e8dc98dcc6ec0def",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1985,
+    "load_duration": 4737700,
+    "prompt_eval_count": 683,
+    "total_duration": 17491298100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"Clients SHOULD NOT open more than one HTTP/2 connection to a given host and port pair\",\n  \"interpretation_a\": \"The clause could be interpreted as a restriction on concurrent connections only.\",\n  \"interpretation_b\": \"Alternatively, it could be interpreted as a restriction on the total number of connections a client may open over its lifetime.\",\n  \"missing_information\": \"The clause does not specify whether the restriction applies to concurrent connections or to the total number of connections over time, leading to two materially different implementation behaviours. The next clause clarifies replacements, but the target clause alone is under‑specified regarding the time dimension of the restriction. This missing constraint prevents a unique operational interpretation.  \",\n  \"justification\": \"The target clause lacks a concrete constraint on the time dimension of the restriction, allowing two reasonable interpretations. This satisfies the criteria for ambiguity (U‑2).\"\n}",
+  "record_id": "e95668d91c5f2525c62b326f6b412561c82ca8986538e9be84a0fa8f8c57a8c0",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "9.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 84.922
+}

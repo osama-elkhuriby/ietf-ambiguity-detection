@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD NOT send",
+    "interpretation_a": "An implementation *must not* send headers exceeding the size, and doing so is a protocol error.",
+    "interpretation_b": "An implementation *should* avoid sending headers exceeding the size, but may do so if it chooses, accepting that the peer may refuse to process them.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD NOT' is a weak recommendation. It allows for implementations to send headers exceeding the size, which is a materially different behavior than requiring them not to. The clause does not clearly define the consequences of exceeding the limit, leaving room for interpretation.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:06:42.816921+00:00",
+  "document_id": "draft-ietf-quic-http-29",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "159e398f951d4e59df142f47e60467e2f29d2b53bed53fdd45de4fd2f1acf414",
+  "lineage_ids": "lineage:140b1446d6d070be9ab81775",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 160,
+    "load_duration": 9001300,
+    "prompt_eval_count": 638,
+    "total_duration": 6299630000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD NOT send\", \"interpretation_a\": \"An implementation *must not* send headers exceeding the size, and doing so is a protocol error.\", \"interpretation_b\": \"An implementation *should* avoid sending headers exceeding the size, but may do so if it chooses, accepting that the peer may refuse to process them.\", \"missing_information\": \"\", \"justification\": \"The use of 'SHOULD NOT' is a weak recommendation. It allows for implementations to send headers exceeding the size, which is a materially different behavior than requiring them not to. The clause does not clearly define the consequences of exceeding the limit, leaving room for interpretation.\"}",
+  "record_id": "c55fd244106625bf50585a73235b31e7855c04c134f83615bdaf5c973db7996b",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "4.1.1.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.328
+}

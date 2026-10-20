@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "uncertain",
+    "justification": "The clause uses the term 'secure protocol' without providing a definition in the supplied text. This omission creates an incomplete constraint that could lead to different interpretations of which protocols are considered secure, thereby affecting whether the restriction applies. According to the guidelines, when an external definition or more context is needed and not supplied, the appropriate response is to mark the clause as uncertain. The evidence span is empty because the clause itself does not contain any ambiguous wording beyond the undefined term. The missing information field specifies the required context to resolve the ambiguity.",
+    "missing_information": "Definition of 'secure protocol' needed to determine the scope of the restriction in the clause. Without that context, it is unclear whether the clause applies only to HTTPS or to any secure protocol, leading to potential ambiguity in implementation. The clause itself does not provide that definition, so the ambiguity cannot be resolved from the supplied text alone. The lack of a concrete definition constitutes an incomplete constraint affecting implementation behaviour (U-2). The clause is therefore uncertain rather than definitively ambiguous or unambiguous. The missing information is the definition of 'secure protocol'."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T06:00:12.271573+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-14",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "ec8efcc20319d494c069e10076fb20bb302b36a34a1c4b44339bfdbf3b34a627",
+  "lineage_ids": "lineage:9d8d842194b162ba93876d59",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 4681,
+    "load_duration": 6659500,
+    "prompt_eval_count": 620,
+    "total_duration": 41057047900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"uncertain\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"Definition of 'secure protocol' needed to determine the scope of the restriction in the clause. Without that context, it is unclear whether the clause applies only to HTTPS or to any secure protocol, leading to potential ambiguity in implementation. The clause itself does not provide that definition, so the ambiguity cannot be resolved from the supplied text alone. The lack of a concrete definition constitutes an incomplete constraint affecting implementation behaviour (U-2). The clause is therefore uncertain rather than definitively ambiguous or unambiguous. The missing information is the definition of 'secure protocol'.\",\n  \"justification\": \"The clause uses the term 'secure protocol' without providing a definition in the supplied text. This omission creates an incomplete constraint that could lead to different interpretations of which protocols are considered secure, thereby affecting whether the restriction applies. According to the guidelines, when an external definition or more context is needed and not supplied, the appropriate response is to mark the clause as uncertain. The evidence span is empty because the clause itself does not contain any ambiguous wording beyond the undefined term. The missing information field specifies the required context to resolve the ambiguity.\"\n}",
+  "record_id": "392842c82b20202ea155703086455c945970e8a395a80e7f3b2ef4bc8a841910",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "10.1.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 109.171
+}

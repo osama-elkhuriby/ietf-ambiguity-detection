@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY be treated as an error",
+    "interpretation_a": "Implementations may choose to treat non-zero bits in the Empty field of the PRIORITY frame as an error, but are not required to do so.",
+    "interpretation_b": "Implementations may choose to ignore non-zero bits in the Empty field of the PRIORITY frame, without treating it as an error.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' allows for multiple reasonable behaviors by implementations, and the lack of a specific constraint on how to handle non-zero bits in the Empty field leads to different possible operational interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:04:26.163842+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "46b0bf289a3ed23fcb41cb82ea53d32716e39b15d1fc44ff47f949cb95fad027",
+  "lineage_ids": "lineage:9b77043aaf1c07d4159d9558",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 162,
+    "load_duration": 15509700,
+    "prompt_eval_count": 524,
+    "total_duration": 6734370500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"MAY be treated as an error\",\n  \"interpretation_a\": \"Implementations may choose to treat non-zero bits in the Empty field of the PRIORITY frame as an error, but are not required to do so.\",\n  \"interpretation_b\": \"Implementations may choose to ignore non-zero bits in the Empty field of the PRIORITY frame, without treating it as an error.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The use of 'MAY' allows for multiple reasonable behaviors by implementations, and the lack of a specific constraint on how to handle non-zero bits in the Empty field leads to different possible operational interpretations.\"\n}",
+  "record_id": "e3ddb2b6f93b9b36b38e3fc421c0526476428f9ccdc7dcd239a2e080bd9f4ef6",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "B.14",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.75
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that any push stream containing fewer than 4 octets (i.e., missing the required 32‑bit Push ID) must be treated as a connection error of type HTTP_MALFORMED_PUSH. No alternative reasonable interpretation exists.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T10:17:13.433850+00:00",
+  "document_id": "draft-ietf-quic-http-07",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "885ec0566405a7814c02d27a4b042b4c05e817c09dcf4099cf3728903d0bdeba",
+  "lineage_ids": "lineage:14efc2adc960032ca5dced8b",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 378,
+    "load_duration": 6061800,
+    "prompt_eval_count": 574,
+    "total_duration": 3423069400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that any push stream containing fewer than 4 octets (i.e., missing the required 32‑bit Push ID) must be treated as a connection error of type HTTP_MALFORMED_PUSH. No alternative reasonable interpretation exists.\"\n}",
+  "record_id": "c53030810c48e35539f9ff383d31188d4cfbe81f68f7dedddf64d00f6856d7c9",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "4.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 3.438
+}

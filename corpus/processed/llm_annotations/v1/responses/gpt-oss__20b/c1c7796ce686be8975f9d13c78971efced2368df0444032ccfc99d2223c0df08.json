@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that clients should let idle connections time out when no responses are expected, and that gateways may use PING to keep connections to servers alive to avoid the latency of establishing new connections. The wording does not allow for two materially different implementation behaviours, nor does it omit a concrete constraint that would change the interpretation.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T10:15:59.800495+00:00",
+  "document_id": "draft-ietf-quic-http-17",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "57ebc616b67c5d1ec93f0695fd2bb5f5fd8f1034c7e84fc51f7e23b9bb9cd1a4",
+  "lineage_ids": "lineage:b5b2277b33575380ad5db164",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1149,
+    "load_duration": 4519800,
+    "prompt_eval_count": 616,
+    "total_duration": 9912934500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"no\",\"ambiguity_subtype\":\"none\",\"evidence_span\":\"\",\"interpretation_a\":\"\",\"interpretation_b\":\"\",\"missing_information\":\"\",\"justification\":\"The clause unambiguously states that clients should let idle connections time out when no responses are expected, and that gateways may use PING to keep connections to servers alive to avoid the latency of establishing new connections. The wording does not allow for two materially different implementation behaviours, nor does it omit a concrete constraint that would change the interpretation.\"}",
+  "record_id": "c1c7796ce686be8975f9d13c78971efced2368df0444032ccfc99d2223c0df08",
+  "revision": "17",
+  "schema_version": 1,
+  "section_ids": "6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.906
+}

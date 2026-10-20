@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY ignore",
+    "interpretation_a": "The endpoint receiving a RESET_STREAM frame after sending a STOP_SENDING frame is permitted to disregard the error code within the RESET_STREAM.",
+    "interpretation_b": "The endpoint receiving a RESET_STREAM frame after sending a STOP_SENDING frame is permitted to act *as if* it did not receive the error code, potentially triggering different error handling logic than if it had processed the code.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'ignore' is underspecified. It could mean to discard the error code, or to proceed as if the error code was not received. Both interpretations are reasonable and lead to different implementation behaviours.",
+    "missing_information": "It is unclear whether 'ignore' means to simply discard the code, or to treat the stream as if the error code was never sent. This affects how the endpoint handles the error condition indicated by the code."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:50:57.450476+00:00",
+  "document_id": "draft-ietf-quic-transport-30",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "33868517d5ee8eaf9a1dcf478ffac4c8662bde1b519e1624def4a7c76d2b9c55",
+  "lineage_ids": "lineage:af17a6c4556d25f2d4f9e4c0",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 214,
+    "load_duration": 4541300,
+    "prompt_eval_count": 585,
+    "total_duration": 7994035700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY ignore\", \"interpretation_a\": \"The endpoint receiving a RESET_STREAM frame after sending a STOP_SENDING frame is permitted to disregard the error code within the RESET_STREAM.\", \"interpretation_b\": \"The endpoint receiving a RESET_STREAM frame after sending a STOP_SENDING frame is permitted to act *as if* it did not receive the error code, potentially triggering different error handling logic than if it had processed the code.\", \"missing_information\": \"It is unclear whether 'ignore' means to simply discard the code, or to treat the stream as if the error code was never sent. This affects how the endpoint handles the error condition indicated by the code.\", \"justification\": \"The term 'ignore' is underspecified. It could mean to discard the error code, or to proceed as if the error code was not received. Both interpretations are reasonable and lead to different implementation behaviours.\"}",
+  "record_id": "a472cfdcb22017a422617f6f7accb80b3520a076b3d235645f62f620453a83f3",
+  "revision": "30",
+  "schema_version": 1,
+  "section_ids": "3.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.0
+}

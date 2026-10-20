@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "exceed its current configuration",
+    "interpretation_a": "The server can process data even if it violates the settings it *previously* communicated to the client.",
+    "interpretation_b": "The server can process data even if it violates the settings it *currently* communicates to the client (before the client has had a chance to apply them).",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'current configuration' is not clearly defined. Does it refer to the settings from a previous session, or the settings being communicated in the current flight? Both interpretations are reasonable and lead to different implementation choices.",
+    "missing_information": "It is unclear whether 'current configuration' refers to the settings the server previously communicated, or the settings it is currently communicating. This affects how a client should handle data received before the settings are fully applied."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:46:42.814920+00:00",
+  "document_id": "draft-ietf-quic-http-13",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "17312359473838d09f5ce4ba27883d3e632a3b857fee8ced29cd02061da853c8",
+  "lineage_ids": "lineage:7191cdf5d6124baa089297d7",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 194,
+    "load_duration": 4318400,
+    "prompt_eval_count": 608,
+    "total_duration": 7484335100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"exceed its current configuration\", \"interpretation_a\": \"The server can process data even if it violates the settings it *previously* communicated to the client.\", \"interpretation_b\": \"The server can process data even if it violates the settings it *currently* communicates to the client (before the client has had a chance to apply them).\", \"missing_information\": \"It is unclear whether 'current configuration' refers to the settings the server previously communicated, or the settings it is currently communicating. This affects how a client should handle data received before the settings are fully applied.\", \"justification\": \"The phrase 'current configuration' is not clearly defined. Does it refer to the settings from a previous session, or the settings being communicated in the current flight? Both interpretations are reasonable and lead to different implementation choices.\"}",
+  "record_id": "3bfd4f08d90d806a74e798c5f397bc96058840298b93f27dbf16421d6b75d9f0",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "4.2.6.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.516
+}

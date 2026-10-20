@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY be empty",
+    "interpretation_a": "The default set can be empty, meaning no ALPNs are added to the SVCB ALPN set.",
+    "interpretation_b": "The default set must contain at least one ALPN, even if it's a minimal or rarely used one.",
+    "is_ambiguous": "yes",
+    "justification": "The use of \"MAY be empty\" introduces ambiguity. It's unclear whether a valid \"default set\" can be truly empty, or if it must always contain at least one ALPN. This impacts the implementation of the client's logic for adding the default set.",
+    "missing_information": "The document does not define what constitutes a \"default set\" or whether an empty set is permissible. This affects how clients and servers interpret and implement the addition of the default set to the SVCB ALPN set."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:12:46.943332+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "6dcf027c8fe938905e21532ceaa4c094c2ffa1e33ebf169ce6fc4db2eece53ae",
+  "lineage_ids": "lineage:c8fcad84d1fa4758b5586052",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 198,
+    "load_duration": 4006000,
+    "prompt_eval_count": 639,
+    "total_duration": 7492708500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY be empty\", \"interpretation_a\": \"The default set can be empty, meaning no ALPNs are added to the SVCB ALPN set.\", \"interpretation_b\": \"The default set must contain at least one ALPN, even if it's a minimal or rarely used one.\", \"missing_information\": \"The document does not define what constitutes a \\\"default set\\\" or whether an empty set is permissible. This affects how clients and servers interpret and implement the addition of the default set to the SVCB ALPN set.\",\"justification\": \"The use of \\\"MAY be empty\\\" introduces ambiguity. It's unclear whether a valid \\\"default set\\\" can be truly empty, or if it must always contain at least one ALPN. This impacts the implementation of the client's logic for adding the default set.\"}",
+  "record_id": "dbfdcdb70a891f22f81296e1dade35e69c347e73c77fd2449fb6d57c28e50fa9",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "7.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.5
+}

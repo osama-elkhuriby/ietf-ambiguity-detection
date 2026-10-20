@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "handshake messages or alert",
+    "interpretation_a": "The record must contain at least one octet of a handshake message.",
+    "interpretation_b": "The record must contain at least one octet of an alert.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether the required octet must belong to a handshake message or to an alert, leaving an incomplete constraint that could lead to different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T13:13:51.783090+00:00",
+  "document_id": "draft-ietf-quic-tls-12",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "e7b110f7615dfbf0c390dfffa372a3701bb73fc6f5402b78b69505f8dc5e0048",
+  "lineage_ids": "lineage:9557272975c70d9f7583e5a3",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 295,
+    "load_duration": 5535100,
+    "prompt_eval_count": 708,
+    "total_duration": 2715287500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"handshake messages or alert\",\n  \"interpretation_a\": \"The record must contain at least one octet of a handshake message.\",\n  \"interpretation_b\": \"The record must contain at least one octet of an alert.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify whether the required octet must belong to a handshake message or to an alert, leaving an incomplete constraint that could lead to different implementation behaviours.\"\n}",
+  "record_id": "cf1ed7fe115ed5f07c0187ae875fb2c9ff8245c4acb78657eb877d2e3cfe9b4f",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "10.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 32.0
+}

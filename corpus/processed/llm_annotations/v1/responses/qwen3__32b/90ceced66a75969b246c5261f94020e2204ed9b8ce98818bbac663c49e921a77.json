@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "difficult to guess",
+    "interpretation_a": "The requirement could be interpreted as needing cryptographic randomness and sufficient entropy to resist guessing by an attacker with significant computational resources.",
+    "interpretation_b": "The requirement could be interpreted as needing only basic randomness, such as using a pseudo-random number generator with a non-cryptographic seed, which may be insufficient for strong security.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'difficult to guess' is not quantified or defined in the clause, leaving open how much entropy or randomness is required. This lack of constraint could lead to materially different implementations, such as using cryptographic versus non-cryptographic random number generators.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:25:37.715477+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "bf3b4608a9ec9c1b4d229ce8efc4d90dd1ceaf0528a6040d5995e6b9dfa5579b",
+  "lineage_ids": "lineage:7f77730741d00dfc080a867a",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 173,
+    "load_duration": 4572800,
+    "prompt_eval_count": 514,
+    "total_duration": 7069165700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"difficult to guess\",\n  \"interpretation_a\": \"The requirement could be interpreted as needing cryptographic randomness and sufficient entropy to resist guessing by an attacker with significant computational resources.\",\n  \"interpretation_b\": \"The requirement could be interpreted as needing only basic randomness, such as using a pseudo-random number generator with a non-cryptographic seed, which may be insufficient for strong security.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The phrase 'difficult to guess' is not quantified or defined in the clause, leaving open how much entropy or randomness is required. This lack of constraint could lead to materially different implementations, such as using cryptographic versus non-cryptographic random number generators.\"\n}",
+  "record_id": "90ceced66a75969b246c5261f94020e2204ed9b8ce98818bbac663c49e921a77",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "10.3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.062
+}

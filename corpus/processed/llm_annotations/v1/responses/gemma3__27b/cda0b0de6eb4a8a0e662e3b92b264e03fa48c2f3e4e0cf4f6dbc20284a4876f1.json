@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY be different",
+    "interpretation_a": "The header block octets can be different, implying flexibility in encoding without changing the semantic meaning of the header fields.",
+    "interpretation_b": "The header block octets must be the same, as any difference would violate the requirement for identical header fields and values.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' introduces uncertainty about whether the header block octets can differ at all. The subsequent 'MUST' clause seems to contradict this, but the scope of 'different' is not clearly defined. A missing constraint on the allowable variation in encoding creates ambiguity.",
+    "missing_information": "The degree of allowable difference in encoding is not specified. Does a change in encoding that affects the size of the header block constitute a difference that violates the 'MUST' clause?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:08:13.829209+00:00",
+  "document_id": "draft-ietf-quic-http-16",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "b9dccdc98739eb542196f460c59c8a8d1feb1b1a5cbda53d5708516db50d2247",
+  "lineage_ids": "lineage:a019d2983bc467d40e135fc5",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 193,
+    "load_duration": 20853100,
+    "prompt_eval_count": 573,
+    "total_duration": 7472827600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY be different\", \"interpretation_a\": \"The header block octets can be different, implying flexibility in encoding without changing the semantic meaning of the header fields.\", \"interpretation_b\": \"The header block octets must be the same, as any difference would violate the requirement for identical header fields and values.\", \"missing_information\": \"The degree of allowable difference in encoding is not specified. Does a change in encoding that affects the size of the header block constitute a difference that violates the 'MUST' clause?\", \"justification\": \"The use of 'MAY' introduces uncertainty about whether the header block octets can differ at all. The subsequent 'MUST' clause seems to contradict this, but the scope of 'different' is not clearly defined. A missing constraint on the allowable variation in encoding creates ambiguity.\"}",
+  "record_id": "cda0b0de6eb4a8a0e662e3b92b264e03fa48c2f3e4e0cf4f6dbc20284a4876f1",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "4.2.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.469
+}

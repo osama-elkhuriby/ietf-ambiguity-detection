@@ -1,0 +1,52 @@
+{
+  "best_epoch": 7,
+  "checkpoint_hashes": {
+    "config.json": "9cf8366176c672d6d05fea47519954d0c2e1566d55ba76cf8961518e9daabb54",
+    "model.safetensors": "8928980fd9c0abf7298d82ff706a93c58daed236603589f326cfc50bdae22d73",
+    "tokenizer.json": "e9ddd853a4a31023721c993458663f2019e3154a05dacf0d2b3c217e53d9bdc8",
+    "tokenizer_config.json": "7c32643ba4f187cbf781701a511726ffff31ae3649f7eef5cd01e80675f901ea"
+  },
+  "checkpoint_selection_partition": "inner_grouped_family",
+  "config_path": "experiments/transformer/configs/deberta_clause_only.yaml",
+  "config_sha256": "14e67e4a1493d2871b0cb06721c50da5e3de536130126ad1f373c8510204760f",
+  "device": "cuda",
+  "excluded_exact_duplicate_record_ids": [],
+  "excluded_inner_duplicate_record_ids": [
+    "ac7c215ebb828b233c150316a61c679826b5df2df370ed6e911ff75bb5887ada",
+    "bdf2986c669fb4ffe3d297beb6a9abda852069b6d881a4fa42bdb7e848722b67"
+  ],
+  "fold": 2,
+  "fold_assignment_sha256": "c04dc8424ed96486f8521ef57d17e4b503d2c3f41bb116edeeb9535073dd7884",
+  "git_commit": "0eb748efbfaff532f97893c6bd47b0f9e7e8935f",
+  "gpu": "NVIDIA RTX 5000 Ada Generation",
+  "held_out_families": [
+    "draft-ietf-httpbis-semantics"
+  ],
+  "inner_selection_assignment_sha256": "7db817c91e962a6a921942e14bc2d41737bd1060a111a8c7fb798bb929054616",
+  "inner_selection_family": "draft-ietf-quic-recovery",
+  "inner_selection_positive_labels": 34,
+  "inner_selection_rows": 164,
+  "inner_selection_scored_rows": 162,
+  "model_license": "MIT",
+  "model_parameter_dtype": "torch.float32",
+  "model_repository": "microsoft/deberta-v3-small",
+  "model_revision": "a36c739020e01763fe789b4b85e2df55d6180012",
+  "outer_fold_evaluations_after_selection": 1,
+  "outer_fold_evaluations_during_training": 0,
+  "peak_gpu_memory_allocated_mb": 2951.83544921875,
+  "peak_gpu_memory_reserved_mb": 3642.0,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "precision": "fp32",
+  "process_id": 7932,
+  "python": "3.12.14",
+  "schema_version": 1,
+  "scored_validation_rows": 407,
+  "seed": 2718,
+  "torch": "2.13.0+cu132",
+  "total_runtime_seconds": 110.89948849997018,
+  "train_split_sha256": "4b0ee17308e26fdc8a2a362e7df1099fa7f55de79a9754ba64d50cb56f5542c4",
+  "training_rows": 1682,
+  "training_runtime_seconds": 107.60271350003313,
+  "transformers": "5.19.0",
+  "validation_rows": 407
+}

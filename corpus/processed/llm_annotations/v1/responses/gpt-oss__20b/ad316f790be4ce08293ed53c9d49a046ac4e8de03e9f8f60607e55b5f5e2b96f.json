@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "A client that migrates to a preferred address MUST validate the address it chooses before migrating; see [forgery-spa].",
+    "interpretation_a": "The clause does not specify what validation entails, leaving implementation open to interpretation.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause relies on an external reference for the definition of 'validate', which is not provided, creating an incomplete constraint that could lead to different implementation behaviours.",
+    "missing_information": "Definition of 'validate' in [forgery-spa]."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T17:47:02.365112+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "92d79e2adb4d15f30170b6dd83ca3c497a86a298161bb052c25b03c58e38861f",
+  "lineage_ids": "lineage:72f14553e38d8ce781011d57",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1753,
+    "load_duration": 5833800,
+    "prompt_eval_count": 603,
+    "total_duration": 15254648700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\",\"ambiguity_subtype\":\"U-2\",\"evidence_span\":\"A client that migrates to a preferred address MUST validate the address it chooses before migrating; see [forgery-spa].\",\"interpretation_a\":\"The clause does not specify what validation entails, leaving implementation open to interpretation.\",\"interpretation_b\":\"\",\"missing_information\":\"Definition of 'validate' in [forgery-spa].\",\"justification\":\"The clause relies on an external reference for the definition of 'validate', which is not provided, creating an incomplete constraint that could lead to different implementation behaviours.\"}",
+  "record_id": "ad316f790be4ce08293ed53c9d49a046ac4e8de03e9f8f60607e55b5f5e2b96f",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9.6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 83.375
+}

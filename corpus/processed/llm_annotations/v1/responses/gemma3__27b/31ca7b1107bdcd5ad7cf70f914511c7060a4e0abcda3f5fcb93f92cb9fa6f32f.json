@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHALL be used as its wire format encoding",
+    "interpretation_a": "The decoded value is directly used as the wire format, implying a one-to-one mapping.",
+    "interpretation_b": "The decoded value is used as input to a process that *generates* the wire format, allowing for transformations or additional encoding steps.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'used as its wire format encoding' is incomplete. It doesn't specify *how* the decoded value becomes the wire format. Does it mean a direct assignment, or a process that transforms the decoded value into the wire format? This lack of clarity creates ambiguity.",
+    "missing_information": "The specification does not define how the decoded value is transformed into the wire format, leaving room for different implementations. A concrete constraint defining this transformation is missing."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:00:39.732799+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "8e16975f82a549f04102a8b677dd5e0a210e921c0aa6ff9beba23bb86a2db0c1",
+  "lineage_ids": "lineage:48fb67902a29e5235207967f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 195,
+    "load_duration": 7330600,
+    "prompt_eval_count": 592,
+    "total_duration": 7334408800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHALL be used as its wire format encoding\", \"interpretation_a\": \"The decoded value is directly used as the wire format, implying a one-to-one mapping.\", \"interpretation_b\": \"The decoded value is used as input to a process that *generates* the wire format, allowing for transformations or additional encoding steps.\", \"missing_information\": \"The specification does not define how the decoded value is transformed into the wire format, leaving room for different implementations. A concrete constraint defining this transformation is missing.\", \"justification\": \"The phrase 'used as its wire format encoding' is incomplete. It doesn't specify *how* the decoded value becomes the wire format. Does it mean a direct assignment, or a process that transforms the decoded value into the wire format? This lack of clarity creates ambiguity.\"}",
+  "record_id": "31ca7b1107bdcd5ad7cf70f914511c7060a4e0abcda3f5fcb93f92cb9fa6f32f",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.344
+}

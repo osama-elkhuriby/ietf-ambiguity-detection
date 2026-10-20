@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "TLS records SHOULD always contain at least one octet of a handshake messages or alert.",
+    "interpretation_a": "A TLS record *must* contain at least one octet of handshake data or an alert, even if it's redundant or unnecessary.",
+    "interpretation_b": "A TLS record *should* contain at least one octet of handshake data or an alert if possible, but it's permissible to send a record with zero octets of handshake data or alerts under certain circumstances (e.g., a very short handshake).",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' creates ambiguity. While it indicates a recommendation, it doesn't definitively state whether a record *must* contain the octet or if it's permissible to send a record with zero octets under specific conditions. This impacts implementation, as some implementations might strictly enforce the 'at least one octet' rule, while others might allow exceptions.",
+    "missing_information": "The meaning of 'SHOULD' is not fully defined in this context. Is it a strong recommendation, or is there room for deviation? Also, the definition of 'at least one octet' is not precise. Does it mean exactly one, or one or more?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:48:32.581062+00:00",
+  "document_id": "draft-ietf-quic-tls-12",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "e7b110f7615dfbf0c390dfffa372a3701bb73fc6f5402b78b69505f8dc5e0048",
+  "lineage_ids": "lineage:9557272975c70d9f7583e5a3",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 280,
+    "load_duration": 6186700,
+    "prompt_eval_count": 561,
+    "total_duration": 10332923100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"TLS records SHOULD always contain at least one octet of a handshake messages or alert.\", \"interpretation_a\": \"A TLS record *must* contain at least one octet of handshake data or an alert, even if it's redundant or unnecessary.\", \"interpretation_b\": \"A TLS record *should* contain at least one octet of handshake data or an alert if possible, but it's permissible to send a record with zero octets of handshake data or alerts under certain circumstances (e.g., a very short handshake).\", \"missing_information\": \"The meaning of 'SHOULD' is not fully defined in this context. Is it a strong recommendation, or is there room for deviation? Also, the definition of 'at least one octet' is not precise. Does it mean exactly one, or one or more?\",\"justification\": \"The use of 'SHOULD' creates ambiguity. While it indicates a recommendation, it doesn't definitively state whether a record *must* contain the octet or if it's permissible to send a record with zero octets under specific conditions. This impacts implementation, as some implementations might strictly enforce the 'at least one octet' rule, while others might allow exceptions.\"}",
+  "record_id": "cf1ed7fe115ed5f07c0187ae875fb2c9ff8245c4acb78657eb877d2e3cfe9b4f",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "10.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.328
+}

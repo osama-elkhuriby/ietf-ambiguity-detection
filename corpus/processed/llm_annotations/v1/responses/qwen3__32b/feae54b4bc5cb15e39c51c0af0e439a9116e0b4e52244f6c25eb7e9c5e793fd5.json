@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear directive that intermediaries transforming HTTP/1.x messages to HTTP/3 should remove specific connection-specific header fields (e.g., Keep-Alive, Proxy-Connection, etc.) even if they are not listed in the Connection header. The use of 'SHOULD' indicates a recommendation, not a strict requirement, but the list of header fields is explicit and unambiguous. There is no ambiguity in the behavior expected from an implementation.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:07:22.851527+00:00",
+  "document_id": "draft-ietf-quic-http-27",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "9fb2df3286724398df1292cf4519d85733d6b9457765f44d4a4cc11d5005448b",
+  "lineage_ids": "lineage:8359dce0dbba6fb57ffa2364",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 147,
+    "load_duration": 9235900,
+    "prompt_eval_count": 551,
+    "total_duration": 6151065700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear directive that intermediaries transforming HTTP/1.x messages to HTTP/3 should remove specific connection-specific header fields (e.g., Keep-Alive, Proxy-Connection, etc.) even if they are not listed in the Connection header. The use of 'SHOULD' indicates a recommendation, not a strict requirement, but the list of header fields is explicit and unambiguous. There is no ambiguity in the behavior expected from an implementation.\"\n}",
+  "record_id": "feae54b4bc5cb15e39c51c0af0e439a9116e0b4e52244f6c25eb7e9c5e793fd5",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "4.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.156
+}

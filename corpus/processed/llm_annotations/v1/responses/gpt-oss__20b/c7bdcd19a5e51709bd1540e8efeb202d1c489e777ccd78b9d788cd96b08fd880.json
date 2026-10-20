@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "After sending a SETTINGS frame that reduces the initial flow-control window size, a receiver MAY continue to process streams that exceed flow-control limits.",
+    "interpretation_a": "The clause does not specify whether the receiver may continue to process only streams that were already in progress before the SETTINGS frame, or all streams, nor does it clarify whether the streams that exceed flow-control limits refer to those exceeding the new window size or the old window size.",
+    "interpretation_b": "Thus, two materially different implementation behaviours are possible: (1) the receiver may continue to process any stream that exceeds the new window size, or (2) the receiver may continue only those streams that were already in progress and exceeded the old window size. The clause lacks a constraint to disambiguate these behaviours.",
+    "is_ambiguous": "yes",
+    "justification": "The clause is under-specified regarding the scope of streams that may continue processing, leading to two reasonable, materially different interpretations.",
+    "missing_information": "Clarification of which streams are allowed to continue processing after the SETTINGS frame and whether the reference to 'exceed flow-control limits' applies to the new or old window size is required to resolve the ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T04:57:35.851741+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "7197ef382b81735dd812d083ae2376308347a06c4ce77ead2a6949c6187eace2",
+  "lineage_ids": "lineage:ca4525cb2f95b3cbd0a8c6e3",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3088,
+    "load_duration": 4235200,
+    "prompt_eval_count": 609,
+    "total_duration": 26714151500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"After sending a SETTINGS frame that reduces the initial flow-control window size, a receiver MAY continue to process streams that exceed flow-control limits.\",\n  \"interpretation_a\": \"The clause does not specify whether the receiver may continue to process only streams that were already in progress before the SETTINGS frame, or all streams, nor does it clarify whether the streams that exceed flow-control limits refer to those exceeding the new window size or the old window size.\",\n  \"interpretation_b\": \"Thus, two materially different implementation behaviours are possible: (1) the receiver may continue to process any stream that exceeds the new window size, or (2) the receiver may continue only those streams that were already in progress and exceeded the old window size. The clause lacks a constraint to disambiguate these behaviours.\",\n  \"missing_information\": \"Clarification of which streams are allowed to continue processing after the SETTINGS frame and whether the reference to 'exceed flow-control limits' applies to the new or old window size is required to resolve the ambiguity.\",\n  \"justification\": \"The clause is under-specified regarding the scope of streams that may continue processing, leading to two reasonable, materially different interpretations.\"\n}",
+  "record_id": "c7bdcd19a5e51709bd1540e8efeb202d1c489e777ccd78b9d788cd96b08fd880",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.9.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 26.718
+}

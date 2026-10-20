@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT be used",
+    "interpretation_a": "The server MUST discard any early data received, treating it as an error.",
+    "interpretation_b": "The server MUST signal an error to the client if it attempts to process or utilize the early data in any way.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'MUST NOT be used' is incomplete. It doesn't specify what action the server must take regarding the early data. It could mean simply discarding it, or it could mean actively signaling an error. Both interpretations are reasonable.",
+    "missing_information": "The clause does not specify *how* early data must not be used. Does 'not be used' mean discard, signal an error, or both?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:53:36.210443+00:00",
+  "document_id": "draft-ietf-quic-tls-20",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "ae72d93204df5ec21156156bcfe0d4a7dd56fdb0b30a40da6946b76953046d0f",
+  "lineage_ids": "lineage:e464cd6d64e4e9be14c83a40",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 174,
+    "load_duration": 4005600,
+    "prompt_eval_count": 591,
+    "total_duration": 6619480200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT be used\", \"interpretation_a\": \"The server MUST discard any early data received, treating it as an error.\", \"interpretation_b\": \"The server MUST signal an error to the client if it attempts to process or utilize the early data in any way.\", \"missing_information\": \"The clause does not specify *how* early data must not be used. Does 'not be used' mean discard, signal an error, or both?\", \"justification\": \"The phrase 'MUST NOT be used' is incomplete. It doesn't specify what action the server must take regarding the early data. It could mean simply discarding it, or it could mean actively signaling an error. Both interpretations are reasonable.\"}",
+  "record_id": "fc375228ce48159dbc1fb456727f62b72f5d47ea2d0a816073f0cb40dcd22854",
+  "revision": "20",
+  "schema_version": 1,
+  "section_ids": "4.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.61
+}

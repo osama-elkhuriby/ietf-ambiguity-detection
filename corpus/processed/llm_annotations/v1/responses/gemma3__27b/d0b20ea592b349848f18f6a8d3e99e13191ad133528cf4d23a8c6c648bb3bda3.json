@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "the “initial_max_data” transport parameter supplied by the server",
+    "interpretation_a": "The server dictates the maximum 0-RTT data size via the initial_max_data parameter, and the client must respect this limit.",
+    "interpretation_b": "The 0xffffffff value in the NewSessionTicket is a maximum, but the server can further restrict the 0-RTT data size using initial_max_data. The client must respect the *lower* of the two values.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states that the server controls the amount of 0-RTT data via initial_max_data, but doesn't specify how this interacts with the 0xffffffff value in the NewSessionTicket. Does initial_max_data *replace* the 0xffffffff value, or act as a further restriction? This missing constraint leads to ambiguity.",
+    "missing_information": "It is unclear whether the server's initial_max_data parameter overrides the 0xffffffff value specified in the NewSessionTicket, or if it simply provides an additional constraint. A clear statement of precedence is needed."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:48:51.885255+00:00",
+  "document_id": "draft-ietf-quic-tls-23",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "c5f8c1c58485d69dcbe15f08ac10c229de01063603e8652c2f39b5a2213f621b",
+  "lineage_ids": "lineage:3df350b8c7aee23b3462f4a7",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 261,
+    "load_duration": 4046200,
+    "prompt_eval_count": 622,
+    "total_duration": 9719099200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"the “initial_max_data” transport parameter supplied by the server\", \"interpretation_a\": \"The server dictates the maximum 0-RTT data size via the initial_max_data parameter, and the client must respect this limit.\", \"interpretation_b\": \"The 0xffffffff value in the NewSessionTicket is a maximum, but the server can further restrict the 0-RTT data size using initial_max_data. The client must respect the *lower* of the two values.\", \"missing_information\": \"It is unclear whether the server's initial_max_data parameter overrides the 0xffffffff value specified in the NewSessionTicket, or if it simply provides an additional constraint. A clear statement of precedence is needed.\", \"justification\": \"The clause states that the server controls the amount of 0-RTT data via initial_max_data, but doesn't specify how this interacts with the 0xffffffff value in the NewSessionTicket. Does initial_max_data *replace* the 0xffffffff value, or act as a further restriction? This missing constraint leads to ambiguity.\"}",
+  "record_id": "d0b20ea592b349848f18f6a8d3e99e13191ad133528cf4d23a8c6c648bb3bda3",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "4.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.719
+}

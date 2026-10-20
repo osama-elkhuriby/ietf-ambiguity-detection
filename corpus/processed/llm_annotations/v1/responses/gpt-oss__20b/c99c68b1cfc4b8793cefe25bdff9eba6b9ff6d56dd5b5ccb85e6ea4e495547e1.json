@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "ignore RTT samples",
+    "interpretation_a": "The endpoint may ignore the RTT sample that is less than min_rtt.",
+    "interpretation_b": "The endpoint may ignore all RTT samples until handshake confirmation.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states \"MAY ignore RTT samples if adjusting the RTT sample for acknowledgement delay causes the sample to be less than the min_rtt.\" The phrase \"ignore RTT samples\" is ambiguous because it does not specify whether the endpoint should ignore only the sample that is less than min_rtt, all RTT samples until handshake confirmation, or all samples that are less than min_rtt. This missing constraint leads to two or more materially different implementation behaviours, satisfying the definition of ambiguity.",
+    "missing_information": "The clause does not specify which RTT samples are to be ignored, leading to multiple reasonable implementation behaviours. The lack of a constraint on which samples to ignore creates ambiguity. The clause could be interpreted as ignoring only the sample that falls below min_rtt, or as ignoring all RTT samples until the handshake is confirmed, or as ignoring all samples that are less than min_rtt. This missing constraint prevents a unique operational interpretation. The ambiguity is therefore due to an incomplete constraint affecting implementation behaviour (U-2)."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T11:58:22.732553+00:00",
+  "document_id": "draft-ietf-quic-recovery-33",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "26b6baab6e1d95e56e5a84c23304e2341e8a78a4a2c65bcb157a491a5469f895",
+  "lineage_ids": "lineage:357d7dde5bbd9b75f212b673",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1704,
+    "load_duration": 4872000,
+    "prompt_eval_count": 651,
+    "total_duration": 15053139400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"ignore RTT samples\",\n  \"interpretation_a\": \"The endpoint may ignore the RTT sample that is less than min_rtt.\",\n  \"interpretation_b\": \"The endpoint may ignore all RTT samples until handshake confirmation.\",\n  \"missing_information\": \"The clause does not specify which RTT samples are to be ignored, leading to multiple reasonable implementation behaviours. The lack of a constraint on which samples to ignore creates ambiguity. The clause could be interpreted as ignoring only the sample that falls below min_rtt, or as ignoring all RTT samples until the handshake is confirmed, or as ignoring all samples that are less than min_rtt. This missing constraint prevents a unique operational interpretation. The ambiguity is therefore due to an incomplete constraint affecting implementation behaviour (U-2).\",\n  \"justification\": \"The clause states \\\"MAY ignore RTT samples if adjusting the RTT sample for acknowledgement delay causes the sample to be less than the min_rtt.\\\" The phrase \\\"ignore RTT samples\\\" is ambiguous because it does not specify whether the endpoint should ignore only the sample that is less than min_rtt, all RTT samples until handshake confirmation, or all samples that are less than min_rtt. This missing constraint leads to two or more materially different implementation behaviours, satisfying the definition of ambiguity.\"\n}",
+  "record_id": "c99c68b1cfc4b8793cefe25bdff9eba6b9ff6d56dd5b5ccb85e6ea4e495547e1",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "5.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 15.047
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY either assume a media type of \"application/octet-stream\"",
+    "interpretation_a": "The recipient is permitted to always assume 'application/octet-stream' if no Content-Type is present.",
+    "interpretation_b": "The recipient is permitted to attempt to determine the type of the data, potentially bypassing the default of 'application/octet-stream'.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'either...or' with 'MAY' allows for two distinct implementation choices. There is no constraint on *when* the recipient should choose one option over the other, leading to potentially inconsistent behavior across different implementations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:10:14.929909+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "c5d7b39b8999a128def6fe38a4365422b691d2c2db031cf17d737ffd1dc2aafd",
+  "lineage_ids": "lineage:3408fb04444e8aa47c2add5b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 160,
+    "load_duration": 9548500,
+    "prompt_eval_count": 619,
+    "total_duration": 6651906800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY either assume a media type of \\\"application/octet-stream\\\"\", \"interpretation_a\": \"The recipient is permitted to always assume 'application/octet-stream' if no Content-Type is present.\", \"interpretation_b\": \"The recipient is permitted to attempt to determine the type of the data, potentially bypassing the default of 'application/octet-stream'.\", \"missing_information\": \"\", \"justification\": \"The use of 'either...or' with 'MAY' allows for two distinct implementation choices. There is no constraint on *when* the recipient should choose one option over the other, leading to potentially inconsistent behavior across different implementations.\"}",
+  "record_id": "62f569db8dc8c5401575210784d43b8903faf90983b847083ec61d649d988938",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "8.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.656
+}

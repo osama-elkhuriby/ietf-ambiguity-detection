@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST be the first PSK",
+    "interpretation_a": "The client provides multiple PSKs in the \"pre_shared_key\" extension, and the server is required to use the very first one in the list, regardless of any other factors.",
+    "interpretation_b": "The client provides multiple PSKs in the \"pre_shared_key\" extension, and the server is required to use the first PSK that meets certain criteria (e.g., is valid, is preferred), and if multiple PSKs meet the criteria, the server uses the first one in the list.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'first PSK' is incomplete. It doesn't specify what happens if the first PSK is invalid or unusable. This creates ambiguity in implementation.",
+    "missing_information": "The clause does not specify what happens if the first PSK is invalid or otherwise unusable. It's unclear if the server is required to attempt to use it anyway, or if it can move on to the next PSK in the list."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:36:27.756747+00:00",
+  "document_id": "draft-ietf-tls-tls13-21",
+  "family_id": "draft-ietf-tls-tls13",
+  "input_fingerprint": "558eebdf341aba3e5fae55287f252e69457d9711949f5e1a8759a5cdd002bcc6",
+  "lineage_ids": "lineage:5a638fdc0885f7b13229f25c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 240,
+    "load_duration": 9883300,
+    "prompt_eval_count": 650,
+    "total_duration": 9157551600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST be the first PSK\", \"interpretation_a\": \"The client provides multiple PSKs in the \\\"pre_shared_key\\\" extension, and the server is required to use the very first one in the list, regardless of any other factors.\", \"interpretation_b\": \"The client provides multiple PSKs in the \\\"pre_shared_key\\\" extension, and the server is required to use the first PSK that meets certain criteria (e.g., is valid, is preferred), and if multiple PSKs meet the criteria, the server uses the first one in the list.\", \"missing_information\": \"The clause does not specify what happens if the first PSK is invalid or otherwise unusable. It's unclear if the server is required to attempt to use it anyway, or if it can move on to the next PSK in the list.\",\"justification\": \"The phrase 'first PSK' is incomplete. It doesn't specify what happens if the first PSK is invalid or unusable. This creates ambiguity in implementation.\"}",
+  "record_id": "b2473eaf6068f2a6a950a4ddd401d1d3c30456cc574c446e0c0d922c29284198",
+  "revision": "21",
+  "schema_version": 1,
+  "section_ids": "4.2.9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.172
+}

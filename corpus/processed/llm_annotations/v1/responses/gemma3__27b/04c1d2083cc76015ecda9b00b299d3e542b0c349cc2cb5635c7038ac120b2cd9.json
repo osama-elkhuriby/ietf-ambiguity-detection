@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD send a non-probing packet",
+    "interpretation_a": "The endpoint *must* send a non-probing packet, though there may be valid reasons to do so beyond responding to the PATH_CHALLENGE.",
+    "interpretation_b": "The endpoint is permitted to send a non-probing packet, but is not required to do so, and may choose not to respond to the PATH_CHALLENGE.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' is ambiguous. It could be interpreted as a strong recommendation equivalent to 'MUST', or as a weaker suggestion allowing for alternative behaviours. This affects implementation, as a strict implementation would *always* send a non-probing packet, while a lenient one might not.",
+    "missing_information": "The strength of 'SHOULD' is not defined. Is it equivalent to 'MUST', or does it allow for discretion?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:56:03.665143+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "e9db4c149cf623dfe91543d315ff79fb052be7021a23258bb8f9dcd33532fd78",
+  "lineage_ids": "lineage:d7bd6ba9a9979a71c025a7d9",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 213,
+    "load_duration": 7174000,
+    "prompt_eval_count": 612,
+    "total_duration": 8161446400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD send a non-probing packet\", \"interpretation_a\": \"The endpoint *must* send a non-probing packet, though there may be valid reasons to do so beyond responding to the PATH_CHALLENGE.\", \"interpretation_b\": \"The endpoint is permitted to send a non-probing packet, but is not required to do so, and may choose not to respond to the PATH_CHALLENGE.\", \"missing_information\": \"The strength of 'SHOULD' is not defined. Is it equivalent to 'MUST', or does it allow for discretion?\",\"justification\": \"The use of 'SHOULD' is ambiguous. It could be interpreted as a strong recommendation equivalent to 'MUST', or as a weaker suggestion allowing for alternative behaviours. This affects implementation, as a strict implementation would *always* send a non-probing packet, while a lenient one might not.\"}",
+  "record_id": "04c1d2083cc76015ecda9b00b299d3e542b0c349cc2cb5635c7038ac120b2cd9",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9.3.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.156
+}

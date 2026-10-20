@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST be used",
+    "interpretation_a": "A separate PRIORITY frame is required for all priority updates.",
+    "interpretation_b": "A separate PRIORITY frame is required only when the PRIORITY region within HEADERS is not supported (as stated in the previous clause).",
+    "is_ambiguous": "yes",
+    "justification": "The clause states a requirement without specifying the conditions under which it applies. The previous clause establishes a context (HEADERS PRIORITY region not supported), which could reasonably be interpreted as limiting the scope of the 'MUST' statement.",
+    "missing_information": "It is unclear whether the requirement to use a separate PRIORITY frame applies universally, or only in the specific case where the PRIORITY region of HEADERS is not supported. The scope of 'MUST' is not clearly defined."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:43:34.549869+00:00",
+  "document_id": "draft-ietf-quic-http-19",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "63cc83efc13e305ac2656261006d8c5d00b4731341d4ac2d10d283edc0210049",
+  "lineage_ids": "lineage:4537e2969874eea80a52766d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 185,
+    "load_duration": 4084800,
+    "prompt_eval_count": 549,
+    "total_duration": 7076341000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST be used\", \"interpretation_a\": \"A separate PRIORITY frame is required for all priority updates.\", \"interpretation_b\": \"A separate PRIORITY frame is required only when the PRIORITY region within HEADERS is not supported (as stated in the previous clause).\", \"missing_information\": \"It is unclear whether the requirement to use a separate PRIORITY frame applies universally, or only in the specific case where the PRIORITY region of HEADERS is not supported. The scope of 'MUST' is not clearly defined.\", \"justification\": \"The clause states a requirement without specifying the conditions under which it applies. The previous clause establishes a context (HEADERS PRIORITY region not supported), which could reasonably be interpreted as limiting the scope of the 'MUST' statement.\"}",
+  "record_id": "23ba76eae0cf85bc8cee157732559666dc22c7261c5a1127e826758c920fbee8",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "A.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.094
+}

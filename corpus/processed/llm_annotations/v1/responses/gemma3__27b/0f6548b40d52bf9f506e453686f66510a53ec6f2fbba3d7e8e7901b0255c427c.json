@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD retrieve any HTTPS records",
+    "interpretation_a": "The client is required to retrieve HTTPS records for the alt-authority if they exist.",
+    "interpretation_b": "The client is permitted, but not required, to retrieve HTTPS records for the alt-authority.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' creates ambiguity. While 'SHOULD' is generally understood as a strong recommendation, it doesn't definitively mandate the retrieval of HTTPS records. A client could reasonably interpret this as optional, leading to different implementations.",
+    "missing_information": "The strength of 'SHOULD' is unclear. Does it indicate a strong recommendation, or merely a suggestion? This affects whether clients *must* retrieve the records or are allowed to skip this step."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:58:12.130285+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "f4761524909115c6ac2e547553fcd287d4d254ea2f1b4b294e312b01974606f5",
+  "lineage_ids": "lineage:eedea74da6f41b058ec2ce70",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 183,
+    "load_duration": 4371000,
+    "prompt_eval_count": 606,
+    "total_duration": 6876908600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD retrieve any HTTPS records\", \"interpretation_a\": \"The client is required to retrieve HTTPS records for the alt-authority if they exist.\", \"interpretation_b\": \"The client is permitted, but not required, to retrieve HTTPS records for the alt-authority.\", \"missing_information\": \"The strength of 'SHOULD' is unclear. Does it indicate a strong recommendation, or merely a suggestion? This affects whether clients *must* retrieve the records or are allowed to skip this step.\", \"justification\": \"The use of 'SHOULD' creates ambiguity. While 'SHOULD' is generally understood as a strong recommendation, it doesn't definitively mandate the retrieval of HTTPS records. A client could reasonably interpret this as optional, leading to different implementations.\"}",
+  "record_id": "0f6548b40d52bf9f506e453686f66510a53ec6f2fbba3d7e8e7901b0255c427c",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "9.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.875
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD increase exponentially the interval between successive probes",
+    "interpretation_a": "The interval between probes increases by a constant multiplicative factor each time (e.g., double each time).",
+    "interpretation_b": "The interval between probes increases according to an exponential function, but the base of the exponent is not specified, allowing for different rates of increase.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'increase exponentially' is vague. While it implies a non-linear increase, it doesn't specify *how* the interval should increase exponentially. Different bases or rates could be used, leading to materially different probing behaviors.",
+    "missing_information": "The base or rate of the exponential increase is not defined, leading to different implementations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:30:19.505802+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "f6f8cfc10da9bbee2551e13036fbb8ea4c71cbfc46271213b740b6226f0b9c48",
+  "lineage_ids": "lineage:45941c0f3f7fc61f714e714f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 176,
+    "load_duration": 4632100,
+    "prompt_eval_count": 600,
+    "total_duration": 6854040800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD increase exponentially the interval between successive probes\", \"interpretation_a\": \"The interval between probes increases by a constant multiplicative factor each time (e.g., double each time).\", \"interpretation_b\": \"The interval between probes increases according to an exponential function, but the base of the exponent is not specified, allowing for different rates of increase.\", \"missing_information\": \"The base or rate of the exponential increase is not defined, leading to different implementations.\", \"justification\": \"The phrase 'increase exponentially' is vague. While it implies a non-linear increase, it doesn't specify *how* the interval should increase exponentially. Different bases or rates could be used, leading to materially different probing behaviors.\"}",
+  "record_id": "e8628ccf9741f812e96e57fee913b64a7cccfcbf5ad5311bf2f93e61875cfcab",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.8.6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.875
+}

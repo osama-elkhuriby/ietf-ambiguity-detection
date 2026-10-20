@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST be repeated",
+    "interpretation_a": "The client MUST include the token in the header of every subsequent Initial packet.",
+    "interpretation_b": "The client MUST include the token somewhere within the payload of every subsequent Initial packet.",
+    "is_ambiguous": "yes",
+    "justification": "The word 'repeated' is vague. It doesn't specify *where* the token must be repeated. It could be in the packet header or the payload. Both are reasonable interpretations, and the location affects how an implementation would parse and validate the packet.",
+    "missing_information": "The specification does not define *where* the token must be repeated in the Initial packet. This affects implementation because header fields and payload fields are handled differently."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:02:18.532844+00:00",
+  "document_id": "draft-ietf-quic-transport-18",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "34a4063f6348fcb033b20b0be2eb57210eb9f7f59b1dc4602b20138592553303",
+  "lineage_ids": "lineage:d45beb5e40dd396e9ba5a0fe",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 170,
+    "load_duration": 4877700,
+    "prompt_eval_count": 586,
+    "total_duration": 6460690800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST be repeated\", \"interpretation_a\": \"The client MUST include the token in the header of every subsequent Initial packet.\", \"interpretation_b\": \"The client MUST include the token somewhere within the payload of every subsequent Initial packet.\", \"missing_information\": \"The specification does not define *where* the token must be repeated in the Initial packet. This affects implementation because header fields and payload fields are handled differently.\", \"justification\": \"The word 'repeated' is vague. It doesn't specify *where* the token must be repeated. It could be in the packet header or the payload. Both are reasonable interpretations, and the location affects how an implementation would parse and validate the packet.\"}",
+  "record_id": "1c4def7c736e63b41761d957ead48dea595150c4531a881ce37e699ef1aaa616",
+  "revision": "18",
+  "schema_version": 1,
+  "section_ids": "8.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.5
+}

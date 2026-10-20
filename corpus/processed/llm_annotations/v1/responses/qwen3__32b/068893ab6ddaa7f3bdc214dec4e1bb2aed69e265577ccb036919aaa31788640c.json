@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides clear conditions under which the If-Modified-Since header field must be ignored: (1) if the field value is not a valid HTTP-date, or (2) if the request method is neither GET nor HEAD. These conditions are specific and unambiguous, leaving no room for multiple reasonable interpretations that would affect implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:02:42.296571+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-10",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "4a833e4e63082c26efcd111d8027f635945ebd82908ce50dd0a9f14ceb7f19f0",
+  "lineage_ids": "lineage:ea5afd3d13291170212034ad",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 124,
+    "load_duration": 19946400,
+    "prompt_eval_count": 607,
+    "total_duration": 5218963500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides clear conditions under which the If-Modified-Since header field must be ignored: (1) if the field value is not a valid HTTP-date, or (2) if the request method is neither GET nor HEAD. These conditions are specific and unambiguous, leaving no room for multiple reasonable interpretations that would affect implementation behavior.\"\n}",
+  "record_id": "068893ab6ddaa7f3bdc214dec4e1bb2aed69e265577ccb036919aaa31788640c",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "9.2.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.234
+}

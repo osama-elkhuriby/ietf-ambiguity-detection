@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Any second attempt that is triggered by address validation (see [validate-new]) MUST also be sent within a single packet.",
+    "interpretation_a": "The clause could be interpreted as referring to a second attempt to send a CRYPTO frame, consistent with the preceding clause.",
+    "interpretation_b": "Alternatively, it could be interpreted as referring to any second attempt of any kind that is triggered by address validation, not necessarily a CRYPTO frame.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not explicitly specify what the 'second attempt' refers to, leaving it open to interpretation.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T13:48:08.847201+00:00",
+  "document_id": "draft-ietf-quic-transport-16",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "d98105dacd344362f0fbf8f87bf22cec1366d2f890d35988ad25de5859229d16",
+  "lineage_ids": "lineage:beb72cf5393f09ca56359548",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 943,
+    "load_duration": 4495100,
+    "prompt_eval_count": 573,
+    "total_duration": 8216590000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"Any second attempt that is triggered by address validation (see [validate-new]) MUST also be sent within a single packet.\",\n  \"interpretation_a\": \"The clause could be interpreted as referring to a second attempt to send a CRYPTO frame, consistent with the preceding clause.\",\n  \"interpretation_b\": \"Alternatively, it could be interpreted as referring to any second attempt of any kind that is triggered by address validation, not necessarily a CRYPTO frame.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not explicitly specify what the 'second attempt' refers to, leaving it open to interpretation.\"\n}",
+  "record_id": "04c55204e8cc4db39685918ccf6a3804ee69b7eb9cd615fd1f379f9008094813",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.219
+}

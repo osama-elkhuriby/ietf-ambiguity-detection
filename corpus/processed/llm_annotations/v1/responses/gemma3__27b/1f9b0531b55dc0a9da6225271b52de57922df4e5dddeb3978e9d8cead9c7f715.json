@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "for a period of time determined by the authentication scheme, parameters, and/or user preferences",
+    "interpretation_a": "The duration is determined solely by the authentication scheme, meaning the scheme dictates a fixed timeout.",
+    "interpretation_b": "The duration is determined by a combination of the authentication scheme, parameters, and user preferences, allowing for a configurable timeout.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'determined by' is vague. It doesn't specify *how* the scheme, parameters, and preferences contribute to the timeout period. This allows for multiple valid implementations.",
+    "missing_information": "The clause does not specify how these factors (scheme, parameters, preferences) are combined to determine the period of time. Is it a simple addition, a weighted average, or some other method? Without this, implementations could reasonably differ."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:58:04.204234+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "614a5683715275ace7e579c3847faffa02039c2f5c8724cc2f37f862944254e1",
+  "lineage_ids": "lineage:3565ac5c7961ad6a7d788bef",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 196,
+    "load_duration": 8397600,
+    "prompt_eval_count": 606,
+    "total_duration": 7629132400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"for a period of time determined by the authentication scheme, parameters, and/or user preferences\", \"interpretation_a\": \"The duration is determined solely by the authentication scheme, meaning the scheme dictates a fixed timeout.\", \"interpretation_b\": \"The duration is determined by a combination of the authentication scheme, parameters, and user preferences, allowing for a configurable timeout.\", \"missing_information\": \"The clause does not specify how these factors (scheme, parameters, preferences) are combined to determine the period of time. Is it a simple addition, a weighted average, or some other method? Without this, implementations could reasonably differ.\",\"justification\": \"The phrase 'determined by' is vague. It doesn't specify *how* the scheme, parameters, and preferences contribute to the timeout period. This allows for multiple valid implementations.\"}",
+  "record_id": "1f9b0531b55dc0a9da6225271b52de57922df4e5dddeb3978e9d8cead9c7f715",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "11.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.64
+}

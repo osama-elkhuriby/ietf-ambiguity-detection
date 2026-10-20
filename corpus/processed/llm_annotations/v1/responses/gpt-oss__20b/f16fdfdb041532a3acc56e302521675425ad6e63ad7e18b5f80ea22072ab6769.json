@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "A PUSH_PROMISE frame without the END_HEADERS flag set MUST be followed by a CONTINUATION frame for the same stream.",
+    "interpretation_a": "The CONTINUATION frame must immediately follow the PUSH_PROMISE frame.",
+    "interpretation_b": "The CONTINUATION frame may appear later, not necessarily immediately after the PUSH_PROMISE frame.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether the CONTINUATION frame must immediately follow the PUSH_PROMISE frame or may appear later, leaving the implementation behavior under‑specified.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T05:16:06.974260+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "dd13f69fda425b4573310c8c00ac7622a830e622b96ff7620a943997b4d0ce0b",
+  "lineage_ids": "lineage:73e581a0f2da25ea5c0dd116",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 313,
+    "load_duration": 5447600,
+    "prompt_eval_count": 756,
+    "total_duration": 2850917500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"A PUSH_PROMISE frame without the END_HEADERS flag set MUST be followed by a CONTINUATION frame for the same stream.\",\n  \"interpretation_a\": \"The CONTINUATION frame must immediately follow the PUSH_PROMISE frame.\",\n  \"interpretation_b\": \"The CONTINUATION frame may appear later, not necessarily immediately after the PUSH_PROMISE frame.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify whether the CONTINUATION frame must immediately follow the PUSH_PROMISE frame or may appear later, leaving the implementation behavior under‑specified.\"\n}",
+  "record_id": "f16fdfdb041532a3acc56e302521675425ad6e63ad7e18b5f80ea22072ab6769",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 12.438
+}

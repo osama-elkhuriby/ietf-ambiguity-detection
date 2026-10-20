@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "with either with RSA",
+    "interpretation_a": "The phrase 'with either with RSA' could be interpreted as RSA being an option alongside ECDSA, meaning SHA-1 is used with either RSA or ECDSA.",
+    "interpretation_b": "The phrase 'with either with RSA' could be a redundant or poorly worded phrasing, intending to state that SHA-1 is used with RSA and ECDSA.",
+    "is_ambiguous": "yes",
+    "justification": "The repetition of 'with' before 'RSA' is syntactically awkward and creates ambiguity about whether RSA is presented as an alternative to ECDSA or simply a clarification of which algorithms SHA-1 is used with.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:32:08.690635+00:00",
+  "document_id": "draft-ietf-tls-tls13-21",
+  "family_id": "draft-ietf-tls-tls13",
+  "input_fingerprint": "06445c8d6345c4ca66cb9593861ba209119d497b090701cebe54c7a27f29de02",
+  "lineage_ids": "lineage:9461397c9c6ce400c6bef391",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 164,
+    "load_duration": 9933400,
+    "prompt_eval_count": 612,
+    "total_duration": 6436779400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"with either with RSA\", \"interpretation_a\": \"The phrase 'with either with RSA' could be interpreted as RSA being an option alongside ECDSA, meaning SHA-1 is used with either RSA or ECDSA.\", \"interpretation_b\": \"The phrase 'with either with RSA' could be a redundant or poorly worded phrasing, intending to state that SHA-1 is used with RSA and ECDSA.\", \"missing_information\": \"\", \"justification\": \"The repetition of 'with' before 'RSA' is syntactically awkward and creates ambiguity about whether RSA is presented as an alternative to ECDSA or simply a clarification of which algorithms SHA-1 is used with.\"}",
+  "record_id": "062012d5ea8fbaefa9132024f5b5764aed5b35837db7d3615fff710e0e0e3289",
+  "revision": "21",
+  "schema_version": 1,
+  "section_ids": "4.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.437
+}

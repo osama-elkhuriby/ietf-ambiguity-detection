@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "as other QUIC versions might allow the use of a long header",
+    "interpretation_a": "The current implementation MUST accept packets with a long header ending in a valid stateless reset token, even if it doesn't currently support long headers itself.",
+    "interpretation_b": "The current implementation is only required to treat packets with a valid stateless reset token as a reset if it also supports long headers, and can ignore such packets otherwise.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'might allow' introduces uncertainty about whether the current implementation needs to support long headers to correctly handle the stateless reset token. This creates a missing constraint on how to handle packets with long headers that end in a valid token.",
+    "missing_information": "The draft does not clearly define whether the current version of QUIC MUST support long headers to process the stateless reset token, or if it can simply ignore the packet if it doesn't."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:03:02.417012+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "a0bb169ff81eb953a3def06b20f0f657aee369f694c977c9367c02f4d3b35678",
+  "lineage_ids": "lineage:aa6689a153b6a741785f9cef",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 212,
+    "load_duration": 3750900,
+    "prompt_eval_count": 574,
+    "total_duration": 7967983400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"as other QUIC versions might allow the use of a long header\", \"interpretation_a\": \"The current implementation MUST accept packets with a long header ending in a valid stateless reset token, even if it doesn't currently support long headers itself.\", \"interpretation_b\": \"The current implementation is only required to treat packets with a valid stateless reset token as a reset if it also supports long headers, and can ignore such packets otherwise.\", \"missing_information\": \"The draft does not clearly define whether the current version of QUIC MUST support long headers to process the stateless reset token, or if it can simply ignore the packet if it doesn't.\", \"justification\": \"The phrase 'might allow' introduces uncertainty about whether the current implementation needs to support long headers to correctly handle the stateless reset token. This creates a missing constraint on how to handle packets with long headers that end in a valid token.\"}",
+  "record_id": "cc0b33f0fd92420cff9dd0294a26b6699a9b15484c9fe8829e0051fcc5764738",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "10.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.969
+}

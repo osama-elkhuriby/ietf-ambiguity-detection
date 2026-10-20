@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD be discarded",
+    "interpretation_a": "The client is required to discard the packet if it cannot be associated with an existing connection and is not buffered.",
+    "interpretation_b": "The client is not required to discard the packet, but it is recommended. The client may attempt to handle the packet in some other way, such as logging it or attempting to establish a new connection.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' creates ambiguity. While it indicates a recommendation, it doesn't definitively state whether discarding is mandatory. This allows for implementations that handle such packets differently, potentially leading to interoperability issues.",
+    "missing_information": "The degree to which 'SHOULD' implies a requirement versus a strong recommendation is not clear. A missing constraint on the handling of unassociated, unbuffered packets allows for multiple implementations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:20:53.138353+00:00",
+  "document_id": "draft-ietf-quic-transport-09",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "b630bda0902374dbbf07520be0070d6661cfd7c0d75a1b5c05d7d1ff19505d8a",
+  "lineage_ids": "lineage:bdbec4518219629c079d0e25",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 200,
+    "load_duration": 3996100,
+    "prompt_eval_count": 565,
+    "total_duration": 7533194700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD be discarded\", \"interpretation_a\": \"The client is required to discard the packet if it cannot be associated with an existing connection and is not buffered.\", \"interpretation_b\": \"The client is not required to discard the packet, but it is recommended. The client may attempt to handle the packet in some other way, such as logging it or attempting to establish a new connection.\", \"missing_information\": \"The degree to which 'SHOULD' implies a requirement versus a strong recommendation is not clear. A missing constraint on the handling of unassociated, unbuffered packets allows for multiple implementations.\", \"justification\": \"The use of 'SHOULD' creates ambiguity. While it indicates a recommendation, it doesn't definitively state whether discarding is mandatory. This allows for implementations that handle such packets differently, potentially leading to interoperability issues.\"}",
+  "record_id": "4aa4a8d12d4645277fbdbfbfef0f099a239bd3ee6529e46c837fdd81204631d1",
+  "revision": "09",
+  "schema_version": 1,
+  "section_ids": "7.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.547
+}

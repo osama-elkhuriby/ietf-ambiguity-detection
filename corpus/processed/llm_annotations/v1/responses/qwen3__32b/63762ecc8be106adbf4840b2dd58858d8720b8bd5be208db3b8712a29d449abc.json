@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides clear guidance on the handling of duplicate Stateless Reset Tokens. It states that endpoints are not required to compare new values against all previous values, but if a duplicate is detected, it MAY be treated as a connection error. This allows for flexibility in implementation without introducing ambiguity in operational behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:13:00.756194+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "90e8da97727fe976472c9c9b7eae8cba4237b337cb5fad5df86864702bee469b",
+  "lineage_ids": "lineage:1dcbbe9ea93636cf038ef8b3",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 115,
+    "load_duration": 5078800,
+    "prompt_eval_count": 536,
+    "total_duration": 4736108200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides clear guidance on the handling of duplicate Stateless Reset Tokens. It states that endpoints are not required to compare new values against all previous values, but if a duplicate is detected, it MAY be treated as a connection error. This allows for flexibility in implementation without introducing ambiguity in operational behavior.\"\n}",
+  "record_id": "63762ecc8be106adbf4840b2dd58858d8720b8bd5be208db3b8712a29d449abc",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "10.3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 4.735
+}

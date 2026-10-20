@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "potentially for longer if the peer chooses to not send STREAMS_BLOCKED frames",
+    "interpretation_a": "The peer might not send STREAMS_BLOCKED frames at all, leading to indefinite blocking.",
+    "interpretation_b": "The peer might delay sending STREAMS_BLOCKED frames, leading to blocking for multiple round trips, but not indefinitely.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'potentially for longer' is vague. The lack of a defined upper bound on 'longer' creates ambiguity about how long the peer can delay sending STREAMS_BLOCKED frames before violating the intent of the clause. This impacts implementation because developers must decide how to handle potentially unbounded delays.",
+    "missing_information": "The document does not define a maximum delay or limit on the number of round trips for which the peer can withhold STREAMS_BLOCKED frames. This missing constraint affects implementation because it leaves open the possibility of prolonged or indefinite blocking, even if the peer eventually sends the frames."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:23:00.899957+00:00",
+  "document_id": "draft-ietf-quic-transport-29",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "05c7f7e863395f05a0030b205896ebea01ed2435896e17744626ba0b6e70177e",
+  "lineage_ids": "lineage:f2771ec2a3ce2162f6495dad",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 231,
+    "load_duration": 4671300,
+    "prompt_eval_count": 569,
+    "total_duration": 8625487000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"potentially for longer if the peer chooses to not send STREAMS_BLOCKED frames\", \"interpretation_a\": \"The peer might not send STREAMS_BLOCKED frames at all, leading to indefinite blocking.\", \"interpretation_b\": \"The peer might delay sending STREAMS_BLOCKED frames, leading to blocking for multiple round trips, but not indefinitely.\", \"missing_information\": \"The document does not define a maximum delay or limit on the number of round trips for which the peer can withhold STREAMS_BLOCKED frames. This missing constraint affects implementation because it leaves open the possibility of prolonged or indefinite blocking, even if the peer eventually sends the frames.\", \"justification\": \"The phrase 'potentially for longer' is vague. The lack of a defined upper bound on 'longer' creates ambiguity about how long the peer can delay sending STREAMS_BLOCKED frames before violating the intent of the clause. This impacts implementation because developers must decide how to handle potentially unbounded delays.\"}",
+  "record_id": "4f8bcb06c07a2259eb7058f22bb39eeca93c0fa3fd806f91e93530a1e0f0e169",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "4.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.657
+}

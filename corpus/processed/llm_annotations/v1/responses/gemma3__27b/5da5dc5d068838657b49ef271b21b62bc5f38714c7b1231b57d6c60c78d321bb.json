@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "after it has successfully performed its normal request checks and just before it would process the request payload (if any) or perform the action associated with the request method",
+    "interpretation_a": "The preconditions are evaluated immediately before payload processing *or* method action, implying a strict sequential order.",
+    "interpretation_b": "The preconditions are evaluated before *either* payload processing *or* method action, allowing for some overlap or parallel execution, as long as preconditions complete before either of those actions.",
+    "is_ambiguous": "yes",
+    "justification": "The timing of precondition evaluation relative to payload processing and method action is not clearly defined. 'Just before' could mean immediately before, or simply before, allowing for different implementation choices.",
+    "missing_information": "The phrase 'just before' is vague. Does it require strict sequential ordering, or merely that preconditions are completed before payload processing/method action begins?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:09:21.032650+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-13",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "0f03be15de1ba978a65def4e1457ab3810298d55f5712c2cd0ce3ed56b40b011",
+  "lineage_ids": "lineage:b9850ca62229cd8c43b5adb8",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 204,
+    "load_duration": 9888700,
+    "prompt_eval_count": 608,
+    "total_duration": 7850540200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"after it has successfully performed its normal request checks and just before it would process the request payload (if any) or perform the action associated with the request method\", \"interpretation_a\": \"The preconditions are evaluated immediately before payload processing *or* method action, implying a strict sequential order.\", \"interpretation_b\": \"The preconditions are evaluated before *either* payload processing *or* method action, allowing for some overlap or parallel execution, as long as preconditions complete before either of those actions.\", \"missing_information\": \"The phrase 'just before' is vague. Does it require strict sequential ordering, or merely that preconditions are completed before payload processing/method action begins?\",\"justification\": \"The timing of precondition evaluation relative to payload processing and method action is not clearly defined. 'Just before' could mean immediately before, or simply before, allowing for different implementation choices.\"}",
+  "record_id": "5da5dc5d068838657b49ef271b21b62bc5f38714c7b1231b57d6c60c78d321bb",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "13.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.86
+}

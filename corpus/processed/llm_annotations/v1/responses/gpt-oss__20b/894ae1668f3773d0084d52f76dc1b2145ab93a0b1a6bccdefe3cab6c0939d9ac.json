@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "sized to the largest of the minimum datagram sizes from all versions they support",
+    "interpretation_a": "The first UDP datagram must be exactly the size of the largest minimum datagram size.",
+    "interpretation_b": "The first UDP datagram must be at least the size of the largest minimum datagram size.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"sized to\" is ambiguous between exact sizing and minimum sizing, and the clause does not constrain the padding frames beyond ensuring the size.",
+    "missing_information": "The clause does not specify whether the datagram must be exactly that size or merely at least that size, leading to two materially different implementation behaviours."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T16:56:12.992225+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "6d1577f0e20f8cf8e1d28716c85a8504621fea0c007a1a1441c2776cb200d74a",
+  "lineage_ids": "lineage:961eebbdbb989fb22bfdc12f",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 291,
+    "load_duration": 6606100,
+    "prompt_eval_count": 6807,
+    "total_duration": 3685720200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\":\"yes\",\"ambiguity_subtype\":\"U-2\",\"evidence_span\":\"sized to the largest of the minimum datagram sizes from all versions they support\",\"interpretation_a\":\"The first UDP datagram must be exactly the size of the largest minimum datagram size.\",\"interpretation_b\":\"The first UDP datagram must be at least the size of the largest minimum datagram size.\",\"missing_information\":\"The clause does not specify whether the datagram must be exactly that size or merely at least that size, leading to two materially different implementation behaviours.\",\"justification\":\"The phrase \\\"sized to\\\" is ambiguous between exact sizing and minimum sizing, and the clause does not constrain the padding frames beyond ensuring the size.\"}",
+  "record_id": "894ae1668f3773d0084d52f76dc1b2145ab93a0b1a6bccdefe3cab6c0939d9ac",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 72.0
+}

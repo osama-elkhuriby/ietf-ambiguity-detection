@@ -1,0 +1,37 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "as long as the result is larger than the min_rtt.",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify what to do when the result equals min_rtt, leaving a concrete missing constraint that can lead to different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 3,
+  "created_at": "2026-10-08T11:43:57.977132+00:00",
+  "document_id": "draft-ietf-quic-recovery-19",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "2566bb25b0ed2d1bd0843e29f3d2292867212e7d0658bcc3c4b4e0e8b53510c5",
+  "lineage_ids": "lineage:8783692601cea23356129797",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 7218,
+    "load_duration": 4460200,
+    "prompt_eval_count": 734,
+    "total_duration": 62880023800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"as long as the result is larger than the min_rtt.\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify what to do when the result equals min_rtt, leaving a concrete missing constraint that can lead to different implementation behaviours.\"\n}",
+  "record_id": "a7af661185809e3e45c733e0ae19c797faaba0d8a50ce116f246fd631a0e604a",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "5",
+  "status": "invalid",
+  "validation_errors": [
+    "yes requires two distinct interpretations or missing information"
+  ],
+  "wall_seconds": 145.187
+}

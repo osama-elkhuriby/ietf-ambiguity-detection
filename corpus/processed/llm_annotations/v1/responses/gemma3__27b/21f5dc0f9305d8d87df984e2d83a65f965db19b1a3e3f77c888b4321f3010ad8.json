@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD skip ECN validation",
+    "interpretation_a": "The endpoint is permitted to skip ECN validation, but it is still valid to perform it.",
+    "interpretation_b": "The endpoint is permitted to skip ECN validation, and it is not valid to perform it.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' allows for two interpretations: the endpoint may choose to perform the validation, or it may choose not to. The clause does not explicitly state whether performing the validation is permissible when the condition is met.",
+    "missing_information": "The clause does not specify whether skipping ECN validation is merely permitted or whether performing it is disallowed when the largest acknowledged packet number does not increase."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:03:55.727555+00:00",
+  "document_id": "draft-ietf-quic-transport-30",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "cb236407ff8110db8175cafdedb94b1f1b73a9d74d6cc19a20b7b055a00152ee",
+  "lineage_ids": "lineage:f7288c4d004ffb5b92e39f09",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 171,
+    "load_duration": 5040000,
+    "prompt_eval_count": 548,
+    "total_duration": 6484844200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD skip ECN validation\", \"interpretation_a\": \"The endpoint is permitted to skip ECN validation, but it is still valid to perform it.\", \"interpretation_b\": \"The endpoint is permitted to skip ECN validation, and it is not valid to perform it.\", \"missing_information\": \"The clause does not specify whether skipping ECN validation is merely permitted or whether performing it is disallowed when the largest acknowledged packet number does not increase.\",\"justification\": \"The use of 'SHOULD' allows for two interpretations: the endpoint may choose to perform the validation, or it may choose not to. The clause does not explicitly state whether performing the validation is permissible when the condition is met.\"}",
+  "record_id": "21f5dc0f9305d8d87df984e2d83a65f965db19b1a3e3f77c888b4321f3010ad8",
+  "revision": "30",
+  "schema_version": 1,
+  "section_ids": "13.4.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.484
+}

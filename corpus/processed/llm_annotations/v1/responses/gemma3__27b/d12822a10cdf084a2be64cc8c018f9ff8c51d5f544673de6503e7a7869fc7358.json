@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "congestion window MUST be reduced to the minimum congestion window",
+    "interpretation_a": "The congestion window is reduced to the smallest possible value defined by the protocol (e.g., 1 MSS).",
+    "interpretation_b": "The congestion window is reduced to the initial congestion window size, which may be larger than the minimum.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'minimum congestion window' is not defined within the provided context. This leaves room for interpretation as to what constitutes the 'minimum' value, potentially leading to different implementations.",
+    "missing_information": "The definition of 'minimum congestion window' is not provided in this excerpt. It is unclear whether this refers to the absolute smallest possible window size or the initial congestion window size."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:30:29.574497+00:00",
+  "document_id": "draft-ietf-quic-recovery-16",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "6069b04e7c102ec113f225b37ff0d52dfa68330c2184caf4fd0a9fec21096fd3",
+  "lineage_ids": "lineage:80227fb77d37dcbdea7fa193",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 178,
+    "load_duration": 4989300,
+    "prompt_eval_count": 554,
+    "total_duration": 6753071800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"congestion window MUST be reduced to the minimum congestion window\", \"interpretation_a\": \"The congestion window is reduced to the smallest possible value defined by the protocol (e.g., 1 MSS).\", \"interpretation_b\": \"The congestion window is reduced to the initial congestion window size, which may be larger than the minimum.\", \"missing_information\": \"The definition of 'minimum congestion window' is not provided in this excerpt. It is unclear whether this refers to the absolute smallest possible window size or the initial congestion window size.\", \"justification\": \"The phrase 'minimum congestion window' is not defined within the provided context. This leaves room for interpretation as to what constitutes the 'minimum' value, potentially leading to different implementations.\"}",
+  "record_id": "d12822a10cdf084a2be64cc8c018f9ff8c51d5f544673de6503e7a7869fc7358",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "5.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.765
+}

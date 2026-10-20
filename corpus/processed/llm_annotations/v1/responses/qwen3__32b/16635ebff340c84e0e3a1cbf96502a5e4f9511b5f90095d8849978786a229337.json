@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause uses the word 'SHOULD', which indicates a recommendation rather than a mandatory requirement. While this allows for discretion, it does not introduce ambiguity in the sense of permitting materially different implementations. The condition (server not accepting new connections) and the action (sending a CONNECTION_CLOSE frame with error code SERVER_BUSY) are clearly defined. There is no missing constraint or undefined term that would lead to multiple reasonable interpretations affecting implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:51:05.262121+00:00",
+  "document_id": "draft-ietf-quic-transport-28",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "1aea903a857a0a8dda66d4c49f34742aa552eec387d008a59db08a5b13233600",
+  "lineage_ids": "lineage:98000d2c996602acbb2f9752",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 142,
+    "load_duration": 6609000,
+    "prompt_eval_count": 546,
+    "total_duration": 5827492500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause uses the word 'SHOULD', which indicates a recommendation rather than a mandatory requirement. While this allows for discretion, it does not introduce ambiguity in the sense of permitting materially different implementations. The condition (server not accepting new connections) and the action (sending a CONNECTION_CLOSE frame with error code SERVER_BUSY) are clearly defined. There is no missing constraint or undefined term that would lead to multiple reasonable interpretations affecting implementation behavior.\"\n}",
+  "record_id": "16635ebff340c84e0e3a1cbf96502a5e4f9511b5f90095d8849978786a229337",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "5.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.828
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Frame types other than DATA or stream management frames",
+    "interpretation_a": "Any frame type not explicitly listed as DATA or a stream management frame is prohibited on a connected stream.",
+    "interpretation_b": "Only frames that are *not* both DATA and stream management frames are prohibited; other frames are allowed.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'or' is ambiguous in programming and logic. It could be interpreted as an inclusive OR or an exclusive OR. This affects which frame types are allowed on a connected stream.",
+    "missing_information": "It is unclear whether the phrase 'or stream management frames' is inclusive or exclusive. Does it mean 'or frames that are stream management frames' (inclusive OR) or 'or frames that are only stream management frames' (exclusive OR)? This affects which frames are permitted."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:35:23.318911+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "5df4f11e09cb6f30f1cae7c5e351baeeb3819f46363f43f6dfed001a1550d42c",
+  "lineage_ids": "lineage:a5bd980750b1c88ae08a0972",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 195,
+    "load_duration": 19617200,
+    "prompt_eval_count": 598,
+    "total_duration": 7907325700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Frame types other than DATA or stream management frames\", \"interpretation_a\": \"Any frame type not explicitly listed as DATA or a stream management frame is prohibited on a connected stream.\", \"interpretation_b\": \"Only frames that are *not* both DATA and stream management frames are prohibited; other frames are allowed.\", \"missing_information\": \"It is unclear whether the phrase 'or stream management frames' is inclusive or exclusive. Does it mean 'or frames that are stream management frames' (inclusive OR) or 'or frames that are only stream management frames' (exclusive OR)? This affects which frames are permitted.\", \"justification\": \"The phrase 'or' is ambiguous in programming and logic. It could be interpreted as an inclusive OR or an exclusive OR. This affects which frame types are allowed on a connected stream.\"}",
+  "record_id": "62ae296e8f6c3870c93789cd4595d0dc6946c84f1c9f04096b7a52eec5c3548b",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.922
+}

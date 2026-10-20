@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause is clear and unambiguous. It explicitly states that an endpoint MUST NOT send more than one ACK-frame-only packet in response to an ACK-eliciting packet. The condition is well-defined (receiving an ACK-eliciting packet), and the restriction is specific and actionable. There is no room for multiple reasonable interpretations, and no missing constraint that would affect implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:47:36.966813+00:00",
+  "document_id": "draft-ietf-quic-transport-23",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "21c2dad1b0ba9672cc539cdcc116c0abd33bb1d9b98033cb75c64f0a414e55c8",
+  "lineage_ids": "lineage:4d2b213ca0d3c31527954509",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 132,
+    "load_duration": 6363300,
+    "prompt_eval_count": 579,
+    "total_duration": 5456499600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause is clear and unambiguous. It explicitly states that an endpoint MUST NOT send more than one ACK-frame-only packet in response to an ACK-eliciting packet. The condition is well-defined (receiving an ACK-eliciting packet), and the restriction is specific and actionable. There is no room for multiple reasonable interpretations, and no missing constraint that would affect implementation behavior.\"\n}",
+  "record_id": "03a2e396c60b1afd6f960c87284bf20c0873c662c4aa0810e0dd46896b86359d",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "13.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.453
+}

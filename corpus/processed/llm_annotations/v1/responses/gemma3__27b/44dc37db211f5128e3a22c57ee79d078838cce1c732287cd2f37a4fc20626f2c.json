@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "even if it could",
+    "interpretation_a": "The server MUST NOT process 0-RTT packets even if it has the technical capability to do so, regardless of the reason.",
+    "interpretation_b": "The server MUST NOT process 0-RTT packets even if processing them would be beneficial or advantageous, but may process them if there is no benefit.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"even if it could\" is vague. It's unclear whether 'could' refers to technical capability, or simply whether processing would be beneficial. This creates two reasonable interpretations of when the server is prohibited from processing 0-RTT packets.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:37:42.517061+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "b4086e191e980cc56e330f92dfa20aad68d2b6de78fc22feea0658560b983aeb",
+  "lineage_ids": "lineage:bde35d5eb0d2aab50c51198f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 163,
+    "load_duration": 4657100,
+    "prompt_eval_count": 603,
+    "total_duration": 6223723000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"even if it could\", \"interpretation_a\": \"The server MUST NOT process 0-RTT packets even if it has the technical capability to do so, regardless of the reason.\", \"interpretation_b\": \"The server MUST NOT process 0-RTT packets even if processing them would be beneficial or advantageous, but may process them if there is no benefit.\", \"missing_information\": \"\", \"justification\": \"The phrase \\\"even if it could\\\" is vague. It's unclear whether 'could' refers to technical capability, or simply whether processing would be beneficial. This creates two reasonable interpretations of when the server is prohibited from processing 0-RTT packets.\"}",
+  "record_id": "44dc37db211f5128e3a22c57ee79d078838cce1c732287cd2f37a4fc20626f2c",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.25
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear condition for when an intermediary should not append a Cache-Status member to a locally generated response. It specifies that the Cache-Status should not be added unless the generated response is based on a stored response, with examples provided (e.g., 304 Not Modified and 206 Partial Content). The wording is precise and does not allow for multiple materially different interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:15:17.905240+00:00",
+  "document_id": "draft-ietf-httpbis-cache-header-10",
+  "family_id": "draft-ietf-httpbis-cache-header",
+  "input_fingerprint": "b1f30c2ebfcebff4626bdf212781cfa9d8d4f7a587871e069f74f54e2c0f9a64",
+  "lineage_ids": "lineage:e6c94ec53b161e7da5dd8bdc",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 137,
+    "load_duration": 5043700,
+    "prompt_eval_count": 584,
+    "total_duration": 5628680500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear condition for when an intermediary should not append a Cache-Status member to a locally generated response. It specifies that the Cache-Status should not be added unless the generated response is based on a stored response, with examples provided (e.g., 304 Not Modified and 206 Partial Content). The wording is precise and does not allow for multiple materially different interpretations.\"\n}",
+  "record_id": "98829ab6c6abb0f7c1107eb2397feef0203202bdae12e1ed8620b7d58e361ede",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.641
+}

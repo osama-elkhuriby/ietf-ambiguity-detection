@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause is clear and unambiguous. It explicitly states that CONNECTION_CLOSE frames signaling application errors (type 0x1d) must only appear in the application data packet number space. This provides a single, concrete constraint with no room for multiple interpretations. There is no missing information or undefined term that would lead to ambiguity.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:51:49.844730+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "bd7a82d378efb370f46e409601ef64d3106394f097e50ee16496ebf984eb426f",
+  "lineage_ids": "lineage:9b3cb56b1495243cdbc88b86",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 122,
+    "load_duration": 4021400,
+    "prompt_eval_count": 549,
+    "total_duration": 5027385100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause is clear and unambiguous. It explicitly states that CONNECTION_CLOSE frames signaling application errors (type 0x1d) must only appear in the application data packet number space. This provides a single, concrete constraint with no room for multiple interpretations. There is no missing information or undefined term that would lead to ambiguity.\"\n}",
+  "record_id": "f4f1bfba6ef051076333e37e714671d9fa105ceb0eced066a2b1fa9312909f6d",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "12.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.016
+}

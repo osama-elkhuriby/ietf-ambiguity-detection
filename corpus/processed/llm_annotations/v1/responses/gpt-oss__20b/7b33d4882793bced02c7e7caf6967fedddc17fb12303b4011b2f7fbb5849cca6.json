@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that when the usable window becomes negative, the sender should refrain from sending new data and should retransmit the old unacknowledged data that lies within the current send window (between SND.UNA and SND.UNA+SND.WND). The wording does not permit multiple materially different interpretations, nor does it omit a concrete constraint that would change implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T20:09:06.497724+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-10",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "237d383fffc55a5c1690217b4f1ef028e768e630183e9d5979dc570a933dea62",
+  "lineage_ids": "lineage:8392c02bd89b8ca78c89e2a4",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 750,
+    "load_duration": 5118600,
+    "prompt_eval_count": 672,
+    "total_duration": 6667541400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"no\",\"ambiguity_subtype\": \"none\",\"evidence_span\": \"\",\"interpretation_a\": \"\",\"interpretation_b\": \"\",\"missing_information\": \"\",\"justification\": \"The clause unambiguously states that when the usable window becomes negative, the sender should refrain from sending new data and should retransmit the old unacknowledged data that lies within the current send window (between SND.UNA and SND.UNA+SND.WND). The wording does not permit multiple materially different interpretations, nor does it omit a concrete constraint that would change implementation behavior.\"}",
+  "record_id": "7b33d4882793bced02c7e7caf6967fedddc17fb12303b4011b2f7fbb5849cca6",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "3.8.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 74.203
+}

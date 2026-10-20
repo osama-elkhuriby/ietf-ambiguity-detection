@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause is clear and unambiguous. It specifies that a server generating a 304 (Not Modified) response must include certain header fields that would have been included in a 200 (OK) response to the same request. The list of required header fields is explicit and does not allow for multiple materially different interpretations. There is no missing constraint or undefined term that would lead to different implementation behaviors.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:11:11.587605+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "288d0efe0fb3699e7dd81a0b30428a053182f192ca70b303f944f7a0dad9413f",
+  "lineage_ids": "lineage:0348ad7c647037a5cf97c8d0",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 140,
+    "load_duration": 16408600,
+    "prompt_eval_count": 674,
+    "total_duration": 5937540000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause is clear and unambiguous. It specifies that a server generating a 304 (Not Modified) response must include certain header fields that would have been included in a 200 (OK) response to the same request. The list of required header fields is explicit and does not allow for multiple materially different interpretations. There is no missing constraint or undefined term that would lead to different implementation behaviors.\"\n}",
+  "record_id": "48e0e1ea55e308a114903c88a51de556dab6eae59ac89a310e25fdfbf6037309",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "15.4.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.953
+}

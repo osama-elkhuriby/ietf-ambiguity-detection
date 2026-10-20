@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless it can verify that the request is a duplicate of an immediately prior change made by the same user agent.",
+    "interpretation_a": "The server must verify the request is *exactly* the same as a prior request, including all headers and body (if any).",
+    "interpretation_b": "The server only needs to verify that the *effect* of the request is the same as a prior request, allowing for different header/body combinations that achieve the same result.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'duplicate' is not defined, and it is unclear whether a 'duplicate' request must be bitwise identical to a prior request, or merely have the same effect on the resource. This affects implementation because a server might implement strict byte-for-byte comparison, or a more lenient semantic comparison.",
+    "missing_information": "The definition of 'duplicate' is not provided. Does 'duplicate' mean bitwise identical, or semantically equivalent?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:57:18.594891+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-05",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "f3b2d6dba1775a2223fb31fec806e123e3389f00c4aa2139548bda0dfb873294",
+  "lineage_ids": "lineage:ddffff92879468838ff199a2",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 221,
+    "load_duration": 23170900,
+    "prompt_eval_count": 720,
+    "total_duration": 8719935500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless it can verify that the request is a duplicate of an immediately prior change made by the same user agent.\", \"interpretation_a\": \"The server must verify the request is *exactly* the same as a prior request, including all headers and body (if any).\", \"interpretation_b\": \"The server only needs to verify that the *effect* of the request is the same as a prior request, allowing for different header/body combinations that achieve the same result.\",\"missing_information\": \"The definition of 'duplicate' is not provided. Does 'duplicate' mean bitwise identical, or semantically equivalent?\",\"justification\": \"The term 'duplicate' is not defined, and it is unclear whether a 'duplicate' request must be bitwise identical to a prior request, or merely have the same effect on the resource. This affects implementation because a server might implement strict byte-for-byte comparison, or a more lenient semantic comparison.\"}",
+  "record_id": "1c14e3dfbe6918ac595f044c996e13aa67cfcb2304535a6ce4b0cf79d2888ee1",
+  "revision": "05",
+  "schema_version": 1,
+  "section_ids": "8.2.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.735
+}

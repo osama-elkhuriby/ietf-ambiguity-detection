@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "a client MAY use one of these version numbers with the expectation that the server will initiate version negotiation; a server MAY advertise support for one of these versions and can expect that clients ignore the value.",
+    "interpretation_a": "A client using a reserved version number expects the server to initiate version negotiation, implying a specific negotiation process is expected.",
+    "interpretation_b": "A server advertising a reserved version number expects clients to ignore it, implying no negotiation process is expected. The clause does not specify what happens if both client and server act on their MAYs, creating a conflict.",
+    "is_ambiguous": "yes",
+    "justification": "The clause allows both client and server to act in ways that are mutually exclusive. The lack of a constraint on how these actions interact creates ambiguity in implementation.",
+    "missing_information": "The clause lacks a constraint on what happens when a client uses a reserved version number *and* a server advertises support for it. It's unclear if the client's expectation of negotiation overrides the server's expectation of being ignored, or vice versa."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:30:53.753958+00:00",
+  "document_id": "draft-ietf-quic-transport-05",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "856b87cf1e48e823a93eb2a9a582e1c26f30058df147a7cd54f11246814d7552",
+  "lineage_ids": "lineage:1b888b645498622724d78024",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 240,
+    "load_duration": 5927900,
+    "prompt_eval_count": 584,
+    "total_duration": 8954143000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"a client MAY use one of these version numbers with the expectation that the server will initiate version negotiation; a server MAY advertise support for one of these versions and can expect that clients ignore the value.\", \"interpretation_a\": \"A client using a reserved version number expects the server to initiate version negotiation, implying a specific negotiation process is expected.\", \"interpretation_b\": \"A server advertising a reserved version number expects clients to ignore it, implying no negotiation process is expected. The clause does not specify what happens if both client and server act on their MAYs, creating a conflict.\", \"missing_information\": \"The clause lacks a constraint on what happens when a client uses a reserved version number *and* a server advertises support for it. It's unclear if the client's expectation of negotiation overrides the server's expectation of being ignored, or vice versa.\", \"justification\": \"The clause allows both client and server to act in ways that are mutually exclusive. The lack of a constraint on how these actions interact creates ambiguity in implementation.\"}",
+  "record_id": "6c82d53ee5f8fc60bdcfb7c1eea7fd2a258e63803c74e503cbd7097a4ee9a9ef",
+  "revision": "05",
+  "schema_version": 1,
+  "section_ids": "4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.968
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "valid proof",
+    "interpretation_a": "A 'valid proof' is defined elsewhere in this document, and the reset packet must conform to that definition to be accepted.",
+    "interpretation_b": "A 'valid proof' is any cryptographic proof that the sender claims is valid, regardless of whether it actually meets any defined criteria. The receiver simply checks that *some* proof is present, not its correctness.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'valid proof' is not defined within the provided excerpt. This leaves open the question of whether a 'valid proof' requires actual verification against some criteria, or simply the presence of a proof object. This impacts implementation because a receiver could either fully validate the proof (expensive) or simply check for its existence (cheap).",
+    "missing_information": "The definition of 'valid proof' is not present in the provided context. Without knowing the criteria for a valid proof, it is unclear whether the receiver must verify the proof's correctness or merely its presence."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:58:06.066053+00:00",
+  "document_id": "draft-ietf-quic-transport-04",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "94d30dac311882fb3cddf6e9f36070a8b6607182ba8b262e4203926616b6ece7",
+  "lineage_ids": "lineage:2ce11e39c4d0ec04a5a5e59c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 230,
+    "load_duration": 7123900,
+    "prompt_eval_count": 541,
+    "total_duration": 8566354800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"valid proof\", \"interpretation_a\": \"A 'valid proof' is defined elsewhere in this document, and the reset packet must conform to that definition to be accepted.\", \"interpretation_b\": \"A 'valid proof' is any cryptographic proof that the sender claims is valid, regardless of whether it actually meets any defined criteria. The receiver simply checks that *some* proof is present, not its correctness.\", \"missing_information\": \"The definition of 'valid proof' is not present in the provided context. Without knowing the criteria for a valid proof, it is unclear whether the receiver must verify the proof's correctness or merely its presence.\", \"justification\": \"The term 'valid proof' is not defined within the provided excerpt. This leaves open the question of whether a 'valid proof' requires actual verification against some criteria, or simply the presence of a proof object. This impacts implementation because a receiver could either fully validate the proof (expensive) or simply check for its existence (cheap).\"}",
+  "record_id": "bb96ac8e826c70c87105b0d31627130a7577e8148cea308130140bf297dde15e",
+  "revision": "04",
+  "schema_version": 1,
+  "section_ids": "5.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.562
+}

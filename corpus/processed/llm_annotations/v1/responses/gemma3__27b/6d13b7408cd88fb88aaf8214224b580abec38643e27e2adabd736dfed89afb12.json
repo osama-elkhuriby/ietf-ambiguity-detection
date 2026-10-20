@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD send a Last-Modified value if it is feasible to send one.",
+    "interpretation_a": "The server SHOULD send a Last-Modified date if it can, even if it doesn't change the response.",
+    "interpretation_b": "The server SHOULD send a Last-Modified date only if the content has changed since the last request, and it is feasible to determine that.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'feasible' is subjective and lacks a concrete definition. This allows for different interpretations of when a server is required to send the Last-Modified value.",
+    "missing_information": "The definition of 'feasible' is not provided. Does 'feasible' mean technically possible, or practically reasonable given cost/benefit? Without a clearer definition, implementations could reasonably differ on when to include the Last-Modified header."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:11:45.661121+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-14",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "5c34f6d63163e886eb438078c5e542532546dab483b4bc0addb1217c8e1c2d5e",
+  "lineage_ids": "lineage:a8dc31da969ce055055da666",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 195,
+    "load_duration": 9506800,
+    "prompt_eval_count": 610,
+    "total_duration": 7523951400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD send a Last-Modified value if it is feasible to send one.\", \"interpretation_a\": \"The server SHOULD send a Last-Modified date if it can, even if it doesn't change the response.\", \"interpretation_b\": \"The server SHOULD send a Last-Modified date only if the content has changed since the last request, and it is feasible to determine that.\", \"missing_information\": \"The definition of 'feasible' is not provided. Does 'feasible' mean technically possible, or practically reasonable given cost/benefit? Without a clearer definition, implementations could reasonably differ on when to include the Last-Modified header.\",\"justification\": \"The term 'feasible' is subjective and lacks a concrete definition. This allows for different interpretations of when a server is required to send the Last-Modified value.\"}",
+  "record_id": "6d13b7408cd88fb88aaf8214224b580abec38643e27e2adabd736dfed89afb12",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "8.8.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.516
+}

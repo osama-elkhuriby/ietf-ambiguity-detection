@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "0x?a?a?a?a",
+    "interpretation_a": "The pattern means that any codepoint where each nibble is a hexadecimal digit (i.e., any 32‑bit value) is reserved, so all codepoints are reserved.",
+    "interpretation_b": "The pattern means that only codepoints matching the literal string \"0x?a?a?a?a\" (i.e., the four question marks are literal characters) are reserved, which would be a single, nonsensical codepoint.",
+    "is_ambiguous": "yes",
+    "justification": "The clause uses an undefined pattern \"0x?a?a?a?a\" without defining the meaning of the question marks, allowing two materially different interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T19:27:15.209758+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "178c516baadd86d47858619bd8795f5d74dc959b2b11cb1638d55e3cb07c4143",
+  "lineage_ids": "lineage:4e3bb70cd834bd3b29b64e4f",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 306,
+    "load_duration": 6130300,
+    "prompt_eval_count": 727,
+    "total_duration": 2819085600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-1\",\n  \"evidence_span\": \"0x?a?a?a?a\",\n  \"interpretation_a\": \"The pattern means that any codepoint where each nibble is a hexadecimal digit (i.e., any 32‑bit value) is reserved, so all codepoints are reserved.\",\n  \"interpretation_b\": \"The pattern means that only codepoints matching the literal string \\\"0x?a?a?a?a\\\" (i.e., the four question marks are literal characters) are reserved, which would be a single, nonsensical codepoint.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause uses an undefined pattern \\\"0x?a?a?a?a\\\" without defining the meaning of the question marks, allowing two materially different interpretations.\"\n}",
+  "record_id": "f95aeb3d218383a2cfb606fbe8b47fc11794733a1fb2af5059c9634f3ffcf42b",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "22.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 39.344
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD send a 401 (Unauthorized) response",
+    "interpretation_a": "The server is required to send a 401 response in all cases where credentials are missing, invalid, or partial.",
+    "interpretation_b": "The server is permitted to choose not to send a 401 response, even if credentials are missing, invalid, or partial, though it is recommended to do so.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' creates ambiguity. While it indicates a recommendation, the degree of obligation is not specified. This allows for different interpretations of whether a server is required to send a 401 response or if it has discretion to handle the situation differently.",
+    "missing_information": "The strength of 'SHOULD' is not defined. Is it a strong recommendation, or is non-compliance acceptable? Without knowing the intended strength of 'SHOULD', it is ambiguous whether the server *must* respond with a 401, or merely *should*."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:26:35.315892+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-08",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "bc99b4f34dad0d572e8eae2c65ce4abeb9116497a058f8d300604232dfcf8436",
+  "lineage_ids": "lineage:febb29548cc6761b7b4391c8",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 235,
+    "load_duration": 14475800,
+    "prompt_eval_count": 674,
+    "total_duration": 9115733000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD send a 401 (Unauthorized) response\", \"interpretation_a\": \"The server is required to send a 401 response in all cases where credentials are missing, invalid, or partial.\", \"interpretation_b\": \"The server is permitted to choose not to send a 401 response, even if credentials are missing, invalid, or partial, though it is recommended to do so.\", \"missing_information\": \"The strength of 'SHOULD' is not defined. Is it a strong recommendation, or is non-compliance acceptable? Without knowing the intended strength of 'SHOULD', it is ambiguous whether the server *must* respond with a 401, or merely *should*.\",\"justification\": \"The use of 'SHOULD' creates ambiguity. While it indicates a recommendation, the degree of obligation is not specified. This allows for different interpretations of whether a server is required to send a 401 response or if it has discretion to handle the situation differently.\"}",
+  "record_id": "c32cf9bacd566c41c44f0ded96bf30dfc468e0859fafc45475705642d5a58cba",
+  "revision": "08",
+  "schema_version": 1,
+  "section_ids": "8.5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.125
+}

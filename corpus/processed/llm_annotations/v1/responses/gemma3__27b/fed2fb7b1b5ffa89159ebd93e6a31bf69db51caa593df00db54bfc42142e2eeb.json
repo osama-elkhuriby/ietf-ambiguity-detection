@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "compatible with the client and the proxy",
+    "interpretation_a": "The SVCB option must be compatible with both the client's capabilities (e.g., supported TLS versions) *and* the proxy's capabilities (e.g., supported TLS versions, allowed destination ports).",
+    "interpretation_b": "The SVCB option must be compatible with the client's capabilities, and the proxy must be able to forward traffic to the destination specified by the SVCB record without modification. The proxy's own capabilities are irrelevant.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'compatible with the client and the proxy' is underspecified. It's unclear whether 'compatible' refers to technical capabilities of both entities, or simply the proxy's ability to forward traffic to the destination specified by the SVCB record. This leads to two reasonable interpretations of how the compatibility check should be performed.",
+    "missing_information": "The meaning of 'compatible' is not defined. Does it refer to technical compatibility (e.g., TLS versions, port numbers) or simply the ability of the proxy to forward traffic?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:14:56.462558+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-00",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "28acb25dbe2011ecff4c5c12301f9edf2974fd540b5841d887eed111a07eac3c",
+  "lineage_ids": "lineage:e7ad6cb92bcd5560742ee2e4",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 253,
+    "load_duration": 4212000,
+    "prompt_eval_count": 644,
+    "total_duration": 9457165200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"compatible with the client and the proxy\", \"interpretation_a\": \"The SVCB option must be compatible with both the client's capabilities (e.g., supported TLS versions) *and* the proxy's capabilities (e.g., supported TLS versions, allowed destination ports).\", \"interpretation_b\": \"The SVCB option must be compatible with the client's capabilities, and the proxy must be able to forward traffic to the destination specified by the SVCB record without modification. The proxy's own capabilities are irrelevant.\", \"missing_information\": \"The meaning of 'compatible' is not defined. Does it refer to technical compatibility (e.g., TLS versions, port numbers) or simply the ability of the proxy to forward traffic?\",\"justification\": \"The phrase 'compatible with the client and the proxy' is underspecified. It's unclear whether 'compatible' refers to technical capabilities of both entities, or simply the proxy's ability to forward traffic to the destination specified by the SVCB record. This leads to two reasonable interpretations of how the compatibility check should be performed.\"}",
+  "record_id": "fed2fb7b1b5ffa89159ebd93e6a31bf69db51caa593df00db54bfc42142e2eeb",
+  "revision": "00",
+  "schema_version": 1,
+  "section_ids": "3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.453
+}

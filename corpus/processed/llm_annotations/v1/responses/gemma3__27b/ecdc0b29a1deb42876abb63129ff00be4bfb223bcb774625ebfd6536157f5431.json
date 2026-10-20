@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "incompatible combination",
+    "interpretation_a": "The server and client must support the same QUIC version and ALPN identifier. Any mismatch is considered incompatible.",
+    "interpretation_b": "The server and client must support at least one common QUIC version and ALPN identifier. A mismatch is only incompatible if no common ground exists.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'incompatible combination' is not clearly defined. It's unclear whether any difference in QUIC version or ALPN identifier constitutes incompatibility, or if there needs to be some overlap in supported values. This affects how a client should react.",
+    "missing_information": "The definition of 'incompatible' is not precise. Does it require exact matching, or merely overlapping support?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:52:03.607648+00:00",
+  "document_id": "draft-ietf-quic-tls-22",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "b31ae7057a6162afdf8d5f8cc127c11078bacddd001d83bece7593014702e9a3",
+  "lineage_ids": "lineage:119e60bbcd1838807d281ce6",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 179,
+    "load_duration": 8299100,
+    "prompt_eval_count": 551,
+    "total_duration": 6761084700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"incompatible combination\", \"interpretation_a\": \"The server and client must support the same QUIC version and ALPN identifier. Any mismatch is considered incompatible.\", \"interpretation_b\": \"The server and client must support at least one common QUIC version and ALPN identifier. A mismatch is only incompatible if no common ground exists.\", \"missing_information\": \"The definition of 'incompatible' is not precise. Does it require exact matching, or merely overlapping support?\", \"justification\": \"The term 'incompatible combination' is not clearly defined. It's unclear whether any difference in QUIC version or ALPN identifier constitutes incompatibility, or if there needs to be some overlap in supported values. This affects how a client should react.\"}",
+  "record_id": "ecdc0b29a1deb42876abb63129ff00be4bfb223bcb774625ebfd6536157f5431",
+  "revision": "22",
+  "schema_version": 1,
+  "section_ids": "8.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.766
+}

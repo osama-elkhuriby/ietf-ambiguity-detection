@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD attempt to validate the old remote address before attempting to validate the new address.",
+    "interpretation_a": "The endpoint must *completely* finish validating the old address before *starting* validation of the new address.",
+    "interpretation_b": "The endpoint should *begin* validating the old address before *beginning* validation of the new address, but the two validations can proceed concurrently.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' grants discretion, but the temporal relationship between the two validations is not precise enough. 'Before' is open to interpretation regarding the degree of completion of the first validation before the second can begin.",
+    "missing_information": "The degree of completion required for the 'old address' validation before starting the 'new address' validation is not specified. Does 'before' mean 'completely before' or 'at least begin before'?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:46:59.883072+00:00",
+  "document_id": "draft-ietf-quic-transport-10",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "8c4f3832adcd0322cff9e5b8d6d6928f93a66e8e0a8c8f9e860417de6e81d24d",
+  "lineage_ids": "lineage:04d212e40cb156c86127ec59",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 203,
+    "load_duration": 5946200,
+    "prompt_eval_count": 592,
+    "total_duration": 7649381300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD attempt to validate the old remote address before attempting to validate the new address.\", \"interpretation_a\": \"The endpoint must *completely* finish validating the old address before *starting* validation of the new address.\", \"interpretation_b\": \"The endpoint should *begin* validating the old address before *beginning* validation of the new address, but the two validations can proceed concurrently.\", \"missing_information\": \"The degree of completion required for the 'old address' validation before starting the 'new address' validation is not specified. Does 'before' mean 'completely before' or 'at least begin before'?\",\"justification\": \"The use of 'SHOULD' grants discretion, but the temporal relationship between the two validations is not precise enough. 'Before' is open to interpretation regarding the degree of completion of the first validation before the second can begin.\"}",
+  "record_id": "97fccd1fb8708b360a6dc953d84d1a1ea991a9b01ddb13991dc26851a461dd71",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "7.8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.656
+}

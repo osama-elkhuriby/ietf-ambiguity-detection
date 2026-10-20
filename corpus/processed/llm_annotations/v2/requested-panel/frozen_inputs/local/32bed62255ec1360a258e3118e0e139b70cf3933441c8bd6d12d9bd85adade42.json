@@ -1,0 +1,74 @@
+{
+  "context_builder_version": "same-revision-context-v2.0.0",
+  "context_char_limit": 24000,
+  "context_chars": 400,
+  "coverage_claim": "bounded_same_document_same_revision_context_only",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "items": [
+    {
+      "block_id": "draft-ietf-quic-transport-34:3.5:b0136",
+      "clause_id": "draft-ietf-quic-transport-34:3.5:b0136:c01",
+      "content": "An endpoint SHOULD copy the error code from the STOP_SENDING frame to the RESET_STREAM frame it sends, but can use any application error code.",
+      "content_sha256": "f38b3569a5e210e4b6d5bcaabc12acfa779d227042cadfbb63a24a868f6b7380",
+      "document_id": "draft-ietf-quic-transport-34",
+      "kind": "target",
+      "retrieval_reason": "frozen_target_clause",
+      "revision": "34",
+      "section_heading": "Solicited State Transitions",
+      "section_id": "3.5",
+      "source_sha256": "c56fcfe4e27e792590a539b0de7b84c765333b2ca373d484d332b37e928688d5",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[3]/section[5]/t[5]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-quic-transport-34:3.5:b0135",
+      "clause_id": "draft-ietf-quic-transport-34:3.5:b0135:c04",
+      "content": "If any outstanding data is declared lost, the endpoint SHOULD send a RESET_STREAM frame instead of retransmitting the data.",
+      "content_sha256": "78736f5e46bb10efccf9bee7d0b09ad78fe91aa3de6a7fcfc98d6e1631dc215d",
+      "document_id": "draft-ietf-quic-transport-34",
+      "kind": "previous",
+      "retrieval_reason": "local_previous_clause",
+      "revision": "34",
+      "section_heading": "Solicited State Transitions",
+      "section_id": "3.5",
+      "source_sha256": "c56fcfe4e27e792590a539b0de7b84c765333b2ca373d484d332b37e928688d5",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[3]/section[5]/t[4]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-quic-transport-34:3.5:b0136",
+      "clause_id": "draft-ietf-quic-transport-34:3.5:b0136:c02",
+      "content": "An endpoint that sends a STOP_SENDING frame MAY ignore the error code in any RESET_STREAM frames subsequently received for that stream.",
+      "content_sha256": "8a577b48e2984375cd86c27730cd00b97993d846994277db285f05cc731a095a",
+      "document_id": "draft-ietf-quic-transport-34",
+      "kind": "next",
+      "retrieval_reason": "local_next_clause",
+      "revision": "34",
+      "section_heading": "Solicited State Transitions",
+      "section_id": "3.5",
+      "source_sha256": "c56fcfe4e27e792590a539b0de7b84c765333b2ca373d484d332b37e928688d5",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[3]/section[5]/t[5]"
+      }
+    }
+  ],
+  "omitted": [],
+  "record_id": "32bed62255ec1360a258e3118e0e139b70cf3933441c8bd6d12d9bd85adade42",
+  "retrieval": [],
+  "revision": "34",
+  "section_heading": "Solicited State Transitions",
+  "section_id": "3.5",
+  "source_artifact": "D:/RFC/ietf-ambiguity-detection/corpus/processed/alignments/draft-ietf-quic-transport/lexical-first-classifier-v1/inputs/draft-ietf-quic-transport-34.json",
+  "source_sha256": "c56fcfe4e27e792590a539b0de7b84c765333b2ca373d484d332b37e928688d5",
+  "target_clause": "An endpoint SHOULD copy the error code from the STOP_SENDING frame to the RESET_STREAM frame it sends, but can use any application error code.",
+  "variant": "local"
+}

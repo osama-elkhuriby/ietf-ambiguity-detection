@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "A proxy MUST forward 1xx responses unless the proxy itself requested the generation of the 1xx response.",
+    "interpretation_a": "The clause does not define what constitutes \"requested the generation\" of a 1xx response, so a proxy could reasonably interpret this as either (1) any 1xx response that the proxy explicitly requested via a header such as \"Expect: 100-continue\", or (2) any 1xx response that the proxy generated itself. The lack of a precise definition allows two materially different implementation behaviours.",
+    "interpretation_b": "Alternatively, a proxy might interpret the clause as meaning that it must forward all 1xx responses except those that it explicitly requested, but without a clear definition of \"requested\" it cannot determine which responses qualify.",
+    "is_ambiguous": "yes",
+    "justification": "The clause is incomplete in specifying the condition under which a proxy may omit forwarding a 1xx response, leading to multiple reasonable interpretations.",
+    "missing_information": "A precise definition of \"requested the generation\" of a 1xx response (e.g., which request headers or proxy actions trigger this condition)."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T06:57:20.761312+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "e81368285f2125a2ae70c8d122a7dd6944be04ecf892f2d02c117f0328b988cc",
+  "lineage_ids": "lineage:f55b32f0c7326b15cc161224",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 4503,
+    "load_duration": 7682200,
+    "prompt_eval_count": 596,
+    "total_duration": 38827776000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"A proxy MUST forward 1xx responses unless the proxy itself requested the generation of the 1xx response.\",\n  \"interpretation_a\": \"The clause does not define what constitutes \\\"requested the generation\\\" of a 1xx response, so a proxy could reasonably interpret this as either (1) any 1xx response that the proxy explicitly requested via a header such as \\\"Expect: 100-continue\\\", or (2) any 1xx response that the proxy generated itself. The lack of a precise definition allows two materially different implementation behaviours.\",\n  \"interpretation_b\": \"Alternatively, a proxy might interpret the clause as meaning that it must forward all 1xx responses except those that it explicitly requested, but without a clear definition of \\\"requested\\\" it cannot determine which responses qualify.\",\n  \"missing_information\": \"A precise definition of \\\"requested the generation\\\" of a 1xx response (e.g., which request headers or proxy actions trigger this condition).\",\n  \"justification\": \"The clause is incomplete in specifying the condition under which a proxy may omit forwarding a 1xx response, leading to multiple reasonable interpretations.\"\n}",
+  "record_id": "7b24efe178f4d114838c335394d2217c23f89a7b84df34542127c4c452da1082",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "15.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 38.829
+}

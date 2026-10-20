@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "abruptly closed",
+    "interpretation_a": "It is unclear whether 'abruptly closed' refers to a QUIC RST_STREAM, a FIN, or any other abrupt closure, leading to different implementation behaviours.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause uses an undefined term that could be interpreted in multiple materially different ways, creating ambiguity in implementation.",
+    "missing_information": "Definition of 'abruptly closed' is missing, which could change how implementations decide to close the message control stream."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T10:18:55.825543+00:00",
+  "document_id": "draft-ietf-quic-http-04",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "d71836fbc44551165ee13675804f6556fc80845b98dd6343d8bb315330dd7653",
+  "lineage_ids": "lineage:54a9da721689642fa439c00a",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 423,
+    "load_duration": 1537300,
+    "prompt_eval_count": 765,
+    "total_duration": 3845496100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-1\",\n  \"evidence_span\": \"abruptly closed\",\n  \"interpretation_a\": \"It is unclear whether 'abruptly closed' refers to a QUIC RST_STREAM, a FIN, or any other abrupt closure, leading to different implementation behaviours.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"Definition of 'abruptly closed' is missing, which could change how implementations decide to close the message control stream.\",\n  \"justification\": \"The clause uses an undefined term that could be interpreted in multiple materially different ways, creating ambiguity in implementation.\"\n}",
+  "record_id": "c5cab61c6e83fdffe655aae269ec2d219257137ff620296b240a80d10bf580d3",
+  "revision": "04",
+  "schema_version": 1,
+  "section_ids": "4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 61.421
+}

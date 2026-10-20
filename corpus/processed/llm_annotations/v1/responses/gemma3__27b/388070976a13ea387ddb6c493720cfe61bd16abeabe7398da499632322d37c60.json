@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "cross the end of the frame",
+    "interpretation_a": "A value that, when added to the current offset within the frame, exceeds the frame's total length is malformed.",
+    "interpretation_b": "A value that, when considered as an absolute offset within the frame, points beyond the frame's total length is malformed.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'cross the end of the frame' is open to interpretation. It's unclear whether it refers to an offset exceeding the frame length or an absolute value exceeding the frame length. This affects how implementations would validate the SETTINGS values.",
+    "missing_information": "The meaning of 'cross the end of the frame' is not precisely defined. Does it refer to exceeding the frame length when added to an offset, or to an absolute value exceeding the frame length?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:46:20.075361+00:00",
+  "document_id": "draft-ietf-quic-http-08",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "31f874d88751224a4c1e8c2df81b3b78b9502587b6759faae96138a2139cd438",
+  "lineage_ids": "lineage:e64d754cafe333d42e3076f2",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 198,
+    "load_duration": 7975000,
+    "prompt_eval_count": 581,
+    "total_duration": 7659811000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"cross the end of the frame\", \"interpretation_a\": \"A value that, when added to the current offset within the frame, exceeds the frame's total length is malformed.\", \"interpretation_b\": \"A value that, when considered as an absolute offset within the frame, points beyond the frame's total length is malformed.\", \"missing_information\": \"The meaning of 'cross the end of the frame' is not precisely defined. Does it refer to exceeding the frame length when added to an offset, or to an absolute value exceeding the frame length?\",\"justification\": \"The phrase 'cross the end of the frame' is open to interpretation. It's unclear whether it refers to an offset exceeding the frame length or an absolute value exceeding the frame length. This affects how implementations would validate the SETTINGS values.\"}",
+  "record_id": "388070976a13ea387ddb6c493720cfe61bd16abeabe7398da499632322d37c60",
+  "revision": "08",
+  "schema_version": 1,
+  "section_ids": "5.2.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.656
+}

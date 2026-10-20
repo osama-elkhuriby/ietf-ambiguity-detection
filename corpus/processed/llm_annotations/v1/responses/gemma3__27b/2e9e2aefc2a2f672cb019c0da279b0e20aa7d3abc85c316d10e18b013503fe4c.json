@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT appear more than once",
+    "interpretation_a": "The same key cannot appear multiple times within the comma-separated list of SvcParamKeys.",
+    "interpretation_b": "Each unique key can only be listed once across *all* SvcParamKeys, even if they are presented in different presentation values (e.g., different SVB records).",
+    "is_ambiguous": "yes",
+    "justification": "The clause states a key 'MUST NOT appear more than once', but does not specify the scope of 'once'. Does it mean within a single RR's presentation value, or across all RRs for a given service?",
+    "missing_information": "It is unclear whether the restriction applies to a single presentation value (the comma-separated list in a single RR) or to all presentation values associated with a given service."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:00:16.491372+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "4881f547f848fd05a75d0e9ac2a526a818591f8879429be37d0077086af2d55b",
+  "lineage_ids": "lineage:bc85584e5f807290d5be5bce",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 194,
+    "load_duration": 4265900,
+    "prompt_eval_count": 589,
+    "total_duration": 7318673800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT appear more than once\", \"interpretation_a\": \"The same key cannot appear multiple times within the comma-separated list of SvcParamKeys.\", \"interpretation_b\": \"Each unique key can only be listed once across *all* SvcParamKeys, even if they are presented in different presentation values (e.g., different SVB records).\", \"missing_information\": \"It is unclear whether the restriction applies to a single presentation value (the comma-separated list in a single RR) or to all presentation values associated with a given service.\", \"justification\": \"The clause states a key 'MUST NOT appear more than once', but does not specify the scope of 'once'. Does it mean within a single RR's presentation value, or across all RRs for a given service?\"}",
+  "record_id": "2e9e2aefc2a2f672cb019c0da279b0e20aa7d3abc85c316d10e18b013503fe4c",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.312
+}

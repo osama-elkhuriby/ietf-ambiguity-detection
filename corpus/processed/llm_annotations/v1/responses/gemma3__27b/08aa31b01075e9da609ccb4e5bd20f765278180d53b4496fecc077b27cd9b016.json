@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST continue to have the VERSION flag set",
+    "interpretation_a": "The VERSION flag should remain set on all packets even after a version has been negotiated, indicating that version negotiation *has* occurred.",
+    "interpretation_b": "The VERSION flag should remain set on all packets until the new version is fully adopted, and then can be cleared.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'continue to have' is open to interpretation. Does it mean 'always', or 'for a period of time'? The lack of a time constraint creates ambiguity about when the VERSION flag can be unset.",
+    "missing_information": "It is unclear whether the VERSION flag is intended to be permanently set after negotiation, or only for a limited duration. A clear statement about when the VERSION flag can be cleared would resolve the ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:57:04.131908+00:00",
+  "document_id": "draft-ietf-quic-transport-01",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "5c818e3b37646dc062ad44e5c2478863b7eccbb26c08842242f498de67701430",
+  "lineage_ids": "lineage:b532fe9df48ee4652a8dad56",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 192,
+    "load_duration": 5770200,
+    "prompt_eval_count": 572,
+    "total_duration": 7236967900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST continue to have the VERSION flag set\", \"interpretation_a\": \"The VERSION flag should remain set on all packets even after a version has been negotiated, indicating that version negotiation *has* occurred.\", \"interpretation_b\": \"The VERSION flag should remain set on all packets until the new version is fully adopted, and then can be cleared.\", \"missing_information\": \"It is unclear whether the VERSION flag is intended to be permanently set after negotiation, or only for a limited duration. A clear statement about when the VERSION flag can be cleared would resolve the ambiguity.\", \"justification\": \"The phrase 'continue to have' is open to interpretation. Does it mean 'always', or 'for a period of time'? The lack of a time constraint creates ambiguity about when the VERSION flag can be unset.\"}",
+  "record_id": "08aa31b01075e9da609ccb4e5bd20f765278180d53b4496fecc077b27cd9b016",
+  "revision": "01",
+  "schema_version": 1,
+  "section_ids": "6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.235
+}

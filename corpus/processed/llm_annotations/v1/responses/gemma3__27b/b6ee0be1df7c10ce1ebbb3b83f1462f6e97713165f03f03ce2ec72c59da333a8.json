@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY treat non-zero padding as a connection error",
+    "interpretation_a": "The receiver can choose to treat non-zero padding as an error, terminating the connection.",
+    "interpretation_b": "The receiver can choose to ignore non-zero padding without terminating the connection, continuing normal operation.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' creates ambiguity because it doesn't specify under what conditions the receiver *should* treat non-zero padding as an error. This leaves room for different implementations to handle the same input in different ways, potentially leading to interoperability issues.",
+    "missing_information": "The criteria for *when* a receiver would choose to treat non-zero padding as an error is not specified. This impacts implementation because a receiver must decide on a policy for handling this condition."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:45:05.868830+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "42dbfa9249938cc4489dc019a3ff6fd302f9f84f550002ab3cf4b4bc49e2d4c4",
+  "lineage_ids": "lineage:0bda260deafe633e028a4a54",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 192,
+    "load_duration": 19496900,
+    "prompt_eval_count": 554,
+    "total_duration": 7430586000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY treat non-zero padding as a connection error\", \"interpretation_a\": \"The receiver can choose to treat non-zero padding as an error, terminating the connection.\", \"interpretation_b\": \"The receiver can choose to ignore non-zero padding without terminating the connection, continuing normal operation.\", \"missing_information\": \"The criteria for *when* a receiver would choose to treat non-zero padding as an error is not specified. This impacts implementation because a receiver must decide on a policy for handling this condition.\", \"justification\": \"The use of 'MAY' creates ambiguity because it doesn't specify under what conditions the receiver *should* treat non-zero padding as an error. This leaves room for different implementations to handle the same input in different ways, potentially leading to interoperability issues.\"}",
+  "record_id": "b6ee0be1df7c10ce1ebbb3b83f1462f6e97713165f03f03ce2ec72c59da333a8",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.437
+}

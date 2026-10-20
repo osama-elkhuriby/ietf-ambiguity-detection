@@ -1,0 +1,74 @@
+{
+  "context_builder_version": "same-revision-context-v2.0.0",
+  "context_char_limit": 24000,
+  "context_chars": 778,
+  "coverage_claim": "bounded_same_document_same_revision_context_only",
+  "document_id": "draft-ietf-quic-transport-27",
+  "family_id": "draft-ietf-quic-transport",
+  "items": [
+    {
+      "block_id": "draft-ietf-quic-transport-27:13.2.4:b0550",
+      "clause_id": "draft-ietf-quic-transport-27:13.2.4:b0550:c02",
+      "content": "The receiver SHOULD exclude already acknowledged packets from future ACK frames whenever these packets would unnecessarily contribute to the ACK frame size.",
+      "content_sha256": "abc7aa3331409a3714f32cc2d54a5f56cdc1e90ad9c371929bfcf64d8629bdb5",
+      "document_id": "draft-ietf-quic-transport-27",
+      "kind": "target",
+      "retrieval_reason": "frozen_target_clause",
+      "revision": "27",
+      "section_heading": "Limiting ACK Ranges",
+      "section_id": "13.2.4",
+      "source_sha256": "4b222dfe5d3ed94c1c2ff40e3e4feacec88aaa6d3945333bfd7a4d1499e055e9",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[13]/section[2]/section[4]/t[1]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-quic-transport-27:13.2.4:b0550",
+      "clause_id": "draft-ietf-quic-transport-27:13.2.4:b0550:c01",
+      "content": "To limit ACK Ranges (see [ack-ranges]) to those that have not yet been received by the sender, the receiver SHOULD track which ACK frames have been acknowledged by its peer.",
+      "content_sha256": "84a9819d7251b0275a6078690f2c375e78ea57cc0610e516f92e17a421a5e107",
+      "document_id": "draft-ietf-quic-transport-27",
+      "kind": "previous",
+      "retrieval_reason": "local_previous_clause",
+      "revision": "27",
+      "section_heading": "Limiting ACK Ranges",
+      "section_id": "13.2.4",
+      "source_sha256": "4b222dfe5d3ed94c1c2ff40e3e4feacec88aaa6d3945333bfd7a4d1499e055e9",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[13]/section[2]/section[4]/t[1]"
+      }
+    },
+    {
+      "block_id": "draft-ietf-quic-transport-27:13.2.4:b0550",
+      "clause_id": "draft-ietf-quic-transport-27:13.2.4:b0550:c03",
+      "content": "When the receiver is only sending non-ack-eliciting packets, it can bundle a PING or other small ack-eliciting frame with a fraction of them, such as once per round trip, to enable dropping unnecessary ACK ranges and any state for previously sent packets. The receiver MUST NOT bundle an ack-eliciting frame, such as a PING, with all packets that would otherwise be non-ack-eliciting, in order to avoid an infinite feedback loop of acknowledgements.",
+      "content_sha256": "c7c0a25f85394e5178d65728347e277dcd2d3052b6adf62a34008a66f28f684e",
+      "document_id": "draft-ietf-quic-transport-27",
+      "kind": "next",
+      "retrieval_reason": "local_next_clause",
+      "revision": "27",
+      "section_heading": "Limiting ACK Ranges",
+      "section_id": "13.2.4",
+      "source_sha256": "4b222dfe5d3ed94c1c2ff40e3e4feacec88aaa6d3945333bfd7a4d1499e055e9",
+      "source_span": {
+        "line_end": null,
+        "line_start": null,
+        "xpath": "/rfc/middle/section[13]/section[2]/section[4]/t[1]"
+      }
+    }
+  ],
+  "omitted": [],
+  "record_id": "9ef4a65b75c09eae8c1c31330bc647823fae5f6e26ab2921a8723d2bdd36cb20",
+  "retrieval": [],
+  "revision": "27",
+  "section_heading": "Limiting ACK Ranges",
+  "section_id": "13.2.4",
+  "source_artifact": "D:/RFC/ietf-ambiguity-detection/corpus/processed/alignments/draft-ietf-quic-transport/lexical-first-classifier-v1/inputs/draft-ietf-quic-transport-27.json",
+  "source_sha256": "4b222dfe5d3ed94c1c2ff40e3e4feacec88aaa6d3945333bfd7a4d1499e055e9",
+  "target_clause": "The receiver SHOULD exclude already acknowledged packets from future ACK frames whenever these packets would unnecessarily contribute to the ACK frame size.",
+  "variant": "local"
+}

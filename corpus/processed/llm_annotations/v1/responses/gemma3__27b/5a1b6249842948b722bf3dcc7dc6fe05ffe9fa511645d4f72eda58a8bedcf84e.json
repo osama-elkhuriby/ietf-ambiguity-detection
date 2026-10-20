@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "minimum congestion window’s worth",
+    "interpretation_a": "The server must limit transmission to the new address to no more than one minimum congestion window of data. This implies a fixed quantity of data.",
+    "interpretation_b": "The server must limit transmission to the new address to no more than the *size* of one minimum congestion window of data. This implies a limit on the number of packets, but the actual data volume could vary depending on packet size.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'minimum congestion window’s worth' is ambiguous. It could refer to a fixed amount of data (e.g., 10KB) or to the number of packets that would fill a minimum congestion window. This affects how the server limits transmission to the new address.",
+    "missing_information": "The definition of 'minimum congestion window' is not provided in this excerpt. Is it a fixed amount of data, or a packet count?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:26:08.373683+00:00",
+  "document_id": "draft-ietf-quic-transport-24",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "bea77cc2dd7b25449c0b83e82a1c258fd9fa5f72350cc04f66146b27e97be8b8",
+  "lineage_ids": "lineage:639d8bfbc8335beb38f8d48d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 219,
+    "load_duration": 2506100,
+    "prompt_eval_count": 588,
+    "total_duration": 8224041000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"minimum congestion window’s worth\", \"interpretation_a\": \"The server must limit transmission to the new address to no more than one minimum congestion window of data. This implies a fixed quantity of data.\", \"interpretation_b\": \"The server must limit transmission to the new address to no more than the *size* of one minimum congestion window of data. This implies a limit on the number of packets, but the actual data volume could vary depending on packet size.\", \"missing_information\": \"The definition of 'minimum congestion window' is not provided in this excerpt. Is it a fixed amount of data, or a packet count?\",\"justification\": \"The phrase 'minimum congestion window’s worth' is ambiguous. It could refer to a fixed amount of data (e.g., 10KB) or to the number of packets that would fill a minimum congestion window. This affects how the server limits transmission to the new address.\"}",
+  "record_id": "5a1b6249842948b722bf3dcc7dc6fe05ffe9fa511645d4f72eda58a8bedcf84e",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "9.6.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.218
+}

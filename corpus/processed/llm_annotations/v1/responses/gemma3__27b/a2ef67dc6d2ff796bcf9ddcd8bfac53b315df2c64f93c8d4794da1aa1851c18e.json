@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "invalid sequence of frames",
+    "interpretation_a": "Any deviation from the expected frame order constitutes an invalid sequence, triggering a connection error.",
+    "interpretation_b": "Only sequences that demonstrably violate the protocol's framing rules (e.g., missing required frames) are considered invalid; minor deviations might be tolerated.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'invalid sequence of frames' is open to interpretation. Does it encompass any out-of-order frames, or only those that break fundamental protocol rules? Without a clearer definition, implementations could reasonably differ on what constitutes an invalid sequence.",
+    "missing_information": "The definition of 'invalid sequence of frames' is not sufficiently precise. It's unclear whether any deviation from the expected order is considered invalid, or if only significant violations trigger the error."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:00:53.385611+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "4a9dd9e894ff514780a83df05eb2f14e2c03351c13e65ec66207d74f1d56e788",
+  "lineage_ids": "lineage:3effecbda2c1c31f7e8a8e76",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 192,
+    "load_duration": 15098600,
+    "prompt_eval_count": 622,
+    "total_duration": 7465902000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"invalid sequence of frames\", \"interpretation_a\": \"Any deviation from the expected frame order constitutes an invalid sequence, triggering a connection error.\", \"interpretation_b\": \"Only sequences that demonstrably violate the protocol's framing rules (e.g., missing required frames) are considered invalid; minor deviations might be tolerated.\", \"missing_information\": \"The definition of 'invalid sequence of frames' is not sufficiently precise. It's unclear whether any deviation from the expected order is considered invalid, or if only significant violations trigger the error.\", \"justification\": \"The phrase 'invalid sequence of frames' is open to interpretation. Does it encompass any out-of-order frames, or only those that break fundamental protocol rules? Without a clearer definition, implementations could reasonably differ on what constitutes an invalid sequence.\"}",
+  "record_id": "a2ef67dc6d2ff796bcf9ddcd8bfac53b315df2c64f93c8d4794da1aa1851c18e",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.469
+}

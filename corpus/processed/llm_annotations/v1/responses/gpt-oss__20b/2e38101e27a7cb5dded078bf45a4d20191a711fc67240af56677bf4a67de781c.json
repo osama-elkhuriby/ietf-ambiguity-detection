@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously requires that when an implementation sends ACK frames in response to a packet that contains frames other than ACK frames, it must also acknowledge any packets that contain only ACK frames. The wording does not allow for two materially different interpretations or a missing constraint that would change implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T14:42:42.075179+00:00",
+  "document_id": "draft-ietf-quic-transport-14",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "056fc915c7c6aebc2da7a70b19909d628825895941c4b3e13c0385cb98268c71",
+  "lineage_ids": "lineage:a09a7765b5558865380d5d5e",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2943,
+    "load_duration": 4317900,
+    "prompt_eval_count": 587,
+    "total_duration": 25381532700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"no\", \"ambiguity_subtype\": \"none\", \"evidence_span\": \"\", \"interpretation_a\": \"\", \"interpretation_b\": \"\", \"missing_information\": \"\",\"justification\":\"The clause unambiguously requires that when an implementation sends ACK frames in response to a packet that contains frames other than ACK frames, it must also acknowledge any packets that contain only ACK frames. The wording does not allow for two materially different interpretations or a missing constraint that would change implementation behavior.\"}",
+  "record_id": "2e38101e27a7cb5dded078bf45a4d20191a711fc67240af56677bf4a67de781c",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "7.15.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 25.391
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "sufficient state",
+    "interpretation_a": "The endpoint has enough information to construct a valid closing frame, including all necessary connection IDs and frame headers.",
+    "interpretation_b": "The endpoint has *some* state, but may not have *all* the information needed for a fully compliant closing frame, but considers that enough to signal the error. This could lead to malformed or incomplete closing frames being sent.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'sufficient state' is vague. It doesn't define what constitutes 'sufficient' state, leaving room for different interpretations of what an endpoint needs to have before sending a closing frame. This could lead to interoperability issues if endpoints have different thresholds for what they consider 'sufficient'.",
+    "missing_information": "The definition of 'sufficient state' is not provided. It's unclear what level of state is required to satisfy the MUST condition. Does it require a complete and valid closing frame, or just enough to attempt one?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:52:31.592483+00:00",
+  "document_id": "draft-ietf-quic-transport-16",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "1d3b6de67c9372ed31d527c2a5bcc9fd80e5751d5ed527b66ffb1b05a2517856",
+  "lineage_ids": "lineage:39bd33faaa6533ec762237a7",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 224,
+    "load_duration": 4366900,
+    "prompt_eval_count": 569,
+    "total_duration": 8477834800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"sufficient state\", \"interpretation_a\": \"The endpoint has enough information to construct a valid closing frame, including all necessary connection IDs and frame headers.\", \"interpretation_b\": \"The endpoint has *some* state, but may not have *all* the information needed for a fully compliant closing frame, but considers that enough to signal the error. This could lead to malformed or incomplete closing frames being sent.\", \"missing_information\": \"The definition of 'sufficient state' is not provided. It's unclear what level of state is required to satisfy the MUST condition. Does it require a complete and valid closing frame, or just enough to attempt one?\",\"justification\": \"The phrase 'sufficient state' is vague. It doesn't define what constitutes 'sufficient' state, leaving room for different interpretations of what an endpoint needs to have before sending a closing frame. This could lead to interoperability issues if endpoints have different thresholds for what they consider 'sufficient'.\"}",
+  "record_id": "a8ebb565e8d03102db7261233144054217df4f849a829e1bd85c77c1a44df925",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "10.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.468
+}

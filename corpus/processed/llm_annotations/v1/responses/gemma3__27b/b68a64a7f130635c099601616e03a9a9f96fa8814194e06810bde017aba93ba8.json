@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "prior to sending the first HTTP request",
+    "interpretation_a": "The connection must be secured *before* any part of the HTTP request is sent, including headers.",
+    "interpretation_b": "The connection must be secured before the HTTP request body is sent, but headers may be sent over an insecure connection.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'first HTTP request' is not precise. It is unclear whether the security requirement applies to the entire request (headers and body) or only to the body. This creates two reasonable interpretations for implementation.",
+    "missing_information": "The phrase 'first HTTP request' is ambiguous. Does it refer to the entire request (headers + body) or just the body?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:25:09.411334+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-06",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "f259550d9ca90c3a8db0be5cdefc21cafb92c8c6768a9df4fe1d2b4437e3f97d",
+  "lineage_ids": "lineage:ba8170de8b3b48e504046b7b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 172,
+    "load_duration": 4767600,
+    "prompt_eval_count": 663,
+    "total_duration": 6828011200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"prior to sending the first HTTP request\", \"interpretation_a\": \"The connection must be secured *before* any part of the HTTP request is sent, including headers.\", \"interpretation_b\": \"The connection must be secured before the HTTP request body is sent, but headers may be sent over an insecure connection.\", \"missing_information\": \"The phrase 'first HTTP request' is ambiguous. Does it refer to the entire request (headers + body) or just the body?\", \"justification\": \"The phrase 'first HTTP request' is not precise. It is unclear whether the security requirement applies to the entire request (headers and body) or only to the body. This creates two reasonable interpretations for implementation.\"}",
+  "record_id": "b68a64a7f130635c099601616e03a9a9f96fa8814194e06810bde017aba93ba8",
+  "revision": "06",
+  "schema_version": 1,
+  "section_ids": "2.5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.844
+}

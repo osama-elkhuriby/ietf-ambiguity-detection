@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "or else large window sizes will appear like negative windows and TCP will now work",
+    "interpretation_a": "The clause could be read as requiring the window size to be unsigned, otherwise large windows would appear negative and TCP would fail.",
+    "interpretation_b": "Alternatively, it could be read as requiring the window size to be unsigned, otherwise large windows would appear negative and TCP would still work.",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a clear constraint on the consequences of not treating the window size as unsigned, allowing two materially different interpretations of the intended behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T20:27:50.004108+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-18",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "85b21d337ef7f365d461b9e7afe6c55304771c04ec6ce072050638e3a639877b",
+  "lineage_ids": "lineage:45468dfe63553b8e248a6952",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1905,
+    "load_duration": 4951300,
+    "prompt_eval_count": 626,
+    "total_duration": 16485070000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"or else large window sizes will appear like negative windows and TCP will now work\",\n  \"interpretation_a\": \"The clause could be read as requiring the window size to be unsigned, otherwise large windows would appear negative and TCP would fail.\",\n  \"interpretation_b\": \"Alternatively, it could be read as requiring the window size to be unsigned, otherwise large windows would appear negative and TCP would still work.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause lacks a clear constraint on the consequences of not treating the window size as unsigned, allowing two materially different interpretations of the intended behavior.\"\n}",
+  "record_id": "cdb5ce1666316ca582a7fdd00617a1fd0446fee2560b11a10a3c4e089fbd5d8d",
+  "revision": "18",
+  "schema_version": 1,
+  "section_ids": "3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 16.485
+}

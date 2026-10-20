@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless it is in response to a Version Negotiation packet from the server",
+    "interpretation_a": "The client may change the version only if it sends a packet in response to a Version Negotiation packet from the server.",
+    "interpretation_b": "The client may change the version simply after receiving a Version Negotiation packet from the server, regardless of whether it sends a response.",
+    "is_ambiguous": "yes",
+    "justification": "The lack of a precise definition for 'in response to' creates an incomplete constraint that can be interpreted in two materially different ways.",
+    "missing_information": "The clause does not define what constitutes a 'response', leading to two plausible implementation behaviours."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T17:22:17.035768+00:00",
+  "document_id": "draft-ietf-quic-transport-18",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "80eec10391418258f0920e00b7105d6405e5cb17ea58b1b8fec6d2b3675caacb",
+  "lineage_ids": "lineage:40a0745d9e813c39e5ef5de3",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3352,
+    "load_duration": 7158500,
+    "prompt_eval_count": 652,
+    "total_duration": 28938718700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"unless it is in response to a Version Negotiation packet from the server\",\n  \"interpretation_a\": \"The client may change the version only if it sends a packet in response to a Version Negotiation packet from the server.\",\n  \"interpretation_b\": \"The client may change the version simply after receiving a Version Negotiation packet from the server, regardless of whether it sends a response.\",\n  \"missing_information\": \"The clause does not define what constitutes a 'response', leading to two plausible implementation behaviours.\",\n  \"justification\": \"The lack of a precise definition for 'in response to' creates an incomplete constraint that can be interpreted in two materially different ways.\"\n}",
+  "record_id": "9c549fa84e2873831679e7abbcdcb3e9809f4327652c638619b9679a502d92bf",
+  "revision": "18",
+  "schema_version": 1,
+  "section_ids": "6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 96.641
+}

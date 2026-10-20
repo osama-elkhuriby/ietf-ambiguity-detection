@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY skip this check",
+    "interpretation_a": "An endpoint can choose to always skip the check, regardless of whether any packets are successfully processed.",
+    "interpretation_b": "An endpoint can choose to skip the check only if at least one packet from a datagram is successfully processed.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' allows for two distinct interpretations of when the check is skipped. The clause does not specify whether the check *must* be performed if no packets are successfully processed, creating an incomplete constraint.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:06:34.394160+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "7a632172284c2ca4991124d1e30d0d32a28f20fc56cf4e8056c04ae6b912e7e8",
+  "lineage_ids": "lineage:83b4aa3a357dcdf6f443ac73",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 140,
+    "load_duration": 3615500,
+    "prompt_eval_count": 569,
+    "total_duration": 5405205900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY skip this check\", \"interpretation_a\": \"An endpoint can choose to always skip the check, regardless of whether any packets are successfully processed.\", \"interpretation_b\": \"An endpoint can choose to skip the check only if at least one packet from a datagram is successfully processed.\", \"missing_information\": \"\", \"justification\": \"The use of 'MAY' allows for two distinct interpretations of when the check is skipped. The clause does not specify whether the check *must* be performed if no packets are successfully processed, creating an incomplete constraint.\"}",
+  "record_id": "281027f6d5d6845b273e5331f9a7e4dd64481869021b3e26a1da325dee2eb652",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "10.3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.407
+}

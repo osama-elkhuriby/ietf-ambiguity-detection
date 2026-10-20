@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "A QUIC endpoint MUST NOT reuse a Stream ID.",
+    "interpretation_a": "The clause prohibits reusing a stream ID for a new stream while the previous stream is still open.",
+    "interpretation_b": "The clause prohibits reusing a stream ID for any new stream, even after the previous stream has closed.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether a Stream ID can be reused after the original stream has closed, leaving two materially different implementation possibilities.",
+    "missing_information": "Whether reuse of a Stream ID is allowed after the original stream has been closed and is no longer in use."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T14:25:09.389529+00:00",
+  "document_id": "draft-ietf-quic-transport-16",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "3fba34115f9e4be0a0acf46880f6cfd507028f888e43a4505789c9e9f7527358",
+  "lineage_ids": "lineage:fd49d2efb64bb7cd68572d17",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1938,
+    "load_duration": 5016500,
+    "prompt_eval_count": 555,
+    "total_duration": 16645788600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"A QUIC endpoint MUST NOT reuse a Stream ID.\",\n  \"interpretation_a\": \"The clause prohibits reusing a stream ID for a new stream while the previous stream is still open.\",\n  \"interpretation_b\": \"The clause prohibits reusing a stream ID for any new stream, even after the previous stream has closed.\",\n  \"missing_information\": \"Whether reuse of a Stream ID is allowed after the original stream has been closed and is no longer in use.\",\n  \"justification\": \"The clause does not specify whether a Stream ID can be reused after the original stream has closed, leaving two materially different implementation possibilities.\"\n}",
+  "record_id": "23d46b008e35b58dccc374c96d393e9bf026b86cc63ac2d4d43ce1261c51422f",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 16.64
+}

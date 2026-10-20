@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "after receiving at least two ack-eliciting packets",
+    "interpretation_a": "The receiver must send an ACK frame immediately after the second ack-eliciting packet is received.",
+    "interpretation_b": "The receiver may send an ACK frame at any time after it has received at least two ack-eliciting packets.",
+    "is_ambiguous": "yes",
+    "justification": "The target clause lacks a concrete timing constraint for when the ACK frame must be sent relative to the receipt of the second ack-eliciting packet, allowing two materially different implementation behaviours.",
+    "missing_information": "The clause does not specify whether the ACK must be sent immediately after the second packet or can be delayed, leaving the timing of the ACK frame unspecified."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T15:32:09.046445+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "6310d0cb3f26446c88ea76c7a780c6061e3df26f4c3aab635f1d722076cdff65",
+  "lineage_ids": "lineage:03763957dacb191b32c8f058",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1296,
+    "load_duration": 4200400,
+    "prompt_eval_count": 592,
+    "total_duration": 11213606900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"after receiving at least two ack-eliciting packets\",\n  \"interpretation_a\": \"The receiver must send an ACK frame immediately after the second ack-eliciting packet is received.\",\n  \"interpretation_b\": \"The receiver may send an ACK frame at any time after it has received at least two ack-eliciting packets.\",\n  \"missing_information\": \"The clause does not specify whether the ACK must be sent immediately after the second packet or can be delayed, leaving the timing of the ACK frame unspecified.\",\n  \"justification\": \"The target clause lacks a concrete timing constraint for when the ACK frame must be sent relative to the receipt of the second ack-eliciting packet, allowing two materially different implementation behaviours.\"\n}",
+  "record_id": "48b9bb01b10ec4a891c8869eac2ad627f7d72f634bec973c1572f5ee4d523dcf",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "13.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.203
+}

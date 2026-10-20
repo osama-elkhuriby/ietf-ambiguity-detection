@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "more frequently than it would send an Initial packet",
+    "interpretation_a": "The endpoint can send PATH_CHALLENGE frames at the same rate as Initial packets, but no faster.",
+    "interpretation_b": "The endpoint can send PATH_CHALLENGE frames at a rate that is proportionally related to the rate of Initial packets, but the proportionality factor is not defined.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'more frequently than' is vague. It doesn't specify whether the rate of PATH_CHALLENGE frames must be strictly less than, less than or equal to, or simply proportional to the rate of Initial packets. This allows for multiple reasonable interpretations regarding the allowed frequency of PATH_CHALLENGE frames.",
+    "missing_information": "The meaning of 'more frequently than' is not precise. Does it mean 'at least as frequently as', 'no more often than', or 'at a lower rate than'? A concrete rate limit or a clear comparison metric is missing."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:05:46.313566+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "2a1fe8cf33ab08c8f19fe140ffa96253a00a09abd350537d32e9ad22e252e09d",
+  "lineage_ids": "lineage:416d5e9242806c3bc511afe2",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 229,
+    "load_duration": 2506000,
+    "prompt_eval_count": 577,
+    "total_duration": 8583736800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"more frequently than it would send an Initial packet\", \"interpretation_a\": \"The endpoint can send PATH_CHALLENGE frames at the same rate as Initial packets, but no faster.\", \"interpretation_b\": \"The endpoint can send PATH_CHALLENGE frames at a rate that is proportionally related to the rate of Initial packets, but the proportionality factor is not defined.\", \"missing_information\": \"The meaning of 'more frequently than' is not precise. Does it mean 'at least as frequently as', 'no more often than', or 'at a lower rate than'? A concrete rate limit or a clear comparison metric is missing.\", \"justification\": \"The phrase 'more frequently than' is vague. It doesn't specify whether the rate of PATH_CHALLENGE frames must be strictly less than, less than or equal to, or simply proportional to the rate of Initial packets. This allows for multiple reasonable interpretations regarding the allowed frequency of PATH_CHALLENGE frames.\"}",
+  "record_id": "26fee366e47626db2d6b4076e3a491d1ceb6aad8817f8bd79063139280a0ee60",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "8.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.578
+}

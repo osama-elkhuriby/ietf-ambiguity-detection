@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that if the first frame on the control stream is not a SETTINGS frame, the connection must be terminated with an HTTP_MISSING_SETTINGS error. The preceding clause establishes that the first frame must be SETTINGS, and no alternative frame types are permitted. No missing constraints or undefined terms affect the interpretation.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T09:22:54.153776+00:00",
+  "document_id": "draft-ietf-quic-http-23",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "103b6678b9a0fb815230e530005cbc146992a60636f53603e316fd8c8f22af2f",
+  "lineage_ids": "lineage:e0939e20d729c376deca09fe",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 517,
+    "load_duration": 7389700,
+    "prompt_eval_count": 612,
+    "total_duration": 4628095000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that if the first frame on the control stream is not a SETTINGS frame, the connection must be terminated with an HTTP_MISSING_SETTINGS error. The preceding clause establishes that the first frame must be SETTINGS, and no alternative frame types are permitted. No missing constraints or undefined terms affect the interpretation.\"\n}",
+  "record_id": "5450a5e27f119928f353105d0ebe3dbafcaba39c680151f375d0b80f2fda660b",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "6.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 4.625
+}

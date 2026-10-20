@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "I-1",
+    "evidence_span": "Unreachable messages",
+    "interpretation_a": "The clause could be interpreted as meaning that the MUST NOT abort applies to all listed ICMPv6 messages (Destination Unreachable, Time Exceeded, and Parameter Problem), treating Parameter Problem as a type of Unreachable message.",
+    "interpretation_b": "Alternatively, the clause could be interpreted as meaning that the MUST NOT abort applies only to the Destination Unreachable messages, and that Parameter Problem is a separate category not covered by the soft‑error rule.",
+    "is_ambiguous": "yes",
+    "justification": "The clause refers to \"Unreachable messages\" but includes Parameter Problem, which is not an Unreachable message in ICMPv6. This direct inconsistency creates two materially different implementation interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T19:51:27.907350+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-14",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "a3b11349ec8f8b9004ff485533a33b95984b89ddbcdcbee1af8f382643cf09d6",
+  "lineage_ids": "lineage:20df6d775083a392e36358be",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1674,
+    "load_duration": 5126900,
+    "prompt_eval_count": 684,
+    "total_duration": 14434118300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"I-1\",\n  \"evidence_span\": \"Unreachable messages\",\n  \"interpretation_a\": \"The clause could be interpreted as meaning that the MUST NOT abort applies to all listed ICMPv6 messages (Destination Unreachable, Time Exceeded, and Parameter Problem), treating Parameter Problem as a type of Unreachable message.\",\n  \"interpretation_b\": \"Alternatively, the clause could be interpreted as meaning that the MUST NOT abort applies only to the Destination Unreachable messages, and that Parameter Problem is a separate category not covered by the soft‑error rule.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause refers to \\\"Unreachable messages\\\" but includes Parameter Problem, which is not an Unreachable message in ICMPv6. This direct inconsistency creates two materially different implementation interpretations.\"\n}",
+  "record_id": "3ab9bc053dd9b70ee42950e0cb40f638e134fde434da69f1c02d3f06ee01ee83",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "3.9.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 14.437
+}

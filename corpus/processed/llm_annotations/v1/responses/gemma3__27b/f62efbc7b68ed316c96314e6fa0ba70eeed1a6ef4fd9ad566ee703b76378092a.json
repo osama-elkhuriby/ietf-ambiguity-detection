@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "A and/or AAAA queries",
+    "interpretation_a": "Clients MUST perform both A and AAAA queries.",
+    "interpretation_b": "Clients MAY perform either A or AAAA queries, or both.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'and/or' creates ambiguity. It is unclear whether clients are required to perform both A and AAAA queries, or if they can choose to perform only one. This affects implementation because a client could choose to only perform one type of query, potentially leading to incomplete resolution.",
+    "missing_information": "The meaning of 'and/or' is not clearly defined. Does it require both, allow either, or allow both?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:14:22.245259+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "036d058badd5581c92ac6ffa27525325ba1042a0fd41365c2bb26d5f5d8a559c",
+  "lineage_ids": "lineage:ae8c6f3b47e237eca3b9683e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 167,
+    "load_duration": 4967800,
+    "prompt_eval_count": 599,
+    "total_duration": 6334604800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"A and/or AAAA queries\", \"interpretation_a\": \"Clients MUST perform both A and AAAA queries.\", \"interpretation_b\": \"Clients MAY perform either A or AAAA queries, or both.\", \"missing_information\": \"The meaning of 'and/or' is not clearly defined. Does it require both, allow either, or allow both?\", \"justification\": \"The use of 'and/or' creates ambiguity. It is unclear whether clients are required to perform both A and AAAA queries, or if they can choose to perform only one. This affects implementation because a client could choose to only perform one type of query, potentially leading to incomplete resolution.\"}",
+  "record_id": "f62efbc7b68ed316c96314e6fa0ba70eeed1a6ef4fd9ad566ee703b76378092a",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "7.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.328
+}

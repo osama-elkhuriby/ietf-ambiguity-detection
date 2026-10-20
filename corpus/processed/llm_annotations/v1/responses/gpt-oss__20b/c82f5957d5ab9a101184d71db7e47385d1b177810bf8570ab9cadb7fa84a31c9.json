@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "treat its presence as an error",
+    "interpretation_a": "The recipient rejects the URI entirely, treating the presence of userinfo as a fatal error.",
+    "interpretation_b": "The recipient logs a warning or records an error but still proceeds to use the URI, treating the presence of userinfo as a non-fatal error.",
+    "is_ambiguous": "yes",
+    "justification": "Because the clause requires parsing for userinfo and treating its presence as an error but does not define what constitutes an error or how to handle it, implementers may reasonably choose either to reject the URI or to continue processing it with a warning. This incomplete constraint leads to materially different implementation behaviours.",
+    "missing_information": "The clause does not specify the exact error handling action that should be taken when userinfo is present."
+  },
+  "attempts": 3,
+  "created_at": "2026-10-08T07:57:12.045520+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "8512286b3baa84bed537bc2bdc308dfb9540f5120965f750eca4f2d0aa1cd9d0",
+  "lineage_ids": "lineage:ea5ef01582bdb3c4a02df8d2",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 689,
+    "load_duration": 6865700,
+    "prompt_eval_count": 852,
+    "total_duration": 6237446600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"treat its presence as an error\",\n  \"interpretation_a\": \"The recipient rejects the URI entirely, treating the presence of userinfo as a fatal error.\",\n  \"interpretation_b\": \"The recipient logs a warning or records an error but still proceeds to use the URI, treating the presence of userinfo as a non-fatal error.\",\n  \"missing_information\": \"The clause does not specify the exact error handling action that should be taken when userinfo is present.\",\n  \"justification\": \"Because the clause requires parsing for userinfo and treating its presence as an error but does not define what constitutes an error or how to handle it, implementers may reasonably choose either to reject the URI or to continue processing it with a warning. This incomplete constraint leads to materially different implementation behaviours.\"\n}",
+  "record_id": "c82f5957d5ab9a101184d71db7e47385d1b177810bf8570ab9cadb7fa84a31c9",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "4.2.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 38.407
+}

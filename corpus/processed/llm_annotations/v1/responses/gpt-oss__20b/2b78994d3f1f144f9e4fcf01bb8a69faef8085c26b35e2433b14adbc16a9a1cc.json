@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "any significant quantity of data",
+    "interpretation_a": "The endpoint must wait until it has sent a large amount of data (e.g., 1 MB) to the new address before proceeding.",
+    "interpretation_b": "The endpoint must wait until it has sent only a small amount of data (e.g., 1 KB) to the new address before proceeding.",
+    "is_ambiguous": "yes",
+    "justification": "The clause specifies a requirement but does not define the threshold for 'significant quantity', leading to multiple reasonable implementation choices.",
+    "missing_information": "Definition of what constitutes a 'significant quantity of data'."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T14:38:08.142704+00:00",
+  "document_id": "draft-ietf-quic-transport-10",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "576d73c238bc0b45697f568df4ca77cee66b0e836c1dce0a41855192f33e0302",
+  "lineage_ids": "lineage:d8cc0ff8cad052560ec81629",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1663,
+    "load_duration": 772300,
+    "prompt_eval_count": 579,
+    "total_duration": 14288397700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"any significant quantity of data\",\n  \"interpretation_a\": \"The endpoint must wait until it has sent a large amount of data (e.g., 1 MB) to the new address before proceeding.\",\n  \"interpretation_b\": \"The endpoint must wait until it has sent only a small amount of data (e.g., 1 KB) to the new address before proceeding.\",\n  \"missing_information\": \"Definition of what constitutes a 'significant quantity of data'.\",\n  \"justification\": \"The clause specifies a requirement but does not define the threshold for 'significant quantity', leading to multiple reasonable implementation choices.\"\n}",
+  "record_id": "2b78994d3f1f144f9e4fcf01bb8a69faef8085c26b35e2433b14adbc16a9a1cc",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "7.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 14.281
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Removing the \"early_data\" extension",
+    "interpretation_a": "The client MUST remove the \"early_data\" extension from its ClientHello message.",
+    "interpretation_b": "The client MAY remove the \"early_data\" extension from its ClientHello message. The wording does not explicitly require removal, only that it *is* removed.",
+    "is_ambiguous": "yes",
+    "justification": "The use of present tense 'Removing' without a normative keyword creates ambiguity. It's unclear if the client is *required* to remove the extension or if it simply *will* be removed as a consequence of some other action.",
+    "missing_information": "The clause lacks a normative keyword (MUST, SHOULD, MAY) to clarify whether removal is required or optional."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:34:53.020076+00:00",
+  "document_id": "draft-ietf-tls-tls13-28",
+  "family_id": "draft-ietf-tls-tls13",
+  "input_fingerprint": "d45898985d7093526b876d27157728c18e697d2e417f60d72c645df7f1beb890",
+  "lineage_ids": "lineage:6dbad0af24f55a7795ac9cb0",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 179,
+    "load_duration": 9028500,
+    "prompt_eval_count": 578,
+    "total_duration": 6986588800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Removing the \\\"early_data\\\" extension\", \"interpretation_a\": \"The client MUST remove the \\\"early_data\\\" extension from its ClientHello message.\", \"interpretation_b\": \"The client MAY remove the \\\"early_data\\\" extension from its ClientHello message. The wording does not explicitly require removal, only that it *is* removed.\", \"missing_information\": \"The clause lacks a normative keyword (MUST, SHOULD, MAY) to clarify whether removal is required or optional.\",\"justification\": \"The use of present tense 'Removing' without a normative keyword creates ambiguity. It's unclear if the client is *required* to remove the extension or if it simply *will* be removed as a consequence of some other action.\"}",
+  "record_id": "73303c2e67ca3b2b9bc80bb243c782fba324e0eb3847e82889080826748036a2",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "4.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.0
+}

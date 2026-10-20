@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "If the first frame",
+    "interpretation_a": "If any frame that is not a SETTINGS frame is received as the very first frame on the control stream, it's a connection error.",
+    "interpretation_b": "If a frame that is not a SETTINGS frame is received *after* some other frames (even if those other frames are valid), it's a connection error. The clause doesn't specify that it must be the very first frame.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"the first frame\" is ambiguous. It could mean the absolute first frame ever received on the control stream, or the first frame received after some other frames have already been processed. This difference affects how implementations would handle non-SETTINGS frames on the control stream.",
+    "missing_information": "The clause needs to explicitly state that it refers to the very first frame received on the control stream to remove the ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:50:35.871296+00:00",
+  "document_id": "draft-ietf-quic-http-23",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "103b6678b9a0fb815230e530005cbc146992a60636f53603e316fd8c8f22af2f",
+  "lineage_ids": "lineage:e0939e20d729c376deca09fe",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 213,
+    "load_duration": 9938500,
+    "prompt_eval_count": 607,
+    "total_duration": 8121941300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"If the first frame\", \"interpretation_a\": \"If any frame that is not a SETTINGS frame is received as the very first frame on the control stream, it's a connection error.\", \"interpretation_b\": \"If a frame that is not a SETTINGS frame is received *after* some other frames (even if those other frames are valid), it's a connection error. The clause doesn't specify that it must be the very first frame.\", \"missing_information\": \"The clause needs to explicitly state that it refers to the very first frame received on the control stream to remove the ambiguity.\", \"justification\": \"The phrase \\\"the first frame\\\" is ambiguous. It could mean the absolute first frame ever received on the control stream, or the first frame received after some other frames have already been processed. This difference affects how implementations would handle non-SETTINGS frames on the control stream.\"}",
+  "record_id": "5450a5e27f119928f353105d0ebe3dbafcaba39c680151f375d0b80f2fda660b",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "6.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.125
+}

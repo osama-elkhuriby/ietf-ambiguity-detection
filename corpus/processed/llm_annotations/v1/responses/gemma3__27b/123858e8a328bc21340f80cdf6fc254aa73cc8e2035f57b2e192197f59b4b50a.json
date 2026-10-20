@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "other",
+    "evidence_span": "MAY ignore it",
+    "interpretation_a": "Clients are permitted to disregard the advisory indication and proceed with connection attempts using standard DNS resolution without involving SVCB.",
+    "interpretation_b": "Clients are permitted to disregard the advisory indication, but are also permitted to log the event, alert an administrator, or take other non-connection-affecting actions in response to the indication.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' grants clients discretion, but doesn't specify *how* they may ignore the indication. It could be silent disregard, or it could involve some form of logging or reporting. These are materially different behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:58:18.207620+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "057db95066d59f1f27a77bb4a9f4dbcdb2ff19358685ec1d28591fc561c83eee",
+  "lineage_ids": "lineage:d8827d4e547c77c9d739e1da",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 160,
+    "load_duration": 5524100,
+    "prompt_eval_count": 562,
+    "total_duration": 6063188300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"other\", \"evidence_span\": \"MAY ignore it\", \"interpretation_a\": \"Clients are permitted to disregard the advisory indication and proceed with connection attempts using standard DNS resolution without involving SVCB.\", \"interpretation_b\": \"Clients are permitted to disregard the advisory indication, but are also permitted to log the event, alert an administrator, or take other non-connection-affecting actions in response to the indication.\",\"missing_information\": \"\", \"justification\": \"The use of 'MAY' grants clients discretion, but doesn't specify *how* they may ignore the indication. It could be silent disregard, or it could involve some form of logging or reporting. These are materially different behaviours.\"}",
+  "record_id": "123858e8a328bc21340f80cdf6fc254aa73cc8e2035f57b2e192197f59b4b50a",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "2.5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.063
+}

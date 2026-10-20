@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "the Proxy-Authorization header field is consumed by the first inbound proxy that was expecting to receive credentials. A proxy MAY relay the credentials from the client request to the next proxy",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The lack of a clear rule about the state of the header after consumption creates an incomplete constraint affecting implementation behaviour.",
+    "missing_information": "The clause does not specify whether the Proxy-Authorization header is removed from the request after being consumed by the first inbound proxy, nor does it clarify whether the proxy that consumes the header may also forward it to the next proxy. This missing constraint allows two materially different implementation behaviours: (1) the header is removed and cannot be forwarded, or (2) the header is retained and can be forwarded."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T08:09:24.819211+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "38920680a2341025f727c832882c21d56de5766e7bf2ba46c7d5d324ef87852c",
+  "lineage_ids": "lineage:934835ced4d7f6fd2db9a911",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 761,
+    "load_duration": 2535200,
+    "prompt_eval_count": 824,
+    "total_duration": 6666570800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"the Proxy-Authorization header field is consumed by the first inbound proxy that was expecting to receive credentials. A proxy MAY relay the credentials from the client request to the next proxy\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The clause does not specify whether the Proxy-Authorization header is removed from the request after being consumed by the first inbound proxy, nor does it clarify whether the proxy that consumes the header may also forward it to the next proxy. This missing constraint allows two materially different implementation behaviours: (1) the header is removed and cannot be forwarded, or (2) the header is retained and can be forwarded.\",\n  \"justification\": \"The lack of a clear rule about the state of the header after consumption creates an incomplete constraint affecting implementation behaviour.\"\n}",
+  "record_id": "db28bdf88ffa5f5c001323ad918859c2d6c14e40891c3bf62b792e1fffa9684e",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "11.7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 25.828
+}

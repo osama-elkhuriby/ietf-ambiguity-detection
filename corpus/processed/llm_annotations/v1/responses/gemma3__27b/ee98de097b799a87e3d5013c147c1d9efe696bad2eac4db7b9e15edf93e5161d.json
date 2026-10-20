@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "not a valid HTTP-date",
+    "interpretation_a": "The header field value must conform to the full HTTP-date grammar, including all allowed variations and extensions.",
+    "interpretation_b": "The header field value must be a date that can be parsed as a valid HTTP-date, but minor deviations from the strict grammar might be tolerated.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'not a valid HTTP-date' relies on an external definition of 'valid'. Without knowing the precise requirements for a valid date, two different implementations could reasonably interpret this clause differently, leading to inconsistent behavior.",
+    "missing_information": "The definition of 'valid HTTP-date' is not provided in this excerpt. It is unclear whether strict conformance to the full grammar is required, or if some leniency is permitted."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:35:57.880268+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-10",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "57a47b9aa59f832bb4a9ad82b9548f5879d295e16c555ec609be5e3756f3c9eb",
+  "lineage_ids": "lineage:62650d6210cc723bcc3a97d0",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 192,
+    "load_duration": 9172700,
+    "prompt_eval_count": 634,
+    "total_duration": 7481758700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-1\", \"evidence_span\": \"not a valid HTTP-date\", \"interpretation_a\": \"The header field value must conform to the full HTTP-date grammar, including all allowed variations and extensions.\", \"interpretation_b\": \"The header field value must be a date that can be parsed as a valid HTTP-date, but minor deviations from the strict grammar might be tolerated.\", \"missing_information\": \"The definition of 'valid HTTP-date' is not provided in this excerpt. It is unclear whether strict conformance to the full grammar is required, or if some leniency is permitted.\", \"justification\": \"The phrase 'not a valid HTTP-date' relies on an external definition of 'valid'. Without knowing the precise requirements for a valid date, two different implementations could reasonably interpret this clause differently, leading to inconsistent behavior.\"}",
+  "record_id": "ee98de097b799a87e3d5013c147c1d9efe696bad2eac4db7b9e15edf93e5161d",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "9.2.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.469
+}

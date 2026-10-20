@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless an endpoint is certain that those protocol features are not in use",
+    "interpretation_a": "An endpoint can determine with absolute certainty that peer connection migration, NAT rebinding, and client port reuse will *never* occur, and therefore use zero-length connection IDs.",
+    "interpretation_b": "An endpoint can make a reasonable, good-faith assessment that the probability of peer connection migration, NAT rebinding, and client port reuse is sufficiently low to justify using zero-length connection IDs, even if absolute certainty is not possible.",
+    "is_ambiguous": "yes",
+    "justification": "The clause uses the term 'certain' without defining it. This creates ambiguity because it is unclear what level of confidence an endpoint must have before it is permissible to use zero-length connection IDs. One interpretation is that absolute certainty is required, while another is that a reasonable assessment of low probability is sufficient.",
+    "missing_information": "The definition of 'certain' is not provided. Does 'certain' require absolute proof, or is a high degree of confidence sufficient?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:42:02.522659+00:00",
+  "document_id": "draft-ietf-quic-transport-29",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "afb090a15eb004c48985c3f9d1fc9d9edea014f6830c65928c422bb55cee7ac7",
+  "lineage_ids": "lineage:31e865175d601809b734c2cd",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 236,
+    "load_duration": 5082800,
+    "prompt_eval_count": 627,
+    "total_duration": 8844236000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless an endpoint is certain that those protocol features are not in use\", \"interpretation_a\": \"An endpoint can determine with absolute certainty that peer connection migration, NAT rebinding, and client port reuse will *never* occur, and therefore use zero-length connection IDs.\", \"interpretation_b\": \"An endpoint can make a reasonable, good-faith assessment that the probability of peer connection migration, NAT rebinding, and client port reuse is sufficiently low to justify using zero-length connection IDs, even if absolute certainty is not possible.\", \"missing_information\": \"The definition of 'certain' is not provided. Does 'certain' require absolute proof, or is a high degree of confidence sufficient?\", \"justification\": \"The clause uses the term 'certain' without defining it. This creates ambiguity because it is unclear what level of confidence an endpoint must have before it is permissible to use zero-length connection IDs. One interpretation is that absolute certainty is required, while another is that a reasonable assessment of low probability is sufficient.\"}",
+  "record_id": "8aae0dd2c4782598d8cbea83ee691adc3d4f1d4183a008f7d7f4b4280310c77a",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.844
+}

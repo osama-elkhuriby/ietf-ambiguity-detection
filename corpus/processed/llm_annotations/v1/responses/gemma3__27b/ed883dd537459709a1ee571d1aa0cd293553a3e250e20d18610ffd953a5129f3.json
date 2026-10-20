@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "might also be appropriate",
+    "interpretation_a": "The resolver is required to omit RRSets when the maximum response size is reached.",
+    "interpretation_b": "The resolver is not required to omit RRSets when the maximum response size is reached; it is merely an option.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"might also be appropriate\" introduces uncertainty. It does not clearly state whether omitting RRSets upon reaching the maximum response size is a requirement or simply a permissible action. This lack of a definitive constraint creates ambiguity in implementation.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:13:29.059627+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "ab6401743df24e06e03ff236e4132fe565469532cd5589eefab41effc28ef349",
+  "lineage_ids": "lineage:e76524f3fb09faf5431ad409",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 144,
+    "load_duration": 4095000,
+    "prompt_eval_count": 608,
+    "total_duration": 5555353200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"might also be appropriate\", \"interpretation_a\": \"The resolver is required to omit RRSets when the maximum response size is reached.\", \"interpretation_b\": \"The resolver is not required to omit RRSets when the maximum response size is reached; it is merely an option.\", \"missing_information\": \"\", \"justification\": \"The phrase \\\"might also be appropriate\\\" introduces uncertainty. It does not clearly state whether omitting RRSets upon reaching the maximum response size is a requirement or simply a permissible action. This lack of a definitive constraint creates ambiguity in implementation.\"}",
+  "record_id": "ed883dd537459709a1ee571d1aa0cd293553a3e250e20d18610ffd953a5129f3",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.547
+}

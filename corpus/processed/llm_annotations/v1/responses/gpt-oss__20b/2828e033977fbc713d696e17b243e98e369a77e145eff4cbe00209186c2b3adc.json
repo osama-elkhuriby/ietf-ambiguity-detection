@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "resend data in 0-RTT packets",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause \"A client MAY attempt to resend data in 0-RTT packets after it sends a new Initial packet\" does not constrain the nature of the data to be resent. This omission allows two materially different implementation behaviours: (1) resending the exact same payload that was originally sent in the 0‑RTT packets, or (2) sending new or modified payloads in subsequent 0‑RTT packets. The lack of a constraint on the data content constitutes an incomplete constraint (U-2).",
+    "missing_information": "Whether the data that a client attempts to resend in 0‑RTT packets must be identical to the data originally sent in the 0‑RTT packets, or whether it may be new data, is not specified."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T14:33:46.923852+00:00",
+  "document_id": "draft-ietf-quic-transport-22",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "36944580bdf6a618a54425f2b817cd862ef09cb3c9fb82a55d51a65021ebe96c",
+  "lineage_ids": "lineage:2f4ac0652df7eba68cc25e43",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 577,
+    "load_duration": 6603400,
+    "prompt_eval_count": 835,
+    "total_duration": 5156069900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"resend data in 0-RTT packets\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"Whether the data that a client attempts to resend in 0‑RTT packets must be identical to the data originally sent in the 0‑RTT packets, or whether it may be new data, is not specified.\",\n  \"justification\": \"The clause \\\"A client MAY attempt to resend data in 0-RTT packets after it sends a new Initial packet\\\" does not constrain the nature of the data to be resent. This omission allows two materially different implementation behaviours: (1) resending the exact same payload that was originally sent in the 0‑RTT packets, or (2) sending new or modified payloads in subsequent 0‑RTT packets. The lack of a constraint on the data content constitutes an incomplete constraint (U-2).\"\n}",
+  "record_id": "2828e033977fbc713d696e17b243e98e369a77e145eff4cbe00209186c2b3adc",
+  "revision": "22",
+  "schema_version": 1,
+  "section_ids": "17.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 57.953
+}

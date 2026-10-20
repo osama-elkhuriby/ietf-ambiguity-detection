@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "MAY choose",
+    "interpretation_a": "The endpoint is permitted to treat a stream error as a connection error, but is not required to do so.",
+    "interpretation_b": "The endpoint is encouraged to treat a stream error as a connection error, but is not required to do so.",
+    "is_ambiguous": "yes",
+    "justification": "The word 'MAY' is vague. It could mean 'permitted' or 'encouraged'. Without further clarification, implementations could reasonably interpret this clause in different ways, leading to inconsistent behavior.",
+    "missing_information": "The degree of freedom granted by 'MAY' is not constrained. It is unclear whether the endpoint has significant discretion or if there are implicit limitations on when it can treat a stream error as a connection error."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:14:33.759511+00:00",
+  "document_id": "draft-ietf-quic-http-32",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "04e17f438a54dab0996c34199beb6d7cc3d5741d7fd74628a495ed28b0a4a5f1",
+  "lineage_ids": "lineage:2841cbba2875ece68d79a940",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 177,
+    "load_duration": 23251400,
+    "prompt_eval_count": 554,
+    "total_duration": 6852400500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"MAY choose\", \"interpretation_a\": \"The endpoint is permitted to treat a stream error as a connection error, but is not required to do so.\", \"interpretation_b\": \"The endpoint is encouraged to treat a stream error as a connection error, but is not required to do so.\", \"missing_information\": \"The degree of freedom granted by 'MAY' is not constrained. It is unclear whether the endpoint has significant discretion or if there are implicit limitations on when it can treat a stream error as a connection error.\",\"justification\": \"The word 'MAY' is vague. It could mean 'permitted' or 'encouraged'. Without further clarification, implementations could reasonably interpret this clause in different ways, leading to inconsistent behavior.\"}",
+  "record_id": "f09b648fd40414fd55fc148877e23313a2f808457bf9bad2d40696696f351407",
+  "revision": "32",
+  "schema_version": 1,
+  "section_ids": "8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.86
+}

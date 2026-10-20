@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "closest to the next expected packet number",
+    "interpretation_a": "Choose the full packet number that yields the smallest absolute difference from the next expected packet number, breaking ties by selecting the smaller full packet number.",
+    "interpretation_b": "Choose the full packet number that yields the smallest absolute difference from the next expected packet number, breaking ties by selecting the larger full packet number.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify how to resolve ties when multiple full packet numbers are equally close to the next expected packet number, leaving a concrete missing constraint that can lead to materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T19:36:15.649219+00:00",
+  "document_id": "draft-ietf-quic-transport-01",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "f8113da92af1051d266ce229abebd2cb9b81099ff6a8d689113acc8441d0050c",
+  "lineage_ids": "lineage:8841da89ad2cc054f8e35d72",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1306,
+    "load_duration": 4523900,
+    "prompt_eval_count": 579,
+    "total_duration": 11236820800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"closest to the next expected packet number\",\n  \"interpretation_a\": \"Choose the full packet number that yields the smallest absolute difference from the next expected packet number, breaking ties by selecting the smaller full packet number.\",\n  \"interpretation_b\": \"Choose the full packet number that yields the smallest absolute difference from the next expected packet number, breaking ties by selecting the larger full packet number.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify how to resolve ties when multiple full packet numbers are equally close to the next expected packet number, leaving a concrete missing constraint that can lead to materially different implementation behaviours.\"\n}",
+  "record_id": "fdd991ae7110928cdb69e1ce91cec13313bb60a1962ded6f9fb0511eb6aaa0e2",
+  "revision": "01",
+  "schema_version": 1,
+  "section_ids": "5.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.25
+}

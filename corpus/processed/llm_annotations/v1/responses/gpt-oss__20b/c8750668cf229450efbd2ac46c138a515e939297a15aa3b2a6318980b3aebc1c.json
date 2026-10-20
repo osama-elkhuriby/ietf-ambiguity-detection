@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "An endpoint MUST NOT send further packets, which could result in a constant exchange of closing frames until the closing period on either peer ended.",
+    "interpretation_a": "The clause prohibits sending any packets at all until the closing period on either peer ends.",
+    "interpretation_b": "The clause prohibits only sending packets that could cause a constant exchange of closing frames, but allows other packets (e.g., data or non‑closing control frames) until the closing period ends.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify which packets are disallowed, leading to an incomplete constraint on implementation behaviour.",
+    "missing_information": ""
+  },
+  "attempts": 3,
+  "created_at": "2026-10-08T18:22:37.823242+00:00",
+  "document_id": "draft-ietf-quic-transport-16",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "1c9fd5f4c3c4f3b70ce2835b23717f065136b3eb033f726705497d598ebf3afb",
+  "lineage_ids": "lineage:2f36de0902c4f53dd06ab9ed",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 334,
+    "load_duration": 4187600,
+    "prompt_eval_count": 766,
+    "total_duration": 3136467000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"An endpoint MUST NOT send further packets, which could result in a constant exchange of closing frames until the closing period on either peer ended.\",\n  \"interpretation_a\": \"The clause prohibits sending any packets at all until the closing period on either peer ends.\",\n  \"interpretation_b\": \"The clause prohibits only sending packets that could cause a constant exchange of closing frames, but allows other packets (e.g., data or non‑closing control frames) until the closing period ends.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify which packets are disallowed, leading to an incomplete constraint on implementation behaviour.\"\n}",
+  "record_id": "c8750668cf229450efbd2ac46c138a515e939297a15aa3b2a6318980b3aebc1c",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "10.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 89.172
+}

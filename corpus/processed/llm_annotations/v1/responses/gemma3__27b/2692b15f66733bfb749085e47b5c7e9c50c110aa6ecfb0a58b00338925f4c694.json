@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT generate a Content-Range header field in the HTTP header section of a multiple part response",
+    "interpretation_a": "The server should not include a Content-Range header in the main HTTP headers for a multipart response.",
+    "interpretation_b": "The server should not include *any* Content-Range header in the main HTTP headers for a multipart response, even if it doesn't apply to the entire response.",
+    "is_ambiguous": "yes",
+    "justification": "The clause prohibits a Content-Range header in the 'HTTP header section' of a multipart response. It's unclear if this means *any* Content-Range header, or only those not specific to a part. This creates two reasonable interpretations regarding the scope of the prohibition.",
+    "missing_information": "It is unclear whether the prohibition applies to all Content-Range headers, or only those that don't relate to the individual parts. The phrase 'in the HTTP header section' is vague and could be interpreted to mean 'anywhere in the HTTP headers' or 'a Content-Range header that applies to the entire response'."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:59:12.128250+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "e3a42a3a90a7260d4c8de657c613a3d2ef8a0f831d86dd85d6064cc360b3dc10",
+  "lineage_ids": "lineage:7c3de3ba1346d2ae5be0e0e2",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 248,
+    "load_duration": 17434500,
+    "prompt_eval_count": 644,
+    "total_duration": 9496160000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT generate a Content-Range header field in the HTTP header section of a multiple part response\", \"interpretation_a\": \"The server should not include a Content-Range header in the main HTTP headers for a multipart response.\", \"interpretation_b\": \"The server should not include *any* Content-Range header in the main HTTP headers for a multipart response, even if it doesn't apply to the entire response.\", \"missing_information\": \"It is unclear whether the prohibition applies to all Content-Range headers, or only those that don't relate to the individual parts. The phrase 'in the HTTP header section' is vague and could be interpreted to mean 'anywhere in the HTTP headers' or 'a Content-Range header that applies to the entire response'.\", \"justification\": \"The clause prohibits a Content-Range header in the 'HTTP header section' of a multipart response. It's unclear if this means *any* Content-Range header, or only those not specific to a part. This creates two reasonable interpretations regarding the scope of the prohibition.\"}",
+  "record_id": "2692b15f66733bfb749085e47b5c7e9c50c110aa6ecfb0a58b00338925f4c694",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "15.3.7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.5
+}

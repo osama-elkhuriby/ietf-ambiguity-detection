@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY send a Via header field",
+    "interpretation_a": "The gateway might choose to include a Via header in response messages, or it might not.",
+    "interpretation_b": "The gateway is permitted to include a Via header in response messages, but it is not required to do so.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' creates ambiguity because it doesn't define conditions for including or excluding the Via header in response messages. A missing constraint on when to include the header leads to different implementations.",
+    "missing_information": "The criteria for when the gateway *should* or *should not* include the Via header in response messages is not specified. This leaves room for different implementations to make different choices without violating the specification."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:08:08.353734+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "eddc6e2802570554d0b9b3b99c4904ce8de948788111e1d5b0225118d37eb4c4",
+  "lineage_ids": "lineage:8b68d2d8e405c3f7ac328396",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 178,
+    "load_duration": 9435900,
+    "prompt_eval_count": 583,
+    "total_duration": 6931619000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY send a Via header field\", \"interpretation_a\": \"The gateway might choose to include a Via header in response messages, or it might not.\", \"interpretation_b\": \"The gateway is permitted to include a Via header in response messages, but it is not required to do so.\", \"missing_information\": \"The criteria for when the gateway *should* or *should not* include the Via header in response messages is not specified. This leaves room for different implementations to make different choices without violating the specification.\",\"justification\": \"The use of 'MAY' creates ambiguity because it doesn't define conditions for including or excluding the Via header in response messages. A missing constraint on when to include the header leads to different implementations.\"}",
+  "record_id": "57984f75f35bf5c19947d358f44980e6e7e9cdb50c2150113950db684690e26e",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "7.6.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.938
+}

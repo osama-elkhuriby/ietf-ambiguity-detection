@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "requires that its peer send packets with a zero-length Destination Connection ID",
+    "interpretation_a": "The endpoint MUST NOT send this frame if it is currently in a state where it *expects* its peer to send packets with a zero-length Destination Connection ID.",
+    "interpretation_b": "The endpoint MUST NOT send this frame if it is currently in a state where it *has requested* its peer to send packets with a zero-length Destination Connection ID.",
+    "is_ambiguous": "yes",
+    "justification": "The word 'requires' is ambiguous. It could mean that the endpoint expects the peer to send zero-length packets, or that the endpoint has actively requested the peer to do so. These are different states and affect when the condition is met.",
+    "missing_information": "The meaning of 'requires' is not defined. Does it mean 'expects' or 'has requested'? This affects when the condition is met and thus when the frame can be sent."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:28:21.826431+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "0ef1c9480735a3168f18abd13a356bb2eb2e5702de4e7c0fe5b0a6379109ffe0",
+  "lineage_ids": "lineage:ea785d679a99ad728ca63176",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 220,
+    "load_duration": 4041500,
+    "prompt_eval_count": 602,
+    "total_duration": 8245331600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"requires that its peer send packets with a zero-length Destination Connection ID\", \"interpretation_a\": \"The endpoint MUST NOT send this frame if it is currently in a state where it *expects* its peer to send packets with a zero-length Destination Connection ID.\", \"interpretation_b\": \"The endpoint MUST NOT send this frame if it is currently in a state where it *has requested* its peer to send packets with a zero-length Destination Connection ID.\", \"missing_information\": \"The meaning of 'requires' is not defined. Does it mean 'expects' or 'has requested'? This affects when the condition is met and thus when the frame can be sent.\", \"justification\": \"The word 'requires' is ambiguous. It could mean that the endpoint expects the peer to send zero-length packets, or that the endpoint has actively requested the peer to do so. These are different states and affect when the condition is met.\"}",
+  "record_id": "6128ec99579876a130d5e59786bcc728ca90e0f6fafae88a9066d0e8cca92d68",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "19.15",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.25
+}

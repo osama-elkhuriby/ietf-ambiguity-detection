@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "An endpoint MAY treat activity that is suspicious as a connection error of type ENHANCE_YOUR_CALM.",
+    "interpretation_a": "The term 'suspicious' could refer to any activity that deviates from normal patterns, leading to a connection error.",
+    "interpretation_b": "The term 'suspicious' could refer to any activity that triggers a specific threshold or rule, leading to a connection error.",
+    "is_ambiguous": "yes",
+    "justification": "The clause uses the undefined term 'suspicious', which allows multiple reasonable interpretations of what activity qualifies, making the clause ambiguous.",
+    "missing_information": "Definition of 'suspicious'."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T05:04:23.990183+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "aa177b788b844bb4f293eb19ddc73b244ace7cd4a68ae9ffa78bf146cdef3dcd",
+  "lineage_ids": "lineage:b58e4cf1a69b6fa73b9ba061",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1829,
+    "load_duration": 4013000,
+    "prompt_eval_count": 562,
+    "total_duration": 15735379500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-1\",\n  \"evidence_span\": \"An endpoint MAY treat activity that is suspicious as a connection error of type ENHANCE_YOUR_CALM.\",\n  \"interpretation_a\": \"The term 'suspicious' could refer to any activity that deviates from normal patterns, leading to a connection error.\",\n  \"interpretation_b\": \"The term 'suspicious' could refer to any activity that triggers a specific threshold or rule, leading to a connection error.\",\n  \"missing_information\": \"Definition of 'suspicious'.\",\n  \"justification\": \"The clause uses the undefined term 'suspicious', which allows multiple reasonable interpretations of what activity qualifies, making the clause ambiguous.\"\n}",
+  "record_id": "d70ca0ad3cef9ef81194c6fed8e7d6d87a97cff8ab02cb0cd170ba086285be43",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "10.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 15.75
+}

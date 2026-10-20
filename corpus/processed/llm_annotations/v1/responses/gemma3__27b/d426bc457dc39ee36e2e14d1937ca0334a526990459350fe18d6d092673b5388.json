@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "SHOULD NOT generate a User-Agent field containing needlessly fine-grained detail and SHOULD limit the addition of subproducts by third parties.",
+    "interpretation_a": "A User-Agent field could include version numbers, operating system details, and browser engine information, but SHOULD avoid extremely specific details like build numbers or internal component versions. Third-party additions (e.g., browser extensions) should be limited to a reasonable number.",
+    "interpretation_b": "A User-Agent field could include only the browser name and major version number, and SHOULD completely exclude any information about the operating system, browser engine, or third-party extensions. The limit on third-party additions could be interpreted as 'no additions allowed'.",
+    "is_ambiguous": "yes",
+    "justification": "The terms \"needlessly fine-grained detail\" and \"limit\" are subjective and lack concrete definitions. What constitutes 'needlessly fine-grained' is open to interpretation, leading to different implementations. Similarly, 'limit the addition' doesn't specify a maximum number or a threshold for acceptable third-party subproducts.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:29:55.930978+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-12",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "5ecf5792316cf6984d069df2c427fe1ec0115e4c38a5e2897b712a815034a6e4",
+  "lineage_ids": "lineage:bf859d051a1908c8754fa186",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 249,
+    "load_duration": 19945800,
+    "prompt_eval_count": 592,
+    "total_duration": 9456922000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"SHOULD NOT generate a User-Agent field containing needlessly fine-grained detail and SHOULD limit the addition of subproducts by third parties.\", \"interpretation_a\": \"A User-Agent field could include version numbers, operating system details, and browser engine information, but SHOULD avoid extremely specific details like build numbers or internal component versions. Third-party additions (e.g., browser extensions) should be limited to a reasonable number.\", \"interpretation_b\": \"A User-Agent field could include only the browser name and major version number, and SHOULD completely exclude any information about the operating system, browser engine, or third-party extensions. The limit on third-party additions could be interpreted as 'no additions allowed'.\", \"missing_information\": \"\", \"justification\": \"The terms \\\"needlessly fine-grained detail\\\" and \\\"limit\\\" are subjective and lack concrete definitions. What constitutes 'needlessly fine-grained' is open to interpretation, leading to different implementations. Similarly, 'limit the addition' doesn't specify a maximum number or a threshold for acceptable third-party subproducts.\"}",
+  "record_id": "d426bc457dc39ee36e2e14d1937ca0334a526990459350fe18d6d092673b5388",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "9.1.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.469
+}

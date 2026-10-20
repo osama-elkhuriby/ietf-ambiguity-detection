@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY discard or truncate",
+    "interpretation_a": "The client is permitted to discard or truncate large header fields.",
+    "interpretation_b": "The client is not required to discard or truncate large header fields, but may do so.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' introduces discretion, but the condition 'safely ignored without changing the message framing or response semantics' is not clearly defined. Different implementations could reasonably interpret what constitutes 'safe' ignoring or truncation, leading to inconsistent behavior.",
+    "missing_information": "The criteria for 'safely ignored' are not defined. What constitutes 'changing the message framing or response semantics' is subjective and lacks a concrete constraint, leading to different implementations of what header fields can be discarded or truncated."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:25:16.430693+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-06",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "878363ce3880f57fcca64e651231b0a9fccddbe0398caa4e59b796499d29b281",
+  "lineage_ids": "lineage:70d40044b7dd01dca1dd3102",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 180,
+    "load_duration": 16723000,
+    "prompt_eval_count": 581,
+    "total_duration": 7017589700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY discard or truncate\", \"interpretation_a\": \"The client is permitted to discard or truncate large header fields.\", \"interpretation_b\": \"The client is not required to discard or truncate large header fields, but may do so.\", \"missing_information\": \"The criteria for 'safely ignored' are not defined. What constitutes 'changing the message framing or response semantics' is subjective and lacks a concrete constraint, leading to different implementations of what header fields can be discarded or truncated.\",\"justification\": \"The use of 'MAY' introduces discretion, but the condition 'safely ignored without changing the message framing or response semantics' is not clearly defined. Different implementations could reasonably interpret what constitutes 'safe' ignoring or truncation, leading to inconsistent behavior.\"}",
+  "record_id": "b8f8caf99917fe281be5d81d4146c2fba06ee50990450b21ac6256dbdc041ded",
+  "revision": "06",
+  "schema_version": 1,
+  "section_ids": "4.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.016
+}

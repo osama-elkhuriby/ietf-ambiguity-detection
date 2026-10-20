@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT generate an HTTP/3 message containing connection-specific header fields",
+    "interpretation_a": "The endpoint must not *create* messages with connection-specific headers.",
+    "interpretation_b": "The endpoint must not *transmit* messages with connection-specific headers (even if received).",
+    "is_ambiguous": "yes",
+    "justification": "The term 'generate' is ambiguous. Does it mean to create the message, or to transmit it? Both interpretations are reasonable and lead to different implementations.",
+    "missing_information": "It is unclear whether the prohibition applies to message creation only, or also to forwarding/transmission of such messages. The scope of 'generate' is not defined."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:14:11.057713+00:00",
+  "document_id": "draft-ietf-quic-http-27",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "663be8c4011a12fa23117b001fd0b5c3ded16b35b1ef6769e899c2ae3dda5393",
+  "lineage_ids": "lineage:9b1b494ebab77a654c01ebab",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 162,
+    "load_duration": 9066100,
+    "prompt_eval_count": 623,
+    "total_duration": 6430011100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT generate an HTTP/3 message containing connection-specific header fields\", \"interpretation_a\": \"The endpoint must not *create* messages with connection-specific headers.\", \"interpretation_b\": \"The endpoint must not *transmit* messages with connection-specific headers (even if received).\", \"missing_information\": \"It is unclear whether the prohibition applies to message creation only, or also to forwarding/transmission of such messages. The scope of 'generate' is not defined.\",\"justification\": \"The term 'generate' is ambiguous. Does it mean to create the message, or to transmit it? Both interpretations are reasonable and lead to different implementations.\"}",
+  "record_id": "eede3bca22ff6fe01a1c2d0f629c4c2e8332b05d5c6f960eafc8319ec42fa292",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "4.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.438
+}

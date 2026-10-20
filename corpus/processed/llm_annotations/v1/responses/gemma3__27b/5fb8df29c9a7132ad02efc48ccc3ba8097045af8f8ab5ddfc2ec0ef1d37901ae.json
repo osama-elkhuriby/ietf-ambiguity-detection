@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless an alternative mechanism to indicate the target host is used",
+    "interpretation_a": "If any mechanism other than SNI is used to indicate the target host, SNI is not required.",
+    "interpretation_b": "SNI is always required, but the clause allows for the definition of alternative mechanisms in other specifications that might also convey the target host information.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'unless an alternative mechanism to indicate the target host is used' is incomplete. It doesn't define what constitutes an 'alternative mechanism'. This allows for multiple interpretations of when SNI is required or not.",
+    "missing_information": "The definition of 'alternative mechanism' is not provided. It is unclear whether any mechanism that conveys the target host information qualifies, or if it must be a formally defined alternative to SNI."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:52:21.126050+00:00",
+  "document_id": "draft-ietf-quic-http-33",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "a0dcb604a3372e7527bfd60592a31587491bfc5b6740efa509e3c146bc37107d",
+  "lineage_ids": "lineage:9263d2ee2c7575a7bcce5630",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 195,
+    "load_duration": 9511400,
+    "prompt_eval_count": 585,
+    "total_duration": 7551916900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless an alternative mechanism to indicate the target host is used\", \"interpretation_a\": \"If any mechanism other than SNI is used to indicate the target host, SNI is not required.\", \"interpretation_b\": \"SNI is always required, but the clause allows for the definition of alternative mechanisms in other specifications that might also convey the target host information.\", \"missing_information\": \"The definition of 'alternative mechanism' is not provided. It is unclear whether any mechanism that conveys the target host information qualifies, or if it must be a formally defined alternative to SNI.\", \"justification\": \"The phrase 'unless an alternative mechanism to indicate the target host is used' is incomplete. It doesn't define what constitutes an 'alternative mechanism'. This allows for multiple interpretations of when SNI is required or not.\"}",
+  "record_id": "5fb8df29c9a7132ad02efc48ccc3ba8097045af8f8ab5ddfc2ec0ef1d37901ae",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.547
+}

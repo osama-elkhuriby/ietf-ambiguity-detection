@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "However, they MUST acknowledge packets containing only ACK frames when sending ACK frames in response to other packets.",
+    "interpretation_a": "An implementation could interpret this to mean that if a packet containing data and an ACK is received, and the next packet sent is an ACK, then the ACK must acknowledge the initial packet containing data and the ACK. This implies a stateful association between packets.",
+    "interpretation_b": "Alternatively, an implementation could interpret this to mean that any ACK frame sent in response to *any* packet must acknowledge any previously unacknowledged packets containing only ACK frames. This is a stateless interpretation, simply requiring acknowledgement of outstanding ACK-only packets when *any* ACK is sent.",
+    "is_ambiguous": "yes",
+    "justification": "The clause creates a conditional requirement to acknowledge ACK-only packets 'when sending ACK frames in response to other packets'. The meaning of 'other packets' is not clearly defined, leading to two plausible interpretations about when the acknowledgement of ACK-only packets is required.",
+    "missing_information": "The relationship between the 'other packets' and the 'packets containing only ACK frames' is not clearly defined. Is the acknowledgement of ACK-only packets conditional on receiving 'other packets', or is it a general requirement whenever an ACK is sent?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:08:39.733360+00:00",
+  "document_id": "draft-ietf-quic-transport-14",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "056fc915c7c6aebc2da7a70b19909d628825895941c4b3e13c0385cb98268c71",
+  "lineage_ids": "lineage:a09a7765b5558865380d5d5e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 280,
+    "load_duration": 2596200,
+    "prompt_eval_count": 576,
+    "total_duration": 10358146300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"However, they MUST acknowledge packets containing only ACK frames when sending ACK frames in response to other packets.\", \"interpretation_a\": \"An implementation could interpret this to mean that if a packet containing data and an ACK is received, and the next packet sent is an ACK, then the ACK must acknowledge the initial packet containing data and the ACK. This implies a stateful association between packets.\", \"interpretation_b\": \"Alternatively, an implementation could interpret this to mean that any ACK frame sent in response to *any* packet must acknowledge any previously unacknowledged packets containing only ACK frames. This is a stateless interpretation, simply requiring acknowledgement of outstanding ACK-only packets when *any* ACK is sent.\", \"missing_information\": \"The relationship between the 'other packets' and the 'packets containing only ACK frames' is not clearly defined. Is the acknowledgement of ACK-only packets conditional on receiving 'other packets', or is it a general requirement whenever an ACK is sent?\",\"justification\": \"The clause creates a conditional requirement to acknowledge ACK-only packets 'when sending ACK frames in response to other packets'. The meaning of 'other packets' is not clearly defined, leading to two plausible interpretations about when the acknowledgement of ACK-only packets is required.\"}",
+  "record_id": "2e38101e27a7cb5dded078bf45a4d20191a711fc67240af56677bf4a67de781c",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "7.15.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.359
+}

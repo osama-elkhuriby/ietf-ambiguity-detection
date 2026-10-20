@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "This timer MUST be updated when a new crypto packet is sent.",
+    "interpretation_a": "The timer could be reset to the original crypto timeout period each time a new crypto packet is sent.",
+    "interpretation_b": "The timer could be extended or otherwise adjusted based on some other rule, but the clause does not specify how.",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a concrete constraint on how the timer is updated, allowing multiple reasonable implementation behaviours.",
+    "missing_information": "The clause does not specify the exact method or value by which the timer should be updated when a new crypto packet is sent, leaving the implementation behavior under‑specified."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T12:14:53.252105+00:00",
+  "document_id": "draft-ietf-quic-recovery-19",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "4fffb45da2cacafdf628db32bf39c3ec36a3af2fd8323a8546a259df471b7dd8",
+  "lineage_ids": "lineage:6782b1f56ff60222e406cd77",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1095,
+    "load_duration": 4609400,
+    "prompt_eval_count": 573,
+    "total_duration": 9613962100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"This timer MUST be updated when a new crypto packet is sent.\",\n  \"interpretation_a\": \"The timer could be reset to the original crypto timeout period each time a new crypto packet is sent.\",\n  \"interpretation_b\": \"The timer could be extended or otherwise adjusted based on some other rule, but the clause does not specify how.\",\n  \"missing_information\": \"The clause does not specify the exact method or value by which the timer should be updated when a new crypto packet is sent, leaving the implementation behavior under‑specified.\",\n  \"justification\": \"The clause lacks a concrete constraint on how the timer is updated, allowing multiple reasonable implementation behaviours.\"\n}",
+  "record_id": "f4b2acd2476c5d828c718b1c594544e9432b68207315700491f2b410a1720c8b",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.625
+}

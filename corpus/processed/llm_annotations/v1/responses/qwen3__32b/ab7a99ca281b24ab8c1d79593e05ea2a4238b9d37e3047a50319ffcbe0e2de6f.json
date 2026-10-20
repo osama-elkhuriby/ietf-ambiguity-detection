@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Servers MAY also reject requests on streams below the indicated ID if these requests were not processed.",
+    "interpretation_a": "Servers are allowed to reject requests on streams below the GOAWAY ID if they have not yet processed them, implying that such requests are no longer valid and should be canceled by the client.",
+    "interpretation_b": "Servers may reject requests on streams below the GOAWAY ID even if they were not processed, but this could be interpreted as optional behavior without a clear constraint on when or how it should be applied, leading to inconsistent implementations.",
+    "is_ambiguous": "yes",
+    "justification": "The target clause introduces a 'MAY' condition for server behavior that is not clearly constrained, allowing for multiple interpretations of when and how servers should reject requests on streams below the GOAWAY ID. This lack of constraint could lead to different implementations handling such cases inconsistently.",
+    "missing_information": "The clause does not specify under what conditions or timing servers should reject such requests, nor does it clarify the expected client behavior in response to such rejections, leading to ambiguity in implementation."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:56:50.175032+00:00",
+  "document_id": "draft-ietf-quic-http-18",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "fbdaf0a05b4f5f1f3ef7030f634c7fa476b83381105d6d2af49f2b9fe5503031",
+  "lineage_ids": "lineage:23540f32f0664bc30ef74b0e",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 251,
+    "load_duration": 13666900,
+    "prompt_eval_count": 573,
+    "total_duration": 10502752700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"Servers MAY also reject requests on streams below the indicated ID if these requests were not processed.\",\n  \"interpretation_a\": \"Servers are allowed to reject requests on streams below the GOAWAY ID if they have not yet processed them, implying that such requests are no longer valid and should be canceled by the client.\",\n  \"interpretation_b\": \"Servers may reject requests on streams below the GOAWAY ID even if they were not processed, but this could be interpreted as optional behavior without a clear constraint on when or how it should be applied, leading to inconsistent implementations.\",\n  \"missing_information\": \"The clause does not specify under what conditions or timing servers should reject such requests, nor does it clarify the expected client behavior in response to such rejections, leading to ambiguity in implementation.\",\n  \"justification\": \"The target clause introduces a 'MAY' condition for server behavior that is not clearly constrained, allowing for multiple interpretations of when and how servers should reject requests on streams below the GOAWAY ID. This lack of constraint could lead to different implementations handling such cases inconsistently.\"\n}",
+  "record_id": "ab7a99ca281b24ab8c1d79593e05ea2a4238b9d37e3047a50319ffcbe0e2de6f",
+  "revision": "18",
+  "schema_version": 1,
+  "section_ids": "6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.515
+}

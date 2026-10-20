@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY be treated",
+    "interpretation_a": "Implementations are permitted to treat a PRIORITY frame with the Empty bit not set to zero as a connection error.",
+    "interpretation_b": "Implementations are not required to treat a PRIORITY frame with the Empty bit not set to zero as a connection error; they may choose to ignore it or handle it differently.",
+    "is_ambiguous": "yes",
+    "justification": "The use of \"MAY\" introduces a choice for the implementation. While it doesn't create a direct contradiction, it leaves open the question of whether an implementation *must* treat the frame as an error if it doesn't, leading to different behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:09:26.191299+00:00",
+  "document_id": "draft-ietf-quic-http-22",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "2c3bf991a58a0c93e161041178076a50ce90bac17f6036442a3aac1dbba0d0a8",
+  "lineage_ids": "lineage:c5f73acf906f2c2e4c64fd29",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 165,
+    "load_duration": 20568500,
+    "prompt_eval_count": 613,
+    "total_duration": 6456305600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY be treated\", \"interpretation_a\": \"Implementations are permitted to treat a PRIORITY frame with the Empty bit not set to zero as a connection error.\", \"interpretation_b\": \"Implementations are not required to treat a PRIORITY frame with the Empty bit not set to zero as a connection error; they may choose to ignore it or handle it differently.\", \"missing_information\": \"\", \"justification\": \"The use of \\\"MAY\\\" introduces a choice for the implementation. While it doesn't create a direct contradiction, it leaves open the question of whether an implementation *must* treat the frame as an error if it doesn't, leading to different behaviours.\"}",
+  "record_id": "d22acda7f82e58f7398c3722e5abbc8fbd36b7cc752b67e10f10074eec03bb0c",
+  "revision": "22",
+  "schema_version": 1,
+  "section_ids": "7.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.453
+}

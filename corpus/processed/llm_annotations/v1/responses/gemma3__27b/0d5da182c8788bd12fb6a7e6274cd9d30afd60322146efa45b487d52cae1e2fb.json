@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY change the request method from POST to GET",
+    "interpretation_a": "A user agent is permitted to change a POST request to a GET request after receiving a 301 redirect.",
+    "interpretation_b": "A user agent is not required to change a POST request to a GET request after receiving a 301 redirect; it can preserve the original method.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' allows for two valid interpretations: the user agent can change the method, or it can retain the original method. Without further constraints, implementations could behave differently, leading to interoperability issues.",
+    "missing_information": "The clause does not specify under what conditions a user agent *should* or *should not* change the request method. This lack of constraint creates ambiguity in implementation."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:55:33.588072+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-14",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "0d26f1591ad57e15543b9380a6263a49f0b72d8c30d887c9b59f9adc00af8db6",
+  "lineage_ids": "lineage:2fbab645f77e3feeef00d2cd",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 191,
+    "load_duration": 8545500,
+    "prompt_eval_count": 582,
+    "total_duration": 7734029600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY change the request method from POST to GET\", \"interpretation_a\": \"A user agent is permitted to change a POST request to a GET request after receiving a 301 redirect.\", \"interpretation_b\": \"A user agent is not required to change a POST request to a GET request after receiving a 301 redirect; it can preserve the original method.\", \"missing_information\": \"The clause does not specify under what conditions a user agent *should* or *should not* change the request method. This lack of constraint creates ambiguity in implementation.\",\"justification\": \"The use of 'MAY' allows for two valid interpretations: the user agent can change the method, or it can retain the original method. Without further constraints, implementations could behave differently, leading to interoperability issues.\"}",
+  "record_id": "0d5da182c8788bd12fb6a7e6274cd9d30afd60322146efa45b487d52cae1e2fb",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "15.4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.75
+}

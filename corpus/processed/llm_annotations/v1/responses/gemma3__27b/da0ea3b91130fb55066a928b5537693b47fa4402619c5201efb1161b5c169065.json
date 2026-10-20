@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "partitioned for each local network",
+    "interpretation_a": "Each network interface (e.g., Wi-Fi, Ethernet) requires a separate DNS cache partition.",
+    "interpretation_b": "Each physically separate network (e.g., home network, work network) requires a separate DNS cache partition, even if using the same network interface.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'local network' is open to interpretation. A client could reasonably interpret this as partitioning by network interface or by a more general network definition. Without a clearer definition, implementations could differ in how they partition the DNS cache, leading to varying levels of security.",
+    "missing_information": "The definition of 'local network' is not precise. Is it a broadcast domain, a subnet, or something else? This affects how the partitioning or flushing is implemented."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:12:33.341539+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "af6a0f5e5d3f2f734e7164e99df426b67c2d41f5f888e068b14c0bcbdd7e4667",
+  "lineage_ids": "lineage:d7625c1e1037235c26fe9f9c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 196,
+    "load_duration": 2506000,
+    "prompt_eval_count": 597,
+    "total_duration": 7406495400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"partitioned for each local network\", \"interpretation_a\": \"Each network interface (e.g., Wi-Fi, Ethernet) requires a separate DNS cache partition.\", \"interpretation_b\": \"Each physically separate network (e.g., home network, work network) requires a separate DNS cache partition, even if using the same network interface.\", \"missing_information\": \"The definition of 'local network' is not precise. Is it a broadcast domain, a subnet, or something else? This affects how the partitioning or flushing is implemented.\",\"justification\": \"The phrase 'local network' is open to interpretation. A client could reasonably interpret this as partitioning by network interface or by a more general network definition. Without a clearer definition, implementations could differ in how they partition the DNS cache, leading to varying levels of security.\"}",
+  "record_id": "da0ea3b91130fb55066a928b5537693b47fa4402619c5201efb1161b5c169065",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "12",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.406
+}

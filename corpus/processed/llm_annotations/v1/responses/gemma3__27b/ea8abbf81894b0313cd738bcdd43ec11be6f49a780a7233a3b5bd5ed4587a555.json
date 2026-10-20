@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "limit the number of bytes",
+    "interpretation_a": "The server must limit the total number of bytes sent across all packets before validating the client's address.",
+    "interpretation_b": "The server must limit the number of bytes sent in a single datagram before validating the client's address.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'number of bytes' is ambiguous. It could refer to the total bytes sent since the connection started, or the bytes in a single datagram. Both interpretations are reasonable and would lead to different implementations.",
+    "missing_information": "The clause does not specify whether the limit applies to a single datagram or the cumulative number of bytes sent. This affects how the server implements the limitation."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:13:17.557415+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "0ec0103527e54bf29554f56b94d1db2d0d258c774125c14a9c0c531311c0a1cc",
+  "lineage_ids": "lineage:2ac54c858f624938fa44f687",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 174,
+    "load_duration": 7032000,
+    "prompt_eval_count": 572,
+    "total_duration": 6611936800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"limit the number of bytes\", \"interpretation_a\": \"The server must limit the total number of bytes sent across all packets before validating the client's address.\", \"interpretation_b\": \"The server must limit the number of bytes sent in a single datagram before validating the client's address.\", \"missing_information\": \"The clause does not specify whether the limit applies to a single datagram or the cumulative number of bytes sent. This affects how the server implements the limitation.\",\"justification\": \"The phrase 'number of bytes' is ambiguous. It could refer to the total bytes sent since the connection started, or the bytes in a single datagram. Both interpretations are reasonable and would lead to different implementations.\"}",
+  "record_id": "ea8abbf81894b0313cd738bcdd43ec11be6f49a780a7233a3b5bd5ed4587a555",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "14.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.61
+}

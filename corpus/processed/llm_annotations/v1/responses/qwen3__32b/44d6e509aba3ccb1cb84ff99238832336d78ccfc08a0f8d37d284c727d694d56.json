@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "A recipient MUST parse and ignore a reasonable number of empty list elements: enough to handle common mistakes by senders that merge values, but not so much that they could be used as a denial-of-service mechanism.",
+    "interpretation_a": "A recipient could interpret 'a reasonable number' as a small, fixed number (e.g., up to 5 empty elements), sufficient to handle common sender errors without risking denial-of-service.",
+    "interpretation_b": "A recipient could interpret 'a reasonable number' as a dynamic or context-dependent threshold, such as based on system resources or message size, to avoid denial-of-service while still handling sender errors.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'a reasonable number' is not quantified or bounded, and the clause does not provide a concrete constraint or reference to a standard for determining what is 'reasonable'. This missing constraint allows for materially different implementations depending on how 'reasonable' is interpreted.",
+    "missing_information": "The clause does not define what constitutes a 'reasonable number' of empty elements, leaving the implementation threshold undefined and open to interpretation."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:10:37.886904+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "245f4fa32654974ac53c841be248c5f30c1f763978fe279efc5a0e9042484ce5",
+  "lineage_ids": "lineage:ef73d230f130f01afd5850df",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 254,
+    "load_duration": 14195500,
+    "prompt_eval_count": 543,
+    "total_duration": 10548397900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"A recipient MUST parse and ignore a reasonable number of empty list elements: enough to handle common mistakes by senders that merge values, but not so much that they could be used as a denial-of-service mechanism.\",\n  \"interpretation_a\": \"A recipient could interpret 'a reasonable number' as a small, fixed number (e.g., up to 5 empty elements), sufficient to handle common sender errors without risking denial-of-service.\",\n  \"interpretation_b\": \"A recipient could interpret 'a reasonable number' as a dynamic or context-dependent threshold, such as based on system resources or message size, to avoid denial-of-service while still handling sender errors.\",\n  \"missing_information\": \"The clause does not define what constitutes a 'reasonable number' of empty elements, leaving the implementation threshold undefined and open to interpretation.\",\n  \"justification\": \"The phrase 'a reasonable number' is not quantified or bounded, and the clause does not provide a concrete constraint or reference to a standard for determining what is 'reasonable'. This missing constraint allows for materially different implementations depending on how 'reasonable' is interpreted.\"\n}",
+  "record_id": "44d6e509aba3ccb1cb84ff99238832336d78ccfc08a0f8d37d284c727d694d56",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "5.6.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.563
+}

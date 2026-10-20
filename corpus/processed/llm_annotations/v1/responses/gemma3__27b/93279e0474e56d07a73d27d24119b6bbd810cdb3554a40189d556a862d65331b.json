@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "it MUST continue to use the same Destination Connection ID",
+    "interpretation_a": "The client is required to use the Destination Connection ID it *initially* used, even if the server signals a different one in the handshake.",
+    "interpretation_b": "The client is required to use the Destination Connection ID from the *most recent* handshake packet, even if it differs from the initial one.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'the same Destination Connection ID' is underspecified. It's unclear whether the client should continue using the original Destination Connection ID it started with, or the one provided in the Handshake packet, even if they differ. This affects how the client constructs and sends 0-RTT packets.",
+    "missing_information": "The clause does not specify which 'same Destination Connection ID' the client must use. Is it the initial one, or the one received in the handshake packet?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:45:19.259594+00:00",
+  "document_id": "draft-ietf-quic-transport-12",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "ef0716d270b24119235d74489e6ffc8a43e4a2a7472c79173ff8fe8f7cd8a2c9",
+  "lineage_ids": "lineage:02859294154ea9d0ff5a6276",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 213,
+    "load_duration": 4851800,
+    "prompt_eval_count": 590,
+    "total_duration": 8005320400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"it MUST continue to use the same Destination Connection ID\", \"interpretation_a\": \"The client is required to use the Destination Connection ID it *initially* used, even if the server signals a different one in the handshake.\", \"interpretation_b\": \"The client is required to use the Destination Connection ID from the *most recent* handshake packet, even if it differs from the initial one.\", \"missing_information\": \"The clause does not specify which 'same Destination Connection ID' the client must use. Is it the initial one, or the one received in the handshake packet?\",\"justification\": \"The phrase 'the same Destination Connection ID' is underspecified. It's unclear whether the client should continue using the original Destination Connection ID it started with, or the one provided in the Handshake packet, even if they differ. This affects how the client constructs and sends 0-RTT packets.\"}",
+  "record_id": "93279e0474e56d07a73d27d24119b6bbd810cdb3554a40189d556a862d65331b",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "4.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.0
+}

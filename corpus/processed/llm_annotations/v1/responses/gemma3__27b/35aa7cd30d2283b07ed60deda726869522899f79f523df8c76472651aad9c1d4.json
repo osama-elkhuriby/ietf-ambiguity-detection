@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "for which the server is authoritative",
+    "interpretation_a": "The server is authoritative for the value in the \":authority\" pseudo-header, meaning it is the canonical name for a resource.",
+    "interpretation_b": "The server is authoritative in the sense that it is allowed to respond to requests for the domain specified in the \":authority\" pseudo-header, but doesn't necessarily imply canonical naming.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'authoritative' is not clearly defined. It could refer to being the canonical name for a resource (like a DNS authoritative server), or simply being permitted to respond to requests for that domain. Both interpretations are reasonable given the context.",
+    "missing_information": "The definition of 'authoritative' is not provided and has multiple reasonable interpretations in the context of HTTP and DNS."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:45:58.920778+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "2c5a347a45ffc77c0065a1bd820065b9afeea8a06de0887df1571feee228e2a7",
+  "lineage_ids": "lineage:532081123bbe47281a5461bd",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 195,
+    "load_duration": 9629600,
+    "prompt_eval_count": 585,
+    "total_duration": 7562254600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-1\", \"evidence_span\": \"for which the server is authoritative\", \"interpretation_a\": \"The server is authoritative for the value in the \\\":authority\\\" pseudo-header, meaning it is the canonical name for a resource.\", \"interpretation_b\": \"The server is authoritative in the sense that it is allowed to respond to requests for the domain specified in the \\\":authority\\\" pseudo-header, but doesn't necessarily imply canonical naming.\", \"missing_information\": \"The definition of 'authoritative' is not provided and has multiple reasonable interpretations in the context of HTTP and DNS.\",\"justification\": \"The term 'authoritative' is not clearly defined. It could refer to being the canonical name for a resource (like a DNS authoritative server), or simply being permitted to respond to requests for that domain. Both interpretations are reasonable given the context.\"}",
+  "record_id": "35aa7cd30d2283b07ed60deda726869522899f79f523df8c76472651aad9c1d4",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.578
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "reasonably sure",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause requires an endpoint to be \"reasonably sure\" before resuming the previous send rate, but the term \"reasonably sure\" is not defined in the supplied text, leaving the implementation behavior under-specified.",
+    "missing_information": "definition of \"reasonably sure\" or criteria for determining that the previous send rate is valid for the new path"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T17:29:15.802142+00:00",
+  "document_id": "draft-ietf-quic-transport-22",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "ee421d691412de562b8334a142d12ac78dc88cb456a24e8cd630b11ffdf03c66",
+  "lineage_ids": "lineage:b7c0aa128c3f55eb1fa2d3b6",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 881,
+    "load_duration": 6214800,
+    "prompt_eval_count": 613,
+    "total_duration": 7695482100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"reasonably sure\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"definition of \\\"reasonably sure\\\" or criteria for determining that the previous send rate is valid for the new path\",\n  \"justification\": \"The clause requires an endpoint to be \\\"reasonably sure\\\" before resuming the previous send rate, but the term \\\"reasonably sure\\\" is not defined in the supplied text, leaving the implementation behavior under-specified.\"\n}",
+  "record_id": "a1126c19ff1f45d483cd2cc8af289d1f2b63b42d0340a9a736a0809860fa348d",
+  "revision": "22",
+  "schema_version": 1,
+  "section_ids": "9.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.688
+}

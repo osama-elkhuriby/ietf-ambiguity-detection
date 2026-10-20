@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "0x1f * N + 0x21",
+    "interpretation_a": "The range of reserved codes starts at 0x21 and extends to 0x3FFFFFFFFFFFFFFE, inclusive. Any value within this range is prohibited for assignment.",
+    "interpretation_b": "The range of reserved codes starts at 0x21 and extends to the maximum possible 64-bit integer value (0x7FFFFFFFFFFFFFFF) that satisfies the formula 0x1f * N + 0x21. The upper bound 0x3FFFFFFFFFFFFFFE is likely a typo or an unintended limit.",
+    "is_ambiguous": "yes",
+    "justification": "The upper bound of the reserved range is ambiguous. The provided value, 0x3FFFFFFFFFFFFFFE, is unusual and doesn't clearly represent a standard maximum value. This creates uncertainty about the actual scope of the reservation.",
+    "missing_information": "The intended upper bound of the reserved code range is unclear. The value 0x3FFFFFFFFFFFFFFE appears to be an arbitrary limit and is not a standard maximum value for a 64-bit integer. Clarification is needed to determine if the intention is to reserve all codes up to the maximum 64-bit integer that fits the formula, or if 0x3FFFFFFFFFFFFFFE is the intended limit."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:45:42.378335+00:00",
+  "document_id": "draft-ietf-quic-http-19",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "f8cd56e7a1e7e1e30aab488367f619b2a528cb5e73412e1c7543792c47395a36",
+  "lineage_ids": "lineage:a0730d1ed1e9603e39fa5618",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 308,
+    "load_duration": 8450600,
+    "prompt_eval_count": 615,
+    "total_duration": 11608683500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"0x1f * N + 0x21\", \"interpretation_a\": \"The range of reserved codes starts at 0x21 and extends to 0x3FFFFFFFFFFFFFFE, inclusive. Any value within this range is prohibited for assignment.\", \"interpretation_b\": \"The range of reserved codes starts at 0x21 and extends to the maximum possible 64-bit integer value (0x7FFFFFFFFFFFFFFF) that satisfies the formula 0x1f * N + 0x21. The upper bound 0x3FFFFFFFFFFFFFFE is likely a typo or an unintended limit.\", \"missing_information\": \"The intended upper bound of the reserved code range is unclear. The value 0x3FFFFFFFFFFFFFFE appears to be an arbitrary limit and is not a standard maximum value for a 64-bit integer. Clarification is needed to determine if the intention is to reserve all codes up to the maximum 64-bit integer that fits the formula, or if 0x3FFFFFFFFFFFFFFE is the intended limit.\", \"justification\": \"The upper bound of the reserved range is ambiguous. The provided value, 0x3FFFFFFFFFFFFFFE, is unusual and doesn't clearly represent a standard maximum value. This creates uncertainty about the actual scope of the reservation.\"}",
+  "record_id": "34fd95e3cf165974e6f404e72d54820cc0b8398c06d39772fb4b00f1b5a93e95",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "10.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.625
+}

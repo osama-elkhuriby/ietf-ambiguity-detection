@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that if the server sends a partial or complete response while still reading the request, the client should continue sending the request body and close the request stream normally. No alternative reasonable interpretations or missing constraints are evident.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T09:26:32.990441+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "bfb9e340d574e7ecfaea3cfe8a74a498642eacfc621356abd00deaa3ef9e916b",
+  "lineage_ids": "lineage:2aec7db35a72f3eb95f4d06b",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2930,
+    "load_duration": 5341200,
+    "prompt_eval_count": 611,
+    "total_duration": 25339028200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that if the server sends a partial or complete response while still reading the request, the client should continue sending the request body and close the request stream normally. No alternative reasonable interpretations or missing constraints are evident.\"\n}",
+  "record_id": "5e49d49be2a0ae471b258d90658447fccfb8da372f0c22e7a13a48fcdd2a0749",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 93.329
+}

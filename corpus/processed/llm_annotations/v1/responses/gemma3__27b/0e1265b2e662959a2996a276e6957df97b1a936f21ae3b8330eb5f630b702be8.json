@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "three times or more larger than the packet it receives",
+    "interpretation_a": "The stateless reset can be up to three times the size of the received packet, but not larger. A packet of 1000 bytes could trigger a reset of 3000 bytes.",
+    "interpretation_b": "The stateless reset must be strictly less than three times the size of the received packet. A packet of 1000 bytes could not trigger a reset of 3000 bytes, only 2999.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'three times or more' is ambiguous. It is unclear whether a reset that is exactly three times the size of the received packet is permitted or not. This affects the maximum size of the reset packet and therefore implementation behaviour.",
+    "missing_information": "The phrase 'three times or more' is ambiguous. Does 'or more' mean any amount over three times, or is it inclusive of three times?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:58:01.304786+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "162e5cfcf4a296daf9638d6f06ccc1660f9e4cec56bb9e4e78b2ed0b6d929ac1",
+  "lineage_ids": "lineage:967092b59fcc6d10b968e99f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 227,
+    "load_duration": 4099700,
+    "prompt_eval_count": 586,
+    "total_duration": 8484038700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"three times or more larger than the packet it receives\", \"interpretation_a\": \"The stateless reset can be up to three times the size of the received packet, but not larger. A packet of 1000 bytes could trigger a reset of 3000 bytes.\", \"interpretation_b\": \"The stateless reset must be strictly less than three times the size of the received packet. A packet of 1000 bytes could not trigger a reset of 3000 bytes, only 2999.\", \"missing_information\": \"The phrase 'three times or more' is ambiguous. Does 'or more' mean any amount over three times, or is it inclusive of three times?\",\"justification\": \"The phrase 'three times or more' is ambiguous. It is unclear whether a reset that is exactly three times the size of the received packet is permitted or not. This affects the maximum size of the reset packet and therefore implementation behaviour.\"}",
+  "record_id": "0e1265b2e662959a2996a276e6957df97b1a936f21ae3b8330eb5f630b702be8",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "10.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.484
+}

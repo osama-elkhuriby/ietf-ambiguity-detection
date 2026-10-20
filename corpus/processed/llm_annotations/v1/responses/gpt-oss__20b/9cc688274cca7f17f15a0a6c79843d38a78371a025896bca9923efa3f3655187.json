@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "as close as possible",
+    "interpretation_a": "obtain the Last-Modified value immediately before the Date field is generated",
+    "interpretation_b": "obtain the Last-Modified value within a few seconds (or a short interval) of the Date field generation",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"as close as possible\" is vague and does not provide a concrete constraint, allowing multiple reasonable interpretations of the required timing. This constitutes an incomplete constraint (U-2).",
+    "missing_information": "The clause does not specify a concrete threshold or definition of how close is close enough, leaving the implementation to decide the acceptable interval between obtaining the Last-Modified value and generating the Date field value. This missing constraint can lead to materially different implementation behaviours. The clause is therefore incomplete and ambiguous.  "
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T07:19:30.971974+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "edbdd618f1b9d7a638c96cafe61b6e6bf4208c642f04bf176a217f972740ca01",
+  "lineage_ids": "lineage:468922b7641c2e92d8b0b0c8",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2175,
+    "load_duration": 4353300,
+    "prompt_eval_count": 604,
+    "total_duration": 19079997900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"as close as possible\",\n  \"interpretation_a\": \"obtain the Last-Modified value immediately before the Date field is generated\",\n  \"interpretation_b\": \"obtain the Last-Modified value within a few seconds (or a short interval) of the Date field generation\",\n  \"missing_information\": \"The clause does not specify a concrete threshold or definition of how close is close enough, leaving the implementation to decide the acceptable interval between obtaining the Last-Modified value and generating the Date field value. This missing constraint can lead to materially different implementation behaviours. The clause is therefore incomplete and ambiguous.  \",\n  \"justification\": \"The phrase \\\"as close as possible\\\" is vague and does not provide a concrete constraint, allowing multiple reasonable interpretations of the required timing. This constitutes an incomplete constraint (U-2).\"\n}",
+  "record_id": "9cc688274cca7f17f15a0a6c79843d38a78371a025896bca9923efa3f3655187",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "8.8.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 19.094
+}

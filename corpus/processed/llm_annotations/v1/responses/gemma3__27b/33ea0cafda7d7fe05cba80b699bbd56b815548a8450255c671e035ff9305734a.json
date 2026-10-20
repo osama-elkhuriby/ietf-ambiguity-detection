@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "followup query to the TargetName MUST also be for type $T",
+    "interpretation_a": "The followup query MUST be for type $T, regardless of any other records that might be present.",
+    "interpretation_b": "The followup query MUST be for type $T, unless other records indicate a different type should be used.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states the followup query 'MUST' be for type $T, but doesn't specify if this is an absolute requirement or if other DNS records could override it. This creates ambiguity in implementation, as some implementations might allow overrides while others might not.",
+    "missing_information": "It is unclear if the requirement to query for type $T is absolute, or if other mechanisms (e.g., other DNS records) could override this requirement. A missing constraint is whether other DNS records can specify a different record type for the followup query."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:00:53.038330+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "c6438ba92937459551868a7951aceca3c819bbfb8e6bba5df3318740fc731369",
+  "lineage_ids": "lineage:b97013291e857e211bc2d7df",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 212,
+    "load_duration": 4904200,
+    "prompt_eval_count": 623,
+    "total_duration": 7973824300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"followup query to the TargetName MUST also be for type $T\", \"interpretation_a\": \"The followup query MUST be for type $T, regardless of any other records that might be present.\", \"interpretation_b\": \"The followup query MUST be for type $T, unless other records indicate a different type should be used.\", \"missing_information\": \"It is unclear if the requirement to query for type $T is absolute, or if other mechanisms (e.g., other DNS records) could override this requirement. A missing constraint is whether other DNS records can specify a different record type for the followup query.\", \"justification\": \"The clause states the followup query 'MUST' be for type $T, but doesn't specify if this is an absolute requirement or if other DNS records could override it. This creates ambiguity in implementation, as some implementations might allow overrides while others might not.\"}",
+  "record_id": "33ea0cafda7d7fe05cba80b699bbd56b815548a8450255c671e035ff9305734a",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.969
+}

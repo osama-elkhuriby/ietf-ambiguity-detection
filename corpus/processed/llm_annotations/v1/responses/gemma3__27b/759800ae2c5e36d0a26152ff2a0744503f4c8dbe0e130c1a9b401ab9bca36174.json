@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "short time",
+    "interpretation_a": "The server must discard the 0-RTT keys within a very brief period after receiving the 1-RTT packet, potentially milliseconds.",
+    "interpretation_b": "The server can delay discarding the 0-RTT keys for a longer, but still limited, duration after receiving the 1-RTT packet, potentially several seconds.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'short time' is subjective and lacks a concrete definition. This allows for materially different implementations, as what constitutes a 'short time' can vary significantly. While a recommendation is provided, it is not a MUST, leaving room for interpretation.",
+    "missing_information": "The phrase 'short time' is not defined, and its meaning is critical to implementation. A concrete duration or a more precise constraint is needed."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:41:02.860154+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "7c090290eb9f707342df16bcd593db6bbe5bc9c67b806b6d1af974fc74a3df79",
+  "lineage_ids": "lineage:322a02c4d045ef4488c7ac0f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 193,
+    "load_duration": 3614900,
+    "prompt_eval_count": 626,
+    "total_duration": 7301168300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"short time\", \"interpretation_a\": \"The server must discard the 0-RTT keys within a very brief period after receiving the 1-RTT packet, potentially milliseconds.\", \"interpretation_b\": \"The server can delay discarding the 0-RTT keys for a longer, but still limited, duration after receiving the 1-RTT packet, potentially several seconds.\", \"missing_information\": \"The phrase 'short time' is not defined, and its meaning is critical to implementation. A concrete duration or a more precise constraint is needed.\",\"justification\": \"The term 'short time' is subjective and lacks a concrete definition. This allows for materially different implementations, as what constitutes a 'short time' can vary significantly. While a recommendation is provided, it is not a MUST, leaving room for interpretation.\"}",
+  "record_id": "759800ae2c5e36d0a26152ff2a0744503f4c8dbe0e130c1a9b401ab9bca36174",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.9.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.297
+}

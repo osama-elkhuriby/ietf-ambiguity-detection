@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "fetch additional information that is required",
+    "interpretation_a": "The client must be able to perform additional DNS queries to resolve any dependencies of the SVCB record (e.g., resolving the target host in the ALPN field).",
+    "interpretation_b": "The client must be able to handle cases where the SVCB record refers to information not available via DNS, such as TLS extensions or certificate details, and potentially use out-of-band mechanisms to obtain it.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'additional information that is required' is vague. It doesn't specify *how* this information is obtained, leaving room for different implementations. Is it limited to DNS, or can it include other mechanisms?",
+    "missing_information": "The type of 'additional information' is not defined. It is unclear whether this refers *only* to DNS lookups, or if it includes other forms of information retrieval."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:06:19.105062+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "afc9c3fbf3a194df7bd69f1e0a0e249b554f2fbf81a21fbbbf3017de5ab7bf5a",
+  "lineage_ids": "lineage:35bdd4b9c334f9424818e92b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 214,
+    "load_duration": 5292900,
+    "prompt_eval_count": 605,
+    "total_duration": 8039401800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"fetch additional information that is required\", \"interpretation_a\": \"The client must be able to perform additional DNS queries to resolve any dependencies of the SVCB record (e.g., resolving the target host in the ALPN field).\", \"interpretation_b\": \"The client must be able to handle cases where the SVCB record refers to information not available via DNS, such as TLS extensions or certificate details, and potentially use out-of-band mechanisms to obtain it.\", \"missing_information\": \"The type of 'additional information' is not defined. It is unclear whether this refers *only* to DNS lookups, or if it includes other forms of information retrieval.\",\"justification\": \"The phrase 'additional information that is required' is vague. It doesn't specify *how* this information is obtained, leaving room for different implementations. Is it limited to DNS, or can it include other mechanisms?\"}",
+  "record_id": "760b538b071ef339f13e6ef85848b7abee3958ccbe43562f1c31b09c749824ff",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.047
+}

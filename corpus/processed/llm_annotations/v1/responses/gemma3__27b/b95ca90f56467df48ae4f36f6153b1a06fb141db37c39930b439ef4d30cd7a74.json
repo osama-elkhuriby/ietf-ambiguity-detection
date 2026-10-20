@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "modify the \"absolute-path\" and \"query\"",
+    "interpretation_a": "The proxy must not change any part of the absolute-path or query string.",
+    "interpretation_b": "The proxy must not *add* to the absolute-path or query string, but may replace existing characters within them.",
+    "is_ambiguous": "yes",
+    "justification": "The term \"modify\" is underspecified. It could mean any change, or it could mean adding to or altering existing content. Without clarification, a proxy could reasonably interpret this to allow character replacement within the absolute-path or query, or to forbid any change whatsoever.",
+    "missing_information": "The clause does not specify whether modification means replacement of existing content, addition of new content, or both. This affects how a proxy would handle, for example, replacing a character in the query string with another character."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:25:24.190011+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-07",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "73d511280bd9f99d8d208ae25127dcfaf7ef37e28ef7f53dc23e8855080319a8",
+  "lineage_ids": "lineage:dc4b9c1c305636e2b9af5109",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 201,
+    "load_duration": 4809400,
+    "prompt_eval_count": 602,
+    "total_duration": 7730928400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"modify the \\\"absolute-path\\\" and \\\"query\\\"\", \"interpretation_a\": \"The proxy must not change any part of the absolute-path or query string.\", \"interpretation_b\": \"The proxy must not *add* to the absolute-path or query string, but may replace existing characters within them.\", \"missing_information\": \"The clause does not specify whether modification means replacement of existing content, addition of new content, or both. This affects how a proxy would handle, for example, replacing a character in the query string with another character.\", \"justification\": \"The term \\\"modify\\\" is underspecified. It could mean any change, or it could mean adding to or altering existing content. Without clarification, a proxy could reasonably interpret this to allow character replacement within the absolute-path or query, or to forbid any change whatsoever.\"}",
+  "record_id": "b95ca90f56467df48ae4f36f6153b1a06fb141db37c39930b439ef4d30cd7a74",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "5.7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.75
+}

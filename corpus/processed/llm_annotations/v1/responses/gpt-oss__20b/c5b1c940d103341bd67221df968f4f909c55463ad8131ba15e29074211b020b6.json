@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "provided that the packet is sufficiently long",
+    "interpretation_a": "The clause does not specify what to do if the packet is not sufficiently long.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause’s phrase “provided that the packet is sufficiently long” introduces an incomplete constraint: it specifies an action only for sufficiently long packets but does not state what to do otherwise. This omission leads to multiple reasonable implementation behaviours for packets that are not sufficiently long, making the clause ambiguous.",
+    "missing_information": "The clause does not specify the action for packets that are not sufficiently long. This omission creates an incomplete constraint affecting implementation behaviour. The server could drop the packet, ignore it, or attempt to decode it, but the text does not mandate any specific behaviour in that case. The ambiguity arises because the clause only prescribes sending a Version Negotiation packet when the packet is sufficiently long, leaving the handling of shorter packets undefined. This missing constraint prevents a unique operational interpretation for such packets. The clause also does not clarify whether the server should still refrain from decoding or decrypting the packet when it is not sufficiently long, or whether it may attempt to do so. The lack of a clear rule for this scenario is the source of the ambiguity. The clause could be clarified by explicitly stating the required action for packets that are not sufficiently long, e.g., “Servers SHOULD NOT attempt to decode or decrypt a packet from an unknown version, and if the packet is sufficiently long, they SHOULD send a Version Negotiation packet; otherwise, they SHOULD drop the packet.”"
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T18:15:30.866911+00:00",
+  "document_id": "draft-ietf-quic-transport-29",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "c0a93cd8b48a0cc84fcbb6ec24dd78be90ce3316d41c38b195d501050227c3da",
+  "lineage_ids": "lineage:9a73f94735a2648a239d3748",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1603,
+    "load_duration": 4561800,
+    "prompt_eval_count": 642,
+    "total_duration": 14467945300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"provided that the packet is sufficiently long\",\n  \"interpretation_a\": \"The clause does not specify what to do if the packet is not sufficiently long.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The clause does not specify the action for packets that are not sufficiently long. This omission creates an incomplete constraint affecting implementation behaviour. The server could drop the packet, ignore it, or attempt to decode it, but the text does not mandate any specific behaviour in that case. The ambiguity arises because the clause only prescribes sending a Version Negotiation packet when the packet is sufficiently long, leaving the handling of shorter packets undefined. This missing constraint prevents a unique operational interpretation for such packets. The clause also does not clarify whether the server should still refrain from decoding or decrypting the packet when it is not sufficiently long, or whether it may attempt to do so. The lack of a clear rule for this scenario is the source of the ambiguity. The clause could be clarified by explicitly stating the required action for packets that are not sufficiently long, e.g., “Servers SHOULD NOT attempt to decode or decrypt a packet from an unknown version, and if the packet is sufficiently long, they SHOULD send a Version Negotiation packet; otherwise, they SHOULD drop the packet.”\",\n  \"justification\": \"The clause’s phrase “provided that the packet is sufficiently long” introduces an incomplete constraint: it specifies an action only for sufficiently long packets but does not state what to do otherwise. This omission leads to multiple reasonable implementation behaviours for packets that are not sufficiently long, making the clause ambiguous.\"\n}",
+  "record_id": "c5b1c940d103341bd67221df968f4f909c55463ad8131ba15e29074211b020b6",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "5.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 82.235
+}

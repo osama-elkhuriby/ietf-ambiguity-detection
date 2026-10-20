@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously specifies that after sending a GOAWAY, the sender ignores frames on streams initiated by the receiver with stream identifiers higher than the last stream identifier, and that receivers must not open new streams on the same connection. No alternative reasonable interpretations or missing constraints are evident.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T04:23:39.711055+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "c35b4598d892f8866f1a8ad0fbb3194dd0cccd85d4ecac479d00be681793a010",
+  "lineage_ids": "lineage:f848c019afa8a447398d09ec",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 4728,
+    "load_duration": 6831700,
+    "prompt_eval_count": 644,
+    "total_duration": 40937765500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously specifies that after sending a GOAWAY, the sender ignores frames on streams initiated by the receiver with stream identifiers higher than the last stream identifier, and that receivers must not open new streams on the same connection. No alternative reasonable interpretations or missing constraints are evident.\"\n}",
+  "record_id": "723c1ad01f2f054ad1f69e2d57c5d2dbd891ea0b36844f71acb329e76ce643ef",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 40.937
+}

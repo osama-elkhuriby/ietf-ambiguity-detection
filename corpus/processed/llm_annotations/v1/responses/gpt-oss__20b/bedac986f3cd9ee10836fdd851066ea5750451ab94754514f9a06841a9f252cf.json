@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Protocol mapping documents MAY specify additional underscore-prefixed labels to be prepended.",
+    "interpretation_a": "Additional labels are prepended before the scheme label, e.g., \"_label1._label2._scheme.service.example.com.\"",
+    "interpretation_b": "Additional labels are prepended after the scheme label, e.g., \"_scheme._label1._label2.service.example.com.\"",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify the order of the additional underscore-prefixed labels relative to the scheme label, leaving two reasonable implementation options.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T03:22:12.052638+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "6d7538326b7c6f020b5f87a638dbe6fff1938db94646b7f7c8c03b7940218c89",
+  "lineage_ids": "lineage:7202db9162e33ac0ca7072f1",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 962,
+    "load_duration": 4509600,
+    "prompt_eval_count": 689,
+    "total_duration": 8480445900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"Protocol mapping documents MAY specify additional underscore-prefixed labels to be prepended.\",\n  \"interpretation_a\": \"Additional labels are prepended before the scheme label, e.g., \\\"_label1._label2._scheme.service.example.com.\\\"\",\n  \"interpretation_b\": \"Additional labels are prepended after the scheme label, e.g., \\\"_scheme._label1._label2.service.example.com.\\\"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify the order of the additional underscore-prefixed labels relative to the scheme label, leaving two reasonable implementation options.\"\n}",
+  "record_id": "bedac986f3cd9ee10836fdd851066ea5750451ab94754514f9a06841a9f252cf",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 75.86
+}

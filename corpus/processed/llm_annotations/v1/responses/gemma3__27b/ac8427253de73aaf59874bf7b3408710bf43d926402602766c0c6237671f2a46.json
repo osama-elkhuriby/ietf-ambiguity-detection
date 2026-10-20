@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless the recipient has determined (through experience or configuration) that the sender incorrectly implements what is implied by those semantics.",
+    "interpretation_a": "The recipient can disregard the protocol element if it *believes* the sender is implementing the semantics incorrectly, based on its own internal logic or configuration.",
+    "interpretation_b": "The recipient can disregard the protocol element only if it has *objective proof* that the sender is violating the defined semantics, and this proof is independent of the recipient's configuration.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'incorrectly implements what is implied by those semantics' is subjective. What one recipient considers an incorrect implementation, another might consider valid. The clause doesn't define the criteria for determining incorrectness, creating a loophole for implementations to diverge.",
+    "missing_information": "The clause lacks a clear definition of what constitutes 'incorrectly implements what is implied by those semantics'. The threshold for determining incorrect implementation is not specified, leading to potential disagreement between implementations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:23:41.189166+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "e2f906e4589235cdd1541d3386c5ccfd657dfb80e51ea9dc2749cff778c0e853",
+  "lineage_ids": "lineage:2aa2a894c05a79b1b56d3e91",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 228,
+    "load_duration": 8621900,
+    "prompt_eval_count": 600,
+    "total_duration": 8702001200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless the recipient has determined (through experience or configuration) that the sender incorrectly implements what is implied by those semantics.\", \"interpretation_a\": \"The recipient can disregard the protocol element if it *believes* the sender is implementing the semantics incorrectly, based on its own internal logic or configuration.\", \"interpretation_b\": \"The recipient can disregard the protocol element only if it has *objective proof* that the sender is violating the defined semantics, and this proof is independent of the recipient's configuration.\", \"missing_information\": \"The clause lacks a clear definition of what constitutes 'incorrectly implements what is implied by those semantics'. The threshold for determining incorrect implementation is not specified, leading to potential disagreement between implementations.\", \"justification\": \"The phrase 'incorrectly implements what is implied by those semantics' is subjective. What one recipient considers an incorrect implementation, another might consider valid. The clause doesn't define the criteria for determining incorrectness, creating a loophole for implementations to diverge.\"}",
+  "record_id": "ac8427253de73aaf59874bf7b3408710bf43d926402602766c0c6237671f2a46",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "2.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.703
+}

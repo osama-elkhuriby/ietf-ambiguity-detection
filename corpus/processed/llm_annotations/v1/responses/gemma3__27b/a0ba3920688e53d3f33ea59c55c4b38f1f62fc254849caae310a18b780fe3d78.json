@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST match the values",
+    "interpretation_a": "The values must be identical, bit-for-bit.",
+    "interpretation_b": "The values must be equivalent in meaning, allowing for potential differences in encoding or representation (e.g., different byte order).",
+    "is_ambiguous": "yes",
+    "justification": "The term 'match' is vague. It doesn't specify whether the comparison should be strict (identical values) or semantic (equivalent meaning). This lack of precision creates ambiguity in implementation.",
+    "missing_information": "The clause does not specify the level of matching required. Does 'match' mean exact equality, or semantic equivalence? Without this clarification, implementations could diverge on how they compare the values, leading to interoperability issues."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:49:50.405295+00:00",
+  "document_id": "draft-ietf-quic-transport-33",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "9b196337da6d59a29efbc503dfe3ca9bbaf124f251b47f116fc4dddc88219deb",
+  "lineage_ids": "lineage:45f75b0289c245d074f7e2ee",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 175,
+    "load_duration": 6119300,
+    "prompt_eval_count": 613,
+    "total_duration": 6663531000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST match the values\", \"interpretation_a\": \"The values must be identical, bit-for-bit.\", \"interpretation_b\": \"The values must be equivalent in meaning, allowing for potential differences in encoding or representation (e.g., different byte order).\", \"missing_information\": \"The clause does not specify the level of matching required. Does 'match' mean exact equality, or semantic equivalence? Without this clarification, implementations could diverge on how they compare the values, leading to interoperability issues.\",\"justification\": \"The term 'match' is vague. It doesn't specify whether the comparison should be strict (identical values) or semantic (equivalent meaning). This lack of precision creates ambiguity in implementation.\"}",
+  "record_id": "a0ba3920688e53d3f33ea59c55c4b38f1f62fc254849caae310a18b780fe3d78",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "7.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.656
+}

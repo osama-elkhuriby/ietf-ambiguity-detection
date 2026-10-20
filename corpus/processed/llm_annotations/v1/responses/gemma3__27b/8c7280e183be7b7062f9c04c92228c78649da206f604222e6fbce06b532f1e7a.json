@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "\"idle\" state",
+    "interpretation_a": "A stream is considered 'idle' from the moment it is created but before any frames are sent or received for it.",
+    "interpretation_b": "A stream is considered 'idle' only after a FIN frame has been sent and acknowledged, indicating the end of the stream.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'idle' is not defined, and its meaning is crucial to determining whether a RST_STREAM frame is valid. Different interpretations of 'idle' lead to different implementation behaviours.",
+    "missing_information": "The definition of \"idle\" state is not provided within the supplied text. Without a clear definition, it is unclear when a stream transitions into and out of the 'idle' state, leading to different interpretations of when RST_STREAM frames are prohibited."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:40:58.246187+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "2f059fc60cec35fd162e505dfc60b7cb0cf58815d6bd2576393632e2ddbf7159",
+  "lineage_ids": "lineage:44af9f852283dfc094ff73dc",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 192,
+    "load_duration": 11821900,
+    "prompt_eval_count": 593,
+    "total_duration": 7442992000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"\\\"idle\\\" state\", \"interpretation_a\": \"A stream is considered 'idle' from the moment it is created but before any frames are sent or received for it.\", \"interpretation_b\": \"A stream is considered 'idle' only after a FIN frame has been sent and acknowledged, indicating the end of the stream.\", \"missing_information\": \"The definition of \\\"idle\\\" state is not provided within the supplied text. Without a clear definition, it is unclear when a stream transitions into and out of the 'idle' state, leading to different interpretations of when RST_STREAM frames are prohibited.\", \"justification\": \"The term 'idle' is not defined, and its meaning is crucial to determining whether a RST_STREAM frame is valid. Different interpretations of 'idle' lead to different implementation behaviours.\"}",
+  "record_id": "8c7280e183be7b7062f9c04c92228c78649da206f604222e6fbce06b532f1e7a",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.453
+}

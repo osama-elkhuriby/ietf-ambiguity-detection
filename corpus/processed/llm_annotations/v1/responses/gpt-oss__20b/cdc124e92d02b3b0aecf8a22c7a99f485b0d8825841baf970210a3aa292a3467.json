@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that a client should not use PING frames to keep a connection open unless there are outstanding responses for requests or server pushes. The reference to “this purpose” is clear from the preceding clause, and the conditional “unless” provides a single, well‑defined exception. No alternative materially different implementation behaviours or missing constraints are evident.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T10:22:21.528958+00:00",
+  "document_id": "draft-ietf-quic-http-14",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "ac6fc6b0212bf78ecaef16d142095da499a07bbc8db2de98bf7c7dcb5a91642e",
+  "lineage_ids": "lineage:f31451432d7085d8fa6611e0",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1195,
+    "load_duration": 4673200,
+    "prompt_eval_count": 619,
+    "total_duration": 10314005700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that a client should not use PING frames to keep a connection open unless there are outstanding responses for requests or server pushes. The reference to “this purpose” is clear from the preceding clause, and the conditional “unless” provides a single, well‑defined exception. No alternative materially different implementation behaviours or missing constraints are evident.\"\n}",
+  "record_id": "cdc124e92d02b3b0aecf8a22c7a99f485b0d8825841baf970210a3aa292a3467",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.313
+}

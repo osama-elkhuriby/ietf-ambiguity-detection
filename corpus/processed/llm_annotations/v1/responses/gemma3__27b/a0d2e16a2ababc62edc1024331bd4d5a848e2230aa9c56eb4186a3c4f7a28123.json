@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "exceeds the maximum stream ID",
+    "interpretation_a": "The STREAM_BLOCKED frame is sent when a stream ID is *greater than* the maximum allowed stream ID.",
+    "interpretation_b": "The STREAM_BLOCKED frame is sent when a stream ID is *equal to* the maximum allowed stream ID. The phrase 'exceeds' is not precise.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'exceeds' is ambiguous. Does it mean 'greater than' or 'greater than or equal to'? This affects the boundary condition for triggering the STREAM_BLOCKED frame.",
+    "missing_information": "It is unclear whether the maximum stream ID is inclusive or exclusive. This affects how implementations determine when to send the STREAM_BLOCKED frame."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:49:57.347932+00:00",
+  "document_id": "draft-ietf-quic-transport-05",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "7ddd10b7cb64c1eb3209bbe67531ff687365e87471d69c192e26a9ff3fb0f357",
+  "lineage_ids": "lineage:49b7a656f0c86d14d37f8940",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 183,
+    "load_duration": 11688900,
+    "prompt_eval_count": 594,
+    "total_duration": 6942559800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"exceeds the maximum stream ID\", \"interpretation_a\": \"The STREAM_BLOCKED frame is sent when a stream ID is *greater than* the maximum allowed stream ID.\", \"interpretation_b\": \"The STREAM_BLOCKED frame is sent when a stream ID is *equal to* the maximum allowed stream ID. The phrase 'exceeds' is not precise.\", \"missing_information\": \"It is unclear whether the maximum stream ID is inclusive or exclusive. This affects how implementations determine when to send the STREAM_BLOCKED frame.\",\"justification\": \"The term 'exceeds' is ambiguous. Does it mean 'greater than' or 'greater than or equal to'? This affects the boundary condition for triggering the STREAM_BLOCKED frame.\"}",
+  "record_id": "a0d2e16a2ababc62edc1024331bd4d5a848e2230aa9c56eb4186a3c4f7a28123",
+  "revision": "05",
+  "schema_version": 1,
+  "section_ids": "8.9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.953
+}

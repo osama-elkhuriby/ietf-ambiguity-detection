@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "what is necessary to identify the product",
+    "interpretation_a": "The clause could be interpreted as requiring only the product name to identify the product.",
+    "interpretation_b": "The clause could be interpreted as requiring the product name plus a version identifier to identify the product.",
+    "is_ambiguous": "yes",
+    "justification": "The target clause lacks a precise definition of 'necessary', creating an incomplete constraint that can result in materially different implementation behaviours.",
+    "missing_information": "Definition of what constitutes 'necessary' information for identifying the product is not provided in the clause itself. This omission leads to different possible implementation behaviours regarding whether the product-version must be included or not."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T05:47:51.978893+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "179708e70e0aa7f091267b8a40e9fce5fca772cbd87941ca7ef6da1dad8778d6",
+  "lineage_ids": "lineage:3e8fafe1fbd60bdbc4ef82ff",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 7451,
+    "load_duration": 4415300,
+    "prompt_eval_count": 612,
+    "total_duration": 65092591000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"what is necessary to identify the product\",\n  \"interpretation_a\": \"The clause could be interpreted as requiring only the product name to identify the product.\",\n  \"interpretation_b\": \"The clause could be interpreted as requiring the product name plus a version identifier to identify the product.\",\n  \"missing_information\": \"Definition of what constitutes 'necessary' information for identifying the product is not provided in the clause itself. This omission leads to different possible implementation behaviours regarding whether the product-version must be included or not.\",\n  \"justification\": \"The target clause lacks a precise definition of 'necessary', creating an incomplete constraint that can result in materially different implementation behaviours.\"\n}",
+  "record_id": "2ea5e370b196973741bcacebc51e809e062d6eaedf1a37a13337af0ddaa6aa56",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "10.1.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 65.094
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "before being passed into a non-HTTP/2 context",
+    "interpretation_a": "The concatenation happens immediately after decompression, regardless of whether the receiving context is ready.",
+    "interpretation_b": "The concatenation happens only when the data is actually *being passed* to the non-HTTP/2 context, allowing for potential buffering or other processing in between.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'before being passed into' is temporally ambiguous. Does it mean 'immediately before' or 'at some point before'?",
+    "missing_information": "It is unclear whether the concatenation is an immediate operation after decompression or is triggered by the act of passing the data to a non-HTTP/2 context. This affects buffering and potential intermediate processing."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:36:15.981897+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-03",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "32ea7f14ca31c111c6fa70381b131e92cb89c78ca6624dbbac9cfc4bd0995ecf",
+  "lineage_ids": "lineage:3e3f15334bd21b5ff509d598",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 177,
+    "load_duration": 11330300,
+    "prompt_eval_count": 633,
+    "total_duration": 6942831100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"before being passed into a non-HTTP/2 context\", \"interpretation_a\": \"The concatenation happens immediately after decompression, regardless of whether the receiving context is ready.\", \"interpretation_b\": \"The concatenation happens only when the data is actually *being passed* to the non-HTTP/2 context, allowing for potential buffering or other processing in between.\", \"missing_information\": \"It is unclear whether the concatenation is an immediate operation after decompression or is triggered by the act of passing the data to a non-HTTP/2 context. This affects buffering and potential intermediate processing.\",\"justification\": \"The phrase 'before being passed into' is temporally ambiguous. Does it mean 'immediately before' or 'at some point before'?\"}",
+  "record_id": "6458b706452c6e486d22525e13eceb7c8f4b4f2995dfa621d85a1b7843216f8e",
+  "revision": "03",
+  "schema_version": 1,
+  "section_ids": "8.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.953
+}

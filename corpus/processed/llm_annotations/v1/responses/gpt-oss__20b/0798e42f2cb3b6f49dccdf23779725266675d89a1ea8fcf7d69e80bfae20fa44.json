@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "the following values",
+    "interpretation_a": "The clause does not specify which values must be verified, leaving ambiguity about which values are required for consistency checks.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause refers to \"the following values\" without enumerating them, creating an incomplete constraint that could lead to different implementation behaviours.",
+    "missing_information": "The specific values that must be verified are not listed in the clause itself; they are only implied to be the ones listed in the following clause, which is not part of the clause being evaluated. This omission prevents a unique operational interpretation of the verification requirement."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T20:47:53.055652+00:00",
+  "document_id": "draft-ietf-tls-tls13-18",
+  "family_id": "draft-ietf-tls-tls13",
+  "input_fingerprint": "674cb15bf084635c8ef8b47a3c92c5199c7cca6ec9d8c06f1120edb011ac8af4",
+  "lineage_ids": "lineage:48e47287c44e06091db821f7",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2964,
+    "load_duration": 4525100,
+    "prompt_eval_count": 590,
+    "total_duration": 25802354400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"the following values\",\n  \"interpretation_a\": \"The clause does not specify which values must be verified, leaving ambiguity about which values are required for consistency checks.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The specific values that must be verified are not listed in the clause itself; they are only implied to be the ones listed in the following clause, which is not part of the clause being evaluated. This omission prevents a unique operational interpretation of the verification requirement.\",\n  \"justification\": \"The clause refers to \\\"the following values\\\" without enumerating them, creating an incomplete constraint that could lead to different implementation behaviours.\"\n}",
+  "record_id": "0798e42f2cb3b6f49dccdf23779725266675d89a1ea8fcf7d69e80bfae20fa44",
+  "revision": "18",
+  "schema_version": 1,
+  "section_ids": "4.2.8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 25.797
+}

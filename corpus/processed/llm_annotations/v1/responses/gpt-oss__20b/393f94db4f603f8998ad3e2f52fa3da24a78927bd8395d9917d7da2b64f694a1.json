@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "implied values for transport parameters",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause contains an incomplete constraint: it does not define what “implied values for transport parameters” refers to, which can lead to materially different implementation choices.  This satisfies the definition of an ambiguous clause under subtype U‑2.",
+    "missing_information": "definition of \"implied values\" for transport parameters to clarify which values must be supported by the server when deciding to reject 0‑RTT data or abort the handshake.  The clause does not specify whether these values refer to the client's transport parameters, the 0‑RTT data, or some other source, leading to potentially different implementation behaviours.  This missing constraint makes the clause ambiguous.  (No additional context was provided.)"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T15:06:45.077713+00:00",
+  "document_id": "draft-ietf-quic-transport-30",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "294bd93bfdb09d5da29ec195915ddb4d5f0ac1a6423756d84c0ace55bfe42c0f",
+  "lineage_ids": "lineage:07b0ee4a4866f5dc033c3769",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 5750,
+    "load_duration": 5598000,
+    "prompt_eval_count": 634,
+    "total_duration": 50170824600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"implied values for transport parameters\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"definition of \\\"implied values\\\" for transport parameters to clarify which values must be supported by the server when deciding to reject 0‑RTT data or abort the handshake.  The clause does not specify whether these values refer to the client's transport parameters, the 0‑RTT data, or some other source, leading to potentially different implementation behaviours.  This missing constraint makes the clause ambiguous.  (No additional context was provided.)\",\n  \"justification\": \"The clause contains an incomplete constraint: it does not define what “implied values for transport parameters” refers to, which can lead to materially different implementation choices.  This satisfies the definition of an ambiguous clause under subtype U‑2.\"\n}",
+  "record_id": "393f94db4f603f8998ad3e2f52fa3da24a78927bd8395d9917d7da2b64f694a1",
+  "revision": "30",
+  "schema_version": 1,
+  "section_ids": "7.4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 50.172
+}

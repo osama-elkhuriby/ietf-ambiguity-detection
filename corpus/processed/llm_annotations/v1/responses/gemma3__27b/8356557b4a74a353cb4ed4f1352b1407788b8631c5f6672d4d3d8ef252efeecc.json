@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "the server MUST ensure that a value with the same sequence has been received and acknowledged by the client",
+    "interpretation_a": "The server must verify that the client has received *and* acknowledged the previous packet with the same sequence number before sending a new packet with the wrapped sequence number.",
+    "interpretation_b": "The server must verify that the client has received (but not necessarily acknowledged) the previous packet with the same sequence number before sending a new packet with the wrapped sequence number.",
+    "is_ambiguous": "yes",
+    "justification": "The clause uses 'received and acknowledged' without defining what constitutes 'acknowledged'. This allows for two interpretations: one where explicit acknowledgement is required, and another where any indication of successful receipt is sufficient. This difference affects implementation because it determines how strictly the server must verify client state before wrapping the sequence number.",
+    "missing_information": "The definition of 'acknowledged' is not provided. Does 'acknowledged' require an explicit ACK frame, or is any indication of successful receipt sufficient?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:38:44.654212+00:00",
+  "document_id": "draft-ietf-quic-transport-07",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "1738778db28c4cdfe9fcd230b15990e25fda4800db331db86412e18e18afaf72",
+  "lineage_ids": "lineage:f07125ad211429e694477709",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 229,
+    "load_duration": 4795000,
+    "prompt_eval_count": 581,
+    "total_duration": 8593815500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"the server MUST ensure that a value with the same sequence has been received and acknowledged by the client\", \"interpretation_a\": \"The server must verify that the client has received *and* acknowledged the previous packet with the same sequence number before sending a new packet with the wrapped sequence number.\", \"interpretation_b\": \"The server must verify that the client has received (but not necessarily acknowledged) the previous packet with the same sequence number before sending a new packet with the wrapped sequence number.\", \"missing_information\": \"The definition of 'acknowledged' is not provided. Does 'acknowledged' require an explicit ACK frame, or is any indication of successful receipt sufficient?\",\"justification\": \"The clause uses 'received and acknowledged' without defining what constitutes 'acknowledged'. This allows for two interpretations: one where explicit acknowledgement is required, and another where any indication of successful receipt is sufficient. This difference affects implementation because it determines how strictly the server must verify client state before wrapping the sequence number.\"}",
+  "record_id": "8356557b4a74a353cb4ed4f1352b1407788b8631c5f6672d4d3d8ef252efeecc",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.12",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.594
+}

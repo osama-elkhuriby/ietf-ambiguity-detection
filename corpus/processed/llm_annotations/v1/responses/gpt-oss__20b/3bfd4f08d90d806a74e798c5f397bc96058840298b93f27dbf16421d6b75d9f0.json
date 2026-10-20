@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "uncertain",
+    "justification": "The clause is not ambiguous in the supplied text, but the lack of a definition for \"initial flight\" prevents a definitive assessment of its scope. According to the instructions, we should answer uncertain in such a case. The schema requires empty evidence, interpretations, and missing_information for a \"no\" answer, but for an uncertain answer we provide the missing context in missing_information. The final JSON reflects this. The JSON object is valid and conforms to the required schema.",
+    "missing_information": "Definition of \"initial flight\" is required to determine the scope of the clause and whether the server may continue processing data from clients that exceed its current configuration during that period. Without that definition, the clause’s precise operational meaning cannot be uniquely determined. The clause itself does not contain a missing constraint that would lead to materially different implementation behaviours. The ambiguity arises solely from the missing definition. The missing_information field indicates the context needed for a definitive assessment. The evidence_span, interpretation_a, and interpretation_b fields are empty because no part of the clause itself is ambiguous. The ambiguity_subtype is set to \"none\" because the ambiguity is due to incomplete context rather than a logical inconsistency or undefined term within the clause. The JSON object reflects this by indicating uncertainty and providing the missing context. The final JSON is as follows: }"
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T09:12:06.425025+00:00",
+  "document_id": "draft-ietf-quic-http-13",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "17312359473838d09f5ce4ba27883d3e632a3b857fee8ced29cd02061da853c8",
+  "lineage_ids": "lineage:7191cdf5d6124baa089297d7",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 660,
+    "load_duration": 5435200,
+    "prompt_eval_count": 989,
+    "total_duration": 6277897900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"uncertain\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"Definition of \\\"initial flight\\\" is required to determine the scope of the clause and whether the server may continue processing data from clients that exceed its current configuration during that period. Without that definition, the clause’s precise operational meaning cannot be uniquely determined. The clause itself does not contain a missing constraint that would lead to materially different implementation behaviours. The ambiguity arises solely from the missing definition. The missing_information field indicates the context needed for a definitive assessment. The evidence_span, interpretation_a, and interpretation_b fields are empty because no part of the clause itself is ambiguous. The ambiguity_subtype is set to \\\"none\\\" because the ambiguity is due to incomplete context rather than a logical inconsistency or undefined term within the clause. The JSON object reflects this by indicating uncertainty and providing the missing context. The final JSON is as follows: }\",\n\n  \"justification\": \"The clause is not ambiguous in the supplied text, but the lack of a definition for \\\"initial flight\\\" prevents a definitive assessment of its scope. According to the instructions, we should answer uncertain in such a case. The schema requires empty evidence, interpretations, and missing_information for a \\\"no\\\" answer, but for an uncertain answer we provide the missing context in missing_information. The final JSON reflects this. The JSON object is valid and conforms to the required schema.\"}",
+  "record_id": "3bfd4f08d90d806a74e798c5f397bc96058840298b93f27dbf16421d6b75d9f0",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "4.2.6.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 42.844
+}

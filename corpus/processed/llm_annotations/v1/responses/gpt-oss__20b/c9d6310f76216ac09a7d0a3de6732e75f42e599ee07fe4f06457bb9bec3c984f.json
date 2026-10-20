@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "excessive quantities",
+    "interpretation_a": "Treat any non-productive packet as excessive if it exceeds a fixed absolute threshold per time unit (e.g., more than 100 packets per second).",
+    "interpretation_b": "Treat any non-productive packet as excessive if it exceeds a relative threshold of the total traffic (e.g., more than 10% of all packets in a given period).",
+    "is_ambiguous": "yes",
+    "justification": "The lack of a defined threshold for 'excessive quantities' allows multiple reasonable interpretations of when a packet stream should be considered indicative of an attack.",
+    "missing_information": "The clause does not define a specific threshold or metric for what constitutes 'excessive', leaving the implementation to decide."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T18:23:12.747331+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "419209808022ea9e6e6b7a9348de7357cf4709770d0b04d886b61b6397fa69f7",
+  "lineage_ids": "lineage:05d52f97e7a8fee09a721d82",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 618,
+    "load_duration": 4033500,
+    "prompt_eval_count": 737,
+    "total_duration": 5427143700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"excessive quantities\",\n  \"interpretation_a\": \"Treat any non-productive packet as excessive if it exceeds a fixed absolute threshold per time unit (e.g., more than 100 packets per second).\",\n  \"interpretation_b\": \"Treat any non-productive packet as excessive if it exceeds a relative threshold of the total traffic (e.g., more than 10% of all packets in a given period).\",\n  \"missing_information\": \"The clause does not define a specific threshold or metric for what constitutes 'excessive', leaving the implementation to decide.\",\n  \"justification\": \"The lack of a defined threshold for 'excessive quantities' allows multiple reasonable interpretations of when a packet stream should be considered indicative of an attack.\"\n}",
+  "record_id": "c9d6310f76216ac09a7d0a3de6732e75f42e599ee07fe4f06457bb9bec3c984f",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "21.9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 14.079
+}

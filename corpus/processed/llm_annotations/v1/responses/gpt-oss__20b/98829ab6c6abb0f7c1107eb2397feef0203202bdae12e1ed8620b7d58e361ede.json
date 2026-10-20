@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless the generated response is based upon a stored response",
+    "interpretation_a": "The clause is ambiguous because the phrase \"based upon a stored response\" is not defined, so it is unclear whether a response such as a 200 OK served from cache qualifies for the exception. This could lead to two materially different implementation behaviours: one that allows Cache‑Status to be appended for any cached response, and another that disallows it unless the response is explicitly a 304 or 206.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a concrete definition of \"based upon a stored response\", creating an incomplete constraint that can change implementation behaviour.",
+    "missing_information": "definition of \"based upon a stored response\" that clarifies which responses are considered based on a stored response (e.g., 200 OK from cache, 304, 206, etc.) and how that determination is made by an intermediary."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T03:42:50.052316+00:00",
+  "document_id": "draft-ietf-httpbis-cache-header-10",
+  "family_id": "draft-ietf-httpbis-cache-header",
+  "input_fingerprint": "b1f30c2ebfcebff4626bdf212781cfa9d8d4f7a587871e069f74f54e2c0f9a64",
+  "lineage_ids": "lineage:e6c94ec53b161e7da5dd8bdc",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3638,
+    "load_duration": 6091900,
+    "prompt_eval_count": 627,
+    "total_duration": 31641488600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"unless the generated response is based upon a stored response\",\n  \"interpretation_a\": \"The clause is ambiguous because the phrase \\\"based upon a stored response\\\" is not defined, so it is unclear whether a response such as a 200 OK served from cache qualifies for the exception. This could lead to two materially different implementation behaviours: one that allows Cache‑Status to be appended for any cached response, and another that disallows it unless the response is explicitly a 304 or 206.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"definition of \\\"based upon a stored response\\\" that clarifies which responses are considered based on a stored response (e.g., 200 OK from cache, 304, 206, etc.) and how that determination is made by an intermediary.\",\n  \"justification\": \"The clause lacks a concrete definition of \\\"based upon a stored response\\\", creating an incomplete constraint that can change implementation behaviour.\"\n}",
+  "record_id": "98829ab6c6abb0f7c1107eb2397feef0203202bdae12e1ed8620b7d58e361ede",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 31.64
+}

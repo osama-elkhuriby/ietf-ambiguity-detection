@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "detects multiple different errors, it MAY choose to report any one of those errors",
+    "interpretation_a": "An endpoint, upon detecting multiple errors, can select and report only one of them, discarding the others.",
+    "interpretation_b": "An endpoint, upon detecting multiple errors, can report any combination of those errors, potentially sending multiple error reports.",
+    "is_ambiguous": "yes",
+    "justification": "The use of \"any one\" could be interpreted as a single error, or as any subset of errors. The clause does not clarify if multiple error reports are allowed, creating ambiguity in implementation.",
+    "missing_information": "The clause does not specify whether the endpoint is limited to reporting a single error, or if it can report multiple errors. This affects how an endpoint handles concurrent errors and how the receiving end interprets the error condition."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:47:07.982935+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "611593ebc9e58dac109c415ab0d1a4a8a9d3b288654e4c92e1778762b280a50d",
+  "lineage_ids": "lineage:a642c0815ada4f5b127a202d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 193,
+    "load_duration": 11641500,
+    "prompt_eval_count": 576,
+    "total_duration": 7474263000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"detects multiple different errors, it MAY choose to report any one of those errors\", \"interpretation_a\": \"An endpoint, upon detecting multiple errors, can select and report only one of them, discarding the others.\", \"interpretation_b\": \"An endpoint, upon detecting multiple errors, can report any combination of those errors, potentially sending multiple error reports.\", \"missing_information\": \"The clause does not specify whether the endpoint is limited to reporting a single error, or if it can report multiple errors. This affects how an endpoint handles concurrent errors and how the receiving end interprets the error condition.\", \"justification\": \"The use of \\\"any one\\\" could be interpreted as a single error, or as any subset of errors. The clause does not clarify if multiple error reports are allowed, creating ambiguity in implementation.\"}",
+  "record_id": "c74f9c18bdd0ca5f67534a46c7b7f50da360f8e5e63a13dc8089d9d1309ec04a",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "5.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.484
+}

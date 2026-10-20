@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that the peer that opened the control stream (the sender) must not close it, and the other peer (the receiver) must not request that it be closed. The context of a single control stream per peer makes the reference to “the control stream” clear, and no missing constraint or alternative interpretation is evident.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T10:20:54.211772+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "14c3cf77f339b95f36d786e80f97a6be8896d603a557eb911de74235edacbdc5",
+  "lineage_ids": "lineage:9286f069e924baa1bcb8a2a5",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 565,
+    "load_duration": 4878900,
+    "prompt_eval_count": 607,
+    "total_duration": 4986210100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that the peer that opened the control stream (the sender) must not close it, and the other peer (the receiver) must not request that it be closed. The context of a single control stream per peer makes the reference to “the control stream” clear, and no missing constraint or alternative interpretation is evident.\"\n}",
+  "record_id": "ccccf2dd86423956470bbeedfd9e9e7a182829f1c3a018a8f36523654a8ebe6a",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 4.984
+}

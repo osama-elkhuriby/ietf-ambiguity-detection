@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "cannot be attributed to a connection based on address tuple",
+    "interpretation_a": "The clause prohibits migration if the peer sends packets *without* a Destination Connection ID, because those packets cannot be associated with a connection. This implies that if a Destination Connection ID *is* present, migration is allowed regardless of the address tuple.",
+    "interpretation_b": "The clause prohibits migration if the peer sends a zero-length Connection ID, and also prohibits migration if packets *without* a Destination Connection ID are received. The 'address tuple' part of the sentence is a justification for the prohibition, meaning that migration is generally disallowed when the address tuple is insufficient to identify the connection, and the zero-length ID case is a specific instance of this.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'packets without a Destination Connection ID cannot be attributed to a connection based on address tuple' could be read as a general constraint on all packets lacking a Destination Connection ID, or as a specific justification for the zero-length ID prohibition. This creates two reasonable interpretations.",
+    "missing_information": "It is unclear whether the prohibition applies only to the zero-length ID case, or to all packets lacking a Destination Connection ID. The phrasing suggests the latter, but the connection to 'address tuple' is ambiguous."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:19:02.331785+00:00",
+  "document_id": "draft-ietf-quic-transport-22",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "8c107ebe22b53db7685d5c9e9eb685068e23319d3db03269a827e939a50271f7",
+  "lineage_ids": "lineage:11f50f576882c821702ac021",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 288,
+    "load_duration": 503000,
+    "prompt_eval_count": 587,
+    "total_duration": 10866390900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"cannot be attributed to a connection based on address tuple\", \"interpretation_a\": \"The clause prohibits migration if the peer sends packets *without* a Destination Connection ID, because those packets cannot be associated with a connection. This implies that if a Destination Connection ID *is* present, migration is allowed regardless of the address tuple.\", \"interpretation_b\": \"The clause prohibits migration if the peer sends a zero-length Connection ID, and also prohibits migration if packets *without* a Destination Connection ID are received. The 'address tuple' part of the sentence is a justification for the prohibition, meaning that migration is generally disallowed when the address tuple is insufficient to identify the connection, and the zero-length ID case is a specific instance of this.\", \"missing_information\": \"It is unclear whether the prohibition applies only to the zero-length ID case, or to all packets lacking a Destination Connection ID. The phrasing suggests the latter, but the connection to 'address tuple' is ambiguous.\", \"justification\": \"The phrase 'packets without a Destination Connection ID cannot be attributed to a connection based on address tuple' could be read as a general constraint on all packets lacking a Destination Connection ID, or as a specific justification for the zero-length ID prohibition. This creates two reasonable interpretations.\"}",
+  "record_id": "fa261f465294f22212d2d19276a0ebdf466a28de0168707831deb292e49d719e",
+  "revision": "22",
+  "schema_version": 1,
+  "section_ids": "9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.859
+}

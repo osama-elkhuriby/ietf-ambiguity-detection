@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "after more than a round-trip time",
+    "interpretation_a": "The round‑trip time is measured from the moment the stream was closed.",
+    "interpretation_b": "The round‑trip time is measured from the moment the endpoint received the first frame on the closed stream.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify the reference point for the round‑trip time, allowing two materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T04:20:31.561118+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "524472de01759467c999704dd6db00a97a0756f9f3b20dc49d8e67781fa85d5a",
+  "lineage_ids": "lineage:8f4f10c800c961189f138805",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1315,
+    "load_duration": 4621700,
+    "prompt_eval_count": 580,
+    "total_duration": 11381067400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"after more than a round-trip time\",\n  \"interpretation_a\": \"The round‑trip time is measured from the moment the stream was closed.\",\n  \"interpretation_b\": \"The round‑trip time is measured from the moment the endpoint received the first frame on the closed stream.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify the reference point for the round‑trip time, allowing two materially different implementation behaviours.\"\n}",
+  "record_id": "6da464eaad9390788426a8be6ece81972775e245b5523f8ba5f9e9790e6e51bd",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "5.4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.375
+}

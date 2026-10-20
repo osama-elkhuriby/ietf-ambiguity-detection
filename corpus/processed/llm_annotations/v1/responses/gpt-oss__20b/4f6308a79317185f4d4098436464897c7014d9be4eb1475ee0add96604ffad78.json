@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "use HTTPS RRs for the requestURL",
+    "interpretation_a": "Clients should use the HTTPS RR as the full URL for the WebSocket opening handshake.",
+    "interpretation_b": "Clients should use the HTTPS RR only for the domain component, leaving the path and query unchanged from the original requestURL.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether the HTTPS RR should replace the entire requestURL or only part of it, leaving the implementation behavior under‑specified.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T02:43:14.296059+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "d184aef483ca3beb9c9db29c09f647cf8fe763129ac195eaf61638dfbf18e6e0",
+  "lineage_ids": "lineage:063732dfffed923133d99ca5",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 309,
+    "load_duration": 6042000,
+    "prompt_eval_count": 773,
+    "total_duration": 2858329600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"use HTTPS RRs for the requestURL\",\n  \"interpretation_a\": \"Clients should use the HTTPS RR as the full URL for the WebSocket opening handshake.\",\n  \"interpretation_b\": \"Clients should use the HTTPS RR only for the domain component, leaving the path and query unchanged from the original requestURL.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify whether the HTTPS RR should replace the entire requestURL or only part of it, leaving the implementation behavior under‑specified.\"\n}",
+  "record_id": "4f6308a79317185f4d4098436464897c7014d9be4eb1475ee0add96604ffad78",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "9.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 25.109
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "the client MUST start the crypto retransmission timer even if there is no unacknowledged CRYPTO data",
+    "interpretation_a": "The client MUST start the timer regardless of whether any CRYPTO data has *ever* been sent, even if the connection is newly established and no data has been transmitted yet.",
+    "interpretation_b": "The client MUST start the timer if any CRYPTO data was sent but not yet acknowledged, even if no CRYPTO data is currently unacknowledged (e.g., all previously sent data was acknowledged).",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'no unacknowledged CRYPTO data' is open to interpretation. It's unclear whether it means 'no CRYPTO data has ever been unacknowledged' or 'there is currently no CRYPTO data in an unacknowledged state'. This difference affects when the timer should be started.",
+    "missing_information": "The meaning of 'unacknowledged' is not fully defined. Does it refer to data that has never been acknowledged, or data that was once unacknowledged but is now acknowledged?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:21:16.300604+00:00",
+  "document_id": "draft-ietf-quic-recovery-19",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "63b9c17d84cce9ae90d14d30952c24f36725faa3ed859c1f792ecfe2fa9c73cd",
+  "lineage_ids": "lineage:e8073dd30be4d12eb872193b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 247,
+    "load_duration": 4598100,
+    "prompt_eval_count": 609,
+    "total_duration": 9206459900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"the client MUST start the crypto retransmission timer even if there is no unacknowledged CRYPTO data\", \"interpretation_a\": \"The client MUST start the timer regardless of whether any CRYPTO data has *ever* been sent, even if the connection is newly established and no data has been transmitted yet.\", \"interpretation_b\": \"The client MUST start the timer if any CRYPTO data was sent but not yet acknowledged, even if no CRYPTO data is currently unacknowledged (e.g., all previously sent data was acknowledged).\", \"missing_information\": \"The meaning of 'unacknowledged' is not fully defined. Does it refer to data that has never been acknowledged, or data that was once unacknowledged but is now acknowledged?\",\"justification\": \"The phrase 'no unacknowledged CRYPTO data' is open to interpretation. It's unclear whether it means 'no CRYPTO data has ever been unacknowledged' or 'there is currently no CRYPTO data in an unacknowledged state'. This difference affects when the timer should be started.\"}",
+  "record_id": "63cf97bd1172522d830bf643c4d794faa1044a4453710f93ea6ca5433cd4afcc",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.203
+}

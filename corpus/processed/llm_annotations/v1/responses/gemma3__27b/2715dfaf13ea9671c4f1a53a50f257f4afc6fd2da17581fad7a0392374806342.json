@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "If the client’s version is not acceptable to the server",
+    "interpretation_a": "The server considers the client's version unacceptable if it is not in the server's supported version list.",
+    "interpretation_b": "The server considers the client's version unacceptable if it is in the server's supported version list, but the server prefers a different version.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'not acceptable' is vague. It doesn't specify whether the server must reject the client's version entirely, or if it can simply indicate a preference for a different version. This leads to two reasonable interpretations regarding the server's behavior.",
+    "missing_information": "The clause does not define what 'not acceptable' means. Does it mean the client's version is not supported at all, or simply that the server prefers a different version?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:06:02.320106+00:00",
+  "document_id": "draft-ietf-quic-transport-00",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "98b0e167ea7773083ae797f39114209b2d63e44cf82308e77e956c845cb44911",
+  "lineage_ids": "lineage:9a2aae13e50d777b7d6f00a0",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 204,
+    "load_duration": 4484700,
+    "prompt_eval_count": 566,
+    "total_duration": 7631826100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"If the client’s version is not acceptable to the server\", \"interpretation_a\": \"The server considers the client's version unacceptable if it is not in the server's supported version list.\", \"interpretation_b\": \"The server considers the client's version unacceptable if it is in the server's supported version list, but the server prefers a different version.\", \"missing_information\": \"The clause does not define what 'not acceptable' means. Does it mean the client's version is not supported at all, or simply that the server prefers a different version?\", \"justification\": \"The phrase 'not acceptable' is vague. It doesn't specify whether the server must reject the client's version entirely, or if it can simply indicate a preference for a different version. This leads to two reasonable interpretations regarding the server's behavior.\"}",
+  "record_id": "2715dfaf13ea9671c4f1a53a50f257f4afc6fd2da17581fad7a0392374806342",
+  "revision": "00",
+  "schema_version": 1,
+  "section_ids": "5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.641
+}

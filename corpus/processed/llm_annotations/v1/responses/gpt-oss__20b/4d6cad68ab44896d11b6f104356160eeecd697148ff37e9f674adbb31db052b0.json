@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "the same DNSSEC-related records that they would send when providing that RRSet as an Answer",
+    "interpretation_a": "Include NSEC/NSEC3 records for each RRSet in the Additional section, mirroring the zone-wide records that would accompany the RRSet in the Answer.",
+    "interpretation_b": "Include only the RRSIG records for each RRSet in the Additional section, treating NSEC/NSEC3 as zone-wide and not per RRSet.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not clarify whether NSEC/NSEC3, which are zone-wide records, should be duplicated for each RRSet in the Additional section or included only once, creating an incomplete constraint that can result in materially different implementations.",
+    "missing_information": "Whether NSEC and NSEC3 records are to be included per RRSet or only once per zone when mirroring the Answer section records is not explicitly specified, leading to different implementation behaviours."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:42:49.182075+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "45226f4a42627928dd553fbeea82a9dc5a31068db0fae3b1a2df4c9678d0583b",
+  "lineage_ids": "lineage:e27ad43290d58895994f433c",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 4317,
+    "load_duration": 5502600,
+    "prompt_eval_count": 683,
+    "total_duration": 37558927500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"the same DNSSEC-related records that they would send when providing that RRSet as an Answer\",\n  \"interpretation_a\": \"Include NSEC/NSEC3 records for each RRSet in the Additional section, mirroring the zone-wide records that would accompany the RRSet in the Answer.\",\n  \"interpretation_b\": \"Include only the RRSIG records for each RRSet in the Additional section, treating NSEC/NSEC3 as zone-wide and not per RRSet.\",\n  \"missing_information\": \"Whether NSEC and NSEC3 records are to be included per RRSet or only once per zone when mirroring the Answer section records is not explicitly specified, leading to different implementation behaviours.\",\n  \"justification\": \"The clause does not clarify whether NSEC/NSEC3, which are zone-wide records, should be duplicated for each RRSet in the Additional section or included only once, creating an incomplete constraint that can result in materially different implementations.\"\n}",
+  "record_id": "4d6cad68ab44896d11b6f104356160eeecd697148ff37e9f674adbb31db052b0",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "4.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 37.563
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST be omitted",
+    "interpretation_a": "The pseudo-header field is completely absent from the HTTP/3 request.",
+    "interpretation_b": "The pseudo-header field is present, but its value is empty.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'omitted' is ambiguous. It could mean the field is not included in the HTTP/3 request at all, or that it is included but with an empty value. This difference affects how an implementation would construct the HTTP/3 request.",
+    "missing_information": "The clause does not specify whether 'omitted' means the field is not present at all, or present with an empty value. Both interpretations are reasonable and affect implementation."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:50:27.742785+00:00",
+  "document_id": "draft-ietf-quic-http-33",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "efab592a7a7ee916cde89da04f7b18ec27d8a4b3b43d278e6ba4107a64cba2c8",
+  "lineage_ids": "lineage:ac70e27dc0382c0b1c0f6c05",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 170,
+    "load_duration": 8618900,
+    "prompt_eval_count": 622,
+    "total_duration": 6593511100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST be omitted\", \"interpretation_a\": \"The pseudo-header field is completely absent from the HTTP/3 request.\", \"interpretation_b\": \"The pseudo-header field is present, but its value is empty.\", \"missing_information\": \"The clause does not specify whether 'omitted' means the field is not present at all, or present with an empty value. Both interpretations are reasonable and affect implementation.\", \"justification\": \"The term 'omitted' is ambiguous. It could mean the field is not included in the HTTP/3 request at all, or that it is included but with an empty value. This difference affects how an implementation would construct the HTTP/3 request.\"}",
+  "record_id": "5439905f10067830a843d02b8d9c7400a6c7c460c244b8556dd6f65ddecaab94",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "4.1.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.594
+}

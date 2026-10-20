@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "prior to performing the method",
+    "interpretation_a": "The server evaluates the If-Range condition *before* starting any part of the Range request processing (e.g., checking headers, validating syntax).",
+    "interpretation_b": "The server evaluates the If-Range condition *before* sending the response, but may perform some initial processing of the Range request before evaluation.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'performing the method' is vague. It's unclear whether the evaluation of the If-Range condition must occur before *any* processing of the Range request begins, or only before the server commits to sending a response. This affects how a server might handle invalid or mismatched If-Range headers.",
+    "missing_information": "The timing of 'performing the method' is not clearly defined. Does it include initial header parsing, or only the actual retrieval/processing of the requested range?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:19:52.396350+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "8e44ccb1e1bc1d1953688c7043f1d5ce27e7e57de2aa2183ef2b94ed81e60afc",
+  "lineage_ids": "lineage:3de968f2be0dec0947851e87",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 210,
+    "load_duration": 12279400,
+    "prompt_eval_count": 602,
+    "total_duration": 8103505500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"prior to performing the method\", \"interpretation_a\": \"The server evaluates the If-Range condition *before* starting any part of the Range request processing (e.g., checking headers, validating syntax).\", \"interpretation_b\": \"The server evaluates the If-Range condition *before* sending the response, but may perform some initial processing of the Range request before evaluation.\", \"missing_information\": \"The timing of 'performing the method' is not clearly defined. Does it include initial header parsing, or only the actual retrieval/processing of the requested range?\",\"justification\": \"The phrase 'performing the method' is vague. It's unclear whether the evaluation of the If-Range condition must occur before *any* processing of the Range request begins, or only before the server commits to sending a response. This affects how a server might handle invalid or mismatched If-Range headers.\"}",
+  "record_id": "9b47edf5b691832925e2ace59ddba4574d9196a5581d23f51f9bf75b65e8280b",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "13.1.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.109
+}

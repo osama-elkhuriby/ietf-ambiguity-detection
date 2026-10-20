@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT include the fragment and userinfo components",
+    "interpretation_a": "The user agent should remove the fragment and userinfo components before including the URI reference in the Referer field.",
+    "interpretation_b": "The user agent should not include any URI reference that *contains* fragment or userinfo components in the Referer field. It may include a URI reference that does not contain those components.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'MUST NOT include the fragment and userinfo components' can be interpreted in two ways. One interpretation is that if a URI reference contains those components, they must be removed before being used in the Referer field. The other interpretation is that any URI reference containing those components should not be used at all. The lack of clarity on whether the requirement is about modification or selection creates ambiguity.",
+    "missing_information": "It is unclear whether the requirement applies to removing those components from an existing URI reference, or to not using URI references that contain those components in the first place."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:05:53.580115+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-16",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "07d735d9f83aa5a4c639c1b75c2c24cd2282408e33f915a9851482c70e5135a6",
+  "lineage_ids": "lineage:acdf35d3d6dd8d5e03383f19",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 232,
+    "load_duration": 8901000,
+    "prompt_eval_count": 601,
+    "total_duration": 8840693000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT include the fragment and userinfo components\", \"interpretation_a\": \"The user agent should remove the fragment and userinfo components before including the URI reference in the Referer field.\", \"interpretation_b\": \"The user agent should not include any URI reference that *contains* fragment or userinfo components in the Referer field. It may include a URI reference that does not contain those components.\", \"missing_information\": \"It is unclear whether the requirement applies to removing those components from an existing URI reference, or to not using URI references that contain those components in the first place.\", \"justification\": \"The phrase 'MUST NOT include the fragment and userinfo components' can be interpreted in two ways. One interpretation is that if a URI reference contains those components, they must be removed before being used in the Referer field. The other interpretation is that any URI reference containing those components should not be used at all. The lack of clarity on whether the requirement is about modification or selection creates ambiguity.\"}",
+  "record_id": "4f3bc7a67c47776512ee36750ebbf2fd2c563b2b22484eb19725e5af3a3f91a1",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "10.1.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.829
+}

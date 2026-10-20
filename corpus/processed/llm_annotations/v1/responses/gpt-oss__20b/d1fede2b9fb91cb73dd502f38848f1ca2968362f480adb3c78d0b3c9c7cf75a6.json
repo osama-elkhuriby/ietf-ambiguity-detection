@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "ensure the server is willing to serve that scheme",
+    "interpretation_a": "The client must perform a capability negotiation (e.g., send a request and wait for a response indicating support).",
+    "interpretation_b": "The client must consult a pre‑established list or configuration indicating the server's supported schemes.",
+    "is_ambiguous": "yes",
+    "justification": "The target clause lacks a concrete mechanism for ensuring the server’s willingness, which is a missing constraint that can lead to different implementation behaviours.  This satisfies the definition of U‑2 (incomplete constraint affecting implementation behaviour).",
+    "missing_information": "The clause does not specify how the client should determine the server's willingness to serve the scheme, leaving the implementation method unspecified.  This missing constraint leads to multiple reasonable implementation behaviours.  No other context is provided to resolve the ambiguity.  The clause is therefore ambiguous.  (No other interpretations are required.)"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T10:25:18.252226+00:00",
+  "document_id": "draft-ietf-quic-http-24",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "390a3d61e29efd088a85518a461b0a57bee39172a5d21381abc63c4c24219edf",
+  "lineage_ids": "lineage:7038e83450c84273ebcd3a0a",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1004,
+    "load_duration": 3056300,
+    "prompt_eval_count": 613,
+    "total_duration": 9119573500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"ensure the server is willing to serve that scheme\",\n  \"interpretation_a\": \"The client must perform a capability negotiation (e.g., send a request and wait for a response indicating support).\",\n  \"interpretation_b\": \"The client must consult a pre‑established list or configuration indicating the server's supported schemes.\",\n  \"missing_information\": \"The clause does not specify how the client should determine the server's willingness to serve the scheme, leaving the implementation method unspecified.  This missing constraint leads to multiple reasonable implementation behaviours.  No other context is provided to resolve the ambiguity.  The clause is therefore ambiguous.  (No other interpretations are required.)\",\n  \"justification\": \"The target clause lacks a concrete mechanism for ensuring the server’s willingness, which is a missing constraint that can lead to different implementation behaviours.  This satisfies the definition of U‑2 (incomplete constraint affecting implementation behaviour).\"\n}",
+  "record_id": "d1fede2b9fb91cb73dd502f38848f1ca2968362f480adb3c78d0b3c9c7cf75a6",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "3.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.125
+}

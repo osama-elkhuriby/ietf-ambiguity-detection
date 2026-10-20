@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "enough information",
+    "interpretation_a": "The server could provide a minimal amount of information, such as a generic error message indicating a conflict occurred.",
+    "interpretation_b": "The server could provide detailed information, such as the specific resource that caused the conflict, the version of the resource, and the conflicting changes.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'enough' is vague and allows for materially different implementations. There is no defined threshold for what information is 'enough' to allow a user to recognize the source of the conflict.",
+    "missing_information": "The phrase 'enough information' lacks a concrete definition. What constitutes 'enough' is subjective and depends on the application. A missing constraint on the granularity or type of information needed makes implementation ambiguous."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:11:14.379884+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-13",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "f901c66a4ab469f6217769942fb23ee2ec97fee21fe08011477a9df28361d9e9",
+  "lineage_ids": "lineage:d00e5df55bafa40ab458c95c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 180,
+    "load_duration": 9193100,
+    "prompt_eval_count": 569,
+    "total_duration": 6971480300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"enough information\", \"interpretation_a\": \"The server could provide a minimal amount of information, such as a generic error message indicating a conflict occurred.\", \"interpretation_b\": \"The server could provide detailed information, such as the specific resource that caused the conflict, the version of the resource, and the conflicting changes.\", \"missing_information\": \"The phrase 'enough information' lacks a concrete definition. What constitutes 'enough' is subjective and depends on the application. A missing constraint on the granularity or type of information needed makes implementation ambiguous.\",\"justification\": \"The term 'enough' is vague and allows for materially different implementations. There is no defined threshold for what information is 'enough' to allow a user to recognize the source of the conflict.\"}",
+  "record_id": "66dca4f450e743834655a913b563810791d38ec79994dd0a636ac94057ee7d4f",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "15.5.10",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.968
+}

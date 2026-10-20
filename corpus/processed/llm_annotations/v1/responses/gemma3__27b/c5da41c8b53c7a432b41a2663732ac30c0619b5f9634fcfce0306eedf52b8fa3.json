@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD signal this",
+    "interpretation_a": "The transport *may* signal this by sending a STOP_SENDING frame, but is not required to.",
+    "interpretation_b": "The transport is *expected* to signal this by sending a STOP_SENDING frame, but is not strictly required to.",
+    "is_ambiguous": "yes",
+    "justification": "The word 'SHOULD' is known to be ambiguous. Without further clarification, it is unclear whether the transport is expected to send the frame, or merely permitted to do so. This affects implementation because a developer must decide how strictly to adhere to the recommendation.",
+    "missing_information": "The strength of 'SHOULD' is not clarified. Is non-compliance a failure, or merely a suggestion?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:01:05.021170+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "c4ae03bb930af6761156b0656db23074e96d7fd0cc00b0e5dba90b20290fa292",
+  "lineage_ids": "lineage:bcbd87486cc197c86005e4cb",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 178,
+    "load_duration": 4585100,
+    "prompt_eval_count": 611,
+    "total_duration": 6769778700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD signal this\", \"interpretation_a\": \"The transport *may* signal this by sending a STOP_SENDING frame, but is not required to.\", \"interpretation_b\": \"The transport is *expected* to signal this by sending a STOP_SENDING frame, but is not strictly required to.\", \"missing_information\": \"The strength of 'SHOULD' is not clarified. Is non-compliance a failure, or merely a suggestion?\",\"justification\": \"The word 'SHOULD' is known to be ambiguous. Without further clarification, it is unclear whether the transport is expected to send the frame, or merely permitted to do so. This affects implementation because a developer must decide how strictly to adhere to the recommendation.\"}",
+  "record_id": "c5da41c8b53c7a432b41a2663732ac30c0619b5f9634fcfce0306eedf52b8fa3",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "3.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.765
+}

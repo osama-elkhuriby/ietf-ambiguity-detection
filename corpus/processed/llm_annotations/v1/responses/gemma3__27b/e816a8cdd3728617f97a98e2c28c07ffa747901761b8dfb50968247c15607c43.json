@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD process the response",
+    "interpretation_a": "The client is required to handle the response as if it were a 5xx error, potentially logging it as such, displaying an error message to the user, or retrying the request.",
+    "interpretation_b": "The client is permitted to handle the response in any way it sees fit, but is encouraged to treat it as a 5xx error for diagnostic or compatibility purposes. It could, for example, ignore the invalid status code and proceed as if the request succeeded.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' creates ambiguity. It is unclear whether the client *must* process the response as a 5xx error, or is merely *encouraged* to do so. This affects implementation, as a strict interpretation would require error handling, while a weaker one would allow for more flexible behavior.",
+    "missing_information": "The strength of 'SHOULD' is not defined in this document. Is it a soft recommendation, or a strong requirement?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:33:38.719399+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "ed3bb1665d9c2a1e90ddec01099672e3e6beb9d03b327ef28f19732a88c8fe0c",
+  "lineage_ids": "lineage:e517dc0a2f38b19de5a08cd8",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 236,
+    "load_duration": 11320400,
+    "prompt_eval_count": 631,
+    "total_duration": 8977405000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD process the response\", \"interpretation_a\": \"The client is required to handle the response as if it were a 5xx error, potentially logging it as such, displaying an error message to the user, or retrying the request.\", \"interpretation_b\": \"The client is permitted to handle the response in any way it sees fit, but is encouraged to treat it as a 5xx error for diagnostic or compatibility purposes. It could, for example, ignore the invalid status code and proceed as if the request succeeded.\", \"missing_information\": \"The strength of 'SHOULD' is not defined in this document. Is it a soft recommendation, or a strong requirement?\",\"justification\": \"The use of 'SHOULD' creates ambiguity. It is unclear whether the client *must* process the response as a 5xx error, or is merely *encouraged* to do so. This affects implementation, as a strict interpretation would require error handling, while a weaker one would allow for more flexible behavior.\"}",
+  "record_id": "e816a8cdd3728617f97a98e2c28c07ffa747901761b8dfb50968247c15607c43",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "15",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.0
+}

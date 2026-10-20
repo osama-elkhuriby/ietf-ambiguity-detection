@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "per-connection basis",
+    "interpretation_a": "Administrators can disable the spin bit for all connections, or for individual connections.",
+    "interpretation_b": "Administrators can disable the spin bit for all connections, or for connections identified by a specific connection ID.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'per-connection basis' is open to interpretation. It could mean disabling the spin bit for all connections individually, or it could mean disabling it based on a connection identifier (e.g., connection ID). This difference affects implementation.",
+    "missing_information": "The meaning of 'per-connection basis' is not defined. Does it mean all connections, or connections identified by a specific connection ID?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:00:35.268297+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "284c462c8d1b1bd4cbe3684370561025b5ac67177f42f48a411e519ff45e6dc9",
+  "lineage_ids": "lineage:f94aad3da04f88589a9d8f7e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 170,
+    "load_duration": 4806900,
+    "prompt_eval_count": 617,
+    "total_duration": 6499095500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"per-connection basis\", \"interpretation_a\": \"Administrators can disable the spin bit for all connections, or for individual connections.\", \"interpretation_b\": \"Administrators can disable the spin bit for all connections, or for connections identified by a specific connection ID.\", \"missing_information\": \"The meaning of 'per-connection basis' is not defined. Does it mean all connections, or connections identified by a specific connection ID?\",\"justification\": \"The phrase 'per-connection basis' is open to interpretation. It could mean disabling the spin bit for all connections individually, or it could mean disabling it based on a connection identifier (e.g., connection ID). This difference affects implementation.\"}",
+  "record_id": "169b7237938fc6bc9c857832478836e1cd3b3e2f861fc7dba857fa35a84432a5",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "17.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.515
+}

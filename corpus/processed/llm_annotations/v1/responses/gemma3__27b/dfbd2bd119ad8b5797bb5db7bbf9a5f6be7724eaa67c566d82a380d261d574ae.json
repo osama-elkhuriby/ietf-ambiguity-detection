@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "alter any values that might be violated",
+    "interpretation_a": "The server cannot change any parameter value that, if the client used the previously agreed-upon value, would cause the client to exceed a limit. This implies a check against the client's 0-RTT data.",
+    "interpretation_b": "The server cannot change any parameter value that would cause *any* client to violate a limit, regardless of whether the client is actually sending 0-RTT data. This is a broader restriction on server configuration.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'might be violated by the client with its 0-RTT data' is open to interpretation. Does it refer to the specific 0-RTT data being sent, or to any data the client *could* send using the previously negotiated parameters? This affects how the server determines which values it can alter.",
+    "missing_information": "It is unclear whether the restriction applies only to the 0-RTT data the client is currently sending, or to all possible data the client might send using the previously negotiated parameters."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:09:53.004793+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "a817f00a37661310f4c6b5746726f220c1feeddddf5ca6ec3c6a897db7ac4f19",
+  "lineage_ids": "lineage:fbe36cde9abf7705b13994d4",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 246,
+    "load_duration": 4991000,
+    "prompt_eval_count": 609,
+    "total_duration": 9173450500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"alter any values that might be violated\", \"interpretation_a\": \"The server cannot change any parameter value that, if the client used the previously agreed-upon value, would cause the client to exceed a limit. This implies a check against the client's 0-RTT data.\", \"interpretation_b\": \"The server cannot change any parameter value that would cause *any* client to violate a limit, regardless of whether the client is actually sending 0-RTT data. This is a broader restriction on server configuration.\", \"missing_information\": \"It is unclear whether the restriction applies only to the 0-RTT data the client is currently sending, or to all possible data the client might send using the previously negotiated parameters.\", \"justification\": \"The phrase 'might be violated by the client with its 0-RTT data' is open to interpretation. Does it refer to the specific 0-RTT data being sent, or to any data the client *could* send using the previously negotiated parameters? This affects how the server determines which values it can alter.\"}",
+  "record_id": "dfbd2bd119ad8b5797bb5db7bbf9a5f6be7724eaa67c566d82a380d261d574ae",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.172
+}

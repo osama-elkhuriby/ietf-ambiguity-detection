@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT wait for the payload",
+    "interpretation_a": "The server must send the 100 response before *any* part of the payload is received.",
+    "interpretation_b": "The server must send the 100 response before it has *fully* received the payload, but may receive some portion of it first.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'wait' is not precisely defined. It's reasonable to interpret 'wait' as meaning 'begin processing' or 'receive any part of'. The clause could be interpreted to mean the server must respond before receiving *any* data, or before receiving the *entire* payload.",
+    "missing_information": "The clause does not define what 'wait' means. Does receiving even a single byte of the payload constitute 'waiting'?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:15:06.917421+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-13",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "8a4ff32e30b8a2e3fa08dce44ed763c281477d1d60006a253d2a5f59941118d2",
+  "lineage_ids": "lineage:14df3be3347497143b4fa13a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 192,
+    "load_duration": 19109300,
+    "prompt_eval_count": 728,
+    "total_duration": 7575310300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT wait for the payload\", \"interpretation_a\": \"The server must send the 100 response before *any* part of the payload is received.\", \"interpretation_b\": \"The server must send the 100 response before it has *fully* received the payload, but may receive some portion of it first.\", \"missing_information\": \"The clause does not define what 'wait' means. Does receiving even a single byte of the payload constitute 'waiting'?\",\"justification\": \"The term 'wait' is not precisely defined. It's reasonable to interpret 'wait' as meaning 'begin processing' or 'receive any part of'. The clause could be interpreted to mean the server must respond before receiving *any* data, or before receiving the *entire* payload.\"}",
+  "record_id": "846e6072a92d5a5be7994de9d337ad47104f3d1f17dfa36020627625393b9fe0",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "10.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.578
+}

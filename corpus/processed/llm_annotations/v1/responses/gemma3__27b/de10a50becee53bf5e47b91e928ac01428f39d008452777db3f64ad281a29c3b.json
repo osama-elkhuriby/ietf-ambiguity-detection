@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "redundant length encodings",
+    "interpretation_a": "Multiple length encodings could exist due to framing or reassembly, and they must all agree.",
+    "interpretation_b": "A single length encoding might be repeated for robustness, and these repetitions must match.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'redundant length encodings' is not defined within the provided context. This lack of definition allows for multiple interpretations of how the self-consistency check should be performed, leading to ambiguity in implementation.",
+    "missing_information": "The definition of 'redundant length encodings' is not provided. It is unclear whether this refers to multiple, independent length fields, or repeated instances of the same length field. This affects how the self-consistency check is performed."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:11:45.443884+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "a9935725eee2ad5d0a0fac9e062f4a68d29e83996cd59314c7876ec984b95150",
+  "lineage_ids": "lineage:30994f1bded1d2aba3ec408c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 182,
+    "load_duration": 9580100,
+    "prompt_eval_count": 612,
+    "total_duration": 7070896300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"redundant length encodings\", \"interpretation_a\": \"Multiple length encodings could exist due to framing or reassembly, and they must all agree.\", \"interpretation_b\": \"A single length encoding might be repeated for robustness, and these repetitions must match.\", \"missing_information\": \"The definition of 'redundant length encodings' is not provided. It is unclear whether this refers to multiple, independent length fields, or repeated instances of the same length field. This affects how the self-consistency check is performed.\", \"justification\": \"The term 'redundant length encodings' is not defined within the provided context. This lack of definition allows for multiple interpretations of how the self-consistency check should be performed, leading to ambiguity in implementation.\"}",
+  "record_id": "de10a50becee53bf5e47b91e928ac01428f39d008452777db3f64ad281a29c3b",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.062
+}

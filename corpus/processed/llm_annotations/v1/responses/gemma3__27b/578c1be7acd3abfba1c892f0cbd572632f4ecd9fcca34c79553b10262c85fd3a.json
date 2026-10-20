@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD generate a payload",
+    "interpretation_a": "The server is required to generate a payload in all 300 responses for non-HEAD requests.",
+    "interpretation_b": "The server is not required to generate a payload, but it is recommended to do so. The server may choose not to generate a payload if it deems it unnecessary or impractical.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' creates ambiguity. While it indicates a recommendation, it doesn't explicitly state whether the server *must* generate a payload or if omitting it is permissible. This affects implementation, as some servers might choose to always include a payload, while others might omit it based on certain conditions.",
+    "missing_information": "The degree of obligation implied by 'SHOULD' is not clearly defined in this context. Is the server permitted to omit the payload entirely, or is it only encouraged to provide one?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:08:01.415482+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-13",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "5e50d22a85e336bb4eb470243a60511449af4502fa18bd1d24a81e10e7f733f5",
+  "lineage_ids": "lineage:016c9dc727b4c161107438ee",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 213,
+    "load_duration": 9924000,
+    "prompt_eval_count": 591,
+    "total_duration": 8199898800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD generate a payload\", \"interpretation_a\": \"The server is required to generate a payload in all 300 responses for non-HEAD requests.\", \"interpretation_b\": \"The server is not required to generate a payload, but it is recommended to do so. The server may choose not to generate a payload if it deems it unnecessary or impractical.\", \"missing_information\": \"The degree of obligation implied by 'SHOULD' is not clearly defined in this context. Is the server permitted to omit the payload entirely, or is it only encouraged to provide one?\",\"justification\": \"The use of 'SHOULD' creates ambiguity. While it indicates a recommendation, it doesn't explicitly state whether the server *must* generate a payload or if omitting it is permissible. This affects implementation, as some servers might choose to always include a payload, while others might omit it based on certain conditions.\"}",
+  "record_id": "578c1be7acd3abfba1c892f0cbd572632f4ecd9fcca34c79553b10262c85fd3a",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "15.4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.218
+}

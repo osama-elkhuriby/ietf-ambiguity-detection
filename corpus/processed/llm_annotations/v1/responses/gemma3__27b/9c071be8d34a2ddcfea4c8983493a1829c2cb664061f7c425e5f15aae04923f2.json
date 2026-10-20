@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST implement the Connection header field",
+    "interpretation_a": "The intermediary must implement the Connection header field according to Section 7.6.1, meaning it must parse, validate, and potentially modify the header field.",
+    "interpretation_b": "The intermediary must *support* the Connection header field, meaning it must be able to receive and process messages containing it, but it doesn't necessarily need to actively modify or validate it. It could simply pass it through.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'implement' is open to interpretation. It's unclear whether the intermediary needs to actively process and potentially modify the Connection header field, or if simply supporting its presence in messages is sufficient.",
+    "missing_information": "The clause does not specify *how* the Connection header field must be implemented. Does 'implement' mean 'support' or 'fully process and potentially modify'?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:20:00.387450+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-14",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "6cdb0a4c027f4c236769debf5be066064265326d3dfce3dfa60c3c1eebc0816b",
+  "lineage_ids": "lineage:aefcd193b440f17e95f60eda",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 208,
+    "load_duration": 12603500,
+    "prompt_eval_count": 606,
+    "total_duration": 7983191100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST implement the Connection header field\", \"interpretation_a\": \"The intermediary must implement the Connection header field according to Section 7.6.1, meaning it must parse, validate, and potentially modify the header field.\", \"interpretation_b\": \"The intermediary must *support* the Connection header field, meaning it must be able to receive and process messages containing it, but it doesn't necessarily need to actively modify or validate it. It could simply pass it through.\", \"missing_information\": \"The clause does not specify *how* the Connection header field must be implemented. Does 'implement' mean 'support' or 'fully process and potentially modify'?\",\"justification\": \"The term 'implement' is open to interpretation. It's unclear whether the intermediary needs to actively process and potentially modify the Connection header field, or if simply supporting its presence in messages is sufficient.\"}",
+  "record_id": "9c071be8d34a2ddcfea4c8983493a1829c2cb664061f7c425e5f15aae04923f2",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "7.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.0
+}

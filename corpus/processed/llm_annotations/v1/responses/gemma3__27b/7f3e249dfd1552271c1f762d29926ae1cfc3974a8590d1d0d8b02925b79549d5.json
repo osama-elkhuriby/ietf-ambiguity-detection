@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "An endpoint SHOULD use DPLPMTUD ([dplpmtud]) or PMTUD ([pmtud])",
+    "interpretation_a": "An endpoint is required to use *either* DPLPMTUD or PMTUD to determine path MTU. It is not required to use both.",
+    "interpretation_b": "An endpoint is required to use *both* DPLPMTUD and PMTUD to determine path MTU. The use of 'or' does not preclude the use of both.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'or' creates ambiguity. It is unclear whether the endpoint is required to use only one of the mechanisms, or both. This affects implementation because an endpoint could choose to implement only one of the mechanisms, potentially leading to interoperability issues if the other endpoint expects both to be used.",
+    "missing_information": "The document does not specify whether the endpoint must use one or both of the mechanisms. The use of 'or' is ambiguous in this context."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:37:14.139720+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "60511964bc17f40a25b531e1b4c818b86588590bfde2c291bb56248c8c3537a1",
+  "lineage_ids": "lineage:67e261bc7aa0082448220564",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 237,
+    "load_duration": 4431100,
+    "prompt_eval_count": 604,
+    "total_duration": 8829498500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"An endpoint SHOULD use DPLPMTUD ([dplpmtud]) or PMTUD ([pmtud])\", \"interpretation_a\": \"An endpoint is required to use *either* DPLPMTUD or PMTUD to determine path MTU. It is not required to use both.\", \"interpretation_b\": \"An endpoint is required to use *both* DPLPMTUD and PMTUD to determine path MTU. The use of 'or' does not preclude the use of both.\", \"missing_information\": \"The document does not specify whether the endpoint must use one or both of the mechanisms. The use of 'or' is ambiguous in this context.\", \"justification\": \"The use of 'or' creates ambiguity. It is unclear whether the endpoint is required to use only one of the mechanisms, or both. This affects implementation because an endpoint could choose to implement only one of the mechanisms, potentially leading to interoperability issues if the other endpoint expects both to be used.\"}",
+  "record_id": "7f3e249dfd1552271c1f762d29926ae1cfc3974a8590d1d0d8b02925b79549d5",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "14.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.828
+}

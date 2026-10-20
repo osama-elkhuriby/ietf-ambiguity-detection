@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear constraint: when a server accepts 0-RTT data, it must not include SETTINGS that reduce limits or alter values that could be violated by the 0-RTT data. There is no ambiguity in the language, and the constraint is specific and actionable. No external definitions or additional context are needed to interpret it.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:38:33.698889+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "f061d809d79bc49c68fd1cca51fbf95c35cfa62aa7bd2977e42859787d5171c2",
+  "lineage_ids": "lineage:c9ff1aaa200132056a747e92",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 126,
+    "load_duration": 7778500,
+    "prompt_eval_count": 545,
+    "total_duration": 5269558600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear constraint: when a server accepts 0-RTT data, it must not include SETTINGS that reduce limits or alter values that could be violated by the 0-RTT data. There is no ambiguity in the language, and the constraint is specific and actionable. No external definitions or additional context are needed to interpret it.\"\n}",
+  "record_id": "00ce28e89658067929b66e42ec1eb3905741356c8f4866cae2bdda852386807f",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.2.4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.281
+}

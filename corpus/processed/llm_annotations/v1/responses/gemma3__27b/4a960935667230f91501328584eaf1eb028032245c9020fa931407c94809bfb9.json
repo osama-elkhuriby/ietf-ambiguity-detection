@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD send a stateless reset that is one byte shorter than the packet it responds to",
+    "interpretation_a": "If a packet is 43 bytes long, the stateless reset should be 42 bytes long.",
+    "interpretation_b": "If a packet is 43 bytes long, the stateless reset could be any length as long as it is less than or equal to 42 bytes.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' combined with the lack of a maximum length constraint creates ambiguity. A strict interpretation would require exactly one byte less, while a more lenient interpretation allows any length less than or equal to one byte less.",
+    "missing_information": "The clause does not specify whether the reset *must* be exactly one byte shorter, or merely *at most* one byte shorter. This affects implementation because a receiver might reject a reset that is more than one byte shorter than the triggering packet."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:20:45.601915+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "02e44799c012d6b0cf8e3778c2013fcd948c3b8ca371f6a282f373999bb04571",
+  "lineage_ids": "lineage:9da1309a0e24f22fdb143301",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 218,
+    "load_duration": 4177800,
+    "prompt_eval_count": 591,
+    "total_duration": 8183016500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD send a stateless reset that is one byte shorter than the packet it responds to\", \"interpretation_a\": \"If a packet is 43 bytes long, the stateless reset should be 42 bytes long.\", \"interpretation_b\": \"If a packet is 43 bytes long, the stateless reset could be any length as long as it is less than or equal to 42 bytes.\", \"missing_information\": \"The clause does not specify whether the reset *must* be exactly one byte shorter, or merely *at most* one byte shorter. This affects implementation because a receiver might reject a reset that is more than one byte shorter than the triggering packet.\", \"justification\": \"The use of 'SHOULD' combined with the lack of a maximum length constraint creates ambiguity. A strict interpretation would require exactly one byte less, while a more lenient interpretation allows any length less than or equal to one byte less.\"}",
+  "record_id": "4a960935667230f91501328584eaf1eb028032245c9020fa931407c94809bfb9",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "10.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.188
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "prior to the end of the handshake",
+    "interpretation_a": "Packets received immediately before the handshake completion event are considered 'prior'.",
+    "interpretation_b": "Packets received with a timestamp indicating they were sent before the handshake completion event are considered 'prior', even if received after.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'prior to the end of the handshake' is open to interpretation. It's unclear whether it refers to the time of packet reception or the completion of handshake processing. This impacts when application data is accepted, potentially leading to different implementations.",
+    "missing_information": "The definition of 'end of the handshake' is not precise. Does it refer to the moment the last handshake packet is received, or the moment the handshake is fully processed? This affects when application data is considered valid."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:33:34.975060+00:00",
+  "document_id": "draft-ietf-quic-tls-10",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "f5467ee24b5e7c55a3ba8aa35f813083ea5ae10ce08825ed6df7ff1b4b193d2f",
+  "lineage_ids": "lineage:542d9590565e253ef4a46eae",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 194,
+    "load_duration": 3532200,
+    "prompt_eval_count": 573,
+    "total_duration": 7341761100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"prior to the end of the handshake\", \"interpretation_a\": \"Packets received immediately before the handshake completion event are considered 'prior'.\", \"interpretation_b\": \"Packets received with a timestamp indicating they were sent before the handshake completion event are considered 'prior', even if received after.\", \"missing_information\": \"The definition of 'end of the handshake' is not precise. Does it refer to the moment the last handshake packet is received, or the moment the handshake is fully processed? This affects when application data is considered valid.\", \"justification\": \"The phrase 'prior to the end of the handshake' is open to interpretation. It's unclear whether it refers to the time of packet reception or the completion of handshake processing. This impacts when application data is accepted, potentially leading to different implementations.\"}",
+  "record_id": "032125e6b1714467a1490f7d7be1fa9b84b3a3608cde25fae2d402106beeab37",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "8.1.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.344
+}

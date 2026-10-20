@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unique across all clients",
+    "interpretation_a": "The server must ensure that each NEW_TOKEN is globally unique across *all* clients it serves, ever. This implies a persistent, potentially unbounded state on the server to track issued tokens.",
+    "interpretation_b": "The server must ensure that each NEW_TOKEN is unique among the clients it is *currently* serving. This allows the server to reuse token values after a client has disconnected, simplifying state management.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'all clients' is not scoped. It could mean all clients the server has ever seen, or only those currently connected. This affects the complexity of the server's state management.",
+    "missing_information": "The scope of 'all clients' is not defined. Is it all clients ever connected to the server, or only currently connected clients?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:59:02.206400+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "35bf7d2bc3d381c63cba240e7325de9e3dbe52240c55bbb0efe700864c41f00e",
+  "lineage_ids": "lineage:7d9d63467a4d149c50e0f631",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 199,
+    "load_duration": 4487800,
+    "prompt_eval_count": 592,
+    "total_duration": 7510546200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unique across all clients\", \"interpretation_a\": \"The server must ensure that each NEW_TOKEN is globally unique across *all* clients it serves, ever. This implies a persistent, potentially unbounded state on the server to track issued tokens.\", \"interpretation_b\": \"The server must ensure that each NEW_TOKEN is unique among the clients it is *currently* serving. This allows the server to reuse token values after a client has disconnected, simplifying state management.\", \"missing_information\": \"The scope of 'all clients' is not defined. Is it all clients ever connected to the server, or only currently connected clients?\",\"justification\": \"The phrase 'all clients' is not scoped. It could mean all clients the server has ever seen, or only those currently connected. This affects the complexity of the server's state management.\"}",
+  "record_id": "c02a09663c0afcfec406a2980b51b92ba7be6010be658c1b4fc0d79f33965d38",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "8.1.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.516
+}

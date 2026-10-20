@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "when a stream is open",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"when a stream is open\" leaves it unclear whether the PING frame is required only in that situation or also in other idle states, creating an incomplete constraint that can result in materially different implementations.",
+    "missing_information": "The clause does not specify whether PING frames should be sent only when a stream is open or also when no streams are open, leading to different implementation behaviours."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T16:14:35.026950+00:00",
+  "document_id": "draft-ietf-quic-transport-05",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "edf1587daa19fe18fb82aa7179d818e35cb56f359b512b5974e4ba8dd9e400fe",
+  "lineage_ids": "lineage:961eb4f08b62bf137d0fa446",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 4339,
+    "load_duration": 4585800,
+    "prompt_eval_count": 572,
+    "total_duration": 37462266600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"when a stream is open\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The clause does not specify whether PING frames should be sent only when a stream is open or also when no streams are open, leading to different implementation behaviours.\",\n  \"justification\": \"The phrase \\\"when a stream is open\\\" leaves it unclear whether the PING frame is required only in that situation or also in other idle states, creating an incomplete constraint that can result in materially different implementations.\"\n}",
+  "record_id": "6e5ebb9ad48eb33c4579d85e8a13f768655da8cde891360a25cd5b960dc3aa5d",
+  "revision": "05",
+  "schema_version": 1,
+  "section_ids": "8.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 37.453
+}

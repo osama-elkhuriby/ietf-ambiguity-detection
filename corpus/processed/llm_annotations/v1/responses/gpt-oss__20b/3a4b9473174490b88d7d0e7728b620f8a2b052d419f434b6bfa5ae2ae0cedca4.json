@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "same configuration",
+    "interpretation_a": "The phrase 'same configuration' could refer to the combination of IP address, TCP port, Server Name Indication value, and TLS client certificate, or it could refer to the overall TLS configuration (cipher suites, keying material, etc.).",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause uses the undefined term 'configuration' without specifying its scope, allowing different implementations to interpret it in materially different ways.",
+    "missing_information": "A precise definition of what constitutes 'configuration' in this context is missing, leading to multiple reasonable interpretations of the clause's intent."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T04:04:16.908274+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "edefd21cf2c6b7f6489cd4524e18bb2ba7b83681c2e8d228b692c0daf6323d2e",
+  "lineage_ids": "lineage:6692235dba5f781bc502bca2",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1282,
+    "load_duration": 5222300,
+    "prompt_eval_count": 625,
+    "total_duration": 11211082200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-1\",\n  \"evidence_span\": \"same configuration\",\n  \"interpretation_a\": \"The phrase 'same configuration' could refer to the combination of IP address, TCP port, Server Name Indication value, and TLS client certificate, or it could refer to the overall TLS configuration (cipher suites, keying material, etc.).\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"A precise definition of what constitutes 'configuration' in this context is missing, leading to multiple reasonable interpretations of the clause's intent.\",\n  \"justification\": \"The clause uses the undefined term 'configuration' without specifying its scope, allowing different implementations to interpret it in materially different ways.\"\n}",
+  "record_id": "3a4b9473174490b88d7d0e7728b620f8a2b052d419f434b6bfa5ae2ae0cedca4",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "9.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.203
+}

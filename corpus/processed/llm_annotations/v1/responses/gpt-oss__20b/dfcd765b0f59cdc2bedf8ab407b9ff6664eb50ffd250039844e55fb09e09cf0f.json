@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Servers MAY communicate a preferred address of each address family (IPv4 and IPv6)",
+    "interpretation_a": "If a server chooses to communicate a preferred address, it must provide one for each address family (both IPv4 and IPv6).",
+    "interpretation_b": "A server may communicate a preferred address for only one address family (e.g., only IPv4 or only IPv6) and omit the other.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether a server must provide a preferred address for every address family when it chooses to provide any, leaving two materially different implementation behaviours possible.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T18:48:10.932735+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "d44cebd0790910c9a16054954d892f5a1cb49de64677f927baff89c14e0809a6",
+  "lineage_ids": "lineage:6e7cca1d9ed38d514dca62ea",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1191,
+    "load_duration": 3986600,
+    "prompt_eval_count": 605,
+    "total_duration": 10318921000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"Servers MAY communicate a preferred address of each address family (IPv4 and IPv6)\",\n  \"interpretation_a\": \"If a server chooses to communicate a preferred address, it must provide one for each address family (both IPv4 and IPv6).\",\n  \"interpretation_b\": \"A server may communicate a preferred address for only one address family (e.g., only IPv4 or only IPv6) and omit the other.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify whether a server must provide a preferred address for every address family when it chooses to provide any, leaving two materially different implementation behaviours possible.\"\n}",
+  "record_id": "dfcd765b0f59cdc2bedf8ab407b9ff6664eb50ffd250039844e55fb09e09cf0f",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9.6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.313
+}

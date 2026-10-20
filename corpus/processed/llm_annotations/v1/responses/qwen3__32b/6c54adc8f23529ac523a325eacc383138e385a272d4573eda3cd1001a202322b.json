@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause is clear and unambiguous. It specifies a condition under which clients must not use an HTTPS RR response: when they do not support TLS SNI or fail to indicate the origin name in the TLS ClientHello. The wording does not allow for multiple materially different interpretations, and the reference to future specifications (e.g., ECH) is explicitly noted as a possibility, not an ambiguity.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:07:50.719328+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "f82c4b0869ec13d7565183ecd635239d1d47678ef32a4c61a530d5355e4fdc58",
+  "lineage_ids": "lineage:474ce16bd60086bcc5120122",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 135,
+    "load_duration": 8500000,
+    "prompt_eval_count": 532,
+    "total_duration": 5630026500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause is clear and unambiguous. It specifies a condition under which clients must not use an HTTPS RR response: when they do not support TLS SNI or fail to indicate the origin name in the TLS ClientHello. The wording does not allow for multiple materially different interpretations, and the reference to future specifications (e.g., ECH) is explicitly noted as a possibility, not an ambiguity.\"\n}",
+  "record_id": "6c54adc8f23529ac523a325eacc383138e385a272d4573eda3cd1001a202322b",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "9.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.625
+}

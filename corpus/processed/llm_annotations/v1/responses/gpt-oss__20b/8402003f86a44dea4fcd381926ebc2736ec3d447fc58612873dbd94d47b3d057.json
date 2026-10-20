@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Automated clients MAY provide a configuration setting that disables this check, but MUST provide a setting which enables it.",
+    "interpretation_a": "The client must provide at least one configuration setting that enables the check; it may optionally provide a separate setting that disables the check. The enabling setting could be the same as the disabling setting (e.g., a boolean toggle).",
+    "interpretation_b": "The client must provide two distinct configuration settings: one that enables the check and another that disables it. The enabling setting cannot be the same as the disabling setting.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether the enabling setting must be distinct from the disabling setting, allowing two materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T07:02:28.784441+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "90a178c515975cf1f5f6c483b188a4e8f71879dd2de74ba6a2d482bee2adabe1",
+  "lineage_ids": "lineage:66ddaf5dc5bad42a0f629b2a",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2074,
+    "load_duration": 5466600,
+    "prompt_eval_count": 574,
+    "total_duration": 17857807300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"Automated clients MAY provide a configuration setting that disables this check, but MUST provide a setting which enables it.\",\n  \"interpretation_a\": \"The client must provide at least one configuration setting that enables the check; it may optionally provide a separate setting that disables the check. The enabling setting could be the same as the disabling setting (e.g., a boolean toggle).\",\n  \"interpretation_b\": \"The client must provide two distinct configuration settings: one that enables the check and another that disables it. The enabling setting cannot be the same as the disabling setting.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify whether the enabling setting must be distinct from the disabling setting, allowing two materially different implementation behaviours.\"\n}",
+  "record_id": "8402003f86a44dea4fcd381926ebc2736ec3d447fc58612873dbd94d47b3d057",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "4.3.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 17.859
+}

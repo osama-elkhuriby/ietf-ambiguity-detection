@@ -1,0 +1,3588 @@
+{
+  "actual_digest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+  "api_ps_after_unload": {
+    "models": []
+  },
+  "api_ps_before": {
+    "models": []
+  },
+  "api_ps_resident": {
+    "models": [
+      {
+        "context_length": 16384,
+        "details": {
+          "families": [
+            "qwen35"
+          ],
+          "family": "qwen35",
+          "format": "gguf",
+          "parameter_size": "26.9B",
+          "parent_model": "",
+          "quantization_level": "Q4_K_M"
+        },
+        "digest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+        "expires_at": "2026-10-14T21:19:22.6836753+03:00",
+        "model": "qwen3.5:27b",
+        "name": "qwen3.5:27b",
+        "runner": "llamacpp",
+        "size": 17643434146,
+        "size_vram": 17643434146
+      }
+    ]
+  },
+  "base_url": "http://127.0.0.1:11435",
+  "candidate_server_exit_code": 1,
+  "completed_at": "2026-10-14T18:14:22.905984+00:00",
+  "cuda_discovery_verified": true,
+  "diagnostic_version": "gpu-placement-v1",
+  "expected_digest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+  "frozen_gate_reasons": [],
+  "frozen_gates_passed": true,
+  "hardware_after_resident": {
+    "captured_at": "2026-10-14T18:14:22.684176+00:00",
+    "gpu": {
+      "free_mib": 13028,
+      "name": "NVIDIA RTX 5000 Ada Generation",
+      "total_mib": 32760,
+      "used_mib": 19208,
+      "utilization_percent": 87
+    },
+    "paging": {
+      "percent_used": 22.5,
+      "total_bytes": 5714313216,
+      "used_bytes": 1285935104
+    },
+    "ram": {
+      "available_bytes": 21313028096,
+      "percent_used": 37.4,
+      "total_bytes": 34050842624
+    }
+  },
+  "hardware_after_unload": {
+    "captured_at": "2026-10-14T18:14:22.872534+00:00",
+    "gpu": {
+      "free_mib": 31082,
+      "name": "NVIDIA RTX 5000 Ada Generation",
+      "total_mib": 32760,
+      "used_mib": 1154,
+      "utilization_percent": 4
+    },
+    "paging": {
+      "percent_used": 22.5,
+      "total_bytes": 5714313216,
+      "used_bytes": 1285935104
+    },
+    "ram": {
+      "available_bytes": 22945402880,
+      "percent_used": 32.6,
+      "total_bytes": 34050842624
+    }
+  },
+  "hardware_before": {
+    "captured_at": "2026-10-14T18:11:23.944004+00:00",
+    "gpu": {
+      "free_mib": 31069,
+      "name": "NVIDIA RTX 5000 Ada Generation",
+      "total_mib": 32760,
+      "used_mib": 1167,
+      "utilization_percent": 7
+    },
+    "paging": {
+      "percent_used": 22.5,
+      "total_bytes": 5714313216,
+      "used_bytes": 1288527872
+    },
+    "ram": {
+      "available_bytes": 22825975808,
+      "percent_used": 33.0,
+      "total_bytes": 34050842624
+    }
+  },
+  "inference_request_count": 1,
+  "inference_request_limit": 1,
+  "limits": {
+    "heavy_paging_delta_gib": 1.0,
+    "projected_pilot_runtime_ceiling_seconds": 21600,
+    "ram_reserve_gib": 8.0
+  },
+  "model": "qwen3.5:27b",
+  "model_store": "C:\\Users\\mosta\\.ollama\\models",
+  "model_store_from_environment": false,
+  "model_tag": {
+    "capabilities": [
+      "completion",
+      "vision",
+      "tools",
+      "thinking"
+    ],
+    "details": {
+      "context_length": 262144,
+      "embedding_length": 5120,
+      "families": [
+        "qwen35"
+      ],
+      "family": "qwen35",
+      "format": "gguf",
+      "parameter_size": "26.9B",
+      "parent_model": "qwen35-validation-20261004:27b-q4",
+      "quantization_level": "Q4_K_M",
+      "runner": "llamacpp"
+    },
+    "digest": "64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59",
+    "model": "qwen3.5:27b",
+    "modified_at": "2026-10-14T15:04:33.322004+03:00",
+    "name": "qwen3.5:27b",
+    "size": 17478556591
+  },
+  "monitor_samples": [
+    {
+      "captured_at": "2026-10-14T18:11:23.977655+00:00",
+      "gpu": {
+        "free_mib": 31069,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 1167,
+        "utilization_percent": 7
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 22826151936,
+        "percent_used": 33.0,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:11:25.008615+00:00",
+      "gpu": {
+        "free_mib": 30799,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 1437,
+        "utilization_percent": 31
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 22459478016,
+        "percent_used": 34.0,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:11:26.056437+00:00",
+      "gpu": {
+        "free_mib": 15718,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16518,
+        "utilization_percent": 22
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21706883072,
+        "percent_used": 36.3,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:11:27.107848+00:00",
+      "gpu": {
+        "free_mib": 15718,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16518,
+        "utilization_percent": 1
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21705764864,
+        "percent_used": 36.3,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:11:28.157469+00:00",
+      "gpu": {
+        "free_mib": 15718,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16518,
+        "utilization_percent": 1
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21724094464,
+        "percent_used": 36.2,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:11:29.209163+00:00",
+      "gpu": {
+        "free_mib": 15713,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16523,
+        "utilization_percent": 0
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21711933440,
+        "percent_used": 36.2,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:11:30.260200+00:00",
+      "gpu": {
+        "free_mib": 15713,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16523,
+        "utilization_percent": 2
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21708623872,
+        "percent_used": 36.2,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:11:31.310412+00:00",
+      "gpu": {
+        "free_mib": 15718,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16518,
+        "utilization_percent": 4
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21703450624,
+        "percent_used": 36.3,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:11:32.361857+00:00",
+      "gpu": {
+        "free_mib": 15718,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16518,
+        "utilization_percent": 7
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21708566528,
+        "percent_used": 36.2,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:11:33.412455+00:00",
+      "gpu": {
+        "free_mib": 15718,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16518,
+        "utilization_percent": 9
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21699039232,
+        "percent_used": 36.3,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:11:34.464824+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 10
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21692665856,
+        "percent_used": 36.3,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:11:35.513522+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 9
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21692710912,
+        "percent_used": 36.3,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:11:36.566184+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 11
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21667459072,
+        "percent_used": 36.4,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:11:37.616383+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 11
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21668409344,
+        "percent_used": 36.4,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:11:38.667298+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 10
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21655920640,
+        "percent_used": 36.4,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:11:39.718311+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 11
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21651660800,
+        "percent_used": 36.4,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:11:40.768984+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 9
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21637804032,
+        "percent_used": 36.5,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:11:41.802909+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 5
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21594394624,
+        "percent_used": 36.6,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:11:42.854881+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 8
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21585567744,
+        "percent_used": 36.6,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:11:43.904357+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 6
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21606858752,
+        "percent_used": 36.5,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:11:44.956868+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 7
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21596876800,
+        "percent_used": 36.6,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:11:45.994631+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 8
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21575905280,
+        "percent_used": 36.6,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:11:47.040938+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 8
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21573251072,
+        "percent_used": 36.6,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:11:48.092905+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 9
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21566791680,
+        "percent_used": 36.7,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:11:49.129710+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 9
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21570387968,
+        "percent_used": 36.7,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:11:50.176536+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 8
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21572706304,
+        "percent_used": 36.6,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:11:51.227382+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 9
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21572521984,
+        "percent_used": 36.6,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:11:52.278012+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 9
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21572718592,
+        "percent_used": 36.6,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:11:53.329490+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 10
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21573869568,
+        "percent_used": 36.6,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:11:54.379980+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 7
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21547044864,
+        "percent_used": 36.7,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:11:55.430788+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 8
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21563133952,
+        "percent_used": 36.7,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:11:56.482706+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 7
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21535928320,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:11:57.532622+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 7
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21544992768,
+        "percent_used": 36.7,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:11:58.572710+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 7
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21521494016,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:11:59.617709+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 4
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21501513728,
+        "percent_used": 36.9,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:00.668566+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 9
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21503037440,
+        "percent_used": 36.9,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:01.719442+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 8
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21525925888,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:02.753794+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 6
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288527872
+      },
+      "ram": {
+        "available_bytes": 21521571840,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:03.805415+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 10
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288523776
+      },
+      "ram": {
+        "available_bytes": 21507739648,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:04.855710+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 8
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288523776
+      },
+      "ram": {
+        "available_bytes": 21545861120,
+        "percent_used": 36.7,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:05.906474+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 8
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288523776
+      },
+      "ram": {
+        "available_bytes": 21539860480,
+        "percent_used": 36.7,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:06.958932+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 4
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288523776
+      },
+      "ram": {
+        "available_bytes": 21544046592,
+        "percent_used": 36.7,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:08.008178+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 9
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288523776
+      },
+      "ram": {
+        "available_bytes": 21529755648,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:09.058425+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 8
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288523776
+      },
+      "ram": {
+        "available_bytes": 21536473088,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:10.109686+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 8
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288523776
+      },
+      "ram": {
+        "available_bytes": 21516275712,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:11.159252+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 7
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288519680
+      },
+      "ram": {
+        "available_bytes": 21510959104,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:12.211318+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 5
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288519680
+      },
+      "ram": {
+        "available_bytes": 21538336768,
+        "percent_used": 36.7,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:13.261362+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 7
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288519680
+      },
+      "ram": {
+        "available_bytes": 21534248960,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:14.313175+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 6
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288519680
+      },
+      "ram": {
+        "available_bytes": 21541437440,
+        "percent_used": 36.7,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:15.364862+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 7
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288515584
+      },
+      "ram": {
+        "available_bytes": 21544419328,
+        "percent_used": 36.7,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:16.415417+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 9
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288515584
+      },
+      "ram": {
+        "available_bytes": 21543399424,
+        "percent_used": 36.7,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:17.466027+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 6
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288515584
+      },
+      "ram": {
+        "available_bytes": 21533978624,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:18.516557+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 5
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288515584
+      },
+      "ram": {
+        "available_bytes": 21518512128,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:19.568414+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 9
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288515584
+      },
+      "ram": {
+        "available_bytes": 21511905280,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:20.618545+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 9
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288515584
+      },
+      "ram": {
+        "available_bytes": 21511643136,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:21.669031+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 7
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288515584
+      },
+      "ram": {
+        "available_bytes": 21521854464,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:22.704344+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 6
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288515584
+      },
+      "ram": {
+        "available_bytes": 21499944960,
+        "percent_used": 36.9,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:23.755544+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 7
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288503296
+      },
+      "ram": {
+        "available_bytes": 21515612160,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:24.795068+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 5
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288503296
+      },
+      "ram": {
+        "available_bytes": 21504684032,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:25.839247+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 6
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288503296
+      },
+      "ram": {
+        "available_bytes": 21490020352,
+        "percent_used": 36.9,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:26.888927+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 7
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288499200
+      },
+      "ram": {
+        "available_bytes": 21499281408,
+        "percent_used": 36.9,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:27.935054+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 8
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288368128
+      },
+      "ram": {
+        "available_bytes": 21503758336,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:28.974612+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 9
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288331264
+      },
+      "ram": {
+        "available_bytes": 21505449984,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:30.014987+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 9
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288318976
+      },
+      "ram": {
+        "available_bytes": 21506478080,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:31.060051+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 9
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288310784
+      },
+      "ram": {
+        "available_bytes": 21511655424,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:32.128617+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 9
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288257536
+      },
+      "ram": {
+        "available_bytes": 21516075008,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:33.212054+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 5
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288241152
+      },
+      "ram": {
+        "available_bytes": 21493428224,
+        "percent_used": 36.9,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:34.264821+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 4
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288204288
+      },
+      "ram": {
+        "available_bytes": 21478326272,
+        "percent_used": 36.9,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:35.324730+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 7
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288196096
+      },
+      "ram": {
+        "available_bytes": 21493313536,
+        "percent_used": 36.9,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:36.365133+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 6
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288159232
+      },
+      "ram": {
+        "available_bytes": 21503467520,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:37.415121+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 4
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288151040
+      },
+      "ram": {
+        "available_bytes": 21519429632,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:38.467297+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 7
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288146944
+      },
+      "ram": {
+        "available_bytes": 21521182720,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:39.518180+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 6
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288138752
+      },
+      "ram": {
+        "available_bytes": 21527511040,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:40.568919+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 7
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288138752
+      },
+      "ram": {
+        "available_bytes": 21522321408,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:41.619108+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 8
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288126464
+      },
+      "ram": {
+        "available_bytes": 21527527424,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:42.670036+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 5
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288118272
+      },
+      "ram": {
+        "available_bytes": 21519187968,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:43.720488+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 6
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288110080
+      },
+      "ram": {
+        "available_bytes": 21501882368,
+        "percent_used": 36.9,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:44.771576+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 5
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288110080
+      },
+      "ram": {
+        "available_bytes": 21493907456,
+        "percent_used": 36.9,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:45.805915+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 8
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288105984
+      },
+      "ram": {
+        "available_bytes": 21497061376,
+        "percent_used": 36.9,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:46.856758+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 8
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288097792
+      },
+      "ram": {
+        "available_bytes": 21493514240,
+        "percent_used": 36.9,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:47.907100+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 7
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288065024
+      },
+      "ram": {
+        "available_bytes": 21489463296,
+        "percent_used": 36.9,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:48.957504+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 8
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288052736
+      },
+      "ram": {
+        "available_bytes": 21494460416,
+        "percent_used": 36.9,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:50.009233+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 8
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1288048640
+      },
+      "ram": {
+        "available_bytes": 21466664960,
+        "percent_used": 37.0,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:51.059571+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 9
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1287991296
+      },
+      "ram": {
+        "available_bytes": 21450199040,
+        "percent_used": 37.0,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:52.129519+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 8
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1287970816
+      },
+      "ram": {
+        "available_bytes": 21432758272,
+        "percent_used": 37.1,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:53.211699+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 7
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1287970816
+      },
+      "ram": {
+        "available_bytes": 21422309376,
+        "percent_used": 37.1,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:54.278933+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 4
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1287970816
+      },
+      "ram": {
+        "available_bytes": 21407756288,
+        "percent_used": 37.1,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:55.331178+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 6
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1287970816
+      },
+      "ram": {
+        "available_bytes": 21393387520,
+        "percent_used": 37.2,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:56.380581+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 8
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1287966720
+      },
+      "ram": {
+        "available_bytes": 21377249280,
+        "percent_used": 37.2,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:57.425083+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 6
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1287962624
+      },
+      "ram": {
+        "available_bytes": 21358166016,
+        "percent_used": 37.3,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:58.532828+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 8
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1287962624
+      },
+      "ram": {
+        "available_bytes": 21363146752,
+        "percent_used": 37.3,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:12:59.582841+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 8
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1287950336
+      },
+      "ram": {
+        "available_bytes": 21364023296,
+        "percent_used": 37.3,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:00.635618+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 7
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1287913472
+      },
+      "ram": {
+        "available_bytes": 21365891072,
+        "percent_used": 37.3,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:01.685085+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 6
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1287901184
+      },
+      "ram": {
+        "available_bytes": 21375275008,
+        "percent_used": 37.2,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:02.769678+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 6
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1287897088
+      },
+      "ram": {
+        "available_bytes": 21383114752,
+        "percent_used": 37.2,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:03.870485+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 4
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1287831552
+      },
+      "ram": {
+        "available_bytes": 21383434240,
+        "percent_used": 37.2,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:04.955520+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 7
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1287770112
+      },
+      "ram": {
+        "available_bytes": 21385490432,
+        "percent_used": 37.2,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:06.006584+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 5
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1287639040
+      },
+      "ram": {
+        "available_bytes": 21374197760,
+        "percent_used": 37.2,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:07.190396+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 3
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1287561216
+      },
+      "ram": {
+        "available_bytes": 21348343808,
+        "percent_used": 37.3,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:08.241060+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 8
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1287479296
+      },
+      "ram": {
+        "available_bytes": 21358628864,
+        "percent_used": 37.3,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:09.291244+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 3
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1287471104
+      },
+      "ram": {
+        "available_bytes": 21352517632,
+        "percent_used": 37.3,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:10.325579+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 4
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1287467008
+      },
+      "ram": {
+        "available_bytes": 21353877504,
+        "percent_used": 37.3,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:11.378090+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 5
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1287356416
+      },
+      "ram": {
+        "available_bytes": 21353304064,
+        "percent_used": 37.3,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:12.427593+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 4
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1287319552
+      },
+      "ram": {
+        "available_bytes": 21351116800,
+        "percent_used": 37.3,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:13.469932+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 3
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1286651904
+      },
+      "ram": {
+        "available_bytes": 21320212480,
+        "percent_used": 37.4,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:14.513712+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 4
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1286397952
+      },
+      "ram": {
+        "available_bytes": 21295996928,
+        "percent_used": 37.5,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:15.562724+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 4
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1286168576
+      },
+      "ram": {
+        "available_bytes": 21317443584,
+        "percent_used": 37.4,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:16.614189+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 4
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1286139904
+      },
+      "ram": {
+        "available_bytes": 21326598144,
+        "percent_used": 37.4,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:17.665397+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 4
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1286135808
+      },
+      "ram": {
+        "available_bytes": 21333131264,
+        "percent_used": 37.3,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:18.717034+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 6
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1286025216
+      },
+      "ram": {
+        "available_bytes": 21333016576,
+        "percent_used": 37.3,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:19.767204+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 8
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285963776
+      },
+      "ram": {
+        "available_bytes": 21330964480,
+        "percent_used": 37.4,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:20.819408+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 3
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285963776
+      },
+      "ram": {
+        "available_bytes": 21275525120,
+        "percent_used": 37.5,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:21.868808+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 3
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285959680
+      },
+      "ram": {
+        "available_bytes": 21280624640,
+        "percent_used": 37.5,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:22.902488+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 3
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285959680
+      },
+      "ram": {
+        "available_bytes": 21284941824,
+        "percent_used": 37.5,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:23.954076+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 3
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285959680
+      },
+      "ram": {
+        "available_bytes": 21292236800,
+        "percent_used": 37.5,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:25.004216+00:00",
+      "gpu": {
+        "free_mib": 15722,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 16514,
+        "utilization_percent": 3
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285959680
+      },
+      "ram": {
+        "available_bytes": 21320667136,
+        "percent_used": 37.4,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:26.055369+00:00",
+      "gpu": {
+        "free_mib": 14226,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 18010,
+        "utilization_percent": 0
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285959680
+      },
+      "ram": {
+        "available_bytes": 21156110336,
+        "percent_used": 37.9,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:27.105623+00:00",
+      "gpu": {
+        "free_mib": 14194,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 18042,
+        "utilization_percent": 0
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285959680
+      },
+      "ram": {
+        "available_bytes": 21257809920,
+        "percent_used": 37.6,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:28.157132+00:00",
+      "gpu": {
+        "free_mib": 14194,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 18042,
+        "utilization_percent": 0
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285959680
+      },
+      "ram": {
+        "available_bytes": 21243928576,
+        "percent_used": 37.6,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:29.207989+00:00",
+      "gpu": {
+        "free_mib": 14194,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 18042,
+        "utilization_percent": 0
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285959680
+      },
+      "ram": {
+        "available_bytes": 21236527104,
+        "percent_used": 37.6,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:30.258464+00:00",
+      "gpu": {
+        "free_mib": 14194,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 18042,
+        "utilization_percent": 0
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285955584
+      },
+      "ram": {
+        "available_bytes": 21232795648,
+        "percent_used": 37.6,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:31.309764+00:00",
+      "gpu": {
+        "free_mib": 14194,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 18042,
+        "utilization_percent": 5
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285955584
+      },
+      "ram": {
+        "available_bytes": 21225091072,
+        "percent_used": 37.7,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:32.361561+00:00",
+      "gpu": {
+        "free_mib": 14194,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 18042,
+        "utilization_percent": 4
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285955584
+      },
+      "ram": {
+        "available_bytes": 21217841152,
+        "percent_used": 37.7,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:33.412478+00:00",
+      "gpu": {
+        "free_mib": 14194,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 18042,
+        "utilization_percent": 4
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285955584
+      },
+      "ram": {
+        "available_bytes": 21210923008,
+        "percent_used": 37.7,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:34.462385+00:00",
+      "gpu": {
+        "free_mib": 14194,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 18042,
+        "utilization_percent": 5
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285955584
+      },
+      "ram": {
+        "available_bytes": 21536112640,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:35.513267+00:00",
+      "gpu": {
+        "free_mib": 14194,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 18042,
+        "utilization_percent": 5
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285955584
+      },
+      "ram": {
+        "available_bytes": 21524611072,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:36.563089+00:00",
+      "gpu": {
+        "free_mib": 14194,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 18042,
+        "utilization_percent": 5
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285951488
+      },
+      "ram": {
+        "available_bytes": 21455441920,
+        "percent_used": 37.0,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:37.614973+00:00",
+      "gpu": {
+        "free_mib": 14194,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 18042,
+        "utilization_percent": 5
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285951488
+      },
+      "ram": {
+        "available_bytes": 21438197760,
+        "percent_used": 37.0,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:38.665987+00:00",
+      "gpu": {
+        "free_mib": 14194,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 18042,
+        "utilization_percent": 3
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285951488
+      },
+      "ram": {
+        "available_bytes": 21452259328,
+        "percent_used": 37.0,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:39.716895+00:00",
+      "gpu": {
+        "free_mib": 14194,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 18042,
+        "utilization_percent": 4
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285951488
+      },
+      "ram": {
+        "available_bytes": 21246951424,
+        "percent_used": 37.6,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:40.768444+00:00",
+      "gpu": {
+        "free_mib": 14194,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 18042,
+        "utilization_percent": 4
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285951488
+      },
+      "ram": {
+        "available_bytes": 21203447808,
+        "percent_used": 37.7,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:41.818423+00:00",
+      "gpu": {
+        "free_mib": 14194,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 18042,
+        "utilization_percent": 3
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285951488
+      },
+      "ram": {
+        "available_bytes": 21251870720,
+        "percent_used": 37.6,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:42.870234+00:00",
+      "gpu": {
+        "free_mib": 14194,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 18042,
+        "utilization_percent": 3
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285951488
+      },
+      "ram": {
+        "available_bytes": 21204705280,
+        "percent_used": 37.7,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:43.921555+00:00",
+      "gpu": {
+        "free_mib": 14194,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 18042,
+        "utilization_percent": 3
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285951488
+      },
+      "ram": {
+        "available_bytes": 21224738816,
+        "percent_used": 37.7,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:44.972016+00:00",
+      "gpu": {
+        "free_mib": 14194,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 18042,
+        "utilization_percent": 3
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285951488
+      },
+      "ram": {
+        "available_bytes": 21222957056,
+        "percent_used": 37.7,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:46.006273+00:00",
+      "gpu": {
+        "free_mib": 14194,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 18042,
+        "utilization_percent": 3
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285951488
+      },
+      "ram": {
+        "available_bytes": 21232672768,
+        "percent_used": 37.6,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:47.055842+00:00",
+      "gpu": {
+        "free_mib": 13306,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 18930,
+        "utilization_percent": 100
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285951488
+      },
+      "ram": {
+        "available_bytes": 21530062848,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:48.097703+00:00",
+      "gpu": {
+        "free_mib": 13306,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 18930,
+        "utilization_percent": 0
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285951488
+      },
+      "ram": {
+        "available_bytes": 21527154688,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:49.141301+00:00",
+      "gpu": {
+        "free_mib": 13306,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 18930,
+        "utilization_percent": 1
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285951488
+      },
+      "ram": {
+        "available_bytes": 21515849728,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:50.194035+00:00",
+      "gpu": {
+        "free_mib": 13306,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 18930,
+        "utilization_percent": 2
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285951488
+      },
+      "ram": {
+        "available_bytes": 21509394432,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:51.242770+00:00",
+      "gpu": {
+        "free_mib": 13306,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 18930,
+        "utilization_percent": 2
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285951488
+      },
+      "ram": {
+        "available_bytes": 21519855616,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:52.292920+00:00",
+      "gpu": {
+        "free_mib": 13306,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 18930,
+        "utilization_percent": 3
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285951488
+      },
+      "ram": {
+        "available_bytes": 21530648576,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:53.350933+00:00",
+      "gpu": {
+        "free_mib": 13306,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 18930,
+        "utilization_percent": 7
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285951488
+      },
+      "ram": {
+        "available_bytes": 21544980480,
+        "percent_used": 36.7,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:54.396385+00:00",
+      "gpu": {
+        "free_mib": 13306,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 18930,
+        "utilization_percent": 9
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285951488
+      },
+      "ram": {
+        "available_bytes": 21527068672,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:55.446106+00:00",
+      "gpu": {
+        "free_mib": 13306,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 18930,
+        "utilization_percent": 5
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285943296
+      },
+      "ram": {
+        "available_bytes": 21519822848,
+        "percent_used": 36.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:56.504577+00:00",
+      "gpu": {
+        "free_mib": 13306,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 18930,
+        "utilization_percent": 4
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285943296
+      },
+      "ram": {
+        "available_bytes": 21492457472,
+        "percent_used": 36.9,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:57.548203+00:00",
+      "gpu": {
+        "free_mib": 13052,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 19184,
+        "utilization_percent": 100
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285943296
+      },
+      "ram": {
+        "available_bytes": 21432979456,
+        "percent_used": 37.1,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:58.598843+00:00",
+      "gpu": {
+        "free_mib": 13052,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 19184,
+        "utilization_percent": 1
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285943296
+      },
+      "ram": {
+        "available_bytes": 21365497856,
+        "percent_used": 37.3,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:13:59.650590+00:00",
+      "gpu": {
+        "free_mib": 13052,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 19184,
+        "utilization_percent": 1
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285943296
+      },
+      "ram": {
+        "available_bytes": 21374869504,
+        "percent_used": 37.2,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:14:00.700806+00:00",
+      "gpu": {
+        "free_mib": 13052,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 19184,
+        "utilization_percent": 2
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285943296
+      },
+      "ram": {
+        "available_bytes": 21371969536,
+        "percent_used": 37.2,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:14:01.751262+00:00",
+      "gpu": {
+        "free_mib": 13052,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 19184,
+        "utilization_percent": 4
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285943296
+      },
+      "ram": {
+        "available_bytes": 21383032832,
+        "percent_used": 37.2,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:14:02.801784+00:00",
+      "gpu": {
+        "free_mib": 13052,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 19184,
+        "utilization_percent": 4
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285943296
+      },
+      "ram": {
+        "available_bytes": 21368270848,
+        "percent_used": 37.2,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:14:03.853174+00:00",
+      "gpu": {
+        "free_mib": 13052,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 19184,
+        "utilization_percent": 3
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285943296
+      },
+      "ram": {
+        "available_bytes": 21359554560,
+        "percent_used": 37.3,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:14:04.892455+00:00",
+      "gpu": {
+        "free_mib": 13042,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 19194,
+        "utilization_percent": 3
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285943296
+      },
+      "ram": {
+        "available_bytes": 21451026432,
+        "percent_used": 37.0,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:14:05.938331+00:00",
+      "gpu": {
+        "free_mib": 13042,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 19194,
+        "utilization_percent": 0
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285943296
+      },
+      "ram": {
+        "available_bytes": 21298892800,
+        "percent_used": 37.4,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:14:06.988905+00:00",
+      "gpu": {
+        "free_mib": 13042,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 19194,
+        "utilization_percent": 0
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285943296
+      },
+      "ram": {
+        "available_bytes": 21305786368,
+        "percent_used": 37.4,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:14:08.039955+00:00",
+      "gpu": {
+        "free_mib": 13042,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 19194,
+        "utilization_percent": 0
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285943296
+      },
+      "ram": {
+        "available_bytes": 21305876480,
+        "percent_used": 37.4,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:14:09.090326+00:00",
+      "gpu": {
+        "free_mib": 13042,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 19194,
+        "utilization_percent": 2
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285939200
+      },
+      "ram": {
+        "available_bytes": 21302415360,
+        "percent_used": 37.4,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:14:10.143203+00:00",
+      "gpu": {
+        "free_mib": 13042,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 19194,
+        "utilization_percent": 3
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285939200
+      },
+      "ram": {
+        "available_bytes": 21305626624,
+        "percent_used": 37.4,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:14:11.193406+00:00",
+      "gpu": {
+        "free_mib": 13042,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 19194,
+        "utilization_percent": 87
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285939200
+      },
+      "ram": {
+        "available_bytes": 21327155200,
+        "percent_used": 37.4,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:14:12.244838+00:00",
+      "gpu": {
+        "free_mib": 13042,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 19194,
+        "utilization_percent": 0
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285935104
+      },
+      "ram": {
+        "available_bytes": 21206204416,
+        "percent_used": 37.7,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:14:13.294209+00:00",
+      "gpu": {
+        "free_mib": 13042,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 19194,
+        "utilization_percent": 0
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285935104
+      },
+      "ram": {
+        "available_bytes": 21200879616,
+        "percent_used": 37.7,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:14:14.344955+00:00",
+      "gpu": {
+        "free_mib": 13042,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 19194,
+        "utilization_percent": 1
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285935104
+      },
+      "ram": {
+        "available_bytes": 21193224192,
+        "percent_used": 37.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:14:15.395940+00:00",
+      "gpu": {
+        "free_mib": 13042,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 19194,
+        "utilization_percent": 2
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285935104
+      },
+      "ram": {
+        "available_bytes": 21171339264,
+        "percent_used": 37.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:14:16.447232+00:00",
+      "gpu": {
+        "free_mib": 13042,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 19194,
+        "utilization_percent": 2
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285935104
+      },
+      "ram": {
+        "available_bytes": 21149495296,
+        "percent_used": 37.9,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:14:17.497772+00:00",
+      "gpu": {
+        "free_mib": 13042,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 19194,
+        "utilization_percent": 5
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285935104
+      },
+      "ram": {
+        "available_bytes": 21169856512,
+        "percent_used": 37.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:14:18.548386+00:00",
+      "gpu": {
+        "free_mib": 13042,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 19194,
+        "utilization_percent": 5
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285935104
+      },
+      "ram": {
+        "available_bytes": 21175312384,
+        "percent_used": 37.8,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:14:19.599372+00:00",
+      "gpu": {
+        "free_mib": 13028,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 19208,
+        "utilization_percent": 100
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285935104
+      },
+      "ram": {
+        "available_bytes": 21290209280,
+        "percent_used": 37.5,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:14:20.650184+00:00",
+      "gpu": {
+        "free_mib": 13028,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 19208,
+        "utilization_percent": 97
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285935104
+      },
+      "ram": {
+        "available_bytes": 21300023296,
+        "percent_used": 37.4,
+        "total_bytes": 34050842624
+      }
+    },
+    {
+      "captured_at": "2026-10-14T18:14:21.701337+00:00",
+      "gpu": {
+        "free_mib": 13028,
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "used_mib": 19208,
+        "utilization_percent": 80
+      },
+      "paging": {
+        "percent_used": 22.5,
+        "total_bytes": 5714313216,
+        "used_bytes": 1285935104
+      },
+      "ram": {
+        "available_bytes": 21304934400,
+        "percent_used": 37.4,
+        "total_bytes": 34050842624
+      }
+    }
+  ],
+  "monitor_summary": {
+    "maximum_gpu_used_mib": 19208,
+    "maximum_gpu_utilization_percent": 100,
+    "maximum_paging_used_bytes": 1288527872,
+    "minimum_available_ram_bytes": 21149495296,
+    "sample_count": 170
+  },
+  "resident_gpu_placement_verified": true,
+  "retry_limit": 0,
+  "runtime": "C:\\Users\\mosta\\AppData\\Local\\OllamaStandalone\\v0.40.4\\runtime",
+  "settings": {
+    "num_ctx": 16384,
+    "num_predict": 768,
+    "reasoning_setting": false,
+    "seed": 20261014,
+    "temperature": 0.0,
+    "timeout_seconds": 300
+  },
+  "started_at": "2026-10-14T18:11:21.620722+00:00",
+  "status": "VALID",
+  "structural_validation": {
+    "annotation": {
+      "ambiguity_subtype": "none",
+      "context_issue": "none",
+      "evidence_span": "",
+      "interpretation_a": "",
+      "interpretation_b": "",
+      "justification": "The clause clearly permits an endpoint to choose between explicitly permitted options, which is a standard discretionary requirement.",
+      "label": "CLEAR",
+      "missing_information": ""
+    },
+    "errors": [],
+    "operational_status": "VALID"
+  },
+  "timings_ns": {
+    "eval_duration": 7951505000,
+    "load_duration": 153423131100,
+    "prompt_eval_duration": 17321822000,
+    "total_duration": 178703136000
+  },
+  "token_counts": {
+    "eval_count": 91,
+    "prompt_eval_count": 799
+  },
+  "unload_control_request_count": 1,
+  "version_envelope": {
+    "version": "0.40.4"
+  },
+  "wall_seconds": 178.71799999999348
+}

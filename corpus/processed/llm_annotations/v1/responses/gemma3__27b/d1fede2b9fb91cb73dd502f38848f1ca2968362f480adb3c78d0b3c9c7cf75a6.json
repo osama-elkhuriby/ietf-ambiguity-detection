@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Prior to making requests",
+    "interpretation_a": "The client must check *before* initiating any requests to the origin.",
+    "interpretation_b": "The client must check *concurrently* with the first request to the origin, allowing a request to potentially fail if the server doesn't support the scheme.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'Prior to making requests' is open to interpretation regarding the timing of the check. It could mean a separate check *before* any requests are made, or it could mean checking as part of the first request. This affects implementation because a separate check adds latency and complexity.",
+    "missing_information": "The timing of 'Prior to' is not clearly defined. Does it require a separate probing request, or can it be done as part of the initial request?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:09:19.728812+00:00",
+  "document_id": "draft-ietf-quic-http-24",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "390a3d61e29efd088a85518a461b0a57bee39172a5d21381abc63c4c24219edf",
+  "lineage_ids": "lineage:7038e83450c84273ebcd3a0a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 191,
+    "load_duration": 11262900,
+    "prompt_eval_count": 603,
+    "total_duration": 7396021500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Prior to making requests\", \"interpretation_a\": \"The client must check *before* initiating any requests to the origin.\", \"interpretation_b\": \"The client must check *concurrently* with the first request to the origin, allowing a request to potentially fail if the server doesn't support the scheme.\", \"missing_information\": \"The timing of 'Prior to' is not clearly defined. Does it require a separate probing request, or can it be done as part of the initial request?\",\"justification\": \"The phrase 'Prior to making requests' is open to interpretation regarding the timing of the check. It could mean a separate check *before* any requests are made, or it could mean checking as part of the first request. This affects implementation because a separate check adds latency and complexity.\"}",
+  "record_id": "d1fede2b9fb91cb73dd502f38848f1ca2968362f480adb3c78d0b3c9c7cf75a6",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "3.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.422
+}

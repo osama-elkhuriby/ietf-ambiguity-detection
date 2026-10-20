@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "smaller values sent in subsequent NEW_CONNECTION_ID frames have no effect",
+    "interpretation_a": "Any `Retire Prior To` value smaller than the first seen is completely ignored and has no impact on connection ID retirement.",
+    "interpretation_b": "Subsequent `Retire Prior To` values smaller than the first seen are still *received* and potentially processed for other purposes, but do not change the retirement behavior; the first seen value remains the effective minimum.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'have no effect' is incomplete. It's unclear if the receiver discards the smaller values entirely, or if it still processes them for other purposes. This impacts how the receiver manages state related to the `Retire Prior To` field.",
+    "missing_information": "It is unclear whether the receiver still processes the smaller values for other purposes, or if it completely discards them. This affects implementation of the receiver's state management."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:28:48.436282+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "7dcf09b28ec8ac8dfb82485fcf7ffe0926d8a0387b6483b59a4c806649eccae0",
+  "lineage_ids": "lineage:f68ab55b357821f2cefd179a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 221,
+    "load_duration": 5324400,
+    "prompt_eval_count": 647,
+    "total_duration": 8344593600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"smaller values sent in subsequent NEW_CONNECTION_ID frames have no effect\", \"interpretation_a\": \"Any `Retire Prior To` value smaller than the first seen is completely ignored and has no impact on connection ID retirement.\", \"interpretation_b\": \"Subsequent `Retire Prior To` values smaller than the first seen are still *received* and potentially processed for other purposes, but do not change the retirement behavior; the first seen value remains the effective minimum.\", \"missing_information\": \"It is unclear whether the receiver still processes the smaller values for other purposes, or if it completely discards them. This affects implementation of the receiver's state management.\", \"justification\": \"The phrase 'have no effect' is incomplete. It's unclear if the receiver discards the smaller values entirely, or if it still processes them for other purposes. This impacts how the receiver manages state related to the `Retire Prior To` field.\"}",
+  "record_id": "650436e5ce5204244512c6d626be9d1edf4d5cedb26877cdc52bb24a9af5301d",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "19.15",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.36
+}

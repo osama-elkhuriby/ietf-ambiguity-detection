@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "already been promised",
+    "interpretation_a": "The client MUST treat a Push ID as already promised if it has received a PUSH_PROMISE frame for that ID, regardless of whether the promised resource has been fully received.",
+    "interpretation_b": "The client MUST treat a Push ID as already promised only after the resource associated with the PUSH_PROMISE frame has been fully received. Receiving a PUSH_PROMISE before the resource is complete does not trigger the error.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'already been promised' is incomplete. It's unclear whether the error is triggered by the *promise* itself (receipt of the PUSH_PROMISE frame) or by the *fulfillment* of the promise (complete delivery of the resource).",
+    "missing_information": "The clause does not define when a Push ID is considered 'promised'. Is it upon receipt of the PUSH_PROMISE frame, or only after the associated resource has been fully delivered?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:42:52.691932+00:00",
+  "document_id": "draft-ietf-quic-http-23",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "0af9661cbbf8d84106a8543fdb5ca7982905d2d79c085987e0d329e17ac227f1",
+  "lineage_ids": "lineage:05de013cd649bba84cea3406",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 232,
+    "load_duration": 9858700,
+    "prompt_eval_count": 594,
+    "total_duration": 8880360600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"already been promised\", \"interpretation_a\": \"The client MUST treat a Push ID as already promised if it has received a PUSH_PROMISE frame for that ID, regardless of whether the promised resource has been fully received.\", \"interpretation_b\": \"The client MUST treat a Push ID as already promised only after the resource associated with the PUSH_PROMISE frame has been fully received. Receiving a PUSH_PROMISE before the resource is complete does not trigger the error.\", \"missing_information\": \"The clause does not define when a Push ID is considered 'promised'. Is it upon receipt of the PUSH_PROMISE frame, or only after the associated resource has been fully delivered?\",\"justification\": \"The phrase 'already been promised' is incomplete. It's unclear whether the error is triggered by the *promise* itself (receipt of the PUSH_PROMISE frame) or by the *fulfillment* of the promise (complete delivery of the resource).\"}",
+  "record_id": "1eae9afb95d02328ef00c9228040c78dd402ba4d299f517178db2b50a94b02ab",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "7.2.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.89
+}

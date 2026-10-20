@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "at least 1200 octets",
+    "interpretation_a": "The initial packets MUST be padded to a minimum size of 1200 octets, but may be larger.",
+    "interpretation_b": "The initial packets MUST be exactly 1200 octets in size, with no additional padding allowed.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"at least\" is ambiguous. It could mean \"exactly\" or \"minimum\". Without further clarification, implementations could differ on whether they are allowed to exceed 1200 octets.",
+    "missing_information": "The clause does not specify whether the 1200 octet minimum is a hard limit or simply a lower bound. This affects how implementations handle padding."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:50:43.042103+00:00",
+  "document_id": "draft-ietf-quic-transport-07",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "f532ffd54ddc06fa58281de48d0b01eff4afde7ea437f0e4362e77bd2533121b",
+  "lineage_ids": "lineage:1b41d6c8f20642edbf3e9b4d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 181,
+    "load_duration": 4405300,
+    "prompt_eval_count": 609,
+    "total_duration": 7051625500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"at least 1200 octets\", \"interpretation_a\": \"The initial packets MUST be padded to a minimum size of 1200 octets, but may be larger.\", \"interpretation_b\": \"The initial packets MUST be exactly 1200 octets in size, with no additional padding allowed.\", \"missing_information\": \"The clause does not specify whether the 1200 octet minimum is a hard limit or simply a lower bound. This affects how implementations handle padding.\", \"justification\": \"The phrase \\\"at least\\\" is ambiguous. It could mean \\\"exactly\\\" or \\\"minimum\\\". Without further clarification, implementations could differ on whether they are allowed to exceed 1200 octets.\"}",
+  "record_id": "a4054178ac0bae083a34afc7a3ad2a4c8afad2915064d56cccd9864a222efaef",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.047
+}

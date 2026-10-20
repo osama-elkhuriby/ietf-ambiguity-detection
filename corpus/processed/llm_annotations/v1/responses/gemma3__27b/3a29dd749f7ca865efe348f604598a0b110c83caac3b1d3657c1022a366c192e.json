@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD be retained",
+    "interpretation_a": "The next set of packet protection keys *must* be retained, even if the packet is discarded.",
+    "interpretation_b": "The next set of packet protection keys *may* be retained, even if the packet is discarded, but there is no requirement to do so.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' creates ambiguity. While it indicates a recommendation, it doesn't definitively state whether retention is mandatory or optional. This affects implementation as some implementations might treat it as a hard requirement while others might not.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:36:48.316850+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "8b3cf0a0b8e888afdd45341aacb1e62fde73dd54eb6ffd097f12848d6fd13544",
+  "lineage_ids": "lineage:5cab68cf03ca22e24f879d79",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 152,
+    "load_duration": 5366800,
+    "prompt_eval_count": 593,
+    "total_duration": 5859087100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD be retained\", \"interpretation_a\": \"The next set of packet protection keys *must* be retained, even if the packet is discarded.\", \"interpretation_b\": \"The next set of packet protection keys *may* be retained, even if the packet is discarded, but there is no requirement to do so.\", \"missing_information\": \"\", \"justification\": \"The use of 'SHOULD' creates ambiguity. While it indicates a recommendation, it doesn't definitively state whether retention is mandatory or optional. This affects implementation as some implementations might treat it as a hard requirement while others might not.\"}",
+  "record_id": "3a29dd749f7ca865efe348f604598a0b110c83caac3b1d3657c1022a366c192e",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.86
+}

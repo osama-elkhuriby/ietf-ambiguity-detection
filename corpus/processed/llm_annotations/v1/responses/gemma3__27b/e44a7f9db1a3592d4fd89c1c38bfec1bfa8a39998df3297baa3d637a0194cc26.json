@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Future extensions MUST define their interaction with 0-RTT.",
+    "interpretation_a": "Any future extension *must* explicitly state how it behaves with 0-RTT data, even if it simply states it is incompatible.",
+    "interpretation_b": "Future extensions are only required to define interaction with 0-RTT if they *do* interact with it; silence implies compatibility if no interaction occurs.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'define their interaction' is underspecified. It's unclear whether all future extensions must *always* define how they interact with 0-RTT (even if it's just to say they don't), or only those that actually utilize 0-RTT. This affects implementation because extensions could be implemented with differing assumptions about this requirement.",
+    "missing_information": "The clause does not specify what constitutes 'defining their interaction'. Does it require explicit compatibility statements, or only definitions for extensions that actually use 0-RTT?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:37:01.856974+00:00",
+  "document_id": "draft-ietf-tls-tls13-15",
+  "family_id": "draft-ietf-tls-tls13",
+  "input_fingerprint": "f5ce7d21f12818cead8a51e792caa544700a79762db1b2def6d012f649344a93",
+  "lineage_ids": "lineage:150d0b89035a9ef5b0e043e6",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 225,
+    "load_duration": 28225800,
+    "prompt_eval_count": 578,
+    "total_duration": 8647514400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Future extensions MUST define their interaction with 0-RTT.\", \"interpretation_a\": \"Any future extension *must* explicitly state how it behaves with 0-RTT data, even if it simply states it is incompatible.\", \"interpretation_b\": \"Future extensions are only required to define interaction with 0-RTT if they *do* interact with it; silence implies compatibility if no interaction occurs.\", \"missing_information\": \"The clause does not specify what constitutes 'defining their interaction'. Does it require explicit compatibility statements, or only definitions for extensions that actually use 0-RTT?\",\"justification\": \"The phrase 'define their interaction' is underspecified. It's unclear whether all future extensions must *always* define how they interact with 0-RTT (even if it's just to say they don't), or only those that actually utilize 0-RTT. This affects implementation because extensions could be implemented with differing assumptions about this requirement.\"}",
+  "record_id": "e44a7f9db1a3592d4fd89c1c38bfec1bfa8a39998df3297baa3d637a0194cc26",
+  "revision": "15",
+  "schema_version": 1,
+  "section_ids": "4.2.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.656
+}

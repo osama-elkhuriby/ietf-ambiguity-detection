@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY interrupt delivery",
+    "interpretation_a": "The implementation is permitted to stop delivering stream data as soon as it receives the RESET_STREAM, even if some data hasn't been processed yet.",
+    "interpretation_b": "The implementation is permitted to *continue* delivering stream data until all buffered data is consumed, and *then* interrupt delivery upon receiving the RESET_STREAM.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' grants discretion, but the lack of further constraints on *when* the interruption can happen creates two reasonable interpretations. One interpretation allows immediate interruption, while the other allows delivery to complete before interruption.",
+    "missing_information": "The clause does not specify *when* the interruption of delivery must occur relative to the receipt of the RESET_STREAM and consumption of buffered data. This creates ambiguity about the timing of the interruption."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:24:58.972574+00:00",
+  "document_id": "draft-ietf-quic-transport-19",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "478121b2584586c4b3daf5efaacd9760b9e80badf20447eb607a3300323dfc0a",
+  "lineage_ids": "lineage:5955e6be192b61f5564951f2",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 199,
+    "load_duration": 4951800,
+    "prompt_eval_count": 599,
+    "total_duration": 7528713700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY interrupt delivery\", \"interpretation_a\": \"The implementation is permitted to stop delivering stream data as soon as it receives the RESET_STREAM, even if some data hasn't been processed yet.\", \"interpretation_b\": \"The implementation is permitted to *continue* delivering stream data until all buffered data is consumed, and *then* interrupt delivery upon receiving the RESET_STREAM.\", \"missing_information\": \"The clause does not specify *when* the interruption of delivery must occur relative to the receipt of the RESET_STREAM and consumption of buffered data. This creates ambiguity about the timing of the interruption.\",\"justification\": \"The use of 'MAY' grants discretion, but the lack of further constraints on *when* the interruption can happen creates two reasonable interpretations. One interpretation allows immediate interruption, while the other allows delivery to complete before interruption.\"}",
+  "record_id": "57e549c76d19f834ce68e5e623894da36dc21a3111d5dff3a815c82bd1f2b7f5",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.532
+}

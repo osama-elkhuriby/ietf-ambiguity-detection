@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY be initiated out-of-order, but stream IDs SHOULD be allocated to promised resources sequentially.",
+    "interpretation_a": "Pushed resources can be initiated in any order, but the stream IDs assigned to them must be sequential.",
+    "interpretation_b": "Pushed resources can be initiated in any order, and their stream IDs can also be assigned in any order, as long as the stream IDs for *promised* resources are sequential.",
+    "is_ambiguous": "yes",
+    "justification": "The sentence structure allows for two interpretations of how 'out-of-order' applies. Does it modify both 'initiated' and 'stream IDs', or only 'initiated'? The meaning of 'promised resources' is also unclear.",
+    "missing_information": "It is unclear whether the 'out-of-order' initiation applies to both pushed resources and the assignment of stream IDs, or only to the initiation of pushed resources. The relationship between 'pushed resources' and 'promised resources' is not fully defined."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:05:37.033470+00:00",
+  "document_id": "draft-ietf-quic-http-07",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "59ad40f1c04cd6c67f8c3247d1e8518f3a3dbcce8063016b9c4bb18b8fd0c912",
+  "lineage_ids": "lineage:c7d8bc9caa2d093029e36a4c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 227,
+    "load_duration": 11037200,
+    "prompt_eval_count": 572,
+    "total_duration": 8635022700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY be initiated out-of-order, but stream IDs SHOULD be allocated to promised resources sequentially.\", \"interpretation_a\": \"Pushed resources can be initiated in any order, but the stream IDs assigned to them must be sequential.\", \"interpretation_b\": \"Pushed resources can be initiated in any order, and their stream IDs can also be assigned in any order, as long as the stream IDs for *promised* resources are sequential.\", \"missing_information\": \"It is unclear whether the 'out-of-order' initiation applies to both pushed resources and the assignment of stream IDs, or only to the initiation of pushed resources. The relationship between 'pushed resources' and 'promised resources' is not fully defined.\", \"justification\": \"The sentence structure allows for two interpretations of how 'out-of-order' applies. Does it modify both 'initiated' and 'stream IDs', or only 'initiated'? The meaning of 'promised resources' is also unclear.\"}",
+  "record_id": "bc8ad9f36af3cd3cc0817ebf4efc0d0506e28daf9299d35702cbb56689fd3330",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.641
+}

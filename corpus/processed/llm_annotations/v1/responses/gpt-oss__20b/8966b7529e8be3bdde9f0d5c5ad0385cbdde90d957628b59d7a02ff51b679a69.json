@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "a single 206 (Partial Content) response containing a multipart/byteranges body, or multiple 206 (Partial Content) responses, each with one continuous range that is indicated by a Content-Range header field.",
+    "interpretation_a": "The client should process the set of continuous ranges as a single 206 (Partial Content) response containing a multipart/byteranges body.",
+    "interpretation_b": "The client should process the set of continuous ranges as multiple 206 (Partial Content) responses, each with one continuous range indicated by a Content-Range header field.",
+    "is_ambiguous": "yes",
+    "justification": "The clause lists two mutually exclusive options (single multipart/byteranges 206 or multiple 206 responses) without specifying which to use when the combined response is not a prefix, leaving a concrete missing constraint that allows materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T07:05:55.697840+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-07",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "7601579ab78778b9ca3b8dede387d1f46e6936100b82cd9aecbef465b1a8952e",
+  "lineage_ids": "lineage:22261a53c2d02d893dbf0f93",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2516,
+    "load_duration": 4752800,
+    "prompt_eval_count": 649,
+    "total_duration": 21740270100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"a single 206 (Partial Content) response containing a multipart/byteranges body, or multiple 206 (Partial Content) responses, each with one continuous range that is indicated by a Content-Range header field.\",\n  \"interpretation_a\": \"The client should process the set of continuous ranges as a single 206 (Partial Content) response containing a multipart/byteranges body.\",\n  \"interpretation_b\": \"The client should process the set of continuous ranges as multiple 206 (Partial Content) responses, each with one continuous range indicated by a Content-Range header field.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause lists two mutually exclusive options (single multipart/byteranges 206 or multiple 206 responses) without specifying which to use when the combined response is not a prefix, leaving a concrete missing constraint that allows materially different implementation behaviours.\"\n}",
+  "record_id": "8966b7529e8be3bdde9f0d5c5ad0385cbdde90d957628b59d7a02ff51b679a69",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "9.3.7.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 21.75
+}

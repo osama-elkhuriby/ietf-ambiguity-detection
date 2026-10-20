@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously specifies that a PRIORITY frame sent on a request stream is an error if either the Prioritized Element Type is not 11 or if it expresses a dependency on a request with a greater Stream ID than the current stream. The conditions are mutually exclusive and fully defined, leaving no room for materially different implementation behaviours or missing constraints.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T10:25:52.506554+00:00",
+  "document_id": "draft-ietf-quic-http-20",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "da13dfce582d0c19d6998831569a942b9411f7fb481348f1ef591658977cf480",
+  "lineage_ids": "lineage:f46106f49db40168bd3c7a23",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2270,
+    "load_duration": 1509300,
+    "prompt_eval_count": 626,
+    "total_duration": 19616616000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously specifies that a PRIORITY frame sent on a request stream is an error if either the Prioritized Element Type is not 11 or if it expresses a dependency on a request with a greater Stream ID than the current stream. The conditions are mutually exclusive and fully defined, leaving no room for materially different implementation behaviours or missing constraints.\"\n}",
+  "record_id": "d3f38d57d9533c0a346f97509e64619f229fc71c5f4da42dd0e648b990ed5d0c",
+  "revision": "20",
+  "schema_version": 1,
+  "section_ids": "4.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 19.609
+}

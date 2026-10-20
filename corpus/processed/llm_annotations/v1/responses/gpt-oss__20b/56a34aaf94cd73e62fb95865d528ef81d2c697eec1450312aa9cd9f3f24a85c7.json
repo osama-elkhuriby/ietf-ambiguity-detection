@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "has SVCB, AAAA, or A records",
+    "interpretation_a": "The domain must have at least one of the record types SVCB, AAAA, or A.",
+    "interpretation_b": "The domain must have all three record types SVCB, AAAA, and A.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether the \"or\" is inclusive or exclusive, leaving it unclear whether the domain must possess at least one of the listed record types or must possess all of them.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:48:47.718604+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-00",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "f177f030e72a47304932790487f4f0a851c3d6a58b4b267874691f1c7465a478",
+  "lineage_ids": "lineage:709e1b5829e9f516929dd178",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3044,
+    "load_duration": 5785900,
+    "prompt_eval_count": 589,
+    "total_duration": 26302770700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"has SVCB, AAAA, or A records\",\n  \"interpretation_a\": \"The domain must have at least one of the record types SVCB, AAAA, or A.\",\n  \"interpretation_b\": \"The domain must have all three record types SVCB, AAAA, and A.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify whether the \\\"or\\\" is inclusive or exclusive, leaving it unclear whether the domain must possess at least one of the listed record types or must possess all of them.\"\n}",
+  "record_id": "56a34aaf94cd73e62fb95865d528ef81d2c697eec1450312aa9cd9f3f24a85c7",
+  "revision": "00",
+  "schema_version": 1,
+  "section_ids": "2.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 26.312
+}

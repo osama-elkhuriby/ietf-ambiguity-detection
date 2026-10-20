@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "its max_ack_delay",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The pronoun 'its' is ambiguous, creating an incomplete constraint that affects implementation behavior.",
+    "missing_information": "The clause does not specify whether 'its' refers to the endpoint's own max_ack_delay or the peer's max_ack_delay, leaving the implementation behavior under-specified when measuring acknowledgement delay relative to max_ack_delay. This missing constraint can lead to different interpretations of when to report the measured delay.  "
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T16:54:31.055558+00:00",
+  "document_id": "draft-ietf-quic-transport-33",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "933111c6d3eb7a300db3523c0a877e07c4efa147263560131899d7192d535cca",
+  "lineage_ids": "lineage:423f337b1b64e078a08bdc63",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 908,
+    "load_duration": 4521200,
+    "prompt_eval_count": 601,
+    "total_duration": 8228951200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"its max_ack_delay\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The clause does not specify whether 'its' refers to the endpoint's own max_ack_delay or the peer's max_ack_delay, leaving the implementation behavior under-specified when measuring acknowledgement delay relative to max_ack_delay. This missing constraint can lead to different interpretations of when to report the measured delay.  \",\n  \"justification\": \"The pronoun 'its' is ambiguous, creating an incomplete constraint that affects implementation behavior.\"\n}",
+  "record_id": "87cb25ea70c0fc6d84e2fce6cee40413caacdef13840dcdcf2a2a492a6b50614",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "13.2.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.234
+}

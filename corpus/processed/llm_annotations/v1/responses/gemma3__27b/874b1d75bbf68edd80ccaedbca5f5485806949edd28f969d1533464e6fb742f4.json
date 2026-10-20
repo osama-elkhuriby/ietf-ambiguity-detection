@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD select one of the two addresses",
+    "interpretation_a": "The client is encouraged to select one of the two addresses, but is free to choose a different address if it deems appropriate.",
+    "interpretation_b": "The client is expected to select one of the two addresses, and deviating from this is discouraged but not prohibited.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' creates ambiguity. While it indicates a recommendation, it doesn't specify the consequences of not following it. This leaves room for different implementations to interpret the strength of the recommendation differently.",
+    "missing_information": "The degree of obligation implied by 'SHOULD' is not clearly defined in this context. Is there a specific condition under which the client *must* select one of the provided addresses, or is it always permissible to use a different address?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:41:03.455323+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "407e260f7da58b6bc976f081943e8291173337b8ac2fbf9e98296119b88df085",
+  "lineage_ids": "lineage:8f53000a46b6f59f9f0a58e1",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 199,
+    "load_duration": 5165000,
+    "prompt_eval_count": 604,
+    "total_duration": 7484535700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD select one of the two addresses\", \"interpretation_a\": \"The client is encouraged to select one of the two addresses, but is free to choose a different address if it deems appropriate.\", \"interpretation_b\": \"The client is expected to select one of the two addresses, and deviating from this is discouraged but not prohibited.\", \"missing_information\": \"The degree of obligation implied by 'SHOULD' is not clearly defined in this context. Is there a specific condition under which the client *must* select one of the provided addresses, or is it always permissible to use a different address?\",\"justification\": \"The use of 'SHOULD' creates ambiguity. While it indicates a recommendation, it doesn't specify the consequences of not following it. This leaves room for different implementations to interpret the strength of the recommendation differently.\"}",
+  "record_id": "874b1d75bbf68edd80ccaedbca5f5485806949edd28f969d1533464e6fb742f4",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9.6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.5
+}

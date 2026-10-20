@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "for the duration of the connection",
+    "interpretation_a": "The connection ID is valid until the connection is explicitly closed (e.g., via a connection close alert).",
+    "interpretation_b": "The connection ID is valid for an indefinite period, potentially exceeding the intended lifespan of the connection, unless explicitly retired.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'duration of the connection' is not defined. This leaves open the question of what constitutes the end of the 'connection' for the purposes of accepting packets with the issued connection ID. Without a clear definition, implementations could reasonably interpret this differently, leading to interoperability issues.",
+    "missing_information": "The definition of 'duration of the connection' is not provided. Is it tied to a specific signal (e.g., connection close alert) or is it an unbounded period?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:39:21.353134+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "c1402a5662e97fcd2032142d7788a35fd5762965d62229532eecfb2baebc6cc0",
+  "lineage_ids": "lineage:471991432305159e825eca83",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 197,
+    "load_duration": 4563300,
+    "prompt_eval_count": 627,
+    "total_duration": 7466233000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"for the duration of the connection\", \"interpretation_a\": \"The connection ID is valid until the connection is explicitly closed (e.g., via a connection close alert).\", \"interpretation_b\": \"The connection ID is valid for an indefinite period, potentially exceeding the intended lifespan of the connection, unless explicitly retired.\", \"missing_information\": \"The definition of 'duration of the connection' is not provided. Is it tied to a specific signal (e.g., connection close alert) or is it an unbounded period?\",\"justification\": \"The phrase 'duration of the connection' is not defined. This leaves open the question of what constitutes the end of the 'connection' for the purposes of accepting packets with the issued connection ID. Without a clear definition, implementations could reasonably interpret this differently, leading to interoperability issues.\"}",
+  "record_id": "84150ea7da88210c71011222989067ccb38bd1a1bf3e35d7f13d2128f4734fba",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "5.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.453
+}

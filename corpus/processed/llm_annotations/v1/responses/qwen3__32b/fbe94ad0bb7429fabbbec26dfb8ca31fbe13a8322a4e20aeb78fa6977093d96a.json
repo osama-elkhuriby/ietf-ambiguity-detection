@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause provides a clear and specific instruction for intermediaries converting HTTP/3 requests to HTTP/1.1: if a Host header field is not present, it must be created by copying the value of the \":authority\" pseudo-header field. There is no ambiguity in the wording or in the required behavior. The clause does not allow for multiple interpretations or missing constraints that would affect implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:07:11.871757+00:00",
+  "document_id": "draft-ietf-quic-http-27",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "56e8da9330121530d895e78300a42c6976668a67b6f58dfda6da7ce58bce6dce",
+  "lineage_ids": "lineage:5af2c3136b858510e8aeeb2c",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 137,
+    "load_duration": 12907400,
+    "prompt_eval_count": 599,
+    "total_duration": 5768081400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause provides a clear and specific instruction for intermediaries converting HTTP/3 requests to HTTP/1.1: if a Host header field is not present, it must be created by copying the value of the \\\":authority\\\" pseudo-header field. There is no ambiguity in the wording or in the required behavior. The clause does not allow for multiple interpretations or missing constraints that would affect implementation behavior.\"\n}",
+  "record_id": "fbe94ad0bb7429fabbbec26dfb8ca31fbe13a8322a4e20aeb78fa6977093d96a",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "4.1.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.782
+}

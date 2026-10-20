@@ -1,0 +1,37 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "but the mechanism to do so depends on the state of the corresponding push stream.",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause specifies that the server should abort sending the resource but does not define the mechanism for doing so, leaving the implementation behavior unspecified until the state of the push stream is considered. This incomplete constraint allows multiple reasonable interpretations of how the server should act, making the clause ambiguous.",
+    "missing_information": ""
+  },
+  "attempts": 3,
+  "created_at": "2026-10-08T09:05:56.905774+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "73b6a4643479816f5ba3795d89d76ee44335e8ec1bda3a350121257871874364",
+  "lineage_ids": "lineage:e126e04bc6801fad1cd0aa8d",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 379,
+    "load_duration": 5510300,
+    "prompt_eval_count": 783,
+    "total_duration": 3485283300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"but the mechanism to do so depends on the state of the corresponding push stream.\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause specifies that the server should abort sending the resource but does not define the mechanism for doing so, leaving the implementation behavior unspecified until the state of the push stream is considered. This incomplete constraint allows multiple reasonable interpretations of how the server should act, making the clause ambiguous.\"\n}",
+  "record_id": "30fd86f8ae496d33542f66a7dcb521779f38c1c974cb6d87e398f354cdb82a91",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.2.3",
+  "status": "invalid",
+  "validation_errors": [
+    "yes requires two distinct interpretations or missing information"
+  ],
+  "wall_seconds": 23.406
+}

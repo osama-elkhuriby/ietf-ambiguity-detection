@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "persistent congestion SHOULD consider packets sent across packet number spaces",
+    "interpretation_a": "The sender MUST track and consider packets from all packet number spaces when determining persistent congestion, even if some spaces have limited or no recent acknowledgements.",
+    "interpretation_b": "The sender MAY choose to only consider packets from the packet number space that *has* been acknowledged, effectively ignoring packets in other spaces when assessing persistent congestion.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' allows for flexibility, but the lack of a clear definition of 'consider' creates ambiguity. A sender could interpret 'consider' as simply being aware of packets across spaces, or as actively including them in congestion control calculations. This difference in interpretation leads to materially different implementation behaviours.",
+    "missing_information": "The clause does not define what 'consider' means in the context of persistent congestion. Does it mean to include in calculations, or simply be aware of their existence? The degree of consideration is not specified."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:23:24.509455+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "40b70510e4115c93b0b60160ced79d73b9b17bdc9699622e21289fdf6f97f0e6",
+  "lineage_ids": "lineage:b870863c014d90a9c8ff3a68",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 227,
+    "load_duration": 4709500,
+    "prompt_eval_count": 590,
+    "total_duration": 8510168400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"persistent congestion SHOULD consider packets sent across packet number spaces\", \"interpretation_a\": \"The sender MUST track and consider packets from all packet number spaces when determining persistent congestion, even if some spaces have limited or no recent acknowledgements.\", \"interpretation_b\": \"The sender MAY choose to only consider packets from the packet number space that *has* been acknowledged, effectively ignoring packets in other spaces when assessing persistent congestion.\", \"missing_information\": \"The clause does not define what 'consider' means in the context of persistent congestion. Does it mean to include in calculations, or simply be aware of their existence? The degree of consideration is not specified.\", \"justification\": \"The use of 'SHOULD' allows for flexibility, but the lack of a clear definition of 'consider' creates ambiguity. A sender could interpret 'consider' as simply being aware of packets across spaces, or as actively including them in congestion control calculations. This difference in interpretation leads to materially different implementation behaviours.\"}",
+  "record_id": "85ff9e6a9d36ed3c2c7f56c906beeedf711bb350626442415c3de800935d5a24",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.516
+}

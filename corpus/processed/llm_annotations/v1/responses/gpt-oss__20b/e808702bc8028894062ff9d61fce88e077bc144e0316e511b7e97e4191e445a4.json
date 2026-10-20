@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "drop the incoming packets on that path without generating a stateless reset",
+    "interpretation_a": "The endpoint must drop all incoming packets on that path, including those that do not violate the requirement, and must not generate a stateless reset for any of them.",
+    "interpretation_b": "The endpoint must drop only the packets that violate the requirement, and must not generate a stateless reset for those dropped packets, but may still process other packets on that path.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether the drop applies to all packets on the path or only to the violating packets, nor does it clarify whether the prohibition on stateless resets applies to all packets or only to the dropped ones, leading to two materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T19:00:03.375942+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "fb38c5217a3f4d5054a72d771e1f13e7af3f8243257c93bb737fb106c7af48e2",
+  "lineage_ids": "lineage:f7a5b36ad256194ff1ded9b9",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1156,
+    "load_duration": 6121500,
+    "prompt_eval_count": 673,
+    "total_duration": 10092581100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"drop the incoming packets on that path without generating a stateless reset\",\n  \"interpretation_a\": \"The endpoint must drop all incoming packets on that path, including those that do not violate the requirement, and must not generate a stateless reset for any of them.\",\n  \"interpretation_b\": \"The endpoint must drop only the packets that violate the requirement, and must not generate a stateless reset for those dropped packets, but may still process other packets on that path.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify whether the drop applies to all packets on the path or only to the violating packets, nor does it clarify whether the prohibition on stateless resets applies to all packets or only to the dropped ones, leading to two materially different implementation behaviours.\"\n}",
+  "record_id": "e808702bc8028894062ff9d61fce88e077bc144e0316e511b7e97e4191e445a4",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 77.734
+}

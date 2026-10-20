@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "any other stream",
+    "interpretation_a": "The statement could be interpreted as applying to *any* stream that is not a request stream, including those established for responses or other purposes.",
+    "interpretation_b": "The statement could be interpreted as applying only to streams that are expected to carry requests, but are not the original request stream that triggered the PUSH.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'any other stream' is insufficiently precise. It's unclear if it refers to all streams that aren't request streams, or only streams that *should* be request streams but aren't the original one.",
+    "missing_information": "It is unclear what constitutes 'other stream'. A definition of what streams are permissible for PUSH frames would resolve the ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:16:14.239455+00:00",
+  "document_id": "draft-ietf-quic-http-23",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "2f1d96cb180d2300caee1603706c70b8236cabc3c86f1183cca0e0cd8419d93f",
+  "lineage_ids": "lineage:772d9654bce6f363d5ad2302",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 185,
+    "load_duration": 9356100,
+    "prompt_eval_count": 570,
+    "total_duration": 7203000900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"any other stream\", \"interpretation_a\": \"The statement could be interpreted as applying to *any* stream that is not a request stream, including those established for responses or other purposes.\", \"interpretation_b\": \"The statement could be interpreted as applying only to streams that are expected to carry requests, but are not the original request stream that triggered the PUSH.\", \"missing_information\": \"It is unclear what constitutes 'other stream'. A definition of what streams are permissible for PUSH frames would resolve the ambiguity.\", \"justification\": \"The phrase 'any other stream' is insufficiently precise. It's unclear if it refers to all streams that aren't request streams, or only streams that *should* be request streams but aren't the original one.\"}",
+  "record_id": "fecf132bca5780aa33e85a8c785c4024887700c61099a18efd49bb5bf7203fb5",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "7.2.8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.204
+}

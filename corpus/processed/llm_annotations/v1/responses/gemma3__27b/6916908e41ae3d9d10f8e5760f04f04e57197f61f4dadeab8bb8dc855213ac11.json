@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "at least eight connection IDs",
+    "interpretation_a": "Endpoints must issue a minimum of 8 connection IDs at any given time.",
+    "interpretation_b": "Endpoints must issue 8 or more connection IDs cumulatively over the lifetime of the connection.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states endpoints 'SHOULD provide and maintain at least eight connection IDs'. 'Maintain' could mean 'always have available' or 'have issued at some point'. This difference affects implementation, as one interpretation requires proactive issuance, while the other allows for issuance as needed, as long as the total issued reaches eight.",
+    "missing_information": "It is unclear whether the requirement to 'maintain at least eight connection IDs' refers to the number of currently available/unused IDs, or the total number issued over the connection's lifetime."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:29:41.454843+00:00",
+  "document_id": "draft-ietf-quic-transport-20",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "a4841b7bd5a6443b7a801b96825bfebf0caa643df6a370974c5060cbf502613c",
+  "lineage_ids": "lineage:26272c2aaeeb3093e07d5e7f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 193,
+    "load_duration": 5526400,
+    "prompt_eval_count": 586,
+    "total_duration": 7321237600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"at least eight connection IDs\", \"interpretation_a\": \"Endpoints must issue a minimum of 8 connection IDs at any given time.\", \"interpretation_b\": \"Endpoints must issue 8 or more connection IDs cumulatively over the lifetime of the connection.\", \"missing_information\": \"It is unclear whether the requirement to 'maintain at least eight connection IDs' refers to the number of currently available/unused IDs, or the total number issued over the connection's lifetime.\", \"justification\": \"The clause states endpoints 'SHOULD provide and maintain at least eight connection IDs'. 'Maintain' could mean 'always have available' or 'have issued at some point'. This difference affects implementation, as one interpretation requires proactive issuance, while the other allows for issuance as needed, as long as the total issued reaches eight.\"}",
+  "record_id": "6916908e41ae3d9d10f8e5760f04f04e57197f61f4dadeab8bb8dc855213ac11",
+  "revision": "20",
+  "schema_version": 1,
+  "section_ids": "5.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.312
+}

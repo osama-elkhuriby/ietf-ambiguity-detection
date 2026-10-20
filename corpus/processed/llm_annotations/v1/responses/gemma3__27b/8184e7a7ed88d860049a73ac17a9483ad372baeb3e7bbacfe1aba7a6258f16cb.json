@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "The max packet size is used for calculating initial and minimum congestion windows.",
+    "interpretation_a": "The value of kInitialMss directly determines the initial and minimum congestion windows. A change to kInitialMss *requires* a recalculation of those windows.",
+    "interpretation_b": "kInitialMss is *one factor* in calculating the initial and minimum congestion windows, but other factors may also be involved. Changing kInitialMss may or may not require recalculation of those windows.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'is used for calculating' is insufficiently precise. It doesn't state whether it's the only input, or if other inputs exist. This creates ambiguity about how changes to kInitialMss affect the congestion windows.",
+    "missing_information": "The text does not specify whether kInitialMss is the *sole* determinant of the initial and minimum congestion windows, or if other factors are also involved. This affects how a change to kInitialMss must be handled."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:22:59.572059+00:00",
+  "document_id": "draft-ietf-quic-recovery-13",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "0a5c86db3645da307bd411e28aa5083b1df370ea66ba5df352381708948e2e2b",
+  "lineage_ids": "lineage:f7f82642bf99592009d09bcc",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 234,
+    "load_duration": 5002100,
+    "prompt_eval_count": 584,
+    "total_duration": 8713411900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"The max packet size is used for calculating initial and minimum congestion windows.\", \"interpretation_a\": \"The value of kInitialMss directly determines the initial and minimum congestion windows. A change to kInitialMss *requires* a recalculation of those windows.\", \"interpretation_b\": \"kInitialMss is *one factor* in calculating the initial and minimum congestion windows, but other factors may also be involved. Changing kInitialMss may or may not require recalculation of those windows.\", \"missing_information\": \"The text does not specify whether kInitialMss is the *sole* determinant of the initial and minimum congestion windows, or if other factors are also involved. This affects how a change to kInitialMss must be handled.\", \"justification\": \"The phrase 'is used for calculating' is insufficiently precise. It doesn't state whether it's the only input, or if other inputs exist. This creates ambiguity about how changes to kInitialMss affect the congestion windows.\"}",
+  "record_id": "8184e7a7ed88d860049a73ac17a9483ad372baeb3e7bbacfe1aba7a6258f16cb",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "4.8.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.718
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT send a Referer header field in an unsecured HTTP request",
+    "interpretation_a": "The user agent should not send the Referer header if the request is unencrypted, regardless of the referring page's security.",
+    "interpretation_b": "The user agent should only not send the Referer header if both the request and the referring page are not secure. If the request is secure, the header may be sent.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states a prohibition based on the security of both the request and the referring page. However, it doesn't define what constitutes an 'unsecured HTTP request'. This lack of precision creates ambiguity as to when the requirement applies.",
+    "missing_information": "The definition of 'unsecured HTTP request' is not precise. Does it mean any HTTP request without TLS, or only those without specific security features? This affects whether the requirement applies in all cases."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:02:46.553460+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-14",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "ec8efcc20319d494c069e10076fb20bb302b36a34a1c4b44339bfdbf3b34a627",
+  "lineage_ids": "lineage:9d8d842194b162ba93876d59",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 213,
+    "load_duration": 9480900,
+    "prompt_eval_count": 579,
+    "total_duration": 8178288600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT send a Referer header field in an unsecured HTTP request\", \"interpretation_a\": \"The user agent should not send the Referer header if the request is unencrypted, regardless of the referring page's security.\", \"interpretation_b\": \"The user agent should only not send the Referer header if both the request and the referring page are not secure. If the request is secure, the header may be sent.\", \"missing_information\": \"The definition of 'unsecured HTTP request' is not precise. Does it mean any HTTP request without TLS, or only those without specific security features? This affects whether the requirement applies in all cases.\",\"justification\": \"The clause states a prohibition based on the security of both the request and the referring page. However, it doesn't define what constitutes an 'unsecured HTTP request'. This lack of precision creates ambiguity as to when the requirement applies.\"}",
+  "record_id": "392842c82b20202ea155703086455c945970e8a395a80e7f3b2ef4bc8a841910",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "10.1.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.203
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "separately acknowledge them, as if they were received as the payload of different UDP datagrams.",
+    "interpretation_a": "The receiver must send a separate ACK frame for each coalesced QUIC packet.",
+    "interpretation_b": "The receiver may send a single ACK frame that acknowledges each coalesced QUIC packet individually.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether the receiver must send separate ACK frames per packet or can aggregate acknowledgements in a single frame, leaving a concrete missing constraint that affects implementation behaviour.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T15:10:23.426501+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "f16bfc77fa7d537172cee644c56e79a41dc7326accd7907cebbfbfccf6a24895",
+  "lineage_ids": "lineage:f5481064a274d983a88b5037",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1411,
+    "load_duration": 4695400,
+    "prompt_eval_count": 617,
+    "total_duration": 12190877300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"separately acknowledge them, as if they were received as the payload of different UDP datagrams.\",\n  \"interpretation_a\": \"The receiver must send a separate ACK frame for each coalesced QUIC packet.\",\n  \"interpretation_b\": \"The receiver may send a single ACK frame that acknowledges each coalesced QUIC packet individually.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify whether the receiver must send separate ACK frames per packet or can aggregate acknowledgements in a single frame, leaving a concrete missing constraint that affects implementation behaviour.\"\n}",
+  "record_id": "3c5032b5883833adf5851fd6906c4df21e26f3c57eb54666470fd1358dc1da94",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "12.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 12.203
+}

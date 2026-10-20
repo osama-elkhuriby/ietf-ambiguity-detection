@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "If a DELETE method is successfully applied, the origin server SHOULD send",
+    "interpretation_a": "a response body describing the deletion",
+    "interpretation_b": "a status code indicating success",
+    "is_ambiguous": "yes",
+    "justification": "The clause omits the object of the send action, allowing at least two reasonable interpretations of what the server should send.",
+    "missing_information": ""
+  },
+  "attempts": 3,
+  "created_at": "2026-10-08T06:31:51.344229+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "ebbdf49af52f8c00ad4a3e624983abae3abf15ae1769258c3ea2d6016ee041e5",
+  "lineage_ids": "lineage:daa765002e3fae15e89c88e7",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 645,
+    "load_duration": 6025500,
+    "prompt_eval_count": 729,
+    "total_duration": 5763172800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"If a DELETE method is successfully applied, the origin server SHOULD send\",\n  \"interpretation_a\": \"a response body describing the deletion\",\n  \"interpretation_b\": \"a status code indicating success\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause omits the object of the send action, allowing at least two reasonable interpretations of what the server should send.\"\n}",
+  "record_id": "5e9ab3391c4caa9f156ab993a421fee19bdddd35dd202c4ac7c568b7446acca2",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "9.3.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 47.828
+}

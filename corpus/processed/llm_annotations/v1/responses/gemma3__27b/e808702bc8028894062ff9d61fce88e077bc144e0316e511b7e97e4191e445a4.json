@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "either drop the incoming packets on that path without generating a stateless reset or proceed with path validation and allow the peer to migrate",
+    "interpretation_a": "The endpoint can choose to drop the packets *or* proceed with path validation, and the choice is entirely up to the implementation.",
+    "interpretation_b": "The endpoint *must* attempt to drop the packets first, and only if that fails (e.g., due to implementation limitations) can it proceed with path validation.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'either...or' without further qualification allows for two reasonable interpretations regarding the order or conditions under which the endpoint can choose between the two actions. This lack of a constraint on the selection process constitutes an ambiguity.",
+    "missing_information": "The clause does not specify any criteria for choosing between dropping the packets and proceeding with path validation. A missing constraint on the selection criteria creates ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:12:37.888036+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "fb38c5217a3f4d5054a72d771e1f13e7af3f8243257c93bb737fb106c7af48e2",
+  "lineage_ids": "lineage:f7a5b36ad256194ff1ded9b9",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 211,
+    "load_duration": 6267000,
+    "prompt_eval_count": 630,
+    "total_duration": 7956992700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"either drop the incoming packets on that path without generating a stateless reset or proceed with path validation and allow the peer to migrate\", \"interpretation_a\": \"The endpoint can choose to drop the packets *or* proceed with path validation, and the choice is entirely up to the implementation.\", \"interpretation_b\": \"The endpoint *must* attempt to drop the packets first, and only if that fails (e.g., due to implementation limitations) can it proceed with path validation.\", \"missing_information\": \"The clause does not specify any criteria for choosing between dropping the packets and proceeding with path validation. A missing constraint on the selection criteria creates ambiguity.\", \"justification\": \"The use of 'either...or' without further qualification allows for two reasonable interpretations regarding the order or conditions under which the endpoint can choose between the two actions. This lack of a constraint on the selection process constitutes an ambiguity.\"}",
+  "record_id": "e808702bc8028894062ff9d61fce88e077bc144e0316e511b7e97e4191e445a4",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.953
+}

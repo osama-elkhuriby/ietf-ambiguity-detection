@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "three times the PTO",
+    "interpretation_a": "The endpoint waits exactly 3 * PTO before initiating the key update.",
+    "interpretation_b": "The endpoint waits at least 3 * PTO before initiating the key update, but may wait longer.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'three times the PTO' with 'SHOULD' allows for interpretations of both a minimum and an exact wait time. A missing constraint on whether it is a minimum or maximum duration creates ambiguity.",
+    "missing_information": "The clause does not specify whether 'three times the PTO' is a minimum or exact duration. This affects the timing of key updates and could lead to packet loss if the wait is too long or security issues if it's too short."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:51:02.575862+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "75fbb9dc69ab752b8749e7a1e045e882134bec3818b2cbeb7aa7e283af4b9c76",
+  "lineage_ids": "lineage:e0129eee3028b6c4eb772ded",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 180,
+    "load_duration": 4080900,
+    "prompt_eval_count": 581,
+    "total_duration": 6820614500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"three times the PTO\", \"interpretation_a\": \"The endpoint waits exactly 3 * PTO before initiating the key update.\", \"interpretation_b\": \"The endpoint waits at least 3 * PTO before initiating the key update, but may wait longer.\", \"missing_information\": \"The clause does not specify whether 'three times the PTO' is a minimum or exact duration. This affects the timing of key updates and could lead to packet loss if the wait is too long or security issues if it's too short.\",\"justification\": \"The use of 'three times the PTO' with 'SHOULD' allows for interpretations of both a minimum and an exact wait time. A missing constraint on whether it is a minimum or maximum duration creates ambiguity.\"}",
+  "record_id": "e3acc3dac4567378c909725f4486d5085ba1b101de03894bb21f358cca02e804",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.828
+}

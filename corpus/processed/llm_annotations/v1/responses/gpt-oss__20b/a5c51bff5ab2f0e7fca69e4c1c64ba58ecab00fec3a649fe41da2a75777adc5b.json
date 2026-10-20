@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that a client may only include an HTTP-date in an If-Range header if it has no entity-tag for the representation and the date qualifies as a strong validator per Section 8.8.2.2; otherwise it must not. No alternative reasonable interpretations or missing constraints are evident.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T07:30:25.022611+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-14",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "cd8d4758bc6fdad40e5e7560711ad904b12e60d78ff54e65796d5e892aaac978",
+  "lineage_ids": "lineage:1fdd2c1cc30ccf3ac7021cf9",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1119,
+    "load_duration": 5007000,
+    "prompt_eval_count": 623,
+    "total_duration": 9752373700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that a client may only include an HTTP-date in an If-Range header if it has no entity-tag for the representation and the date qualifies as a strong validator per Section 8.8.2.2; otherwise it must not. No alternative reasonable interpretations or missing constraints are evident.\"\n}",
+  "record_id": "a5c51bff5ab2f0e7fca69e4c1c64ba58ecab00fec3a649fe41da2a75777adc5b",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "13.1.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.75
+}

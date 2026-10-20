@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "reject 0-RTT if it selects smaller values",
+    "interpretation_a": "The server can reject 0-RTT if the client proposes values for max_idle_timeout, max_udp_payload_size, and disable_active_migration that are *strictly* smaller than previously seen values.",
+    "interpretation_b": "The server can reject 0-RTT if the client proposes values for max_idle_timeout, max_udp_payload_size, and disable_active_migration that are smaller or equal to previously seen values. The use of 'smaller' does not explicitly exclude equality.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'smaller values' is open to interpretation. Does it mean strictly less than, or less than or equal to? This affects how a server would implement the rejection logic.",
+    "missing_information": "It is unclear whether 'smaller values' includes equality. A precise constraint is needed to define the condition for rejection."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:08:24.137614+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "2a2eb11b78d4c28f0b9998a370ad05c05b3201bba1b43bd2b18883fd92403e2c",
+  "lineage_ids": "lineage:2a2f9758aeb29e7185e67164",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 223,
+    "load_duration": 4301900,
+    "prompt_eval_count": 634,
+    "total_duration": 8361325700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"reject 0-RTT if it selects smaller values\", \"interpretation_a\": \"The server can reject 0-RTT if the client proposes values for max_idle_timeout, max_udp_payload_size, and disable_active_migration that are *strictly* smaller than previously seen values.\", \"interpretation_b\": \"The server can reject 0-RTT if the client proposes values for max_idle_timeout, max_udp_payload_size, and disable_active_migration that are smaller or equal to previously seen values. The use of 'smaller' does not explicitly exclude equality.\", \"missing_information\": \"It is unclear whether 'smaller values' includes equality. A precise constraint is needed to define the condition for rejection.\", \"justification\": \"The phrase 'smaller values' is open to interpretation. Does it mean strictly less than, or less than or equal to? This affects how a server would implement the rejection logic.\"}",
+  "record_id": "da473d82441e5761647998b6420795219a533c97c9286ee165c167759438e753",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.36
+}

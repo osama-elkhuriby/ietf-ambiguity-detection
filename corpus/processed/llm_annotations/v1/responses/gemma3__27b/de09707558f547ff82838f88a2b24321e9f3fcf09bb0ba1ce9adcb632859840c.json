@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "during the TLS handshake",
+    "interpretation_a": "The target domain name must be indicated *at some point* during the entire TLS handshake process, even if not in the initial client hello.",
+    "interpretation_b": "The target domain name must be indicated *immediately* during the TLS handshake, such as within the initial client hello.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'during the TLS handshake' is insufficiently precise. It could mean at any point during the entire handshake, or specifically in the initial handshake messages. This difference affects how an implementer would satisfy the requirement.",
+    "missing_information": "The clause does not specify *when* during the TLS handshake the domain name must be indicated. This affects implementation because some mechanisms might not be available at all stages of the handshake."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:11:38.371134+00:00",
+  "document_id": "draft-ietf-quic-http-25",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "5496b37d06a85ff044dfe475b60e9c58318386d29721c3541b53f3d5b964ad45",
+  "lineage_ids": "lineage:bc0e3babc4fd3b1eab2dda3f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 187,
+    "load_duration": 1003800,
+    "prompt_eval_count": 573,
+    "total_duration": 7242887200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"during the TLS handshake\", \"interpretation_a\": \"The target domain name must be indicated *at some point* during the entire TLS handshake process, even if not in the initial client hello.\", \"interpretation_b\": \"The target domain name must be indicated *immediately* during the TLS handshake, such as within the initial client hello.\", \"missing_information\": \"The clause does not specify *when* during the TLS handshake the domain name must be indicated. This affects implementation because some mechanisms might not be available at all stages of the handshake.\", \"justification\": \"The phrase 'during the TLS handshake' is insufficiently precise. It could mean at any point during the entire handshake, or specifically in the initial handshake messages. This difference affects how an implementer would satisfy the requirement.\"}",
+  "record_id": "de09707558f547ff82838f88a2b24321e9f3fcf09bb0ba1ce9adcb632859840c",
+  "revision": "25",
+  "schema_version": 1,
+  "section_ids": "3.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.25
+}

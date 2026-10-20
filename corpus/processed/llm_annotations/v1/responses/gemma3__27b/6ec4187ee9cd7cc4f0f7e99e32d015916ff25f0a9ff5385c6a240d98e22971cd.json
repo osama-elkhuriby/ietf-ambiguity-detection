@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless the negotiated connection selects the same ALPN protocol.",
+    "interpretation_a": "If the ALPN protocol is the same, automatic re-sending of early data is permitted. If it is different, it is prohibited.",
+    "interpretation_b": "Automatic re-sending of early data is *always* prohibited, but the ALPN protocol being the same is a condition that *allows* applications to override that prohibition (though the clause doesn't state that).",
+    "is_ambiguous": "yes",
+    "justification": "The clause creates ambiguity around the condition for allowing re-sending. Does the ALPN protocol being the same *enable* re-sending, or merely *not prohibit* it? The lack of clarity on the scope of 'negotiated connection' further complicates the interpretation.",
+    "missing_information": "The clause does not specify what 'negotiated connection' refers to. Is it the initial connection attempt, or a re-negotiated connection? Also, it's unclear if the ALPN protocol must be *exactly* the same, or merely compatible/related."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:34:38.324212+00:00",
+  "document_id": "draft-ietf-tls-tls13-24",
+  "family_id": "draft-ietf-tls-tls13",
+  "input_fingerprint": "161e1ad2e662bdb49fd51d3d4867fb3f820c72d8c9fe2c722ea055aa7ecba34c",
+  "lineage_ids": "lineage:359d1d7d6ac090ae0a0a2977",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 243,
+    "load_duration": 21477600,
+    "prompt_eval_count": 562,
+    "total_duration": 9210035100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless the negotiated connection selects the same ALPN protocol.\", \"interpretation_a\": \"If the ALPN protocol is the same, automatic re-sending of early data is permitted. If it is different, it is prohibited.\", \"interpretation_b\": \"Automatic re-sending of early data is *always* prohibited, but the ALPN protocol being the same is a condition that *allows* applications to override that prohibition (though the clause doesn't state that).\", \"missing_information\": \"The clause does not specify what 'negotiated connection' refers to. Is it the initial connection attempt, or a re-negotiated connection? Also, it's unclear if the ALPN protocol must be *exactly* the same, or merely compatible/related.\", \"justification\": \"The clause creates ambiguity around the condition for allowing re-sending. Does the ALPN protocol being the same *enable* re-sending, or merely *not prohibit* it? The lack of clarity on the scope of 'negotiated connection' further complicates the interpretation.\"}",
+  "record_id": "6ec4187ee9cd7cc4f0f7e99e32d015916ff25f0a9ff5385c6a240d98e22971cd",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "4.2.10",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.219
+}

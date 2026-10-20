@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY use a higher limit",
+    "interpretation_a": "The sender can increase the burst limit to any value it deems appropriate, as long as it believes the network can handle it.",
+    "interpretation_b": "The sender can increase the burst limit, but there is an implicit upper bound (e.g., a multiple of the initial congestion window) that is not specified.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'higher limit' is vague. It doesn't specify how much higher the limit can be, leading to different implementations. One implementation might allow a small increase, while another might allow a very large increase, both believing they are acting within the bounds of the specification.",
+    "missing_information": "The document does not define what constitutes a 'higher limit'. Is there a maximum allowed increase, or is it unbounded? Without this information, implementations could diverge significantly."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:26:21.964878+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "b5bfcb83b31c21ea9781f7d61186f78e21f300bd9f55aa247b91b4716e1ec319",
+  "lineage_ids": "lineage:c22abd6fbde9b51f7c000590",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 205,
+    "load_duration": 5582100,
+    "prompt_eval_count": 564,
+    "total_duration": 7680146500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY use a higher limit\", \"interpretation_a\": \"The sender can increase the burst limit to any value it deems appropriate, as long as it believes the network can handle it.\", \"interpretation_b\": \"The sender can increase the burst limit, but there is an implicit upper bound (e.g., a multiple of the initial congestion window) that is not specified.\", \"missing_information\": \"The document does not define what constitutes a 'higher limit'. Is there a maximum allowed increase, or is it unbounded? Without this information, implementations could diverge significantly.\", \"justification\": \"The phrase 'higher limit' is vague. It doesn't specify how much higher the limit can be, leading to different implementations. One implementation might allow a small increase, while another might allow a very large increase, both believing they are acting within the bounds of the specification.\"}",
+  "record_id": "a17c023853b540fda75ce1faa8a1615a82d72de52c8db4acd3ce8793729a4ddb",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.688
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "A server SHOULD request a client certificate if it sees a renegotiation request immediately after establishing a connection.",
+    "interpretation_a": "The clause does not specify which connection is referred to by 'establishing a connection', leading to different implementation behaviours.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a concrete constraint on the timing relative to the connection establishment, allowing multiple reasonable interpretations.",
+    "missing_information": "Which connection is referred to by 'establishing a connection' (e.g., TCP, TLS handshake, HTTP/2 connection preface)?"
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T04:48:41.983674+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "82522bcdf4130500924b904a1159cdc11218ac66707711804053839c368d9d6d",
+  "lineage_ids": "lineage:cdf230a050ef06b5e5782d09",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 4775,
+    "load_duration": 5037000,
+    "prompt_eval_count": 632,
+    "total_duration": 41390415800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"A server SHOULD request a client certificate if it sees a renegotiation request immediately after establishing a connection.\",\n  \"interpretation_a\": \"The clause does not specify which connection is referred to by 'establishing a connection', leading to different implementation behaviours.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"Which connection is referred to by 'establishing a connection' (e.g., TCP, TLS handshake, HTTP/2 connection preface)?\",\n  \"justification\": \"The clause lacks a concrete constraint on the timing relative to the connection establishment, allowing multiple reasonable interpretations.\"\n}",
+  "record_id": "b4ead8889cc7d3e0d1eb8fa65263380f86c1661c7d6cbc36b6aee2c36623bbf5",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "9.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 109.266
+}

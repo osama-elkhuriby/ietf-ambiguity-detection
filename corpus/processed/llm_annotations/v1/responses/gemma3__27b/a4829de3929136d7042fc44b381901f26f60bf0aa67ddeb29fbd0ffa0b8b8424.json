@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "implementaions MUST attempt to enforce a maximum ack delay",
+    "interpretation_a": "Implementations must *try* to enforce a maximum ack delay, but are not penalized if they fail to do so.",
+    "interpretation_b": "Implementations must enforce a maximum ack delay, and failure to do so is a protocol error.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'attempt' creates ambiguity. Does 'attempt' mean 'must try', or 'must succeed in trying'? Without further clarification, implementations could reasonably interpret this as a best-effort requirement versus a hard constraint.",
+    "missing_information": "The degree to which 'attempt' is a strong requirement is unclear. Is it sufficient to have a mechanism to limit ack delay, or must that mechanism be consistently effective?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:26:28.979338+00:00",
+  "document_id": "draft-ietf-quic-recovery-14",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "ee0930e5b6e21d3417a197de0070850f1ee56abd3d4388849bc59aa7342bcc1f",
+  "lineage_ids": "lineage:497033287b78182f32176234",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 185,
+    "load_duration": 4156300,
+    "prompt_eval_count": 579,
+    "total_duration": 7011876200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"implementaions MUST attempt to enforce a maximum ack delay\", \"interpretation_a\": \"Implementations must *try* to enforce a maximum ack delay, but are not penalized if they fail to do so.\", \"interpretation_b\": \"Implementations must enforce a maximum ack delay, and failure to do so is a protocol error.\", \"missing_information\": \"The degree to which 'attempt' is a strong requirement is unclear. Is it sufficient to have a mechanism to limit ack delay, or must that mechanism be consistently effective?\",\"justification\": \"The use of 'attempt' creates ambiguity. Does 'attempt' mean 'must try', or 'must succeed in trying'? Without further clarification, implementations could reasonably interpret this as a best-effort requirement versus a hard constraint.\"}",
+  "record_id": "a4829de3929136d7042fc44b381901f26f60bf0aa67ddeb29fbd0ffa0b8b8424",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "4.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.016
+}

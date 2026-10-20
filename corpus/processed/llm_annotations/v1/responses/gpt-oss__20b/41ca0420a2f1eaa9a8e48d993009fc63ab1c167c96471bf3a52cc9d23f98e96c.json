@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that if DNS responses are cryptographically protected and SVCB resolution fails due to an authentication error, SERVFAIL, transport error, or timeout, the client should abandon its attempt to reach the service, even if the client is SVCB-optional. The wording does not permit two materially different implementation behaviours, nor does it omit a concrete constraint that would change the operational interpretation.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:37:12.017253+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "e3cc0cb09e97f32895a093549c023f39795f7c0e0c05aeeb04579724162ecc22",
+  "lineage_ids": "lineage:0a567cfdfc9131911f1c2a4f",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1127,
+    "load_duration": 4162800,
+    "prompt_eval_count": 612,
+    "total_duration": 11247514500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that if DNS responses are cryptographically protected and SVCB resolution fails due to an authentication error, SERVFAIL, transport error, or timeout, the client should abandon its attempt to reach the service, even if the client is SVCB-optional. The wording does not permit two materially different implementation behaviours, nor does it omit a concrete constraint that would change the operational interpretation.\"\n}",
+  "record_id": "41ca0420a2f1eaa9a8e48d993009fc63ab1c167c96471bf3a52cc9d23f98e96c",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.266
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Implementations MAY send stream types before knowing whether the peer supports them.",
+    "interpretation_a": "Implementations are permitted to send stream types speculatively, even if they haven't confirmed peer support, potentially leading to wasted bandwidth if the peer doesn't support the type.",
+    "interpretation_b": "Implementations are permitted to send stream types before receiving explicit confirmation of peer support, but they could also implement a mechanism to quickly probe for support before sending a significant amount of data using that stream type.",
+    "is_ambiguous": "yes",
+    "justification": "The MAY allows for sending stream types without knowing peer support, but doesn't specify any limits on the amount of data sent. This creates ambiguity about how much data an implementation is allowed to send before confirming support, leading to different implementation behaviors.",
+    "missing_information": "The clause lacks a constraint on *how much* of a stream type can be sent before peer support is known. This missing constraint affects implementation behavior, as some implementations might send a full stream, while others might send only a minimal probe."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:06:04.992369+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "2cd55f57cc602fbb20f87f8ab9e1dce6cd45f084f21a908e977f0bfce6185547",
+  "lineage_ids": "lineage:19beacf040cad62f382fd618",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 240,
+    "load_duration": 4799000,
+    "prompt_eval_count": 640,
+    "total_duration": 9154461100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Implementations MAY send stream types before knowing whether the peer supports them.\", \"interpretation_a\": \"Implementations are permitted to send stream types speculatively, even if they haven't confirmed peer support, potentially leading to wasted bandwidth if the peer doesn't support the type.\", \"interpretation_b\": \"Implementations are permitted to send stream types before receiving explicit confirmation of peer support, but they could also implement a mechanism to quickly probe for support before sending a significant amount of data using that stream type.\", \"missing_information\": \"The clause lacks a constraint on *how much* of a stream type can be sent before peer support is known. This missing constraint affects implementation behavior, as some implementations might send a full stream, while others might send only a minimal probe.\", \"justification\": \"The MAY allows for sending stream types without knowing peer support, but doesn't specify any limits on the amount of data sent. This creates ambiguity about how much data an implementation is allowed to send before confirming support, leading to different implementation behaviors.\"}",
+  "record_id": "c2ca925cc375154dfab42e10d43574f80ea811d0d0c9a4975e6705441ddca174",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.172
+}

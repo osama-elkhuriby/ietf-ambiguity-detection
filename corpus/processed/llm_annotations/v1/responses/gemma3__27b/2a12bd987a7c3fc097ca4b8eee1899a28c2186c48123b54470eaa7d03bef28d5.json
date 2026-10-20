@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY automatically redirect",
+    "interpretation_a": "The user agent is permitted to redirect the request if a Location header is present, but is not required to do so.",
+    "interpretation_b": "The user agent is required to attempt redirection if a Location header is present, but may fail if redirection is not possible.",
+    "is_ambiguous": "yes",
+    "justification": "The word 'MAY' is ambiguous. It could mean the user agent is permitted to redirect, or that it should attempt to redirect. This difference affects implementation.",
+    "missing_information": "The degree of obligation implied by 'MAY' is not clearly defined. Does 'MAY' mean 'permitted but not required', or 'should attempt but may fail'? This affects implementation choices regarding automatic redirection."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:00:02.347349+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "ca0d24f0de89a843c6b74475dea621933a797e1ed125e1c16aa2ccd92015755f",
+  "lineage_ids": "lineage:173ad74468eee689675600e0",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 176,
+    "load_duration": 21190600,
+    "prompt_eval_count": 645,
+    "total_duration": 6942246900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY automatically redirect\", \"interpretation_a\": \"The user agent is permitted to redirect the request if a Location header is present, but is not required to do so.\", \"interpretation_b\": \"The user agent is required to attempt redirection if a Location header is present, but may fail if redirection is not possible.\", \"missing_information\": \"The degree of obligation implied by 'MAY' is not clearly defined. Does 'MAY' mean 'permitted but not required', or 'should attempt but may fail'? This affects implementation choices regarding automatic redirection.\",\"justification\": \"The word 'MAY' is ambiguous. It could mean the user agent is permitted to redirect, or that it should attempt to redirect. This difference affects implementation.\"}",
+  "record_id": "2a12bd987a7c3fc097ca4b8eee1899a28c2186c48123b54470eaa7d03bef28d5",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "15.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.953
+}

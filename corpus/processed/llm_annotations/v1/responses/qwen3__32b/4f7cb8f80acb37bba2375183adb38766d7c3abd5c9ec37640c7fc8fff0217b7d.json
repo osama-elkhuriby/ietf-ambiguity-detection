@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause provides a clear condition for when a proxy should respond with a 407 (Proxy Authentication Required) status code. It specifies that this should happen when a request omits proxy credentials or contains invalid or partial proxy credentials, and the proxy requires authentication. The language is precise and does not allow for multiple materially different interpretations. There is no missing constraint that would affect implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:11:58.520979+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-14",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "33dbd0d337e67a5244ac06a5049adcafb482bde3c21a5480bc4e86500e17c5df",
+  "lineage_ids": "lineage:deab2236d9f99904e661231e",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 135,
+    "load_duration": 8507200,
+    "prompt_eval_count": 649,
+    "total_duration": 5674140200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause provides a clear condition for when a proxy should respond with a 407 (Proxy Authentication Required) status code. It specifies that this should happen when a request omits proxy credentials or contains invalid or partial proxy credentials, and the proxy requires authentication. The language is precise and does not allow for multiple materially different interpretations. There is no missing constraint that would affect implementation behavior.\"\n}",
+  "record_id": "4f7cb8f80acb37bba2375183adb38766d7c3abd5c9ec37640c7fc8fff0217b7d",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "11.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.687
+}

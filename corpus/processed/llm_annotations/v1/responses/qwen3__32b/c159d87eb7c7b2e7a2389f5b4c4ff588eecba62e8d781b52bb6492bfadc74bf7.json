@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear condition for closing a connection when a frame is received for a stream that is allocated to the endpoint but has not been created. The condition is unambiguous: if the stream ID is allocated to the endpoint (based on whether it is odd or even) and the stream has not been created, the endpoint must close the connection with a specific error code. There is no ambiguity in the language or in the conditions described.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:38:01.451171+00:00",
+  "document_id": "draft-ietf-quic-transport-07",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "86ffc1dba3963dc323690648da4401fca619d64d7e0ef72ea047deea800f52aa",
+  "lineage_ids": "lineage:ca9b1b989e3c4e76b35d7f23",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 144,
+    "load_duration": 3738100,
+    "prompt_eval_count": 570,
+    "total_duration": 5919367200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear condition for closing a connection when a frame is received for a stream that is allocated to the endpoint but has not been created. The condition is unambiguous: if the stream ID is allocated to the endpoint (based on whether it is odd or even) and the stream has not been created, the endpoint must close the connection with a specific error code. There is no ambiguity in the language or in the conditions described.\"\n}",
+  "record_id": "c159d87eb7c7b2e7a2389f5b4c4ff588eecba62e8d781b52bb6492bfadc74bf7",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "10.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.922
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "ignore any MAX_STREAM_ID that does not increase the maximum",
+    "interpretation_a": "The sender ignores the frame entirely, discarding it without any further action.",
+    "interpretation_b": "The sender logs the out-of-order frame as an error, but continues processing other frames. The logging could trigger some form of reporting or alerting.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'ignore' is underspecified. It could mean to silently discard the frame, or to log it as an error without taking further action. Both interpretations are reasonable, and the lack of a constraint on error handling creates ambiguity.",
+    "missing_information": "It is unclear whether ignoring the frame implies silent discarding or some form of error handling/logging. A missing constraint on error handling affects implementation."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:43:50.369211+00:00",
+  "document_id": "draft-ietf-quic-transport-13",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "9de52ca0ed9cb5503357d4902612f42eb5c2e07b48ef6ebefc7a36bae69865e9",
+  "lineage_ids": "lineage:5fb56b048c7ce38890a1f38d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 187,
+    "load_duration": 5013000,
+    "prompt_eval_count": 580,
+    "total_duration": 7072174900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"ignore any MAX_STREAM_ID that does not increase the maximum\", \"interpretation_a\": \"The sender ignores the frame entirely, discarding it without any further action.\", \"interpretation_b\": \"The sender logs the out-of-order frame as an error, but continues processing other frames. The logging could trigger some form of reporting or alerting.\", \"missing_information\": \"It is unclear whether ignoring the frame implies silent discarding or some form of error handling/logging. A missing constraint on error handling affects implementation.\", \"justification\": \"The phrase 'ignore' is underspecified. It could mean to silently discard the frame, or to log it as an error without taking further action. Both interpretations are reasonable, and the lack of a constraint on error handling creates ambiguity.\"}",
+  "record_id": "8f1104ddf96e6ae776ce7b6f61577883eb040a9bad385c0c79cd41c4055a6998",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "9.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.063
+}

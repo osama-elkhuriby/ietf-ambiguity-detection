@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Connection IDs MUST be used in the order in which they are numbered.",
+    "interpretation_a": "Connection IDs must be used strictly sequentially, with no gaps. If a connection ID is skipped, it is an error.",
+    "interpretation_b": "Connection IDs must be used in ascending order, but gaps are permitted. An endpoint can choose to use a later connection ID without using all preceding ones.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"in the order in which they are numbered\" can be interpreted as either strict sequential usage or simply ascending order. Without further clarification, it's unclear whether skipping Connection IDs is permissible.",
+    "missing_information": "The clause does not specify whether gaps in the sequence of Connection IDs are allowed. This affects how an endpoint manages its available Connection IDs and how it handles out-of-order delivery."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:21:26.394836+00:00",
+  "document_id": "draft-ietf-quic-transport-12",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "f14ed565568bad52cb155f66b386d1aca13b17487e0b3fbb289ff065c772ecb8",
+  "lineage_ids": "lineage:966474da58a3048124e784a6",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 197,
+    "load_duration": 6177600,
+    "prompt_eval_count": 561,
+    "total_duration": 7397233600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Connection IDs MUST be used in the order in which they are numbered.\", \"interpretation_a\": \"Connection IDs must be used strictly sequentially, with no gaps. If a connection ID is skipped, it is an error.\", \"interpretation_b\": \"Connection IDs must be used in ascending order, but gaps are permitted. An endpoint can choose to use a later connection ID without using all preceding ones.\", \"missing_information\": \"The clause does not specify whether gaps in the sequence of Connection IDs are allowed. This affects how an endpoint manages its available Connection IDs and how it handles out-of-order delivery.\", \"justification\": \"The phrase \\\"in the order in which they are numbered\\\" can be interpreted as either strict sequential usage or simply ascending order. Without further clarification, it's unclear whether skipping Connection IDs is permissible.\"}",
+  "record_id": "ff18323dfb9e16ece48fbf89660eedaa8480128432c2a5f38544eeb6c11955d0",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "6.8.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.391
+}

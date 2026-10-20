@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "does not satisfy all of the characteristics of a strong validator",
+    "interpretation_a": "The origin server must check *every* characteristic of a strong validator. If even one is not met, the ETag is weak.",
+    "interpretation_b": "The origin server must check the characteristics of a strong validator, and if *most* are met, the ETag can be considered strong, even if not all characteristics are satisfied.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'does not satisfy all of the characteristics' is incomplete. It doesn't specify the degree to which characteristics must be satisfied to avoid being considered 'weak'. This creates ambiguity in implementation.",
+    "missing_information": "The clause does not define what constitutes 'all' of the characteristics. Is it a strict requirement that every single characteristic be met, or is there some tolerance for minor deviations?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:30:16.426483+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "9fd4a4cbf59eebf5bf9190a3dbaf0030206477fa264ddc7e573e9d2f2eb00618",
+  "lineage_ids": "lineage:5b098478d8fa0654c18e4481",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 201,
+    "load_duration": 11942900,
+    "prompt_eval_count": 617,
+    "total_duration": 7778474000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"does not satisfy all of the characteristics of a strong validator\", \"interpretation_a\": \"The origin server must check *every* characteristic of a strong validator. If even one is not met, the ETag is weak.\", \"interpretation_b\": \"The origin server must check the characteristics of a strong validator, and if *most* are met, the ETag can be considered strong, even if not all characteristics are satisfied.\", \"missing_information\": \"The clause does not define what constitutes 'all' of the characteristics. Is it a strict requirement that every single characteristic be met, or is there some tolerance for minor deviations?\",\"justification\": \"The phrase 'does not satisfy all of the characteristics' is incomplete. It doesn't specify the degree to which characteristics must be satisfied to avoid being considered 'weak'. This creates ambiguity in implementation.\"}",
+  "record_id": "d7e94232f5a21309cfbfcaee79bb385e99f1f0281c52deefb5fd94d07603f2a1",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "8.8.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.781
+}

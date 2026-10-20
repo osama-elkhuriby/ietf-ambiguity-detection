@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD apply the same restriction",
+    "interpretation_a": "Clients are encouraged to apply the same port restrictions to the SvcParam 'port' as they do to 'https' URIs, but are not required to.",
+    "interpretation_b": "Clients are expected to apply the same port restrictions to the SvcParam 'port' as they do to 'https' URIs, and deviation from this is discouraged.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' creates ambiguity. While it indicates a recommended behaviour, the level of adherence is not specified. This allows for different interpretations of how strictly clients should apply the port restriction.",
+    "missing_information": "The strength of 'SHOULD' is not defined. Is it a weak recommendation, or a strong one? The degree to which a client is expected to adhere to the restriction is unclear."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:05:29.886790+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "f4e041432755054450bf5958e1cdc7bac14beff7fe83e0ad916770d610b16672",
+  "lineage_ids": "lineage:104f33aa508a4b1fe71d9db0",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 203,
+    "load_duration": 3535400,
+    "prompt_eval_count": 607,
+    "total_duration": 7676575000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD apply the same restriction\", \"interpretation_a\": \"Clients are encouraged to apply the same port restrictions to the SvcParam 'port' as they do to 'https' URIs, but are not required to.\", \"interpretation_b\": \"Clients are expected to apply the same port restrictions to the SvcParam 'port' as they do to 'https' URIs, and deviation from this is discouraged.\", \"missing_information\": \"The strength of 'SHOULD' is not defined. Is it a weak recommendation, or a strong one? The degree to which a client is expected to adhere to the restriction is unclear.\",\"justification\": \"The use of 'SHOULD' creates ambiguity. While it indicates a recommended behaviour, the level of adherence is not specified. This allows for different interpretations of how strictly clients should apply the port restriction.\"}",
+  "record_id": "6bbbe62888d4780b9e7be3ef03b910ddac18244a0e3faf42a8f7a05075dc6cff",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.687
+}

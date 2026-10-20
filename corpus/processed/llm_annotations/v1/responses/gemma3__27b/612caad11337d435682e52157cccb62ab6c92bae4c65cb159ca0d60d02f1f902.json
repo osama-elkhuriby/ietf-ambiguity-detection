@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "0x3ffffffffffffffe",
+    "interpretation_a": "The maximum value is interpreted as a 64-bit integer, limiting the range of N.",
+    "interpretation_b": "The maximum value is interpreted as a 32-bit integer, allowing a larger range of N but potentially causing overflow if N exceeds the maximum 32-bit value.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'through 0x3ffffffffffffffe' could be interpreted as a 64-bit integer limit, or a 32-bit integer limit due to the hexadecimal representation. Without specifying the intended bit-width, the maximum value of N is ambiguous.",
+    "missing_information": "The bit-width of N is not explicitly defined, leading to different interpretations of the maximum allowed value."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:52:45.233823+00:00",
+  "document_id": "draft-ietf-quic-http-32",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "c3eee9e4bd925e3858886aa68703063f123703aae5d8683f7ccefe6ba0c9c53d",
+  "lineage_ids": "lineage:2c5a42c97ea3636cb8fe3f59",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 194,
+    "load_duration": 9776000,
+    "prompt_eval_count": 1039,
+    "total_duration": 12765008600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"0x3ffffffffffffffe\", \"interpretation_a\": \"The maximum value is interpreted as a 64-bit integer, limiting the range of N.\", \"interpretation_b\": \"The maximum value is interpreted as a 32-bit integer, allowing a larger range of N but potentially causing overflow if N exceeds the maximum 32-bit value.\", \"missing_information\": \"The bit-width of N is not explicitly defined, leading to different interpretations of the maximum allowed value.\", \"justification\": \"The phrase 'through 0x3ffffffffffffffe' could be interpreted as a 64-bit integer limit, or a 32-bit integer limit due to the hexadecimal representation. Without specifying the intended bit-width, the maximum value of N is ambiguous.\"}",
+  "record_id": "612caad11337d435682e52157cccb62ab6c92bae4c65cb159ca0d60d02f1f902",
+  "revision": "32",
+  "schema_version": 1,
+  "section_ids": "11.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 12.781
+}

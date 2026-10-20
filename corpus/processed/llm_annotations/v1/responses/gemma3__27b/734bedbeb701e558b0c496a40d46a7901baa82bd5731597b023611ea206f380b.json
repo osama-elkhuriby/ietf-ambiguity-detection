@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless it maintains state sufficient to prevent looping",
+    "interpretation_a": "The endpoint can send Stateless Resets of any size if it has state to detect and prevent loops.",
+    "interpretation_b": "The endpoint must always send smaller Stateless Resets, even if it has state to prevent loops, because the state is not guaranteed to be effective.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'sufficient to prevent looping' is vague. It doesn't specify what constitutes 'sufficient' state, leaving room for different implementations to interpret the requirement differently. An implementation might believe a simple counter is sufficient, while another might require more complex state. This creates a potential for inconsistent behavior.",
+    "missing_information": "The criteria for 'sufficient state' are not defined. It is unclear what level of state maintenance is required to satisfy the exception, and whether the exception applies regardless of the effectiveness of the state."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:32:36.149896+00:00",
+  "document_id": "draft-ietf-quic-transport-29",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "d55811a4a9f1a65279bdb710b6b2f698fd0135be89cb959e257e33aa4d561274",
+  "lineage_ids": "lineage:37ea24db7b2d02b0c1311b41",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 208,
+    "load_duration": 7302700,
+    "prompt_eval_count": 589,
+    "total_duration": 7833652100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless it maintains state sufficient to prevent looping\", \"interpretation_a\": \"The endpoint can send Stateless Resets of any size if it has state to detect and prevent loops.\", \"interpretation_b\": \"The endpoint must always send smaller Stateless Resets, even if it has state to prevent loops, because the state is not guaranteed to be effective.\", \"missing_information\": \"The criteria for 'sufficient state' are not defined. It is unclear what level of state maintenance is required to satisfy the exception, and whether the exception applies regardless of the effectiveness of the state.\",\"justification\": \"The phrase 'sufficient to prevent looping' is vague. It doesn't specify what constitutes 'sufficient' state, leaving room for different implementations to interpret the requirement differently. An implementation might believe a simple counter is sufficient, while another might require more complex state. This creates a potential for inconsistent behavior.\"}",
+  "record_id": "734bedbeb701e558b0c496a40d46a7901baa82bd5731597b023611ea206f380b",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "10.4.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.844
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST only occur once per challenge",
+    "interpretation_a": "The constraint applies to all authentication parameters across all challenges. A parameter name cannot be reused in *any* challenge.",
+    "interpretation_b": "The constraint applies only within a single challenge. A parameter name cannot be reused within the same challenge, but can be reused in different challenges.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'per challenge' is incomplete. It is unclear whether the uniqueness constraint applies to a single challenge instance or to all challenges encountered during a session or communication. This affects how an implementation would handle duplicate parameter names.",
+    "missing_information": "The scope of 'challenge' is not defined. Is a 'challenge' a single HTTP request/response exchange, or a broader context (e.g., a session)?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:56:10.601858+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "463cc2cd6bdbf64d8ff7097a524c8fe34f011ea1970077fd740c91de89184d9c",
+  "lineage_ids": "lineage:3d45f545722fd11763363286",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 189,
+    "load_duration": 8787500,
+    "prompt_eval_count": 630,
+    "total_duration": 7326756000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST only occur once per challenge\", \"interpretation_a\": \"The constraint applies to all authentication parameters across all challenges. A parameter name cannot be reused in *any* challenge.\", \"interpretation_b\": \"The constraint applies only within a single challenge. A parameter name cannot be reused within the same challenge, but can be reused in different challenges.\", \"missing_information\": \"The scope of 'challenge' is not defined. Is a 'challenge' a single HTTP request/response exchange, or a broader context (e.g., a session)?\", \"justification\": \"The phrase 'per challenge' is incomplete. It is unclear whether the uniqueness constraint applies to a single challenge instance or to all challenges encountered during a session or communication. This affects how an implementation would handle duplicate parameter names.\"}",
+  "record_id": "13608b064b89e629964a5428147f114ceac173626a13f48f4167d4951fb0b388",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "11.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.328
+}

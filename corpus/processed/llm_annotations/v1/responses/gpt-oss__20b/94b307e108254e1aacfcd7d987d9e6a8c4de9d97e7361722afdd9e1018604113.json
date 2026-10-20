@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "source IP address and port in client packets remains constant",
+    "interpretation_a": "The server should verify that the source IP address and port in the client packet that includes the token remains the same as the source IP address and port in the original client packet that triggered the Retry.",
+    "interpretation_b": "The server should verify that the source IP address and port in all client packets that include the token remains constant across all such packets.",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a clear reference point for the constancy check, allowing two materially different interpretations.",
+    "missing_information": "The clause does not specify the reference point for 'remains constant' (e.g., relative to the original client packet or relative to all client packets that include the token)."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T17:10:17.976174+00:00",
+  "document_id": "draft-ietf-quic-transport-28",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "f5cc1c5c639231fe08202b23b001b968b35ae0e405c7eca653ae358e16b1443d",
+  "lineage_ids": "lineage:17bbf8908a1acb43aa3a6954",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2364,
+    "load_duration": 4066100,
+    "prompt_eval_count": 604,
+    "total_duration": 20267881300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"source IP address and port in client packets remains constant\",\n  \"interpretation_a\": \"The server should verify that the source IP address and port in the client packet that includes the token remains the same as the source IP address and port in the original client packet that triggered the Retry.\",\n  \"interpretation_b\": \"The server should verify that the source IP address and port in all client packets that include the token remains constant across all such packets.\",\n  \"missing_information\": \"The clause does not specify the reference point for 'remains constant' (e.g., relative to the original client packet or relative to all client packets that include the token).\",\n  \"justification\": \"The clause lacks a clear reference point for the constancy check, allowing two materially different interpretations.\"\n}",
+  "record_id": "94b307e108254e1aacfcd7d987d9e6a8c4de9d97e7361722afdd9e1018604113",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "8.1.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 20.265
+}

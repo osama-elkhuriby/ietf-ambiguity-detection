@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "excluding some fields described below",
+    "interpretation_a": "The server might exclude any fields it deems unnecessary or problematic, leading to varying responses.",
+    "interpretation_b": "The server might exclude only a specific, predefined set of fields, leading to a more consistent response.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"some fields described below\" implies a description exists, but the provided context does not contain it. Without knowing which fields are to be excluded, implementations could reasonably differ in what they omit from the reflected message.",
+    "missing_information": "The document does not specify *which* fields are excluded, leaving room for different implementations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:13:11.127954+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-14",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "43ee0170813ef80815b48fc6a3b64ef56185ca7a3dc6de14306255c8e5c3dffe",
+  "lineage_ids": "lineage:1f349fcd1a15edeb03f335dd",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 156,
+    "load_duration": 13760600,
+    "prompt_eval_count": 622,
+    "total_duration": 6191210900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"excluding some fields described below\", \"interpretation_a\": \"The server might exclude any fields it deems unnecessary or problematic, leading to varying responses.\", \"interpretation_b\": \"The server might exclude only a specific, predefined set of fields, leading to a more consistent response.\", \"missing_information\": \"The document does not specify *which* fields are excluded, leaving room for different implementations.\",\"justification\": \"The phrase \\\"some fields described below\\\" implies a description exists, but the provided context does not contain it. Without knowing which fields are to be excluded, implementations could reasonably differ in what they omit from the reflected message.\"}",
+  "record_id": "71f4d1c0edfe217d6dd1760f06f199fe88811a6ae0bdc15817b0dc6cb4e04f7a",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "9.3.8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.187
+}

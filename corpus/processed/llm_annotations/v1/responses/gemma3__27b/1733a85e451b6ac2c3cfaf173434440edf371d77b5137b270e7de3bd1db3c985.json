@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "exceeds the integrity limit",
+    "interpretation_a": "The limit is a hard cap. Once exceeded, the connection is closed regardless of whether the failures are clustered or spread out.",
+    "interpretation_b": "The limit is a rate limiter. The endpoint might tolerate a burst of failures, but close the connection if the rate of failures exceeds the limit over a period of time.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'exceeds the integrity limit' does not specify if this is an absolute threshold or a rate-limited threshold. Without further clarification, implementations could reasonably interpret this in two different ways, leading to interoperability issues.",
+    "missing_information": "The clause does not specify whether the limit is absolute or a rate limit. This affects how an implementation would handle bursts of authentication failures."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:34:48.268503+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "bf5586ce6c6394d3834b9acbc833cc864e3f74a19db5b2f0dfb9c87c4c8e9194",
+  "lineage_ids": "lineage:87b73a539b9cd365bd7d5659",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 191,
+    "load_duration": 3896000,
+    "prompt_eval_count": 635,
+    "total_duration": 7277081000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"exceeds the integrity limit\", \"interpretation_a\": \"The limit is a hard cap. Once exceeded, the connection is closed regardless of whether the failures are clustered or spread out.\", \"interpretation_b\": \"The limit is a rate limiter. The endpoint might tolerate a burst of failures, but close the connection if the rate of failures exceeds the limit over a period of time.\", \"missing_information\": \"The clause does not specify whether the limit is absolute or a rate limit. This affects how an implementation would handle bursts of authentication failures.\", \"justification\": \"The phrase 'exceeds the integrity limit' does not specify if this is an absolute threshold or a rate-limited threshold. Without further clarification, implementations could reasonably interpret this in two different ways, leading to interoperability issues.\"}",
+  "record_id": "1733a85e451b6ac2c3cfaf173434440edf371d77b5137b270e7de3bd1db3c985",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.281
+}

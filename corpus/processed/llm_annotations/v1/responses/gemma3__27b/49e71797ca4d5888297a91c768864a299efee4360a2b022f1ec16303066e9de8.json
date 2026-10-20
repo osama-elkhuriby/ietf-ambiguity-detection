@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY use state for just the packet number space that was acknowledged.",
+    "interpretation_a": "The sender *can* choose to only use the acknowledged packet number space for congestion control, simplifying implementation.",
+    "interpretation_b": "The sender *is permitted* to use only the acknowledged packet number space, but should consider the implications of doing so for congestion control accuracy.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' allows for two reasonable interpretations. One is that the sender can simplify its implementation by only tracking congestion in the acknowledged space. The other is that it's permitted to do so, but should be aware of the potential for reduced accuracy. The lack of clarity on what 'use state' entails creates the ambiguity.",
+    "missing_information": "The clause does not specify what 'use state' means in terms of congestion control. Does it mean use *only* that state, or use that state *in addition to* other information? This affects whether the implementation is a simplification or a potentially inaccurate approach."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:19:45.500811+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "b9880e31842cb6d98fb3572e6a9bd2e9f7ec37dbca2cb7163d604c6699f7696c",
+  "lineage_ids": "lineage:87fd078af17a475c3932bc4f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 235,
+    "load_duration": 3563100,
+    "prompt_eval_count": 592,
+    "total_duration": 8792167500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY use state for just the packet number space that was acknowledged.\", \"interpretation_a\": \"The sender *can* choose to only use the acknowledged packet number space for congestion control, simplifying implementation.\", \"interpretation_b\": \"The sender *is permitted* to use only the acknowledged packet number space, but should consider the implications of doing so for congestion control accuracy.\", \"missing_information\": \"The clause does not specify what 'use state' means in terms of congestion control. Does it mean use *only* that state, or use that state *in addition to* other information? This affects whether the implementation is a simplification or a potentially inaccurate approach.\", \"justification\": \"The use of 'MAY' allows for two reasonable interpretations. One is that the sender can simplify its implementation by only tracking congestion in the acknowledged space. The other is that it's permitted to do so, but should be aware of the potential for reduced accuracy. The lack of clarity on what 'use state' entails creates the ambiguity.\"}",
+  "record_id": "49e71797ca4d5888297a91c768864a299efee4360a2b022f1ec16303066e9de8",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.797
+}

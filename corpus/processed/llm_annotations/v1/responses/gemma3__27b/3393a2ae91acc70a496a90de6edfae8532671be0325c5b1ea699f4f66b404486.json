@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT declare in-flight crypto packets as lost",
+    "interpretation_a": "The sender must not mark packets as lost in any way, including internal state or signaling to other layers.",
+    "interpretation_b": "The sender must not signal to the receiver that packets are lost, but may still internally track them as lost for retransmission purposes.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'declare as lost' is open to interpretation. It's unclear whether it refers to internal tracking of lost packets (which might be necessary for retransmission) or external signaling to the receiver. This difference in interpretation could lead to different implementations.",
+    "missing_information": "The meaning of 'declare as lost' is not defined. Does it refer to internal state, signaling to the receiver, or both?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:18:29.747206+00:00",
+  "document_id": "draft-ietf-quic-recovery-22",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "4b59b17730f2afa3f25a98a1c7be8c53a296fbd21a07faf1ef379abafee5cd32",
+  "lineage_ids": "lineage:f2e6ca424d697256e54f01be",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 188,
+    "load_duration": 6515000,
+    "prompt_eval_count": 580,
+    "total_duration": 7088593100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT declare in-flight crypto packets as lost\", \"interpretation_a\": \"The sender must not mark packets as lost in any way, including internal state or signaling to other layers.\", \"interpretation_b\": \"The sender must not signal to the receiver that packets are lost, but may still internally track them as lost for retransmission purposes.\", \"missing_information\": \"The meaning of 'declare as lost' is not defined. Does it refer to internal state, signaling to the receiver, or both?\", \"justification\": \"The phrase 'declare as lost' is open to interpretation. It's unclear whether it refers to internal tracking of lost packets (which might be necessary for retransmission) or external signaling to the receiver. This difference in interpretation could lead to different implementations.\"}",
+  "record_id": "3393a2ae91acc70a496a90de6edfae8532671be0325c5b1ea699f4f66b404486",
+  "revision": "22",
+  "schema_version": 1,
+  "section_ids": "6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.094
+}

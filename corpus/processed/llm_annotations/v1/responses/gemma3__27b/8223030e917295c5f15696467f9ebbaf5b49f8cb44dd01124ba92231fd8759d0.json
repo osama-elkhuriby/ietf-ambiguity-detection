@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Stream ID of any other type",
+    "interpretation_a": "Any Stream ID that is not a client-initiated bidirectional stream (as described in the previous clause) is considered 'other type'.",
+    "interpretation_b": "Any Stream ID that is not currently active or valid is considered 'other type'.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'any other type' is vague. It's unclear if it refers to stream types beyond the client-initiated bidirectional stream mentioned in the previous clause, or to stream IDs that are invalid or no longer active. This lack of clarity creates ambiguity in implementation.",
+    "missing_information": "The definition of 'other type' Stream ID is not provided. It is unclear whether it refers to stream types or stream states."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:56:22.243103+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "b7aff7498b0a27b72cf589975ee03a2e8ef8b91dc0d21fea707997b99068fd17",
+  "lineage_ids": "lineage:ba1277120f3dc97ddb5f92fb",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 183,
+    "load_duration": 8320400,
+    "prompt_eval_count": 595,
+    "total_duration": 7136123300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Stream ID of any other type\", \"interpretation_a\": \"Any Stream ID that is not a client-initiated bidirectional stream (as described in the previous clause) is considered 'other type'.\", \"interpretation_b\": \"Any Stream ID that is not currently active or valid is considered 'other type'.\", \"missing_information\": \"The definition of 'other type' Stream ID is not provided. It is unclear whether it refers to stream types or stream states.\", \"justification\": \"The phrase 'any other type' is vague. It's unclear if it refers to stream types beyond the client-initiated bidirectional stream mentioned in the previous clause, or to stream IDs that are invalid or no longer active. This lack of clarity creates ambiguity in implementation.\"}",
+  "record_id": "8223030e917295c5f15696467f9ebbaf5b49f8cb44dd01124ba92231fd8759d0",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.2.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.156
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "The value of zero indicates that the ticket should be discarded immediately.",
+    "interpretation_a": "A ticket with a lifetime of zero means the client should immediately delete the ticket from its cache upon receipt.",
+    "interpretation_b": "A ticket with a lifetime of zero means the server considers the ticket invalid immediately, and the client should not attempt to use it for resumption.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'discard' is ambiguous in this context. It could refer to the server invalidating the ticket (meaning the client should not use it) or the client deleting the ticket from its cache. Both interpretations are reasonable, and the lack of clarity creates a potential implementation divergence.",
+    "missing_information": "It is unclear whether 'discard' refers to server-side invalidation or client-side deletion. The clause does not specify *who* should discard the ticket."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:33:41.853723+00:00",
+  "document_id": "draft-ietf-tls-tls13-17",
+  "family_id": "draft-ietf-tls-tls13",
+  "input_fingerprint": "9a5d30087cc92ce79963df135bafad847c808a68267d846075632c90560d886e",
+  "lineage_ids": "lineage:8fb1894ce40091b7ad92d355",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 203,
+    "load_duration": 19330700,
+    "prompt_eval_count": 566,
+    "total_duration": 7780848000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"The value of zero indicates that the ticket should be discarded immediately.\", \"interpretation_a\": \"A ticket with a lifetime of zero means the client should immediately delete the ticket from its cache upon receipt.\", \"interpretation_b\": \"A ticket with a lifetime of zero means the server considers the ticket invalid immediately, and the client should not attempt to use it for resumption.\", \"missing_information\": \"It is unclear whether 'discard' refers to server-side invalidation or client-side deletion. The clause does not specify *who* should discard the ticket.\", \"justification\": \"The term 'discard' is ambiguous in this context. It could refer to the server invalidating the ticket (meaning the client should not use it) or the client deleting the ticket from its cache. Both interpretations are reasonable, and the lack of clarity creates a potential implementation divergence.\"}",
+  "record_id": "3e310e336d80ca93fd9e39c719f9981ea31b7392202eeede76a81cb233b285d6",
+  "revision": "17",
+  "schema_version": 1,
+  "section_ids": "4.5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.781
+}

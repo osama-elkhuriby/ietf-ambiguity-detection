@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "usage limits",
+    "interpretation_a": "The key update must occur *before* the number of packets protected by the current key reaches the limit.",
+    "interpretation_b": "The key update must occur *at or before* the point at which the usage limit is exceeded, allowing for the possibility of updating the key exactly when the limit is reached.",
+    "is_ambiguous": "yes",
+    "justification": "The word 'before' is ambiguous. It could mean 'strictly before' or 'at or before'. This affects when the key update must be initiated.",
+    "missing_information": "The phrase 'before' is ambiguous. Does it mean strictly before, or at/before?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:35:59.206027+00:00",
+  "document_id": "draft-ietf-quic-tls-29",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "94b9e146299584f700f2b36260db2287952eb350f2c54035394027b9c3aab055",
+  "lineage_ids": "lineage:cfdb86f7aa5773b0c83e6d4a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 160,
+    "load_duration": 4293700,
+    "prompt_eval_count": 549,
+    "total_duration": 6116553800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"usage limits\", \"interpretation_a\": \"The key update must occur *before* the number of packets protected by the current key reaches the limit.\", \"interpretation_b\": \"The key update must occur *at or before* the point at which the usage limit is exceeded, allowing for the possibility of updating the key exactly when the limit is reached.\", \"missing_information\": \"The phrase 'before' is ambiguous. Does it mean strictly before, or at/before?\",\"justification\": \"The word 'before' is ambiguous. It could mean 'strictly before' or 'at or before'. This affects when the key update must be initiated.\"}",
+  "record_id": "2d534605dd49f61fc695464be5d0400d41c77d3d7e7f9b02074b969066dce15a",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "6.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.14
+}

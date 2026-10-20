@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY send an ACK segment",
+    "interpretation_a": "The implementation is permitted, but not required, to send an ACK segment.",
+    "interpretation_b": "The implementation is encouraged to send an ACK segment, but it is not a strict requirement.",
+    "is_ambiguous": "yes",
+    "justification": "The word 'MAY' is often used to indicate permission, but can also indicate a weak recommendation. Without further clarification, it is unclear whether the implementation is simply allowed to send an ACK segment, or whether it is encouraged to do so. This affects implementation choices.",
+    "missing_information": "The strength of 'MAY' is not defined. Is it a weak suggestion, or a permission that is rarely useful?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:28:52.314986+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "579810c2b5d8c56b84f5221d9b0a255d29d05c4d72bdb0ec3f64db4e673b2b22",
+  "lineage_ids": "lineage:23933b58b125ccfc0d0617d1",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 168,
+    "load_duration": 4586700,
+    "prompt_eval_count": 584,
+    "total_duration": 6546605700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY send an ACK segment\", \"interpretation_a\": \"The implementation is permitted, but not required, to send an ACK segment.\", \"interpretation_b\": \"The implementation is encouraged to send an ACK segment, but it is not a strict requirement.\", \"missing_information\": \"The strength of 'MAY' is not defined. Is it a weak suggestion, or a permission that is rarely useful?\", \"justification\": \"The word 'MAY' is often used to indicate permission, but can also indicate a weak recommendation. Without further clarification, it is unclear whether the implementation is simply allowed to send an ACK segment, or whether it is encouraged to do so. This affects implementation choices.\"}",
+  "record_id": "cfdc5773ad757dc3f54ed93bab968dc42d7459a9f48c116e7e15295202de8491",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.10.7.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.562
+}

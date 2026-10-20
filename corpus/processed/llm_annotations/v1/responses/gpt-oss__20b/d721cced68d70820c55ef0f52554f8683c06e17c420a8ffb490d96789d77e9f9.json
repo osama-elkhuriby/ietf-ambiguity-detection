@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST be constructed in a way that allows the server to identify how it was provided to a client.",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause requires that the token be constructed so that the server can identify how it was provided to a client, but it does not specify what information must be included or how it must be encoded.  This incomplete constraint allows multiple materially different implementation behaviours, making the clause ambiguous.",
+    "missing_information": "The clause does not specify the exact content or format of the token, leaving the implementation choice open to the server. This missing constraint prevents a unique operational interpretation of how the token must be constructed to satisfy the requirement.  "
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T18:40:59.090987+00:00",
+  "document_id": "draft-ietf-quic-transport-33",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "24338f86e29fc69be2232f5c36cffb5b1cce9a0c428ab918eea37962ac77ab36",
+  "lineage_ids": "lineage:9b6d58e01142efe08c62e828",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1394,
+    "load_duration": 6648000,
+    "prompt_eval_count": 569,
+    "total_duration": 12385813900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"MUST be constructed in a way that allows the server to identify how it was provided to a client.\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The clause does not specify the exact content or format of the token, leaving the implementation choice open to the server. This missing constraint prevents a unique operational interpretation of how the token must be constructed to satisfy the requirement.  \",\n  \"justification\": \"The clause requires that the token be constructed so that the server can identify how it was provided to a client, but it does not specify what information must be included or how it must be encoded.  This incomplete constraint allows multiple materially different implementation behaviours, making the clause ambiguous.\"\n}",
+  "record_id": "d721cced68d70820c55ef0f52554f8683c06e17c420a8ffb490d96789d77e9f9",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "8.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 12.391
+}

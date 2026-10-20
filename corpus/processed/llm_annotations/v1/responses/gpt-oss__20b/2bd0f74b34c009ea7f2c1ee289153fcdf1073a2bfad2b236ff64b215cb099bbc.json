@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY replace that value with the time that response was received",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The target clause allows a recipient to replace an invalid Date header field value with the time the response was received, but it does not specify whether this replacement should be applied to the original message, a cached copy, or a forwarded downstream copy.  This omission creates a concrete missing constraint that can lead to materially different implementation behaviours, satisfying the definition of ambiguity.  The evidence span is an exact substring of the target clause.  The missing information is the lack of specification of the scope of the replacement operation.",
+    "missing_information": "The clause does not specify whether the replacement should be applied to the original message, a cached copy, or a forwarded downstream copy, leaving the implementation behavior under‑specified in that regard.  The lack of a clear constraint on where the replacement occurs creates a material ambiguity in how a recipient should handle an invalid Date header field value.  This missing constraint prevents a unique operational interpretation.  The ambiguity is therefore an incomplete constraint affecting implementation behaviour (U‑2)."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T05:46:25.861959+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "531dbe542036f4eb0b31477c2f547aef453cf475e66867f889c2e8a40853be7e",
+  "lineage_ids": "lineage:0e769a5c6383364f9d698319",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1794,
+    "load_duration": 4585700,
+    "prompt_eval_count": 623,
+    "total_duration": 15845029200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"MAY replace that value with the time that response was received\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The clause does not specify whether the replacement should be applied to the original message, a cached copy, or a forwarded downstream copy, leaving the implementation behavior under‑specified in that regard.  The lack of a clear constraint on where the replacement occurs creates a material ambiguity in how a recipient should handle an invalid Date header field value.  This missing constraint prevents a unique operational interpretation.  The ambiguity is therefore an incomplete constraint affecting implementation behaviour (U‑2).\",\n  \"justification\": \"The target clause allows a recipient to replace an invalid Date header field value with the time the response was received, but it does not specify whether this replacement should be applied to the original message, a cached copy, or a forwarded downstream copy.  This omission creates a concrete missing constraint that can lead to materially different implementation behaviours, satisfying the definition of ambiguity.  The evidence span is an exact substring of the target clause.  The missing information is the lack of specification of the scope of the replacement operation.\"\n}",
+  "record_id": "2bd0f74b34c009ea7f2c1ee289153fcdf1073a2bfad2b236ff64b215cb099bbc",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "6.6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 15.86
+}

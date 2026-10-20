@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "potentially large decimal numerals",
+    "interpretation_a": "The recipient must be able to handle arbitrarily large numbers represented as decimal strings in the Content-Length field.",
+    "interpretation_b": "The recipient must be able to handle large, but practically limited, numbers represented as decimal strings in the Content-Length field. The limit is not specified.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'potentially large decimal numerals' is vague. While it indicates a need to handle large numbers, it doesn't specify a maximum size or acceptable range. This allows for different implementations to interpret 'large' differently, leading to potential inconsistencies in parsing behavior.",
+    "missing_information": "The document does not define what constitutes 'potentially large'. Without a defined upper bound, implementations could reasonably differ on how much parsing overhead to incur."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:55:06.946721+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "6502ec04af70be3a29e00f7b7f0bd6f91865a55f412c308a3f11afbdadbbd746",
+  "lineage_ids": "lineage:fc314ca447ea8ae2d321e63a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 190,
+    "load_duration": 10848700,
+    "prompt_eval_count": 613,
+    "total_duration": 7431959600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"potentially large decimal numerals\", \"interpretation_a\": \"The recipient must be able to handle arbitrarily large numbers represented as decimal strings in the Content-Length field.\", \"interpretation_b\": \"The recipient must be able to handle large, but practically limited, numbers represented as decimal strings in the Content-Length field. The limit is not specified.\", \"missing_information\": \"The document does not define what constitutes 'potentially large'. Without a defined upper bound, implementations could reasonably differ on how much parsing overhead to incur.\",\"justification\": \"The phrase 'potentially large decimal numerals' is vague. While it indicates a need to handle large numbers, it doesn't specify a maximum size or acceptable range. This allows for different implementations to interpret 'large' differently, leading to potential inconsistencies in parsing behavior.\"}",
+  "record_id": "0ba4809bd8d298cbd6a951e05070caf875f0f889e22a830b7f660fdaaa232345",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "8.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.438
+}

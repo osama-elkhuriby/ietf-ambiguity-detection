@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear condition and action: if priority information has already been received via the control stream by the time a new request stream is opened, the PRIORITY frame on the request stream must be ignored. There is no ambiguity in the condition or the required action. The language is precise and does not allow for multiple materially different interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:51:54.438266+00:00",
+  "document_id": "draft-ietf-quic-http-20",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "f109cfa8ff59af0473b796ddac723d7fc5761110972b56975054e427bd8ad4c3",
+  "lineage_ids": "lineage:3599c13c4a0fa3dcae674981",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 124,
+    "load_duration": 11597500,
+    "prompt_eval_count": 672,
+    "total_duration": 5310182300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear condition and action: if priority information has already been received via the control stream by the time a new request stream is opened, the PRIORITY frame on the request stream must be ignored. There is no ambiguity in the condition or the required action. The language is precise and does not allow for multiple materially different interpretations.\"\n}",
+  "record_id": "7f6b0744d26051ccaf3dfd4152a72d83f6ba8506cb32fb4e971b54376bb18ed5",
+  "revision": "20",
+  "schema_version": 1,
+  "section_ids": "4.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.313
+}

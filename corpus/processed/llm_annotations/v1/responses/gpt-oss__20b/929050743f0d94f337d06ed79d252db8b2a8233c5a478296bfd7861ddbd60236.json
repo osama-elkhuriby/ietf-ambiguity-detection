@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "unpredictable value",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause requires an unpredictable value but does not define 'unpredictable', creating an undefined term that could lead to materially different implementation behaviours.",
+    "missing_information": "The term 'unpredictable' is not defined, leaving its precise meaning open to interpretation, which could affect how the Destination Connection ID is generated and validated by implementations.  A definition or constraint on what constitutes an unpredictable value is required to eliminate ambiguity.  (No external definition was provided.)"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T17:07:53.015845+00:00",
+  "document_id": "draft-ietf-quic-transport-27",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "58bf43ff2ba5dffc6c3234e84ea3ad3364c312c7ae0ebeb811e34c7dd2a79328",
+  "lineage_ids": "lineage:f171d3103628c137e1902723",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 4468,
+    "load_duration": 4118300,
+    "prompt_eval_count": 624,
+    "total_duration": 39010261400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-1\",\n  \"evidence_span\": \"unpredictable value\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The term 'unpredictable' is not defined, leaving its precise meaning open to interpretation, which could affect how the Destination Connection ID is generated and validated by implementations.  A definition or constraint on what constitutes an unpredictable value is required to eliminate ambiguity.  (No external definition was provided.)\",\n  \"justification\": \"The clause requires an unpredictable value but does not define 'unpredictable', creating an undefined term that could lead to materially different implementation behaviours.\"\n}",
+  "record_id": "929050743f0d94f337d06ed79d252db8b2a8233c5a478296bfd7861ddbd60236",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 39.0
+}

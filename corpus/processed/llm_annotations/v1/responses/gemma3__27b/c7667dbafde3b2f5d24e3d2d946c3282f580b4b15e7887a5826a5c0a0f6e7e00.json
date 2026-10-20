@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "before verifying either the client Finished message or - in the case that the server has chosen to use a pre-shared key - the pre-shared key binder",
+    "interpretation_a": "The server must verify *at least one* of the two mechanisms before processing data. It could choose to verify only the Finished message, or only the PSK binder.",
+    "interpretation_b": "The server must verify *both* the Finished message *and* the PSK binder before processing data. The 'or' is interpreted as 'and' in this context, requiring both checks.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'or' creates ambiguity. It's unclear whether the server needs to verify at least one of the conditions, or both. This affects implementation because a server could be implemented to only verify one, while another could verify both.",
+    "missing_information": "The meaning of 'or' is unclear. Does the server need to verify one or both of the conditions before processing the data?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:47:57.008419+00:00",
+  "document_id": "draft-ietf-quic-tls-20",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "e3ade654b389bd16fed84abeed4e615a49151452e0a75dd2b49d5c79a03b9229",
+  "lineage_ids": "lineage:df55911fffcc1e19973f1a7f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 231,
+    "load_duration": 593800,
+    "prompt_eval_count": 630,
+    "total_duration": 8650828900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"before verifying either the client Finished message or - in the case that the server has chosen to use a pre-shared key - the pre-shared key binder\", \"interpretation_a\": \"The server must verify *at least one* of the two mechanisms before processing data. It could choose to verify only the Finished message, or only the PSK binder.\", \"interpretation_b\": \"The server must verify *both* the Finished message *and* the PSK binder before processing data. The 'or' is interpreted as 'and' in this context, requiring both checks.\", \"missing_information\": \"The meaning of 'or' is unclear. Does the server need to verify one or both of the conditions before processing the data?\",\"justification\": \"The use of 'or' creates ambiguity. It's unclear whether the server needs to verify at least one of the conditions, or both. This affects implementation because a server could be implemented to only verify one, while another could verify both.\"}",
+  "record_id": "c7667dbafde3b2f5d24e3d2d946c3282f580b4b15e7887a5826a5c0a0f6e7e00",
+  "revision": "20",
+  "schema_version": 1,
+  "section_ids": "5.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.656
+}

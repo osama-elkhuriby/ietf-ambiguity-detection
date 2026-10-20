@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "at most once per RTT",
+    "interpretation_a": "The receiver can send a PING frame once during each round trip.",
+    "interpretation_b": "The receiver can send a PING frame a single time across the entire connection lifetime, regardless of RTTs.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'at most once per RTT' is open to interpretation. It could mean once during each round trip, or a single ping frame for the entire connection, limited by the round trip time. This affects implementation because a receiver could either send a ping every RTT or only send one ping during the connection.",
+    "missing_information": "The scope of 'per RTT' is unclear. Does it mean once *in* each RTT, or once *across* the entire connection, limited by the RTT duration?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:18:40.851802+00:00",
+  "document_id": "draft-ietf-quic-transport-02",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "80bdd1f2c1498da29d1a723ce8a405987ff38a175b09fc9d5397a85085af7e26",
+  "lineage_ids": "lineage:5b35bcf17d6b78f39a8a06c3",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 198,
+    "load_duration": 5624500,
+    "prompt_eval_count": 589,
+    "total_duration": 7470946200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"at most once per RTT\", \"interpretation_a\": \"The receiver can send a PING frame once during each round trip.\", \"interpretation_b\": \"The receiver can send a PING frame a single time across the entire connection lifetime, regardless of RTTs.\", \"missing_information\": \"The scope of 'per RTT' is unclear. Does it mean once *in* each RTT, or once *across* the entire connection, limited by the RTT duration?\", \"justification\": \"The phrase 'at most once per RTT' is open to interpretation. It could mean once during each round trip, or a single ping frame for the entire connection, limited by the round trip time. This affects implementation because a receiver could either send a ping every RTT or only send one ping during the connection.\"}",
+  "record_id": "4531fa3f7ceea8e013ffc6feabd550c35d93c49effc17f016ed3592476cdd550",
+  "revision": "02",
+  "schema_version": 1,
+  "section_ids": "8.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.485
+}

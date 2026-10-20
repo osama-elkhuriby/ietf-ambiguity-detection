@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "connection IDs it has not used or for connection IDs that have been retired",
+    "interpretation_a": "An endpoint does not need to check for tokens associated with connection IDs it has never used, or connection IDs it has explicitly marked as retired.",
+    "interpretation_b": "An endpoint does not need to check for tokens associated with connection IDs it is not currently using, or connection IDs that are no longer active. This could include connection IDs that have been temporarily paused or are awaiting cleanup.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'retired' is not defined within the provided context. This creates ambiguity as to what constitutes a 'retired' connection ID, and therefore which tokens an endpoint is required to check against. Different interpretations of 'retired' lead to different implementation behaviours.",
+    "missing_information": "The meaning of 'retired' is not defined. Does 'retired' mean 'never used', 'explicitly marked as retired', 'no longer active', or something else? This affects how an endpoint determines which connection IDs to check against."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:12:00.958969+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "bba1532437d062bf59f0c107127a7a321bcb30e86a46a325c2045b01a5ba741a",
+  "lineage_ids": "lineage:5bf4ae84e544ac3f72d6e418",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 237,
+    "load_duration": 4575400,
+    "prompt_eval_count": 595,
+    "total_duration": 8851040300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"connection IDs it has not used or for connection IDs that have been retired\", \"interpretation_a\": \"An endpoint does not need to check for tokens associated with connection IDs it has never used, or connection IDs it has explicitly marked as retired.\", \"interpretation_b\": \"An endpoint does not need to check for tokens associated with connection IDs it is not currently using, or connection IDs that are no longer active. This could include connection IDs that have been temporarily paused or are awaiting cleanup.\", \"missing_information\": \"The meaning of 'retired' is not defined. Does 'retired' mean 'never used', 'explicitly marked as retired', 'no longer active', or something else? This affects how an endpoint determines which connection IDs to check against.\", \"justification\": \"The term 'retired' is not defined within the provided context. This creates ambiguity as to what constitutes a 'retired' connection ID, and therefore which tokens an endpoint is required to check against. Different interpretations of 'retired' lead to different implementation behaviours.\"}",
+  "record_id": "e6747ad4e5fb3c6862af95b47a04fb3d14c8035287573613e4cf62d1489d939b",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "10.3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.86
+}

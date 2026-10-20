@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "instead opening streams in order",
+    "interpretation_a": "The phrase 'in order' could be interpreted as referring to the order of stream IDs, meaning the endpoint should open streams sequentially by increasing stream ID.",
+    "interpretation_b": "Alternatively, 'in order' could be interpreted as the order in which the endpoint intends to use the streams, i.e., the endpoint should open streams in the order it plans to send data, not necessarily by stream ID.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify the ordering criterion, allowing two materially different interpretations that affect implementation behaviour.",
+    "missing_information": "A precise definition of what 'in order' means in the context of stream opening is missing, leading to multiple reasonable implementation behaviours."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T16:29:40.943253+00:00",
+  "document_id": "draft-ietf-quic-transport-10",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "8c509d9054ed4262e4711ae0de9bcc986774901b513de1f1d71ca9082eb79e40",
+  "lineage_ids": "lineage:011b0dcdce15e740c794d984",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2130,
+    "load_duration": 4800600,
+    "prompt_eval_count": 571,
+    "total_duration": 18359569400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"instead opening streams in order\",\n  \"interpretation_a\": \"The phrase 'in order' could be interpreted as referring to the order of stream IDs, meaning the endpoint should open streams sequentially by increasing stream ID.\",\n  \"interpretation_b\": \"Alternatively, 'in order' could be interpreted as the order in which the endpoint intends to use the streams, i.e., the endpoint should open streams in the order it plans to send data, not necessarily by stream ID.\",\n  \"missing_information\": \"A precise definition of what 'in order' means in the context of stream opening is missing, leading to multiple reasonable implementation behaviours.\",\n  \"justification\": \"The clause does not specify the ordering criterion, allowing two materially different interpretations that affect implementation behaviour.\"\n}",
+  "record_id": "7aa9d7603549ac8ca13e6cacd4e953a0d628f57ee7ee7b7843d5de4c32d8dc9c",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "10.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 18.359
+}

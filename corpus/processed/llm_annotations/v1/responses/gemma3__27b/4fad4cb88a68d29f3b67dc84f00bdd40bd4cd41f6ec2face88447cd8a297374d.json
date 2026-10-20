@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "one or more valid SvcParamKeys",
+    "interpretation_a": "The list can contain any number of valid SvcParamKeys, even just one.",
+    "interpretation_b": "The list must contain at least two valid SvcParamKeys to be considered valid.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'one or more' is technically satisfied by 'one', but the context suggests a list implies multiple items. Without a minimum quantity specified, implementations could diverge.",
+    "missing_information": "The clause does not specify a minimum or maximum number of SvcParamKeys that must be present in the list. This affects implementation because a resolver might accept a list with only one key, while another might require at least two."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:02:26.547644+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "c16ee6dd183a78121319c64a499fd05dde54c5eebcaeac9b593a2b88fd67129b",
+  "lineage_ids": "lineage:f75d25bd438378d62fcd47e7",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 174,
+    "load_duration": 4430400,
+    "prompt_eval_count": 594,
+    "total_duration": 6630607200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"one or more valid SvcParamKeys\", \"interpretation_a\": \"The list can contain any number of valid SvcParamKeys, even just one.\", \"interpretation_b\": \"The list must contain at least two valid SvcParamKeys to be considered valid.\", \"missing_information\": \"The clause does not specify a minimum or maximum number of SvcParamKeys that must be present in the list. This affects implementation because a resolver might accept a list with only one key, while another might require at least two.\",\"justification\": \"The phrase 'one or more' is technically satisfied by 'one', but the context suggests a list implies multiple items. Without a minimum quantity specified, implementations could diverge.\"}",
+  "record_id": "4fad4cb88a68d29f3b67dc84f00bdd40bd4cd41f6ec2face88447cd8a297374d",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.625
+}

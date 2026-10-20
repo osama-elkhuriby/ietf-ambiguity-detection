@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST expose the ability",
+    "interpretation_a": "The implementation must provide a programmatic interface (e.g., a function call) to perform the operations.",
+    "interpretation_b": "The implementation must allow the operations to be performed through some means, even if it's manual configuration or a separate tool, without a direct API.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'expose the ability' is vague. It doesn't specify *how* the operations must be made available. This allows for multiple reasonable interpretations regarding the level of API access required.",
+    "missing_information": "The clause does not define what 'expose the ability' means. Is a programmatic API required, or is any mechanism sufficient?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:31:07.268689+00:00",
+  "document_id": "draft-ietf-quic-transport-29",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "23a33146700b1bb5901d4a0b4ea7707e27c3c9c6bdc48f3fb6e7ff84824454bb",
+  "lineage_ids": "lineage:304aaabfb8eb3f84549ab111",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 172,
+    "load_duration": 3739800,
+    "prompt_eval_count": 577,
+    "total_duration": 6551004500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST expose the ability\", \"interpretation_a\": \"The implementation must provide a programmatic interface (e.g., a function call) to perform the operations.\", \"interpretation_b\": \"The implementation must allow the operations to be performed through some means, even if it's manual configuration or a separate tool, without a direct API.\", \"missing_information\": \"The clause does not define what 'expose the ability' means. Is a programmatic API required, or is any mechanism sufficient?\", \"justification\": \"The phrase 'expose the ability' is vague. It doesn't specify *how* the operations must be made available. This allows for multiple reasonable interpretations regarding the level of API access required.\"}",
+  "record_id": "6d34fa0bdcd5b7443be3704684c1eb74d3ec164b6dae4cdc42957b295b21b59f",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "5.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.547
+}

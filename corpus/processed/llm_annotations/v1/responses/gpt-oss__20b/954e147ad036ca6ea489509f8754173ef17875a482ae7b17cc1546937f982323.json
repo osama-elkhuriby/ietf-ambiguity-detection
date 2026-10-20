@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "The most specific reason that the cache is aware of SHOULD be used, to the extent that it is possible to implement.",
+    "interpretation_a": "The cache should use the most specific reason it knows if it can implement it; if it cannot, it should not use any reason.",
+    "interpretation_b": "The cache should use the most specific reason it knows if it can implement it; if it cannot, it should use a less specific reason.",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a clear fallback or constraint for the case where the most specific reason cannot be implemented, leading to multiple reasonable interpretations.",
+    "missing_information": "The clause does not specify what to do if the most specific reason cannot be implemented, leaving the fallback behavior undefined.  "
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T03:42:18.407408+00:00",
+  "document_id": "draft-ietf-httpbis-cache-header-10",
+  "family_id": "draft-ietf-httpbis-cache-header",
+  "input_fingerprint": "e6f234c8eab661313a1128b05fc32d3184e1e232eace6962d8923d3015e11d2e",
+  "lineage_ids": "lineage:60ee1694e8027842d6b97700",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1372,
+    "load_duration": 4612700,
+    "prompt_eval_count": 593,
+    "total_duration": 11919001200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"The most specific reason that the cache is aware of SHOULD be used, to the extent that it is possible to implement.\",\n  \"interpretation_a\": \"The cache should use the most specific reason it knows if it can implement it; if it cannot, it should not use any reason.\",\n  \"interpretation_b\": \"The cache should use the most specific reason it knows if it can implement it; if it cannot, it should use a less specific reason.\",\n  \"missing_information\": \"The clause does not specify what to do if the most specific reason cannot be implemented, leaving the fallback behavior undefined.  \",\n  \"justification\": \"The clause lacks a clear fallback or constraint for the case where the most specific reason cannot be implemented, leading to multiple reasonable interpretations.\"\n}",
+  "record_id": "954e147ad036ca6ea489509f8754173ef17875a482ae7b17cc1546937f982323",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.922
+}

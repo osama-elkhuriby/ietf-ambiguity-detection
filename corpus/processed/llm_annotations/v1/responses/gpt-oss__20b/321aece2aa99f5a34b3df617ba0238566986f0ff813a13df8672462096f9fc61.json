@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "for a period of time that SHOULD NOT exceed 1/8 RTT unless more out-of-order packets arrive",
+    "interpretation_a": "The receiver may send immediate ACKs for in-order packets for up to 1/8 RTT, but if more out-of-order packets arrive, the period may be shortened or stopped.",
+    "interpretation_b": "The receiver may send immediate ACKs for in-order packets for up to 1/8 RTT, but if more out-of-order packets arrive, the period may be extended beyond 1/8 RTT.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether the 1/8 RTT limit applies only when no more out-of-order packets arrive or whether the limit can be exceeded if out-of-order packets arrive, leading to two reasonable implementation interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T11:09:32.025674+00:00",
+  "document_id": "draft-ietf-quic-recovery-22",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "627f49f67f0f46de4df7bee9b29f9d39137e67460b053b2e23a58afdb7134eaa",
+  "lineage_ids": "lineage:c0388a2b44fbd7fee6d14906",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1332,
+    "load_duration": 7222700,
+    "prompt_eval_count": 599,
+    "total_duration": 11544056500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"for a period of time that SHOULD NOT exceed 1/8 RTT unless more out-of-order packets arrive\",\n  \"interpretation_a\": \"The receiver may send immediate ACKs for in-order packets for up to 1/8 RTT, but if more out-of-order packets arrive, the period may be shortened or stopped.\",\n  \"interpretation_b\": \"The receiver may send immediate ACKs for in-order packets for up to 1/8 RTT, but if more out-of-order packets arrive, the period may be extended beyond 1/8 RTT.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify whether the 1/8 RTT limit applies only when no more out-of-order packets arrive or whether the limit can be exceeded if out-of-order packets arrive, leading to two reasonable implementation interpretations.\"\n}",
+  "record_id": "321aece2aa99f5a34b3df617ba0238566986f0ff813a13df8672462096f9fc61",
+  "revision": "22",
+  "schema_version": 1,
+  "section_ids": "4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.532
+}

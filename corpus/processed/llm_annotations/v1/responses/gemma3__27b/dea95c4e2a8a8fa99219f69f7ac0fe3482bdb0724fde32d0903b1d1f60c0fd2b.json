@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "SHOULD NOT generate trailer fields that it believes are necessary",
+    "interpretation_a": "The server should avoid generating trailers it *knows* the client needs, because they might be dropped. This implies the server has some knowledge of the client's capabilities.",
+    "interpretation_b": "The server should avoid generating trailers it *suspects* the client needs, because they might be dropped. This is a weaker requirement, and the server's belief could be based on very little information.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"believes are necessary\" is vague. Does 'believes' mean 'knows with certainty' or 'has a reasonable suspicion'? This difference affects how strictly a server must adhere to the recommendation.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:31:51.233440+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "472c25e7a15520068a8eccd10ce71d247f91ff89f34efcf0868913e59f55abfd",
+  "lineage_ids": "lineage:aa1bddd69d5d4fe1dcc1b3aa",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 183,
+    "load_duration": 14493500,
+    "prompt_eval_count": 590,
+    "total_duration": 7095684400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"SHOULD NOT generate trailer fields that it believes are necessary\", \"interpretation_a\": \"The server should avoid generating trailers it *knows* the client needs, because they might be dropped. This implies the server has some knowledge of the client's capabilities.\", \"interpretation_b\": \"The server should avoid generating trailers it *suspects* the client needs, because they might be dropped. This is a weaker requirement, and the server's belief could be based on very little information.\", \"missing_information\": \"\", \"justification\": \"The phrase \\\"believes are necessary\\\" is vague. Does 'believes' mean 'knows with certainty' or 'has a reasonable suspicion'? This difference affects how strictly a server must adhere to the recommendation.\"}",
+  "record_id": "dea95c4e2a8a8fa99219f69f7ac0fe3482bdb0724fde32d0903b1d1f60c0fd2b",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "6.5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.11
+}

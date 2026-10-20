@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "An origin server can apply any normalization method, whereas other servers MUST perform scheme-based normalization",
+    "interpretation_a": "Origin servers are free to use any normalization method, potentially leading to inconsistencies in how requests are processed across different servers. Other servers are constrained to scheme-based normalization.",
+    "interpretation_b": "The statement implies a distinction between 'origin servers' and 'other servers' but doesn't define what constitutes 'other servers'. This could include proxies, caches, or load balancers. The lack of a clear definition creates ambiguity about which servers are subject to the scheme-based normalization requirement.",
+    "is_ambiguous": "yes",
+    "justification": "The clause creates ambiguity because it doesn't define 'other servers'. This leaves room for different interpretations of which servers are required to perform scheme-based normalization, potentially leading to inconsistent behavior.",
+    "missing_information": "A clear definition of 'other servers' is needed to determine the scope of the MUST requirement. Without it, implementations may differ on which servers must perform scheme-based normalization."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:44:17.826846+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "29eb74c7a00a8d32298ed64fecf6f3d46efdf6cae6884e176c4443406fc0d52c",
+  "lineage_ids": "lineage:ba8c17a6fc857710c9f689ab",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 235,
+    "load_duration": 19142500,
+    "prompt_eval_count": 637,
+    "total_duration": 9045932700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"An origin server can apply any normalization method, whereas other servers MUST perform scheme-based normalization\", \"interpretation_a\": \"Origin servers are free to use any normalization method, potentially leading to inconsistencies in how requests are processed across different servers. Other servers are constrained to scheme-based normalization.\", \"interpretation_b\": \"The statement implies a distinction between 'origin servers' and 'other servers' but doesn't define what constitutes 'other servers'. This could include proxies, caches, or load balancers. The lack of a clear definition creates ambiguity about which servers are subject to the scheme-based normalization requirement.\", \"missing_information\": \"A clear definition of 'other servers' is needed to determine the scope of the MUST requirement. Without it, implementations may differ on which servers must perform scheme-based normalization.\",\"justification\": \"The clause creates ambiguity because it doesn't define 'other servers'. This leaves room for different interpretations of which servers are required to perform scheme-based normalization, potentially leading to inconsistent behavior.\"}",
+  "record_id": "ac9762e2ff593c87651c9075a772dc5d761a090c4f40a8d1c2b1e7514c6cc7b0",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.047
+}

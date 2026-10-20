@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST be prepared to receive",
+    "interpretation_a": "The sending endpoint must continue to accept frames on the stream, even after sending RST_STREAM, and process them (potentially discarding them later).",
+    "interpretation_b": "The sending endpoint must have sufficient buffering or other mechanisms to handle any in-flight or queued frames from the remote peer *at the time* the RST_STREAM is sent, but is not obligated to accept any further frames after that point.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'prepared to receive' is incomplete. It doesn't specify a time window or condition for receiving frames. This allows for different interpretations of how long the endpoint must maintain the ability to receive and buffer frames after sending the RST_STREAM.",
+    "missing_information": "The duration for which the endpoint must be 'prepared to receive' is not defined. Does this apply only to frames already in transit, or does it extend to a period after the RST_STREAM is sent?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:39:49.649292+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "c31e8270d6f26c77a1fcadb691b052bf4cdf1b79e14fcdc730e2e83a4976aa62",
+  "lineage_ids": "lineage:dc9f0c16c1f9aa0ce19cb30f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 226,
+    "load_duration": 8890600,
+    "prompt_eval_count": 584,
+    "total_duration": 8704251800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST be prepared to receive\", \"interpretation_a\": \"The sending endpoint must continue to accept frames on the stream, even after sending RST_STREAM, and process them (potentially discarding them later).\", \"interpretation_b\": \"The sending endpoint must have sufficient buffering or other mechanisms to handle any in-flight or queued frames from the remote peer *at the time* the RST_STREAM is sent, but is not obligated to accept any further frames after that point.\", \"missing_information\": \"The duration for which the endpoint must be 'prepared to receive' is not defined. Does this apply only to frames already in transit, or does it extend to a period after the RST_STREAM is sent?\",\"justification\": \"The phrase 'prepared to receive' is incomplete. It doesn't specify a time window or condition for receiving frames. This allows for different interpretations of how long the endpoint must maintain the ability to receive and buffer frames after sending the RST_STREAM.\"}",
+  "record_id": "8551339b19808509f39b010fa2fe7e6ffabf629d3b366ad3861da1d725fd79a0",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "5.4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.718
+}

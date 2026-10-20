@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY use this connection ID on any path",
+    "interpretation_a": "The client is permitted to use the provided connection ID for migration on *any* network path, even if that path doesn't correspond to the address(es) associated with the preferred_address parameter.",
+    "interpretation_b": "The client is permitted to use the provided connection ID for migration on *any* network path, but the server might still reject connections using that ID if the path doesn't align with the server's expectations based on the preferred_address parameter. The 'MAY' implies the server has some control.",
+    "is_ambiguous": "yes",
+    "justification": "The 'MAY' allows for two interpretations: the client can unilaterally use the connection ID on any path, or the server can still reject connections using that ID if the path is unexpected. This missing constraint affects implementation because it determines whether the client needs to check with the server before using the connection ID on a new path.",
+    "missing_information": "It is unclear whether the server has any control over whether the client can use the connection ID on any path, or if the client's use is unrestricted as long as it's for migration."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:38:32.429970+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "9136b0dd00e2149dff346d64c4d3968db43f432248c290bfde20c6e49687184a",
+  "lineage_ids": "lineage:340f0f5d89ebb2dcb10e6a6e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 267,
+    "load_duration": 4003500,
+    "prompt_eval_count": 565,
+    "total_duration": 9927726400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY use this connection ID on any path\", \"interpretation_a\": \"The client is permitted to use the provided connection ID for migration on *any* network path, even if that path doesn't correspond to the address(es) associated with the preferred_address parameter.\", \"interpretation_b\": \"The client is permitted to use the provided connection ID for migration on *any* network path, but the server might still reject connections using that ID if the path doesn't align with the server's expectations based on the preferred_address parameter. The 'MAY' implies the server has some control.\", \"missing_information\": \"It is unclear whether the server has any control over whether the client can use the connection ID on any path, or if the client's use is unrestricted as long as it's for migration.\", \"justification\": \"The 'MAY' allows for two interpretations: the client can unilaterally use the connection ID on any path, or the server can still reject connections using that ID if the path is unexpected. This missing constraint affects implementation because it determines whether the client needs to check with the server before using the connection ID on a new path.\"}",
+  "record_id": "83356cef00891b14da4852e27a16914aa92b44580d774a5b9e87e2dafcb255ef",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9.6.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.922
+}

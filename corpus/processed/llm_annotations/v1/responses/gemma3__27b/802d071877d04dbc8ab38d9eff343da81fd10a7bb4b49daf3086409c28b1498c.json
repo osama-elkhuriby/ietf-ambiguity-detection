@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY discard connection state",
+    "interpretation_a": "The endpoint is permitted to discard connection state immediately upon detecting a lack of validated paths.",
+    "interpretation_b": "The endpoint is permitted to continue holding connection state for some unspecified duration, even without validated paths, before discarding it.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' introduces discretion, but the lack of a time limit or condition for discarding state creates ambiguity. An implementation needs to decide how long to wait before discarding state, and different implementations could choose vastly different durations.",
+    "missing_information": "The duration for which the endpoint can hold connection state without a validated path is not defined. This affects implementation because an endpoint could hold state indefinitely, consuming resources, or discard it quickly, potentially disrupting the connection."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:37:40.148526+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "e638c95feb806fe74403949635e7f3f281831f301018d8b13790840d1644a140",
+  "lineage_ids": "lineage:d911a97ad9b3fe56c6b1236a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 185,
+    "load_duration": 6011100,
+    "prompt_eval_count": 575,
+    "total_duration": 7024654300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY discard connection state\", \"interpretation_a\": \"The endpoint is permitted to discard connection state immediately upon detecting a lack of validated paths.\", \"interpretation_b\": \"The endpoint is permitted to continue holding connection state for some unspecified duration, even without validated paths, before discarding it.\", \"missing_information\": \"The duration for which the endpoint can hold connection state without a validated path is not defined. This affects implementation because an endpoint could hold state indefinitely, consuming resources, or discard it quickly, potentially disrupting the connection.\", \"justification\": \"The use of 'MAY' introduces discretion, but the lack of a time limit or condition for discarding state creates ambiguity. An implementation needs to decide how long to wait before discarding state, and different implementations could choose vastly different durations.\"}",
+  "record_id": "802d071877d04dbc8ab38d9eff343da81fd10a7bb4b49daf3086409c28b1498c",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.016
+}

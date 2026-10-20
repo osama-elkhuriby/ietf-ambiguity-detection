@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "safe and cacheable",
+    "interpretation_a": "The method MUST be both safe AND cacheable.",
+    "interpretation_b": "The method MUST be either safe OR cacheable.",
+    "is_ambiguous": "yes",
+    "justification": "The conjunction 'and' is ambiguous. It could mean both conditions must be met, or that either condition is sufficient.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:42:38.853195+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "baf569a961d4590638b1b71e86516086734610798d8b3139ef7b41f3ee2dbced",
+  "lineage_ids": "lineage:2632dc4c6bb2446b684d3afa",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 100,
+    "load_duration": 12278400,
+    "prompt_eval_count": 617,
+    "total_duration": 4154918900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-1\", \"evidence_span\": \"safe and cacheable\", \"interpretation_a\": \"The method MUST be both safe AND cacheable.\", \"interpretation_b\": \"The method MUST be either safe OR cacheable.\", \"missing_information\": \"\", \"justification\": \"The conjunction 'and' is ambiguous. It could mean both conditions must be met, or that either condition is sufficient.\"}",
+  "record_id": "97c5e72a6348f7f604ee52856b4e6f06893a2f530988015acff4740543c9100f",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 4.171
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless there is a specific need to request a later part earlier",
+    "interpretation_a": "The client may deviate from ascending order if it has a specific need, such as optimizing for internal catalog or reverse order representation.",
+    "interpretation_b": "The client may deviate only if it has a specific need that is explicitly defined by the application, otherwise it must list ranges in ascending order.",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a definition for 'specific need', allowing multiple reasonable interpretations of when a client may deviate from ascending order.",
+    "missing_information": "The clause does not define what constitutes a 'specific need'."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T08:30:51.421874+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "0789dd8cfc744eedae5013483fb1c047561ee16c4826f01d5825a2f2d33d723b",
+  "lineage_ids": "lineage:dfbb3b517f8a79c7330cd8a8",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2003,
+    "load_duration": 4483800,
+    "prompt_eval_count": 643,
+    "total_duration": 17326347700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"unless there is a specific need to request a later part earlier\",\n  \"interpretation_a\": \"The client may deviate from ascending order if it has a specific need, such as optimizing for internal catalog or reverse order representation.\",\n  \"interpretation_b\": \"The client may deviate only if it has a specific need that is explicitly defined by the application, otherwise it must list ranges in ascending order.\",\n  \"missing_information\": \"The clause does not define what constitutes a 'specific need'.\",\n  \"justification\": \"The clause lacks a definition for 'specific need', allowing multiple reasonable interpretations of when a client may deviate from ascending order.\"\n}",
+  "record_id": "efe56cb50187e77e6f7c296f90f34808fb2929c0db1f2727c0f632ecbb624897",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "14.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 17.328
+}

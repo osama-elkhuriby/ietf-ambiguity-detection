@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY send a MAX_STREAM_DATA or MAX_DATA frame multiple times within a round trip or send it early enough to allow for recovery from loss of the frame.",
+    "interpretation_a": "The receiver is permitted to send multiple MAX_STREAM_DATA or MAX_DATA frames in a single round trip, even if the initial frame hasn't been acknowledged.",
+    "interpretation_b": "The receiver is permitted to send MAX_STREAM_DATA or MAX_DATA frames *before* a loss event occurs, proactively increasing flow control limits to mitigate the impact of potential frame loss.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'or' creates ambiguity. Does 'early enough' apply to sending before a potential loss, or in response to an actual loss? Both are reasonable interpretations, and the timing impacts implementation.",
+    "missing_information": "The clause does not specify whether 'early enough' refers to sending the frame before a loss *might* occur, or before a loss *has* occurred. This affects the timing of the frame transmission."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:58:50.188192+00:00",
+  "document_id": "draft-ietf-quic-transport-30",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "709883c53e3e7e3565592f4c447ed5e4fcfff18cc70eb85ebdc632c8599d3421",
+  "lineage_ids": "lineage:fb2ca4faaa0b64fda70cfe13",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 239,
+    "load_duration": 4289200,
+    "prompt_eval_count": 588,
+    "total_duration": 8924987300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY send a MAX_STREAM_DATA or MAX_DATA frame multiple times within a round trip or send it early enough to allow for recovery from loss of the frame.\", \"interpretation_a\": \"The receiver is permitted to send multiple MAX_STREAM_DATA or MAX_DATA frames in a single round trip, even if the initial frame hasn't been acknowledged.\", \"interpretation_b\": \"The receiver is permitted to send MAX_STREAM_DATA or MAX_DATA frames *before* a loss event occurs, proactively increasing flow control limits to mitigate the impact of potential frame loss.\", \"missing_information\": \"The clause does not specify whether 'early enough' refers to sending the frame before a loss *might* occur, or before a loss *has* occurred. This affects the timing of the frame transmission.\",\"justification\": \"The use of 'or' creates ambiguity. Does 'early enough' apply to sending before a potential loss, or in response to an actual loss? Both are reasonable interpretations, and the timing impacts implementation.\"}",
+  "record_id": "1017fd1f4a9ce167d4a91f0cffd935a8ebfa1b626d009c7d2125641620dd7467",
+  "revision": "30",
+  "schema_version": 1,
+  "section_ids": "4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.937
+}

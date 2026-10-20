@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "until the entire request header section is received",
+    "interpretation_a": "The server must wait for the complete header section, including any potential chunked encoding signals, before beginning to process the request.",
+    "interpretation_b": "The server must wait for all header fields to be received, but can begin processing once the last header field is received, even if the body is still being transmitted (e.g., in a chunked transfer encoding).",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'entire request header section' is incomplete. It's unclear whether this refers to all header fields *and* the body, or just the header fields. This impacts when the server can start processing the request.",
+    "missing_information": "The definition of 'request header section' is not precise. Does it include the body, or only the header fields themselves? This affects when processing can begin."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:01:08.710837+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-06",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "7bec8e3e96f75969201c9a2bab857c0a9500a530e5a09589f2ab2229281d17e5",
+  "lineage_ids": "lineage:111118c8b86c21d7393c6de3",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 208,
+    "load_duration": 9612600,
+    "prompt_eval_count": 694,
+    "total_duration": 8120159900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"until the entire request header section is received\", \"interpretation_a\": \"The server must wait for the complete header section, including any potential chunked encoding signals, before beginning to process the request.\", \"interpretation_b\": \"The server must wait for all header fields to be received, but can begin processing once the last header field is received, even if the body is still being transmitted (e.g., in a chunked transfer encoding).\", \"missing_information\": \"The definition of 'request header section' is not precise. Does it include the body, or only the header fields themselves? This affects when processing can begin.\", \"justification\": \"The phrase 'entire request header section' is incomplete. It's unclear whether this refers to all header fields *and* the body, or just the header fields. This impacts when the server can start processing the request.\"}",
+  "record_id": "30f98f538ed4697c3c268bf37c18184a43a7d5ac7eb858d25004f2b84474fcbb",
+  "revision": "06",
+  "schema_version": 1,
+  "section_ids": "4.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.14
+}

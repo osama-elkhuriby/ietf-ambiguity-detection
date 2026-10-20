@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD be subtracted from the RTT as long as the result is larger than the Min RTT",
+    "interpretation_a": "The ack delay is always subtracted if the result is larger than Min RTT.",
+    "interpretation_b": "The ack delay is optionally subtracted if the result is larger than Min RTT.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' creates ambiguity. It is unclear whether subtracting the ack delay is a mandatory step when the condition is met, or simply a recommendation. This affects implementation, as some implementations might always subtract, while others might not.",
+    "missing_information": "The meaning of SHOULD is not precise. Is subtracting the ack delay mandatory when the condition is met, or merely recommended?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:22:44.457145+00:00",
+  "document_id": "draft-ietf-quic-recovery-16",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "3d560068abe919a3e42d6683cc6aa0348a9f7420ef8a883a39897c3d8c73b464",
+  "lineage_ids": "lineage:f2f965827b3a75f596453192",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 177,
+    "load_duration": 4047300,
+    "prompt_eval_count": 613,
+    "total_duration": 6790971800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD be subtracted from the RTT as long as the result is larger than the Min RTT\", \"interpretation_a\": \"The ack delay is always subtracted if the result is larger than Min RTT.\", \"interpretation_b\": \"The ack delay is optionally subtracted if the result is larger than Min RTT.\", \"missing_information\": \"The meaning of SHOULD is not precise. Is subtracting the ack delay mandatory when the condition is met, or merely recommended?\",\"justification\": \"The use of 'SHOULD' creates ambiguity. It is unclear whether subtracting the ack delay is a mandatory step when the condition is met, or simply a recommendation. This affects implementation, as some implementations might always subtract, while others might not.\"}",
+  "record_id": "7c5dc9abd1481a63d62249c8a752ef5031021d8af07ce7aa84223bd65266187d",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.781
+}

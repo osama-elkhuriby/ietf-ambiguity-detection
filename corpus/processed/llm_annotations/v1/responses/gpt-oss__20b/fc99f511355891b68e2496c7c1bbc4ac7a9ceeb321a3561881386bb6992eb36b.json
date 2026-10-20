@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "The IPv6 flow label SHOULD be a pseudo-random function of the source and destination addresses, source and destination UDP ports, and the destination CID.",
+    "interpretation_a": "The flow label is deterministically derived from the listed inputs using a fixed pseudo-random function, producing the same label for identical inputs.",
+    "interpretation_b": "The flow label is derived from the listed inputs but the pseudo‑random function incorporates additional entropy (e.g., a per‑connection key or nonce), yielding different labels for the same inputs across different connections.",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a clear constraint on the pseudo‑random function’s determinism or key usage, allowing two materially different implementation behaviours.",
+    "missing_information": "The clause does not specify whether the pseudo‑random function must be deterministic or keyed, nor does it define the key or how the function should be implemented.  }"
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T19:34:23.248491+00:00",
+  "document_id": "draft-ietf-quic-transport-29",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "7a93024cebec97c6600dff4659944dbc44557506dfa7a9379950f69e6c8abcbe",
+  "lineage_ids": "lineage:812f079fbf91a200de16ebe5",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 465,
+    "load_duration": 6450700,
+    "prompt_eval_count": 842,
+    "total_duration": 4403858000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"The IPv6 flow label SHOULD be a pseudo-random function of the source and destination addresses, source and destination UDP ports, and the destination CID.\",\n  \"interpretation_a\": \"The flow label is deterministically derived from the listed inputs using a fixed pseudo-random function, producing the same label for identical inputs.\",\n  \"interpretation_b\": \"The flow label is derived from the listed inputs but the pseudo‑random function incorporates additional entropy (e.g., a per‑connection key or nonce), yielding different labels for the same inputs across different connections.\",\n  \"missing_information\": \"The clause does not specify whether the pseudo‑random function must be deterministic or keyed, nor does it define the key or how the function should be implemented.  }\",\n  \"justification\": \"The clause lacks a clear constraint on the pseudo‑random function’s determinism or key usage, allowing two materially different implementation behaviours.\"}",
+  "record_id": "fc99f511355891b68e2496c7c1bbc4ac7a9ceeb321a3561881386bb6992eb36b",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "9.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 72.047
+}

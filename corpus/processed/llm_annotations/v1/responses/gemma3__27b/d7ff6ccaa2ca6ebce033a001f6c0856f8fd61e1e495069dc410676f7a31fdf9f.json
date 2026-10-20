@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "The order in which field lines with the same name are received is therefore significant to the interpretation of the field value",
+    "interpretation_a": "The order of received field lines *always* affects the interpretation of the field value, even if the field definition doesn't explicitly require it. The receiver must maintain the original order to correctly interpret the value.",
+    "interpretation_b": "The order of received field lines only affects interpretation when the field definition *requires* order to be significant (e.g., for a field that represents a sequence). If the field definition allows recombination regardless of order, the receiver is free to reorder them.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states that order is significant to interpretation, but doesn't clarify if this significance is universal or conditional on the field's definition. This allows for two reasonable interpretations of how a receiver should handle field lines with the same name.",
+    "missing_information": "The clause states order is significant, but doesn't specify *how* it is significant. Is it significant for all fields, or only those where the field definition explicitly states order matters? A missing constraint on when order is significant creates ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:30:26.617624+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "352e1d98531c26546c8edbdd7dcd17bd514abe9697237be6603a8dc744333310",
+  "lineage_ids": "lineage:91491ad6583f320639c5d10f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 266,
+    "load_duration": 13199600,
+    "prompt_eval_count": 673,
+    "total_duration": 10182050500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"The order in which field lines with the same name are received is therefore significant to the interpretation of the field value\", \"interpretation_a\": \"The order of received field lines *always* affects the interpretation of the field value, even if the field definition doesn't explicitly require it. The receiver must maintain the original order to correctly interpret the value.\", \"interpretation_b\": \"The order of received field lines only affects interpretation when the field definition *requires* order to be significant (e.g., for a field that represents a sequence). If the field definition allows recombination regardless of order, the receiver is free to reorder them.\", \"missing_information\": \"The clause states order is significant, but doesn't specify *how* it is significant. Is it significant for all fields, or only those where the field definition explicitly states order matters? A missing constraint on when order is significant creates ambiguity.\", \"justification\": \"The clause states that order is significant to interpretation, but doesn't clarify if this significance is universal or conditional on the field's definition. This allows for two reasonable interpretations of how a receiver should handle field lines with the same name.\"}",
+  "record_id": "d7ff6ccaa2ca6ebce033a001f6c0856f8fd61e1e495069dc410676f7a31fdf9f",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "5.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.187
+}

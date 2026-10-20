@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that if the server’s preferred address fails path validation but the original address succeeds, the client MAY migrate to its new address (i.e., change its source address) and continue sending to the server’s original address (i.e., keep the destination address). The pronoun “its” clearly refers to the client, and the clause does not permit two materially different implementation behaviours or lack a concrete constraint that would lead to ambiguity.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T13:51:40.230788+00:00",
+  "document_id": "draft-ietf-quic-transport-24",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "db8758b157756a18a116e7dea249738eb1b49dd30f7d5cabcdf3b8483e8e3aba",
+  "lineage_ids": "lineage:daa8633b17cc3ddca6ee3844",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 4727,
+    "load_duration": 5635000,
+    "prompt_eval_count": 638,
+    "total_duration": 40810656100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that if the server’s preferred address fails path validation but the original address succeeds, the client MAY migrate to its new address (i.e., change its source address) and continue sending to the server’s original address (i.e., keep the destination address). The pronoun “its” clearly refers to the client, and the clause does not permit two materially different implementation behaviours or lack a concrete constraint that would lead to ambiguity.\"\n}",
+  "record_id": "085feaa2f42fb0baccd5cb00b1248d0c88cc0d50bc3883e0d0bbe598f270db55",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "9.6.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 40.828
+}

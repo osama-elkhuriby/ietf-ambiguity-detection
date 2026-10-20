@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "the contents of the public value are the byte string inputs and outputs of the corresponding functions defined in [RFC7748]",
+    "interpretation_a": "The public value is the input to the RFC7748 function.",
+    "interpretation_b": "The public value is the output of the RFC7748 function.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether the public value corresponds to the input or the output of the RFC7748 function, allowing two materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T20:48:25.950090+00:00",
+  "document_id": "draft-ietf-tls-tls13-28",
+  "family_id": "draft-ietf-tls-tls13",
+  "input_fingerprint": "777714a420d678b1d948cfcf96a41e4aa5e46b233779eaa548ecc99c7a4e5a19",
+  "lineage_ids": "lineage:2df3ca88435f6a2981bcbb7b",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 212,
+    "load_duration": 4016700,
+    "prompt_eval_count": 799,
+    "total_duration": 2001633600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"the contents of the public value are the byte string inputs and outputs of the corresponding functions defined in [RFC7748]\",\n  \"interpretation_a\": \"The public value is the input to the RFC7748 function.\",\n  \"interpretation_b\": \"The public value is the output of the RFC7748 function.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify whether the public value corresponds to the input or the output of the RFC7748 function, allowing two materially different implementation behaviours.\"\n}",
+  "record_id": "08f6b66cea0286ad7aeb78e65cfd94fe33b6640ba2a3742bf479cce7ace1f89b",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "4.2.8.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 18.234
+}

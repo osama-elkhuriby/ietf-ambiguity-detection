@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY wait for a new path",
+    "interpretation_a": "The endpoint is permitted to wait indefinitely for a new path, potentially leading to resource exhaustion if a path never becomes available.",
+    "interpretation_b": "The endpoint is permitted to wait for a *reasonable* amount of time for a new path, after which it must discard connection state. The definition of 'reasonable' is not provided.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY wait' without a time limit or other constraint creates ambiguity. It's unclear how long an endpoint is expected to wait before discarding state, leading to different implementations.",
+    "missing_information": "The duration or conditions under which the endpoint should stop waiting for a new path are not specified."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:45:29.222856+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "7c303d161706caa5eca7289e46a1a984108719ebbe28609bb8fa23055b32b607",
+  "lineage_ids": "lineage:f930a84cf6ead08fdcbf39d0",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 177,
+    "load_duration": 4109100,
+    "prompt_eval_count": 564,
+    "total_duration": 6708904300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY wait for a new path\", \"interpretation_a\": \"The endpoint is permitted to wait indefinitely for a new path, potentially leading to resource exhaustion if a path never becomes available.\", \"interpretation_b\": \"The endpoint is permitted to wait for a *reasonable* amount of time for a new path, after which it must discard connection state. The definition of 'reasonable' is not provided.\", \"missing_information\": \"The duration or conditions under which the endpoint should stop waiting for a new path are not specified.\", \"justification\": \"The use of 'MAY wait' without a time limit or other constraint creates ambiguity. It's unclear how long an endpoint is expected to wait before discarding state, leading to different implementations.\"}",
+  "record_id": "94aa33a9bd3001d77b0b9aae21795bd4dfbfbc656baaad9df8e20740ba3a54e2",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.719
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "before being passed into a context other than HTTP/2 or HTTP/3",
+    "interpretation_a": "The concatenation happens *before* any other processing of the cookie string by the receiving application (e.g., parsing).",
+    "interpretation_b": "The concatenation happens *after* the receiving application has potentially begun processing the cookie string, and the application is responsible for handling the delimiter.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'before being passed into a context...' is open to interpretation. Does 'before' mean before *any* processing by the receiving application, or simply before the context is fully established?",
+    "missing_information": "It is unclear whether the concatenation is a pre-processing step before the cookie string is delivered to the application, or if the application is expected to handle the delimiter itself."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:54:50.561878+00:00",
+  "document_id": "draft-ietf-quic-http-33",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "3bc70f4a7186f0a5be68ab75eb294883a21f02781a03ab3c6177a2cf32382e4a",
+  "lineage_ids": "lineage:e2033c0de949fce7881e567b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 193,
+    "load_duration": 9029800,
+    "prompt_eval_count": 631,
+    "total_duration": 7494406400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"before being passed into a context other than HTTP/2 or HTTP/3\", \"interpretation_a\": \"The concatenation happens *before* any other processing of the cookie string by the receiving application (e.g., parsing).\", \"interpretation_b\": \"The concatenation happens *after* the receiving application has potentially begun processing the cookie string, and the application is responsible for handling the delimiter.\", \"missing_information\": \"It is unclear whether the concatenation is a pre-processing step before the cookie string is delivered to the application, or if the application is expected to handle the delimiter itself.\", \"justification\": \"The phrase 'before being passed into a context...' is open to interpretation. Does 'before' mean before *any* processing by the receiving application, or simply before the context is fully established?\"}",
+  "record_id": "751cc4d2bde64420a1ce6191fa6d51095f244a9560b5c6c52d52c9d1cb54ad50",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "4.1.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.5
+}

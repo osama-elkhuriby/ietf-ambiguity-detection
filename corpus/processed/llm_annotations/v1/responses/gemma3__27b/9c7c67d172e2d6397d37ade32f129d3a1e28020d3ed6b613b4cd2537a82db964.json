@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "need not wait",
+    "interpretation_a": "The initiator can close the read side immediately upon sending its close_notify, without any attempt to receive the response.",
+    "interpretation_b": "The initiator must make *some* attempt to receive the response, but is not required to wait indefinitely or block.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'need not wait' is incomplete. It doesn't specify if any attempt to receive the alert is required before closing the read side. This creates ambiguity in implementation.",
+    "missing_information": "The degree to which the initiator must attempt to receive the response is not specified. Does 'need not wait' mean 'may close immediately' or 'may not be required to wait for a certain duration'?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:35:49.795349+00:00",
+  "document_id": "draft-ietf-tls-tls13-20",
+  "family_id": "draft-ietf-tls-tls13",
+  "input_fingerprint": "38bce16c86163b5fef81dacc04a1c68eeda1b465bbb04a680b8b9cfb19d39dea",
+  "lineage_ids": "lineage:66c937ba69c5ea6e5d4b8619",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 179,
+    "load_duration": 4824500,
+    "prompt_eval_count": 612,
+    "total_duration": 6991325300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"need not wait\", \"interpretation_a\": \"The initiator can close the read side immediately upon sending its close_notify, without any attempt to receive the response.\", \"interpretation_b\": \"The initiator must make *some* attempt to receive the response, but is not required to wait indefinitely or block.\", \"missing_information\": \"The degree to which the initiator must attempt to receive the response is not specified. Does 'need not wait' mean 'may close immediately' or 'may not be required to wait for a certain duration'?\",\"justification\": \"The phrase 'need not wait' is incomplete. It doesn't specify if any attempt to receive the alert is required before closing the read side. This creates ambiguity in implementation.\"}",
+  "record_id": "9c7c67d172e2d6397d37ade32f129d3a1e28020d3ed6b613b4cd2537a82db964",
+  "revision": "20",
+  "schema_version": 1,
+  "section_ids": "6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.015
+}

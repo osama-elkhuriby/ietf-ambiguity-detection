@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD NOT send TLS application data records unless it is to hide the length of QUIC records",
+    "interpretation_a": "TLS application data records are permitted if and only if they are used to hide the length of QUIC records.",
+    "interpretation_b": "TLS application data records are generally discouraged after the handshake, but are permitted even if not used to hide the length of QUIC records, as the 'unless' clause could be read as an exception to the discouragement rather than a strict condition.",
+    "is_ambiguous": "yes",
+    "justification": "The 'unless' clause creates ambiguity. It's unclear whether sending TLS application data records is *only* permissible when hiding QUIC record lengths, or if it's permissible *even if* they hide QUIC record lengths. This affects implementation because it determines whether an endpoint needs to strictly enforce the length-hiding requirement before sending TLS data.",
+    "missing_information": "The strength of the 'SHOULD NOT' is unclear. Is it a strong recommendation, or a weak one? The meaning of 'unless' is also ambiguous; does it create a condition where sending data *only* to hide length is allowed, or does it simply allow sending data *even if* it hides length?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:46:29.358197+00:00",
+  "document_id": "draft-ietf-quic-tls-10",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "2b36309a33ac72eb7d955ac4d479191114ad9b2710ac245af71a0d2afd27b73a",
+  "lineage_ids": "lineage:a817b0e07ae36047f7e9734e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 279,
+    "load_duration": 4152600,
+    "prompt_eval_count": 588,
+    "total_duration": 10345486700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD NOT send TLS application data records unless it is to hide the length of QUIC records\", \"interpretation_a\": \"TLS application data records are permitted if and only if they are used to hide the length of QUIC records.\", \"interpretation_b\": \"TLS application data records are generally discouraged after the handshake, but are permitted even if not used to hide the length of QUIC records, as the 'unless' clause could be read as an exception to the discouragement rather than a strict condition.\", \"missing_information\": \"The strength of the 'SHOULD NOT' is unclear. Is it a strong recommendation, or a weak one? The meaning of 'unless' is also ambiguous; does it create a condition where sending data *only* to hide length is allowed, or does it simply allow sending data *even if* it hides length?\", \"justification\": \"The 'unless' clause creates ambiguity. It's unclear whether sending TLS application data records is *only* permissible when hiding QUIC record lengths, or if it's permissible *even if* they hide QUIC record lengths. This affects implementation because it determines whether an endpoint needs to strictly enforce the length-hiding requirement before sending TLS data.\"}",
+  "record_id": "bbf9dd09f76dc0cfe84c2cb21357f7f6930899b134bbda00f29efa1898f636c0",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "10.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.344
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-4",
+    "evidence_span": "discard its handshake keys",
+    "interpretation_a": "The endpoint must zero out the memory containing the handshake keys.",
+    "interpretation_b": "The endpoint must simply stop using the handshake keys, allowing them to remain in memory.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'discard' is underspecified. It could mean to zero out the memory containing the keys (secure deletion) or simply to stop using the keys without erasing them. Both interpretations are reasonable and materially different in terms of security implications.",
+    "missing_information": "The definition of 'discard' is not specified. Does 'discard' imply memory sanitization, or merely ceasing use?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:53:50.130339+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "cfcacd6bf9b92da93c24ac98924b0e5686a5991b393a1e8ec6304e6d99d746da",
+  "lineage_ids": "lineage:149a25b5971ca538ee82b610",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 160,
+    "load_duration": 3630300,
+    "prompt_eval_count": 532,
+    "total_duration": 6179634900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-4\", \"evidence_span\": \"discard its handshake keys\", \"interpretation_a\": \"The endpoint must zero out the memory containing the handshake keys.\", \"interpretation_b\": \"The endpoint must simply stop using the handshake keys, allowing them to remain in memory.\", \"missing_information\": \"The definition of 'discard' is not specified. Does 'discard' imply memory sanitization, or merely ceasing use?\", \"justification\": \"The term 'discard' is underspecified. It could mean to zero out the memory containing the keys (secure deletion) or simply to stop using the keys without erasing them. Both interpretations are reasonable and materially different in terms of security implications.\"}",
+  "record_id": "ff0406868d260aed27f6d06a9cd814b633857d1e884d3e815d3cff731bd7003f",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.9.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.172
+}

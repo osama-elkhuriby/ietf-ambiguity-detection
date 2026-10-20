@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously specifies that a receiver must treat a PUSH_PROMISE received on any stream that is not in the 'open' or 'half-closed (local)' state as a connection error of type PROTOCOL_ERROR. The logical condition is clear, the referenced stream states are defined elsewhere in the specification, and no additional constraints or normative references are required to interpret the clause.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T05:05:01.218674+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "afad24a54929bfebf2427acbba399651fc9673ca3a58e641950d32c2478937d8",
+  "lineage_ids": "lineage:776107ce7f1cce8891802f60",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 4300,
+    "load_duration": 4041600,
+    "prompt_eval_count": 620,
+    "total_duration": 37226011400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously specifies that a receiver must treat a PUSH_PROMISE received on any stream that is not in the 'open' or 'half-closed (local)' state as a connection error of type PROTOCOL_ERROR. The logical condition is clear, the referenced stream states are defined elsewhere in the specification, and no additional constraints or normative references are required to interpret the clause.\"\n}",
+  "record_id": "d9b16e5ccbfeff42c1ddf3b0e50b9058e12490642a7b393e307902d4bd45cb06",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 37.219
+}

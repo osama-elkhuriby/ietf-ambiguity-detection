@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously requires the server to include each of the listed header fields in a 206 response if that field would have been sent in a 200 response to the same request. The conditional is applied per field, and the list of fields is exhaustive. No missing constraints or undefined terms are present.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T07:08:44.692000+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-14",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "45862e01efbb8c8835043375bdc4f78cfda74f6b6757ce64371b49b1c51e9761",
+  "lineage_ids": "lineage:cfb64fdd965cc2ada7cad4ed",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1220,
+    "load_duration": 6219300,
+    "prompt_eval_count": 688,
+    "total_duration": 10758665300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously requires the server to include each of the listed header fields in a 206 response if that field would have been sent in a 200 response to the same request. The conditional is applied per field, and the list of fields is exhaustive. No missing constraints or undefined terms are present.\"\n}",
+  "record_id": "8d0397c8274e288a4ddf53055adf65ec8648189de3a49a470839ab93bc6f188c",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "15.3.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 78.14
+}

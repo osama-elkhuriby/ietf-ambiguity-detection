@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "it MAY send the exact same packet",
+    "interpretation_a": "The endpoint is permitted to retransmit the original close frame packet without modification.",
+    "interpretation_b": "The endpoint is permitted to construct a new packet containing a copy of the close frame, potentially with different packet number or other header fields.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'exact same packet' is incomplete. Does it mean bit-for-bit identical, or just the same payload? The difference affects implementation of retransmission and packet construction.",
+    "missing_information": "It is unclear whether 'exact same packet' refers to a bitwise identical packet (including packet number, timestamps, etc.) or simply a packet containing the same close frame payload. This affects how an endpoint would implement retransmission vs. re-creation of the packet."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:11:58.534412+00:00",
+  "document_id": "draft-ietf-quic-transport-07",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "2440562197f941762460472677e0cc11eff5ac596b519b991ce9a351e2eda83e",
+  "lineage_ids": "lineage:140b04a3ed0c22818ed9ca77",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 193,
+    "load_duration": 3006000,
+    "prompt_eval_count": 580,
+    "total_duration": 7287526400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"it MAY send the exact same packet\", \"interpretation_a\": \"The endpoint is permitted to retransmit the original close frame packet without modification.\", \"interpretation_b\": \"The endpoint is permitted to construct a new packet containing a copy of the close frame, potentially with different packet number or other header fields.\", \"missing_information\": \"It is unclear whether 'exact same packet' refers to a bitwise identical packet (including packet number, timestamps, etc.) or simply a packet containing the same close frame payload. This affects how an endpoint would implement retransmission vs. re-creation of the packet.\", \"justification\": \"The phrase 'exact same packet' is incomplete. Does it mean bit-for-bit identical, or just the same payload? The difference affects implementation of retransmission and packet construction.\"}",
+  "record_id": "34b76f77d31362c55b5c282c972725438a05a43a03a6cdc6b1a1244c2fc8c482",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "7.8.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.281
+}

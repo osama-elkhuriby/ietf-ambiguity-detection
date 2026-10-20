@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that after persistent congestion is detected, endpoints should set the min_rtt to the most recent RTT sample. The phrase \"newest RTT sample\" refers to the latest sample available at that time, which is the sample that triggered the persistent congestion detection. No other interpretation is materially different, and no constraint is missing that would allow multiple valid implementations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T11:19:48.591927+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "d34c10e289a33c51507169372a037a28f623bdc3ddf9d152472aea41e2faabbb",
+  "lineage_ids": "lineage:2145223a4380172cf29ce4fe",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 7395,
+    "load_duration": 5265100,
+    "prompt_eval_count": 629,
+    "total_duration": 64324272400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that after persistent congestion is detected, endpoints should set the min_rtt to the most recent RTT sample. The phrase \\\"newest RTT sample\\\" refers to the latest sample available at that time, which is the sample that triggered the persistent congestion detection. No other interpretation is materially different, and no constraint is missing that would allow multiple valid implementations.\"\n}",
+  "record_id": "482c668ad92e7cd75e85ae6e0daed9e7770ed8153b8756d89ef787a7afa708d1",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 64.328
+}

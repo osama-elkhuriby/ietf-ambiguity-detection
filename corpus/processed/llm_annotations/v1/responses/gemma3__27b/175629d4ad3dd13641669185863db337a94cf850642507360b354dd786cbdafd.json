@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "smaller than the overhead of sending multiple parts",
+    "interpretation_a": "The server might coalesce ranges if the gap is small enough to make sending one part more efficient, even if the overhead is minimal.",
+    "interpretation_b": "The server might only coalesce ranges if the gap is significantly small, where 'overhead' includes factors like connection setup, headers, and other transmission costs, potentially ignoring very small overheads.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'overhead of sending multiple parts' is vague. It doesn't define what 'overhead' includes (e.g., just bandwidth, or also connection setup, header sizes, etc.). This allows for different implementations to calculate overhead differently, leading to different decisions about range coalescing.",
+    "missing_information": "The definition of 'overhead' is not specified. Without a clear definition, different implementations could reasonably interpret what constitutes a 'small' gap based on varying overhead calculations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:56:42.006145+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-03",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "aab2750ee7f42643599a7b2382df8d426642a0169fdb3dcd77187c3a7a0ba2ec",
+  "lineage_ids": "lineage:5c8c4e5acfedb7fbeb5dd231",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 215,
+    "load_duration": 10066900,
+    "prompt_eval_count": 581,
+    "total_duration": 8282222200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"smaller than the overhead of sending multiple parts\", \"interpretation_a\": \"The server might coalesce ranges if the gap is small enough to make sending one part more efficient, even if the overhead is minimal.\", \"interpretation_b\": \"The server might only coalesce ranges if the gap is significantly small, where 'overhead' includes factors like connection setup, headers, and other transmission costs, potentially ignoring very small overheads.\", \"missing_information\": \"The definition of 'overhead' is not specified. Without a clear definition, different implementations could reasonably interpret what constitutes a 'small' gap based on varying overhead calculations.\",\"justification\": \"The phrase 'overhead of sending multiple parts' is vague. It doesn't define what 'overhead' includes (e.g., just bandwidth, or also connection setup, header sizes, etc.). This allows for different implementations to calculate overhead differently, leading to different decisions about range coalescing.\"}",
+  "record_id": "175629d4ad3dd13641669185863db337a94cf850642507360b354dd786cbdafd",
+  "revision": "03",
+  "schema_version": 1,
+  "section_ids": "9.3.7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.297
+}

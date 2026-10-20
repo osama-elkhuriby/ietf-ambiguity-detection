@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY be followed",
+    "interpretation_a": "Implementations MAY choose to ignore parameters entirely; a parser could successfully process a media type even if it doesn't support parameters.",
+    "interpretation_b": "Implementations MUST support parameters, but MAY choose not to process them if they encounter them; a parser could successfully process a media type even if it doesn't understand a specific parameter.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' creates ambiguity regarding whether parameters are optional to even recognize, or just optional to process. Without clarification, implementations could differ on whether to parse parameters at all.",
+    "missing_information": "The clause does not specify whether a parser MUST at least *recognize* parameters (e.g., skip over them) even if it doesn't *process* them. This affects implementation because a parser that doesn't recognize parameters might incorrectly interpret the remainder of the media type string."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:38:17.138070+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "a8e53a1d3e7819187b2c0dad26deddcf88efa07b02f5c454cc5a3e00751429e4",
+  "lineage_ids": "lineage:e1b95d879c586d7778703706",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 215,
+    "load_duration": 13148600,
+    "prompt_eval_count": 572,
+    "total_duration": 8257678800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY be followed\", \"interpretation_a\": \"Implementations MAY choose to ignore parameters entirely; a parser could successfully process a media type even if it doesn't support parameters.\", \"interpretation_b\": \"Implementations MUST support parameters, but MAY choose not to process them if they encounter them; a parser could successfully process a media type even if it doesn't understand a specific parameter.\", \"missing_information\": \"The clause does not specify whether a parser MUST at least *recognize* parameters (e.g., skip over them) even if it doesn't *process* them. This affects implementation because a parser that doesn't recognize parameters might incorrectly interpret the remainder of the media type string.\", \"justification\": \"The use of 'MAY' creates ambiguity regarding whether parameters are optional to even recognize, or just optional to process. Without clarification, implementations could differ on whether to parse parameters at all.\"}",
+  "record_id": "fad6cd1decc1ca6165b0815f0e90de305319edc1830d1f0a2afe256c56f65e31",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "8.3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.25
+}

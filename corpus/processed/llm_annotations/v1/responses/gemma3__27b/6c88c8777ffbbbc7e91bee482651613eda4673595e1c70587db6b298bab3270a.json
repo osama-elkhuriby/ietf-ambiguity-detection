@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY ignore the loss",
+    "interpretation_a": "An endpoint is permitted to discard these packets without any attempt at retransmission or buffering.",
+    "interpretation_b": "An endpoint is permitted to attempt retransmission or buffering, but is not *required* to do so, and may choose to discard them instead.",
+    "is_ambiguous": "yes",
+    "justification": "The use of \"MAY ignore\" allows for two reasonable interpretations: immediate discard, or buffering/retransmission attempts. The lack of further constraint on handling lost packets creates ambiguity.",
+    "missing_information": "The clause does not specify whether the endpoint is allowed to buffer these packets for later processing once the keys are available, or if they must be discarded on loss. This affects implementation choices regarding buffering and retransmission strategies."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:21:46.248986+00:00",
+  "document_id": "draft-ietf-quic-recovery-27",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "785b5ac3ea2dc5fe428b4772f0a7e0a5eaf77ff6acbc519fd10a792da9252ac1",
+  "lineage_ids": "lineage:52cb83b07ed2e66bad3b5df3",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 181,
+    "load_duration": 4890500,
+    "prompt_eval_count": 583,
+    "total_duration": 6881059100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY ignore the loss\", \"interpretation_a\": \"An endpoint is permitted to discard these packets without any attempt at retransmission or buffering.\", \"interpretation_b\": \"An endpoint is permitted to attempt retransmission or buffering, but is not *required* to do so, and may choose to discard them instead.\", \"missing_information\": \"The clause does not specify whether the endpoint is allowed to buffer these packets for later processing once the keys are available, or if they must be discarded on loss. This affects implementation choices regarding buffering and retransmission strategies.\", \"justification\": \"The use of \\\"MAY ignore\\\" allows for two reasonable interpretations: immediate discard, or buffering/retransmission attempts. The lack of further constraint on handling lost packets creates ambiguity.\"}",
+  "record_id": "6c88c8777ffbbbc7e91bee482651613eda4673595e1c70587db6b298bab3270a",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "6.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.875
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "protocol using QUIC",
+    "interpretation_a": "The RESET_STREAM frame must be initiated by an application that is itself implemented using the QUIC protocol.",
+    "interpretation_b": "The RESET_STREAM frame must be initiated by the QUIC protocol itself, meaning the QUIC layer is responsible for triggering the reset based on some internal condition.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'protocol using QUIC' is ambiguous. It could refer to an application that utilizes the QUIC protocol, or to the QUIC protocol stack itself. This leads to two different interpretations of who is responsible for instigating the RESET_STREAM frame.",
+    "missing_information": "The meaning of 'protocol using QUIC' is unclear. Does it refer to the application layer running over QUIC, or the QUIC protocol stack itself?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:10:26.621424+00:00",
+  "document_id": "draft-ietf-quic-transport-24",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "d1a89c5b8aba9eb336cb47865718c7c8228e65d55319a148cd978c23a0a0f890",
+  "lineage_ids": "lineage:7e8958aa4f273d878c2f88a5",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 193,
+    "load_duration": 3656600,
+    "prompt_eval_count": 579,
+    "total_duration": 7299679400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-1\", \"evidence_span\": \"protocol using QUIC\", \"interpretation_a\": \"The RESET_STREAM frame must be initiated by an application that is itself implemented using the QUIC protocol.\", \"interpretation_b\": \"The RESET_STREAM frame must be initiated by the QUIC protocol itself, meaning the QUIC layer is responsible for triggering the reset based on some internal condition.\", \"missing_information\": \"The meaning of 'protocol using QUIC' is unclear. Does it refer to the application layer running over QUIC, or the QUIC protocol stack itself?\",\"justification\": \"The phrase 'protocol using QUIC' is ambiguous. It could refer to an application that utilizes the QUIC protocol, or to the QUIC protocol stack itself. This leads to two different interpretations of who is responsible for instigating the RESET_STREAM frame.\"}",
+  "record_id": "319868948b8394762d14d25bd7389c03fa2bedc5957ba2ccf0767ff63fdfed37",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "11.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.297
+}

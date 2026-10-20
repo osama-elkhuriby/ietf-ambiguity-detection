@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST be sent as the first frame",
+    "interpretation_a": "The SETTINGS frame must be the very first frame transmitted on the control stream, with no other frames preceding it.",
+    "interpretation_b": "The SETTINGS frame must be among the first frames transmitted on the control stream, but other control frames may precede it.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'first frame' is open to interpretation. It's unclear whether any frames are allowed before the SETTINGS frame, or if it must be the very first frame sent on the control stream.",
+    "missing_information": "The definition of 'first frame' is not precise. Does it mean the absolute first frame sent on the stream, or the first frame of a particular type?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:57:39.676244+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "86b6ab19ef06942e329d4784f3a2e73860ca408c5657443867acfd43be56279f",
+  "lineage_ids": "lineage:9cb689be0d35a9aeedf72de4",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 179,
+    "load_duration": 4752800,
+    "prompt_eval_count": 591,
+    "total_duration": 6986894800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST be sent as the first frame\", \"interpretation_a\": \"The SETTINGS frame must be the very first frame transmitted on the control stream, with no other frames preceding it.\", \"interpretation_b\": \"The SETTINGS frame must be among the first frames transmitted on the control stream, but other control frames may precede it.\", \"missing_information\": \"The definition of 'first frame' is not precise. Does it mean the absolute first frame sent on the stream, or the first frame of a particular type?\",\"justification\": \"The phrase 'first frame' is open to interpretation. It's unclear whether any frames are allowed before the SETTINGS frame, or if it must be the very first frame sent on the control stream.\"}",
+  "record_id": "8a8ccfa6e908169be110187ba72f4e75b3eb520bf344538c7adfc23d4b5bd180",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.2.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.016
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause is clear and unambiguous. It explicitly states that an endpoint MUST NOT initiate migration if its peer supplies a zero-length connection ID, and it provides a clear reason (packets without a Destination Connection ID cannot be attributed to a connection based on address tuple). There is no room for multiple interpretations, and all necessary constraints are provided.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:53:30.592482+00:00",
+  "document_id": "draft-ietf-quic-transport-22",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "8c107ebe22b53db7685d5c9e9eb685068e23319d3db03269a827e939a50271f7",
+  "lineage_ids": "lineage:11f50f576882c821702ac021",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 124,
+    "load_duration": 3612900,
+    "prompt_eval_count": 548,
+    "total_duration": 5265627100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause is clear and unambiguous. It explicitly states that an endpoint MUST NOT initiate migration if its peer supplies a zero-length connection ID, and it provides a clear reason (packets without a Destination Connection ID cannot be attributed to a connection based on address tuple). There is no room for multiple interpretations, and all necessary constraints are provided.\"\n}",
+  "record_id": "fa261f465294f22212d2d19276a0ebdf466a28de0168707831deb292e49d719e",
+  "revision": "22",
+  "schema_version": 1,
+  "section_ids": "9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.266
+}

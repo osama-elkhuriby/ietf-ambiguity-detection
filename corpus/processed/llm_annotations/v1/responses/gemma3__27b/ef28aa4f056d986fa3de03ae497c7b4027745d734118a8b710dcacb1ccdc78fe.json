@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "might have already sent - or enqueued for sending - frames on the stream that cannot be withdrawn",
+    "interpretation_a": "The peer may have sent frames that are in-flight and will arrive at the receiver, even after the RST_STREAM is sent.",
+    "interpretation_b": "The peer may have enqueued frames for sending, but not yet transmitted them, and these frames are considered 'lost' upon receipt of the RST_STREAM.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'might have already sent - or enqueued for sending' introduces ambiguity. 'Enqueued for sending' could mean frames already on the wire, or frames only buffered internally. The MUST clause only addresses *received* frames, but the ambiguity lies in whether the receiver should *expect* to receive frames that were enqueued but not sent.",
+    "missing_information": "It is unclear whether 'enqueued for sending' implies frames that have been added to a transmit queue but not yet physically sent, or frames that are merely buffered for a higher-layer protocol. This distinction affects whether the receiver should expect to see those frames or not."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:14:43.232154+00:00",
+  "document_id": "draft-ietf-quic-transport-01",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "89b05fd997a31db651c9e2d8f776266d16b0557e22f458890f95538e32c55526",
+  "lineage_ids": "lineage:c443040435a87d013266d5d7",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 255,
+    "load_duration": 5867400,
+    "prompt_eval_count": 617,
+    "total_duration": 9499524800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"might have already sent - or enqueued for sending - frames on the stream that cannot be withdrawn\", \"interpretation_a\": \"The peer may have sent frames that are in-flight and will arrive at the receiver, even after the RST_STREAM is sent.\", \"interpretation_b\": \"The peer may have enqueued frames for sending, but not yet transmitted them, and these frames are considered 'lost' upon receipt of the RST_STREAM.\", \"missing_information\": \"It is unclear whether 'enqueued for sending' implies frames that have been added to a transmit queue but not yet physically sent, or frames that are merely buffered for a higher-layer protocol. This distinction affects whether the receiver should expect to see those frames or not.\", \"justification\": \"The phrase 'might have already sent - or enqueued for sending' introduces ambiguity. 'Enqueued for sending' could mean frames already on the wire, or frames only buffered internally. The MUST clause only addresses *received* frames, but the ambiguity lies in whether the receiver should *expect* to receive frames that were enqueued but not sent.\"}",
+  "record_id": "ef28aa4f056d986fa3de03ae497c7b4027745d734118a8b710dcacb1ccdc78fe",
+  "revision": "01",
+  "schema_version": 1,
+  "section_ids": "9.1.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.5
+}

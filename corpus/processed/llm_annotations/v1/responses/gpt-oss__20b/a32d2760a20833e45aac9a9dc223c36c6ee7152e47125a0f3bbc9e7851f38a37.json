@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "but not for 0-RTT packets",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The prohibition on using the server‑chosen connection ID for 0‑RTT packets is clear, but the clause fails to state which connection ID the client should use for those packets, creating an incomplete constraint that could result in divergent implementations.",
+    "missing_information": "The clause does not specify which connection ID the client must use for 0‑RTT packets, leaving a concrete missing constraint that could lead to different implementation choices."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T17:31:37.350648+00:00",
+  "document_id": "draft-ietf-quic-transport-07",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "35ca8e50417897a84fd3d1cc5399a5e040ad796748e52219b6539d886b9a4f65",
+  "lineage_ids": "lineage:786f3a810f25bde540c6f314",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 552,
+    "load_duration": 5014400,
+    "prompt_eval_count": 801,
+    "total_duration": 5016806800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"but not for 0-RTT packets\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The clause does not specify which connection ID the client must use for 0‑RTT packets, leaving a concrete missing constraint that could lead to different implementation choices.\",\n  \"justification\": \"The prohibition on using the server‑chosen connection ID for 0‑RTT packets is clear, but the clause fails to state which connection ID the client should use for those packets, creating an incomplete constraint that could result in divergent implementations.\"\n}",
+  "record_id": "a32d2760a20833e45aac9a9dc223c36c6ee7152e47125a0f3bbc9e7851f38a37",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "5.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 35.812
+}

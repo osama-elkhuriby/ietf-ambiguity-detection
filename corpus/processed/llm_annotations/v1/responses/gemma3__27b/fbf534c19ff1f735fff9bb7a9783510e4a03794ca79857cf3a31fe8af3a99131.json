@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "If such a host issues a CLOSE call while received data is still pending in TCP, or if new data is received after CLOSE is called",
+    "interpretation_a": "The RST is sent if *either* data is pending at the time of the CLOSE call *or* data is received after the CLOSE call.",
+    "interpretation_b": "The RST is sent only if data is pending at the time of the CLOSE call *and* data is received after the CLOSE call. The 'or' could be read as an inclusive or or an exclusive or.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'or' is ambiguous. It is unclear whether both conditions need to be true for the RST to be sent, or if either condition is sufficient.",
+    "missing_information": "The document does not specify whether the 'or' is inclusive or exclusive. This affects whether an RST is sent in all cases where data is received after the close call."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:31:25.257795+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-14",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "14f3a27bd636847261c242050eb3317eb065d78f477d9c84164c896bb6ef8ed1",
+  "lineage_ids": "lineage:a89bbef9f220b47af7bb9b84",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 219,
+    "load_duration": 19479400,
+    "prompt_eval_count": 616,
+    "total_duration": 8455998000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"If such a host issues a CLOSE call while received data is still pending in TCP, or if new data is received after CLOSE is called\", \"interpretation_a\": \"The RST is sent if *either* data is pending at the time of the CLOSE call *or* data is received after the CLOSE call.\", \"interpretation_b\": \"The RST is sent only if data is pending at the time of the CLOSE call *and* data is received after the CLOSE call. The 'or' could be read as an inclusive or or an exclusive or.\", \"missing_information\": \"The document does not specify whether the 'or' is inclusive or exclusive. This affects whether an RST is sent in all cases where data is received after the close call.\", \"justification\": \"The use of 'or' is ambiguous. It is unclear whether both conditions need to be true for the RST to be sent, or if either condition is sufficient.\"}",
+  "record_id": "fbf534c19ff1f735fff9bb7a9783510e4a03794ca79857cf3a31fe8af3a99131",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "3.5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.454
+}

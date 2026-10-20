@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "A proxy MAY transform the content of a message that does not contain a no-transform cache-control directive.",
+    "interpretation_a": "The clause applies to all HTTP messages, so a proxy may transform either requests or responses that lack a no-transform directive.",
+    "interpretation_b": "The clause applies only to responses, so a proxy may transform only responses that lack a no-transform directive, but not requests.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether the message is a request or a response, leading to two materially different implementation possibilities.",
+    "missing_information": ""
+  },
+  "attempts": 3,
+  "created_at": "2026-10-08T05:34:20.223480+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "425bce8f7a2de92ba20758229614d258c58a0ed69c4e654bd2fc06ec1d69b7c2",
+  "lineage_ids": "lineage:9bd9ec7c0fa1a9be9eb2aab4",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 303,
+    "load_duration": 7089300,
+    "prompt_eval_count": 785,
+    "total_duration": 2897065200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"A proxy MAY transform the content of a message that does not contain a no-transform cache-control directive.\",\n  \"interpretation_a\": \"The clause applies to all HTTP messages, so a proxy may transform either requests or responses that lack a no-transform directive.\",\n  \"interpretation_b\": \"The clause applies only to responses, so a proxy may transform only responses that lack a no-transform directive, but not requests.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify whether the message is a request or a response, leading to two materially different implementation possibilities.\"\n}",
+  "record_id": "1d1f44d99885488cc18812bd86a7a1b730076e071294f2fcce8840b5f96db4eb",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "7.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 84.984
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "If the application protocol using TLS provides that any data may be carried over the underlying transport after the TLS connection is closed",
+    "interpretation_a": "The condition applies if the application protocol *allows* data to be sent after TLS closure, even if it doesn't *require* it.",
+    "interpretation_b": "The condition applies only if the application protocol *requires* data to be sent after TLS closure.",
+    "is_ambiguous": "yes",
+    "justification": "The word 'may' is ambiguous. It could mean 'is permitted to' or 'is required to'. The difference between these two interpretations affects whether the TLS implementation must receive a close_notify alert.",
+    "missing_information": "The meaning of 'provides that any data may be carried' is unclear. Does 'may' mean 'allows' or 'requires'? This affects whether the MUST condition is triggered."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:36:04.844361+00:00",
+  "document_id": "draft-ietf-tls-tls13-28",
+  "family_id": "draft-ietf-tls-tls13",
+  "input_fingerprint": "035a21d62d0e5690c7d3e941b1e49f5db2177877c0251ef132bb565ad9aa5768",
+  "lineage_ids": "lineage:b0422cd4e4587b4751def4e2",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 201,
+    "load_duration": 19796500,
+    "prompt_eval_count": 622,
+    "total_duration": 7771533500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"If the application protocol using TLS provides that any data may be carried over the underlying transport after the TLS connection is closed\", \"interpretation_a\": \"The condition applies if the application protocol *allows* data to be sent after TLS closure, even if it doesn't *require* it.\", \"interpretation_b\": \"The condition applies only if the application protocol *requires* data to be sent after TLS closure.\", \"missing_information\": \"The meaning of 'provides that any data may be carried' is unclear. Does 'may' mean 'allows' or 'requires'? This affects whether the MUST condition is triggered.\", \"justification\": \"The word 'may' is ambiguous. It could mean 'is permitted to' or 'is required to'. The difference between these two interpretations affects whether the TLS implementation must receive a close_notify alert.\"}",
+  "record_id": "aca8885eeafe0538c920c33056f9db2a44a24e730dc73608a350de83102a1293",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.781
+}

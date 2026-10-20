@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously requires that a CONTINUATION frame follows a HEADERS frame lacking END_HEADERS, and the subsequent clause clarifies that any other frame type would trigger a protocol error, leaving no materially different implementation options.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T04:05:21.306415+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "b9bf7799c547758d68d741910b0a4c85fb93b2d2d0b8f7a3e15266b6a6779090",
+  "lineage_ids": "lineage:052d6c48799b7465b201ab4f",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 914,
+    "load_duration": 5767100,
+    "prompt_eval_count": 607,
+    "total_duration": 8008543300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously requires that a CONTINUATION frame follows a HEADERS frame lacking END_HEADERS, and the subsequent clause clarifies that any other frame type would trigger a protocol error, leaving no materially different implementation options.\"\n}",
+  "record_id": "3e1390018c75175419a7c2c870ffcd6af99fc0694e92ebbeeb31583191fd69fa",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.0
+}

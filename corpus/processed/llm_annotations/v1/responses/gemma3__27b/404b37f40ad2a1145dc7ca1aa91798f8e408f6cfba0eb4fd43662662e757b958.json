@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY ignore or reject",
+    "interpretation_a": "The server is permitted to ignore the Range header field entirely, effectively treating the request as if no range was specified.",
+    "interpretation_b": "The server is permitted to reject the request with an error response (e.g., 416 Range Not Satisfiable) indicating that the range request is invalid.",
+    "is_ambiguous": "yes",
+    "justification": "The use of \"MAY ignore or reject\" provides two distinct implementation options without specifying conditions for choosing one over the other. A server could silently ignore the range request, or it could actively reject it with an error. This lack of a concrete constraint creates ambiguity.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:03:37.622701+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-05",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "511b07540335ef1ba40238c9530afcbe95134b9bd4dc0c2415090ae7147caad1",
+  "lineage_ids": "lineage:b3c4734fd064bb0419b7d705",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 165,
+    "load_duration": 8917200,
+    "prompt_eval_count": 595,
+    "total_duration": 6504080200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY ignore or reject\", \"interpretation_a\": \"The server is permitted to ignore the Range header field entirely, effectively treating the request as if no range was specified.\", \"interpretation_b\": \"The server is permitted to reject the request with an error response (e.g., 416 Range Not Satisfiable) indicating that the range request is invalid.\", \"missing_information\": \"\", \"justification\": \"The use of \\\"MAY ignore or reject\\\" provides two distinct implementation options without specifying conditions for choosing one over the other. A server could silently ignore the range request, or it could actively reject it with an error. This lack of a concrete constraint creates ambiguity.\"}",
+  "record_id": "404b37f40ad2a1145dc7ca1aa91798f8e408f6cfba0eb4fd43662662e757b958",
+  "revision": "05",
+  "schema_version": 1,
+  "section_ids": "8.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.5
+}

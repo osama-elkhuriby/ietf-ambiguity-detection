@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "has fallen below the smallest allowed maximum datagram size of 1200 bytes",
+    "interpretation_a": "The PMTU is strictly less than 1200 bytes (e.g., 1199 bytes).",
+    "interpretation_b": "The PMTU is equal to 1200 bytes, triggering the cessation of packets. The phrase 'below' could be inclusive or exclusive.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'fallen below' is ambiguous. Does it mean strictly less than 1200 bytes, or less than or equal to 1200 bytes? This affects the implementation of the PMTU check.",
+    "missing_information": "The specification does not explicitly state whether 'below' includes 1200 bytes or not. This affects the threshold at which the endpoint must cease sending packets."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:09:32.742222+00:00",
+  "document_id": "draft-ietf-quic-transport-33",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "74cfb2df5c288357a2e47566dab52b6dc889f69a4a4658a28adda0934e52df21",
+  "lineage_ids": "lineage:2f84b4b9545c73a0f7ad6c1d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 204,
+    "load_duration": 4082200,
+    "prompt_eval_count": 631,
+    "total_duration": 7677164400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"has fallen below the smallest allowed maximum datagram size of 1200 bytes\", \"interpretation_a\": \"The PMTU is strictly less than 1200 bytes (e.g., 1199 bytes).\", \"interpretation_b\": \"The PMTU is equal to 1200 bytes, triggering the cessation of packets. The phrase 'below' could be inclusive or exclusive.\", \"missing_information\": \"The specification does not explicitly state whether 'below' includes 1200 bytes or not. This affects the threshold at which the endpoint must cease sending packets.\", \"justification\": \"The phrase 'fallen below' is ambiguous. Does it mean strictly less than 1200 bytes, or less than or equal to 1200 bytes? This affects the implementation of the PMTU check.\"}",
+  "record_id": "de78b65cba8a68c67be122de4ccb8be79275354c7739ee452f1eaa6dd7f19e28",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "14.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.672
+}

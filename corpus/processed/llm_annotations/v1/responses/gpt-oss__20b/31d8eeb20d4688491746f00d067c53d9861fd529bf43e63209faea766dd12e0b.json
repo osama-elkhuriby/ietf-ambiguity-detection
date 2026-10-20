@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "An endpoint SHOULD ensure that its peer has a sufficient number of available and unused connection IDs.",
+    "interpretation_a": "The endpoint must ensure the peer has at least one unused connection ID.",
+    "interpretation_b": "The endpoint must ensure the peer has at least as many unused connection IDs as the active_connection_id_limit parameter allows.",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a concrete numeric threshold or rule for determining sufficiency, allowing at least two materially different reasonable implementation behaviours.",
+    "missing_information": "None specified; the clause does not define what constitutes a \"sufficient\" number of connection IDs, leaving the threshold open to interpretation."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T14:51:51.537746+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "4f2ae7594db37f6ca9217c3cde55bb81968692a683526406f03eda477e9fd5ef",
+  "lineage_ids": "lineage:096b2b8c53bc3807f6b4a3e3",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 460,
+    "load_duration": 4135400,
+    "prompt_eval_count": 715,
+    "total_duration": 4327533400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"An endpoint SHOULD ensure that its peer has a sufficient number of available and unused connection IDs.\",\n  \"interpretation_a\": \"The endpoint must ensure the peer has at least one unused connection ID.\",\n  \"interpretation_b\": \"The endpoint must ensure the peer has at least as many unused connection IDs as the active_connection_id_limit parameter allows.\",\n  \"missing_information\": \"None specified; the clause does not define what constitutes a \\\"sufficient\\\" number of connection IDs, leaving the threshold open to interpretation.\",\n  \"justification\": \"The clause lacks a concrete numeric threshold or rule for determining sufficiency, allowing at least two materially different reasonable implementation behaviours.\"\n}",
+  "record_id": "31d8eeb20d4688491746f00d067c53d9861fd529bf43e63209faea766dd12e0b",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "5.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 15.828
+}

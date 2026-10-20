@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "cumulative size",
+    "interpretation_a": "The cumulative size refers to the total number of bytes sent.",
+    "interpretation_b": "The cumulative size refers to the total number of packets sent.",
+    "is_ambiguous": "yes",
+    "justification": "The target clause uses the term \"cumulative size\" without specifying whether it refers to bytes or packets.  This omission allows two materially different implementation behaviours: limiting the total bytes sent or limiting the total number of packets sent.  The lack of a definition constitutes an incomplete constraint (U‑2).",
+    "missing_information": "The clause does not define \"size\", leaving it ambiguous whether it means bytes or packets."
+  },
+  "attempts": 3,
+  "created_at": "2026-10-08T19:03:01.258439+00:00",
+  "document_id": "draft-ietf-quic-transport-33",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "9e1fac7d856b647bd167f3a67d02360e7f6165058571ff52f37fe528e2f50d30",
+  "lineage_ids": "lineage:f41e85542dabb24555909889",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 335,
+    "load_duration": 6713700,
+    "prompt_eval_count": 783,
+    "total_duration": 3140824300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\":\"yes\",\"ambiguity_subtype\":\"U-2\",\"evidence_span\":\"cumulative size\",\"interpretation_a\":\"The cumulative size refers to the total number of bytes sent.\",\"interpretation_b\":\"The cumulative size refers to the total number of packets sent.\",\"missing_information\":\"The clause does not define \\\"size\\\", leaving it ambiguous whether it means bytes or packets.\",\"justification\":\"The target clause uses the term \\\"cumulative size\\\" without specifying whether it refers to bytes or packets.  This omission allows two materially different implementation behaviours: limiting the total bytes sent or limiting the total number of packets sent.  The lack of a definition constitutes an incomplete constraint (U‑2).\"}",
+  "record_id": "e9e5b9fe99b4f7d1ca84bc2b68039a57acedeb60745322d9a04f23641bdf8ba3",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "10.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 79.156
+}

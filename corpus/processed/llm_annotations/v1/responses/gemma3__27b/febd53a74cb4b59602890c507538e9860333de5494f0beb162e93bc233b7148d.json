@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SYN-RECEIVED state",
+    "interpretation_a": "The implementation must track the state transition to SYN-RECEIVED regardless of whether it was initiated by a passive or active open.",
+    "interpretation_b": "The implementation must track the *source* of the SYN-RECEIVED state transition (passive vs. active) in addition to the state itself.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states that a TCP implementation \"MUST keep track of whether a connection has reached SYN-RECEIVED state as the result of a passive OPEN or an active OPEN.\" This could be interpreted as simply tracking whether the connection is in the SYN-RECEIVED state, or tracking *how* it got there (i.e., whether it was a passive or active open). The latter interpretation requires storing additional information, and is not explicitly stated.",
+    "missing_information": "It is unclear whether the tracking requirement is simply to know that the connection *reached* SYN-RECEIVED, or to know *how* it reached SYN-RECEIVED. The latter would require storing additional information."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:31:42.248612+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-10",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "47e540283b2d9b10ff945e32099c3bf16ceb0117486fc4fc14644022eabb908b",
+  "lineage_ids": "lineage:7acdd8fd6abcefac14ee1207",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 237,
+    "load_duration": 20565400,
+    "prompt_eval_count": 571,
+    "total_duration": 8985861500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SYN-RECEIVED state\", \"interpretation_a\": \"The implementation must track the state transition to SYN-RECEIVED regardless of whether it was initiated by a passive or active open.\", \"interpretation_b\": \"The implementation must track the *source* of the SYN-RECEIVED state transition (passive vs. active) in addition to the state itself.\", \"missing_information\": \"It is unclear whether the tracking requirement is simply to know that the connection *reached* SYN-RECEIVED, or to know *how* it reached SYN-RECEIVED. The latter would require storing additional information.\", \"justification\": \"The clause states that a TCP implementation \\\"MUST keep track of whether a connection has reached SYN-RECEIVED state as the result of a passive OPEN or an active OPEN.\\\" This could be interpreted as simply tracking whether the connection is in the SYN-RECEIVED state, or tracking *how* it got there (i.e., whether it was a passive or active open). The latter interpretation requires storing additional information, and is not explicitly stated.\"}",
+  "record_id": "febd53a74cb4b59602890c507538e9860333de5494f0beb162e93bc233b7148d",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "3.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.0
+}

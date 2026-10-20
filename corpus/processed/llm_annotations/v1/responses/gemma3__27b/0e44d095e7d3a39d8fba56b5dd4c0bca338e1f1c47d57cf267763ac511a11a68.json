@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "clients receiving it MUST terminate the connection",
+    "interpretation_a": "Clients MUST terminate the connection immediately upon receiving the alert, without attempting any further communication.",
+    "interpretation_b": "Clients MAY attempt a limited amount of cleanup or logging before terminating the connection, as long as the connection is ultimately terminated.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'terminate the connection' is open to interpretation regarding the timing and any permitted actions before termination. While the ultimate result is the same (connection closure), the intermediate steps could differ.",
+    "missing_information": "The clause does not specify whether clients are permitted to perform any actions *before* terminating the connection. This could affect resource cleanup or logging, and thus is a material implementation detail."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:32:37.328894+00:00",
+  "document_id": "draft-ietf-tls-tls13-16",
+  "family_id": "draft-ietf-tls-tls13",
+  "input_fingerprint": "0be1925f0e51a114fd0577bcbd7cb04acaa497a3b5b1470594e247f535e4187b",
+  "lineage_ids": "lineage:d2c7f213ce312e6d4d4e71a8",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 175,
+    "load_duration": 10518500,
+    "prompt_eval_count": 564,
+    "total_duration": 6744638100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"clients receiving it MUST terminate the connection\", \"interpretation_a\": \"Clients MUST terminate the connection immediately upon receiving the alert, without attempting any further communication.\", \"interpretation_b\": \"Clients MAY attempt a limited amount of cleanup or logging before terminating the connection, as long as the connection is ultimately terminated.\", \"missing_information\": \"The clause does not specify whether clients are permitted to perform any actions *before* terminating the connection. This could affect resource cleanup or logging, and thus is a material implementation detail.\", \"justification\": \"The phrase 'terminate the connection' is open to interpretation regarding the timing and any permitted actions before termination. While the ultimate result is the same (connection closure), the intermediate steps could differ.\"}",
+  "record_id": "0e44d095e7d3a39d8fba56b5dd4c0bca338e1f1c47d57cf267763ac511a11a68",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.75
+}

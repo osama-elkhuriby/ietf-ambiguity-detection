@@ -1,0 +1,37 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY either assume a media type of \"application/octet-stream\" or examine the data to determine its type.",
+    "interpretation_a": "The recipient is permitted to always assume 'application/octet-stream' regardless of the data.",
+    "interpretation_b": "The recipient is permitted to always examine the data to determine its type, bypassing the default.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'either...or' with 'MAY' grants complete discretion to the recipient. There is no guidance on when to default to 'application/octet-stream' and when to inspect the data. This allows for materially different implementations.",
+    "missing_information": "The clause does not specify any criteria for *when* the recipient should choose one behavior over the other. A missing constraint on the selection criteria creates ambiguity."
+  },
+  "attempts": 3,
+  "created_at": "2026-10-07T04:20:44.787127+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-06",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "9764cd04e6f7bf5144891f6bd6a1e19ebec9bf8daf491314611a8ca1553fcd80",
+  "lineage_ids": "lineage:c97ee501d96d411c362ba98f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 191,
+    "load_duration": 5524300,
+    "prompt_eval_count": 815,
+    "total_duration": 7487817900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY either assume a media type of \\\"application/octet-stream\\\" or examine the data to determine its type.\", \"interpretation_a\": \"The recipient is permitted to always assume 'application/octet-stream' regardless of the data.\", \"interpretation_b\": \"The recipient is permitted to always examine the data to determine its type, bypassing the default.\", \"missing_information\": \"The clause does not specify any criteria for *when* the recipient should choose one behavior over the other. A missing constraint on the selection criteria creates ambiguity.\",\"justification\": \"The use of 'either...or' with 'MAY' grants complete discretion to the recipient. There is no guidance on when to default to 'application/octet-stream' and when to inspect the data. This allows for materially different implementations.\"}",
+  "record_id": "9f7863929620e8b9a2b72865ac37ed85e7d41f3c3173dd59d6c6de597e5a9bcb",
+  "revision": "06",
+  "schema_version": 1,
+  "section_ids": "6.2.1",
+  "status": "invalid",
+  "validation_errors": [
+    "evidence_span is not an exact target-clause substring"
+  ],
+  "wall_seconds": 28.11
+}

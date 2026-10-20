@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Trailer fields that might be generated more than once during a message MUST be defined as a list-based field",
+    "interpretation_a": "Any trailer field that *could* be generated multiple times, even if it isn't always, must be defined as a list. This implies a proactive approach to field definition.",
+    "interpretation_b": "Only trailer fields that *are* generated multiple times during a message must be defined as a list-based field. This implies a reactive approach, based on observed behavior.",
+    "is_ambiguous": "yes",
+    "justification": "The ambiguity lies in the interpretation of 'might be generated'. Does it mean 'potentially can be generated' or 'is actually generated'? This affects whether a field needs to be defined as list-based preemptively or only when multiple instances are observed.",
+    "missing_information": "The phrase 'might be generated' is vague. It's unclear whether this refers to potential for multiple occurrences within a single message, or across multiple messages. A clearer definition of 'might' is needed to resolve the ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:22:35.717012+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "5d60c342b252ceab2e30ef287859ad37da40f00a125c531a5dde2fede6aad9f5",
+  "lineage_ids": "lineage:fa34e2f37a589020d88df0aa",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 240,
+    "load_duration": 10851400,
+    "prompt_eval_count": 623,
+    "total_duration": 9161817300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Trailer fields that might be generated more than once during a message MUST be defined as a list-based field\", \"interpretation_a\": \"Any trailer field that *could* be generated multiple times, even if it isn't always, must be defined as a list. This implies a proactive approach to field definition.\", \"interpretation_b\": \"Only trailer fields that *are* generated multiple times during a message must be defined as a list-based field. This implies a reactive approach, based on observed behavior.\", \"missing_information\": \"The phrase 'might be generated' is vague. It's unclear whether this refers to potential for multiple occurrences within a single message, or across multiple messages. A clearer definition of 'might' is needed to resolve the ambiguity.\", \"justification\": \"The ambiguity lies in the interpretation of 'might be generated'. Does it mean 'potentially can be generated' or 'is actually generated'? This affects whether a field needs to be defined as list-based preemptively or only when multiple instances are observed.\"}",
+  "record_id": "a6ceac7c07cdf8edba829b0334e62ebb5d7ad26ff1f87d8bf29356bda36c82ff",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "6.5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.157
+}

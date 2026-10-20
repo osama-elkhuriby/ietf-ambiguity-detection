@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "maximum data value that it has sent",
+    "interpretation_a": "The receiver limits data based on the *total* amount of data it has advertised to the sender, and the sender must not exceed that cumulative limit.",
+    "interpretation_b": "The receiver limits data based on the amount of data it has *specifically acknowledged* from the sender, and the sender must not exceed that acknowledged limit.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'maximum data value that it has sent' is ambiguous. It could refer to the total advertised receive window, or the amount of data the receiver has acknowledged. These lead to different implementations of the flow control error condition.",
+    "missing_information": "It is unclear whether 'maximum data value that it has sent' refers to the cumulative advertised window, or the amount of data that has been explicitly acknowledged."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:41:14.669978+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "b8a66f3d257487c6df3a63ddee1ca64930d4ac058a7937b01cf588a7cb98b113",
+  "lineage_ids": "lineage:ce6e923f566d643342204b16",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 197,
+    "load_duration": 5192000,
+    "prompt_eval_count": 583,
+    "total_duration": 7453263400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"maximum data value that it has sent\", \"interpretation_a\": \"The receiver limits data based on the *total* amount of data it has advertised to the sender, and the sender must not exceed that cumulative limit.\", \"interpretation_b\": \"The receiver limits data based on the amount of data it has *specifically acknowledged* from the sender, and the sender must not exceed that acknowledged limit.\", \"missing_information\": \"It is unclear whether 'maximum data value that it has sent' refers to the cumulative advertised window, or the amount of data that has been explicitly acknowledged.\", \"justification\": \"The phrase 'maximum data value that it has sent' is ambiguous. It could refer to the total advertised receive window, or the amount of data the receiver has acknowledged. These lead to different implementations of the flow control error condition.\"}",
+  "record_id": "87c8aae93deb4649864ba9c429b31e5977c264ef4f82398a6deb9ae4dd4f7b2f",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "19.9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.453
+}

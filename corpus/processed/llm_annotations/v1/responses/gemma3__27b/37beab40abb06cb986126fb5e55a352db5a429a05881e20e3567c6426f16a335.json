@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "An endpoint MAY save the last protected WINDOW_UPDATE frame it receives for each stream and apply the values once the TLS handshake completes.",
+    "interpretation_a": "The endpoint must save *only* the last WINDOW_UPDATE frame received for each stream.",
+    "interpretation_b": "The endpoint may save multiple WINDOW_UPDATE frames, but is only required to apply the last one received for each stream.",
+    "is_ambiguous": "yes",
+    "justification": "The clause uses 'the last' which could mean 'only the last' or 'the most recent of any saved'. This affects implementation because an endpoint could choose to buffer all WINDOW_UPDATE frames, or only the most recent one.",
+    "missing_information": "It is unclear whether the endpoint is required to save all WINDOW_UPDATE frames, or only the last one. The phrase 'the last' could be interpreted as either the most recent or the only one saved."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:36:16.232765+00:00",
+  "document_id": "draft-ietf-quic-tls-00",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "333246f588204c9e719bd485d8892b3b2043b3cf9bfc9b953c4a6e9e6155598f",
+  "lineage_ids": "lineage:da714cf7a58b147e827c2117",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 208,
+    "load_duration": 4603200,
+    "prompt_eval_count": 569,
+    "total_duration": 7838498300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"An endpoint MAY save the last protected WINDOW_UPDATE frame it receives for each stream and apply the values once the TLS handshake completes.\", \"interpretation_a\": \"The endpoint must save *only* the last WINDOW_UPDATE frame received for each stream.\", \"interpretation_b\": \"The endpoint may save multiple WINDOW_UPDATE frames, but is only required to apply the last one received for each stream.\", \"missing_information\": \"It is unclear whether the endpoint is required to save all WINDOW_UPDATE frames, or only the last one. The phrase 'the last' could be interpreted as either the most recent or the only one saved.\",\"justification\": \"The clause uses 'the last' which could mean 'only the last' or 'the most recent of any saved'. This affects implementation because an endpoint could choose to buffer all WINDOW_UPDATE frames, or only the most recent one.\"}",
+  "record_id": "37beab40abb06cb986126fb5e55a352db5a429a05881e20e3567c6426f16a335",
+  "revision": "00",
+  "schema_version": 1,
+  "section_ids": "5.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.828
+}

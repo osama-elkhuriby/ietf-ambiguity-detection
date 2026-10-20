@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides clear instructions: once a GOAWAY is sent, the server will refuse new requests on streams with a higher stream ID, and clients must not send new requests after receiving GOAWAY. The language is precise and does not allow for multiple materially different interpretations. There is no missing constraint that would affect implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:07:39.032104+00:00",
+  "document_id": "draft-ietf-quic-http-09",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "67d57f83ce7e09871a261b0f36e8cb1faed14e0872fae4ac3ea7e4550da05709",
+  "lineage_ids": "lineage:7aca0659af99a59016f17290",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 122,
+    "load_duration": 10877800,
+    "prompt_eval_count": 561,
+    "total_duration": 5142498600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides clear instructions: once a GOAWAY is sent, the server will refuse new requests on streams with a higher stream ID, and clients must not send new requests after receiving GOAWAY. The language is precise and does not allow for multiple materially different interpretations. There is no missing constraint that would affect implementation behavior.\"\n}",
+  "record_id": "ffa779f9f9f0207129683c4065aadb081f02752d4860665d2f6c175aed98ca51",
+  "revision": "09",
+  "schema_version": 1,
+  "section_ids": "4.2.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.156
+}

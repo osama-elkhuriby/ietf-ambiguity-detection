@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "though it MAY choose to treat having connection IDs in need of retirement that exceed this limit as a connection error of type CONNECTION_ID_LIMIT_ERROR.",
+    "interpretation_a": "An endpoint can choose to tolerate exceeding the active_connection_id limit by reporting a CONNECTION_ID_LIMIT_ERROR, allowing continued operation with potentially degraded performance.",
+    "interpretation_b": "An endpoint can choose to strictly enforce the active_connection_id limit, immediately terminating the connection upon exceeding it by reporting a CONNECTION_ID_LIMIT_ERROR.",
+    "is_ambiguous": "yes",
+    "justification": "The 'MAY' clause introduces ambiguity about whether exceeding the limit is a hard error condition or a soft one that can be tolerated. This impacts how an implementation handles connection ID retirement and potential connection errors.",
+    "missing_information": "The text does not specify *when* an endpoint would choose to report the error versus simply tolerate exceeding the limit. This affects implementation choices regarding error handling and connection stability."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:23:25.538976+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "0be5a2cfa396b3bb2f9a74ab81679772bd101ec7cf97a08d0e8f730b1033bd20",
+  "lineage_ids": "lineage:bdcc23ed4f15fe73df811db2",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 223,
+    "load_duration": 4020800,
+    "prompt_eval_count": 621,
+    "total_duration": 8376530200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"though it MAY choose to treat having connection IDs in need of retirement that exceed this limit as a connection error of type CONNECTION_ID_LIMIT_ERROR.\", \"interpretation_a\": \"An endpoint can choose to tolerate exceeding the active_connection_id limit by reporting a CONNECTION_ID_LIMIT_ERROR, allowing continued operation with potentially degraded performance.\", \"interpretation_b\": \"An endpoint can choose to strictly enforce the active_connection_id limit, immediately terminating the connection upon exceeding it by reporting a CONNECTION_ID_LIMIT_ERROR.\", \"missing_information\": \"The text does not specify *when* an endpoint would choose to report the error versus simply tolerate exceeding the limit. This affects implementation choices regarding error handling and connection stability.\", \"justification\": \"The 'MAY' clause introduces ambiguity about whether exceeding the limit is a hard error condition or a soft one that can be tolerated. This impacts how an implementation handles connection ID retirement and potential connection errors.\"}",
+  "record_id": "5162dd01258a319e8f275bc879abf3ba6a4f843af4909e82a2a18c7c2f0b5bce",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "5.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.375
+}

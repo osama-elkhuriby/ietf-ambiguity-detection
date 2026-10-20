@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless the receiver treats this as a connection error",
+    "interpretation_a": "The receiver must account for the frame against the connection flow‑control window unless it treats the frame as a connection error, in which case the accounting is waived.",
+    "interpretation_b": "The receiver must always account for the frame against the connection flow‑control window, even if it treats the frame as a connection error.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether the exception applies, leaving two materially different implementation behaviours possible.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T03:53:11.240279+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "ec6b204a18fbfc52ca6cef94a626ea9c0a9f15c4b9e7ee607159c7fe8accd949",
+  "lineage_ids": "lineage:8f93e319448c06175a993a81",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 358,
+    "load_duration": 2551200,
+    "prompt_eval_count": 746,
+    "total_duration": 3242684000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"unless the receiver treats this as a connection error\",\n  \"interpretation_a\": \"The receiver must account for the frame against the connection flow‑control window unless it treats the frame as a connection error, in which case the accounting is waived.\",\n  \"interpretation_b\": \"The receiver must always account for the frame against the connection flow‑control window, even if it treats the frame as a connection error.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify whether the exception applies, leaving two materially different implementation behaviours possible.\"\n}",
+  "record_id": "1b6c68d337833e9c8d337c61de51b1f7f4ada07f851dad448f082d8049b8ce8a",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 15.766
+}

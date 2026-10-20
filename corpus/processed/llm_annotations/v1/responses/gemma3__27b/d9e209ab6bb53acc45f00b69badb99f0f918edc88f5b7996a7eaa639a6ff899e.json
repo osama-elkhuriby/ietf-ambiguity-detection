@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "smaller maximum data than one found in an older packet",
+    "interpretation_a": "The receiver must accept a MAX_DATA frame with a lower value than a previously received MAX_DATA frame, potentially leading to a conservative (and less efficient) data flow limit.",
+    "interpretation_b": "The receiver must accept a MAX_DATA frame with a lower value, but only if the older packet is considered invalid or superseded due to packet number or connection ID changes, effectively prioritizing the newer, smaller limit.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states the receiver MUST accept a smaller maximum data value from an outdated frame. However, it doesn't specify *how* the receiver should handle this situation. Does it simply apply the lower limit, or does it consider the older packet invalid and ignore its value? This missing constraint leads to different implementation behaviors.",
+    "missing_information": "The conditions under which an 'older packet' is considered valid or invalid are not clearly defined. This impacts how the receiver handles potentially conflicting MAX_DATA values."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:08:12.216208+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "8614b1e329a1b351cae63928401fd01095dba2d888fdd2c6525c4c995f7c6ff3",
+  "lineage_ids": "lineage:526ec5ae2bfe891e9c0ebf31",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 237,
+    "load_duration": 4788100,
+    "prompt_eval_count": 590,
+    "total_duration": 8839608400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"smaller maximum data than one found in an older packet\", \"interpretation_a\": \"The receiver must accept a MAX_DATA frame with a lower value than a previously received MAX_DATA frame, potentially leading to a conservative (and less efficient) data flow limit.\", \"interpretation_b\": \"The receiver must accept a MAX_DATA frame with a lower value, but only if the older packet is considered invalid or superseded due to packet number or connection ID changes, effectively prioritizing the newer, smaller limit.\", \"missing_information\": \"The conditions under which an 'older packet' is considered valid or invalid are not clearly defined. This impacts how the receiver handles potentially conflicting MAX_DATA values.\", \"justification\": \"The clause states the receiver MUST accept a smaller maximum data value from an outdated frame. However, it doesn't specify *how* the receiver should handle this situation. Does it simply apply the lower limit, or does it consider the older packet invalid and ignore its value? This missing constraint leads to different implementation behaviors.\"}",
+  "record_id": "d9e209ab6bb53acc45f00b69badb99f0f918edc88f5b7996a7eaa639a6ff899e",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "13.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.828
+}

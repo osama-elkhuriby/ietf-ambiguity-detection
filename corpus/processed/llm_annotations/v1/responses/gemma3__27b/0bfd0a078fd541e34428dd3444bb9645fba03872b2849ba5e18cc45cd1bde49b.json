@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "too small to be valid QUIC packets",
+    "interpretation_a": "Packets smaller than a fixed minimum size (e.g., 21 bytes as suggested in the next clause) are discarded.",
+    "interpretation_b": "Packets are discarded if their size is insufficient to contain a valid QUIC header and potentially some payload, but the exact minimum size is not defined and depends on the specific QUIC version and configuration.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"too small\" is subjective without a defined lower bound. Different implementations could reasonably interpret this differently, leading to interoperability issues. The example in the following clause suggests a minimum of 21 bytes, but this is not a normative requirement within the target clause itself.",
+    "missing_information": "The minimum valid QUIC packet size is not explicitly defined in the target clause. While the next clause provides an example, it doesn't establish a universal minimum."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:57:39.539488+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "3ec79316a1758d7db492b39f59c6f6ffc34af8da3ab47303482066e84f80b336",
+  "lineage_ids": "lineage:88f195e59dbf616642608a8c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 217,
+    "load_duration": 3765000,
+    "prompt_eval_count": 600,
+    "total_duration": 8164366900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"too small to be valid QUIC packets\", \"interpretation_a\": \"Packets smaller than a fixed minimum size (e.g., 21 bytes as suggested in the next clause) are discarded.\", \"interpretation_b\": \"Packets are discarded if their size is insufficient to contain a valid QUIC header and potentially some payload, but the exact minimum size is not defined and depends on the specific QUIC version and configuration.\", \"missing_information\": \"The minimum valid QUIC packet size is not explicitly defined in the target clause. While the next clause provides an example, it doesn't establish a universal minimum.\", \"justification\": \"The phrase \\\"too small\\\" is subjective without a defined lower bound. Different implementations could reasonably interpret this differently, leading to interoperability issues. The example in the following clause suggests a minimum of 21 bytes, but this is not a normative requirement within the target clause itself.\"}",
+  "record_id": "0bfd0a078fd541e34428dd3444bb9645fba03872b2849ba5e18cc45cd1bde49b",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "10.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.156
+}

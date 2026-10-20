@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Data received out of order MUST be buffered for later delivery, as long as it is not in violation of the receiver's flow control limits.",
+    "interpretation_a": "The receiver must buffer out‑of‑order data only when it does not violate flow control limits; if buffering would violate those limits, the MUST does not apply, so the receiver may drop or otherwise handle the data.",
+    "interpretation_b": "The receiver must buffer out‑of‑order data regardless, but the clause’s “as long as” means it cannot buffer data that would violate flow control limits; in that case the receiver must still buffer the data but cannot deliver it until the limits allow.",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a clear instruction for what to do with out‑of‑order data that would violate flow control limits, allowing two materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T17:11:42.290771+00:00",
+  "document_id": "draft-ietf-quic-transport-06",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "28a576c24a923acb6f67a806130795b4c8ccf74c850c07023204558957d2c2d1",
+  "lineage_ids": "lineage:f3b456085049d8db60e2ac22",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1236,
+    "load_duration": 5233000,
+    "prompt_eval_count": 591,
+    "total_duration": 10770128500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"Data received out of order MUST be buffered for later delivery, as long as it is not in violation of the receiver's flow control limits.\",\n  \"interpretation_a\": \"The receiver must buffer out‑of‑order data only when it does not violate flow control limits; if buffering would violate those limits, the MUST does not apply, so the receiver may drop or otherwise handle the data.\",\n  \"interpretation_b\": \"The receiver must buffer out‑of‑order data regardless, but the clause’s “as long as” means it cannot buffer data that would violate flow control limits; in that case the receiver must still buffer the data but cannot deliver it until the limits allow.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause lacks a clear instruction for what to do with out‑of‑order data that would violate flow control limits, allowing two materially different implementation behaviours.\"\n}",
+  "record_id": "96937204aeb96b66e04e9fcd98a9cb4e8b85891369b30f208d32690d2c95da37",
+  "revision": "06",
+  "schema_version": 1,
+  "section_ids": "10.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.766
+}

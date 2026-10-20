@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear condition for discarding packets based on packet numbers and key usage. It specifies that once a packet with a given packet number is successfully received, any packets in the same packet number space with higher packet numbers must be discarded if they cannot be unprotected using the same key or a subsequent packet protection key. The language is precise and does not allow for multiple materially different interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:32:56.805139+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "d6cd8d4d7fb200008c80cd7f5c7a8fda49a45cceb439da799841dc49b15c762f",
+  "lineage_ids": "lineage:903baf03be0ea992a77818cf",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 134,
+    "load_duration": 4116700,
+    "prompt_eval_count": 555,
+    "total_duration": 5539421500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear condition for discarding packets based on packet numbers and key usage. It specifies that once a packet with a given packet number is successfully received, any packets in the same packet number space with higher packet numbers must be discarded if they cannot be unprotected using the same key or a subsequent packet protection key. The language is precise and does not allow for multiple materially different interpretations.\"\n}",
+  "record_id": "419a5433c35c629461364437555b5b328bd348445e46283ae0aaa2e5cb399b78",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "5.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.546
+}

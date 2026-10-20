@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD cease any transmission of 0-RTT data",
+    "interpretation_a": "The clause could be interpreted as requiring the client to stop sending new 0-RTT data only, or as requiring the client to stop sending all 0-RTT data, including data already in flight.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a constraint on whether in‑flight 0‑RTT data must also be stopped, allowing two materially different implementation behaviours.",
+    "missing_information": "Whether the client should also stop sending 0-RTT data that is already in flight is not specified."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T12:26:46.713037+00:00",
+  "document_id": "draft-ietf-quic-tls-12",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "59ae21f31b35a581088ff77998f2c3f34a44882f774821f110e4ff71ac95797e",
+  "lineage_ids": "lineage:5913ead06b803681e439dafe",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2432,
+    "load_duration": 4005800,
+    "prompt_eval_count": 638,
+    "total_duration": 21247760300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"SHOULD cease any transmission of 0-RTT data\",\n  \"interpretation_a\": \"The clause could be interpreted as requiring the client to stop sending new 0-RTT data only, or as requiring the client to stop sending all 0-RTT data, including data already in flight.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"Whether the client should also stop sending 0-RTT data that is already in flight is not specified.\",\n  \"justification\": \"The clause lacks a constraint on whether in‑flight 0‑RTT data must also be stopped, allowing two materially different implementation behaviours.\"\n}",
+  "record_id": "394568295abf1d866a5517bd4813a68305f6d4614fe3c06b097255be442009c4",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "6.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 89.062
+}

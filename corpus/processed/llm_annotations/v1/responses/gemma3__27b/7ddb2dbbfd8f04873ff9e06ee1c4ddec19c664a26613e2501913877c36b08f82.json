@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD create",
+    "interpretation_a": "An endpoint is required to create the HTTP control stream and mandatory extension streams, but is not required to create additional streams.",
+    "interpretation_b": "An endpoint is encouraged to create the HTTP control stream and mandatory extension streams, and is also encouraged to create additional streams if resources allow.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' creates ambiguity. It is unclear whether the endpoint is required to create the streams or merely encouraged to do so. This affects implementation because a strict interpretation would require creation, while a lenient one would only encourage it.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:55:20.699567+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "3c2cc1cc7d3a9ec7b755ade50346a3da8674f7f9d45181705d6524cbf30a6673",
+  "lineage_ids": "lineage:89b8cf2e12edc1c010bf5d87",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 155,
+    "load_duration": 19770200,
+    "prompt_eval_count": 662,
+    "total_duration": 6167393100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD create\", \"interpretation_a\": \"An endpoint is required to create the HTTP control stream and mandatory extension streams, but is not required to create additional streams.\", \"interpretation_b\": \"An endpoint is encouraged to create the HTTP control stream and mandatory extension streams, and is also encouraged to create additional streams if resources allow.\", \"missing_information\": \"\", \"justification\": \"The use of 'SHOULD' creates ambiguity. It is unclear whether the endpoint is required to create the streams or merely encouraged to do so. This affects implementation because a strict interpretation would require creation, while a lenient one would only encourage it.\"}",
+  "record_id": "7ddb2dbbfd8f04873ff9e06ee1c4ddec19c664a26613e2501913877c36b08f82",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.172
+}

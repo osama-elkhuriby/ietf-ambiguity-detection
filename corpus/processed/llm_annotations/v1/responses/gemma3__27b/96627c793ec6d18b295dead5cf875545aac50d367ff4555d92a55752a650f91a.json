@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD maintain compatibility",
+    "interpretation_a": "Server operators should continue to accept and process requests using the old, expired records for a period of time, even after publishing new records.",
+    "interpretation_b": "Server operators should make a best-effort attempt to support old records, but are not required to actively process them or guarantee functionality.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' grants discretion, but the lack of a defined duration or threshold for 'nearly all connections' creates ambiguity in implementation. Different operators could reasonably interpret 'nearly all' as 90%, 95%, 99%, or some other value, leading to inconsistent behavior.",
+    "missing_information": "The duration for which 'compatibility' must be maintained is not defined. The phrase 'nearly all connections' is vague and lacks a quantifiable threshold. Without a defined threshold, implementations may differ on when to stop supporting expired records."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:08:23.553239+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "eb5cb1027c33e79b27c1c3c958a503d522c7d24886c3e366177f1e25e53588b6",
+  "lineage_ids": "lineage:78640ff144e9406ca56a5ba4",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 216,
+    "load_duration": 3505800,
+    "prompt_eval_count": 570,
+    "total_duration": 8090647200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD maintain compatibility\", \"interpretation_a\": \"Server operators should continue to accept and process requests using the old, expired records for a period of time, even after publishing new records.\", \"interpretation_b\": \"Server operators should make a best-effort attempt to support old records, but are not required to actively process them or guarantee functionality.\", \"missing_information\": \"The duration for which 'compatibility' must be maintained is not defined. The phrase 'nearly all connections' is vague and lacks a quantifiable threshold. Without a defined threshold, implementations may differ on when to stop supporting expired records.\", \"justification\": \"The use of 'SHOULD' grants discretion, but the lack of a defined duration or threshold for 'nearly all connections' creates ambiguity in implementation. Different operators could reasonably interpret 'nearly all' as 90%, 95%, 99%, or some other value, leading to inconsistent behavior.\"}",
+  "record_id": "96627c793ec6d18b295dead5cf875545aac50d367ff4555d92a55752a650f91a",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "9.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.094
+}

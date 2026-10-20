@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "stop processing further",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not define the condition under which processing should resume, making the phrase \"stop processing further\" under‑specified.",
+    "missing_information": "When to resume processing after dropping the unacceptable segment is not specified, leading to multiple reasonable implementation behaviours (e.g., stop until the next acceptable segment arrives, stop until the connection is closed, etc.)."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T20:05:38.817589+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "d820b84cc6f0049630884ce4b7e1d26884b8721edba64db64c65898f25186e26",
+  "lineage_ids": "lineage:cd0bf5dcd4a0d481154aedc6",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2571,
+    "load_duration": 5828900,
+    "prompt_eval_count": 583,
+    "total_duration": 22399379200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"stop processing further\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"When to resume processing after dropping the unacceptable segment is not specified, leading to multiple reasonable implementation behaviours (e.g., stop until the next acceptable segment arrives, stop until the connection is closed, etc.).\",\n  \"justification\": \"The clause does not define the condition under which processing should resume, making the phrase \\\"stop processing further\\\" under‑specified.\"\n}",
+  "record_id": "72d3870d2ed974b11f1af53072d837969d6eb1791395a3d9693741e283f3bf80",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.10.7.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 22.391
+}

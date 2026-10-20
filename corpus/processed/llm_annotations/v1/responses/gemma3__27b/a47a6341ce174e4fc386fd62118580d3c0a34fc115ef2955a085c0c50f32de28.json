@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT update the connection ID",
+    "interpretation_a": "The client should continue to use the original connection ID for all subsequent 0-RTT packets, even if the server signals a change.",
+    "interpretation_b": "The client should only use the original connection ID for 0-RTT packets sent *before* receiving the new connection ID from the server; after that, it should use the new ID.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'it uses for 0-RTT packets' is ambiguous. Does it refer to all 0-RTT packets the client *has* used, or all 0-RTT packets the client *will* use? The lack of temporal specificity creates two reasonable interpretations.",
+    "missing_information": "The clause does not specify whether the restriction applies to all 0-RTT packets ever sent, or only those sent before the server's response. This affects how the client handles subsequent 0-RTT packets after receiving the server's new connection ID."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:51:06.087354+00:00",
+  "document_id": "draft-ietf-quic-transport-05",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "fc44fa0616989c773b00d6df62292b61e6896635fb7bef58fa4d63f1ff8d9a6a",
+  "lineage_ids": "lineage:7153ca42e4da587d5c4a31d2",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 232,
+    "load_duration": 3008400,
+    "prompt_eval_count": 575,
+    "total_duration": 8633941000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT update the connection ID\", \"interpretation_a\": \"The client should continue to use the original connection ID for all subsequent 0-RTT packets, even if the server signals a change.\", \"interpretation_b\": \"The client should only use the original connection ID for 0-RTT packets sent *before* receiving the new connection ID from the server; after that, it should use the new ID.\", \"missing_information\": \"The clause does not specify whether the restriction applies to all 0-RTT packets ever sent, or only those sent before the server's response. This affects how the client handles subsequent 0-RTT packets after receiving the server's new connection ID.\", \"justification\": \"The phrase 'it uses for 0-RTT packets' is ambiguous. Does it refer to all 0-RTT packets the client *has* used, or all 0-RTT packets the client *will* use? The lack of temporal specificity creates two reasonable interpretations.\"}",
+  "record_id": "a47a6341ce174e4fc386fd62118580d3c0a34fc115ef2955a085c0c50f32de28",
+  "revision": "05",
+  "schema_version": 1,
+  "section_ids": "5.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.64
+}

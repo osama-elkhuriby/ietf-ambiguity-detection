@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "congestion control or connection-level flow control",
+    "interpretation_a": "Stream 1 is exempt from *both* congestion control and connection-level flow control.",
+    "interpretation_b": "Stream 1 is exempt from congestion control, and also exempt from connection-level flow control, but these are separate requirements.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'or' creates ambiguity. Does it mean Stream 1 must be exempt from at least one of congestion control or connection-level flow control, or must it be exempt from both?",
+    "missing_information": "It is unclear whether 'or' is intended to be inclusive or exclusive. If inclusive, then the statement allows for Stream 1 to be exempt from either or both congestion control and connection-level flow control. If exclusive, then it must be exempt from both."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:58:08.740130+00:00",
+  "document_id": "draft-ietf-quic-transport-01",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "8efc7bc9341798cc7a87c4e39a69039a8cc2154d8f688f44cfb48bb8365a8fbf",
+  "lineage_ids": "lineage:b57a81bd800f05b661fa8021",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 197,
+    "load_duration": 4784800,
+    "prompt_eval_count": 583,
+    "total_duration": 7432195100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"congestion control or connection-level flow control\", \"interpretation_a\": \"Stream 1 is exempt from *both* congestion control and connection-level flow control.\", \"interpretation_b\": \"Stream 1 is exempt from congestion control, and also exempt from connection-level flow control, but these are separate requirements.\", \"missing_information\": \"It is unclear whether 'or' is intended to be inclusive or exclusive. If inclusive, then the statement allows for Stream 1 to be exempt from either or both congestion control and connection-level flow control. If exclusive, then it must be exempt from both.\", \"justification\": \"The use of 'or' creates ambiguity. Does it mean Stream 1 must be exempt from at least one of congestion control or connection-level flow control, or must it be exempt from both?\"}",
+  "record_id": "0e4e9ad1593b56e304eec18311492935fed3b9cd81d79d51f35abc6b4d8b86f6",
+  "revision": "01",
+  "schema_version": 1,
+  "section_ids": "9.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.438
+}

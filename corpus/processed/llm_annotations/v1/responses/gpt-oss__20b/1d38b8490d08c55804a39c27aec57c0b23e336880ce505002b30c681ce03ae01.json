@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Any reduction in the QUIC maximum packet size in response to ICMP messages MAY be provisional until QUIC's loss detection algorithm determines that the quoted packet has actually been lost.",
+    "interpretation_a": "The reduction is provisional and will be undone immediately if the loss detection algorithm determines that the quoted packet was not lost.",
+    "interpretation_b": "The reduction remains provisional until the loss detection algorithm determines that the quoted packet was lost; if the algorithm determines that the packet was not lost, the reduction stays provisional but may be undone later.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify what happens if the loss detection algorithm determines that the quoted packet was not lost, leaving a concrete missing constraint that can lead to materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T14:15:44.723082+00:00",
+  "document_id": "draft-ietf-quic-transport-31",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "5ca4509876a7d91e55854ea336088cdcafcd055b3e20411c86606c25429797f2",
+  "lineage_ids": "lineage:2e6087ef7daeafd9955b8a3a",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3753,
+    "load_duration": 4343000,
+    "prompt_eval_count": 593,
+    "total_duration": 32407943900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"Any reduction in the QUIC maximum packet size in response to ICMP messages MAY be provisional until QUIC's loss detection algorithm determines that the quoted packet has actually been lost.\",\n  \"interpretation_a\": \"The reduction is provisional and will be undone immediately if the loss detection algorithm determines that the quoted packet was not lost.\",\n  \"interpretation_b\": \"The reduction remains provisional until the loss detection algorithm determines that the quoted packet was lost; if the algorithm determines that the packet was not lost, the reduction stays provisional but may be undone later.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify what happens if the loss detection algorithm determines that the quoted packet was not lost, leaving a concrete missing constraint that can lead to materially different implementation behaviours.\"\n}",
+  "record_id": "1d38b8490d08c55804a39c27aec57c0b23e336880ce505002b30c681ce03ae01",
+  "revision": "31",
+  "schema_version": 1,
+  "section_ids": "14.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 32.422
+}

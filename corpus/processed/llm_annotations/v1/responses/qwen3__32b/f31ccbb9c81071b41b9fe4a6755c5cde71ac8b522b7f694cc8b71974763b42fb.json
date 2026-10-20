@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD be the most restrictive possible value.",
+    "interpretation_a": "Implementations should use the most restrictive value possible, implying a strict default behavior unless explicitly configured otherwise.",
+    "interpretation_b": "Implementations are advised to use the most restrictive value, but may choose a less restrictive value if they deem it appropriate for their use case.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' introduces discretion in implementation behavior. The phrase 'most restrictive possible value' is not quantified or defined, allowing for different interpretations of what constitutes 'most restrictive' in practice. This lack of a concrete constraint leads to ambiguity in implementation.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:06:16.539094+00:00",
+  "document_id": "draft-ietf-quic-http-24",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "196f44b64f6ad25f43682627fe930c21cd5420cc9a7242b771c6d7c040ce0a69",
+  "lineage_ids": "lineage:eef2c0bc1736baebb7d649ec",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 169,
+    "load_duration": 23787400,
+    "prompt_eval_count": 502,
+    "total_duration": 7050771800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"SHOULD be the most restrictive possible value.\",\n  \"interpretation_a\": \"Implementations should use the most restrictive value possible, implying a strict default behavior unless explicitly configured otherwise.\",\n  \"interpretation_b\": \"Implementations are advised to use the most restrictive value, but may choose a less restrictive value if they deem it appropriate for their use case.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The use of 'SHOULD' introduces discretion in implementation behavior. The phrase 'most restrictive possible value' is not quantified or defined, allowing for different interpretations of what constitutes 'most restrictive' in practice. This lack of a concrete constraint leads to ambiguity in implementation.\"\n}",
+  "record_id": "f31ccbb9c81071b41b9fe4a6755c5cde71ac8b522b7f694cc8b71974763b42fb",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "11.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.063
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause is unambiguous. It clearly states that receiving a STOP_SENDING frame for a receive-only stream must result in terminating the connection with a PROTOCOL_VIOLATION error. There is no room for multiple interpretations, and the condition (receiving a STOP_SENDING frame for a receive-only stream) is clearly defined.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:31:03.413414+00:00",
+  "document_id": "draft-ietf-quic-transport-17",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "e376db38272a5f2d06d69a6b3d478c6a067f68612283d85ee4a76406c586c76f",
+  "lineage_ids": "lineage:39bf6fd939cebcc87599ad80",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 122,
+    "load_duration": 6187300,
+    "prompt_eval_count": 548,
+    "total_duration": 5040242900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause is unambiguous. It clearly states that receiving a STOP_SENDING frame for a receive-only stream must result in terminating the connection with a PROTOCOL_VIOLATION error. There is no room for multiple interpretations, and the condition (receiving a STOP_SENDING frame for a receive-only stream) is clearly defined.\"\n}",
+  "record_id": "a53d26e9c4a6bc0bed6eb7aa3fb8348f3e625a7755b76a197c1fb63e5a52f0c1",
+  "revision": "17",
+  "schema_version": 1,
+  "section_ids": "19.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.047
+}

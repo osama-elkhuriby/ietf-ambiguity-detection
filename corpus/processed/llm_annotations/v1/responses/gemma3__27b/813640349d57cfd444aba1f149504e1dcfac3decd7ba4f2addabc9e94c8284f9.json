@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT include the deprecated userinfo subcomponent",
+    "interpretation_a": "The :authority pseudo-header field MUST NOT include the userinfo subcomponent (e.g., username:password) when the scheme is 'http' or 'https'.",
+    "interpretation_b": "The :authority pseudo-header field MUST NOT include the userinfo subcomponent when the scheme is 'http' or 'https', but this restriction only applies to CONNECT or asterisk-form OPTIONS requests, as stated in the first part of the clause.",
+    "is_ambiguous": "yes",
+    "justification": "The clause begins by specifying a condition for CONNECT or asterisk-form OPTIONS requests, then immediately follows with a MUST NOT statement that isn't explicitly tied to those request types. This creates ambiguity about the scope of the restriction.",
+    "missing_information": "It is unclear whether the restriction on userinfo applies to all requests using :authority, or only to CONNECT or asterisk-form OPTIONS requests. The sentence structure suggests it applies to all, but the initial context limits the scope to those request types."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:39:06.592379+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "83e017a94155d93ff0d1776ae741308cf9d84d2d1b5abf51eedc9eca9409a843",
+  "lineage_ids": "lineage:a381208d5dc6044004847670",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 242,
+    "load_duration": 21115800,
+    "prompt_eval_count": 624,
+    "total_duration": 9260655800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT include the deprecated userinfo subcomponent\", \"interpretation_a\": \"The :authority pseudo-header field MUST NOT include the userinfo subcomponent (e.g., username:password) when the scheme is 'http' or 'https'.\", \"interpretation_b\": \"The :authority pseudo-header field MUST NOT include the userinfo subcomponent when the scheme is 'http' or 'https', but this restriction only applies to CONNECT or asterisk-form OPTIONS requests, as stated in the first part of the clause.\", \"missing_information\": \"It is unclear whether the restriction on userinfo applies to all requests using :authority, or only to CONNECT or asterisk-form OPTIONS requests. The sentence structure suggests it applies to all, but the initial context limits the scope to those request types.\", \"justification\": \"The clause begins by specifying a condition for CONNECT or asterisk-form OPTIONS requests, then immediately follows with a MUST NOT statement that isn't explicitly tied to those request types. This creates ambiguity about the scope of the restriction.\"}",
+  "record_id": "813640349d57cfd444aba1f149504e1dcfac3decd7ba4f2addabc9e94c8284f9",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.266
+}

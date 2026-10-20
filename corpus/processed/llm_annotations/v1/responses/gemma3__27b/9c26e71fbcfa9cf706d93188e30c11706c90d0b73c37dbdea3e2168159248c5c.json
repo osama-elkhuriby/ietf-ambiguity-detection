@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Section XX",
+    "interpretation_a": "The endpoint MUST close the connection if it receives STREAM frames for a stream in the half-closed (remote) state, referencing a specific section XX for the error details.",
+    "interpretation_b": "The endpoint MUST close the connection if it receives STREAM frames for a stream in the half-closed (remote) state, but the details of the error are not defined in the provided text, creating uncertainty about the exact error handling.",
+    "is_ambiguous": "yes",
+    "justification": "The reference to 'Section XX' is incomplete. Without knowing the content of Section XX, it's impossible to determine the precise error condition that triggers the connection closure. This creates a missing constraint affecting implementation behaviour.",
+    "missing_information": "The content of Section XX is required to fully understand the error condition and ensure consistent implementation."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:48:06.676957+00:00",
+  "document_id": "draft-ietf-quic-transport-00",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "48245178553070e88909df6c42d33778a8d9b59d47de521040ba0dc8a5a85cee",
+  "lineage_ids": "lineage:6c010d662a8f7086fd515f1d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 196,
+    "load_duration": 3846000,
+    "prompt_eval_count": 592,
+    "total_duration": 7424738600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Section XX\", \"interpretation_a\": \"The endpoint MUST close the connection if it receives STREAM frames for a stream in the half-closed (remote) state, referencing a specific section XX for the error details.\", \"interpretation_b\": \"The endpoint MUST close the connection if it receives STREAM frames for a stream in the half-closed (remote) state, but the details of the error are not defined in the provided text, creating uncertainty about the exact error handling.\", \"missing_information\": \"The content of Section XX is required to fully understand the error condition and ensure consistent implementation.\", \"justification\": \"The reference to 'Section XX' is incomplete. Without knowing the content of Section XX, it's impossible to determine the precise error condition that triggers the connection closure. This creates a missing constraint affecting implementation behaviour.\"}",
+  "record_id": "9c26e71fbcfa9cf706d93188e30c11706c90d0b73c37dbdea3e2168159248c5c",
+  "revision": "00",
+  "schema_version": 1,
+  "section_ids": "8.1.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.422
+}

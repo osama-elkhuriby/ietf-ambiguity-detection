@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "difficult to guess",
+    "interpretation_a": "The token must have high entropy, e.g., 128‑bit random value, to be computationally infeasible to guess.",
+    "interpretation_b": "The token must simply be unpredictable to an attacker, with no specified entropy threshold, allowing implementations to choose any reasonable randomness.",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a concrete constraint on the token’s entropy or unpredictability, leaving room for materially different implementation behaviours.",
+    "missing_information": "No explicit entropy or statistical requirement is defined for what constitutes 'difficult to guess'."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T17:05:23.694168+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "bf3b4608a9ec9c1b4d229ce8efc4d90dd1ceaf0528a6040d5995e6b9dfa5579b",
+  "lineage_ids": "lineage:7f77730741d00dfc080a867a",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 5862,
+    "load_duration": 6563700,
+    "prompt_eval_count": 563,
+    "total_duration": 50772496400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"difficult to guess\",\n  \"interpretation_a\": \"The token must have high entropy, e.g., 128‑bit random value, to be computationally infeasible to guess.\",\n  \"interpretation_b\": \"The token must simply be unpredictable to an attacker, with no specified entropy threshold, allowing implementations to choose any reasonable randomness.\",\n  \"missing_information\": \"No explicit entropy or statistical requirement is defined for what constitutes 'difficult to guess'.\",\n  \"justification\": \"The clause lacks a concrete constraint on the token’s entropy or unpredictability, leaving room for materially different implementation behaviours.\"\n}",
+  "record_id": "90ceced66a75969b246c5261f94020e2204ed9b8ce98818bbac663c49e921a77",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "10.3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 50.766
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "which is recommended to be the minimum of 10 * max_datagram_size and max(2* max_datagram_size, 14720))",
+    "interpretation_a": "The initial congestion window MUST be set to the recommended minimum value (i.e., the minimum of 10 * max_datagram_size and max(2*max_datagram_size, 14720)).",
+    "interpretation_b": "The initial congestion window MAY be set to the recommended minimum value, but implementations are free to choose a different value.",
+    "is_ambiguous": "yes",
+    "justification": "The clause uses the word \"recommended\" without specifying whether it is a requirement, leaving the exact value for the initial congestion window unspecified.",
+    "missing_information": "Whether the recommended value is mandatory or optional."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T11:12:44.130111+00:00",
+  "document_id": "draft-ietf-quic-recovery-27",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "c4bf353b06a6db9a20272b3af925c75e83a1d57b076ee483273b867800f9ab44",
+  "lineage_ids": "lineage:d6650790b9580aeed7fbb39e",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 634,
+    "load_duration": 7841500,
+    "prompt_eval_count": 804,
+    "total_duration": 5614079800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"which is recommended to be the minimum of 10 * max_datagram_size and max(2* max_datagram_size, 14720))\",\n  \"interpretation_a\": \"The initial congestion window MUST be set to the recommended minimum value (i.e., the minimum of 10 * max_datagram_size and max(2*max_datagram_size, 14720)).\",\n  \"interpretation_b\": \"The initial congestion window MAY be set to the recommended minimum value, but implementations are free to choose a different value.\",\n  \"missing_information\": \"Whether the recommended value is mandatory or optional.\",\n  \"justification\": \"The clause uses the word \\\"recommended\\\" without specifying whether it is a requirement, leaving the exact value for the initial congestion window unspecified.\"\n}",
+  "record_id": "418d13bb0383e5bbe566d5425148c4b3e04a00a3fdf7fe0d3daef0d0ed8f94a6",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "6.8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 51.0
+}

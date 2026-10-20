@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "closest to the next expected packet number",
+    "interpretation_a": "If the truncated packet number is 0x7FFF and the next expected packet number is 0x8000, reconstruction yields 0x8000. If the truncated packet number is 0x8001 and the next expected packet number is 0x8000, reconstruction yields 0x8000.",
+    "interpretation_b": "If the truncated packet number is 0x7FFF and the next expected packet number is 0x8000, reconstruction yields 0x7FFF. If the truncated packet number is 0x8001 and the next expected packet number is 0x8000, reconstruction yields 0x8001.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'closest to' is ambiguous. Does 'closest to' mean numerically closest, or does it mean the next expected value? The example shows that both interpretations are reasonable.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:20:53.803304+00:00",
+  "document_id": "draft-ietf-quic-transport-01",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "f8113da92af1051d266ce229abebd2cb9b81099ff6a8d689113acc8441d0050c",
+  "lineage_ids": "lineage:8841da89ad2cc054f8e35d72",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 241,
+    "load_duration": 3756500,
+    "prompt_eval_count": 566,
+    "total_duration": 8964108300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"closest to the next expected packet number\", \"interpretation_a\": \"If the truncated packet number is 0x7FFF and the next expected packet number is 0x8000, reconstruction yields 0x8000. If the truncated packet number is 0x8001 and the next expected packet number is 0x8000, reconstruction yields 0x8000.\", \"interpretation_b\": \"If the truncated packet number is 0x7FFF and the next expected packet number is 0x8000, reconstruction yields 0x7FFF. If the truncated packet number is 0x8001 and the next expected packet number is 0x8000, reconstruction yields 0x8001.\", \"missing_information\": \"\", \"justification\": \"The phrase 'closest to' is ambiguous. Does 'closest to' mean numerically closest, or does it mean the next expected value? The example shows that both interpretations are reasonable.\"}",
+  "record_id": "fdd991ae7110928cdb69e1ce91cec13313bb60a1962ded6f9fb0511eb6aaa0e2",
+  "revision": "01",
+  "schema_version": 1,
+  "section_ids": "5.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.969
+}

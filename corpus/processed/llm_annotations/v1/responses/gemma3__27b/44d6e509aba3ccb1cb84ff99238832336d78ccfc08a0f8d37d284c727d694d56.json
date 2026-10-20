@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "a reasonable number",
+    "interpretation_a": "A recipient could interpret 'a reasonable number' as 10 empty list elements.",
+    "interpretation_b": "A recipient could interpret 'a reasonable number' as 100 empty list elements.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'a reasonable number' is subjective and lacks a concrete definition. Different implementations could reasonably interpret this phrase differently, leading to inconsistent behavior. The clause attempts to balance handling common errors with preventing denial-of-service attacks, but without a specific limit, this balance is not guaranteed.",
+    "missing_information": "The document does not define what constitutes 'a reasonable number' of empty list elements, leaving room for different implementations. A concrete limit is needed to prevent denial-of-service attacks and ensure consistent behavior."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:04:14.545942+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "245f4fa32654974ac53c841be248c5f30c1f763978fe279efc5a0e9042484ce5",
+  "lineage_ids": "lineage:ef73d230f130f01afd5850df",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 189,
+    "load_duration": 20436000,
+    "prompt_eval_count": 582,
+    "total_duration": 7353760700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"a reasonable number\", \"interpretation_a\": \"A recipient could interpret 'a reasonable number' as 10 empty list elements.\", \"interpretation_b\": \"A recipient could interpret 'a reasonable number' as 100 empty list elements.\", \"missing_information\": \"The document does not define what constitutes 'a reasonable number' of empty list elements, leaving room for different implementations. A concrete limit is needed to prevent denial-of-service attacks and ensure consistent behavior.\",\"justification\": \"The phrase 'a reasonable number' is subjective and lacks a concrete definition. Different implementations could reasonably interpret this phrase differently, leading to inconsistent behavior. The clause attempts to balance handling common errors with preventing denial-of-service attacks, but without a specific limit, this balance is not guaranteed.\"}",
+  "record_id": "44d6e509aba3ccb1cb84ff99238832336d78ccfc08a0f8d37d284c727d694d56",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "5.6.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.359
+}

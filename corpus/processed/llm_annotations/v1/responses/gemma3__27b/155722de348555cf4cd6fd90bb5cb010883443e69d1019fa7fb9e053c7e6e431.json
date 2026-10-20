@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "SHOULD proceed",
+    "interpretation_a": "The server may choose to treat the client as if it doesn't have a validated address and send a Retry.",
+    "interpretation_b": "The server may choose *not* to treat the client as if it doesn't have a validated address and *not* send a Retry, potentially continuing the connection attempt without further validation.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' introduces ambiguity. It allows the server to either proceed as if the address isn't validated (and potentially send a Retry) or to proceed without doing so. This difference in behaviour constitutes ambiguity.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:59:58.236001+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "e2a1bd44df7d916be7a54217b0107e5f599fa47a19c200af28463c8759213df1",
+  "lineage_ids": "lineage:8e0128f0124bd8a8b49be260",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 162,
+    "load_duration": 776700,
+    "prompt_eval_count": 598,
+    "total_duration": 6179508500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"SHOULD proceed\", \"interpretation_a\": \"The server may choose to treat the client as if it doesn't have a validated address and send a Retry.\", \"interpretation_b\": \"The server may choose *not* to treat the client as if it doesn't have a validated address and *not* send a Retry, potentially continuing the connection attempt without further validation.\", \"missing_information\": \"\", \"justification\": \"The use of 'SHOULD' introduces ambiguity. It allows the server to either proceed as if the address isn't validated (and potentially send a Retry) or to proceed without doing so. This difference in behaviour constitutes ambiguity.\"}",
+  "record_id": "155722de348555cf4cd6fd90bb5cb010883443e69d1019fa7fb9e053c7e6e431",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "8.1.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.188
+}

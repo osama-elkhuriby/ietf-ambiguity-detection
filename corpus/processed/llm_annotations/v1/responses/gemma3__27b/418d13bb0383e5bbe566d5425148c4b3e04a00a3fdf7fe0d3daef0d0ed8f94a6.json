@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "10 * max_datagram_size and max(2* max_datagram_size, 14720))",
+    "interpretation_a": "The initial congestion window is calculated as 10 times the max_datagram_size, or the maximum of 2 times the max_datagram_size and 14720, whichever is larger.",
+    "interpretation_b": "The initial congestion window is calculated as the minimum of 10 times the max_datagram_size and the maximum of 2 times the max_datagram_size and 14720. This creates a different result than interpretation_a.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"which is recommended to be the minimum of...\" is grammatically ambiguous. It's unclear if the entire expression before it (10 * max_datagram_size) is recommended to be the minimum of the following expression, or if the recommendation applies only to the calculation of the initial congestion window itself. This leads to two different interpretations of how the initial congestion window is calculated.",
+    "missing_information": "The use of 'and' vs 'minimum' is ambiguous. It is unclear whether the initial congestion window is the result of both calculations, or the minimum of the two."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:18:55.811387+00:00",
+  "document_id": "draft-ietf-quic-recovery-27",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "c4bf353b06a6db9a20272b3af925c75e83a1d57b076ee483273b867800f9ab44",
+  "lineage_ids": "lineage:d6650790b9580aeed7fbb39e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 295,
+    "load_duration": 4066900,
+    "prompt_eval_count": 654,
+    "total_duration": 10990614800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"10 * max_datagram_size and max(2* max_datagram_size, 14720))\", \"interpretation_a\": \"The initial congestion window is calculated as 10 times the max_datagram_size, or the maximum of 2 times the max_datagram_size and 14720, whichever is larger.\", \"interpretation_b\": \"The initial congestion window is calculated as the minimum of 10 times the max_datagram_size and the maximum of 2 times the max_datagram_size and 14720. This creates a different result than interpretation_a.\", \"missing_information\": \"The use of 'and' vs 'minimum' is ambiguous. It is unclear whether the initial congestion window is the result of both calculations, or the minimum of the two.\", \"justification\": \"The phrase \\\"which is recommended to be the minimum of...\\\" is grammatically ambiguous. It's unclear if the entire expression before it (10 * max_datagram_size) is recommended to be the minimum of the following expression, or if the recommendation applies only to the calculation of the initial congestion window itself. This leads to two different interpretations of how the initial congestion window is calculated.\"}",
+  "record_id": "418d13bb0383e5bbe566d5425148c4b3e04a00a3fdf7fe0d3daef0d0ed8f94a6",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "6.8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.985
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "conflicting header field values",
+    "interpretation_a": "The clause does not define what constitutes a conflict, allowing different implementations to treat any difference in header fields or only differences in values for the same header field name as a conflict.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause permits two materially different interpretations regarding what constitutes a conflict, due to the lack of a precise definition.",
+    "missing_information": "Definition of 'conflicting header field values'."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T09:22:19.552669+00:00",
+  "document_id": "draft-ietf-quic-http-08",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "25204ea66ec03d34db3668ce1423678db7748681b5fa485c1ca66d7595e7bbae",
+  "lineage_ids": "lineage:9e3c55e7ab7b65f33c948663",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1499,
+    "load_duration": 5364200,
+    "prompt_eval_count": 585,
+    "total_duration": 12945310500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"conflicting header field values\",\n  \"interpretation_a\": \"The clause does not define what constitutes a conflict, allowing different implementations to treat any difference in header fields or only differences in values for the same header field name as a conflict.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"Definition of 'conflicting header field values'.\",\n  \"justification\": \"The clause permits two materially different interpretations regarding what constitutes a conflict, due to the lack of a precise definition.\"\n}",
+  "record_id": "5384362dd71a6cd8d341ddf435eccfe0ccf06864d6c1e995f9b121454ae81ca8",
+  "revision": "08",
+  "schema_version": 1,
+  "section_ids": "5.2.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 12.953
+}

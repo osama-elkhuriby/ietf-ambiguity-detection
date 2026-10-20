@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "any of the following header fields",
+    "interpretation_a": "The server must include *all* of the listed header fields if they would have been present in a 200 response.",
+    "interpretation_b": "The server must include *at least one* of the listed header fields if it would have been present in a 200 response.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"any of\" is ambiguous in a normative context. It could be interpreted as \"at least one\" or \"all\". Without further clarification, it's unclear whether the server is required to include all of the listed header fields if they would have been present in a 200 response, or just one or more of them.",
+    "missing_information": "The use of 'any of' is unclear. Does it mean 'all' or 'at least one'? A clearer phrasing would be 'all of' or 'one or more of'."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:04:59.246293+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "288d0efe0fb3699e7dd81a0b30428a053182f192ca70b303f944f7a0dad9413f",
+  "lineage_ids": "lineage:0348ad7c647037a5cf97c8d0",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 220,
+    "load_duration": 21854400,
+    "prompt_eval_count": 711,
+    "total_duration": 8540510400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"any of the following header fields\", \"interpretation_a\": \"The server must include *all* of the listed header fields if they would have been present in a 200 response.\", \"interpretation_b\": \"The server must include *at least one* of the listed header fields if it would have been present in a 200 response.\", \"missing_information\": \"The use of 'any of' is unclear. Does it mean 'all' or 'at least one'? A clearer phrasing would be 'all of' or 'one or more of'.\",\"justification\": \"The phrase \\\"any of\\\" is ambiguous in a normative context. It could be interpreted as \\\"at least one\\\" or \\\"all\\\". Without further clarification, it's unclear whether the server is required to include all of the listed header fields if they would have been present in a 200 response, or just one or more of them.\"}",
+  "record_id": "48e0e1ea55e308a114903c88a51de556dab6eae59ac89a310e25fdfbf6037309",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "15.4.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.546
+}

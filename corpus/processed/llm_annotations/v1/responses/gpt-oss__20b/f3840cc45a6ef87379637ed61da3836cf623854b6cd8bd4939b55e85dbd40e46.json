@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "inadequately secured UDP endpoints",
+    "interpretation_a": "Endpoints that lack any security controls, allowing any UDP traffic to reach them without restriction.",
+    "interpretation_b": "Endpoints that have security controls in place but are misconfigured or outdated, making them vulnerable to certain attacks but not completely open.",
+    "is_ambiguous": "yes",
+    "justification": "The term \"inadequately secured UDP endpoints\" is undefined and can be interpreted in multiple materially different ways, leading to ambiguity in implementation.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T19:15:42.834565+00:00",
+  "document_id": "draft-ietf-quic-transport-33",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "9ce4aba2cf5e30a8f24db6321a803ad3f27b72ec051617557b9c178d3e680268",
+  "lineage_ids": "lineage:3515634a0b0bd9823cbc2ba6",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 357,
+    "load_duration": 5081100,
+    "prompt_eval_count": 758,
+    "total_duration": 3231266600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-1\",\n  \"evidence_span\": \"inadequately secured UDP endpoints\",\n  \"interpretation_a\": \"Endpoints that lack any security controls, allowing any UDP traffic to reach them without restriction.\",\n  \"interpretation_b\": \"Endpoints that have security controls in place but are misconfigured or outdated, making them vulnerable to certain attacks but not completely open.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The term \\\"inadequately secured UDP endpoints\\\" is undefined and can be interpreted in multiple materially different ways, leading to ambiguity in implementation.\"\n}",
+  "record_id": "f3840cc45a6ef87379637ed61da3836cf623854b6cd8bd4939b55e85dbd40e46",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "21.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 12.875
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "other",
+    "evidence_span": "current activity, system conditions, and other environmental factors",
+    "interpretation_a": "The receiver could advance the maximum stream ID based on observed network congestion (current activity), available memory (system conditions), or time of day (environmental factors).",
+    "interpretation_b": "The receiver could choose to not advance the maximum stream ID at all, even if 'current activity, system conditions, and other environmental factors' exist, as the use of 'MAY' grants discretion.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'current activity, system conditions, and other environmental factors' is extremely broad and doesn't define what constitutes a trigger for advancing the maximum stream ID. This allows for vastly different implementations, some of which might be very aggressive in increasing the limit, while others might rarely do so. The use of 'MAY' further exacerbates this, as it allows implementations to ignore these factors entirely.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:44:02.565831+00:00",
+  "document_id": "draft-ietf-quic-transport-15",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "2bca5fc6c28e135e5f2b6c4da3ec6569224750385b9e7d9dd7ad5d5e4d11da2d",
+  "lineage_ids": "lineage:b1ceec172c8e8e041f21c750",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 212,
+    "load_duration": 4066400,
+    "prompt_eval_count": 549,
+    "total_duration": 7895063500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"other\", \"evidence_span\": \"current activity, system conditions, and other environmental factors\", \"interpretation_a\": \"The receiver could advance the maximum stream ID based on observed network congestion (current activity), available memory (system conditions), or time of day (environmental factors).\", \"interpretation_b\": \"The receiver could choose to not advance the maximum stream ID at all, even if 'current activity, system conditions, and other environmental factors' exist, as the use of 'MAY' grants discretion.\",\"missing_information\": \"\", \"justification\": \"The phrase 'current activity, system conditions, and other environmental factors' is extremely broad and doesn't define what constitutes a trigger for advancing the maximum stream ID. This allows for vastly different implementations, some of which might be very aggressive in increasing the limit, while others might rarely do so. The use of 'MAY' further exacerbates this, as it allows implementations to ignore these factors entirely.\"}",
+  "record_id": "8f8e763a3bcc899ba8362fdca575835fc76d66e9e5896056aad3e2ea3a5d9687",
+  "revision": "15",
+  "schema_version": 1,
+  "section_ids": "10.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.891
+}

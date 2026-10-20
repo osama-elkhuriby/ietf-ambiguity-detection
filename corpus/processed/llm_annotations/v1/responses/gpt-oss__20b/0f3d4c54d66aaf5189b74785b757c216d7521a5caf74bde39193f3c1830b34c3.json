@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously specifies that if an endpoint receives an ACK frame in an unprotected packet that acknowledges protected packets, it must treat this as a connection error of type OPTIMISTIC_ACK. The terms 'unprotected packet', 'ACK frame', and 'protected packets' are defined elsewhere in the document, and the clause’s structure leaves no room for multiple materially different interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T12:18:39.675229+00:00",
+  "document_id": "draft-ietf-quic-tls-06",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "ee9821817507fac9471c86921b8dc1c9eccde939b6985056cb63f0f08cbf22ec",
+  "lineage_ids": "lineage:7211de26473d07896df8c545",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 779,
+    "load_duration": 5139200,
+    "prompt_eval_count": 603,
+    "total_duration": 6850342700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously specifies that if an endpoint receives an ACK frame in an unprotected packet that acknowledges protected packets, it must treat this as a connection error of type OPTIMISTIC_ACK. The terms 'unprotected packet', 'ACK frame', and 'protected packets' are defined elsewhere in the document, and the clause’s structure leaves no room for multiple materially different interpretations.\"\n}",
+  "record_id": "0f3d4c54d66aaf5189b74785b757c216d7521a5caf74bde39193f3c1830b34c3",
+  "revision": "06",
+  "schema_version": 1,
+  "section_ids": "9.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.859
+}

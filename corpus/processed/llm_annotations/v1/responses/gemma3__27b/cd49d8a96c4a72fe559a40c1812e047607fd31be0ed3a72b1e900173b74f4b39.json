@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD NOT contribute",
+    "interpretation_a": "Packets on the old path are completely ignored by congestion control and RTT estimation for the new path.",
+    "interpretation_b": "Packets on the old path contribute *less* to congestion control and RTT estimation for the new path, but are not entirely ignored. The degree to which they contribute is unspecified.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD NOT' rather than 'MUST NOT' introduces ambiguity. It allows for some level of contribution, but doesn't define what that level is. This creates a concrete missing constraint that affects implementation.",
+    "missing_information": "The degree to which packets on the old path are allowed to contribute to congestion control and RTT estimation is not specified. 'SHOULD NOT' allows for some contribution, but the extent is undefined."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:03:27.224787+00:00",
+  "document_id": "draft-ietf-quic-transport-24",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "9357838a7fa8e866ac76685c2d9f782f1266697336ec26a6c074ea87c4bf880f",
+  "lineage_ids": "lineage:f4f79fac2e2e282282274d23",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 199,
+    "load_duration": 3005700,
+    "prompt_eval_count": 623,
+    "total_duration": 7522778600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD NOT contribute\", \"interpretation_a\": \"Packets on the old path are completely ignored by congestion control and RTT estimation for the new path.\", \"interpretation_b\": \"Packets on the old path contribute *less* to congestion control and RTT estimation for the new path, but are not entirely ignored. The degree to which they contribute is unspecified.\", \"missing_information\": \"The degree to which packets on the old path are allowed to contribute to congestion control and RTT estimation is not specified. 'SHOULD NOT' allows for some contribution, but the extent is undefined.\",\"justification\": \"The use of 'SHOULD NOT' rather than 'MUST NOT' introduces ambiguity. It allows for some level of contribution, but doesn't define what that level is. This creates a concrete missing constraint that affects implementation.\"}",
+  "record_id": "cd49d8a96c4a72fe559a40c1812e047607fd31be0ed3a72b1e900173b74f4b39",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "9.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.515
+}

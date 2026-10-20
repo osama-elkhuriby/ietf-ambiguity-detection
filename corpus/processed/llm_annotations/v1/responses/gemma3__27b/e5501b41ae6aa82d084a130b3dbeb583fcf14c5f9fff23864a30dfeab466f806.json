@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "A PATH_RESPONSE frame MUST be sent on the network path where the PATH_CHALLENGE was received.",
+    "interpretation_a": "The response must be sent using the same source and destination IP address/port combination as the challenge.",
+    "interpretation_b": "The response must be sent using the same underlying network infrastructure (e.g., same AS path) as the challenge, even if the IP addresses/ports differ due to NAT or other network address translation mechanisms.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'network path' is underspecified. It's unclear whether it refers to the specific source/destination addresses/ports used for the challenge, or the broader network infrastructure. This allows for two reasonable interpretations of where the response must be sent.",
+    "missing_information": "The definition of 'network path' is not precise. Does it refer to the specific IP addresses and ports used for the challenge, or the underlying network infrastructure used to deliver the challenge?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:11:36.875023+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "2b02a345c38e34d5dedb84065779aa70c10e6d903c94a19e0314e35f23d3068f",
+  "lineage_ids": "lineage:c486aa89c6451e160d07d827",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 224,
+    "load_duration": 4532700,
+    "prompt_eval_count": 572,
+    "total_duration": 8369960100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"A PATH_RESPONSE frame MUST be sent on the network path where the PATH_CHALLENGE was received.\", \"interpretation_a\": \"The response must be sent using the same source and destination IP address/port combination as the challenge.\", \"interpretation_b\": \"The response must be sent using the same underlying network infrastructure (e.g., same AS path) as the challenge, even if the IP addresses/ports differ due to NAT or other network address translation mechanisms.\", \"missing_information\": \"The definition of 'network path' is not precise. Does it refer to the specific IP addresses and ports used for the challenge, or the underlying network infrastructure used to deliver the challenge?\",\"justification\": \"The phrase 'network path' is underspecified. It's unclear whether it refers to the specific source/destination addresses/ports used for the challenge, or the broader network infrastructure. This allows for two reasonable interpretations of where the response must be sent.\"}",
+  "record_id": "e5501b41ae6aa82d084a130b3dbeb583fcf14c5f9fff23864a30dfeab466f806",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "8.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.391
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "To avoid unbounded alias chains, clients and recursive resolvers MUST impose a limit on the total number of SVCB aliases they will follow for each resolution request.",
+    "interpretation_a": "An implementation may choose to allow up to 10 SVCB aliases per request.",
+    "interpretation_b": "An implementation may choose to allow up to 5 SVCB aliases per request.",
+    "is_ambiguous": "yes",
+    "justification": "The clause mandates a limit but does not specify the numeric value, leaving the choice of limit open to implementers. This incomplete constraint allows multiple reasonable implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T02:32:20.183841+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "ac331094b1916de6bb6696a4a5621055f094b1efce1fc285c3c10b2fa9a1a5c6",
+  "lineage_ids": "lineage:10ef10d026c3d523591a6c86",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 385,
+    "load_duration": 4917100,
+    "prompt_eval_count": 753,
+    "total_duration": 3452295800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"To avoid unbounded alias chains, clients and recursive resolvers MUST impose a limit on the total number of SVCB aliases they will follow for each resolution request.\",\n  \"interpretation_a\": \"An implementation may choose to allow up to 10 SVCB aliases per request.\",\n  \"interpretation_b\": \"An implementation may choose to allow up to 5 SVCB aliases per request.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause mandates a limit but does not specify the numeric value, leaving the choice of limit open to implementers. This incomplete constraint allows multiple reasonable implementation behaviours.\"\n}",
+  "record_id": "2e3f1f56b754c435083e6833758762bc8dfd51151617867435eb06560055a726",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "2.4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.859
+}

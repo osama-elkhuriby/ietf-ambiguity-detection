@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "whether it closed normally or was aborted",
+    "interpretation_a": "The application is informed with a specific flag or code indicating a normal FIN close.",
+    "interpretation_b": "The application is informed via separate error handling or logging mechanisms indicating an RST abort.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'whether it closed normally or was aborted' implies a distinction must be made, but the clause doesn't specify *how* that distinction is conveyed to the application. This leaves room for different implementations to signal the close type in different ways, potentially leading to interoperability issues if the application expects a specific signaling method.",
+    "missing_information": "The clause does not define *how* the application is informed, leaving open the implementation details of the notification mechanism. It also doesn't specify what constitutes 'informed' - is it a flag, a return code, a log message, etc.?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:24:53.083128+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-10",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "c24946f5fb8bdfff45c5475e97ff5d8c06b9f01c953c9e32383d1686444b4ef0",
+  "lineage_ids": "lineage:da6205942a491da45b280349",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 208,
+    "load_duration": 21194900,
+    "prompt_eval_count": 597,
+    "total_duration": 8592609800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"whether it closed normally or was aborted\", \"interpretation_a\": \"The application is informed with a specific flag or code indicating a normal FIN close.\", \"interpretation_b\": \"The application is informed via separate error handling or logging mechanisms indicating an RST abort.\", \"missing_information\": \"The clause does not define *how* the application is informed, leaving open the implementation details of the notification mechanism. It also doesn't specify what constitutes 'informed' - is it a flag, a return code, a log message, etc.?\",\"justification\": \"The phrase 'whether it closed normally or was aborted' implies a distinction must be made, but the clause doesn't specify *how* that distinction is conveyed to the application. This leaves room for different implementations to signal the close type in different ways, potentially leading to interoperability issues if the application expects a specific signaling method.\"}",
+  "record_id": "8a920ad565445040f627a0dc396f7ac125f7e33a5169818e1277e57056f0a819",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "3.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.594
+}

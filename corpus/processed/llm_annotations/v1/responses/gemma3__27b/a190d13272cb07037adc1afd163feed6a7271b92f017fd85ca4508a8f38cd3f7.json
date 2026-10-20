@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT send a Last-Modified date that is later than the server's time of message origination (Date).",
+    "interpretation_a": "The Last-Modified date must be equal to or before the Date header.",
+    "interpretation_b": "The Last-Modified date can be slightly before the Date header, accounting for clock skew or processing time. The phrase 'later than' is not precise enough to exclude this possibility.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'later than' is open to interpretation regarding the acceptable margin of difference between the Last-Modified date and the Date header. Without a defined tolerance, implementations could reasonably differ on how strictly to enforce this requirement.",
+    "missing_information": "The degree of permissible difference between Last-Modified and Date is not specified. Is a difference of milliseconds allowed? Seconds? The specification needs to define the acceptable tolerance."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:21:05.455840+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-17",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "5b462690a7a7c43a7b6e8b7d87e6c35d268a65fc69a0c022bf80a1c9048ee62b",
+  "lineage_ids": "lineage:46ac034fb8715eaf2df67fb1",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 205,
+    "load_duration": 8511200,
+    "prompt_eval_count": 617,
+    "total_duration": 7878452600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT send a Last-Modified date that is later than the server's time of message origination (Date).\", \"interpretation_a\": \"The Last-Modified date must be equal to or before the Date header.\", \"interpretation_b\": \"The Last-Modified date can be slightly before the Date header, accounting for clock skew or processing time. The phrase 'later than' is not precise enough to exclude this possibility.\", \"missing_information\": \"The degree of permissible difference between Last-Modified and Date is not specified. Is a difference of milliseconds allowed? Seconds? The specification needs to define the acceptable tolerance.\", \"justification\": \"The phrase 'later than' is open to interpretation regarding the acceptable margin of difference between the Last-Modified date and the Date header. Without a defined tolerance, implementations could reasonably differ on how strictly to enforce this requirement.\"}",
+  "record_id": "a190d13272cb07037adc1afd163feed6a7271b92f017fd85ca4508a8f38cd3f7",
+  "revision": "17",
+  "schema_version": 1,
+  "section_ids": "8.8.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.891
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "at least 22 bytes longer than the minimum connection ID",
+    "interpretation_a": "The endpoint pads all packets to be 22 bytes larger than the *smallest* connection ID it might request. This implies a fixed offset based on the minimum possible CID.",
+    "interpretation_b": "The endpoint pads all packets to be 22 bytes larger than the *currently negotiated* minimum connection ID. This allows for dynamic adjustment of padding based on CID negotiation.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'minimum connection ID that it might request' is open to interpretation. Does it refer to the absolute minimum CID value possible, or the minimum CID the endpoint has *requested* from its peer? The difference affects the padding calculation and thus the effectiveness of the stateless reset protection.",
+    "missing_information": "It is unclear whether 'minimum connection ID' refers to the smallest possible CID value or the currently negotiated minimum CID. This affects how the padding is calculated and impacts the indistinguishability guarantee."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:59:30.594352+00:00",
+  "document_id": "draft-ietf-quic-transport-30",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "e80b75abccd11a86a91dccbf5a7068c5d73c5cebd26d174380160c018bc94013",
+  "lineage_ids": "lineage:ede11eb59c138b8b53009b53",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 229,
+    "load_duration": 3899800,
+    "prompt_eval_count": 606,
+    "total_duration": 8596131300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"at least 22 bytes longer than the minimum connection ID\", \"interpretation_a\": \"The endpoint pads all packets to be 22 bytes larger than the *smallest* connection ID it might request. This implies a fixed offset based on the minimum possible CID.\", \"interpretation_b\": \"The endpoint pads all packets to be 22 bytes larger than the *currently negotiated* minimum connection ID. This allows for dynamic adjustment of padding based on CID negotiation.\", \"missing_information\": \"It is unclear whether 'minimum connection ID' refers to the smallest possible CID value or the currently negotiated minimum CID. This affects how the padding is calculated and impacts the indistinguishability guarantee.\", \"justification\": \"The phrase 'minimum connection ID that it might request' is open to interpretation. Does it refer to the absolute minimum CID value possible, or the minimum CID the endpoint has *requested* from its peer? The difference affects the padding calculation and thus the effectiveness of the stateless reset protection.\"}",
+  "record_id": "c11c2a7f1c685aee0207175a3ee19db4ba7d683c2ce9ce56dbe6ecc075fc7edc",
+  "revision": "30",
+  "schema_version": 1,
+  "section_ids": "10.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.593
+}

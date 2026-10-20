@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "231-1",
+    "interpretation_a": "231-1 is interpreted as 2^31 - 1, the maximum value for a 31-bit unsigned integer.",
+    "interpretation_b": "231-1 is interpreted as 231 minus 1, resulting in the value 230.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase '231-1' is ambiguous because it's unclear whether the '231' refers to a power of 2 (2^31) or a literal value. This affects the maximum allowed setting value and thus implementation behavior.",
+    "missing_information": "The bit width of the flow-control window size is not explicitly defined, leading to ambiguity in interpreting '231-1'. Is it 2^31 - 1 or 230?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:43:37.842478+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "71da492dfb36cd618442a95f9356feff5ab43313373a2b0c1bb4afd632fdf05b",
+  "lineage_ids": "lineage:cbdfdde7ec940f7409e4a788",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 208,
+    "load_duration": 7990400,
+    "prompt_eval_count": 594,
+    "total_duration": 8049532200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"231-1\", \"interpretation_a\": \"231-1 is interpreted as 2^31 - 1, the maximum value for a 31-bit unsigned integer.\", \"interpretation_b\": \"231-1 is interpreted as 231 minus 1, resulting in the value 230.\", \"missing_information\": \"The bit width of the flow-control window size is not explicitly defined, leading to ambiguity in interpreting '231-1'. Is it 2^31 - 1 or 230?\",\"justification\": \"The phrase '231-1' is ambiguous because it's unclear whether the '231' refers to a power of 2 (2^31) or a literal value. This affects the maximum allowed setting value and thus implementation behavior.\"}",
+  "record_id": "a5474eed12f5beb50dc99029fdf1f61a8db581ae25b8888994c87bb8e98cc946",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.047
+}

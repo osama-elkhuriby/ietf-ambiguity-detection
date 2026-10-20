@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "the codepoint is the first unallocated codepoint in the registry",
+    "interpretation_a": "IANA will not allocate a codepoint if it is the first unallocated one, implying a preference for allocating later codepoints.",
+    "interpretation_b": "IANA will not allocate a codepoint if it *happens* to be the first unallocated one, but will allocate it if it's unallocated and not the first.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states IANA MUST allocate unless the codepoint is already assigned *or* it is the first unallocated. The 'or' is ambiguous. Does it mean IANA will not allocate if it is the first unallocated, or that it will allocate if it is not the first unallocated?",
+    "missing_information": "It is unclear whether the phrase 'the first unallocated codepoint' is intended as a condition that *prevents* allocation, or merely a description of a codepoint that is not allocated because it is not yet assigned."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:09:11.178186+00:00",
+  "document_id": "draft-ietf-quic-transport-32",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "c935ed438ba37edaf15e15b7a0e41377daba58e17dd30162fd91ee19a686d2b8",
+  "lineage_ids": "lineage:c3fe8ed63d007ac83967853b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 240,
+    "load_duration": 3006700,
+    "prompt_eval_count": 567,
+    "total_duration": 8942940800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"the codepoint is the first unallocated codepoint in the registry\", \"interpretation_a\": \"IANA will not allocate a codepoint if it is the first unallocated one, implying a preference for allocating later codepoints.\", \"interpretation_b\": \"IANA will not allocate a codepoint if it *happens* to be the first unallocated one, but will allocate it if it's unallocated and not the first.\", \"missing_information\": \"It is unclear whether the phrase 'the first unallocated codepoint' is intended as a condition that *prevents* allocation, or merely a description of a codepoint that is not allocated because it is not yet assigned.\",\"justification\": \"The clause states IANA MUST allocate unless the codepoint is already assigned *or* it is the first unallocated. The 'or' is ambiguous. Does it mean IANA will not allocate if it is the first unallocated, or that it will allocate if it is not the first unallocated?\"}",
+  "record_id": "dd027e1f2919f44784074103ebafab8c39693a9d7a701b3d6da2af17d28f7099",
+  "revision": "32",
+  "schema_version": 1,
+  "section_ids": "22.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.938
+}

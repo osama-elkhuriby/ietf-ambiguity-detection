@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "ultimately send a final status code",
+    "interpretation_a": "The server must send a 2xx, 3xx, 4xx, 5xx, or 6xx status code.",
+    "interpretation_b": "The server must send *any* final status code, even if it is an interim response like 100-Continue, before the connection is closed.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'final status code' is not clearly defined. While commonly understood to mean a 2xx-6xx code, the text does not explicitly exclude interim responses as being 'final'. This allows for a reading where a server could repeatedly send 100-Continue as the 'final status code' until the connection closes, which is not the intended behaviour.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:29:46.463180+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-14",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "1c4525bab9c9df4cd6ce14a3a383a4d2491f535346ec9905e063f164a8a51975",
+  "lineage_ids": "lineage:8759e4ca28901f51a7f6c707",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 194,
+    "load_duration": 12296300,
+    "prompt_eval_count": 636,
+    "total_duration": 7532169200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"ultimately send a final status code\", \"interpretation_a\": \"The server must send a 2xx, 3xx, 4xx, 5xx, or 6xx status code.\", \"interpretation_b\": \"The server must send *any* final status code, even if it is an interim response like 100-Continue, before the connection is closed.\", \"missing_information\": \"\", \"justification\": \"The phrase 'final status code' is not clearly defined. While commonly understood to mean a 2xx-6xx code, the text does not explicitly exclude interim responses as being 'final'. This allows for a reading where a server could repeatedly send 100-Continue as the 'final status code' until the connection closes, which is not the intended behaviour.\"}",
+  "record_id": "d40184da0ab1a8c40c2157e30c2ced23e97c1ef72f9dfab14aec47bba5f3de99",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "10.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.547
+}

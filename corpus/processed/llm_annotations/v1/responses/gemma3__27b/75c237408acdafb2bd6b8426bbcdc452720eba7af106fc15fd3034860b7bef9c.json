@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "do not increase the stream limit",
+    "interpretation_a": "A MAX_STREAMS frame that sets the limit to the *same* value as the current limit is considered not an increase, and thus ignored.",
+    "interpretation_b": "A MAX_STREAMS frame that sets the limit to the *same* value as the current limit is *not* ignored, as it is a re-affirmation of the limit.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states frames that 'do not increase' the limit must be ignored. It is unclear whether a frame that sets the limit to the same value as the current limit is considered an increase or not. This affects implementation because an endpoint could either ignore such a frame (interpretation a) or process it as a valid limit update (interpretation b).",
+    "missing_information": "The definition of 'increase' is not precise. Does maintaining the same limit count as an increase?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:33:47.021665+00:00",
+  "document_id": "draft-ietf-quic-transport-29",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "fc67da0c1e78c0323a0995f775c85067bbfd3bca639774e570a73968c4214339",
+  "lineage_ids": "lineage:63787da09679121acd3ce7a1",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 217,
+    "load_duration": 6481900,
+    "prompt_eval_count": 578,
+    "total_duration": 8149371100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"do not increase the stream limit\", \"interpretation_a\": \"A MAX_STREAMS frame that sets the limit to the *same* value as the current limit is considered not an increase, and thus ignored.\", \"interpretation_b\": \"A MAX_STREAMS frame that sets the limit to the *same* value as the current limit is *not* ignored, as it is a re-affirmation of the limit.\", \"missing_information\": \"The definition of 'increase' is not precise. Does maintaining the same limit count as an increase?\",\"justification\": \"The clause states frames that 'do not increase' the limit must be ignored. It is unclear whether a frame that sets the limit to the same value as the current limit is considered an increase or not. This affects implementation because an endpoint could either ignore such a frame (interpretation a) or process it as a valid limit update (interpretation b).\"}",
+  "record_id": "75c237408acdafb2bd6b8426bbcdc452720eba7af106fc15fd3034860b7bef9c",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "19.11",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.141
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD first send a GOAWAY frame",
+    "interpretation_a": "The endpoint *must* send a GOAWAY frame before taking any other action regarding the connection error.",
+    "interpretation_b": "The endpoint *may* send a GOAWAY frame, but is permitted to take other actions (e.g., logging, resource cleanup) concurrently or even instead of sending the GOAWAY frame.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' combined with 'first' creates ambiguity. Does 'first' mean 'immediately before any other action', or simply 'at some point before other actions are taken'? The lack of a stronger requirement (e.g., 'MUST') leaves room for different interpretations of the intended behaviour.",
+    "missing_information": "The degree of urgency or priority of sending the GOAWAY frame is not specified. The use of 'first' implies a specific order of operations, but 'SHOULD' weakens this implication."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:46:17.035288+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "d0fad8a70297ce8be0d6bc64594e02ac2c9459285e972925982c35e170af49ea",
+  "lineage_ids": "lineage:2c023c480183489ceb5a2fd8",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 226,
+    "load_duration": 8981800,
+    "prompt_eval_count": 586,
+    "total_duration": 8656298300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD first send a GOAWAY frame\", \"interpretation_a\": \"The endpoint *must* send a GOAWAY frame before taking any other action regarding the connection error.\", \"interpretation_b\": \"The endpoint *may* send a GOAWAY frame, but is permitted to take other actions (e.g., logging, resource cleanup) concurrently or even instead of sending the GOAWAY frame.\", \"missing_information\": \"The degree of urgency or priority of sending the GOAWAY frame is not specified. The use of 'first' implies a specific order of operations, but 'SHOULD' weakens this implication.\", \"justification\": \"The use of 'SHOULD' combined with 'first' creates ambiguity. Does 'first' mean 'immediately before any other action', or simply 'at some point before other actions are taken'? The lack of a stronger requirement (e.g., 'MUST') leaves room for different interpretations of the intended behaviour.\"}",
+  "record_id": "bde97f2857b055b5c9bfcba189b624552d7ba783945e2cbf371db2e175b2db50",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "5.4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.656
+}

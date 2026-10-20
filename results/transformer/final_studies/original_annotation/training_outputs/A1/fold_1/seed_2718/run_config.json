@@ -1,0 +1,111 @@
+{
+  "base_configuration": {
+    "conditions": {
+      "A1": "standard_ce",
+      "A2": "weighted_ce"
+    },
+    "data": {
+      "approved_source_hashes": {
+        "canonical_context_csv": "d18dfd145305cca61c62d8e3b23ff93a0a76dcd1235f04112c13458ab0f4be3f",
+        "metadata_csv": "a0e2d4cf81dce960efc15b47bf39abbfbe67ec8ec743b1aa63df00b8395a0dd1",
+        "private_key_csv": "09edc22f73d93998df728378986f039690e5b87fa62e1f52928a80708009cdce"
+      },
+      "canonical_context_csv": "corpus/processed/transformer_inputs/v3/dataset.csv",
+      "expected_annotated_cohort_omissions": 121,
+      "expected_source_rows": 2425,
+      "expected_unresolved_item_ids": [
+        "2161"
+      ],
+      "id_column": "item_id",
+      "label_column": "final_label",
+      "metadata_csv": "corpus/processed/model_datasets/v2/training_dataset.csv",
+      "private_key_csv": "results/annotation/key_PRIVATE.csv",
+      "source_csv": "results/annotation/final_annotation (Copy 2).csv",
+      "source_sha256": "a34df11a87d36dfd14c7d251d96a52a0cac8bb2016db6e4d0475a858f8b382cb",
+      "target_column": "target_clause"
+    },
+    "description": "Dataset A only; selection-free five-epoch outer family CV",
+    "experiment": "original_annotation_experiment_1",
+    "folds": {
+      "count": 5,
+      "fold_source": "experiments/transformer/configs/folds_v1.json",
+      "fold_source_sha256": "c04dc8424ed96486f8521ef57d17e4b503d2c3f41bb116edeeb9535073dd7884",
+      "near_duplicate_threshold": 0.85,
+      "policy": "preserve held-out scoring rows; exclude fitting-side exact, near, lineage, and BCP14-skeleton conflicts"
+    },
+    "model": {
+      "default_local_path": "D:/RFC/models/deberta-v3-base",
+      "fully_fine_tune": true,
+      "label2id": {
+        "No": 0,
+        "Yes": 1
+      },
+      "num_labels": 2,
+      "offline_only": true,
+      "repository": "microsoft/deberta-v3-base",
+      "revision": null
+    },
+    "outputs": {
+      "aggregate_dir": "experiments/transformer_final/original_annotation/aggregate_metrics",
+      "audit_dir": "experiments/transformer_final/original_annotation/audit_logs",
+      "dataset_dir": "experiments/transformer_final/original_annotation/manifests/dataset_v1",
+      "runs_dir": "experiments/transformer_final/original_annotation/training_outputs"
+    },
+    "partitions": {
+      "dns_family": "draft-ietf-dnsop-svcb-https",
+      "sealed_evaluation_enabled": false,
+      "tcp_family": "draft-ietf-tcpm-rfc793bis",
+      "train_families": [
+        "draft-ietf-6man-rfc2460bis",
+        "draft-ietf-httpbis-cache-header",
+        "draft-ietf-httpbis-http2bis",
+        "draft-ietf-httpbis-semantics",
+        "draft-ietf-quic-http",
+        "draft-ietf-quic-recovery",
+        "draft-ietf-quic-tls",
+        "draft-ietf-quic-transport",
+        "draft-ietf-tls-tls13"
+      ]
+    },
+    "schema_version": 1,
+    "tokenization": {
+      "add_vocabulary_tokens": false,
+      "context_mode_available": true,
+      "dynamic_padding": true,
+      "input_mode": "target_only",
+      "max_length": 256,
+      "target_overflow": "deterministic_head_tail"
+    },
+    "training": {
+      "deterministic": true,
+      "early_stopping": false,
+      "epochs": 5,
+      "eval_batch_size": 16,
+      "gradient_accumulation_steps": 1,
+      "learning_rate": 1e-05,
+      "max_grad_norm": 1.0,
+      "optimizer": "AdamW",
+      "precision": "auto",
+      "scheduler": "linear",
+      "seeds": [
+        1729,
+        2718,
+        31415
+      ],
+      "threshold": 0.5,
+      "train_batch_size": 8,
+      "warmup_ratio": 0.1,
+      "weight_decay": 0.01
+    }
+  },
+  "resolved": {
+    "condition": "A1",
+    "diagnostic_numerics": true,
+    "fold": 1,
+    "input_mode": "target_only",
+    "loss": "standard_ce",
+    "model_path": "D:\\RFC\\models\\deberta-v3-base",
+    "precision": "fp32",
+    "seed": 2718
+  }
+}

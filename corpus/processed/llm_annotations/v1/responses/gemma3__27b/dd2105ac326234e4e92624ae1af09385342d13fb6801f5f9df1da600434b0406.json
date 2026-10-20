@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "the sum of the offset and data length",
+    "interpretation_a": "The sum refers to the current offset plus the length of the current data being delivered.",
+    "interpretation_b": "The sum refers to the maximum offset seen so far on the stream plus the length of the current data being delivered.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'the sum of the offset and data length' is ambiguous. It's unclear whether it refers to the current offset and the length of the current data being delivered, or the maximum offset seen so far on the stream plus the length of the current data. Both interpretations are reasonable and lead to different maximum allowable data lengths.",
+    "missing_information": "It is unclear whether 'the sum' refers to the current offset + data length, or the maximum offset seen so far + data length. This affects the maximum allowable data length for a given offset."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:09:18.993454+00:00",
+  "document_id": "draft-ietf-quic-transport-19",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "2a0ee4e411a304073eedc8b0e22bf277e727fdfe0e458728f7723e14c725204f",
+  "lineage_ids": "lineage:00c8229682ef6274f2bfe003",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 208,
+    "load_duration": 4050900,
+    "prompt_eval_count": 548,
+    "total_duration": 7811179600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"the sum of the offset and data length\", \"interpretation_a\": \"The sum refers to the current offset plus the length of the current data being delivered.\", \"interpretation_b\": \"The sum refers to the maximum offset seen so far on the stream plus the length of the current data being delivered.\", \"missing_information\": \"It is unclear whether 'the sum' refers to the current offset + data length, or the maximum offset seen so far + data length. This affects the maximum allowable data length for a given offset.\", \"justification\": \"The phrase 'the sum of the offset and data length' is ambiguous. It's unclear whether it refers to the current offset and the length of the current data being delivered, or the maximum offset seen so far on the stream plus the length of the current data. Both interpretations are reasonable and lead to different maximum allowable data lengths.\"}",
+  "record_id": "dd2105ac326234e4e92624ae1af09385342d13fb6801f5f9df1da600434b0406",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "19.8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.812
+}

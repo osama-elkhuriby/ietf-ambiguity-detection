@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "but MAY opt not to store settings in certain cases",
+    "interpretation_a": "The client may choose not to store settings if the session ticket arrives before the SETTINGS frame, meaning it can proceed without any stored settings.",
+    "interpretation_b": "The client may choose not to store settings in other cases not specified, but still expects to have some settings available, potentially defaulting to values or requesting them later.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'certain cases' is vague and doesn't provide enough detail to determine when a client is allowed to not store settings. This leads to different implementations potentially handling the storage of settings differently, impacting 0-RTT behavior.",
+    "missing_information": "The criteria for 'certain cases' are not defined, leaving room for different implementations to decide when settings are not stored."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:56:33.013970+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "02367ab892d1f3c7bec7867bc26a2270129c59ba28b834231ea5047d2d241a11",
+  "lineage_ids": "lineage:7c74d821ab80987b68554d38",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 194,
+    "load_duration": 25275900,
+    "prompt_eval_count": 649,
+    "total_duration": 7575230800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"but MAY opt not to store settings in certain cases\", \"interpretation_a\": \"The client may choose not to store settings if the session ticket arrives before the SETTINGS frame, meaning it can proceed without any stored settings.\", \"interpretation_b\": \"The client may choose not to store settings in other cases not specified, but still expects to have some settings available, potentially defaulting to values or requesting them later.\", \"missing_information\": \"The criteria for 'certain cases' are not defined, leaving room for different implementations to decide when settings are not stored.\", \"justification\": \"The phrase 'certain cases' is vague and doesn't provide enough detail to determine when a client is allowed to not store settings. This leads to different implementations potentially handling the storage of settings differently, impacting 0-RTT behavior.\"}",
+  "record_id": "844b84c47ea4b671caa319982a5d0aa0d666f0eaacf63f853a9ce9fbcd74386c",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.2.4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.578
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "cannot be associated with a connection",
+    "interpretation_a": "A server might generate a stateless reset if a packet doesn't match *any* known connection, even if it's malformed or doesn't adhere to QUIC's basic structure.",
+    "interpretation_b": "A server might generate a stateless reset only if the packet *appears* to be a valid QUIC packet but doesn't match any established connection (e.g., due to a missing or invalid connection ID).",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'cannot be associated with a connection' is underspecified. It's unclear whether this applies to all packets the server cannot process, or only to those that appear to be valid QUIC packets but don't match any existing connection. This affects whether a server should stateless reset obviously invalid packets.",
+    "missing_information": "The criteria for 'cannot be associated with a connection' are not fully defined. Does it include packets that are clearly not QUIC, or only those that look like QUIC but don't match an existing connection?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:17:37.887032+00:00",
+  "document_id": "draft-ietf-quic-transport-09",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "fe66a2a50d5821ccc12ef365e5f1c637137d26b4a6961d7105208e316901766f",
+  "lineage_ids": "lineage:1250a2d34d10f481a5000c8e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 249,
+    "load_duration": 2533800,
+    "prompt_eval_count": 591,
+    "total_duration": 9295723200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"cannot be associated with a connection\", \"interpretation_a\": \"A server might generate a stateless reset if a packet doesn't match *any* known connection, even if it's malformed or doesn't adhere to QUIC's basic structure.\", \"interpretation_b\": \"A server might generate a stateless reset only if the packet *appears* to be a valid QUIC packet but doesn't match any established connection (e.g., due to a missing or invalid connection ID).\", \"missing_information\": \"The criteria for 'cannot be associated with a connection' are not fully defined. Does it include packets that are clearly not QUIC, or only those that look like QUIC but don't match an existing connection?\",\"justification\": \"The phrase 'cannot be associated with a connection' is underspecified. It's unclear whether this applies to all packets the server cannot process, or only to those that appear to be valid QUIC packets but don't match any existing connection. This affects whether a server should stateless reset obviously invalid packets.\"}",
+  "record_id": "43e2dd50f3c683d6a5dba2e426da24736a055a18311753ec72f577a5d68838ee",
+  "revision": "09",
+  "schema_version": 1,
+  "section_ids": "7.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.297
+}

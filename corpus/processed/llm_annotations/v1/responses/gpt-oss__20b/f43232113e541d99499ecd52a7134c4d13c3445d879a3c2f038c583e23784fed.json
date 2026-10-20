@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "lower multiplier",
+    "interpretation_a": "The multiplier refers to the multiplier used in the reordering threshold calculation defined elsewhere in the document.",
+    "interpretation_b": "The multiplier refers to a multiplier that is not defined in the clause, so implementers might interpret it as any multiplier, leading to ambiguous behaviour.",
+    "is_ambiguous": "yes",
+    "justification": "The clause references a 'multiplier' without defining it, creating an incomplete constraint that could lead to materially different implementation behaviours.",
+    "missing_information": "definition of multiplier"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T12:14:43.635452+00:00",
+  "document_id": "draft-ietf-quic-recovery-17",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "1dc11a5bda2366767f4f124d7c0eff1c074eba141fa15ee454323819f3b2367c",
+  "lineage_ids": "lineage:2e57055feefbac0cb65e4ddf",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3190,
+    "load_duration": 4651800,
+    "prompt_eval_count": 599,
+    "total_duration": 27578233800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"lower multiplier\",\n  \"interpretation_a\": \"The multiplier refers to the multiplier used in the reordering threshold calculation defined elsewhere in the document.\",\n  \"interpretation_b\": \"The multiplier refers to a multiplier that is not defined in the clause, so implementers might interpret it as any multiplier, leading to ambiguous behaviour.\",\n  \"missing_information\": \"definition of multiplier\",\n  \"justification\": \"The clause references a 'multiplier' without defining it, creating an incomplete constraint that could lead to materially different implementation behaviours.\"\n}",
+  "record_id": "f43232113e541d99499ecd52a7134c4d13c3445d879a3c2f038c583e23784fed",
+  "revision": "17",
+  "schema_version": 1,
+  "section_ids": "6.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 27.578
+}

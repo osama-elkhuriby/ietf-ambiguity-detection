@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously requires that any header field from the listed set that would have been sent in a 200 (OK) response must also be sent in a 304 response. The wording “any of the following header fields that would have been sent” is interpreted as “for each header field in the list that would have been sent in a 200, the 304 must include it.” No alternative interpretation or missing constraint is evident.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T06:20:33.936266+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-03",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "9cd70d87d75f0942069f59639b72576cf61587948418d3fe9a974f796ec2ef6c",
+  "lineage_ids": "lineage:f5a329afc4fcb47e87a4acdd",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 825,
+    "load_duration": 5797900,
+    "prompt_eval_count": 714,
+    "total_duration": 7203609800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"no\",\"ambiguity_subtype\":\"none\",\"evidence_span\":\"\",\"interpretation_a\":\"\",\"interpretation_b\":\"\",\"missing_information\":\"\",\"justification\":\"The clause unambiguously requires that any header field from the listed set that would have been sent in a 200 (OK) response must also be sent in a 304 response. The wording “any of the following header fields that would have been sent” is interpreted as “for each header field in the list that would have been sent in a 200, the 304 must include it.” No alternative interpretation or missing constraint is evident.\"}",
+  "record_id": "5609ecd1d07680cac501b2fe76398bd7c063059144a91e373d3997b6be31d7e9",
+  "revision": "03",
+  "schema_version": 1,
+  "section_ids": "9.4.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.219
+}

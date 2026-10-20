@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "If an implementation chooses to reject a request",
+    "interpretation_a": "An implementation can reject a request and send a RST_STREAM, but it is not *required* to reject a request if it chooses not to.",
+    "interpretation_b": "An implementation *must* reject a request if it chooses to do so, and the rejection is signaled by a RST_STREAM.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'If an implementation chooses to reject...' is ambiguous. 'Chooses' could mean 'is permitted to' or 'decides to'. If it means 'is permitted to', then the sentence says that if an implementation is allowed to reject a request, it must send a RST_STREAM. If it means 'decides to', then the sentence says that if an implementation decides to reject a request, it must send a RST_STREAM. These are different interpretations that affect implementation.",
+    "missing_information": "The meaning of 'chooses' is unclear. Does 'chooses to reject' mean 'decides to reject' or 'is permitted to reject'? The conditional phrasing implies a choice, but the subsequent 'MUST' suggests an obligation when that choice is made."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:47:53.602915+00:00",
+  "document_id": "draft-ietf-quic-http-04",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "7efc3387a5d3837fb532822ccf42e7f83b28dbfe4195a8ba10a808bdee711ca5",
+  "lineage_ids": "lineage:19c080662be9cc5b824bffe8",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 269,
+    "load_duration": 6508500,
+    "prompt_eval_count": 595,
+    "total_duration": 10156795900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"If an implementation chooses to reject a request\", \"interpretation_a\": \"An implementation can reject a request and send a RST_STREAM, but it is not *required* to reject a request if it chooses not to.\", \"interpretation_b\": \"An implementation *must* reject a request if it chooses to do so, and the rejection is signaled by a RST_STREAM.\", \"missing_information\": \"The meaning of 'chooses' is unclear. Does 'chooses to reject' mean 'decides to reject' or 'is permitted to reject'? The conditional phrasing implies a choice, but the subsequent 'MUST' suggests an obligation when that choice is made.\", \"justification\": \"The phrase 'If an implementation chooses to reject...' is ambiguous. 'Chooses' could mean 'is permitted to' or 'decides to'. If it means 'is permitted to', then the sentence says that if an implementation is allowed to reject a request, it must send a RST_STREAM. If it means 'decides to', then the sentence says that if an implementation decides to reject a request, it must send a RST_STREAM. These are different interpretations that affect implementation.\"}",
+  "record_id": "434c3986a2c43e14fd80c5316ae24b01f19c715e7fa6377f88c0591bdf439279",
+  "revision": "04",
+  "schema_version": 1,
+  "section_ids": "4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.172
+}

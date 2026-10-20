@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "In the latter case, the origin server MUST NOT send a validator header field in the response unless it can",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The target clause ends abruptly, lacking the necessary predicate that would specify when the server is allowed to send a validator header. This incomplete constraint prevents a unique operational interpretation.",
+    "missing_information": "The clause is incomplete; the condition after 'unless it can' is missing, leaving the implementation behavior undefined."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T06:30:26.864970+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-05",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "5a2ae9aa59aded7ebdf51c0b2c7d52466a7d4fdf0df6079ae55c2072ae2dee08",
+  "lineage_ids": "lineage:75e04cf1056a0516af3cc6d6",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 579,
+    "load_duration": 5910900,
+    "prompt_eval_count": 693,
+    "total_duration": 5182026600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"In the latter case, the origin server MUST NOT send a validator header field in the response unless it can\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The clause is incomplete; the condition after 'unless it can' is missing, leaving the implementation behavior undefined.\",\n  \"justification\": \"The target clause ends abruptly, lacking the necessary predicate that would specify when the server is allowed to send a validator header. This incomplete constraint prevents a unique operational interpretation.\"\n}",
+  "record_id": "5d20a411d7b422624a5b8e8655ee3e427a6f7feef1de633cae8e8c1afe0a2447",
+  "revision": "05",
+  "schema_version": 1,
+  "section_ids": "8.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.188
+}

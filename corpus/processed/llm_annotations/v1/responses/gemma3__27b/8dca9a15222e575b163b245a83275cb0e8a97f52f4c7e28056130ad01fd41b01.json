@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD be removed",
+    "interpretation_a": "Implementations are required to remove the special interpretation at some point in the future.",
+    "interpretation_b": "Implementations are permitted, but not required, to remove the special interpretation at some point in the future.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' introduces ambiguity. While it indicates a recommendation, it doesn't definitively state whether implementations *must* remove the interpretation or are merely *allowed* to. This affects implementation behavior as some may choose to maintain the interpretation indefinitely.",
+    "missing_information": "The trigger for removal is not defined. Is it when *all* Google QUIC implementations have transitioned, or when the specification is updated? A concrete timeline or condition is missing."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:43:14.215518+00:00",
+  "document_id": "draft-ietf-quic-transport-16",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "580187ddb05301f960dac55a24b56a9f4b37e85a6164ba3c7f93b59ec1f130b0",
+  "lineage_ids": "lineage:6d77dcce84e83c12888f659c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 182,
+    "load_duration": "",
+    "prompt_eval_count": 594,
+    "total_duration": 6903123800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD be removed\", \"interpretation_a\": \"Implementations are required to remove the special interpretation at some point in the future.\", \"interpretation_b\": \"Implementations are permitted, but not required, to remove the special interpretation at some point in the future.\", \"missing_information\": \"The trigger for removal is not defined. Is it when *all* Google QUIC implementations have transitioned, or when the specification is updated? A concrete timeline or condition is missing.\", \"justification\": \"The use of 'SHOULD' introduces ambiguity. While it indicates a recommendation, it doesn't definitively state whether implementations *must* remove the interpretation or are merely *allowed* to. This affects implementation behavior as some may choose to maintain the interpretation indefinitely.\"}",
+  "record_id": "8dca9a15222e575b163b245a83275cb0e8a97f52f4c7e28056130ad01fd41b01",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "17.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.89
+}

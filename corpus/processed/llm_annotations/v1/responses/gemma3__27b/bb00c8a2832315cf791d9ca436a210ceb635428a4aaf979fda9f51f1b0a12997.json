@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY attempt",
+    "interpretation_a": "The client is permitted, but not required, to attempt access using the described method.",
+    "interpretation_b": "The client is expected to attempt access using the described method, but is not strictly required to do so.",
+    "is_ambiguous": "yes",
+    "justification": "The use of \"MAY\" introduces ambiguity. Does it mean the client *can* attempt, or that it *should* attempt, but isn't forced to? This affects implementation choices regarding default behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:05:11.110020+00:00",
+  "document_id": "draft-ietf-quic-http-33",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "0d2d890dc483f23f1e3269b0368312aeec84ad7abc6bbb1681417e31c0ec7178",
+  "lineage_ids": "lineage:dfe01708d9db6139397283a0",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 134,
+    "load_duration": 9733400,
+    "prompt_eval_count": 631,
+    "total_duration": 5323599100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY attempt\", \"interpretation_a\": \"The client is permitted, but not required, to attempt access using the described method.\", \"interpretation_b\": \"The client is expected to attempt access using the described method, but is not strictly required to do so.\", \"missing_information\": \"\", \"justification\": \"The use of \\\"MAY\\\" introduces ambiguity. Does it mean the client *can* attempt, or that it *should* attempt, but isn't forced to? This affects implementation choices regarding default behavior.\"}",
+  "record_id": "bb00c8a2832315cf791d9ca436a210ceb635428a4aaf979fda9f51f1b0a12997",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.328
+}

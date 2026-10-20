@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Reserved versions MAY be listed, but unreserved versions which are not supported by the alternative SHOULD NOT be present in the list.",
+    "interpretation_a": "The server can list reserved versions even if it doesn't support them, as long as it doesn't list unreserved versions it doesn't support.",
+    "interpretation_b": "The server should not list *any* unreserved versions it doesn't support, implying that listing reserved versions it doesn't support is also disallowed, even though the MAY allows it.",
+    "is_ambiguous": "yes",
+    "justification": "The sentence structure allows for two interpretations of what 'the alternative' refers to. If it's the client, then the server shouldn't advertise versions the client doesn't support. If it's a server-side component, then the server shouldn't advertise versions that *another* server component doesn't support. The MAY/SHOULD combination creates a weak constraint, and the ambiguity of 'alternative' makes it unclear how strictly the SHOULD is applied to reserved versions.",
+    "missing_information": "It is unclear whether the 'alternative' refers to the client or some other server-side component. This affects how the 'SHOULD NOT' applies."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:54:29.055868+00:00",
+  "document_id": "draft-ietf-quic-http-23",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "bd23e9def1ea040702f5c99538fec79f0fe126d5a25156e39143662d41e2d88c",
+  "lineage_ids": "lineage:de781eb23f24cfb581b51520",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 276,
+    "load_duration": 10737300,
+    "prompt_eval_count": 612,
+    "total_duration": 10466110500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Reserved versions MAY be listed, but unreserved versions which are not supported by the alternative SHOULD NOT be present in the list.\", \"interpretation_a\": \"The server can list reserved versions even if it doesn't support them, as long as it doesn't list unreserved versions it doesn't support.\", \"interpretation_b\": \"The server should not list *any* unreserved versions it doesn't support, implying that listing reserved versions it doesn't support is also disallowed, even though the MAY allows it.\", \"missing_information\": \"It is unclear whether the 'alternative' refers to the client or some other server-side component. This affects how the 'SHOULD NOT' applies.\", \"justification\": \"The sentence structure allows for two interpretations of what 'the alternative' refers to. If it's the client, then the server shouldn't advertise versions the client doesn't support. If it's a server-side component, then the server shouldn't advertise versions that *another* server component doesn't support. The MAY/SHOULD combination creates a weak constraint, and the ambiguity of 'alternative' makes it unclear how strictly the SHOULD is applied to reserved versions.\"}",
+  "record_id": "71c698fd04664f423b669e34bfd41b594da722a8682c894dfa69e32d12cd314b",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "3.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.469
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "SHOULD NOT send new data, but SHOULD retransmit normally the old unacknowledged data between SND.UNA and SND.UNA+SND.WND.",
+    "interpretation_a": "The sender is permitted to send new data if it chooses, but is encouraged to retransmit existing unacknowledged data.",
+    "interpretation_b": "The sender is discouraged from sending new data, and encouraged to retransmit existing unacknowledged data. The use of two SHOULD statements implies a stronger recommendation to prioritize retransmission over sending new data.",
+    "is_ambiguous": "yes",
+    "justification": "The use of two 'SHOULD' statements in close proximity creates ambiguity. It's unclear whether the 'SHOULD NOT send new data' is a strong recommendation, or merely a weaker suggestion alongside the retransmission recommendation. The relationship between the two actions isn't clearly defined, leading to different interpretations of the sender's expected behaviour.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:24:02.000745+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-10",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "237d383fffc55a5c1690217b4f1ef028e768e630183e9d5979dc570a933dea62",
+  "lineage_ids": "lineage:8392c02bd89b8ca78c89e2a4",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 216,
+    "load_duration": 16968200,
+    "prompt_eval_count": 628,
+    "total_duration": 8275021600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"SHOULD NOT send new data, but SHOULD retransmit normally the old unacknowledged data between SND.UNA and SND.UNA+SND.WND.\", \"interpretation_a\": \"The sender is permitted to send new data if it chooses, but is encouraged to retransmit existing unacknowledged data.\", \"interpretation_b\": \"The sender is discouraged from sending new data, and encouraged to retransmit existing unacknowledged data. The use of two SHOULD statements implies a stronger recommendation to prioritize retransmission over sending new data.\", \"missing_information\": \"\", \"justification\": \"The use of two 'SHOULD' statements in close proximity creates ambiguity. It's unclear whether the 'SHOULD NOT send new data' is a strong recommendation, or merely a weaker suggestion alongside the retransmission recommendation. The relationship between the two actions isn't clearly defined, leading to different interpretations of the sender's expected behaviour.\"}",
+  "record_id": "7b33d4882793bced02c7e7caf6967fedddc17fb12303b4011b2f7fbb5849cca6",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "3.8.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.282
+}

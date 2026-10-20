@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear condition and required action: if a sender runs out of flow control credit and does not receive a MAX_DATA or MAX_STREAM_DATA frame, it MUST send a BLOCKED or STREAM_BLOCKED frame. There is no ambiguity in the required behavior under the specified condition.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:32:42.859105+00:00",
+  "document_id": "draft-ietf-quic-transport-07",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "a30c2f15ee1ba891da03061e890f18ab8a032428a64328b4a2548d09b79fb6e0",
+  "lineage_ids": "lineage:304ded062098fdf80671c50a",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 113,
+    "load_duration": 8502200,
+    "prompt_eval_count": 537,
+    "total_duration": 4682691200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear condition and required action: if a sender runs out of flow control credit and does not receive a MAX_DATA or MAX_STREAM_DATA frame, it MUST send a BLOCKED or STREAM_BLOCKED frame. There is no ambiguity in the required behavior under the specified condition.\"\n}",
+  "record_id": "ac4f3e6e20d3c64fe3ea8fe8f2e7573b30ae9a541de059d347b4478f3f2a3f7b",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "11.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 4.688
+}

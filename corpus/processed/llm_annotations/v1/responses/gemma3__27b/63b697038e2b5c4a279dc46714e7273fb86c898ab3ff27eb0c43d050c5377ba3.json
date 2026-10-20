@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "intermediary transforming an HTTP/1.x message to HTTP/2 MUST remove connection-specific header fields",
+    "interpretation_a": "An intermediary *always* removes connection-specific header fields when translating from HTTP/1.x to HTTP/2.",
+    "interpretation_b": "An intermediary removes connection-specific header fields *only if* the resulting HTTP/2 message would be considered malformed without removal. The clause does not specify a threshold for 'malformed'.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states an intermediary *MUST* remove header fields 'or their messages will be treated by other HTTP/2 endpoints as malformed'. This implies that removal is conditional on avoiding a malformed message, but doesn't define what constitutes 'malformed' in this context. This creates ambiguity as to when the removal is required.",
+    "missing_information": "The definition of 'malformed' is not provided within this excerpt, and the degree to which a message must be malformed to trigger removal is not specified."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:35:58.207259+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "0919923cd0bd98f272735e3a468266cb977f42d9fcc48db8eaa680a1e32c4e60",
+  "lineage_ids": "lineage:91e255f071aadb698ecc8475",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 236,
+    "load_duration": 20413400,
+    "prompt_eval_count": 618,
+    "total_duration": 9326836700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"intermediary transforming an HTTP/1.x message to HTTP/2 MUST remove connection-specific header fields\", \"interpretation_a\": \"An intermediary *always* removes connection-specific header fields when translating from HTTP/1.x to HTTP/2.\", \"interpretation_b\": \"An intermediary removes connection-specific header fields *only if* the resulting HTTP/2 message would be considered malformed without removal. The clause does not specify a threshold for 'malformed'.\", \"missing_information\": \"The definition of 'malformed' is not provided within this excerpt, and the degree to which a message must be malformed to trigger removal is not specified.\", \"justification\": \"The clause states an intermediary *MUST* remove header fields 'or their messages will be treated by other HTTP/2 endpoints as malformed'. This implies that removal is conditional on avoiding a malformed message, but doesn't define what constitutes 'malformed' in this context. This creates ambiguity as to when the removal is required.\"}",
+  "record_id": "63b697038e2b5c4a279dc46714e7273fb86c898ab3ff27eb0c43d050c5377ba3",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.344
+}

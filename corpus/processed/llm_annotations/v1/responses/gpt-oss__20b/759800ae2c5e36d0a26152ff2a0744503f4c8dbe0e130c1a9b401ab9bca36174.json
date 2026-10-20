@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "within a short time",
+    "interpretation_a": "Servers must discard 0-RTT keys within a time period no longer than 3×PTO.",
+    "interpretation_b": "Servers must discard 0-RTT keys within a time period no longer than a few milliseconds, but not necessarily 3×PTO.",
+    "is_ambiguous": "yes",
+    "justification": "The clause requires discarding 0‑RTT keys within a \"short time\" but only recommends a 3×PTO period, leaving the exact duration undefined.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T12:48:53.901563+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "7c090290eb9f707342df16bcd593db6bbe5bc9c67b806b6d1af974fc74a3df79",
+  "lineage_ids": "lineage:322a02c4d045ef4488c7ac0f",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1495,
+    "load_duration": 4319300,
+    "prompt_eval_count": 646,
+    "total_duration": 12929927100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"within a short time\",\n  \"interpretation_a\": \"Servers must discard 0-RTT keys within a time period no longer than 3×PTO.\",\n  \"interpretation_b\": \"Servers must discard 0-RTT keys within a time period no longer than a few milliseconds, but not necessarily 3×PTO.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause requires discarding 0‑RTT keys within a \\\"short time\\\" but only recommends a 3×PTO period, leaving the exact duration undefined.\"\n}",
+  "record_id": "759800ae2c5e36d0a26152ff2a0744503f4c8dbe0e130c1a9b401ab9bca36174",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.9.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 12.937
+}

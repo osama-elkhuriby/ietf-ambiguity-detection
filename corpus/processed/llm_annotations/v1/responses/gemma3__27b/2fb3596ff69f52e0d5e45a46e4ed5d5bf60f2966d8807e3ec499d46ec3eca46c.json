@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "the same local address",
+    "interpretation_a": "The PATH_RESPONSE must be received on the same local IP address and port combination as the PATH_CHALLENGE was sent from.",
+    "interpretation_b": "The PATH_RESPONSE must be received on the same network interface as the PATH_CHALLENGE was sent from, but the local address (IP and port) may differ if multiple addresses are bound to that interface.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'same local address' is incomplete. It is unclear whether it refers to the exact IP address and port combination, or simply the network interface. This affects how an endpoint would validate the PATH_RESPONSE.",
+    "missing_information": "The specification does not define what constitutes 'the same local address'. Is it the IP address and port combination, or simply the network interface?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:09:24.798008+00:00",
+  "document_id": "draft-ietf-quic-transport-17",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "07e390cdf8283e008c623b23ce07c4727b2009bc3ed0c7c1cdf21629c77c56d5",
+  "lineage_ids": "lineage:509c3b0f1bf9117712713622",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 197,
+    "load_duration": 4435700,
+    "prompt_eval_count": 618,
+    "total_duration": 7437992900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"the same local address\", \"interpretation_a\": \"The PATH_RESPONSE must be received on the same local IP address and port combination as the PATH_CHALLENGE was sent from.\", \"interpretation_b\": \"The PATH_RESPONSE must be received on the same network interface as the PATH_CHALLENGE was sent from, but the local address (IP and port) may differ if multiple addresses are bound to that interface.\", \"missing_information\": \"The specification does not define what constitutes 'the same local address'. Is it the IP address and port combination, or simply the network interface?\",\"justification\": \"The phrase 'same local address' is incomplete. It is unclear whether it refers to the exact IP address and port combination, or simply the network interface. This affects how an endpoint would validate the PATH_RESPONSE.\"}",
+  "record_id": "2fb3596ff69f52e0d5e45a46e4ed5d5bf60f2966d8807e3ec499d46ec3eca46c",
+  "revision": "17",
+  "schema_version": 1,
+  "section_ids": "8.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.438
+}

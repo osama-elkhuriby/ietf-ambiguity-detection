@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "stream identifier field is 0x0",
+    "interpretation_a": "The condition applies to any DATA frame where the stream identifier is literally the hexadecimal value 0x0.",
+    "interpretation_b": "The condition applies to any DATA frame where the stream identifier is the decimal value 0, which is represented as 0x0 in hexadecimal.",
+    "is_ambiguous": "yes",
+    "justification": "The specification does not explicitly state whether the stream identifier is interpreted as hexadecimal or decimal. While 0x0 is a common way to represent the decimal value 0 in hexadecimal, the lack of explicit clarification creates ambiguity. A recipient might interpret 0x0 as the hexadecimal value, leading to a different outcome than if it's interpreted as the decimal value 0.",
+    "missing_information": "It is unclear whether the stream identifier is interpreted as a hexadecimal or decimal value. This affects how the condition is evaluated and whether a frame triggers the error."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:34:16.291014+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "db8b6cb1cac8c1e6f595aacab928f3daa36ef7e4dec5d821d08c6ec46531d829",
+  "lineage_ids": "lineage:07e97ddf0bd79dca6ad3cc6a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 217,
+    "load_duration": 8678200,
+    "prompt_eval_count": 580,
+    "total_duration": 8315343600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"stream identifier field is 0x0\", \"interpretation_a\": \"The condition applies to any DATA frame where the stream identifier is literally the hexadecimal value 0x0.\", \"interpretation_b\": \"The condition applies to any DATA frame where the stream identifier is the decimal value 0, which is represented as 0x0 in hexadecimal.\", \"missing_information\": \"It is unclear whether the stream identifier is interpreted as a hexadecimal or decimal value. This affects how the condition is evaluated and whether a frame triggers the error.\", \"justification\": \"The specification does not explicitly state whether the stream identifier is interpreted as hexadecimal or decimal. While 0x0 is a common way to represent the decimal value 0 in hexadecimal, the lack of explicit clarification creates ambiguity. A recipient might interpret 0x0 as the hexadecimal value, leading to a different outcome than if it's interpreted as the decimal value 0.\"}",
+  "record_id": "54af04aaa049a23e6d86756d7ad0c4867067c87e681dd2b869e16700d76bc118",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.313
+}

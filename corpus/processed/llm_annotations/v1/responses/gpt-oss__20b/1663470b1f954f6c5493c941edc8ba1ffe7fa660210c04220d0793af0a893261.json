@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "with a reduced delay",
+    "interpretation_a": "Endpoints should send acknowledgments for packets containing CRYPTO frames with a reduced delay (i.e., the acknowledgments should be sent sooner after receiving the packet).",
+    "interpretation_b": "Endpoints should send acknowledgments for packets containing CRYPTO frames, and the delay between sending the packet and receiving the acknowledgment should be reduced (i.e., the acknowledgment should be received sooner by the sender).",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'with a reduced delay' can modify either the act of sending the acknowledgment or the delay experienced by the packet, leading to two materially different implementation behaviours.  ",
+    "missing_information": "The clause does not specify whether 'reduced delay' refers to the time between receiving the packet and sending the acknowledgment, or the time between sending the packet and receiving the acknowledgment, nor does it define the target delay value or metric. This missing constraint prevents a unique operational interpretation.  "
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T14:04:46.797564+00:00",
+  "document_id": "draft-ietf-quic-transport-20",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "9447aa031e34a2501f0035ab00f479c3fa91e61a6257e7615a8148321dd48992",
+  "lineage_ids": "lineage:181fee5935608ae933d4c843",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1463,
+    "load_duration": 11509800,
+    "prompt_eval_count": 580,
+    "total_duration": 13045645600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"with a reduced delay\",\n  \"interpretation_a\": \"Endpoints should send acknowledgments for packets containing CRYPTO frames with a reduced delay (i.e., the acknowledgments should be sent sooner after receiving the packet).\",\n  \"interpretation_b\": \"Endpoints should send acknowledgments for packets containing CRYPTO frames, and the delay between sending the packet and receiving the acknowledgment should be reduced (i.e., the acknowledgment should be received sooner by the sender).\",\n  \"missing_information\": \"The clause does not specify whether 'reduced delay' refers to the time between receiving the packet and sending the acknowledgment, or the time between sending the packet and receiving the acknowledgment, nor does it define the target delay value or metric. This missing constraint prevents a unique operational interpretation.  \",\n  \"justification\": \"The phrase 'with a reduced delay' can modify either the act of sending the acknowledgment or the delay experienced by the packet, leading to two materially different implementation behaviours.  \"\n}",
+  "record_id": "1663470b1f954f6c5493c941edc8ba1ffe7fa660210c04220d0793af0a893261",
+  "revision": "20",
+  "schema_version": 1,
+  "section_ids": "13.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 13.031
+}

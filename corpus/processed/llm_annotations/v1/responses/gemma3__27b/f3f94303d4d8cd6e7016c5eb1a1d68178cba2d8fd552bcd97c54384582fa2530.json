@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "SHOULD NOT employ the TCP urgent mechanism",
+    "interpretation_a": "Applications are discouraged from using the urgent mechanism, but may still do so if they choose.",
+    "interpretation_b": "Applications must not use the urgent mechanism, but there may be valid reasons to ignore this recommendation.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD NOT' creates ambiguity. While it indicates a strong recommendation against use, it doesn't explicitly *prohibit* it. This allows for two reasonable interpretations: applications can choose to ignore the recommendation, or they must adhere to it. The subsequent clause stating 'MUST still include support' further complicates this, as it implies support must exist even if applications are discouraged from using it.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:31:09.424805+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-10",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "e16c29427b637010f52982383b1a4e1032b135cc286ba38bb87db8152eb1c91f",
+  "lineage_ids": "lineage:c5a2be185ce612162c660127",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 179,
+    "load_duration": 10292000,
+    "prompt_eval_count": 550,
+    "total_duration": 6931765400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"SHOULD NOT employ the TCP urgent mechanism\", \"interpretation_a\": \"Applications are discouraged from using the urgent mechanism, but may still do so if they choose.\", \"interpretation_b\": \"Applications must not use the urgent mechanism, but there may be valid reasons to ignore this recommendation.\", \"missing_information\": \"\", \"justification\": \"The use of 'SHOULD NOT' creates ambiguity. While it indicates a strong recommendation against use, it doesn't explicitly *prohibit* it. This allows for two reasonable interpretations: applications can choose to ignore the recommendation, or they must adhere to it. The subsequent clause stating 'MUST still include support' further complicates this, as it implies support must exist even if applications are discouraged from using it.\"}",
+  "record_id": "f3f94303d4d8cd6e7016c5eb1a1d68178cba2d8fd552bcd97c54384582fa2530",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "3.8.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.937
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "unless the variance cannot be crossed or the origin server has been deliberately configured to prevent cache transparency",
+    "interpretation_a": "The server should send a Vary header unless the variance cannot be crossed by a cache, meaning that the cache cannot handle the variance.",
+    "interpretation_b": "The server should send a Vary header unless the variance cannot be crossed by a user, meaning that the user cannot cross the variance boundaries.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"cannot be crossed\" is not defined in the supplied text, allowing at least two materially different interpretations of when a Vary header should be omitted.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T08:16:56.546920+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-07",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "203c53bc67d3a2589304fb002b4597f56f04b5f9bafc3ad97cdd32d7c5f253d6",
+  "lineage_ids": "lineage:7696074ea7b7c38bd6486b3b",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3777,
+    "load_duration": 5556900,
+    "prompt_eval_count": 660,
+    "total_duration": 32767717900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-1\",\n  \"evidence_span\": \"unless the variance cannot be crossed or the origin server has been deliberately configured to prevent cache transparency\",\n  \"interpretation_a\": \"The server should send a Vary header unless the variance cannot be crossed by a cache, meaning that the cache cannot handle the variance.\",\n  \"interpretation_b\": \"The server should send a Vary header unless the variance cannot be crossed by a user, meaning that the user cannot cross the variance boundaries.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The phrase \\\"cannot be crossed\\\" is not defined in the supplied text, allowing at least two materially different interpretations of when a Vary header should be omitted.\"\n}",
+  "record_id": "e3bc5ee0404c3efff663d22cddb911fe17c1fe355ff104e3cd4595821003517d",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "10.1.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 32.765
+}

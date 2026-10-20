@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "the server has for the target resource that cannot or will not be changed by the PUT",
+    "interpretation_a": "The server should check that the PUT request does not violate constraints that are fixed and cannot be altered by the PUT operation itself, such as access control policies or mandatory metadata fields.",
+    "interpretation_b": "The server should check that the PUT request does not violate constraints that the server has decided not to change, even if they could be changed, such as certain configuration settings or legacy constraints.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'cannot or will not be changed by the PUT' introduces ambiguity. It is unclear whether the constraints are immutable (cannot be changed) or mutable but intentionally not changed (will not be changed). This distinction affects how servers should interpret and enforce these constraints, leading to different implementation behaviors.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:11:00.680485+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-16",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "f46fa009bc0cd6f6cc0a7e9660fd5c71c2c79e12d1f939e84f32d350a28ee562",
+  "lineage_ids": "lineage:b57b75b3bff3127eb5cda155",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 207,
+    "load_duration": 4049000,
+    "prompt_eval_count": 591,
+    "total_duration": 8598248200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"the server has for the target resource that cannot or will not be changed by the PUT\",\n  \"interpretation_a\": \"The server should check that the PUT request does not violate constraints that are fixed and cannot be altered by the PUT operation itself, such as access control policies or mandatory metadata fields.\",\n  \"interpretation_b\": \"The server should check that the PUT request does not violate constraints that the server has decided not to change, even if they could be changed, such as certain configuration settings or legacy constraints.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The phrase 'cannot or will not be changed by the PUT' introduces ambiguity. It is unclear whether the constraints are immutable (cannot be changed) or mutable but intentionally not changed (will not be changed). This distinction affects how servers should interpret and enforce these constraints, leading to different implementation behaviors.\"\n}",
+  "record_id": "47281693de6ff5f37956de43930f28fa96bf8a82b2ed43105d191ed78dae07f2",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "9.3.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.625
+}

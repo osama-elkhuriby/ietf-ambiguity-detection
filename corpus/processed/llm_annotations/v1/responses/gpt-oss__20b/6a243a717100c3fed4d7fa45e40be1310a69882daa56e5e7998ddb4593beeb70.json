@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD increase exponentially the interval between successive probes",
+    "interpretation_a": "The interval between successive probes is doubled each time (exponential backoff with base 2).",
+    "interpretation_b": "The interval between successive probes is increased by a factor of 1.5 each time (or any other factor).",
+    "is_ambiguous": "yes",
+    "justification": "The clause’s wording allows at least two materially different interpretations of how the probe interval should grow, and it omits a concrete algorithm or base for the exponential increase, making the behavior under‑specified.",
+    "missing_information": "The clause does not specify the exact exponential increase algorithm or base, nor the precise timing for the first probe relative to the retransmission timeout period, leaving the implementation behavior under‑specified.  The lack of a defined exponential function or base creates multiple materially different reasonable interpretations.  The missing constraint prevents a unique operational interpretation.  (U-2)."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T20:04:30.276113+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-19",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "ad525469d666d9c2ec29fb3926f42ef4c353446a29ab27ace45e7acdfe657d0b",
+  "lineage_ids": "lineage:6efae2e75ffa9e9cf1356a5b|lineage:e4d14326afdf70ec532d7ccb",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1779,
+    "load_duration": 5555800,
+    "prompt_eval_count": 614,
+    "total_duration": 15778307700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"SHOULD increase exponentially the interval between successive probes\",\n  \"interpretation_a\": \"The interval between successive probes is doubled each time (exponential backoff with base 2).\",\n  \"interpretation_b\": \"The interval between successive probes is increased by a factor of 1.5 each time (or any other factor).\",\n  \"missing_information\": \"The clause does not specify the exact exponential increase algorithm or base, nor the precise timing for the first probe relative to the retransmission timeout period, leaving the implementation behavior under‑specified.  The lack of a defined exponential function or base creates multiple materially different reasonable interpretations.  The missing constraint prevents a unique operational interpretation.  (U-2).\",\n  \"justification\": \"The clause’s wording allows at least two materially different interpretations of how the probe interval should grow, and it omits a concrete algorithm or base for the exponential increase, making the behavior under‑specified.\"\n}",
+  "record_id": "6a243a717100c3fed4d7fa45e40be1310a69882daa56e5e7998ddb4593beeb70",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "3.7.6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 15.782
+}

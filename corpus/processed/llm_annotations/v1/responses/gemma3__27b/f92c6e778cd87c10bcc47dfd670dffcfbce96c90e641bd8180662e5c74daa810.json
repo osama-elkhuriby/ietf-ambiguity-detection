@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST be treated as a stream error",
+    "interpretation_a": "The server MUST signal a stream error immediately upon detecting a malformed request/response.",
+    "interpretation_b": "The server MAY delay signaling a stream error after detecting a malformed request/response, potentially processing it further before erroring.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'MUST be treated as' is open to interpretation regarding *when* the stream error must be signaled. It could mean immediately upon detection, or at some later point. This affects implementation because a server might choose to buffer or partially process a malformed request before signaling the error, which is a valid interpretation but not explicitly ruled out.",
+    "missing_information": "The timing of the stream error is not specified. Does 'MUST be treated' imply immediate action, or is there a window for further processing before the error is signaled?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:15:40.686900+00:00",
+  "document_id": "draft-ietf-quic-http-32",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "0e015d671f5e28c8e0d35273d9ec49f23685b7967400a627e0bfc427f34e4681",
+  "lineage_ids": "lineage:0f51da331f11d7d2df14e218",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 205,
+    "load_duration": 4566100,
+    "prompt_eval_count": 594,
+    "total_duration": 7873252800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST be treated as a stream error\", \"interpretation_a\": \"The server MUST signal a stream error immediately upon detecting a malformed request/response.\", \"interpretation_b\": \"The server MAY delay signaling a stream error after detecting a malformed request/response, potentially processing it further before erroring.\", \"missing_information\": \"The timing of the stream error is not specified. Does 'MUST be treated' imply immediate action, or is there a window for further processing before the error is signaled?\", \"justification\": \"The phrase 'MUST be treated as' is open to interpretation regarding *when* the stream error must be signaled. It could mean immediately upon detection, or at some later point. This affects implementation because a server might choose to buffer or partially process a malformed request before signaling the error, which is a valid interpretation but not explicitly ruled out.\"}",
+  "record_id": "f92c6e778cd87c10bcc47dfd670dffcfbce96c90e641bd8180662e5c74daa810",
+  "revision": "32",
+  "schema_version": 1,
+  "section_ids": "4.1.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.891
+}

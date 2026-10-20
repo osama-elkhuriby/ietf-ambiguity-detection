@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST specify which keys are applicable and safe to use",
+    "interpretation_a": "A protocol mapping document must list *all* keys that are applicable and safe, implying a comprehensive list is required.",
+    "interpretation_b": "A protocol mapping document must specify *at least* the keys it intends to use, leaving open the possibility of supporting additional keys without explicit listing.",
+    "is_ambiguous": "yes",
+    "justification": "The terms 'applicable' and 'safe' are not defined, leading to different interpretations of the requirement. A protocol mapping document could reasonably interpret this as needing to list all applicable and safe keys, or only those it actively uses.",
+    "missing_information": "The clause does not define what constitutes 'applicable' or 'safe'. Without these definitions, implementations could reasonably differ on which keys to include."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:02:39.684847+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "25b3d403f543aabcd22c0b18379139c31069746a47b4e051e2276b80fdc6884f",
+  "lineage_ids": "lineage:8b6b6140050301a6c7328e2f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 188,
+    "load_duration": 4307500,
+    "prompt_eval_count": 573,
+    "total_duration": 7115268000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST specify which keys are applicable and safe to use\", \"interpretation_a\": \"A protocol mapping document must list *all* keys that are applicable and safe, implying a comprehensive list is required.\", \"interpretation_b\": \"A protocol mapping document must specify *at least* the keys it intends to use, leaving open the possibility of supporting additional keys without explicit listing.\", \"missing_information\": \"The clause does not define what constitutes 'applicable' or 'safe'. Without these definitions, implementations could reasonably differ on which keys to include.\",\"justification\": \"The terms 'applicable' and 'safe' are not defined, leading to different interpretations of the requirement. A protocol mapping document could reasonably interpret this as needing to list all applicable and safe keys, or only those it actively uses.\"}",
+  "record_id": "5001d2bd2ab0ecbc0a053532e54b76f0d360f608c9d0db08d53ece877d4c994d",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.125
+}

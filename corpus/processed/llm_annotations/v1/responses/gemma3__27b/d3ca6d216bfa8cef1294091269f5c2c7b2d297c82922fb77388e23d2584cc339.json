@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "indicated last Stream ID",
+    "interpretation_a": "The server cancels requests on streams *strictly* higher than the last Stream ID in the GOAWAY. Stream ID equal to the last Stream ID is unaffected.",
+    "interpretation_b": "The server cancels requests on streams greater than or equal to the last Stream ID in the GOAWAY. Stream ID equal to the last Stream ID is also cancelled.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'higher than' is ambiguous. Does it include the indicated last Stream ID, or only those strictly above it? Both interpretations are reasonable and lead to different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:09:32.355212+00:00",
+  "document_id": "draft-ietf-quic-http-17",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "87975ee615a07ef4e5333453539498c8bf7a08dae88e7a838502456f0d40d76b",
+  "lineage_ids": "lineage:6c2ad077b02dcc701ea36fd9",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 157,
+    "load_duration": 10732900,
+    "prompt_eval_count": 573,
+    "total_duration": 6147142200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"indicated last Stream ID\", \"interpretation_a\": \"The server cancels requests on streams *strictly* higher than the last Stream ID in the GOAWAY. Stream ID equal to the last Stream ID is unaffected.\", \"interpretation_b\": \"The server cancels requests on streams greater than or equal to the last Stream ID in the GOAWAY. Stream ID equal to the last Stream ID is also cancelled.\", \"missing_information\": \"\", \"justification\": \"The phrase 'higher than' is ambiguous. Does it include the indicated last Stream ID, or only those strictly above it? Both interpretations are reasonable and lead to different implementation behaviours.\"}",
+  "record_id": "d3ca6d216bfa8cef1294091269f5c2c7b2d297c82922fb77388e23d2584cc339",
+  "revision": "17",
+  "schema_version": 1,
+  "section_ids": "6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.156
+}

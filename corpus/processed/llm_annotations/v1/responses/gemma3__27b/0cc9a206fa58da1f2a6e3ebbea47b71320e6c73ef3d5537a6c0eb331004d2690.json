@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "might be exploited by an attacker if they are translated verbatim",
+    "interpretation_a": "An attacker could exploit these characters if an intermediary simply passes them through without modification, potentially altering header field parsing.",
+    "interpretation_b": "An attacker could exploit these characters if an intermediary *does* translate them verbatim, introducing unexpected characters into the header field value.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"might be exploited by an attacker if they are translated verbatim\" is unclear. It's not specified *how* the verbatim translation leads to exploitation. Does it mean the characters are dangerous if passed through unchanged, or if they are literally interpreted as control characters? This lack of clarity creates two reasonable interpretations affecting how an implementation would handle these characters.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:28:13.989860+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-00",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "a4ee413d6e4036f1181c0820f1976d57e48fe21e9b2b2d6d5ad68fc6d217db15",
+  "lineage_ids": "lineage:8ebcef40acee4889aa4b8e49",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 182,
+    "load_duration": 20450200,
+    "prompt_eval_count": 640,
+    "total_duration": 7112889500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"might be exploited by an attacker if they are translated verbatim\", \"interpretation_a\": \"An attacker could exploit these characters if an intermediary simply passes them through without modification, potentially altering header field parsing.\", \"interpretation_b\": \"An attacker could exploit these characters if an intermediary *does* translate them verbatim, introducing unexpected characters into the header field value.\", \"missing_information\": \"\", \"justification\": \"The phrase \\\"might be exploited by an attacker if they are translated verbatim\\\" is unclear. It's not specified *how* the verbatim translation leads to exploitation. Does it mean the characters are dangerous if passed through unchanged, or if they are literally interpreted as control characters? This lack of clarity creates two reasonable interpretations affecting how an implementation would handle these characters.\"}",
+  "record_id": "0cc9a206fa58da1f2a6e3ebbea47b71320e6c73ef3d5537a6c0eb331004d2690",
+  "revision": "00",
+  "schema_version": 1,
+  "section_ids": "10.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.125
+}

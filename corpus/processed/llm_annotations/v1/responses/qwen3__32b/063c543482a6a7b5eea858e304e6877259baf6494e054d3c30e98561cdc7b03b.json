@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear and unambiguous requirement: for HTTP or HTTPS URIs, the :path pseudo-header field must not be empty. It further specifies that if the URI lacks a path component, the value '/' must be used. There is no room for multiple reasonable interpretations, and the constraint is complete for implementation.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T01:40:21.320537+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "b2b7c7742578a427194d5ef9dcc4fe33d44b5410c94e0f42e88ba7f3fcec07f4",
+  "lineage_ids": "lineage:0019b39c61c2e80415af3d51",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 120,
+    "load_duration": 3686100,
+    "prompt_eval_count": 541,
+    "total_duration": 4938990200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear and unambiguous requirement: for HTTP or HTTPS URIs, the :path pseudo-header field must not be empty. It further specifies that if the URI lacks a path component, the value '/' must be used. There is no room for multiple reasonable interpretations, and the constraint is complete for implementation.\"\n}",
+  "record_id": "063c543482a6a7b5eea858e304e6877259baf6494e054d3c30e98561cdc7b03b",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 4.938
+}

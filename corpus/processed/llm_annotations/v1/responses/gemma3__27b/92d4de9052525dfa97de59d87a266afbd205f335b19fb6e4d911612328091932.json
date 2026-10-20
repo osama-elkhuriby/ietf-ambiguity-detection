@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "stream ID exceeding the limit it has sent",
+    "interpretation_a": "The receiver considers any frame with a stream ID *greater than* the advertised limit to be an error.",
+    "interpretation_b": "The receiver considers any frame with a stream ID *equal to or greater than* the advertised limit to be an error.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'exceeding the limit' is ambiguous. Does 'exceeding' mean 'greater than' or 'greater than or equal to'? Both interpretations are reasonable and would lead to different implementations.",
+    "missing_information": "The specification does not explicitly state whether exceeding the limit includes being equal to the limit. This affects how the receiver handles frames with stream IDs at the boundary of the limit."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:45:11.252450+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "50b988921585dc8460fd4d4ed8d6136172d0856858d48717ec335888b5685d3d",
+  "lineage_ids": "lineage:e6ab7294691807d7480d4049",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 182,
+    "load_duration": "",
+    "prompt_eval_count": 600,
+    "total_duration": 6868214200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"stream ID exceeding the limit it has sent\", \"interpretation_a\": \"The receiver considers any frame with a stream ID *greater than* the advertised limit to be an error.\", \"interpretation_b\": \"The receiver considers any frame with a stream ID *equal to or greater than* the advertised limit to be an error.\", \"missing_information\": \"The specification does not explicitly state whether exceeding the limit includes being equal to the limit. This affects how the receiver handles frames with stream IDs at the boundary of the limit.\", \"justification\": \"The phrase 'exceeding the limit' is ambiguous. Does 'exceeding' mean 'greater than' or 'greater than or equal to'? Both interpretations are reasonable and would lead to different implementations.\"}",
+  "record_id": "92d4de9052525dfa97de59d87a266afbd205f335b19fb6e4d911612328091932",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.875
+}

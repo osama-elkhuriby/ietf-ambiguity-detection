@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD still send a GOAWAY frame",
+    "interpretation_a": "The receiver MAY choose not to send a GOAWAY frame before terminating the connection, even after receiving one.",
+    "interpretation_b": "The receiver MUST send a GOAWAY frame before terminating the connection, even after receiving one.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' creates ambiguity. While 'SHOULD' is generally a recommendation, the context of a protocol dealing with connection termination could imply a stronger requirement. The phrase 'no more use for the connection' is also open to interpretation.",
+    "missing_information": "The strength of 'SHOULD' is unclear. Is it a recommendation, or a weaker form of 'MUST'? The phrase 'no more use for the connection' is also vague; what constitutes 'no more use'?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:45:22.377633+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "6f3e589f4121397b5e1029ddfbe007c8f18caf16d37cb79d0e7f5366cfbaa38f",
+  "lineage_ids": "lineage:b57fefd69c397a12764e12cf",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 198,
+    "load_duration": 10021700,
+    "prompt_eval_count": 663,
+    "total_duration": 7745295400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD still send a GOAWAY frame\", \"interpretation_a\": \"The receiver MAY choose not to send a GOAWAY frame before terminating the connection, even after receiving one.\", \"interpretation_b\": \"The receiver MUST send a GOAWAY frame before terminating the connection, even after receiving one.\", \"missing_information\": \"The strength of 'SHOULD' is unclear. Is it a recommendation, or a weaker form of 'MUST'? The phrase 'no more use for the connection' is also vague; what constitutes 'no more use'?\",\"justification\": \"The use of 'SHOULD' creates ambiguity. While 'SHOULD' is generally a recommendation, the context of a protocol dealing with connection termination could imply a stronger requirement. The phrase 'no more use for the connection' is also open to interpretation.\"}",
+  "record_id": "b85c5dc0896a79425bd2866f11a63afe9618424ce1f14f15cea11a2d922a908d",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.75
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY treat non-zero padding as a connection error",
+    "interpretation_a": "The receiver can choose to treat non-zero padding as an error, but is not required to.",
+    "interpretation_b": "The receiver can choose to ignore non-zero padding without treating it as an error.",
+    "is_ambiguous": "yes",
+    "justification": "The MAY clause grants discretion, but the lack of criteria for exercising that discretion creates ambiguity. A receiver could be programmed to always treat it as an error, or to never do so, or to use some other criteria. This affects implementation because different receivers could implement different logic for this decision.",
+    "missing_information": "The criteria for *how* the receiver decides whether to treat non-zero padding as an error is missing. This affects implementation because different receivers could implement different logic for this decision."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:28:00.288674+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "5f54da9a0eded422fca721dbe91f057493e3837687f2c0e781d5e52e1583f75c",
+  "lineage_ids": "lineage:3d808f37e751d7bfd90e9239",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 194,
+    "load_duration": 8519300,
+    "prompt_eval_count": 562,
+    "total_duration": 7476052800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY treat non-zero padding as a connection error\", \"interpretation_a\": \"The receiver can choose to treat non-zero padding as an error, but is not required to.\", \"interpretation_b\": \"The receiver can choose to ignore non-zero padding without treating it as an error.\", \"missing_information\": \"The criteria for *how* the receiver decides whether to treat non-zero padding as an error is missing. This affects implementation because different receivers could implement different logic for this decision.\", \"justification\": \"The MAY clause grants discretion, but the lack of criteria for exercising that discretion creates ambiguity. A receiver could be programmed to always treat it as an error, or to never do so, or to use some other criteria. This affects implementation because different receivers could implement different logic for this decision.\"}",
+  "record_id": "0b35d2425b4b8770de3a6588f5b5bb6ec258b3ee24bce0d57b188ea3da75edfb",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.484
+}

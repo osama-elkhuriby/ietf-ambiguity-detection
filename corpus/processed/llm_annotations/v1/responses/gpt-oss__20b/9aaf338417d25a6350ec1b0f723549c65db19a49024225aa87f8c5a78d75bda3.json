@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "reasonable length",
+    "interpretation_a": "The recipient must be able to parse any value up to a fixed maximum length defined by the protocol (e.g., a specific byte limit).",
+    "interpretation_b": "The recipient must be able to parse any value up to a length that is considered reasonable by the implementer, which could vary widely.",
+    "is_ambiguous": "yes",
+    "justification": "The clause contains an undefined term 'reasonable length' that is not defined elsewhere in the supplied text. This omission creates an incomplete constraint that can lead to materially different implementation behaviours, satisfying the criteria for ambiguity.",
+    "missing_information": "The clause does not define what constitutes a 'reasonable length', leaving the maximum permissible length unspecified. This omission allows for materially different implementation behaviours regarding how large a value can be parsed. The lack of a concrete constraint on length is the source of ambiguity. The clause also does not specify whether the length limit applies to all protocol elements or only those applicable to the recipient's role, which could further affect implementation. However, the primary ambiguity arises from the undefined term 'reasonable length'."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T07:18:33.142374+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-13",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "a1c5bdc9f71e5e54f11d0f8f73dce24e629e50f91e224f63dbe650940012975a",
+  "lineage_ids": "lineage:1ab06ddd826774538f24315a",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1484,
+    "load_duration": 5259400,
+    "prompt_eval_count": 575,
+    "total_duration": 13197064100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"reasonable length\",\n  \"interpretation_a\": \"The recipient must be able to parse any value up to a fixed maximum length defined by the protocol (e.g., a specific byte limit).\",\n  \"interpretation_b\": \"The recipient must be able to parse any value up to a length that is considered reasonable by the implementer, which could vary widely.\",\n  \"missing_information\": \"The clause does not define what constitutes a 'reasonable length', leaving the maximum permissible length unspecified. This omission allows for materially different implementation behaviours regarding how large a value can be parsed. The lack of a concrete constraint on length is the source of ambiguity. The clause also does not specify whether the length limit applies to all protocol elements or only those applicable to the recipient's role, which could further affect implementation. However, the primary ambiguity arises from the undefined term 'reasonable length'.\",\n  \"justification\": \"The clause contains an undefined term 'reasonable length' that is not defined elsewhere in the supplied text. This omission creates an incomplete constraint that can lead to materially different implementation behaviours, satisfying the criteria for ambiguity.\"\n}",
+  "record_id": "9aaf338417d25a6350ec1b0f723549c65db19a49024225aa87f8c5a78d75bda3",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 13.188
+}

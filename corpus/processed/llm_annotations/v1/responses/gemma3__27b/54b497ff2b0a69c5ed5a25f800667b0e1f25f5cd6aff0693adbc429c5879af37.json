@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY treat receipt of any other type of frame",
+    "interpretation_a": "An endpoint is permitted to treat receipt of any other frame type as an error.",
+    "interpretation_b": "An endpoint is not required to treat receipt of any other frame type as an error; it may ignore it or handle it in some other way.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' allows for two reasonable interpretations. The endpoint could either treat the frame as an error, or it could choose to ignore it or handle it in some other way. The clause does not specify what happens if the endpoint chooses to 'treat' the frame as an error; it could log it, discard it, or take other actions. This lack of constraint creates ambiguity.",
+    "missing_information": "The degree of freedom granted by 'MAY' is not constrained. It is unclear whether the endpoint *must* handle the frame as an error if it chooses to treat it as such, or if it has further discretion in how it responds."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:34:25.200809+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "441dcaca775f75777491d634359452c90fe0d7a0cf57a62c5c8612ad0a059f59",
+  "lineage_ids": "lineage:6001c155499a0c7014e71d82",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 233,
+    "load_duration": 21019300,
+    "prompt_eval_count": 603,
+    "total_duration": 8902600200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY treat receipt of any other type of frame\", \"interpretation_a\": \"An endpoint is permitted to treat receipt of any other frame type as an error.\", \"interpretation_b\": \"An endpoint is not required to treat receipt of any other frame type as an error; it may ignore it or handle it in some other way.\", \"missing_information\": \"The degree of freedom granted by 'MAY' is not constrained. It is unclear whether the endpoint *must* handle the frame as an error if it chooses to treat it as such, or if it has further discretion in how it responds.\", \"justification\": \"The use of 'MAY' allows for two reasonable interpretations. The endpoint could either treat the frame as an error, or it could choose to ignore it or handle it in some other way. The clause does not specify what happens if the endpoint chooses to 'treat' the frame as an error; it could log it, discard it, or take other actions. This lack of constraint creates ambiguity.\"}",
+  "record_id": "54b497ff2b0a69c5ed5a25f800667b0e1f25f5cd6aff0693adbc429c5879af37",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.906
+}

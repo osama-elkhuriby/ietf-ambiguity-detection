@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "disable ECN for that path",
+    "interpretation_a": "The clause could be interpreted as disabling ECN for that path permanently (for the remainder of the connection).",
+    "interpretation_b": "Alternatively, it could be interpreted as disabling ECN for that path only temporarily (e.g., for the next packet or until some condition).",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"disable ECN for that path\" lacks a constraint on the duration of the disabling, allowing two materially different implementation behaviours.",
+    "missing_information": "The clause does not specify the duration for which ECN should be disabled."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T10:54:27.889570+00:00",
+  "document_id": "draft-ietf-quic-recovery-31",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "ad21ebab33bb390db62ee3c904d8838fddfa1488c7af3f81b5a15e8b4d0a3956",
+  "lineage_ids": "lineage:79670ac4b413ab4842a37938",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 4351,
+    "load_duration": 3006400,
+    "prompt_eval_count": 619,
+    "total_duration": 37356188100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"disable ECN for that path\",\n  \"interpretation_a\": \"The clause could be interpreted as disabling ECN for that path permanently (for the remainder of the connection).\",\n  \"interpretation_b\": \"Alternatively, it could be interpreted as disabling ECN for that path only temporarily (e.g., for the next packet or until some condition).\",\n  \"missing_information\": \"The clause does not specify the duration for which ECN should be disabled.\",\n  \"justification\": \"The phrase \\\"disable ECN for that path\\\" lacks a constraint on the duration of the disabling, allowing two materially different implementation behaviours.\"\n}",
+  "record_id": "04b21ffdcba0a7501a3af591f1d88f644ef67efa68207c101fa85292943a5f6b",
+  "revision": "31",
+  "schema_version": 1,
+  "section_ids": "8.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 37.36
+}

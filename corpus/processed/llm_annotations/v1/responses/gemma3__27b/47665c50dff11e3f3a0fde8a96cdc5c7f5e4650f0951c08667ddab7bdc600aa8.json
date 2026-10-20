@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY open multiple connections",
+    "interpretation_a": "The client is permitted to open a large number of connections, limited only by resource constraints.",
+    "interpretation_b": "The client is permitted to open a small number of connections, perhaps only a few, as opening many would be wasteful.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' allows for a wide range of implementations. Without a limit on the number of connections, different clients could behave very differently, leading to interoperability issues or denial-of-service concerns.",
+    "missing_information": "The draft does not specify a limit on the number of connections a client MAY open. This missing constraint affects implementation because a client could choose to open a very large number of connections, potentially overwhelming the server or network."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:48:57.757856+00:00",
+  "document_id": "draft-ietf-quic-http-31",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "ede626fe6a315fd80810c68a07f8c47b532d134ecdabe839c46795ff1e7eb61a",
+  "lineage_ids": "lineage:c4b530e7bd4499a98ba0d50b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 184,
+    "load_duration": 20407600,
+    "prompt_eval_count": 602,
+    "total_duration": 7185292500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY open multiple connections\", \"interpretation_a\": \"The client is permitted to open a large number of connections, limited only by resource constraints.\", \"interpretation_b\": \"The client is permitted to open a small number of connections, perhaps only a few, as opening many would be wasteful.\", \"missing_information\": \"The draft does not specify a limit on the number of connections a client MAY open. This missing constraint affects implementation because a client could choose to open a very large number of connections, potentially overwhelming the server or network.\",\"justification\": \"The use of 'MAY' allows for a wide range of implementations. Without a limit on the number of connections, different clients could behave very differently, leading to interoperability issues or denial-of-service concerns.\"}",
+  "record_id": "47665c50dff11e3f3a0fde8a96cdc5c7f5e4650f0951c08667ddab7bdc600aa8",
+  "revision": "31",
+  "schema_version": 1,
+  "section_ids": "3.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.187
+}

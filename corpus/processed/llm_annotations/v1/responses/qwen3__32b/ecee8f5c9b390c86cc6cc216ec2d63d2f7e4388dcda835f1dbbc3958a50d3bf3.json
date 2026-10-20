@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "the origin server has verified that a state change is being requested and the final state is already reflected in the current state of the target resource",
+    "interpretation_a": "The server can return a 2xx status code if the requested change has already been applied, even if the user agent is unaware of it. This implies that the server must determine whether the requested change is redundant based on the current state of the resource.",
+    "interpretation_b": "The server can return a 2xx status code only if it can conclusively determine that the requested change is a duplicate of a prior change made by the same user agent, and the prior response was lost. This interpretation adds a constraint not explicitly stated in the clause.",
+    "is_ambiguous": "yes",
+    "justification": "The clause allows the origin server to return a 2xx status code if it verifies that the requested change is redundant. However, the criteria for 'verifying' the state change are not clearly defined, leaving room for different interpretations of what constitutes sufficient verification. This missing constraint could lead to materially different implementations.",
+    "missing_information": "The clause does not specify how the server is to verify that the change is already reflected in the current state, or whether the server must track prior changes per user agent to determine this. This missing constraint could lead to different implementations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:35:21.660183+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-10",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "c3ca7de88ab4155b49876f90269973bc9c9a272f865b4ff8dd972da0cbc9336a",
+  "lineage_ids": "lineage:199347ed08d5522e1e06f718",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 299,
+    "load_duration": 9305400,
+    "prompt_eval_count": 659,
+    "total_duration": 12394051400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"the origin server has verified that a state change is being requested and the final state is already reflected in the current state of the target resource\",\n  \"interpretation_a\": \"The server can return a 2xx status code if the requested change has already been applied, even if the user agent is unaware of it. This implies that the server must determine whether the requested change is redundant based on the current state of the resource.\",\n  \"interpretation_b\": \"The server can return a 2xx status code only if it can conclusively determine that the requested change is a duplicate of a prior change made by the same user agent, and the prior response was lost. This interpretation adds a constraint not explicitly stated in the clause.\",\n  \"missing_information\": \"The clause does not specify how the server is to verify that the change is already reflected in the current state, or whether the server must track prior changes per user agent to determine this. This missing constraint could lead to different implementations.\",\n  \"justification\": \"The clause allows the origin server to return a 2xx status code if it verifies that the requested change is redundant. However, the criteria for 'verifying' the state change are not clearly defined, leaving room for different interpretations of what constitutes sufficient verification. This missing constraint could lead to materially different implementations.\"\n}",
+  "record_id": "ecee8f5c9b390c86cc6cc216ec2d63d2f7e4388dcda835f1dbbc3958a50d3bf3",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "9.2.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 12.422
+}

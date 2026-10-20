@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "largest received packet number",
+    "interpretation_a": "The receiver SHOULD send an immediate ACK if the received packet number is less than the largest received packet number + 1. This implies that gaps in the sequence numbers trigger immediate ACKs.",
+    "interpretation_b": "The receiver SHOULD send an immediate ACK if the received packet number is not equal to the largest received packet number + 1. This implies that only out-of-order packets trigger immediate ACKs, and in-order packets are handled by the regular ACK timer.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'not one greater than' is ambiguous. It could be interpreted as 'not equal to' or 'less than'. This difference in interpretation affects how the receiver handles in-order packets and gaps in the sequence numbers, leading to different implementation behaviours.",
+    "missing_information": "It is unclear whether the phrase 'not one greater than' means 'not equal to' or 'less than'. This affects how the receiver handles in-order packets and gaps in the sequence numbers."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:28:31.346933+00:00",
+  "document_id": "draft-ietf-quic-recovery-18",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "54a432aac15932d9ef9413e4ca4c1cffb804f76d3da3a454892de9a00e54a488",
+  "lineage_ids": "lineage:c972a37273f2a2486e36770c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 239,
+    "load_duration": 2506100,
+    "prompt_eval_count": 588,
+    "total_duration": 8945062500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"largest received packet number\", \"interpretation_a\": \"The receiver SHOULD send an immediate ACK if the received packet number is less than the largest received packet number + 1. This implies that gaps in the sequence numbers trigger immediate ACKs.\", \"interpretation_b\": \"The receiver SHOULD send an immediate ACK if the received packet number is not equal to the largest received packet number + 1. This implies that only out-of-order packets trigger immediate ACKs, and in-order packets are handled by the regular ACK timer.\", \"missing_information\": \"It is unclear whether the phrase 'not one greater than' means 'not equal to' or 'less than'. This affects how the receiver handles in-order packets and gaps in the sequence numbers.\", \"justification\": \"The phrase 'not one greater than' is ambiguous. It could be interpreted as 'not equal to' or 'less than'. This difference in interpretation affects how the receiver handles in-order packets and gaps in the sequence numbers, leading to different implementation behaviours.\"}",
+  "record_id": "bd74c0bee72a5a7c79fd1300a81c3018332a5bb37d57835384a066f56425ac75",
+  "revision": "18",
+  "schema_version": 1,
+  "section_ids": "4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.938
+}

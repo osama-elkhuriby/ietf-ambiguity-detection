@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "TCP MUST support simultaneous open attempts",
+    "interpretation_a": "The TCP implementation must be able to initiate a connection while simultaneously accepting a connection.",
+    "interpretation_b": "The TCP implementation must be able to handle receiving a SYN packet while already in the process of initiating a connection.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'simultaneous open attempts' is not clearly defined. It could mean the ability to initiate multiple connections at the same time, or the ability to handle both active and passive connection attempts happening concurrently. Without further clarification, implementations could reasonably interpret this requirement in different ways.",
+    "missing_information": "The meaning of 'simultaneous open attempts' is not defined. Does it refer to initiating multiple connections at the same time, or handling concurrent active and passive opens?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:18:33.482959+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-14",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "74a14f54d061c0e1a5c45d3db46f6c568b8981fdc398ddd1e562013298393103",
+  "lineage_ids": "lineage:595d0b0b450026355d5cc4e6",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 184,
+    "load_duration": 9687500,
+    "prompt_eval_count": 753,
+    "total_duration": 7281094700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"TCP MUST support simultaneous open attempts\", \"interpretation_a\": \"The TCP implementation must be able to initiate a connection while simultaneously accepting a connection.\", \"interpretation_b\": \"The TCP implementation must be able to handle receiving a SYN packet while already in the process of initiating a connection.\", \"missing_information\": \"The meaning of 'simultaneous open attempts' is not defined. Does it refer to initiating multiple connections at the same time, or handling concurrent active and passive opens?\",\"justification\": \"The phrase 'simultaneous open attempts' is not clearly defined. It could mean the ability to initiate multiple connections at the same time, or the ability to handle both active and passive connection attempts happening concurrently. Without further clarification, implementations could reasonably interpret this requirement in different ways.\"}",
+  "record_id": "18942c2616cb4b30c32b8ce1ac94e8e616ff9beabcd5fdfe82fecb331f425102",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "3.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.297
+}

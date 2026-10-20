@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause specifies that CRYPTO and CONNECTION_CLOSE (type 0x1c) frames may appear in packets of any encryption level except 0-RTT. This is a clear constraint with no conflicting or ambiguous wording. The exclusion of 0-RTT is explicit, and the use of 'MAY' indicates optional behavior, not ambiguity. There is no missing constraint or undefined term that would lead to multiple reasonable interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:43:21.855481+00:00",
+  "document_id": "draft-ietf-quic-tls-27",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "45115db46bc99c9bb78e36aacc34a21094b533f381ea39cf74243a161c3cbfe2",
+  "lineage_ids": "lineage:66cad70c8eca6052b004a261",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 143,
+    "load_duration": 4407300,
+    "prompt_eval_count": 553,
+    "total_duration": 5876505600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause specifies that CRYPTO and CONNECTION_CLOSE (type 0x1c) frames may appear in packets of any encryption level except 0-RTT. This is a clear constraint with no conflicting or ambiguous wording. The exclusion of 0-RTT is explicit, and the use of 'MAY' indicates optional behavior, not ambiguity. There is no missing constraint or undefined term that would lead to multiple reasonable interpretations.\"\n}",
+  "record_id": "df861f8afb61bb96a604eb4cfee94a9387382c09d208046a52968b809f4c2efb",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.875
+}

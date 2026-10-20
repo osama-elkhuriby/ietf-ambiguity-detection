@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "the origin server has verified that a state change is being requested and the final state is already reflected in the current state of the target resource",
+    "interpretation_a": "The server verifies the *intent* to change state, and confirms the resource is already in the desired state. This allows for idempotent operations where the server acknowledges a previously successful operation.",
+    "interpretation_b": "The server verifies that a state change *was* requested, and confirms the resource is already in the desired state. This implies the server must track all prior requests and their intended states, which is a much stronger requirement.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'verified that a state change is being requested' is open to interpretation. It's unclear whether 'verified' refers to verifying the *intent* to change state (allowing idempotent operations) or verifying that a state change *was* requested (requiring tracking of prior requests). This difference significantly impacts implementation.",
+    "missing_information": "The meaning of 'verified' is not clearly defined. Does it mean verifying the intent of the request, or verifying that a request was previously made?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:15:54.768369+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-10",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "bb673b177a23fd377ad2a72947adfaf857f57128a8eaf0c6de7c18378a5d09c8",
+  "lineage_ids": "lineage:bc5bd965d16a34a50a187b2b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 253,
+    "load_duration": 13595200,
+    "prompt_eval_count": 691,
+    "total_duration": 9729982000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"the origin server has verified that a state change is being requested and the final state is already reflected in the current state of the target resource\", \"interpretation_a\": \"The server verifies the *intent* to change state, and confirms the resource is already in the desired state. This allows for idempotent operations where the server acknowledges a previously successful operation.\", \"interpretation_b\": \"The server verifies that a state change *was* requested, and confirms the resource is already in the desired state. This implies the server must track all prior requests and their intended states, which is a much stronger requirement.\", \"missing_information\": \"The meaning of 'verified' is not clearly defined. Does it mean verifying the intent of the request, or verifying that a request was previously made?\",\"justification\": \"The phrase 'verified that a state change is being requested' is open to interpretation. It's unclear whether 'verified' refers to verifying the *intent* to change state (allowing idempotent operations) or verifying that a state change *was* requested (requiring tracking of prior requests). This difference significantly impacts implementation.\"}",
+  "record_id": "8840ccc4ea1931aaa1aea5b0a7d5c3d7efa55296add82ac1b4954daf2c55f82f",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "9.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.734
+}

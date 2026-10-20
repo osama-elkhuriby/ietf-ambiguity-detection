@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD send a value of 0",
+    "interpretation_a": "The sender is encouraged, but not required, to send a value of 0 for the ACK Delay field in ACK frames for Initial and Handshake packets.",
+    "interpretation_b": "The sender must send a value of 0 for the ACK Delay field in ACK frames for Initial and Handshake packets.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' introduces ambiguity. While often interpreted as a strong recommendation, it doesn't carry the same force as 'MUST'. The clause could be read as either a recommendation or a requirement.",
+    "missing_information": "The difference between 'SHOULD' and 'MUST' is not defined within this excerpt. Without knowing the document's overall treatment of these keywords, it's unclear whether the sender is required or merely encouraged to send 0."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:03:41.623210+00:00",
+  "document_id": "draft-ietf-quic-transport-24",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "0a2048dd233bdc7d1f7e7db04ba26c28d93c417294663f14e670d9ec2aab02d0",
+  "lineage_ids": "lineage:280f4688cb84ca0e4885c761",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 205,
+    "load_duration": 2506200,
+    "prompt_eval_count": 579,
+    "total_duration": 7725993800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD send a value of 0\", \"interpretation_a\": \"The sender is encouraged, but not required, to send a value of 0 for the ACK Delay field in ACK frames for Initial and Handshake packets.\", \"interpretation_b\": \"The sender must send a value of 0 for the ACK Delay field in ACK frames for Initial and Handshake packets.\", \"missing_information\": \"The difference between 'SHOULD' and 'MUST' is not defined within this excerpt. Without knowing the document's overall treatment of these keywords, it's unclear whether the sender is required or merely encouraged to send 0.\",\"justification\": \"The use of 'SHOULD' introduces ambiguity. While often interpreted as a strong recommendation, it doesn't carry the same force as 'MUST'. The clause could be read as either a recommendation or a requirement.\"}",
+  "record_id": "ceed45b71581876a9e2152adec06bc07d92503c3efa23e9c562fab0a13bfb498",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "19.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.735
+}

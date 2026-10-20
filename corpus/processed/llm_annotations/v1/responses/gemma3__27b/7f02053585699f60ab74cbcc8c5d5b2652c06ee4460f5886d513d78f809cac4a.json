@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "maximum permitted value",
+    "interpretation_a": "The maximum permitted value is defined elsewhere in the specification, and the integer encoding MUST use the minimum number of bytes to represent that maximum value.",
+    "interpretation_b": "The maximum permitted value is the largest value that can be represented by the integer encoding format, and the integer encoding MUST use the minimum number of bytes to represent that maximum value. However, the specification does not define what the maximum permitted value is, leaving it open to interpretation.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'maximum permitted value' is not defined within this section or the immediately preceding context. This leaves open the question of what value the integer encoding must be able to represent, and thus how many bytes are 'too many'.",
+    "missing_information": "The specification does not define the 'maximum permitted value'. Without this definition, it is unclear what value the integer encoding must be able to represent, and therefore how many bytes it must use."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:55:53.605148+00:00",
+  "document_id": "draft-ietf-quic-http-07",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "fe1e3b045fd3887d04412f2d283f7aca112cbcfd3eda63d55975f0173de1f783",
+  "lineage_ids": "lineage:ccd6b621fca2e8dad270a75e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 223,
+    "load_duration": 7766000,
+    "prompt_eval_count": 554,
+    "total_duration": 8541166100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"maximum permitted value\", \"interpretation_a\": \"The maximum permitted value is defined elsewhere in the specification, and the integer encoding MUST use the minimum number of bytes to represent that maximum value.\", \"interpretation_b\": \"The maximum permitted value is the largest value that can be represented by the integer encoding format, and the integer encoding MUST use the minimum number of bytes to represent that maximum value. However, the specification does not define what the maximum permitted value is, leaving it open to interpretation.\", \"missing_information\": \"The specification does not define the 'maximum permitted value'. Without this definition, it is unclear what value the integer encoding must be able to represent, and therefore how many bytes it must use.\", \"justification\": \"The phrase 'maximum permitted value' is not defined within this section or the immediately preceding context. This leaves open the question of what value the integer encoding must be able to represent, and thus how many bytes are 'too many'.\"}",
+  "record_id": "7f02053585699f60ab74cbcc8c5d5b2652c06ee4460f5886d513d78f809cac4a",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "5.2.5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.531
+}

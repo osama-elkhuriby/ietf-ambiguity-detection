@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that any PRIORITY frame received on a stream that is not a request or control stream must be treated as a connection error of type HTTP_WRONG_STREAM. The phrase \"other than a request or control stream\" is a standard exclusive reference, and the normative requirement is clear. No missing constraints or undefined terms are present in the clause itself.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T09:19:00.758379+00:00",
+  "document_id": "draft-ietf-quic-http-20",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "0884cdbdca1aa54c332a0452a4fd656cf2d14ecc2d957b251fbf019bb0fe3f92",
+  "lineage_ids": "lineage:90c07e678ce170be0114d969",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 596,
+    "load_duration": 5007100,
+    "prompt_eval_count": 618,
+    "total_duration": 5225057200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that any PRIORITY frame received on a stream that is not a request or control stream must be treated as a connection error of type HTTP_WRONG_STREAM. The phrase \\\"other than a request or control stream\\\" is a standard exclusive reference, and the normative requirement is clear. No missing constraints or undefined terms are present in the clause itself.\"\n}",
+  "record_id": "47c7d11c16f771ee92c4a6e67ea6971a5000bf081f3d581359ea6276de0d1b44",
+  "revision": "20",
+  "schema_version": 1,
+  "section_ids": "4.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.219
+}

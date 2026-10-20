@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "An endpoint MAY treat consecutive key updates as a connection error of type KEY_UPDATE_ERROR.",
+    "interpretation_a": "The endpoint *must not* send any packets with updated keys until it receives an acknowledgement of the initial key update. Receiving a second update before acknowledgement means the peer is behaving incorrectly, and the endpoint should error.",
+    "interpretation_b": "The endpoint *can* send packets with updated keys before receiving acknowledgement, but *may* choose to treat consecutive updates as an error. It is not required to do so, and could continue operating.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' combined with the conditional phrasing creates ambiguity. Does the endpoint have discretion over whether to treat the situation as an error, or is the entire scenario conditional on the endpoint having sent packets with updated keys before receiving acknowledgement?",
+    "missing_information": "The clause does not specify whether the endpoint *must* wait for acknowledgement before sending packets with updated keys, or whether the 'MAY' applies to whether to treat the situation as an error *if* packets were sent before acknowledgement."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:54:03.229904+00:00",
+  "document_id": "draft-ietf-quic-tls-33",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "2c2f284fa042843f21588542c420209b5f62de191eba98f895008f6eef8247be",
+  "lineage_ids": "lineage:64601c86439d040c026f562a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 247,
+    "load_duration": 4318700,
+    "prompt_eval_count": 626,
+    "total_duration": 9229766500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"An endpoint MAY treat consecutive key updates as a connection error of type KEY_UPDATE_ERROR.\", \"interpretation_a\": \"The endpoint *must not* send any packets with updated keys until it receives an acknowledgement of the initial key update. Receiving a second update before acknowledgement means the peer is behaving incorrectly, and the endpoint should error.\", \"interpretation_b\": \"The endpoint *can* send packets with updated keys before receiving acknowledgement, but *may* choose to treat consecutive updates as an error. It is not required to do so, and could continue operating.\", \"missing_information\": \"The clause does not specify whether the endpoint *must* wait for acknowledgement before sending packets with updated keys, or whether the 'MAY' applies to whether to treat the situation as an error *if* packets were sent before acknowledgement.\", \"justification\": \"The use of 'MAY' combined with the conditional phrasing creates ambiguity. Does the endpoint have discretion over whether to treat the situation as an error, or is the entire scenario conditional on the endpoint having sent packets with updated keys before receiving acknowledgement?\"}",
+  "record_id": "ffde3bd5393d043dd5ef82b0eb521a2ad17752a788a709f68a6804fa8aa9bbc3",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.218
+}

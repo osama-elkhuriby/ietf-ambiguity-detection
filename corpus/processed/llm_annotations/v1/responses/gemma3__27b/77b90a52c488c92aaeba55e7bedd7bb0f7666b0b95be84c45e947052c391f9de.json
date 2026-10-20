@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless they are participating in an experiment that uses these bits",
+    "interpretation_a": "If an endpoint is *not* participating in an experiment, it *must* ignore the bits, effectively treating them as zero or a defined default value.",
+    "interpretation_b": "If an endpoint is *not* participating in an experiment, it *may* ignore the bits, but is not *required* to, potentially leading to different handling of the reserved bits depending on implementation.",
+    "is_ambiguous": "yes",
+    "justification": "The word 'ignore' is not precisely defined. The MUST statement only applies when *not* participating in an experiment, but doesn't specify *how* to ignore the bits. This creates a concrete missing constraint.",
+    "missing_information": "The specification does not define what 'ignore' means when not participating in an experiment. Does it mean treat as zero? Treat as a default value? Or simply discard the information? This missing constraint affects implementation."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:34:34.373720+00:00",
+  "document_id": "draft-ietf-quic-transport-16",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "91d28b093ea743867ec589b293ed55247868c1adb42d4a0536847bfc3db7d388",
+  "lineage_ids": "lineage:b98981cca0e89e6a57a07717",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 222,
+    "load_duration": 5103700,
+    "prompt_eval_count": 580,
+    "total_duration": 8326467400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless they are participating in an experiment that uses these bits\", \"interpretation_a\": \"If an endpoint is *not* participating in an experiment, it *must* ignore the bits, effectively treating them as zero or a defined default value.\", \"interpretation_b\": \"If an endpoint is *not* participating in an experiment, it *may* ignore the bits, but is not *required* to, potentially leading to different handling of the reserved bits depending on implementation.\", \"missing_information\": \"The specification does not define what 'ignore' means when not participating in an experiment. Does it mean treat as zero? Treat as a default value? Or simply discard the information? This missing constraint affects implementation.\", \"justification\": \"The word 'ignore' is not precisely defined. The MUST statement only applies when *not* participating in an experiment, but doesn't specify *how* to ignore the bits. This creates a concrete missing constraint.\"}",
+  "record_id": "77b90a52c488c92aaeba55e7bedd7bb0f7666b0b95be84c45e947052c391f9de",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "17.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.343
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "as an ordered byte-stream",
+    "interpretation_a": "The endpoint must present data to the application in the exact order it was sent, even if it requires significant buffering and reordering.",
+    "interpretation_b": "The endpoint may reorder data internally to optimize performance, but must ultimately deliver a logically ordered byte-stream to the application, potentially with gaps filled by later data.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'as an ordered byte-stream' is incomplete. It doesn't specify *how* ordered the stream must be. A strict interpretation requires complete in-order delivery before any data is presented to the application. A more relaxed interpretation allows for some out-of-order presentation as long as the application eventually receives a logically ordered stream.",
+    "missing_information": "The degree of buffering and reordering allowed before the 'ordered byte-stream' requirement is met is not specified. Does 'ordered' mean strict in-order delivery, or logically ordered with potential out-of-order presentation followed by later in-order completion?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:19:11.247631+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "52a036337b54bf45c8d894f0e95cc6860550ca4f2214146f383ca3a03763db11",
+  "lineage_ids": "lineage:8afa04b5bfd340f74c427279",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 240,
+    "load_duration": 4847600,
+    "prompt_eval_count": 574,
+    "total_duration": 8912602000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"as an ordered byte-stream\", \"interpretation_a\": \"The endpoint must present data to the application in the exact order it was sent, even if it requires significant buffering and reordering.\", \"interpretation_b\": \"The endpoint may reorder data internally to optimize performance, but must ultimately deliver a logically ordered byte-stream to the application, potentially with gaps filled by later data.\", \"missing_information\": \"The degree of buffering and reordering allowed before the 'ordered byte-stream' requirement is met is not specified. Does 'ordered' mean strict in-order delivery, or logically ordered with potential out-of-order presentation followed by later in-order completion?\",\"justification\": \"The phrase 'as an ordered byte-stream' is incomplete. It doesn't specify *how* ordered the stream must be. A strict interpretation requires complete in-order delivery before any data is presented to the application. A more relaxed interpretation allows for some out-of-order presentation as long as the application eventually receives a logically ordered stream.\"}",
+  "record_id": "fa46dddfe08850b806ad34f42785052b34c8f9631e36d61063eac4a8bd6b03cc",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.906
+}

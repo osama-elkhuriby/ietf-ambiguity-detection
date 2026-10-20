@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD send a CANCEL_PUSH frame",
+    "interpretation_a": "The client is encouraged, but not required, to send a CANCEL_PUSH frame if the push is not needed.",
+    "interpretation_b": "The client is expected to send a CANCEL_PUSH frame if the push is not needed, but may use STOP_SENDING as an alternative.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' creates ambiguity. While it indicates a recommendation, it doesn't clearly define the consequences of *not* sending the CANCEL_PUSH frame. Is it a performance issue, a protocol violation, or something else? The alternative of STOP_SENDING further complicates this, as it's unclear when STOP_SENDING is 'appropriate' beyond the examples given.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:02:37.762168+00:00",
+  "document_id": "draft-ietf-quic-http-13",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "e246af5856533dd3dc1653340bb73ef70d108ff6dafd294b07d69bf281f0f574",
+  "lineage_ids": "lineage:6e8887229ee6b73c18c7e5f4",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 195,
+    "load_duration": 8897200,
+    "prompt_eval_count": 641,
+    "total_duration": 7511194700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD send a CANCEL_PUSH frame\", \"interpretation_a\": \"The client is encouraged, but not required, to send a CANCEL_PUSH frame if the push is not needed.\", \"interpretation_b\": \"The client is expected to send a CANCEL_PUSH frame if the push is not needed, but may use STOP_SENDING as an alternative.\", \"missing_information\": \"\", \"justification\": \"The use of 'SHOULD' creates ambiguity. While it indicates a recommendation, it doesn't clearly define the consequences of *not* sending the CANCEL_PUSH frame. Is it a performance issue, a protocol violation, or something else? The alternative of STOP_SENDING further complicates this, as it's unclear when STOP_SENDING is 'appropriate' beyond the examples given.\"}",
+  "record_id": "ae04a0776344f60b053c4b8adf5faac153231ea16e1751cd0b0fa3503eff9c20",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "3.3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.516
+}

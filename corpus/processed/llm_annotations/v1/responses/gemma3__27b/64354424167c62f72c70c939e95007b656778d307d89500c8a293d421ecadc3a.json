@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "when appropriate for a future request",
+    "interpretation_a": "The server is advertising upgrade support even if the current request cannot be upgraded, anticipating future requests that might be eligible.",
+    "interpretation_b": "The server is only advertising upgrade support if the current request *could* be upgraded, but isn't due to some other condition (e.g., missing credentials), and is signaling that a future, identical request might succeed.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"when appropriate for a future request\" is vague. It doesn't specify whether the 'appropriateness' is determined by the current request's characteristics, or by the potential for future requests. This allows for two reasonable interpretations of when the Upgrade header can be sent.",
+    "missing_information": "The conditions under which a server would send the Upgrade header in a non-426 response are not clearly defined. Is it permissible to advertise upgrade support for requests that are fundamentally incompatible with upgrade, or only for requests that are nearly compatible?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:10:28.119306+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "294dbecb02089811afed97be0410523d5fbe602ba3389cc8c647daf0ee51b47f",
+  "lineage_ids": "lineage:67340611bef51c0d50f988a2",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 233,
+    "load_duration": 4357300,
+    "prompt_eval_count": 587,
+    "total_duration": 8927096900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"when appropriate for a future request\", \"interpretation_a\": \"The server is advertising upgrade support even if the current request cannot be upgraded, anticipating future requests that might be eligible.\", \"interpretation_b\": \"The server is only advertising upgrade support if the current request *could* be upgraded, but isn't due to some other condition (e.g., missing credentials), and is signaling that a future, identical request might succeed.\", \"missing_information\": \"The conditions under which a server would send the Upgrade header in a non-426 response are not clearly defined. Is it permissible to advertise upgrade support for requests that are fundamentally incompatible with upgrade, or only for requests that are nearly compatible?\",\"justification\": \"The phrase \\\"when appropriate for a future request\\\" is vague. It doesn't specify whether the 'appropriateness' is determined by the current request's characteristics, or by the potential for future requests. This allows for two reasonable interpretations of when the Upgrade header can be sent.\"}",
+  "record_id": "64354424167c62f72c70c939e95007b656778d307d89500c8a293d421ecadc3a",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "7.8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.953
+}

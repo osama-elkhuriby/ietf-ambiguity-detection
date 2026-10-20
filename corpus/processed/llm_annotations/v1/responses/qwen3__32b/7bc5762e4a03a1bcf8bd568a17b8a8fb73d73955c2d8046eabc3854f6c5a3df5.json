@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST generate any of the following header fields that would have been sent in a 200 (OK)",
+    "interpretation_a": "The server must generate all header fields that would have been sent in a 200 (OK) response to the same request.",
+    "interpretation_b": "The server must generate at least one of the header fields that would have been sent in a 200 (OK) response to the same request.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'any of the following header fields' is ambiguous. It could be interpreted to mean that the server must generate all such header fields, or it could mean that the server must generate at least one. This ambiguity affects implementation behavior, as it is unclear whether all or just some of the header fields are required.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:18:39.237259+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-07",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "51f35be642941fa7f6ed75f28bc88e63c623deb7b69ef0f0659c739774cfe1c3",
+  "lineage_ids": "lineage:2213783b9ade5f929b44b76d",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 203,
+    "load_duration": 10683900,
+    "prompt_eval_count": 601,
+    "total_duration": 8491388700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"MUST generate any of the following header fields that would have been sent in a 200 (OK)\",\n  \"interpretation_a\": \"The server must generate all header fields that would have been sent in a 200 (OK) response to the same request.\",\n  \"interpretation_b\": \"The server must generate at least one of the header fields that would have been sent in a 200 (OK) response to the same request.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The phrase 'any of the following header fields' is ambiguous. It could be interpreted to mean that the server must generate all such header fields, or it could mean that the server must generate at least one. This ambiguity affects implementation behavior, as it is unclear whether all or just some of the header fields are required.\"\n}",
+  "record_id": "7bc5762e4a03a1bcf8bd568a17b8a8fb73d73955c2d8046eabc3854f6c5a3df5",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "9.4.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.5
+}

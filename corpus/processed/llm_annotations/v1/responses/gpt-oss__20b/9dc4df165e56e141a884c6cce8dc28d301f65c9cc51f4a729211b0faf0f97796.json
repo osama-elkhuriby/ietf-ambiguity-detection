@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "before peers migrate",
+    "interpretation_a": "Provide new connection IDs before the peer initiates migration.",
+    "interpretation_b": "Provide new connection IDs before the peer completes migration.",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a precise definition of when the new connection IDs must be provided relative to the peer’s migration, allowing two reasonable implementation interpretations.",
+    "missing_information": "The clause does not specify the exact timing relative to the peer's migration."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T17:24:41.954489+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "9be2e0bbc0192a6354d0470784f7e6a37286d8e2caf344cc3e1a7e96c83630b3",
+  "lineage_ids": "lineage:dbb8cb76e23a4851030366a8",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3858,
+    "load_duration": 4507000,
+    "prompt_eval_count": 616,
+    "total_duration": 33255885400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"before peers migrate\",\n  \"interpretation_a\": \"Provide new connection IDs before the peer initiates migration.\",\n  \"interpretation_b\": \"Provide new connection IDs before the peer completes migration.\",\n  \"missing_information\": \"The clause does not specify the exact timing relative to the peer's migration.\",\n  \"justification\": \"The clause lacks a precise definition of when the new connection IDs must be provided relative to the peer’s migration, allowing two reasonable implementation interpretations.\"\n}",
+  "record_id": "9dc4df165e56e141a884c6cce8dc28d301f65c9cc51f4a729211b0faf0f97796",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 33.265
+}

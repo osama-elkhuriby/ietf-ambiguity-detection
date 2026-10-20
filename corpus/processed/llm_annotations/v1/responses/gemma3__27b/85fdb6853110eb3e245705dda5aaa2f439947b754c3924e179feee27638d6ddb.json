@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY be made available",
+    "interpretation_a": "The server can choose to deliver pushed responses to the application, but is not required to.",
+    "interpretation_b": "The server must deliver pushed responses to the application, but has discretion in *how* it delivers them (e.g., immediately, after some delay, or in batches).",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' is ambiguous. It could mean permission to deliver, or a requirement to deliver with flexibility in implementation. Without further clarification, implementations could reasonably differ on whether they actively deliver pushed responses to the application or not.",
+    "missing_information": "The meaning of 'made available' is not fully defined. Does it mean the server *can* deliver, or *must* deliver, and if the latter, what constitutes 'available'?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:57:13.380809+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "08e78f39681130729bd2dd7b59b469c029c72439801a4ba9981d9f3f524c0b2f",
+  "lineage_ids": "lineage:9d7b255d7f964146b9af748a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 196,
+    "load_duration": 10183000,
+    "prompt_eval_count": 534,
+    "total_duration": 7528931100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY be made available\", \"interpretation_a\": \"The server can choose to deliver pushed responses to the application, but is not required to.\", \"interpretation_b\": \"The server must deliver pushed responses to the application, but has discretion in *how* it delivers them (e.g., immediately, after some delay, or in batches).\", \"missing_information\": \"The meaning of 'made available' is not fully defined. Does it mean the server *can* deliver, or *must* deliver, and if the latter, what constitutes 'available'?\",\"justification\": \"The use of 'MAY' is ambiguous. It could mean permission to deliver, or a requirement to deliver with flexibility in implementation. Without further clarification, implementations could reasonably differ on whether they actively deliver pushed responses to the application or not.\"}",
+  "record_id": "85fdb6853110eb3e245705dda5aaa2f439947b754c3924e179feee27638d6ddb",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.547
+}

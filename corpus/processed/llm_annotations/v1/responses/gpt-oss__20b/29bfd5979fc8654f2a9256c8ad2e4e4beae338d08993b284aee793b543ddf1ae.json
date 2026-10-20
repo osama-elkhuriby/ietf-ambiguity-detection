@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously requires that a TCP endpoint that does not implement PUSH flags must not buffer data for an indefinite period and must set the PSH bit on the last segment that will be sent. The phrase \"last buffered segment\" is clarified by the parenthetical \"i.e., when there is no more queued data to be sent,\" eliminating any reasonable alternative interpretation. The term \"indefinitely\" is a normative requirement that the implementation must not buffer data for an unbounded period, which is a standard interpretation in TCP specifications. No other part of the clause or the surrounding context introduces a conflicting or incomplete constraint. Therefore the clause is not ambiguous.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T19:48:59.344529+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "f91618360ccf538c1aa5b934383f3b4075fa409eceda55019a08c4a4f78c85e4",
+  "lineage_ids": "lineage:a878c31784da710fdbd0b069",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3741,
+    "load_duration": 4728900,
+    "prompt_eval_count": 620,
+    "total_duration": 32285317900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously requires that a TCP endpoint that does not implement PUSH flags must not buffer data for an indefinite period and must set the PSH bit on the last segment that will be sent. The phrase \\\"last buffered segment\\\" is clarified by the parenthetical \\\"i.e., when there is no more queued data to be sent,\\\" eliminating any reasonable alternative interpretation. The term \\\"indefinitely\\\" is a normative requirement that the implementation must not buffer data for an unbounded period, which is a standard interpretation in TCP specifications. No other part of the clause or the surrounding context introduces a conflicting or incomplete constraint. Therefore the clause is not ambiguous.\"\n}",
+  "record_id": "29bfd5979fc8654f2a9256c8ad2e4e4beae338d08993b284aee793b543ddf1ae",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.9.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 32.297
+}

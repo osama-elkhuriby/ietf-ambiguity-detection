@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "is not known to be safe",
+    "interpretation_a": "The client interprets 'safe' according to HTTP semantics (e.g., GET, HEAD, OPTIONS are safe; POST, PUT, DELETE are not).",
+    "interpretation_b": "The client interprets 'safe' based on a QUIC-specific definition of safety, which may differ from HTTP.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'safe' is borrowed from HTTP, but the document does not explicitly state whether the HTTP definition applies. A QUIC-specific definition of 'safe' could lead to different implementations.",
+    "missing_information": "The document does not define what 'safe' means in the context of QUIC HTTP/3.  Without this definition, implementations could reasonably diverge."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:02:44.886313+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "50e518ca750fadb18d8b70c55990dc0945e559aa6845cc6ea599a4c1a8e576e9",
+  "lineage_ids": "lineage:5a7b387658f8eda777c5ca38",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 183,
+    "load_duration": 7977400,
+    "prompt_eval_count": 590,
+    "total_duration": 7117582300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"is not known to be safe\", \"interpretation_a\": \"The client interprets 'safe' according to HTTP semantics (e.g., GET, HEAD, OPTIONS are safe; POST, PUT, DELETE are not).\", \"interpretation_b\": \"The client interprets 'safe' based on a QUIC-specific definition of safety, which may differ from HTTP.\", \"missing_information\": \"The document does not define what 'safe' means in the context of QUIC HTTP/3.  Without this definition, implementations could reasonably diverge.\", \"justification\": \"The term 'safe' is borrowed from HTTP, but the document does not explicitly state whether the HTTP definition applies. A QUIC-specific definition of 'safe' could lead to different implementations.\"}",
+  "record_id": "aec405d0de1c86c39c15dc3fd0ce2d13c0c545726bc027fceb37467fb7e0eb63",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.125
+}

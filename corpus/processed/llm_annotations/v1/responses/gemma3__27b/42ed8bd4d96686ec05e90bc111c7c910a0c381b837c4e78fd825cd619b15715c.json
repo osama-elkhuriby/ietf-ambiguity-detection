@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "invalid or unsatisfiable",
+    "interpretation_a": "The server sends a 416 response if the range is syntactically invalid (e.g., badly formatted byte range).",
+    "interpretation_b": "The server sends a 416 response if the range is validly formatted but cannot be satisfied (e.g., the requested range is outside the bounds of the resource).",
+    "is_ambiguous": "yes",
+    "justification": "The terms 'invalid' and 'unsatisfiable' are not clearly defined. A range could be 'invalid' in terms of syntax or in terms of being outside the resource's bounds. Without clarification, implementations could reasonably interpret these terms differently, leading to inconsistent behavior.",
+    "missing_information": "The clause does not define what constitutes 'invalid' or 'unsatisfiable'. These terms require further definition to avoid differing implementations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:04:07.185772+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "bdf15e3c089188e7080fff8626c413a5f4f2cdeb356d70aee3420a5001ca19ed",
+  "lineage_ids": "lineage:8f3709e1890b5658caa0eb3b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 203,
+    "load_duration": 4357800,
+    "prompt_eval_count": 607,
+    "total_duration": 7940225000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"invalid or unsatisfiable\", \"interpretation_a\": \"The server sends a 416 response if the range is syntactically invalid (e.g., badly formatted byte range).\", \"interpretation_b\": \"The server sends a 416 response if the range is validly formatted but cannot be satisfied (e.g., the requested range is outside the bounds of the resource).\", \"missing_information\": \"The clause does not define what constitutes 'invalid' or 'unsatisfiable'. These terms require further definition to avoid differing implementations.\", \"justification\": \"The terms 'invalid' and 'unsatisfiable' are not clearly defined. A range could be 'invalid' in terms of syntax or in terms of being outside the resource's bounds. Without clarification, implementations could reasonably interpret these terms differently, leading to inconsistent behavior.\"}",
+  "record_id": "42ed8bd4d96686ec05e90bc111c7c910a0c381b837c4e78fd825cd619b15715c",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "14.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.953
+}

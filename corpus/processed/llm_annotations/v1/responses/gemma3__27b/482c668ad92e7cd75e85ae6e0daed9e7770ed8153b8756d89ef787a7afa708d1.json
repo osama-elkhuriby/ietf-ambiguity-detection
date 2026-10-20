@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD",
+    "interpretation_a": "Endpoints are required to set min_rtt to the newest RTT sample after persistent congestion is established.",
+    "interpretation_b": "Endpoints are permitted, but not required, to set min_rtt to the newest RTT sample after persistent congestion is established.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' creates ambiguity. It is unclear whether the action is mandatory or optional. A concrete constraint specifying whether this is a requirement or a recommendation is missing.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:19:36.705651+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "d34c10e289a33c51507169372a037a28f623bdc3ddf9d152472aea41e2faabbb",
+  "lineage_ids": "lineage:2145223a4380172cf29ce4fe",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 137,
+    "load_duration": 3008900,
+    "prompt_eval_count": 626,
+    "total_duration": 5328758900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD\", \"interpretation_a\": \"Endpoints are required to set min_rtt to the newest RTT sample after persistent congestion is established.\", \"interpretation_b\": \"Endpoints are permitted, but not required, to set min_rtt to the newest RTT sample after persistent congestion is established.\", \"missing_information\": \"\", \"justification\": \"The use of 'SHOULD' creates ambiguity. It is unclear whether the action is mandatory or optional. A concrete constraint specifying whether this is a requirement or a recommendation is missing.\"}",
+  "record_id": "482c668ad92e7cd75e85ae6e0daed9e7770ed8153b8756d89ef787a7afa708d1",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.328
+}

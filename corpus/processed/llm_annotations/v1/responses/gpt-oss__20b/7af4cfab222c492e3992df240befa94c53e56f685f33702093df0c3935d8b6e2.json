@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "The identifier of a newly established stream MUST be numerically greater than all streams that the initiating endpoint has opened or reserved.",
+    "interpretation_a": "The new stream ID must be greater than every stream ID that the initiating endpoint has ever opened or reserved, ensuring a strictly increasing stream identifier sequence over the entire connection lifetime.",
+    "interpretation_b": "The new stream ID must be greater than every stream ID that the initiating endpoint currently has open or reserved, allowing the reuse of stream IDs that were previously used but have since been closed.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not explicitly state whether the comparison applies to all streams ever opened/reserved or only to those currently open/reserved, which can lead to materially different implementation behaviours.",
+    "missing_information": "Whether the comparison applies to all streams ever opened/reserved or only to those currently open/reserved is not explicitly specified, leading to a missing constraint that affects implementation behaviour.  "
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T04:26:25.210630+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "9875eccd960aee2e80366bc6ee2a10d46f6eb9e80a158b93da08616bed0901c9",
+  "lineage_ids": "lineage:4909e3ecbcb9367691307a94",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2700,
+    "load_duration": 2511200,
+    "prompt_eval_count": 599,
+    "total_duration": 23350842500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"The identifier of a newly established stream MUST be numerically greater than all streams that the initiating endpoint has opened or reserved.\",\n  \"interpretation_a\": \"The new stream ID must be greater than every stream ID that the initiating endpoint has ever opened or reserved, ensuring a strictly increasing stream identifier sequence over the entire connection lifetime.\",\n  \"interpretation_b\": \"The new stream ID must be greater than every stream ID that the initiating endpoint currently has open or reserved, allowing the reuse of stream IDs that were previously used but have since been closed.\",\n  \"missing_information\": \"Whether the comparison applies to all streams ever opened/reserved or only to those currently open/reserved is not explicitly specified, leading to a missing constraint that affects implementation behaviour.  \",\n  \"justification\": \"The clause does not explicitly state whether the comparison applies to all streams ever opened/reserved or only to those currently open/reserved, which can lead to materially different implementation behaviours.\"\n}",
+  "record_id": "7af4cfab222c492e3992df240befa94c53e56f685f33702093df0c3935d8b6e2",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "5.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 23.343
+}

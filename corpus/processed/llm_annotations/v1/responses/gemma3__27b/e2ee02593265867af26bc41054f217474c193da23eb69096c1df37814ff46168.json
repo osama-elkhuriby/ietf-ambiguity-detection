@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD ignore",
+    "interpretation_a": "A receiver MAY choose to process packets with differing Destination Connection IDs, even if the first packet establishes a specific ID.",
+    "interpretation_b": "A receiver MUST ignore packets with differing Destination Connection IDs after the first packet in the datagram.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' creates ambiguity. It's unclear whether receivers are required to ignore subsequent packets or merely recommended to do so. This affects implementation choices regarding packet handling.",
+    "missing_information": "The strength of 'SHOULD' is not defined. Is it a strong recommendation approaching a MUST, or a weak suggestion allowing for flexibility?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:10:45.142669+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "0f7d4c83701f5b00d20267fb944ab6f654b5b6bee55e371603f84de9446fcb9b",
+  "lineage_ids": "lineage:2ce4c4b0ab2254ba64aefb53",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 162,
+    "load_duration": 4881100,
+    "prompt_eval_count": 571,
+    "total_duration": 6213351700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD ignore\", \"interpretation_a\": \"A receiver MAY choose to process packets with differing Destination Connection IDs, even if the first packet establishes a specific ID.\", \"interpretation_b\": \"A receiver MUST ignore packets with differing Destination Connection IDs after the first packet in the datagram.\", \"missing_information\": \"The strength of 'SHOULD' is not defined. Is it a strong recommendation approaching a MUST, or a weak suggestion allowing for flexibility?\",\"justification\": \"The use of 'SHOULD' creates ambiguity. It's unclear whether receivers are required to ignore subsequent packets or merely recommended to do so. This affects implementation choices regarding packet handling.\"}",
+  "record_id": "e2ee02593265867af26bc41054f217474c193da23eb69096c1df37814ff46168",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "12.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.218
+}

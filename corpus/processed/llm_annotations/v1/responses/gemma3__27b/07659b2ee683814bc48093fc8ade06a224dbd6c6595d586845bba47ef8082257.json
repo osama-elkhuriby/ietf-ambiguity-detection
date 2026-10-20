@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "periodically send",
+    "interpretation_a": "The sender must send a STREAM_DATA_BLOCKED or DATA_BLOCKED frame at regular, fixed intervals.",
+    "interpretation_b": "The sender may send a STREAM_DATA_BLOCKED or DATA_BLOCKED frame at irregular intervals, as long as it does so from time to time while flow control limited.",
+    "is_ambiguous": "yes",
+    "justification": "The word 'periodically' is vague. It does not specify a frequency or range of frequencies for sending the frames. This allows for multiple reasonable interpretations of how often the sender should send the frames, which impacts implementation.",
+    "missing_information": "The meaning of 'periodically' is not defined. A fixed interval, or any interval, is not specified. This affects implementation because different implementations could choose vastly different sending rates."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:56:38.281958+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "a8d3c9a39a77503ff7bd6c2bdca959522436bf50577f7792bd38f9a3e8e704ed",
+  "lineage_ids": "lineage:b83c465372882c972ff8a8ff",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 195,
+    "load_duration": 4167800,
+    "prompt_eval_count": 646,
+    "total_duration": 7419432800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"periodically send\", \"interpretation_a\": \"The sender must send a STREAM_DATA_BLOCKED or DATA_BLOCKED frame at regular, fixed intervals.\", \"interpretation_b\": \"The sender may send a STREAM_DATA_BLOCKED or DATA_BLOCKED frame at irregular intervals, as long as it does so from time to time while flow control limited.\", \"missing_information\": \"The meaning of 'periodically' is not defined. A fixed interval, or any interval, is not specified. This affects implementation because different implementations could choose vastly different sending rates.\", \"justification\": \"The word 'periodically' is vague. It does not specify a frequency or range of frequencies for sending the frames. This allows for multiple reasonable interpretations of how often the sender should send the frames, which impacts implementation.\"}",
+  "record_id": "07659b2ee683814bc48093fc8ade06a224dbd6c6595d586845bba47ef8082257",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.422
+}

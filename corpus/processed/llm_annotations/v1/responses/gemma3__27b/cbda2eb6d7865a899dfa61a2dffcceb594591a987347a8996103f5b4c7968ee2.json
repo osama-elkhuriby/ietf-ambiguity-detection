@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless the endpoint has acted on a preferred_address transport parameter from the peer.",
+    "interpretation_a": "The endpoint is allowed to send packets from a different local address if it has *received* and processed a preferred_address parameter.",
+    "interpretation_b": "The endpoint is allowed to send packets from a different local address if it has *sent* a preferred_address parameter.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'acted on' is vague. It could mean either receiving and processing the preferred_address parameter (implying the peer has indicated a preferred address), or sending the preferred_address parameter (implying the endpoint has requested a preferred address). These have different implications for when the endpoint is permitted to send packets from a different local address.",
+    "missing_information": "It is unclear whether 'acted on' means receiving and processing the parameter, or sending it. This affects whether the endpoint can use a different local address after sending a preferred_address parameter but before receiving a response."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:02:54.447160+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "95fe2bd0dbcd9622f96f5b0eb13c6a2c3aaa5fed63d23a1153ec4a12ed0691ee",
+  "lineage_ids": "lineage:d22aba09c0f8e7d48b816218",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 232,
+    "load_duration": 4681300,
+    "prompt_eval_count": 632,
+    "total_duration": 8693008800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless the endpoint has acted on a preferred_address transport parameter from the peer.\", \"interpretation_a\": \"The endpoint is allowed to send packets from a different local address if it has *received* and processed a preferred_address parameter.\", \"interpretation_b\": \"The endpoint is allowed to send packets from a different local address if it has *sent* a preferred_address parameter.\", \"missing_information\": \"It is unclear whether 'acted on' means receiving and processing the parameter, or sending it. This affects whether the endpoint can use a different local address after sending a preferred_address parameter but before receiving a response.\", \"justification\": \"The phrase 'acted on' is vague. It could mean either receiving and processing the preferred_address parameter (implying the peer has indicated a preferred address), or sending the preferred_address parameter (implying the endpoint has requested a preferred address). These have different implications for when the endpoint is permitted to send packets from a different local address.\"}",
+  "record_id": "cbda2eb6d7865a899dfa61a2dffcceb594591a987347a8996103f5b4c7968ee2",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.719
+}

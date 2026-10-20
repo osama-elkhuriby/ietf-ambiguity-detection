@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "recently used",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause is ambiguous because it does not define what qualifies as \"recently used\". This missing constraint leads to materially different implementation behaviours. The evidence_span is the exact substring \"recently used\" from the target clause. The interpretations are left empty because the ambiguity is due to an incomplete constraint rather than multiple distinct interpretations that can be explicitly enumerated. The missing_information field indicates the specific context that is required to resolve the ambiguity. The JSON follows the required schema. The answer is ",
+    "missing_information": "Definition of the time window that qualifies as \"recently\" for sending packets from a given IP address and port is not specified, leading to different possible implementations of which Stateless Reset Tokens to compare against. This missing constraint makes the clause ambiguous. The rest of the clause is unambiguous. The provided evidence_span is an exact substring of the target clause. The interpretations are left empty because the ambiguity is due to an incomplete constraint rather than multiple distinct interpretations that can be explicitly enumerated. The missing_information field indicates the specific context that is required to resolve the ambiguity. The JSON follows the required schema. The answer is "
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T16:44:29.174193+00:00",
+  "document_id": "draft-ietf-quic-transport-23",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "37018752cb6f2a6683f4f366db084a0fc77c0b489f1418560e3a763ed0066fc5",
+  "lineage_ids": "lineage:b02fe073bbe2d6920cd2357a",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1462,
+    "load_duration": 4114100,
+    "prompt_eval_count": 619,
+    "total_duration": 13180561400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"recently used\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"Definition of the time window that qualifies as \\\"recently\\\" for sending packets from a given IP address and port is not specified, leading to different possible implementations of which Stateless Reset Tokens to compare against. This missing constraint makes the clause ambiguous. The rest of the clause is unambiguous. The provided evidence_span is an exact substring of the target clause. The interpretations are left empty because the ambiguity is due to an incomplete constraint rather than multiple distinct interpretations that can be explicitly enumerated. The missing_information field indicates the specific context that is required to resolve the ambiguity. The JSON follows the required schema. The answer is \",\"justification\":\"The clause is ambiguous because it does not define what qualifies as \\\"recently used\\\". This missing constraint leads to materially different implementation behaviours. The evidence_span is the exact substring \\\"recently used\\\" from the target clause. The interpretations are left empty because the ambiguity is due to an incomplete constraint rather than multiple distinct interpretations that can be explicitly enumerated. The missing_information field indicates the specific context that is required to resolve the ambiguity. The JSON follows the required schema. The answer is \"}",
+  "record_id": "85146b1e44b536672a75c50a4ab493dc1698892f4c6aa02da20d2bef76d5d314",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "10.4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 13.172
+}

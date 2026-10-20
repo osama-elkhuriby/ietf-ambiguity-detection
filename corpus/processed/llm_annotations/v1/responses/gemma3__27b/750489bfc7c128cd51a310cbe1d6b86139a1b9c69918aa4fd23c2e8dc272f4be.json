@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD stop tracking",
+    "interpretation_a": "The receiver is encouraged to stop tracking acknowledged ACK Ranges, but may continue to do so if it chooses.",
+    "interpretation_b": "The receiver is expected to stop tracking acknowledged ACK Ranges, and deviating from this is discouraged.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' creates ambiguity. Does it mean 'strongly recommended' or 'expected'? Without a clear definition of the strength of 'SHOULD' in this context, it's unclear whether the receiver *must* stop tracking, or merely *should*.",
+    "missing_information": "The strength of 'SHOULD' is not defined. A clear definition of what constitutes acceptable deviation from a 'SHOULD' statement is needed to determine if continued tracking is permissible."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:33:17.556034+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "b2ca8c16699b7055f472c8a8aa152773590cfabcaf04b3344ce6e2bcbd88fd86",
+  "lineage_ids": "lineage:c221d0c4d461f14079d13d30",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 188,
+    "load_duration": 3787500,
+    "prompt_eval_count": 593,
+    "total_duration": 7126137800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD stop tracking\", \"interpretation_a\": \"The receiver is encouraged to stop tracking acknowledged ACK Ranges, but may continue to do so if it chooses.\", \"interpretation_b\": \"The receiver is expected to stop tracking acknowledged ACK Ranges, and deviating from this is discouraged.\", \"missing_information\": \"The strength of 'SHOULD' is not defined. A clear definition of what constitutes acceptable deviation from a 'SHOULD' statement is needed to determine if continued tracking is permissible.\",\"justification\": \"The use of 'SHOULD' creates ambiguity. Does it mean 'strongly recommended' or 'expected'? Without a clear definition of the strength of 'SHOULD' in this context, it's unclear whether the receiver *must* stop tracking, or merely *should*.\"}",
+  "record_id": "750489bfc7c128cd51a310cbe1d6b86139a1b9c69918aa4fd23c2e8dc272f4be",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "13.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.125
+}

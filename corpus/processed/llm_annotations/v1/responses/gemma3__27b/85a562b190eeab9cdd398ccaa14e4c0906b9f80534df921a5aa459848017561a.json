@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "discarded",
+    "interpretation_a": "The clause means that any ACK frame arriving in an unprotected packet *after* a 1-RTT protected packet is received is discarded, regardless of whether the 1-RTT packet contained an ACK frame itself.",
+    "interpretation_b": "The clause means that any ACK frame arriving in an unprotected packet *after* a 1-RTT protected packet is received *and* the 1-RTT packet contained an ACK frame is discarded. If the 1-RTT packet did not contain an ACK frame, the unprotected ACK frame is still processed.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states that all ACK frames in unprotected packets *must* be discarded after a 1-RTT protected packet is received. However, it doesn't specify if the 1-RTT packet itself needs to contain an ACK frame for this rule to be triggered. This creates two reasonable interpretations.",
+    "missing_information": "It is unclear whether the discarding is conditional on the 1-RTT packet *also* containing an ACK frame. The phrase 'after successful receipt of a packet protected with 1-RTT keys' does not specify whether the 1-RTT packet must also contain an ACK frame for this rule to apply."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:41:42.587321+00:00",
+  "document_id": "draft-ietf-quic-tls-06",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "59797db0b92ab47ac3e2c4647abc1db3baa3c8e42317a62bd79c9701f0a1fd94",
+  "lineage_ids": "lineage:74a887fec79fa2a89d37029e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 281,
+    "load_duration": 4399000,
+    "prompt_eval_count": 612,
+    "total_duration": 10428322200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"discarded\", \"interpretation_a\": \"The clause means that any ACK frame arriving in an unprotected packet *after* a 1-RTT protected packet is received is discarded, regardless of whether the 1-RTT packet contained an ACK frame itself.\", \"interpretation_b\": \"The clause means that any ACK frame arriving in an unprotected packet *after* a 1-RTT protected packet is received *and* the 1-RTT packet contained an ACK frame is discarded. If the 1-RTT packet did not contain an ACK frame, the unprotected ACK frame is still processed.\", \"missing_information\": \"It is unclear whether the discarding is conditional on the 1-RTT packet *also* containing an ACK frame. The phrase 'after successful receipt of a packet protected with 1-RTT keys' does not specify whether the 1-RTT packet must also contain an ACK frame for this rule to apply.\", \"justification\": \"The clause states that all ACK frames in unprotected packets *must* be discarded after a 1-RTT protected packet is received. However, it doesn't specify if the 1-RTT packet itself needs to contain an ACK frame for this rule to be triggered. This creates two reasonable interpretations.\"}",
+  "record_id": "85a562b190eeab9cdd398ccaa14e4c0906b9f80534df921a5aa459848017561a",
+  "revision": "06",
+  "schema_version": 1,
+  "section_ids": "9.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.437
+}

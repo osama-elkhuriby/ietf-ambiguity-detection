@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST also send an \"Upgrade\" connection option in the Connection header field",
+    "interpretation_a": "The Upgrade header field itself *is* the \"Upgrade\" connection option.",
+    "interpretation_b": "A separate, additional connection option named \"Upgrade\" must be included within the Connection header field, alongside the Upgrade header field.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"connection option\" is not clearly defined in relation to the Upgrade header. It's plausible that the Upgrade header *is* the connection option, or that a separate option needs to be added to the Connection header field. This affects how an implementation would parse and process the headers.",
+    "missing_information": "It is unclear whether the Upgrade header field satisfies the requirement to send an \"Upgrade\" connection option, or if a separate connection option is needed."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:36:31.996503+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "1869b2e09c3d3ce3ea3496ac92f47fcf081b1203f9bf7dedd7b10c2a20831b5f",
+  "lineage_ids": "lineage:93c9cb67bcb16cea65621edd",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 195,
+    "load_duration": 3294400,
+    "prompt_eval_count": 615,
+    "total_duration": 7498145100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST also send an \\\"Upgrade\\\" connection option in the Connection header field\", \"interpretation_a\": \"The Upgrade header field itself *is* the \\\"Upgrade\\\" connection option.\", \"interpretation_b\": \"A separate, additional connection option named \\\"Upgrade\\\" must be included within the Connection header field, alongside the Upgrade header field.\", \"missing_information\": \"It is unclear whether the Upgrade header field satisfies the requirement to send an \\\"Upgrade\\\" connection option, or if a separate connection option is needed.\", \"justification\": \"The phrase \\\"connection option\\\" is not clearly defined in relation to the Upgrade header. It's plausible that the Upgrade header *is* the connection option, or that a separate option needs to be added to the Connection header field. This affects how an implementation would parse and process the headers.\"}",
+  "record_id": "efa5edf59bef8058da36c05c6aa9c88dc9091bee5123efce84cc884b9179b1f9",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "7.8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.5
+}

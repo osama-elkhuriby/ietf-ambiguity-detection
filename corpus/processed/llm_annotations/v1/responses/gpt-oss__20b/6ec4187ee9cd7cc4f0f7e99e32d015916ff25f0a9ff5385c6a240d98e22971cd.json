@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that a TLS implementation must not automatically resend early data unless the negotiated connection selects the same ALPN protocol. The phrase \"same ALPN protocol\" refers to the protocol selected for the connection, and the condition is clear whether it is satisfied or not. No missing constraint or undefined term creates multiple materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T20:55:22.371412+00:00",
+  "document_id": "draft-ietf-tls-tls13-24",
+  "family_id": "draft-ietf-tls-tls13",
+  "input_fingerprint": "161e1ad2e662bdb49fd51d3d4867fb3f820c72d8c9fe2c722ea055aa7ecba34c",
+  "lineage_ids": "lineage:359d1d7d6ac090ae0a0a2977",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2963,
+    "load_duration": 4638500,
+    "prompt_eval_count": 571,
+    "total_duration": 25438352600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that a TLS implementation must not automatically resend early data unless the negotiated connection selects the same ALPN protocol. The phrase \\\"same ALPN protocol\\\" refers to the protocol selected for the connection, and the condition is clear whether it is satisfied or not. No missing constraint or undefined term creates multiple materially different implementation behaviours.\"\n}",
+  "record_id": "6ec4187ee9cd7cc4f0f7e99e32d015916ff25f0a9ff5385c6a240d98e22971cd",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "4.2.10",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 25.438
+}

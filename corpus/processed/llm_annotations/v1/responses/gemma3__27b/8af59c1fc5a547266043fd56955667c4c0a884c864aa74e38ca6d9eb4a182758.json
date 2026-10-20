@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "I-1",
+    "evidence_span": "MUST be treated as a connection error",
+    "interpretation_a": "Any HEADERS frame with *any* flag set immediately terminates the connection with an HTTP_MALFORMED_HEADERS error.",
+    "interpretation_b": "A HEADERS frame with flags set is invalid, and the receiver is required to signal a connection error, but the specific error type (HTTP_MALFORMED_HEADERS) is merely an example of a valid error to signal.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states \"MUST be treated as a connection error\", which could mean that the error is *required* to be HTTP_MALFORMED_HEADERS, or that it is merely an *example* of a valid error. The use of 'treated as' is ambiguous.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:57:46.791238+00:00",
+  "document_id": "draft-ietf-quic-http-08",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "0ee4cd2eb7edfc1315e275d522846f7adbccfb5d5fb5857e723df9d545f34af0",
+  "lineage_ids": "lineage:7f60032e6ca1b2860866231e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 186,
+    "load_duration": 4448600,
+    "prompt_eval_count": 543,
+    "total_duration": 7098538000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"I-1\", \"evidence_span\": \"MUST be treated as a connection error\", \"interpretation_a\": \"Any HEADERS frame with *any* flag set immediately terminates the connection with an HTTP_MALFORMED_HEADERS error.\", \"interpretation_b\": \"A HEADERS frame with flags set is invalid, and the receiver is required to signal a connection error, but the specific error type (HTTP_MALFORMED_HEADERS) is merely an example of a valid error to signal.\", \"missing_information\": \"\", \"justification\": \"The clause states \\\"MUST be treated as a connection error\\\", which could mean that the error is *required* to be HTTP_MALFORMED_HEADERS, or that it is merely an *example* of a valid error. The use of 'treated as' is ambiguous.\"}",
+  "record_id": "8af59c1fc5a547266043fd56955667c4c0a884c864aa74e38ca6d9eb4a182758",
+  "revision": "08",
+  "schema_version": 1,
+  "section_ids": "5.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.109
+}

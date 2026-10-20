@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "less than the smallest allowed maximum packet size of 1200 bytes",
+    "interpretation_a": "The server must discard any Initial packet with a payload smaller than 1200 bytes.",
+    "interpretation_b": "The server must discard any Initial packet with a payload smaller than *exactly* 1200 bytes. A payload of 1200 bytes is acceptable.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"less than\" is ambiguous. Does it include the value 1200, or not? This affects whether a packet of exactly 1200 bytes is discarded or not.",
+    "missing_information": "It is unclear whether 'less than' includes equality. The phrase could be interpreted as strictly less than, or less than or equal to."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:27:28.381899+00:00",
+  "document_id": "draft-ietf-quic-transport-31",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "9707b01bd480b5d420087727834596ae7233bf23e1126d3f0f8672e001fa9150",
+  "lineage_ids": "lineage:b8164585bef1b67842db0881",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 190,
+    "load_duration": 4410100,
+    "prompt_eval_count": 612,
+    "total_duration": 7170006000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"less than the smallest allowed maximum packet size of 1200 bytes\", \"interpretation_a\": \"The server must discard any Initial packet with a payload smaller than 1200 bytes.\", \"interpretation_b\": \"The server must discard any Initial packet with a payload smaller than *exactly* 1200 bytes. A payload of 1200 bytes is acceptable.\", \"missing_information\": \"It is unclear whether 'less than' includes equality. The phrase could be interpreted as strictly less than, or less than or equal to.\", \"justification\": \"The phrase \\\"less than\\\" is ambiguous. Does it include the value 1200, or not? This affects whether a packet of exactly 1200 bytes is discarded or not.\"}",
+  "record_id": "5ebf48c7bf93fd0c2c6e4d6ba584cae7e2e22e461d53b052176b98383759f345",
+  "revision": "31",
+  "schema_version": 1,
+  "section_ids": "14.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.172
+}

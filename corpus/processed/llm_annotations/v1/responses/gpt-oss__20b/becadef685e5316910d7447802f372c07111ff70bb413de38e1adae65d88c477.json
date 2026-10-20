@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "lower-priority record",
+    "interpretation_a": "The client may try the next lower-priority record in the list.",
+    "interpretation_b": "The client may try any lower-priority record arbitrarily.",
+    "is_ambiguous": "yes",
+    "justification": "The clause \"If the connection fails, the client MAY try to connect using values from a lower-priority record.\" is ambiguous because it does not specify which lower-priority record to use if multiple exist, nor the order in which to try them.  This omission leads to two reasonable interpretations: (1) the client may try the next lower-priority record in the list; (2) the client may try any lower-priority record arbitrarily.  The missing constraint is a concrete implementation detail that changes the operational interpretation.  Hence the clause is ambiguous.",
+    "missing_information": "The clause does not specify which lower-priority record to use if multiple exist, nor the order in which to try them. This omission leads to different possible implementation behaviours.  The document should clarify whether the client should try all lower-priority records, the next one in priority order, or any arbitrary one.  Without this constraint, the behaviour is under-specified.  The missing constraint is a concrete implementation detail that changes the operational interpretation.  Therefore the clause is ambiguous.  (Note: The term \"lower-priority\" is interpreted as a record with a higher numeric priority value, but the clause does not specify the selection logic.)  The missing information is the selection rule for lower-priority records.  The clause should explicitly state the intended behaviour.  The ambiguity arises from the lack of this rule.)"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T03:20:56.174934+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-00",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "0124cc4b272da188b262b68f1edf188ff64e612fb2b00bf981b156d393d3ac63",
+  "lineage_ids": "lineage:66b2f593fe856902120b1d92",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2273,
+    "load_duration": 1104600,
+    "prompt_eval_count": 570,
+    "total_duration": 20296784000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"lower-priority record\",\n  \"interpretation_a\": \"The client may try the next lower-priority record in the list.\",\n  \"interpretation_b\": \"The client may try any lower-priority record arbitrarily.\",\n  \"missing_information\": \"The clause does not specify which lower-priority record to use if multiple exist, nor the order in which to try them. This omission leads to different possible implementation behaviours.  The document should clarify whether the client should try all lower-priority records, the next one in priority order, or any arbitrary one.  Without this constraint, the behaviour is under-specified.  The missing constraint is a concrete implementation detail that changes the operational interpretation.  Therefore the clause is ambiguous.  (Note: The term \\\"lower-priority\\\" is interpreted as a record with a higher numeric priority value, but the clause does not specify the selection logic.)  The missing information is the selection rule for lower-priority records.  The clause should explicitly state the intended behaviour.  The ambiguity arises from the lack of this rule.)\",\n  \"justification\": \"The clause \\\"If the connection fails, the client MAY try to connect using values from a lower-priority record.\\\" is ambiguous because it does not specify which lower-priority record to use if multiple exist, nor the order in which to try them.  This omission leads to two reasonable interpretations: (1) the client may try the next lower-priority record in the list; (2) the client may try any lower-priority record arbitrarily.  The missing constraint is a concrete implementation detail that changes the operational interpretation.  Hence the clause is ambiguous.\"\n}",
+  "record_id": "becadef685e5316910d7447802f372c07111ff70bb413de38e1adae65d88c477",
+  "revision": "00",
+  "schema_version": 1,
+  "section_ids": "3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 20.312
+}

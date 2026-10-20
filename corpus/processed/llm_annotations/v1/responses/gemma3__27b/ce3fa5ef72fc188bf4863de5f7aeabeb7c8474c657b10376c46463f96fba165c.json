@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless the variance cannot be crossed or the origin server has been deliberately configured to prevent cache transparency.",
+    "interpretation_a": "The server does *not* send a Vary header if the variance cannot be crossed, meaning the server knows the variance is uncrossable (e.g., a language tag that is not supported).",
+    "interpretation_b": "The server does *not* send a Vary header if the server is deliberately configured to prevent cache transparency, even if the variance *could* be crossed. This allows an operator to disable Vary behavior.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'cannot be crossed' is vague. It's unclear whether it refers to a technical limitation (the server cannot generate a different representation) or a configuration choice (the server chooses not to). This affects whether a Vary header is sent.",
+    "missing_information": "The meaning of 'cannot be crossed' is not defined. Does it refer to technical limitations, or configuration choices?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:28:40.213408+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-11",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "666459cbf4dce14f75ea853398c72f5a3aa4479c2a707729c5bdc3ced15a91af",
+  "lineage_ids": "lineage:7ca1186f2cf484458c43f065",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 224,
+    "load_duration": 14402100,
+    "prompt_eval_count": 645,
+    "total_duration": 9051766500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless the variance cannot be crossed or the origin server has been deliberately configured to prevent cache transparency.\", \"interpretation_a\": \"The server does *not* send a Vary header if the variance cannot be crossed, meaning the server knows the variance is uncrossable (e.g., a language tag that is not supported).\", \"interpretation_b\": \"The server does *not* send a Vary header if the server is deliberately configured to prevent cache transparency, even if the variance *could* be crossed. This allows an operator to disable Vary behavior.\", \"missing_information\": \"The meaning of 'cannot be crossed' is not defined. Does it refer to technical limitations, or configuration choices?\",\"justification\": \"The phrase 'cannot be crossed' is vague. It's unclear whether it refers to a technical limitation (the server cannot generate a different representation) or a configuration choice (the server chooses not to). This affects whether a Vary header is sent.\"}",
+  "record_id": "ce3fa5ef72fc188bf4863de5f7aeabeb7c8474c657b10376c46463f96fba165c",
+  "revision": "11",
+  "schema_version": 1,
+  "section_ids": "11.1.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.063
+}

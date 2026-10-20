@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that an endpoint may discard connection IDs it cannot store and must not send a RETIRE_CONNECTION_ID frame for those discarded IDs. The term \"excessive\" is contextually understood as exceeding storage capacity, and the clause does not leave room for materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T16:31:34.797163+00:00",
+  "document_id": "draft-ietf-quic-transport-20",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "7edfc637e7963083a73ea26084847923b4bbf2dbcbf959f8bf5e100fbdb70e06",
+  "lineage_ids": "lineage:cfcf4992cf738107a336bda4",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2537,
+    "load_duration": 4155300,
+    "prompt_eval_count": 573,
+    "total_duration": 21932164800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that an endpoint may discard connection IDs it cannot store and must not send a RETIRE_CONNECTION_ID frame for those discarded IDs. The term \\\"excessive\\\" is contextually understood as exceeding storage capacity, and the clause does not leave room for materially different implementation behaviours.\"\n}",
+  "record_id": "7cacbe947d9653b23a49e3decbf285aced4087da4e4192c9204086b9f49e15ec",
+  "revision": "20",
+  "schema_version": 1,
+  "section_ids": "5.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 21.938
+}

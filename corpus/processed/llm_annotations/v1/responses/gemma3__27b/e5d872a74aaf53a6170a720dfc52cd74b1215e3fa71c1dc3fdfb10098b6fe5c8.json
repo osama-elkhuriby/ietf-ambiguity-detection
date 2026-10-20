@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "I-1",
+    "evidence_span": "MUST NOT include the Accept-Encoding header field",
+    "interpretation_a": "The server should not include the header field at all.",
+    "interpretation_b": "The server should include the header field, but with an empty value.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states the header field \"MUST NOT\" be included, but does not specify whether this means the header field should not be present in the response, or whether it should be present but empty. Both interpretations are reasonable.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:33:29.713555+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "188e7b6c95022c762ac02052b467f3fc9c9fb699d5775d0845490ad1046e36dc",
+  "lineage_ids": "lineage:72be82ce40be4c157c68622d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 131,
+    "load_duration": 11429000,
+    "prompt_eval_count": 642,
+    "total_duration": 5271467600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"I-1\", \"evidence_span\": \"MUST NOT include the Accept-Encoding header field\", \"interpretation_a\": \"The server should not include the header field at all.\", \"interpretation_b\": \"The server should include the header field, but with an empty value.\",\"missing_information\": \"\", \"justification\": \"The clause states the header field \\\"MUST NOT\\\" be included, but does not specify whether this means the header field should not be present in the response, or whether it should be present but empty. Both interpretations are reasonable.\"}",
+  "record_id": "e5d872a74aaf53a6170a720dfc52cd74b1215e3fa71c1dc3fdfb10098b6fe5c8",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "12.5.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.281
+}

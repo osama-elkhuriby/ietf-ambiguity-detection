@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "A TCP implementation SHOULD implement the Nagle Algorithm to coalesce short segments (SHLD-7).",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause references \"short segments\" without defining the term in the supplied text. This missing definition constitutes an incomplete constraint that can lead to materially different implementation behaviours, satisfying the criteria for ambiguity.",
+    "missing_information": "Definition of \"short segments\" is required to determine the exact implementation behaviour. The clause does not provide this definition within the supplied context, making the requirement under‑specified. The missing constraint could lead to materially different implementations depending on how \"short segments\" are interpreted. The reference (SHLD-7) may define it, but that context is not provided here. Therefore the clause is ambiguous due to an incomplete constraint. The ambiguity is specifically an incomplete constraint affecting implementation behaviour (U‑2)."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T20:39:31.105120+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "0fa9b45c42eda01811020809591909621b80f335da3e9437c3bd60225b16f96f",
+  "lineage_ids": "lineage:0ecc8ae611e9a3666bf50508",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2485,
+    "load_duration": 5349400,
+    "prompt_eval_count": 640,
+    "total_duration": 21911517800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"A TCP implementation SHOULD implement the Nagle Algorithm to coalesce short segments (SHLD-7).\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"Definition of \\\"short segments\\\" is required to determine the exact implementation behaviour. The clause does not provide this definition within the supplied context, making the requirement under‑specified. The missing constraint could lead to materially different implementations depending on how \\\"short segments\\\" are interpreted. The reference (SHLD-7) may define it, but that context is not provided here. Therefore the clause is ambiguous due to an incomplete constraint. The ambiguity is specifically an incomplete constraint affecting implementation behaviour (U‑2).\",\n  \"justification\": \"The clause references \\\"short segments\\\" without defining the term in the supplied text. This missing definition constitutes an incomplete constraint that can lead to materially different implementation behaviours, satisfying the criteria for ambiguity.\"\n}",
+  "record_id": "df3a922501f0739229ca60c55dfc3cbb9d3de61e557040fb0f1042bc1d37e8d0",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.7.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 21.907
+}

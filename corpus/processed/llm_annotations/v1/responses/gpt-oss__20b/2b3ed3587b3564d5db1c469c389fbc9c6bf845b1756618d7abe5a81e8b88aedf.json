@@ -1,0 +1,37 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "abruptly",
+    "interpretation_a": "The clause does not define what constitutes an 'abrupt' termination, leaving implementations uncertain whether a given termination qualifies as abrupt.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The term 'abruptly' is not defined in the supplied context, creating an incomplete constraint that could lead to materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 3,
+  "created_at": "2026-10-08T09:04:59.239921+00:00",
+  "document_id": "draft-ietf-quic-http-04",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "f9c5b9fc41834aa312fd68d814f36e9e6f55bd93d60177c1d0e49224579a9767",
+  "lineage_ids": "lineage:a0b4963850a6da7229b3f90d",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1379,
+    "load_duration": 4008500,
+    "prompt_eval_count": 632,
+    "total_duration": 12139257200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\",\"ambiguity_subtype\":\"U-2\",\"evidence_span\":\"abruptly\",\"interpretation_a\":\"The clause does not define what constitutes an 'abrupt' termination, leaving implementations uncertain whether a given termination qualifies as abrupt.\",\"interpretation_b\":\"\",\"missing_information\":\"\",\"justification\":\"The term 'abruptly' is not defined in the supplied context, creating an incomplete constraint that could lead to materially different implementation behaviours.\"}",
+  "record_id": "2b3ed3587b3564d5db1c469c389fbc9c6bf845b1756618d7abe5a81e8b88aedf",
+  "revision": "04",
+  "schema_version": 1,
+  "section_ids": "4",
+  "status": "invalid",
+  "validation_errors": [
+    "yes requires two distinct interpretations or missing information"
+  ],
+  "wall_seconds": 149.719
+}

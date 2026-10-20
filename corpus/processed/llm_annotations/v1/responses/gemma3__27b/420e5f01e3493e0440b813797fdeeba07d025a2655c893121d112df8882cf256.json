@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "the PTO and loss detection timers MUST be reset",
+    "interpretation_a": "Resetting the timers means setting them back to their initial values, effectively restarting the timeout and loss detection process.",
+    "interpretation_b": "Resetting the timers could mean stopping them entirely, preventing any further timeout or loss detection until new keys are established and timers are re-initialized.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'reset' is ambiguous in the context of timers. It could mean restoring to initial values or stopping entirely, leading to different implementation behaviors regarding timeout and loss detection.",
+    "missing_information": "The clause does not specify *how* the timers are reset. Are they set to their initial values, or are they simply stopped? This affects how quickly a new connection can be established after key rotation."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:19:09.203447+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "077aa4258f0efc505eac7e7908629067e80f43455d6f8e5b0afc90ad30ca94f5",
+  "lineage_ids": "lineage:26cd41d990d6d0022a1923ce",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 189,
+    "load_duration": 4489500,
+    "prompt_eval_count": 594,
+    "total_duration": 7148093700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"the PTO and loss detection timers MUST be reset\", \"interpretation_a\": \"Resetting the timers means setting them back to their initial values, effectively restarting the timeout and loss detection process.\", \"interpretation_b\": \"Resetting the timers could mean stopping them entirely, preventing any further timeout or loss detection until new keys are established and timers are re-initialized.\", \"missing_information\": \"The clause does not specify *how* the timers are reset. Are they set to their initial values, or are they simply stopped? This affects how quickly a new connection can be established after key rotation.\", \"justification\": \"The term 'reset' is ambiguous in the context of timers. It could mean restoring to initial values or stopping entirely, leading to different implementation behaviors regarding timeout and loss detection.\"}",
+  "record_id": "420e5f01e3493e0440b813797fdeeba07d025a2655c893121d112df8882cf256",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.14
+}

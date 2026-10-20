@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "identified by this search or a request to update the registration",
+    "interpretation_a": "The codepoint cannot be reclaimed if *either* a use is identified by the search *or* a request to update the registration is made.",
+    "interpretation_b": "The codepoint cannot be reclaimed if a use is identified by the search *and* a request to update the registration is made (i.e., both conditions must be met).",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'or' is ambiguous. It could be inclusive or exclusive. Without clarification, implementations could reasonably interpret it in either way, leading to different behaviours regarding codepoint reclamation.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:18:31.940248+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "ea50dea5b7745cbc8430d095ef20b1dbc7057e9199b6ffa794bb8c8d52ab0044",
+  "lineage_ids": "lineage:8c912400f9fb3be2d7a36cba",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 169,
+    "load_duration": 4280100,
+    "prompt_eval_count": 572,
+    "total_duration": 6419561000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"identified by this search or a request to update the registration\", \"interpretation_a\": \"The codepoint cannot be reclaimed if *either* a use is identified by the search *or* a request to update the registration is made.\", \"interpretation_b\": \"The codepoint cannot be reclaimed if a use is identified by the search *and* a request to update the registration is made (i.e., both conditions must be met).\", \"missing_information\": \"\", \"justification\": \"The use of 'or' is ambiguous. It could be inclusive or exclusive. Without clarification, implementations could reasonably interpret it in either way, leading to different behaviours regarding codepoint reclamation.\"}",
+  "record_id": "f980a50e4227edcc9c5d35eddf120ddd8e7cc77a660ef4db79f3b01b7270c5bd",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "22.1.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.422
+}

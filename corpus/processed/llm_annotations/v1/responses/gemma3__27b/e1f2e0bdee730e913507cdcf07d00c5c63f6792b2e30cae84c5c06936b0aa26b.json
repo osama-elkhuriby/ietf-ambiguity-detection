@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Once a server has provided new settings",
+    "interpretation_a": "The server provides settings via some mechanism (e.g., a specific QUIC frame) and the client must use those settings from the moment they are received.",
+    "interpretation_b": "The server provides settings, but the client is only required to use them for *future* connections or sessions, not necessarily the current one.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'provided new settings' is vague. It doesn't specify the mechanism for providing the settings, nor does it clarify whether the client is expected to comply with the settings immediately upon receipt, or only for future connections. This creates ambiguity in implementation.",
+    "missing_information": "The clause does not specify *how* the server provides the settings, or when the client is expected to begin complying with them. Is compliance immediate upon receipt, or only for subsequent connections?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:12:31.790596+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "722fb0a0e997f911b3a3a815e66e48f39ec8256c15195963115a48ba747e3a91",
+  "lineage_ids": "lineage:abbac1fdc7e48a26f7f58c59",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 209,
+    "load_duration": 13586900,
+    "prompt_eval_count": 585,
+    "total_duration": 8055027300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Once a server has provided new settings\", \"interpretation_a\": \"The server provides settings via some mechanism (e.g., a specific QUIC frame) and the client must use those settings from the moment they are received.\", \"interpretation_b\": \"The server provides settings, but the client is only required to use them for *future* connections or sessions, not necessarily the current one.\", \"missing_information\": \"The clause does not specify *how* the server provides the settings, or when the client is expected to begin complying with them. Is compliance immediate upon receipt, or only for subsequent connections?\",\"justification\": \"The phrase 'provided new settings' is vague. It doesn't specify the mechanism for providing the settings, nor does it clarify whether the client is expected to comply with the settings immediately upon receipt, or only for future connections. This creates ambiguity in implementation.\"}",
+  "record_id": "e1f2e0bdee730e913507cdcf07d00c5c63f6792b2e30cae84c5c06936b0aa26b",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.2.4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.047
+}

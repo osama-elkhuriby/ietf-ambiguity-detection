@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause is clear and unambiguous. It specifies that an origin server allowing PUT on a target resource must respond with a 400 (Bad Request) if the request includes a Content-Range header field. The reasoning is also clearly stated: the payload is likely to be partial content mistakenly sent as a full representation. There is no room for multiple interpretations, and the constraint is complete and specific.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:23:41.683152+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-12",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "c22cc2d992658c7ae138ed063247f673d7329171b42fcb3f6c14668fde13fa34",
+  "lineage_ids": "lineage:ad2f00f49aeba9aad4eedfef",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 138,
+    "load_duration": 23193300,
+    "prompt_eval_count": 628,
+    "total_duration": 5817703000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause is clear and unambiguous. It specifies that an origin server allowing PUT on a target resource must respond with a 400 (Bad Request) if the request includes a Content-Range header field. The reasoning is also clearly stated: the payload is likely to be partial content mistakenly sent as a full representation. There is no room for multiple interpretations, and the constraint is complete and specific.\"\n}",
+  "record_id": "a10fb7a8889cb09243d13f16eb0b07131a1ebcc37424e0a5d491ce796b8716da",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "8.3.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.828
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "necessary to identify the product",
+    "interpretation_a": "The product identifier could include detailed information about the specific build, configuration, or features of the product, as long as it's deemed 'necessary' for identification.",
+    "interpretation_b": "The product identifier should be as minimal as possible, only including the core product name and perhaps a major version number, avoiding any potentially identifying details.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'necessary' is vague and open to interpretation. Different implementations could reasonably disagree on what level of detail is 'necessary' to identify a product, leading to varying product identifier lengths and content.",
+    "missing_information": "The definition of 'necessary' is subjective and lacks a concrete constraint. What constitutes 'necessary' for identification is not defined, leading to different implementations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:00:44.961669+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "179708e70e0aa7f091267b8a40e9fce5fca772cbd87941ca7ef6da1dad8778d6",
+  "lineage_ids": "lineage:3e8fafe1fbd60bdbc4ef82ff",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 190,
+    "load_duration": 9906400,
+    "prompt_eval_count": 605,
+    "total_duration": 7374360100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"necessary to identify the product\", \"interpretation_a\": \"The product identifier could include detailed information about the specific build, configuration, or features of the product, as long as it's deemed 'necessary' for identification.\", \"interpretation_b\": \"The product identifier should be as minimal as possible, only including the core product name and perhaps a major version number, avoiding any potentially identifying details.\", \"missing_information\": \"The definition of 'necessary' is subjective and lacks a concrete constraint. What constitutes 'necessary' for identification is not defined, leading to different implementations.\", \"justification\": \"The term 'necessary' is vague and open to interpretation. Different implementations could reasonably disagree on what level of detail is 'necessary' to identify a product, leading to varying product identifier lengths and content.\"}",
+  "record_id": "2ea5e370b196973741bcacebc51e809e062d6eaedf1a37a13337af0ddaa6aa56",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "10.1.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.375
+}

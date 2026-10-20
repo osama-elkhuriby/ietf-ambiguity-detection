@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "limit the rate at which it sends data to this address",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The target clause requires limiting the rate but does not define the rate or the mechanism, creating an incomplete constraint that permits materially different implementation behaviours.",
+    "missing_information": "The clause does not specify the rate or method for limiting the data sent to an address that is not yet deemed valid, leaving the implementation unconstrained on how to enforce the rate limit.  The subsequent clause provides a specific constraint, but the target clause itself is incomplete and therefore ambiguous.  "
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T16:33:03.134436+00:00",
+  "document_id": "draft-ietf-quic-transport-32",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "3aa8fbfb0f65ac33483015242d8cd2be0808d16f4d119ce7a589c06ca6de0cf7",
+  "lineage_ids": "lineage:079c1c739c8791544a9df5bf",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1193,
+    "load_duration": 5322300,
+    "prompt_eval_count": 613,
+    "total_duration": 10579423700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"limit the rate at which it sends data to this address\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The clause does not specify the rate or method for limiting the data sent to an address that is not yet deemed valid, leaving the implementation unconstrained on how to enforce the rate limit.  The subsequent clause provides a specific constraint, but the target clause itself is incomplete and therefore ambiguous.  \",\n  \"justification\": \"The target clause requires limiting the rate but does not define the rate or the mechanism, creating an incomplete constraint that permits materially different implementation behaviours.\"\n}",
+  "record_id": "7d05d8600ab9270298f606b0b2b453f8c7794b00e83acc554bff53b948516d91",
+  "revision": "32",
+  "schema_version": 1,
+  "section_ids": "9.3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.594
+}

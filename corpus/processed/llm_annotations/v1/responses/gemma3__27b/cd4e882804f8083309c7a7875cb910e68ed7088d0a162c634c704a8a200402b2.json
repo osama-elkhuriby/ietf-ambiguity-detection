@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "more or fewer fields",
+    "interpretation_a": "A PRIORITY frame with any deviation from the expected fields is a connection error.",
+    "interpretation_b": "A PRIORITY frame is considered malformed if it doesn't have *exactly* the expected number of fields, but additional or missing fields beyond that are tolerated.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'more or fewer fields' is ambiguous because the expected number of fields is not specified. This creates uncertainty about what constitutes a malformed frame.",
+    "missing_information": "The expected number of fields is not defined in this section or the preceding context. Without knowing the expected number, it's unclear if 'more or fewer' refers to a specific deviation or any deviation."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:08:06.349206+00:00",
+  "document_id": "draft-ietf-quic-http-08",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "c3e96e10600c2d565c320aa71885f62c1558e2a1ac4096fde96e0129468cfea7",
+  "lineage_ids": "lineage:c4d0060bbea352a6da3330e0",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 178,
+    "load_duration": 4727700,
+    "prompt_eval_count": 560,
+    "total_duration": 6840602300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"more or fewer fields\", \"interpretation_a\": \"A PRIORITY frame with any deviation from the expected fields is a connection error.\", \"interpretation_b\": \"A PRIORITY frame is considered malformed if it doesn't have *exactly* the expected number of fields, but additional or missing fields beyond that are tolerated.\", \"missing_information\": \"The expected number of fields is not defined in this section or the preceding context. Without knowing the expected number, it's unclear if 'more or fewer' refers to a specific deviation or any deviation.\", \"justification\": \"The phrase 'more or fewer fields' is ambiguous because the expected number of fields is not specified. This creates uncertainty about what constitutes a malformed frame.\"}",
+  "record_id": "cd4e882804f8083309c7a7875cb910e68ed7088d0a162c634c704a8a200402b2",
+  "revision": "08",
+  "schema_version": 1,
+  "section_ids": "5.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.859
+}

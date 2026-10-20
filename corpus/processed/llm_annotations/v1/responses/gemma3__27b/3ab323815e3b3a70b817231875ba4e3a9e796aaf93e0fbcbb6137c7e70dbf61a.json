@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "match received Connection ID values",
+    "interpretation_a": "The transport parameters and Connection ID values must be identical.",
+    "interpretation_b": "The transport parameters must be consistent with the Connection ID values, allowing for some transformation or encoding.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'match' is underspecified. It's unclear whether the Connection ID values in the transport parameters must be a verbatim copy of the received Connection ID, or if a consistent mapping is sufficient. This affects how an endpoint would implement the validation.",
+    "missing_information": "The clause does not specify what 'match' means. Does it require exact string equality, or is some form of consistent mapping acceptable?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:14:10.223790+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "aeca822cbe441d10041365054137926a21f975bb88c4f6f8ed8dc94293ffed28",
+  "lineage_ids": "lineage:0f4010c50f145694b760f8f8",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 167,
+    "load_duration": 4960000,
+    "prompt_eval_count": 601,
+    "total_duration": 6368799600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"match received Connection ID values\", \"interpretation_a\": \"The transport parameters and Connection ID values must be identical.\", \"interpretation_b\": \"The transport parameters must be consistent with the Connection ID values, allowing for some transformation or encoding.\", \"missing_information\": \"The clause does not specify what 'match' means. Does it require exact string equality, or is some form of consistent mapping acceptable?\", \"justification\": \"The term 'match' is underspecified. It's unclear whether the Connection ID values in the transport parameters must be a verbatim copy of the received Connection ID, or if a consistent mapping is sufficient. This affects how an endpoint would implement the validation.\"}",
+  "record_id": "3ab323815e3b3a70b817231875ba4e3a9e796aaf93e0fbcbb6137c7e70dbf61a",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.36
+}

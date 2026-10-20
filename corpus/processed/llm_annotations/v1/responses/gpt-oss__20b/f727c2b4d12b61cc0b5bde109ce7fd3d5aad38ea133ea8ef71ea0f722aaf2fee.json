@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously requires that an endpoint that has sent a CONNECTION_CLOSE frame respond to any packet it receives during the closing period with a packet containing a CONNECTION_CLOSE frame. The subsequent clause clarifies that the endpoint may reuse the same packet, resolving any potential confusion about whether a new packet must be sent. No missing constraints or conflicting interpretations are present.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T19:21:55.547268+00:00",
+  "document_id": "draft-ietf-quic-transport-24",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "8332a89957486100b45435c53b05ad07776e89a9e140c6c0452f7f93065f9aca",
+  "lineage_ids": "lineage:ea90cdf399a63044ea5e145d",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1032,
+    "load_duration": 5732400,
+    "prompt_eval_count": 584,
+    "total_duration": 8991315900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously requires that an endpoint that has sent a CONNECTION_CLOSE frame respond to any packet it receives during the closing period with a packet containing a CONNECTION_CLOSE frame. The subsequent clause clarifies that the endpoint may reuse the same packet, resolving any potential confusion about whether a new packet must be sent. No missing constraints or conflicting interpretations are present.\"\n}",
+  "record_id": "f727c2b4d12b61cc0b5bde109ce7fd3d5aad38ea133ea8ef71ea0f722aaf2fee",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "10.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.0
+}

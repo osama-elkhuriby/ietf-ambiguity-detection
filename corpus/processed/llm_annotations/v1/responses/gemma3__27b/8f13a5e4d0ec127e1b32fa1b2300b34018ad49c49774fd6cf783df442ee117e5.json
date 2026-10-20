@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "SHOULD be limited",
+    "interpretation_a": "Implementations MAY limit the ack delay field to the max_ack_delay, but are not required to do so.",
+    "interpretation_b": "Implementations SHOULD limit the ack delay field to the max_ack_delay, but there is no stated consequence for failing to do so. The degree of 'should' is not specified.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' without a clear consequence for non-compliance creates ambiguity. It's unclear whether implementations are expected to always limit the ack delay, or if they have discretion. This impacts how implementations handle the ack delay field and potentially affects timeout behavior.",
+    "missing_information": "The strength of 'SHOULD' is not defined. Is non-compliance a failure, or merely a recommendation?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:24:13.868826+00:00",
+  "document_id": "draft-ietf-quic-recovery-19",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "749f2c922cb2ea10e9434bf9c776c75dcb5b065b122ba7769070ac7c7326e764",
+  "lineage_ids": "lineage:94e8d5fcf2839cac3e7f2d0c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 195,
+    "load_duration": 4552900,
+    "prompt_eval_count": 602,
+    "total_duration": 7362353000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"SHOULD be limited\", \"interpretation_a\": \"Implementations MAY limit the ack delay field to the max_ack_delay, but are not required to do so.\", \"interpretation_b\": \"Implementations SHOULD limit the ack delay field to the max_ack_delay, but there is no stated consequence for failing to do so. The degree of 'should' is not specified.\", \"missing_information\": \"The strength of 'SHOULD' is not defined. Is non-compliance a failure, or merely a recommendation?\",\"justification\": \"The use of 'SHOULD' without a clear consequence for non-compliance creates ambiguity. It's unclear whether implementations are expected to always limit the ack delay, or if they have discretion. This impacts how implementations handle the ack delay field and potentially affects timeout behavior.\"}",
+  "record_id": "8f13a5e4d0ec127e1b32fa1b2300b34018ad49c49774fd6cf783df442ee117e5",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.375
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "primary resource created ([field.location])",
+    "interpretation_a": "The clause does not specify how to determine the primary resource when multiple resources are created, leading to different implementation choices.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause requires a Location header for the primary resource but does not define which resource is primary when more than one is created, creating an incomplete constraint that can result in materially different implementations.",
+    "missing_information": "Criteria for selecting the primary resource when multiple resources are created."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T06:49:28.772654+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "f082c3eb02c2b29c3907df5c49c7a5cb37704c2460b288ae9c01fab9714f7776",
+  "lineage_ids": "lineage:bf93d9749ffad0c40bec6643",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1442,
+    "load_duration": 4698900,
+    "prompt_eval_count": 712,
+    "total_duration": 12570772200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"primary resource created ([field.location])\",\n  \"interpretation_a\": \"The clause does not specify how to determine the primary resource when multiple resources are created, leading to different implementation choices.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"Criteria for selecting the primary resource when multiple resources are created.\",\n  \"justification\": \"The clause requires a Location header for the primary resource but does not define which resource is primary when more than one is created, creating an incomplete constraint that can result in materially different implementations.\"\n}",
+  "record_id": "6f841687d8f9eea373268399dee58078377b92d768c0ed29ba4ffd48b9897953",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "9.3.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 12.578
+}

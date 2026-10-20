@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "yet is within the current receive window",
+    "interpretation_a": "A segment is considered 'within the current receive window' if its sequence number is greater than or equal to RCV.NXT and less than RCV.NXT + RCV.WIN.  This implies that segments with sequence numbers falling within this range, but not matching RCV.NXT, trigger the challenge ACK.",
+    "interpretation_b": "A segment is considered 'within the current receive window' if any part of the segment's data falls within the range defined by RCV.NXT and RCV.NXT + RCV.WIN. This could mean that even partial overlaps trigger the challenge ACK, even if the sequence number itself doesn't directly align with expectations.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'yet is within the current receive window' is underspecified. It's unclear whether the entire segment needs to be within the window, or just a portion of it. This ambiguity affects how implementations handle segments that partially overlap the receive window but don't match the expected sequence number.",
+    "missing_information": "The definition of 'within the current receive window' is not explicitly defined in this clause. It relies on an implicit understanding of how sequence numbers and the receive window interact, which could lead to different implementations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:21:48.366349+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-14",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "3517515f5eea90db11c0f28dccb33f4bd61efc04cb60a9ac4d39d67f10158699",
+  "lineage_ids": "lineage:586e965551444bfa040bd040",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 297,
+    "load_duration": 8681800,
+    "prompt_eval_count": 662,
+    "total_duration": 11293853700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"yet is within the current receive window\", \"interpretation_a\": \"A segment is considered 'within the current receive window' if its sequence number is greater than or equal to RCV.NXT and less than RCV.NXT + RCV.WIN.  This implies that segments with sequence numbers falling within this range, but not matching RCV.NXT, trigger the challenge ACK.\", \"interpretation_b\": \"A segment is considered 'within the current receive window' if any part of the segment's data falls within the range defined by RCV.NXT and RCV.NXT + RCV.WIN. This could mean that even partial overlaps trigger the challenge ACK, even if the sequence number itself doesn't directly align with expectations.\", \"missing_information\": \"The definition of 'within the current receive window' is not explicitly defined in this clause. It relies on an implicit understanding of how sequence numbers and the receive window interact, which could lead to different implementations.\",\"justification\": \"The phrase 'yet is within the current receive window' is underspecified. It's unclear whether the entire segment needs to be within the window, or just a portion of it. This ambiguity affects how implementations handle segments that partially overlap the receive window but don't match the expected sequence number.\"}",
+  "record_id": "51f53c39c47afba2e7dfe6e1aea1c31ccd2a5ce4b09ec53ffca25628ffe45fa6",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "3.10",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.313
+}

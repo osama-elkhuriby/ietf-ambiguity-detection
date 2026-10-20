@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "earliest acknowledged packet",
+    "interpretation_a": "Packets sent *immediately* after the earliest acknowledged packet are protected. Any packet with a packet number greater than or equal to the earliest acknowledged packet must not be ignored.",
+    "interpretation_b": "Packets sent after the earliest acknowledged packet, but only if there is a *significant* gap in packet numbers, are protected. Ignoring loss is permissible if the gap is small enough to be considered normal network jitter.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'earliest acknowledged packet' is open to interpretation. It's unclear whether 'after' means immediately following in packet number sequence, or simply at some point later. This affects whether packets with gaps in sequence numbers are subject to the MUST NOT ignore rule.",
+    "missing_information": "The definition of 'after' is not precise. Does it mean 'immediately after' (i.e., the next packet number) or 'at some point after' (allowing for gaps in packet numbers)? A concrete definition of the acceptable gap between acknowledged packets and subsequent packets would resolve the ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:32:50.441178+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "d08f5b47dbefd0659506a00b21bf8cd2e332cfa9c9460429b7fdf8a4661eb20a",
+  "lineage_ids": "lineage:ed4859bcac876d779319356d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 248,
+    "load_duration": 4311200,
+    "prompt_eval_count": 573,
+    "total_duration": 9249485800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"earliest acknowledged packet\", \"interpretation_a\": \"Packets sent *immediately* after the earliest acknowledged packet are protected. Any packet with a packet number greater than or equal to the earliest acknowledged packet must not be ignored.\", \"interpretation_b\": \"Packets sent after the earliest acknowledged packet, but only if there is a *significant* gap in packet numbers, are protected. Ignoring loss is permissible if the gap is small enough to be considered normal network jitter.\", \"missing_information\": \"The definition of 'after' is not precise. Does it mean 'immediately after' (i.e., the next packet number) or 'at some point after' (allowing for gaps in packet numbers)? A concrete definition of the acceptable gap between acknowledged packets and subsequent packets would resolve the ambiguity.\", \"justification\": \"The phrase 'earliest acknowledged packet' is open to interpretation. It's unclear whether 'after' means immediately following in packet number sequence, or simply at some point later. This affects whether packets with gaps in sequence numbers are subject to the MUST NOT ignore rule.\"}",
+  "record_id": "f1961f456d56d1c0d3cb7cbf3c4ec1f6c0cf49babc73f5fcb0c8da827a4cadf4",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.25
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "limited number",
+    "interpretation_a": "The clause allows the server to buffer any number of 0‑RTT packets, provided that number is limited, but the clause does not specify what that limit is.",
+    "interpretation_b": "The server could buffer a small fixed number of packets, or it could buffer as many as resources allow, as long as it remains within some unspecified limit.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"limited number\" is an incomplete constraint that permits materially different implementation behaviours, making the clause ambiguous.",
+    "missing_information": "The clause does not define a numeric limit or criteria for the \"limited number\" of packets that may be buffered."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T16:17:56.541834+00:00",
+  "document_id": "draft-ietf-quic-transport-20",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "cb9adc79d26964f97b5bc6cc7da873360525db317dc0e1338f4832b1ab392d4d",
+  "lineage_ids": "lineage:df7955da2632e8c1a6d42f39",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1921,
+    "load_duration": 4707900,
+    "prompt_eval_count": 605,
+    "total_duration": 16641926800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"limited number\",\n  \"interpretation_a\": \"The clause allows the server to buffer any number of 0‑RTT packets, provided that number is limited, but the clause does not specify what that limit is.\",\n  \"interpretation_b\": \"The server could buffer a small fixed number of packets, or it could buffer as many as resources allow, as long as it remains within some unspecified limit.\",\n  \"missing_information\": \"The clause does not define a numeric limit or criteria for the \\\"limited number\\\" of packets that may be buffered.\",\n  \"justification\": \"The phrase \\\"limited number\\\" is an incomplete constraint that permits materially different implementation behaviours, making the clause ambiguous.\"\n}",
+  "record_id": "7229653373d92384a4655beed3f732af223ee6198d6db5d345f3e5b70c2640ad",
+  "revision": "20",
+  "schema_version": 1,
+  "section_ids": "5.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 16.641
+}

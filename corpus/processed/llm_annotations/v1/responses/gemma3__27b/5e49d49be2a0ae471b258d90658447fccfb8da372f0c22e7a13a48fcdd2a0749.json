@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD continue sending the body of the request",
+    "interpretation_a": "The client is encouraged to continue sending the request body, but is permitted to stop.",
+    "interpretation_b": "The client is expected to continue sending the request body, and deviating from this is discouraged.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' creates ambiguity. It's unclear whether the client *should* continue sending the request body as a strong recommendation, or if it's merely a suggestion. This impacts implementation choices regarding request completion versus termination.",
+    "missing_information": "The strength of 'SHOULD' is not defined. Is it a strong recommendation, or merely a suggestion? This affects implementation decisions about whether to prioritize completing the request or terminating it."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:51:50.057649+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "bfb9e340d574e7ecfaea3cfe8a74a498642eacfc621356abd00deaa3ef9e916b",
+  "lineage_ids": "lineage:2aec7db35a72f3eb95f4d06b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 183,
+    "load_duration": 8444800,
+    "prompt_eval_count": 569,
+    "total_duration": 7079129600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD continue sending the body of the request\", \"interpretation_a\": \"The client is encouraged to continue sending the request body, but is permitted to stop.\", \"interpretation_b\": \"The client is expected to continue sending the request body, and deviating from this is discouraged.\", \"missing_information\": \"The strength of 'SHOULD' is not defined. Is it a strong recommendation, or merely a suggestion? This affects implementation decisions about whether to prioritize completing the request or terminating it.\", \"justification\": \"The use of 'SHOULD' creates ambiguity. It's unclear whether the client *should* continue sending the request body as a strong recommendation, or if it's merely a suggestion. This impacts implementation choices regarding request completion versus termination.\"}",
+  "record_id": "5e49d49be2a0ae471b258d90658447fccfb8da372f0c22e7a13a48fcdd2a0749",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.078
+}

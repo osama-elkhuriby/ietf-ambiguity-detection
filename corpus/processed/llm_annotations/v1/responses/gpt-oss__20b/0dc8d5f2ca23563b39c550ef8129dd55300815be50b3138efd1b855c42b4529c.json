@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "The initial handshake timeout SHOULD be set to twice the initial RTT.",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The target clause presumes the existence of an \"initial RTT\" value, but the surrounding context indicates that at the beginning of a connection there are no prior RTT samples. Without a definition or method for deriving the initial RTT, the clause is incomplete and cannot be implemented uniquely.",
+    "missing_information": "The clause does not define what is meant by \"initial RTT\" or how it should be determined when no prior RTT samples exist, leaving the implementation unable to compute the timeout value unambiguously."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T10:58:24.262197+00:00",
+  "document_id": "draft-ietf-quic-recovery-15",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "b80302e1c27b739c635c147dd758215d471f2f24a237be82e928402bce0912bd",
+  "lineage_ids": "lineage:71a8312a630b3f062f80d14b",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 473,
+    "load_duration": 5896100,
+    "prompt_eval_count": 582,
+    "total_duration": 4314584200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"The initial handshake timeout SHOULD be set to twice the initial RTT.\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The clause does not define what is meant by \\\"initial RTT\\\" or how it should be determined when no prior RTT samples exist, leaving the implementation unable to compute the timeout value unambiguously.\",\n  \"justification\": \"The target clause presumes the existence of an \\\"initial RTT\\\" value, but the surrounding context indicates that at the beginning of a connection there are no prior RTT samples. Without a definition or method for deriving the initial RTT, the clause is incomplete and cannot be implemented uniquely.\"\n}",
+  "record_id": "0dc8d5f2ca23563b39c550ef8129dd55300815be50b3138efd1b855c42b4529c",
+  "revision": "15",
+  "schema_version": 1,
+  "section_ids": "4.3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 4.313
+}

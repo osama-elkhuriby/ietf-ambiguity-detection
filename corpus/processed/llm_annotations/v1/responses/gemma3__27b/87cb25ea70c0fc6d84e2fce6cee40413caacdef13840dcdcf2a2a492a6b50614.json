@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "max_ack_delay",
+    "interpretation_a": "If the measured delay exceeds the configured `max_ack_delay` value, report it.",
+    "interpretation_b": "If the measured delay exceeds a default or implicitly defined `max_ack_delay` value (not explicitly configured), report it.",
+    "is_ambiguous": "yes",
+    "justification": "The clause refers to `max_ack_delay` without defining it. This could be a configurable parameter, a default value, or a value derived from other parameters. Without knowing how `max_ack_delay` is determined, there are multiple reasonable interpretations of when the delay should be reported.",
+    "missing_information": "The definition and source of `max_ack_delay` is not provided in the target clause. Is it a configurable parameter, a fixed value, or something else?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:41:22.126715+00:00",
+  "document_id": "draft-ietf-quic-transport-33",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "933111c6d3eb7a300db3523c0a877e07c4efa147263560131899d7192d535cca",
+  "lineage_ids": "lineage:423f337b1b64e078a08bdc63",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 197,
+    "load_duration": 4814900,
+    "prompt_eval_count": 588,
+    "total_duration": 7454154500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"max_ack_delay\", \"interpretation_a\": \"If the measured delay exceeds the configured `max_ack_delay` value, report it.\", \"interpretation_b\": \"If the measured delay exceeds a default or implicitly defined `max_ack_delay` value (not explicitly configured), report it.\", \"missing_information\": \"The definition and source of `max_ack_delay` is not provided in the target clause. Is it a configurable parameter, a fixed value, or something else?\", \"justification\": \"The clause refers to `max_ack_delay` without defining it. This could be a configurable parameter, a default value, or a value derived from other parameters. Without knowing how `max_ack_delay` is determined, there are multiple reasonable interpretations of when the delay should be reported.\"}",
+  "record_id": "87cb25ea70c0fc6d84e2fce6cee40413caacdef13840dcdcf2a2a492a6b50614",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "13.2.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.453
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "clients SHOULD select the highest-priority compatible record.",
+    "interpretation_a": "The clause does not specify how to choose among multiple compatible records that have the same priority value.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause requires selecting the highest‑priority compatible record but omits a rule for handling ties, creating an incomplete constraint that can result in different operational interpretations.",
+    "missing_information": "A tie‑breaking rule for records with equal priority is not provided, leaving implementations free to choose arbitrarily or use an unspecified heuristic, which can lead to materially different behaviours."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:49:31.418305+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-02",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "b7f6bed8590befacf2113eac2e9b531b17286a412cd413e763bfb46b5a0ad1f7",
+  "lineage_ids": "lineage:bc951cbd11486ebc4120f9df",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 5033,
+    "load_duration": 4579700,
+    "prompt_eval_count": 636,
+    "total_duration": 43695885200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"clients SHOULD select the highest-priority compatible record.\",\n  \"interpretation_a\": \"The clause does not specify how to choose among multiple compatible records that have the same priority value.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"A tie‑breaking rule for records with equal priority is not provided, leaving implementations free to choose arbitrarily or use an unspecified heuristic, which can lead to materially different behaviours.\",\n  \"justification\": \"The clause requires selecting the highest‑priority compatible record but omits a rule for handling ties, creating an incomplete constraint that can result in different operational interpretations.\"\n}",
+  "record_id": "581191cfddbd533640e6c4d26ab0a1761270e0642610807209fd3b94cb78b6f2",
+  "revision": "02",
+  "schema_version": 1,
+  "section_ids": "3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 43.703
+}

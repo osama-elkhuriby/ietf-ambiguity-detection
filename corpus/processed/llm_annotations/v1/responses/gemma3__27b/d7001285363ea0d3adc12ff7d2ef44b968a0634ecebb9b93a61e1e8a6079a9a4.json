@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD apply an IPv6 flow label in compliance with [RFC6437], unless the local API does not allow setting IPv6 flow labels.",
+    "interpretation_a": "If the local API allows setting IPv6 flow labels, endpoints SHOULD apply them, meaning they are encouraged to do so but not required.",
+    "interpretation_b": "If the local API does not allow setting IPv6 flow labels, endpoints MUST NOT apply them, effectively making flow label application conditional on API support.",
+    "is_ambiguous": "yes",
+    "justification": "The clause uses 'SHOULD' which is often interpreted as a recommendation, but the 'unless' clause creates a conditional requirement. It's unclear if the 'SHOULD' is overridden entirely by the API limitation, or if it remains a recommendation even when the API allows it. This creates ambiguity about the level of compliance expected.",
+    "missing_information": "The strength of 'SHOULD' is unclear. Is it a weak recommendation, or is it a strong recommendation that becomes a requirement when the API allows it? The clause does not clearly state what happens when the API *does* allow setting flow labels – is compliance mandatory then?"
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T02:07:17.635918+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "2cbc945b63225fd56e3c253f55020b0067ce60b3dc0af04d9fab70d7bd857f1f",
+  "lineage_ids": "lineage:398b07ba88de43872fd5c13f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 261,
+    "load_duration": 4003700,
+    "prompt_eval_count": 880,
+    "total_duration": 9743247300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD apply an IPv6 flow label in compliance with [RFC6437], unless the local API does not allow setting IPv6 flow labels.\", \"interpretation_a\": \"If the local API allows setting IPv6 flow labels, endpoints SHOULD apply them, meaning they are encouraged to do so but not required.\", \"interpretation_b\": \"If the local API does not allow setting IPv6 flow labels, endpoints MUST NOT apply them, effectively making flow label application conditional on API support.\", \"missing_information\": \"The strength of 'SHOULD' is unclear. Is it a weak recommendation, or is it a strong recommendation that becomes a requirement when the API allows it? The clause does not clearly state what happens when the API *does* allow setting flow labels – is compliance mandatory then?\",\"justification\": \"The clause uses 'SHOULD' which is often interpreted as a recommendation, but the 'unless' clause creates a conditional requirement. It's unclear if the 'SHOULD' is overridden entirely by the API limitation, or if it remains a recommendation even when the API allows it. This creates ambiguity about the level of compliance expected.\"}",
+  "record_id": "d7001285363ea0d3adc12ff7d2ef44b968a0634ecebb9b93a61e1e8a6079a9a4",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 21.141
+}

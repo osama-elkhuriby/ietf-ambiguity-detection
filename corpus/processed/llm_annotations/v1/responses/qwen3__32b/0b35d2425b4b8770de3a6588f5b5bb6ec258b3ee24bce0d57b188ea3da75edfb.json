@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides clear guidance on the handling of non-zero padding in PUSH_PROMISE frames. It states that a receiver is not required to verify padding but may treat non-zero padding as a connection error. This allows for two possible behaviors (ignoring or treating as an error) without ambiguity in the specification. There is no missing constraint that would lead to materially different implementations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T01:40:55.930902+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "5f54da9a0eded422fca721dbe91f057493e3837687f2c0e781d5e52e1583f75c",
+  "lineage_ids": "lineage:3d808f37e751d7bfd90e9239",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 130,
+    "load_duration": 4607300,
+    "prompt_eval_count": 518,
+    "total_duration": 5578056700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides clear guidance on the handling of non-zero padding in PUSH_PROMISE frames. It states that a receiver is not required to verify padding but may treat non-zero padding as a connection error. This allows for two possible behaviors (ignoring or treating as an error) without ambiguity in the specification. There is no missing constraint that would lead to materially different implementations.\"\n}",
+  "record_id": "0b35d2425b4b8770de3a6588f5b5bb6ec258b3ee24bce0d57b188ea3da75edfb",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.578
+}

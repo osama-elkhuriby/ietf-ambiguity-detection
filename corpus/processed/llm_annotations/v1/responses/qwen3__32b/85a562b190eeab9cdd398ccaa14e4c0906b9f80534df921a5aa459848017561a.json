@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause provides a clear and unambiguous instruction: any ACK frames in unprotected packets received after the successful receipt of a packet protected with 1-RTT keys must be discarded. There is no ambiguity in the wording, as it specifies the condition (after successful receipt of a 1-RTT packet) and the required action (discard the ACK frames). No alternative interpretations or missing constraints are evident.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:36:31.799212+00:00",
+  "document_id": "draft-ietf-quic-tls-06",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "59797db0b92ab47ac3e2c4647abc1db3baa3c8e42317a62bd79c9701f0a1fd94",
+  "lineage_ids": "lineage:74a887fec79fa2a89d37029e",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 138,
+    "load_duration": 4283900,
+    "prompt_eval_count": 579,
+    "total_duration": 5684407300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause provides a clear and unambiguous instruction: any ACK frames in unprotected packets received after the successful receipt of a packet protected with 1-RTT keys must be discarded. There is no ambiguity in the wording, as it specifies the condition (after successful receipt of a 1-RTT packet) and the required action (discard the ACK frames). No alternative interpretations or missing constraints are evident.\"\n}",
+  "record_id": "85a562b190eeab9cdd398ccaa14e4c0906b9f80534df921a5aa459848017561a",
+  "revision": "06",
+  "schema_version": 1,
+  "section_ids": "9.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.688
+}

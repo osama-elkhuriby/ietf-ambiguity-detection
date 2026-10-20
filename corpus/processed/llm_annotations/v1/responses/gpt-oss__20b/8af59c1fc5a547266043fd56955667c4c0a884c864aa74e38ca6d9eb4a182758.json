@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that any HEADERS frame with any flag bits set (i.e., any flag set) must be treated as a connection error of type HTTP_MALFORMED_HEADERS. Since no flags are defined for the HEADERS frame, the clause is clear and does not permit multiple reasonable interpretations or lack a concrete constraint.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T09:48:00.570402+00:00",
+  "document_id": "draft-ietf-quic-http-08",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "0ee4cd2eb7edfc1315e275d522846f7adbccfb5d5fb5857e723df9d545f34af0",
+  "lineage_ids": "lineage:7f60032e6ca1b2860866231e",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 375,
+    "load_duration": 4685200,
+    "prompt_eval_count": 554,
+    "total_duration": 3374720800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that any HEADERS frame with any flag bits set (i.e., any flag set) must be treated as a connection error of type HTTP_MALFORMED_HEADERS. Since no flags are defined for the HEADERS frame, the clause is clear and does not permit multiple reasonable interpretations or lack a concrete constraint.\"\n}",
+  "record_id": "8af59c1fc5a547266043fd56955667c4c0a884c864aa74e38ca6d9eb4a182758",
+  "revision": "08",
+  "schema_version": 1,
+  "section_ids": "5.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 3.375
+}

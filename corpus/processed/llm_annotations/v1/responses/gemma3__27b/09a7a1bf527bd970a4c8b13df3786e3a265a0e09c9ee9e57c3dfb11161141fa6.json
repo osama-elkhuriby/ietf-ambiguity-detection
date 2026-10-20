@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "advertised maximum stream ID",
+    "interpretation_a": "The maximum stream ID is a fixed value advertised once during connection establishment.",
+    "interpretation_b": "The maximum stream ID can be dynamically updated during the connection, requiring endpoints to track the current advertised value.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"advertised maximum stream ID\" is incomplete. It's unclear if this refers to a single, initial advertisement or if it can change over time. If it can change, the mechanism for learning about updates is missing, creating ambiguity about the correct value to use for the constraint.",
+    "missing_information": "The document does not specify whether the advertised maximum stream ID is static or dynamic. If dynamic, the mechanism for updating it is not described, leaving open the question of how endpoints determine the current valid maximum."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:57:17.277946+00:00",
+  "document_id": "draft-ietf-quic-transport-06",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "08e52d48eaa97d5f763685948dbc9861394decbf3d4c940278345e9aad106d93",
+  "lineage_ids": "lineage:5e78a517dc9905bcede9845c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 193,
+    "load_duration": 4362800,
+    "prompt_eval_count": 558,
+    "total_duration": 7216168000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"advertised maximum stream ID\", \"interpretation_a\": \"The maximum stream ID is a fixed value advertised once during connection establishment.\", \"interpretation_b\": \"The maximum stream ID can be dynamically updated during the connection, requiring endpoints to track the current advertised value.\", \"missing_information\": \"The document does not specify whether the advertised maximum stream ID is static or dynamic. If dynamic, the mechanism for updating it is not described, leaving open the question of how endpoints determine the current valid maximum.\", \"justification\": \"The phrase \\\"advertised maximum stream ID\\\" is incomplete. It's unclear if this refers to a single, initial advertisement or if it can change over time. If it can change, the mechanism for learning about updates is missing, creating ambiguity about the correct value to use for the constraint.\"}",
+  "record_id": "09a7a1bf527bd970a4c8b13df3786e3a265a0e09c9ee9e57c3dfb11161141fa6",
+  "revision": "06",
+  "schema_version": 1,
+  "section_ids": "10.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.203
+}

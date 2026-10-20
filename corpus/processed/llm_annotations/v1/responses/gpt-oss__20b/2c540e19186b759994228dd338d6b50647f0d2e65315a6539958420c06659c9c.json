@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "If the PING frame is determined to be lost, a new PING frame SHOULD be generated.",
+    "interpretation_a": "The clause could be interpreted as requiring a new PING frame when a timeout expires without an acknowledgment.",
+    "interpretation_b": "Alternatively, it could be interpreted as requiring a new PING frame when the sender receives no response to the original PING after a certain number of retransmissions.",
+    "is_ambiguous": "yes",
+    "justification": "The lack of a precise definition for 'determined to be lost' creates an incomplete constraint that can lead to materially different implementation behaviours.",
+    "missing_information": "The clause does not define what constitutes 'determined to be lost', leaving the mechanism for loss detection unspecified and allowing multiple reasonable implementations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T14:39:15.457245+00:00",
+  "document_id": "draft-ietf-quic-transport-09",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "c15915c4b2bec26f2eaa292f8945870b05bf423e0af192e22f5216c2466d9ad4",
+  "lineage_ids": "lineage:ab17317ee5d4360550b39a70",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 931,
+    "load_duration": 5102800,
+    "prompt_eval_count": 599,
+    "total_duration": 8147174200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"If the PING frame is determined to be lost, a new PING frame SHOULD be generated.\",\n  \"interpretation_a\": \"The clause could be interpreted as requiring a new PING frame when a timeout expires without an acknowledgment.\",\n  \"interpretation_b\": \"Alternatively, it could be interpreted as requiring a new PING frame when the sender receives no response to the original PING after a certain number of retransmissions.\",\n  \"missing_information\": \"The clause does not define what constitutes 'determined to be lost', leaving the mechanism for loss detection unspecified and allowing multiple reasonable implementations.\",\n  \"justification\": \"The lack of a precise definition for 'determined to be lost' creates an incomplete constraint that can lead to materially different implementation behaviours.\"\n}",
+  "record_id": "2c540e19186b759994228dd338d6b50647f0d2e65315a6539958420c06659c9c",
+  "revision": "09",
+  "schema_version": 1,
+  "section_ids": "7.7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.141
+}

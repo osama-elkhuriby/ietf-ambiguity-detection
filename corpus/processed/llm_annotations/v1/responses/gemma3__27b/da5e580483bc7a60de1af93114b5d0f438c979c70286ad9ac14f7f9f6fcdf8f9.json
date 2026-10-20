@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "implementation-specific metadata",
+    "interpretation_a": "The 'implementation-specific metadata' could be a timestamp stored in a database, a file system modification time, or any other internal representation of time. If this metadata happens to be in the future (according to the server's clock), the server *must* use the message origination date instead.",
+    "interpretation_b": "The 'implementation-specific metadata' could refer to a calculation or process that *results* in a future timestamp. For example, a scheduled event time. If this calculation yields a future time, the server *must* use the message origination date instead.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'implementation-specific metadata' is vague. It doesn't specify *what* constitutes this metadata, only that it's used to derive the last modification time. This allows for different interpretations of how the future time is determined, and therefore, how the replacement rule applies.",
+    "missing_information": "The definition of 'implementation-specific metadata' is not precise enough. It's unclear whether it refers to the source of the timestamp (e.g., a database) or the timestamp itself. This affects how the condition 'evaluates to some time in the future' is interpreted."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:31:01.545840+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-14",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "dc62198069900bd3f25435baea87dfb18dee806c14d4107d518b9f79d5a763b5",
+  "lineage_ids": "lineage:d59f2983d9928aa836ccff6a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 286,
+    "load_duration": 20888200,
+    "prompt_eval_count": 601,
+    "total_duration": 10809987100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"implementation-specific metadata\", \"interpretation_a\": \"The 'implementation-specific metadata' could be a timestamp stored in a database, a file system modification time, or any other internal representation of time. If this metadata happens to be in the future (according to the server's clock), the server *must* use the message origination date instead.\", \"interpretation_b\": \"The 'implementation-specific metadata' could refer to a calculation or process that *results* in a future timestamp. For example, a scheduled event time. If this calculation yields a future time, the server *must* use the message origination date instead.\", \"missing_information\": \"The definition of 'implementation-specific metadata' is not precise enough. It's unclear whether it refers to the source of the timestamp (e.g., a database) or the timestamp itself. This affects how the condition 'evaluates to some time in the future' is interpreted.\", \"justification\": \"The phrase 'implementation-specific metadata' is vague. It doesn't specify *what* constitutes this metadata, only that it's used to derive the last modification time. This allows for different interpretations of how the future time is determined, and therefore, how the replacement rule applies.\"}",
+  "record_id": "da5e580483bc7a60de1af93114b5d0f438c979c70286ad9ac14f7f9f6fcdf8f9",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "8.8.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.812
+}

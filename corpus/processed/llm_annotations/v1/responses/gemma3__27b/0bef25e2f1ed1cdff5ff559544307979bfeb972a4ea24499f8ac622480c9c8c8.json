@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD NOT increase",
+    "interpretation_a": "Servers are permitted to maintain the existing MAX_STREAMS limit after sending a GOAWAY frame.",
+    "interpretation_b": "Servers are permitted to increase the MAX_STREAMS limit to a value *equal* to the existing limit after sending a GOAWAY frame.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'SHOULD NOT increase' is open to interpretation. It could mean 'must not make larger' or 'must not change'. The latter allows for re-setting to the same value, while the former does not. This affects implementation because a server might choose to re-set the limit to the same value, believing that is permissible, while another might interpret it as a complete prohibition on any change.",
+    "missing_information": "The meaning of 'increase' is not fully defined. Does it include setting the value to the same value?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:40:03.340177+00:00",
+  "document_id": "draft-ietf-quic-http-22",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "6684d5a0a8ffc5ad033a847c84f776653d5e6c8e1b00853dd2a0397231e7b2c0",
+  "lineage_ids": "lineage:441befd96ab3631d9471be22",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 213,
+    "load_duration": 8462700,
+    "prompt_eval_count": 565,
+    "total_duration": 8173579600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD NOT increase\", \"interpretation_a\": \"Servers are permitted to maintain the existing MAX_STREAMS limit after sending a GOAWAY frame.\", \"interpretation_b\": \"Servers are permitted to increase the MAX_STREAMS limit to a value *equal* to the existing limit after sending a GOAWAY frame.\", \"missing_information\": \"The meaning of 'increase' is not fully defined. Does it include setting the value to the same value?\", \"justification\": \"The phrase 'SHOULD NOT increase' is open to interpretation. It could mean 'must not make larger' or 'must not change'. The latter allows for re-setting to the same value, while the former does not. This affects implementation because a server might choose to re-set the limit to the same value, believing that is permissible, while another might interpret it as a complete prohibition on any change.\"}",
+  "record_id": "0bef25e2f1ed1cdff5ff559544307979bfeb972a4ea24499f8ac622480c9c8c8",
+  "revision": "22",
+  "schema_version": 1,
+  "section_ids": "5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.188
+}

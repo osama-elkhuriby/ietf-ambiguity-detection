@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously requires that a peer’s SETTINGS frames received as part of the connection preface be acknowledged after the local endpoint has sent its own connection preface. The phrase “after sending the connection preface” clearly refers to the local side’s preface, and there is no alternative reasonable interpretation or missing constraint that would lead to materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T05:14:33.730270+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "26c3a0571c8ea71d4075e03141a7c6bf0c09ad848d70696b734d2479d44a3a7b",
+  "lineage_ids": "lineage:3055a4b87dfd145dc1964a2a",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3184,
+    "load_duration": 5861000,
+    "prompt_eval_count": 620,
+    "total_duration": 27432336800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously requires that a peer’s SETTINGS frames received as part of the connection preface be acknowledged after the local endpoint has sent its own connection preface. The phrase “after sending the connection preface” clearly refers to the local side’s preface, and there is no alternative reasonable interpretation or missing constraint that would lead to materially different implementation behaviours.\"\n}",
+  "record_id": "ebfca3bf279f2e81865078faf677c1afceace38b48131b35ed59d24bc504ea75",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "3.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 27.422
+}

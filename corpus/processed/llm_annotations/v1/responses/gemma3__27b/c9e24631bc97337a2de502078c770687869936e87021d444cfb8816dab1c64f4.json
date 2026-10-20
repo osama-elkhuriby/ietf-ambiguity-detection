@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "correct",
+    "interpretation_a": "The client must validate that the `retry_source_connection_id` parameter matches the value from the received Retry packet.",
+    "interpretation_b": "The client must validate that the `retry_source_connection_id` parameter is not present if no Retry packet was received, and that it is present and correct if a Retry packet was received.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'correct' is not defined. It is unclear whether 'correct' means that the value of the parameter must match the value in the Retry packet, or simply that the parameter is a valid value according to its specification. This leads to two reasonable interpretations.",
+    "missing_information": "The definition of 'correct' is missing. Does 'correct' mean matching the value in the Retry packet, or simply being a valid value according to the parameter's specification?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:02:14.207672+00:00",
+  "document_id": "draft-ietf-quic-transport-30",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "620ecc55dbdc45666ff078cf6f31c2656cfce5a48f34f131fdcba84b73a75f0e",
+  "lineage_ids": "lineage:a610be06934239ccc5452141",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 207,
+    "load_duration": 4746100,
+    "prompt_eval_count": 613,
+    "total_duration": 7998189200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"correct\", \"interpretation_a\": \"The client must validate that the `retry_source_connection_id` parameter matches the value from the received Retry packet.\", \"interpretation_b\": \"The client must validate that the `retry_source_connection_id` parameter is not present if no Retry packet was received, and that it is present and correct if a Retry packet was received.\", \"missing_information\": \"The definition of 'correct' is missing. Does 'correct' mean matching the value in the Retry packet, or simply being a valid value according to the parameter's specification?\",\"justification\": \"The term 'correct' is not defined. It is unclear whether 'correct' means that the value of the parameter must match the value in the Retry packet, or simply that the parameter is a valid value according to its specification. This leads to two reasonable interpretations.\"}",
+  "record_id": "c9e24631bc97337a2de502078c770687869936e87021d444cfb8816dab1c64f4",
+  "revision": "30",
+  "schema_version": 1,
+  "section_ids": "17.2.5.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.0
+}

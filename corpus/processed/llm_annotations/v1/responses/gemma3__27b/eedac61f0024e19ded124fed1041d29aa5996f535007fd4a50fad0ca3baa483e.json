@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Draft versions MUST use the corresponding draft transport version as their transport.",
+    "interpretation_a": "A draft version 'h3-25' MUST use the QUIC transport defined in 'draft-ietf-quic-transport-25' even if a newer QUIC transport version exists.",
+    "interpretation_b": "A draft version 'h3-25' MUST use *a* QUIC transport version that is considered 'corresponding' to it, but the specific version is not constrained; it could use a newer QUIC transport version if deemed appropriate.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'corresponding' is not defined, leaving room for interpretation. Does it mean the exact same version, the latest version, or some other relationship? This affects implementation because different interpretations could lead to interoperability issues.",
+    "missing_information": "The definition of 'corresponding' is missing. It is unclear whether 'corresponding' means the exact same version number, the latest version at the time of the HTTP/3 draft, or some other relationship."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:14:04.621413+00:00",
+  "document_id": "draft-ietf-quic-http-32",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "04e6beafbdb7b97e1c44082295f200bb5df256637a47dba70322d6a8e8180cff",
+  "lineage_ids": "lineage:d65e1b619531ba316af9c53e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 241,
+    "load_duration": 8763400,
+    "prompt_eval_count": 587,
+    "total_duration": 9156939500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Draft versions MUST use the corresponding draft transport version as their transport.\", \"interpretation_a\": \"A draft version 'h3-25' MUST use the QUIC transport defined in 'draft-ietf-quic-transport-25' even if a newer QUIC transport version exists.\", \"interpretation_b\": \"A draft version 'h3-25' MUST use *a* QUIC transport version that is considered 'corresponding' to it, but the specific version is not constrained; it could use a newer QUIC transport version if deemed appropriate.\", \"missing_information\": \"The definition of 'corresponding' is missing. It is unclear whether 'corresponding' means the exact same version number, the latest version at the time of the HTTP/3 draft, or some other relationship.\", \"justification\": \"The term 'corresponding' is not defined, leaving room for interpretation. Does it mean the exact same version, the latest version, or some other relationship? This affects implementation because different interpretations could lead to interoperability issues.\"}",
+  "record_id": "eedac61f0024e19ded124fed1041d29aa5996f535007fd4a50fad0ca3baa483e",
+  "revision": "32",
+  "schema_version": 1,
+  "section_ids": "3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.156
+}

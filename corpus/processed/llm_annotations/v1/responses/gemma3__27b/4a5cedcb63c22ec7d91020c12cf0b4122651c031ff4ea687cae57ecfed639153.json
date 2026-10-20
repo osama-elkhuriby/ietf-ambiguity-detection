@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "partially or fully processed",
+    "interpretation_a": "A request is considered 'partially processed' if any bytes of the request body have been read or acted upon by the server. 'Fully processed' means the server has completed all intended operations based on the request.",
+    "interpretation_b": "A request is 'partially processed' only if the server has made a persistent change to its state based on the request. 'Fully processed' means the server has sent a complete response (even if an error).",
+    "is_ambiguous": "yes",
+    "justification": "The terms 'partially' and 'fully processed' are subjective. Without a clear definition, different implementations might disagree on whether a given level of processing warrants the use of H3_REQUEST_REJECTED or not.",
+    "missing_information": "The definition of 'partially' and 'fully processed' is not precise, leading to different interpretations of when H3_REQUEST_REJECTED can be used."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:49:27.696720+00:00",
+  "document_id": "draft-ietf-quic-http-29",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "231940cb2a8526d797646fbd355e4e5e1eea8f06793ac02a4dcdd3ba646dda58",
+  "lineage_ids": "lineage:93da56fac7ab3134eafd6eef",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 224,
+    "load_duration": 10490500,
+    "prompt_eval_count": 597,
+    "total_duration": 8583037900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"partially or fully processed\", \"interpretation_a\": \"A request is considered 'partially processed' if any bytes of the request body have been read or acted upon by the server. 'Fully processed' means the server has completed all intended operations based on the request.\", \"interpretation_b\": \"A request is 'partially processed' only if the server has made a persistent change to its state based on the request. 'Fully processed' means the server has sent a complete response (even if an error).\", \"missing_information\": \"The definition of 'partially' and 'fully processed' is not precise, leading to different interpretations of when H3_REQUEST_REJECTED can be used.\", \"justification\": \"The terms 'partially' and 'fully processed' are subjective. Without a clear definition, different implementations might disagree on whether a given level of processing warrants the use of H3_REQUEST_REJECTED or not.\"}",
+  "record_id": "4a5cedcb63c22ec7d91020c12cf0b4122651c031ff4ea687cae57ecfed639153",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "4.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.594
+}

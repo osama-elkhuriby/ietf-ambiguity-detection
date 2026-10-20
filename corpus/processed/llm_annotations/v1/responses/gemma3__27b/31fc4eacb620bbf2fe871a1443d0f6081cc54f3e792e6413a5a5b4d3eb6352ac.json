@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY consist of multiple messages",
+    "interpretation_a": "The server can send multiple HTTP messages as a response to a single request if interim responses are sent first.",
+    "interpretation_b": "The server might send multiple HTTP messages as a response to a single request if interim responses are sent first, but it is not required to do so.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' creates ambiguity. Does the server have the option to send a single final response even after sending interim responses, or is sending multiple messages mandatory when interim responses are present? This impacts how a client parses and handles the response stream.",
+    "missing_information": "The degree of freedom granted by 'MAY' is not constrained. It is unclear if the server *must* send multiple messages when interim responses are present, or if it *can* choose to do so. This affects implementation because a client needs to know if it should expect only one final response even after 1xx responses."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:45:27.242522+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "6830228317a29ab796addd44d0cd9055ca0d566e06182c92bfa2f4661e3a3658",
+  "lineage_ids": "lineage:f777af3ab06a1b5f53e39d1d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 226,
+    "load_duration": 4301900,
+    "prompt_eval_count": 596,
+    "total_duration": 8595555900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY consist of multiple messages\", \"interpretation_a\": \"The server can send multiple HTTP messages as a response to a single request if interim responses are sent first.\", \"interpretation_b\": \"The server might send multiple HTTP messages as a response to a single request if interim responses are sent first, but it is not required to do so.\", \"missing_information\": \"The degree of freedom granted by 'MAY' is not constrained. It is unclear if the server *must* send multiple messages when interim responses are present, or if it *can* choose to do so. This affects implementation because a client needs to know if it should expect only one final response even after 1xx responses.\", \"justification\": \"The use of 'MAY' creates ambiguity. Does the server have the option to send a single final response even after sending interim responses, or is sending multiple messages mandatory when interim responses are present? This impacts how a client parses and handles the response stream.\"}",
+  "record_id": "31fc4eacb620bbf2fe871a1443d0f6081cc54f3e792e6413a5a5b4d3eb6352ac",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.625
+}

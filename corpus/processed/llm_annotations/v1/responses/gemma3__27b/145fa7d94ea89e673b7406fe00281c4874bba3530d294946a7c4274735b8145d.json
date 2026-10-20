@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "non-existent Push ID or a Placeholder ID greater than the server’s limit",
+    "interpretation_a": "The server must treat the frame as an error if *either* the Push ID doesn't exist *or* the Placeholder ID exceeds the limit.",
+    "interpretation_b": "The server must treat the frame as an error if *both* the Push ID doesn't exist *and* the Placeholder ID exceeds the limit.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'or' is ambiguous. It could be interpreted as inclusive or exclusive. Without clarification, implementations could differ on whether both conditions must be met for the error to be triggered.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:40:53.947330+00:00",
+  "document_id": "draft-ietf-quic-http-17",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "613c3d5f6a559bad73671ca68980d4f868f2bd6e60c45351c07e47d3aa2382e7",
+  "lineage_ids": "lineage:7a49d98fe955aa706edf8fa1",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 166,
+    "load_duration": 8606200,
+    "prompt_eval_count": 608,
+    "total_duration": 6475049000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"non-existent Push ID or a Placeholder ID greater than the server’s limit\", \"interpretation_a\": \"The server must treat the frame as an error if *either* the Push ID doesn't exist *or* the Placeholder ID exceeds the limit.\", \"interpretation_b\": \"The server must treat the frame as an error if *both* the Push ID doesn't exist *and* the Placeholder ID exceeds the limit.\", \"missing_information\": \"\", \"justification\": \"The use of 'or' is ambiguous. It could be interpreted as inclusive or exclusive. Without clarification, implementations could differ on whether both conditions must be met for the error to be triggered.\"}",
+  "record_id": "145fa7d94ea89e673b7406fe00281c4874bba3530d294946a7c4274735b8145d",
+  "revision": "17",
+  "schema_version": 1,
+  "section_ids": "4.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.5
+}

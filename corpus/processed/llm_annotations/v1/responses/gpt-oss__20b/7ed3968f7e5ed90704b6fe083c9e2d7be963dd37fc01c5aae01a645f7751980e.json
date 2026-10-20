@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "A probe packet MAY carry retransmitted unacknowledged data when new data is unavailable, when flow control does not permit new data to be sent, or to opportunistically reduce loss recovery delay.",
+    "interpretation_a": "The clause permits retransmitted data only when new data is unavailable or flow control prohibits new data.",
+    "interpretation_b": "The clause also permits retransmitted data when new data is available, provided the implementation wishes to opportunistically reduce loss recovery delay.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether the third reason is independent of the first two, allowing two materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T11:28:11.117620+00:00",
+  "document_id": "draft-ietf-quic-recovery-29",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "8c5ae0720bacb1d2863b3cb1c8923ade919d05a30777308928dbc9d32bc7d528",
+  "lineage_ids": "lineage:cb1d31286192531226dfd6fc",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1648,
+    "load_duration": 4332700,
+    "prompt_eval_count": 599,
+    "total_duration": 14172830400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"A probe packet MAY carry retransmitted unacknowledged data when new data is unavailable, when flow control does not permit new data to be sent, or to opportunistically reduce loss recovery delay.\",\n  \"interpretation_a\": \"The clause permits retransmitted data only when new data is unavailable or flow control prohibits new data.\",\n  \"interpretation_b\": \"The clause also permits retransmitted data when new data is available, provided the implementation wishes to opportunistically reduce loss recovery delay.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify whether the third reason is independent of the first two, allowing two materially different implementation behaviours.\"\n}",
+  "record_id": "7ed3968f7e5ed90704b6fe083c9e2d7be963dd37fc01c5aae01a645f7751980e",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "6.2.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 14.172
+}

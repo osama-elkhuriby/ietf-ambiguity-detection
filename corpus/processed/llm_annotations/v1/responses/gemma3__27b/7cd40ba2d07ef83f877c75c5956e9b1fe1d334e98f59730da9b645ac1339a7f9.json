@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "I-1",
+    "evidence_span": "the first client-initiated stream",
+    "interpretation_a": "Stream 0 is *always* the first stream initiated by the client, regardless of other streams.",
+    "interpretation_b": "Stream 0 is the first stream initiated by the client *in a given connection*, but other streams may be initiated before it if the connection is re-established.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'the first client-initiated stream' is ambiguous. Does it mean the very first stream ever initiated by a client on this connection, or the first stream initiated by a client after some initial condition (e.g., connection establishment)? The two interpretations lead to different implementation choices.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:36:05.798028+00:00",
+  "document_id": "draft-ietf-quic-transport-07",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "061928601471e674094b9d7bdd0add0f24539ba1115e8081445419553d4b4853",
+  "lineage_ids": "lineage:c40e1beb206260e3000b985d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 169,
+    "load_duration": 4077700,
+    "prompt_eval_count": 556,
+    "total_duration": 6415627200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"I-1\", \"evidence_span\": \"the first client-initiated stream\", \"interpretation_a\": \"Stream 0 is *always* the first stream initiated by the client, regardless of other streams.\", \"interpretation_b\": \"Stream 0 is the first stream initiated by the client *in a given connection*, but other streams may be initiated before it if the connection is re-established.\", \"missing_information\": \"\", \"justification\": \"The phrase 'the first client-initiated stream' is ambiguous. Does it mean the very first stream ever initiated by a client on this connection, or the first stream initiated by a client after some initial condition (e.g., connection establishment)? The two interpretations lead to different implementation choices.\"}",
+  "record_id": "7cd40ba2d07ef83f877c75c5956e9b1fe1d334e98f59730da9b645ac1339a7f9",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "10.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.422
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "every subsequent ACK-eliciting packet",
+    "interpretation_a": "ACK-eliciting packets arriving out of order *consecutively* trigger immediate ACK frames for each.",
+    "interpretation_b": "Any ACK-eliciting packet arriving out of order, even interspersed with in-order packets, triggers immediate ACK frames for each.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'every subsequent' is ambiguous. It could mean 'every packet that arrives after the initial out-of-order packet', implying a sequence of out-of-order packets must be received to trigger the behavior. Alternatively, it could mean 'any' ACK-eliciting packet that arrives out of order, regardless of whether previous packets were in order.",
+    "missing_information": "The meaning of 'every subsequent' is unclear. Does it mean 'every packet in a sequence' or 'any packet'?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:18:06.719122+00:00",
+  "document_id": "draft-ietf-quic-transport-23",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "1d3f4fbde7430d1a4caf0b946a4a33d24011193d2e2a40afb448e3416ea3cebf",
+  "lineage_ids": "lineage:cf8036a76b697f0bc759dc73",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 206,
+    "load_duration": 5295400,
+    "prompt_eval_count": 628,
+    "total_duration": 7754128900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"every subsequent ACK-eliciting packet\", \"interpretation_a\": \"ACK-eliciting packets arriving out of order *consecutively* trigger immediate ACK frames for each.\", \"interpretation_b\": \"Any ACK-eliciting packet arriving out of order, even interspersed with in-order packets, triggers immediate ACK frames for each.\", \"missing_information\": \"The meaning of 'every subsequent' is unclear. Does it mean 'every packet in a sequence' or 'any packet'?\",\"justification\": \"The phrase 'every subsequent' is ambiguous. It could mean 'every packet that arrives after the initial out-of-order packet', implying a sequence of out-of-order packets must be received to trigger the behavior. Alternatively, it could mean 'any' ACK-eliciting packet that arrives out of order, regardless of whether previous packets were in order.\"}",
+  "record_id": "449153889a16d20ac40ed8c5a65d99cd5c0a47c5cde15455d6e9618048ebb864",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "13.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.766
+}

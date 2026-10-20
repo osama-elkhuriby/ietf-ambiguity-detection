@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "PADDING frames ([frame-padding]) as necessary",
+    "interpretation_a": "The client adds padding to reach the largest minimum datagram size, even if the actual data payload is smaller.",
+    "interpretation_b": "The client adds padding only if the actual data payload is smaller than the largest minimum datagram size.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'as necessary' is vague. It's unclear whether padding is always applied to reach the maximum size, or only when the payload is smaller. This impacts implementation because it determines the amount of padding added and the resulting datagram size.",
+    "missing_information": "The specification does not clearly state whether padding is *always* added to reach the maximum size, or only when the payload is smaller than the maximum size. This affects how much padding is added and thus the size of the initial datagram."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:41:40.041792+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "6d1577f0e20f8cf8e1d28716c85a8504621fea0c007a1a1441c2776cb200d74a",
+  "lineage_ids": "lineage:961eebbdbb989fb22bfdc12f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 202,
+    "load_duration": 4547800,
+    "prompt_eval_count": 586,
+    "total_duration": 7614770800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"PADDING frames ([frame-padding]) as necessary\", \"interpretation_a\": \"The client adds padding to reach the largest minimum datagram size, even if the actual data payload is smaller.\", \"interpretation_b\": \"The client adds padding only if the actual data payload is smaller than the largest minimum datagram size.\", \"missing_information\": \"The specification does not clearly state whether padding is *always* added to reach the maximum size, or only when the payload is smaller than the maximum size. This affects how much padding is added and thus the size of the initial datagram.\", \"justification\": \"The phrase 'as necessary' is vague. It's unclear whether padding is always applied to reach the maximum size, or only when the payload is smaller. This impacts implementation because it determines the amount of padding added and the resulting datagram size.\"}",
+  "record_id": "894ae1668f3773d0084d52f76dc1b2145ab93a0b1a6bccdefe3cab6c0939d9ac",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.61
+}

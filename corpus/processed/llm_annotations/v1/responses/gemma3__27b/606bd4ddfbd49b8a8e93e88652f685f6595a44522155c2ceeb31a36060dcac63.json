@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "or drop packets without response",
+    "interpretation_a": "The endpoint can choose to drop packets from unvalidated addresses without sending any response.",
+    "interpretation_b": "The endpoint can choose to drop packets from unvalidated addresses *after* sending a response, but only if the response is no more than three times the size of the received packet.",
+    "is_ambiguous": "yes",
+    "justification": "The phrasing 'or drop packets without response' is ambiguous because it's unclear whether the 'or' applies to the entire first clause ('limit transmission...') or just the 'limit transmission' part. This affects how an endpoint handles packets from unvalidated addresses.",
+    "missing_information": "It is unclear whether the 'or' applies to the entire condition of 'limit transmission...to validated addresses' or only to 'limit transmission'. If the former, the endpoint can simply drop packets. If the latter, the endpoint must attempt to limit transmission *and* consider dropping packets based on response size."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:27:54.114385+00:00",
+  "document_id": "draft-ietf-quic-transport-29",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "8e7a77f888d46f9063b63d33b09c331b33297b14802b5a5fa795375b7d8ce563",
+  "lineage_ids": "lineage:328b399f89735a40b80d9cb0",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 224,
+    "load_duration": 3535800,
+    "prompt_eval_count": 581,
+    "total_duration": 8389955900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"or drop packets without response\", \"interpretation_a\": \"The endpoint can choose to drop packets from unvalidated addresses without sending any response.\", \"interpretation_b\": \"The endpoint can choose to drop packets from unvalidated addresses *after* sending a response, but only if the response is no more than three times the size of the received packet.\", \"missing_information\": \"It is unclear whether the 'or' applies to the entire condition of 'limit transmission...to validated addresses' or only to 'limit transmission'. If the former, the endpoint can simply drop packets. If the latter, the endpoint must attempt to limit transmission *and* consider dropping packets based on response size.\", \"justification\": \"The phrasing 'or drop packets without response' is ambiguous because it's unclear whether the 'or' applies to the entire first clause ('limit transmission...') or just the 'limit transmission' part. This affects how an endpoint handles packets from unvalidated addresses.\"}",
+  "record_id": "606bd4ddfbd49b8a8e93e88652f685f6595a44522155c2ceeb31a36060dcac63",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "10.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.39
+}

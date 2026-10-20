@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "based solely on the information in the ClientHello",
+    "interpretation_a": "The server MUST ignore the QUIC version when selecting the application protocol, relying only on the ALPN identifiers.",
+    "interpretation_b": "The server MAY consider the QUIC version as a secondary factor when selecting the application protocol, but the primary factor is the ALPN identifiers. The clause does not explicitly prohibit the QUIC version from influencing the decision, only that it shouldn't be the *sole* basis.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"based solely on\" is open to interpretation. It could mean 'exclusively on' or 'primarily on'. The next clause indicates that version negotiation *can* occur if there's a mismatch, implying the version is at least considered.",
+    "missing_information": "The degree to which the QUIC version can influence the application protocol selection is not specified. Is it a hard constraint that the server must ignore the QUIC version, or merely that it shouldn't be the only factor?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:42:48.387061+00:00",
+  "document_id": "draft-ietf-quic-tls-01",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "ec7772fb97bf14be066d05f38e5842e7f9dbfc63a485c69ce312d5bbe6663e23",
+  "lineage_ids": "lineage:7668beee9e2b3c8d1ca6afd7",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 235,
+    "load_duration": 4008000,
+    "prompt_eval_count": 609,
+    "total_duration": 8780927500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"based solely on the information in the ClientHello\", \"interpretation_a\": \"The server MUST ignore the QUIC version when selecting the application protocol, relying only on the ALPN identifiers.\", \"interpretation_b\": \"The server MAY consider the QUIC version as a secondary factor when selecting the application protocol, but the primary factor is the ALPN identifiers. The clause does not explicitly prohibit the QUIC version from influencing the decision, only that it shouldn't be the *sole* basis.\", \"missing_information\": \"The degree to which the QUIC version can influence the application protocol selection is not specified. Is it a hard constraint that the server must ignore the QUIC version, or merely that it shouldn't be the only factor?\",\"justification\": \"The phrase \\\"based solely on\\\" is open to interpretation. It could mean 'exclusively on' or 'primarily on'. The next clause indicates that version negotiation *can* occur if there's a mismatch, implying the version is at least considered.\"}",
+  "record_id": "9059f0e2a53741a432af22428ccb605312e89b926b7fad3d759bd42765435e2a",
+  "revision": "01",
+  "schema_version": 1,
+  "section_ids": "8.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.781
+}

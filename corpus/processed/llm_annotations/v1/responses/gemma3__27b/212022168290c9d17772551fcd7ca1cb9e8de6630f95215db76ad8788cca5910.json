@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "SHOULD treat",
+    "interpretation_a": "The server is required to treat the ClientHello as an error, but may choose not to.",
+    "interpretation_b": "The server is expected to treat the ClientHello as an error, but is not strictly required to.",
+    "is_ambiguous": "yes",
+    "justification": "The use of \"SHOULD\" introduces ambiguity. While it indicates a recommendation, it doesn't definitively state whether the server *must* treat the ClientHello as an error or merely *should*. This allows for implementations where the server might tolerate the legacy_session_id field without raising an error, which is a materially different behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:35:06.889467+00:00",
+  "document_id": "draft-ietf-quic-tls-28",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "458aea46d8d37a7a874342947ae72a31660b4b9c803b68633cd7683d870782b8",
+  "lineage_ids": "lineage:2f9a6a6b7382795c7c3fe6b2",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 162,
+    "load_duration": 4737600,
+    "prompt_eval_count": 565,
+    "total_duration": 6193603000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"SHOULD treat\", \"interpretation_a\": \"The server is required to treat the ClientHello as an error, but may choose not to.\", \"interpretation_b\": \"The server is expected to treat the ClientHello as an error, but is not strictly required to.\", \"missing_information\": \"\", \"justification\": \"The use of \\\"SHOULD\\\" introduces ambiguity. While it indicates a recommendation, it doesn't definitively state whether the server *must* treat the ClientHello as an error or merely *should*. This allows for implementations where the server might tolerate the legacy_session_id field without raising an error, which is a materially different behavior.\"}",
+  "record_id": "212022168290c9d17772551fcd7ca1cb9e8de6630f95215db76ad8788cca5910",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "8.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.219
+}

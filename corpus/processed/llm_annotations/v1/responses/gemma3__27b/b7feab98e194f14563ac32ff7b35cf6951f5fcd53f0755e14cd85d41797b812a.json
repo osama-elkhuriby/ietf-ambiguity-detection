@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY discard packets rather than immediately close",
+    "interpretation_a": "An endpoint can choose to discard packets with handshake errors without sending a CONNECTION_CLOSE.",
+    "interpretation_b": "An endpoint can choose to send a CONNECTION_CLOSE in response to handshake errors, even though discarding is permitted.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' allows for two valid interpretations: either discarding the packet or immediately closing the connection. There is no further constraint to determine which action is preferred or appropriate in different scenarios.",
+    "missing_information": "The clause does not specify conditions under which an endpoint *should* discard versus close, leaving implementation discretion without clear guidance."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:56:45.051715+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "67d232f1a58d9298ed31cab493fc5ace9e276131037291ee6271f5b5463b6588",
+  "lineage_ids": "lineage:57739a8854f2531e9aa4c1b5",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 161,
+    "load_duration": 4042800,
+    "prompt_eval_count": 607,
+    "total_duration": 6184598400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY discard packets rather than immediately close\", \"interpretation_a\": \"An endpoint can choose to discard packets with handshake errors without sending a CONNECTION_CLOSE.\", \"interpretation_b\": \"An endpoint can choose to send a CONNECTION_CLOSE in response to handshake errors, even though discarding is permitted.\", \"missing_information\": \"The clause does not specify conditions under which an endpoint *should* discard versus close, leaving implementation discretion without clear guidance.\",\"justification\": \"The use of 'MAY' allows for two valid interpretations: either discarding the packet or immediately closing the connection. There is no further constraint to determine which action is preferred or appropriate in different scenarios.\"}",
+  "record_id": "b7feab98e194f14563ac32ff7b35cf6951f5fcd53f0755e14cd85d41797b812a",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "10.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.172
+}

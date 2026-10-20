@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY treat the entire SvcParams portion of the record as opaque.",
+    "interpretation_a": "The resolver can ignore all SvcParams and proceed as if they weren't present.",
+    "interpretation_b": "The resolver can parse the SvcParams, but if it encounters an unrecognized key or malformed value, it can choose to ignore the entire SvcParams section.",
+    "is_ambiguous": "yes",
+    "justification": "The MAY clause allows for two different behaviors: completely ignoring SvcParams or parsing them and potentially ignoring them based on errors. This creates ambiguity in how a resolver should handle SvcParams.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:11:04.956169+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-05",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "643f511b588cbbc18d44a4d7ff465e1fbfc9f8d2bd15c5f6a93399b1d03a99ed",
+  "lineage_ids": "lineage:1cbc1d6ed483478a748819e4|lineage:e551e309d8a51f14253a3059",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 154,
+    "load_duration": 2581300,
+    "prompt_eval_count": 574,
+    "total_duration": 5950797900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY treat the entire SvcParams portion of the record as opaque.\", \"interpretation_a\": \"The resolver can ignore all SvcParams and proceed as if they weren't present.\", \"interpretation_b\": \"The resolver can parse the SvcParams, but if it encounters an unrecognized key or malformed value, it can choose to ignore the entire SvcParams section.\", \"missing_information\": \"\",\"justification\": \"The MAY clause allows for two different behaviors: completely ignoring SvcParams or parsing them and potentially ignoring them based on errors. This creates ambiguity in how a resolver should handle SvcParams.\"}",
+  "record_id": "b7c0ccada375e0c77603f662e7f70c5b0622570b0e4b0e92c510f393cbc4f6ec",
+  "revision": "05",
+  "schema_version": 1,
+  "section_ids": "4.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.953
+}

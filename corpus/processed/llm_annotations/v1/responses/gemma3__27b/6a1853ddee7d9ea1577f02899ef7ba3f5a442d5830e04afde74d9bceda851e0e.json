@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause is clear and does not present ambiguity. It specifies a mandatory action (sending a RST_STREAM) under a specific condition (receiving a RST_STREAM and not having sent a FIN or RST_STREAM). The requirement to include the last byte sent as the final offset is also unambiguous.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:30:05.729309+00:00",
+  "document_id": "draft-ietf-quic-transport-04",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "bdf5cc6b5d3d827b72b7f45c947f5e1b4459b48ebe72b60f6f6c1450bca69cce",
+  "lineage_ids": "lineage:cd1521c60a79b1d99d141235",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 108,
+    "load_duration": 5114300,
+    "prompt_eval_count": 587,
+    "total_duration": 4324593400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"no\", \"ambiguity_subtype\": \"none\", \"evidence_span\": \"\", \"interpretation_a\": \"\", \"interpretation_b\": \"\", \"missing_information\": \"\", \"justification\": \"The clause is clear and does not present ambiguity. It specifies a mandatory action (sending a RST_STREAM) under a specific condition (receiving a RST_STREAM and not having sent a FIN or RST_STREAM). The requirement to include the last byte sent as the final offset is also unambiguous.\"}",
+  "record_id": "6a1853ddee7d9ea1577f02899ef7ba3f5a442d5830e04afde74d9bceda851e0e",
+  "revision": "04",
+  "schema_version": 1,
+  "section_ids": "11.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 4.328
+}

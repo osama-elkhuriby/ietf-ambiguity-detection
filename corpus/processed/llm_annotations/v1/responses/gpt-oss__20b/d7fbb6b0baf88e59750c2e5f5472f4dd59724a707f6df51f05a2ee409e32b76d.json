@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "a server MUST set its value based on the Initial packet.",
+    "interpretation_a": "The clause does not specify which field of the Initial packet the server must use to set its Destination Connection ID, allowing different implementations to choose the Source Connection ID, the Destination Connection ID, or another field.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The target clause lacks a concrete constraint on the server’s Destination Connection ID derivation, leading to materially different implementation behaviours.",
+    "missing_information": "Which field of the Initial packet the server must use to set its Destination Connection ID (e.g., Source Connection ID vs. Destination Connection ID)."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T18:41:29.207345+00:00",
+  "document_id": "draft-ietf-quic-transport-27",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "ddf270c937238facd5ff20dcecbb8d56d310dc3da3e5c45a6172c6dc07741aed",
+  "lineage_ids": "lineage:33c706cd35962efbb7301c54",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3480,
+    "load_duration": 4132500,
+    "prompt_eval_count": 617,
+    "total_duration": 30111460100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"a server MUST set its value based on the Initial packet.\",\n  \"interpretation_a\": \"The clause does not specify which field of the Initial packet the server must use to set its Destination Connection ID, allowing different implementations to choose the Source Connection ID, the Destination Connection ID, or another field.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"Which field of the Initial packet the server must use to set its Destination Connection ID (e.g., Source Connection ID vs. Destination Connection ID).\",\n  \"justification\": \"The target clause lacks a concrete constraint on the server’s Destination Connection ID derivation, leading to materially different implementation behaviours.\"\n}",
+  "record_id": "d7fbb6b0baf88e59750c2e5f5472f4dd59724a707f6df51f05a2ee409e32b76d",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 30.109
+}

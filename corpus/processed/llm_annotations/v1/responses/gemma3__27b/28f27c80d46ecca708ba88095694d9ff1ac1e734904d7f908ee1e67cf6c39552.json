@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY send an additional GOAWAY frame",
+    "interpretation_a": "The endpoint is permitted to send another GOAWAY frame if a new error occurs, even if a previous GOAWAY frame with NO_ERROR was already sent.",
+    "interpretation_b": "The endpoint is not required to send another GOAWAY frame if a new error occurs, even if a previous GOAWAY frame with NO_ERROR was already sent. The previous GOAWAY with NO_ERROR is sufficient.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' creates ambiguity. It's unclear if the endpoint *should* send another GOAWAY frame, or if it's simply allowed to do so. This impacts how implementations handle subsequent errors after already signaling a graceful shutdown or initial error.",
+    "missing_information": "The clause does not specify whether sending an additional GOAWAY frame is *required* or merely *permitted* when a new error occurs after a NO_ERROR GOAWAY. This affects implementation, as some implementations might always send the additional frame, while others might not."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:30:33.963268+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "cc836c6c82fe6d74d6acc2dbc9d89a12d40248f72cf3b30e93a74e63056845f8",
+  "lineage_ids": "lineage:b9cc7bf8f3e92cedf503267e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 249,
+    "load_duration": 10305600,
+    "prompt_eval_count": 594,
+    "total_duration": 9507983800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY send an additional GOAWAY frame\", \"interpretation_a\": \"The endpoint is permitted to send another GOAWAY frame if a new error occurs, even if a previous GOAWAY frame with NO_ERROR was already sent.\", \"interpretation_b\": \"The endpoint is not required to send another GOAWAY frame if a new error occurs, even if a previous GOAWAY frame with NO_ERROR was already sent. The previous GOAWAY with NO_ERROR is sufficient.\", \"missing_information\": \"The clause does not specify whether sending an additional GOAWAY frame is *required* or merely *permitted* when a new error occurs after a NO_ERROR GOAWAY. This affects implementation, as some implementations might always send the additional frame, while others might not.\", \"justification\": \"The use of 'MAY' creates ambiguity. It's unclear if the endpoint *should* send another GOAWAY frame, or if it's simply allowed to do so. This impacts how implementations handle subsequent errors after already signaling a graceful shutdown or initial error.\"}",
+  "record_id": "28f27c80d46ecca708ba88095694d9ff1ac1e734904d7f908ee1e67cf6c39552",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "5.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.516
+}

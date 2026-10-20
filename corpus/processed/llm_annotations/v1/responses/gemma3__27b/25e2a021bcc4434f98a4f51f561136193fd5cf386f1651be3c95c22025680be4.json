@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "complete sample",
+    "interpretation_a": "The 'complete sample' refers to the entire header protection sample as defined in section 5.4.1, requiring a packet to be long enough to contain all the data needed for that process.",
+    "interpretation_b": "The 'complete sample' refers only to the portion of the packet used for the header protection sample, meaning a packet only needs to be long enough to contain that specific data.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'complete sample' is not defined within the target clause. It is unclear whether it refers to the entire header protection sample or just the portion used for the protection mechanism. This lack of clarity creates ambiguity in the minimum packet length requirement.",
+    "missing_information": "The definition of 'complete sample' is not explicitly stated within the target clause, leading to different interpretations of the minimum packet length requirement."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:35:20.944414+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "6ad4ab5c5a8a72e860851eef5ac073878438473c20a664680ed7a4bf4c1663a3",
+  "lineage_ids": "lineage:68c3131e3fc991e8e4547f6e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 206,
+    "load_duration": 4068800,
+    "prompt_eval_count": 598,
+    "total_duration": 7779366400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"complete sample\", \"interpretation_a\": \"The 'complete sample' refers to the entire header protection sample as defined in section 5.4.1, requiring a packet to be long enough to contain all the data needed for that process.\", \"interpretation_b\": \"The 'complete sample' refers only to the portion of the packet used for the header protection sample, meaning a packet only needs to be long enough to contain that specific data.\", \"missing_information\": \"The definition of 'complete sample' is not explicitly stated within the target clause, leading to different interpretations of the minimum packet length requirement.\", \"justification\": \"The phrase 'complete sample' is not defined within the target clause. It is unclear whether it refers to the entire header protection sample or just the portion used for the protection mechanism. This lack of clarity creates ambiguity in the minimum packet length requirement.\"}",
+  "record_id": "25e2a021bcc4434f98a4f51f561136193fd5cf386f1651be3c95c22025680be4",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "5.4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.782
+}

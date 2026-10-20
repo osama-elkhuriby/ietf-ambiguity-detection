@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "the remainder of the stream cannot be consumed as the semantics are unknown",
+    "interpretation_a": "The recipient completely ignores any data after the stream header, treating the stream as invalid and unusable.",
+    "interpretation_b": "The recipient attempts to parse the remainder of the stream, but discards any data it cannot interpret, potentially logging errors or warnings. While it doesn't *use* the data, it still *processes* it to determine its invalidity.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'cannot be consumed' is open to interpretation. Does it mean no attempt at processing is made, or that processing is attempted but yields no usable results? The difference impacts implementation details like resource allocation and error handling.",
+    "missing_information": "It is unclear whether the recipient is expected to attempt any parsing of the stream data beyond the header, or if it should immediately discard it. This affects resource usage and potential error handling."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:02:53.179239+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "88351b7a34a99ec497e5c8fa1811dd27792913796252fb5015f329a1c18ff9e8",
+  "lineage_ids": "lineage:65c69e6a2ce917e9195710cd",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 216,
+    "load_duration": 13829900,
+    "prompt_eval_count": 645,
+    "total_duration": 8289157800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"the remainder of the stream cannot be consumed as the semantics are unknown\", \"interpretation_a\": \"The recipient completely ignores any data after the stream header, treating the stream as invalid and unusable.\", \"interpretation_b\": \"The recipient attempts to parse the remainder of the stream, but discards any data it cannot interpret, potentially logging errors or warnings. While it doesn't *use* the data, it still *processes* it to determine its invalidity.\", \"missing_information\": \"It is unclear whether the recipient is expected to attempt any parsing of the stream data beyond the header, or if it should immediately discard it. This affects resource usage and potential error handling.\", \"justification\": \"The phrase 'cannot be consumed' is open to interpretation. Does it mean no attempt at processing is made, or that processing is attempted but yields no usable results? The difference impacts implementation details like resource allocation and error handling.\"}",
+  "record_id": "aeebae830f18d9ce9f138c4093f89aac0d7b1f8ef4e6a2cbca3a50dab375bfbc",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.297
+}

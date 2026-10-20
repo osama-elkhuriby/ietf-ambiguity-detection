@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT rely on user recourse for access",
+    "interpretation_a": "The origin should not *expect* users to be able to bypass HTTPS errors, and design its systems accordingly (e.g., not providing a fallback mechanism).",
+    "interpretation_b": "The origin should not *actively prevent* users from bypassing HTTPS errors, but simply not offer any assistance or guidance to do so.",
+    "is_ambiguous": "yes",
+    "justification": "The verb 'rely' is open to interpretation. One could interpret it as meaning the origin should not *expect* users to bypass errors, implying a design consideration. Alternatively, it could mean the origin should not *actively prevent* users from bypassing errors, which is a different operational requirement.",
+    "missing_information": "The meaning of 'rely' is not clearly defined. Does it mean 'expect' or 'prevent'? This affects how an origin should behave when a user attempts to bypass HTTPS errors."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:14:07.425342+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "46f258d7784249ef8b557a99a42aa723b66bef47c3764fc7b48907929671eab5",
+  "lineage_ids": "lineage:41537b99bbf9a177182fc2e8",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 217,
+    "load_duration": 3992000,
+    "prompt_eval_count": 643,
+    "total_duration": 8175853800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT rely on user recourse for access\", \"interpretation_a\": \"The origin should not *expect* users to be able to bypass HTTPS errors, and design its systems accordingly (e.g., not providing a fallback mechanism).\", \"interpretation_b\": \"The origin should not *actively prevent* users from bypassing HTTPS errors, but simply not offer any assistance or guidance to do so.\", \"missing_information\": \"The meaning of 'rely' is not clearly defined. Does it mean 'expect' or 'prevent'? This affects how an origin should behave when a user attempts to bypass HTTPS errors.\", \"justification\": \"The verb 'rely' is open to interpretation. One could interpret it as meaning the origin should not *expect* users to bypass errors, implying a design consideration. Alternatively, it could mean the origin should not *actively prevent* users from bypassing errors, which is a different operational requirement.\"}",
+  "record_id": "f55bdb5830e20a00a532fada2951f974c169d38314cebb9d1dca81a2a4ffca3d",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "9.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.188
+}

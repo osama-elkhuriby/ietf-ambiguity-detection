@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "authority over",
+    "interpretation_a": "The tenant has the right to control the resource, such as being the owner or having explicit permissions.",
+    "interpretation_b": "The tenant is the definitive source for the resource, meaning they are responsible for its content and updates, even if they don't 'own' it in a traditional sense.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'authority over' is open to interpretation. Does it mean ownership, permission, or being the authoritative source? Without a clear definition, implementations could differ on what constitutes having 'authority'. This is a concrete missing constraint affecting implementation behaviour.",
+    "missing_information": "The definition of 'authority over' is not provided. This impacts how a server determines if a tenant is allowed to push a resource."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:10:26.284858+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "46608800d184163811bbe653c6982a9e4f5738d71088f1219013965e8766eb57",
+  "lineage_ids": "lineage:0de91c5f7110e5c3c9fea3dc",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 186,
+    "load_duration": 4754700,
+    "prompt_eval_count": 592,
+    "total_duration": 7181461800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"authority over\", \"interpretation_a\": \"The tenant has the right to control the resource, such as being the owner or having explicit permissions.\", \"interpretation_b\": \"The tenant is the definitive source for the resource, meaning they are responsible for its content and updates, even if they don't 'own' it in a traditional sense.\", \"missing_information\": \"The definition of 'authority over' is not provided. This impacts how a server determines if a tenant is allowed to push a resource.\", \"justification\": \"The phrase 'authority over' is open to interpretation. Does it mean ownership, permission, or being the authoritative source? Without a clear definition, implementations could differ on what constitutes having 'authority'. This is a concrete missing constraint affecting implementation behaviour.\"}",
+  "record_id": "d860a93b125d7d7f3cc253701a96c683d3e2ed79c7d20b023abd718d98c444cf",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "10.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.187
+}

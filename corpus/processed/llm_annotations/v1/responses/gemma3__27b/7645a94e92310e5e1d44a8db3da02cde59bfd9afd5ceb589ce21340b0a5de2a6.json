@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Receipt of a frame that encodes a larger stream ID",
+    "interpretation_a": "A frame with a stream ID exceeding 2^62-1 is considered an error.",
+    "interpretation_b": "A frame with a stream ID exceeding 2^60 is considered an error, even though the previous clause states stream IDs up to 2^62-1 are encodable.",
+    "is_ambiguous": "yes",
+    "justification": "The target clause states that a frame with a 'larger stream ID' must be treated as an error. However, the previous clause states that stream IDs up to 2^62-1 are encodable. This creates ambiguity as to what constitutes a 'larger stream ID'. Is it anything over 2^60, or 2^62-1? The lack of a clear threshold creates two reasonable interpretations.",
+    "missing_information": "The target clause refers to 'larger stream ID' but the previous clause defines the maximum encodable stream ID as 2^62-1. The target clause should specify the threshold for 'larger' to align with the previous clause, or explain why a lower limit is being applied here."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:34:18.874015+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "94df0fcdf0968f9461a3e6451384a183c87bfdc9a440470add891f1b252c8537",
+  "lineage_ids": "lineage:54cbbd89c65a21f81a5c36a9",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 268,
+    "load_duration": 4871800,
+    "prompt_eval_count": 573,
+    "total_duration": 9936922900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Receipt of a frame that encodes a larger stream ID\", \"interpretation_a\": \"A frame with a stream ID exceeding 2^62-1 is considered an error.\", \"interpretation_b\": \"A frame with a stream ID exceeding 2^60 is considered an error, even though the previous clause states stream IDs up to 2^62-1 are encodable.\", \"missing_information\": \"The target clause refers to 'larger stream ID' but the previous clause defines the maximum encodable stream ID as 2^62-1. The target clause should specify the threshold for 'larger' to align with the previous clause, or explain why a lower limit is being applied here.\", \"justification\": \"The target clause states that a frame with a 'larger stream ID' must be treated as an error. However, the previous clause states that stream IDs up to 2^62-1 are encodable. This creates ambiguity as to what constitutes a 'larger stream ID'. Is it anything over 2^60, or 2^62-1? The lack of a clear threshold creates two reasonable interpretations.\"}",
+  "record_id": "7645a94e92310e5e1d44a8db3da02cde59bfd9afd5ceb589ce21340b0a5de2a6",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "19.14",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.937
+}

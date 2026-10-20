@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST be set if possible",
+    "interpretation_a": "The clause could be interpreted as requiring the DF bit to be set for all IPv4 packets.",
+    "interpretation_b": "The clause could be interpreted as requiring the DF bit to be set only for those packets that can be transmitted without fragmentation.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'if possible' is not defined, allowing two materially different implementation behaviours.",
+    "missing_information": "Definition of what 'possible' refers to in this context (e.g., whether it means the packet can be transmitted without fragmentation or simply that the DF bit can be set)."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T15:31:50.421265+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "22e9b67115541de04784d536890da17c38ea8bd6476cb1e4e4914c79332f9286",
+  "lineage_ids": "lineage:1fd0fcacd3705c84b90c22fe",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1254,
+    "load_duration": 6256100,
+    "prompt_eval_count": 578,
+    "total_duration": 10947320800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"MUST be set if possible\",\n  \"interpretation_a\": \"The clause could be interpreted as requiring the DF bit to be set for all IPv4 packets.\",\n  \"interpretation_b\": \"The clause could be interpreted as requiring the DF bit to be set only for those packets that can be transmitted without fragmentation.\",\n  \"missing_information\": \"Definition of what 'possible' refers to in this context (e.g., whether it means the packet can be transmitted without fragmentation or simply that the DF bit can be set).\",\n  \"justification\": \"The phrase 'if possible' is not defined, allowing two materially different implementation behaviours.\"\n}",
+  "record_id": "486a8b4dd3494d3e401c9186822eed3597caaa7ae97ea61aee131dc6aa2be0ef",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "14",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.938
+}

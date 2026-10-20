@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "in the absence of any priority signals",
+    "interpretation_a": "Servers can use any information they have to determine priority when no priority signals are present.",
+    "interpretation_b": "Servers must use *other* contextual information, implying that there is a defined set of contextual information that is relevant and must be considered.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'other contextual information' is vague. It's unclear what constitutes 'other' information, and whether there's an implied set of acceptable sources or types of context. This allows for different implementations to consider different information, leading to varying priority assignments.",
+    "missing_information": "The definition of 'other contextual information' is not provided, leaving open the question of what information servers are expected to use."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:52:48.681524+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "217d64299f8adc0101c16e437edb78f7c859f42ca0d9a3e9a927ddcb4ef0bcd7",
+  "lineage_ids": "lineage:3b04904a725514b6a05f1d63",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 181,
+    "load_duration": 8917700,
+    "prompt_eval_count": 575,
+    "total_duration": 7066752500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"in the absence of any priority signals\", \"interpretation_a\": \"Servers can use any information they have to determine priority when no priority signals are present.\", \"interpretation_b\": \"Servers must use *other* contextual information, implying that there is a defined set of contextual information that is relevant and must be considered.\", \"missing_information\": \"The definition of 'other contextual information' is not provided, leaving open the question of what information servers are expected to use.\",\"justification\": \"The phrase 'other contextual information' is vague. It's unclear what constitutes 'other' information, and whether there's an implied set of acceptable sources or types of context. This allows for different implementations to consider different information, leading to varying priority assignments.\"}",
+  "record_id": "fdce5aea90b84789e2d2e44a893efd448016c76d87cf84b3298ac1c0b2de1a3f",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "5.3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.078
+}

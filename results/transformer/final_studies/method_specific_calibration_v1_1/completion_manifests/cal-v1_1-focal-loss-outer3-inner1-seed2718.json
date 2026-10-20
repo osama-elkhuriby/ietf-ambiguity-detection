@@ -1,0 +1,93 @@
+{
+  "attempt_id": "cal-v1_1-focal-loss-outer3-inner1-seed2718",
+  "cell_id": "focal_loss/outer_3/inner_1/seed_2718",
+  "completed_at": "2026-10-19T00:33:34.610328+03:00",
+  "elapsed_seconds": 268.81199999991804,
+  "gpu_preflight": {
+    "active_compute_processes": [],
+    "free_memory_mib": 30823,
+    "minimum_free_memory_mib": 18000,
+    "name": "NVIDIA RTX 5000 Ada Generation"
+  },
+  "origin": "V1_1_NEW_GPU_EXECUTION",
+  "peak_gpu_memory_allocated_mb": 3956.06005859375,
+  "peak_gpu_memory_reserved_mb": 5822.0,
+  "protocol_sha256": "57c04d15cb3c586c52bc7f59eede3893339f3c67014fdf3e50ccfb95d8fcda4c",
+  "reused": false,
+  "run_manifest_sha256": "35a967aec583e5d31d81ac39f4f57afb8561121e54647284740d5808476a9cff",
+  "semantic_validation": {
+    "audit_sha256": "28e710f8d0aa7f051063fed8fa6ab22c013d2b52a354f2723295958346459fb9",
+    "context_sanitizations": [
+      {
+        "field": "next_clause",
+        "reasons": [
+          "matches_fitting_target:ac7c215ebb828b233c150316a61c679826b5df2df370ed6e911ff75bb5887ada"
+        ],
+        "record_id": "449153889a16d20ac40ed8c5a65d99cd5c0a47c5cde15455d6e9618048ebb864",
+        "role": "evaluation"
+      },
+      {
+        "field": "previous_clause",
+        "reasons": [
+          "matches_evaluation_target:f4f1bfba6ef051076333e37e714671d9fa105ceb0eced066a2b1fa9312909f6d"
+        ],
+        "record_id": "4f83ea63063f6b9618425d2f7af840ea827b90018fa290eff29c2e27185c0c0e",
+        "role": "fitting"
+      },
+      {
+        "field": "previous_clause",
+        "reasons": [
+          "matches_evaluation_target:70bf428691a4fd8930d34316289785810ec9a5834eae23ee8ae2b277295e2179"
+        ],
+        "record_id": "6e37b19e71b761f90c21507dfdbeaf7a7bad73732cabcdd37f1c6e418711310a",
+        "role": "fitting"
+      }
+    ],
+    "custom_inner_split_sha256": "b78ba6c8d25350a3067c3acfd860b3830535eb6bdda45f38d3fe47c02b433ccc",
+    "fitting_exclusions": [
+      {
+        "reasons": [
+          "near_target_of_evaluation:d5aa27b2819436e3ef9225f698ed3a7570b85c0ddddc159df486997f14582467"
+        ],
+        "record_id": "853a6c3da0c1deb70611c0c787fcce304ac31c24398ee635dfdc09908429cfb5"
+      }
+    ],
+    "fitting_families": [
+      "draft-ietf-6man-rfc2460bis",
+      "draft-ietf-httpbis-cache-header",
+      "draft-ietf-httpbis-http2bis",
+      "draft-ietf-httpbis-semantics",
+      "draft-ietf-quic-recovery",
+      "draft-ietf-quic-tls",
+      "draft-ietf-tls-tls13"
+    ],
+    "fitting_rows": 1034,
+    "leakage_audit_counts": {
+      "cross_fold_bcp14_skeleton_conflicts": 0,
+      "cross_fold_document_overlaps": 0,
+      "cross_fold_lineage_conflicts": 0,
+      "cross_fold_target_context_overlaps": 3,
+      "exact_target_duplicates_all": 0,
+      "exact_target_duplicates_cross_fold": 0,
+      "families_assigned_to_multiple_folds": 0,
+      "near_cross_fold_targets": 1,
+      "targets_with_bcp14_keyword": 1814
+    },
+    "legacy_fold_file": "D:\\RFC\\ietf-ambiguity-detection\\experiments\\transformer_final\\final_annotation_ready_pilot_v1\\manifests\\dataset_v1\\folds\\fold_1.json",
+    "legacy_fold_file_sha256": "684cac99acb8eca3d34698265f23a9f22e879de9f1ec25280e02cf61bd87643e",
+    "peak_gpu_memory_allocated_mb": 3956.06005859375,
+    "peak_gpu_memory_reserved_mb": 5822.0,
+    "prediction_rows": 793,
+    "prediction_sha256": "89af0e3ac03c9f37354846c5a068719f732679b92e58b604dea69fefe5e872be",
+    "run_manifest_sha256": "35a967aec583e5d31d81ac39f4f57afb8561121e54647284740d5808476a9cff",
+    "runtime_seconds": 259.4949562000111,
+    "scoring_families": [
+      "draft-ietf-quic-transport"
+    ],
+    "scoring_rows": 793
+  },
+  "spec_sha256": "ef11275363e33c6b5e6ff13877a89361935f9cbd6282eb79280cb9fdb8d31f54",
+  "started_at": "2026-10-19T00:29:05.408864+03:00",
+  "status": "COMPLETE",
+  "training_runtime_seconds": 259.4949562000111
+}

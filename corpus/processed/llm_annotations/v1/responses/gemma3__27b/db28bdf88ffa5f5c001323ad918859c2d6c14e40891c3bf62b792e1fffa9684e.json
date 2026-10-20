@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY relay the credentials",
+    "interpretation_a": "The proxy is permitted to relay credentials, but is not required to do so. Each proxy in the chain handles authentication independently.",
+    "interpretation_b": "The proxy is expected to relay credentials to the next proxy in the chain, enabling cooperative authentication across multiple proxies.",
+    "is_ambiguous": "yes",
+    "justification": "The use of \"MAY\" creates ambiguity regarding whether credential relaying is optional or expected behavior. This impacts how proxies in a chain interact and authenticate requests.",
+    "missing_information": "The specification does not clearly define under what conditions a proxy *should* relay credentials, leading to uncertainty about the intended authentication mechanism in a multi-proxy scenario."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:31:08.103138+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "38920680a2341025f727c832882c21d56de5766e7bf2ba46c7d5d324ef87852c",
+  "lineage_ids": "lineage:934835ced4d7f6fd2db9a911",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 167,
+    "load_duration": 9889300,
+    "prompt_eval_count": 597,
+    "total_duration": 6554439000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY relay the credentials\", \"interpretation_a\": \"The proxy is permitted to relay credentials, but is not required to do so. Each proxy in the chain handles authentication independently.\", \"interpretation_b\": \"The proxy is expected to relay credentials to the next proxy in the chain, enabling cooperative authentication across multiple proxies.\", \"missing_information\": \"The specification does not clearly define under what conditions a proxy *should* relay credentials, leading to uncertainty about the intended authentication mechanism in a multi-proxy scenario.\", \"justification\": \"The use of \\\"MAY\\\" creates ambiguity regarding whether credential relaying is optional or expected behavior. This impacts how proxies in a chain interact and authenticate requests.\"}",
+  "record_id": "db28bdf88ffa5f5c001323ad918859c2d6c14e40891c3bf62b792e1fffa9684e",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "11.7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.563
+}

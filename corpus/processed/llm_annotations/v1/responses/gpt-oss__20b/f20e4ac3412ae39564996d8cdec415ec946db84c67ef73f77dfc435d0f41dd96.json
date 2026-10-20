@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that if a client receives a GOAWAY frame on any stream other than the control stream, it must treat it as a connection error of type H3_FRAME_UNEXPECTED. The wording is clear and does not allow for multiple materially different interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T10:44:00.699595+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "806b1b82467bbef315966d774dfe92476da28e656f23589922421ae33dd0c216",
+  "lineage_ids": "lineage:3e9218d6d6bc12d61b3efc08",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 599,
+    "load_duration": 6860400,
+    "prompt_eval_count": 590,
+    "total_duration": 5326503000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that if a client receives a GOAWAY frame on any stream other than the control stream, it must treat it as a connection error of type H3_FRAME_UNEXPECTED. The wording is clear and does not allow for multiple materially different interpretations.\"\n}",
+  "record_id": "f20e4ac3412ae39564996d8cdec415ec946db84c67ef73f77dfc435d0f41dd96",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.2.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.328
+}

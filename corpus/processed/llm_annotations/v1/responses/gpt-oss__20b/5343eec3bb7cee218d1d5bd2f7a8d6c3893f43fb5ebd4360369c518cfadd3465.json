@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that clients must not use the HTTP_REQUEST_REJECTED error code except in the single, well-defined scenario where the server has requested closure of the request stream using that same error code. No alternative reasonable interpretations or missing constraints are apparent.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T09:22:02.585169+00:00",
+  "document_id": "draft-ietf-quic-http-23",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "e9439691022f3c979cb5b243f855c67e0a7b3eaeba861733de23b304b969c207",
+  "lineage_ids": "lineage:33765fbbdae547632cefe8c5",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1527,
+    "load_duration": 6827300,
+    "prompt_eval_count": 611,
+    "total_duration": 13143006600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that clients must not use the HTTP_REQUEST_REJECTED error code except in the single, well-defined scenario where the server has requested closure of the request stream using that same error code. No alternative reasonable interpretations or missing constraints are apparent.\"\n}",
+  "record_id": "5343eec3bb7cee218d1d5bd2f7a8d6c3893f43fb5ebd4360369c518cfadd3465",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "4.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 13.14
+}

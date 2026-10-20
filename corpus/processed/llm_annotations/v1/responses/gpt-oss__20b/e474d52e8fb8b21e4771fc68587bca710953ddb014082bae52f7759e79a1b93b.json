@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that a client must terminate the connection with a VERSION_NEGOTIATION_ERROR error code if the negotiated_version value is not included in the supported_versions list. The context provided defines the supported_versions list as the list the client sent, and there is no missing constraint or alternative interpretation that would materially change implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T18:53:24.079060+00:00",
+  "document_id": "draft-ietf-quic-transport-07",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "5d2eaf69e8880f069a69a9280eb44b0140cb7c3a6b86928d1e2ac39d9971959e",
+  "lineage_ids": "lineage:b7687980f9cc9ff959841690",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 336,
+    "load_duration": 5409000,
+    "prompt_eval_count": 621,
+    "total_duration": 3095416700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that a client must terminate the connection with a VERSION_NEGOTIATION_ERROR error code if the negotiated_version value is not included in the supported_versions list. The context provided defines the supported_versions list as the list the client sent, and there is no missing constraint or alternative interpretation that would materially change implementation behavior.\"\n}",
+  "record_id": "e474d52e8fb8b21e4771fc68587bca710953ddb014082bae52f7759e79a1b93b",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "7.4.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 3.093
+}

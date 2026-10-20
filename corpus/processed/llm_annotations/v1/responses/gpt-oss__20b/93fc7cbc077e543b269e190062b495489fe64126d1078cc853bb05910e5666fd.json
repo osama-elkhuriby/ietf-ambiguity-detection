@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously requires TCP to act on an ICMP error message and deliver it to the connection that generated the error. The next clause supplies the necessary demultiplexing information, so no missing constraint remains in the target clause itself.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T20:11:21.982447+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-14",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "113645d513044edd9be2b9892fa8707ad01d344cab5a28b4a8cb2e05c579f609",
+  "lineage_ids": "lineage:294bd52e42bb9f4c14cbc0d8",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1329,
+    "load_duration": 5206800,
+    "prompt_eval_count": 580,
+    "total_duration": 11465360400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously requires TCP to act on an ICMP error message and deliver it to the connection that generated the error. The next clause supplies the necessary demultiplexing information, so no missing constraint remains in the target clause itself.\"\n}",
+  "record_id": "93fc7cbc077e543b269e190062b495489fe64126d1078cc853bb05910e5666fd",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "3.9.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.453
+}

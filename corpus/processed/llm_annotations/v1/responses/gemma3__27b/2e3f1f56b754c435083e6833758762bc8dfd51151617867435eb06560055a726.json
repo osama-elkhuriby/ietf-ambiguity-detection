@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "impose a limit",
+    "interpretation_a": "Implementations could impose a limit of 1, effectively disabling deep alias chains.",
+    "interpretation_b": "Implementations could impose a limit of 10 or more, allowing for relatively deep alias chains.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'impose a limit' is underspecified. It doesn't define *what* that limit should be, only that one *must* exist. This allows for materially different implementations.",
+    "missing_information": "The document does not specify what constitutes a reasonable limit. Without a defined upper bound, implementations have significant discretion, leading to interoperability concerns."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:00:09.170830+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "ac331094b1916de6bb6696a4a5621055f094b1efce1fc285c3c10b2fa9a1a5c6",
+  "lineage_ids": "lineage:10ef10d026c3d523591a6c86",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 159,
+    "load_duration": 4253900,
+    "prompt_eval_count": 578,
+    "total_duration": 6077444100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"impose a limit\", \"interpretation_a\": \"Implementations could impose a limit of 1, effectively disabling deep alias chains.\", \"interpretation_b\": \"Implementations could impose a limit of 10 or more, allowing for relatively deep alias chains.\", \"missing_information\": \"The document does not specify what constitutes a reasonable limit. Without a defined upper bound, implementations have significant discretion, leading to interoperability concerns.\",\"justification\": \"The phrase 'impose a limit' is underspecified. It doesn't define *what* that limit should be, only that one *must* exist. This allows for materially different implementations.\"}",
+  "record_id": "2e3f1f56b754c435083e6833758762bc8dfd51151617867435eb06560055a726",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "2.4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.078
+}

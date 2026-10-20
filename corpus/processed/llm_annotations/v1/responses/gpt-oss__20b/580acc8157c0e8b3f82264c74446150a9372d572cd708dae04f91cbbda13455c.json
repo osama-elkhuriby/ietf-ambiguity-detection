@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "random selection of at least one in every 16 network paths",
+    "interpretation_a": "The clause could be interpreted as requiring that, for each group of 16 network paths, at least one path must have the spin bit disabled (i.e., a deterministic selection per group).",
+    "interpretation_b": "Alternatively, it could be interpreted as requiring that each network path independently has a 1/16 probability of having the spin bit disabled (i.e., a random selection per path).",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"random selection of at least one in every 16 network paths\" is ambiguous: it does not specify whether the selection is per group of 16 paths or per individual path with a 1/16 probability. The use of \"or\" between network paths and connection IDs also leaves unclear whether endpoints must disable the spin bit for both or only one of these sets. This incomplete constraint leads to materially different implementation behaviours.",
+    "missing_information": "None – the clause itself is under‑specified regarding how the random selection is to be performed and whether the requirement applies to both network paths and connection IDs or only one of them."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T15:50:29.721079+00:00",
+  "document_id": "draft-ietf-quic-transport-33",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "be080cce52cbeaa2f334751369b0e90367873cb99c2d3870982a93c0270190df",
+  "lineage_ids": "lineage:e9fc333ad4af5aece7c16ec7",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2185,
+    "load_duration": 4995100,
+    "prompt_eval_count": 616,
+    "total_duration": 18909837900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"random selection of at least one in every 16 network paths\",\n  \"interpretation_a\": \"The clause could be interpreted as requiring that, for each group of 16 network paths, at least one path must have the spin bit disabled (i.e., a deterministic selection per group).\",\n  \"interpretation_b\": \"Alternatively, it could be interpreted as requiring that each network path independently has a 1/16 probability of having the spin bit disabled (i.e., a random selection per path).\",\n  \"missing_information\": \"None – the clause itself is under‑specified regarding how the random selection is to be performed and whether the requirement applies to both network paths and connection IDs or only one of them.\",\n  \"justification\": \"The phrase \\\"random selection of at least one in every 16 network paths\\\" is ambiguous: it does not specify whether the selection is per group of 16 paths or per individual path with a 1/16 probability. The use of \\\"or\\\" between network paths and connection IDs also leaves unclear whether endpoints must disable the spin bit for both or only one of these sets. This incomplete constraint leads to materially different implementation behaviours.\"\n}",
+  "record_id": "580acc8157c0e8b3f82264c74446150a9372d572cd708dae04f91cbbda13455c",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "17.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 18.922
+}

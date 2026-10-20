@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "in a protected packet",
+    "interpretation_a": "The ACK must be sent in the same protected packet that immediately follows the unprotected handshake packet.",
+    "interpretation_b": "The ACK may be sent in any later protected packet, not necessarily the immediate next one.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether the ACK must be sent in the same packet as the next handshake message or in any later protected packet, leaving a concrete missing constraint that allows materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T16:12:58.817350+00:00",
+  "document_id": "draft-ietf-quic-transport-05",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "7aa58edc7376a05ae95633ddc8e43c1cf1235a6e91c5f6d639b636c47fbe4764",
+  "lineage_ids": "lineage:cce94257ab5130ee8ae53b86",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 403,
+    "load_duration": 5950500,
+    "prompt_eval_count": 767,
+    "total_duration": 3623301700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"in a protected packet\",\n  \"interpretation_a\": \"The ACK must be sent in the same protected packet that immediately follows the unprotected handshake packet.\",\n  \"interpretation_b\": \"The ACK may be sent in any later protected packet, not necessarily the immediate next one.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify whether the ACK must be sent in the same packet as the next handshake message or in any later protected packet, leaving a concrete missing constraint that allows materially different implementation behaviours.\"\n}",
+  "record_id": "6bee62378cdfa67d8d9e34010f07ac48ce5152638bab90b54a8fbae496771522",
+  "revision": "05",
+  "schema_version": 1,
+  "section_ids": "8.13.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 23.516
+}

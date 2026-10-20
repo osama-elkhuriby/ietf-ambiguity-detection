@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY reject the entire RRSet.",
+    "interpretation_a": "Clients may reject the entire RRSet only when at least one RR is not self-consistent.",
+    "interpretation_b": "Clients may reject the entire RRSet regardless of whether any RR is not self-consistent.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether the optional rejection of the entire RRSet is conditional on the presence of a non‑self‑consistent RR, leaving two materially different implementation options.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:29:31.020517+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "4f20b5c8092c36d29c3378dea37bfafe77cc2b8d108879244768f76817ec149b",
+  "lineage_ids": "lineage:939e0c5802b5f2be94e9b680",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1601,
+    "load_duration": 5236100,
+    "prompt_eval_count": 591,
+    "total_duration": 13867712100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"MAY reject the entire RRSet.\",\n  \"interpretation_a\": \"Clients may reject the entire RRSet only when at least one RR is not self-consistent.\",\n  \"interpretation_b\": \"Clients may reject the entire RRSet regardless of whether any RR is not self-consistent.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify whether the optional rejection of the entire RRSet is conditional on the presence of a non‑self‑consistent RR, leaving two materially different implementation options.\"\n}",
+  "record_id": "1d707fb87a97f06ebd3e53f97e3ffbcbf1c9d5d69d35ee4f7981cba0442ba86f",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "2.4.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 13.875
+}

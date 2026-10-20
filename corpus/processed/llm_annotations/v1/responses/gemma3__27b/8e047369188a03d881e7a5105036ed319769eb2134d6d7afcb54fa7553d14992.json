@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST only be sent in the 0-RTT and 1-RTT levels",
+    "interpretation_a": "Frames can be sent in both 0-RTT and 1-RTT, but not in any other levels.",
+    "interpretation_b": "Frames must be sent in either 0-RTT or 1-RTT, but not necessarily both. The clause does not specify if sending in both is allowed or disallowed.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'and' is ambiguous. It could mean 'both' or 'either/or'. Without further clarification, implementations could differ on whether a frame needs to be sent in both 0-RTT and 1-RTT to be compliant.",
+    "missing_information": "The clause does not specify whether frames *must* be sent in both 0-RTT and 1-RTT, or if sending in only one of those levels is sufficient. This affects implementation because a receiver might need to wait for a frame in both levels before considering the connection fully established."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:42:22.481266+00:00",
+  "document_id": "draft-ietf-quic-tls-27",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "ce76067cc23ede2e25a5a916146f77df06f20357faa2e9b0d30eb3aefbcec506",
+  "lineage_ids": "lineage:c53a77c1dded1c0946d5790f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 237,
+    "load_duration": 4959200,
+    "prompt_eval_count": 605,
+    "total_duration": 8847833100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST only be sent in the 0-RTT and 1-RTT levels\", \"interpretation_a\": \"Frames can be sent in both 0-RTT and 1-RTT, but not in any other levels.\", \"interpretation_b\": \"Frames must be sent in either 0-RTT or 1-RTT, but not necessarily both. The clause does not specify if sending in both is allowed or disallowed.\", \"missing_information\": \"The clause does not specify whether frames *must* be sent in both 0-RTT and 1-RTT, or if sending in only one of those levels is sufficient. This affects implementation because a receiver might need to wait for a frame in both levels before considering the connection fully established.\", \"justification\": \"The use of 'and' is ambiguous. It could mean 'both' or 'either/or'. Without further clarification, implementations could differ on whether a frame needs to be sent in both 0-RTT and 1-RTT to be compliant.\"}",
+  "record_id": "8e047369188a03d881e7a5105036ed319769eb2134d6d7afcb54fa7553d14992",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.844
+}

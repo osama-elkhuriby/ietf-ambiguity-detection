@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Out-of-order packets SHOULD be acknowledged more quickly, in order to accelerate loss recovery.",
+    "interpretation_a": "Acknowledge out-of-order packets immediately upon receipt.",
+    "interpretation_b": "Acknowledge out-of-order packets after a short delay or after receiving a subsequent packet.",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a concrete definition of 'more quickly', allowing multiple reasonable implementation behaviours.",
+    "missing_information": "Definition of 'more quickly' or baseline for comparison to determine the required acknowledgment timing."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T12:15:30.979066+00:00",
+  "document_id": "draft-ietf-quic-recovery-18",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "c8732e0ec6f8a431fa5d49f3ae4928b5d37ba224c55fb2c44bbcbc4759dd9471",
+  "lineage_ids": "lineage:557a213c55795722f7f07875",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 971,
+    "load_duration": 4160700,
+    "prompt_eval_count": 582,
+    "total_duration": 8517797900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"Out-of-order packets SHOULD be acknowledged more quickly, in order to accelerate loss recovery.\",\n  \"interpretation_a\": \"Acknowledge out-of-order packets immediately upon receipt.\",\n  \"interpretation_b\": \"Acknowledge out-of-order packets after a short delay or after receiving a subsequent packet.\",\n  \"missing_information\": \"Definition of 'more quickly' or baseline for comparison to determine the required acknowledgment timing.\",\n  \"justification\": \"The clause lacks a concrete definition of 'more quickly', allowing multiple reasonable implementation behaviours.\"\n}",
+  "record_id": "fb5bdd0ca270e3dd9b6cc494716784e5864f4093c394ee2d0731f2497529b39c",
+  "revision": "18",
+  "schema_version": 1,
+  "section_ids": "4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.516
+}

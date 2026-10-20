@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear directive: endpoints should not initiate migration with peers that have requested a zero-length connection ID. The reasoning is also clear—migration could allow traffic on the new path to be trivially linked to traffic on the old path. There is no ambiguity in the language or in the implications for implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:49:27.019624+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "a962bc314181eaa57cd8dde3ab5a1be0eefd65e472a49f9f467fe90389c2040a",
+  "lineage_ids": "lineage:474002bfe9a86ddbf5caf671",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 120,
+    "load_duration": 4278300,
+    "prompt_eval_count": 567,
+    "total_duration": 4949109100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear directive: endpoints should not initiate migration with peers that have requested a zero-length connection ID. The reasoning is also clear—migration could allow traffic on the new path to be trivially linked to traffic on the old path. There is no ambiguity in the language or in the implications for implementation behavior.\"\n}",
+  "record_id": "eda949ac616c733aa08da67fba075c8fa8fb12aaf8a865cbe128e936a7669fa4",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 4.953
+}

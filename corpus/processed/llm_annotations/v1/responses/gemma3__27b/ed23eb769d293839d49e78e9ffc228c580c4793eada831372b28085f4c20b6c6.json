@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST include the same header fields each time",
+    "interpretation_a": "The server must include the exact same header fields, in the exact same order, each time the Push ID is used.",
+    "interpretation_b": "The server must include the same header fields, but the order of the header fields may vary each time the Push ID is used.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'same header fields' is incomplete. It does not specify whether the order of the header fields matters. Two implementations could reasonably interpret this differently, leading to interoperability issues.",
+    "missing_information": "The clause does not specify whether the order of header fields is significant. Without this information, implementations could differ on whether to enforce a specific order."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:13:31.803068+00:00",
+  "document_id": "draft-ietf-quic-http-16",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "7d204a6f4beb8369a2f62e715e8557d90e8584d511ccf4a33bf6bed76bf71198",
+  "lineage_ids": "lineage:65d7f4c3f3a7f27308ef2078",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 177,
+    "load_duration": 12793200,
+    "prompt_eval_count": 598,
+    "total_duration": 6928617700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST include the same header fields each time\", \"interpretation_a\": \"The server must include the exact same header fields, in the exact same order, each time the Push ID is used.\", \"interpretation_b\": \"The server must include the same header fields, but the order of the header fields may vary each time the Push ID is used.\", \"missing_information\": \"The clause does not specify whether the order of header fields is significant. Without this information, implementations could differ on whether to enforce a specific order.\", \"justification\": \"The phrase 'same header fields' is incomplete. It does not specify whether the order of the header fields matters. Two implementations could reasonably interpret this differently, leading to interoperability issues.\"}",
+  "record_id": "ed23eb769d293839d49e78e9ffc228c580c4793eada831372b28085f4c20b6c6",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "4.2.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.953
+}

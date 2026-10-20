@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "higher stream ID than the greatest maximum stream ID",
+    "interpretation_a": "The maximum stream ID received from any peer. This would mean that the peer must track the maximum stream ID received from *all* peers.",
+    "interpretation_b": "The maximum stream ID received from the *current* peer. This would mean that the peer only needs to track the maximum stream ID received from the peer it is currently communicating with.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'the greatest maximum stream ID' is ambiguous. It is unclear if this refers to the highest stream ID received from *any* peer, or only the highest stream ID received from the peer initiating the stream. This affects how the peer must track stream IDs and could lead to different implementations.",
+    "missing_information": "It is unclear whether 'the greatest maximum stream ID' refers to the highest value received from any peer, or only the highest value received from the peer initiating the stream."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:46:33.252987+00:00",
+  "document_id": "draft-ietf-quic-transport-16",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "68ae9b2a6ef88540bd1fe8cc6cd904ba8a451accdb95fe0153586212c1aa197e",
+  "lineage_ids": "lineage:b1a7abf876e6b90beda365aa",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 220,
+    "load_duration": 3564500,
+    "prompt_eval_count": 604,
+    "total_duration": 8261986300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"higher stream ID than the greatest maximum stream ID\", \"interpretation_a\": \"The maximum stream ID received from any peer. This would mean that the peer must track the maximum stream ID received from *all* peers.\", \"interpretation_b\": \"The maximum stream ID received from the *current* peer. This would mean that the peer only needs to track the maximum stream ID received from the peer it is currently communicating with.\", \"missing_information\": \"It is unclear whether 'the greatest maximum stream ID' refers to the highest value received from any peer, or only the highest value received from the peer initiating the stream.\", \"justification\": \"The phrase 'the greatest maximum stream ID' is ambiguous. It is unclear if this refers to the highest stream ID received from *any* peer, or only the highest stream ID received from the peer initiating the stream. This affects how the peer must track stream IDs and could lead to different implementations.\"}",
+  "record_id": "96d8e66c16f951b9df75c6319ea7f839c6fc218c1403115ecf88dde72e230daa",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "19.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.265
+}

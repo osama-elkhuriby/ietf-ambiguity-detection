@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause provides a clear directive for the server's behavior when credentials are missing, invalid, or partial. It specifies that the server 'SHOULD' respond with a 401 (Unauthorized) status code and include a WWW-Authenticate header field with at least one challenge. The language is prescriptive and does not allow for materially different interpretations that would affect implementation behavior. There is no missing constraint or undefined term that introduces ambiguity.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:28:17.302248+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-14",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "26bee2f2b51831beceb69c25133f3c3c62cc7f74710f65e2cfd1be9341ea7af9",
+  "lineage_ids": "lineage:fb2b0bb77d94a1acc4872bc4",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 144,
+    "load_duration": 7312700,
+    "prompt_eval_count": 632,
+    "total_duration": 6046402900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause provides a clear directive for the server's behavior when credentials are missing, invalid, or partial. It specifies that the server 'SHOULD' respond with a 401 (Unauthorized) status code and include a WWW-Authenticate header field with at least one challenge. The language is prescriptive and does not allow for materially different interpretations that would affect implementation behavior. There is no missing constraint or undefined term that introduces ambiguity.\"\n}",
+  "record_id": "c29a5a5fe70daea5ef745f17b54a91db91e52293fa4970cc3ccf25f10ae48253",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "11.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.063
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "if the field semantics are such that the dropped value(s) can be safely ignored",
+    "interpretation_a": "The client can discard or truncate field lines if it determines the dropped values won't affect message framing or response semantics, based on its own understanding of the field semantics.",
+    "interpretation_b": "The client can discard or truncate field lines only if the field specification *explicitly* states that dropped values can be safely ignored without affecting message framing or response semantics. Without such explicit guidance, the client must not discard or truncate.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'if the field semantics are such that...' is open to interpretation. Does it mean the client independently assesses whether dropping values is safe, or does it require the field specification to explicitly allow it? This affects implementation because a client might be more aggressive in discarding values if it interprets the clause as allowing independent assessment.",
+    "missing_information": "The clause does not define what constitutes 'safe to ignore'. It's unclear whether the client makes this determination independently, or if the field specification must provide guidance."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:07:42.443084+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "57c3cf5764aa2f5791b9eb2e6aaadc2a9c0f1a1a61127c9f2ee509061037660a",
+  "lineage_ids": "lineage:009d77f44c24279578b4f8c7",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 247,
+    "load_duration": 18988500,
+    "prompt_eval_count": 580,
+    "total_duration": 9407147200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"if the field semantics are such that the dropped value(s) can be safely ignored\", \"interpretation_a\": \"The client can discard or truncate field lines if it determines the dropped values won't affect message framing or response semantics, based on its own understanding of the field semantics.\", \"interpretation_b\": \"The client can discard or truncate field lines only if the field specification *explicitly* states that dropped values can be safely ignored without affecting message framing or response semantics. Without such explicit guidance, the client must not discard or truncate.\", \"missing_information\": \"The clause does not define what constitutes 'safe to ignore'. It's unclear whether the client makes this determination independently, or if the field specification must provide guidance.\", \"justification\": \"The phrase 'if the field semantics are such that...' is open to interpretation. Does it mean the client independently assesses whether dropping values is safe, or does it require the field specification to explicitly allow it? This affects implementation because a client might be more aggressive in discarding values if it interprets the clause as allowing independent assessment.\"}",
+  "record_id": "568d1cdf8d926b7be2ad396c9d3dc40b64d771df0666bd9c7a85d23b317657f3",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "5.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.422
+}

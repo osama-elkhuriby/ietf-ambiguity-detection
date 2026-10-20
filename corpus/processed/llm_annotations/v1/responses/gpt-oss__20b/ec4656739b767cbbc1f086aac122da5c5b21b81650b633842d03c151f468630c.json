@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "A client MAY send a packet using a version that is reserved for forcing version negotiation.",
+    "interpretation_a": "The clause does not specify which version(s) are reserved, so a client cannot determine which version to use.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a concrete constraint identifying the reserved version(s), leading to an incomplete specification that prevents a unique operational interpretation.",
+    "missing_information": "Which version(s) are reserved for forcing version negotiation?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T19:08:07.919170+00:00",
+  "document_id": "draft-ietf-quic-transport-27",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "31f2cf873faaac46d819a22a75462e560cf0a8926f86a844e09d63363bcf7f0e",
+  "lineage_ids": "lineage:25ef2c74829b544fa7d47411",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1291,
+    "load_duration": 4726700,
+    "prompt_eval_count": 573,
+    "total_duration": 11147867000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"A client MAY send a packet using a version that is reserved for forcing version negotiation.\",\n  \"interpretation_a\": \"The clause does not specify which version(s) are reserved, so a client cannot determine which version to use.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"Which version(s) are reserved for forcing version negotiation?\",\n  \"justification\": \"The clause lacks a concrete constraint identifying the reserved version(s), leading to an incomplete specification that prevents a unique operational interpretation.\"\n}",
+  "record_id": "ec4656739b767cbbc1f086aac122da5c5b21b81650b633842d03c151f468630c",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "6.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.141
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "should be marked as lost",
+    "interpretation_a": "The sender must mark all unacknowledged retransmittable packets as lost immediately upon triggering the Early Retransmit process.",
+    "interpretation_b": "The sender may delay marking unacknowledged retransmittable packets as lost, potentially waiting for further information or a timeout.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'should' for marking packets as lost introduces ambiguity. While 'should' indicates a recommendation, the lack of a defined timeframe for the alarm and the connection between the alarm and the loss marking creates two reasonable interpretations of when the packets are marked as lost.",
+    "missing_information": "The duration of the 'small period of time' is not defined, and the relationship between marking packets as lost and the alarm is unclear. Is marking packets as lost conditional on the alarm expiring, or is it an immediate action?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:23:32.338516+00:00",
+  "document_id": "draft-ietf-quic-recovery-13",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "6fe2869239d0a7cd086a6002ebcb31e6d13d8c0a617feb56eff3e433429ac73d",
+  "lineage_ids": "lineage:71462382c9d36b187d7c25a5",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 207,
+    "load_duration": 4428700,
+    "prompt_eval_count": 615,
+    "total_duration": 7827034800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"should be marked as lost\", \"interpretation_a\": \"The sender must mark all unacknowledged retransmittable packets as lost immediately upon triggering the Early Retransmit process.\", \"interpretation_b\": \"The sender may delay marking unacknowledged retransmittable packets as lost, potentially waiting for further information or a timeout.\", \"missing_information\": \"The duration of the 'small period of time' is not defined, and the relationship between marking packets as lost and the alarm is unclear. Is marking packets as lost conditional on the alarm expiring, or is it an immediate action?\",\"justification\": \"The use of 'should' for marking packets as lost introduces ambiguity. While 'should' indicates a recommendation, the lack of a defined timeframe for the alarm and the connection between the alarm and the loss marking creates two reasonable interpretations of when the packets are marked as lost.\"}",
+  "record_id": "86df2469b7cad4b45d9b21f13d230351841999c6774de4b6c82e6e47476df4e6",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "3.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.828
+}

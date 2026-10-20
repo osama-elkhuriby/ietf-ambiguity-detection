@@ -61,6 +61,7 @@ comparison claim. The model and data limitations are described in
 | [`models/llm/`](models/llm/) | Local Ollama prompting and supervised lexical/semantic hybrids |
 | [`models/hybrid/`](models/hybrid/) | Cross-model ensemble experiment and paper-figure generator |
 | [`experiments/`](experiments/) | Experiment plans, protocol configs, and reproducibility support |
+| [`gui/`](gui/) | Local browser app for RFC clause ranking and optional Qwen explanations |
 | [`scripts/`](scripts/) | Environment checks and workflow launchers; see [`scripts/README.md`](scripts/README.md) |
 | [`docs/`](docs/) | Operator guides and project documentation index |
 | [`results/`](results/) | Compact reports, metrics, and publication figures; local runs are ignored |
@@ -90,6 +91,26 @@ see the corresponding model and experiment guides before running them.
 ## Common workflows
 
 Run commands from the repository root unless noted.
+
+### Review an RFC in the local GUI
+
+The GUI uploads rendered RFC plaintext (`.txt`) to a loopback-only server,
+segments the document, then ranks explicitly normative clauses with the saved
+engineered-feature + TF–IDF Logistic Regression model. It can optionally ask the
+pinned local Qwen3 32B model for short review notes on up to five selected
+clauses. The classifier score is a ranking value, not a calibrated probability
+or confirmed ambiguity judgment.
+
+The local model artifact under `results/ML/v2_engineered_tfidf/` is not included
+in Git; restore its `final_model.joblib`, `manifest.json`, and `metrics.json`
+before starting the app:
+
+```powershell
+python -m gui.app
+```
+
+See [`gui/README.md`](gui/README.md) for model provenance, limitations, and
+privacy details.
 
 ### Build and validate corpus metadata
 

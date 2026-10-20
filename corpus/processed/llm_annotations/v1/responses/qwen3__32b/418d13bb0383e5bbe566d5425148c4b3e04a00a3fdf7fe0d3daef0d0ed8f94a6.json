@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear requirement: implementations must either use pacing or limit bursts to the initial congestion window. The congestion window is defined as the minimum of two expressions involving max_datagram_size. While the expressions are complex, they are mathematically precise and do not allow for multiple reasonable interpretations. There is no ambiguity in the normative requirement or in the constraints provided.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:18:31.231823+00:00",
+  "document_id": "draft-ietf-quic-recovery-27",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "c4bf353b06a6db9a20272b3af925c75e83a1d57b076ee483273b867800f9ab44",
+  "lineage_ids": "lineage:d6650790b9580aeed7fbb39e",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 130,
+    "load_duration": 6037100,
+    "prompt_eval_count": 610,
+    "total_duration": 5395302700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear requirement: implementations must either use pacing or limit bursts to the initial congestion window. The congestion window is defined as the minimum of two expressions involving max_datagram_size. While the expressions are complex, they are mathematically precise and do not allow for multiple reasonable interpretations. There is no ambiguity in the normative requirement or in the constraints provided.\"\n}",
+  "record_id": "418d13bb0383e5bbe566d5425148c4b3e04a00a3fdf7fe0d3daef0d0ed8f94a6",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "6.8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.406
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "minimum size",
+    "interpretation_a": "The ClientHello packet must be padded to at least 1 byte.",
+    "interpretation_b": "The ClientHello packet must be padded to at least 128 bytes (or some other non-trivial size).",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"minimum size\" is incomplete. Without a defined minimum size, implementations could reasonably choose different padding amounts, leading to interoperability issues.",
+    "missing_information": "The minimum size is not defined, leaving open the question of how much padding is required."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:43:14.225483+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "6210b54529ee715585515e9cde234de4eba831fc98aee70eb006520c43327831",
+  "lineage_ids": "lineage:c3afe6cc10744f8c88495e47",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 141,
+    "load_duration": 4142900,
+    "prompt_eval_count": 581,
+    "total_duration": 5452105200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"minimum size\", \"interpretation_a\": \"The ClientHello packet must be padded to at least 1 byte.\", \"interpretation_b\": \"The ClientHello packet must be padded to at least 128 bytes (or some other non-trivial size).\", \"missing_information\": \"The minimum size is not defined, leaving open the question of how much padding is required.\", \"justification\": \"The phrase \\\"minimum size\\\" is incomplete. Without a defined minimum size, implementations could reasonably choose different padding amounts, leading to interoperability issues.\"}",
+  "record_id": "9a8ea85f592037b4d83d2afb837a327e07994b5dadbf0a5797280aeb62fd1d38",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.453
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear condition under which an endpoint may continue using the same connection ID with a new remote address. The use of 'MAY' indicates optional behavior, and the condition is explicitly defined as receiving packets from a new source address with the same destination connection ID. There is no ambiguity in the behavior described, as it is bounded by the stated condition and does not allow for multiple materially different interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:08:13.968300+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "2bc022efa92df319b3d5c7c4be2f5abefc502f45b341c2ba23498c4034661340",
+  "lineage_ids": "lineage:18df4cf47f5ed3d466232bce",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 138,
+    "load_duration": 7594200,
+    "prompt_eval_count": 576,
+    "total_duration": 5688397300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear condition under which an endpoint may continue using the same connection ID with a new remote address. The use of 'MAY' indicates optional behavior, and the condition is explicitly defined as receiving packets from a new source address with the same destination connection ID. There is no ambiguity in the behavior described, as it is bounded by the stated condition and does not allow for multiple materially different interpretations.\"\n}",
+  "record_id": "4d0e87990c8655c6574850ec50ee5e14428d8b3bc44d5b3fb99bdfadea792930",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.687
+}

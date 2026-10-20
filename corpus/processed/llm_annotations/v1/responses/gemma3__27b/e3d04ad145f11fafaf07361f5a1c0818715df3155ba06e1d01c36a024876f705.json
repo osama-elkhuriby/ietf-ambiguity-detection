@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD no longer be transmitted",
+    "interpretation_a": "The implementation may continue to transmit non-protected frames after packet protection is available, but it is discouraged.",
+    "interpretation_b": "The implementation must stop transmitting non-protected frames after packet protection is available.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' creates ambiguity. It is unclear whether the implementation is required to stop transmitting non-protected frames or merely encouraged to do so. A 'MUST' would remove the ambiguity.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:31:45.866863+00:00",
+  "document_id": "draft-ietf-quic-recovery-07",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "58bdfe97744f6c6ef4627c105139fbf08e0ba2e73de0a834eb52a85721a800a9",
+  "lineage_ids": "lineage:75c74484c0be5891aa3258ff",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 135,
+    "load_duration": 2502000,
+    "prompt_eval_count": 548,
+    "total_duration": 5217160800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD no longer be transmitted\", \"interpretation_a\": \"The implementation may continue to transmit non-protected frames after packet protection is available, but it is discouraged.\", \"interpretation_b\": \"The implementation must stop transmitting non-protected frames after packet protection is available.\", \"missing_information\": \"\", \"justification\": \"The use of 'SHOULD' creates ambiguity. It is unclear whether the implementation is required to stop transmitting non-protected frames or merely encouraged to do so. A 'MUST' would remove the ambiguity.\"}",
+  "record_id": "e3d04ad145f11fafaf07361f5a1c0818715df3155ba06e1d01c36a024876f705",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "3.3.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.219
+}

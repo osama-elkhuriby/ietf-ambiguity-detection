@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "same address family for the server",
+    "interpretation_a": "The client should use a preferred address that is from the same address family as the server's current address family.",
+    "interpretation_b": "The client should use a preferred address that is from the same address family as the server's preferred address family.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify which address family is intended, leading to two reasonable interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T18:29:26.266559+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "8053fe809fe61a1754192e14cfa1e676ff75162e232e921678f0f254dabe6400",
+  "lineage_ids": "lineage:0e75b5b218b4087aee33c1ec",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2517,
+    "load_duration": 2307100,
+    "prompt_eval_count": 595,
+    "total_duration": 21625575900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"same address family for the server\",\n  \"interpretation_a\": \"The client should use a preferred address that is from the same address family as the server's current address family.\",\n  \"interpretation_b\": \"The client should use a preferred address that is from the same address family as the server's preferred address family.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify which address family is intended, leading to two reasonable interpretations.\"\n}",
+  "record_id": "cf92e524a89fdba12937c2a91a8cf6d91298786bdddb87baa36f6e279823db9e",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9.6.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 21.64
+}

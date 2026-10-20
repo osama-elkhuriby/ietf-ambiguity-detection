@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "The final recipient of the request SHOULD exclude any request fields that are likely to contain sensitive data when that recipient generates the response payload.",
+    "interpretation_a": "Exclude all request headers that contain authentication credentials (e.g., Authorization, Cookie) from the TRACE response payload.",
+    "interpretation_b": "Exclude only those request headers that are explicitly known to contain sensitive data, such as those defined in RFC 7235 or RFC 6265, while leaving other headers unchanged.",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a concrete constraint on which request fields are considered sensitive, allowing multiple reasonable implementation choices.",
+    "missing_information": "A clear definition of what constitutes 'likely to contain sensitive data' is missing, leading to different reasonable interpretations of which request fields should be omitted from the TRACE response payload. This lack of constraint makes the clause ambiguous.  "
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T05:41:00.491334+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-13",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "66b1f67d1ec23d4031413c2d41c3a3f8b4e74408e5b3d189db4ca9252b2d63e3",
+  "lineage_ids": "lineage:da5bddfa507e82948af51a70",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 4463,
+    "load_duration": 5411000,
+    "prompt_eval_count": 608,
+    "total_duration": 38905558200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"The final recipient of the request SHOULD exclude any request fields that are likely to contain sensitive data when that recipient generates the response payload.\",\n  \"interpretation_a\": \"Exclude all request headers that contain authentication credentials (e.g., Authorization, Cookie) from the TRACE response payload.\",\n  \"interpretation_b\": \"Exclude only those request headers that are explicitly known to contain sensitive data, such as those defined in RFC 7235 or RFC 6265, while leaving other headers unchanged.\",\n  \"missing_information\": \"A clear definition of what constitutes 'likely to contain sensitive data' is missing, leading to different reasonable interpretations of which request fields should be omitted from the TRACE response payload. This lack of constraint makes the clause ambiguous.  \",\n  \"justification\": \"The clause lacks a concrete constraint on which request fields are considered sensitive, allowing multiple reasonable implementation choices.\"\n}",
+  "record_id": "277a83c4c2f36342b6f0763f8aff7655dacee1f50be1ed5b10303e4d01950acf",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "9.3.8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 38.906
+}

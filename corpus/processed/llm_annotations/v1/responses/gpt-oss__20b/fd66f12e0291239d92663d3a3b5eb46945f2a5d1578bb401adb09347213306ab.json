@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "An endpoint MAY skip packet numbers when sending packets to detect this behavior.",
+    "interpretation_a": "Skip sending packets with certain packet numbers (i.e., omit packets that would normally be assigned those numbers).",
+    "interpretation_b": "Skip the packet number field in the packet header (i.e., send packets without a packet number).",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"skip packet numbers\" is undefined and can be reasonably interpreted in multiple ways, leading to materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T19:36:04.409738+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "5e6fd1b66487785e674c0a5d52c0fc4a58aa69dba15d4816effc9cf59f061c34",
+  "lineage_ids": "lineage:67a9afd1ea7b53cb96f46a8e",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1330,
+    "load_duration": 2520800,
+    "prompt_eval_count": 588,
+    "total_duration": 11437160300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-1\",\n  \"evidence_span\": \"An endpoint MAY skip packet numbers when sending packets to detect this behavior.\",\n  \"interpretation_a\": \"Skip sending packets with certain packet numbers (i.e., omit packets that would normally be assigned those numbers).\",\n  \"interpretation_b\": \"Skip the packet number field in the packet header (i.e., send packets without a packet number).\",\n  \"missing_information\": \"\",\n  \"justification\": \"The phrase \\\"skip packet numbers\\\" is undefined and can be reasonably interpreted in multiple ways, leading to materially different implementation behaviours.\"\n}",
+  "record_id": "fd66f12e0291239d92663d3a3b5eb46945f2a5d1578bb401adb09347213306ab",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "21.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 11.437
+}

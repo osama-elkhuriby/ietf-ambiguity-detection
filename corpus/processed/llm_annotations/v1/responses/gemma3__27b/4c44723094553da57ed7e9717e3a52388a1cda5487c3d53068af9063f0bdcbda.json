@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD stop sending",
+    "interpretation_a": "The endpoint may continue sending MAX_STREAM_DATA frames after the receiver enters the \"Size Known\" state, but it is discouraged.",
+    "interpretation_b": "The endpoint must not send any further MAX_STREAM_DATA frames once the receiver enters the \"Size Known\" state.",
+    "is_ambiguous": "yes",
+    "justification": "The use of \"SHOULD\" creates ambiguity. It is unclear whether the endpoint is permitted to send additional frames, or if it is prohibited from doing so. A missing constraint on the behaviour after the receiver enters the \"Size Known\" state creates two reasonable interpretations.",
+    "missing_information": "The meaning of \"SHOULD\" is not precise. A stronger requirement (e.g., \"MUST\") would remove ambiguity. It is unclear if any further frames are permitted, or if the endpoint is simply discouraged from sending them."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:22:03.750489+00:00",
+  "document_id": "draft-ietf-quic-transport-33",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "68aec21f96ac729d91799d819194655fe4a958a386fec1bb01f5f9db26b8c226",
+  "lineage_ids": "lineage:1c4fea56305dc4bf6e4e4f7e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 208,
+    "load_duration": 4379900,
+    "prompt_eval_count": 603,
+    "total_duration": 7829779400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD stop sending\", \"interpretation_a\": \"The endpoint may continue sending MAX_STREAM_DATA frames after the receiver enters the \\\"Size Known\\\" state, but it is discouraged.\", \"interpretation_b\": \"The endpoint must not send any further MAX_STREAM_DATA frames once the receiver enters the \\\"Size Known\\\" state.\", \"missing_information\": \"The meaning of \\\"SHOULD\\\" is not precise. A stronger requirement (e.g., \\\"MUST\\\") would remove ambiguity. It is unclear if any further frames are permitted, or if the endpoint is simply discouraged from sending them.\", \"justification\": \"The use of \\\"SHOULD\\\" creates ambiguity. It is unclear whether the endpoint is permitted to send additional frames, or if it is prohibited from doing so. A missing constraint on the behaviour after the receiver enters the \\\"Size Known\\\" state creates two reasonable interpretations.\"}",
+  "record_id": "4c44723094553da57ed7e9717e3a52388a1cda5487c3d53068af9063f0bdcbda",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "13.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.844
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "SHOULD NOT be retransmitted",
+    "interpretation_a": "The endpoint *may* retransmit data after a RST_STREAM, but it is discouraged.",
+    "interpretation_b": "The endpoint *must not* retransmit data after a RST_STREAM.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD NOT' creates ambiguity. It could be interpreted as a strong recommendation against retransmission, or as a weaker prohibition. This impacts whether implementations will retransmit data after receiving a RST_STREAM.",
+    "missing_information": "The strength of 'SHOULD' is unclear. Is it a strong recommendation, or a near-requirement? This affects implementation decisions regarding retransmission after RST_STREAM."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:43:07.308111+00:00",
+  "document_id": "draft-ietf-quic-transport-09",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "60e8ee02a3dc4c058f271a0dfaa5a6fc9c4032e5adcf43981b85a72cf2285fb6",
+  "lineage_ids": "lineage:1d316a2bff2532e0b6e5ec00",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 170,
+    "load_duration": 4807600,
+    "prompt_eval_count": 580,
+    "total_duration": 6723560900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"SHOULD NOT be retransmitted\", \"interpretation_a\": \"The endpoint *may* retransmit data after a RST_STREAM, but it is discouraged.\", \"interpretation_b\": \"The endpoint *must not* retransmit data after a RST_STREAM.\", \"missing_information\": \"The strength of 'SHOULD' is unclear. Is it a strong recommendation, or a near-requirement? This affects implementation decisions regarding retransmission after RST_STREAM.\",\"justification\": \"The use of 'SHOULD NOT' creates ambiguity. It could be interpreted as a strong recommendation against retransmission, or as a weaker prohibition. This impacts whether implementations will retransmit data after receiving a RST_STREAM.\"}",
+  "record_id": "8dabfe410dde38e9ec3bf3691588ce8c4f7a97f37e6130d9ba65038b1bccfb38",
+  "revision": "09",
+  "schema_version": 1,
+  "section_ids": "9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.734
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY consider",
+    "interpretation_a": "The recipient is permitted, but not required, to treat the payload as current.",
+    "interpretation_b": "The recipient is expected to treat the payload as current, but is not strictly mandated to do so.",
+    "is_ambiguous": "yes",
+    "justification": "The use of \"MAY\" introduces ambiguity. Does \"MAY\" mean the recipient is permitted to treat the payload as current, or that they are expected to do so but not strictly required? This affects implementation because a server might expect clients to always consider the payload current when Content-Location matches the target URI, while a client might choose not to in certain cases.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:34:42.353530+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-13",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "a5fc0bf65aeb167e5c30bdafe0d799afdba8057e09528c1de004a11094fb2c8f",
+  "lineage_ids": "lineage:871d26925aacba9ddaf8066e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 163,
+    "load_duration": 10794900,
+    "prompt_eval_count": 633,
+    "total_duration": 6424622700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY consider\", \"interpretation_a\": \"The recipient is permitted, but not required, to treat the payload as current.\", \"interpretation_b\": \"The recipient is expected to treat the payload as current, but is not strictly mandated to do so.\", \"missing_information\": \"\", \"justification\": \"The use of \\\"MAY\\\" introduces ambiguity. Does \\\"MAY\\\" mean the recipient is permitted to treat the payload as current, or that they are expected to do so but not strictly required? This affects implementation because a server might expect clients to always consider the payload current when Content-Location matches the target URI, while a client might choose not to in certain cases.\"}",
+  "record_id": "ec0b87f74303ab01a0100a4509b6f3ba1c02a004eed31196858c3250e15adfc7",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "8.8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.438
+}

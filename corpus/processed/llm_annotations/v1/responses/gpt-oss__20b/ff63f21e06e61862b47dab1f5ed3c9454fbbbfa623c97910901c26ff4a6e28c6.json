@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "An endpoint MAY skip validation of a peer address if that address has been seen recently.",
+    "interpretation_a": "The address was observed within a short, unspecified time window (e.g., the last few seconds).",
+    "interpretation_b": "The address was observed within a longer, unspecified time window (e.g., the last several minutes).",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a concrete definition of 'seen recently', allowing multiple reasonable interpretations of the time window.",
+    "missing_information": "A precise definition of what constitutes 'seen recently'."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T19:38:33.962474+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "af150e45c4a5f39bbc6243c5c2868c24c135e66592d591e160dbb734775bc4e8",
+  "lineage_ids": "lineage:9afe7aeb9e75d774f5c34e0d",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 811,
+    "load_duration": 4547100,
+    "prompt_eval_count": 619,
+    "total_duration": 7084551900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"An endpoint MAY skip validation of a peer address if that address has been seen recently.\",\n  \"interpretation_a\": \"The address was observed within a short, unspecified time window (e.g., the last few seconds).\",\n  \"interpretation_b\": \"The address was observed within a longer, unspecified time window (e.g., the last several minutes).\",\n  \"missing_information\": \"A precise definition of what constitutes 'seen recently'.\",\n  \"justification\": \"The clause lacks a concrete definition of 'seen recently', allowing multiple reasonable interpretations of the time window.\"\n}",
+  "record_id": "ff63f21e06e61862b47dab1f5ed3c9454fbbbfa623c97910901c26ff4a6e28c6",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.094
+}

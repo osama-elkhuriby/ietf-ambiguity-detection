@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "which MAY be a summary if a specification reference is provided",
+    "interpretation_a": "The description can be a full explanation of the error code's semantics.",
+    "interpretation_b": "The description can be a brief summary, relying on an external specification for complete details.",
+    "is_ambiguous": "yes",
+    "justification": "The clause allows for either a full description or a summary, depending on the presence of a specification reference. Without knowing the requirements when no reference is present, implementations could reasonably choose different levels of detail, leading to interoperability issues.",
+    "missing_information": "It is unclear what level of detail is expected when no specification reference is provided. The use of 'MAY' allows for both a full description and a summary, creating ambiguity in implementation."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:40:55.955405+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "a0a2143afba62e0b4883d4cb37416b1c3d8b803580cf0e98697ce6d475a2330b",
+  "lineage_ids": "lineage:3c9efa6ca01f8747128a8eb5",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 178,
+    "load_duration": 4631300,
+    "prompt_eval_count": 560,
+    "total_duration": 6756770700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"which MAY be a summary if a specification reference is provided\", \"interpretation_a\": \"The description can be a full explanation of the error code's semantics.\", \"interpretation_b\": \"The description can be a brief summary, relying on an external specification for complete details.\", \"missing_information\": \"It is unclear what level of detail is expected when no specification reference is provided. The use of 'MAY' allows for both a full description and a summary, creating ambiguity in implementation.\",\"justification\": \"The clause allows for either a full description or a summary, depending on the presence of a specification reference. Without knowing the requirements when no reference is present, implementations could reasonably choose different levels of detail, leading to interoperability issues.\"}",
+  "record_id": "870bb118d3682643c67316a923c3c5d8ed585e61e416730b646797798b6a406b",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "22.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.75
+}

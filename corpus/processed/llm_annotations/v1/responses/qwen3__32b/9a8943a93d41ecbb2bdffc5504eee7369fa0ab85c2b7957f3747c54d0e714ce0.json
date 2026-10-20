@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "acknowledgement that is carried in a packet protected with old keys where any acknowledged packet was protected with newer keys",
+    "interpretation_a": "The endpoint receives an acknowledgment in a packet using old keys, and the acknowledged packet was protected with newer keys. This could imply that the peer is acknowledging a packet it should not have received, as it should have transitioned to newer keys.",
+    "interpretation_b": "The endpoint receives an acknowledgment in a packet using old keys, but the acknowledged packet was protected with newer keys. This could imply that the peer is acknowledging a packet it should have received, but is still using old keys for sending the acknowledgment, which is unexpected.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'acknowledgement that is carried in a packet protected with old keys where any acknowledged packet was protected with newer keys' is ambiguous because it is unclear whether the acknowledged packet is expected to be received under the new keys or not. The term 'acknowledged packet' could refer to a packet that was sent before or after the key update, leading to different interpretations of the error condition.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:37:36.184251+00:00",
+  "document_id": "draft-ietf-quic-tls-33",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "06b9c58ae6c0f6de7c3f4475c7d2fcc523b619adf15ee199d55bb7a1ad98bacf",
+  "lineage_ids": "lineage:5bd7c3934cccf108841bad3e",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 261,
+    "load_duration": 4004900,
+    "prompt_eval_count": 596,
+    "total_duration": 10662919300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-1\",\n  \"evidence_span\": \"acknowledgement that is carried in a packet protected with old keys where any acknowledged packet was protected with newer keys\",\n  \"interpretation_a\": \"The endpoint receives an acknowledgment in a packet using old keys, and the acknowledged packet was protected with newer keys. This could imply that the peer is acknowledging a packet it should not have received, as it should have transitioned to newer keys.\",\n  \"interpretation_b\": \"The endpoint receives an acknowledgment in a packet using old keys, but the acknowledged packet was protected with newer keys. This could imply that the peer is acknowledging a packet it should have received, but is still using old keys for sending the acknowledgment, which is unexpected.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The phrase 'acknowledgement that is carried in a packet protected with old keys where any acknowledged packet was protected with newer keys' is ambiguous because it is unclear whether the acknowledged packet is expected to be received under the new keys or not. The term 'acknowledged packet' could refer to a packet that was sent before or after the key update, leading to different interpretations of the error condition.\"\n}",
+  "record_id": "9a8943a93d41ecbb2bdffc5504eee7369fa0ab85c2b7957f3747c54d0e714ce0",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.671
+}

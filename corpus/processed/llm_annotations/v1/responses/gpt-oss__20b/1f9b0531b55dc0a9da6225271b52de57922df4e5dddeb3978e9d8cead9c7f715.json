@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "for a period of time determined by the authentication scheme, parameters, and/or user preferences",
+    "interpretation_a": "The period starts at the time of the prior authorized request and applies to all subsequent requests within that protection space.",
+    "interpretation_b": "The period starts at the time of each subsequent request, allowing the same credentials to be reused for a period after each request.",
+    "is_ambiguous": "yes",
+    "justification": "The lack of a defined start time for the period of reuse creates a concrete missing constraint that can result in materially different implementation behaviours.",
+    "missing_information": "The clause does not specify when the period of time begins, leading to different possible implementation behaviours regarding credential reuse timing. This missing constraint makes the clause ambiguous.  "
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T05:36:02.364882+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "614a5683715275ace7e579c3847faffa02039c2f5c8724cc2f37f862944254e1",
+  "lineage_ids": "lineage:3565ac5c7961ad6a7d788bef",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2183,
+    "load_duration": 4507700,
+    "prompt_eval_count": 619,
+    "total_duration": 19013021300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"for a period of time determined by the authentication scheme, parameters, and/or user preferences\",\n  \"interpretation_a\": \"The period starts at the time of the prior authorized request and applies to all subsequent requests within that protection space.\",\n  \"interpretation_b\": \"The period starts at the time of each subsequent request, allowing the same credentials to be reused for a period after each request.\",\n  \"missing_information\": \"The clause does not specify when the period of time begins, leading to different possible implementation behaviours regarding credential reuse timing. This missing constraint makes the clause ambiguous.  \",\n  \"justification\": \"The lack of a defined start time for the period of reuse creates a concrete missing constraint that can result in materially different implementation behaviours.\"\n}",
+  "record_id": "1f9b0531b55dc0a9da6225271b52de57922df4e5dddeb3978e9d8cead9c7f715",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "11.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 19.016
+}

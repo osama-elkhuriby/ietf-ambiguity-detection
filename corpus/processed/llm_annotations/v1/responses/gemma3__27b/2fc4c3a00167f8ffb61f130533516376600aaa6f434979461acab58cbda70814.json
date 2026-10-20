@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "larger than it wishes to process",
+    "interpretation_a": "The server can define any arbitrary limit it wants, even a very small one, and return a 4xx error if the header exceeds that limit.",
+    "interpretation_b": "The server must adhere to a reasonable or industry-standard limit for header sizes before returning a 4xx error; 'wishes to process' implies some objective standard.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'wishes to process' is subjective. Without a defined limit, a server could reject headers that are within reasonable bounds, leading to interoperability issues. Two different implementations could reasonably interpret this differently.",
+    "missing_information": "The document does not define what constitutes a reasonable or acceptable limit for header field sizes, leaving the server with broad discretion. A concrete constraint on the maximum acceptable size is missing."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:00:56.559525+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "a170f901e8128d9ad2e95e368f375f57d7a463f16afa362df1530f8a08e53cce",
+  "lineage_ids": "lineage:6df6c8318d8da8ebbea821f1",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 200,
+    "load_duration": 14889400,
+    "prompt_eval_count": 596,
+    "total_duration": 7739036200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"larger than it wishes to process\", \"interpretation_a\": \"The server can define any arbitrary limit it wants, even a very small one, and return a 4xx error if the header exceeds that limit.\", \"interpretation_b\": \"The server must adhere to a reasonable or industry-standard limit for header sizes before returning a 4xx error; 'wishes to process' implies some objective standard.\", \"missing_information\": \"The document does not define what constitutes a reasonable or acceptable limit for header field sizes, leaving the server with broad discretion. A concrete constraint on the maximum acceptable size is missing.\", \"justification\": \"The phrase 'wishes to process' is subjective. Without a defined limit, a server could reject headers that are within reasonable bounds, leading to interoperability issues. Two different implementations could reasonably interpret this differently.\"}",
+  "record_id": "2fc4c3a00167f8ffb61f130533516376600aaa6f434979461acab58cbda70814",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "5.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.75
+}

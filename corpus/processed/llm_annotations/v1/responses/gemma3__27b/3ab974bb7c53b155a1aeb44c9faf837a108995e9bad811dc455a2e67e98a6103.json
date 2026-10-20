@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless the only change in the peer's address is its port number.",
+    "interpretation_a": "If the peer's address changes *and* the port number also changes, the congestion controller and RTT estimator *must* be reset to initial values.",
+    "interpretation_b": "If the peer's address changes but the port number remains the same, the congestion controller and RTT estimator *must* be reset to initial values.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'unless the only change in the peer's address is its port number' is ambiguous because it's unclear if 'address' encompasses the port number. If it does, the condition is always met when the address changes, rendering the 'unless' clause meaningless. If it doesn't, the clause introduces a specific exception for port changes, which is reasonable but requires a clear definition of what constitutes the 'address' for this comparison.",
+    "missing_information": "It is unclear whether a change in address *includes* a change in port number. If it does, the clause is trivially true and doesn't specify any behaviour. If it does not, then the clause introduces a distinction between address and port number that is not clearly defined."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:14:20.467027+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "2f4cd11698418ba1c6a8e6c107eea31ff4491b12cff72f4e1c34220fe67ad08a",
+  "lineage_ids": "lineage:1ac150cc7e0617766af18677",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 276,
+    "load_duration": 3645100,
+    "prompt_eval_count": 643,
+    "total_duration": 10240911500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless the only change in the peer's address is its port number.\", \"interpretation_a\": \"If the peer's address changes *and* the port number also changes, the congestion controller and RTT estimator *must* be reset to initial values.\", \"interpretation_b\": \"If the peer's address changes but the port number remains the same, the congestion controller and RTT estimator *must* be reset to initial values.\", \"missing_information\": \"It is unclear whether a change in address *includes* a change in port number. If it does, the clause is trivially true and doesn't specify any behaviour. If it does not, then the clause introduces a distinction between address and port number that is not clearly defined.\",\"justification\": \"The phrase 'unless the only change in the peer's address is its port number' is ambiguous because it's unclear if 'address' encompasses the port number. If it does, the condition is always met when the address changes, rendering the 'unless' clause meaningless. If it doesn't, the clause introduces a specific exception for port changes, which is reasonable but requires a clear definition of what constitutes the 'address' for this comparison.\"}",
+  "record_id": "3ab974bb7c53b155a1aeb44c9faf837a108995e9bad811dc455a2e67e98a6103",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.25
+}

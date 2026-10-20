@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY accept 0-RTT",
+    "interpretation_a": "The server is permitted to accept 0-RTT data and then signal different settings, potentially leading to the client sending data that violates the new settings.",
+    "interpretation_b": "The server is permitted to accept 0-RTT data, but only if it intends to maintain compatibility with the initial 0-RTT assumptions, and any subsequent settings changes will be communicated in a way that avoids immediate violations.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' grants the server discretion, but the clause doesn't define the boundaries of that discretion. The server could accept 0-RTT and then immediately signal settings that cause the client's 0-RTT data to be invalid, or it could accept 0-RTT with the intention of providing compatible settings. This creates two reasonable interpretations.",
+    "missing_information": "The clause does not specify the conditions under which the server MAY accept 0-RTT data and provide different settings. It's unclear whether the server can change settings in a way that immediately invalidates the 0-RTT data, or if there's an expectation of graceful transition."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:03:32.915906+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "2211691273541812b3992fcf88ca02d9c5bf7d6d3a2506bad61036794ee4d834",
+  "lineage_ids": "lineage:62549f159cb60b498c621c32",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 266,
+    "load_duration": 20533000,
+    "prompt_eval_count": 591,
+    "total_duration": 10090913100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY accept 0-RTT\", \"interpretation_a\": \"The server is permitted to accept 0-RTT data and then signal different settings, potentially leading to the client sending data that violates the new settings.\", \"interpretation_b\": \"The server is permitted to accept 0-RTT data, but only if it intends to maintain compatibility with the initial 0-RTT assumptions, and any subsequent settings changes will be communicated in a way that avoids immediate violations.\", \"missing_information\": \"The clause does not specify the conditions under which the server MAY accept 0-RTT data and provide different settings. It's unclear whether the server can change settings in a way that immediately invalidates the 0-RTT data, or if there's an expectation of graceful transition.\", \"justification\": \"The use of 'MAY' grants the server discretion, but the clause doesn't define the boundaries of that discretion. The server could accept 0-RTT and then immediately signal settings that cause the client's 0-RTT data to be invalid, or it could accept 0-RTT with the intention of providing compatible settings. This creates two reasonable interpretations.\"}",
+  "record_id": "b39812a3d64a2ee4437b7ba15d04a3471ec905081d746aaab28a0cce4eb7520c",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.2.4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.093
+}

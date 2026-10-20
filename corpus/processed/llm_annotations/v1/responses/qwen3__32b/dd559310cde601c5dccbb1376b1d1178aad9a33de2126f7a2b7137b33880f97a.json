@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause provides a clear directive for origin servers to include validator fields in 200 responses to GET or HEAD requests. It specifies that validators should be sent if available, and it prefers both a strong entity-tag and a Last-Modified date. The use of 'SHOULD' allows for discretion but does not introduce ambiguity in the required behavior. The clause does not permit materially different interpretations that would affect implementation.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:32:18.002535+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "973b6e311d2e50ace52049efcc994fa0f9e87fdea06301350426777d4d36d65b",
+  "lineage_ids": "lineage:a1a743ce6976de01faabe535",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 140,
+    "load_duration": 8809900,
+    "prompt_eval_count": 603,
+    "total_duration": 5866906000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause provides a clear directive for origin servers to include validator fields in 200 responses to GET or HEAD requests. It specifies that validators should be sent if available, and it prefers both a strong entity-tag and a Last-Modified date. The use of 'SHOULD' allows for discretion but does not introduce ambiguity in the required behavior. The clause does not permit materially different interpretations that would affect implementation.\"\n}",
+  "record_id": "dd559310cde601c5dccbb1376b1d1178aad9a33de2126f7a2b7137b33880f97a",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "15.3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.891
+}

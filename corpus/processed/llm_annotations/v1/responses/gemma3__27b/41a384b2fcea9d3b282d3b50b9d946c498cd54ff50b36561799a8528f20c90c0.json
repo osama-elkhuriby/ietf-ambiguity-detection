@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "kMinimumWindow",
+    "interpretation_a": "kMinimumWindow is a fixed, pre-defined constant.",
+    "interpretation_b": "kMinimumWindow is a dynamically calculated value based on network conditions or other parameters.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'kMinimumWindow' is used without definition. This leaves open the possibility of different implementations interpreting it as a fixed constant or a dynamically calculated value, leading to different congestion window reductions.",
+    "missing_information": "The definition of kMinimumWindow is not provided within this excerpt. Without knowing whether it is a constant or a variable, implementations could differ significantly in how they reduce the congestion window."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:19:02.054182+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "82dfb5248c7443a728a88ac0447b14a04545ab3c96f18a9ab1d691e09a4b0f93",
+  "lineage_ids": "lineage:3d1b5785ba29a083732ac1a1",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 158,
+    "load_duration": 4395700,
+    "prompt_eval_count": 578,
+    "total_duration": 6238972100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"kMinimumWindow\", \"interpretation_a\": \"kMinimumWindow is a fixed, pre-defined constant.\", \"interpretation_b\": \"kMinimumWindow is a dynamically calculated value based on network conditions or other parameters.\", \"missing_information\": \"The definition of kMinimumWindow is not provided within this excerpt. Without knowing whether it is a constant or a variable, implementations could differ significantly in how they reduce the congestion window.\",\"justification\": \"The term 'kMinimumWindow' is used without definition. This leaves open the possibility of different implementations interpreting it as a fixed constant or a dynamically calculated value, leading to different congestion window reductions.\"}",
+  "record_id": "41a384b2fcea9d3b282d3b50b9d946c498cd54ff50b36561799a8528f20c90c0",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.25
+}

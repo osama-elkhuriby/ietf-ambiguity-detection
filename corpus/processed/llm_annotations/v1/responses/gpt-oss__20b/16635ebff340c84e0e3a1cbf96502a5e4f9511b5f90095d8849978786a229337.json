@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "If a server isn't currently accepting any new connections, it SHOULD send an Initial packet containing a CONNECTION_CLOSE frame with error code SERVER_BUSY.",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The lack of a concrete constraint on timing allows materially different implementation behaviours (e.g., immediate vs delayed sending).",
+    "missing_information": "The clause does not specify when the server should send the Initial packet, leaving ambiguity about the timing of the packet."
+  },
+  "attempts": 3,
+  "created_at": "2026-10-08T14:06:36.117569+00:00",
+  "document_id": "draft-ietf-quic-transport-28",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "1aea903a857a0a8dda66d4c49f34742aa552eec387d008a59db08a5b13233600",
+  "lineage_ids": "lineage:98000d2c996602acbb2f9752",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3185,
+    "load_duration": 6009700,
+    "prompt_eval_count": 757,
+    "total_duration": 27588494200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"If a server isn't currently accepting any new connections, it SHOULD send an Initial packet containing a CONNECTION_CLOSE frame with error code SERVER_BUSY.\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The clause does not specify when the server should send the Initial packet, leaving ambiguity about the timing of the packet.\",\n  \"justification\": \"The lack of a concrete constraint on timing allows materially different implementation behaviours (e.g., immediate vs delayed sending).\"\n}",
+  "record_id": "16635ebff340c84e0e3a1cbf96502a5e4f9511b5f90095d8849978786a229337",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "5.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 109.328
+}

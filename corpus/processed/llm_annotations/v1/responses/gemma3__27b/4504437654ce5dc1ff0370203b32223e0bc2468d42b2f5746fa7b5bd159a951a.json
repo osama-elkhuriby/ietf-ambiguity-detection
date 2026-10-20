@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless it can ensure",
+    "interpretation_a": "The receiver can definitively prove, through some mechanism (e.g., a timeout, a stateful check), that no future packets will arrive with numbers within the discarded ACK range.",
+    "interpretation_b": "The receiver has a reasonable belief, based on observed behavior or heuristics, that no future packets will arrive with numbers within the discarded ACK range, but this belief is not guaranteed.",
+    "is_ambiguous": "yes",
+    "justification": "The word 'ensure' is vague. It doesn't specify the degree of certainty required before an ACK range can be discarded. This creates ambiguity in implementation, as different receivers might interpret 'ensure' differently, leading to potentially incompatible behavior.",
+    "missing_information": "The level of certainty required for 'ensure' is not defined. Does 'ensure' require absolute proof, or is a high probability sufficient? This affects how a receiver would implement the retention or discarding of ACK ranges."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:18:17.994523+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "1a782198cf2d639a74060a06e9e939014ab91a5a86c04c4ac68e73864281e504",
+  "lineage_ids": "lineage:328c84d534634fed247f380f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 218,
+    "load_duration": 4180900,
+    "prompt_eval_count": 581,
+    "total_duration": 8172112800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless it can ensure\", \"interpretation_a\": \"The receiver can definitively prove, through some mechanism (e.g., a timeout, a stateful check), that no future packets will arrive with numbers within the discarded ACK range.\", \"interpretation_b\": \"The receiver has a reasonable belief, based on observed behavior or heuristics, that no future packets will arrive with numbers within the discarded ACK range, but this belief is not guaranteed.\", \"missing_information\": \"The level of certainty required for 'ensure' is not defined. Does 'ensure' require absolute proof, or is a high probability sufficient? This affects how a receiver would implement the retention or discarding of ACK ranges.\",\"justification\": \"The word 'ensure' is vague. It doesn't specify the degree of certainty required before an ACK range can be discarded. This creates ambiguity in implementation, as different receivers might interpret 'ensure' differently, leading to potentially incompatible behavior.\"}",
+  "record_id": "4504437654ce5dc1ff0370203b32223e0bc2468d42b2f5746fa7b5bd159a951a",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "13.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.172
+}

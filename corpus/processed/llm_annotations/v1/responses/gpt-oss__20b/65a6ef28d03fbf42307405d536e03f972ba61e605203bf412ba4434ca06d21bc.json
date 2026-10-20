@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "between 0 and 2^31-1",
+    "interpretation_a": "The upper bound 2^31-1 is included in the uniform random distribution.",
+    "interpretation_b": "The upper bound 2^31-1 is excluded from the uniform random distribution.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states 'between 0 and 2^31-1' without specifying inclusivity, leaving two reasonable interpretations that affect implementation.",
+    "missing_information": "Whether the upper bound 2^31-1 is inclusive or exclusive in the distribution range."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T16:05:42.271233+00:00",
+  "document_id": "draft-ietf-quic-transport-07",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "b1a8a055279e98578acaf80a83e33f0aac9426aac2a432f15ed0251669f64178",
+  "lineage_ids": "lineage:eaa5bae72e05ee011fab47bb",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 923,
+    "load_duration": 5749600,
+    "prompt_eval_count": 562,
+    "total_duration": 8205451700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"between 0 and 2^31-1\",\n  \"interpretation_a\": \"The upper bound 2^31-1 is included in the uniform random distribution.\",\n  \"interpretation_b\": \"The upper bound 2^31-1 is excluded from the uniform random distribution.\",\n  \"missing_information\": \"Whether the upper bound 2^31-1 is inclusive or exclusive in the distribution range.\",\n  \"justification\": \"The clause states 'between 0 and 2^31-1' without specifying inclusivity, leaving two reasonable interpretations that affect implementation.\"\n}",
+  "record_id": "65a6ef28d03fbf42307405d536e03f972ba61e605203bf412ba4434ca06d21bc",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "5.7.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.203
+}

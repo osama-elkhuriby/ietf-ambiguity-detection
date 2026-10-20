@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY be sent",
+    "interpretation_a": "The endpoint is permitted to resend previously sent data as a probe packet if no new data is available.",
+    "interpretation_b": "The endpoint is not required to resend previously sent data as a probe packet even if no new data is available; it may choose to simply not send a probe packet.",
+    "is_ambiguous": "yes",
+    "justification": "The use of \"MAY\" creates ambiguity regarding whether resending previously sent data is optional or permissible. It is unclear if the endpoint *must* send *something* as a probe, or if it can simply omit the probe packet if no new data is available.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:28:17.771748+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "4985055c1e3351cacf8e8e813b93030e71fd18d97c7eb4fb5a85c58ab91ceb58",
+  "lineage_ids": "lineage:d4b6ed2b465513e343eded90",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 163,
+    "load_duration": 3749000,
+    "prompt_eval_count": 569,
+    "total_duration": 6255921800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY be sent\", \"interpretation_a\": \"The endpoint is permitted to resend previously sent data as a probe packet if no new data is available.\", \"interpretation_b\": \"The endpoint is not required to resend previously sent data as a probe packet even if no new data is available; it may choose to simply not send a probe packet.\", \"missing_information\": \"\", \"justification\": \"The use of \\\"MAY\\\" creates ambiguity regarding whether resending previously sent data is optional or permissible. It is unclear if the endpoint *must* send *something* as a probe, or if it can simply omit the probe packet if no new data is available.\"}",
+  "record_id": "bc80d9b315d61dc271d9c466f71ef8f477deb8d33ef8b485a5d2f40ceb3f3b9c",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.2.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.25
+}

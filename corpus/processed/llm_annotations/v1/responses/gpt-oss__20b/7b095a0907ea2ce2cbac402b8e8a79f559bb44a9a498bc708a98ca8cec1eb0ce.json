@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST handle PUSH_PROMISE frames that might have been created before the RST_STREAM frame is received and processed",
+    "interpretation_a": "The endpoint that *sent* the RST_STREAM must process any PUSH_PROMISE frames that were created before the RST_STREAM frame was received and processed by the *receiver*.",
+    "interpretation_b": "The endpoint that *received* the RST_STREAM must process any PUSH_PROMISE frames that were created before the RST_STREAM frame was received and processed by the *sender*.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether the ‘endpoint that has sent RST_STREAM’ refers to the sender or the receiver, leaving the implementation behavior under‑specified.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T04:26:41.770619+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "28f4131856ffe5f71a7e428f3833b95d5c5f1debc1ef3e5ede51205ac414ad77",
+  "lineage_ids": "lineage:f5a638afe77ae80c8f77c79f",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 483,
+    "load_duration": 5786500,
+    "prompt_eval_count": 763,
+    "total_duration": 4289006500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"MUST handle PUSH_PROMISE frames that might have been created before the RST_STREAM frame is received and processed\",\n  \"interpretation_a\": \"The endpoint that *sent* the RST_STREAM must process any PUSH_PROMISE frames that were created before the RST_STREAM frame was received and processed by the *receiver*.\",\n  \"interpretation_b\": \"The endpoint that *received* the RST_STREAM must process any PUSH_PROMISE frames that were created before the RST_STREAM frame was received and processed by the *sender*.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify whether the ‘endpoint that has sent RST_STREAM’ refers to the sender or the receiver, leaving the implementation behavior under‑specified.\"\n}",
+  "record_id": "7b095a0907ea2ce2cbac402b8e8a79f559bb44a9a498bc708a98ca8cec1eb0ce",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 16.563
+}

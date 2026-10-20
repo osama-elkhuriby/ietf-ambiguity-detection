@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "prior to completing the handshake",
+    "interpretation_a": "The endpoint must not decrypt 1-RTT packets until the handshake is fully completed, meaning all handshake messages have been exchanged and processed.",
+    "interpretation_b": "The endpoint must not decrypt 1-RTT packets until a specific point *during* the handshake process is reached (e.g., after receiving a Handshake Complete message), even if further handshake messages are still expected.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'completing the handshake' is vague. It's unclear whether it refers to the absolute end of the handshake process or a specific point during the process. This allows for different interpretations of when decryption is permitted.",
+    "missing_information": "The definition of 'completing the handshake' is not precise. Does it require full completion of the handshake exchange, or reaching a specific state within the handshake?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:53:08.288206+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "f3d56c7f590f0bc124ee405eae9ae32ebb17aa632895f526d65734c124ded263",
+  "lineage_ids": "lineage:417830d81677630272f1db5e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 205,
+    "load_duration": 4074800,
+    "prompt_eval_count": 600,
+    "total_duration": 7753970200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"prior to completing the handshake\", \"interpretation_a\": \"The endpoint must not decrypt 1-RTT packets until the handshake is fully completed, meaning all handshake messages have been exchanged and processed.\", \"interpretation_b\": \"The endpoint must not decrypt 1-RTT packets until a specific point *during* the handshake process is reached (e.g., after receiving a Handshake Complete message), even if further handshake messages are still expected.\", \"missing_information\": \"The definition of 'completing the handshake' is not precise. Does it require full completion of the handshake exchange, or reaching a specific state within the handshake?\",\"justification\": \"The phrase 'completing the handshake' is vague. It's unclear whether it refers to the absolute end of the handshake process or a specific point during the process. This allows for different interpretations of when decryption is permitted.\"}",
+  "record_id": "f7090b028eae06e42592a449a9425d930f995550f098282132f13dac71263c32",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "5.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.75
+}

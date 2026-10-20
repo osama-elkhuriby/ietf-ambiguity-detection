@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "For unexpected closures caused by error conditions, a QUIC CONNECTION_CLOSE or APPLICATION_CLOSE frame MUST be used.",
+    "interpretation_a": "The clause permits either a CONNECTION_CLOSE or an APPLICATION_CLOSE frame, but does not state whether both frames may be sent together, allowing two reasonable implementation behaviours: sending only one of the frames or sending both.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause’s use of “or” without further restriction creates an under‑specified requirement that could be interpreted as allowing either frame alone or both frames together.",
+    "missing_information": "Whether sending both frames is allowed or prohibited is not specified, creating an incomplete constraint on implementation behaviour."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T08:52:43.581084+00:00",
+  "document_id": "draft-ietf-quic-http-13",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "bc1c124ea508b2b0bf0e9bbaeb13e78582a79c688f3c62ebcc702e1d4eef802f",
+  "lineage_ids": "lineage:e6518441f4ea016ff1e4de97",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1170,
+    "load_duration": 5908300,
+    "prompt_eval_count": 624,
+    "total_duration": 10314392600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"For unexpected closures caused by error conditions, a QUIC CONNECTION_CLOSE or APPLICATION_CLOSE frame MUST be used.\",\n  \"interpretation_a\": \"The clause permits either a CONNECTION_CLOSE or an APPLICATION_CLOSE frame, but does not state whether both frames may be sent together, allowing two reasonable implementation behaviours: sending only one of the frames or sending both.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"Whether sending both frames is allowed or prohibited is not specified, creating an incomplete constraint on implementation behaviour.\",\n  \"justification\": \"The clause’s use of “or” without further restriction creates an under‑specified requirement that could be interpreted as allowing either frame alone or both frames together.\"\n}",
+  "record_id": "1acf79067b32f37c774560eeaa24be15d23d16d21abcaffe8ef3d79f39ae3064",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "4.2.8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.313
+}

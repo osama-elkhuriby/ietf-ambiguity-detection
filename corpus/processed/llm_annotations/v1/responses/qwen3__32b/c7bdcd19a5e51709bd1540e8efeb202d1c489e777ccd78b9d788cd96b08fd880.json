@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause uses 'MAY', which grants the receiver discretion to continue processing streams that exceed flow-control limits after reducing the initial window size. This is not ambiguous because it does not permit multiple materially different interpretations of implementation behavior. The behavior is bounded by the normative requirement to handle data exceeding the window size (as noted in the previous clause), and the clause itself does not introduce conflicting or undefined constraints.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T01:56:29.255148+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "7197ef382b81735dd812d083ae2376308347a06c4ce77ead2a6949c6187eace2",
+  "lineage_ids": "lineage:ca4525cb2f95b3cbd0a8c6e3",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 137,
+    "load_duration": 10908600,
+    "prompt_eval_count": 560,
+    "total_duration": 5719524800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause uses 'MAY', which grants the receiver discretion to continue processing streams that exceed flow-control limits after reducing the initial window size. This is not ambiguous because it does not permit multiple materially different interpretations of implementation behavior. The behavior is bounded by the normative requirement to handle data exceeding the window size (as noted in the previous clause), and the clause itself does not introduce conflicting or undefined constraints.\"\n}",
+  "record_id": "c7bdcd19a5e51709bd1540e8efeb202d1c489e777ccd78b9d788cd96b08fd880",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.9.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.735
+}

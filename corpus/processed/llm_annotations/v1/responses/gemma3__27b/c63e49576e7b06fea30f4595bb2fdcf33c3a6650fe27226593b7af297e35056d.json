@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "required MTU",
+    "interpretation_a": "The endpoint must verify that the path supports the MTU required by the QUIC specification (e.g., a minimum of 1200 bytes).",
+    "interpretation_b": "The endpoint must verify that the path supports a specific MTU value negotiated or otherwise determined between the peers.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'required MTU' is incomplete. It's unclear *which* MTU is required. Without knowing the source or definition of this MTU, implementations could reasonably differ on how to determine the correct value to verify.",
+    "missing_information": "The document does not define what 'required MTU' refers to. Is it a fixed value, a negotiated value, or something else?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:01:11.987347+00:00",
+  "document_id": "draft-ietf-quic-transport-33",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "861aef545f281f9f14e694cc67144a0d6f25c470c74f7b4b96a9fe9ef308e003",
+  "lineage_ids": "lineage:652ac497ee0695ab51027309",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 184,
+    "load_duration": 4807500,
+    "prompt_eval_count": 586,
+    "total_duration": 6963901800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"required MTU\", \"interpretation_a\": \"The endpoint must verify that the path supports the MTU required by the QUIC specification (e.g., a minimum of 1200 bytes).\", \"interpretation_b\": \"The endpoint must verify that the path supports a specific MTU value negotiated or otherwise determined between the peers.\", \"missing_information\": \"The document does not define what 'required MTU' refers to. Is it a fixed value, a negotiated value, or something else?\",\"justification\": \"The phrase 'required MTU' is incomplete. It's unclear *which* MTU is required. Without knowing the source or definition of this MTU, implementations could reasonably differ on how to determine the correct value to verify.\"}",
+  "record_id": "c63e49576e7b06fea30f4595bb2fdcf33c3a6650fe27226593b7af297e35056d",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "8.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.969
+}

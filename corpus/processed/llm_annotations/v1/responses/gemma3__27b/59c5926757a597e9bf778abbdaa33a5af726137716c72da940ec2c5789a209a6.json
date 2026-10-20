@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "if the last frame on the stream was truncated",
+    "interpretation_a": "A frame is considered truncated if any part of it is missing due to packet loss or other transmission issues.",
+    "interpretation_b": "A frame is considered truncated only if the length encoding indicates a longer frame than what was actually received, implying a parsing error.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'truncated' is not defined. Without a clear definition, it's ambiguous whether a partially received frame due to packet loss is considered truncated, or if truncation specifically refers to a mismatch between the frame's declared length and the actual received data. This affects how the connection error is triggered.",
+    "missing_information": "The definition of 'truncated' is not provided. It is unclear whether any partial reception constitutes truncation, or if it requires a discrepancy between the indicated and actual frame length."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:51:10.698828+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "c5f95a0f64fd290dac005e64d8bcdcddca54194759f4855800928156cb9e2762",
+  "lineage_ids": "lineage:50f109bfcd059bf05baeb000",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 203,
+    "load_duration": 8085100,
+    "prompt_eval_count": 582,
+    "total_duration": 7809155200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"if the last frame on the stream was truncated\", \"interpretation_a\": \"A frame is considered truncated if any part of it is missing due to packet loss or other transmission issues.\", \"interpretation_b\": \"A frame is considered truncated only if the length encoding indicates a longer frame than what was actually received, implying a parsing error.\", \"missing_information\": \"The definition of 'truncated' is not provided. It is unclear whether any partial reception constitutes truncation, or if it requires a discrepancy between the indicated and actual frame length.\", \"justification\": \"The term 'truncated' is not defined. Without a clear definition, it's ambiguous whether a partially received frame due to packet loss is considered truncated, or if truncation specifically refers to a mismatch between the frame's declared length and the actual received data. This affects how the connection error is triggered.\"}",
+  "record_id": "59c5926757a597e9bf778abbdaa33a5af726137716c72da940ec2c5789a209a6",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.828
+}

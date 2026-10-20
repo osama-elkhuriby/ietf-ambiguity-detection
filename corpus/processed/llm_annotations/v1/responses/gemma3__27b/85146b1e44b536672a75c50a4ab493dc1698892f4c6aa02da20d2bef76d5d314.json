@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "recently used",
+    "interpretation_a": "The endpoint compares against tokens from connection IDs used in the very recent past (e.g., within the last few seconds).",
+    "interpretation_b": "The endpoint compares against tokens from connection IDs used at any point in the past, as long as the endpoint remembers them.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'recently' is not defined, leading to different interpretations of how long the endpoint must retain and compare against Stateless Reset Tokens. This affects implementation because the memory management and search scope will vary depending on the interpretation.",
+    "missing_information": "The definition of 'recently' is missing. A time duration or other constraint is needed to define how far back the endpoint should search for associated connection IDs."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:39:55.204737+00:00",
+  "document_id": "draft-ietf-quic-transport-23",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "37018752cb6f2a6683f4f366db084a0fc77c0b489f1418560e3a763ed0066fc5",
+  "lineage_ids": "lineage:b02fe073bbe2d6920cd2357a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 180,
+    "load_duration": 5017200,
+    "prompt_eval_count": 611,
+    "total_duration": 6856015000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"recently used\", \"interpretation_a\": \"The endpoint compares against tokens from connection IDs used in the very recent past (e.g., within the last few seconds).\", \"interpretation_b\": \"The endpoint compares against tokens from connection IDs used at any point in the past, as long as the endpoint remembers them.\", \"missing_information\": \"The definition of 'recently' is missing. A time duration or other constraint is needed to define how far back the endpoint should search for associated connection IDs.\", \"justification\": \"The term 'recently' is not defined, leading to different interpretations of how long the endpoint must retain and compare against Stateless Reset Tokens. This affects implementation because the memory management and search scope will vary depending on the interpretation.\"}",
+  "record_id": "85146b1e44b536672a75c50a4ab493dc1698892f4c6aa02da20d2bef76d5d314",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "10.4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.875
+}

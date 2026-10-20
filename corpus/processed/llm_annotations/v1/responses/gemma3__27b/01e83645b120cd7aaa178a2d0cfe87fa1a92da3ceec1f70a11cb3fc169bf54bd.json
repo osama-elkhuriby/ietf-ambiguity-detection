@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless it has previously validated that address",
+    "interpretation_a": "The endpoint only needs to perform path validation if the address change happens *after* the initial connection establishment. If the address was validated during initial handshake, no further validation is needed.",
+    "interpretation_b": "The endpoint needs to perform path validation every time an address changes, regardless of prior validation. The 'unless' clause only provides an optimization: if already validated, it *can* skip the validation, but isn't required to.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'previously validated' is incomplete. It doesn't specify *when* the address must have been validated to avoid re-validation. This leads to two reasonable interpretations regarding the scope of the validation requirement.",
+    "missing_information": "The meaning of 'previously validated' is not clearly defined. Does it mean validated during the initial connection establishment, or validated at any point in the connection's lifetime? This affects whether validation is required after a NAT rebinding event that occurs after the initial handshake."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:55:18.057716+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "4dda7d1b1fe52cbb0ed5b18d6ede0682302b68a7a80b8c70802da8021f762735",
+  "lineage_ids": "lineage:da2f4e4bbb9af2d00bf5ef0b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 239,
+    "load_duration": 4508400,
+    "prompt_eval_count": 593,
+    "total_duration": 8907065900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless it has previously validated that address\", \"interpretation_a\": \"The endpoint only needs to perform path validation if the address change happens *after* the initial connection establishment. If the address was validated during initial handshake, no further validation is needed.\", \"interpretation_b\": \"The endpoint needs to perform path validation every time an address changes, regardless of prior validation. The 'unless' clause only provides an optimization: if already validated, it *can* skip the validation, but isn't required to.\", \"missing_information\": \"The meaning of 'previously validated' is not clearly defined. Does it mean validated during the initial connection establishment, or validated at any point in the connection's lifetime? This affects whether validation is required after a NAT rebinding event that occurs after the initial handshake.\", \"justification\": \"The phrase 'previously validated' is incomplete. It doesn't specify *when* the address must have been validated to avoid re-validation. This leads to two reasonable interpretations regarding the scope of the validation requirement.\"}",
+  "record_id": "01e83645b120cd7aaa178a2d0cfe87fa1a92da3ceec1f70a11cb3fc169bf54bd",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.906
+}

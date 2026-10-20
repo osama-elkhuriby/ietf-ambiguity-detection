@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause is clear and unambiguous. It specifies a concrete condition (the Source Connection ID field in the Retry packet being identical to the Destination Connection ID field of the client's Initial packet) and a required action (the client MUST discard the Retry packet). There is no room for multiple interpretations, and the condition is well-defined.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:48:20.031248+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "67a80e7ccd5693523c60d8dda3a8f9f16f3a563a620caa7c82cddf5a09478eb5",
+  "lineage_ids": "lineage:1ba68914b7cd0774aa740efc",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 122,
+    "load_duration": 7198500,
+    "prompt_eval_count": 554,
+    "total_duration": 5027623400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause is clear and unambiguous. It specifies a concrete condition (the Source Connection ID field in the Retry packet being identical to the Destination Connection ID field of the client's Initial packet) and a required action (the client MUST discard the Retry packet). There is no room for multiple interpretations, and the condition is well-defined.\"\n}",
+  "record_id": "e97923e50caea5b50e5a87eead40b4904fe598dec426f742d3df4496260a781a",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "17.2.5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.032
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST send an Upgrade header field to indicate the acceptable protocols, in order of descending preference.",
+    "interpretation_a": "The server MUST list all acceptable protocols in the Upgrade header, sorted from most preferred to least preferred.",
+    "interpretation_b": "The server MUST list at least one acceptable protocol in the Upgrade header, sorted from most preferred to least preferred, but may omit some acceptable protocols.",
+    "is_ambiguous": "yes",
+    "justification": "The requirement to indicate 'acceptable protocols' is not fully defined. Does the server need to list all protocols it accepts for upgrade, or only those it prefers? The lack of clarity creates ambiguity in implementation.",
+    "missing_information": "It is unclear whether the server is required to list *all* acceptable protocols or just a subset. The phrase 'acceptable protocols' is not fully constrained."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:26:50.698170+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "8fea710269c8ee2bb043699781f35663ab775c156ee2e99e4849a8b955a76415",
+  "lineage_ids": "lineage:14bbcb2ce901563a7f7192a2",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 191,
+    "load_duration": 10261000,
+    "prompt_eval_count": 618,
+    "total_duration": 7370365800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST send an Upgrade header field to indicate the acceptable protocols, in order of descending preference.\", \"interpretation_a\": \"The server MUST list all acceptable protocols in the Upgrade header, sorted from most preferred to least preferred.\", \"interpretation_b\": \"The server MUST list at least one acceptable protocol in the Upgrade header, sorted from most preferred to least preferred, but may omit some acceptable protocols.\", \"missing_information\": \"It is unclear whether the server is required to list *all* acceptable protocols or just a subset. The phrase 'acceptable protocols' is not fully constrained.\", \"justification\": \"The requirement to indicate 'acceptable protocols' is not fully defined. Does the server need to list all protocols it accepts for upgrade, or only those it prefers? The lack of clarity creates ambiguity in implementation.\"}",
+  "record_id": "c476b737031c74043216829fdf45d67d1fe71ad056a03c79ae8c5195ba95e396",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "7.8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.39
+}

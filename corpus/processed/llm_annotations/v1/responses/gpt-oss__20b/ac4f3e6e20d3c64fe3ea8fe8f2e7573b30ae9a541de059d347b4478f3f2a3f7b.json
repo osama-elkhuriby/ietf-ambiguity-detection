@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST send a BLOCKED or STREAM_BLOCKED frame.",
+    "interpretation_a": "The sender must send a BLOCKED frame.",
+    "interpretation_b": "The sender must send a STREAM_BLOCKED frame.",
+    "is_ambiguous": "yes",
+    "justification": "The clause allows two distinct implementation choices.",
+    "missing_information": "The clause does not specify which frame to send when flow control credit is exhausted."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T17:44:09.394692+00:00",
+  "document_id": "draft-ietf-quic-transport-07",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "a30c2f15ee1ba891da03061e890f18ab8a032428a64328b4a2548d09b79fb6e0",
+  "lineage_ids": "lineage:304ded062098fdf80671c50a",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 557,
+    "load_duration": 6931800,
+    "prompt_eval_count": 707,
+    "total_duration": 4944368000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"MUST send a BLOCKED or STREAM_BLOCKED frame.\",\n  \"interpretation_a\": \"The sender must send a BLOCKED frame.\",\n  \"interpretation_b\": \"The sender must send a STREAM_BLOCKED frame.\",\n  \"missing_information\": \"The clause does not specify which frame to send when flow control credit is exhausted.\",\n  \"justification\": \"The clause allows two distinct implementation choices.\"\n}",
+  "record_id": "ac4f3e6e20d3c64fe3ea8fe8f2e7573b30ae9a541de059d347b4478f3f2a3f7b",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "11.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 67.859
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "incrementing the packet sequence number by an externally unpredictable value",
+    "interpretation_a": "The client increments the packet sequence number by the externally unpredictable value for each packet after migration.",
+    "interpretation_b": "The client increments the packet sequence number by the externally unpredictable value only for the first packet after migration.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether the externally unpredictable value is applied once or for every packet, leading to two materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T18:07:00.938149+00:00",
+  "document_id": "draft-ietf-quic-transport-06",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "32a4671b5ed2ad3ef79a7abaae4a4f8344995106ff16b78844d912fffef4a88c",
+  "lineage_ids": "lineage:c676c0c80cdf9e985ca57524",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2725,
+    "load_duration": 4426900,
+    "prompt_eval_count": 593,
+    "total_duration": 23478182400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"incrementing the packet sequence number by an externally unpredictable value\",\n  \"interpretation_a\": \"The client increments the packet sequence number by the externally unpredictable value for each packet after migration.\",\n  \"interpretation_b\": \"The client increments the packet sequence number by the externally unpredictable value only for the first packet after migration.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify whether the externally unpredictable value is applied once or for every packet, leading to two materially different implementation behaviours.\"\n}",
+  "record_id": "bf1a72e293a442dc10bfe7ca1dfebf3a7ff70f45ca494eb716f70c4c14e37604",
+  "revision": "06",
+  "schema_version": 1,
+  "section_ids": "7.6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 23.485
+}

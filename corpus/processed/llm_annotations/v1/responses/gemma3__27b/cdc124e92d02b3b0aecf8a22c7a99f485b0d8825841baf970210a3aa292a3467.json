@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless there are responses outstanding for requests or server pushes",
+    "interpretation_a": "The client should only send PING frames if it has *any* outstanding requests or server pushes. If all requests have been answered and all pushes acknowledged, PING frames are prohibited.",
+    "interpretation_b": "The client should send PING frames if it has outstanding requests *or* server pushes. It is permissible to send PING frames even if only one type of outstanding item exists.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'or' is ambiguous. It could mean 'and' in this context, or it could mean the standard disjunctive 'or'. This affects whether a client can send PING frames when only requests or only server pushes are outstanding.",
+    "missing_information": "The meaning of 'outstanding' is not fully defined. Does it require both requests and pushes to be outstanding, or either?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:08:21.935136+00:00",
+  "document_id": "draft-ietf-quic-http-14",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "ac6fc6b0212bf78ecaef16d142095da499a07bbc8db2de98bf7c7dcb5a91642e",
+  "lineage_ids": "lineage:f31451432d7085d8fa6611e0",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 210,
+    "load_duration": 8545400,
+    "prompt_eval_count": 609,
+    "total_duration": 8090281800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless there are responses outstanding for requests or server pushes\", \"interpretation_a\": \"The client should only send PING frames if it has *any* outstanding requests or server pushes. If all requests have been answered and all pushes acknowledged, PING frames are prohibited.\", \"interpretation_b\": \"The client should send PING frames if it has outstanding requests *or* server pushes. It is permissible to send PING frames even if only one type of outstanding item exists.\", \"missing_information\": \"The meaning of 'outstanding' is not fully defined. Does it require both requests and pushes to be outstanding, or either?\",\"justification\": \"The use of 'or' is ambiguous. It could mean 'and' in this context, or it could mean the standard disjunctive 'or'. This affects whether a client can send PING frames when only requests or only server pushes are outstanding.\"}",
+  "record_id": "cdc124e92d02b3b0aecf8a22c7a99f485b0d8825841baf970210a3aa292a3467",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.093
+}

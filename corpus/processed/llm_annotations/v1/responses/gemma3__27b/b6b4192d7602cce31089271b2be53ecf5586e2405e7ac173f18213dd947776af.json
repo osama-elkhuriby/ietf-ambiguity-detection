@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "the default initial value",
+    "interpretation_a": "The endpoint uses the default initial value as defined in [QUIC-RECOVERY] without any further modification or consideration.",
+    "interpretation_b": "The endpoint uses the default initial value as a starting point, but may adjust it based on other factors or heuristics, as long as it adheres to the principles outlined in [QUIC-RECOVERY].",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' combined with the reference to '[QUIC-RECOVERY]' creates ambiguity. It's unclear if the endpoint *must* use the default value, or if it *should* use it as a base and potentially modify it while still adhering to the principles in [QUIC-RECOVERY].",
+    "missing_information": "The clause does not specify whether the 'SHOULD' recommendation implies strict adherence to the default value or allows for adjustments while still being consistent with the referenced document. This affects how the RTT estimate is calculated and impacts congestion control."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:56:29.427218+00:00",
+  "document_id": "draft-ietf-quic-transport-27",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "255144496814e9ce90a08b3029414b56e4675ba5db257c90057db10c48ffa141",
+  "lineage_ids": "lineage:4254f6f485d91d0b5d5a9e31",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 233,
+    "load_duration": 3764100,
+    "prompt_eval_count": 598,
+    "total_duration": 8712429800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"the default initial value\", \"interpretation_a\": \"The endpoint uses the default initial value as defined in [QUIC-RECOVERY] without any further modification or consideration.\", \"interpretation_b\": \"The endpoint uses the default initial value as a starting point, but may adjust it based on other factors or heuristics, as long as it adheres to the principles outlined in [QUIC-RECOVERY].\", \"missing_information\": \"The clause does not specify whether the 'SHOULD' recommendation implies strict adherence to the default value or allows for adjustments while still being consistent with the referenced document. This affects how the RTT estimate is calculated and impacts congestion control.\",\"justification\": \"The use of 'SHOULD' combined with the reference to '[QUIC-RECOVERY]' creates ambiguity. It's unclear if the endpoint *must* use the default value, or if it *should* use it as a base and potentially modify it while still adhering to the principles in [QUIC-RECOVERY].\"}",
+  "record_id": "b6b4192d7602cce31089271b2be53ecf5586e2405e7ac173f18213dd947776af",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "9.3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.704
+}

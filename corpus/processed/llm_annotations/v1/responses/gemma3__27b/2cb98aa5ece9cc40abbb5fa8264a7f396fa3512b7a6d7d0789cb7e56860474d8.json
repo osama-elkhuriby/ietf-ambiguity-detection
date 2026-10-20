@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "reduce the frequency",
+    "interpretation_a": "The endpoint should send CONNECTION_CLOSE frames less often than it normally would, but there is no defined threshold or rate limit.",
+    "interpretation_b": "The endpoint should send CONNECTION_CLOSE frames only after a significant delay or under specific conditions, effectively limiting the rate.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'reduce the frequency' is vague. It doesn't specify *how much* the frequency should be reduced, leaving room for different implementations. Without a concrete constraint, the implementation behaviour is not unique.",
+    "missing_information": "The clause lacks a definition of what constitutes a 'reduction in frequency'. A specific rate limit, delay, or condition would remove the ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:08:15.052967+00:00",
+  "document_id": "draft-ietf-quic-transport-29",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "6e6a3f991513982fc9c84a0cecc40eb1ab0affe4be83e144f218a51ff098cc73",
+  "lineage_ids": "lineage:80c45636897a4d7e62b0aad8",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 175,
+    "load_duration": 4192000,
+    "prompt_eval_count": 571,
+    "total_duration": 6641698200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"reduce the frequency\", \"interpretation_a\": \"The endpoint should send CONNECTION_CLOSE frames less often than it normally would, but there is no defined threshold or rate limit.\", \"interpretation_b\": \"The endpoint should send CONNECTION_CLOSE frames only after a significant delay or under specific conditions, effectively limiting the rate.\", \"missing_information\": \"The clause lacks a definition of what constitutes a 'reduction in frequency'. A specific rate limit, delay, or condition would remove the ambiguity.\", \"justification\": \"The phrase 'reduce the frequency' is vague. It doesn't specify *how much* the frequency should be reduced, leaving room for different implementations. Without a concrete constraint, the implementation behaviour is not unique.\"}",
+  "record_id": "2cb98aa5ece9cc40abbb5fa8264a7f396fa3512b7a6d7d0789cb7e56860474d8",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "10.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.656
+}

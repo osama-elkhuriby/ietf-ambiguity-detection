@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD NOT be sent and SHOULD be ignored",
+    "interpretation_a": "Implementations MAY send frames not defined in HTTP/QUIC, but they are discouraged from doing so.",
+    "interpretation_b": "Implementations MUST NOT send frames not defined in HTTP/QUIC, but they MAY ignore them on receipt.",
+    "is_ambiguous": "yes",
+    "justification": "The use of two 'SHOULD' statements creates ambiguity. 'SHOULD NOT' is weaker than 'MUST NOT'. One interpretation is that sending undefined frames is discouraged but allowed, while another is that it is prohibited. This affects how implementations handle such frames.",
+    "missing_information": "The difference between 'SHOULD NOT' and 'MUST NOT' is critical. The clause does not clearly state whether sending undefined frames is prohibited or merely discouraged. This affects implementation choices regarding error handling and security."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:04:25.578570+00:00",
+  "document_id": "draft-ietf-quic-http-04",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "d1dd804cc4316e453d046ff32e623e2d7ee5ab9f604fb412120bb2e5b5ffb54f",
+  "lineage_ids": "lineage:c1e135bad9c1dd43f4d880a9",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 198,
+    "load_duration": 12871900,
+    "prompt_eval_count": 568,
+    "total_duration": 7639808400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD NOT be sent and SHOULD be ignored\", \"interpretation_a\": \"Implementations MAY send frames not defined in HTTP/QUIC, but they are discouraged from doing so.\", \"interpretation_b\": \"Implementations MUST NOT send frames not defined in HTTP/QUIC, but they MAY ignore them on receipt.\", \"missing_information\": \"The difference between 'SHOULD NOT' and 'MUST NOT' is critical. The clause does not clearly state whether sending undefined frames is prohibited or merely discouraged. This affects implementation choices regarding error handling and security.\", \"justification\": \"The use of two 'SHOULD' statements creates ambiguity. 'SHOULD NOT' is weaker than 'MUST NOT'. One interpretation is that sending undefined frames is discouraged but allowed, while another is that it is prohibited. This affects how implementations handle such frames.\"}",
+  "record_id": "b82ae3dfa5a40760fe2ed57345ec2c1ae4a4e0bf67d3b9afe4aea12c18e78e8e",
+  "revision": "04",
+  "schema_version": 1,
+  "section_ids": "7.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.657
+}

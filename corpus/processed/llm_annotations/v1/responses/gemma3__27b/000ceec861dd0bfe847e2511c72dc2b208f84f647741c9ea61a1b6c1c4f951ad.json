@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "An endpoint MAY terminate the connection",
+    "interpretation_a": "The endpoint is permitted to terminate the connection if an alternative path is not found, but it is not required to do so; it may continue attempting to find an alternative path.",
+    "interpretation_b": "The endpoint is permitted to terminate the connection if an alternative path is not found, and it is expected to do so; continuing to attempt to find an alternative path would be considered an error.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' is not sufficient to resolve the ambiguity. It does not specify whether termination is the preferred or expected behavior when an alternative path is unavailable.",
+    "missing_information": "The clause does not specify whether the endpoint *should* terminate the connection if an alternative path cannot be found, only that it *may*. This leaves open the question of expected behavior and whether continued attempts to find an alternative path are permissible."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:54:11.231009+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "f7e402712a49a68c70104e4881cf67c8db620beedc5fee9e43438e2d621977ad",
+  "lineage_ids": "lineage:8ec8bfd32f8222eae4b0e2b8",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 213,
+    "load_duration": 4042000,
+    "prompt_eval_count": 603,
+    "total_duration": 7999189500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"An endpoint MAY terminate the connection\", \"interpretation_a\": \"The endpoint is permitted to terminate the connection if an alternative path is not found, but it is not required to do so; it may continue attempting to find an alternative path.\", \"interpretation_b\": \"The endpoint is permitted to terminate the connection if an alternative path is not found, and it is expected to do so; continuing to attempt to find an alternative path would be considered an error.\", \"missing_information\": \"The clause does not specify whether the endpoint *should* terminate the connection if an alternative path cannot be found, only that it *may*. This leaves open the question of expected behavior and whether continued attempts to find an alternative path are permissible.\", \"justification\": \"The use of 'MAY' is not sufficient to resolve the ambiguity. It does not specify whether termination is the preferred or expected behavior when an alternative path is unavailable.\"}",
+  "record_id": "000ceec861dd0bfe847e2511c72dc2b208f84f647741c9ea61a1b6c1c4f951ad",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "14.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.0
+}

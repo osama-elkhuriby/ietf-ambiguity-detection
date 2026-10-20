@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "specific to that agent",
+    "interpretation_a": "The connection is secured using TLS and includes a mechanism (e.g., client certificates) to uniquely identify the user agent.",
+    "interpretation_b": "The connection is secured using TLS, and the server relies on other information within the request (e.g., a cookie) to identify the user agent, but this identification is not necessarily unique.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'specific to that agent' is vague. It doesn't specify the level of granularity required for identifying the agent. This allows for multiple interpretations regarding the required security measures and identification methods.",
+    "missing_information": "The clause does not define what 'specific to that agent' means. It's unclear whether a unique identifier is required, or if any mechanism for associating requests with an agent is sufficient."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:05:07.234435+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-10",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "4f840ebf51196fb96e696140250cec8d1ed250b609b23739bfee3b984a693d12",
+  "lineage_ids": "lineage:bceee81f919ca0fe3a26bc90",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 199,
+    "load_duration": 11910700,
+    "prompt_eval_count": 574,
+    "total_duration": 7967839600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"specific to that agent\", \"interpretation_a\": \"The connection is secured using TLS and includes a mechanism (e.g., client certificates) to uniquely identify the user agent.\", \"interpretation_b\": \"The connection is secured using TLS, and the server relies on other information within the request (e.g., a cookie) to identify the user agent, but this identification is not necessarily unique.\", \"missing_information\": \"The clause does not define what 'specific to that agent' means. It's unclear whether a unique identifier is required, or if any mechanism for associating requests with an agent is sufficient.\", \"justification\": \"The phrase 'specific to that agent' is vague. It doesn't specify the level of granularity required for identifying the agent. This allows for multiple interpretations regarding the required security measures and identification methods.\"}",
+  "record_id": "4976ea96a6d094a2a0cff1805c233bbc5f120ae85ad00cc71abe426461e6a171",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.985
+}

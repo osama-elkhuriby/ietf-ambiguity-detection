@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY consider",
+    "interpretation_a": "The client is permitted, but not required, to confirm the handshake upon receiving an acknowledgement for a 1-RTT packet.",
+    "interpretation_b": "The client is permitted, but not required, to confirm the handshake *only* upon receiving an acknowledgement for a 1-RTT packet, and must not use other methods.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' introduces discretion, but the lack of further constraints on *when* the client can consider the handshake confirmed creates ambiguity. It's unclear if the 1-RTT ACK is the sole trigger, or if it's an alternative to the HANDSHAKE_DONE frame mentioned in the previous clause.",
+    "missing_information": "The draft does not specify whether the client *must* also receive a HANDSHAKE_DONE frame to confirm the handshake, or if the 1-RTT ACK is sufficient. This missing constraint affects implementation because a client could be implemented to confirm the handshake with only one of these signals, leading to interoperability issues."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:53:29.588300+00:00",
+  "document_id": "draft-ietf-quic-tls-33",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "5f8b090d4e80c40eb2a33d5e2cd6026a25f53fa37022acefa24e1c9306fb0955",
+  "lineage_ids": "lineage:fbeefb8060d3b58bfb6d2756",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 245,
+    "load_duration": 4359300,
+    "prompt_eval_count": 608,
+    "total_duration": 9135862000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY consider\", \"interpretation_a\": \"The client is permitted, but not required, to confirm the handshake upon receiving an acknowledgement for a 1-RTT packet.\", \"interpretation_b\": \"The client is permitted, but not required, to confirm the handshake *only* upon receiving an acknowledgement for a 1-RTT packet, and must not use other methods.\", \"missing_information\": \"The draft does not specify whether the client *must* also receive a HANDSHAKE_DONE frame to confirm the handshake, or if the 1-RTT ACK is sufficient. This missing constraint affects implementation because a client could be implemented to confirm the handshake with only one of these signals, leading to interoperability issues.\", \"justification\": \"The use of 'MAY' introduces discretion, but the lack of further constraints on *when* the client can consider the handshake confirmed creates ambiguity. It's unclear if the 1-RTT ACK is the sole trigger, or if it's an alternative to the HANDSHAKE_DONE frame mentioned in the previous clause.\"}",
+  "record_id": "fadea4403d695febed35bb8d7d31a61da8627157351865d72a4325be6989f6fb",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "4.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.125
+}

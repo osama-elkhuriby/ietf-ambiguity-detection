@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "the lesser of a) the received value decremented by one (1) or b) the recipient's maximum supported value for Max-Forwards",
+    "interpretation_a": "If the recipient's maximum supported value is, for example, 5, and the received Max-Forwards is 6, the forwarded value will be 5.",
+    "interpretation_b": "If the recipient's maximum supported value is, for example, 5, and the received Max-Forwards is 4, the forwarded value will be 3.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'recipient's maximum supported value for Max-Forwards' is not defined within this document. This missing constraint allows for multiple reasonable implementations, as the maximum supported value could be determined in different ways.",
+    "missing_information": "The document does not define what the recipient's 'maximum supported value for Max-Forwards' is. Is this a configurable parameter, a fixed limit, or some other value? Without this definition, implementations could reasonably differ."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:17:15.153226+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-03",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "53a7bd13d5adea1f1a2af8a8ee7ece6402e7411ca9a1a2667c42eb51afdc5276",
+  "lineage_ids": "lineage:2b59675fccabebfde93723d4",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 242,
+    "load_duration": 10481500,
+    "prompt_eval_count": 623,
+    "total_duration": 9547602800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"the lesser of a) the received value decremented by one (1) or b) the recipient's maximum supported value for Max-Forwards\", \"interpretation_a\": \"If the recipient's maximum supported value is, for example, 5, and the received Max-Forwards is 6, the forwarded value will be 5.\", \"interpretation_b\": \"If the recipient's maximum supported value is, for example, 5, and the received Max-Forwards is 4, the forwarded value will be 3.\", \"missing_information\": \"The document does not define what the recipient's 'maximum supported value for Max-Forwards' is. Is this a configurable parameter, a fixed limit, or some other value? Without this definition, implementations could reasonably differ.\", \"justification\": \"The phrase 'recipient's maximum supported value for Max-Forwards' is not defined within this document. This missing constraint allows for multiple reasonable implementations, as the maximum supported value could be determined in different ways.\"}",
+  "record_id": "8e23261559d8d4e57b77632ef189319bc98a7173f08985cd1b3d6aa82a6c76d7",
+  "revision": "03",
+  "schema_version": 1,
+  "section_ids": "8.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.563
+}

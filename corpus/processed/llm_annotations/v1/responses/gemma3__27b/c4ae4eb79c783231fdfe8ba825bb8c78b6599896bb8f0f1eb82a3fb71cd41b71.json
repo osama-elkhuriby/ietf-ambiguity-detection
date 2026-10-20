@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "effective MTU of an interface varies packet-to-packet",
+    "interpretation_a": "The MSS is calculated based on the *minimum* MTU observed across all packets sent through the interface.",
+    "interpretation_b": "The MSS is calculated based on the *current* MTU for each packet, potentially changing with each packet sent.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'effective MTU of an interface varies packet-to-packet' does not specify *how* it varies. Does it mean the interface can dynamically change its MTU, or that different paths through the interface have different MTUs? The 'smallest effective MTU' could refer to the minimum MTU ever observed, or the MTU applicable to the current packet. This affects how the MSS is calculated.",
+    "missing_information": "It is unclear whether the 'smallest effective MTU' refers to the minimum MTU ever seen on the interface, or the MTU applicable to the current packet being constructed."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:27:48.010370+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "1f67e01babebe21f65f088c6e04f6292761c164c77f2427c85f34c35909045ca",
+  "lineage_ids": "lineage:f9d85b4ac530de754332c24a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 228,
+    "load_duration": 8605700,
+    "prompt_eval_count": 594,
+    "total_duration": 8710707000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"effective MTU of an interface varies packet-to-packet\", \"interpretation_a\": \"The MSS is calculated based on the *minimum* MTU observed across all packets sent through the interface.\", \"interpretation_b\": \"The MSS is calculated based on the *current* MTU for each packet, potentially changing with each packet sent.\", \"missing_information\": \"It is unclear whether the 'smallest effective MTU' refers to the minimum MTU ever seen on the interface, or the MTU applicable to the current packet being constructed.\", \"justification\": \"The phrase 'effective MTU of an interface varies packet-to-packet' does not specify *how* it varies. Does it mean the interface can dynamically change its MTU, or that different paths through the interface have different MTUs? The 'smallest effective MTU' could refer to the minimum MTU ever observed, or the MTU applicable to the current packet. This affects how the MSS is calculated.\"}",
+  "record_id": "c4ae4eb79c783231fdfe8ba825bb8c78b6599896bb8f0f1eb82a3fb71cd41b71",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.7.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.734
+}

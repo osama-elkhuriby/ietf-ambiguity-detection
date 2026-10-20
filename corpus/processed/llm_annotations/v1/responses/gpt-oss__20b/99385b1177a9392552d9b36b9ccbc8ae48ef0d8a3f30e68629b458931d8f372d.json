@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "A server that responds with a final status code before reading the entire request content SHOULD indicate whether it intends to close the connection (e.g., see Section 9.6 of [HTTP11]) or continue reading the request content.",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause permits two materially different implementation behaviours (e.g., indicating via a header versus closing the connection) without specifying the required mechanism, constituting an incomplete constraint that leads to ambiguity.",
+    "missing_information": "The clause does not specify the mechanism by which the server should indicate its intention to close the connection or continue reading the request content, leaving the implementation behavior under-specified. This missing constraint allows multiple reasonable interpretations of how the indication should be conveyed (e.g., via a Connection header, by closing the socket, or by other means)."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T07:16:12.765609+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "1e3dcb6dfc95faf60914f68ac8f8c33998154843e395a9b2e7954df6a9559b6b",
+  "lineage_ids": "lineage:486ebb698c743a23019bfa67",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 4831,
+    "load_duration": 7648400,
+    "prompt_eval_count": 699,
+    "total_duration": 41891100400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"A server that responds with a final status code before reading the entire request content SHOULD indicate whether it intends to close the connection (e.g., see Section 9.6 of [HTTP11]) or continue reading the request content.\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The clause does not specify the mechanism by which the server should indicate its intention to close the connection or continue reading the request content, leaving the implementation behavior under-specified. This missing constraint allows multiple reasonable interpretations of how the indication should be conveyed (e.g., via a Connection header, by closing the socket, or by other means).\",\n  \"justification\": \"The clause permits two materially different implementation behaviours (e.g., indicating via a header versus closing the connection) without specifying the required mechanism, constituting an incomplete constraint that leads to ambiguity.\"\n}",
+  "record_id": "99385b1177a9392552d9b36b9ccbc8ae48ef0d8a3f30e68629b458931d8f372d",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "10.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 41.891
+}

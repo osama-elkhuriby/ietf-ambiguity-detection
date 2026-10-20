@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY generate content of zero length",
+    "interpretation_a": "The server can send a 200 response with an empty body.",
+    "interpretation_b": "The server must send a 200 response with a body that has at least one byte.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' introduces a choice, but the phrase 'content of zero length' is open to interpretation. Does zero length qualify as 'content'? If not, the MAY clause is effectively a SHOULD, and if it does, the server has a legitimate choice. Without a clear definition, implementations could diverge.",
+    "missing_information": "The definition of 'content' and whether a zero-length body is considered 'content' is not explicitly defined. This impacts whether a server can legitimately send a 200 response with no body data."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:07:50.231167+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-16",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "fcdc9d9a85dd74ca2afca51b3319b4aad0c0f07ae90a40c85ed1f5d332162963",
+  "lineage_ids": "lineage:107b9e04fb3a15987d5cc3b6",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 199,
+    "load_duration": 19435900,
+    "prompt_eval_count": 646,
+    "total_duration": 7781377300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY generate content of zero length\", \"interpretation_a\": \"The server can send a 200 response with an empty body.\", \"interpretation_b\": \"The server must send a 200 response with a body that has at least one byte.\", \"missing_information\": \"The definition of 'content' and whether a zero-length body is considered 'content' is not explicitly defined. This impacts whether a server can legitimately send a 200 response with no body data.\",\"justification\": \"The use of 'MAY' introduces a choice, but the phrase 'content of zero length' is open to interpretation. Does zero length qualify as 'content'? If not, the MAY clause is effectively a SHOULD, and if it does, the server has a legitimate choice. Without a clear definition, implementations could diverge.\"}",
+  "record_id": "56a53be7b5b6d6e111915ea613d7e6f4d02e7197b9ac7150fd901ec88a865e0c",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "15.3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.781
+}

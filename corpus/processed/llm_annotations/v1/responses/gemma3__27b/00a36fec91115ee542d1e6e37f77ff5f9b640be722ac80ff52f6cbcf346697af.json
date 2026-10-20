@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "smaller SvcPriority",
+    "interpretation_a": "The RR with \"ech\" should have a SvcPriority value of 0, and the RR without \"ech\" should have a SvcPriority value of 1.",
+    "interpretation_b": "The RR with \"ech\" should have a SvcPriority value of 1, and the RR without \"ech\" should have a SvcPriority value of 2. Or any other combination where the \"ech\" RR has a numerically smaller value.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'smaller' is relative and lacks a concrete definition. Without knowing the valid range and granularity of SvcPriority, it's ambiguous how much smaller the 'ech' RR's priority needs to be to satisfy the requirement.",
+    "missing_information": "The clause does not define the range of valid SvcPriority values, or the granularity of the difference required to be considered 'smaller'. This affects implementation because different implementations might interpret 'smaller' differently, leading to inconsistent preference behavior."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:57:27.694602+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-08",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "6ab4140c1d6a0fab30d09d08ce53fa24fe0700dcef84f8a259980ee137206c36",
+  "lineage_ids": "lineage:f231002659d0dc11d66eb66d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 237,
+    "load_duration": 110341339000,
+    "prompt_eval_count": 573,
+    "total_duration": 119374011100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"smaller SvcPriority\", \"interpretation_a\": \"The RR with \\\"ech\\\" should have a SvcPriority value of 0, and the RR without \\\"ech\\\" should have a SvcPriority value of 1.\", \"interpretation_b\": \"The RR with \\\"ech\\\" should have a SvcPriority value of 1, and the RR without \\\"ech\\\" should have a SvcPriority value of 2. Or any other combination where the \\\"ech\\\" RR has a numerically smaller value.\", \"missing_information\": \"The clause does not define the range of valid SvcPriority values, or the granularity of the difference required to be considered 'smaller'. This affects implementation because different implementations might interpret 'smaller' differently, leading to inconsistent preference behavior.\", \"justification\": \"The term 'smaller' is relative and lacks a concrete definition. Without knowing the valid range and granularity of SvcPriority, it's ambiguous how much smaller the 'ech' RR's priority needs to be to satisfy the requirement.\"}",
+  "record_id": "00a36fec91115ee542d1e6e37f77ff5f9b640be722ac80ff52f6cbcf346697af",
+  "revision": "08",
+  "schema_version": 1,
+  "section_ids": "10.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 119.375
+}

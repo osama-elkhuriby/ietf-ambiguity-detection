@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "whenever it considers prior representations to be unacceptable",
+    "interpretation_a": "The server considers prior representations unacceptable if they are functionally different, even if the data is the same (e.g., different rendering based on user preferences).",
+    "interpretation_b": "The server considers prior representations unacceptable only if the data itself is different, regardless of functional differences in rendering.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'considers prior representations to be unacceptable' is open to interpretation. The server's criteria for determining unacceptability are not defined, leading to different implementations based on what constitutes an 'unacceptable' representation.",
+    "missing_information": "The definition of 'unacceptable' is not specified. Does 'unacceptable' refer to data equivalence, functional equivalence, or some other criterion?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:01:27.514082+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "56901f31f66343bd264c6f35ad23c6adef68ca9a08e17eda4061429d88eab032",
+  "lineage_ids": "lineage:ff00ad6432cc4e9090791a99",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 187,
+    "load_duration": 8729500,
+    "prompt_eval_count": 619,
+    "total_duration": 7297928500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"whenever it considers prior representations to be unacceptable\", \"interpretation_a\": \"The server considers prior representations unacceptable if they are functionally different, even if the data is the same (e.g., different rendering based on user preferences).\", \"interpretation_b\": \"The server considers prior representations unacceptable only if the data itself is different, regardless of functional differences in rendering.\", \"missing_information\": \"The definition of 'unacceptable' is not specified. Does 'unacceptable' refer to data equivalence, functional equivalence, or some other criterion?\",\"justification\": \"The phrase 'considers prior representations to be unacceptable' is open to interpretation. The server's criteria for determining unacceptability are not defined, leading to different implementations based on what constitutes an 'unacceptable' representation.\"}",
+  "record_id": "32935bab3d9474a6b8c7fbd6221bea0bd94de2e8522d003b2f606874d582e782",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "8.8.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.297
+}

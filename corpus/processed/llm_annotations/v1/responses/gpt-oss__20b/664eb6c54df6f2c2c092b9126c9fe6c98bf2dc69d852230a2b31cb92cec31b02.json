@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that the server should send PUSH_PROMISE or DUPLICATE_PUSH frames before sending any HEADERS or DATA frames that reference the promised responses. The wording does not allow for materially different implementation behaviours or lacks a concrete constraint that would change the operational interpretation.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T09:29:51.299215+00:00",
+  "document_id": "draft-ietf-quic-http-25",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "38f2fb8cd4f5636706c703d4fae3263caf4fb84c44cfbbfebe61cedf56c07aae",
+  "lineage_ids": "lineage:4c0adf675018ad147b8ee33e",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1597,
+    "load_duration": 4842500,
+    "prompt_eval_count": 585,
+    "total_duration": 13867949400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that the server should send PUSH_PROMISE or DUPLICATE_PUSH frames before sending any HEADERS or DATA frames that reference the promised responses. The wording does not allow for materially different implementation behaviours or lacks a concrete constraint that would change the operational interpretation.\"\n}",
+  "record_id": "664eb6c54df6f2c2c092b9126c9fe6c98bf2dc69d852230a2b31cb92cec31b02",
+  "revision": "25",
+  "schema_version": 1,
+  "section_ids": "4.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 13.859
+}

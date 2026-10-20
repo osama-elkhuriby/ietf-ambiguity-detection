@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "at least one unidirectional stream",
+    "interpretation_a": "The peer must be allowed to create exactly one unidirectional stream.",
+    "interpretation_b": "The peer must be allowed to create one or more unidirectional streams, with 'at least one' being a lower bound.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'at least one' is vague. It doesn't specify an upper bound, or whether multiple streams are permissible beyond the minimum. This affects implementation because a server could choose to only allow one stream, while another could allow many, both satisfying the requirement.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:10:00.736105+00:00",
+  "document_id": "draft-ietf-quic-http-22",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "cf99bc49cb33881c8eafd18651a1521b5c656f7fda8c20530f43229371261ec2",
+  "lineage_ids": "lineage:3789215735e384d5609ac274",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 147,
+    "load_duration": 4991600,
+    "prompt_eval_count": 678,
+    "total_duration": 6212006300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"at least one unidirectional stream\", \"interpretation_a\": \"The peer must be allowed to create exactly one unidirectional stream.\", \"interpretation_b\": \"The peer must be allowed to create one or more unidirectional streams, with 'at least one' being a lower bound.\", \"missing_information\": \"\", \"justification\": \"The phrase 'at least one' is vague. It doesn't specify an upper bound, or whether multiple streams are permissible beyond the minimum. This affects implementation because a server could choose to only allow one stream, while another could allow many, both satisfying the requirement.\"}",
+  "record_id": "d496833e1272481e08f9503cf96d3c8ac61d849fccf09eb615e7274a94d6ad13",
+  "revision": "22",
+  "schema_version": 1,
+  "section_ids": "6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.234
+}

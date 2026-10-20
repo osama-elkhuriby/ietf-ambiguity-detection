@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "at least to determine whether more urgent data remains to be read",
+    "interpretation_a": "The implementation must provide a mechanism to report the *exact* amount of remaining urgent data.",
+    "interpretation_b": "The implementation only needs to provide a boolean indicator (yes/no) of whether any urgent data remains.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'at least to determine whether' introduces ambiguity. It allows for either a precise count of remaining urgent data or a simple boolean indicator. Both interpretations satisfy the 'at least' condition, creating a materially different implementation behaviour.",
+    "missing_information": "The clause does not specify the granularity of information that must be provided. Is a precise count required, or is a simple 'urgent data present' flag sufficient?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:27:09.456767+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "bd622bcb73a6f22fbeb80fae4d27a5f2ba581e2d3804f16682ea7b217715a190",
+  "lineage_ids": "lineage:d9bef07b731e1f9bf8f90db5",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 181,
+    "load_duration": 8342900,
+    "prompt_eval_count": 608,
+    "total_duration": 7033953700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"at least to determine whether more urgent data remains to be read\", \"interpretation_a\": \"The implementation must provide a mechanism to report the *exact* amount of remaining urgent data.\", \"interpretation_b\": \"The implementation only needs to provide a boolean indicator (yes/no) of whether any urgent data remains.\", \"missing_information\": \"The clause does not specify the granularity of information that must be provided. Is a precise count required, or is a simple 'urgent data present' flag sufficient?\",\"justification\": \"The phrase 'at least to determine whether' introduces ambiguity. It allows for either a precise count of remaining urgent data or a simple boolean indicator. Both interpretations satisfy the 'at least' condition, creating a materially different implementation behaviour.\"}",
+  "record_id": "b8d888d4726f8456f88ea5529c5f9094d187656d252c17a2a3161f8ba927b471",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.8.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.032
+}

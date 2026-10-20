@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Once a client receives a packet from the server which is not a Version Negotiation packet",
+    "interpretation_a": "Any packet that isn't a Version Negotiation packet will trigger the ignoring of further Version Negotiation packets. This includes initial packets, data packets, etc.",
+    "interpretation_b": "Only a successfully parsed and processed packet (i.e., one that doesn't cause an immediate error) that isn't a Version Negotiation packet will trigger the ignoring of further Version Negotiation packets. A malformed packet that is rejected would not count.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'a packet from the server' is not precise. Does it refer to any packet received from the server's IP address/port, or does it require successful parsing and processing of the packet? The difference is material because a client might receive a malformed packet that it discards, and it's unclear whether that should trigger the ignoring of further Version Negotiation packets.",
+    "missing_information": "It is unclear whether a packet that fails to parse or is otherwise rejected counts as a packet 'from the server' for the purposes of this clause."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:35:27.959940+00:00",
+  "document_id": "draft-ietf-quic-transport-02",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "6fcd068e7b2ca76999683176d0232385db40b3a5b151085cd8e0ebc4dca472de",
+  "lineage_ids": "lineage:5a283ce1ad9425ac66536a15",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 257,
+    "load_duration": 3600500,
+    "prompt_eval_count": 564,
+    "total_duration": 9500530600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Once a client receives a packet from the server which is not a Version Negotiation packet\", \"interpretation_a\": \"Any packet that isn't a Version Negotiation packet will trigger the ignoring of further Version Negotiation packets. This includes initial packets, data packets, etc.\", \"interpretation_b\": \"Only a successfully parsed and processed packet (i.e., one that doesn't cause an immediate error) that isn't a Version Negotiation packet will trigger the ignoring of further Version Negotiation packets. A malformed packet that is rejected would not count.\", \"missing_information\": \"It is unclear whether a packet that fails to parse or is otherwise rejected counts as a packet 'from the server' for the purposes of this clause.\", \"justification\": \"The phrase 'a packet from the server' is not precise. Does it refer to any packet received from the server's IP address/port, or does it require successful parsing and processing of the packet? The difference is material because a client might receive a malformed packet that it discards, and it's unclear whether that should trigger the ignoring of further Version Negotiation packets.\"}",
+  "record_id": "7b432a477d1fe6ed5717a0d005ae83ae996e27120d3b0b9f84e58d166214e67a",
+  "revision": "02",
+  "schema_version": 1,
+  "section_ids": "7.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.5
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Any data received after a closure alert is ignored.",
+    "interpretation_a": "All data received after the alert, regardless of fragmentation or protocol context, is discarded.",
+    "interpretation_b": "Data *intended* as part of the TLS connection is ignored, but out-of-band or unrelated transport layer data might still be processed.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether the ignored data refers to all received bytes or only those belonging to the TLS connection. This distinction is important because fragmented packets could arrive after the alert, and the receiver needs to know if it should discard those fragments as well.",
+    "missing_information": "The scope of 'data' is not defined. Does it refer to all bytes received on the connection, or only those intended as TLS data? This affects how a receiver handles potentially fragmented packets."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:37:18.235248+00:00",
+  "document_id": "draft-ietf-tls-tls13-17",
+  "family_id": "draft-ietf-tls-tls13",
+  "input_fingerprint": "ca75d316964400d2a7a43e066930a1071c497933eeb45abda6e9bba27e86e746",
+  "lineage_ids": "lineage:f3304a945987d3879a839446",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 198,
+    "load_duration": 18124300,
+    "prompt_eval_count": 565,
+    "total_duration": 7603260600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Any data received after a closure alert is ignored.\", \"interpretation_a\": \"All data received after the alert, regardless of fragmentation or protocol context, is discarded.\", \"interpretation_b\": \"Data *intended* as part of the TLS connection is ignored, but out-of-band or unrelated transport layer data might still be processed.\", \"missing_information\": \"The scope of 'data' is not defined. Does it refer to all bytes received on the connection, or only those intended as TLS data? This affects how a receiver handles potentially fragmented packets.\", \"justification\": \"The clause does not specify whether the ignored data refers to all received bytes or only those belonging to the TLS connection. This distinction is important because fragmented packets could arrive after the alert, and the receiver needs to know if it should discard those fragments as well.\"}",
+  "record_id": "effc064031d3a555cc927eddb98d0469d0e5016d4e9f20cd6b7fbd4c7bbe1750",
+  "revision": "17",
+  "schema_version": 1,
+  "section_ids": "6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.609
+}

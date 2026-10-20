@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY combine those responses",
+    "interpretation_a": "The client is permitted, but not required, to combine the responses.",
+    "interpretation_b": "The client is permitted to combine the responses, but it is unclear if the combination must be done automatically upon receipt of multiple partial responses.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' is not inherently ambiguous, but in this context, it's unclear if the client *can* combine the responses or *must* combine them under certain conditions. This creates a missing constraint on implementation behavior.",
+    "missing_information": "It is unclear whether the 'MAY' allows for optional combination or if the client must conditionally combine responses based on some other criteria not specified in the text."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:04:21.437194+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "2c29f3e6ada9fbaa4f8506299e03ff1df04597493ffa423d9ad59603b29429ea",
+  "lineage_ids": "lineage:9a452b6d0fa3cfc25f31dc26",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 176,
+    "load_duration": 9746400,
+    "prompt_eval_count": 610,
+    "total_duration": 6889576300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY combine those responses\", \"interpretation_a\": \"The client is permitted, but not required, to combine the responses.\", \"interpretation_b\": \"The client is permitted to combine the responses, but it is unclear if the combination must be done automatically upon receipt of multiple partial responses.\", \"missing_information\": \"It is unclear whether the 'MAY' allows for optional combination or if the client must conditionally combine responses based on some other criteria not specified in the text.\",\"justification\": \"The use of 'MAY' is not inherently ambiguous, but in this context, it's unclear if the client *can* combine the responses or *must* combine them under certain conditions. This creates a missing constraint on implementation behavior.\"}",
+  "record_id": "45a5223e3ae65019493c2ba57b395ae2fb813a87e279e91e6d233b4c8ad01df8",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "15.3.7.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.891
+}

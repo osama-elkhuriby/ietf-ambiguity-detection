@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "add network load without establishing packet loss",
+    "interpretation_a": "The probe packets contribute to the total network load, but are not considered lost if no ACK is received, meaning they are still counted as in-flight.",
+    "interpretation_b": "The probe packets contribute to the total network load, and are considered lost if no ACK is received within a certain timeframe, meaning they *are* counted as lost.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states probe packets 'add network load without establishing packet loss'. This is ambiguous because it doesn't specify *when* a probe packet is considered lost. A reasonable interpretation is that the packet remains 'in flight' until an ACK is received. Another reasonable interpretation is that a probe packet is considered lost after a timeout, and thus contributes to loss calculations. The missing constraint is a definition of the timeout period for probe packets.",
+    "missing_information": "The timeframe within which a probe packet is considered lost is not defined. Without this, implementations could reasonably differ on when to stop counting the probe packet as 'in flight' and treat it as lost."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:28:53.530152+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "a7428ec7585649c4194c04503ae46039b6dd562ace1c7d729428172979928a91",
+  "lineage_ids": "lineage:3bd0cdd4e3387f79f6f3b970",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 250,
+    "load_duration": 2714200,
+    "prompt_eval_count": 574,
+    "total_duration": 9326190100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"add network load without establishing packet loss\", \"interpretation_a\": \"The probe packets contribute to the total network load, but are not considered lost if no ACK is received, meaning they are still counted as in-flight.\", \"interpretation_b\": \"The probe packets contribute to the total network load, and are considered lost if no ACK is received within a certain timeframe, meaning they *are* counted as lost.\", \"missing_information\": \"The timeframe within which a probe packet is considered lost is not defined. Without this, implementations could reasonably differ on when to stop counting the probe packet as 'in flight' and treat it as lost.\",\"justification\": \"The clause states probe packets 'add network load without establishing packet loss'. This is ambiguous because it doesn't specify *when* a probe packet is considered lost. A reasonable interpretation is that the packet remains 'in flight' until an ACK is received. Another reasonable interpretation is that a probe packet is considered lost after a timeout, and thus contributes to loss calculations. The missing constraint is a definition of the timeout period for probe packets.\"}",
+  "record_id": "becd1fa36336c4fd70eee7924c7d6d011f6c9beaae565a6646c61a33ebfbf95f",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.328
+}

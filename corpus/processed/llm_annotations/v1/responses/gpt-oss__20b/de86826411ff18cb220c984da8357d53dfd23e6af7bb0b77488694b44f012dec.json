@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "unrelated registrations",
+    "interpretation_a": "Registrations that are not related to the HTTP/2 registry at all, i.e., frame types that have no counterpart in the HTTP/2 registry.",
+    "interpretation_b": "Registrations that are not related to the specific value being considered, i.e., any registration that does not conflict with the same value in the corresponding registry.",
+    "is_ambiguous": "yes",
+    "justification": "The term \"unrelated registrations\" is undefined and could be interpreted in multiple ways, leading to materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T10:36:54.965313+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "d846a97218545eb35c696de772bc7d5e0470afea65226839694545638ab4b539",
+  "lineage_ids": "lineage:44e5c76c0ce03105b695c45e",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 353,
+    "load_duration": 6449300,
+    "prompt_eval_count": 741,
+    "total_duration": 3229737000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-1\",\n  \"evidence_span\": \"unrelated registrations\",\n  \"interpretation_a\": \"Registrations that are not related to the HTTP/2 registry at all, i.e., frame types that have no counterpart in the HTTP/2 registry.\",\n  \"interpretation_b\": \"Registrations that are not related to the specific value being considered, i.e., any registration that does not conflict with the same value in the corresponding registry.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The term \\\"unrelated registrations\\\" is undefined and could be interpreted in multiple ways, leading to materially different implementation behaviours.\"\n}",
+  "record_id": "de86826411ff18cb220c984da8357d53dfd23e6af7bb0b77488694b44f012dec",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "11.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 13.234
+}

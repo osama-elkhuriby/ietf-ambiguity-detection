@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT generate an ACK frame",
+    "interpretation_a": "An endpoint should not generate an ACK frame if the received packet *only* contains ACK or PADDING frames. This implies that if the packet contains other frame types in addition to ACK/PADDING, an ACK frame can be generated.",
+    "interpretation_b": "An endpoint should not generate an ACK frame if the received packet contains *any* ACK or PADDING frames, regardless of other frame types present. This would be a stricter interpretation.",
+    "is_ambiguous": "yes",
+    "justification": "The word 'only' is open to interpretation. Does it mean 'exclusively' or 'primarily'? The difference affects whether an ACK frame can be generated if the packet contains ACK/PADDING frames *and* other frame types.",
+    "missing_information": "The clause does not explicitly define what constitutes 'only'. Does 'only' mean exclusively, or does it allow for the presence of other frame types alongside ACK/PADDING?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:16:15.002066+00:00",
+  "document_id": "draft-ietf-quic-transport-05",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "f1f8a598c1b1ad2699c4f9c63fd47ca0b588fe398bfeba826d0932094b1773af",
+  "lineage_ids": "lineage:4d2064f14441c47bdc274eec",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 220,
+    "load_duration": 4359000,
+    "prompt_eval_count": 587,
+    "total_duration": 8242912300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT generate an ACK frame\", \"interpretation_a\": \"An endpoint should not generate an ACK frame if the received packet *only* contains ACK or PADDING frames. This implies that if the packet contains other frame types in addition to ACK/PADDING, an ACK frame can be generated.\", \"interpretation_b\": \"An endpoint should not generate an ACK frame if the received packet contains *any* ACK or PADDING frames, regardless of other frame types present. This would be a stricter interpretation.\", \"missing_information\": \"The clause does not explicitly define what constitutes 'only'. Does 'only' mean exclusively, or does it allow for the presence of other frame types alongside ACK/PADDING?\",\"justification\": \"The word 'only' is open to interpretation. Does it mean 'exclusively' or 'primarily'? The difference affects whether an ACK frame can be generated if the packet contains ACK/PADDING frames *and* other frame types.\"}",
+  "record_id": "40420eae0b1c2a1636781f264ed0c2c885ad2fa7a1d3fb3e9c5f4b71e1e79045",
+  "revision": "05",
+  "schema_version": 1,
+  "section_ids": "9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.25
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "if one or more its constituent fragments is determined to be an overlapping fragment",
+    "interpretation_a": "The condition applies if *any* fragment is determined to be overlapping, triggering discard.",
+    "interpretation_b": "The condition applies only if *all* fragments are determined to be overlapping, triggering discard.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'one or more' is ambiguous in the context of fragment overlap. It's unclear if a single overlapping fragment is sufficient to trigger the discard behavior, or if multiple fragments must be identified as overlapping.",
+    "missing_information": "The clause does not define what constitutes an 'overlapping fragment'. Without a precise definition, implementations could reasonably differ on whether a single overlapping fragment is sufficient to trigger discard, or if multiple overlapping fragments are required."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:26:44.506261+00:00",
+  "document_id": "draft-ietf-6man-rfc2460bis-09",
+  "family_id": "draft-ietf-6man-rfc2460bis",
+  "input_fingerprint": "a7b13195b6156ccef1bfec8e4bf98873800bf8acedf7a2adcdc2cf769feb1bdf",
+  "lineage_ids": "lineage:07f06a080e39a7d52a740b85",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 185,
+    "load_duration": 109106930300,
+    "prompt_eval_count": 594,
+    "total_duration": 116468470900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"if one or more its constituent fragments is determined to be an overlapping fragment\", \"interpretation_a\": \"The condition applies if *any* fragment is determined to be overlapping, triggering discard.\", \"interpretation_b\": \"The condition applies only if *all* fragments are determined to be overlapping, triggering discard.\", \"missing_information\": \"The clause does not define what constitutes an 'overlapping fragment'. Without a precise definition, implementations could reasonably differ on whether a single overlapping fragment is sufficient to trigger discard, or if multiple overlapping fragments are required.\",\"justification\": \"The phrase 'one or more' is ambiguous in the context of fragment overlap. It's unclear if a single overlapping fragment is sufficient to trigger the discard behavior, or if multiple fragments must be identified as overlapping.\"}",
+  "record_id": "8dd0e1eb528a1b0a4ab82a41f9ea8cc3b905d311367f8d0bbc28d77278851e76",
+  "revision": "09",
+  "schema_version": 1,
+  "section_ids": "B",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 116.469
+}

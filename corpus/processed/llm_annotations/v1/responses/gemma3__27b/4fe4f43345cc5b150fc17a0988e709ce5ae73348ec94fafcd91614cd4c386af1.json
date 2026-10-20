@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "either reject the message or replace each of those characters with SP",
+    "interpretation_a": "Implementations can choose to reject the entire message if CR or NUL characters are found.",
+    "interpretation_b": "Implementations can choose to replace CR or NUL characters with SP and continue processing the message.",
+    "is_ambiguous": "yes",
+    "justification": "The clause uses \"either/or\" which allows for two distinct implementation choices. There is no further constraint to determine which action MUST be taken, only that one of them must be.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:06:02.710725+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-17",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "455ac00f3614a2c9fe8da85415a4df17c7742f00f740035ee9077d7ac6731217",
+  "lineage_ids": "lineage:52deb7b1827ffa0c61981177",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 138,
+    "load_duration": 8829900,
+    "prompt_eval_count": 625,
+    "total_duration": 5498788800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"either reject the message or replace each of those characters with SP\", \"interpretation_a\": \"Implementations can choose to reject the entire message if CR or NUL characters are found.\", \"interpretation_b\": \"Implementations can choose to replace CR or NUL characters with SP and continue processing the message.\", \"missing_information\": \"\", \"justification\": \"The clause uses \\\"either/or\\\" which allows for two distinct implementation choices. There is no further constraint to determine which action MUST be taken, only that one of them must be.\"}",
+  "record_id": "4fe4f43345cc5b150fc17a0988e709ce5ae73348ec94fafcd91614cd4c386af1",
+  "revision": "17",
+  "schema_version": 1,
+  "section_ids": "5.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.5
+}

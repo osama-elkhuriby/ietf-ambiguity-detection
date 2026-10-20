@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "Requests or responses containing invalid header field names MUST be treated as malformed.",
+    "interpretation_a": "The header field name is invalid according to the HTTP/2 header field encoding rules.",
+    "interpretation_b": "The header field name is invalid according to the HTTP/1.1 Internet Message Syntax rules.",
+    "is_ambiguous": "yes",
+    "justification": "The term \"invalid header field names\" is undefined in the clause, allowing two distinct, reasonable interpretations regarding which specification defines validity.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T04:02:15.489785+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-00",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "534265c8075c2486a68097926dcbe1e1f8b743339313d906f0d6cfaa793540a1",
+  "lineage_ids": "lineage:15cfe8e32ef6681dfe826b98",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 309,
+    "load_duration": 4518300,
+    "prompt_eval_count": 749,
+    "total_duration": 2813156500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-1\",\n  \"evidence_span\": \"Requests or responses containing invalid header field names MUST be treated as malformed.\",\n  \"interpretation_a\": \"The header field name is invalid according to the HTTP/2 header field encoding rules.\",\n  \"interpretation_b\": \"The header field name is invalid according to the HTTP/1.1 Internet Message Syntax rules.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The term \\\"invalid header field names\\\" is undefined in the clause, allowing two distinct, reasonable interpretations regarding which specification defines validity.\"\n}",
+  "record_id": "2f650217161f81357e0c967a93643b0e48b4c5e975a28fad4cf94cbf36c11360",
+  "revision": "00",
+  "schema_version": 1,
+  "section_ids": "10.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.406
+}

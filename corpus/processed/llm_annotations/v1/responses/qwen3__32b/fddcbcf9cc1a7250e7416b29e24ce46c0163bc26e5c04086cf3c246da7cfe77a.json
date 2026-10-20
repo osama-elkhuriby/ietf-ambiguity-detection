@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause provides a clear and unambiguous instruction: when the packet number reaches 2^62 - 1, the sender must close the connection without sending a CONNECTION_CLOSE frame or further packets. Additionally, it specifies that an endpoint may send a Stateless Reset in response to further packets. There is no ambiguity in the required behavior, as the language is prescriptive and does not allow for multiple materially different interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:54:59.504918+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "1a384b565e317111c9eebfd248d35b7f8dce26307306ca0699fa5f44b21a3d6d",
+  "lineage_ids": "lineage:c433f9eab113d10a31d70973",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 140,
+    "load_duration": 4513500,
+    "prompt_eval_count": 576,
+    "total_duration": 5756431600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause provides a clear and unambiguous instruction: when the packet number reaches 2^62 - 1, the sender must close the connection without sending a CONNECTION_CLOSE frame or further packets. Additionally, it specifies that an endpoint may send a Stateless Reset in response to further packets. There is no ambiguity in the required behavior, as the language is prescriptive and does not allow for multiple materially different interpretations.\"\n}",
+  "record_id": "fddcbcf9cc1a7250e7416b29e24ce46c0163bc26e5c04086cf3c246da7cfe77a",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "12.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.765
+}

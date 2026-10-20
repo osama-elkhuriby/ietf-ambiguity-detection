@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause uses the word 'MAY', which grants the sender discretionary authority to send a packet even if the bytes in flight exceed the congestion window. This is not an ambiguity but a deliberate allowance for flexibility in implementation. There is no conflicting or missing constraint that would lead to materially different interpretations affecting implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:26:20.445228+00:00",
+  "document_id": "draft-ietf-quic-recovery-29",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "61651b2b534e11ecab758fb9e2954c54a70f07e288d3ab6ad5dc9034eb73c612",
+  "lineage_ids": "lineage:354337a61f1525444cefe045",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 118,
+    "load_duration": 7680900,
+    "prompt_eval_count": 553,
+    "total_duration": 4857780000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause uses the word 'MAY', which grants the sender discretionary authority to send a packet even if the bytes in flight exceed the congestion window. This is not an ambiguity but a deliberate allowance for flexibility in implementation. There is no conflicting or missing constraint that would lead to materially different interpretations affecting implementation behavior.\"\n}",
+  "record_id": "c01e5cb8e236c7d97e8992fe1d85ace0404784eccc72aa67ddddd86b3170e1c0",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "7.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 4.859
+}

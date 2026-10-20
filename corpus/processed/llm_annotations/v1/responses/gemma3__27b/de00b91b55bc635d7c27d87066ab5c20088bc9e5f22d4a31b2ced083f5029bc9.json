@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST only be sent",
+    "interpretation_a": "PUSH_PROMISE frames can be sent on a peer-initiated stream that is in the \"open\" state.",
+    "interpretation_b": "PUSH_PROMISE frames can be sent on a peer-initiated stream that is in the \"half-closed (remote)\" state.",
+    "is_ambiguous": "yes",
+    "justification": "The use of \"either\" does not clearly state if both conditions must be met, or if only one is sufficient. This impacts implementation as a receiver must determine if a PUSH_PROMISE is valid if the stream is only in one of the states.",
+    "missing_information": "The clause does not specify whether both states must be satisfied, or if either state is sufficient. A missing constraint on the logical AND/OR relationship between the two states creates ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:50:07.693289+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "b5e767e04209a8198d97773be45469c512b92f92dfcc97f26c414c4f7193fdca",
+  "lineage_ids": "lineage:550e81158d17f2cb88c7d1d2",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 198,
+    "load_duration": 19819600,
+    "prompt_eval_count": 597,
+    "total_duration": 7724536500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST only be sent\", \"interpretation_a\": \"PUSH_PROMISE frames can be sent on a peer-initiated stream that is in the \\\"open\\\" state.\", \"interpretation_b\": \"PUSH_PROMISE frames can be sent on a peer-initiated stream that is in the \\\"half-closed (remote)\\\" state.\", \"missing_information\": \"The clause does not specify whether both states must be satisfied, or if either state is sufficient. A missing constraint on the logical AND/OR relationship between the two states creates ambiguity.\",\"justification\": \"The use of \\\"either\\\" does not clearly state if both conditions must be met, or if only one is sufficient. This impacts implementation as a receiver must determine if a PUSH_PROMISE is valid if the stream is only in one of the states.\"}",
+  "record_id": "de00b91b55bc635d7c27d87066ab5c20088bc9e5f22d4a31b2ced083f5029bc9",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.735
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Content-Range header field",
+    "interpretation_a": "The Content-Range header field must include the full range of the original resource, even if the body part only contains a portion of that range.",
+    "interpretation_b": "The Content-Range header field must only reflect the portion of the original resource contained within the current body part.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'corresponding to the range being enclosed in that body part' is open to interpretation. Does 'corresponding to' mean the full range of the resource, or just the portion of the range represented by the current body part?",
+    "missing_information": "The specification does not define how the Content-Range header field should be constructed when dealing with multiple parts. Specifically, it's unclear whether the range should refer to the entire original resource or just the portion contained in the current part."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:12:24.812536+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-13",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "61e987a3b073bf74779b4ffd230b4a398af9d22ce0a702e5fc9c731c0c0c7bdc",
+  "lineage_ids": "lineage:6c839f4ba29e7cdb88f28f14",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 201,
+    "load_duration": 12231900,
+    "prompt_eval_count": 632,
+    "total_duration": 7748968700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Content-Range header field\", \"interpretation_a\": \"The Content-Range header field must include the full range of the original resource, even if the body part only contains a portion of that range.\", \"interpretation_b\": \"The Content-Range header field must only reflect the portion of the original resource contained within the current body part.\", \"missing_information\": \"The specification does not define how the Content-Range header field should be constructed when dealing with multiple parts. Specifically, it's unclear whether the range should refer to the entire original resource or just the portion contained in the current part.\",\"justification\": \"The phrase 'corresponding to the range being enclosed in that body part' is open to interpretation. Does 'corresponding to' mean the full range of the resource, or just the portion of the range represented by the current body part?\"}",
+  "record_id": "6f49941878c38d5551ebe8b7a66567dfade7e63745fe5f5df26387d202bcb64c",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "15.3.7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.766
+}

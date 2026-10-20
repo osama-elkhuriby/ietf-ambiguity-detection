@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Resumed connections over the same network SHOULD use the previous connection's final smoothed RTT value as the resumed connection's initial RTT.",
+    "interpretation_a": "Use the final smoothed RTT of the most recently closed connection on the same network as the initial RTT for the resumed connection.",
+    "interpretation_b": "Use the final smoothed RTT of the earliest closed connection on the same network as the initial RTT for the resumed connection.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify which previous connection to reference when more than one exists, leading to materially different implementation behaviours.",
+    "missing_information": "Which previous connection's RTT to use if multiple previous connections exist on the same network?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T11:44:17.616052+00:00",
+  "document_id": "draft-ietf-quic-recovery-27",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "a14c0d4607bebe65d4ec9048b7bb5455b99fd4d9faef42aeb680daba1a42af1b",
+  "lineage_ids": "lineage:6e0b627f61dba771033f2f59",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1415,
+    "load_duration": 4043100,
+    "prompt_eval_count": 604,
+    "total_duration": 12184337400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"Resumed connections over the same network SHOULD use the previous connection's final smoothed RTT value as the resumed connection's initial RTT.\",\n  \"interpretation_a\": \"Use the final smoothed RTT of the most recently closed connection on the same network as the initial RTT for the resumed connection.\",\n  \"interpretation_b\": \"Use the final smoothed RTT of the earliest closed connection on the same network as the initial RTT for the resumed connection.\",\n  \"missing_information\": \"Which previous connection's RTT to use if multiple previous connections exist on the same network?\",\n  \"justification\": \"The clause does not specify which previous connection to reference when more than one exists, leading to materially different implementation behaviours.\"\n}",
+  "record_id": "aca66be0888789405d3cf64eba3e0472dffe6b421b4e6df318d2c9e278e8d7bb",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "5.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 12.188
+}

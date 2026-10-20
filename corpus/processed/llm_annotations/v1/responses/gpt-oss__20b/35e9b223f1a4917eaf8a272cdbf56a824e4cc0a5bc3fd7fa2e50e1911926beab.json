@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously specifies that when either side closes its connection, the intermediary must attempt to forward any data originating from the closed side that has not yet been delivered, then close both connections and discard any remaining undelivered data. The wording does not permit two materially different implementation behaviours nor does it omit a concrete constraint that would lead to divergent interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T05:56:22.555722+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "fcb188d337e759b8aa58bb6126b0480ad9e694fae439a76268b8a413c173b4c9",
+  "lineage_ids": "lineage:c96df467adcf75dd6a514d29",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 5807,
+    "load_duration": 4695300,
+    "prompt_eval_count": 604,
+    "total_duration": 50170664100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously specifies that when either side closes its connection, the intermediary must attempt to forward any data originating from the closed side that has not yet been delivered, then close both connections and discard any remaining undelivered data. The wording does not permit two materially different implementation behaviours nor does it omit a concrete constraint that would lead to divergent interpretations.\"\n}",
+  "record_id": "35e9b223f1a4917eaf8a272cdbf56a824e4cc0a5bc3fd7fa2e50e1911926beab",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "9.3.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 50.172
+}

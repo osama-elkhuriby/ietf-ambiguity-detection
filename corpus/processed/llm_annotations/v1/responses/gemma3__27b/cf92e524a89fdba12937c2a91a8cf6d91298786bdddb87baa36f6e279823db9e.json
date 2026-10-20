@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD use a preferred address",
+    "interpretation_a": "The client MUST use a preferred address, even if it is not ideal.",
+    "interpretation_b": "The client MAY use a preferred address, but can choose not to.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' creates ambiguity. Does the client *have* to use a preferred address, or is it merely recommended? The difference affects implementation, as a strict requirement would necessitate checking for and using a preferred address, while a recommendation allows for flexibility.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:04:05.495550+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "8053fe809fe61a1754192e14cfa1e676ff75162e232e921678f0f254dabe6400",
+  "lineage_ids": "lineage:0e75b5b218b4087aee33c1ec",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 141,
+    "load_duration": 4632500,
+    "prompt_eval_count": 587,
+    "total_duration": 5440426300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD use a preferred address\", \"interpretation_a\": \"The client MUST use a preferred address, even if it is not ideal.\", \"interpretation_b\": \"The client MAY use a preferred address, but can choose not to.\", \"missing_information\": \"\", \"justification\": \"The use of 'SHOULD' creates ambiguity. Does the client *have* to use a preferred address, or is it merely recommended? The difference affects implementation, as a strict requirement would necessitate checking for and using a preferred address, while a recommendation allows for flexibility.\"}",
+  "record_id": "cf92e524a89fdba12937c2a91a8cf6d91298786bdddb87baa36f6e279823db9e",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9.6.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.453
+}

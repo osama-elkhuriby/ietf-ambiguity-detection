@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously requires that any request or response containing a character not permitted in a header field value must be treated as malformed. The preceding sentence merely warns that CR, LF, and NUL may be exploited if translated verbatim, but does not alter the normative requirement. The definition of permitted characters is provided in RFC7230, so no missing constraint or alternative interpretation exists.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T03:46:35.479590+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-00",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "a4ee413d6e4036f1181c0820f1976d57e48fe21e9b2b2d6d5ad68fc6d217db15",
+  "lineage_ids": "lineage:8ebcef40acee4889aa4b8e49",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1073,
+    "load_duration": 4119900,
+    "prompt_eval_count": 647,
+    "total_duration": 9436393400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously requires that any request or response containing a character not permitted in a header field value must be treated as malformed. The preceding sentence merely warns that CR, LF, and NUL may be exploited if translated verbatim, but does not alter the normative requirement. The definition of permitted characters is provided in RFC7230, so no missing constraint or alternative interpretation exists.\"\n}",
+  "record_id": "0cc9a206fa58da1f2a6e3ebbea47b71320e6c73ef3d5537a6c0eb331004d2690",
+  "revision": "00",
+  "schema_version": 1,
+  "section_ids": "10.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.437
+}

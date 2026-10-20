@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "ignore max_ack_delay",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify whether the endpoint should ignore the max_ack_delay field itself or only its value in RTT calculations, leading to two materially different implementation behaviours.",
+    "missing_information": "whether to ignore the max_ack_delay field entirely or just its value in RTT calculations until the handshake is confirmed"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T11:05:33.891680+00:00",
+  "document_id": "draft-ietf-quic-recovery-33",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "c9237cfc454c80a026771d09a142b1e106db5d659a06f33d09076622a506a4c4",
+  "lineage_ids": "lineage:e6c775e26afdd7402bdb89ae",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1671,
+    "load_duration": 4592600,
+    "prompt_eval_count": 617,
+    "total_duration": 14535981300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"ignore max_ack_delay\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"whether to ignore the max_ack_delay field entirely or just its value in RTT calculations until the handshake is confirmed\",\n  \"justification\": \"The clause does not specify whether the endpoint should ignore the max_ack_delay field itself or only its value in RTT calculations, leading to two materially different implementation behaviours.\"\n}",
+  "record_id": "2213af3382ea7165164f7671f78105540d74161c6998e3e17370f6c865043989",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "5.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 14.532
+}

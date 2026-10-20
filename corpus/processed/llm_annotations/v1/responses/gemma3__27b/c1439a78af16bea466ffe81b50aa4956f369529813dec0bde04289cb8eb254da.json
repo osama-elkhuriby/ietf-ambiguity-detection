@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY allow a period of approximately the Probe Timeout",
+    "interpretation_a": "The endpoint is permitted to wait up to the full PTO before generating new keys.",
+    "interpretation_b": "The endpoint is permitted to wait a short, unspecified duration *around* the PTO before generating new keys, potentially much less than the full PTO.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'approximately' is vague. It doesn't specify a tolerance or range around the PTO, leading to different implementations of the delay.",
+    "missing_information": "The meaning of 'approximately' is not defined. A reasonable person could interpret it as 'up to' or 'around'. Without a tighter bound, implementations could differ significantly in how long they delay key generation."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:47:23.967566+00:00",
+  "document_id": "draft-ietf-quic-tls-33",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "4924cbed2c71c875ce99416fa21d75c3ce8aacfed0751b3cccfede11b71945b6",
+  "lineage_ids": "lineage:5e60ee182397f8c6cb588b98",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 177,
+    "load_duration": 4838700,
+    "prompt_eval_count": 581,
+    "total_duration": 6724726900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY allow a period of approximately the Probe Timeout\", \"interpretation_a\": \"The endpoint is permitted to wait up to the full PTO before generating new keys.\", \"interpretation_b\": \"The endpoint is permitted to wait a short, unspecified duration *around* the PTO before generating new keys, potentially much less than the full PTO.\", \"missing_information\": \"The meaning of 'approximately' is not defined. A reasonable person could interpret it as 'up to' or 'around'. Without a tighter bound, implementations could differ significantly in how long they delay key generation.\",\"justification\": \"The term 'approximately' is vague. It doesn't specify a tolerance or range around the PTO, leading to different implementations of the delay.\"}",
+  "record_id": "c1439a78af16bea466ffe81b50aa4956f369529813dec0bde04289cb8eb254da",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "6.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.718
+}

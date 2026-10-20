@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless the client has the knowledge that the server that issued the token and the server the client is connecting to are jointly managing the tokens.",
+    "interpretation_a": "The client can use a token if it *knows* the issuing server and the connecting server are the same entity or are cooperating on token management.",
+    "interpretation_b": "The client can use a token if it *believes* the issuing server and the connecting server are the same entity or are cooperating on token management. The threshold for 'knowledge' is not defined, allowing for a lower standard of confidence.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'knowledge' is not defined. It is unclear whether the client needs to have absolute certainty that the servers are jointly managing tokens, or if a reasonable belief is sufficient. This impacts implementation, as a client might implement a strict check for token origin or a more lenient heuristic.",
+    "missing_information": "The definition of 'knowledge' is missing. Does 'knowledge' require certainty, or is a reasonable belief sufficient? This affects whether a client can use a token based on a heuristic or must have definitive proof of token management cooperation."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:55:39.300312+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "fb7f261cfb74eb2af6db806b93b6b8427e157e4cdd88b961a652497cc10f7e4c",
+  "lineage_ids": "lineage:9f63c8c75972462918650acb",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 260,
+    "load_duration": 4708500,
+    "prompt_eval_count": 591,
+    "total_duration": 9660934000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless the client has the knowledge that the server that issued the token and the server the client is connecting to are jointly managing the tokens.\", \"interpretation_a\": \"The client can use a token if it *knows* the issuing server and the connecting server are the same entity or are cooperating on token management.\", \"interpretation_b\": \"The client can use a token if it *believes* the issuing server and the connecting server are the same entity or are cooperating on token management. The threshold for 'knowledge' is not defined, allowing for a lower standard of confidence.\", \"missing_information\": \"The definition of 'knowledge' is missing. Does 'knowledge' require certainty, or is a reasonable belief sufficient? This affects whether a client can use a token based on a heuristic or must have definitive proof of token management cooperation.\", \"justification\": \"The term 'knowledge' is not defined. It is unclear whether the client needs to have absolute certainty that the servers are jointly managing tokens, or if a reasonable belief is sufficient. This impacts implementation, as a client might implement a strict check for token origin or a more lenient heuristic.\"}",
+  "record_id": "025ab985041d56d1ce849dd90c88b90f8a7a86c688098c63c546b2fc728f2806",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "8.1.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.656
+}

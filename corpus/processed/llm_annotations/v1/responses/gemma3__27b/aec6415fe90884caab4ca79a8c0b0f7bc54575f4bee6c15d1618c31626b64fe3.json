@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY remove the user recourse option",
+    "interpretation_a": "Clients are permitted, but not required, to remove the user recourse option when an HTTPS RR is present.",
+    "interpretation_b": "Clients are required to remove the user recourse option when an HTTPS RR is present, but the specification uses 'MAY' instead of 'SHALL'.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' creates ambiguity. Does the presence of an HTTPS RR *allow* a client to remove user recourse, or *require* it? The two interpretations lead to different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:10:41.173965+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-07",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "8c52b6b28fdf9030681fc0c5807f9e4606a040165f7e6c03aafdb63edaf6a911",
+  "lineage_ids": "lineage:8e28d8b88ed34d2829c1f04c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 149,
+    "load_duration": 680200,
+    "prompt_eval_count": 647,
+    "total_duration": 5785530100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY remove the user recourse option\", \"interpretation_a\": \"Clients are permitted, but not required, to remove the user recourse option when an HTTPS RR is present.\", \"interpretation_b\": \"Clients are required to remove the user recourse option when an HTTPS RR is present, but the specification uses 'MAY' instead of 'SHALL'.\", \"missing_information\": \"\", \"justification\": \"The use of 'MAY' creates ambiguity. Does the presence of an HTTPS RR *allow* a client to remove user recourse, or *require* it? The two interpretations lead to different implementation behaviours.\"}",
+  "record_id": "aec6415fe90884caab4ca79a8c0b0f7bc54575f4bee6c15d1618c31626b64fe3",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.797
+}

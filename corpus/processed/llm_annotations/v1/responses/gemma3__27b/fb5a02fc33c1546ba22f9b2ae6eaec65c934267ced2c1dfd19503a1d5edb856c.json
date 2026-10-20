@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY advertise support",
+    "interpretation_a": "A client or server is permitted to advertise support for reserved versions, but is not required to do so.",
+    "interpretation_b": "A client or server is permitted to advertise support for reserved versions, and there is an expectation that they will do so.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' is ambiguous. It could mean simply permitted, or it could imply a recommendation or expectation. Without further clarification, implementations could reasonably choose to always advertise support, or to only do so under specific conditions.",
+    "missing_information": "The degree to which 'MAY' implies encouragement or optionality is not clarified. This affects implementation choices regarding whether to include reserved version advertisements by default."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:20:07.977198+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "36c662d3fe80ac99390672bedcf65d871689e8a49c035c4206e072492f811b3b",
+  "lineage_ids": "lineage:0502eca56c8fc62dbe7eea24",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 177,
+    "load_duration": 6241600,
+    "prompt_eval_count": 593,
+    "total_duration": 6724588200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY advertise support\", \"interpretation_a\": \"A client or server is permitted to advertise support for reserved versions, but is not required to do so.\", \"interpretation_b\": \"A client or server is permitted to advertise support for reserved versions, and there is an expectation that they will do so.\", \"missing_information\": \"The degree to which 'MAY' implies encouragement or optionality is not clarified. This affects implementation choices regarding whether to include reserved version advertisements by default.\", \"justification\": \"The use of 'MAY' is ambiguous. It could mean simply permitted, or it could imply a recommendation or expectation. Without further clarification, implementations could reasonably choose to always advertise support, or to only do so under specific conditions.\"}",
+  "record_id": "fb5a02fc33c1546ba22f9b2ae6eaec65c934267ced2c1dfd19503a1d5edb856c",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "15",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.734
+}

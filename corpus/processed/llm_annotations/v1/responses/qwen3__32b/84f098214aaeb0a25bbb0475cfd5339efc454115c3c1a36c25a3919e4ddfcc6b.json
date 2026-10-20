@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides a clear directive for servers to abort a response stream with the HTTP_REQUEST_CANCELLED error code when they abandon a response after partial processing. The use of 'SHOULD' allows for discretion but does not introduce ambiguity in the required behavior. There is no conflicting or missing constraint that would lead to materially different implementations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:52:25.210089+00:00",
+  "document_id": "draft-ietf-quic-http-23",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "c00337a7e4408c6dc5dd0af13e32dd346bc2f2ef72a3408bee0a731863b0d26c",
+  "lineage_ids": "lineage:49b51ea8f2e0d09a2e1afd1b",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 121,
+    "load_duration": 8829400,
+    "prompt_eval_count": 558,
+    "total_duration": 5078715600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides a clear directive for servers to abort a response stream with the HTTP_REQUEST_CANCELLED error code when they abandon a response after partial processing. The use of 'SHOULD' allows for discretion but does not introduce ambiguity in the required behavior. There is no conflicting or missing constraint that would lead to materially different implementations.\"\n}",
+  "record_id": "84f098214aaeb0a25bbb0475cfd5339efc454115c3c1a36c25a3919e4ddfcc6b",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "4.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.093
+}

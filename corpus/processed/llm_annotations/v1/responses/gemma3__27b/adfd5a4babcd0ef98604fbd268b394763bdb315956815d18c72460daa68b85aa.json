@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "stream ID",
+    "interpretation_a": "Stream IDs must increase monotonically across all streams of the same type. For example, if streams 1 and 3 are opened, stream 2 must be opened before any subsequent stream.",
+    "interpretation_b": "Stream IDs must increase monotonically *within* a single connection. Streams on different connections can reuse IDs. For example, connection A can open streams 1 and 3, while connection B can open streams 1 and 2.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states streams must be opened in increasing order of stream ID, but does not specify whether this order applies globally or only within a single connection. This leads to two reasonable interpretations of how stream IDs should be assigned.",
+    "missing_information": "The scope of 'stream ID' is not defined. Is it globally unique, or unique per connection?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:54:13.769386+00:00",
+  "document_id": "draft-ietf-quic-transport-29",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "49b0a6c0f276e03191507fadcd4bfab616df7dee69e9db0ba3bd300fbddb63bb",
+  "lineage_ids": "lineage:cbb2c9cb093b3a509ae1f420",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 202,
+    "load_duration": 4589200,
+    "prompt_eval_count": 562,
+    "total_duration": 7584310900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"stream ID\", \"interpretation_a\": \"Stream IDs must increase monotonically across all streams of the same type. For example, if streams 1 and 3 are opened, stream 2 must be opened before any subsequent stream.\", \"interpretation_b\": \"Stream IDs must increase monotonically *within* a single connection. Streams on different connections can reuse IDs. For example, connection A can open streams 1 and 3, while connection B can open streams 1 and 2.\", \"missing_information\": \"The scope of 'stream ID' is not defined. Is it globally unique, or unique per connection?\",\"justification\": \"The clause states streams must be opened in increasing order of stream ID, but does not specify whether this order applies globally or only within a single connection. This leads to two reasonable interpretations of how stream IDs should be assigned.\"}",
+  "record_id": "adfd5a4babcd0ef98604fbd268b394763bdb315956815d18c72460daa68b85aa",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.578
+}

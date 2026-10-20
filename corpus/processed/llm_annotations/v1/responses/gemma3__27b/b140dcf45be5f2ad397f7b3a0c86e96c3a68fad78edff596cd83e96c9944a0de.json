@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "difficult to guess",
+    "interpretation_a": "The Data field should be populated with random or pseudo-random data to make it unpredictable.",
+    "interpretation_b": "The Data field should contain information that is not easily correlated with known connection parameters or application data, but may not necessarily be random.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'difficult to guess' is subjective and lacks a concrete definition. This allows for different implementations to interpret the level of randomness or complexity required for the Data field, leading to materially different security profiles.",
+    "missing_information": "The definition of 'difficult to guess' is missing. What constitutes 'difficult' is not specified, leaving room for varying interpretations of the required level of unpredictability or obfuscation."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:55:11.166043+00:00",
+  "document_id": "draft-ietf-quic-transport-09",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "1fa31b61f8fcb0c2decb0d4895c1587be3631815d58a8e69fe0a3a4d352ad4cf",
+  "lineage_ids": "lineage:bca91ab6207196c834521436",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 177,
+    "load_duration": 4325000,
+    "prompt_eval_count": 585,
+    "total_duration": 6716712200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"difficult to guess\", \"interpretation_a\": \"The Data field should be populated with random or pseudo-random data to make it unpredictable.\", \"interpretation_b\": \"The Data field should contain information that is not easily correlated with known connection parameters or application data, but may not necessarily be random.\", \"missing_information\": \"The definition of 'difficult to guess' is missing. What constitutes 'difficult' is not specified, leaving room for varying interpretations of the required level of unpredictability or obfuscation.\", \"justification\": \"The phrase 'difficult to guess' is subjective and lacks a concrete definition. This allows for different implementations to interpret the level of randomness or complexity required for the Data field, leading to materially different security profiles.\"}",
+  "record_id": "b140dcf45be5f2ad397f7b3a0c86e96c3a68fad78edff596cd83e96c9944a0de",
+  "revision": "09",
+  "schema_version": 1,
+  "section_ids": "7.7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.735
+}

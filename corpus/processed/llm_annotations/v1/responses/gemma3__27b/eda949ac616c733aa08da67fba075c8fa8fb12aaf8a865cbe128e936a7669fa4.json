@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD NOT initiate migration",
+    "interpretation_a": "The endpoint is prohibited from initiating migration if the peer has *ever* requested a zero-length connection ID.",
+    "interpretation_b": "The endpoint is prohibited from initiating migration only when the peer *currently* has a zero-length connection ID.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"has requested\" is temporally ambiguous. It's unclear whether the restriction applies only when the peer currently uses a zero-length connection ID, or if it applies indefinitely after a request for one.",
+    "missing_information": "The duration of the restriction is not specified. Does the 'has requested' refer to a past request, a current setting, or a persistent configuration?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:14:06.105061+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "a962bc314181eaa57cd8dde3ab5a1be0eefd65e472a49f9f467fe90389c2040a",
+  "lineage_ids": "lineage:474002bfe9a86ddbf5caf671",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 173,
+    "load_duration": 6241000,
+    "prompt_eval_count": 605,
+    "total_duration": 6591660100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD NOT initiate migration\", \"interpretation_a\": \"The endpoint is prohibited from initiating migration if the peer has *ever* requested a zero-length connection ID.\", \"interpretation_b\": \"The endpoint is prohibited from initiating migration only when the peer *currently* has a zero-length connection ID.\", \"missing_information\": \"The duration of the restriction is not specified. Does the 'has requested' refer to a past request, a current setting, or a persistent configuration?\",\"justification\": \"The phrase \\\"has requested\\\" is temporally ambiguous. It's unclear whether the restriction applies only when the peer currently uses a zero-length connection ID, or if it applies indefinitely after a request for one.\"}",
+  "record_id": "eda949ac616c733aa08da67fba075c8fa8fb12aaf8a865cbe128e936a7669fa4",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.593
+}

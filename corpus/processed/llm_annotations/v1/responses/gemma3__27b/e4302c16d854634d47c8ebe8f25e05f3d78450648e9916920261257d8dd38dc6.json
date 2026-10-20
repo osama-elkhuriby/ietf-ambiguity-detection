@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY defer sending the RESET_STREAM frame until the packets containing outstanding data are acknowledged or declared lost.",
+    "interpretation_a": "The endpoint can choose to send the RESET_STREAM frame immediately, even if packets are still in flight.",
+    "interpretation_b": "The endpoint must wait for acknowledgement or loss indication before sending the RESET_STREAM frame.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' creates ambiguity. It's unclear whether the endpoint is permitted to send the RESET_STREAM frame immediately or if it should only defer sending it if packets are still in flight. A missing constraint would clarify the intended behaviour.",
+    "missing_information": "The degree of discretion granted by 'MAY' is unclear. Does 'MAY' mean 'permitted to' or 'should consider'?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:11:16.390655+00:00",
+  "document_id": "draft-ietf-quic-transport-30",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "3ffe45d1426828ebf5d47bfb9bcbc6a004d138112bacc312d396c3857e5941ab",
+  "lineage_ids": "lineage:d925b5001d89caf69a230a9d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 186,
+    "load_duration": 4748400,
+    "prompt_eval_count": 596,
+    "total_duration": 7027185500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY defer sending the RESET_STREAM frame until the packets containing outstanding data are acknowledged or declared lost.\", \"interpretation_a\": \"The endpoint can choose to send the RESET_STREAM frame immediately, even if packets are still in flight.\", \"interpretation_b\": \"The endpoint must wait for acknowledgement or loss indication before sending the RESET_STREAM frame.\", \"missing_information\": \"The degree of discretion granted by 'MAY' is unclear. Does 'MAY' mean 'permitted to' or 'should consider'?\", \"justification\": \"The use of 'MAY' creates ambiguity. It's unclear whether the endpoint is permitted to send the RESET_STREAM frame immediately or if it should only defer sending it if packets are still in flight. A missing constraint would clarify the intended behaviour.\"}",
+  "record_id": "e4302c16d854634d47c8ebe8f25e05f3d78450648e9916920261257d8dd38dc6",
+  "revision": "30",
+  "schema_version": 1,
+  "section_ids": "3.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.031
+}

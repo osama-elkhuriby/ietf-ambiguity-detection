@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "generate a new initial packet number",
+    "interpretation_a": "The client must generate a completely new random initial packet number, independent of any previous value.",
+    "interpretation_b": "The client must simply reset its internal initial packet number counter to a valid starting value, potentially based on prior state, but not necessarily a fully random number.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'generate a new initial packet number' is underspecified. It doesn't clarify whether a completely new random number must be generated, or if simply resetting the counter to a valid starting value is sufficient. Both interpretations are reasonable, and the choice impacts implementation details related to security and collision avoidance.",
+    "missing_information": "The clause does not specify *how* a new initial packet number is generated. Is it a full re-randomization, or a reset to a valid starting point? This affects security and collision avoidance."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:11:09.360422+00:00",
+  "document_id": "draft-ietf-quic-transport-05",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "5086a6f4930f8aa40e2a6c72c8fa535e05d78872654ce31117bcdebab581342a",
+  "lineage_ids": "lineage:6bf7e6586801cc81ecb67be5",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 211,
+    "load_duration": 4539000,
+    "prompt_eval_count": 598,
+    "total_duration": 7928457500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"generate a new initial packet number\", \"interpretation_a\": \"The client must generate a completely new random initial packet number, independent of any previous value.\", \"interpretation_b\": \"The client must simply reset its internal initial packet number counter to a valid starting value, potentially based on prior state, but not necessarily a fully random number.\", \"missing_information\": \"The clause does not specify *how* a new initial packet number is generated. Is it a full re-randomization, or a reset to a valid starting point? This affects security and collision avoidance.\", \"justification\": \"The phrase 'generate a new initial packet number' is underspecified. It doesn't clarify whether a completely new random number must be generated, or if simply resetting the counter to a valid starting value is sufficient. Both interpretations are reasonable, and the choice impacts implementation details related to security and collision avoidance.\"}",
+  "record_id": "e3c53d88b49742ca38834c5d1e206292495c7cb09cc1cce54b48bfe7446c8fb2",
+  "revision": "05",
+  "schema_version": 1,
+  "section_ids": "5.7.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.937
+}

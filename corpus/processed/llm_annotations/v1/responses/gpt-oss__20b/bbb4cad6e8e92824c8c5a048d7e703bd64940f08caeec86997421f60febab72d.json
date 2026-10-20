@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause is unambiguous when interpreted in the context of a PUSH_PROMISE frame: a receiver that receives any frame other than a PUSH_PROMISE or a frame on a different stream must treat it as a PROTOCOL_ERROR. The surrounding context clarifies that the receiver is expecting a PUSH_PROMISE, leaving no reasonable alternative interpretation.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T04:53:44.578308+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "e91d139ed6880fb31c6c467da79deafdbba0aac2bc0ee97b436c5852ff93c6c7",
+  "lineage_ids": "lineage:ff651ea1e824dffe72a9d681",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2364,
+    "load_duration": 6421900,
+    "prompt_eval_count": 611,
+    "total_duration": 20446830200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause is unambiguous when interpreted in the context of a PUSH_PROMISE frame: a receiver that receives any frame other than a PUSH_PROMISE or a frame on a different stream must treat it as a PROTOCOL_ERROR. The surrounding context clarifies that the receiver is expecting a PUSH_PROMISE, leaving no reasonable alternative interpretation.\"\n}",
+  "record_id": "bbb4cad6e8e92824c8c5a048d7e703bd64940f08caeec86997421f60febab72d",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 20.453
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "registries",
+    "interpretation_a": "The creation process can define a range of codepoints with a different policy. This implies multiple registries could exist, each with its own range and policy.",
+    "interpretation_b": "A single registry creation can define a range of codepoints *within that registry* that are governed by a different policy. This implies a single registry with internal policy variations.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'registries' (plural) versus 'registry' (singular) creates ambiguity about whether the range applies to multiple registries or a range within a single registry. This affects how an implementation would handle codepoint assignments and policy enforcement.",
+    "missing_information": "It is unclear whether 'registries' refers to multiple distinct registries or ranges within a single registry. The singular 'registry' in the next clause suggests the latter, but the target clause's plural form is ambiguous."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:24:51.440577+00:00",
+  "document_id": "draft-ietf-quic-transport-29",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "18048854f864593eb3cad0f842a7fdad938899e0eac880a3db058bf8f43f3653",
+  "lineage_ids": "lineage:66fd025894886a86e0e816a5",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 214,
+    "load_duration": 2505900,
+    "prompt_eval_count": 582,
+    "total_duration": 8050194000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"registries\", \"interpretation_a\": \"The creation process can define a range of codepoints with a different policy. This implies multiple registries could exist, each with its own range and policy.\", \"interpretation_b\": \"A single registry creation can define a range of codepoints *within that registry* that are governed by a different policy. This implies a single registry with internal policy variations.\", \"missing_information\": \"It is unclear whether 'registries' refers to multiple distinct registries or ranges within a single registry. The singular 'registry' in the next clause suggests the latter, but the target clause's plural form is ambiguous.\",\"justification\": \"The use of 'registries' (plural) versus 'registry' (singular) creates ambiguity about whether the range applies to multiple registries or a range within a single registry. This affects how an implementation would handle codepoint assignments and policy enforcement.\"}",
+  "record_id": "5768db7298e30062335e8d18b4ce3d5990d82041bb17474b027822356f243ed5",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "22.1.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.062
+}

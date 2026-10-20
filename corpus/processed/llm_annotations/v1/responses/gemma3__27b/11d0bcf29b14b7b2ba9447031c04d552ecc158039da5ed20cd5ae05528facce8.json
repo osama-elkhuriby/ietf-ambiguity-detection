@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY send a list",
+    "interpretation_a": "The client is permitted, but not required, to send a list of protocols.",
+    "interpretation_b": "The client is permitted to send a list, or a single protocol, in the Upgrade header.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'a list' is ambiguous. It could mean 'one or more' or specifically 'more than one'. This affects how an implementation would handle a single protocol in the Upgrade header.",
+    "missing_information": "It is unclear whether 'a list' implies at least two protocols, or if a list of one protocol is also valid. The specification does not explicitly state the minimum list length."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:55:51.082881+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-14",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "283c5f7383a282f6e2357b8454945d379ba2e9172909a0d56a1adc0d95d750b1",
+  "lineage_ids": "lineage:559b8f3b51ba642796fb704c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 168,
+    "load_duration": 4554000,
+    "prompt_eval_count": 581,
+    "total_duration": 6568948300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY send a list\", \"interpretation_a\": \"The client is permitted, but not required, to send a list of protocols.\", \"interpretation_b\": \"The client is permitted to send a list, or a single protocol, in the Upgrade header.\", \"missing_information\": \"It is unclear whether 'a list' implies at least two protocols, or if a list of one protocol is also valid. The specification does not explicitly state the minimum list length.\", \"justification\": \"The use of 'a list' is ambiguous. It could mean 'one or more' or specifically 'more than one'. This affects how an implementation would handle a single protocol in the Upgrade header.\"}",
+  "record_id": "11d0bcf29b14b7b2ba9447031c04d552ecc158039da5ed20cd5ae05528facce8",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "7.8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.594
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY be included",
+    "interpretation_a": "The STREAM frame with the TLS alert is optional; it might not be sent.",
+    "interpretation_b": "The STREAM frame with the TLS alert is permitted, but the endpoint is not required to send it in every failure case.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' creates ambiguity. It's unclear if the endpoint *can* include the frame, or if it *should* include it under certain conditions, or if it's simply permitted but not encouraged. This affects implementation because an implementer must decide how to handle the absence of the frame.",
+    "missing_information": "It is unclear whether the 'MAY' applies to all handshake failures, or only to a subset. A missing constraint would clarify whether the STREAM frame is conditionally required in certain failure scenarios."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:34:40.989087+00:00",
+  "document_id": "draft-ietf-quic-tls-12",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "01ee50898344355c87ddfa88d503e1695994b8588a2a6b21488b0d36c60367d8",
+  "lineage_ids": "lineage:6b71262a24f220af9b2a130f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 197,
+    "load_duration": 4462200,
+    "prompt_eval_count": 539,
+    "total_duration": 7463228900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY be included\", \"interpretation_a\": \"The STREAM frame with the TLS alert is optional; it might not be sent.\", \"interpretation_b\": \"The STREAM frame with the TLS alert is permitted, but the endpoint is not required to send it in every failure case.\", \"missing_information\": \"It is unclear whether the 'MAY' applies to all handshake failures, or only to a subset. A missing constraint would clarify whether the STREAM frame is conditionally required in certain failure scenarios.\", \"justification\": \"The use of 'MAY' creates ambiguity. It's unclear if the endpoint *can* include the frame, or if it *should* include it under certain conditions, or if it's simply permitted but not encouraged. This affects implementation because an implementer must decide how to handle the absence of the frame.\"}",
+  "record_id": "1732bdb856f80ea43a0f98bc61992eda1b5dfb36d26c994446944390a07a9132",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "8.1.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.469
+}

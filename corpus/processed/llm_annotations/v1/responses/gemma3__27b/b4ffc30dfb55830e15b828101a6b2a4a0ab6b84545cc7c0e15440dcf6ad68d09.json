@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD only have a single resource record",
+    "interpretation_a": "Implementations MUST ensure that SVCB RRSets in AliasMode contain exactly one resource record; any more is an error.",
+    "interpretation_b": "Implementations MAY allow SVCB RRSets in AliasMode to contain more than one resource record, but SHOULD pick one at random as described in the next clause.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' rather than 'MUST' creates ambiguity. While the next clause describes how to handle multiple records, it doesn't change the fact that the target clause doesn't *require* only one record, only that it's *recommended*. This allows for implementations that accept multiple records and pick one, versus implementations that reject multiple records.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:10:59.002402+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "3c9a0d7a14e3186bf89e72b82d89c02c532e07e9a646ff74c99a697d77cc860e",
+  "lineage_ids": "lineage:24d77229db7024805ce1eab9",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 192,
+    "load_duration": 4488000,
+    "prompt_eval_count": 559,
+    "total_duration": 7225062600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD only have a single resource record\", \"interpretation_a\": \"Implementations MUST ensure that SVCB RRSets in AliasMode contain exactly one resource record; any more is an error.\", \"interpretation_b\": \"Implementations MAY allow SVCB RRSets in AliasMode to contain more than one resource record, but SHOULD pick one at random as described in the next clause.\", \"missing_information\": \"\", \"justification\": \"The use of 'SHOULD' rather than 'MUST' creates ambiguity. While the next clause describes how to handle multiple records, it doesn't change the fact that the target clause doesn't *require* only one record, only that it's *recommended*. This allows for implementations that accept multiple records and pick one, versus implementations that reject multiple records.\"}",
+  "record_id": "b4ffc30dfb55830e15b828101a6b2a4a0ab6b84545cc7c0e15440dcf6ad68d09",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "2.4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.235
+}

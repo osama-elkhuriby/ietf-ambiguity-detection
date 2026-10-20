@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "does not process fields",
+    "interpretation_a": "An intermediary that completely ignores all fields in the message.",
+    "interpretation_b": "An intermediary that processes some fields but not others, and only avoids forwarding the prohibited fields.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"does not process fields\" is incomplete. It is unclear whether it means the intermediary ignores *all* fields, or only certain fields. This affects how the intermediary determines which fields are \"prohibited\" and therefore not forwarded.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:27:03.472344+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "cc28157d0e57401141756a2849744ce656ed526dc88fc38d5fbeb5177df29907",
+  "lineage_ids": "lineage:6fe8234b50242032bfc1f199",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 133,
+    "load_duration": 4644600,
+    "prompt_eval_count": 630,
+    "total_duration": 5244276200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"does not process fields\", \"interpretation_a\": \"An intermediary that completely ignores all fields in the message.\", \"interpretation_b\": \"An intermediary that processes some fields but not others, and only avoids forwarding the prohibited fields.\", \"missing_information\": \"\", \"justification\": \"The phrase \\\"does not process fields\\\" is incomplete. It is unclear whether it means the intermediary ignores *all* fields, or only certain fields. This affects how the intermediary determines which fields are \\\"prohibited\\\" and therefore not forwarded.\"}",
+  "record_id": "049cc9e90eb87546b73df449a53ee15eb432075ad46e35dc1848dbad8498ece5",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.265
+}

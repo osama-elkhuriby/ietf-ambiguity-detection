@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD increase exponentially the interval between successive probes",
+    "interpretation_a": "The interval between probes increases by a constant multiplicative factor each time (e.g., double the previous interval).",
+    "interpretation_b": "The interval between probes increases according to an exponential function, potentially with a different base or starting point, allowing for more complex growth patterns.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'increase exponentially' is underspecified. While it suggests a growth pattern, it doesn't define the specific mathematical function or parameters governing the increase. This allows for multiple valid implementations, creating ambiguity.",
+    "missing_information": "The base and initial value of the exponential increase are not defined, leading to different possible implementations of the probing interval."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:26:13.759759+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-18",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "1ae7d3db63e56cbb5f1f281eb8b3982522c89de1846ef86bf94acc227e23cb46",
+  "lineage_ids": "lineage:38b3c5093f6adde0f209122d",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 178,
+    "load_duration": 17789500,
+    "prompt_eval_count": 602,
+    "total_duration": 6949909600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD increase exponentially the interval between successive probes\", \"interpretation_a\": \"The interval between probes increases by a constant multiplicative factor each time (e.g., double the previous interval).\", \"interpretation_b\": \"The interval between probes increases according to an exponential function, potentially with a different base or starting point, allowing for more complex growth patterns.\", \"missing_information\": \"The base and initial value of the exponential increase are not defined, leading to different possible implementations of the probing interval.\", \"justification\": \"The phrase 'increase exponentially' is underspecified. While it suggests a growth pattern, it doesn't define the specific mathematical function or parameters governing the increase. This allows for multiple valid implementations, creating ambiguity.\"}",
+  "record_id": "a1952b29e5b591d8f3f25d184058a7cec5e9494a8e144e896221ee9f667730c5",
+  "revision": "18",
+  "schema_version": 1,
+  "section_ids": "3.7.6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.969
+}

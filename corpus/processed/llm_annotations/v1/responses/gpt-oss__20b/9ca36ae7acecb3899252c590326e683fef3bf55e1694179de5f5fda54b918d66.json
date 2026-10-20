@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously requires that an endpoint that receives a RST_STREAM frame and has not previously sent a FIN or RST_STREAM must immediately send a RST_STREAM frame and must not send any further data on that stream. The language does not allow multiple materially different interpretations or lacks a concrete missing constraint that would affect implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T17:22:37.104033+00:00",
+  "document_id": "draft-ietf-quic-transport-04",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "d4947418d464cd70154d45b463ef5e5c799cfb7e02e3b8b466f581ccf52fc665",
+  "lineage_ids": "lineage:c12fc5d1ac1786259d244254",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2314,
+    "load_duration": 5284000,
+    "prompt_eval_count": 617,
+    "total_duration": 20065417500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously requires that an endpoint that receives a RST_STREAM frame and has not previously sent a FIN or RST_STREAM must immediately send a RST_STREAM frame and must not send any further data on that stream. The language does not allow multiple materially different interpretations or lacks a concrete missing constraint that would affect implementation behavior.\"\n}",
+  "record_id": "9ca36ae7acecb3899252c590326e683fef3bf55e1694179de5f5fda54b918d66",
+  "revision": "04",
+  "schema_version": 1,
+  "section_ids": "10.2.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 20.078
+}

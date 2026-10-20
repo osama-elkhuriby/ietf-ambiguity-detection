@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST be acknowledged in packets",
+    "interpretation_a": "All acknowledgements for 1-RTT protected packets *must* be carried in 1-RTT protected packets.",
+    "interpretation_b": "At least one acknowledgement for 1-RTT protected packets *must* be carried in a 1-RTT protected packet, but not necessarily all.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'packets' as the object of 'MUST be acknowledged in packets' is ambiguous. It could mean all acknowledgements, or just that at least one acknowledgement must be carried in a protected packet. This affects implementation because a receiver could choose to send some acknowledgements in unprotected packets if it interprets the clause as 'at least one'.",
+    "missing_information": "The clause does not specify whether *all* acknowledgements must be in 1-RTT protected packets, or just *at least one*."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:06:04.709124+00:00",
+  "document_id": "draft-ietf-quic-transport-12",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "94f26c94b98fc0429674852d0d5f744a4d225a7e3632cbe8b554f4dfe270b3de",
+  "lineage_ids": "lineage:7bd0647a60dc0d3776ff8102",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 213,
+    "load_duration": 4011900,
+    "prompt_eval_count": 586,
+    "total_duration": 8007068900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST be acknowledged in packets\", \"interpretation_a\": \"All acknowledgements for 1-RTT protected packets *must* be carried in 1-RTT protected packets.\", \"interpretation_b\": \"At least one acknowledgement for 1-RTT protected packets *must* be carried in a 1-RTT protected packet, but not necessarily all.\", \"missing_information\": \"The clause does not specify whether *all* acknowledgements must be in 1-RTT protected packets, or just *at least one*.\", \"justification\": \"The use of 'packets' as the object of 'MUST be acknowledged in packets' is ambiguous. It could mean all acknowledgements, or just that at least one acknowledgement must be carried in a protected packet. This affects implementation because a receiver could choose to send some acknowledgements in unprotected packets if it interprets the clause as 'at least one'.\"}",
+  "record_id": "d506d0fb7a9c3c28f0b45dc8d603c00f39223e81e2cdcc680c28aee04056397d",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "7.15.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.0
+}

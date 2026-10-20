@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "the request target",
+    "interpretation_a": "The intermediary should not modify the Referer header if the scheme and host in the Referer match the scheme and host of the *original* request target.",
+    "interpretation_b": "The intermediary should not modify the Referer header if the scheme and host in the Referer match the scheme and host of the request target *as seen by the intermediary* (i.e., after any prior modifications).",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'the request target' is ambiguous. It could refer to the original request target or the request target as seen by the intermediary. If the intermediary has already modified the request target (e.g., by rewriting the URL), the interpretation of what constitutes a matching scheme and host changes.",
+    "missing_information": "It is unclear whether 'the request target' refers to the original request or the request as seen by the intermediary. This distinction affects whether modifications made *before* this intermediary are considered when determining whether the scheme and host match."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:31:35.613668+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-07",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "1dc4ffb93763e98b3943470cae962a1bf9a421606974c2b705e84695241043ca",
+  "lineage_ids": "lineage:a8b0980260e620bdcf56775b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 236,
+    "load_duration": 11325000,
+    "prompt_eval_count": 581,
+    "total_duration": 8992086000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"the request target\", \"interpretation_a\": \"The intermediary should not modify the Referer header if the scheme and host in the Referer match the scheme and host of the *original* request target.\", \"interpretation_b\": \"The intermediary should not modify the Referer header if the scheme and host in the Referer match the scheme and host of the request target *as seen by the intermediary* (i.e., after any prior modifications).\", \"missing_information\": \"It is unclear whether 'the request target' refers to the original request or the request as seen by the intermediary. This distinction affects whether modifications made *before* this intermediary are considered when determining whether the scheme and host match.\", \"justification\": \"The phrase 'the request target' is ambiguous. It could refer to the original request target or the request target as seen by the intermediary. If the intermediary has already modified the request target (e.g., by rewriting the URL), the interpretation of what constitutes a matching scheme and host changes.\"}",
+  "record_id": "ddf04fbe7a5c4b8e10b64ce7e32677ef99332b5cfc684ad933e98f2c778bdc8b",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.0
+}

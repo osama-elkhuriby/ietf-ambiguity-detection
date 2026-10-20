@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "If frames that are on a stream are passed to the application layer",
+    "interpretation_a": "Frames are considered 'passed to the application layer' only when the application has *begun* processing them.",
+    "interpretation_b": "Frames are considered 'passed to the application layer' as soon as they are *delivered* to the application layer, even if processing hasn't started.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'passed to the application layer' is vague. It's unclear whether this refers to the point of delivery to the application's buffer or the point at which the application actually begins processing the frames. This difference affects when `REFUSED_STREAM` can be used and when a `GOAWAY` frame must be sent.",
+    "missing_information": "The definition of 'passed to the application layer' is not precise. Does this mean delivery to the application's buffer, or actual processing by the application?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:47:35.106468+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "75dfd39b96c1e653230e64eae96f1d18cf54014d3e57329c4b254b0630a6ace8",
+  "lineage_ids": "lineage:7c92b2a5adaa5e0d247d1658",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 219,
+    "load_duration": 24965200,
+    "prompt_eval_count": 603,
+    "total_duration": 8438730300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"If frames that are on a stream are passed to the application layer\", \"interpretation_a\": \"Frames are considered 'passed to the application layer' only when the application has *begun* processing them.\", \"interpretation_b\": \"Frames are considered 'passed to the application layer' as soon as they are *delivered* to the application layer, even if processing hasn't started.\", \"missing_information\": \"The definition of 'passed to the application layer' is not precise. Does this mean delivery to the application's buffer, or actual processing by the application?\",\"justification\": \"The phrase 'passed to the application layer' is vague. It's unclear whether this refers to the point of delivery to the application's buffer or the point at which the application actually begins processing the frames. This difference affects when `REFUSED_STREAM` can be used and when a `GOAWAY` frame must be sent.\"}",
+  "record_id": "c84fcd2fc7a52f667cacecc79d26022078eeb172b777f70d777d6fccf3f7a051",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.453
+}

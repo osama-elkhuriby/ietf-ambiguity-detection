@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD NOT be reclaimed",
+    "interpretation_a": "Codepoints updated less than a year prior to the reclamation request are *never* reclaimed, regardless of their recorded date.",
+    "interpretation_b": "Codepoints updated less than a year prior to the reclamation request are less likely to be reclaimed, but may still be reclaimed if they are the earliest recorded.",
+    "is_ambiguous": "yes",
+    "justification": "The clause contains conflicting guidance. It states that reclamation 'SHOULD' be done for the earliest codepoints, but then states that those updated less than a year prior 'SHOULD NOT' be reclaimed. This creates ambiguity as to which rule takes precedence, and whether a recently updated codepoint can *ever* be reclaimed, even if it's the earliest.",
+    "missing_information": "The interaction between 'SHOULD' and 'SHOULD NOT' is unclear. Does 'SHOULD NOT' override 'SHOULD', or is it a weaker prohibition? Also, the meaning of 'earliest recorded date' is not fully defined; is it the date of initial registration, or the date of the last update?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:26:50.793261+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "e8f81a26d4faba9a7bea9e2bb0ca170e03ed0f9315eb72eab7779d2dc509d7d6",
+  "lineage_ids": "lineage:fe80d53a96c931dae6604ec0",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 255,
+    "load_duration": 3774800,
+    "prompt_eval_count": 616,
+    "total_duration": 9505242100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD NOT be reclaimed\", \"interpretation_a\": \"Codepoints updated less than a year prior to the reclamation request are *never* reclaimed, regardless of their recorded date.\", \"interpretation_b\": \"Codepoints updated less than a year prior to the reclamation request are less likely to be reclaimed, but may still be reclaimed if they are the earliest recorded.\", \"missing_information\": \"The interaction between 'SHOULD' and 'SHOULD NOT' is unclear. Does 'SHOULD NOT' override 'SHOULD', or is it a weaker prohibition? Also, the meaning of 'earliest recorded date' is not fully defined; is it the date of initial registration, or the date of the last update?\",\"justification\": \"The clause contains conflicting guidance. It states that reclamation 'SHOULD' be done for the earliest codepoints, but then states that those updated less than a year prior 'SHOULD NOT' be reclaimed. This creates ambiguity as to which rule takes precedence, and whether a recently updated codepoint can *ever* be reclaimed, even if it's the earliest.\"}",
+  "record_id": "5bec5662c7feafe5303a898d64d609722ab98f7cf09ea06b0a47f755d5c56cc4",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "22.1.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.5
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously specifies that an origin server must either send a final status code (if determinable from the method, target URI, and header fields) or send a 100 (Continue) response before reading the payload. The conditional and the exclusive choice are clear, and no missing constraints or undefined terms affect implementation.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T08:08:21.995938+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-13",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "bd97dfe6b22ade475f2aed2fb51a5b3db950cdd75e3ee7cbb727ff784ac74031",
+  "lineage_ids": "lineage:b96b2076f80ee202be3fdc02",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1509,
+    "load_duration": 4126000,
+    "prompt_eval_count": 713,
+    "total_duration": 13123956600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously specifies that an origin server must either send a final status code (if determinable from the method, target URI, and header fields) or send a 100 (Continue) response before reading the payload. The conditional and the exclusive choice are clear, and no missing constraints or undefined terms affect implementation.\"\n}",
+  "record_id": "d9db9b094dd16d1dac1165f25008e69aeffa69555f54dda14236a5fb1a9d9bda",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "10.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 80.25
+}

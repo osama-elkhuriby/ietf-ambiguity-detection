@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "all segments sent on this connection",
+    "interpretation_a": "The return route is used for all TCP segments, including those carrying data, acknowledgements, and control information.",
+    "interpretation_b": "The return route is used only for data segments, excluding acknowledgements and control information. This could be based on segment flags or other criteria not specified.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'all segments' is open to interpretation. It's unclear whether it encompasses all TCP segment types (data, ACK, control) or only a subset. This missing constraint could lead to interoperability issues.",
+    "missing_information": "The clause does not specify which types of TCP segments the saved return route applies to. This leaves room for different implementations to handle control and acknowledgement segments differently."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:16:48.332231+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "dfc31f4adf3e295656d57180439e9039ab2ddc112d7b30ece08369efb2f16104",
+  "lineage_ids": "lineage:487b94ad1858e33b4625e8f8",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 187,
+    "load_duration": 13976800,
+    "prompt_eval_count": 634,
+    "total_duration": 7234872800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"all segments sent on this connection\", \"interpretation_a\": \"The return route is used for all TCP segments, including those carrying data, acknowledgements, and control information.\", \"interpretation_b\": \"The return route is used only for data segments, excluding acknowledgements and control information. This could be based on segment flags or other criteria not specified.\", \"missing_information\": \"The clause does not specify which types of TCP segments the saved return route applies to. This leaves room for different implementations to handle control and acknowledgement segments differently.\",\"justification\": \"The phrase 'all segments' is open to interpretation. It's unclear whether it encompasses all TCP segment types (data, ACK, control) or only a subset. This missing constraint could lead to interoperability issues.\"}",
+  "record_id": "04f4f3143017cc21596747c152343641e3b2c42129d43d4bd237611844882814",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.9.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.25
+}

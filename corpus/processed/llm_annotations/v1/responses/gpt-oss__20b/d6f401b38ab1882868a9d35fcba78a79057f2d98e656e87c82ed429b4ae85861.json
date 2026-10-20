@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously requires that after the TLS handshake is complete, both peers must ignore any packets that are not protected. The term \"ignore\" is standard in RFCs to mean drop or otherwise not process, and there is no alternative interpretation or missing constraint that would lead to materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T13:17:39.176616+00:00",
+  "document_id": "draft-ietf-quic-tls-12",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "efc8f5f2bc78a9a3ec274abe78a502dbbbdf5a69c31ba3bfc36886923a7044ac",
+  "lineage_ids": "lineage:4bb903ac15bf9c28bd281b58",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 455,
+    "load_duration": 6066000,
+    "prompt_eval_count": 575,
+    "total_duration": 4081054700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously requires that after the TLS handshake is complete, both peers must ignore any packets that are not protected. The term \\\"ignore\\\" is standard in RFCs to mean drop or otherwise not process, and there is no alternative interpretation or missing constraint that would lead to materially different implementation behaviours.\"\n}",
+  "record_id": "d6f401b38ab1882868a9d35fcba78a79057f2d98e656e87c82ed429b4ae85861",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "8.1.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 4.078
+}

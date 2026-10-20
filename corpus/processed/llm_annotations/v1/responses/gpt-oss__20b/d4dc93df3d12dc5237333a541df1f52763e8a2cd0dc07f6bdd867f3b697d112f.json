@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "signal the existence of that error to its peer",
+    "interpretation_a": "The endpoint may send a QUIC error packet containing an error code and optional data to inform the peer of the error.",
+    "interpretation_b": "The endpoint may simply close the connection or send a generic notification without a specific error packet, thereby signaling the error to the peer.",
+    "is_ambiguous": "yes",
+    "justification": "The lack of a defined mechanism permits materially different implementation behaviours.",
+    "missing_information": "The clause does not specify the required format, protocol, or timing for signaling the error, allowing different implementations to choose different methods."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T18:35:23.454405+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "cf4a903eff6a02a8a4ac377102417474e628616577182c795613e17aff8b1ee8",
+  "lineage_ids": "lineage:f4d2588d6f689a3267613639",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 321,
+    "load_duration": 7434600,
+    "prompt_eval_count": 700,
+    "total_duration": 3042915300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"signal the existence of that error to its peer\",\n  \"interpretation_a\": \"The endpoint may send a QUIC error packet containing an error code and optional data to inform the peer of the error.\",\n  \"interpretation_b\": \"The endpoint may simply close the connection or send a generic notification without a specific error packet, thereby signaling the error to the peer.\",\n  \"missing_information\": \"The clause does not specify the required format, protocol, or timing for signaling the error, allowing different implementations to choose different methods.\",\n  \"justification\": \"The lack of a defined mechanism permits materially different implementation behaviours.\"\n}",
+  "record_id": "d4dc93df3d12dc5237333a541df1f52763e8a2cd0dc07f6bdd867f3b697d112f",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "11",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 21.625
+}

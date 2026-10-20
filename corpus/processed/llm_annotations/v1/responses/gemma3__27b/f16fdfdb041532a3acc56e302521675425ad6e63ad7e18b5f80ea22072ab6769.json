@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "A PUSH_PROMISE frame without the END_HEADERS flag set MUST be followed by a CONTINUATION frame for the same stream.",
+    "interpretation_a": "The CONTINUATION frame must immediately follow the PUSH_PROMISE frame.",
+    "interpretation_b": "There can be intervening frames of other types before the CONTINUATION frame, as long as it eventually arrives on the same stream.",
+    "is_ambiguous": "yes",
+    "justification": "The word 'followed' is ambiguous. It could mean 'immediately followed' or 'followed at some point'. Without clarification, implementations could differ on whether to allow other frames between the PUSH_PROMISE and its CONTINUATION.",
+    "missing_information": "The clause does not specify whether the CONTINUATION frame must be the *next* frame, or simply arrive at some point later on the same stream. This affects how a receiver would handle other frames received before the expected CONTINUATION frame."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:52:09.670169+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "dd13f69fda425b4573310c8c00ac7622a830e622b96ff7620a943997b4d0ce0b",
+  "lineage_ids": "lineage:73e581a0f2da25ea5c0dd116",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 215,
+    "load_duration": 5531700,
+    "prompt_eval_count": 606,
+    "total_duration": 8257585500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"A PUSH_PROMISE frame without the END_HEADERS flag set MUST be followed by a CONTINUATION frame for the same stream.\", \"interpretation_a\": \"The CONTINUATION frame must immediately follow the PUSH_PROMISE frame.\", \"interpretation_b\": \"There can be intervening frames of other types before the CONTINUATION frame, as long as it eventually arrives on the same stream.\", \"missing_information\": \"The clause does not specify whether the CONTINUATION frame must be the *next* frame, or simply arrive at some point later on the same stream. This affects how a receiver would handle other frames received before the expected CONTINUATION frame.\", \"justification\": \"The word 'followed' is ambiguous. It could mean 'immediately followed' or 'followed at some point'. Without clarification, implementations could differ on whether to allow other frames between the PUSH_PROMISE and its CONTINUATION.\"}",
+  "record_id": "f16fdfdb041532a3acc56e302521675425ad6e63ad7e18b5f80ea22072ab6769",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.281
+}

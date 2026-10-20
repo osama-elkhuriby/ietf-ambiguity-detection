@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause is clear and unambiguous. It specifies a precise condition (a MAX_PUSH_ID frame payload not containing a single variable-length integer) and a required response (treat it as a connection error of type HTTP_MALFORMED_MAX_PUSH_ID). There is no room for multiple interpretations or missing constraints that would affect implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:52:40.086795+00:00",
+  "document_id": "draft-ietf-quic-http-08",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "b039709389f8064faaa7b9d69fe1b5f509e8e4bf5c73cb9ab819110282aa0288",
+  "lineage_ids": "lineage:01019a4aab9a674a33cf738a",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 123,
+    "load_duration": 9033100,
+    "prompt_eval_count": 550,
+    "total_duration": 5156591500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause is clear and unambiguous. It specifies a precise condition (a MAX_PUSH_ID frame payload not containing a single variable-length integer) and a required response (treat it as a connection error of type HTTP_MALFORMED_MAX_PUSH_ID). There is no room for multiple interpretations or missing constraints that would affect implementation behavior.\"\n}",
+  "record_id": "85c7405fe42058e4c7561032dcf1c133c6018eb26e11402d7dbcc5353bccd9d1",
+  "revision": "08",
+  "schema_version": 1,
+  "section_ids": "5.2.8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.171
+}

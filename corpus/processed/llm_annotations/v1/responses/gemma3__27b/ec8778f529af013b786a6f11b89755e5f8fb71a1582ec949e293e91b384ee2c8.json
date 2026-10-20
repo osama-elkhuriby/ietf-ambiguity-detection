@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY drop these packets, or MAY buffer them in anticipation of later packets",
+    "interpretation_a": "The client can choose to discard out-of-order packets immediately.",
+    "interpretation_b": "The client can choose to buffer out-of-order packets, potentially consuming memory, in hopes of receiving the necessary key material later.",
+    "is_ambiguous": "yes",
+    "justification": "The MAY/MAY construction allows for two valid implementations: immediate dropping or buffering. The lack of constraints on buffering (duration, resource limits) creates a potential vulnerability.",
+    "missing_information": "There is no limit on how long the client should buffer packets, or any guidance on how to manage buffer resources. This could lead to denial-of-service if an attacker sends many out-of-order packets."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:13:56.035311+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "fa1d88d03fe442bbf35d3c75517f02e2159f54e06e8f43b5a7eb67d5730eae2d",
+  "lineage_ids": "lineage:79f6f3b811fcfd603d51ab90",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 185,
+    "load_duration": 3510900,
+    "prompt_eval_count": 584,
+    "total_duration": 7005160800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY drop these packets, or MAY buffer them in anticipation of later packets\", \"interpretation_a\": \"The client can choose to discard out-of-order packets immediately.\", \"interpretation_b\": \"The client can choose to buffer out-of-order packets, potentially consuming memory, in hopes of receiving the necessary key material later.\", \"missing_information\": \"There is no limit on how long the client should buffer packets, or any guidance on how to manage buffer resources. This could lead to denial-of-service if an attacker sends many out-of-order packets.\", \"justification\": \"The MAY/MAY construction allows for two valid implementations: immediate dropping or buffering. The lack of constraints on buffering (duration, resource limits) creates a potential vulnerability.\"}",
+  "record_id": "ec8778f529af013b786a6f11b89755e5f8fb71a1582ec949e293e91b384ee2c8",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "5.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.016
+}

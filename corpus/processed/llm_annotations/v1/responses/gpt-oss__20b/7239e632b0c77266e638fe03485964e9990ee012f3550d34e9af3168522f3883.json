@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "Other recipients",
+    "interpretation_a": "Other recipients refers to any entity other than the origin server and the immediate recipient, such as intermediate proxies or caches.",
+    "interpretation_b": "Other recipients refers to any entity other than the origin server, including the immediate recipient (e.g., the client), so all parties except the origin server should ignore unrecognized fields.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"Other recipients\" is undefined in the supplied context, allowing two materially different interpretations of which entities should ignore unrecognized header and trailer fields.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T06:52:59.181967+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "9aad829ea612273962a86161c53266b979df13287ef90aa34ea64928d7c7ead5",
+  "lineage_ids": "lineage:8c0ecbef3c2645ba92a233bd",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 343,
+    "load_duration": 7192000,
+    "prompt_eval_count": 713,
+    "total_duration": 3124364000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-1\",\n  \"evidence_span\": \"Other recipients\",\n  \"interpretation_a\": \"Other recipients refers to any entity other than the origin server and the immediate recipient, such as intermediate proxies or caches.\",\n  \"interpretation_b\": \"Other recipients refers to any entity other than the origin server, including the immediate recipient (e.g., the client), so all parties except the origin server should ignore unrecognized fields.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The phrase \\\"Other recipients\\\" is undefined in the supplied context, allowing two materially different interpretations of which entities should ignore unrecognized header and trailer fields.\"\n}",
+  "record_id": "7239e632b0c77266e638fe03485964e9990ee012f3550d34e9af3168522f3883",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 17.265
+}

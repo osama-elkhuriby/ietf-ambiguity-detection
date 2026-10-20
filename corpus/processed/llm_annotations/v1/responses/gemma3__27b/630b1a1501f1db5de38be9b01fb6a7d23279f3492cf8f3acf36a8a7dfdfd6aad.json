@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless there is no authority information to convey",
+    "interpretation_a": "If the client has no authority information (e.g., a direct connection to a service without a domain name), it MUST NOT send the :authority pseudo-header.",
+    "interpretation_b": "If the client determines that the authority information is not *relevant* to the request (e.g., an internal communication where authority is implicit), it MUST NOT send the :authority pseudo-header.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'no authority information to convey' is open to interpretation. It could mean the client literally has no authority to provide, or that the authority is not applicable in the current context. This affects whether a client would send the pseudo-header or not.",
+    "missing_information": "The definition of 'authority information' is not precise. Does it refer to the *existence* of authority information, or the *relevance* of authority information to the request?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:35:32.370012+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "c68aecaa60e08db5ad38fd79e64bfff569f1fe6bc4fcde9db2ef727b69d254ea",
+  "lineage_ids": "lineage:83d64f6ec8227a7e393f1840",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 222,
+    "load_duration": 28085600,
+    "prompt_eval_count": 604,
+    "total_duration": 9032381800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless there is no authority information to convey\", \"interpretation_a\": \"If the client has no authority information (e.g., a direct connection to a service without a domain name), it MUST NOT send the :authority pseudo-header.\", \"interpretation_b\": \"If the client determines that the authority information is not *relevant* to the request (e.g., an internal communication where authority is implicit), it MUST NOT send the :authority pseudo-header.\", \"missing_information\": \"The definition of 'authority information' is not precise. Does it refer to the *existence* of authority information, or the *relevance* of authority information to the request?\",\"justification\": \"The phrase 'no authority information to convey' is open to interpretation. It could mean the client literally has no authority to provide, or that the authority is not applicable in the current context. This affects whether a client would send the pseudo-header or not.\"}",
+  "record_id": "630b1a1501f1db5de38be9b01fb6a7d23279f3492cf8f3acf36a8a7dfdfd6aad",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.047
+}

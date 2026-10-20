@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "uniquely attributed to a single connection",
+    "interpretation_a": "Payload bytes are counted based on the server's ability to map a datagram to a specific, established connection (e.g., via connection ID).",
+    "interpretation_b": "Payload bytes are counted based on the source and destination IP/port, even before a connection is fully established, assuming a one-to-one mapping between these and a potential connection.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'uniquely attributed to a single connection' is open to interpretation. It's unclear whether the attribution requires a fully established connection or if a potential connection (based on source/destination IP/port) is sufficient. This affects how the server counts payload bytes for amplification protection.",
+    "missing_information": "The criteria for 'uniquely attributed' is not defined. Does it require a fully established connection, or is a potential connection (based on source/destination) sufficient?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:54:53.095663+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "03ea11316be01d82dde4a81d830fd16b30396c45ec5496959fa855284da9f0bb",
+  "lineage_ids": "lineage:ff2a8fc960188aa03286d9cc",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 224,
+    "load_duration": 4174300,
+    "prompt_eval_count": 585,
+    "total_duration": 8389157300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"uniquely attributed to a single connection\", \"interpretation_a\": \"Payload bytes are counted based on the server's ability to map a datagram to a specific, established connection (e.g., via connection ID).\", \"interpretation_b\": \"Payload bytes are counted based on the source and destination IP/port, even before a connection is fully established, assuming a one-to-one mapping between these and a potential connection.\", \"missing_information\": \"The criteria for 'uniquely attributed' is not defined. Does it require a fully established connection, or is a potential connection (based on source/destination) sufficient?\", \"justification\": \"The phrase 'uniquely attributed to a single connection' is open to interpretation. It's unclear whether the attribution requires a fully established connection or if a potential connection (based on source/destination IP/port) is sufficient. This affects how the server counts payload bytes for amplification protection.\"}",
+  "record_id": "01a163c0cd3d9a655868f4c30dba5ec94bd2d38198cdb297d07d4fc3f7cc48ad",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "8.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.39
+}

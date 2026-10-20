@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause uses the word 'MAY', which grants the server discretion to discard 0-RTT keys as soon as it receives a 1-RTT packet. This does not introduce ambiguity because it does not require a specific implementation behavior, nor does it leave a missing constraint that would affect operational interpretation. The clause is clear in its permissive language and does not allow for multiple materially different interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:37:06.926944+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "2bb251df05faaf7643f4b7e9cf0b0f578af22ed99f505034e099512efbc7e7d7",
+  "lineage_ids": "lineage:e0a750932030973641d8383e",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 139,
+    "load_duration": 4268800,
+    "prompt_eval_count": 562,
+    "total_duration": 5719952300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause uses the word 'MAY', which grants the server discretion to discard 0-RTT keys as soon as it receives a 1-RTT packet. This does not introduce ambiguity because it does not require a specific implementation behavior, nor does it leave a missing constraint that would affect operational interpretation. The clause is clear in its permissive language and does not allow for multiple materially different interpretations.\"\n}",
+  "record_id": "8e1d79fe1c08f4cde1ed5c47689e3ad75a45e21e501a4824abc2ca1d142aa055",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.9.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.719
+}

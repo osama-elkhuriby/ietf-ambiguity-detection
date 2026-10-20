@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Content-Type and Content-Range field(s)",
+    "interpretation_a": "The clause does not specify what to do if the Content-Type or Content-Range fields are missing, leaving the client implementation ambiguous.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause requires the client to inspect these fields but does not provide guidance for the case where one or both are absent, creating an incomplete constraint that could lead to different implementation behaviours.",
+    "missing_information": "What to do if the Content-Type or Content-Range fields are missing in a 206 response."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T07:44:09.813020+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "cff755f647622fffce265fce4a767c7e4c5a63b3490b593e7c321c2b61a9bbe6",
+  "lineage_ids": "lineage:075470185086b4ad67ff36fe",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3146,
+    "load_duration": 4992600,
+    "prompt_eval_count": 679,
+    "total_duration": 27082883300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"Content-Type and Content-Range field(s)\",\n  \"interpretation_a\": \"The clause does not specify what to do if the Content-Type or Content-Range fields are missing, leaving the client implementation ambiguous.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"What to do if the Content-Type or Content-Range fields are missing in a 206 response.\",\n  \"justification\": \"The clause requires the client to inspect these fields but does not provide guidance for the case where one or both are absent, creating an incomplete constraint that could lead to different implementation behaviours.\"\n}",
+  "record_id": "b4da26b9dca857dd8af961ac1e26a9b3b95c546e5d215c28dcf79f8cba56d66b",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "15.3.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 27.094
+}

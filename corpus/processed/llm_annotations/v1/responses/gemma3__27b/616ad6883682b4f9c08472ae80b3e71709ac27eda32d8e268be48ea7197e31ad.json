@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "equals the decimal number of octets that would have been sent in the content of a 200 (OK) response to the same request.",
+    "interpretation_a": "The Content-Length refers to the size of the response body that *would have been* sent if the request had resulted in a 200 OK. This implies calculating the size of a potentially different response body than the 304 response.",
+    "interpretation_b": "The Content-Length refers to the size of the response body that *would have been* sent if the request had resulted in a 200 OK, but only considering the minimal 304 response body. This implies the Content-Length could be zero.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'equals the decimal number of octets that would have been sent in the content of a 200 (OK) response to the same request' is open to interpretation. Does it mean the full body that *could* have been sent, or the minimal body that *would* have been sent in a 304 context? This affects the value of Content-Length.",
+    "missing_information": "It is unclear whether the 'decimal number of octets' refers to the full potential body of a 200 response, or the minimal body that would be sent in a 304 response. This affects how the Content-Length is calculated."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:10:08.271134+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "06aa964a51f006f140c827975dd8f5bf01184d1694ce22f9369875e22c1fbdd4",
+  "lineage_ids": "lineage:8df7bea139f81b0364c65cce",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 319,
+    "load_duration": 8812500,
+    "prompt_eval_count": 686,
+    "total_duration": 12131596900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"equals the decimal number of octets that would have been sent in the content of a 200 (OK) response to the same request.\", \"interpretation_a\": \"The Content-Length refers to the size of the response body that *would have been* sent if the request had resulted in a 200 OK. This implies calculating the size of a potentially different response body than the 304 response.\", \"interpretation_b\": \"The Content-Length refers to the size of the response body that *would have been* sent if the request had resulted in a 200 OK, but only considering the minimal 304 response body. This implies the Content-Length could be zero.\", \"missing_information\": \"It is unclear whether the 'decimal number of octets' refers to the full potential body of a 200 response, or the minimal body that would be sent in a 304 response. This affects how the Content-Length is calculated.\", \"justification\": \"The phrase 'equals the decimal number of octets that would have been sent in the content of a 200 (OK) response to the same request' is open to interpretation. Does it mean the full body that *could* have been sent, or the minimal body that *would* have been sent in a 304 context? This affects the value of Content-Length.\"}",
+  "record_id": "616ad6883682b4f9c08472ae80b3e71709ac27eda32d8e268be48ea7197e31ad",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "8.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 12.125
+}

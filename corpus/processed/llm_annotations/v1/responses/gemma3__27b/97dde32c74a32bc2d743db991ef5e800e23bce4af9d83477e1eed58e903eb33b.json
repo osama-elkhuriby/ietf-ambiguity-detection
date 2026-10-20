@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY cease setting ECT codepoints",
+    "interpretation_a": "The endpoint might stop setting ECN codepoints.",
+    "interpretation_b": "The endpoint might continue setting ECN codepoints.",
+    "is_ambiguous": "yes",
+    "justification": "The 'MAY' keyword allows for two reasonable implementation behaviours: either the endpoint stops setting ECN codepoints, or it continues to do so. There is no further guidance on when to choose one over the other.",
+    "missing_information": "The criteria for deciding whether to cease setting ECT codepoints is not specified. The use of 'MAY' grants discretion, but without further constraints, it's unclear when the endpoint *should* cease setting the codepoints, leading to different implementations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:46:52.230793+00:00",
+  "document_id": "draft-ietf-quic-transport-16",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "0bb922580d82d937e62d2855f444e22f8991863536a8d81c1803163c78c5e20b",
+  "lineage_ids": "lineage:b59a3f678a5628b0e85fe47b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 177,
+    "load_duration": 4172000,
+    "prompt_eval_count": 637,
+    "total_duration": 6750736000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY cease setting ECT codepoints\", \"interpretation_a\": \"The endpoint might stop setting ECN codepoints.\", \"interpretation_b\": \"The endpoint might continue setting ECN codepoints.\", \"missing_information\": \"The criteria for deciding whether to cease setting ECT codepoints is not specified. The use of 'MAY' grants discretion, but without further constraints, it's unclear when the endpoint *should* cease setting the codepoints, leading to different implementations.\",\"justification\": \"The 'MAY' keyword allows for two reasonable implementation behaviours: either the endpoint stops setting ECN codepoints, or it continues to do so. There is no further guidance on when to choose one over the other.\"}",
+  "record_id": "97dde32c74a32bc2d743db991ef5e800e23bce4af9d83477e1eed58e903eb33b",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "13.3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.75
+}

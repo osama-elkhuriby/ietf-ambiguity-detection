@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless the complete length is unknown or difficult to determine",
+    "interpretation_a": "The server may omit the complete length if it is unknown, but must include it if it is known and easy to determine.",
+    "interpretation_b": "The server may omit the complete length if determining it requires significant computational effort, even if the length is technically known.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'difficult to determine' is subjective and lacks a concrete threshold. Different implementations could reasonably interpret this differently, leading to varying behavior regarding the inclusion of the complete length.",
+    "missing_information": "The definition of 'difficult to determine' is missing. What level of effort constitutes 'difficult' is not specified, leading to different implementations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:30:08.630872+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "c5d5585869f5153314abb85ec0f7a563e8d2870acd76eba9af433217a2f9c231",
+  "lineage_ids": "lineage:967d6a169c770594ecb14df0",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 174,
+    "load_duration": 26008000,
+    "prompt_eval_count": 596,
+    "total_duration": 6835056000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless the complete length is unknown or difficult to determine\", \"interpretation_a\": \"The server may omit the complete length if it is unknown, but must include it if it is known and easy to determine.\", \"interpretation_b\": \"The server may omit the complete length if determining it requires significant computational effort, even if the length is technically known.\", \"missing_information\": \"The definition of 'difficult to determine' is missing. What level of effort constitutes 'difficult' is not specified, leading to different implementations.\", \"justification\": \"The phrase 'difficult to determine' is subjective and lacks a concrete threshold. Different implementations could reasonably interpret this differently, leading to varying behavior regarding the inclusion of the complete length.\"}",
+  "record_id": "d4f322f5cf3232220fe316edc1a093efc59fb7e8b044b2401a8be08432ac1147",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "14.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.828
+}

@@ -1,0 +1,37 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "0x3FFFFFFFFFFFFFFE",
+    "interpretation_a": "The upper bound is inclusive, meaning 0x3FFFFFFFFFFFFFFE is a valid unassigned code.",
+    "interpretation_b": "The upper bound is exclusive, meaning 0x3FFFFFFFFFFFFFFE is an assigned code.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states that codes of the form 0x1f * N + 0x21 MUST NOT be assigned, up to and including 0x3FFFFFFFFFFFFFFE. The use of 'through' is ambiguous; it could mean inclusive or exclusive. This impacts the maximum value of N and therefore the range of unassigned codes.",
+    "missing_information": "It is unclear whether the upper bound is inclusive or exclusive. This affects the range of valid unassigned codes."
+  },
+  "attempts": 3,
+  "created_at": "2026-10-07T05:08:58.526812+00:00",
+  "document_id": "draft-ietf-quic-http-19",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "39ee418edfe4988d959fba6e4b9489b77384f92155a826501711f86a1baf5326",
+  "lineage_ids": "lineage:cc3737cb33241640f7a29849",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 194,
+    "load_duration": 5200600,
+    "prompt_eval_count": 986,
+    "total_duration": 7645155200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"0x3FFFFFFFFFFFFFFE\", \"interpretation_a\": \"The upper bound is inclusive, meaning 0x3FFFFFFFFFFFFFFE is a valid unassigned code.\", \"interpretation_b\": \"The upper bound is exclusive, meaning 0x3FFFFFFFFFFFFFFE is an assigned code.\", \"missing_information\": \"It is unclear whether the upper bound is inclusive or exclusive. This affects the range of valid unassigned codes.\", \"justification\": \"The clause states that codes of the form 0x1f * N + 0x21 MUST NOT be assigned, up to and including 0x3FFFFFFFFFFFFFFE. The use of 'through' is ambiguous; it could mean inclusive or exclusive. This impacts the maximum value of N and therefore the range of unassigned codes.\"}",
+  "record_id": "d15ec91f063d8c5e1953ec500e535848cc07d423a7506f0a71ddbda57cba1b1c",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "10.3",
+  "status": "invalid",
+  "validation_errors": [
+    "evidence_span is not an exact target-clause substring"
+  ],
+  "wall_seconds": 28.781
+}

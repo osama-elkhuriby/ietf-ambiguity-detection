@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously requires that a client which has set SETTINGS_ENABLE_PUSH to 0 and has received an acknowledgment of that setting must treat any received PUSH_PROMISE frame as a PROTOCOL_ERROR. The context provided (previous clause and parameter definition) removes any potential confusion about the meaning of \"had it acknowledged\" or the parameter in question.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T05:05:25.134426+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "1c0d1acc40d1a8e011bb556c0d2efb4abc1b393c627e988b6ca0746307806178",
+  "lineage_ids": "lineage:7014e53bdf7e51836cb637ec",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1402,
+    "load_duration": 4664200,
+    "prompt_eval_count": 591,
+    "total_duration": 12121569100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously requires that a client which has set SETTINGS_ENABLE_PUSH to 0 and has received an acknowledgment of that setting must treat any received PUSH_PROMISE frame as a PROTOCOL_ERROR. The context provided (previous clause and parameter definition) removes any potential confusion about the meaning of \\\"had it acknowledged\\\" or the parameter in question.\"\n}",
+  "record_id": "db01019243db0beb8f99e5cc633fcbd3d0dc1a9f54993371cb13971c2fbee7ac",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 12.125
+}

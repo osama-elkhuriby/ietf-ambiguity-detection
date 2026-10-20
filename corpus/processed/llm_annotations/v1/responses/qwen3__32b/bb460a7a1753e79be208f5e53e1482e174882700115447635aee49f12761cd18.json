@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "process the set of continuous ranges as one of the following",
+    "interpretation_a": "The client must choose one of the listed options (incomplete 200, multipart 206, or multiple 206s) and apply it uniformly to all continuous ranges.",
+    "interpretation_b": "The client may apply different options to different continuous ranges, as long as each is processed according to one of the listed methods.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'process the set of continuous ranges as one of the following' is ambiguous in whether it refers to the entire set being processed using a single method or whether individual ranges may be processed using different methods. This missing constraint could lead to different implementations handling the same input differently.",
+    "missing_information": "The text does not specify whether the client must apply a single method to all ranges or may use different methods for different ranges, which affects implementation behavior."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:27:31.995339+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "800c58b31e0db14d4b2af6dc88ce9fb263df0e6d4855674efe84e3db36cae4bc",
+  "lineage_ids": "lineage:7117ddf21d9397a64011b79f",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 221,
+    "load_duration": 21206500,
+    "prompt_eval_count": 607,
+    "total_duration": 9241177800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"process the set of continuous ranges as one of the following\",\n  \"interpretation_a\": \"The client must choose one of the listed options (incomplete 200, multipart 206, or multiple 206s) and apply it uniformly to all continuous ranges.\",\n  \"interpretation_b\": \"The client may apply different options to different continuous ranges, as long as each is processed according to one of the listed methods.\",\n  \"missing_information\": \"The text does not specify whether the client must apply a single method to all ranges or may use different methods for different ranges, which affects implementation behavior.\",\n  \"justification\": \"The phrase 'process the set of continuous ranges as one of the following' is ambiguous in whether it refers to the entire set being processed using a single method or whether individual ranges may be processed using different methods. This missing constraint could lead to different implementations handling the same input differently.\"\n}",
+  "record_id": "bb460a7a1753e79be208f5e53e1482e174882700115447635aee49f12761cd18",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "15.3.7.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.234
+}

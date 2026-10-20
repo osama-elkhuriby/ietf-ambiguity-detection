@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "I-1",
+    "evidence_span": "but it MAY be used for an RTT measurement.",
+    "interpretation_a": "The Retry packet can be used to measure RTT.",
+    "interpretation_b": "The Retry packet cannot be used to measure RTT.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states the packet MUST NOT be treated as an acknowledgement, but MAY be used for RTT measurement. The use of 'but' creates a direct contradiction. If it is not an acknowledgement, it is unclear how it can be used for RTT measurement, as RTT measurements are typically derived from acknowledgement reception.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:21:59.242365+00:00",
+  "document_id": "draft-ietf-quic-recovery-13",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "05493cb31e0f009f36cbe70188902639614968177a22a1713cf10a0650631293",
+  "lineage_ids": "lineage:a43ea14f095398801e76c0be",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 148,
+    "load_duration": 4814000,
+    "prompt_eval_count": 545,
+    "total_duration": 5647777100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"I-1\", \"evidence_span\": \"but it MAY be used for an RTT measurement.\", \"interpretation_a\": \"The Retry packet can be used to measure RTT.\", \"interpretation_b\": \"The Retry packet cannot be used to measure RTT.\", \"missing_information\": \"\", \"justification\": \"The clause states the packet MUST NOT be treated as an acknowledgement, but MAY be used for RTT measurement. The use of 'but' creates a direct contradiction. If it is not an acknowledgement, it is unclear how it can be used for RTT measurement, as RTT measurements are typically derived from acknowledgement reception.\"}",
+  "record_id": "6e98ddb71fd74c36df602f64ffada2fb64e785c7b592fdc60d1032a6f4f78e37",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "3.3.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.656
+}

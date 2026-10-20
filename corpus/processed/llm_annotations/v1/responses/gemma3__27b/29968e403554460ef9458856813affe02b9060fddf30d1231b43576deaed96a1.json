@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "frame payload that terminates before the end of the identified fields",
+    "interpretation_a": "A frame payload can terminate *anywhere* before the end of the identified fields, even if it's only a single byte short.",
+    "interpretation_b": "A frame payload must contain *all* of the identified fields, and terminating before the end implies a more severe error than simply being short a few bytes.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'before the end of the identified fields' is insufficiently precise. It's unclear whether a frame terminating mid-way through the last field is treated the same as a frame terminating after only a few bytes of the first field. This affects how an implementation would handle partial reads and error detection.",
+    "missing_information": "The granularity of 'before the end' is not specified. Does this apply to any partial field, or only to the last field?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:44:29.519891+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "dd2556d6c902ab4a5859a784846db585c790cae9f4b56c1d7aa25231b836681a",
+  "lineage_ids": "lineage:07d9b91fc514af7e28d6ccf5",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 210,
+    "load_duration": 9026700,
+    "prompt_eval_count": 589,
+    "total_duration": 8019394400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"frame payload that terminates before the end of the identified fields\", \"interpretation_a\": \"A frame payload can terminate *anywhere* before the end of the identified fields, even if it's only a single byte short.\", \"interpretation_b\": \"A frame payload must contain *all* of the identified fields, and terminating before the end implies a more severe error than simply being short a few bytes.\", \"missing_information\": \"The granularity of 'before the end' is not specified. Does this apply to any partial field, or only to the last field?\",\"justification\": \"The phrase 'before the end of the identified fields' is insufficiently precise. It's unclear whether a frame terminating mid-way through the last field is treated the same as a frame terminating after only a few bytes of the first field. This affects how an implementation would handle partial reads and error detection.\"}",
+  "record_id": "29968e403554460ef9458856813affe02b9060fddf30d1231b43576deaed96a1",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.032
+}

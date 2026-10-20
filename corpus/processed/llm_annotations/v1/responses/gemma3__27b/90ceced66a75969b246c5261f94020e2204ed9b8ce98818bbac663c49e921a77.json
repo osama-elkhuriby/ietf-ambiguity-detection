@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST be difficult to guess",
+    "interpretation_a": "The token should have high entropy, making brute-force attacks impractical.",
+    "interpretation_b": "The token should not follow any predictable pattern based on connection parameters, preventing an attacker from crafting a valid token without observing a valid connection.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'difficult to guess' is subjective. Without a concrete definition of what constitutes 'difficult', different implementations could reasonably interpret the requirement differently, leading to varying levels of security. One implementation might focus on entropy, while another might focus on unpredictability, and both could claim to meet the requirement without being equally secure.",
+    "missing_information": "The clause lacks a quantifiable metric for 'difficult to guess'.  For example, it does not specify a minimum entropy requirement or a maximum acceptable probability of successful random guessing."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:44:28.788701+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "bf3b4608a9ec9c1b4d229ce8efc4d90dd1ceaf0528a6040d5995e6b9dfa5579b",
+  "lineage_ids": "lineage:7f77730741d00dfc080a867a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 197,
+    "load_duration": 5185700,
+    "prompt_eval_count": 550,
+    "total_duration": 7407046400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST be difficult to guess\", \"interpretation_a\": \"The token should have high entropy, making brute-force attacks impractical.\", \"interpretation_b\": \"The token should not follow any predictable pattern based on connection parameters, preventing an attacker from crafting a valid token without observing a valid connection.\", \"missing_information\": \"The clause lacks a quantifiable metric for 'difficult to guess'.  For example, it does not specify a minimum entropy requirement or a maximum acceptable probability of successful random guessing.\", \"justification\": \"The phrase 'difficult to guess' is subjective. Without a concrete definition of what constitutes 'difficult', different implementations could reasonably interpret the requirement differently, leading to varying levels of security. One implementation might focus on entropy, while another might focus on unpredictability, and both could claim to meet the requirement without being equally secure.\"}",
+  "record_id": "90ceced66a75969b246c5261f94020e2204ed9b8ce98818bbac663c49e921a77",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "10.3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.407
+}

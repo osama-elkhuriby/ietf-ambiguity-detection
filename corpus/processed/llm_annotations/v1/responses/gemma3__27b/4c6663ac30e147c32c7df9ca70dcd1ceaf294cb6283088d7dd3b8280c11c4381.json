@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "a single range",
+    "interpretation_a": "The server must not generate a multipart response if the request asks for only one byte range, even if the server could technically fulfill it with a single part in a multipart response.",
+    "interpretation_b": "The server must not generate a multipart response if the request asks for only one byte range, and the server has only one byte range to return. It could still return a non-multipart response.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'a single range' is ambiguous. It could refer to the client requesting a single range, or the server having only a single range to return. This affects whether a multipart response is permissible even with a single part.",
+    "missing_information": "The clause does not explicitly state whether the prohibition applies even if the server *could* fulfill the single range request with a single part within a multipart response. The phrase 'a single range' could refer to the request or the server's ability to fulfill it."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:05:27.250516+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "69fd1fafc2e691253d4c3a8475547609247698b452c59875ac9b5000e7fa1194",
+  "lineage_ids": "lineage:4e35cde7a0bb11ecaa0f7d36",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 228,
+    "load_duration": 20371300,
+    "prompt_eval_count": 641,
+    "total_duration": 8751420700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"a single range\", \"interpretation_a\": \"The server must not generate a multipart response if the request asks for only one byte range, even if the server could technically fulfill it with a single part in a multipart response.\", \"interpretation_b\": \"The server must not generate a multipart response if the request asks for only one byte range, and the server has only one byte range to return. It could still return a non-multipart response.\", \"missing_information\": \"The clause does not explicitly state whether the prohibition applies even if the server *could* fulfill the single range request with a single part within a multipart response. The phrase 'a single range' could refer to the request or the server's ability to fulfill it.\",\"justification\": \"The phrase 'a single range' is ambiguous. It could refer to the client requesting a single range, or the server having only a single range to return. This affects whether a multipart response is permissible even with a single part.\"}",
+  "record_id": "4c6663ac30e147c32c7df9ca70dcd1ceaf294cb6283088d7dd3b8280c11c4381",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "15.3.7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.75
+}

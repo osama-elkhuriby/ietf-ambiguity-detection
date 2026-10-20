@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "comparable to the maximum expected packet reordering, such as 1 RTT",
+    "interpretation_a": "Implementations could interpret 'comparable to' as meaning 'approximately equal to', and thus set the tracking time to 1 RTT.",
+    "interpretation_b": "Implementations could interpret 'comparable to' as meaning 'within the same order of magnitude as', and thus set the tracking time to a value significantly different from 1 RTT (e.g., 500ms or 2 RTT) depending on their estimation of maximum expected packet reordering.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'comparable to' is vague and allows for multiple reasonable interpretations. The example 'such as 1 RTT' does not constrain the implementation to only use 1 RTT; it merely provides an example. Without a more precise definition of 'comparable to' or a constraint on the maximum expected packet reordering, different implementations could choose significantly different tracking times.",
+    "missing_information": "The document does not define what 'comparable to' means in this context, nor does it provide a concrete upper bound for the maximum expected packet reordering. This leaves room for different implementations to choose different tracking times, potentially leading to interoperability issues."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:24:36.923571+00:00",
+  "document_id": "draft-ietf-quic-recovery-20",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "ec6ecdec489f8256afeafeb2febfec474a9ae492f953ebe7de17d243db35883f",
+  "lineage_ids": "lineage:8601ead3680b48330e6178b8",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 287,
+    "load_duration": 3964300,
+    "prompt_eval_count": 590,
+    "total_duration": 10610254100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"comparable to the maximum expected packet reordering, such as 1 RTT\", \"interpretation_a\": \"Implementations could interpret 'comparable to' as meaning 'approximately equal to', and thus set the tracking time to 1 RTT.\", \"interpretation_b\": \"Implementations could interpret 'comparable to' as meaning 'within the same order of magnitude as', and thus set the tracking time to a value significantly different from 1 RTT (e.g., 500ms or 2 RTT) depending on their estimation of maximum expected packet reordering.\", \"missing_information\": \"The document does not define what 'comparable to' means in this context, nor does it provide a concrete upper bound for the maximum expected packet reordering. This leaves room for different implementations to choose different tracking times, potentially leading to interoperability issues.\", \"justification\": \"The phrase 'comparable to' is vague and allows for multiple reasonable interpretations. The example 'such as 1 RTT' does not constrain the implementation to only use 1 RTT; it merely provides an example. Without a more precise definition of 'comparable to' or a constraint on the maximum expected packet reordering, different implementations could choose significantly different tracking times.\"}",
+  "record_id": "90c805d4d97dda4030c3ae39d468248547ee009b9a5b48df539d8e6dcb78d08a",
+  "revision": "20",
+  "schema_version": 1,
+  "section_ids": "A.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.609
+}

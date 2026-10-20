@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously specifies that if the priority information for a new request stream has already been received via the control stream by the time the stream is opened, then any PRIORITY frame sent on that request stream must be ignored. The timing and conditions are clearly defined, and no alternative reasonable interpretations or missing constraints are evident.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T09:39:42.300232+00:00",
+  "document_id": "draft-ietf-quic-http-20",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "f109cfa8ff59af0473b796ddac723d7fc5761110972b56975054e427bd8ad4c3",
+  "lineage_ids": "lineage:3599c13c4a0fa3dcae674981",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2471,
+    "load_duration": 4042700,
+    "prompt_eval_count": 724,
+    "total_duration": 21364789200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously specifies that if the priority information for a new request stream has already been received via the control stream by the time the stream is opened, then any PRIORITY frame sent on that request stream must be ignored. The timing and conditions are clearly defined, and no alternative reasonable interpretations or missing constraints are evident.\"\n}",
+  "record_id": "7f6b0744d26051ccaf3dfd4152a72d83f6ba8506cb32fb4e971b54376bb18ed5",
+  "revision": "20",
+  "schema_version": 1,
+  "section_ids": "4.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 21.359
+}

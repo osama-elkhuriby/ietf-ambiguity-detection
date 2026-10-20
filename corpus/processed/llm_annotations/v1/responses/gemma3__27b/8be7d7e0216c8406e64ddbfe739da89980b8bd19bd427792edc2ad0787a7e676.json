@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless separate compression dictionaries are used for each source of data",
+    "interpretation_a": "If confidential and attacker-controlled data are mixed, compression is allowed *if* separate compression dictionaries are maintained for each data source.",
+    "interpretation_b": "If confidential and attacker-controlled data are mixed, compression is *never* allowed, regardless of whether separate compression dictionaries are used.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'unless separate compression dictionaries are used' introduces a conditional exception. However, the definition of 'separate compression dictionaries' is missing, leading to two reasonable interpretations of when compression is permitted.",
+    "missing_information": "The clause does not define what constitutes a 'separate compression dictionary'. Does it mean a completely distinct dictionary, or simply a different starting point within the same dictionary? This affects how implementations would handle the requirement."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:57:54.377838+00:00",
+  "document_id": "draft-ietf-quic-http-29",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "ee1934f49a25b89172a93eba068654e280c67bdcd729ad1f5055bef1320ba56c",
+  "lineage_ids": "lineage:ee7bad8b17383a85a853b199",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 195,
+    "load_duration": 8326000,
+    "prompt_eval_count": 589,
+    "total_duration": 7570186200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless separate compression dictionaries are used for each source of data\", \"interpretation_a\": \"If confidential and attacker-controlled data are mixed, compression is allowed *if* separate compression dictionaries are maintained for each data source.\", \"interpretation_b\": \"If confidential and attacker-controlled data are mixed, compression is *never* allowed, regardless of whether separate compression dictionaries are used.\", \"missing_information\": \"The clause does not define what constitutes a 'separate compression dictionary'. Does it mean a completely distinct dictionary, or simply a different starting point within the same dictionary? This affects how implementations would handle the requirement.\",\"justification\": \"The phrase 'unless separate compression dictionaries are used' introduces a conditional exception. However, the definition of 'separate compression dictionaries' is missing, leading to two reasonable interpretations of when compression is permitted.\"}",
+  "record_id": "8be7d7e0216c8406e64ddbfe739da89980b8bd19bd427792edc2ad0787a7e676",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "10.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.578
+}

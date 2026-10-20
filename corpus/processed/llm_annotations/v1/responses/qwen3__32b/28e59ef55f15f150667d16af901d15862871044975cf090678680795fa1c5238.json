@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "A proxy MAY relay",
+    "interpretation_a": "A proxy is allowed to relay the Proxy-Authorization header to the next proxy in the chain, potentially for cooperative authentication.",
+    "interpretation_b": "A proxy is allowed to choose not to relay the Proxy-Authorization header, which could result in the next proxy not having the necessary credentials for authentication.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' introduces discretion, but the lack of constraints on when or how a proxy should relay credentials creates an ambiguity in implementation behavior.",
+    "missing_information": "The clause does not specify under what conditions or mechanisms a proxy should or should not relay the credentials, leaving the behavior open to implementation-specific decisions."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:06:57.711513+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-07",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "84c461fc5c9d2ac9ba2350708ea63cac4995ed0d0f78663fc11398c368ec6d81",
+  "lineage_ids": "lineage:839468f9b547bec6ddeeb2dd",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 179,
+    "load_duration": 4389700,
+    "prompt_eval_count": 562,
+    "total_duration": 7513303500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"A proxy MAY relay\",\n  \"interpretation_a\": \"A proxy is allowed to relay the Proxy-Authorization header to the next proxy in the chain, potentially for cooperative authentication.\",\n  \"interpretation_b\": \"A proxy is allowed to choose not to relay the Proxy-Authorization header, which could result in the next proxy not having the necessary credentials for authentication.\",\n  \"missing_information\": \"The clause does not specify under what conditions or mechanisms a proxy should or should not relay the credentials, leaving the behavior open to implementation-specific decisions.\",\n  \"justification\": \"The use of 'MAY' introduces discretion, but the lack of constraints on when or how a proxy should relay credentials creates an ambiguity in implementation behavior.\"\n}",
+  "record_id": "28e59ef55f15f150667d16af901d15862871044975cf090678680795fa1c5238",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.5.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.532
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless the client has no entity-tag for the corresponding representation and the date is a strong validator in the sense defined by Section 8.8.2.2.",
+    "interpretation_a": "If the client *does* have an entity-tag, it must not include the HTTP-date. If the client does *not* have an entity-tag, it must include the HTTP-date *only if* it is a strong validator.",
+    "interpretation_b": "If the client *does* have an entity-tag, it must not include the HTTP-date. If the client does *not* have an entity-tag, it must include the HTTP-date, and the requirement that it be a strong validator is a separate condition that must *always* be met when a date is included.",
+    "is_ambiguous": "yes",
+    "justification": "The phrasing 'unless the client has no entity-tag... and the date is a strong validator' creates ambiguity regarding the scope of the 'and'. Does the 'and' apply to both conditions being necessary for inclusion of the date when no entity-tag exists, or does it apply to the entire 'no entity-tag' clause? The two interpretations above demonstrate this difference.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:22:16.034949+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-14",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "cd8d4758bc6fdad40e5e7560711ad904b12e60d78ff54e65796d5e892aaac978",
+  "lineage_ids": "lineage:1fdd2c1cc30ccf3ac7021cf9",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 280,
+    "load_duration": 11888900,
+    "prompt_eval_count": 615,
+    "total_duration": 10671243900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless the client has no entity-tag for the corresponding representation and the date is a strong validator in the sense defined by Section 8.8.2.2.\", \"interpretation_a\": \"If the client *does* have an entity-tag, it must not include the HTTP-date. If the client does *not* have an entity-tag, it must include the HTTP-date *only if* it is a strong validator.\", \"interpretation_b\": \"If the client *does* have an entity-tag, it must not include the HTTP-date. If the client does *not* have an entity-tag, it must include the HTTP-date, and the requirement that it be a strong validator is a separate condition that must *always* be met when a date is included.\", \"missing_information\": \"\",\"justification\": \"The phrasing 'unless the client has no entity-tag... and the date is a strong validator' creates ambiguity regarding the scope of the 'and'. Does the 'and' apply to both conditions being necessary for inclusion of the date when no entity-tag exists, or does it apply to the entire 'no entity-tag' clause? The two interpretations above demonstrate this difference.\"}",
+  "record_id": "a5c51bff5ab2f0e7fca69e4c1c64ba58ecab00fec3a649fe41da2a75777adc5b",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "13.1.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.688
+}

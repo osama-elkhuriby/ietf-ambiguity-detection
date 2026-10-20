@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "prior to having confirmed the handshake",
+    "interpretation_a": "Key update cannot begin until the handshake is fully completed, including all retransmissions and confirmations.",
+    "interpretation_b": "Key update cannot begin until some minimal subset of handshake messages have been exchanged and acknowledged, leaving room for ongoing handshake negotiation.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'confirmed the handshake' is not defined within the provided context. This leaves open the question of what level of handshake completion is required before a key update can be initiated. A complete handshake versus a partial handshake represents two reasonable interpretations.",
+    "missing_information": "The definition of \"confirmed the handshake\" is not provided within this excerpt. It is unclear whether 'confirmed' requires full completion of the handshake, or merely some initial exchange."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:46:56.354761+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "bcc776e1586fce238d4e925dd2ec2fe6846789c3a2f82a629e9d1bec4847559e",
+  "lineage_ids": "lineage:a9955b7d30efd9262de6cfdc",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 185,
+    "load_duration": 6129800,
+    "prompt_eval_count": 585,
+    "total_duration": 7007346400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"prior to having confirmed the handshake\", \"interpretation_a\": \"Key update cannot begin until the handshake is fully completed, including all retransmissions and confirmations.\", \"interpretation_b\": \"Key update cannot begin until some minimal subset of handshake messages have been exchanged and acknowledged, leaving room for ongoing handshake negotiation.\", \"missing_information\": \"The definition of \\\"confirmed the handshake\\\" is not provided within this excerpt. It is unclear whether 'confirmed' requires full completion of the handshake, or merely some initial exchange.\", \"justification\": \"The phrase 'confirmed the handshake' is not defined within the provided context. This leaves open the question of what level of handshake completion is required before a key update can be initiated. A complete handshake versus a partial handshake represents two reasonable interpretations.\"}",
+  "record_id": "bf4da052e0b546ff329817ba14ec242ec5c75745eb7403ff677566a3284069ca",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.016
+}

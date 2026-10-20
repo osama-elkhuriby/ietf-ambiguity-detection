@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "For this design to work, the token MUST be covered by integrity protection against modification or falsification by clients.",
+    "interpretation_a": "The clause requires that the token be protected from client modification, but it does not specify the type or mechanism of integrity protection (e.g., MAC, checksum, signature). This omission allows multiple reasonable, materially different implementation choices.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a concrete constraint on how integrity protection must be achieved, leading to under‑specification of implementation behaviour.",
+    "missing_information": "None beyond the clause itself; the clause is ambiguous due to the lack of a specified integrity protection method."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T15:38:36.532319+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "fc9ea8f92afead83250a1c8f69950052fc47d8b64af0dd2a11b97a0ec933a93c",
+  "lineage_ids": "lineage:a38d4e790eee839bbe59180d",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3509,
+    "load_duration": 4507500,
+    "prompt_eval_count": 585,
+    "total_duration": 30383121000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"For this design to work, the token MUST be covered by integrity protection against modification or falsification by clients.\",\n  \"interpretation_a\": \"The clause requires that the token be protected from client modification, but it does not specify the type or mechanism of integrity protection (e.g., MAC, checksum, signature). This omission allows multiple reasonable, materially different implementation choices.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"None beyond the clause itself; the clause is ambiguous due to the lack of a specified integrity protection method.\",\n  \"justification\": \"The clause lacks a concrete constraint on how integrity protection must be achieved, leading to under‑specification of implementation behaviour.\"\n}",
+  "record_id": "4e8303ccec70c0a44f8a4662639c8231f097af389b4ca7748ccf01a91c70fc0c",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "8.1.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 30.375
+}

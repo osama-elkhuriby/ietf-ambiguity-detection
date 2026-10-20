@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously specifies that after successfully receiving a packet, an endpoint must discard any higher‑numbered packets that cannot be unprotected with either the current key or, if a key update has occurred, the next key. The wording does not allow two materially different implementation behaviours, nor does it omit a concrete constraint that would change the operational interpretation.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T13:21:40.366304+00:00",
+  "document_id": "draft-ietf-quic-tls-05",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "e43010a2b96e03f71ad5ab954a103b80335bad5c7037db2a34bf2a1ffc601fe9",
+  "lineage_ids": "lineage:6eb67d373759e819f660ff2d",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3858,
+    "load_duration": 4286100,
+    "prompt_eval_count": 599,
+    "total_duration": 33149137300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously specifies that after successfully receiving a packet, an endpoint must discard any higher‑numbered packets that cannot be unprotected with either the current key or, if a key update has occurred, the next key. The wording does not allow two materially different implementation behaviours, nor does it omit a concrete constraint that would change the operational interpretation.\"\n}",
+  "record_id": "dfa0a61c279d095daceb2aad3cdde7ade861cce57de05b30aa27da94c79a7d3f",
+  "revision": "05",
+  "schema_version": 1,
+  "section_ids": "5.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 33.157
+}

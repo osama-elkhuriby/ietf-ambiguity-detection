@@ -1,0 +1,116 @@
+{
+  "available_records": 2618,
+  "completed_at": "2026-10-08T21:08:55.379916+00:00",
+  "consensus_policy_version": "strict-majority-v1",
+  "dataset_type": "LLM-consensus silver; not human-validated ground truth",
+  "family_counts": {
+    "draft-ietf-6man-rfc2460bis": 1,
+    "draft-ietf-dnsop-svcb-https": 163,
+    "draft-ietf-httpbis-cache-header": 5,
+    "draft-ietf-httpbis-http2bis": 266,
+    "draft-ietf-httpbis-semantics": 420,
+    "draft-ietf-quic-http": 351,
+    "draft-ietf-quic-recovery": 172,
+    "draft-ietf-quic-tls": 200,
+    "draft-ietf-quic-transport": 842,
+    "draft-ietf-tcpm-rfc793bis": 143,
+    "draft-ietf-tls-tls13": 55
+  },
+  "guardrails": [
+    "weak labels were not included in model prompts",
+    "future revisions and errata were not included in model prompts",
+    "invalid outputs did not vote; two valid matching votes could still form a majority",
+    "unanimous yes/no votes received high-confidence labels",
+    "a strict model majority received a medium-confidence yes/no label",
+    "ties and votes without a yes/no majority became uncertain",
+    "uncertain rows were excluded from training_dataset.csv",
+    "families, not rows, define validation and test splits"
+  ],
+  "input_root": "D:\\RFC\\ietf-ambiguity-detection\\corpus\\processed\\ground_truth",
+  "label_counts": {
+    "no": 2091,
+    "uncertain": 72,
+    "yes": 455
+  },
+  "limit": null,
+  "models": [
+    {
+      "digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+      "name": "qwen3:32b"
+    },
+    {
+      "digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+      "name": "gemma3:27b"
+    },
+    {
+      "digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+      "name": "gpt-oss:20b"
+    }
+  ],
+  "num_ctx": 8192,
+  "ollama_base_url": "http://127.0.0.1:11434",
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "schema_version": 1,
+  "selected_records": 2618,
+  "source_files": [
+    {
+      "path": "D:\\RFC\\ietf-ambiguity-detection\\corpus\\processed\\ground_truth\\draft-ietf-6man-rfc2460bis\\review\\all_candidates_v1\\reviewer_a.csv",
+      "sha256": "152eeca23582192fa930091916741d7289d894e08ef4f9df15b4dba2fd4052c3"
+    },
+    {
+      "path": "D:\\RFC\\ietf-ambiguity-detection\\corpus\\processed\\ground_truth\\draft-ietf-dnsop-svcb-https\\review\\all_candidates_v1\\reviewer_a.csv",
+      "sha256": "4dddb5734f6e18f8da5e633a06f2b7b57f3cf957cb03e49bc8c30077fbb4baa6"
+    },
+    {
+      "path": "D:\\RFC\\ietf-ambiguity-detection\\corpus\\processed\\ground_truth\\draft-ietf-httpbis-cache-header\\review\\all_candidates_v1\\reviewer_a.csv",
+      "sha256": "2fa36e39da5612fbf86f82bfd2a8c7c4efd9fd89f17ebc9445019778ed4cb0e0"
+    },
+    {
+      "path": "D:\\RFC\\ietf-ambiguity-detection\\corpus\\processed\\ground_truth\\draft-ietf-httpbis-http2bis\\review\\all_candidates_v1\\reviewer_a.csv",
+      "sha256": "86b0f5fa09aa7d270ba5b1a4d11aecb5826cc9517020562b7abbbc7aaff396b6"
+    },
+    {
+      "path": "D:\\RFC\\ietf-ambiguity-detection\\corpus\\processed\\ground_truth\\draft-ietf-httpbis-semantics\\review\\all_candidates_v1\\reviewer_a.csv",
+      "sha256": "78703014496b9b660d95e44f59cfbdb5aea77449c406167248848d3424f42def"
+    },
+    {
+      "path": "D:\\RFC\\ietf-ambiguity-detection\\corpus\\processed\\ground_truth\\draft-ietf-quic-http\\review\\all_candidates_v1\\reviewer_a.csv",
+      "sha256": "8547855d2c300dd93f8fb28861966fd9c6c452dea4333d4c0e5b0bc74fc1b6e6"
+    },
+    {
+      "path": "D:\\RFC\\ietf-ambiguity-detection\\corpus\\processed\\ground_truth\\draft-ietf-quic-recovery\\review\\all_candidates_v1\\reviewer_a.csv",
+      "sha256": "4463b0fc0db45cb269e725d7c456138578d9b51464f3a65f08fbc1cdded06fa6"
+    },
+    {
+      "path": "D:\\RFC\\ietf-ambiguity-detection\\corpus\\processed\\ground_truth\\draft-ietf-quic-tls\\review\\all_candidates_v1\\reviewer_a.csv",
+      "sha256": "ef8170a69a175a647324ddd8612cc06ddbd070e0ce5477de92afec04fdc01db9"
+    },
+    {
+      "path": "D:\\RFC\\ietf-ambiguity-detection\\corpus\\processed\\ground_truth\\draft-ietf-quic-transport\\review\\all_candidates_v1\\reviewer_a.csv",
+      "sha256": "bc3363ec827a30fa688b0e956cf64260db34dd20e8b8ed033d229dbe85584519"
+    },
+    {
+      "path": "D:\\RFC\\ietf-ambiguity-detection\\corpus\\processed\\ground_truth\\draft-ietf-tcpm-rfc793bis\\review\\all_candidates_v1\\reviewer_a.csv",
+      "sha256": "a0bfec25b70a574906914d15f62d9483a35be3f570ca99a687bbcf926ba0fa66"
+    },
+    {
+      "path": "D:\\RFC\\ietf-ambiguity-detection\\corpus\\processed\\ground_truth\\draft-ietf-tls-tls13\\review\\all_candidates_v1\\reviewer_a.csv",
+      "sha256": "54a0c38e7da8696f548d6b78f148e71e140040d3a94782803903ffe955ed917e"
+    }
+  ],
+  "split_counts": {
+    "test": 262,
+    "train": 2145,
+    "validation": 139
+  },
+  "started_at": "2026-10-07T21:59:10.215108+00:00",
+  "test_family": "draft-ietf-httpbis-http2bis",
+  "tier_counts": {
+    "HIGH": 786,
+    "MEDIUM": 1760,
+    "UNCERTAIN": 72
+  },
+  "training_records": 2546,
+  "validation_family": "draft-ietf-tcpm-rfc793bis"
+}

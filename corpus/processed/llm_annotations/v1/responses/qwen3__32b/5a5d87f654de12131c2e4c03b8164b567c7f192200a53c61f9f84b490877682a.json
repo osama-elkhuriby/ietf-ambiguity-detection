@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause is not ambiguous. It clearly states that QUIC can detect the loss of ACK-only packets and MAY use that information to adjust the congestion controller or the rate of ACK-only packets being sent. The use of 'MAY' indicates optional behavior, and the clause explicitly states that no mechanism is described for doing so. There is no conflicting or missing constraint that would lead to multiple materially different interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:20:01.041680+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "ce2d255091570ab743c05b3328a7850f38f08b0e0671ff19bd626825e947aad4",
+  "lineage_ids": "lineage:c90bd4fbdae3b58de8a7326a",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 137,
+    "load_duration": 4926700,
+    "prompt_eval_count": 551,
+    "total_duration": 5631543000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause is not ambiguous. It clearly states that QUIC can detect the loss of ACK-only packets and MAY use that information to adjust the congestion controller or the rate of ACK-only packets being sent. The use of 'MAY' indicates optional behavior, and the clause explicitly states that no mechanism is described for doing so. There is no conflicting or missing constraint that would lead to multiple materially different interpretations.\"\n}",
+  "record_id": "5a5d87f654de12131c2e4c03b8164b567c7f192200a53c61f9f84b490877682a",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.625
+}

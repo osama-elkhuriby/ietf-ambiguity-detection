@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT excessively delay acknowledgements of packets containing frames other than ACK or ACN_ECN",
+    "interpretation_a": "Implementations should not delay acknowledgments for packets with non-ACK frames beyond a reasonable or minimal threshold, but the exact definition of 'excessively' is left undefined, allowing varied interpretations.",
+    "interpretation_b": "The phrase 'excessively delay' is not quantified, so different implementations may define 'excessive' differently, leading to inconsistent behaviors in how long acknowledgments are delayed for non-ACK frames.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'excessively delay' is not quantified or defined, leaving it open to interpretation. This missing constraint could lead to materially different implementations, making the clause ambiguous.",
+    "missing_information": "The text does not define what constitutes 'excessive' delay, which is necessary for a consistent implementation."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-07T22:16:40.044289+00:00",
+  "document_id": "draft-ietf-quic-recovery-14",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "c12b512252dee3e2f49262a7a45e652e533f682c11382e6d241738ba10058fb7",
+  "lineage_ids": "lineage:5952c333872f975735994f0f",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 214,
+    "load_duration": 4561400,
+    "prompt_eval_count": 773,
+    "total_duration": 8932077300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"MUST NOT excessively delay acknowledgements of packets containing frames other than ACK or ACN_ECN\",\n  \"interpretation_a\": \"Implementations should not delay acknowledgments for packets with non-ACK frames beyond a reasonable or minimal threshold, but the exact definition of 'excessively' is left undefined, allowing varied interpretations.\",\n  \"interpretation_b\": \"The phrase 'excessively delay' is not quantified, so different implementations may define 'excessive' differently, leading to inconsistent behaviors in how long acknowledgments are delayed for non-ACK frames.\",\n  \"missing_information\": \"The text does not define what constitutes 'excessive' delay, which is necessary for a consistent implementation.\",\n  \"justification\": \"The term 'excessively delay' is not quantified or defined, leaving it open to interpretation. This missing constraint could lead to materially different implementations, making the clause ambiguous.\"\n}",
+  "record_id": "11d8e0679ee5443986eda4514eab4cfd9e986dd157d25bc40162436e53874cbc",
+  "revision": "14",
+  "schema_version": 1,
+  "section_ids": "4.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 19.656
+}

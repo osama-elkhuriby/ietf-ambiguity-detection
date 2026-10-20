@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY appear in any packet number space",
+    "interpretation_a": "ACK frames can be sent in any packet number space, regardless of where the acknowledged packet came from.",
+    "interpretation_b": "ACK frames can be sent in any packet number space, but only if the acknowledged packet was also sent in that same packet number space.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' combined with the subsequent 'but can only acknowledge packets that appeared in that packet number space' creates ambiguity. It's unclear whether the initial 'MAY' allows for ACK frames to be sent in any space *even if* the acknowledged packet wasn't in that space, or if the 'MAY' is conditional on the acknowledged packet also being in that space. The constraint clarifies *what* can be acknowledged, but not *where* the ACK can be sent.",
+    "missing_information": "The meaning of 'appear' is ambiguous. Does it mean 'be sent in' or 'be present in'?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:19:50.357368+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "7210d6005198c87372af5f87cf4ecbaa9d85e260000e70786a6064b1e8f32354",
+  "lineage_ids": "lineage:53d3d96b0c8417dafb3ddb8f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 230,
+    "load_duration": 3552500,
+    "prompt_eval_count": 575,
+    "total_duration": 8607667800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY appear in any packet number space\", \"interpretation_a\": \"ACK frames can be sent in any packet number space, regardless of where the acknowledged packet came from.\", \"interpretation_b\": \"ACK frames can be sent in any packet number space, but only if the acknowledged packet was also sent in that same packet number space.\", \"missing_information\": \"The meaning of 'appear' is ambiguous. Does it mean 'be sent in' or 'be present in'?\",\"justification\": \"The use of 'MAY' combined with the subsequent 'but can only acknowledge packets that appeared in that packet number space' creates ambiguity. It's unclear whether the initial 'MAY' allows for ACK frames to be sent in any space *even if* the acknowledged packet wasn't in that space, or if the 'MAY' is conditional on the acknowledged packet also being in that space. The constraint clarifies *what* can be acknowledged, but not *where* the ACK can be sent.\"}",
+  "record_id": "47f53713d099add569a88a327eee9c7ff33c112790916a71fc3d3bcb61f08fde",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "12.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.609
+}

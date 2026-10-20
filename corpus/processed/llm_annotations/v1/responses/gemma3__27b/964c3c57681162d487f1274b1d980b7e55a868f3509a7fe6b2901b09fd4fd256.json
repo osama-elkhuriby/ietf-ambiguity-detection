@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-3",
+    "evidence_span": "SHOULD be used unless the usage is especially sensitive to having a longer encoding.",
+    "interpretation_a": "Implementations *can* use codepoints encoding to four or eight bytes if there's no specific reason to avoid them, but are free to use shorter encodings if desired.",
+    "interpretation_b": "Implementations *should* prefer codepoints encoding to four or eight bytes unless a compelling reason exists to use a shorter encoding, implying a bias towards longer encodings.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' combined with the vague condition 'especially sensitive' creates ambiguity. Different implementations could reasonably disagree on what constitutes 'especially sensitive' and therefore whether to prioritize longer or shorter encodings.",
+    "missing_information": "The criteria for 'especially sensitive' are not defined, leaving room for differing interpretations of when a longer encoding is unacceptable."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:46:09.416847+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "779b8971ca56f80040aa8b4d68f7c40decbf3163decfb8515a8a90b43059d955",
+  "lineage_ids": "lineage:3f81d75e1e31c42bab4349bf",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 205,
+    "load_duration": 4195400,
+    "prompt_eval_count": 615,
+    "total_duration": 7724305000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-3\", \"evidence_span\": \"SHOULD be used unless the usage is especially sensitive to having a longer encoding.\", \"interpretation_a\": \"Implementations *can* use codepoints encoding to four or eight bytes if there's no specific reason to avoid them, but are free to use shorter encodings if desired.\", \"interpretation_b\": \"Implementations *should* prefer codepoints encoding to four or eight bytes unless a compelling reason exists to use a shorter encoding, implying a bias towards longer encodings.\", \"missing_information\": \"The criteria for 'especially sensitive' are not defined, leaving room for differing interpretations of when a longer encoding is unacceptable.\", \"justification\": \"The use of 'SHOULD' combined with the vague condition 'especially sensitive' creates ambiguity. Different implementations could reasonably disagree on what constitutes 'especially sensitive' and therefore whether to prioritize longer or shorter encodings.\"}",
+  "record_id": "964c3c57681162d487f1274b1d980b7e55a868f3509a7fe6b2901b09fd4fd256",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "22.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.719
+}

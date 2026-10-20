@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "reasonable amount of time",
+    "interpretation_a": "The sender may wait a short period (e.g., a few milliseconds) before timing out.",
+    "interpretation_b": "The sender may wait a long period (e.g., several seconds or minutes) before timing out.",
+    "is_ambiguous": "yes",
+    "justification": "The clause specifies a timeout based on an undefined term \"reasonable amount of time\", which lacks a concrete constraint and therefore permits multiple materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T05:11:27.654388+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "e40ad3cc9145a90a7ddf9dd957ee23c5cf074b7d0633e78f860a89ede7e25dc0",
+  "lineage_ids": "lineage:d2b584a076a36cb60e190072",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 348,
+    "load_duration": 5536800,
+    "prompt_eval_count": 750,
+    "total_duration": 3198553500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"reasonable amount of time\",\n  \"interpretation_a\": \"The sender may wait a short period (e.g., a few milliseconds) before timing out.\",\n  \"interpretation_b\": \"The sender may wait a long period (e.g., several seconds or minutes) before timing out.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause specifies a timeout based on an undefined term \\\"reasonable amount of time\\\", which lacks a concrete constraint and therefore permits multiple materially different implementation behaviours.\"\n}",
+  "record_id": "e73447217541e5162843a8fa428741c807c8edcadc5a446424f73159751a4680",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.5.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 13.39
+}

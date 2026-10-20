@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD NOT open more than one HTTP/3 connection",
+    "interpretation_a": "Clients are discouraged from opening more than one connection, but it is permissible under some circumstances.",
+    "interpretation_b": "Clients must not open more than one connection; doing so is a protocol error.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD NOT' is ambiguous. It could be interpreted as a strong recommendation (similar to 'SHOULD') or a near-requirement (approaching 'MUST'). Without further clarification, implementations could reasonably differ on how strictly they enforce this guideline.",
+    "missing_information": "The strength of 'SHOULD NOT' is unclear. Is it a strong recommendation, or a near-requirement? A clear definition of the severity of violating this guideline is missing."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:56:08.893054+00:00",
+  "document_id": "draft-ietf-quic-http-33",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "99743979fc4009e724f90e4dd282ecdba2b9f33345eb23bdb09d63403c3bf623",
+  "lineage_ids": "lineage:6ced3af70e0a021a1c0f0c9b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 187,
+    "load_duration": 20089200,
+    "prompt_eval_count": 606,
+    "total_duration": 7516044300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD NOT open more than one HTTP/3 connection\", \"interpretation_a\": \"Clients are discouraged from opening more than one connection, but it is permissible under some circumstances.\", \"interpretation_b\": \"Clients must not open more than one connection; doing so is a protocol error.\", \"missing_information\": \"The strength of 'SHOULD NOT' is unclear. Is it a strong recommendation, or a near-requirement? A clear definition of the severity of violating this guideline is missing.\", \"justification\": \"The use of 'SHOULD NOT' is ambiguous. It could be interpreted as a strong recommendation (similar to 'SHOULD') or a near-requirement (approaching 'MUST'). Without further clarification, implementations could reasonably differ on how strictly they enforce this guideline.\"}",
+  "record_id": "80c601bae085775a6781686819533d6aaf5d88e2d9a9613e217cdf81392d4eb2",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "3.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.531
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "For a host that is an IP address",
+    "interpretation_a": "The requirement applies only when the client is connecting to a server using an IP address directly as the hostname (e.g., connecting to 192.0.2.1).",
+    "interpretation_b": "The requirement applies to all connections, and the client should resolve the hostname to an IP address and then check if that IP address is present in the subjectAltName field.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'For a host that is an IP address' is ambiguous. It's unclear if 'host' refers to the hostname the client *intended* to connect to, or the IP address the client is *actually* connecting to. If it's the former, the client would need to resolve the hostname to an IP address and then check the certificate. If it's the latter, the check only applies when the client is connecting directly to an IP address.",
+    "missing_information": "It is unclear whether 'host' refers to the hostname used by the client or the IP address the client is connecting to. This affects whether the check is always performed or only when connecting directly by IP address."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:58:44.429634+00:00",
+  "document_id": "draft-ietf-quic-http-33",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "75b2e5ea722911577bf662d345c6083f43a125c95046137e8e40503770ca1a77",
+  "lineage_ids": "lineage:5b8e993b58162ed047dd4364",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 272,
+    "load_duration": 4593000,
+    "prompt_eval_count": 610,
+    "total_duration": 10231128600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"For a host that is an IP address\", \"interpretation_a\": \"The requirement applies only when the client is connecting to a server using an IP address directly as the hostname (e.g., connecting to 192.0.2.1).\", \"interpretation_b\": \"The requirement applies to all connections, and the client should resolve the hostname to an IP address and then check if that IP address is present in the subjectAltName field.\", \"missing_information\": \"It is unclear whether 'host' refers to the hostname used by the client or the IP address the client is connecting to. This affects whether the check is always performed or only when connecting directly by IP address.\", \"justification\": \"The phrase 'For a host that is an IP address' is ambiguous. It's unclear if 'host' refers to the hostname the client *intended* to connect to, or the IP address the client is *actually* connecting to. If it's the former, the client would need to resolve the hostname to an IP address and then check the certificate. If it's the latter, the check only applies when the client is connecting directly to an IP address.\"}",
+  "record_id": "901747591725df3be93ff7117b6eb5cd3cbc8556a0b21ea7c38bef3de8fcef0f",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.266
+}

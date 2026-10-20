@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST be set to twice its current value",
+    "interpretation_a": "If the current PTO value is 10ms, the new PTO value will be 20ms.",
+    "interpretation_b": "If the current PTO value is 11ms, the new PTO value will be 22ms. The statement does not specify rounding behavior.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'twice its current value' is ambiguous because it doesn't specify how to handle non-integer values. Different rounding methods will lead to different PTO values, affecting congestion control.",
+    "missing_information": "The document does not specify whether the PTO value should be rounded up, down, or to the nearest integer when doubling. This affects the actual timer value and thus implementation behavior."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:32:41.190460+00:00",
+  "document_id": "draft-ietf-quic-recovery-27",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "d3d8bff6ee114c508aff67ef5901234108a6938f818996a775c07f66b6e1708f",
+  "lineage_ids": "lineage:8d10e1185f363433459be20b",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 186,
+    "load_duration": 2606500,
+    "prompt_eval_count": 601,
+    "total_duration": 7064508300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST be set to twice its current value\", \"interpretation_a\": \"If the current PTO value is 10ms, the new PTO value will be 20ms.\", \"interpretation_b\": \"If the current PTO value is 11ms, the new PTO value will be 22ms. The statement does not specify rounding behavior.\", \"missing_information\": \"The document does not specify whether the PTO value should be rounded up, down, or to the nearest integer when doubling. This affects the actual timer value and thus implementation behavior.\", \"justification\": \"The phrase 'twice its current value' is ambiguous because it doesn't specify how to handle non-integer values. Different rounding methods will lead to different PTO values, affecting congestion control.\"}",
+  "record_id": "f146c1437c40223e730e95e49012e6e1a0ccd32c643fc732fe2722f312b6f34f",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "5.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.063
+}

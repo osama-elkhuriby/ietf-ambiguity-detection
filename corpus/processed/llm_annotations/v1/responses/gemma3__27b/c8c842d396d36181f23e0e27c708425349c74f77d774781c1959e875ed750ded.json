@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY interpret",
+    "interpretation_a": "Servers are permitted to treat the absence of priority signals as evidence the client doesn't support the feature, and may act accordingly (e.g., ignore subsequent signals).",
+    "interpretation_b": "Servers are permitted to treat the absence of priority signals as evidence the client doesn't support the feature, but must still process requests as if priority signals were present, using a default priority.",
+    "is_ambiguous": "yes",
+    "justification": "The use of \"MAY\" grants discretion, but doesn't specify *how* the server is allowed to interpret the absence of signals. Does it change processing, or just its internal understanding?",
+    "missing_information": "It is unclear whether the server is permitted to change its behavior based on the absence of signals, or whether it must continue to operate as if signals were present but ignored."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:47:46.203544+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "175b311149ef51ff740e4c93af2cb3698b7d413e4ce8234afb7b6b48043c179a",
+  "lineage_ids": "lineage:44dea83d6e334adec318e858",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 201,
+    "load_duration": 11336600,
+    "prompt_eval_count": 590,
+    "total_duration": 7753624200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY interpret\", \"interpretation_a\": \"Servers are permitted to treat the absence of priority signals as evidence the client doesn't support the feature, and may act accordingly (e.g., ignore subsequent signals).\", \"interpretation_b\": \"Servers are permitted to treat the absence of priority signals as evidence the client doesn't support the feature, but must still process requests as if priority signals were present, using a default priority.\", \"missing_information\": \"It is unclear whether the server is permitted to change its behavior based on the absence of signals, or whether it must continue to operate as if signals were present but ignored.\", \"justification\": \"The use of \\\"MAY\\\" grants discretion, but doesn't specify *how* the server is allowed to interpret the absence of signals. Does it change processing, or just its internal understanding?\"}",
+  "record_id": "c8c842d396d36181f23e0e27c708425349c74f77d774781c1959e875ed750ded",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "5.3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.765
+}

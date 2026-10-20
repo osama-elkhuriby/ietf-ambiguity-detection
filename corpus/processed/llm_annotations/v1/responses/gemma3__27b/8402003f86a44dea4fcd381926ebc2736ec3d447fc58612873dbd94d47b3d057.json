@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY provide a configuration setting that disables this check, but MUST provide a setting which enables it.",
+    "interpretation_a": "The client can be configured to *always* perform the check, or to *never* perform the check. The 'MAY' allows for disabling, and the 'MUST' requires an enabling setting.",
+    "interpretation_b": "The client must allow the check to be enabled, but if disabled, the client must still perform some minimal check (e.g., check for a valid certificate, but not necessarily verify against a trusted root). The 'MAY' allows for complete disabling, but the 'MUST' implies some level of checking remains.",
+    "is_ambiguous": "yes",
+    "justification": "The clause allows for two interpretations of what 'disables this check' means. Does it mean no certificate verification at all, or just a less thorough verification? The 'MUST' provide an enabling setting doesn't clarify this, as it could still be enabled to a minimal level of checking.",
+    "missing_information": "It is unclear whether disabling the check means *completely* bypassing certificate verification, or simply bypassing more stringent checks. A concrete definition of 'this check' is needed."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:14:59.336335+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "90a178c515975cf1f5f6c483b188a4e8f71879dd2de74ba6a2d482bee2adabe1",
+  "lineage_ids": "lineage:66ddaf5dc5bad42a0f629b2a",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 266,
+    "load_duration": 9354000,
+    "prompt_eval_count": 561,
+    "total_duration": 10019939400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY provide a configuration setting that disables this check, but MUST provide a setting which enables it.\", \"interpretation_a\": \"The client can be configured to *always* perform the check, or to *never* perform the check. The 'MAY' allows for disabling, and the 'MUST' requires an enabling setting.\", \"interpretation_b\": \"The client must allow the check to be enabled, but if disabled, the client must still perform some minimal check (e.g., check for a valid certificate, but not necessarily verify against a trusted root). The 'MAY' allows for complete disabling, but the 'MUST' implies some level of checking remains.\", \"missing_information\": \"It is unclear whether disabling the check means *completely* bypassing certificate verification, or simply bypassing more stringent checks. A concrete definition of 'this check' is needed.\", \"justification\": \"The clause allows for two interpretations of what 'disables this check' means. Does it mean no certificate verification at all, or just a less thorough verification? The 'MUST' provide an enabling setting doesn't clarify this, as it could still be enabled to a minimal level of checking.\"}",
+  "record_id": "8402003f86a44dea4fcd381926ebc2736ec3d447fc58612873dbd94d47b3d057",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "4.3.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.016
+}

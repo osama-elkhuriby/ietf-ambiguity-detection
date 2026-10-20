@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Similarly, a server MUST expand the payload of all UDP datagrams carrying ack-eliciting Initial packets to at least the smallest allowed maximum datagram size of 1200 bytes.",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause mandates that the payload be at least 1200 bytes but does not define the means of expansion, creating an under‑specified requirement.",
+    "missing_information": "The clause does not specify how the payload should be expanded to reach the required 1200‑byte size, leaving the method of expansion open to interpretation, which can lead to materially different implementations. This constitutes an incomplete constraint affecting implementation behaviour.  "
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T15:18:10.458445+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "0525e03dbbae33e99a80431284e862d4f1792c311b51c8f1197fe5f033d0a135",
+  "lineage_ids": "lineage:7bb036d6561a451636deaec1",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1167,
+    "load_duration": 4696900,
+    "prompt_eval_count": 601,
+    "total_duration": 10289738500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"Similarly, a server MUST expand the payload of all UDP datagrams carrying ack-eliciting Initial packets to at least the smallest allowed maximum datagram size of 1200 bytes.\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The clause does not specify how the payload should be expanded to reach the required 1200‑byte size, leaving the method of expansion open to interpretation, which can lead to materially different implementations. This constitutes an incomplete constraint affecting implementation behaviour.  \",\n  \"justification\": \"The clause mandates that the payload be at least 1200 bytes but does not define the means of expansion, creating an under‑specified requirement.\"\n}",
+  "record_id": "42fe8602f29955ded6c998f0fdc4ea220081c0ef563d7320f0f9cbd7d5b3ef4d",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "14.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.282
+}

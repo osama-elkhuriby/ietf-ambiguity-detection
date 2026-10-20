@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY be present",
+    "interpretation_a": "The TE header field is sometimes allowed in HTTP/3 requests.",
+    "interpretation_b": "The TE header field is never allowed in HTTP/3 requests, but its presence doesn't necessarily invalidate the message.",
+    "is_ambiguous": "yes",
+    "justification": "The use of \"MAY\" creates ambiguity. Does it mean the header is optional but valid when present, or that it's generally disallowed but allowed in specific circumstances not defined here? The constraint that it \"MUST NOT contain any value other than \"trailers\"\" only applies *if* it's present, not whether it can be present at all.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:00:03.535514+00:00",
+  "document_id": "draft-ietf-quic-http-27",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "47eeb9d0fb5285a1a7d8d86d2361b4c937d30b76c9b7ad507ab3c51a80b6a7f0",
+  "lineage_ids": "lineage:4515edbe4f153660464601e9",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 165,
+    "load_duration": 4974400,
+    "prompt_eval_count": 625,
+    "total_duration": 6450915400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY be present\", \"interpretation_a\": \"The TE header field is sometimes allowed in HTTP/3 requests.\", \"interpretation_b\": \"The TE header field is never allowed in HTTP/3 requests, but its presence doesn't necessarily invalidate the message.\", \"missing_information\": \"\", \"justification\": \"The use of \\\"MAY\\\" creates ambiguity. Does it mean the header is optional but valid when present, or that it's generally disallowed but allowed in specific circumstances not defined here? The constraint that it \\\"MUST NOT contain any value other than \\\"trailers\\\"\\\" only applies *if* it's present, not whether it can be present at all.\"}",
+  "record_id": "9db6b7457204d607de5f73a5f32ce417de930230750d1ec608b38198760d3a39",
+  "revision": "27",
+  "schema_version": 1,
+  "section_ids": "4.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.468
+}

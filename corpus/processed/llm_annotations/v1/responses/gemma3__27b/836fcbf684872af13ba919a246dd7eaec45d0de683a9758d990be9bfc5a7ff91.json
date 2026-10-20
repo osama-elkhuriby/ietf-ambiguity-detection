@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "is prevented or limited",
+    "interpretation_a": "The server could prevent replay by rejecting any token seen before, effectively having a very short lifetime.",
+    "interpretation_b": "The server could limit replay by accepting a token a certain number of times, allowing some replay but not unlimited.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"prevented or limited\" allows for a wide range of implementations. 'Prevented' implies a strict rejection of any replayed token, while 'limited' suggests allowing some replay. Without further specification, both interpretations are reasonable and materially different.",
+    "missing_information": "The clause does not specify *how* replay should be prevented or limited. A concrete constraint on the acceptable methods or parameters (e.g., maximum token lifetime, maximum replay count) is missing."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:38:51.768072+00:00",
+  "document_id": "draft-ietf-quic-transport-29",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "34e0a9812c8814be15f6fbd1f488786c26ddea044a41c256d579de06727a7907",
+  "lineage_ids": "lineage:081a52e6f60eba5febf67f4c",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 188,
+    "load_duration": 4064500,
+    "prompt_eval_count": 563,
+    "total_duration": 7112765800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"is prevented or limited\", \"interpretation_a\": \"The server could prevent replay by rejecting any token seen before, effectively having a very short lifetime.\", \"interpretation_b\": \"The server could limit replay by accepting a token a certain number of times, allowing some replay but not unlimited.\", \"missing_information\": \"The clause does not specify *how* replay should be prevented or limited. A concrete constraint on the acceptable methods or parameters (e.g., maximum token lifetime, maximum replay count) is missing.\",\"justification\": \"The phrase \\\"prevented or limited\\\" allows for a wide range of implementations. 'Prevented' implies a strict rejection of any replayed token, while 'limited' suggests allowing some replay. Without further specification, both interpretations are reasonable and materially different.\"}",
+  "record_id": "836fcbf684872af13ba919a246dd7eaec45d0de683a9758d990be9bfc5a7ff91",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "8.1.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.109
+}

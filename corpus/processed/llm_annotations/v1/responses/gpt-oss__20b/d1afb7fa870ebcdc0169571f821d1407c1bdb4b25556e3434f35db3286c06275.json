@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "incremented on each header block",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The target clause states that the sequence number must be incremented on each header block, but does not define the increment value, leading to ambiguity.",
+    "missing_information": "The clause does not specify the amount by which the sequence number is incremented (e.g., by 1). This omission allows multiple reasonable implementations, making the behavior under-specified."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T10:25:06.155391+00:00",
+  "document_id": "draft-ietf-quic-http-04",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "a6c4f02a615e9ae1e3ec3f10ce12ebf368d47152315e036fc69956d60818b9f0",
+  "lineage_ids": "lineage:8553bd966b5e23835e18d0f3",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 568,
+    "load_duration": 5735800,
+    "prompt_eval_count": 732,
+    "total_duration": 5067964500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"incremented on each header block\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The clause does not specify the amount by which the sequence number is incremented (e.g., by 1). This omission allows multiple reasonable implementations, making the behavior under-specified.\",\n  \"justification\": \"The target clause states that the sequence number must be incremented on each header block, but does not define the increment value, leading to ambiguity.\"\n}",
+  "record_id": "d1afb7fa870ebcdc0169571f821d1407c1bdb4b25556e3434f35db3286c06275",
+  "revision": "04",
+  "schema_version": 1,
+  "section_ids": "5.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 73.25
+}

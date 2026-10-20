@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause describes a permissible server behavior. The conditions under which a server can send a RST_STREAM are clearly defined: after sending a complete response and if the response doesn't depend on unsent request data. The use of 'MAY' indicates optional behavior, not ambiguity.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:42:34.682648+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-03",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "43bff692f0cd514a9c59e98c91da2a799aaf8d1b2b80419ba166183f49d464e7",
+  "lineage_ids": "lineage:b2bdedcd6c9573b7e3957c21",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 105,
+    "load_duration": 8186700,
+    "prompt_eval_count": 627,
+    "total_duration": 4410937500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"no\", \"ambiguity_subtype\": \"none\", \"evidence_span\": \"\", \"interpretation_a\": \"\", \"interpretation_b\": \"\", \"missing_information\": \"\", \"justification\": \"The clause describes a permissible server behavior. The conditions under which a server can send a RST_STREAM are clearly defined: after sending a complete response and if the response doesn't depend on unsent request data. The use of 'MAY' indicates optional behavior, not ambiguity.\"}",
+  "record_id": "9755e69a294308252631210f2df476a7eee1953752e0194fb1f8084d98b405f3",
+  "revision": "03",
+  "schema_version": 1,
+  "section_ids": "8.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 4.422
+}

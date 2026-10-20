@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously specifies that a client should send a CANCEL_PUSH frame when a promised push is not needed, and that if the push stream is already open, a STOP_SENDING frame with an appropriate error code may be used instead. The normative language and examples are clear, and no missing constraint or alternative interpretation leads to materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T10:04:55.100035+00:00",
+  "document_id": "draft-ietf-quic-http-13",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "e246af5856533dd3dc1653340bb73ef70d108ff6dafd294b07d69bf281f0f574",
+  "lineage_ids": "lineage:6e8887229ee6b73c18c7e5f4",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1199,
+    "load_duration": 5710600,
+    "prompt_eval_count": 636,
+    "total_duration": 10401466300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"no\", \"ambiguity_subtype\": \"none\", \"evidence_span\": \"\", \"interpretation_a\": \"\", \"interpretation_b\": \"\", \"missing_information\": \"\", \"justification\": \"The clause unambiguously specifies that a client should send a CANCEL_PUSH frame when a promised push is not needed, and that if the push stream is already open, a STOP_SENDING frame with an appropriate error code may be used instead. The normative language and examples are clear, and no missing constraint or alternative interpretation leads to materially different implementation behaviours.\"}",
+  "record_id": "ae04a0776344f60b053c4b8adf5faac153231ea16e1751cd0b0fa3503eff9c20",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "3.3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.407
+}

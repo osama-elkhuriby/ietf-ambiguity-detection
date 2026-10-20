@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause clearly distinguishes client and server behavior: a client may receive a CANCEL_PUSH referencing an unseen Push ID due to reordering, while a server must treat such a frame as a connection error. No alternative materially different interpretations or missing constraints are present.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T09:36:57.875504+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "f47ec57c83070604951f13bd7837bafbec1d2fc284a52267550367c5b4d3bf9c",
+  "lineage_ids": "lineage:9dbbb968916259cc1742460d",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 638,
+    "load_duration": 5046900,
+    "prompt_eval_count": 629,
+    "total_duration": 5578936200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause clearly distinguishes client and server behavior: a client may receive a CANCEL_PUSH referencing an unseen Push ID due to reordering, while a server must treat such a frame as a connection error. No alternative materially different interpretations or missing constraints are present.\"\n}",
+  "record_id": "76ff841cf7be84e90ff8893a5940b583ac378bbf5104921462c41dd9db7019e5",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.579
+}

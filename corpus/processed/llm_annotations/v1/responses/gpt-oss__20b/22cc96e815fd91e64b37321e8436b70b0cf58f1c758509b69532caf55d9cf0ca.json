@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "or otherwise transform, such fields",
+    "interpretation_a": "The clause does not define what transformation is permitted, so a proxy could transform the header field in any manner (e.g., modify the value, rename the field, or otherwise alter it). This lack of definition allows multiple materially different implementation behaviours.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause’s exception for transformation is incomplete, leading to ambiguity about permissible actions.",
+    "missing_information": "A clear definition of what constitutes an allowed transformation of unrecognized header fields is missing, preventing a unique operational interpretation of the clause."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T05:37:14.825384+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "1f0ec30fff18c3f6326fdcff1bd2a319932e98feae82901bb297fd969cc43c53",
+  "lineage_ids": "lineage:aea9742400e3dc3985977c5b",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 6003,
+    "load_duration": 4696500,
+    "prompt_eval_count": 606,
+    "total_duration": 52117636600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"or otherwise transform, such fields\",\n  \"interpretation_a\": \"The clause does not define what transformation is permitted, so a proxy could transform the header field in any manner (e.g., modify the value, rename the field, or otherwise alter it). This lack of definition allows multiple materially different implementation behaviours.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"A clear definition of what constitutes an allowed transformation of unrecognized header fields is missing, preventing a unique operational interpretation of the clause.\",\n  \"justification\": \"The clause’s exception for transformation is incomplete, leading to ambiguity about permissible actions.\"\n}",
+  "record_id": "22cc96e815fd91e64b37321e8436b70b0cf58f1c758509b69532caf55d9cf0ca",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 52.125
+}

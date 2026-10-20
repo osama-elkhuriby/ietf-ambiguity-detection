@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "a single 206 (Partial Content) response containing multipart/byteranges content, or multiple 206 (Partial Content) responses, each with one continuous range that is indicated by a Content-Range header field.",
+    "interpretation_a": "The client processes the continuous ranges as a single 206 (Partial Content) response with multipart/byteranges content.",
+    "interpretation_b": "The client processes the continuous ranges as multiple 206 (Partial Content) responses, each with one continuous range indicated by a Content-Range header field.",
+    "is_ambiguous": "yes",
+    "justification": "The clause lists two possible ways to handle non‑prefix continuous ranges but does not specify a rule for choosing between them, leaving the implementation choice open.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T07:51:03.128461+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "800c58b31e0db14d4b2af6dc88ce9fb263df0e6d4855674efe84e3db36cae4bc",
+  "lineage_ids": "lineage:7117ddf21d9397a64011b79f",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1037,
+    "load_duration": 4429000,
+    "prompt_eval_count": 648,
+    "total_duration": 9004956300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"a single 206 (Partial Content) response containing multipart/byteranges content, or multiple 206 (Partial Content) responses, each with one continuous range that is indicated by a Content-Range header field.\",\n  \"interpretation_a\": \"The client processes the continuous ranges as a single 206 (Partial Content) response with multipart/byteranges content.\",\n  \"interpretation_b\": \"The client processes the continuous ranges as multiple 206 (Partial Content) responses, each with one continuous range indicated by a Content-Range header field.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause lists two possible ways to handle non‑prefix continuous ranges but does not specify a rule for choosing between them, leaving the implementation choice open.\"\n}",
+  "record_id": "bb460a7a1753e79be208f5e53e1482e174882700115447635aee49f12761cd18",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "15.3.7.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.0
+}

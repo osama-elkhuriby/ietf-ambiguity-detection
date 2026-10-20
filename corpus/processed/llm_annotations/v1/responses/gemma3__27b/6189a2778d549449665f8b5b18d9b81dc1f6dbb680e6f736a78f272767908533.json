@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "cannot be safely received",
+    "interpretation_a": "A parameter is considered unsafe if its value could be maliciously crafted to cause harm, even if the DNS resolver doesn't directly interpret it. For example, a very long string could cause a denial of service.",
+    "interpretation_b": "A parameter is considered unsafe if its value would cause the DNS resolver to behave in an unexpected or incorrect manner. This could include parameters that are not supported by the resolver or that have invalid values.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'cannot be safely received' is vague. It doesn't specify *how* a parameter might be unsafe, or what criteria determine safety. This allows for multiple reasonable interpretations of which Alt-Svc parameters fall into this category.",
+    "missing_information": "The definition of 'safely received' is not precise. What constitutes 'safe' is not clearly defined, leaving room for different interpretations of which parameters are acceptable over an untrusted channel."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:04:25.264487+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-07",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "5149e6c54de5cdfbe1650861d87613c941c7a071717dd98f6436fc2be2a78060",
+  "lineage_ids": "lineage:0dfbf677b23aadc0fb1adcd7",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 224,
+    "load_duration": 4442000,
+    "prompt_eval_count": 603,
+    "total_duration": 8398455400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"cannot be safely received\", \"interpretation_a\": \"A parameter is considered unsafe if its value could be maliciously crafted to cause harm, even if the DNS resolver doesn't directly interpret it. For example, a very long string could cause a denial of service.\", \"interpretation_b\": \"A parameter is considered unsafe if its value would cause the DNS resolver to behave in an unexpected or incorrect manner. This could include parameters that are not supported by the resolver or that have invalid values.\", \"missing_information\": \"The definition of 'safely received' is not precise. What constitutes 'safe' is not clearly defined, leaving room for different interpretations of which parameters are acceptable over an untrusted channel.\",\"justification\": \"The phrase 'cannot be safely received' is vague. It doesn't specify *how* a parameter might be unsafe, or what criteria determine safety. This allows for multiple reasonable interpretations of which Alt-Svc parameters fall into this category.\"}",
+  "record_id": "6189a2778d549449665f8b5b18d9b81dc1f6dbb680e6f736a78f272767908533",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.2.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.406
+}

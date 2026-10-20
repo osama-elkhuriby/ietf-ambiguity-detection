@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "implementations SHOULD track cost of processing relative to progress",
+    "interpretation_a": "Implementations could track processing cost as CPU cycles per packet, and consider a high ratio indicative of an attack.",
+    "interpretation_b": "Implementations could track processing cost as memory usage per packet, and consider a high ratio indicative of an attack.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'cost of processing' is underspecified. It could refer to CPU time, memory usage, or other resources. Similarly, 'progress' is not defined, making it difficult to establish a meaningful ratio. This allows for multiple reasonable interpretations of how to implement the tracking mechanism.",
+    "missing_information": "The clause does not define what 'cost of processing' means, nor what constitutes 'progress'. Without these definitions, implementations could reasonably choose different metrics, leading to different behaviours."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:02:06.208132+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "419209808022ea9e6e6b7a9348de7357cf4709770d0b04d886b61b6397fa69f7",
+  "lineage_ids": "lineage:05d52f97e7a8fee09a721d82",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 199,
+    "load_duration": 4523300,
+    "prompt_eval_count": 589,
+    "total_duration": 7768712300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"implementations SHOULD track cost of processing relative to progress\", \"interpretation_a\": \"Implementations could track processing cost as CPU cycles per packet, and consider a high ratio indicative of an attack.\", \"interpretation_b\": \"Implementations could track processing cost as memory usage per packet, and consider a high ratio indicative of an attack.\", \"missing_information\": \"The clause does not define what 'cost of processing' means, nor what constitutes 'progress'. Without these definitions, implementations could reasonably choose different metrics, leading to different behaviours.\",\"justification\": \"The phrase 'cost of processing' is underspecified. It could refer to CPU time, memory usage, or other resources. Similarly, 'progress' is not defined, making it difficult to establish a meaningful ratio. This allows for multiple reasonable interpretations of how to implement the tracking mechanism.\"}",
+  "record_id": "c9d6310f76216ac09a7d0a3de6732e75f42e599ee07fe4f06457bb9bec3c984f",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "21.9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.766
+}

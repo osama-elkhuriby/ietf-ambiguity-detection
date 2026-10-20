@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "without modification",
+    "interpretation_a": "The entire ClientHello message, including extensions, must be resubmitted without any changes beyond the key_share replacement.",
+    "interpretation_b": "Only the key_share extension (if present) and its contents are subject to the 'without modification' constraint; other extensions and fields in the ClientHello can be modified.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'without modification' is incomplete. It doesn't specify *what* is not to be modified. This allows for interpretations where either the entire message is unchanged, or only the key_share extension is unchanged.",
+    "missing_information": "It is unclear whether 'without modification' applies to the entire ClientHello message or only to the key_share extension. A missing constraint specifying the scope of 'without modification' leads to different implementations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:34:46.016394+00:00",
+  "document_id": "draft-ietf-tls-tls13-23",
+  "family_id": "draft-ietf-tls-tls13",
+  "input_fingerprint": "b6802cf1b9dc91462ad61188c0780198282e7b28c3fe498bb0b30333d0cbd7f8",
+  "lineage_ids": "lineage:d0772b254883c3eb328ce2b7",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 199,
+    "load_duration": 24755800,
+    "prompt_eval_count": 586,
+    "total_duration": 7690246300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"without modification\", \"interpretation_a\": \"The entire ClientHello message, including extensions, must be resubmitted without any changes beyond the key_share replacement.\", \"interpretation_b\": \"Only the key_share extension (if present) and its contents are subject to the 'without modification' constraint; other extensions and fields in the ClientHello can be modified.\", \"missing_information\": \"It is unclear whether 'without modification' applies to the entire ClientHello message or only to the key_share extension. A missing constraint specifying the scope of 'without modification' leads to different implementations.\", \"justification\": \"The phrase 'without modification' is incomplete. It doesn't specify *what* is not to be modified. This allows for interpretations where either the entire message is unchanged, or only the key_share extension is unchanged.\"}",
+  "record_id": "6f97e6adcf3e2ccff382e419bde223aff0d65666effe3ab6bee5f916ca3ddb77",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "4.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.687
+}

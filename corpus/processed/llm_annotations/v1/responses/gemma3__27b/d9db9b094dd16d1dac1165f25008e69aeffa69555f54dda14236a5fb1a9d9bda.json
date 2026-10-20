@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "if that status can be determined by examining just the method, target URI, and header fields",
+    "interpretation_a": "The server can determine a final status code *without* looking at the payload, and thus must respond immediately with that status code.",
+    "interpretation_b": "The server can determine a final status code by examining the method, target URI, and header fields, but is not *required* to respond immediately if it chooses not to. It could still send a 100 Continue.",
+    "is_ambiguous": "yes",
+    "justification": "The conditional phrase 'if that status can be determined' is ambiguous. It could be read as a requirement (if it *can* be determined, then it *must* respond), or as a permissive condition (if it can be determined, it *may* respond, but isn't forced to).",
+    "missing_information": "It is unclear whether the phrase 'if that status can be determined' implies a requirement to respond immediately, or merely states a condition under which immediate response is permissible."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:30:43.307592+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-13",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "bd97dfe6b22ade475f2aed2fb51a5b3db950cdd75e3ee7cbb727ff784ac74031",
+  "lineage_ids": "lineage:b96b2076f80ee202be3fdc02",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 238,
+    "load_duration": 22926300,
+    "prompt_eval_count": 677,
+    "total_duration": 9196684300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"if that status can be determined by examining just the method, target URI, and header fields\", \"interpretation_a\": \"The server can determine a final status code *without* looking at the payload, and thus must respond immediately with that status code.\", \"interpretation_b\": \"The server can determine a final status code by examining the method, target URI, and header fields, but is not *required* to respond immediately if it chooses not to. It could still send a 100 Continue.\", \"missing_information\": \"It is unclear whether the phrase 'if that status can be determined' implies a requirement to respond immediately, or merely states a condition under which immediate response is permissible.\", \"justification\": \"The conditional phrase 'if that status can be determined' is ambiguous. It could be read as a requirement (if it *can* be determined, then it *must* respond), or as a permissive condition (if it can be determined, it *may* respond, but isn't forced to).\"}",
+  "record_id": "d9db9b094dd16d1dac1165f25008e69aeffa69555f54dda14236a5fb1a9d9bda",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "10.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.203
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "If the parameter is unspecified, the host will choose an appropriate local IP address",
+    "interpretation_a": "The host is free to choose *any* available local IP address.",
+    "interpretation_b": "The host must choose a local IP address that meets certain criteria (e.g., preferred interface, source address selection policy) which are not specified here.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'appropriate local IP address' is vague. Without further constraints, different implementations could interpret 'appropriate' differently, leading to inconsistent behavior.",
+    "missing_information": "The criteria for choosing an 'appropriate' local IP address are not defined. This leaves room for different implementations to select different addresses, potentially leading to interoperability issues."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:19:05.008391+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-11",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "e1a0d1c70895b82b5193d484d60bbc39047b0c0aa1e82c58823aa8ba82c23cb4",
+  "lineage_ids": "lineage:7d737888da359985571df1ec",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 174,
+    "load_duration": 12129900,
+    "prompt_eval_count": 621,
+    "total_duration": 6832278200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"If the parameter is unspecified, the host will choose an appropriate local IP address\", \"interpretation_a\": \"The host is free to choose *any* available local IP address.\", \"interpretation_b\": \"The host must choose a local IP address that meets certain criteria (e.g., preferred interface, source address selection policy) which are not specified here.\", \"missing_information\": \"The criteria for choosing an 'appropriate' local IP address are not defined. This leaves room for different implementations to select different addresses, potentially leading to interoperability issues.\",\"justification\": \"The phrase 'appropriate local IP address' is vague. Without further constraints, different implementations could interpret 'appropriate' differently, leading to inconsistent behavior.\"}",
+  "record_id": "1bd5219dabbe6109174f71e271796b633cdc58bcc5e3e075daf5aa967eb12f2c",
+  "revision": "11",
+  "schema_version": 1,
+  "section_ids": "3.9.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.844
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause is clear in its requirements: an endpoint must not send a packet if it would cause bytes_in_flight to exceed the congestion window, with two exceptions (PTO timer expiration and entering recovery). The conditions are explicitly defined, and the exceptions are clearly stated. There is no ambiguity in the language or missing constraints that would lead to multiple reasonable interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T22:23:24.060172+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "fd984ef4beb0d2349987890a592f63ca2bdd8fecd33eef12dc0f33b5630c5e40",
+  "lineage_ids": "lineage:42bad79a0092f9402a621e35",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 127,
+    "load_duration": 6066600,
+    "prompt_eval_count": 542,
+    "total_duration": 5219223600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause is clear in its requirements: an endpoint must not send a packet if it would cause bytes_in_flight to exceed the congestion window, with two exceptions (PTO timer expiration and entering recovery). The conditions are explicitly defined, and the exceptions are clearly stated. There is no ambiguity in the language or missing constraints that would lead to multiple reasonable interpretations.\"\n}",
+  "record_id": "92c87f8f1f83b571e0ed91e899f61a961205cf66c940841dbafece9251174a36",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.218
+}

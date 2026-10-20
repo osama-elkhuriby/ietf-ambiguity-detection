@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless the complete length is unknown or difficult to determine",
+    "interpretation_a": "If the complete length is unknown, the sender is not required to include it.",
+    "interpretation_b": "If determining the complete length requires significant computational effort, the sender is not required to include it.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'difficult to determine' is subjective. Different implementers may have different thresholds for what constitutes 'difficult', leading to inconsistent behavior. A concrete constraint on what constitutes 'difficult' is missing.",
+    "missing_information": "The definition of 'difficult to determine' is missing. What level of effort constitutes 'difficult' is not specified, leading to different implementations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:14:32.021963+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-08",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "6c09e4d62f052808d30f823a1cace5f0f03502dc5f9acdf06d6b247f77854c34",
+  "lineage_ids": "lineage:d121ed09915898a598c5f22f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 166,
+    "load_duration": 8556400,
+    "prompt_eval_count": 572,
+    "total_duration": 6487740000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless the complete length is unknown or difficult to determine\", \"interpretation_a\": \"If the complete length is unknown, the sender is not required to include it.\", \"interpretation_b\": \"If determining the complete length requires significant computational effort, the sender is not required to include it.\", \"missing_information\": \"The definition of 'difficult to determine' is missing. What level of effort constitutes 'difficult' is not specified, leading to different implementations.\", \"justification\": \"The phrase 'difficult to determine' is subjective. Different implementers may have different thresholds for what constitutes 'difficult', leading to inconsistent behavior. A concrete constraint on what constitutes 'difficult' is missing.\"}",
+  "record_id": "7c63872f6c02792804aa1448b11a755e642f8f861452dc9abef53830c85d62ac",
+  "revision": "08",
+  "schema_version": 1,
+  "section_ids": "6.3.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.484
+}

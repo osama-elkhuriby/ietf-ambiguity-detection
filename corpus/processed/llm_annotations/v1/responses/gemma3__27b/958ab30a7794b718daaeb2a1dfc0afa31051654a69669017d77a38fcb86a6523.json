@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "more than 8 aliases",
+    "interpretation_a": "The limit of 8 aliases applies to the total number of AliasMode and CNAME records that must be followed to resolve a name.",
+    "interpretation_b": "The limit of 8 aliases applies to the number of AliasMode records *plus* the number of CNAME records, but only those encountered after the initial name lookup.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'more than 8 aliases' is incomplete. It does not specify whether this is a maximum number of total aliases followed during resolution, or a maximum number of aliases at a given level. Both interpretations are reasonable and would lead to different implementations.",
+    "missing_information": "It is unclear whether the '8 aliases' limit refers to the total number of aliases encountered during resolution (including those chained through multiple levels of indirection) or a limit on the number of aliases at any single level of indirection."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:08:09.029724+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "d89b16e475967e557625c52bb802fdbe6b7d501caef8075a32d3bf30a3b7052f",
+  "lineage_ids": "lineage:6007ad7b958dce96bbf36dd9",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 216,
+    "load_duration": 4275000,
+    "prompt_eval_count": 567,
+    "total_duration": 8097622100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"more than 8 aliases\", \"interpretation_a\": \"The limit of 8 aliases applies to the total number of AliasMode and CNAME records that must be followed to resolve a name.\", \"interpretation_b\": \"The limit of 8 aliases applies to the number of AliasMode records *plus* the number of CNAME records, but only those encountered after the initial name lookup.\", \"missing_information\": \"It is unclear whether the '8 aliases' limit refers to the total number of aliases encountered during resolution (including those chained through multiple levels of indirection) or a limit on the number of aliases at any single level of indirection.\",\"justification\": \"The phrase 'more than 8 aliases' is incomplete. It does not specify whether this is a maximum number of total aliases followed during resolution, or a maximum number of aliases at a given level. Both interpretations are reasonable and would lead to different implementations.\"}",
+  "record_id": "958ab30a7794b718daaeb2a1dfc0afa31051654a69669017d77a38fcb86a6523",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "10.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.109
+}

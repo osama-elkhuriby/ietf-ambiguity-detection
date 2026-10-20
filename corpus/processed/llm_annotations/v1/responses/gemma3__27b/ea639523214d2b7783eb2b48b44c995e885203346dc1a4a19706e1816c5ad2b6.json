@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "local application MUST be informed whether it closed normally or was aborted.",
+    "interpretation_a": "The application receives a signal indicating a normal close (e.g., FIN exchange completed).",
+    "interpretation_b": "The application receives a signal indicating an abortive close (e.g., RST sent).",
+    "is_ambiguous": "yes",
+    "justification": "The clause mandates informing the application of the close status, but doesn't specify *how*. Different implementations could use different signals, error codes, or data structures to convey this information, leading to interoperability issues if not further constrained.",
+    "missing_information": "The document does not define *how* the application is informed, nor the specific signals or mechanisms used to convey the close status. This leaves open multiple implementation choices for the signaling method and the exact format of the information provided."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:30:26.967484+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-03",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "be931c4cfa317e5307ece212176ab8c6a7a8e0913b008dcbc691ad323a8a9f0e",
+  "lineage_ids": "lineage:2d05a6da3034b440ae60166f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 194,
+    "load_duration": 11351300,
+    "prompt_eval_count": 538,
+    "total_duration": 7446139200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"local application MUST be informed whether it closed normally or was aborted.\", \"interpretation_a\": \"The application receives a signal indicating a normal close (e.g., FIN exchange completed).\", \"interpretation_b\": \"The application receives a signal indicating an abortive close (e.g., RST sent).\", \"missing_information\": \"The document does not define *how* the application is informed, nor the specific signals or mechanisms used to convey the close status. This leaves open multiple implementation choices for the signaling method and the exact format of the information provided.\",\"justification\": \"The clause mandates informing the application of the close status, but doesn't specify *how*. Different implementations could use different signals, error codes, or data structures to convey this information, leading to interoperability issues if not further constrained.\"}",
+  "record_id": "ea639523214d2b7783eb2b48b44c995e885203346dc1a4a19706e1816c5ad2b6",
+  "revision": "03",
+  "schema_version": 1,
+  "section_ids": "3.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.468
+}

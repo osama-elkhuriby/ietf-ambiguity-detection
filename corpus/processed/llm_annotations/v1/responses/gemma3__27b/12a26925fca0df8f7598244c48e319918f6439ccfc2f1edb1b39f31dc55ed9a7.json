@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "clients MUST initiate streams",
+    "interpretation_a": "Clients MUST begin all streams they initiate with an odd number, and continue incrementing odd numbers for subsequent streams.",
+    "interpretation_b": "Clients MUST initiate *at least one* stream with an odd number, but may use even numbers for other streams.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states clients 'MUST initiate streams' with odd numbers. This could mean all streams, or just the first stream. Both interpretations are reasonable and lead to different implementations.",
+    "missing_information": "It is unclear whether the requirement applies to all streams initiated by the client, or just the first one. A missing constraint on the sequence of stream IDs would clarify this."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:59:40.404972+00:00",
+  "document_id": "draft-ietf-quic-transport-07",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "c6bd454abd08ff1910ce12ba681bd34e73de263c9a702e9026a8c6dc75d17b05",
+  "lineage_ids": "lineage:784ac3a82116cd1917a24e07",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 170,
+    "load_duration": 4078900,
+    "prompt_eval_count": 614,
+    "total_duration": 6474947200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"clients MUST initiate streams\", \"interpretation_a\": \"Clients MUST begin all streams they initiate with an odd number, and continue incrementing odd numbers for subsequent streams.\", \"interpretation_b\": \"Clients MUST initiate *at least one* stream with an odd number, but may use even numbers for other streams.\", \"missing_information\": \"It is unclear whether the requirement applies to all streams initiated by the client, or just the first one. A missing constraint on the sequence of stream IDs would clarify this.\",\"justification\": \"The clause states clients 'MUST initiate streams' with odd numbers. This could mean all streams, or just the first stream. Both interpretations are reasonable and lead to different implementations.\"}",
+  "record_id": "12a26925fca0df8f7598244c48e319918f6439ccfc2f1edb1b39f31dc55ed9a7",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "10.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.469
+}

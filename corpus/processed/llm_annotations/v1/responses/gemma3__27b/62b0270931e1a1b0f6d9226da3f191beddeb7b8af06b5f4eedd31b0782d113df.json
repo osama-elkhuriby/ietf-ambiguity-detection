@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-1",
+    "evidence_span": "undefined or invalid",
+    "interpretation_a": "A pseudo-header field is considered 'undefined' if it is not listed in the specification. It is considered 'invalid' if it is listed but does not conform to the defined syntax or semantics.",
+    "interpretation_b": "A pseudo-header field is considered 'undefined' if it is not recognized by the endpoint's implementation, even if it *is* listed in the specification. It is considered 'invalid' if it violates any constraint, including those not explicitly stated in the specification but implied by common practice.",
+    "is_ambiguous": "yes",
+    "justification": "The terms 'undefined' and 'invalid' are not clearly defined, leading to different interpretations of what constitutes a malformed request or response. This impacts implementation because endpoints might handle unrecognized or syntactically incorrect pseudo-headers differently.",
+    "missing_information": "The definition of 'undefined' and 'invalid' is not precise. Does 'undefined' mean not specified in the standard, or not supported by the implementation? The scope of 'invalid' is also unclear - does it include violations of implied constraints?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:53:02.080127+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "7cc61fdb42c95695412f700d698956e799ae244b979c39a0048a03b9fb5d3584",
+  "lineage_ids": "lineage:4df562d3f04dfd45a850d378",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 250,
+    "load_duration": 21273400,
+    "prompt_eval_count": 564,
+    "total_duration": 9492732500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-1\", \"evidence_span\": \"undefined or invalid\", \"interpretation_a\": \"A pseudo-header field is considered 'undefined' if it is not listed in the specification. It is considered 'invalid' if it is listed but does not conform to the defined syntax or semantics.\", \"interpretation_b\": \"A pseudo-header field is considered 'undefined' if it is not recognized by the endpoint's implementation, even if it *is* listed in the specification. It is considered 'invalid' if it violates any constraint, including those not explicitly stated in the specification but implied by common practice.\",\"missing_information\": \"The definition of 'undefined' and 'invalid' is not precise. Does 'undefined' mean not specified in the standard, or not supported by the implementation? The scope of 'invalid' is also unclear - does it include violations of implied constraints?\",\"justification\": \"The terms 'undefined' and 'invalid' are not clearly defined, leading to different interpretations of what constitutes a malformed request or response. This impacts implementation because endpoints might handle unrecognized or syntactically incorrect pseudo-headers differently.\"}",
+  "record_id": "62b0270931e1a1b0f6d9226da3f191beddeb7b8af06b5f4eedd31b0782d113df",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "4.1.1.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.5
+}

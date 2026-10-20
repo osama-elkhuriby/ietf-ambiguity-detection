@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "F() is a pseudorandom function (PRF)",
+    "interpretation_a": "F() could be any PRF that meets the security requirements, such as HMAC-SHA256.",
+    "interpretation_b": "F() could be a custom PRF designed specifically for this purpose, potentially with different performance characteristics.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states F() is a PRF but does not specify *which* PRF. Different PRFs have different security and performance characteristics. This lack of specificity creates ambiguity in implementation.",
+    "missing_information": "The document does not specify *which* PRF to use, leaving room for different implementations. While it states it *is* a PRF, it doesn't constrain the choice, which affects implementation and security properties."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:19:12.323856+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-13",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "8e682842fec454331afdefd600b874425dc5b97ac521f30f66fd94d29d5c5807",
+  "lineage_ids": "lineage:be5d39c2328a3273553268fb",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 187,
+    "load_duration": 10511300,
+    "prompt_eval_count": 623,
+    "total_duration": 7296658900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"F() is a pseudorandom function (PRF)\", \"interpretation_a\": \"F() could be any PRF that meets the security requirements, such as HMAC-SHA256.\", \"interpretation_b\": \"F() could be a custom PRF designed specifically for this purpose, potentially with different performance characteristics.\", \"missing_information\": \"The document does not specify *which* PRF to use, leaving room for different implementations. While it states it *is* a PRF, it doesn't constrain the choice, which affects implementation and security properties.\",\"justification\": \"The clause states F() is a PRF but does not specify *which* PRF. Different PRFs have different security and performance characteristics. This lack of specificity creates ambiguity in implementation.\"}",
+  "record_id": "2139338711331302d2cc4d622e86bb6f35e5671979f481cbd6ae109d0167d586",
+  "revision": "13",
+  "schema_version": 1,
+  "section_ids": "3.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.313
+}

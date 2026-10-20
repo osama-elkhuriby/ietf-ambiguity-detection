@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Requests that have not been processed have not failed; clients MAY automatically retry them, even those with non-idempotent methods.",
+    "interpretation_a": "Clients may retry any unprocessed requests, including non-idempotent ones, without additional constraints or conditions.",
+    "interpretation_b": "Clients may retry unprocessed requests, but the lack of constraints on retrying non-idempotent methods could lead to unintended side effects, making the behavior ambiguous.",
+    "is_ambiguous": "yes",
+    "justification": "The clause allows clients to retry unprocessed requests, including those with non-idempotent methods, but does not provide constraints or conditions for such retries. This missing constraint could lead to different interpretations and implementations, particularly regarding the handling of non-idempotent methods.",
+    "missing_information": "The clause does not specify under what conditions or limitations clients may retry non-idempotent methods, which could lead to different implementations handling retries in conflicting ways."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T01:47:47.321615+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "ad6c6d257298143e1bdeb8ddd40346faac3a7ae2a5a5332cfd3ce3a0d42575ce",
+  "lineage_ids": "lineage:7de1a481242de329c76d9cf2",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 219,
+    "load_duration": 20002900,
+    "prompt_eval_count": 531,
+    "total_duration": 9052761500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"Requests that have not been processed have not failed; clients MAY automatically retry them, even those with non-idempotent methods.\",\n  \"interpretation_a\": \"Clients may retry any unprocessed requests, including non-idempotent ones, without additional constraints or conditions.\",\n  \"interpretation_b\": \"Clients may retry unprocessed requests, but the lack of constraints on retrying non-idempotent methods could lead to unintended side effects, making the behavior ambiguous.\",\n  \"missing_information\": \"The clause does not specify under what conditions or limitations clients may retry non-idempotent methods, which could lead to different implementations handling retries in conflicting ways.\",\n  \"justification\": \"The clause allows clients to retry unprocessed requests, including those with non-idempotent methods, but does not provide constraints or conditions for such retries. This missing constraint could lead to different interpretations and implementations, particularly regarding the handling of non-idempotent methods.\"\n}",
+  "record_id": "6877e8eba34e5aad8ade5276cd7aec566f43785292d2fe0e29cbdc33db783d20",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "8.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.063
+}

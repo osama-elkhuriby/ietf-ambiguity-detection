@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "larger Push ID than the client has advertised",
+    "interpretation_a": "The client has advertised a MAX_PUSH_ID, and any Push ID exceeding that value is an error.",
+    "interpretation_b": "The client has advertised a list of allowed Push IDs, and any Push ID not in that list is an error. The phrase 'advertised' is ambiguous as to whether it refers to a single maximum value or a list of allowed values.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'advertised' is ambiguous. The previous clause refers to a 'MAX_PUSH_ID' frame, which suggests a single maximum value. However, the current clause could also be interpreted as the client advertising a list of allowed Push IDs. This difference in interpretation affects how the client determines whether a Push ID is valid.",
+    "missing_information": "The meaning of 'advertised' needs to be clarified. Is it a single maximum value (as implied by the previous clause) or a list of allowed values?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:14:19.890142+00:00",
+  "document_id": "draft-ietf-quic-http-23",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "b7e5f0ea5b4ba15833502af7d3e03399b3b0455be904399f90011b2bc95726f2",
+  "lineage_ids": "lineage:d23023714c8af9fb39e66050",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 230,
+    "load_duration": 21535900,
+    "prompt_eval_count": 599,
+    "total_duration": 8825024700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"larger Push ID than the client has advertised\", \"interpretation_a\": \"The client has advertised a MAX_PUSH_ID, and any Push ID exceeding that value is an error.\", \"interpretation_b\": \"The client has advertised a list of allowed Push IDs, and any Push ID not in that list is an error. The phrase 'advertised' is ambiguous as to whether it refers to a single maximum value or a list of allowed values.\", \"missing_information\": \"The meaning of 'advertised' needs to be clarified. Is it a single maximum value (as implied by the previous clause) or a list of allowed values?\",\"justification\": \"The phrase 'advertised' is ambiguous. The previous clause refers to a 'MAX_PUSH_ID' frame, which suggests a single maximum value. However, the current clause could also be interpreted as the client advertising a list of allowed Push IDs. This difference in interpretation affects how the client determines whether a Push ID is valid.\"}",
+  "record_id": "eee3a52aa87c3ad8ee3afeb7a22a9dd095502e6b9de4c439fe0a8b8e5ae07549",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "7.2.8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.828
+}

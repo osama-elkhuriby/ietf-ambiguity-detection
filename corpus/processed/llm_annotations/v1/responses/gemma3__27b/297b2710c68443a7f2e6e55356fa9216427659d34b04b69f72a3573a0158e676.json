@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST include the following field:",
+    "interpretation_a": "The registry entry MUST have at least one additional field beyond those defined in [iana-provisional].",
+    "interpretation_b": "The registry entry MUST include a specific, named field (the one described in the following clauses).",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'the following field' is ambiguous. It could refer to a single, specific field that must be included, or it could refer to a category of fields that must be included. Without further clarification, it's unclear whether the requirement is for a single field or multiple fields.",
+    "missing_information": "It is unclear whether 'the following field' refers to a single field that must be present, or a category of fields that must be present. The use of 'following' implies a specific field is being referenced, but 'field' could also mean a category of fields."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:07:08.799950+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "413395780ec2e9290e1fc8fe44d97cc5f48e8b4b2c0bec000d91b299ae3d5fea",
+  "lineage_ids": "lineage:744c6235fcb311e89444997f",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 212,
+    "load_duration": 4605200,
+    "prompt_eval_count": 564,
+    "total_duration": 7888286600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST include the following field:\", \"interpretation_a\": \"The registry entry MUST have at least one additional field beyond those defined in [iana-provisional].\", \"interpretation_b\": \"The registry entry MUST include a specific, named field (the one described in the following clauses).\", \"missing_information\": \"It is unclear whether 'the following field' refers to a single field that must be present, or a category of fields that must be present. The use of 'following' implies a specific field is being referenced, but 'field' could also mean a category of fields.\", \"justification\": \"The phrase 'the following field' is ambiguous. It could refer to a single, specific field that must be included, or it could refer to a category of fields that must be included. Without further clarification, it's unclear whether the requirement is for a single field or multiple fields.\"}",
+  "record_id": "297b2710c68443a7f2e6e55356fa9216427659d34b04b69f72a3573a0158e676",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "22.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.875
+}

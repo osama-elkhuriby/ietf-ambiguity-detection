@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously specifies that a client must discard a Retry packet when the packet’s Source Connection ID matches the Destination Connection ID of the client’s own Initial packet. The reference to “its Initial packet” is clear and there is no missing constraint that would allow multiple reasonable interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T19:01:42.088567+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "67a80e7ccd5693523c60d8dda3a8f9f16f3a563a620caa7c82cddf5a09478eb5",
+  "lineage_ids": "lineage:1ba68914b7cd0774aa740efc",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 383,
+    "load_duration": 4670300,
+    "prompt_eval_count": 602,
+    "total_duration": 3452449600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously specifies that a client must discard a Retry packet when the packet’s Source Connection ID matches the Destination Connection ID of the client’s own Initial packet. The reference to “its Initial packet” is clear and there is no missing constraint that would allow multiple reasonable interpretations.\"\n}",
+  "record_id": "e97923e50caea5b50e5a87eead40b4904fe598dec426f742d3df4496260a781a",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "17.2.5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 3.453
+}

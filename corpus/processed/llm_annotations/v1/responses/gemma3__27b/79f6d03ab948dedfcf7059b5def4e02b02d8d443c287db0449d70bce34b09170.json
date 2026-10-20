@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "permitted",
+    "interpretation_a": "The clause could be interpreted to mean that any frame received in a packet type not explicitly listed as permitted for that frame type is a connection error.",
+    "interpretation_b": "Alternatively, it could mean that a frame received in a packet type that is generally not permitted for *any* frame is a connection error. The definition of 'permitted' is not clear - is it per-frame type, or globally for all frames?",
+    "is_ambiguous": "yes",
+    "justification": "The term 'permitted' is not clearly defined. It's unclear whether it refers to a frame type being permitted in a specific packet type, or whether it refers to a global allowance of frames in certain packet types. This lack of clarity creates ambiguity in implementation.",
+    "missing_information": "The definition of 'permitted' is needed. Is it a property of the frame type, or a global property of packet types?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:35:00.320704+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "613fc9eaada87868f0f1ec5106e412fc59170166606a4f8e7570663281425b7a",
+  "lineage_ids": "lineage:efeb707939dbc8a37978b6ba",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 212,
+    "load_duration": 4195900,
+    "prompt_eval_count": 584,
+    "total_duration": 7963207400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"permitted\", \"interpretation_a\": \"The clause could be interpreted to mean that any frame received in a packet type not explicitly listed as permitted for that frame type is a connection error.\", \"interpretation_b\": \"Alternatively, it could mean that a frame received in a packet type that is generally not permitted for *any* frame is a connection error. The definition of 'permitted' is not clear - is it per-frame type, or globally for all frames?\", \"missing_information\": \"The definition of 'permitted' is needed. Is it a property of the frame type, or a global property of packet types?\",\"justification\": \"The term 'permitted' is not clearly defined. It's unclear whether it refers to a frame type being permitted in a specific packet type, or whether it refers to a global allowance of frames in certain packet types. This lack of clarity creates ambiguity in implementation.\"}",
+  "record_id": "79f6d03ab948dedfcf7059b5def4e02b02d8d443c287db0449d70bce34b09170",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "12.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.968
+}

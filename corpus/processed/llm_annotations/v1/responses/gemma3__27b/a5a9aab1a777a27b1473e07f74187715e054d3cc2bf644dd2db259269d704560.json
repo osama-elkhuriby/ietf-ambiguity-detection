@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Even if an endpoint does not set an ECT field",
+    "interpretation_a": "An endpoint that *never* sets the ECT field still must report ECN markings it receives.",
+    "interpretation_b": "An endpoint that sets the ECT field on *some* packets, but not others, must report ECN markings it receives.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'does not set an ECT field' is ambiguous. It could mean that the endpoint never sets the ECT field in any packet it sends, or it could mean that the endpoint does not set the ECT field in all packets it sends. The requirement to provide feedback about ECN markings applies differently depending on which interpretation is correct.",
+    "missing_information": "The clause does not define what 'does not set an ECT field' means. Does it mean 'never sets' or 'does not set on all packets'? This affects whether the requirement applies to all endpoints or only those that do not use ECN at all."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:51:38.295789+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "a0f8c83186d10662fffc49f876e51460afbcb55b208fa759efcadb871cf12341",
+  "lineage_ids": "lineage:871e071965d05d3378221332",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 227,
+    "load_duration": 4939600,
+    "prompt_eval_count": 598,
+    "total_duration": 8504734300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Even if an endpoint does not set an ECT field\", \"interpretation_a\": \"An endpoint that *never* sets the ECT field still must report ECN markings it receives.\", \"interpretation_b\": \"An endpoint that sets the ECT field on *some* packets, but not others, must report ECN markings it receives.\", \"missing_information\": \"The clause does not define what 'does not set an ECT field' means. Does it mean 'never sets' or 'does not set on all packets'? This affects whether the requirement applies to all endpoints or only those that do not use ECN at all.\", \"justification\": \"The phrase 'does not set an ECT field' is ambiguous. It could mean that the endpoint never sets the ECT field in any packet it sends, or it could mean that the endpoint does not set the ECT field in all packets it sends. The requirement to provide feedback about ECN markings applies differently depending on which interpretation is correct.\"}",
+  "record_id": "a5a9aab1a777a27b1473e07f74187715e054d3cc2bf644dd2db259269d704560",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "13.4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.516
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously specifies that when the server does not need the remainder of the request, it may abort reading the request stream, send an error code H3_EARLY_RESPONSE on that stream, send a complete response, and then cleanly close the sending side of the request stream. The use of MAY is a discretionary choice, not an ambiguity, and the reference to H3_EARLY_RESPONSE does not alter the interpretation of the actions. No missing constraints or conflicting definitions are required to understand the clause.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T10:34:44.426864+00:00",
+  "document_id": "draft-ietf-quic-http-24",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "ddbaf0a024114a22ab17a56464f245b97e1d16d783f5c177524fae213dc92635",
+  "lineage_ids": "lineage:072c9ed4d363c4717a9ea5fb",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3712,
+    "load_duration": 4004800,
+    "prompt_eval_count": 630,
+    "total_duration": 32151239500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously specifies that when the server does not need the remainder of the request, it may abort reading the request stream, send an error code H3_EARLY_RESPONSE on that stream, send a complete response, and then cleanly close the sending side of the request stream. The use of MAY is a discretionary choice, not an ambiguity, and the reference to H3_EARLY_RESPONSE does not alter the interpretation of the actions. No missing constraints or conflicting definitions are required to understand the clause.\"\n}",
+  "record_id": "dd44df2034a6972be39d49e3f01103e35de46fcabc88b29c1c5f8d294da1de14",
+  "revision": "24",
+  "schema_version": 1,
+  "section_ids": "4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 32.156
+}

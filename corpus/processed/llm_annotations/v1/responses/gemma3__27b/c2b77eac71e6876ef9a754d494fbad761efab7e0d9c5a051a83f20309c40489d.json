@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT be used for another connection",
+    "interpretation_a": "The connection ID and static key combination must not be reused by the same endpoint for a new connection.",
+    "interpretation_b": "The connection ID and static key combination must not be reused by *any* endpoint for any new connection.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'another connection' is ambiguous. It could refer to a new connection established by the same endpoint, or any new connection established by any endpoint. The difference is material because it affects the scope of the restriction and the necessary implementation details.",
+    "missing_information": "It is unclear whether the restriction applies to reuse by the same endpoint or all endpoints. This affects how strictly the key/connection ID pair must be managed."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:59:58.632904+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "c7a46271dab63c0931fa3dbc57b23feacd2c3e02f28e886a90f8f11ff05d5abb",
+  "lineage_ids": "lineage:b4bfd6830993609498ce2b99",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 181,
+    "load_duration": 2512500,
+    "prompt_eval_count": 614,
+    "total_duration": 6880031200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT be used for another connection\", \"interpretation_a\": \"The connection ID and static key combination must not be reused by the same endpoint for a new connection.\", \"interpretation_b\": \"The connection ID and static key combination must not be reused by *any* endpoint for any new connection.\", \"missing_information\": \"It is unclear whether the restriction applies to reuse by the same endpoint or all endpoints. This affects how strictly the key/connection ID pair must be managed.\", \"justification\": \"The phrase 'another connection' is ambiguous. It could refer to a new connection established by the same endpoint, or any new connection established by any endpoint. The difference is material because it affects the scope of the restriction and the necessary implementation details.\"}",
+  "record_id": "c2b77eac71e6876ef9a754d494fbad761efab7e0d9c5a051a83f20309c40489d",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "10.3.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.89
+}

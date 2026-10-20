@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SND.UNA - MAX.SND.WND",
+    "interpretation_a": "Interpretation 1: The lower bound is computed as (SND.UNA - MAX.SND.WND) modulo 2^32, yielding an unsigned 32‑bit sequence number range.",
+    "interpretation_b": "Interpretation 2: The lower bound is computed as a signed difference, which could be negative, leading to a different acceptable range for SEG.ACK.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not specify how the subtraction SND.UNA - MAX.SND.WND is to be performed, leaving the lower bound of the acceptable ACK range ambiguous.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T20:00:23.913345+00:00",
+  "document_id": "draft-ietf-tcpm-rfc793bis-28",
+  "family_id": "draft-ietf-tcpm-rfc793bis",
+  "input_fingerprint": "a299bafa1a9b073996aabd091268fa9bb38611726a4eeaf4c4f1f571a808c25d",
+  "lineage_ids": "lineage:fc6bbfdbb3d452c0d752c4b9",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1906,
+    "load_duration": "",
+    "prompt_eval_count": 633,
+    "total_duration": 16397329200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"SND.UNA - MAX.SND.WND\",\n  \"interpretation_a\": \"Interpretation 1: The lower bound is computed as (SND.UNA - MAX.SND.WND) modulo 2^32, yielding an unsigned 32‑bit sequence number range.\",\n  \"interpretation_b\": \"Interpretation 2: The lower bound is computed as a signed difference, which could be negative, leading to a different acceptable range for SEG.ACK.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not specify how the subtraction SND.UNA - MAX.SND.WND is to be performed, leaving the lower bound of the acceptable ACK range ambiguous.\"\n}",
+  "record_id": "5a2880374f9859fc895491ea8f6c99818e22720c2e03045d7149c9e94c137e99",
+  "revision": "28",
+  "schema_version": 1,
+  "section_ids": "3.10.7.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 16.391
+}

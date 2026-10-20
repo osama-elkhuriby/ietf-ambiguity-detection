@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD be generated as a function of values",
+    "interpretation_a": "The server *could* generate the reserved version using a deterministic function, but is not required to. It could, for example, always return a fixed value.",
+    "interpretation_b": "The server *must* generate the reserved version using a function of available values, implying a non-fixed, calculated value.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' combined with the phrase 'as a function of values' allows for interpretations ranging from a deterministic, fixed value to a calculated value. The lack of a stronger normative term ('MUST') or a constraint on the function's behaviour creates ambiguity.",
+    "missing_information": "The strength of the 'SHOULD' is unclear. Is it a strong recommendation, or is there room for non-functional implementations? A clearer constraint on the function's determinism is needed."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:46:24.984169+00:00",
+  "document_id": "draft-ietf-quic-transport-07",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "0fad670c9fc3a125b793bcf20d046b12e08d259ba049a222f22b6f26a79accd8",
+  "lineage_ids": "lineage:d0c5b5c3d9d5a5b303ee0f24",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 214,
+    "load_duration": 3802800,
+    "prompt_eval_count": 607,
+    "total_duration": 8053004600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD be generated as a function of values\", \"interpretation_a\": \"The server *could* generate the reserved version using a deterministic function, but is not required to. It could, for example, always return a fixed value.\", \"interpretation_b\": \"The server *must* generate the reserved version using a function of available values, implying a non-fixed, calculated value.\", \"missing_information\": \"The strength of the 'SHOULD' is unclear. Is it a strong recommendation, or is there room for non-functional implementations? A clearer constraint on the function's determinism is needed.\", \"justification\": \"The use of 'SHOULD' combined with the phrase 'as a function of values' allows for interpretations ranging from a deterministic, fixed value to a calculated value. The lack of a stronger normative term ('MUST') or a constraint on the function's behaviour creates ambiguity.\"}",
+  "record_id": "96c197370d71512ff54bfa57e9125894b380c1a68977b7f405eeb127833494ba",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "7.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.063
+}

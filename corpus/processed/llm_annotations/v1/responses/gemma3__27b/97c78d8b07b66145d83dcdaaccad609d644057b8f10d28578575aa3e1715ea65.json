@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "whose interpretation might differ between implementations",
+    "interpretation_a": "Different implementations could interpret the complex value type in different ways, leading to interoperability issues.",
+    "interpretation_b": "The statement acknowledges that interpretations *could* differ, but doesn't specify *how* to resolve those differences or what constitutes an acceptable interpretation. It only says to limit validation, but doesn't define what 'specified constraints' are or how to determine them.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"whose interpretation might differ between implementations\" directly indicates a potential for ambiguity. The clause then only *suggests* limiting validation to 'specified constraints', but doesn't define what those constraints are, leaving room for different implementations to apply different constraints, or none at all.",
+    "missing_information": "The document does not define what constitutes a 'specified constraint' or how to determine acceptable interpretations of complex value types. It also doesn't specify how to handle differing interpretations between implementations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:08:49.090622+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "799398ce187b992a06c241e7e8e9b17722f05845638cad925ca8bf09bcc7eadd",
+  "lineage_ids": "lineage:dea68bea110d34fa6583a487",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 224,
+    "load_duration": 3792700,
+    "prompt_eval_count": 654,
+    "total_duration": 8460588000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"whose interpretation might differ between implementations\", \"interpretation_a\": \"Different implementations could interpret the complex value type in different ways, leading to interoperability issues.\", \"interpretation_b\": \"The statement acknowledges that interpretations *could* differ, but doesn't specify *how* to resolve those differences or what constitutes an acceptable interpretation. It only says to limit validation, but doesn't define what 'specified constraints' are or how to determine them.\", \"missing_information\": \"The document does not define what constitutes a 'specified constraint' or how to determine acceptable interpretations of complex value types. It also doesn't specify how to handle differing interpretations between implementations.\", \"justification\": \"The phrase \\\"whose interpretation might differ between implementations\\\" directly indicates a potential for ambiguity. The clause then only *suggests* limiting validation to 'specified constraints', but doesn't define what those constraints are, leaving room for different implementations to apply different constraints, or none at all.\"}",
+  "record_id": "97c78d8b07b66145d83dcdaaccad609d644057b8f10d28578575aa3e1715ea65",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "4.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.453
+}

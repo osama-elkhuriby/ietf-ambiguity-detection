@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "any given curve MUST specify only a single point format",
+    "interpretation_a": "A curve definition *within* a TLS implementation MUST enforce a single point format.",
+    "interpretation_b": "A curve specification document (like a standards document) MUST define a single point format for that curve.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'any given curve' is ambiguous. It could refer to a curve as implemented in a TLS stack, or a curve as defined in a specification. If it refers to the implementation, then the TLS stack must enforce a single point format. If it refers to the specification, then the specification must define a single point format. These are different requirements with different implications.",
+    "missing_information": "It is unclear whether 'any given curve' refers to a curve as implemented in a TLS stack, or a curve as defined in a specification. This affects who is responsible for ensuring the single point format."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:33:50.134720+00:00",
+  "document_id": "draft-ietf-tls-tls13-19",
+  "family_id": "draft-ietf-tls-tls13",
+  "input_fingerprint": "9243cf003b4a806694930437a3a947826ef9c59230a739110923c1c25fae1e80",
+  "lineage_ids": "lineage:3664c9c363546de72c0abbab",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 215,
+    "load_duration": 9009000,
+    "prompt_eval_count": 629,
+    "total_duration": 8263929100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"any given curve MUST specify only a single point format\", \"interpretation_a\": \"A curve definition *within* a TLS implementation MUST enforce a single point format.\", \"interpretation_b\": \"A curve specification document (like a standards document) MUST define a single point format for that curve.\", \"missing_information\": \"It is unclear whether 'any given curve' refers to a curve as implemented in a TLS stack, or a curve as defined in a specification. This affects who is responsible for ensuring the single point format.\", \"justification\": \"The phrase 'any given curve' is ambiguous. It could refer to a curve as implemented in a TLS stack, or a curve as defined in a specification. If it refers to the implementation, then the TLS stack must enforce a single point format. If it refers to the specification, then the specification must define a single point format. These are different requirements with different implications.\"}",
+  "record_id": "46b29619f5f86a3f52acd799559e4e8165603aee4627b9a2f2c990dea935412c",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "4.2.5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.266
+}

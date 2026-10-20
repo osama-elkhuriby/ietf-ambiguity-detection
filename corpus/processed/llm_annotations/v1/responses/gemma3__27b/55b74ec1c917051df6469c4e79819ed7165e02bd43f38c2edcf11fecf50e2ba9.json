@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "might have been processed",
+    "interpretation_a": "The server *could* have fully processed the request, and a response is potentially on its way.",
+    "interpretation_b": "The server *could* have started processing the request but not completed it, leaving the client in an unknown state.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'might have been processed' is insufficiently constrained. It doesn't define the degree to which processing could have occurred, leaving open multiple reasonable interpretations about the client's subsequent actions.",
+    "missing_information": "The clause does not specify what actions the client should take based on this assumption. Does it retry the request? Does it consider the request lost? The lack of guidance on handling this 'might have been processed' state creates ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:50:43.013585+00:00",
+  "document_id": "draft-ietf-quic-http-29",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "ab566f913490b28d0b0a6b8ea604d0621cfb525d6372933684e541e69c378bd3",
+  "lineage_ids": "lineage:d5655c46d4a58caec65adab7",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 185,
+    "load_duration": 8940200,
+    "prompt_eval_count": 568,
+    "total_duration": 7132102500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"might have been processed\", \"interpretation_a\": \"The server *could* have fully processed the request, and a response is potentially on its way.\", \"interpretation_b\": \"The server *could* have started processing the request but not completed it, leaving the client in an unknown state.\", \"missing_information\": \"The clause does not specify what actions the client should take based on this assumption. Does it retry the request? Does it consider the request lost? The lack of guidance on handling this 'might have been processed' state creates ambiguity.\", \"justification\": \"The phrase 'might have been processed' is insufficiently constrained. It doesn't define the degree to which processing could have occurred, leaving open multiple reasonable interpretations about the client's subsequent actions.\"}",
+  "record_id": "55b74ec1c917051df6469c4e79819ed7165e02bd43f38c2edcf11fecf50e2ba9",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "5.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.14
+}

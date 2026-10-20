@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that a receiver may send a WINDOW_UPDATE frame to advertise a larger offset at any point in the connection. The subsequent clause clarifies that once advertised, the offset cannot be reduced, eliminating any potential ambiguity about the relative size of the advertised offset.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T18:03:01.892938+00:00",
+  "document_id": "draft-ietf-quic-transport-02",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "194d9ed7607da865cdd09c3b93a9b699b298948399f1db2a225eb6e033a77c4c",
+  "lineage_ids": "lineage:09d6e8d7e57196df9ceb678a",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 719,
+    "load_duration": 5436300,
+    "prompt_eval_count": 592,
+    "total_duration": 6291558700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that a receiver may send a WINDOW_UPDATE frame to advertise a larger offset at any point in the connection. The subsequent clause clarifies that once advertised, the offset cannot be reduced, eliminating any potential ambiguity about the relative size of the advertised offset.\"\n}",
+  "record_id": "bad007d1fd72cdc2973a65ed21d1b7cb65d839b8d630b79d8f3d505c29775704",
+  "revision": "02",
+  "schema_version": 1,
+  "section_ids": "11",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.297
+}

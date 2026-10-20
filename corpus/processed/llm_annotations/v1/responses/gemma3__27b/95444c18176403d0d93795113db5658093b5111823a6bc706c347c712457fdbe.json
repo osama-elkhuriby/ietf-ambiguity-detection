@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "cannot determine that the settings remembered by a client are compatible with its current settings",
+    "interpretation_a": "The server might determine incompatibility based on a strict, bitwise comparison of setting values. Any difference, no matter how minor or irrelevant, would trigger rejection of 0-RTT data.",
+    "interpretation_b": "The server might determine compatibility based on a semantic equivalence of settings. If the client's settings achieve the same functional outcome as the server's, even with different values, 0-RTT data would be accepted.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'cannot determine that the settings...are compatible' is vague. It doesn't specify *how* the server should determine compatibility. This allows for different implementations to use different comparison methods, leading to materially different behaviours.",
+    "missing_information": "The criteria for determining 'compatibility' are not defined. A concrete constraint specifying how settings are compared (e.g., strict equality, semantic equivalence, a defined subset of settings to compare) is missing."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:59:17.804522+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "782f4e2b4fa3a5b92a89fb6ddfa54db0c793dfbf0a47bf29ac8bf349e4c1da84",
+  "lineage_ids": "lineage:e6419b6b7c1f0dc6761a359e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 236,
+    "load_duration": 6441100,
+    "prompt_eval_count": 581,
+    "total_duration": 8983163000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"cannot determine that the settings remembered by a client are compatible with its current settings\", \"interpretation_a\": \"The server might determine incompatibility based on a strict, bitwise comparison of setting values. Any difference, no matter how minor or irrelevant, would trigger rejection of 0-RTT data.\", \"interpretation_b\": \"The server might determine compatibility based on a semantic equivalence of settings. If the client's settings achieve the same functional outcome as the server's, even with different values, 0-RTT data would be accepted.\", \"missing_information\": \"The criteria for determining 'compatibility' are not defined. A concrete constraint specifying how settings are compared (e.g., strict equality, semantic equivalence, a defined subset of settings to compare) is missing.\", \"justification\": \"The phrase 'cannot determine that the settings...are compatible' is vague. It doesn't specify *how* the server should determine compatibility. This allows for different implementations to use different comparison methods, leading to materially different behaviours.\"}",
+  "record_id": "95444c18176403d0d93795113db5658093b5111823a6bc706c347c712457fdbe",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.2.4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.0
+}

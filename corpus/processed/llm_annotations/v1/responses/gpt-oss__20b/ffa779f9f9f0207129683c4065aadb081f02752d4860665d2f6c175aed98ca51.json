@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that after sending GOAWAY, the server will refuse requests on streams with identifiers higher than the last Stream ID, and that clients must not send any new requests after receiving GOAWAY, except that requests already in transit may still be processed. No two materially different interpretations or missing constraints are present.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T10:53:28.308336+00:00",
+  "document_id": "draft-ietf-quic-http-09",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "67d57f83ce7e09871a261b0f36e8cb1faed14e0872fae4ac3ea7e4550da05709",
+  "lineage_ids": "lineage:7aca0659af99a59016f17290",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 7032,
+    "load_duration": 4041600,
+    "prompt_eval_count": 610,
+    "total_duration": 61141989700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that after sending GOAWAY, the server will refuse requests on streams with identifiers higher than the last Stream ID, and that clients must not send any new requests after receiving GOAWAY, except that requests already in transit may still be processed. No two materially different interpretations or missing constraints are present.\"\n}",
+  "record_id": "ffa779f9f9f0207129683c4065aadb081f02752d4860665d2f6c175aed98ca51",
+  "revision": "09",
+  "schema_version": 1,
+  "section_ids": "4.2.7",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 61.141
+}

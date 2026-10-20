@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Once a client has received a valid Initial packet from the server",
+    "interpretation_a": "The client must discard packets with different Source Connection IDs *after* receiving the first Initial packet, regardless of whether that Initial packet established the connection.",
+    "interpretation_b": "The client must discard packets with different Source Connection IDs *only if* the Initial packet successfully established the connection. If the Initial packet is rejected, the client may continue to process packets with different Source Connection IDs.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'valid' is not precisely defined. A packet can be syntactically valid but still not lead to a successful connection (e.g., due to application-layer negotiation failure). The clause could be interpreted to mean discard after *any* valid Initial, or only after a *successful* Initial.",
+    "missing_information": "The clause does not specify whether the receipt of a 'valid Initial packet' implies successful connection establishment, or merely receipt of a syntactically and semantically correct packet. This distinction affects when the discard rule applies."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T02:03:11.422347+00:00",
+  "document_id": "draft-ietf-quic-transport-33",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "2d371272ab06f8d5ae965a4dc46973f2213179607aecca8850ddc7fe0058fcc6",
+  "lineage_ids": "lineage:ac9c7d8844cd7457a7375110",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 242,
+    "load_duration": 4246400,
+    "prompt_eval_count": 606,
+    "total_duration": 9003688200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Once a client has received a valid Initial packet from the server\", \"interpretation_a\": \"The client must discard packets with different Source Connection IDs *after* receiving the first Initial packet, regardless of whether that Initial packet established the connection.\", \"interpretation_b\": \"The client must discard packets with different Source Connection IDs *only if* the Initial packet successfully established the connection. If the Initial packet is rejected, the client may continue to process packets with different Source Connection IDs.\", \"missing_information\": \"The clause does not specify whether the receipt of a 'valid Initial packet' implies successful connection establishment, or merely receipt of a syntactically and semantically correct packet. This distinction affects when the discard rule applies.\", \"justification\": \"The term 'valid' is not precisely defined. A packet can be syntactically valid but still not lead to a successful connection (e.g., due to application-layer negotiation failure). The clause could be interpreted to mean discard after *any* valid Initial, or only after a *successful* Initial.\"}",
+  "record_id": "cc2997f6ada81873d517cb0d844ec00ed3c0f7aac1bfc5cbd40c2325e402aa29",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.0
+}

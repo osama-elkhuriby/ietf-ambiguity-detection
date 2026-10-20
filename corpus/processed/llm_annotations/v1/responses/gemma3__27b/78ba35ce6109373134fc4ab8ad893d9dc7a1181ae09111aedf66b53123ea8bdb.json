@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY treat SVCB resolution failure as fatal or nonfatal",
+    "interpretation_a": "Clients can choose to stop processing if SVCB resolution fails.",
+    "interpretation_b": "Clients can choose to continue processing even if SVCB resolution fails.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' introduces a choice for the client, but doesn't specify *how* that choice should be made. This creates ambiguity in implementation, as different clients could reasonably implement different fallback behaviors based on unspecified criteria.",
+    "missing_information": "The criteria for choosing between fatal and non-fatal handling are not specified. This affects implementation because a client needs to decide *when* to treat the failure as fatal, and the draft does not provide guidance."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:06:29.516356+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "cc749fc617622aba43839ec461c84862a134aa28b504db4f50d3784e68f5630f",
+  "lineage_ids": "lineage:8f0a3b7214ff46c120666334",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 178,
+    "load_duration": 6152400,
+    "prompt_eval_count": 598,
+    "total_duration": 6775804100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY treat SVCB resolution failure as fatal or nonfatal\", \"interpretation_a\": \"Clients can choose to stop processing if SVCB resolution fails.\", \"interpretation_b\": \"Clients can choose to continue processing even if SVCB resolution fails.\", \"missing_information\": \"The criteria for choosing between fatal and non-fatal handling are not specified. This affects implementation because a client needs to decide *when* to treat the failure as fatal, and the draft does not provide guidance.\", \"justification\": \"The use of 'MAY' introduces a choice for the client, but doesn't specify *how* that choice should be made. This creates ambiguity in implementation, as different clients could reasonably implement different fallback behaviors based on unspecified criteria.\"}",
+  "record_id": "78ba35ce6109373134fc4ab8ad893d9dc7a1181ae09111aedf66b53123ea8bdb",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "3.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.781
+}

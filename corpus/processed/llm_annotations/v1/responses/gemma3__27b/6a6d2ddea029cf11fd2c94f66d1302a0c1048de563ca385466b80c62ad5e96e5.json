@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST be acknowledged",
+    "interpretation_a": "The packet containing the discarded CRYPTO frame must be acknowledged even though the frame itself is not used, implying acknowledgement is based solely on packet reception.",
+    "interpretation_b": "The packet must be acknowledged *in a specific way* to indicate the discard, potentially requiring a different acknowledgement mechanism than usual, which is not specified.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states packets 'MUST be acknowledged' but doesn't specify *how*. A standard ACK could be interpreted as normal processing, while a special ACK could signal the discard event. This missing constraint leads to ambiguity.",
+    "missing_information": "The type of acknowledgement is not specified. Is it a standard ACK, or a special ACK indicating discard? Without this, implementations could differ on how to signal the discard."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:30:21.090788+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "769cb478167dcd27bdd31a1404a9e4fe2260eb2b7b167556ad3754aee5a48ea3",
+  "lineage_ids": "lineage:7cf5393837e5818a0beec477",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 193,
+    "load_duration": 4330900,
+    "prompt_eval_count": 596,
+    "total_duration": 7295186200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST be acknowledged\", \"interpretation_a\": \"The packet containing the discarded CRYPTO frame must be acknowledged even though the frame itself is not used, implying acknowledgement is based solely on packet reception.\", \"interpretation_b\": \"The packet must be acknowledged *in a specific way* to indicate the discard, potentially requiring a different acknowledgement mechanism than usual, which is not specified.\", \"missing_information\": \"The type of acknowledgement is not specified. Is it a standard ACK, or a special ACK indicating discard? Without this, implementations could differ on how to signal the discard.\", \"justification\": \"The clause states packets 'MUST be acknowledged' but doesn't specify *how*. A standard ACK could be interpreted as normal processing, while a special ACK could signal the discard event. This missing constraint leads to ambiguity.\"}",
+  "record_id": "6a6d2ddea029cf11fd2c94f66d1302a0c1048de563ca385466b80c62ad5e96e5",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.297
+}

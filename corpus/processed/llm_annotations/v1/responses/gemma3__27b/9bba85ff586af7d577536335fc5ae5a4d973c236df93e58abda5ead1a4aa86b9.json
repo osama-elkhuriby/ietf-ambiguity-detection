@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "access to the corresponding private key or are authoritative for the public name",
+    "interpretation_a": "Servers have access to the private key used to sign the certificate presented for the TargetName.",
+    "interpretation_b": "Servers are DNS authoritative for the TargetName, meaning they can resolve it to an IP address, even if they don't hold the private key (e.g., a load balancer).",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'access to the corresponding private key or are authoritative for the public name' allows for two reasonable interpretations. A server could have access to the private key, or it could simply be authoritative for the name. The clause doesn't clarify if both conditions must be met, or if either is sufficient. This creates ambiguity in implementation.",
+    "missing_information": "The meaning of 'access to the corresponding private key' is not fully defined. Does it require the server to *use* the key, or merely have the ability to decrypt with it? The relationship between 'access' and 'authoritative' is also unclear; are they mutually exclusive, or can a server be both?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:09:24.140468+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-04",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "e821a224222c3fe44554727eb547838b011a8e45faa1d976167c14ae4d68f34e",
+  "lineage_ids": "lineage:28485220b8a9e9fd27024663",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 255,
+    "load_duration": 5051500,
+    "prompt_eval_count": 585,
+    "total_duration": 9477495000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"access to the corresponding private key or are authoritative for the public name\", \"interpretation_a\": \"Servers have access to the private key used to sign the certificate presented for the TargetName.\", \"interpretation_b\": \"Servers are DNS authoritative for the TargetName, meaning they can resolve it to an IP address, even if they don't hold the private key (e.g., a load balancer).\", \"missing_information\": \"The meaning of 'access to the corresponding private key' is not fully defined. Does it require the server to *use* the key, or merely have the ability to decrypt with it? The relationship between 'access' and 'authoritative' is also unclear; are they mutually exclusive, or can a server be both?\",\"justification\": \"The phrase 'access to the corresponding private key or are authoritative for the public name' allows for two reasonable interpretations. A server could have access to the private key, or it could simply be authoritative for the name. The clause doesn't clarify if both conditions must be met, or if either is sufficient. This creates ambiguity in implementation.\"}",
+  "record_id": "9bba85ff586af7d577536335fc5ae5a4d973c236df93e58abda5ead1a4aa86b9",
+  "revision": "04",
+  "schema_version": 1,
+  "section_ids": "6.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.484
+}

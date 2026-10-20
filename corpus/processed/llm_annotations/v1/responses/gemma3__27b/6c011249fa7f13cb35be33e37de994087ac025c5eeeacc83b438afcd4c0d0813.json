@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "SHOULD prioritize information",
+    "interpretation_a": "Resolvers are encouraged to include information for smaller-SvcPriority records if space allows, but are not required to.",
+    "interpretation_b": "Resolvers must make a best-effort attempt to include information for smaller-SvcPriority records, even if it means truncating other information.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'SHOULD' combined with 'prioritize' creates ambiguity. It's unclear whether prioritization is a strong recommendation or a requirement with some flexibility. The extent of the prioritization is also undefined.",
+    "missing_information": "The degree to which resolvers are required to prioritize smaller-SvcPriority records is not defined. A concrete constraint on the prioritization is missing; for example, a statement about how much other information can be sacrificed to include it."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:05:37.304582+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-12",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "369f45a7b0e4f7729dcd3ebbe607251f8fa6cc76699fc32d71796c27e3cbd655",
+  "lineage_ids": "lineage:2ef431e7ff10a8646fe2fe56",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 196,
+    "load_duration": 4638400,
+    "prompt_eval_count": 612,
+    "total_duration": 7414118800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"SHOULD prioritize information\", \"interpretation_a\": \"Resolvers are encouraged to include information for smaller-SvcPriority records if space allows, but are not required to.\", \"interpretation_b\": \"Resolvers must make a best-effort attempt to include information for smaller-SvcPriority records, even if it means truncating other information.\", \"missing_information\": \"The degree to which resolvers are required to prioritize smaller-SvcPriority records is not defined. A concrete constraint on the prioritization is missing; for example, a statement about how much other information can be sacrificed to include it.\",\"justification\": \"The use of 'SHOULD' combined with 'prioritize' creates ambiguity. It's unclear whether prioritization is a strong recommendation or a requirement with some flexibility. The extent of the prioritization is also undefined.\"}",
+  "record_id": "6c011249fa7f13cb35be33e37de994087ac025c5eeeacc83b438afcd4c0d0813",
+  "revision": "12",
+  "schema_version": 1,
+  "section_ids": "5.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.407
+}

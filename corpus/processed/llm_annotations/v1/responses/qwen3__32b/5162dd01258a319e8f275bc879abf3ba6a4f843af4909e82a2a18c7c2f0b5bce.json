@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides clear constraints: an endpoint must not forget a connection ID without retiring it, and it may treat exceeding the retirement limit as a connection error. These statements are specific and do not allow for materially different interpretations that would affect implementation behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:08:58.501798+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "0be5a2cfa396b3bb2f9a74ab81679772bd101ec7cf97a08d0e8f730b1033bd20",
+  "lineage_ids": "lineage:bdcc23ed4f15fe73df811db2",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 105,
+    "load_duration": 3535100,
+    "prompt_eval_count": 577,
+    "total_duration": 4350157000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides clear constraints: an endpoint must not forget a connection ID without retiring it, and it may treat exceeding the retirement limit as a connection error. These statements are specific and do not allow for materially different interpretations that would affect implementation behavior.\"\n}",
+  "record_id": "5162dd01258a319e8f275bc879abf3ba6a4f843af4909e82a2a18c7c2f0b5bce",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "5.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 4.36
+}

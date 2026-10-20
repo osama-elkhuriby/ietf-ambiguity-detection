@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "have any meaning",
+    "interpretation_a": "The setting is ignored entirely, and the implementation does not need to parse or validate the value.",
+    "interpretation_b": "The setting is parsed and validated, but the value is discarded without affecting behavior. This requires parsing and validation effort.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'have any meaning' is incomplete. It's unclear whether the setting should be completely ignored (no parsing needed) or parsed/validated but then discarded (parsing still needed). This affects implementation complexity.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:49:49.032452+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "cb105286775baa7783292aadbee6ae6438ecc50fd087a377513654552209dc3f",
+  "lineage_ids": "lineage:94d331806c02cec71adf33f0",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 140,
+    "load_duration": 10735000,
+    "prompt_eval_count": 561,
+    "total_duration": 5700014300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"have any meaning\", \"interpretation_a\": \"The setting is ignored entirely, and the implementation does not need to parse or validate the value.\", \"interpretation_b\": \"The setting is parsed and validated, but the value is discarded without affecting behavior. This requires parsing and validation effort.\", \"missing_information\": \"\", \"justification\": \"The phrase 'have any meaning' is incomplete. It's unclear whether the setting should be completely ignored (no parsing needed) or parsed/validated but then discarded (parsing still needed). This affects implementation complexity.\"}",
+  "record_id": "52611a7e6ace984325c3cf0c6c6d6f2b6ee8e7fde7b271377443d173f9412cf1",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.2.4.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.719
+}

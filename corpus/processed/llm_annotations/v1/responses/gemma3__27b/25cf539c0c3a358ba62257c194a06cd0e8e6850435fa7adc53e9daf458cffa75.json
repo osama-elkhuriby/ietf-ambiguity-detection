@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "significantly larger",
+    "interpretation_a": "The stateless reset could be considered 'significantly larger' if it exceeds the received packet by a fixed byte count (e.g., 100 bytes).",
+    "interpretation_b": "The stateless reset could be considered 'significantly larger' if it exceeds the received packet by a percentage (e.g., 50%).",
+    "is_ambiguous": "yes",
+    "justification": "The term 'significantly larger' is subjective and lacks a precise definition. Without a clear threshold, different implementations could reasonably interpret this requirement differently, leading to interoperability issues.",
+    "missing_information": "The definition of 'significantly larger' is missing. A concrete threshold (in bytes or as a percentage of the original packet size) is needed to avoid ambiguity."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:05:10.278679+00:00",
+  "document_id": "draft-ietf-quic-transport-22",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "f4d8656b4fa663a82cdf550dfe8c8337fe0f878477777453894fa28ea09a1f0e",
+  "lineage_ids": "lineage:029a1650f9fee114d798ba9e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 187,
+    "load_duration": 4008000,
+    "prompt_eval_count": 566,
+    "total_duration": 7063153900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"significantly larger\", \"interpretation_a\": \"The stateless reset could be considered 'significantly larger' if it exceeds the received packet by a fixed byte count (e.g., 100 bytes).\", \"interpretation_b\": \"The stateless reset could be considered 'significantly larger' if it exceeds the received packet by a percentage (e.g., 50%).\", \"missing_information\": \"The definition of 'significantly larger' is missing. A concrete threshold (in bytes or as a percentage of the original packet size) is needed to avoid ambiguity.\",\"justification\": \"The term 'significantly larger' is subjective and lacks a precise definition. Without a clear threshold, different implementations could reasonably interpret this requirement differently, leading to interoperability issues.\"}",
+  "record_id": "25cf539c0c3a358ba62257c194a06cd0e8e6850435fa7adc53e9daf458cffa75",
+  "revision": "22",
+  "schema_version": 1,
+  "section_ids": "10.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.062
+}

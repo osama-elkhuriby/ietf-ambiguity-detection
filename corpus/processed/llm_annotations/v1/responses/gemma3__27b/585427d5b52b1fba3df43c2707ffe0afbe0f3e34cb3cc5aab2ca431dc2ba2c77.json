@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "usable Alt-Svc value",
+    "interpretation_a": "An Alt-Svc record is considered usable if it provides a valid and reachable HTTPS endpoint, even if it's not the preferred one.",
+    "interpretation_b": "An Alt-Svc record is considered usable only if it matches specific criteria (e.g., priority, port) that align with the client's configuration or preferences.",
+    "is_ambiguous": "yes",
+    "justification": "The term 'usable' is not defined, leaving room for different interpretations of what constitutes a valid Alt-Svc record that allows a client to skip the HTTPS RR query. This affects implementation because different clients might have different thresholds for what they consider 'usable'.",
+    "missing_information": "The definition of 'usable' is not provided. What criteria determine if an Alt-Svc value is 'usable' for the purpose of skipping the HTTPS RR query?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:03:47.809879+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-05",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "71bce6c9d1d50a23d729a2a02d4afa0ad7cabc7342d166f5ea1c8562339c0368",
+  "lineage_ids": "lineage:ca3208940b5d1b9aa94f0464",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 208,
+    "load_duration": 4045800,
+    "prompt_eval_count": 572,
+    "total_duration": 7814929500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"usable Alt-Svc value\", \"interpretation_a\": \"An Alt-Svc record is considered usable if it provides a valid and reachable HTTPS endpoint, even if it's not the preferred one.\", \"interpretation_b\": \"An Alt-Svc record is considered usable only if it matches specific criteria (e.g., priority, port) that align with the client's configuration or preferences.\", \"missing_information\": \"The definition of 'usable' is not provided. What criteria determine if an Alt-Svc value is 'usable' for the purpose of skipping the HTTPS RR query?\",\"justification\": \"The term 'usable' is not defined, leaving room for different interpretations of what constitutes a valid Alt-Svc record that allows a client to skip the HTTPS RR query. This affects implementation because different clients might have different thresholds for what they consider 'usable'.\"}",
+  "record_id": "585427d5b52b1fba3df43c2707ffe0afbe0f3e34cb3cc5aab2ca431dc2ba2c77",
+  "revision": "05",
+  "schema_version": 1,
+  "section_ids": "8.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.812
+}

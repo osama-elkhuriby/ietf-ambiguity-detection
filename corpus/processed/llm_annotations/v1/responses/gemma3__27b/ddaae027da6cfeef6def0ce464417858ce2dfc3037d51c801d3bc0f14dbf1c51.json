@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "if it has Handshake keys",
+    "interpretation_a": "The client possesses valid Handshake keys established during a previous handshake or key exchange.",
+    "interpretation_b": "The client has merely *received* Handshake keys, but they may not be valid or usable for encryption/authentication.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'has Handshake keys' is incomplete. It doesn't specify whether the keys must be valid, current, or usable. A client might receive Handshake keys as part of a negotiation but then determine they are invalid (e.g., due to a protocol error). The clause doesn't clarify whether an Initial packet should be sent in this case.",
+    "missing_information": "The definition of 'has Handshake keys' is not precise. Does 'has' mean 'possesses valid and usable keys', or simply 'has received keys' regardless of their validity?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:31:19.809218+00:00",
+  "document_id": "draft-ietf-quic-recovery-30",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "76b0379b8f8e654557a216a25a20996de3c733df584be3fe8307c53c4237d864",
+  "lineage_ids": "lineage:70490422b52dda92e21e1a01",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 210,
+    "load_duration": 4041800,
+    "prompt_eval_count": 610,
+    "total_duration": 7907263400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"if it has Handshake keys\", \"interpretation_a\": \"The client possesses valid Handshake keys established during a previous handshake or key exchange.\", \"interpretation_b\": \"The client has merely *received* Handshake keys, but they may not be valid or usable for encryption/authentication.\", \"missing_information\": \"The definition of 'has Handshake keys' is not precise. Does 'has' mean 'possesses valid and usable keys', or simply 'has received keys' regardless of their validity?\",\"justification\": \"The phrase 'has Handshake keys' is incomplete. It doesn't specify whether the keys must be valid, current, or usable. A client might receive Handshake keys as part of a negotiation but then determine they are invalid (e.g., due to a protocol error). The clause doesn't clarify whether an Initial packet should be sent in this case.\"}",
+  "record_id": "ddaae027da6cfeef6def0ce464417858ce2dfc3037d51c801d3bc0f14dbf1c51",
+  "revision": "30",
+  "schema_version": 1,
+  "section_ids": "6.2.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.922
+}

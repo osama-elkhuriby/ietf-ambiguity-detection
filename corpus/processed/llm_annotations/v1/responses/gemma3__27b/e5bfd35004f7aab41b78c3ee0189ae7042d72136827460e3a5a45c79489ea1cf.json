@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "transfer of the body",
+    "interpretation_a": "The data stream must be half-closed as soon as *any* part of the body has been transferred, even if the entire body hasn't been sent.",
+    "interpretation_b": "The data stream must be half-closed only after the *complete* body has been transferred.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'transfer of the body' is incomplete. Does it mean any part of the body, or the entire body? Both interpretations are reasonable and lead to different implementations.",
+    "missing_information": "It is unclear whether 'transfer of the body' refers to any data being sent, or the completion of sending all body data."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:12:56.164886+00:00",
+  "document_id": "draft-ietf-quic-http-04",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "da95805b4a95d586047a7eae1e44750b148cbd77f58e9ace72b04e53cda14752",
+  "lineage_ids": "lineage:bc7c4b4e2043273c78b14f78",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 170,
+    "load_duration": 19077600,
+    "prompt_eval_count": 615,
+    "total_duration": 6663880000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"transfer of the body\", \"interpretation_a\": \"The data stream must be half-closed as soon as *any* part of the body has been transferred, even if the entire body hasn't been sent.\", \"interpretation_b\": \"The data stream must be half-closed only after the *complete* body has been transferred.\", \"missing_information\": \"It is unclear whether 'transfer of the body' refers to any data being sent, or the completion of sending all body data.\", \"justification\": \"The phrase 'transfer of the body' is incomplete. Does it mean any part of the body, or the entire body? Both interpretations are reasonable and lead to different implementations.\"}",
+  "record_id": "e5bfd35004f7aab41b78c3ee0189ae7042d72136827460e3a5a45c79489ea1cf",
+  "revision": "04",
+  "schema_version": 1,
+  "section_ids": "4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 6.672
+}

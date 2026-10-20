@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "cannot or will not be changed",
+    "interpretation_a": "The server must verify consistency with constraints that cannot be changed by the PUT (immutable constraints).",
+    "interpretation_b": "The server must verify consistency with constraints that will not be changed by the PUT (constraints that the server chooses not to change).",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"cannot or will not be changed\" is ambiguous, allowing two materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T06:12:01.915684+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-16",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "f46fa009bc0cd6f6cc0a7e9660fd5c71c2c79e12d1f939e84f32d350a28ee562",
+  "lineage_ids": "lineage:b57b75b3bff3127eb5cda155",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1189,
+    "load_duration": 4199800,
+    "prompt_eval_count": 637,
+    "total_duration": 10336474400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"cannot or will not be changed\",\n  \"interpretation_a\": \"The server must verify consistency with constraints that cannot be changed by the PUT (immutable constraints).\",\n  \"interpretation_b\": \"The server must verify consistency with constraints that will not be changed by the PUT (constraints that the server chooses not to change).\",\n  \"missing_information\": \"\",\n  \"justification\": \"The phrase \\\"cannot or will not be changed\\\" is ambiguous, allowing two materially different implementation behaviours.\"\n}",
+  "record_id": "47281693de6ff5f37956de43930f28fa96bf8a82b2ed43105d191ed78dae07f2",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "9.3.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.344
+}

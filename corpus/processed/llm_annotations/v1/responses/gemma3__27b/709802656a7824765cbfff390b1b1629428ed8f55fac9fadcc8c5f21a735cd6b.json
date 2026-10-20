@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Clients SHOULD try higher-priority alternatives first, with fallback to lower-priority alternatives.",
+    "interpretation_a": "The client attempts each higher-priority alternative sequentially until one succeeds, then falls back to lower-priority alternatives only if all higher-priority attempts fail.",
+    "interpretation_b": "The client attempts multiple higher-priority alternatives concurrently, and may also attempt lower-priority alternatives concurrently or after higher-priority attempts, potentially interleaving attempts across priority levels.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'try' and 'fallback' does not clearly define the order of attempts. 'Try' could imply sequential attempts, while 'fallback' suggests a broader range of behaviors, including concurrent attempts.",
+    "missing_information": "The document does not specify whether the client attempts higher-priority alternatives sequentially or concurrently. This affects implementation choices regarding parallelism and timeout behavior."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:06:01.526322+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-07",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "ca5bbc9fcdf320641d5bf5a10db044997be73f30600ea7d1d3b37bb2a59adb1f",
+  "lineage_ids": "lineage:18d67656b0297a286eb177cc",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 202,
+    "load_duration": 4121500,
+    "prompt_eval_count": 601,
+    "total_duration": 7606927600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"Clients SHOULD try higher-priority alternatives first, with fallback to lower-priority alternatives.\", \"interpretation_a\": \"The client attempts each higher-priority alternative sequentially until one succeeds, then falls back to lower-priority alternatives only if all higher-priority attempts fail.\", \"interpretation_b\": \"The client attempts multiple higher-priority alternatives concurrently, and may also attempt lower-priority alternatives concurrently or after higher-priority attempts, potentially interleaving attempts across priority levels.\", \"missing_information\": \"The document does not specify whether the client attempts higher-priority alternatives sequentially or concurrently. This affects implementation choices regarding parallelism and timeout behavior.\", \"justification\": \"The use of 'try' and 'fallback' does not clearly define the order of attempts. 'Try' could imply sequential attempts, while 'fallback' suggests a broader range of behaviors, including concurrent attempts.\"}",
+  "record_id": "709802656a7824765cbfff390b1b1629428ed8f55fac9fadcc8c5f21a735cd6b",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.593
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "invalid field value",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause specifies that a server must respond with a 400 status code when a Host header is missing, when there are multiple Host headers, or when a Host header has an 'invalid field value'.  The term 'invalid field value' is not defined within the supplied text, creating a concrete missing constraint that could lead to materially different implementation behaviours.  This satisfies the criteria for ambiguity under subtype U-2.",
+    "missing_information": "The clause references an undefined term 'invalid field value' without providing a definition, which constitutes an incomplete constraint affecting implementation behaviour. No further context is supplied in the target clause itself to resolve this ambiguity.  "
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T06:06:48.260349+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-10",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "4334406a700e60e7ad54b1d8bdfd68e33ef9e99a7e51402378f834a41dda73a7",
+  "lineage_ids": "lineage:cacf71ecd486fbe670d1af7e",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 7531,
+    "load_duration": 4084200,
+    "prompt_eval_count": 623,
+    "total_duration": 65802400900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"invalid field value\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The clause references an undefined term 'invalid field value' without providing a definition, which constitutes an incomplete constraint affecting implementation behaviour. No further context is supplied in the target clause itself to resolve this ambiguity.  \",\n  \"justification\": \"The clause specifies that a server must respond with a 400 status code when a Host header is missing, when there are multiple Host headers, or when a Host header has an 'invalid field value'.  The term 'invalid field value' is not defined within the supplied text, creating a concrete missing constraint that could lead to materially different implementation behaviours.  This satisfies the criteria for ambiguity under subtype U-2.\"\n}",
+  "record_id": "42ed136a1ad2c8590b68cb53444df9caa20376f39f511756dd5b8b081f8e9bb4",
+  "revision": "10",
+  "schema_version": 1,
+  "section_ids": "6.6",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 65.797
+}

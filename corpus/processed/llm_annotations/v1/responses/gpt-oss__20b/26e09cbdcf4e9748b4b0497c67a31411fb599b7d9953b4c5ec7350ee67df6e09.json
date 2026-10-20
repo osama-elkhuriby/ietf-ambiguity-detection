@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "pace sending of all in-flight packets based on input from the congestion controller",
+    "interpretation_a": "The clause does not specify the pacing algorithm or pacing interval, leaving implementers free to choose any pacing strategy.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The recommendation lacks a concrete pacing algorithm or interval, allowing materially different implementations.",
+    "missing_information": "The specific pacing algorithm or pacing interval to be used."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T11:09:08.270086+00:00",
+  "document_id": "draft-ietf-quic-recovery-29",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "496741976654a2a2a492be827412d993fb03e9fc0d60443b313ae12bd06ee3c2",
+  "lineage_ids": "lineage:b89093be9018e22792fa4e6a",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 3836,
+    "load_duration": 4588600,
+    "prompt_eval_count": 576,
+    "total_duration": 33024389200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"pace sending of all in-flight packets based on input from the congestion controller\",\n  \"interpretation_a\": \"The clause does not specify the pacing algorithm or pacing interval, leaving implementers free to choose any pacing strategy.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The specific pacing algorithm or pacing interval to be used.\",\n  \"justification\": \"The recommendation lacks a concrete pacing algorithm or interval, allowing materially different implementations.\"\n}",
+  "record_id": "26e09cbdcf4e9748b4b0497c67a31411fb599b7d9953b4c5ec7350ee67df6e09",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "7.9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 33.032
+}

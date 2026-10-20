@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "treat receipt of any frame other than PRIORITY as a connection error",
+    "interpretation_a": "It is unclear whether the clause applies only to frames received after the stream is closed or to all frames.",
+    "interpretation_b": "",
+    "is_ambiguous": "yes",
+    "justification": "The clause lacks a clear constraint on when frames other than PRIORITY should trigger a PROTOCOL_ERROR, allowing two materially different implementation behaviours.",
+    "missing_information": "The clause does not specify the context in which the error applies, leaving the scope of \"any frame\" ambiguous."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T05:12:31.583437+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-03",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "0225f68aad0a2e79ebd528aa975007b69a2f5d5942e53f6b94adaa7bd158dcf4",
+  "lineage_ids": "lineage:56159f14678d352a59972000",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 7312,
+    "load_duration": 5207500,
+    "prompt_eval_count": 599,
+    "total_duration": 63925523800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"treat receipt of any frame other than PRIORITY as a connection error\",\n  \"interpretation_a\": \"It is unclear whether the clause applies only to frames received after the stream is closed or to all frames.\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"The clause does not specify the context in which the error applies, leaving the scope of \\\"any frame\\\" ambiguous.\",\n  \"justification\": \"The clause lacks a clear constraint on when frames other than PRIORITY should trigger a PROTOCOL_ERROR, allowing two materially different implementation behaviours.\"\n}",
+  "record_id": "e811b2e11a37fd180521780c099b4b3ce96183531c26a792079d37d10c426dd5",
+  "revision": "03",
+  "schema_version": 1,
+  "section_ids": "5.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 63.922
+}

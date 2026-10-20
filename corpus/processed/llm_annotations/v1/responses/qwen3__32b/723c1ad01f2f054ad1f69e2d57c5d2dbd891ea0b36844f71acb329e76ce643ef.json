@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause provides clear instructions about the behavior of senders and receivers after a GOAWAY frame is sent. It specifies that senders will ignore frames on streams with identifiers higher than the included last stream identifier and that receivers must not open additional streams. These instructions are unambiguous and do not allow for multiple materially different interpretations.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T01:48:26.763105+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "c35b4598d892f8866f1a8ad0fbb3194dd0cccd85d4ecac479d00be681793a010",
+  "lineage_ids": "lineage:f848c019afa8a447398d09ec",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 121,
+    "load_duration": 10062900,
+    "prompt_eval_count": 595,
+    "total_duration": 5111835900
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause provides clear instructions about the behavior of senders and receivers after a GOAWAY frame is sent. It specifies that senders will ignore frames on streams with identifiers higher than the included last stream identifier and that receivers must not open additional streams. These instructions are unambiguous and do not allow for multiple materially different interpretations.\"\n}",
+  "record_id": "723c1ad01f2f054ad1f69e2d57c5d2dbd891ea0b36844f71acb329e76ce643ef",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.8",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.125
+}

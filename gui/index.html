@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RFC Ambiguity Review</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --navy: #183452;
+      --blue: #2d6596;
+      --teal: #188585;
+      --ink: #26313b;
+      --muted: #5b6974;
+      --line: #d6e0e7;
+      --pale: #f2f7fa;
+      --gold-bg: #fbf2e3;
+      --red-bg: #faedeb;
+      --green-bg: #eaf5ef;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #f3f6f8;
+      color: var(--ink);
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.5;
+    }
+    header {
+      padding: 25px max(24px, calc((100vw - 1180px) / 2));
+      background: var(--navy);
+      color: white;
+    }
+    header h1 { margin: 0; font-size: 25px; }
+    header p { margin: 5px 0 0; color: #dce8f1; font-size: 14px; }
+    main { max-width: 1180px; margin: 24px auto; padding: 0 20px 40px; }
+    .status, .card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      box-shadow: 0 3px 12px rgb(24 52 82 / 5%);
+    }
+    .status {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 13px 16px;
+      margin-bottom: 18px;
+      font-size: 14px;
+    }
+    .dot { flex: 0 0 10px; width: 10px; height: 10px; margin-top: 5px; border-radius: 50%; background: #259469; }
+    .card { padding: 22px; margin-bottom: 18px; }
+    h2 { margin: 0 0 13px; color: var(--navy); font-size: 19px; }
+    p { margin-top: 0; }
+    .intro, .hint, .caveat { color: var(--muted); font-size: 13px; }
+    .intro { margin-bottom: 0; }
+    .field-label { display: block; margin: 14px 0 6px; font-weight: 650; font-size: 14px; }
+    input[type="file"] { display: block; max-width: 100%; padding: 10px; border: 1px solid #bac9d3; border-radius: 7px; background: white; }
+    button {
+      border: 0;
+      border-radius: 7px;
+      padding: 10px 16px;
+      color: white;
+      background: var(--blue);
+      font: 600 14px "Segoe UI", Arial, sans-serif;
+      cursor: pointer;
+    }
+    button:hover { filter: brightness(.94); }
+    button:disabled { cursor: wait; opacity: .65; }
+    button.secondary { color: var(--navy); background: #e7eef3; }
+    .actions { margin-top: 16px; display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+    #working { color: var(--muted); font-size: 13px; }
+    #error, #warning {
+      display: none;
+      margin-top: 14px;
+      padding: 12px;
+      border-radius: 7px;
+      white-space: pre-wrap;
+    }
+    #error { color: #8e322e; background: var(--red-bg); }
+    #warning { color: #765313; background: var(--gold-bg); }
+    .parse-warning {
+      display: none;
+      margin: 12px 0;
+      padding: 11px;
+      border-radius: 7px;
+      color: #765313;
+      background: var(--gold-bg);
+      font-size: 13px;
+    }
+    #results { display: none; }
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+      gap: 10px;
+      margin: 16px 0;
+    }
+    .stat { padding: 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--pale); }
+    .stat strong { display: block; color: var(--navy); font-size: 20px; }
+    .stat span { color: var(--muted); font-size: 12px; }
+    .table-wrap { overflow: auto; max-height: 68vh; border: 1px solid var(--line); border-radius: 8px; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 10px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { position: sticky; top: 0; z-index: 1; background: #edf3f7; color: var(--navy); white-space: nowrap; }
+    td.rank, td.score, td.line { white-space: nowrap; }
+    td.score { font-variant-numeric: tabular-nums; font-weight: 650; }
+    td.clause { min-width: 300px; white-space: pre-wrap; overflow-wrap: anywhere; }
+    td.section { min-width: 150px; }
+    td.reason { min-width: 240px; color: #246344; }
+    td.review { min-width: 145px; }
+    select { max-width: 145px; padding: 6px; border: 1px solid #bac9d3; border-radius: 6px; background: white; color: var(--ink); }
+    .disclaimer { max-width: 980px; margin: 18px auto 0; color: var(--muted); font-size: 12px; text-align: center; }
+    @media (max-width: 650px) {
+      header { padding: 20px; }
+      main { margin-top: 15px; padding: 0 12px 30px; }
+      .card { padding: 16px; }
+      .table-wrap { max-height: 70vh; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>RFC Ambiguity Review</h1>
+    <p>Local clause ranking with Logistic Regression · optional Qwen3 32B explanations</p>
+  </header>
+  <main>
+    <section class="status" aria-live="polite">
+      <span class="dot" aria-hidden="true"></span>
+      <span id="statusText">Loading the saved classifier…</span>
+    </section>
+
+    <section class="card">
+      <h2>Review a rendered RFC</h2>
+      <p class="intro">
+        Upload a plaintext RFC <code>.txt</code>. The classifier scores clauses
+        identified as explicitly normative and ranks them for review. It does not
+        provide calibrated probabilities or a definitive ambiguity decision.
+      </p>
+      <form id="scanForm">
+        <label class="field-label" for="rfcFile">RFC plaintext file</label>
+        <input id="rfcFile" type="file" accept=".txt,text/plain" required>
+        <p class="hint">Maximum 5 MB. Processed locally; a temporary copy is removed after parsing.</p>
+        <div class="actions">
+          <button id="scanButton" type="submit" disabled>Rank clauses</button>
+          <span id="working" aria-live="polite"></span>
+        </div>
+      </form>
+      <div id="error" role="alert"></div>
+      <div id="warning" role="status"></div>
+    </section>
+
+    <section id="results" class="card" aria-live="polite">
+      <h2 id="documentTitle">Ranked clauses</h2>
+      <p id="scopeText" class="intro"></p>
+      <div id="summary" class="summary"></div>
+      <p id="parseWarning" class="parse-warning" role="status"></p>
+      <p class="caveat">
+        Scores are relative ranking values, not calibrated probabilities or proof
+        that a clause is ambiguous. Out-of-fold AP is development evidence only;
+        the saved model was refit on all annotation rows and has no independent
+        production evaluation. Human review is required.
+      </p>
+      <div class="actions">
+        <button id="explainButton" type="button" disabled>Explain selected with Qwen</button>
+        <button id="downloadButton" type="button" class="secondary">Download review CSV</button>
+        <span id="selectionCount" class="hint">Select up to 5 clauses for explanation.</span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Select</th>
+              <th scope="col">Rank</th>
+              <th scope="col">Score</th>
+              <th scope="col">Section</th>
+              <th scope="col">Line</th>
+              <th scope="col">Clause</th>
+              <th scope="col">Qwen review note</th>
+              <th scope="col">Your review</th>
+            </tr>
+          </thead>
+          <tbody id="resultsBody"></tbody>
+        </table>
+      </div>
+    </section>
+    <p class="disclaimer">
+      Research demo only. Evaluation metrics come from operational reference labels,
+      not independent expert adjudication. Only explicitly normative clauses are
+      model-scored; manual-review, contextual, and excluded units are counted but
+      not ranked. The GUI binds to this computer only.
+    </p>
+  </main>
+  <script>
+    const form = document.getElementById("scanForm");
+    const scanButton = document.getElementById("scanButton");
+    const errorBox = document.getElementById("error");
+    const warningBox = document.getElementById("warning");
+    const resultsBox = document.getElementById("results");
+    const rowsById = new Map();
+    let activeScanId = "";
+
+    function setError(message) {
+      errorBox.textContent = message;
+      errorBox.style.display = "block";
+    }
+
+    function addStat(container, value, label) {
+      const item = document.createElement("div");
+      item.className = "stat";
+      const number = document.createElement("strong");
+      number.textContent = String(value);
+      const caption = document.createElement("span");
+      caption.textContent = label;
+      item.append(number, caption);
+      container.append(item);
+    }
+
+    function makeCell(value, className) {
+      const cell = document.createElement("td");
+      if (className) cell.className = className;
+      cell.textContent = value;
+      return cell;
+    }
+
+    function renderRows(rows) {
+      const body = document.getElementById("resultsBody");
+      body.replaceChildren();
+      rowsById.clear();
+      rows.forEach((row) => {
+        rowsById.set(row.clause_id, row);
+        const tr = document.createElement("tr");
+        const selectorCell = document.createElement("td");
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.setAttribute("aria-label", `Select ranked clause ${row.rank}`);
+        checkbox.dataset.clauseId = row.clause_id;
+        checkbox.addEventListener("change", updateSelection);
+        selectorCell.append(checkbox);
+        tr.append(
+          selectorCell,
+          makeCell(String(row.rank), "rank"),
+          makeCell(Number(row.relative_score).toFixed(4), "score"),
+          makeCell(row.section_path || row.section_heading || row.section_id, "section"),
+          makeCell(row.line_start || "—", "line"),
+          makeCell(row.target_clause, "clause"),
+          makeCell(row.qwen_justification || "Not requested", "reason")
+        );
+        const reviewCell = document.createElement("td");
+        reviewCell.className = "review";
+        const review = document.createElement("select");
+        review.dataset.reviewId = row.clause_id;
+        review.setAttribute("aria-label", `Your review for clause ${row.rank}`);
+        [
+          ["", "Not reviewed"],
+          ["likely_ambiguous", "Likely ambiguous"],
+          ["not_ambiguous", "Not ambiguous"],
+          ["uncertain", "Uncertain"]
+        ].forEach(([value, label]) => {
+          const option = document.createElement("option");
+          option.value = value;
+          option.textContent = label;
+          review.append(option);
+        });
+        reviewCell.append(review);
+        tr.append(reviewCell);
+        body.append(tr);
+      });
+    }
+
+    function updateSelection() {
+      const selected = [...document.querySelectorAll("[data-clause-id]:checked")];
+      const atLimit = selected.length >= 5;
+      document.querySelectorAll("[data-clause-id]:not(:checked)").forEach((box) => {
+        box.disabled = atLimit;
+      });
+      document.getElementById("selectionCount").textContent =
+        `${selected.length} selected; choose up to 5 clauses for Qwen.`;
+      document.getElementById("explainButton").disabled = selected.length === 0;
+    }
+
+    function csvEscape(value) {
+      return `"${String(value ?? "").replaceAll('"', '""')}"`;
+    }
+
+    function downloadCsv() {
+      const columns = [
+        "rank", "relative_score", "section_id", "section_path", "line_start",
+        "line_end", "target_clause", "previous_clause", "next_clause",
+        "qwen_justification", "human_review"
+      ];
+      const rows = [...rowsById.values()].map((row) => {
+        const review = document.querySelector(`[data-review-id="${CSS.escape(row.clause_id)}"]`);
+        return [
+          row.rank, row.relative_score, row.section_id, row.section_path,
+          row.line_start, row.line_end, row.target_clause, row.previous_clause,
+          row.next_clause, row.qwen_justification, review ? review.value : ""
+        ];
+      });
+      const csv = [columns, ...rows].map((row) => row.map(csvEscape).join(",")).join("\r\n");
+      const blob = new Blob(["\ufeff", csv], {type: "text/csv;charset=utf-8"});
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = `${document.getElementById("documentTitle").dataset.filename || "rfc"}-ranked-review.csv`;
+      link.click();
+      URL.revokeObjectURL(link.href);
+    }
+
+    async function checkStatus() {
+      try {
+        const response = await fetch("/api/status");
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.error || "The classifier is not ready.");
+        scanButton.disabled = false;
+        const classifier = data.classifier;
+        document.getElementById("statusText").textContent =
+          `${classifier.name} ready · out-of-fold AP ${Number(classifier.average_precision).toFixed(3)} ` +
+          `(${classifier.validation_rows} clauses; ${classifier.validation_groups} draft families). ` +
+          `Qwen ${data.qwen_model} is used only when explanations are requested.`;
+        if (classifier.sklearn_compatibility_warnings.length) {
+          warningBox.textContent =
+            `Compatibility warning: artifact scikit-learn version(s): ` +
+            `${classifier.artifact_sklearn_versions.join(", ") || "not recorded"}; ` +
+            `active version: ${classifier.runtime_sklearn_version}. Predictions are being ` +
+            "produced, but scikit-learn warns cross-version loading may be unreliable. " +
+            "Match the training version before relying on results.";
+          warningBox.style.display = "block";
+        }
+      } catch (error) {
+        setError(error.message);
+      }
+    }
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      errorBox.style.display = "none";
+      warningBox.style.display = warningBox.textContent ? "block" : "none";
+      resultsBox.style.display = "none";
+      const file = document.getElementById("rfcFile").files[0];
+      if (!file || !file.name.toLowerCase().endsWith(".txt")) {
+        setError("Choose a rendered RFC plaintext .txt file.");
+        return;
+      }
+      if (file.size > 5_000_000) {
+        setError("RFC plaintext must not exceed 5 MB.");
+        return;
+      }
+      scanButton.disabled = true;
+      document.getElementById("working").textContent =
+        "Parsing and ranking normative clauses locally…";
+      try {
+        const response = await fetch("/api/scan", {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify({filename: file.name, content: await file.text()})
+        });
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.error || "RFC analysis failed.");
+        activeScanId = data.scan_id;
+        document.getElementById("documentTitle").textContent = data.title;
+        document.getElementById("documentTitle").dataset.filename =
+          data.document_id.replace(/[^A-Za-z0-9._-]+/g, "-");
+        document.getElementById("scopeText").textContent =
+          `${data.candidate_count} explicitly normative clauses ranked. ` +
+          `${data.manual_review_count} manual-review clauses, ${data.contextual_count} contextual clauses, ` +
+          `and ${data.excluded_count} excluded units were not scored.`;
+        const parseWarning = document.getElementById("parseWarning");
+        parseWarning.textContent = data.warnings.length
+          ? `Parser warning: ${data.warnings.join("; ")}`
+          : "";
+        parseWarning.style.display = data.warnings.length ? "block" : "none";
+        const summary = document.getElementById("summary");
+        summary.replaceChildren();
+        addStat(summary, data.candidate_count, "Clauses ranked");
+        addStat(summary, data.manual_review_count, "Manual review, not scored");
+        addStat(summary, data.contextual_count, "Contextual, not scored");
+        addStat(summary, data.excluded_count, "Excluded, not scored");
+        renderRows(data.rows);
+        updateSelection();
+        resultsBox.style.display = "block";
+      } catch (error) {
+        setError(error.message);
+      } finally {
+        document.getElementById("working").textContent = "";
+        scanButton.disabled = false;
+      }
+    });
+
+    document.getElementById("explainButton").addEventListener("click", async () => {
+      const clauseIds = [...document.querySelectorAll("[data-clause-id]:checked")]
+        .map((box) => box.dataset.clauseId);
+      const reviews = new Map(
+        [...document.querySelectorAll("[data-review-id]")].map((select) => [
+          select.dataset.reviewId, select.value
+        ])
+      );
+      const explainButton = document.getElementById("explainButton");
+      errorBox.style.display = "none";
+      explainButton.disabled = true;
+      document.getElementById("working").textContent =
+        "Checking the pinned local Qwen model and generating explanations…";
+      try {
+        const response = await fetch("/api/explain", {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify({scan_id: activeScanId, clause_ids: clauseIds})
+        });
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.error || "Qwen explanation failed.");
+        data.explanations.forEach((item) => {
+          const row = rowsById.get(item.clause_id);
+          if (row) row.qwen_justification = item.qwen_justification;
+        });
+        renderRows([...rowsById.values()]);
+        document.querySelectorAll("[data-review-id]").forEach((select) => {
+          select.value = reviews.get(select.dataset.reviewId) || "";
+        });
+        document.querySelectorAll("[data-clause-id]").forEach((box) => {
+          box.checked = clauseIds.includes(box.dataset.clauseId);
+        });
+        updateSelection();
+      } catch (error) {
+        setError(error.message);
+      } finally {
+        document.getElementById("working").textContent = "";
+        updateSelection();
+      }
+    });
+
+    document.getElementById("downloadButton").addEventListener("click", downloadCsv);
+    checkStatus();
+  </script>
+</body>
+</html>

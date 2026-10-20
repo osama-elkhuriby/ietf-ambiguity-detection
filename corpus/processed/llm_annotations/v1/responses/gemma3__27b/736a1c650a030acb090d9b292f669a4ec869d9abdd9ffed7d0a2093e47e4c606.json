@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "either the same or newer",
+    "interpretation_a": "Packets can be protected with the same key as lower packet numbers, or a newer key.",
+    "interpretation_b": "Packets must be protected with a newer key than lower packet numbers; using the same key is not permitted.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase \"either the same or newer\" allows for two distinct interpretations. One interpretation is that using the same key is acceptable, while the other is that a newer key *must* be used. This missing constraint on whether the same key is allowed affects implementation.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:40:55.557387+00:00",
+  "document_id": "draft-ietf-quic-tls-34",
+  "family_id": "draft-ietf-quic-tls",
+  "input_fingerprint": "c29c506bd02a125ea3ac98b77275a4661404a4acbd480a638c2c26aa76b92280",
+  "lineage_ids": "lineage:ff514ae44895cf2ec9a68edd",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 151,
+    "load_duration": 10368700,
+    "prompt_eval_count": 584,
+    "total_duration": 5793960700
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"either the same or newer\", \"interpretation_a\": \"Packets can be protected with the same key as lower packet numbers, or a newer key.\", \"interpretation_b\": \"Packets must be protected with a newer key than lower packet numbers; using the same key is not permitted.\", \"missing_information\": \"\", \"justification\": \"The phrase \\\"either the same or newer\\\" allows for two distinct interpretations. One interpretation is that using the same key is acceptable, while the other is that a newer key *must* be used. This missing constraint on whether the same key is allowed affects implementation.\"}",
+  "record_id": "736a1c650a030acb090d9b292f669a4ec869d9abdd9ffed7d0a2093e47e4c606",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "6.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 5.797
+}

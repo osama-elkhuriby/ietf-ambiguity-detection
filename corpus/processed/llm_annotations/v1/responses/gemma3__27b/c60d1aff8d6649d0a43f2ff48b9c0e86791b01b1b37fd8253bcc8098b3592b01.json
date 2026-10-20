@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "If the length of the padding is the length of the frame payload",
+    "interpretation_a": "Padding length equal to the frame payload is an error.",
+    "interpretation_b": "Padding length exceeding the frame payload is an error.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'or greater' is ambiguous. Does it include equality? If so, a padding length equal to the frame payload triggers the error. If not, it only triggers when the padding length is strictly greater.",
+    "missing_information": "It is unclear whether 'equal to' is included in the condition that triggers the error. The phrase 'or greater' could be interpreted as strictly greater than, or greater than or equal to. This affects whether a padding length exactly matching the frame payload triggers the error or not."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T03:47:00.502392+00:00",
+  "document_id": "draft-ietf-httpbis-http2bis-07",
+  "family_id": "draft-ietf-httpbis-http2bis",
+  "input_fingerprint": "3b82095f8072932d0bc6825a667b250f6780089036287cc247a045a16c0f84ce",
+  "lineage_ids": "lineage:be25bb1f5fe06f3807043a51",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 185,
+    "load_duration": 10778200,
+    "prompt_eval_count": 583,
+    "total_duration": 7202059000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"If the length of the padding is the length of the frame payload\", \"interpretation_a\": \"Padding length equal to the frame payload is an error.\", \"interpretation_b\": \"Padding length exceeding the frame payload is an error.\", \"missing_information\": \"It is unclear whether 'equal to' is included in the condition that triggers the error. The phrase 'or greater' could be interpreted as strictly greater than, or greater than or equal to. This affects whether a padding length exactly matching the frame payload triggers the error or not.\",\"justification\": \"The phrase 'or greater' is ambiguous. Does it include equality? If so, a padding length equal to the frame payload triggers the error. If not, it only triggers when the padding length is strictly greater.\"}",
+  "record_id": "c60d1aff8d6649d0a43f2ff48b9c0e86791b01b1b37fd8253bcc8098b3592b01",
+  "revision": "07",
+  "schema_version": 1,
+  "section_ids": "6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.203
+}

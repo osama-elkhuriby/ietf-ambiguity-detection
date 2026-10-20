@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unless it paces the sending of packets",
+    "interpretation_a": "If the sender does *not* pace the sending of packets, it MUST reset its congestion window.",
+    "interpretation_b": "If the sender *does* pace the sending of packets, it MAY retain its congestion window (as per the next clause), but the clause does not explicitly state that it *must* retain it.",
+    "is_ambiguous": "yes",
+    "justification": "The 'unless' clause creates ambiguity. Does pacing *prevent* the reset, or simply *allow* retention of the existing window? The next clause suggests retention is permitted with pacing, but doesn't confirm that the reset is avoided.",
+    "missing_information": "The clause does not specify whether pacing is sufficient to avoid resetting the congestion window, or whether it is a condition for retaining the existing window. It leaves open the possibility that pacing is required, but the window is still reset, which is inconsistent with the next clause."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:18:22.653023+00:00",
+  "document_id": "draft-ietf-quic-recovery-19",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "837134525eb2e52d4cf4c19b9fae359b59c46223caadfebcd7bb2f4f41a5c801",
+  "lineage_ids": "lineage:336c53c230bdf4958b5f16aa",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 221,
+    "load_duration": 4041500,
+    "prompt_eval_count": 590,
+    "total_duration": 8284886000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unless it paces the sending of packets\", \"interpretation_a\": \"If the sender does *not* pace the sending of packets, it MUST reset its congestion window.\", \"interpretation_b\": \"If the sender *does* pace the sending of packets, it MAY retain its congestion window (as per the next clause), but the clause does not explicitly state that it *must* retain it.\", \"missing_information\": \"The clause does not specify whether pacing is sufficient to avoid resetting the congestion window, or whether it is a condition for retaining the existing window. It leaves open the possibility that pacing is required, but the window is still reset, which is inconsistent with the next clause.\", \"justification\": \"The 'unless' clause creates ambiguity. Does pacing *prevent* the reset, or simply *allow* retention of the existing window? The next clause suggests retention is permitted with pacing, but doesn't confirm that the reset is avoided.\"}",
+  "record_id": "328351bb7f328defe83be48a55105dbdea4ff3746f0c2e47ecca2a3d766e8ac9",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "7.9",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.281
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause \"MUST limit bursts to the initial congestion window (#3160)\" unambiguously requires that the size of any burst of packets be limited to the value of the initial congestion window. The wording does not permit two materially different interpretations, nor does it omit a concrete constraint that would prevent a unique operational interpretation.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T11:53:39.820244+00:00",
+  "document_id": "draft-ietf-quic-recovery-34",
+  "family_id": "draft-ietf-quic-recovery",
+  "input_fingerprint": "e87c9c3a5a17f15dbdc7df042e4287ff8f43c6d2511da6622603938c26507474",
+  "lineage_ids": "lineage:50f97fc23aa417e4ad40b8ea",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1166,
+    "load_duration": 4505200,
+    "prompt_eval_count": 605,
+    "total_duration": 10305262000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause \\\"MUST limit bursts to the initial congestion window (#3160)\\\" unambiguously requires that the size of any burst of packets be limited to the value of the initial congestion window. The wording does not permit two materially different interpretations, nor does it omit a concrete constraint that would prevent a unique operational interpretation.\"\n}",
+  "record_id": "be9aa3e879daa80edfbdfc2b4ee4efa1995c3fe925f0fcd88b9afbdf03448d77",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "C.10",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 78.718
+}

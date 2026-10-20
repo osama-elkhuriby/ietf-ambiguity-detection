@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "might be exploited by an attacker if they are translated verbatim",
+    "interpretation_a": "The characters CR, LF, and NUL *could* cause issues if an intermediary translates them, but the draft doesn't specify *how* they might be exploited, leaving room for different implementations to handle the potential attack vectors.",
+    "interpretation_b": "The characters CR, LF, and NUL are only problematic if an intermediary *does* translate them. If the intermediary doesn't translate, there's no exploitation possible. The draft doesn't define whether intermediaries are expected to translate or not.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'might be exploited' introduces uncertainty. It doesn't specify *how* these characters could be exploited, leaving implementations to guess at the attack vector. This, combined with the conditional 'if they are translated verbatim', creates ambiguity about the expected behavior of intermediaries.",
+    "missing_information": "The draft needs to specify whether intermediaries are expected to translate these characters, and if so, how they should be handled to prevent exploitation. Without this, implementations could differ on whether to translate or not, leading to inconsistent behavior and potential vulnerabilities."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:09:54.498113+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "371e2430a5a4c3fadff7a55b0fadc420a04863f4f2cb9fe3bb3f3bf45bb56e08",
+  "lineage_ids": "lineage:44b754d58652b95e52d7989e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 264,
+    "load_duration": 8677600,
+    "prompt_eval_count": 638,
+    "total_duration": 10005645400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"might be exploited by an attacker if they are translated verbatim\", \"interpretation_a\": \"The characters CR, LF, and NUL *could* cause issues if an intermediary translates them, but the draft doesn't specify *how* they might be exploited, leaving room for different implementations to handle the potential attack vectors.\", \"interpretation_b\": \"The characters CR, LF, and NUL are only problematic if an intermediary *does* translate them. If the intermediary doesn't translate, there's no exploitation possible. The draft doesn't define whether intermediaries are expected to translate or not.\", \"missing_information\": \"The draft needs to specify whether intermediaries are expected to translate these characters, and if so, how they should be handled to prevent exploitation. Without this, implementations could differ on whether to translate or not, leading to inconsistent behavior and potential vulnerabilities.\",\"justification\": \"The phrase 'might be exploited' introduces uncertainty. It doesn't specify *how* these characters could be exploited, leaving implementations to guess at the attack vector. This, combined with the conditional 'if they are translated verbatim', creates ambiguity about the expected behavior of intermediaries.\"}",
+  "record_id": "d4538080aae66fcb44d86f5ca8f06e1563a9bd1de01b56488835f8db1b7d2f9e",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "10.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 10.016
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The target clause provides a clear and unambiguous instruction: once a client receives a valid Initial packet from the server, it must discard any subsequent packets with a different Source Connection ID. There is no room for multiple reasonable interpretations, and the language is precise in defining the required behavior.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T23:40:46.561179+00:00",
+  "document_id": "draft-ietf-quic-transport-33",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "2d371272ab06f8d5ae965a4dc46973f2213179607aecca8850ddc7fe0058fcc6",
+  "lineage_ids": "lineage:ac9c7d8844cd7457a7375110",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 112,
+    "load_duration": 6497600,
+    "prompt_eval_count": 570,
+    "total_duration": 4643126300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The target clause provides a clear and unambiguous instruction: once a client receives a valid Initial packet from the server, it must discard any subsequent packets with a different Source Connection ID. There is no room for multiple reasonable interpretations, and the language is precise in defining the required behavior.\"\n}",
+  "record_id": "cc2997f6ada81873d517cb0d844ec00ed3c0f7aac1bfc5cbd40c2325e402aa29",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 4.641
+}

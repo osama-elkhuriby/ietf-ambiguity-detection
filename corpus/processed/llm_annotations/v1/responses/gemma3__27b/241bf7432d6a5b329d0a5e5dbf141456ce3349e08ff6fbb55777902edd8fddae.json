@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MAY be sent by a server",
+    "interpretation_a": "A server is permitted to send the parameter in some connections, and not in others, based on its discretion.",
+    "interpretation_b": "A server is required to send the parameter in all connections, but is not required to send it in every packet.",
+    "is_ambiguous": "yes",
+    "justification": "The use of 'MAY' without further clarification creates ambiguity. It's unclear whether the server is allowed to send the parameter conditionally (e.g., based on connection state) or whether it's simply not *required* to send it in every packet.",
+    "missing_information": "The scope of 'MAY' is unclear. Does it mean the server *can* send it in some connections, or that it *can* send it in any given packet?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:04:47.121692+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "b3b3631a3e2563f7cf2002b5f7cc2626bf5267f61b79887b10e8f2d6443d09f3",
+  "lineage_ids": "lineage:1dbecccc7a805c82f5b6b813",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 192,
+    "load_duration": 4006300,
+    "prompt_eval_count": 567,
+    "total_duration": 7231690100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MAY be sent by a server\", \"interpretation_a\": \"A server is permitted to send the parameter in some connections, and not in others, based on its discretion.\", \"interpretation_b\": \"A server is required to send the parameter in all connections, but is not required to send it in every packet.\", \"missing_information\": \"The scope of 'MAY' is unclear. Does it mean the server *can* send it in some connections, or that it *can* send it in any given packet?\",\"justification\": \"The use of 'MAY' without further clarification creates ambiguity. It's unclear whether the server is allowed to send the parameter conditionally (e.g., based on connection state) or whether it's simply not *required* to send it in every packet.\"}",
+  "record_id": "241bf7432d6a5b329d0a5e5dbf141456ce3349e08ff6fbb55777902edd8fddae",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "18.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.234
+}

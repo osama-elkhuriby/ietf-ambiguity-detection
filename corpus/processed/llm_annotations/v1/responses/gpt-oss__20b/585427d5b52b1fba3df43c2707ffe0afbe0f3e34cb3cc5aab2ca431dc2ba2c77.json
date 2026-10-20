@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "Clients that do not implement support for Encrypted ClientHello MAY skip the HTTPS RR query if a usable Alt-Svc value is available in the local cache.",
+    "interpretation_a": "The client may skip the HTTPS RR query if the Alt‑Svc value is syntactically correct, not expired, and contains a valid port number, regardless of whether the server actually supports the required protocol.",
+    "interpretation_b": "The client may skip the HTTPS RR query only if the Alt‑Svc value is syntactically correct, not expired, and the server has been verified to support the required protocol and TLS version, i.e., the value is known to be reachable and usable.",
+    "is_ambiguous": "yes",
+    "justification": "The clause uses the term \"usable Alt‑Svc value\" without providing a definition, creating an incomplete constraint that could lead to materially different implementation behaviours.",
+    "missing_information": "A precise definition of what constitutes a \"usable Alt‑Svc value\" (e.g., required fields, expiration handling, protocol support, reachability checks, etc.) is missing, preventing a unique implementation interpretation."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T02:50:32.369411+00:00",
+  "document_id": "draft-ietf-dnsop-svcb-https-05",
+  "family_id": "draft-ietf-dnsop-svcb-https",
+  "input_fingerprint": "71bce6c9d1d50a23d729a2a02d4afa0ad7cabc7342d166f5ea1c8562339c0368",
+  "lineage_ids": "lineage:ca3208940b5d1b9aa94f0464",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 539,
+    "load_duration": 4843200,
+    "prompt_eval_count": 5229,
+    "total_duration": 5682436500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"Clients that do not implement support for Encrypted ClientHello MAY skip the HTTPS RR query if a usable Alt-Svc value is available in the local cache.\",\n  \"interpretation_a\": \"The client may skip the HTTPS RR query if the Alt‑Svc value is syntactically correct, not expired, and contains a valid port number, regardless of whether the server actually supports the required protocol.\",\n  \"interpretation_b\": \"The client may skip the HTTPS RR query only if the Alt‑Svc value is syntactically correct, not expired, and the server has been verified to support the required protocol and TLS version, i.e., the value is known to be reachable and usable.\",\n  \"missing_information\": \"A precise definition of what constitutes a \\\"usable Alt‑Svc value\\\" (e.g., required fields, expiration handling, protocol support, reachability checks, etc.) is missing, preventing a unique implementation interpretation.\",\n  \"justification\": \"The clause uses the term \\\"usable Alt‑Svc value\\\" without providing a definition, creating an incomplete constraint that could lead to materially different implementation behaviours.\"\n}",
+  "record_id": "585427d5b52b1fba3df43c2707ffe0afbe0f3e34cb3cc5aab2ca431dc2ba2c77",
+  "revision": "05",
+  "schema_version": 1,
+  "section_ids": "8.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 60.953
+}

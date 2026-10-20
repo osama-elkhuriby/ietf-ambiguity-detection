@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "replacing the list of shares with a list containing a single KeyShareEntry",
+    "interpretation_a": "The entire original list of key shares is replaced with a new list containing only one KeyShareEntry.",
+    "interpretation_b": "Only the first KeyShareEntry in the original list is replaced with the new KeyShareEntry, and the rest of the original list is retained.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'replacing the list' could be interpreted as replacing the entire list or replacing an element within the list. Without further clarification, implementations could behave differently.",
+    "missing_information": "It is unclear whether the entire list of shares is replaced or only the first entry. A constraint specifying the behavior regarding the rest of the original list is missing."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:32:44.371707+00:00",
+  "document_id": "draft-ietf-tls-tls13-26",
+  "family_id": "draft-ietf-tls-tls13",
+  "input_fingerprint": "6badd54344e7b0b7f538b5ffd8d7ad79864d26185ee0a664ca40a62d40141e1f",
+  "lineage_ids": "lineage:d9d3c8ca06e1b02419151574",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 182,
+    "load_duration": 10307100,
+    "prompt_eval_count": 586,
+    "total_duration": 7035897400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"replacing the list of shares with a list containing a single KeyShareEntry\", \"interpretation_a\": \"The entire original list of key shares is replaced with a new list containing only one KeyShareEntry.\", \"interpretation_b\": \"Only the first KeyShareEntry in the original list is replaced with the new KeyShareEntry, and the rest of the original list is retained.\", \"missing_information\": \"It is unclear whether the entire list of shares is replaced or only the first entry. A constraint specifying the behavior regarding the rest of the original list is missing.\", \"justification\": \"The phrase 'replacing the list' could be interpreted as replacing the entire list or replacing an element within the list. Without further clarification, implementations could behave differently.\"}",
+  "record_id": "10c30943a7335e2f8226f2d7da81749756e168134402e0c2586667e905f755b0",
+  "revision": "26",
+  "schema_version": 1,
+  "section_ids": "4.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.047
+}

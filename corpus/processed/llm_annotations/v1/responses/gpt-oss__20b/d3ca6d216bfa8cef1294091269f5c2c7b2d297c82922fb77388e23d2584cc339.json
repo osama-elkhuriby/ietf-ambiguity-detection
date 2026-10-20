@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that after the server sends the GOAWAY frame, it must cancel any requests that were sent on streams whose identifiers exceed the last Stream ID indicated in that GOAWAY frame. The context provided (previous clause about GOAWAY and next clause about clients) clarifies that “Once sent” refers to the GOAWAY frame, and the requirement is straightforward without any missing constraints or conflicting definitions.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T10:25:32.886716+00:00",
+  "document_id": "draft-ietf-quic-http-17",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "87975ee615a07ef4e5333453539498c8bf7a08dae88e7a838502456f0d40d76b",
+  "lineage_ids": "lineage:6c2ad077b02dcc701ea36fd9",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1137,
+    "load_duration": 4084000,
+    "prompt_eval_count": 582,
+    "total_duration": 9894872000
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that after the server sends the GOAWAY frame, it must cancel any requests that were sent on streams whose identifiers exceed the last Stream ID indicated in that GOAWAY frame. The context provided (previous clause about GOAWAY and next clause about clients) clarifies that “Once sent” refers to the GOAWAY frame, and the requirement is straightforward without any missing constraints or conflicting definitions.\"\n}",
+  "record_id": "d3ca6d216bfa8cef1294091269f5c2c7b2d297c82922fb77388e23d2584cc339",
+  "revision": "17",
+  "schema_version": 1,
+  "section_ids": "6.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.89
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "unrecognized status code as being equivalent to the x00 status code of that class",
+    "interpretation_a": "An unrecognized 471 status code is treated the same as a 400 status code.",
+    "interpretation_b": "An unrecognized 571 status code is treated the same as a 500 status code.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'x00 status code of that class' is incomplete. It doesn't define what 'x00' means. Does 'x00' mean the status code with '00' as the last two digits within the same hundred range (e.g., 400 for 4xx codes)? Or does it refer to a specific, predefined status code? Without this definition, there are multiple reasonable interpretations of how to handle unrecognized status codes.",
+    "missing_information": "The definition of 'x00' is not provided within the target clause. It is unclear if 'x00' refers to a specific status code or a pattern that needs to be applied to the first digit of the unrecognized code."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:11:55.409441+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "b11ffad3f5b1acb4fa26b104d02bffdeb800cb570f3683406723b878b034a5fc",
+  "lineage_ids": "lineage:12feedd173aeff83b80db486",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 257,
+    "load_duration": 10822800,
+    "prompt_eval_count": 621,
+    "total_duration": 9738580100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"unrecognized status code as being equivalent to the x00 status code of that class\", \"interpretation_a\": \"An unrecognized 471 status code is treated the same as a 400 status code.\", \"interpretation_b\": \"An unrecognized 571 status code is treated the same as a 500 status code.\", \"missing_information\": \"The definition of 'x00' is not provided within the target clause. It is unclear if 'x00' refers to a specific status code or a pattern that needs to be applied to the first digit of the unrecognized code.\", \"justification\": \"The phrase 'x00 status code of that class' is incomplete. It doesn't define what 'x00' means. Does 'x00' mean the status code with '00' as the last two digits within the same hundred range (e.g., 400 for 4xx codes)? Or does it refer to a specific, predefined status code? Without this definition, there are multiple reasonable interpretations of how to handle unrecognized status codes.\"}",
+  "record_id": "6d56fe0a92fe4a02b17c392a99b4fd7fac7a4bc3a86119a4de4c7b5c9fb761b4",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "15",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.75
+}

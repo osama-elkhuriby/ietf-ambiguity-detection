@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "An endpoint MAY treat activity that is suspicious as a connection error of type H3_EXCESSIVE_LOAD ([errors])",
+    "interpretation_a": "An endpoint is allowed to define its own criteria for what constitutes 'suspicious activity' and may choose to treat such activity as a connection error, leading to potential disruption of valid connections.",
+    "interpretation_b": "The lack of a concrete definition for 'suspicious activity' allows for arbitrary implementation decisions, which may lead to inconsistent or overly broad error handling.",
+    "is_ambiguous": "yes",
+    "justification": "The clause provides no concrete definition or constraints for what constitutes 'suspicious activity', leaving it to the discretion of the implementation. This lack of constraint can lead to materially different behaviors across implementations, making it ambiguous.",
+    "missing_information": "A clear definition or constraints on what constitutes 'suspicious activity' are missing, which is necessary to ensure consistent and interoperable implementations."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T02:42:35.981444+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "3a39e3916ae5f9b39af63d4f83133ff4c87873add994c250fe044bee69272138",
+  "lineage_ids": "lineage:f9ca2346e5a6668a97b0d363",
+  "model": "qwen3:32b",
+  "model_digest": "030ee887880fc378860c2dd35101da424377520441ae4bfe7be6deff8ade7840",
+  "ollama_metrics": {
+    "eval_count": 221,
+    "load_duration": 20164400,
+    "prompt_eval_count": 526,
+    "total_duration": 9165001400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"An endpoint MAY treat activity that is suspicious as a connection error of type H3_EXCESSIVE_LOAD ([errors])\",\n  \"interpretation_a\": \"An endpoint is allowed to define its own criteria for what constitutes 'suspicious activity' and may choose to treat such activity as a connection error, leading to potential disruption of valid connections.\",\n  \"interpretation_b\": \"The lack of a concrete definition for 'suspicious activity' allows for arbitrary implementation decisions, which may lead to inconsistent or overly broad error handling.\",\n  \"missing_information\": \"A clear definition or constraints on what constitutes 'suspicious activity' are missing, which is necessary to ensure consistent and interoperable implementations.\",\n  \"justification\": \"The clause provides no concrete definition or constraints for what constitutes 'suspicious activity', leaving it to the discretion of the implementation. This lack of constraint can lead to materially different behaviors across implementations, making it ambiguous.\"\n}",
+  "record_id": "23f40a633d9311c2a1aad62bd7f7f622e226b24a6abd2c2038f840ae2ccc9782",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "10.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.172
+}

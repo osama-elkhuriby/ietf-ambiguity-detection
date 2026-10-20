@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "MUST NOT change",
+    "interpretation_a": "The entire RST_STREAM frame, including all fields, must remain identical on retransmission.",
+    "interpretation_b": "The *data* contained within the RST_STREAM frame must not change, but implementation details like timestamps or frame headers could be updated on retransmission.",
+    "is_ambiguous": "yes",
+    "justification": "The clause states the frame 'MUST NOT change', but does not specify *what* aspect of the frame is subject to this constraint. This allows for different interpretations regarding whether all fields must remain identical, or only the data payload.",
+    "missing_information": "The scope of 'change' is not defined. Does it refer to the entire frame, or only the payload? Without clarification, different implementations could interpret 'change' differently."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T00:57:46.532140+00:00",
+  "document_id": "draft-ietf-quic-transport-16",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "f91f95429c2acfa1c69d548a8ada61e8e72110693d3298dbeb6f7fc2ba20f3c8",
+  "lineage_ids": "lineage:7cb0781e5fd0096e358fb138",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 184,
+    "load_duration": 6148900,
+    "prompt_eval_count": 632,
+    "total_duration": 6991914800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"MUST NOT change\", \"interpretation_a\": \"The entire RST_STREAM frame, including all fields, must remain identical on retransmission.\", \"interpretation_b\": \"The *data* contained within the RST_STREAM frame must not change, but implementation details like timestamps or frame headers could be updated on retransmission.\", \"missing_information\": \"The scope of 'change' is not defined. Does it refer to the entire frame, or only the payload? Without clarification, different implementations could interpret 'change' differently.\",\"justification\": \"The clause states the frame 'MUST NOT change', but does not specify *what* aspect of the frame is subject to this constraint. This allows for different interpretations regarding whether all fields must remain identical, or only the data payload.\"}",
+  "record_id": "0c525c01479a932f3c21956dac541eeea2242ea1c7637528d9bf06d4ef6f4faf",
+  "revision": "16",
+  "schema_version": 1,
+  "section_ids": "13.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.0
+}

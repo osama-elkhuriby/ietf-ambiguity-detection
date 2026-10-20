@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause explicitly references Section 8.6 for the definition of the peer’s advertised maximum stream ID, and the wording unambiguously requires that an endpoint must not send a STREAM or RST_STREAM frame for a stream ID that exceeds that value. No missing constraints or multiple reasonable interpretations are present.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T13:52:24.622641+00:00",
+  "document_id": "draft-ietf-quic-transport-06",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "08e52d48eaa97d5f763685948dbc9861394decbf3d4c940278345e9aad106d93",
+  "lineage_ids": "lineage:5e78a517dc9905bcede9845c",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2694,
+    "load_duration": 4851100,
+    "prompt_eval_count": 568,
+    "total_duration": 23141574200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause explicitly references Section 8.6 for the definition of the peer’s advertised maximum stream ID, and the wording unambiguously requires that an endpoint must not send a STREAM or RST_STREAM frame for a stream ID that exceeds that value. No missing constraints or multiple reasonable interpretations are present.\"\n}",
+  "record_id": "09a7a1bf527bd970a4c8b13df3786e3a265a0e09c9ee9e57c3dfb11161141fa6",
+  "revision": "06",
+  "schema_version": 1,
+  "section_ids": "10.2.1",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 23.141
+}

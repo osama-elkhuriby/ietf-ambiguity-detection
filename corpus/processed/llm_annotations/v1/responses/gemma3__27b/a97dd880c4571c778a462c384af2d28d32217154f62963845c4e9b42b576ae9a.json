@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "does not understand",
+    "interpretation_a": "An implementation could interpret 'does not understand' to mean it has never seen the identifier before. It would ignore any setting with an unknown identifier.",
+    "interpretation_b": "An implementation could interpret 'does not understand' to mean it knows the identifier but does not know how to *apply* the setting. It could still parse the value, but discard it without effect.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'does not understand' is vague. It's unclear whether it refers to a lack of prior knowledge of the identifier itself, or a lack of knowledge about how to *use* the value associated with the identifier. This leads to two reasonable interpretations of how an implementation should behave.",
+    "missing_information": "The draft does not define what constitutes 'understanding' an identifier. Does it require prior knowledge, or simply the ability to parse and interpret the setting's effect?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T05:01:56.372344+00:00",
+  "document_id": "draft-ietf-quic-http-33",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "59c172bc9884029da00ddeeb94b7ae8669672eb568b662217df9091e990698ad",
+  "lineage_ids": "lineage:ef53663d006fbe6907d6165e",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 216,
+    "load_duration": 8251300,
+    "prompt_eval_count": 573,
+    "total_duration": 8315383300
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"does not understand\", \"interpretation_a\": \"An implementation could interpret 'does not understand' to mean it has never seen the identifier before. It would ignore any setting with an unknown identifier.\", \"interpretation_b\": \"An implementation could interpret 'does not understand' to mean it knows the identifier but does not know how to *apply* the setting. It could still parse the value, but discard it without effect.\", \"missing_information\": \"The draft does not define what constitutes 'understanding' an identifier. Does it require prior knowledge, or simply the ability to parse and interpret the setting's effect?\",\"justification\": \"The phrase 'does not understand' is vague. It's unclear whether it refers to a lack of prior knowledge of the identifier itself, or a lack of knowledge about how to *use* the value associated with the identifier. This leads to two reasonable interpretations of how an implementation should behave.\"}",
+  "record_id": "a97dd880c4571c778a462c384af2d28d32217154f62963845c4e9b42b576ae9a",
+  "revision": "33",
+  "schema_version": 1,
+  "section_ids": "7.2.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 8.312
+}

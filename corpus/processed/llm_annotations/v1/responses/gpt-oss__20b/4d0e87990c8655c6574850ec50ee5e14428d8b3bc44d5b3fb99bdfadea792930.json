@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously states that if an endpoint receives packets from a new source address that uses the same destination connection ID, it MAY continue to use that connection ID with the new remote address while still sending from the same local address. The wording does not permit two materially different implementation behaviours, nor does it omit a concrete constraint that would change the operational interpretation.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T15:38:00.591131+00:00",
+  "document_id": "draft-ietf-quic-transport-34",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "2bc022efa92df319b3d5c7c4be2f5abefc502f45b341c2ba23498c4034661340",
+  "lineage_ids": "lineage:18df4cf47f5ed3d466232bce",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2401,
+    "load_duration": 4477300,
+    "prompt_eval_count": 626,
+    "total_duration": 20706670500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously states that if an endpoint receives packets from a new source address that uses the same destination connection ID, it MAY continue to use that connection ID with the new remote address while still sending from the same local address. The wording does not permit two materially different implementation behaviours, nor does it omit a concrete constraint that would change the operational interpretation.\"\n}",
+  "record_id": "4d0e87990c8655c6574850ec50ee5e14428d8b3bc44d5b3fb99bdfadea792930",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "9.5",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 20.703
+}

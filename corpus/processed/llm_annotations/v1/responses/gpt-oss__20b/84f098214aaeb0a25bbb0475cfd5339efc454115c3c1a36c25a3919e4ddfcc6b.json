@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "partial processing",
+    "interpretation_a": "The phrase \"partial processing\" refers to the request being partially processed; thus, the server abandons the response after it has partially processed the request and should abort the response stream with HTTP_REQUEST_CANCELLED.",
+    "interpretation_b": "The phrase \"partial processing\" refers to the response being partially processed (e.g., partially sent); thus, the server abandons the response after it has partially processed the response and should abort the response stream with HTTP_REQUEST_CANCELLED.",
+    "is_ambiguous": "yes",
+    "justification": "The clause contains the ambiguous phrase \"partial processing\" without a definition, leading to two reasonable interpretations that affect when the server should abort the response stream.",
+    "missing_information": "Definition of \"partial processing\" (whether it applies to the request or the response)."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T09:44:56.181082+00:00",
+  "document_id": "draft-ietf-quic-http-23",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "c00337a7e4408c6dc5dd0af13e32dd346bc2f2ef72a3408bee0a731863b0d26c",
+  "lineage_ids": "lineage:49b51ea8f2e0d09a2e1afd1b",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 4118,
+    "load_duration": 4615200,
+    "prompt_eval_count": 607,
+    "total_duration": 35653858100
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"partial processing\",\n  \"interpretation_a\": \"The phrase \\\"partial processing\\\" refers to the request being partially processed; thus, the server abandons the response after it has partially processed the request and should abort the response stream with HTTP_REQUEST_CANCELLED.\",\n  \"interpretation_b\": \"The phrase \\\"partial processing\\\" refers to the response being partially processed (e.g., partially sent); thus, the server abandons the response after it has partially processed the response and should abort the response stream with HTTP_REQUEST_CANCELLED.\",\n  \"missing_information\": \"Definition of \\\"partial processing\\\" (whether it applies to the request or the response).\",\n  \"justification\": \"The clause contains the ambiguous phrase \\\"partial processing\\\" without a definition, leading to two reasonable interpretations that affect when the server should abort the response stream.\"\n}",
+  "record_id": "84f098214aaeb0a25bbb0475cfd5339efc454115c3c1a36c25a3919e4ddfcc6b",
+  "revision": "23",
+  "schema_version": 1,
+  "section_ids": "4.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 35.656
+}

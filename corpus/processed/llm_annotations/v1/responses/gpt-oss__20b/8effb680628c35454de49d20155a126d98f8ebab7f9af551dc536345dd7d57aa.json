@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "appropriate pseudonym for that host",
+    "interpretation_a": "The pseudonym must be consistent across all requests for the same host, allowing intermediaries to correlate traffic.",
+    "interpretation_b": "The pseudonym may be generated anew for each request, providing no correlation between requests.",
+    "is_ambiguous": "yes",
+    "justification": "Because the clause lacks a concrete definition of the pseudonym and does not constrain its generation or consistency, implementations could reasonably choose either consistent or per-request pseudonyms, leading to materially different behaviours.",
+    "missing_information": "The clause does not define what constitutes an 'appropriate pseudonym' or whether it must be consistent across requests."
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T07:11:35.314828+00:00",
+  "document_id": "draft-ietf-httpbis-semantics-19",
+  "family_id": "draft-ietf-httpbis-semantics",
+  "input_fingerprint": "297b037090d85e5dab6ef2134dbe05ef1b5ee4e3c7320f0563acc098683cbcc5",
+  "lineage_ids": "lineage:97c7846b7ee0151def7a2985",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 312,
+    "load_duration": 4508900,
+    "prompt_eval_count": 738,
+    "total_duration": 2851821800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"appropriate pseudonym for that host\",\n  \"interpretation_a\": \"The pseudonym must be consistent across all requests for the same host, allowing intermediaries to correlate traffic.\",\n  \"interpretation_b\": \"The pseudonym may be generated anew for each request, providing no correlation between requests.\",\n  \"missing_information\": \"The clause does not define what constitutes an 'appropriate pseudonym' or whether it must be consistent across requests.\",\n  \"justification\": \"Because the clause lacks a concrete definition of the pseudonym and does not constrain its generation or consistency, implementations could reasonably choose either consistent or per-request pseudonyms, leading to materially different behaviours.\"\n}",
+  "record_id": "8effb680628c35454de49d20155a126d98f8ebab7f9af551dc536345dd7d57aa",
+  "revision": "19",
+  "schema_version": 1,
+  "section_ids": "7.6.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 17.609
+}

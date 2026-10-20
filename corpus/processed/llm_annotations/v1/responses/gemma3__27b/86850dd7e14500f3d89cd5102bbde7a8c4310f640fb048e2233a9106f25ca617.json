@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "does not match the version of QUIC that is in use",
+    "interpretation_a": "The server's current, operational QUIC version. This implies the server has already begun processing using a specific version.",
+    "interpretation_b": "The version advertised in the server's configuration or supported versions list. This implies a check against what the server *can* support, not necessarily what it's currently using.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'the version of QUIC that is in use' is open to interpretation. It's unclear whether it refers to the version the server is currently operating with, or the versions it is configured to support. This affects how the server validates the negotiated version.",
+    "missing_information": "The definition of 'the version of QUIC that is in use' is not precise. Is it the version the server is actively processing, or the versions it supports?"
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:40:35.789314+00:00",
+  "document_id": "draft-ietf-quic-transport-04",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "cbf647028057ee330e2b6a45a33216d07a1caab276b6aa7e3800dfe7cc5658bf",
+  "lineage_ids": "lineage:f334f390220c8286dd0e5275",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 212,
+    "load_duration": 4852600,
+    "prompt_eval_count": 585,
+    "total_duration": 7967742400
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"does not match the version of QUIC that is in use\", \"interpretation_a\": \"The server's current, operational QUIC version. This implies the server has already begun processing using a specific version.\", \"interpretation_b\": \"The version advertised in the server's configuration or supported versions list. This implies a check against what the server *can* support, not necessarily what it's currently using.\", \"missing_information\": \"The definition of 'the version of QUIC that is in use' is not precise. Is it the version the server is actively processing, or the versions it supports?\",\"justification\": \"The phrase 'the version of QUIC that is in use' is open to interpretation. It's unclear whether it refers to the version the server is currently operating with, or the versions it is configured to support. This affects how the server validates the negotiated version.\"}",
+  "record_id": "86850dd7e14500f3d89cd5102bbde7a8c4310f640fb048e2233a9106f25ca617",
+  "revision": "04",
+  "schema_version": 1,
+  "section_ids": "7.3.4",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 7.985
+}

@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "all packets up to the current packet number are in flight",
+    "interpretation_a": "The client must encode packet numbers as if all packets *sent* up to the current packet number are in flight, even if some have been acknowledged. This implies a conservative approach to packet number encoding length.",
+    "interpretation_b": "The client must encode packet numbers as if all packets *potentially* up to the current packet number are in flight, including those not yet sent but which could be sent before any acknowledgement is received. This could lead to a different packet number encoding length than interpretation a.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'all packets up to the current packet number' is incomplete. It's unclear whether 'current' refers to the next packet to be sent, the highest packet number sent, or some other point. This ambiguity affects the calculation of the packet number encoding length.",
+    "missing_information": "The meaning of 'current packet number' is not fully defined in this context. Is it the next packet to be sent, the highest packet number sent, or something else? This affects how 'all packets up to' is interpreted."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T01:02:56.260899+00:00",
+  "document_id": "draft-ietf-quic-transport-29",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "e37795694755be086e7e8316fae5c234490f45d712ab0aad64b747c9e3b258a0",
+  "lineage_ids": "lineage:ec4bbcf70997cd998d71d295",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 259,
+    "load_duration": 6169600,
+    "prompt_eval_count": 593,
+    "total_duration": 9625464800
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"all packets up to the current packet number are in flight\", \"interpretation_a\": \"The client must encode packet numbers as if all packets *sent* up to the current packet number are in flight, even if some have been acknowledged. This implies a conservative approach to packet number encoding length.\", \"interpretation_b\": \"The client must encode packet numbers as if all packets *potentially* up to the current packet number are in flight, including those not yet sent but which could be sent before any acknowledgement is received. This could lead to a different packet number encoding length than interpretation a.\", \"missing_information\": \"The meaning of 'current packet number' is not fully defined in this context. Is it the next packet to be sent, the highest packet number sent, or something else? This affects how 'all packets up to' is interpreted.\",\"justification\": \"The phrase 'all packets up to the current packet number' is incomplete. It's unclear whether 'current' refers to the next packet to be sent, the highest packet number sent, or some other point. This ambiguity affects the calculation of the packet number encoding length.\"}",
+  "record_id": "1e3e4bc0324b8b13008cd29df0ccb6529e0fcacfe9517f0abf6c88f9ac988d80",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "17.2.3",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.625
+}

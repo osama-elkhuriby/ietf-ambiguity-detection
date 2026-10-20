@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "intended for use by specifications that are developed through the standards process [STD]",
+    "interpretation_a": "Only specifications developed through the standards process may use the first codepoint in a range.",
+    "interpretation_b": "Any specification may use the first codepoint in a range, but the allocation must be negotiated with IANA before use.",
+    "is_ambiguous": "yes",
+    "justification": "The clause does not explicitly restrict usage to only standards‑process specifications, so it can be read as either exclusive or inclusive, leading to materially different implementation behaviours.",
+    "missing_information": ""
+  },
+  "attempts": 1,
+  "created_at": "2026-10-08T17:54:19.799484+00:00",
+  "document_id": "draft-ietf-quic-transport-32",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "4a0a72b41a1e06cb4d389bfc71e6c7898476cb56d35008af87d57db5367d4626",
+  "lineage_ids": "lineage:56dcbfc213b763ec0a456038",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 2612,
+    "load_duration": 5595100,
+    "prompt_eval_count": 633,
+    "total_duration": 22379334500
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"yes\",\n  \"ambiguity_subtype\": \"U-2\",\n  \"evidence_span\": \"intended for use by specifications that are developed through the standards process [STD]\",\n  \"interpretation_a\": \"Only specifications developed through the standards process may use the first codepoint in a range.\",\n  \"interpretation_b\": \"Any specification may use the first codepoint in a range, but the allocation must be negotiated with IANA before use.\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause does not explicitly restrict usage to only standards‑process specifications, so it can be read as either exclusive or inclusive, leading to materially different implementation behaviours.\"\n}",
+  "record_id": "b2027d76347d39c626cb62948c0a5346533c489f7e9929ffeb9e0d6e9e266239",
+  "revision": "32",
+  "schema_version": 1,
+  "section_ids": "22.1.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 22.391
+}

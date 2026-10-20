@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "none",
+    "evidence_span": "",
+    "interpretation_a": "",
+    "interpretation_b": "",
+    "is_ambiguous": "no",
+    "justification": "The clause unambiguously specifies that changes to the Destination Connection ID are only allowed if the new value comes from a received NEW_CONNECTION_ID frame, and that any subsequent Initial packets with a different Source Connection ID must be discarded. No alternative reasonable interpretations or missing constraints are evident.",
+    "missing_information": ""
+  },
+  "attempts": 2,
+  "created_at": "2026-10-08T16:29:22.581633+00:00",
+  "document_id": "draft-ietf-quic-transport-29",
+  "family_id": "draft-ietf-quic-transport",
+  "input_fingerprint": "97513a38df7222e76bfde91fa2ffe231e107a357a8e6fea410f8757286c14de9",
+  "lineage_ids": "lineage:d0b9264bb11ddf6ad7c9a066",
+  "model": "gpt-oss:20b",
+  "model_digest": "9ba9cc2b4e02463b933096090530aef679d534dd91ecc9afadfb2dbfdc59f3c5",
+  "ollama_metrics": {
+    "eval_count": 1486,
+    "load_duration": 5627900,
+    "prompt_eval_count": 635,
+    "total_duration": 12895866600
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\n  \"is_ambiguous\": \"no\",\n  \"ambiguity_subtype\": \"none\",\n  \"evidence_span\": \"\",\n  \"interpretation_a\": \"\",\n  \"interpretation_b\": \"\",\n  \"missing_information\": \"\",\n  \"justification\": \"The clause unambiguously specifies that changes to the Destination Connection ID are only allowed if the new value comes from a received NEW_CONNECTION_ID frame, and that any subsequent Initial packets with a different Source Connection ID must be discarded. No alternative reasonable interpretations or missing constraints are evident.\"\n}",
+  "record_id": "7a10e558ba096bda49f30b5c1ab10005f69351ef72752e1731f2e97d60ec8a02",
+  "revision": "29",
+  "schema_version": 1,
+  "section_ids": "7.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 80.766
+}

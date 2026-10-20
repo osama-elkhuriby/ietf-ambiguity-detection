@@ -1,0 +1,35 @@
+{
+  "annotation": {
+    "ambiguity_subtype": "U-2",
+    "evidence_span": "reduce any limits or alter any values",
+    "interpretation_a": "The server cannot decrease a limit (e.g., max packet size) that the client is already using for 0-RTT data. It also cannot change a value (e.g., initial window size) that would cause the client's 0-RTT data to exceed the new limit.",
+    "interpretation_b": "The server cannot reduce *any* limit or alter *any* value, regardless of whether the client's 0-RTT data is currently violating it. This is a broader restriction, preventing any changes that *could* potentially cause a violation in the future.",
+    "is_ambiguous": "yes",
+    "justification": "The phrase 'might be violated' is open to interpretation. Does it mean 'currently being violated' or 'could potentially be violated' under any circumstances? The lack of clarity creates ambiguity in implementation.",
+    "missing_information": "It is unclear whether the restriction applies only to limits/values currently being used by the client's 0-RTT data, or to all limits/values regardless of current usage."
+  },
+  "attempts": 1,
+  "created_at": "2026-10-07T04:38:51.510759+00:00",
+  "document_id": "draft-ietf-quic-http-34",
+  "family_id": "draft-ietf-quic-http",
+  "input_fingerprint": "f061d809d79bc49c68fd1cca51fbf95c35cfa62aa7bd2977e42859787d5171c2",
+  "lineage_ids": "lineage:c9ff1aaa200132056a747e92",
+  "model": "gemma3:27b",
+  "model_digest": "a860daa74e996695e6e3c6288f3d991aea9bd509b3a76233f572aed552473535",
+  "ollama_metrics": {
+    "eval_count": 251,
+    "load_duration": 9278800,
+    "prompt_eval_count": 582,
+    "total_duration": 9500119200
+  },
+  "prompt_sha256": "1c254910d605222363971130d6866b59f106157bc003dbf4ad01968a0c7136ac",
+  "prompt_version": "ietf-ambiguity-v1",
+  "raw_content": "{\"is_ambiguous\": \"yes\", \"ambiguity_subtype\": \"U-2\", \"evidence_span\": \"reduce any limits or alter any values\", \"interpretation_a\": \"The server cannot decrease a limit (e.g., max packet size) that the client is already using for 0-RTT data. It also cannot change a value (e.g., initial window size) that would cause the client's 0-RTT data to exceed the new limit.\", \"interpretation_b\": \"The server cannot reduce *any* limit or alter *any* value, regardless of whether the client's 0-RTT data is currently violating it. This is a broader restriction, preventing any changes that *could* potentially cause a violation in the future.\", \"missing_information\": \"It is unclear whether the restriction applies only to limits/values currently being used by the client's 0-RTT data, or to all limits/values regardless of current usage.\", \"justification\": \"The phrase 'might be violated' is open to interpretation. Does it mean 'currently being violated' or 'could potentially be violated' under any circumstances? The lack of clarity creates ambiguity in implementation.\"}",
+  "record_id": "00ce28e89658067929b66e42ec1eb3905741356c8f4866cae2bdda852386807f",
+  "revision": "34",
+  "schema_version": 1,
+  "section_ids": "7.2.4.2",
+  "status": "valid",
+  "validation_errors": [],
+  "wall_seconds": 9.516
+}
