@@ -539,13 +539,21 @@ def build_deck():
         add_text(slide, 1.75, y - 0.01, 1.45, 0.35, title, size=18,
                  color=NAVY, bold=True)
         add_text(slide, 3.15, y - 0.01, 4.0, 0.56, body, size=16, color=INK)
-    add_box(slide, 7.8, 1.5, 4.45, 3.95, fill=PALE_RED, outline=PALE_RED)
-    add_text(slide, 8.15, 1.86, 3.75, 0.42, "Guardrails", size=21, color=RED, bold=True)
-    add_bullet_list(slide, 8.15, 2.55, 3.65, 2.35, [
+    add_box(slide, 7.8, 1.5, 4.45, 2.55, fill=PALE_RED, outline=PALE_RED)
+    add_text(slide, 8.15, 1.78, 3.75, 0.42, "Guardrails", size=21, color=RED, bold=True)
+    add_bullet_list(slide, 8.15, 2.3, 3.65, 1.52, [
         "Never auto-reject a draft",
         "Expose uncertainty and provenance",
         "Do not treat generated explanations as proof",
-    ], size=15, gap=0.79)
+    ], size=13, gap=0.48)
+    add_box(slide, 7.8, 4.24, 4.45, 1.32, fill=PALE_TEAL, outline=PALE_TEAL)
+    add_text(slide, 8.08, 4.4, 3.9, 0.26, "ILLUSTRATIVE MODEL OUTPUT", size=10,
+             color=TEAL, bold=True)
+    add_text(slide, 8.08, 4.75, 0.62, 0.34, "YES", size=17, color=TEAL,
+             bold=True)
+    add_text(slide, 8.78, 4.69, 3.18, 0.66,
+             "“When appropriate” leaves the retry condition open.",
+             size=13, color=INK)
     add_text(slide, 1.0, 5.9, 11.2, 0.53,
              "A false flag costs reviewer time; a missed flag can create false reassurance.",
              size=18, color=NAVY, bold=True, align=PP_ALIGN.CENTER)
