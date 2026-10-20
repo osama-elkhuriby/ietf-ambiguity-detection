@@ -166,9 +166,12 @@ Describe a careful human-in-the-loop deployment concept, not a deployment claim.
 The system ranks clauses; a reviewer returns to the exact contemporaneous draft
 text and context; the author or reviewer makes the interpretive decision. A false
 positive may waste review time; a false negative may create false reassurance.
-Therefore the system should expose uncertainty and provenance, should never
-automatically reject a draft, and should not treat generated explanations as proof.
-The user remains responsible for the specification decision.
+When the model says **yes**, the interface should include a brief, evidence-grounded
+reason—for example, that “when appropriate” leaves a retry condition open. The
+example on the slide is illustrative, not an observed model output. The system
+should expose uncertainty and provenance, should never automatically reject a
+draft, and should not treat generated explanations as proof. The user remains
+responsible for the specification decision.
 
 ## 16. What evidence would earn a stronger claim? — 1:30
 

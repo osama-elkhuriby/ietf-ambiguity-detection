@@ -23,6 +23,9 @@ DNS remains sealed.
   previous/target/next clause context.
 - `ollama_client.py` validates exact `yes`/`no` responses and derives a continuous
   ambiguity score from Ollama's native token log-probabilities.
+- `justify_qwen_positives.py` makes a separate Qwen call to produce one short,
+  evidence-grounded justification for each positive prediction. This explanation
+  call does not change the binary prediction or its log-probability score.
 - `in_context_evaluate.py` selects fold-safe demonstrations, runs resumable inference,
   and produces PR-AUC, precision, recall, F1, F2, accuracy, balanced accuracy,
   confusion matrices, per-source metrics, and SVG comparisons.
@@ -65,6 +68,26 @@ Results are written to
 `results/LLM/qwen3-32b-final-annotation-ready-v1/` and are ignored by
 Git. The model digest, Ollama version, source/config/code hashes, prompt token counts,
 raw response envelope, and `yes`/`no` log-probabilities are retained for audit.
+
+### Add Qwen justifications to positive predictions
+
+After producing the V1 analysis, make a separate Qwen call for each row where the
+generated `predicted_label` is `1`:
+
+```powershell
+python -m models.llm.justify_qwen_positives `
+  --config experiments/llm/configs/qwen3_32b_final_annotation_ready_in_context.yaml `
+  --predictions results/LLM/qwen3-32b-final-annotation-ready-v1/analysis-final/oof_predictions_8_shot.csv `
+  --output results/LLM/qwen3-32b-final-annotation-ready-v1/analysis-final/oof_predictions_8_shot_with_justifications.csv
+```
+
+The output keeps the original prediction columns and adds `justification`; negative
+predictions receive an empty value. Positive rationales are cached individually so
+an interrupted run can resume. The command refuses to overwrite its output file.
+Only the clause and its local context are sent in the explanation prompt—never its
+reference label, probability, or correctness. The original score and evaluation
+artifacts are not modified. Treat the generated sentence as a review aid, not proof
+that a clause is ambiguous.
 
 Run the isolated V2 experiment with:
 
