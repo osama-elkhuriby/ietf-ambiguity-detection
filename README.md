@@ -61,8 +61,8 @@ comparison claim. The model and data limitations are described in
 | [`models/llm/`](models/llm/) | Local Ollama prompting and supervised lexical/semantic hybrids |
 | [`models/hybrid/`](models/hybrid/) | Cross-model ensemble experiment and paper-figure generator |
 | [`experiments/`](experiments/) | Experiment plans, protocol configs, and reproducibility support |
-| [`scripts/`](scripts/) | Environment checks, workflow launchers, and utilities ([analysis](scripts/analysis/), [annotation](scripts/annotation/)) |
-| [`docs/gpu/`](docs/gpu/) | Manual GPU experiment execution guide |
+| [`scripts/`](scripts/) | Environment checks and workflow launchers; see [`scripts/README.md`](scripts/README.md) |
+| [`docs/`](docs/) | Operator guides and project documentation index |
 | [`results/`](results/) | Compact reports, metrics, and publication figures; local runs are ignored |
 | [`tests/`](tests/) | Offline unit, integration, and governance tests |
 | [`paper/`](paper/) | Manuscript source, bibliography, and figures |
@@ -70,7 +70,8 @@ comparison claim. The model and data limitations are described in
 
 Detailed result conventions and data-handling guidance are in
 [`results/README.md`](results/README.md). The paper's scope, build instructions, and
-submission checklist are in [`paper/README.md`](paper/README.md).
+submission checklist are in [`paper/README.md`](paper/README.md). Other operator
+guides are indexed in [`docs/README.md`](docs/README.md).
 
 ## Setup
 
