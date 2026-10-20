@@ -1,0 +1,127 @@
+{
+  "approved_metadata_hashes": {
+    "canonical_context_csv": "d18dfd145305cca61c62d8e3b23ff93a0a76dcd1235f04112c13458ab0f4be3f",
+    "metadata_csv": "a0e2d4cf81dce960efc15b47bf39abbfbe67ec8ec743b1aa63df00b8395a0dd1",
+    "private_key_csv": "09edc22f73d93998df728378986f039690e5b87fa62e1f52928a80708009cdce"
+  },
+  "config_path": "experiments/transformer_final/final_annotation_661_v1_2/config.json",
+  "config_sha256": "5106c05f2c535d2b567d9790c71f40b583be3e91c979e6e02208661fd8a6f087",
+  "created_at": "2026-10-19T16:33:15.152673+00:00",
+  "dataset_columns": [
+    "item_id",
+    "record_id",
+    "family_id",
+    "document_id",
+    "revision",
+    "clause_ids",
+    "section_ids",
+    "lineage_ids",
+    "target_clause",
+    "section_heading",
+    "previous_clause",
+    "next_clause",
+    "context_source_ids",
+    "context_resolution_status",
+    "alignment_source_path",
+    "source_hashes",
+    "label",
+    "final_source",
+    "final_status",
+    "fold"
+  ],
+  "dataset_file": "dataset.csv",
+  "effective_dataset_sha256": "e5306a6d23e52ab6109c35abfc1582b786f4065737972e4f4732f86ad0ca5eec",
+  "effective_summary": {
+    "families": [
+      "draft-ietf-6man-rfc2460bis",
+      "draft-ietf-httpbis-cache-header",
+      "draft-ietf-httpbis-http2bis",
+      "draft-ietf-quic-http",
+      "draft-ietf-quic-recovery",
+      "draft-ietf-quic-tls",
+      "draft-ietf-quic-transport",
+      "draft-ietf-tls-tls13"
+    ],
+    "folds": [
+      {
+        "candidate_fitting_rows": 957,
+        "context_fields_sanitized": 3,
+        "excluded_fitting_rows": 1,
+        "fitting_positive_labels": 49,
+        "fitting_rows": 956,
+        "fold": 1,
+        "held_out_families": [
+          "draft-ietf-quic-transport"
+        ],
+        "held_out_positive_labels": 50,
+        "held_out_rows": 788,
+        "scoring_rows": 788
+      },
+      {
+        "candidate_fitting_rows": 1268,
+        "context_fields_sanitized": 10,
+        "excluded_fitting_rows": 4,
+        "fitting_positive_labels": 76,
+        "fitting_rows": 1264,
+        "fold": 2,
+        "held_out_families": [
+          "draft-ietf-6man-rfc2460bis",
+          "draft-ietf-httpbis-cache-header",
+          "draft-ietf-quic-http",
+          "draft-ietf-quic-recovery"
+        ],
+        "held_out_positive_labels": 23,
+        "held_out_rows": 477,
+        "scoring_rows": 477
+      },
+      {
+        "candidate_fitting_rows": 1265,
+        "context_fields_sanitized": 12,
+        "excluded_fitting_rows": 3,
+        "fitting_positive_labels": 73,
+        "fitting_rows": 1262,
+        "fold": 3,
+        "held_out_families": [
+          "draft-ietf-httpbis-http2bis",
+          "draft-ietf-quic-tls",
+          "draft-ietf-tls-tls13"
+        ],
+        "held_out_positive_labels": 27,
+        "held_out_rows": 480,
+        "scoring_rows": 480
+      }
+    ],
+    "labels": {
+      "0": 1645,
+      "1": 100
+    },
+    "rows": 1745
+  },
+  "experiment": "final_annotation_661_v1_2",
+  "fold_source_path": "experiments/transformer_final/final_annotation_661_v1_1/manifests/inner/outer_2/dataset.csv",
+  "fold_source_sha256": "e5306a6d23e52ab6109c35abfc1582b786f4065737972e4f4732f86ad0ca5eec",
+  "git_commit": "301070716542cf2991e3b2049b74aa7d44225146",
+  "label_mapping": {
+    "No": 0,
+    "Yes": 1
+  },
+  "leakage_audit": "leakage_audit.json",
+  "leakage_audit_sha256": "194f6ae1a1d59ae9b2ad21d420cad7901ae4fa557126caaf5993f0933bb1871c",
+  "original_dataset_sha256": "8e395e83087c28cdc8e5b514f6fb4eca96e54a31fb525be770810db6f9e22e1d",
+  "private_key_reporting": "Only hashes, join counts, and required stable identifiers are persisted; votes and private annotations are omitted.",
+  "reserved_partitions": {
+    "dns": {
+      "family": "draft-ietf-dnsop-svcb-https",
+      "use": "disabled_incompatible_sealed_evaluation"
+    },
+    "tcp": {
+      "family": "draft-ietf-tcpm-rfc793bis",
+      "use": "reserved_no_training_tuning_or_calibration"
+    }
+  },
+  "schema_version": 1,
+  "source_path": "results/annotation/final_annotation.csv",
+  "unresolved_exclusions": [],
+  "validation_report": "validation_report.json",
+  "validation_report_sha256": "af6c475e88da0ca2d11ef5784437fb34d05eb3a1c4fed2410b1d1b0c5ef37859"
+}

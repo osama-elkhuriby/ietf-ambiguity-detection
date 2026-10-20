@@ -1,0 +1,48 @@
+{
+  "counts": {
+    "cross_fold_bcp14_skeleton_conflicts": 0,
+    "cross_fold_document_overlaps": 0,
+    "cross_fold_lineage_conflicts": 0,
+    "cross_fold_target_context_overlaps": 1,
+    "exact_target_duplicates_all": 1,
+    "exact_target_duplicates_cross_fold": 0,
+    "families_assigned_to_multiple_folds": 0,
+    "near_cross_fold_targets": 0,
+    "targets_with_bcp14_keyword": 1759
+  },
+  "cross_fold_bcp14_skeleton_conflicts": [],
+  "cross_fold_document_overlaps": [],
+  "cross_fold_lineage_conflicts": [],
+  "cross_fold_target_context_overlaps": [
+    {
+      "context_family": "draft-ietf-httpbis-http2bis",
+      "context_field": "previous_clause",
+      "context_fold": 3,
+      "context_record_id": "6e37b19e71b761f90c21507dfdbeaf7a7bad73732cabcdd37f1c6e418711310a",
+      "normalized_text_sha256": "9c79f27e3d9f4bb47ec918d44bab4951053f2a0db01f97bc31795739d034d63f",
+      "target_family": "draft-ietf-quic-transport",
+      "target_fold": 1,
+      "target_record_id": "70bf428691a4fd8930d34316289785810ec9a5834eae23ee8ae2b277295e2179"
+    }
+  ],
+  "exact_target_duplicates": [
+    {
+      "cross_fold": false,
+      "left_family": "draft-ietf-quic-http",
+      "left_fold": 3,
+      "left_record_id": "358d4cb55f8d69b09755551c38ede804958ab033abedacef96153a0cccf3e68e",
+      "normalized_text_sha256": "7f411209a9055a5b265f34df8fc0b298ca1192441872fd8cf10978d0a42dd56c",
+      "right_family": "draft-ietf-quic-http",
+      "right_fold": 3,
+      "right_record_id": "b3aed45dabd69097132d8ef25c648855290002842dffeb9b111800c0d40a2e05"
+    }
+  ],
+  "families_assigned_to_multiple_folds": [],
+  "label_blind": true,
+  "near_cross_fold_targets": [],
+  "near_duplicate_method": "word 3-gram Jaccard; shorter targets use all tokens",
+  "near_duplicate_threshold": 0.85,
+  "normalization": "Unicode NFC, case-folded, whitespace-collapsed",
+  "schema_version": 1,
+  "training_blocked": false
+}

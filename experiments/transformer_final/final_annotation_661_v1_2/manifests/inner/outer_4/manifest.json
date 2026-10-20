@@ -1,0 +1,121 @@
+{
+  "approved_metadata_hashes": {
+    "canonical_context_csv": "d18dfd145305cca61c62d8e3b23ff93a0a76dcd1235f04112c13458ab0f4be3f",
+    "metadata_csv": "a0e2d4cf81dce960efc15b47bf39abbfbe67ec8ec743b1aa63df00b8395a0dd1",
+    "private_key_csv": "09edc22f73d93998df728378986f039690e5b87fa62e1f52928a80708009cdce"
+  },
+  "config_path": "experiments/transformer_final/final_annotation_661_v1_2/config.json",
+  "config_sha256": "5106c05f2c535d2b567d9790c71f40b583be3e91c979e6e02208661fd8a6f087",
+  "created_at": "2026-10-19T16:33:17.518224+00:00",
+  "dataset_columns": [
+    "item_id",
+    "record_id",
+    "family_id",
+    "document_id",
+    "revision",
+    "clause_ids",
+    "section_ids",
+    "lineage_ids",
+    "target_clause",
+    "section_heading",
+    "previous_clause",
+    "next_clause",
+    "context_source_ids",
+    "context_resolution_status",
+    "alignment_source_path",
+    "source_hashes",
+    "label",
+    "final_source",
+    "final_status",
+    "fold"
+  ],
+  "dataset_file": "dataset.csv",
+  "effective_dataset_sha256": "bf639b1be7240a920465feb836618fcdc6cfc03f8224f85adcc2b6b66ec432e9",
+  "effective_summary": {
+    "families": [
+      "draft-ietf-httpbis-semantics",
+      "draft-ietf-quic-http",
+      "draft-ietf-quic-recovery",
+      "draft-ietf-quic-tls",
+      "draft-ietf-quic-transport"
+    ],
+    "folds": [
+      {
+        "candidate_fitting_rows": 1037,
+        "context_fields_sanitized": 2,
+        "excluded_fitting_rows": 1,
+        "fitting_positive_labels": 67,
+        "fitting_rows": 1036,
+        "fold": 1,
+        "held_out_families": [
+          "draft-ietf-quic-transport"
+        ],
+        "held_out_positive_labels": 50,
+        "held_out_rows": 788,
+        "scoring_rows": 788
+      },
+      {
+        "candidate_fitting_rows": 1284,
+        "context_fields_sanitized": 1,
+        "excluded_fitting_rows": 1,
+        "fitting_positive_labels": 68,
+        "fitting_rows": 1283,
+        "fold": 2,
+        "held_out_families": [
+          "draft-ietf-httpbis-semantics",
+          "draft-ietf-quic-recovery"
+        ],
+        "held_out_positive_labels": 49,
+        "held_out_rows": 541,
+        "scoring_rows": 541
+      },
+      {
+        "candidate_fitting_rows": 1329,
+        "context_fields_sanitized": 1,
+        "excluded_fitting_rows": 0,
+        "fitting_positive_labels": 99,
+        "fitting_rows": 1329,
+        "fold": 3,
+        "held_out_families": [
+          "draft-ietf-quic-http",
+          "draft-ietf-quic-tls"
+        ],
+        "held_out_positive_labels": 19,
+        "held_out_rows": 496,
+        "scoring_rows": 496
+      }
+    ],
+    "labels": {
+      "0": 1707,
+      "1": 118
+    },
+    "rows": 1825
+  },
+  "experiment": "final_annotation_661_v1_2",
+  "fold_source_path": "experiments/transformer_final/final_annotation_661_v1_1/manifests/inner/outer_4/dataset.csv",
+  "fold_source_sha256": "c5e46481b1439c8e98f84050f692c9d86be7efbe227e3f5383fc5589496b071b",
+  "git_commit": "301070716542cf2991e3b2049b74aa7d44225146",
+  "label_mapping": {
+    "No": 0,
+    "Yes": 1
+  },
+  "leakage_audit": "leakage_audit.json",
+  "leakage_audit_sha256": "304a6578c02c9b07583dcd53ae3216add13e900c5c6d5a433af3229fa31ca2f3",
+  "original_dataset_sha256": "8e395e83087c28cdc8e5b514f6fb4eca96e54a31fb525be770810db6f9e22e1d",
+  "private_key_reporting": "Only hashes, join counts, and required stable identifiers are persisted; votes and private annotations are omitted.",
+  "reserved_partitions": {
+    "dns": {
+      "family": "draft-ietf-dnsop-svcb-https",
+      "use": "disabled_incompatible_sealed_evaluation"
+    },
+    "tcp": {
+      "family": "draft-ietf-tcpm-rfc793bis",
+      "use": "reserved_no_training_tuning_or_calibration"
+    }
+  },
+  "schema_version": 1,
+  "source_path": "results/annotation/final_annotation.csv",
+  "unresolved_exclusions": [],
+  "validation_report": "validation_report.json",
+  "validation_report_sha256": "c2740235522b4bf0fa3e14c6c276dc98febe894c96aef4022d039877f27a2dca"
+}
