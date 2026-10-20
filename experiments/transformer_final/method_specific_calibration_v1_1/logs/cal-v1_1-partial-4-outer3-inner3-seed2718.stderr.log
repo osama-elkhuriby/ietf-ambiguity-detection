@@ -1,24 +1,0 @@
-Loading weights:   0%|          | 0/198 [00:00<?, ?it/s]Loading weights: 100%|##########| 198/198 [00:00<00:00, 13180.84it/s]
-[transformers] [1mDebertaV2ForSequenceClassification LOAD REPORT[0m from: D:\RFC\models\deberta-v3-base
-Key                                     | Status     | 
-----------------------------------------+------------+-
-lm_predictions.lm_head.LayerNorm.weight | UNEXPECTED | 
-mask_predictions.classifier.weight      | UNEXPECTED | 
-mask_predictions.LayerNorm.bias         | UNEXPECTED | 
-lm_predictions.lm_head.dense.weight     | UNEXPECTED | 
-mask_predictions.dense.weight           | UNEXPECTED | 
-mask_predictions.classifier.bias        | UNEXPECTED | 
-lm_predictions.lm_head.dense.bias       | UNEXPECTED | 
-lm_predictions.lm_head.bias             | UNEXPECTED | 
-lm_predictions.lm_head.LayerNorm.bias   | UNEXPECTED | 
-mask_predictions.dense.bias             | UNEXPECTED | 
-mask_predictions.LayerNorm.weight       | UNEXPECTED | 
-pooler.dense.bias                       | MISSING    | 
-pooler.dense.weight                     | MISSING    | 
-classifier.weight                       | MISSING    | 
-classifier.bias                         | MISSING    | 
-
-Notes:
-- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
-- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
-Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|##########| 1/1 [00:00<00:00,  1.49it/s]Writing model shards: 100%|##########| 1/1 [00:00<00:00,  1.49it/s]
