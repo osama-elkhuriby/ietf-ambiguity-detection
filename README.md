@@ -99,6 +99,9 @@ displays only positive (potentially ambiguous) predictions from the saved
 engineered-feature + TF-IDF Logistic Regression model. The 0.5 threshold
 produces the binary result; scores are not calibrated probabilities or
 confirmed ambiguity judgments.
+This is the selected single-RFC model: its pooled grouped out-of-fold average
+precision was 0.5225, compared with 0.5109 for the comparable Linear SVM. The
+GUI shows this selection rationale and the active model's validation summary.
 
 #### Before the first run
 

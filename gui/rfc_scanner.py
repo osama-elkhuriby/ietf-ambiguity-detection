@@ -95,6 +95,12 @@ def load_classifier(model_path: Path = MODEL_PATH) -> LoadedClassifier:
         "artifact": model_path.name,
         "artifact_sha256": sha256_file(model_path),
         "average_precision": float(validation["pooled_oof_average_precision"]),
+        "selection_rationale": (
+            "Active single-RFC scorer: the saved Logistic Regression artifact. "
+            "The newer transformer ensemble is a research candidate, not a "
+            "live inference artifact; its 0.674 AP used a different cohort "
+            "and is not directly comparable."
+        ),
         "validation_rows": int(metrics["rows"]),
         "validation_positives": int(metrics["positive_rows"]),
         "validation_groups": int(metrics["validation_group_count"]),

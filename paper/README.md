@@ -8,11 +8,16 @@ Qwen V1--V4 prompting and hybrid results; the initial low-prevalence DeBERTa exp
 later annotation-ready DeBERTa pilot and nested calibration; staged weighting/context
 ablations; review-budget and routing feasibility; protocol corrections; and blocked or
 incomplete work. It now includes the updated revision-feature ML grid, the fixed
-three-model rank ensemble, the implemented local RFC-review GUI, and the latest
-annotation-source update with its error-selected human-review caveat. Local-only and
-`.gitignore`-excluded results are included where aggregate evidence is available.
-Missing or unfinished results (including the current human-reviewed follow-up, blocked
-annotation v2, TCP, and sealed DNS) are identified as such, not filled in or implied.
+three-model rank ensemble, the implemented local RFC-review GUI, and the completed
+analysis of the updated human-reviewed label source. The latest DeBERTa results compare
+three methods on one common 2,143-row cohort; the 100 human-confirmed records were
+selected from historical OOF errors and the results are explicitly qualified for that
+selection bias. The repair analysis validates and reuses parent-run predictions rather
+than retraining. Classical ML and earlier Qwen/hybrid studies remain separate
+evaluations on their own label snapshots and protocols; their results are not presented
+as a common-data leaderboard. TCP, sealed DNS, and blocked annotation v2 remain
+unreported. Local-only and `.gitignore`-excluded results are included where aggregate
+evidence is available.
 
 Evaluation tracks remain separate when snapshots, cohorts, labels, and protocols
 differ. The paper reports negative findings and protocol limitations without turning
@@ -67,13 +72,20 @@ Figures included by the manuscript:
 - `classical_pr_curves.png`
 - `classical_lofo.png`
 - `language_model_ap.png`
-- `deberta_ap.png`
+- `reviewed_label_transformer_comparison.png`
 - `annotation_ready_pilot_pr.png`
 - `hybrid_pr_curves.png`
 - `hybrid_pr_curves.pdf`
 - `hybrid_review_budget.png`
 - `hybrid_review_budget.pdf`
 - `transformer_review_budget.png`
+
+The reviewed-label transformer comparison figure is based on the aggregate AP, ROC-AUC,
+and family-cluster intervals in the local
+`final_annotation_human_reviewed_100_v1_analysis_fix_v1/outputs/` directory. It
+compares focal loss, partial fine-tuning, and their rank ensemble on the same 2,143-row
+cohort. The 100 confirmed records were error-selected; this figure is not an independent
+test comparison. The analysis-repair run reuses parent predictions.
 
 The final V4/DeBERTa/classical rank-ensemble figures can be regenerated from the
 saved, label-compatible OOF predictions with:
@@ -110,13 +122,18 @@ The paper deliberately calls the repository's `average_precision_score` output
 "average precision (AP)" rather than using the less precise historical label "PR-AUC."
 Pooled out-of-fold review-budget counts are exploratory because the scores arise from
 fold-specific models and are not a deployment calibration. The classical/heuristic,
-earlier LOFO, earlier transformer-ablation, Qwen/hybrid, and final target-only DeBERTa
+earlier LOFO, earlier transformer-ablation, Qwen/hybrid, and cross-model rank-ensemble
 results have different evaluation cohorts, label definitions, or protocols; the paper
-explicitly avoids direct model ranking across these studies.
+explicitly avoids direct model ranking across those studies.
+The three methods in the updated reviewed-label DeBERTa comparison share the same
+2,143-row cohort and folds, but this cohort includes 100 error-selected human-confirmed
+labels and does not constitute an independent population sample.
 
 The classical precision--recall grid and best-model metric summary were regenerated
 from the current matched result artifacts. The classical table reports learned-model
 threshold metrics at 0.5 and the fixed heuristic at 0.4. Revision-feature changes are
-small and mixed. The 100 human-confirmed records in the latest annotation source were
-selected from historical OOF errors; they are not an independent test set, and no
-completed results from the active follow-up training run are included.
+small and mixed. The latest updated-label DeBERTa analysis is complete, but the 100
+human-confirmed records were selected from historical OOF errors. The analysis-repair
+step validates and reuses parent experiment predictions, so it does not constitute an
+independent rerun. Obtain a separately sampled expert-adjudicated test set before making
+generalization or deployment claims.

@@ -78,3 +78,44 @@ environment uses another version, the GUI reports the compatibility warning
 raised by scikit-learn. Match the training version before relying on results.
 The positive-result list is a research result, not a claim that a clause is
 definitively ambiguous.
+
+## GUI model selection
+
+The currently wired single-RFC scorer is class-balanced Logistic Regression
+with engineered features and TF-IDF. Among its comparable standalone
+classifiers, it had the strongest pooled grouped out-of-fold average precision:
+
+| Classifier | Pooled OOF average precision | Pooled OOF ROC-AUC |
+| --- | ---: | ---: |
+| Logistic Regression, engineered + TF-IDF | 0.5225 | 0.8122 |
+| Linear SVM, engineered + TF-IDF | 0.5109 | 0.8111 |
+
+Both results use 2,406 clauses from 11 draft families. At the 0.5 threshold,
+the Logistic Regression model's pooled OOF recall was 0.677, versus 0.367 for
+the SVM. The SVM had higher precision (0.725 versus 0.215), but the Logistic
+Regression ranking is preferred for this screening interface, where surfacing
+more possible positives is useful. These are development metrics against operational labels, not independent
+expert validation.
+
+The human-reviewed transformer experiment reported ensemble AP 0.6736 and
+ROC-AUC 0.9118 on 2,143 clauses across nine development families. This is a
+research candidate only: its evaluation cohort differs from the saved
+classical model's cohort, the result does not establish a reliable advantage,
+and there is no corresponding single-RFC inference artifact wired into this
+GUI. The GUI shows this result separately and does not use it to score uploads.
+Its ensemble score is a ranking score, not a calibrated probability.
+
+In a separate comparison on 2,097 label-compatible rows, the V4 Qwen/MiniLM
+semantic ensemble had AP 0.3373, compared with AP 0.4567 for Logistic
+Regression and 0.4619 for their three-way rank ensemble with DeBERTa. These
+are exploratory OOF results on yet another cohort, not a direct comparison
+with the human-reviewed transformer experiment or the active model. Pure
+Qwen prompting had pooled AP 0.1513–0.1960 in its separate evaluation. In
+this GUI Qwen remains an optional explanation aid; its explanations do not
+affect predictions.
+
+The revision-aware Logistic Regression experiment reached pooled OOF AP
+0.5172, but requires prior-draft lineage that is not available from a single
+uploaded RFC. The GUI therefore continues to use the saved classical model
+for live scanning while presenting the newer ensemble as a research result
+awaiting same-cohort evaluation and inference integration.

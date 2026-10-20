@@ -111,8 +111,39 @@
       color: #425c71;
       font-size: 13px;
     }
+    .status-copy { display: grid; gap: 3px; }
+    .status-detail { color: var(--muted); font-size: 11px; line-height: 1.45; }
     .status.ready { border-color: #cce6dc; background: #fbfefc; }
     .status.failed { border-color: #f0d0ca; background: #fffaf9; }
+    .model-strategy {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin: 0 0 20px;
+    }
+    .model-option {
+      padding: 17px;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      background: white;
+    }
+    .model-option.active { border-color: #b9dfce; background: #fbfefc; }
+    .model-option.candidate { border-color: #eed9a9; background: #fffdf8; }
+    .model-option h2 { margin: 9px 0 6px; color: var(--navy); font-size: 15px; }
+    .model-option p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.55; }
+    .model-state {
+      display: inline-flex;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #eaf7f0;
+      color: #246344;
+      font-size: 10px;
+      font-weight: 750;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    .candidate .model-state { background: #fff1d4; color: #765313; }
+    .assistance .model-state { background: #edf3f7; color: #526a7e; }
     .dot {
       flex: 0 0 9px;
       width: 9px;
@@ -314,6 +345,7 @@
       .card { padding: 18px; border-radius: 14px; }
       .card-heading { gap: 12px; }
       .drop-zone { min-height: 125px; padding: 17px; }
+      .model-strategy { grid-template-columns: 1fr; }
       .results-toolbar { align-items: flex-start; flex-direction: column; }
       .results-toolbar .actions { width: 100%; }
       .results-toolbar button { flex: 1 1 auto; }
@@ -364,7 +396,42 @@
 
     <section id="classifierStatus" class="status" aria-live="polite">
       <span class="dot" aria-hidden="true"></span>
-      <span id="statusText">Loading the saved classifier…</span>
+      <div class="status-copy">
+        <span id="statusText">Loading the saved classifier…</span>
+        <span id="modelSelection" class="status-detail"></span>
+      </div>
+    </section>
+
+    <section class="model-strategy" aria-label="Model roles and evaluation">
+      <article class="model-option active">
+        <span class="model-state">Active in this GUI</span>
+        <h2>Classical ML · Logistic Regression</h2>
+        <p>
+          The available single-RFC scorer uses engineered features + TF-IDF.
+          Its reported pooled OOF AP was 0.522 on 2,406 clauses across 11
+          families. This is a development estimate, not independent validation.
+        </p>
+      </article>
+      <article class="model-option candidate">
+        <span class="model-state">Research candidate · not wired for live scoring</span>
+        <h2>Transformer ensemble</h2>
+        <p>
+          The human-reviewed study reported AP 0.674 on 2,143 clauses across
+          nine families. Its score is a ranking score, not a calibrated
+          probability. The result is from a different cohort and is not a
+          drop-in replacement for the active RFC scorer.
+        </p>
+      </article>
+      <article class="model-option assistance">
+        <span class="model-state">Optional assistance</span>
+        <h2>LLM review aid</h2>
+        <p>
+          Qwen can provide an optional explanation for selected flagged
+          clauses. Prompt-only Qwen scored below the saved classical model in
+          its own evaluation; explanations do not change the classification
+          or establish that a clause is ambiguous.
+        </p>
+      </article>
     </section>
 
     <section class="card">
@@ -416,10 +483,10 @@
       <div id="summary" class="summary"></div>
       <p id="parseWarning" class="parse-warning" role="status"></p>
       <p class="caveat">
-        These are positive predictions at the saved model threshold, not
-        independent proof of ambiguity. Scores are not calibrated probabilities.
-        Results are ordered by score; the saved model has not had independent
-        production evaluation.
+        The active classical model applies its saved 0.5 screening threshold.
+        Its score is useful for ordering review priority, not a calibrated
+        probability or independent proof of ambiguity. The research ensemble
+        result uses a different cohort and is not used for these predictions.
       </p>
       <div class="results-toolbar">
         <span id="selectionCount" class="hint">Select up to 5 YES predictions for an optional Qwen explanation.</span>
@@ -447,7 +514,7 @@
           <thead>
             <tr>
               <th scope="col">Explain</th>
-              <th scope="col">Score</th>
+              <th scope="col">Model score · ranking only</th>
               <th scope="col">Section</th>
               <th scope="col">Line</th>
               <th scope="col">Clause</th>
@@ -672,10 +739,12 @@
         statusBanner.classList.add("ready");
         const classifier = data.classifier;
         document.getElementById("statusText").textContent =
-          `${classifier.name} ready · YES threshold ${classifier.prediction_threshold.toFixed(2)} · ` +
+          `${classifier.name} ready · screening cutoff ${classifier.prediction_threshold.toFixed(2)} · ` +
           `out-of-fold AP ${Number(classifier.average_precision).toFixed(3)} ` +
           `(${classifier.validation_rows} clauses; ${classifier.validation_groups} draft families). ` +
-          `Qwen ${data.qwen_model} is used only when explanations are requested.`;
+          `Qwen ${data.qwen_model} is optional and used only for explanations.`;
+        document.getElementById("modelSelection").textContent =
+          classifier.selection_rationale;
         if (classifier.sklearn_compatibility_warnings.length) {
           warningBox.textContent =
             `Compatibility warning: artifact scikit-learn version(s): ` +

@@ -10,6 +10,9 @@ from pptx.util import Inches, Pt
 
 ROOT = Path(__file__).resolve().parents[2]
 OUTPUT = Path(__file__).resolve().parent / "ietf_ambiguity_detection_presentation.pptx"
+PRESENTATION_DIR = Path(__file__).resolve().parent
+GUI_OVERVIEW_IMAGE = PRESENTATION_DIR / "gui_rfc9000_overview.png"
+GUI_FILTERED_IMAGE = PRESENTATION_DIR / "gui_rfc9000_filtered_results.png"
 
 SLIDE_W = 13.333
 SLIDE_H = 7.5
@@ -289,7 +292,7 @@ def build_deck():
     studies = [
         ("CLASSICAL ML", "2,406 clauses · 11 families", "158 positives · prevalence 6.57%", BLUE),
         ("QWEN / HYBRID", "2,142 clauses · 9 families", "126 positives · prevalence 5.88%", ORANGE),
-        ("LATEST DEBERTA", "2,125 clauses · 9 families", "136 positives · prevalence 6.40%", TEAL),
+        ("LATEST DEBERTA", "2,143 clauses · 9 families", "138 positives · prevalence 6.44%", TEAL),
     ]
     for i, (title, cohort, detail, accent) in enumerate(studies):
         y = 3.15 + i * 0.9
@@ -301,9 +304,9 @@ def build_deck():
                  color=NAVY, bold=True)
         add_text(slide, 7.8, y + 0.15, 3.95, 0.3, detail, size=14, color=INK)
     add_text(slide, 1.2, 6.14, 10.95, 0.42,
-             "Different label snapshots and eligibility rules: these cohorts are not one shared leaderboard.",
+             "Different label snapshots and eligibility rules: only the three latest DeBERTa methods share one cohort.",
              size=16, color=RED, bold=True, align=PP_ALIGN.CENTER)
-    add_footer(slide, 5, "Source: README.md; paper/main.tex. Cohort metrics are study-specific.")
+    add_footer(slide, 5, "Source: paper/main.tex; study-specific cohorts and label snapshots.")
 
     # 6. Pipeline
     slide = new_slide(prs, "The pipeline makes the information boundary explicit",
@@ -432,31 +435,31 @@ def build_deck():
     add_footer(slide, 10, "Source: paper/main.tex, Table classical; matched 3-fold family-grouped OOF.")
 
     # 11. DeBERTa result
-    slide = new_slide(prs, "Latest DeBERTa study: encouraging ranking, wide uncertainty",
+    slide = new_slide(prs, "Latest DeBERTa comparison: promising ranking, wide uncertainty",
                       "Results · transformer", page=11)
     add_text(slide, 0.95, 1.28, 11.3, 0.38,
-             "2,125 clauses  ·  136 positives  ·  9 families  ·  5-fold family-isolated OOF",
+             "2,143 clauses  ·  138 positives  ·  9 families  ·  5-fold family-isolated OOF",
              size=16, color=MUTED, bold=True)
     add_bar_chart(slide, 1.15, 2.2, 7.6, [
-        ("Equal-weight ECDF ensemble", 0.3711, TEAL),
-        ("Partial fine-tuning", 0.3262, BLUE),
-        ("Focal loss", 0.3054, ORANGE),
-        ("Prevalence baseline", 0.0640, MUTED),
-    ], max_value=0.55, baseline=0.064, row_h=0.7, label_w=3.35,
+        ("Equal-weight ECDF ensemble", 0.6736, TEAL),
+        ("Focal loss", 0.5823, ORANGE),
+        ("Partial fine-tuning", 0.5761, BLUE),
+        ("Prevalence baseline", 0.0644, MUTED),
+    ], max_value=0.75, baseline=0.0644, row_h=0.7, label_w=3.35,
        value_fmt="{:.4f}", highlight="Equal-weight ECDF ensemble")
     add_box(slide, 9.15, 2.0, 3.2, 2.7, fill=PALE_TEAL, outline=PALE_TEAL)
-    add_text(slide, 9.45, 2.28, 2.55, 0.55, "26 / 50", size=30, color=TEAL,
+    add_text(slide, 9.45, 2.28, 2.55, 0.55, "46 / 50", size=30, color=TEAL,
              bold=True, align=PP_ALIGN.CENTER)
     add_text(slide, 9.45, 2.94, 2.55, 0.85,
              "operational positives among the top 50 ranked clauses",
              size=16, color=INK, align=PP_ALIGN.CENTER)
     add_text(slide, 9.36, 4.1, 2.72, 0.42,
-             "AP family-cluster interval: 0.315–0.508", size=12,
+             "Ensemble AP family interval: 0.592–0.764", size=12,
              color=MUTED, align=PP_ALIGN.CENTER)
-    add_text(slide, 1.1, 5.65, 11.1, 0.62,
-             "The interval resamples only nine families; it does not capture training-seed variation or test-set uncertainty.",
-             size=16, color=RED, bold=True, align=PP_ALIGN.CENTER)
-    add_footer(slide, 11, "Source: paper/main.tex, Table ranking and fixed-review-budget results.")
+    add_text(slide, 1.1, 5.35, 11.1, 0.95,
+             "The ECDF ensemble is a ranking score, not a calibrated probability. Intervals overlap across nine families; the 100 labels were error-selected, and this repair reuses parent predictions—not an independent test.",
+             size=14, color=RED, bold=True, align=PP_ALIGN.CENTER)
+    add_footer(slide, 11, "Source: updated reviewed-label DeBERTa outputs; paper/main.tex. OOF development results.")
 
     # 12. Hybrid
     slide = new_slide(prs, "The three-model hybrid adds only a small AP increment",
@@ -523,48 +526,49 @@ def build_deck():
              size=19, color=RED, bold=True, align=PP_ALIGN.CENTER)
     add_footer(slide, 14, "Source: paper/main.tex, Threats to Validity.")
 
-    # 15. Use
-    slide = new_slide(prs, "The right role is an explainable reviewer aid",
-                      "Responsible use", page=15)
-    add_text(slide, 1.0, 1.4, 5.0, 0.48, "A human-in-the-loop workflow", size=21,
+    # 15. GUI example
+    slide = new_slide(prs, "GUI example: RFC 9000 review results",
+                      "Interface", page=15)
+    add_text(slide, 0.9, 1.35, 5.8, 0.38, "Local scan summary", size=20,
              color=NAVY, bold=True)
-    workflow = [
-        ("Rank", "Surface clauses worth a closer read", BLUE),
-        ("Inspect", "Return to the exact draft text and context", TEAL),
-        ("Decide", "Author or reviewer interprets the requirement", ORANGE),
-    ]
-    for i, (title, body, accent) in enumerate(workflow):
-        y = 2.15 + i * 1.14
-        add_circle(slide, 1.1, y, 0.45, accent, str(i + 1), size=16)
-        add_text(slide, 1.75, y - 0.01, 1.45, 0.35, title, size=18,
-                 color=NAVY, bold=True)
-        add_text(slide, 3.15, y - 0.01, 4.0, 0.56, body, size=16, color=INK)
-    add_box(slide, 7.8, 1.5, 4.45, 2.55, fill=PALE_RED, outline=PALE_RED)
-    add_text(slide, 8.15, 1.78, 3.75, 0.42, "Guardrails", size=21, color=RED, bold=True)
-    add_bullet_list(slide, 8.15, 2.3, 3.65, 1.52, [
-        "Never auto-reject a draft",
-        "Expose uncertainty and provenance",
-        "Do not treat generated explanations as proof",
-    ], size=13, gap=0.48)
-    add_box(slide, 7.8, 4.24, 4.45, 1.32, fill=PALE_TEAL, outline=PALE_TEAL)
-    add_text(slide, 8.08, 4.4, 3.9, 0.26, "ILLUSTRATIVE MODEL OUTPUT", size=10,
-             color=TEAL, bold=True)
-    add_text(slide, 8.08, 4.75, 0.62, 0.34, "YES", size=17, color=TEAL,
-             bold=True)
-    add_text(slide, 8.78, 4.69, 3.18, 0.66,
-             "“When appropriate” leaves the retry condition open.",
+    for x, value, label, color in [
+        (0.9, "112", "potentially\nambiguous", TEAL),
+        (2.82, "516", "normative clauses\nscored", BLUE),
+        (4.74, "69", "sections\nrepresented", ORANGE),
+    ]:
+        add_box(slide, x, 1.88, 1.72, 1.17, fill=PALE_BLUE, outline=PALE_BLUE)
+        add_text(slide, x + 0.08, 2.0, 1.56, 0.43, value, size=27,
+                 color=color, bold=True, align=PP_ALIGN.CENTER)
+        add_text(slide, x + 0.08, 2.5, 1.56, 0.42, label, size=11,
+                 color=INK, align=PP_ALIGN.CENTER)
+    add_card(slide, 0.9, 3.4, 5.56, 1.55, "Example ranked suggestion",
+             "Line 4727 · Section 14.2.1 · score 0.5433\n"
+             "“The endpoint SHOULD ignore all ICMP messages that fail validation.”",
+             fill=PALE_TEAL, accent=TEAL, title_size=16, body_size=14)
+    add_box(slide, 0.9, 5.25, 5.56, 1.05, fill=PALE_ORANGE, outline=PALE_ORANGE)
+    add_text(slide, 1.12, 5.43, 5.12, 0.68,
+             "Scores rank clauses for review; they are not calibrated probabilities or ambiguity verdicts. "
+             "This capture also had a scikit-learn artifact/runtime version warning.",
              size=13, color=INK)
-    add_text(slide, 1.0, 5.9, 11.2, 0.53,
-             "A false flag costs reviewer time; a missed flag can create false reassurance.",
-             size=18, color=NAVY, bold=True, align=PP_ALIGN.CENTER)
-    add_footer(slide, 15, "Source: paper/main.tex, Ethical and Practical Considerations.")
+    add_text(slide, 7.35, 1.26, 5.35, 0.22, "Overview · RFC 9000", size=11,
+             color=TEAL, bold=True)
+    slide.shapes.add_picture(
+        str(GUI_OVERVIEW_IMAGE), inches(7.35), inches(1.52), width=inches(5.25)
+    )
+    add_text(slide, 7.35, 4.08, 5.35, 0.22,
+             "Filtered suggestion · one of 112 flagged clauses", size=11,
+             color=TEAL, bold=True)
+    slide.shapes.add_picture(
+        str(GUI_FILTERED_IMAGE), inches(7.35), inches(4.34), width=inches(5.25)
+    )
+    add_footer(slide, 15, "GUI screenshots: local scan of corpus/raw/rfcs/RFC9000.txt; model scores are screening ranks.")
 
     # 16. Next steps
     slide = new_slide(prs, "What evidence would earn a stronger claim?",
                       "Next steps", page=16)
     next_steps = [
         ("01", "Build an expert reference", "Stratified sample; independent double annotation and adjudication.", BLUE),
-        ("02", "Freeze the comparison", "Retrain ML on the same frozen labels; repeat finalists across seeds.", TEAL),
+        ("02", "Freeze the comparison", "Retrain classical and Qwen/hybrid on common labels and folds; repeat finalists across seeds.", TEAL),
         ("03", "Lock the protocol", "Pre-specify model, threshold, code snapshot, and analysis plan.", ORANGE),
         ("04", "Test transfer once", "Evaluate reserved TCP; then open DNS only after the decision rule is fixed.", RED),
     ]

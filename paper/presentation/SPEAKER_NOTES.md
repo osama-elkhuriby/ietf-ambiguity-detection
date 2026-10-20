@@ -55,9 +55,11 @@ hide in an appendix; they determine what the reported numbers mean.
 The corpus work covers 253 Internet-Draft revisions, 12 RFCs, and 31 verified
 technical errata. Then distinguish the three highlighted model cohorts: classical
 ML uses 2,406 clauses from 11 families; the Qwen/hybrid experiment uses 2,142
-clauses from nine families; the latest DeBERTa study uses 2,125 clauses from nine
-families. These are not progressively larger or smaller versions of one identical
-test set. Annotation snapshots and eligibility rules differ. This distinction
+clauses from nine families; the latest reviewed-label DeBERTa study uses 2,143
+clauses, 138 positives, and nine families. These are not progressively larger or
+smaller versions of one identical test set. Annotation snapshots and eligibility
+rules differ. The three DeBERTa methods share that study's cohort and folds, but
+the classical and Qwen/hybrid results are separate studies. This distinction
 prevents an attractive but invalid cross-model leaderboard.
 
 ## 6. The pipeline makes the information boundary explicit — 1:30
@@ -113,16 +115,20 @@ Do not compare the 0.5225 directly with the DeBERTa or Qwen numbers: cohort,
 annotation source, and protocol differ. A strong within-cohort AP does not alone
 establish transfer, calibration, or independent accuracy.
 
-## 11. Latest DeBERTa study: encouraging ranking, wide uncertainty — 1:45
+## 11. Latest DeBERTa comparison: promising ranking, wide uncertainty — 1:45
 
-This study contains 2,125 clauses, 136 positives, and nine families. The equal-weight
-empirical-CDF rank ensemble reaches AP 0.3711, compared with a 0.064 prevalence
-baseline, and retrieves 26 operational positives among the top 50 ranked clauses.
-Translate that into workflow terms: if a reviewer can inspect only 50 clauses from
-this study cohort, the OOF ranking places 26 reference positives in that shortlist.
-Do not call those 26 “confirmed ambiguities.” The family-cluster interval is wide
-(about 0.315 to 0.508), covers only nine families, and does not include training-seed
-variation. It is promising development evidence, not a test-set guarantee.
+This study contains 2,143 clauses, 138 positives, and nine families. The equal-weight
+empirical-CDF rank ensemble reaches AP 0.6736, compared with 0.5823 for focal loss
+and 0.5761 for partial fine-tuning; all three methods use the same cohort and folds.
+The ensemble's family-cluster AP interval is 0.5920–0.7641. The intervals overlap,
+so do not claim a reliable winner. In the pooled OOF ranking, the ensemble retrieves
+46 reference positives among the top 50. Do not call those “confirmed ambiguities”:
+the reference is operational, not expert gold. The 100 human-confirmed records were
+selected from historical OOF errors, so this is error-selection-biased development
+evidence, not an independent population test. The analysis-repair run reuses parent
+predictions rather than retraining. The interval covers only nine families and not
+training-seed variation. The ECDF ensemble is a ranking score, not a calibrated
+probability.
 
 ## 12. The three-model hybrid adds only a small AP increment — 1:45
 
@@ -160,26 +166,28 @@ cannot claim validated ambiguity accuracy or production readiness. This is not a
 failure of the project; identifying the claim boundary is part of responsible ML
 research.
 
-## 15. The right role is an explainable reviewer aid — 1:30
+## 15. GUI example: RFC 9000 review results — 1:30
 
-Describe a careful human-in-the-loop deployment concept, not a deployment claim.
-The system ranks clauses; a reviewer returns to the exact contemporaneous draft
-text and context; the author or reviewer makes the interpretive decision. A false
-positive may waste review time; a false negative may create false reassurance.
-When the model says **yes**, the interface should include a brief, evidence-grounded
-reason—for example, that “when appropriate” leaves a retry condition open. The
-example on the slide is illustrative, not an observed model output. The system
-should expose uncertainty and provenance, should never automatically reject a
-draft, and should not treat generated explanations as proof. The user remains
-responsible for the specification decision.
+These are screenshots of the local GUI after scanning the repository's RFC 9000
+plaintext. The interface found 112 potential review suggestions among 516 clauses
+classified as explicitly normative, spanning 69 sections. The second screenshot
+filters to one real result: line 4727, section 14.2.1, with a ranking score of
+0.5433. Explain that this is not a probability or a verdict: it is a prompt to
+inspect the source text and surrounding context. The GUI's saved Logistic
+Regression artifact is used for this scan, not the research-only DeBERTa ensemble
+or Qwen; Qwen is only an optional explanation aid. During capture, scikit-learn
+reported that the saved artifact was created with 1.9.1 while the runtime is
+1.9.0, so treat the screenshot as a UI demonstration rather than validated
+inference. In use, reviewers remain responsible for interpretation and must not
+treat generated explanations as proof or automatically reject a draft.
 
 ## 16. What evidence would earn a stronger claim? — 1:30
 
 The next steps are sequential. First, create a stratified sample for independent
-double annotation and adjudication. Second, retrain the classical model against the
-same frozen label source as the other candidates, and repeat finalist transformer
-configurations across multiple seeds. Third, freeze the model, threshold or routing
-policy, code snapshot, and analysis plan. Only then evaluate the reserved TCP set.
+double annotation and adjudication. Second, retrain the classical and Qwen/hybrid
+candidates against the same frozen label source and family folds as the transformer,
+and repeat finalist configurations across multiple seeds. Third, freeze the model,
+threshold or routing policy, code snapshot, and analysis plan. Only then evaluate the reserved TCP set.
 DNS should be opened once the decision rule is fixed. The sealed set is valuable
 because it can test transfer without becoming another tuning loop.
 
