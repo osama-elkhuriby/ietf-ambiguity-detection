@@ -79,7 +79,8 @@ def filter_numeric(data, key, operator, value):
 # MAIN
 # =========================
 
-file_path = "corpus\\processed\\clauses\\draft-ietf-tls-tls13-20.json"
+root = Path(__file__).resolve().parents[1]
+file_path = root / "corpus" / "processed" / "clauses" / "draft-ietf-tls-tls13-20.json"
 data = load_json(file_path)
 clauses = get_clause_records(data)
 
@@ -102,4 +103,4 @@ print(f"\nMatches for 'requirements': {len(matches)}")
 if matches:
     print(matches[0])
 
-save_json(normative[:10], "filtered.json")
+save_json(normative[:10], root / "corpus" / "processed" / "filtered.json")

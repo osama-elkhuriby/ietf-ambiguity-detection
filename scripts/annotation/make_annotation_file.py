@@ -1,7 +1,8 @@
-"""Split all LLM-annotated rows between 3 annotators. Single self-contained file.
+"""Split all LLM-annotated rows between three annotators.
 
-Run:  python make_annotation_files.py --check 5     # print context, verify
-      python make_annotation_files.py               # write files
+Run from the repository root:
+  python -m scripts.annotation.make_annotation_file --check 5
+  python -m scripts.annotation.make_annotation_file
 
 Output (results/annotation/):
   pilot.csv                 -> all 3 annotate first (60 rows), then discuss
@@ -18,11 +19,12 @@ from pathlib import Path
 
 import pandas as pd
 
-BASE = Path("/media/yahya/data_stuff/DATA/Final Project/ietf-ambiguity-detection/corpus/processed")
+ROOT = Path(__file__).resolve().parents[2]
+BASE = ROOT / "corpus" / "processed"
 ANN = BASE / "llm_annotations" / "v1"
 ALIGN = BASE / "alignments"
 SEED, N_PILOT, N_SHARED = 42, 60, 240
-OUT = Path("results/annotation")
+OUT = ROOT / "results" / "annotation"
 
 _docs = {}
 

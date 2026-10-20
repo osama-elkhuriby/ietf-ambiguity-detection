@@ -1,4 +1,4 @@
-"""Analyze the 3-LLM votes. Read-only. Run:  python analyze_votes.py"""
+"""Analyze local LLM consensus votes. Read-only."""
 import json
 from collections import Counter
 from itertools import combinations
@@ -7,7 +7,8 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-ANN = Path("/media/yahya/data_stuff/DATA/Final Project/ietf-ambiguity-detection/corpus/processed/llm_annotations/v1")
+ROOT = Path(__file__).resolve().parents[2]
+ANN = ROOT / "corpus" / "processed" / "llm_annotations" / "v1"
 cons = pd.read_csv(ANN / "consensus.csv", dtype=str)
 train = pd.read_csv(ANN / "training_dataset.csv", dtype=str)
 

@@ -1,8 +1,8 @@
-"""Train/evaluate one classifier per LLM's own decisions (+ ordinal vote count), LOFO.
+"""Train/evaluate one classifier per LLM's own decisions and ordinal vote count.
 
 Votes are TARGETS only. Features = target-clause TF-IDF + engineered (E0 feature set),
 all vectorizers/scalers fit on the training families of each fold only.
-Run:  python per_model_targets.py        Output: results/per_model_targets/*.csv
+Run: python -m scripts.analysis.per_model_targets.
 """
 import json
 from pathlib import Path
@@ -17,9 +17,10 @@ from sklearn.linear_model import LogisticRegression, Ridge
 from sklearn.metrics import average_precision_score, confusion_matrix, precision_recall_fscore_support
 from sklearn.preprocessing import StandardScaler
 
-BASE = Path("/media/yahya/data_stuff/DATA/Final Project/ietf-ambiguity-detection/corpus/processed")
+ROOT = Path(__file__).resolve().parents[2]
+BASE = ROOT / "corpus" / "processed"
 ANN, FEAT = BASE / "llm_annotations" / "v1", BASE / "features" / "v3"
-OUT = Path("results/per_model_targets")
+OUT = ROOT / "results" / "per_model_targets"
 OUT.mkdir(parents=True, exist_ok=True)
 MIN_FAMILY, N_BOOT, SEED = 30, 1000, 42
 MODELS = {"gemma": "gemma3:27b", "gptoss": "gpt-oss:20b", "qwen": "qwen3:32b"}

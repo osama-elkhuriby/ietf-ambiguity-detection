@@ -61,6 +61,7 @@ comparison claim. The model and data limitations are described in
 | [`models/llm/`](models/llm/) | Local Ollama prompting and supervised lexical/semantic hybrids |
 | [`models/hybrid/`](models/hybrid/) | Cross-model ensemble experiment and paper-figure generator |
 | [`experiments/`](experiments/) | Experiment plans, protocol configs, and reproducibility support |
+| [`scripts/`](scripts/) | Environment checks, workflow launchers, and utilities ([analysis](scripts/analysis/), [annotation](scripts/annotation/)) |
 | [`results/`](results/) | Compact reports, metrics, and publication figures; local runs are ignored |
 | [`tests/`](tests/) | Offline unit, integration, and governance tests |
 | [`paper/`](paper/) | Manuscript source, bibliography, and figures |
@@ -140,6 +141,21 @@ The first command writes local metrics, predictions, and a provenance manifest u
 Existing output directories and figure files are not overwritten. See
 [`models/hybrid/README.md`](models/hybrid/README.md) for input requirements and cohort
 limitations.
+
+### Run research utilities
+
+Focused analysis and annotation-preparation helpers are grouped under `scripts/`:
+
+```powershell
+python -m scripts.analysis.analyze_votes
+python -m scripts.analysis.per_model_targets
+python -m scripts.annotation.make_annotation_file --check 5
+```
+
+These utilities require the local annotation/features described in their source and
+may write private exports under `results/annotation/`. Review
+[`corpus/LLM_ANNOTATION.md`](corpus/LLM_ANNOTATION.md) before creating annotation
+worksheets.
 
 ### Test and lint
 
