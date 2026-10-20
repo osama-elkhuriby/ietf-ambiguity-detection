@@ -19,6 +19,13 @@ the results into one cross-cohort leaderboard.
 preview and does **not** reflect the current source; rebuild it before distribution
 or submission.
 
+## Presentation
+
+The editable 18-slide project talk and its 25-minute speaker guide are in
+[`presentation/`](presentation/). The PowerPoint deck is generated from editable
+native text, shapes, and charts; see [`presentation/README.md`](presentation/README.md)
+for editing and regeneration instructions.
+
 ## Build
 
 Use a TeX distribution containing `IEEEtran`, then run:
