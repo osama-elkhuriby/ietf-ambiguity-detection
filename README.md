@@ -62,11 +62,11 @@ comparison claim. The model and data limitations are described in
 | [`models/hybrid/`](models/hybrid/) | Cross-model ensemble experiment and paper-figure generator |
 | [`experiments/`](experiments/) | Experiment plans, protocol configs, and reproducibility support |
 | [`scripts/`](scripts/) | Environment checks, workflow launchers, and utilities ([analysis](scripts/analysis/), [annotation](scripts/annotation/)) |
+| [`docs/gpu/`](docs/gpu/) | Manual GPU experiment execution guide |
 | [`results/`](results/) | Compact reports, metrics, and publication figures; local runs are ignored |
 | [`tests/`](tests/) | Offline unit, integration, and governance tests |
 | [`paper/`](paper/) | Manuscript source, bibliography, and figures |
 | [`DECISIONS.md`](DECISIONS.md) | Dated methodological decisions |
-| [`MANUAL_GPU_EXECUTION_GUIDE.md`](MANUAL_GPU_EXECUTION_GUIDE.md) | GPU experiment run instructions |
 
 Detailed result conventions and data-handling guidance are in
 [`results/README.md`](results/README.md). The paper's scope, build instructions, and

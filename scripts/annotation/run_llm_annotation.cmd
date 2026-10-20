@@ -1,6 +1,10 @@
 @echo off
 setlocal
-cd /d "%~dp0"
+cd /d "%~dp0..\.."
+if errorlevel 1 (
+    echo ERROR: Could not locate the repository root.
+    exit /b 1
+)
 
 where uv >nul 2>nul
 if errorlevel 1 (

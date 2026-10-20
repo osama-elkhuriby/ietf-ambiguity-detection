@@ -1,5 +1,9 @@
 # Recall Improvement Study V3 — Manual GPU Execution Guide
 
+This guide is maintained under `docs/gpu/` to keep operational documentation
+separate from the repository root. Run its commands from the repository root as
+described below.
+
 This package runs exactly one immutable training cell per command. It has no unattended runner, no stage loop, no retry path, and no background-job support. Run commands only in the order below, and start the next command only after you have verified the previous cell completed successfully.
 
 ## Frozen identities
