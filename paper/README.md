@@ -1,6 +1,8 @@
-# IEEE paper source
+# Master's project report source
 
-`main.tex` is the current IEEE conference-format manuscript. It aims to tell the
+`main.tex` is the current single-column master's project report. It follows the
+required title-page, front-matter, seven-chapter, IEEE-reference, and appendix
+structure. It aims to tell the
 project-wide research story: literature review; corpus, parsing, and revision alignment;
 annotation workflow, disagreement, and target sensitivity; the complete matched
 classical/heuristic grid; earlier LOFO, embedding, context, and revision-signal studies;
@@ -15,7 +17,9 @@ selected from historical OOF errors and the results are explicitly qualified for
 selection bias. The repair analysis validates and reuses parent-run predictions rather
 than retraining. Classical ML and earlier Qwen/hybrid studies remain separate
 evaluations on their own label snapshots and protocols; their results are not presented
-as a common-data leaderboard. TCP, sealed DNS, and blocked annotation v2 remain
+as a common-data leaderboard. The latest 2,425-row classical rerun includes TCP and
+DNS, so those families are no longer untouched project-level holdouts even though the
+transformer and Qwen development studies exclude them. Blocked annotation v2 remains
 unreported. Local-only and `.gitignore`-excluded results are included where aggregate
 evidence is available.
 
@@ -23,9 +27,8 @@ Evaluation tracks remain separate when snapshots, cohorts, labels, and protocols
 differ. The paper reports negative findings and protocol limitations without turning
 the results into one cross-cohort leaderboard.
 
-`references.bib` contains the bibliography and citations. `main.pdf` is an older
-preview and does **not** reflect the current source; rebuild it before distribution
-or submission.
+`references.bib` contains the bibliography and citations. Rebuild `main.pdf`
+after changing the source or generated figures and before distribution.
 
 ## Presentation
 
@@ -36,7 +39,8 @@ for editing and regeneration instructions.
 
 ## Build
 
-Use a TeX distribution containing `IEEEtran`, then run:
+Use a TeX distribution containing the standard `report` class and the
+`IEEEtran.bst` bibliography style, then run:
 
 ```text
 pdflatex main
@@ -56,8 +60,9 @@ Run these commands from this directory so BibTeX finds `references.bib`.
 ## Overleaf
 
 Upload `main.tex`, `references.bib`, and the complete `figures/` folder, preserving
-the relative paths. Select `main.tex` as the main document. Do not upload or rely on
-the stale `main.pdf` preview. The paper incorporates aggregated evidence from
+the relative paths. Select `main.tex` as the main document. The tracked `main.pdf` is
+the rebuilt report preview, but it should be rebuilt again after any source change.
+The paper incorporates aggregated evidence from
 local-only and ignored experiment outputs, but private annotations, row-level
 predictions, model weights, and complete run directories are not embedded in the
 submission bundle. Their absence limits independent reproduction from a fresh clone.
@@ -67,9 +72,10 @@ Figures included by the manuscript:
 - `project_pipeline.png`
 - `project_cohorts.png`
 - `tls_alignment_counts.png`
-- `ml_heuristic_ap.png`
-- `ml_model_metric_comparison.jpg`
-- `classical_pr_curves.png`
+- `classical_ap_summary.png`
+- `ml_model_metric_comparison_current.png`
+- `classical_pr_curves_current.png`
+- `revision_feature_ablation.png`
 - `classical_lofo.png`
 - `language_model_ap.png`
 - `reviewed_label_transformer_comparison.png`
@@ -99,16 +105,19 @@ This writes PNG and PDF versions to `paper/figures/`. The chart cohort excludes
 records whose labels conflict with the current annotation snapshot. The plots are
 exploratory development summaries, not independent-test results.
 
+The report-specific revision-ablation figure is regenerated from committed aggregate
+metrics with `python paper/generate_report_figures.py` from the repository root.
+
 ## Author action required before submission
 
-1. Select the actual IEEE venue and apply its page limit, copyright notice, anonymity,
-   and artifact-availability rules. Use the anonymous author block if double-blind
-   review is required.
+1. Confirm the School of Computing submission template, declaration requirements,
+   cover-page wording, and any required signatures before final deposit.
 2. Confirm author order, spelling, affiliations, acknowledgments, and consent.
-3. Do not rewrite the development results as final-test performance. TCP and DNS were
-   not opened in the reported experiment.
-4. If those evaluations are later authorized and completed, update the abstract,
-   Results, Threats to Validity, Conclusion, and all associated tables together.
+3. Do not rewrite the development results as final-test performance. The latest
+   classical rerun has already consumed TCP and DNS; reserve new families or later
+   time-sliced drafts for any future final evaluation.
+4. If a new independent evaluation is completed, update the abstract, Results,
+   Threats to Validity, Conclusion, and all associated tables together.
 5. Obtain an independently adjudicated expert sample before making accuracy or
    deployment claims. The current labels are an operational human/AI-assisted
    reference.
@@ -130,9 +139,12 @@ The three methods in the updated reviewed-label DeBERTa comparison share the sam
 labels and does not constitute an independent population sample.
 
 The classical precision--recall grid and best-model metric summary were regenerated
-from the current matched result artifacts. The classical table reports learned-model
-threshold metrics at 0.5 and the fixed heuristic at 0.4. Revision-feature changes are
-small and mixed. The latest updated-label DeBERTa analysis is complete, but the 100
+from the current matched result artifacts. The classical table reports every model at
+its recorded 0.5 threshold. Revision features slightly reduce AP for all three
+classifiers in the latest rerun, while thresholded F2 is unchanged or improves. The
+older `results/revision_features/summary.md` describes a superseded 2,406-row run and
+must not be used as the current aggregate. The latest updated-label DeBERTa analysis
+is complete, but the 100
 human-confirmed records were selected from historical OOF errors. The analysis-repair
 step validates and reuses parent experiment predictions, so it does not constitute an
 independent rerun. Obtain a separately sampled expert-adjudicated test set before making

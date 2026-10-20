@@ -21,11 +21,13 @@ From the repository root, with Python and `python-pptx` installed:
 python paper/presentation/generate_presentation.py
 ```
 
-The deck's updated reviewed-label DeBERTa slide reports the three methods evaluated
-on the same 2,143-row, nine-family cohort. Classical and Qwen/hybrid results are
-shown as separate studies rather than as a shared leaderboard; the 100 reviewed
-labels were selected from historical OOF errors, and the analysis-repair run reuses
-parent predictions. The complete source evidence and limitations are documented in
+The deck reflects the current report. It includes the latest 2,425-row classical
+rerun (best AP 0.3584 with engineered features plus TF–IDF and Linear SVM), the
+matched revision-feature ablation, the annotation-disagreement audit, and the
+updated 2,143-row reviewed-label DeBERTa study. Classical, Qwen/hybrid, and
+transformer results remain separate studies rather than a shared leaderboard. The
+deck also records that TCP and DNS entered the latest classical rerun and are no
+longer untouched project-level holdouts. The complete evidence and limitations are documented in
 [`../main.tex`](../main.tex), [`../../README.md`](../../README.md), and
 [`../../models/hybrid/README.md`](../../models/hybrid/README.md).
 

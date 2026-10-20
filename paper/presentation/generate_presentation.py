@@ -106,7 +106,7 @@ def add_circle(slide, x, y, d, fill, text, size=18, color=WHITE):
 
 
 def add_header(slide, title, section=None):
-    add_text(slide, 0.62, 0.34, 11.9, 0.48, title, size=27, color=NAVY, bold=True)
+    add_text(slide, 0.62, 0.34, 11.9, 0.48, title, size=25, color=NAVY, bold=True)
     add_line(slide, 0.66, 0.96, 12.66, 0.96, color=BLUE, width=1.6)
     if section:
         add_text(slide, 10.6, 0.1, 2.0, 0.22, section.upper(), size=9, color=TEAL,
@@ -115,7 +115,8 @@ def add_header(slide, title, section=None):
 
 def add_footer(slide, page, source=""):
     if source:
-        add_text(slide, 0.66, 7.14, 10.8, 0.18, source, size=8.5, color=MUTED)
+        add_text(slide, 0.66, 7.08, 10.8, 0.24, source, size=7.5, color=MUTED,
+                 valign=MSO_ANCHOR.MIDDLE, margin=0)
     add_text(slide, 11.75, 7.1, 0.85, 0.22, f"{page:02d}  |  18", size=9,
              color=MUTED, align=PP_ALIGN.RIGHT)
 
@@ -126,8 +127,6 @@ def new_slide(prs, title=None, section=None, source="", page=None):
     slide.background.fill.fore_color.rgb = WHITE
     if title:
         add_header(slide, title, section)
-    if page is not None:
-        add_footer(slide, page, source)
     return slide
 
 
@@ -290,7 +289,7 @@ def build_deck():
     add_metric(slide, 4.9, 1.35, 3.55, 1.4, "12", "RFCs")
     add_metric(slide, 8.85, 1.35, 3.55, 1.4, "31", "verified technical errata")
     studies = [
-        ("CLASSICAL ML", "2,406 clauses · 11 families", "158 positives · prevalence 6.57%", BLUE),
+        ("CLASSICAL ML", "2,425 clauses · 11 families", "160 positives · prevalence 6.60%", BLUE),
         ("QWEN / HYBRID", "2,142 clauses · 9 families", "126 positives · prevalence 5.88%", ORANGE),
         ("LATEST DEBERTA", "2,143 clauses · 9 families", "138 positives · prevalence 6.44%", TEAL),
     ]
@@ -304,7 +303,7 @@ def build_deck():
                  color=NAVY, bold=True)
         add_text(slide, 7.8, y + 0.15, 3.95, 0.3, detail, size=14, color=INK)
     add_text(slide, 1.2, 6.14, 10.95, 0.42,
-             "Different label snapshots and eligibility rules: only the three latest DeBERTa methods share one cohort.",
+             "Different label snapshots and protocols: scores across these rows are not a common leaderboard.",
              size=16, color=RED, bold=True, align=PP_ALIGN.CENTER)
     add_footer(slide, 5, "Source: paper/main.tex; study-specific cohorts and label snapshots.")
 
@@ -335,34 +334,36 @@ def build_deck():
     add_text(slide, 1.16, 4.89, 11.05, 0.42,
              "Prediction-time boundary: no later draft, final RFC, erratum, label, vote, rationale, or split metadata as model input.",
              size=16, color=RED, bold=True, align=PP_ALIGN.CENTER)
-    add_text(slide, 1.2, 5.93, 10.9, 0.48,
-             "Reserved TCP transfer validation and sealed DNS final testing remain unopened.",
-             size=17, color=NAVY, bold=True, align=PP_ALIGN.CENTER)
+    add_text(slide, 1.2, 5.88, 10.9, 0.58,
+             "The latest all-family classical rerun includes TCP and DNS, so the proposal's project-level holdouts are no longer untouched.",
+             size=16, color=NAVY, bold=True, align=PP_ALIGN.CENTER)
     add_footer(slide, 6, "Source: paper/figures/project_pipeline.png and paper/main.tex.")
 
-    # 7. Labels
+    # 7. Labels and disagreement
     slide = new_slide(prs, "The label is an operational reference—not a definition of truth",
                       "Measurement", page=7)
-    add_box(slide, 0.95, 1.45, 5.4, 3.78, fill=PALE_BLUE, outline=PALE_BLUE)
-    add_text(slide, 1.35, 1.78, 4.6, 0.48, "What the project has", size=21,
+    add_metric(slide, 0.95, 1.45, 3.45, 1.42, "95.6%",
+               "of positive labels were 2-to-1 votes", color=RED)
+    add_metric(slide, 4.94, 1.45, 3.45, 1.42, "20 / 455",
+               "positive labels were unanimous", color=ORANGE)
+    add_metric(slide, 8.93, 1.45, 3.45, 1.42, "0.017-0.113",
+               "pairwise Cohen's kappa", color=BLUE)
+    add_box(slide, 0.95, 3.35, 5.45, 1.86, fill=PALE_BLUE, outline=PALE_BLUE)
+    add_text(slide, 1.28, 3.65, 4.8, 0.4, "What the labels support", size=19,
              color=NAVY, bold=True)
-    add_bullet_list(slide, 1.35, 2.5, 4.55, 2.2, [
-        "A repeatable annotation workflow",
-        "Provenance and consensus rules",
-        "AI-assisted reference labels",
-    ], size=16, gap=0.72)
-    add_box(slide, 6.95, 1.45, 5.4, 3.78, fill=PALE_ORANGE, outline=PALE_ORANGE)
-    add_text(slide, 7.35, 1.78, 4.6, 0.48, "What remains missing", size=21,
+    add_text(slide, 1.28, 4.18, 4.75, 0.72,
+             "A repeatable, provenance-recorded operational reference for development experiments.",
+             size=15, color=INK)
+    add_box(slide, 6.92, 3.35, 5.45, 1.86, fill=PALE_ORANGE, outline=PALE_ORANGE)
+    add_text(slide, 7.25, 3.65, 4.8, 0.4, "What they do not establish", size=19,
              color=NAVY, bold=True)
-    add_bullet_list(slide, 7.35, 2.5, 4.55, 2.25, [
-        "Independent expert double annotation",
-        "Adjudication against the full rubric",
-        "A public, sealed gold test set",
-    ], size=16, gap=0.72)
-    add_text(slide, 1.25, 5.72, 10.9, 0.6,
-             "Therefore, model scores measure agreement with this operational reference—not ambiguity accuracy.",
-             size=19, color=RED, bold=True, align=PP_ALIGN.CENTER)
-    add_footer(slide, 7, "Source: paper/main.tex, Construct Validity and Annotation sections.")
+    add_text(slide, 7.25, 4.18, 4.75, 0.72,
+             "Independent expert truth, human reliability, or population-level ambiguity accuracy.",
+             size=15, color=INK)
+    add_text(slide, 1.25, 5.78, 10.9, 0.62,
+             "Scores measure agreement with a noisy, model-dependent reference; they do not identify which annotator is correct.",
+             size=18, color=RED, bold=True, align=PP_ALIGN.CENTER)
+    add_footer(slide, 7, "Source: paper/main.tex, Annotation Disagreement Audit and Construct Validity.")
 
     # 8. Model families
     slide = new_slide(prs, "The project tests multiple model families—not one magic model",
@@ -398,10 +399,10 @@ def build_deck():
     add_box(slide, 6.75, 1.5, 5.55, 3.75, fill=PALE, outline=LINE)
     add_text(slide, 7.12, 1.85, 4.85, 0.45, "Latest DeBERTa study", size=21,
              color=NAVY, bold=True, align=PP_ALIGN.CENTER)
-    add_metric(slide, 7.1, 2.57, 2.1, 1.55, "5-fold", "family-isolated OOF", color=TEAL)
-    add_metric(slide, 9.82, 2.57, 2.1, 1.55, "1 seed", "run-to-run uncertainty remains", color=ORANGE)
+    add_metric(slide, 7.1, 2.57, 2.1, 1.55, "5-fold", "transformer family OOF", color=TEAL)
+    add_metric(slide, 9.82, 2.57, 2.1, 1.55, "3-fold", "classical family OOF", color=ORANGE)
     add_text(slide, 7.06, 4.53, 4.95, 0.4,
-             "Development evaluation—not a sealed test.", size=16, color=RED,
+             "Protocols differ; the newest transformer also uses one seed.", size=15, color=RED,
              bold=True, align=PP_ALIGN.CENTER)
     add_text(slide, 1.12, 5.95, 11.0, 0.56,
              "No single score answers whether the system transfers to a new protocol family.",
@@ -412,26 +413,27 @@ def build_deck():
     slide = new_slide(prs, "Classical text features give the strongest result in their own cohort",
                       "Results · classical ML", page=10)
     add_text(slide, 0.95, 1.25, 6.1, 0.52,
-             "2,406 clauses  ·  158 positives  ·  11 families", size=18,
+             "2,425 clauses  ·  160 positives  ·  11 families", size=18,
              color=MUTED, bold=True)
     rows = [
-        ("Logistic: engineered + TF–IDF", 0.5225, BLUE),
-        ("Linear SVM: engineered + TF–IDF", 0.5109, TEAL),
-        ("Fixed engineered heuristic", 0.1049, ORANGE),
-        ("Positive prevalence", 0.0657, MUTED),
+        ("Linear SVM: engineered + TF–IDF", 0.3584, TEAL),
+        ("Random forest: engineered + TF–IDF", 0.3363, NAVY),
+        ("Logistic: engineered + TF–IDF", 0.3265, BLUE),
+        ("Fixed engineered heuristic", 0.0873, ORANGE),
+        ("Positive prevalence", 0.0660, MUTED),
     ]
-    add_bar_chart(slide, 1.05, 2.15, 8.5, rows, max_value=0.58, baseline=0.0657,
-                  row_h=0.73, label_w=3.7, value_fmt="{:.4f}", highlight=rows[0][0])
+    add_bar_chart(slide, 0.95, 1.98, 8.8, rows, max_value=0.40, baseline=0.0660,
+                  row_h=0.62, label_w=3.9, value_fmt="{:.4f}", highlight=rows[0][0])
     add_box(slide, 9.8, 2.0, 2.55, 2.85, fill=PALE_BLUE, outline=PALE_BLUE)
     add_text(slide, 10.02, 2.3, 2.1, 0.5, "Key signal", size=17, color=TEAL,
              bold=True, align=PP_ALIGN.CENTER)
-    add_text(slide, 10.0, 2.95, 2.15, 1.45,
-             "Word-level patterns plus engineered features ranked positives above simple rules.",
-             size=17, color=NAVY, bold=True, align=PP_ALIGN.CENTER,
+    add_text(slide, 10.0, 2.84, 2.15, 1.55,
+             "Lexical plus engineered features lead this matched cohort; thresholds trade precision for recall.",
+             size=16, color=NAVY, bold=True, align=PP_ALIGN.CENTER,
              valign=MSO_ANCHOR.MIDDLE)
-    add_text(slide, 1.1, 5.75, 11.1, 0.58,
-             "This is not directly comparable with the transformer or Qwen cohorts: labels and eligibility differ.",
-             size=17, color=RED, bold=True, align=PP_ALIGN.CENTER)
+    add_text(slide, 1.1, 5.68, 11.1, 0.7,
+             "Logistic recall is 0.706 at precision 0.190; SVM recall is 0.313 at precision 0.455. TCP and DNS are included, so this is not untouched holdout evidence.",
+             size=15, color=RED, bold=True, align=PP_ALIGN.CENTER)
     add_footer(slide, 10, "Source: paper/main.tex, Table classical; matched 3-fold family-grouped OOF.")
 
     # 11. DeBERTa result
@@ -461,58 +463,69 @@ def build_deck():
              size=14, color=RED, bold=True, align=PP_ALIGN.CENTER)
     add_footer(slide, 11, "Source: updated reviewed-label DeBERTa outputs; paper/main.tex. OOF development results.")
 
-    # 12. Hybrid
-    slide = new_slide(prs, "The three-model hybrid adds only a small AP increment",
-                      "Results · hybrid", page=12)
-    add_text(slide, 0.95, 1.25, 11.5, 0.48,
-             "Label-compatible subset: 2,097 clauses  ·  116 positives  ·  equal-weight average of within-cohort percentile ranks",
-             size=15, color=MUTED, bold=True)
+    # 12. Revision-feature ablation
+    slide = new_slide(prs, "Revision history did not improve ranking AP in the matched rerun",
+                      "Results · revision ablation", page=12)
+    add_text(slide, 0.95, 1.23, 11.5, 0.48,
+             "Same 2,425 rows, grouped folds, engineered features, TF–IDF, and classifier settings; only 12 past-only revision features change",
+             size=14, color=MUTED, bold=True)
     rows = [
-        ("ML logistic regression", 0.4567, BLUE),
-        ("V4 semantic ensemble", 0.3373, ORANGE),
-        ("DeBERTa-v3-base pilot", 0.2517, TEAL),
-        ("V4 + ML", 0.4582, RGBColor(112, 153, 191)),
-        ("V4 + DeBERTa + ML", 0.4619, NAVY),
+        ("Logistic baseline", 0.3265, BLUE),
+        ("Logistic + revision", 0.3185, RGBColor(126, 169, 207)),
+        ("SVM baseline", 0.3584, TEAL),
+        ("SVM + revision", 0.3572, RGBColor(118, 185, 179)),
+        ("Random forest baseline", 0.3363, NAVY),
+        ("Random forest + revision", 0.3348, RGBColor(102, 125, 148)),
     ]
-    add_bar_chart(slide, 0.95, 2.0, 7.9, rows, max_value=0.53, row_h=0.59,
-                  label_w=2.9, value_fmt="{:.4f}", highlight="V4 + DeBERTa + ML")
-    add_box(slide, 9.1, 2.0, 3.2, 2.78, fill=PALE_ORANGE, outline=PALE_ORANGE)
-    add_text(slide, 9.35, 2.3, 2.7, 0.55, "+0.0052 AP", size=27,
-             color=ORANGE, bold=True, align=PP_ALIGN.CENTER)
-    add_text(slide, 9.4, 2.98, 2.6, 1.1,
-             "vs. ML alone on this subset. A modest exploratory difference—not evidence of a reliable gain.",
-             size=16, color=INK, align=PP_ALIGN.CENTER)
-    add_text(slide, 1.02, 5.35, 11.15, 0.78,
-             "Caveat: the ML artifact used earlier labels (17 rows missing; 28 conflicts excluded). V4/hybrid design were developed on this cohort.",
-             size=15, color=RED, bold=True, align=PP_ALIGN.CENTER)
-    add_footer(slide, 12, "Source: README.md and models/hybrid/README.md. Not independent-test results.")
+    add_bar_chart(slide, 0.9, 1.95, 8.2, rows, max_value=0.40, baseline=0.0660,
+                  row_h=0.55, label_w=3.0, value_fmt="{:.4f}")
+    add_box(slide, 9.35, 1.86, 2.95, 3.38, fill=PALE_ORANGE, outline=PALE_ORANGE)
+    add_text(slide, 9.62, 2.13, 2.42, 0.4, "AP deltas", size=18,
+             color=NAVY, bold=True, align=PP_ALIGN.CENTER)
+    add_text(slide, 9.62, 2.75, 2.42, 1.15,
+             "Logistic  -0.0081\nSVM       -0.0012\nForest    -0.0015",
+             size=17, color=RED, bold=True, align=PP_ALIGN.CENTER)
+    add_text(slide, 9.55, 4.10, 2.56, 0.72,
+             "F2: unchanged for logistic; small gains for SVM and forest.",
+             size=13, color=INK, align=PP_ALIGN.CENTER)
+    add_text(slide, 1.0, 5.72, 11.25, 0.7,
+             "RQ2 is only partly answered: cross-reference features were not isolated and no calibration metrics were recorded.",
+             size=16, color=RED, bold=True, align=PP_ALIGN.CENTER)
+    add_footer(slide, 12, "Source: paper/main.tex, Revision-Feature Implementation and Feature Comparisons.")
 
-    # 13. Interpretation
-    slide = new_slide(prs, "What can we responsibly conclude from the model studies?",
+    # 13. Research-question status
+    slide = new_slide(prs, "The report answers some questions and leaves two open",
                       "Synthesis", page=13)
-    add_card(slide, 0.88, 1.55, 3.8, 3.55, "1  There is ranking signal",
-             "Text and engineered features can prioritize some operationally labeled clauses above prevalence.",
-             fill=PALE_BLUE, accent=BLUE, title_size=18, body_size=17)
-    add_card(slide, 4.78, 1.55, 3.8, 3.55, "2  Complexity is not a guarantee",
-             "The tested embeddings and revision-only features were not consistently stronger; hybrid gains are small.",
-             fill=PALE_TEAL, accent=TEAL, title_size=18, body_size=17)
-    add_card(slide, 8.68, 1.55, 3.8, 3.55, "3  Cohorts matter",
-             "Scores answer different questions when labels, candidate rules, and protocols differ.",
-             fill=PALE_ORANGE, accent=ORANGE, title_size=18, body_size=17)
-    add_text(slide, 1.0, 5.75, 11.3, 0.62,
-             "A useful result is a disciplined shortlist—not a claim that ambiguity has been solved.",
-             size=20, color=NAVY, bold=True, align=PP_ALIGN.CENTER)
-    add_footer(slide, 13, "Source: results/final_summary/conclusions.md; project studies remain cohort-specific.")
+    rq_rows = [
+        ("RQ1", "Development feasibility", "Supported with qualifications", TEAL),
+        ("RQ2", "Revision / cross-reference / calibration", "Partly answered; AP hypothesis not supported", ORANGE),
+        ("RQ3", "Model-family comparison", "Effectiveness/workload only; separate protocols", BLUE),
+        ("RQ4", "Conditional LLM routing", "Not tested; calls and cost were not reduced", RED),
+        ("RQ5", "Explanation quality", "Not tested with expert faithfulness review", RED),
+    ]
+    for i, (rq, question, status, accent) in enumerate(rq_rows):
+        y = 1.30 + i * 0.91
+        add_box(slide, 0.95, y, 11.4, 0.72, fill=PALE if i % 2 == 0 else WHITE,
+                outline=LINE)
+        add_text(slide, 1.18, y + 0.17, 0.72, 0.32, rq, size=16,
+                 color=accent, bold=True)
+        add_text(slide, 2.02, y + 0.15, 4.0, 0.36, question, size=15,
+                 color=NAVY, bold=True)
+        add_text(slide, 6.2, y + 0.15, 5.7, 0.36, status, size=14.5, color=INK)
+    add_text(slide, 1.05, 6.05, 11.15, 0.47,
+             "Qwen 8-shot AP 0.1960; fitted Qwen/TF–IDF/MiniLM V4 AP 0.3252 on their own 2,142-row cohort.",
+             size=15, color=MUTED, bold=True, align=PP_ALIGN.CENTER)
+    add_footer(slide, 13, "Source: paper/main.tex, Answers to the Proposal Research Questions.")
 
     # 14. Limitations
     slide = new_slide(prs, "The main limitations are scientific—not just engineering",
                       "Validity", page=14)
     limitations = [
-        ("Construct", "AI-assisted labels; no independent adjudicated expert gold."),
+        ("Construct", "Low-agreement AI-assisted labels; no adjudicated expert gold."),
         ("Sampling", "Enriched candidates; scores do not represent every IETF clause."),
         ("Generalization", "Nine families in latest transformer study; one training seed."),
         ("Model selection", "Some comparisons are adaptive development evidence."),
-        ("External test", "Reserved TCP and sealed DNS have not been evaluated."),
+        ("External test", "TCP and DNS entered the latest classical rerun; no untouched project holdout remains."),
     ]
     for i, (label, body) in enumerate(limitations):
         y = 1.35 + i * 0.89
@@ -568,9 +581,9 @@ def build_deck():
                       "Next steps", page=16)
     next_steps = [
         ("01", "Build an expert reference", "Stratified sample; independent double annotation and adjudication.", BLUE),
-        ("02", "Freeze the comparison", "Retrain classical and Qwen/hybrid on common labels and folds; repeat finalists across seeds.", TEAL),
-        ("03", "Lock the protocol", "Pre-specify model, threshold, code snapshot, and analysis plan.", ORANGE),
-        ("04", "Test transfer once", "Evaluate reserved TCP; then open DNS only after the decision rule is fixed.", RED),
+        ("02", "Stabilize estimates", "Repeat selected transformers across seeds; compare common labels and folds.", TEAL),
+        ("03", "Finish open RQs", "Implement conditional LLM routing; measure calls, latency, cost, calibration, and explanations.", ORANGE),
+        ("04", "Create a new holdout", "Pre-register unseen families or later time-sliced revisions for one final test.", RED),
     ]
     for i, (number, title, body, accent) in enumerate(next_steps):
         x = 0.9 + i * 3.08
@@ -580,7 +593,7 @@ def build_deck():
                  color=NAVY, bold=True)
         add_text(slide, x + 0.22, 3.68, 2.28, 1.05, body, size=14, color=INK)
     add_text(slide, 1.15, 5.75, 10.95, 0.58,
-             "Do not spend the sealed test set to tune the system. Keep it a final transfer check.",
+             "The next evaluation must be genuinely untouched and used once after the model and analysis plan are frozen.",
              size=18, color=RED, bold=True, align=PP_ALIGN.CENTER)
     add_footer(slide, 16, "Source: paper/README.md, author action items; results/final_summary/conclusions.md.")
 
@@ -595,7 +608,7 @@ def build_deck():
     add_bullet_list(slide, 1.55, 3.22, 10.2, 2.5, [
         "Revision-aware corpus and explicit temporal information boundaries",
         "Family-aware evaluation across classical ML, transformers, and local LLM hybrids",
-        "Honest reporting of uncertainty, label limits, and unopened external tests",
+        "Honest reporting of uncertainty, label limits, and the consumed project holdouts",
     ], size=18, gap=0.83)
     add_text(slide, 1.2, 6.15, 10.9, 0.42,
              "The next milestone is independent evidence—not a more complicated model.",
