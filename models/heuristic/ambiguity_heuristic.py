@@ -109,7 +109,12 @@ def score_ambiguity(features: pd.DataFrame) -> pd.Series:
     )
 
 
-def evaluate(input_path: Path, output_dir: Path) -> dict[str, Any]:
+def evaluate(
+    input_path: Path,
+    output_dir: Path,
+    *,
+    fold_column: str | None = None,
+) -> dict[str, Any]:
     frame = pd.read_csv(
         input_path,
         encoding="utf-8-sig",
@@ -153,17 +158,49 @@ def evaluate(input_path: Path, output_dir: Path) -> dict[str, Any]:
             f"{N_SPLITS} total and positive groups; found {group_count} and "
             f"{positive_group_count}"
         )
-    splitter = StratifiedGroupKFold(
-        n_splits=N_SPLITS,
-        shuffle=True,
-        random_state=42,
-    )
+    if fold_column is not None:
+        if fold_column not in frame.columns:
+            raise ValueError(f"Input is missing requested fold column: {fold_column}")
+        try:
+            supplied_folds = frame[fold_column].astype(int).to_numpy()
+        except ValueError as exc:
+            raise ValueError(f"{fold_column} must contain integer fold IDs") from exc
+        fold_ids = sorted(np.unique(supplied_folds).tolist())
+        if len(fold_ids) < 2:
+            raise ValueError("Predefined validation requires at least two folds")
+        if fold_ids != list(range(1, len(fold_ids) + 1)):
+            raise ValueError(
+                f"{fold_column} must use consecutive fold IDs starting at 1; "
+                f"found {fold_ids}"
+            )
+        for group in np.unique(groups):
+            if np.unique(supplied_folds[groups == group]).size != 1:
+                raise RuntimeError(
+                    f"Predefined folds split validation group {group!r} across folds"
+                )
+        splits = [
+            (
+                np.flatnonzero(supplied_folds != fold),
+                np.flatnonzero(supplied_folds == fold),
+            )
+            for fold in fold_ids
+        ]
+        validation_strategy = f"predefined family folds from input column {fold_column}"
+        validation_random_state: int | None = None
+    else:
+        splitter = StratifiedGroupKFold(
+            n_splits=N_SPLITS,
+            shuffle=True,
+            random_state=42,
+        )
+        splits = list(splitter.split(frame, labels, groups))
+        validation_strategy = (
+            "3-fold StratifiedGroupKFold; draft revisions grouped by family"
+        )
+        validation_random_state = 42
     fold_metrics: list[dict[str, int | float]] = []
     fold_numbers = np.zeros(len(frame), dtype=np.int8)
-    for fold, (train_indices, test_indices) in enumerate(
-        splitter.split(frame, labels, groups),
-        start=1,
-    ):
+    for fold, (train_indices, test_indices) in enumerate(splits, start=1):
         if (
             np.unique(labels[train_indices]).size != 2
             or np.unique(labels[test_indices]).size != 2
@@ -197,8 +234,8 @@ def evaluate(input_path: Path, output_dir: Path) -> dict[str, Any]:
         "positive_prevalence": float(labels.mean()),
         "draft_families": int(family_ids.nunique()),
         "validation": {
-            "strategy": "3-fold StratifiedGroupKFold; draft revisions grouped by family",
-            "random_state": 42,
+            "strategy": validation_strategy,
+            "random_state": validation_random_state,
             "prediction_threshold": PREDICTION_THRESHOLD,
             "mean_fold_pr_auc": float(
                 np.mean([fold["pr_auc"] for fold in fold_metrics])
@@ -251,6 +288,7 @@ def evaluate(input_path: Path, output_dir: Path) -> dict[str, Any]:
         "threshold": PREDICTION_THRESHOLD,
         "metrics_file": "metrics.json",
         "predictions_file": "predictions.csv",
+        "fold_column": fold_column,
     }
     (output_dir / "manifest.json").write_text(
         json.dumps(manifest, indent=2, sort_keys=True) + "\n",
@@ -266,8 +304,15 @@ def main() -> None:
     )
     parser.add_argument("--input", type=Path, default=DEFAULT_INPUT)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT)
+    parser.add_argument(
+        "--fold-column",
+        help=(
+            "Use integer fold IDs from this input column instead of constructing "
+            "the historical 3-fold split. Groups must belong to exactly one fold."
+        ),
+    )
     args = parser.parse_args()
-    evaluate(args.input, args.output_dir)
+    evaluate(args.input, args.output_dir, fold_column=args.fold_column)
 
 
 if __name__ == "__main__":

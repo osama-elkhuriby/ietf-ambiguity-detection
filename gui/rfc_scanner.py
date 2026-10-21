@@ -1,36 +1,48 @@
-"""RFC parsing and Logistic Regression ranking for the local review GUI."""
+"""RFC parsing and transformer ensemble classification for the local review GUI."""
 
 from __future__ import annotations
 
+import hashlib
 import json
-import re
 import tempfile
-import warnings
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-import joblib
 import numpy as np
 import pandas as pd
-import sklearn
-from sklearn.exceptions import InconsistentVersionWarning
 
 from alignment.clause_segmentation import segment_document
 from alignment.segmentation import parse_document
-from models.classical.annotation_logreg_experiment2 import (
-    TRAINING_FEATURE_COLUMNS,
-    _transform_components,
-    extract_v2_features,
+from experiments.transformer_final.final_annotation_human_reviewed_100_v1.analysis import (
+    empirical_cdf,
+    select_precision_threshold,
 )
-from models.classical.feature_pipeline import sha256_file
+from models.transformer_final.tokenization import encode_example
 from models.transformer.dataset import ROOT
 
-MODEL_DIRECTORY = ROOT / "results/ML/v2_engineered_tfidf"
-MODEL_PATH = MODEL_DIRECTORY / "final_model.joblib"
+EXPERIMENT_DIRECTORY = (
+    ROOT
+    / "experiments/transformer_final/final_annotation_human_reviewed_100_v1"
+)
 MAX_RFC_BYTES = 5_000_000
 MAX_CANDIDATES = 5_000
 MAX_RESPONSE_ROWS = MAX_CANDIDATES
+OUTER_FOLD_COUNT = 5
+INNER_FOLD_COUNT = 3
+MINIMUM_PRECISION_TARGET = 0.30
+VOTE_THRESHOLD = 3
+INFERENCE_BATCH_SIZE = 16
+
+
+@dataclass(frozen=True)
+class FoldClassifier:
+    fold: int
+    focal_model: Any
+    partial4_model: Any
+    focal_reference: np.ndarray
+    partial4_reference: np.ndarray
+    threshold: float
 
 
 @dataclass(frozen=True)
@@ -39,78 +51,244 @@ class LoadedClassifier:
     metadata: dict[str, Any]
 
 
-def load_classifier(model_path: Path = MODEL_PATH) -> LoadedClassifier:
-    """Load and validate the repository's locally trained classifier artifact."""
-    if not model_path.is_file():
-        raise FileNotFoundError(
-            f"Saved Logistic Regression model not found: {model_path}. "
-            "Restore the local results/ML/v2_engineered_tfidf artifact first."
+def _read_inner_predictions(
+    experiment_directory: Path, method: str, outer_fold: int
+) -> pd.DataFrame:
+    predictions: list[pd.DataFrame] = []
+    for inner_fold in range(1, INNER_FOLD_COUNT + 1):
+        parent = (
+            experiment_directory
+            / "runs"
+            / "inner"
+            / method
+            / f"outer_{outer_fold}"
+            / f"inner_{inner_fold}"
         )
-    manifest_path = model_path.parent / "manifest.json"
-    metrics_path = model_path.parent / "metrics.json"
-    if not manifest_path.is_file() or not metrics_path.is_file():
-        raise FileNotFoundError(
-            f"Model provenance files are missing beside {model_path}"
-        )
-    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-    metrics = json.loads(metrics_path.read_text(encoding="utf-8"))
-    if manifest.get("feature_set") != "engineered_tfidf":
-        raise ValueError("Saved model is not the engineered + TF-IDF classifier")
-    if manifest.get("feature_columns") != list(TRAINING_FEATURE_COLUMNS):
-        raise ValueError("Model feature schema does not match the current pipeline")
-    if manifest.get("validation_groups") != 11 or metrics.get("rows") != 2406:
-        raise ValueError("Model cohort metadata does not match the documented study")
+        paths = list(parent.glob("*/predictions/held_out_predictions.csv"))
+        if len(paths) != 1:
+            raise FileNotFoundError(
+                f"Expected one {method} inner-fold prediction file for "
+                f"outer fold {outer_fold}, inner fold {inner_fold}; found {len(paths)}"
+            )
+        frame = pd.read_csv(paths[0], dtype={"record_id": str})
+        required = {"record_id", "label", "probability_yes"}
+        if not required.issubset(frame.columns):
+            raise ValueError(f"Unexpected prediction schema in {paths[0]}")
+        if frame["record_id"].duplicated().any():
+            raise ValueError(f"Duplicate inner predictions in {paths[0]}")
+        predictions.append(frame[["record_id", "label", "probability_yes"]])
 
-    with warnings.catch_warnings(record=True) as captured:
-        warnings.simplefilter("always", InconsistentVersionWarning)
-        components = joblib.load(model_path)
-    compatibility_warnings = [
-        str(item.message)
-        for item in captured
-        if issubclass(item.category, InconsistentVersionWarning)
-    ]
-    artifact_versions = sorted(
-        {
-            match.group(1)
-            for warning in compatibility_warnings
-            if (match := re.search(r"from version ([\d.]+)", warning))
-        }
-    )
-    required = {"vectorizer", "numerical_scaler", "classifier", "feature_mode"}
-    if not isinstance(components, dict) or not required.issubset(components):
-        raise ValueError("Saved model artifact has an unexpected structure")
-    classifier = components["classifier"]
-    if components["feature_mode"] != "engineered_tfidf":
-        raise ValueError("Saved classifier feature mode does not match its manifest")
-    if list(classifier.classes_) != [0, 1]:
-        raise ValueError("Saved classifier does not expose binary classes [0, 1]")
-    if classifier.n_features_in_ != (
-        len(components["vectorizer"].vocabulary_) + len(TRAINING_FEATURE_COLUMNS)
+    combined = pd.concat(predictions, ignore_index=True)
+    if combined["record_id"].duplicated().any():
+        raise ValueError(
+            f"Inner OOF predictions overlap for {method}, outer fold {outer_fold}"
+        )
+    probabilities = combined["probability_yes"].to_numpy(dtype=np.float64)
+    labels = combined["label"].to_numpy(dtype=np.int64)
+    if (
+        not np.isfinite(probabilities).all()
+        or not np.isin(labels, [0, 1]).all()
+        or not combined["probability_yes"].between(0, 1).all()
     ):
-        raise ValueError("Saved classifier input dimensions do not match its features")
+        raise ValueError(
+            f"Invalid inner OOF predictions for {method}, outer fold {outer_fold}"
+        )
+    return combined
 
-    validation = metrics["validation"]
+
+def _build_fold_calibration(
+    focal_inner: pd.DataFrame, partial4_inner: pd.DataFrame
+) -> tuple[np.ndarray, np.ndarray, float]:
+    focal = focal_inner.rename(columns={"probability_yes": "focal_score"})
+    partial4 = partial4_inner.rename(columns={"probability_yes": "partial4_score"})
+    paired = focal.merge(
+        partial4,
+        on=["record_id", "label"],
+        validate="one_to_one",
+    )
+    if len(paired) != len(focal_inner) or len(paired) != len(partial4_inner):
+        raise ValueError("Focal and Partial-4 inner OOF cohorts do not align")
+    focal_reference = paired["focal_score"].to_numpy(dtype=np.float64)
+    partial4_reference = paired["partial4_score"].to_numpy(dtype=np.float64)
+    ensemble_scores = (
+        0.5 * empirical_cdf(focal_reference, focal_reference)
+        + 0.5 * empirical_cdf(partial4_reference, partial4_reference)
+    )
+    selected = select_precision_threshold(
+        paired["label"].to_numpy(dtype=np.int64),
+        ensemble_scores,
+        MINIMUM_PRECISION_TARGET,
+    )
+    if not selected["feasible"] or not np.isfinite(selected["threshold"]):
+        raise RuntimeError("The inner OOF ensemble has no feasible 0.30 threshold")
+    return focal_reference, partial4_reference, float(selected["threshold"])
+
+
+def _verified_checkpoint_path(
+    experiment_directory: Path, method: str, outer_fold: int
+) -> Path:
+    run_parent = (
+        experiment_directory
+        / "runs"
+        / "outer"
+        / method
+        / f"fold_{outer_fold}"
+    )
+    checkpoint_paths = list(run_parent.glob("*/checkpoints/final_epoch"))
+    if len(checkpoint_paths) != 1:
+        raise FileNotFoundError(
+            f"Expected one {method} checkpoint for outer fold {outer_fold}; "
+            f"found {len(checkpoint_paths)} under {run_parent}"
+        )
+    checkpoint = checkpoint_paths[0]
+    metadata_path = checkpoint.parent / "checkpoint_metadata.json"
+    if not metadata_path.is_file():
+        raise FileNotFoundError(f"Checkpoint metadata is missing: {metadata_path}")
+    run_manifest_path = checkpoint.parent.parent / "run_manifest.json"
+    if not run_manifest_path.is_file():
+        raise FileNotFoundError(f"Checkpoint run manifest is missing: {run_manifest_path}")
+    run_manifest = json.loads(run_manifest_path.read_text(encoding="utf-8"))
+    expected_metadata_hash = (
+        run_manifest.get("artifact_hashes", {})
+        .get("checkpoint_metadata", {})
+        .get("sha256")
+    )
+    if (
+        not expected_metadata_hash
+        or _sha256_file(metadata_path) != expected_metadata_hash
+    ):
+        raise ValueError(f"Checkpoint metadata hash mismatch: {metadata_path}")
+    checkpoint_metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+    for filename, expected_hash in checkpoint_metadata.get("files", {}).items():
+        artifact_path = checkpoint / filename
+        if not artifact_path.is_file():
+            raise FileNotFoundError(f"Checkpoint file is missing: {artifact_path}")
+        if _sha256_file(artifact_path) != expected_hash:
+            raise ValueError(f"Checkpoint file hash mismatch: {artifact_path}")
+    if not checkpoint_metadata.get("files"):
+        raise ValueError(f"Checkpoint file hashes are missing: {metadata_path}")
+    return checkpoint
+
+
+def _sha256_file(path: Path) -> str:
+    hasher = hashlib.sha256()
+    with path.open("rb") as artifact:
+        while True:
+            chunk = artifact.read(1024 * 1024)
+            if not chunk:
+                break
+            hasher.update(chunk)
+    return hasher.hexdigest()
+
+
+def load_classifier() -> LoadedClassifier:
+    """Load the validated five-fold focal + Partial-4 transformer classifier."""
+    from transformers import AutoModelForSequenceClassification, AutoTokenizer
+    import torch
+
+    from experiments.transformer_final.final_annotation_human_reviewed_100_v1 import (
+        core as experiment_core,
+    )
+
+    # Validate the frozen protocol and every OOF prediction artifact before inference.
+    experiment_core.verify_frozen()
+    for kind, expected_count in (("outer", 10), ("inner", 30)):
+        specs = experiment_core.iter_specs(kind)
+        if len(specs) != expected_count:
+            raise RuntimeError(
+                f"Expected {expected_count} {kind} cells, found {len(specs)}"
+            )
+        for _, spec in specs:
+            experiment_core.validate_cell(spec)
+    config = experiment_core.load_local_config(EXPERIMENT_DIRECTORY / "config.json")
+    model_path = Path(config["model"]["default_local_path"])
+    tokenizer = AutoTokenizer.from_pretrained(
+        model_path,
+        local_files_only=True,
+    )
+    if tokenizer.pad_token_id is None:
+        raise ValueError("The pinned DeBERTa tokenizer has no padding token")
+
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    folds: list[FoldClassifier] = []
+    for outer_fold in range(1, OUTER_FOLD_COUNT + 1):
+        focal_inner = _read_inner_predictions(
+            EXPERIMENT_DIRECTORY, "focal", outer_fold
+        )
+        partial4_inner = _read_inner_predictions(
+            EXPERIMENT_DIRECTORY, "partial4", outer_fold
+        )
+        focal_reference, partial4_reference, threshold = _build_fold_calibration(
+            focal_inner, partial4_inner
+        )
+        models: dict[str, Any] = {}
+        for method in ("focal", "partial4"):
+            checkpoint = _verified_checkpoint_path(
+                EXPERIMENT_DIRECTORY, method, outer_fold
+            )
+            model = AutoModelForSequenceClassification.from_pretrained(
+                checkpoint,
+                local_files_only=True,
+            )
+            label2id = {
+                str(label): int(index)
+                for label, index in model.config.label2id.items()
+            }
+            id2label = {
+                int(index): str(label)
+                for index, label in model.config.id2label.items()
+            }
+            if (
+                model.config.num_labels != 2
+                or label2id != {"No": 0, "Yes": 1}
+                or id2label != {0: "No", 1: "Yes"}
+            ):
+                raise ValueError(f"Unexpected binary label mapping in {checkpoint}")
+            model.to(device)
+            model.eval()
+            models[method] = model
+        folds.append(
+            FoldClassifier(
+                fold=outer_fold,
+                focal_model=models["focal"],
+                partial4_model=models["partial4"],
+                focal_reference=focal_reference,
+                partial4_reference=partial4_reference,
+                threshold=threshold,
+            )
+        )
+
     metadata = {
-        "name": "Balanced Logistic Regression · engineered features + TF–IDF",
-        "artifact": model_path.name,
-        "artifact_sha256": sha256_file(model_path),
-        "average_precision": float(validation["pooled_oof_average_precision"]),
-        "selection_rationale": (
-            "Active single-RFC scorer: the saved Logistic Regression artifact. "
-            "The newer transformer ensemble is a research candidate, not a "
-            "live inference artifact; its 0.674 AP used a different cohort "
-            "and is not directly comparable."
+        "name": "DeBERTa-v3 Focal + Partial-4 five-fold ensemble",
+        "average_precision": 0.6735728,
+        "roc_auc": 0.9118418,
+        "validation_rows": 2143,
+        "validation_positives": 138,
+        "validation_groups": 9,
+        "validation_protocol": "Nested grouped family OOF; current human-reviewed source",
+        "minimum_precision_target": MINIMUM_PRECISION_TARGET,
+        "vote_threshold": VOTE_THRESHOLD,
+        "vote_count": OUTER_FOLD_COUNT,
+        "prediction_threshold": VOTE_THRESHOLD / OUTER_FOLD_COUNT,
+        "score_semantics": "mean ECDF ranking score; not a calibrated probability",
+        "decision_policy": (
+            "YES when at least 3 of 5 outer-fold models exceed their own "
+            "inner-OOF threshold selected for a 0.30 precision target"
         ),
-        "validation_rows": int(metrics["rows"]),
-        "validation_positives": int(metrics["positive_rows"]),
-        "validation_groups": int(metrics["validation_group_count"]),
-        "validation_protocol": validation["strategy"],
-        "prediction_threshold": float(validation["prediction_threshold"]),
-        "artifact_sklearn_versions": artifact_versions,
-        "runtime_sklearn_version": sklearn.__version__,
-        "sklearn_compatibility_warnings": compatibility_warnings,
+        "inference_device": str(device),
+        "selection_rationale": (
+            "Uses the current-source human-reviewed transformer study. Each "
+            "fold's Focal + Partial-4 ECDF threshold is fitted only on its "
+            "inner OOF predictions. Reported OOF metrics evaluate one "
+            "held-out outer-fold score per clause, not the runtime mean score "
+            "or 3-of-5 vote; neither deployment aggregate has been measured "
+            "or guarantees production precision."
+        ),
     }
-    return LoadedClassifier(components=components, metadata=metadata)
+    return LoadedClassifier(
+        components={"folds": folds, "tokenizer": tokenizer, "device": device},
+        metadata=metadata,
+    )
 
 
 def _prepare_candidate_frame(clauses: list[Any]) -> pd.DataFrame:
@@ -168,45 +346,154 @@ def _prepare_candidate_frame(clauses: list[Any]) -> pd.DataFrame:
     )
 
 
+def _predict_model_probabilities(
+    model: Any,
+    tokenizer: Any,
+    texts: list[str],
+    device: Any,
+) -> np.ndarray:
+    import torch
+
+    from models.transformer_final.modeling import (
+        collate_clauses,
+        supported_model_fields,
+    )
+
+    if tokenizer.pad_token_id is None:
+        raise ValueError("The pinned DeBERTa tokenizer has no padding token")
+    model_fields = supported_model_fields(model)
+    if "input_ids" not in model_fields:
+        raise RuntimeError("Transformer model does not accept input_ids")
+
+    probabilities: list[np.ndarray] = []
+    for batch_start in range(0, len(texts), INFERENCE_BATCH_SIZE):
+        batch_texts = texts[batch_start : batch_start + INFERENCE_BATCH_SIZE]
+        examples = []
+        for offset, text in enumerate(batch_texts, start=batch_start):
+            encoded = encode_example(
+                tokenizer,
+                target=text,
+                section="",
+                previous="",
+                following="",
+                input_mode="target_only",
+                max_length=256,
+            )
+            example: dict[str, Any] = {
+                "input_ids": encoded.input_ids,
+                "attention_mask": encoded.attention_mask,
+                "labels": 0,
+                "row_position": offset,
+                "target_truncated": encoded.target_truncated,
+                "context_truncated": encoded.context_truncated,
+            }
+            if encoded.token_type_ids is not None:
+                example["token_type_ids"] = encoded.token_type_ids
+            examples.append(example)
+        padded = collate_clauses(examples, pad_token_id=tokenizer.pad_token_id)
+        model_inputs = {
+            name: padded[name].to(device)
+            for name in model_fields
+            if name in padded
+        }
+        with torch.inference_mode():
+            logits = model(**model_inputs).logits
+            if logits.ndim != 2 or logits.shape[1] != 2:
+                raise RuntimeError("Transformer returned invalid binary logits")
+            batch_probabilities = torch.softmax(logits.float(), dim=-1)[:, 1]
+        probabilities.append(batch_probabilities.cpu().numpy().astype(np.float64))
+
+    scores = np.concatenate(probabilities) if probabilities else np.empty(0)
+    if scores.shape != (len(texts),) or not np.isfinite(scores).all():
+        raise RuntimeError("Transformer returned invalid RFC clause scores")
+    if np.any((scores < 0) | (scores > 1)):
+        raise RuntimeError("Transformer probabilities are outside [0, 1]")
+    return scores
+
+
+def _fold_ensemble_scores(
+    fold: FoldClassifier,
+    focal_probabilities: np.ndarray,
+    partial4_probabilities: np.ndarray,
+) -> np.ndarray:
+    if focal_probabilities.shape != partial4_probabilities.shape:
+        raise ValueError("Focal and Partial-4 predictions do not align")
+    if not 0.0 <= fold.threshold <= 1.0:
+        raise ValueError(f"Invalid threshold for outer fold {fold.fold}")
+    return (
+        0.5 * empirical_cdf(fold.focal_reference, focal_probabilities)
+        + 0.5 * empirical_cdf(fold.partial4_reference, partial4_probabilities)
+    )
+
+
 def _score_candidate_rows(
     candidates: list[dict[str, Any]],
     loaded_model: LoadedClassifier,
 ) -> list[dict[str, Any]]:
     if not candidates:
         return []
-    frame = pd.DataFrame(candidates)
-    features = extract_v2_features(frame)
-    matrix = _transform_components(
-        "engineered_tfidf",
-        loaded_model.components,
-        frame["target_clause"],
-        features,
-        embeddings=None,
-    )
-    scores = np.asarray(
-        loaded_model.components["classifier"].predict_proba(matrix)[:, 1],
-        dtype=np.float64,
-    )
-    if scores.shape != (len(frame),) or not np.isfinite(scores).all():
-        raise RuntimeError("Classifier returned invalid RFC clause scores")
-    threshold = float(loaded_model.metadata["prediction_threshold"])
-    if not 0.0 <= threshold <= 1.0:
-        raise ValueError("Model prediction threshold must be between 0 and 1")
+    folds = loaded_model.components.get("folds")
+    if not isinstance(folds, list) or len(folds) != OUTER_FOLD_COUNT:
+        raise ValueError("Loaded transformer model must contain five outer folds")
+    tokenizer = loaded_model.components.get("tokenizer")
+    device = loaded_model.components.get("device")
+    if tokenizer is None or device is None:
+        raise ValueError("Loaded transformer tokenizer or inference device is missing")
+    vote_threshold = int(loaded_model.metadata["vote_threshold"])
+    if not 1 <= vote_threshold <= len(folds):
+        raise ValueError("Model vote threshold is outside the fold count")
+
+    texts = [str(candidate["target_clause"]) for candidate in candidates]
+    rank_scores = np.zeros(len(candidates), dtype=np.float64)
+    fold_votes = np.zeros(len(candidates), dtype=np.int64)
+    fold_thresholds: list[float] = []
+    for fold in folds:
+        focal_probabilities = _predict_model_probabilities(
+            fold.focal_model, tokenizer, texts, device
+        )
+        partial4_probabilities = _predict_model_probabilities(
+            fold.partial4_model, tokenizer, texts, device
+        )
+        fold_scores = _fold_ensemble_scores(
+            fold, focal_probabilities, partial4_probabilities
+        )
+        if fold_scores.shape != (len(candidates),) or not np.isfinite(fold_scores).all():
+            raise RuntimeError(f"Invalid ensemble scores from outer fold {fold.fold}")
+        rank_scores += fold_scores
+        fold_votes += fold_scores >= fold.threshold
+        fold_thresholds.append(float(fold.threshold))
+    rank_scores /= len(folds)
+    vote_fraction = fold_votes / len(folds)
+    threshold = vote_threshold / len(folds)
 
     ranked = []
-    for candidate, score in zip(candidates, scores, strict=True):
-        is_ambiguous = bool(score >= threshold)
+    for candidate, score, votes, fraction in zip(
+        candidates, rank_scores, fold_votes, vote_fraction, strict=True
+    ):
+        is_ambiguous = bool(votes >= vote_threshold)
         ranked.append(
             {
                 **candidate,
                 "relative_score": float(score),
+                "fold_vote_fraction": float(fraction),
+                "fold_votes": int(votes),
+                "fold_vote_count": len(folds),
+                "fold_thresholds": fold_thresholds,
+                "vote_threshold": vote_threshold,
+                "vote_cutoff_fraction": threshold,
                 "prediction_threshold": threshold,
                 "decision": "YES" if is_ambiguous else "NO",
                 "prediction": "AMBIGUOUS" if is_ambiguous else "NOT_AMBIGUOUS",
                 "qwen_justification": candidate.get("qwen_justification", ""),
             }
         )
-    ranked.sort(key=lambda row: (-row["relative_score"], row["clause_id"]))
+    ranked.sort(
+        key=lambda row: (
+            -row["relative_score"],
+            -row["fold_votes"],
+            row["clause_id"],
+        )
+    )
     return ranked
 
 
@@ -265,7 +552,10 @@ def scan_rfc_text(
         "scored_count": len(scored_candidates),
         "ambiguous_count": ambiguous_count,
         "not_ambiguous_count": len(scored_candidates) - ambiguous_count,
+        "vote_cutoff_fraction": threshold,
         "prediction_threshold": threshold,
+        "vote_threshold": int(loaded_model.metadata["vote_threshold"]),
+        "vote_count": int(loaded_model.metadata["vote_count"]),
         "normative_count": clause_summary["normative"],
         "contextual_count": clause_summary["contextual"],
         "excluded_count": clause_summary["excluded"],

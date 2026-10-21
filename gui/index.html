@@ -397,7 +397,7 @@
     <section id="classifierStatus" class="status" aria-live="polite">
       <span class="dot" aria-hidden="true"></span>
       <div class="status-copy">
-        <span id="statusText">Loading the saved classifier…</span>
+        <span id="statusText">Loading the transformer ensemble…</span>
         <span id="modelSelection" class="status-detail"></span>
       </div>
     </section>
@@ -405,21 +405,21 @@
     <section class="model-strategy" aria-label="Model roles and evaluation">
       <article class="model-option active">
         <span class="model-state">Active in this GUI</span>
-        <h2>Classical ML · Logistic Regression</h2>
+        <h2>Transformer ensemble · DeBERTa-v3</h2>
         <p>
-          The available single-RFC scorer uses engineered features + TF-IDF.
-          Its reported pooled OOF AP was 0.522 on 2,406 clauses across 11
-          families. This is a development estimate, not independent validation.
+          The current-source human-reviewed study reported pooled nested OOF
+          AP 0.674 on 2,143 clauses across nine families. Five fold classifiers
+          vote; that deployment vote is not itself covered by the reported OOF
+          metrics.
         </p>
       </article>
       <article class="model-option candidate">
-        <span class="model-state">Research candidate · not wired for live scoring</span>
-        <h2>Transformer ensemble</h2>
+        <span class="model-state">Comparison only · not active</span>
+        <h2>Classical ML · Logistic Regression</h2>
         <p>
-          The human-reviewed study reported AP 0.674 on 2,143 clauses across
-          nine families. Its score is a ranking score, not a calibrated
-          probability. The result is from a different cohort and is not a
-          drop-in replacement for the active RFC scorer.
+          The saved engineered-features + TF-IDF model uses a different
+          2,425-clause, 11-family cohort. Its results are not directly
+          comparable with the active transformer study.
         </p>
       </article>
       <article class="model-option assistance">
@@ -483,10 +483,13 @@
       <div id="summary" class="summary"></div>
       <p id="parseWarning" class="parse-warning" role="status"></p>
       <p class="caveat">
-        The active classical model applies its saved 0.5 screening threshold.
-        Its score is useful for ordering review priority, not a calibrated
-        probability or independent proof of ambiguity. The research ensemble
-        result uses a different cohort and is not used for these predictions.
+        Each of five outer-fold model pairs uses its own ECDF calibration and
+        inner-OOF threshold selected for a 0.30 precision target. A clause is
+        flagged when at least 3 of 5 fold classifiers vote YES. The displayed
+        mean ECDF score is for ranking only, not a calibrated probability.
+        Neither the five-fold mean score nor the 3-of-5 vote has been
+        separately evaluated; this is a research screening aid, not an
+        independent proof of ambiguity.
       </p>
       <div class="results-toolbar">
         <span id="selectionCount" class="hint">Select up to 5 YES predictions for an optional Qwen explanation.</span>
@@ -514,7 +517,8 @@
           <thead>
             <tr>
               <th scope="col">Explain</th>
-              <th scope="col">Model score · ranking only</th>
+              <th scope="col">Mean ECDF score · ranking only</th>
+              <th scope="col">Fold votes</th>
               <th scope="col">Section</th>
               <th scope="col">Line</th>
               <th scope="col">Clause</th>
@@ -605,7 +609,7 @@
         const tr = document.createElement("tr");
         const cell = document.createElement("td");
         cell.className = "empty-results";
-        cell.colSpan = 6;
+        cell.colSpan = 7;
         cell.textContent = ambiguousRows.length === 0
           ? normativeScoredCount === 0
             ? "No explicit BCP 14 normative clauses were found to score."
@@ -644,6 +648,7 @@
         tr.append(
           selectorCell,
           makeCell(Number(row.relative_score).toFixed(4), "score"),
+          makeCell(`${row.fold_votes}/${row.fold_vote_count}`, "score"),
           makeCell(row.section_path || row.section_heading || row.section_id, "section"),
           makeCell(row.line_start || "—", "line"),
           makeCell(row.target_clause, "clause"),
@@ -708,14 +713,18 @@
 
     function downloadCsv() {
       const columns = [
-        "decision", "prediction", "relative_score", "prediction_threshold",
+        "decision", "prediction", "relative_score", "fold_votes",
+        "fold_vote_count", "fold_vote_fraction", "vote_threshold",
+        "vote_cutoff_fraction", "fold_thresholds",
         "candidate_type", "candidate_reason",
         "section_id", "section_path",
         "line_start", "line_end", "target_clause", "previous_clause",
         "next_clause", "qwen_justification"
       ];
       const rows = ambiguousRows.map((row) => [
-        row.decision, row.prediction, row.relative_score, row.prediction_threshold,
+        row.decision, row.prediction, row.relative_score, row.fold_votes,
+        row.fold_vote_count, row.fold_vote_fraction, row.vote_threshold,
+        row.vote_cutoff_fraction, row.fold_thresholds.join(";"),
         row.candidate_type, row.candidate_reason,
         row.section_id, row.section_path, row.line_start, row.line_end,
         row.target_clause, row.previous_clause, row.next_clause,
@@ -739,21 +748,12 @@
         statusBanner.classList.add("ready");
         const classifier = data.classifier;
         document.getElementById("statusText").textContent =
-          `${classifier.name} ready · screening cutoff ${classifier.prediction_threshold.toFixed(2)} · ` +
+          `${classifier.name} ready · YES at ${classifier.vote_threshold}/${classifier.vote_count} fold votes · ` +
           `out-of-fold AP ${Number(classifier.average_precision).toFixed(3)} ` +
           `(${classifier.validation_rows} clauses; ${classifier.validation_groups} draft families). ` +
           `Qwen ${data.qwen_model} is optional and used only for explanations.`;
         document.getElementById("modelSelection").textContent =
           classifier.selection_rationale;
-        if (classifier.sklearn_compatibility_warnings.length) {
-          warningBox.textContent =
-            `Compatibility warning: artifact scikit-learn version(s): ` +
-            `${classifier.artifact_sklearn_versions.join(", ") || "not recorded"}; ` +
-            `active version: ${classifier.runtime_sklearn_version}. Predictions are being ` +
-            "produced, but scikit-learn warns cross-version loading may be unreliable. " +
-            "Match the training version before relying on results.";
-          warningBox.style.display = "block";
-        }
       } catch (error) {
         statusBanner.classList.add("failed");
         setError(error.message);

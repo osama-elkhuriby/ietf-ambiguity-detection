@@ -4,6 +4,7 @@ from pathlib import Path
 from typing import Any
 
 import numpy as np
+import pandas as pd
 import pytest
 
 from gui import rfc_scanner
@@ -12,41 +13,50 @@ from gui.app import (
     explain_selected,
     validate_explanation_input,
 )
-from gui.rfc_scanner import LoadedClassifier, scan_rfc_text
+from gui.rfc_scanner import (
+    FoldClassifier,
+    LoadedClassifier,
+    _build_fold_calibration,
+    _score_candidate_rows,
+    scan_rfc_text,
+)
 from models.llm.ollama_client import OllamaError
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
-class FakeClassifier:
-    def __init__(self) -> None:
-        self.matrix_shape: tuple[int, ...] | None = None
-
-    def predict_proba(self, matrix: np.ndarray) -> np.ndarray:
-        self.matrix_shape = matrix.shape
-        scores = np.linspace(0.1, 0.9, len(matrix))
-        return np.column_stack((1 - scores, scores))
+def _fake_loaded_classifier(thresholds: list[float] | None = None) -> LoadedClassifier:
+    fold_thresholds = thresholds or [0.5] * 5
+    folds = [
+        FoldClassifier(
+            fold=index,
+            focal_model=(index, "focal"),
+            partial4_model=(index, "partial4"),
+            focal_reference=np.array([0.1, 0.5, 0.9]),
+            partial4_reference=np.array([0.1, 0.5, 0.9]),
+            threshold=threshold,
+        )
+        for index, threshold in enumerate(fold_thresholds, start=1)
+    ]
+    return LoadedClassifier(
+        components={"folds": folds, "tokenizer": object(), "device": "cpu"},
+        metadata={"vote_threshold": 3, "vote_count": 5, "prediction_threshold": 0.6},
+    )
 
 
 def test_rfc_scan_ranks_only_normative_clauses(monkeypatch: pytest.MonkeyPatch) -> None:
-    classifier = FakeClassifier()
+    inference_calls: list[tuple[Any, ...]] = []
 
-    def transform(
-        feature_mode: str,
-        components: dict[str, Any],
-        texts: Any,
-        features: Any,
-        embeddings: Any,
+    def predict(
+        model: tuple[int, str], _tokenizer: Any, texts: list[str], _device: Any
     ) -> np.ndarray:
-        assert feature_mode == "engineered_tfidf"
-        assert len(texts) == len(features)
-        return np.zeros((len(texts), 2))
+        assert _tokenizer is not None
+        assert _device == "cpu"
+        inference_calls.append(model)
+        return np.linspace(0.1, 0.9, len(texts))
 
-    monkeypatch.setattr(rfc_scanner, "_transform_components", transform)
-    loaded = LoadedClassifier(
-        components={"classifier": classifier},
-        metadata={"prediction_threshold": 0.5},
-    )
+    monkeypatch.setattr(rfc_scanner, "_predict_model_probabilities", predict)
+    loaded = _fake_loaded_classifier()
     content = (ROOT / "corpus/raw/rfcs/RFC9460.txt").read_text(encoding="utf-8")
 
     result = scan_rfc_text(
@@ -64,14 +74,14 @@ def test_rfc_scan_ranks_only_normative_clauses(monkeypatch: pytest.MonkeyPatch) 
     assert result["normative_count"] == 141
     assert result["candidate_count"] == result["normative_count"]
     assert "manual_review_count" not in result
-    assert classifier.matrix_shape == (result["scored_count"], 2)
+    assert len(inference_calls) == 20
     ambiguous_rows = result["rows"]
     assert ambiguous_rows
     assert result["ambiguous_count"] == len(ambiguous_rows)
     assert all(row["decision"] == "YES" for row in ambiguous_rows)
-    assert ambiguous_rows[0]["relative_score"] == pytest.approx(0.9)
-    assert all(row["relative_score"] >= 0.5 for row in ambiguous_rows)
-    assert all(row["prediction_threshold"] == 0.5 for row in ambiguous_rows)
+    assert ambiguous_rows[0]["relative_score"] > 0.85
+    assert all(row["fold_votes"] >= 3 for row in ambiguous_rows)
+    assert all(row["prediction_threshold"] == 0.6 for row in ambiguous_rows)
     assert result["scored_count"] == result["normative_count"]
     assert (
         result["not_ambiguous_count"] + result["ambiguous_count"]
@@ -116,33 +126,100 @@ def test_rfc_scan_rejects_unsupported_or_empty_input(
 
 @pytest.mark.parametrize("filename", ["RFC2328.txt", "RFC8200.txt"])
 def test_rfc_without_explicit_bcp14_terms_has_no_ambiguity_candidates(
-    filename: str, monkeypatch: pytest.MonkeyPatch
+    filename: str,
 ) -> None:
-    monkeypatch.setattr(
-        rfc_scanner,
-        "_transform_components",
-        lambda feature_mode, components, texts, features, embeddings: np.zeros(
-            (len(texts), 2)
-        ),
-    )
-    classifier = FakeClassifier()
-    loaded = LoadedClassifier(
-        components={"classifier": classifier},
-        metadata={"prediction_threshold": 0.5},
-    )
     content = (ROOT / "corpus/raw/rfcs" / filename).read_text(encoding="utf-8")
 
     result = scan_rfc_text(
         filename=filename,
         content=content,
-        loaded_model=loaded,
+        loaded_model=_fake_loaded_classifier(),
     )
 
     assert result["candidate_count"] == 0
     assert result["normative_count"] == 0
     assert result["scored_count"] == 0
     assert result["ambiguous_count"] == 0
-    assert classifier.matrix_shape is None
+
+
+def test_fold_vote_uses_each_fold_ecdf_threshold(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    model_scores = {
+        (1, "focal"): np.array([0.9, 0.1, 0.1]),
+        (2, "focal"): np.array([0.9, 0.1, 0.1]),
+        (3, "focal"): np.array([0.9, 0.5, 0.1]),
+        (4, "focal"): np.array([0.5, 0.9, 0.1]),
+        (5, "focal"): np.array([0.9, 0.9, 0.1]),
+    }
+    model_scores.update(
+        {
+            (fold, "partial4"): scores
+            for (fold, _), scores in list(model_scores.items())
+        }
+    )
+    def predict(
+        model: tuple[int, str],
+        _tokenizer: Any,
+        texts: list[str],
+        _device: Any,
+    ) -> np.ndarray:
+        assert _tokenizer is not None
+        assert len(texts) == 3
+        assert _device == "cpu"
+        return model_scores[model]
+
+    monkeypatch.setattr(rfc_scanner, "_predict_model_probabilities", predict)
+    loaded = _fake_loaded_classifier([0.8, 0.9, 0.6, 0.9, 0.9])
+    candidates = [
+        {"clause_id": "a", "target_clause": "candidate a"},
+        {"clause_id": "b", "target_clause": "candidate b"},
+        {"clause_id": "c", "target_clause": "candidate c"},
+    ]
+
+    scored = _score_candidate_rows(candidates, loaded)
+
+    assert [(row["clause_id"], row["fold_votes"], row["decision"]) for row in scored] == [
+        ("a", 4, "YES"),
+        ("b", 3, "YES"),
+        ("c", 0, "NO"),
+    ]
+    assert [row["relative_score"] for row in scored] == pytest.approx(
+        [14 / 15, 2 / 3, 1 / 3]
+    )
+
+
+def test_fold_calibration_reuses_inner_oof_ecdf_and_precision_target() -> None:
+    focal = pd.DataFrame(
+        {
+            "record_id": ["a", "b", "c", "d"],
+            "label": [0, 1, 0, 1],
+            "probability_yes": [0.1, 0.9, 0.2, 0.8],
+        }
+    )
+    partial4 = pd.DataFrame(
+        {
+            "record_id": ["a", "b", "c", "d"],
+            "label": [0, 1, 0, 1],
+            "probability_yes": [0.2, 0.8, 0.1, 0.9],
+        }
+    )
+
+    focal_reference, partial4_reference, threshold = _build_fold_calibration(
+        focal, partial4
+    )
+
+    assert focal_reference.tolist() == [0.1, 0.9, 0.2, 0.8]
+    assert partial4_reference.tolist() == [0.2, 0.8, 0.1, 0.9]
+    paired_scores = (
+        0.5 * rfc_scanner.empirical_cdf(focal_reference, focal_reference)
+        + 0.5
+        * rfc_scanner.empirical_cdf(partial4_reference, partial4_reference)
+    )
+    selected = rfc_scanner.select_precision_threshold(
+        focal["label"], paired_scores, 0.30
+    )
+    assert threshold == pytest.approx(selected["threshold"])
 
 
 def test_explanations_are_limited_and_do_not_send_model_scores() -> None:

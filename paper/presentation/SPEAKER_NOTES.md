@@ -52,27 +52,47 @@ On the shared 2,143-row reviewed-label cohort, focal loss reaches AP 0.5823, par
 
 This is the controlled RQ2 ablation. Adding twelve past-only revision features changes AP by −0.0081 for logistic regression, −0.0012 for SVM, and −0.0015 for random forest. F2 is unchanged for logistic regression and increases slightly for SVM and forest. The result does not support a general ranking benefit from revision features. Cross-reference features were not isolated and calibration metrics were not recorded, so RQ2 is only partly answered.
 
-## 13. The report answers some questions and leaves two open — 1:40
+## 13. LLM experiment: V4 ranks best on the development cohort — 1:20
 
-Summarize the proposal questions. RQ1 supports development-stage feasibility with qualifications. RQ2 is partly answered and its AP hypothesis is unsupported. RQ3 compares effectiveness and workload only under separate protocols. Qwen eight-shot prompting reaches AP 0.1960 and the fitted Qwen/TF–IDF/MiniLM V4 reaches 0.3252 on their own cohort. RQ4 remains open because no conditional router reduced LLM calls; RQ5 remains open because explanation faithfulness was not evaluated by experts.
+Compare the four saved OOF iterations on the same 2,142-clause, nine-family cohort.
+V1 best raw AP is 0.1960, V2 is 0.1035, V3's nested lexical/Qwen hybrid is 0.2554,
+and V4's semantic ensemble is 0.3252 against 0.0588 prevalence. V4's raw 0.5
+operating point has recall 0.524 and F2 0.421. V4 adds frozen target and neighboring
+clause MiniLM signals to the V3 score. Emphasize that this is adaptive development
+evidence, not a sealed test, and that the probability-like scores are not calibrated.
 
-## 14. The main limitations are scientific—not just engineering — 1:45
+## 14. Hybrid routing preserves effectiveness with fewer LLM calls — 1:30
+
+Explain the fixed (0.4, 0.7) ML band: outside the band the ML decision is used; inside
+it, the stored V4 score simulates the LLM response. The band routes 441 of 2,096
+clauses (79.0% fewer calls) and includes 33 positives. The replay yields AP 0.330
+and F2 0.457, versus 0.372 and 0.447 for LLM-only. Paired family-bootstrap intervals
+for hybrid-minus-LLM-only AP (−0.305, 0.085) and F2 (−0.059, 0.057) include zero,
+so the requested verdict is “preserves”; that does not establish equivalence. These
+are counterfactual call savings because the LLM outputs already exist. Forty-six
+label-conflicting rows from the older ML artifact were excluded.
+
+## 15. The report answers some questions and leaves two open — 1:40
+
+Summarize the proposal questions. RQ1 supports development-stage feasibility with qualifications. RQ2 is partly answered and its AP hypothesis is unsupported. RQ3 compares effectiveness and workload only under separate protocols. The new hybrid replay estimates 79% fewer calls while its AP and F2 confidence intervals include no difference; it is not a sealed or runtime test. RQ5 remains open because explanation faithfulness was not evaluated by experts.
+
+## 16. The main limitations are scientific—not just engineering — 1:45
 
 Cover construct validity, enriched sampling, nine-family/single-seed generalization, adaptive model selection, and the loss of the planned holdouts. Also mention pretraining contamination and the error-selected reviewed subset if time permits. These limitations prevent a claim of validated ambiguity accuracy or deployment readiness.
 
-## 15. GUI example: RFC 9000 review results — 1:20
+## 17. GUI example: RFC 9000 review results — 1:20
 
 The local GUI found 112 suggestions among 516 explicitly normative clauses across 69 sections. The shown score of 0.5433 is a ranking signal, not a probability or verdict. The GUI uses a saved logistic-regression artifact, not the research DeBERTa ensemble; the capture also contains a scikit-learn artifact/runtime version warning.
 
-## 16. What evidence would earn a stronger claim? — 1:30
+## 18. What evidence would earn a stronger claim? — 1:30
 
 First build an expert-adjudicated reference. Repeat selected transformers across seeds and align comparisons on common labels and folds. Implement the intended conditional LLM router and measure calls, latency, cost, calibration, and explanation quality. Finally, preregister a genuinely untouched evaluation based on unseen families or later time-sliced revisions.
 
-## 17. The contribution is a careful path from draft text to review — 0:55
+## 19. The contribution is a careful path from draft text to review — 0:55
 
 The strongest contribution is methodological: a revision-aware corpus, explicit temporal boundaries, family-aware evaluation, and an honest claim boundary. The tested revision features did not improve AP, and current labels and evaluations do not support autonomous use. The next milestone is independent evidence.
 
-## 18. Discussion — 0:20
+## 20. Discussion — 0:20
 
 Invite questions with the boundary question: where should automated triage end and human judgment begin?
 
@@ -84,7 +104,7 @@ Invite questions with the boundary question: where should automated triage end a
 | 5–8 | 5:45 |
 | 9–12 | 6:40 |
 | 13–16 | 6:15 |
-| 17–18 | 1:15 |
-| **Total** | **24:35** |
+| 17–20 | 4:05 |
+| **Total** | **27:25** |
 
-The remaining 25 seconds is intentional transition buffer.
+The two added results slides extend the previous talk by 2 minutes 50 seconds; shorten earlier narration if retaining a 25-minute limit.

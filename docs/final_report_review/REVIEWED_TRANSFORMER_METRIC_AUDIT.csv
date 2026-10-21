@@ -1,0 +1,4 @@
+method,rows,positives,negatives,families,unique_record_ids,missing_scores,nonfinite_scores,unique_scores,rows_in_score_ties,average_precision,trapezoidal_pr_auc,roc_auc,inverted_average_precision,higher_score_class,pooling,top_k_tie_break,cohort_rows
+focal,2143,138,2005,9,2143,0,0,2143,0,0.5823102725318431,0.5802286977433718,0.8814810799089233,0.03478516534872566,Yes/1,one outer OOF score per row; pooled across folds,"score descending, then record_id ascending",2143
+partial4,2143,138,2005,9,2143,0,0,2142,1,0.5761291449079404,0.5741983359396422,0.8923849795800354,0.0347181120126918,Yes/1,one outer OOF score per row; pooled across folds,"score descending, then record_id ascending",2143
+ensemble,2143,138,2005,9,2143,0,0,1719,424,0.6735728244844552,0.6728971216490551,0.9118417723806426,0.034381527093221426,Yes/1,one outer OOF score per row; pooled across folds,"score descending, then record_id ascending",2143

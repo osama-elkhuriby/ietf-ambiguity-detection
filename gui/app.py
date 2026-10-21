@@ -307,11 +307,12 @@ def make_handler(
                     content = payload.get("content")
                     if not isinstance(filename, str) or not isinstance(content, str):
                         raise TypeError("Upload a .txt RFC file")
-                    result = scan_rfc_text(
-                        filename=filename,
-                        content=content,
-                        loaded_model=loaded_model,
-                    )
+                    with INFERENCE_LOCK:
+                        result = scan_rfc_text(
+                            filename=filename,
+                            content=content,
+                            loaded_model=loaded_model,
+                        )
                 except (OSError, TypeError, ValueError) as error:
                     api_error(self, HTTPStatus.BAD_REQUEST, str(error))
                     return
@@ -368,7 +369,7 @@ def main() -> int:
     print(f"RFC review GUI listening locally at {url}")
     print(f"Classifier: {loaded_model.metadata['name']}")
     print(f"Qwen explanations: {config['model']['name']} via local Ollama")
-    if loaded_model.metadata["sklearn_compatibility_warnings"]:
+    if loaded_model.metadata.get("sklearn_compatibility_warnings", []):
         print(
             "WARNING: model artifact was saved with a different scikit-learn "
             "version; see the GUI status banner."

@@ -133,6 +133,8 @@ def train_and_validate(
     *,
     classifier_name: ClassifierName,
     feature_mode: str,
+    fold_column: str | None = None,
+    fit_final_model: bool = True,
     quiet: bool = False,
 ) -> dict[str, Any]:
     if classifier_name not in CLASSIFIERS:
@@ -159,17 +161,50 @@ def train_and_validate(
             f"{group_count} and {positive_group_count}"
         )
 
-    splitter = StratifiedGroupKFold(
-        n_splits=N_SPLITS,
-        shuffle=True,
-        random_state=RANDOM_STATE,
-    )
+    if fold_column is not None:
+        if fold_column not in frame.columns:
+            raise ValueError(f"Input is missing requested fold column: {fold_column}")
+        try:
+            supplied_folds = frame[fold_column].astype(int).to_numpy()
+        except ValueError as exc:
+            raise ValueError(f"{fold_column} must contain integer fold IDs") from exc
+        fold_ids = sorted(np.unique(supplied_folds).tolist())
+        if len(fold_ids) < 2:
+            raise ValueError("Predefined validation requires at least two folds")
+        if fold_ids != list(range(1, len(fold_ids) + 1)):
+            raise ValueError(
+                f"{fold_column} must use consecutive fold IDs starting at 1; "
+                f"found {fold_ids}"
+            )
+        for group in np.unique(groups):
+            if np.unique(supplied_folds[groups == group]).size != 1:
+                raise RuntimeError(
+                    f"Predefined folds split validation group {group!r} across folds"
+                )
+        splits = [
+            (
+                np.flatnonzero(supplied_folds != fold),
+                np.flatnonzero(supplied_folds == fold),
+            )
+            for fold in fold_ids
+        ]
+        validation_strategy = f"predefined family folds from input column {fold_column}"
+        validation_random_state: int | None = None
+    else:
+        splitter = StratifiedGroupKFold(
+            n_splits=N_SPLITS,
+            shuffle=True,
+            random_state=RANDOM_STATE,
+        )
+        splits = list(splitter.split(frame, labels, groups))
+        validation_strategy = (
+            "3-fold StratifiedGroupKFold; draft revisions grouped by family"
+        )
+        validation_random_state = RANDOM_STATE
     oof_scores = np.full(len(frame), np.nan, dtype=np.float64)
+    oof_folds = np.zeros(len(frame), dtype=np.int16)
     fold_metrics: list[dict[str, int | float]] = []
-    for fold, (train_indices, valid_indices) in enumerate(
-        splitter.split(frame, labels, groups),
-        start=1,
-    ):
+    for fold, (train_indices, valid_indices) in enumerate(splits, start=1):
         if (
             np.unique(labels[train_indices]).size != 2
             or np.unique(labels[valid_indices]).size != 2
@@ -213,6 +248,7 @@ def train_and_validate(
         )
         scores = _positive_scores(classifier, valid_matrix, classifier_name)
         oof_scores[valid_indices] = scores
+        oof_folds[valid_indices] = fold
         fold_metrics.append(
             {
                 "fold": fold,
@@ -256,10 +292,8 @@ def train_and_validate(
             frame["document"].str.replace(r"-\d+$", "", regex=True).nunique()
         ),
         "validation": {
-            "strategy": (
-                "3-fold StratifiedGroupKFold; draft revisions grouped by family"
-            ),
-            "random_state": RANDOM_STATE,
+            "strategy": validation_strategy,
+            "random_state": validation_random_state,
             "prediction_threshold": PREDICTION_THRESHOLD,
             "mean_fold_average_precision": float(
                 fold_frame["average_precision"].mean()
@@ -299,6 +333,7 @@ def train_and_validate(
             "document": frame["document"],
             "final_label": frame["final_label"],
             "validation_group": groups,
+            "validation_fold": oof_folds,
             "oof_score_yes": oof_scores,
         }
     ).to_csv(output_dir / "oof_predictions.csv", index=False, lineterminator="\n")
@@ -307,25 +342,26 @@ def train_and_validate(
             output_dir / "revision_features.csv", index=False, lineterminator="\n"
         )
 
-    final_components, final_matrix = _fit_components(
-        feature_mode,
-        frame["target_clause"],
-        features,
-        embeddings,
-        revision_features,
-    )
-    final_classifier = _new_classifier(classifier_name).fit(final_matrix, labels)
-    final_components.update(
-        {
-            "classifier": final_classifier,
-            "classifier_name": classifier_name,
-            "feature_mode": feature_mode,
-            "revision_columns": (
-                list(REVISION_FEATURE_COLUMNS) if use_revision else []
-            ),
-        }
-    )
-    joblib.dump(final_components, output_dir / "final_model.joblib")
+    if fit_final_model:
+        final_components, final_matrix = _fit_components(
+            feature_mode,
+            frame["target_clause"],
+            features,
+            embeddings,
+            revision_features,
+        )
+        final_classifier = _new_classifier(classifier_name).fit(final_matrix, labels)
+        final_components.update(
+            {
+                "classifier": final_classifier,
+                "classifier_name": classifier_name,
+                "feature_mode": feature_mode,
+                "revision_columns": (
+                    list(REVISION_FEATURE_COLUMNS) if use_revision else []
+                ),
+            }
+        )
+        joblib.dump(final_components, output_dir / "final_model.joblib")
     manifest = {
         "source_path": str(input_path.resolve()),
         "source_sha256": hashlib.sha256(input_path.read_bytes()).hexdigest(),
@@ -338,7 +374,11 @@ def train_and_validate(
         "revision_provenance": revision_feature_provenance() if use_revision else None,
         "validation_note": (
             "Metrics use out-of-fold scores; final_model.joblib is fitted on all rows."
+            if fit_final_model
+            else "Metrics use out-of-fold scores; final all-row model fit was skipped."
         ),
+        "fold_column": fold_column,
+        "final_model_fitted": fit_final_model,
     }
     (output_dir / "metrics.json").write_text(
         json.dumps(metrics, indent=2, sort_keys=True) + "\n",
@@ -389,6 +429,18 @@ def main() -> None:
     parser.add_argument("--classifier", choices=CLASSIFIERS, default=None)
     parser.add_argument("--feature-mode", choices=FEATURE_MODES, default=None)
     parser.add_argument(
+        "--fold-column",
+        help=(
+            "Use integer fold IDs from this input column instead of constructing "
+            "the historical 3-fold split. Groups must belong to exactly one fold."
+        ),
+    )
+    parser.add_argument(
+        "--skip-final-fit",
+        action="store_true",
+        help="Write OOF evaluation artifacts without fitting an additional all-row model.",
+    )
+    parser.add_argument(
         "--output-dir",
         type=Path,
         help="Output root; each run goes to <output-dir>/<classifier>/<mode>. "
@@ -411,6 +463,8 @@ def main() -> None:
                 root_dir / classifier_name / mode,
                 classifier_name=classifier_name,
                 feature_mode=mode,
+                fold_column=args.fold_column,
+                fit_final_model=not args.skip_final_fit,
                 quiet=not single,
             )
         except Exception as exc:  # keep going; report at the end

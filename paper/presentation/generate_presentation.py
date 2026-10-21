@@ -1,4 +1,4 @@
-"""Generate an editable 25-minute academic presentation for the project."""
+"""Generate an editable academic presentation for the project."""
 
 from pathlib import Path
 
@@ -117,7 +117,7 @@ def add_footer(slide, page, source=""):
     if source:
         add_text(slide, 0.66, 7.08, 10.8, 0.24, source, size=7.5, color=MUTED,
                  valign=MSO_ANCHOR.MIDDLE, margin=0)
-    add_text(slide, 11.75, 7.1, 0.85, 0.22, f"{page:02d}  |  18", size=9,
+    add_text(slide, 11.75, 7.1, 0.85, 0.22, f"{page:02d}  |  20", size=9,
              color=MUTED, align=PP_ALIGN.RIGHT)
 
 
@@ -493,14 +493,99 @@ def build_deck():
              size=16, color=RED, bold=True, align=PP_ALIGN.CENTER)
     add_footer(slide, 12, "Source: paper/main.tex, Revision-Feature Implementation and Feature Comparisons.")
 
-    # 13. Research-question status
+    # 13. LLM experiment
+    slide = new_slide(prs, "LLM experiment: V4 ranks best on the development cohort",
+                      "Results · LLM", page=13)
+    add_text(slide, 0.95, 1.23, 11.4, 0.42,
+             "2,142 clauses  ·  126 positives  ·  9 families  ·  five family-held-out folds",
+             size=16, color=MUTED, bold=True)
+    llm_rows = [
+        ("V1 best raw", 0.1960, BLUE),
+        ("V2 best raw", 0.1035, ORANGE),
+        ("V3 nested hybrid", 0.2554, NAVY),
+        ("V4 semantic ensemble", 0.3252, TEAL),
+        ("Positive prevalence", 0.0588, MUTED),
+    ]
+    add_bar_chart(slide, 0.9, 2.0, 8.5, llm_rows, max_value=0.36,
+                  baseline=0.0588, row_h=0.61, label_w=2.65,
+                  value_fmt="{:.4f}", highlight="V4 semantic ensemble")
+    add_box(slide, 9.65, 2.02, 2.7, 2.9, fill=PALE_TEAL, outline=PALE_TEAL)
+    add_text(slide, 9.92, 2.27, 2.15, 0.55, "V4 at raw 0.5", size=18,
+             color=TEAL, bold=True, align=PP_ALIGN.CENTER)
+    add_text(slide, 9.9, 2.95, 2.18, 1.4,
+             "AP  0.3252\nRecall  0.524\nF2  0.421",
+             size=18, color=NAVY, bold=True, align=PP_ALIGN.CENTER)
+    add_text(slide, 9.83, 4.47, 2.35, 0.34, "5.5× prevalence AP", size=13,
+             color=TEAL, bold=True, align=PP_ALIGN.CENTER)
+    add_text(slide, 1.05, 5.55, 11.25, 0.8,
+             "V4 combines the V3 signal with frozen target and context MiniLM signals. Adaptive development comparison—not a sealed test; V4 design was informed by this cohort.",
+             size=15, color=RED, bold=True, align=PP_ALIGN.CENTER)
+    add_footer(slide, 13, "Source: V4 analysis-final pooled_metrics.csv and V1–V4 comparison; family-held-out development OOF.")
+
+    # 14. Hybrid routing experiment
+    slide = new_slide(prs, "Hybrid routing preserves effectiveness with fewer LLM calls",
+                      "Results · hybrid routing", page=14)
+    add_text(slide, 0.95, 1.2, 11.4, 0.35,
+             "2,096 aligned clauses  ·  109 positives  ·  46 label conflicts excluded",
+             size=15, color=MUTED, bold=True)
+    for x, value, label, color in [
+        (0.95, "441 / 2,096", "Qwen calls", TEAL),
+        (4.02, "79.0%", "calls saved", BLUE),
+        (7.09, "0.330", "hybrid AP", NAVY),
+        (10.16, "0.457", "hybrid F2", ORANGE),
+    ]:
+        add_box(slide, x, 1.75, 2.25, 1.18, fill=PALE_BLUE, outline=PALE_BLUE)
+        add_text(slide, x + 0.1, 1.88, 2.05, 0.5, value, size=25,
+                 color=color, bold=True, align=PP_ALIGN.CENTER)
+        add_text(slide, x + 0.12, 2.43, 2.01, 0.3, label, size=12,
+                 color=INK, align=PP_ALIGN.CENTER)
+
+    headers = [
+        ("System", 1.0, 3.0, PP_ALIGN.LEFT),
+        ("Calls saved", 4.2, 1.7, PP_ALIGN.CENTER),
+        ("AP", 6.15, 1.5, PP_ALIGN.CENTER),
+        ("F2", 7.9, 1.4, PP_ALIGN.CENTER),
+        ("Recall", 9.6, 1.4, PP_ALIGN.CENTER),
+        ("Precision", 11.1, 1.35, PP_ALIGN.CENTER),
+    ]
+    for text, x, width, align in headers:
+        add_text(slide, x, 3.12, width, 0.34, text, size=12, color=TEAL,
+                 bold=True, align=align, valign=MSO_ANCHOR.MIDDLE)
+    comparison_rows = [
+        ("ML-only", "100%", "0.326", "0.418", "0.716", "0.157"),
+        ("LLM-only", "0%", "0.372", "0.447", "0.569", "0.241"),
+        ("Hybrid (0.4, 0.7)", "79.0%", "0.330", "0.457", "0.624", "0.221"),
+        ("Random budget", "79.0%", "0.302", "0.423", "0.685", "0.167"),
+    ]
+    for index, row in enumerate(comparison_rows):
+        y = 3.53 + index * 0.48
+        add_box(slide, 0.94, y, 11.95, 0.42,
+                fill=PALE_TEAL if index == 2 else (PALE if index % 2 == 0 else WHITE),
+                outline=LINE, radius=False, width=0.6)
+        positions = [(row[0], 1.0, 3.0, PP_ALIGN.LEFT)] + [
+            (row[column], x, width, PP_ALIGN.CENTER)
+            for column, x, width in ((1, 4.2, 1.7), (2, 6.15, 1.5), (3, 7.9, 1.4),
+                                     (4, 9.6, 1.4), (5, 11.1, 1.35))
+        ]
+        for text, x, width, align in positions:
+            add_text(slide, x, y + 0.03, width, 0.34, text, size=13,
+                     color=NAVY if index == 2 else INK, bold=index == 2,
+                     align=align, valign=MSO_ANCHOR.MIDDLE)
+    add_box(slide, 0.95, 5.62, 11.9, 0.92, fill=PALE_ORANGE, outline=PALE_ORANGE)
+    add_text(slide, 1.18, 5.77, 11.45, 0.62,
+             "Paired family-bootstrap Δ vs LLM-only: AP −0.042 (95% CI −0.305 to 0.085); F2 +0.010 (−0.059 to 0.057). Both CIs include zero: exploratory evidence, not proof of equivalence. Stored V4 scores simulate LLM answers; no new calls were made.",
+             size=13, color=INK, bold=True, align=PP_ALIGN.CENTER,
+             valign=MSO_ANCHOR.MIDDLE)
+    add_footer(slide, 14, "Source: results/hybrid/routing_vs_llm_only; primary heuristic ML band (0.4, 0.7); 1,000 family-cluster resamples.")
+
+    # 15. Research-question status
     slide = new_slide(prs, "The report answers some questions and leaves two open",
-                      "Synthesis", page=13)
+                      "Synthesis", page=15)
     rq_rows = [
         ("RQ1", "Development feasibility", "Supported with qualifications", TEAL),
         ("RQ2", "Revision / cross-reference / calibration", "Partly answered; AP hypothesis not supported", ORANGE),
         ("RQ3", "Model-family comparison", "Effectiveness/workload only; separate protocols", BLUE),
-        ("RQ4", "Conditional LLM routing", "Not tested; calls and cost were not reduced", RED),
+        ("RQ4", "Conditional LLM routing", "Exploratory replay: 79% fewer calls; no sealed test", ORANGE),
         ("RQ5", "Explanation quality", "Not tested with expert faithfulness review", RED),
     ]
     for i, (rq, question, status, accent) in enumerate(rq_rows):
@@ -513,13 +598,13 @@ def build_deck():
                  color=NAVY, bold=True)
         add_text(slide, 6.2, y + 0.15, 5.7, 0.36, status, size=14.5, color=INK)
     add_text(slide, 1.05, 6.05, 11.15, 0.47,
-             "Qwen 8-shot AP 0.1960; fitted Qwen/TF–IDF/MiniLM V4 AP 0.3252 on their own 2,142-row cohort.",
+             "Routing gains are retrospective estimates from stored scores—not observed call or cost savings.",
              size=15, color=MUTED, bold=True, align=PP_ALIGN.CENTER)
-    add_footer(slide, 13, "Source: paper/main.tex, Answers to the Proposal Research Questions.")
+    add_footer(slide, 15, "Source: paper/main.tex and results/hybrid/routing_vs_llm_only/summary.md.")
 
-    # 14. Limitations
+    # 16. Limitations
     slide = new_slide(prs, "The main limitations are scientific—not just engineering",
-                      "Validity", page=14)
+                      "Validity", page=16)
     limitations = [
         ("Construct", "Low-agreement AI-assisted labels; no adjudicated expert gold."),
         ("Sampling", "Enriched candidates; scores do not represent every IETF clause."),
@@ -537,11 +622,11 @@ def build_deck():
     add_text(slide, 1.15, 6.08, 11.0, 0.42,
              "No claim of validated ambiguity accuracy or deployment readiness is supported yet.",
              size=19, color=RED, bold=True, align=PP_ALIGN.CENTER)
-    add_footer(slide, 14, "Source: paper/main.tex, Threats to Validity.")
+    add_footer(slide, 16, "Source: paper/main.tex, Threats to Validity.")
 
-    # 15. GUI example
+    # 17. GUI example
     slide = new_slide(prs, "GUI example: RFC 9000 review results",
-                      "Interface", page=15)
+                      "Interface", page=17)
     add_text(slide, 0.9, 1.35, 5.8, 0.38, "Local scan summary", size=20,
              color=NAVY, bold=True)
     for x, value, label, color in [
@@ -574,11 +659,11 @@ def build_deck():
     slide.shapes.add_picture(
         str(GUI_FILTERED_IMAGE), inches(7.35), inches(4.34), width=inches(5.25)
     )
-    add_footer(slide, 15, "GUI screenshots: local scan of corpus/raw/rfcs/RFC9000.txt; model scores are screening ranks.")
+    add_footer(slide, 17, "GUI screenshots: local scan of corpus/raw/rfcs/RFC9000.txt; model scores are screening ranks.")
 
-    # 16. Next steps
+    # 18. Next steps
     slide = new_slide(prs, "What evidence would earn a stronger claim?",
-                      "Next steps", page=16)
+                      "Next steps", page=18)
     next_steps = [
         ("01", "Build an expert reference", "Stratified sample; independent double annotation and adjudication.", BLUE),
         ("02", "Stabilize estimates", "Repeat selected transformers across seeds; compare common labels and folds.", TEAL),
@@ -595,11 +680,11 @@ def build_deck():
     add_text(slide, 1.15, 5.75, 10.95, 0.58,
              "The next evaluation must be genuinely untouched and used once after the model and analysis plan are frozen.",
              size=18, color=RED, bold=True, align=PP_ALIGN.CENTER)
-    add_footer(slide, 16, "Source: paper/README.md, author action items; results/final_summary/conclusions.md.")
+    add_footer(slide, 18, "Source: paper/README.md, author action items; results/final_summary/conclusions.md.")
 
-    # 17. Take-home
+    # 19. Take-home
     slide = new_slide(prs, "The contribution is a careful path from draft text to review",
-                      "Take-home", page=17)
+                      "Take-home", page=19)
     add_box(slide, 1.05, 1.52, 11.25, 1.2, fill=PALE_BLUE, outline=PALE_BLUE)
     add_text(slide, 1.42, 1.77, 10.5, 0.65,
              "A promising research-stage prioritization aid—not an autonomous ambiguity judge.",
@@ -613,10 +698,10 @@ def build_deck():
     add_text(slide, 1.2, 6.15, 10.9, 0.42,
              "The next milestone is independent evidence—not a more complicated model.",
              size=20, color=TEAL, bold=True, align=PP_ALIGN.CENTER)
-    add_footer(slide, 17, "Project status and claim boundary: README.md; paper/main.tex.")
+    add_footer(slide, 19, "Project status and claim boundary: README.md; paper/main.tex.")
 
-    # 18. Discussion and references
-    slide = new_slide(prs, "Discussion", "Questions", page=18)
+    # 20. Discussion and references
+    slide = new_slide(prs, "Discussion", "Questions", page=20)
     add_text(slide, 0.95, 1.38, 6.3, 1.08, "Questions?", size=42, color=NAVY, bold=True)
     add_text(slide, 1.0, 2.65, 5.6, 0.82,
              "Where should the boundary sit between automated triage and human judgment?",
@@ -634,7 +719,7 @@ def build_deck():
     add_text(slide, 1.0, 6.22, 11.2, 0.38,
              "Thank you  ·  School of Computing, Queen's University", size=17,
              color=MUTED, bold=True)
-    add_footer(slide, 18, "Full bibliography and methods: paper/main.tex and paper/references.bib.")
+    add_footer(slide, 20, "Full bibliography and methods: paper/main.tex and paper/references.bib.")
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     prs.save(OUTPUT)

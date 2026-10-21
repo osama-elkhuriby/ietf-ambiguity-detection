@@ -10,6 +10,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
+from matplotlib.patches import FancyBboxPatch
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -121,6 +122,104 @@ def classical_ap_summary() -> None:
     plt.close(figure)
 
 
+def project_cohorts() -> None:
+    """Render cohort counts from the current manifests and aggregate reports."""
+    figure, axis = plt.subplots(figsize=(14.5, 8.0))
+    axis.set_xlim(0, 1)
+    axis.set_ylim(0, 1)
+    axis.axis("off")
+    navy = "#183b5b"
+    text = "#1e3042"
+    muted = "#60748a"
+
+    axis.text(
+        0.5,
+        0.94,
+        "Project data and evaluated cohorts",
+        ha="center",
+        va="center",
+        fontsize=28,
+        fontweight="bold",
+        color=navy,
+    )
+    for x, value, label in (
+        (0.17, "264", "draft revisions"),
+        (0.50, "13", "RFCs"),
+        (0.83, "31", "verified technical errata"),
+    ):
+        axis.text(x, 0.82, value, ha="center", va="center", fontsize=31, fontweight="bold", color=navy)
+        axis.text(x, 0.765, label, ha="center", va="center", fontsize=16, color=text)
+
+    rows = (
+        (
+            0.64,
+            "Classical ML + heuristic",
+            "2,425 clauses | 160 positives | prevalence 6.60%",
+            "3-fold family-grouped OOF; includes TCP/DNS",
+            "#4d8a5b",
+            "#edf6ef",
+            0.25,
+        ),
+        (
+            0.49,
+            "Qwen / hybrid LM",
+            "2,142 clauses | 126 positives | prevalence 5.88%",
+            "5-fold family-grouped OOF",
+            "#bd8020",
+            "#fff6e8",
+            0.20,
+        ),
+        (
+            0.34,
+            "Earlier DeBERTa study",
+            "2,125 clauses | 136 positives | prevalence 6.40%",
+            "5-fold family-isolated OOF",
+            "#7857b4",
+            "#f4effb",
+            0.235,
+        ),
+        (
+            0.19,
+            "Updated reviewed-label DeBERTa",
+            "2,143 clauses | 138 positives | prevalence 6.44%",
+            "5-fold family-isolated OOF; includes 100 error-selected human reviews",
+            "#3974a5",
+            "#eaf3fa",
+            0.33,
+        ),
+    )
+    for y, label, headline, detail, edge, face, width in rows:
+        box = FancyBboxPatch(
+            (0.04, y - 0.037),
+            width,
+            0.075,
+            boxstyle="round,pad=0.008,rounding_size=0.015",
+            linewidth=2,
+            edgecolor=edge,
+            facecolor=face,
+        )
+        axis.add_patch(box)
+        axis.text(0.055, y, label, ha="left", va="center", fontsize=14, fontweight="bold", color=text)
+        axis.text(0.45, y + 0.016, headline, ha="left", va="center", fontsize=14, color=text)
+        axis.text(0.45, y - 0.030, detail, ha="left", va="center", fontsize=12.5, color=muted)
+
+    axis.text(
+        0.5,
+        0.075,
+        "Cohorts and protocols differ; cross-study scores are not a unified leaderboard.",
+        ha="center",
+        va="center",
+        fontsize=15.5,
+        fontweight="bold",
+        color="#a33636",
+    )
+    figure.tight_layout(pad=0.3)
+    OUTPUT.mkdir(parents=True, exist_ok=True)
+    figure.savefig(OUTPUT / "project_cohorts.png", dpi=220, bbox_inches="tight")
+    plt.close(figure)
+
+
 if __name__ == "__main__":
     revision_ablation()
     classical_ap_summary()
+    project_cohorts()

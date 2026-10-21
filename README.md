@@ -14,12 +14,12 @@ transformer baselines, local-LLM experiments, and hybrid experiments.
 
 | Area | Status |
 | --- | --- |
-| Corpus | 253 draft revisions, 12 RFCs, and 31 verified technical errata collected for selected families |
+| Corpus | Current manifest: 264 draft revisions and 13 RFCs; retained technical-errata filter: 31 records |
 | Parsing and alignment | Plaintext/XML parsing, clause segmentation, and revision-lineage tooling implemented |
 | Annotation | AI-assisted operational labels prepared; independent expert adjudication is not available |
 | Model development | Classical, transformer, LLM, and hybrid studies completed on several distinct data artifacts |
 | Hybrid rank comparison | Three-model V4/DeBERTa/classical comparison completed on a label-compatible subset; exploratory |
-| Independent evaluation | Reserved TCP validation and sealed DNS testing have not been opened |
+| Independent evaluation | No untouched project-level TCP/DNS holdout remains: historical LOFO and current all-family classical studies include both; they remain excluded from the nine-family transformer/Qwen tracks |
 
 Scores measure agreement with operational reference labels, not adjudicated ambiguity
 accuracy. Results from separate cohorts, label versions, and validation protocols must
@@ -94,28 +94,36 @@ Run commands from the repository root unless noted.
 
 ### Review an RFC in the local GUI
 
-The GUI runs locally and classifies clauses in rendered RFC plaintext. It
-displays only positive (potentially ambiguous) predictions from the saved
-engineered-feature + TF-IDF Logistic Regression model. The 0.5 threshold
-produces the binary result; scores are not calibrated probabilities or
-confirmed ambiguity judgments.
-This is the selected single-RFC model: its pooled grouped out-of-fold average
-precision was 0.5225, compared with 0.5109 for the comparable Linear SVM. The
-GUI shows this selection rationale and the active model's validation summary.
+The GUI classifies explicit normative clauses in rendered RFC plaintext with
+the current-source human-reviewed DeBERTa-v3 Focal + Partial-4 ensemble. All
+five outer-fold model pairs score each clause; a clause is flagged when at
+least three folds exceed their own inner-OOF calibrated threshold. The GUI
+shows positive predictions, fold-vote support, and a mean ECDF score for
+ranking. The mean score is not a probability.
 
 #### Before the first run
 
 1. Create and activate the project environment using the [Setup](#setup)
    instructions.
-2. Restore the model files `final_model.joblib`, `manifest.json`, and
-   `metrics.json` into `results/ML/v2_engineered_tfidf/` from an approved local
-   backup or model-generation workflow. Model artifacts are not included in
-   Git. The artifact was created with scikit-learn 1.9.1; use the matching
-   version to avoid the cross-version loading warning.
-3. For optional explanations, install Ollama, pull the pinned `qwen3:32b`
-   model, and ensure its digest matches the project configuration. The
-   classifier itself does not require Ollama; explanations are optional and
-   limited to five selected positive results.
+2. Make the complete local experiment bundle available:
+   - The approved annotation source `results/annotation/final_annotation_ready.csv`,
+     private key, canonical context and metadata files, and frozen family-fold
+     source specified by the experiment config. These inputs are not all
+     distributed in Git.
+   - The frozen experiment files, manifests, cell specifications, outer and
+     inner run outputs under
+     `experiments/transformer_final/final_annotation_human_reviewed_100_v1/`.
+     GUI startup validates all 10 outer and 30 inner cells and verifies the
+     checkpoint hashes before loading.
+   - The pinned DeBERTa-v3 base model at the local path configured by
+     `model.default_local_path` in the experiment's `config.json`. It must
+     match the configured model-source hash. In the original Windows setup
+     this was `D:\RFC\models\deberta-v3-base`. The config and model path are
+     part of the frozen experiment; relocating the model requires creating a
+     new experiment version rather than silently editing the frozen config.
+3. For optional explanations only, install Ollama, pull the pinned
+   `qwen3:32b` model, and ensure its digest matches the GUI config. Classification
+   itself is local and does not require Ollama.
 
 #### Start and use
 
@@ -129,23 +137,99 @@ The app opens at `http://127.0.0.1:8765/` and binds only to the local computer.
 Upload a rendered RFC `.txt` file (up to 5 MB), review the positive results,
 and optionally search, filter by section, sort, or download the positive-result
 CSV. Select up to five results to request Qwen explanations. Press `Ctrl+C` in
-the terminal to stop the server.
+the terminal to stop the server. For a different port or no browser launch:
+
+```powershell
+python -m gui.app --port 8766 --no-browser
+```
+
+The parser only scores clauses it recognizes as explicitly normative from
+uppercase BCP 14 keywords; it does not promote contextual or lowercase-modal
+clauses. See [`gui/README.md`](gui/README.md) for the UI behavior and
+limitations.
+
+### Reproduce the human-reviewed transformer experiment
+
+The GUI uses already-trained checkpoints; launching it does not train models.
+To recreate the experiment, use the frozen protocol and complete local inputs
+described by
+[`experiments/transformer_final/final_annotation_human_reviewed_100_v1/`](experiments/transformer_final/final_annotation_human_reviewed_100_v1/)
+and its [`MANUAL_EXECUTION.md`](experiments/transformer_final/final_annotation_human_reviewed_100_v1/MANUAL_EXECUTION.md).
+The annotation source, private key, derived manifests, and model weights are
+local artifacts and must be supplied from approved project storage. Use the
+project Python 3.11 environment, the pinned DeBERTa-v3-base model, and a
+CUDA-capable GPU. Training is offline, FP32, sequential, fail-fast, and does
+not retry or resume checkpoints.
+
+The experiment uses the current annotation source SHA-256
+`8ffa654c2c405dd3eef72901c600f1ef3823e6dbff663020bb824c57ff65bdbf`.
+Its nine-family development cohort has 2,143 clauses (138 positives); the
+TCP and DNS families are excluded from this experiment. The frozen design is
+five outer family folds and three inner folds per outer fitting partition.
+It trains two methods in every split: full fine-tuning with gamma-2 focal
+loss, and Partial-4 fine-tuning of the final four DeBERTa layers plus task
+head. Inputs are target-clause text only, truncated with the frozen
+head-tail policy at 256 tokens.
+
+Run the commands in `MANUAL_EXECUTION.md` in order. The essential sequence is:
+
+```powershell
+python -m experiments.transformer_final.final_annotation_human_reviewed_100_v1.cli preflight
+python -m experiments.transformer_final.final_annotation_human_reviewed_100_v1.environment_preflight
+python -m experiments.transformer_final.final_annotation_human_reviewed_100_v1.cli status
+
+# Train and validate all 10 outer cells.
+python -m experiments.transformer_final.final_annotation_human_reviewed_100_v1.cli train-outer --all
+python -m experiments.transformer_final.final_annotation_human_reviewed_100_v1.cli validate-outer --require-all
+
+# Then train and validate all 30 inner cells.
+python -m experiments.transformer_final.final_annotation_human_reviewed_100_v1.cli train-inner --all
+python -m experiments.transformer_final.final_annotation_human_reviewed_100_v1.cli validate-inner --require-all
+
+# Analyze only after both cell sets validate.
+python -m experiments.transformer_final.final_annotation_human_reviewed_100_v1.cli analyze
+python -m experiments.transformer_final.final_annotation_human_reviewed_100_v1.cli validate-analysis
+```
+
+Run the training commands only when the corresponding immutable runs do not
+already exist. If a project artifact bundle includes completed runs, start
+with `status`, then validate the available outer and inner cells; do not
+retrain or overwrite them. A fresh reproduction needs a clean experiment
+output area and the approved source and model inputs. The commands intentionally
+fail rather than resume or overwrite existing cells.
+
+Each training run writes an immutable checkpoint, held-out predictions,
+metrics, audit, and completion manifest under the experiment's `runs/`,
+`audits/`, and `completion_manifests/` directories. Do not overwrite or resume
+completed runs. If frozen protocol or code must change, create a new experiment
+version. Analysis outputs include fold and pooled metrics, calibration
+thresholds, robustness and uncertainty summaries, and error-analysis exports.
+
+The reported Focal + Partial-4 equal-weight ECDF ensemble achieved nested OOF
+AP 0.6736 and ROC-AUC 0.9118. Each outer-fold threshold is selected from
+inner-OOF predictions to maximize recall subject to a fitting-side precision
+target of 0.30. The pooled OOF precision/recall for this per-fold policy were
+0.5063/0.6212. These metrics do **not** evaluate the GUI's runtime 3-of-5
+majority-vote policy or its mean ranking score, which have not been measured.
+The target is not a production precision guarantee. Labels are operational
+references rather than independent expert judgments; treat the study as
+development evidence, not a validated detector or a direct leaderboard
+comparison with models trained on different cohorts.
 
 #### What remains before research or submission claims
 
-- Match the environment to the saved artifact's scikit-learn version and verify
-  model provenance before relying on predictions.
-- Independently evaluate the detector on an approved, held-out dataset with
-  expert-adjudicated labels. Current scores are development estimates against
-  operational reference labels, not independent expert validation.
-- Follow the sealed evaluation protocol for reserved TCP and DNS data; do not
-  inspect or use those partitions outside the approved protocol.
-- Document the evaluation cohort, label source, threshold, and limitations in
-  any paper or presentation. The GUI is a research demonstration, not a
-  validated production detector.
+- Measure the runtime 3-of-5 majority-vote policy and mean ECDF ranking score
+  on a suitable evaluation set; current nested OOF metrics do not evaluate
+  either deployment aggregate.
+- Independently evaluate the detector on an approved held-out family or time
+  slice with expert-adjudicated labels. Current labels are operational
+  references, not independent expert validation.
+- Document the cohort, annotation source, calibration, vote rule, and
+  limitations in any paper or presentation. The GUI is a research
+  demonstration, not a validated production detector.
 
-See [`gui/README.md`](gui/README.md) for model provenance, limitations, and
-privacy details.
+See [`gui/README.md`](gui/README.md) for additional inference, provenance,
+limitation, and privacy details.
 
 ### Build and validate corpus metadata
 
@@ -223,12 +307,14 @@ python -m ruff check alignment corpus models eval tests
 
 ## Data and experiment boundaries
 
-- Annotation exports, private review material, row-level predictions, model weights,
-  and generated run directories are local-only and excluded from version control.
+- Some annotation exports, private review material, transformer weights, and large
+  generated run directories are local-only. The active classical GUI artifact and
+  selected result tables are tracked; check each artifact rather than assuming.
 - Aggregate metrics, experiment protocols, tests, and publication figures may be
   committed when they do not expose private labels or reserved-set results.
-- TCP is reserved for transfer verification; DNS SVCB/HTTPS is a sealed final test.
-  Do not inspect or evaluate either partition outside its approved protocol.
+- TCP and DNS were the proposal's intended holdouts, but historical LOFO and the
+  current all-family classical study include both. They are excluded only from
+  particular nine-family transformer/Qwen studies, not reserved project-wide.
 - Model selection, preprocessing, and thresholds must use fitting-side data only.
   Report out-of-fold and development results as exploratory where appropriate.
 - The current annotation labels are human/AI-assisted operational references, not
